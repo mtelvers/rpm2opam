@@ -1,4 +1,12 @@
-let primary = Xml.parse_file "primary.xml"
+let primary_file =
+  try Sys.argv.(1) with
+  | _ -> "primary.xml"
+
+let distribution_url =
+  try Sys.argv.(2) with
+  | _ -> "https://foo.bar"
+
+let primary = Xml.parse_file primary_file
 
 let version_of_string s =
   let rec loop i r = function
@@ -35,6 +43,7 @@ type details = {
 
 type rpm = {
   pkg : string;
+  arch : string;
   version : int list;
   location : string;
   details : details;
@@ -48,10 +57,10 @@ let symbol_of_flag = function
   | "LE" -> "<="
   | _ -> assert false
 
-let string_of_entry e =
+let string_of_constraints e =
   match (e.flags, e.ver) with
-  | Some flags, Some ver -> "\"" ^ e.name ^ "\" {" ^ symbol_of_flag flags ^ " \"" ^ string_of_version ver ^ "\"}"
-  | _, _ -> "\"" ^ e.name ^ "\""
+  | Some flags, Some ver -> "{" ^ symbol_of_flag flags ^ " \"" ^ string_of_version ver ^ "\"}"
+  | _, _ -> ""
 
 let rpms =
   Xml.map
@@ -61,6 +70,7 @@ let rpms =
           match Xml.tag xml with
           | "name" -> { acc with pkg = Xml.children xml |> List.hd |> Xml.pcdata }
           | "version" -> { acc with version = Xml.attrib xml "ver" |> version_of_string }
+          | "arch" -> { acc with arch = Xml.children xml |> List.hd |> Xml.pcdata }
           | "location" -> { acc with location = Xml.attrib xml "href" }
           | "format" ->
               let details =
@@ -90,9 +100,54 @@ let rpms =
               in
               { acc with details }
           | _ -> acc)
-        { pkg = ""; version = []; location = ""; details = { provides = []; requires = [] } }
+        { pkg = ""; arch = ""; version = []; location = ""; details = { provides = []; requires = [] } }
         package)
     primary
+
+let rpms = List.filter (fun rpm -> rpm.arch = "x86_64") rpms
+let provides = Hashtbl.create 100000
+let () = List.iter (fun rpm -> List.iter (fun p -> Hashtbl.add provides p.name (p, rpm)) rpm.details.provides) rpms
+
+let tests =
+  [
+    { name = "/bin/sh"; flags = Some "EQ"; ver = Some [ 5; 9 ] };
+    { name = "libxml2.so.2()(64bit)"; flags = None; ver = None };
+    { name = "libxml2.so.2(LIBXML2_2.4.30)(64bit)"; flags = None; ver = None };
+    { name = "libgcc_s.so.1()(64bit)"; flags = None; ver = None };
+    { name = "python3"; flags = Some "GE"; ver = Some [ 3; 6 ] };
+  ]
+
+let search req =
+  Hashtbl.find_all provides req.name
+  |> List.filter_map (fun (pro, rpm) ->
+         match (req.flags, req.ver, pro.ver) with
+         | None, _, _
+         | Some _, _, None ->
+             Some (req, rpm)
+         | Some "EQ", Some reqver, Some prover -> if compare prover reqver = 0 then Some (req, rpm) else None
+         | Some "GE", Some reqver, Some prover -> if compare prover reqver >= 0 then Some (req, rpm) else None
+         | Some "GT", Some reqver, Some prover -> if compare prover reqver > 0 then Some (req, rpm) else None
+         | Some "LE", Some reqver, Some prover -> if compare prover reqver <= 0 then Some (req, rpm) else None
+         | Some "LT", Some reqver, Some prover -> if compare prover reqver < 0 then Some (req, rpm) else None
+         | Some v, _, _ ->
+             print_endline v;
+             assert false)
+
+let latest_rpm r =
+  if List.length r > 0 then
+    Some
+      (List.sort
+         (fun (_, p1) (_, p2) ->
+           let c = -compare p1.version p2.version in
+           if c <> 0 then c else compare p1.pkg p2.pkg)
+         r
+      |> List.hd)
+  else None
+
+let filter_entries = List.filter (fun e -> String.get e.name 0 <> '/')
+let () = List.map search tests |> List.flatten |> List.iter (fun (req, rpm) -> Printf.printf "%s @ %s\n" rpm.pkg (string_of_constraints req))
+let r = List.filter_map (fun req -> search req |> latest_rpm) tests |> List.sort_uniq compare
+let () = List.iter (fun (req, rpm) -> Printf.printf "%s @ %s\n" rpm.pkg (string_of_constraints req)) r
 
 let mkdir_p s =
   String.split_on_char '/' s
@@ -106,62 +161,30 @@ let mkdir_p s =
 let () =
   List.iter
     (fun rpm ->
+      let () = Printf.printf "Package: %s\n" rpm.pkg in
       let dir = "packages/" ^ rpm.pkg ^ "/" ^ rpm.pkg ^ "." ^ string_of_version rpm.version in
       let _ = mkdir_p dir in
       let oc = open_out (dir ^ "/opam") in
       let () = Printf.fprintf oc "opam-version: \"2.0\"\n" in
       let () = Printf.fprintf oc "build: [\n" in
       let rpm_filename = String.split_on_char '/' rpm.location |> List.rev |> List.hd in
-      let () = Printf.fprintf oc "  [\"zypper -n install %s\"]\n" rpm_filename in
+      let () = Printf.fprintf oc "  [\"/usr/bin/zypper\" \"-n\" \"install\" \"%s\"]\n" rpm_filename in
       let () = Printf.fprintf oc "]\n" in
       let () = Printf.fprintf oc "remove: [\n" in
-      let () = Printf.fprintf oc "  [\"zypper -n remove %s\"]\n" rpm.pkg in
+      let () = Printf.fprintf oc "  [\"/usr/bin/zypper\" \"-n\" \"remove\" \"%s\"]\n" rpm.pkg in
       let () = Printf.fprintf oc "]\n" in
       let () = Printf.fprintf oc "depends: [\n" in
       let pkgs =
-        List.fold_left
-          (fun acc r ->
-            let () = Printf.printf "requires %s\n" r.name in
-            let best =
-              List.fold_left
-                (fun acc rpm ->
-                  List.fold_left
-                    (fun acc p ->
-                      match (r.flags, r.ver) with
-                      | None, _ -> if r.name = p.name then { name = rpm.pkg; flags = None; ver = Some rpm.version } :: acc else acc
-                      | Some "GT", Some version ->
-                          if r.name = p.name && compare version rpm.version > 0 then { name = rpm.pkg; flags = Some "GT"; ver = Some rpm.version } :: acc
-                          else acc
-                      | Some "GE", Some version ->
-                          if r.name = p.name && compare version rpm.version >= 0 then { name = rpm.pkg; flags = Some "GE"; ver = Some rpm.version } :: acc
-                          else acc
-                      | Some "LT", Some version ->
-                          if r.name = p.name && compare version rpm.version < 0 then { name = rpm.pkg; flags = Some "LT"; ver = Some rpm.version } :: acc
-                          else acc
-                      | Some "LE", Some version ->
-                          if r.name = p.name && compare version rpm.version <= 0 then { name = rpm.pkg; flags = Some "LE"; ver = Some rpm.version } :: acc
-                          else acc
-                      | Some "EQ", Some version ->
-                          if r.name = p.name && compare version rpm.version = 0 then { name = rpm.pkg; flags = Some "EQ"; ver = Some rpm.version } :: acc
-                          else acc)
-                    acc rpm.details.provides)
-                [] rpms
-              |> List.sort (fun a b -> compare a.ver b.ver)
-              |> List.rev
-            in
-            let () = List.iter (fun r -> Printf.printf "-- %s (%s)\n" r.name (Option.value ~default:[ 0 ] r.ver |> string_of_version)) best in
-            match best with
-            | [] -> acc
-            | hd :: _ ->
-                let () = Printf.printf "keeping %s\n" hd.name in
-                hd :: acc)
-          [] rpm.details.requires
-        |> List.sort_uniq compare
+        filter_entries rpm.details.requires
+        |> List.filter_map (fun e -> search e |> latest_rpm)
+        |> List.sort_uniq (fun (_, rpm1) (_, rpm2) -> compare rpm1.pkg rpm2.pkg)
       in
-      let () = List.iter (fun p -> Printf.fprintf oc "  %s\n" (string_of_entry p)) pkgs in
+      let () =
+        List.iter (fun (req, p) -> Printf.fprintf oc "  \"%s\" %s\n" p.pkg (string_of_constraints { name = ""; flags = req.flags; ver = Some p.version })) pkgs
+      in
       let () = Printf.fprintf oc "]\n" in
       let () = Printf.fprintf oc "extra-source \"%s\" {\n" rpm_filename in
-      let () = Printf.fprintf oc "  src: \"http://download.opensuse.org/tumbleweed/repo/oss/%s\"\n" rpm.location in
+      let () = Printf.fprintf oc "  src: \"%s/%s\"\n" distribution_url rpm.location in
       let () = Printf.fprintf oc "}\n" in
       close_out oc)
     rpms

@@ -3,6 +3,13 @@ Download the package index
 
 ```
 curl -L  http://download.opensuse.org/tumbleweed/repo/oss/repodata/69cebf2bb8ca028a0096158754a020506fede251e0d0ff16c91979ea063eb5450ea1dbdc98cfc0a6b243f5aea603c9295ac75c64a9318b7ce5c9816f740db0a2-primary.xml.zst -o primary.xml.zst
+curl -L http://download.opensuse.org/distribution/leap/16.0/repo/oss/repodata/8cc7dec90a1e9327f864b878739b64d4f793a59cb712e26ae32f25308e3023245bb3bf37082bde6d61002a6ece6644f5ea8883b9b8b5fcea996df01246f66692-primary.xml.zst -o leap-primary.xml.zst
+```
+
+Run this project with
+```
+dune exec -- opensuse tumbleweed-primary.xml http://download.opensuse.org/tumbleweed/repo/oss
+dune exec -- opensuse leap-primary.xml http://download.opensuse.org/distribution/leap/16.0/repo/oss
 ```
 
 Test with Ryan's solver
@@ -54,8 +61,9 @@ Actual testing,
 
 ```
 docker run -v ~/opensuse:/root/opensuse --rm -it opensuse/tumbleweed
-zypper install opam
+zypper -n install opam
 opam init -y --bare
 opam switch create opensuse --empty
-opam repository add tumbleweed ~/opensuse
-
+opam repository add tumbleweed --kind=path opensuse
+OPAMJOBS=1 opam install nano -y
+```
