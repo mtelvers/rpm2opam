@@ -1,12 +1,48 @@
-let primary_file =
-  try Sys.argv.(1) with
-  | _ -> "primary.xml"
+type distribution = {
+  name : string;
+  prefix : string;
+  url : string;
+  file : string;
+  build : string list;
+  remove : string list;
+}
 
-let distribution_url =
-  try Sys.argv.(2) with
-  | _ -> "https://foo.bar"
+let distributions =
+  [
+    ( "tumbleweed",
+      {
+        name = "tumbleweed";
+        prefix = "";
+        url = "http://download.opensuse.org/tumbleweed/repo/oss";
+        file = "tumbleweed-primary.xml";
+        build = [ "/usr/bin/zypper"; "n"; "install" ];
+        remove = [ "/usr/bin/zypper"; "-n"; "remove" ];
+      } );
+    ( "leap",
+      {
+        name = "leap";
+        prefix = "";
+        url = "http://download.opensuse.org/distribution/leap/16.0/repo/oss";
+        file = "leap-primary.xml";
+        build = [ "/usr/bin/zypper"; "-n"; "install" ];
+        remove = [ "/usr/bin/zypper"; "-n"; "remove" ];
+      } );
+    ( "fedora40",
+      {
+        name = "fedora40";
+        prefix = "";
+        url = "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os";
+        file = "fedora40.xml";
+        build = [ "/usr/bin/dnf"; "-y"; "install" ];
+        remove = [ "/usr/bin/dnf"; "-y"; "remove" ];
+      } );
+  ]
 
-let primary = Xml.parse_file primary_file
+let distribution =
+  try List.assoc Sys.argv.(1) distributions with
+  | _ -> assert false
+
+let primary = Xml.parse_file distribution.file
 
 let version_of_string s =
   let rec loop i r = function
@@ -39,6 +75,7 @@ type entry = {
 type details = {
   requires : entry list;
   provides : entry list;
+  conflicts : entry list;
 }
 
 type rpm = {
@@ -62,13 +99,15 @@ let string_of_constraints e =
   | Some flags, Some ver -> "{" ^ symbol_of_flag flags ^ " \"" ^ string_of_version ver ^ "\"}"
   | _, _ -> ""
 
+let dots_to_dashes s = String.split_on_char '.' s |> String.concat "-"
+
 let rpms =
   Xml.map
     (fun package ->
       Xml.fold
         (fun acc xml ->
           match Xml.tag xml with
-          | "name" -> { acc with pkg = Xml.children xml |> List.hd |> Xml.pcdata }
+          | "name" -> { acc with pkg = Xml.children xml |> List.hd |> Xml.pcdata |> dots_to_dashes }
           | "version" -> { acc with version = Xml.attrib xml "ver" |> version_of_string }
           | "arch" -> { acc with arch = Xml.children xml |> List.hd |> Xml.pcdata }
           | "location" -> { acc with location = Xml.attrib xml "href" }
@@ -95,12 +134,21 @@ let rpms =
                             xml
                         in
                         { acc with provides = lst }
+                    | "rpm:conflicts" ->
+                        let lst =
+                          Xml.map
+                            (fun xml ->
+                              let a = Xml.attribs xml in
+                              { name = List.assoc "name" a; flags = List.assoc_opt "flags" a; ver = List.assoc_opt "ver" a |> Option.map version_of_string })
+                            xml
+                        in
+                        { acc with conflicts = lst }
                     | _ -> acc)
-                  { requires = []; provides = [] } xml
+                  { requires = []; provides = []; conflicts = [] } xml
               in
               { acc with details }
           | _ -> acc)
-        { pkg = ""; arch = ""; version = []; location = ""; details = { provides = []; requires = [] } }
+        { pkg = ""; arch = ""; version = []; location = ""; details = { provides = []; requires = []; conflicts = [] } }
         package)
     primary
 
@@ -158,20 +206,22 @@ let mkdir_p s =
          p)
        ""
 
+let quoted_string lst = List.map (fun x -> "\"" ^ x ^ "\"") lst |> String.concat " "
+
 let () =
   List.iter
     (fun rpm ->
       let () = Printf.printf "Package: %s\n" rpm.pkg in
-      let dir = "packages/" ^ rpm.pkg ^ "/" ^ rpm.pkg ^ "." ^ string_of_version rpm.version in
+      let dir = distribution.name ^ "/packages/" ^ distribution.prefix ^ rpm.pkg ^ "/" ^ distribution.prefix ^ rpm.pkg ^ "." ^ string_of_version rpm.version in
       let _ = mkdir_p dir in
       let oc = open_out (dir ^ "/opam") in
       let () = Printf.fprintf oc "opam-version: \"2.0\"\n" in
       let () = Printf.fprintf oc "build: [\n" in
       let rpm_filename = String.split_on_char '/' rpm.location |> List.rev |> List.hd in
-      let () = Printf.fprintf oc "  [\"/usr/bin/zypper\" \"-n\" \"install\" \"%s\"]\n" rpm_filename in
+      let () = Printf.fprintf oc "  [%s]\n" (distribution.build @ [ rpm_filename ] |> quoted_string) in
       let () = Printf.fprintf oc "]\n" in
       let () = Printf.fprintf oc "remove: [\n" in
-      let () = Printf.fprintf oc "  [\"/usr/bin/zypper\" \"-n\" \"remove\" \"%s\"]\n" rpm.pkg in
+      let () = Printf.fprintf oc "  [%s]\n" (distribution.remove @ [ rpm_filename ] |> quoted_string) in
       let () = Printf.fprintf oc "]\n" in
       let () = Printf.fprintf oc "depends: [\n" in
       let pkgs =
@@ -180,11 +230,22 @@ let () =
         |> List.sort_uniq (fun (_, rpm1) (_, rpm2) -> compare rpm1.pkg rpm2.pkg)
       in
       let () =
-        List.iter (fun (req, p) -> Printf.fprintf oc "  \"%s\" %s\n" p.pkg (string_of_constraints { name = ""; flags = req.flags; ver = Some p.version })) pkgs
+        List.iter
+          (fun (req, p) ->
+            Printf.fprintf oc "  \"%s%s\" %s\n" distribution.prefix p.pkg (string_of_constraints { name = ""; flags = req.flags; ver = Some p.version }))
+          pkgs
       in
       let () = Printf.fprintf oc "]\n" in
+      (*
+      let () =
+        if List.length rpm.details.conflicts > 0 then
+          let () = Printf.fprintf oc "conflicts: [\n" in
+          let () = List.iter (fun con -> Printf.fprintf oc "  \"%s%s\" %s\n" distribution.prefix con.name (string_of_constraints con)) rpm.details.conflicts in
+          Printf.fprintf oc "]\n"
+      in
+         *)
       let () = Printf.fprintf oc "extra-source \"%s\" {\n" rpm_filename in
-      let () = Printf.fprintf oc "  src: \"%s/%s\"\n" distribution_url rpm.location in
+      let () = Printf.fprintf oc "  src: \"%s/%s\"\n" distribution.url rpm.location in
       let () = Printf.fprintf oc "}\n" in
       close_out oc)
     rpms

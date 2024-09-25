@@ -8,18 +8,17 @@ curl -L http://download.opensuse.org/distribution/leap/16.0/repo/oss/repodata/8c
 
 Run this project with
 ```
-dune exec -- opensuse tumbleweed-primary.xml http://download.opensuse.org/tumbleweed/repo/oss
-dune exec -- opensuse leap-primary.xml http://download.opensuse.org/distribution/leap/16.0/repo/oss
+dune exec -- opensuse {tumbleweed|leap|fedora40}
 ```
 
 Test with Ryan's solver
 
 ```
 git clone https://github.com/RyanGibb/opam-0install-solver
-dune exec -- bin/main.exe --repo ~/opensuse/packages nano
+dune exec -- bin/main.exe --repo ~/opensuse/tumbleweed/packages nano
 ```
 
-Created a file `~/opensuse/repo` which contained
+Created a file `~/opensuse/tumbleweed/repo` which contained
 
 ```
 opam-version: "2.0"
@@ -29,7 +28,7 @@ Then created the switch like this
 
 ```
 opam switch create opensuse --empty
-opam repository add tumbleweed ~/opensuse
+opam repository add tumbleweed ~/opensuse/tumbleweed
 ```
 
 Initially I ran into problems as there was a package called opam which caused opam to ignore the repository.
@@ -64,6 +63,27 @@ docker run -v ~/opensuse:/root/opensuse --rm -it opensuse/tumbleweed
 zypper -n install opam
 opam init -y --bare
 opam switch create opensuse --empty
-opam repository add tumbleweed --kind=path opensuse
+opam repository add tumbleweed --kind=local opensuse/tumbleweed
 OPAMJOBS=1 opam install nano -y
 ```
+
+# Fedora
+
+https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/repodata/
+
+```
+curl -L https://fedora.mirrorservice.org/fedora/linux/releases/39/Everything/x86_64/os/repodata/579f037cfd670a295af90427be9fe7acc3d2a03c2b6824fb286c1db75558ad64-other.xml.gz | gunzip > fedora39.xmlcurl -L https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/repodata/b70b906963da8e73d3b09b98ea9a414a09f17d731324decb6138efc8f683b564-primary.xml.gz | gunzip > fedora40.xml
+curl -L https://fedora.mirrorservice.org/fedora/linux/releases/39/Everything/x86_64/os/repodata/e681f4dcf1aa9814a1393a685d70b94210232b8997d2bc8a02c080e0ba8e51e3-primary.xml.gz | gunzip > fedora39.xml
+```
+
+Actual testing,
+
+```
+docker run -v ~/opensuse:/root/opensuse --rm -it fedora:latest
+dnf -y install opam
+opam init -y --bare
+opam switch create fedora --empty
+opam repository add fedora40 --kind=local opensuse/fedora40
+OPAMJOBS=1 opam install nano -y
+```
+
