@@ -1,10 +1,9 @@
 type distribution = {
   name : string;
+  repomd : string;
   prefix : string;
   url : string;
   file : string;
-  build : string list;
-  remove : string list;
 }
 
 let distributions =
@@ -12,29 +11,26 @@ let distributions =
     ( "tumbleweed",
       {
         name = "tumbleweed";
+        repomd = "repodata/repomd.xml";
         prefix = "";
         url = "http://download.opensuse.org/tumbleweed/repo/oss";
         file = "tumbleweed-primary.xml";
-        build = [ "/usr/bin/zypper"; "n"; "install" ];
-        remove = [ "/usr/bin/zypper"; "-n"; "remove" ];
       } );
     ( "leap",
       {
         name = "leap";
+        repomd = "repodata/repomd.xml";
         prefix = "";
         url = "http://download.opensuse.org/distribution/leap/16.0/repo/oss";
         file = "leap-primary.xml";
-        build = [ "/usr/bin/zypper"; "-n"; "install" ];
-        remove = [ "/usr/bin/zypper"; "-n"; "remove" ];
       } );
     ( "fedora40",
       {
         name = "fedora40";
+        repomd = "repodata/repomd.xml";
         prefix = "";
         url = "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os";
         file = "fedora40.xml";
-        build = [ "/usr/bin/dnf"; "-y"; "install" ];
-        remove = [ "/usr/bin/dnf"; "-y"; "remove" ];
       } );
   ]
 
@@ -42,7 +38,42 @@ let distribution =
   try List.assoc Sys.argv.(1) distributions with
   | _ -> assert false
 
-let primary = Xml.parse_file distribution.file
+let _ = Sys.command ("curl " ^ distribution.url ^ "/" ^ distribution.repomd ^ " -o repomd.xml")
+let repo = Xml.parse_file "repomd.xml"
+
+let primary_url =
+  Xml.map
+    (fun xml ->
+      match Xml.tag xml with
+      | "data" ->
+          let ty = Xml.attrib xml "type" in
+          Some
+            (Xml.fold
+               (fun acc xml ->
+                 match Xml.tag xml with
+                 | "location" ->
+                     let href = Xml.attrib xml "href" in
+                     (ty, href)
+                 | _ -> acc)
+               ("", "") xml)
+      | _ -> None)
+    repo
+  |> List.filter_map (fun x -> x)
+  |> List.assoc "primary"
+
+let primary_filename = String.split_on_char '/' primary_url |> List.rev |> List.hd
+let primary_xml = Filename.remove_extension primary_filename
+
+let _ =
+  if not (Sys.file_exists primary_xml) then
+    let _ = Sys.command ("curl -L " ^ distribution.url ^ "/" ^ primary_url ^ " -o " ^ primary_filename) in
+    match Filename.extension primary_filename with
+    | ".gz" -> Sys.command ("gunzip " ^ primary_filename)
+    | ".zst" -> Sys.command ("unzstd " ^ primary_filename)
+    | _ -> 0
+  else 0
+
+let primary = Xml.parse_file primary_xml
 
 let version_of_string s =
   let rec loop i r = function
@@ -76,6 +107,7 @@ type details = {
   requires : entry list;
   provides : entry list;
   conflicts : entry list;
+  files : string list;
 }
 
 type rpm = {
@@ -143,56 +175,59 @@ let rpms =
                             xml
                         in
                         { acc with conflicts = lst }
+                    | "file" -> { acc with files = (Xml.children xml |> List.hd |> Xml.pcdata) :: acc.files }
                     | _ -> acc)
-                  { requires = []; provides = []; conflicts = [] } xml
+                  { requires = []; provides = []; conflicts = []; files = [] }
+                  xml
               in
               { acc with details }
           | _ -> acc)
-        { pkg = ""; arch = ""; version = []; location = ""; details = { provides = []; requires = []; conflicts = [] } }
+        { pkg = ""; arch = ""; version = []; location = ""; details = { provides = []; requires = []; conflicts = []; files = [] } }
         package)
     primary
 
-let rpms = List.filter (fun rpm -> rpm.arch = "x86_64") rpms
+let rpms = List.filter (fun rpm -> rpm.arch = "x86_64" || rpm.arch = "noarch") rpms
 let provides = Hashtbl.create 100000
 let () = List.iter (fun rpm -> List.iter (fun p -> Hashtbl.add provides p.name (p, rpm)) rpm.details.provides) rpms
 
 let tests =
   [
+    { name = "/usr/bin/less"; flags = None; ver = None };
     { name = "/bin/sh"; flags = Some "EQ"; ver = Some [ 5; 9 ] };
     { name = "libxml2.so.2()(64bit)"; flags = None; ver = None };
     { name = "libxml2.so.2(LIBXML2_2.4.30)(64bit)"; flags = None; ver = None };
     { name = "libgcc_s.so.1()(64bit)"; flags = None; ver = None };
     { name = "python3"; flags = Some "GE"; ver = Some [ 3; 6 ] };
+    { name = "file-magic"; flags = Some "EQ"; ver = Some [ 5; 45 ] };
   ]
 
 let search req =
-  Hashtbl.find_all provides req.name
-  |> List.filter_map (fun (pro, rpm) ->
-         match (req.flags, req.ver, pro.ver) with
-         | None, _, _
-         | Some _, _, None ->
-             Some (req, rpm)
-         | Some "EQ", Some reqver, Some prover -> if compare prover reqver = 0 then Some (req, rpm) else None
-         | Some "GE", Some reqver, Some prover -> if compare prover reqver >= 0 then Some (req, rpm) else None
-         | Some "GT", Some reqver, Some prover -> if compare prover reqver > 0 then Some (req, rpm) else None
-         | Some "LE", Some reqver, Some prover -> if compare prover reqver <= 0 then Some (req, rpm) else None
-         | Some "LT", Some reqver, Some prover -> if compare prover reqver < 0 then Some (req, rpm) else None
-         | Some v, _, _ ->
-             print_endline v;
-             assert false)
+  let matches =
+    Hashtbl.find_all provides req.name
+    |> List.filter_map (fun (pro, rpm) ->
+           match (req.flags, req.ver, pro.ver) with
+           | None, _, _
+           | Some _, _, None ->
+               Some (req, rpm)
+           | Some "EQ", Some reqver, Some prover -> if compare prover reqver = 0 then Some (req, rpm) else None
+           | Some "GE", Some reqver, Some prover -> if compare prover reqver >= 0 then Some (req, rpm) else None
+           | Some "GT", Some reqver, Some prover -> if compare prover reqver > 0 then Some (req, rpm) else None
+           | Some "LE", Some reqver, Some prover -> if compare prover reqver <= 0 then Some (req, rpm) else None
+           | Some "LT", Some reqver, Some prover -> if compare prover reqver < 0 then Some (req, rpm) else None
+           | Some v, _, _ ->
+               print_endline v;
+               assert false)
+  in
+  if List.length matches = 0 then
+    List.filter
+      (fun rpm ->
+        let m = List.filter (fun file -> req.name = file) rpm.details.files in
+        List.length m > 0)
+      rpms
+    |> List.map (fun rpm -> ({ name = req.name; flags = None; ver = None }, rpm))
+  else matches
 
-let latest_rpm r =
-  if List.length r > 0 then
-    Some
-      (List.sort
-         (fun (_, p1) (_, p2) ->
-           let c = -compare p1.version p2.version in
-           if c <> 0 then c else compare p1.pkg p2.pkg)
-         r
-      |> List.hd)
-  else None
-
-let filter_entries = List.filter (fun e -> String.get e.name 0 <> '/')
+let latest_rpm r = if List.length r > 0 then Some (List.sort (fun (_, p1) (_, p2) -> compare p1.pkg p2.pkg) r |> List.hd) else None
 let () = List.map search tests |> List.flatten |> List.iter (fun (req, rpm) -> Printf.printf "%s @ %s\n" rpm.pkg (string_of_constraints req))
 let r = List.filter_map (fun req -> search req |> latest_rpm) tests |> List.sort_uniq compare
 let () = List.iter (fun (req, rpm) -> Printf.printf "%s @ %s\n" rpm.pkg (string_of_constraints req)) r
@@ -218,16 +253,14 @@ let () =
       let () = Printf.fprintf oc "opam-version: \"2.0\"\n" in
       let () = Printf.fprintf oc "build: [\n" in
       let rpm_filename = String.split_on_char '/' rpm.location |> List.rev |> List.hd in
-      let () = Printf.fprintf oc "  [%s]\n" (distribution.build @ [ rpm_filename ] |> quoted_string) in
+      let () = Printf.fprintf oc "  [%s]\n" ([ "/usr/bin/rpm"; "-U"; "--replacepkgs"; rpm_filename ] |> quoted_string) in
       let () = Printf.fprintf oc "]\n" in
       let () = Printf.fprintf oc "remove: [\n" in
-      let () = Printf.fprintf oc "  [%s]\n" (distribution.remove @ [ rpm_filename ] |> quoted_string) in
+      let () = Printf.fprintf oc "  [%s]\n" ([ "/usr/bin/rpm"; "-e"; rpm_filename ] |> quoted_string) in
       let () = Printf.fprintf oc "]\n" in
       let () = Printf.fprintf oc "depends: [\n" in
       let pkgs =
-        filter_entries rpm.details.requires
-        |> List.filter_map (fun e -> search e |> latest_rpm)
-        |> List.sort_uniq (fun (_, rpm1) (_, rpm2) -> compare rpm1.pkg rpm2.pkg)
+        rpm.details.requires |> List.filter_map (fun e -> search e |> latest_rpm) |> List.sort_uniq (fun (_, rpm1) (_, rpm2) -> compare rpm1.pkg rpm2.pkg)
       in
       let () =
         List.iter
