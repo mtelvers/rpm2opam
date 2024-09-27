@@ -1,24 +1,21 @@
 type distribution = {
   name : string;
-  repomd : string;
   prefix : string;
   url : string;
 }
 
 let distributions =
   [
-    ("tumbleweed", { name = "tumbleweed"; repomd = "repodata/repomd.xml"; prefix = ""; url = "http://download.opensuse.org/tumbleweed/repo/oss" });
-    ("leap", { name = "leap"; repomd = "repodata/repomd.xml"; prefix = ""; url = "http://download.opensuse.org/distribution/leap/16.0/repo/oss" });
-    ( "fedora40",
-      { name = "fedora40"; repomd = "repodata/repomd.xml"; prefix = ""; url = "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os" }
-    );
+    ("tumbleweed", { name = "tumbleweed"; prefix = ""; url = "http://download.opensuse.org/tumbleweed/repo/oss" });
+    ("leap", { name = "leap"; prefix = ""; url = "http://download.opensuse.org/distribution/leap/16.0/repo/oss" });
+    ("fedora40", { name = "fedora40"; prefix = ""; url = "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os" });
   ]
 
 let distribution =
   try List.assoc Sys.argv.(1) distributions with
   | _ -> assert false
 
-let _ = Sys.command ("curl " ^ distribution.url ^ "/" ^ distribution.repomd ^ " -o repomd.xml")
+let _ = Sys.command ("curl " ^ distribution.url ^ "/repodata/repomd.xml -o repomd.xml")
 let repo = Xml.parse_file "repomd.xml"
 
 let primary_url =
@@ -93,11 +90,6 @@ let flag_of_string = function
   | "LE" -> `LE
   | _ -> assert false
 
-type con = {
-  flags : flag;
-  ver : int list;
-}
-
 let symbol_of_flag = function
   | `EQ -> "="
   | `GE -> ">="
@@ -105,6 +97,11 @@ let symbol_of_flag = function
   | `LT -> "<"
   | `LE -> "<="
   | _ -> assert false
+
+type con = {
+  flags : flag;
+  ver : int list;
+}
 
 let string_of_constraints = function
   | Some c -> "{" ^ symbol_of_flag c.flags ^ " \"" ^ string_of_version c.ver ^ "\"}"
@@ -132,6 +129,16 @@ type rpm = {
 
 let dots_to_dashes s = String.split_on_char '.' s |> String.concat "-"
 
+let list_of_xml_entry =
+  Xml.map (fun xml ->
+      let a = Xml.attribs xml in
+      let con =
+        match List.assoc_opt "flags" a with
+        | Some flags -> Some { flags = flag_of_string flags; ver = List.assoc "ver" a |> version_of_string }
+        | None -> None
+      in
+      { name = List.assoc "name" a; con })
+
 let rpms =
   Xml.map
     (fun package ->
@@ -147,48 +154,9 @@ let rpms =
                 Xml.fold
                   (fun acc xml ->
                     match Xml.tag xml with
-                    | "rpm:requires" ->
-                        let lst =
-                          Xml.map
-                            (fun xml ->
-                              let a = Xml.attribs xml in
-                              let con =
-                                match List.assoc_opt "flags" a with
-                                | Some flags -> Some { flags = flag_of_string flags; ver = List.assoc "ver" a |> version_of_string }
-                                | None -> None
-                              in
-                              { name = List.assoc "name" a; con })
-                            xml
-                        in
-                        { acc with requires = lst }
-                    | "rpm:provides" ->
-                        let lst =
-                          Xml.map
-                            (fun xml ->
-                              let a = Xml.attribs xml in
-                              let con =
-                                match List.assoc_opt "flags" a with
-                                | Some flags -> Some { flags = flag_of_string flags; ver = List.assoc "ver" a |> version_of_string }
-                                | None -> None
-                              in
-                              { name = List.assoc "name" a; con })
-                            xml
-                        in
-                        { acc with provides = lst }
-                    | "rpm:conflicts" ->
-                        let lst =
-                          Xml.map
-                            (fun xml ->
-                              let a = Xml.attribs xml in
-                              let con =
-                                match List.assoc_opt "flags" a with
-                                | Some flags -> Some { flags = flag_of_string flags; ver = List.assoc "ver" a |> version_of_string }
-                                | None -> None
-                              in
-                              { name = List.assoc "name" a; con })
-                            xml
-                        in
-                        { acc with conflicts = lst }
+                    | "rpm:requires" -> { acc with requires = list_of_xml_entry xml }
+                    | "rpm:provides" -> { acc with provides = list_of_xml_entry xml }
+                    | "rpm:conflicts" -> { acc with conflicts = list_of_xml_entry xml }
                     | "file" -> { acc with files = (Xml.children xml |> List.hd |> Xml.pcdata) :: acc.files }
                     | _ -> acc)
                   { requires = []; provides = []; conflicts = []; files = [] }
