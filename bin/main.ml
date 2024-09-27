@@ -129,15 +129,26 @@ type rpm = {
 
 let dots_to_dashes s = String.split_on_char '.' s |> String.concat "-"
 
+let remove_brackets s =
+  let len = String.length s in
+  String.sub s 1 (len - 2)
+
 let list_of_xml_entry =
   Xml.map (fun xml ->
       let a = Xml.attribs xml in
+      let name = List.assoc "name" a in
+      let name =
+        if String.get name 0 = '(' then
+          let words = remove_brackets name |> String.split_on_char ' ' in
+          List.nth words 0
+        else name
+      in
       let con =
         match List.assoc_opt "flags" a with
-        | Some flags -> Some { flags = flag_of_string flags; ver = List.assoc "ver" a |> version_of_string }
+        | Some flags -> Some { flags = flag_of_string flags; ver = (List.assoc "epoch" a |> int_of_string) :: (List.assoc "ver" a |> version_of_string) }
         | None -> None
       in
-      { name = List.assoc "name" a; con })
+      { name; con })
 
 let rpms =
   Xml.map
@@ -183,7 +194,7 @@ let tests =
     { name = "file-magic"; con = Some { flags = `EQ; ver = [ 5; 45 ] } };
   ]
 
-let search req =
+let search2 req =
   let matches =
     Hashtbl.find_all provides req.name
     |> List.filter_map (fun (pro, rpm) ->
@@ -208,10 +219,23 @@ let search req =
     |> List.map (fun rpm -> ({ name = req.name; con = None }, rpm))
   else matches
 
-let latest_rpm r = if List.length r > 0 then Some (List.sort (fun (_, p1) (_, p2) -> compare p1.pkg p2.pkg) r |> List.hd) else None
+let search req =
+  let () = Printf.printf "Searching for %s: " req.name in
+  let answer = search2 req in
+  if List.length answer = 0 then
+    let () = Printf.printf "Not found\n" in
+    []
+  else
+    let () = List.iter (fun (_, rpm) -> Printf.printf "%s," rpm.pkg) answer in
+    let () = Printf.printf "\n" in
+    answer
+
+let latest_rpm r = if List.length r > 0 then Some (List.sort (fun (_, p1) (_, p2) -> compare p1.pkg p2.pkg) r |> List.hd) else assert false
+(*
 let () = List.map search tests |> List.flatten |> List.iter (fun (req, rpm) -> Printf.printf "%s @ %s\n" rpm.pkg (string_of_constraints req.con))
 let r = List.filter_map (fun req -> search req |> latest_rpm) tests |> List.sort_uniq compare
 let () = List.iter (fun (req, rpm) -> Printf.printf "%s @ %s\n" rpm.pkg (string_of_constraints req.con)) r
+       *)
 
 let mkdir_p s =
   String.split_on_char '/' s
@@ -223,6 +247,9 @@ let mkdir_p s =
        ""
 
 let quoted_string lst = List.map (fun x -> "\"" ^ x ^ "\"") lst |> String.concat " "
+
+(* opam can't handle a package called "opam" *)
+let rpms = List.filter (fun rpm -> rpm.pkg <> "opam") rpms
 
 let () =
   List.iter
@@ -239,10 +266,11 @@ let () =
       let () = Printf.fprintf oc "remove: [\n" in
       let () = Printf.fprintf oc "  [%s]\n" ([ "/usr/bin/rpm"; "-e"; rpm_filename ] |> quoted_string) in
       let () = Printf.fprintf oc "]\n" in
+      let pkgs = List.map (search) rpm.details.requires in
+      let met = List.fold_left (fun acc l -> acc && List.length l > 0) true pkgs in
+      let () = if not met then Printf.fprintf oc "flags: [ avoid-version ]\n" in
+      let pkgs = List.map (search) rpm.details.requires |> List.flatten |> List.sort_uniq (fun (_, rpm1) (_, rpm2) -> compare rpm1.pkg rpm2.pkg) in
       let () = Printf.fprintf oc "depends: [\n" in
-      let pkgs =
-        rpm.details.requires |> List.filter_map (fun e -> search e |> latest_rpm) |> List.sort_uniq (fun (_, rpm1) (_, rpm2) -> compare rpm1.pkg rpm2.pkg)
-      in
       let () =
         List.iter
           (fun (req, p) ->

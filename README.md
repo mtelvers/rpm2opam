@@ -1,3 +1,13 @@
+# Notes
+
+RPM packages have a lists of things they provide and things which they require.
+
+The application creates a mapping between the requirements and the provisions.
+- Not all RPMs have satisifiable dependencies
+- Some requirements are met by multiple providers
+- Some packages are obsoleted by others.  e.g. requesting `antic` gives you `flint`
+
+# Usage
 
 Run this project with
 ```
@@ -54,10 +64,10 @@ OPAMJOBS=1 opam install nano git vim -y
 
 
 ```
-docker run -v ~/fedora:/root/fedora --rm -it fedora:latest
+docker run -v ~/opensuse/fedora40:/root/fedora --rm -it fedora:latest
 bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"
-opam init -k local --bare --bypass-checks -a -y /root/leap
-opam switch create leap --empty
+opam init -k local --bare --bypass-checks -a -y /root/fedora
+opam switch create fedora --empty
 OPAMJOBS=1 opam install nano git vim -y
 ```
 
