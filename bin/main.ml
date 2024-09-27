@@ -3,35 +3,15 @@ type distribution = {
   repomd : string;
   prefix : string;
   url : string;
-  file : string;
 }
 
 let distributions =
   [
-    ( "tumbleweed",
-      {
-        name = "tumbleweed";
-        repomd = "repodata/repomd.xml";
-        prefix = "";
-        url = "http://download.opensuse.org/tumbleweed/repo/oss";
-        file = "tumbleweed-primary.xml";
-      } );
-    ( "leap",
-      {
-        name = "leap";
-        repomd = "repodata/repomd.xml";
-        prefix = "";
-        url = "http://download.opensuse.org/distribution/leap/16.0/repo/oss";
-        file = "leap-primary.xml";
-      } );
+    ("tumbleweed", { name = "tumbleweed"; repomd = "repodata/repomd.xml"; prefix = ""; url = "http://download.opensuse.org/tumbleweed/repo/oss" });
+    ("leap", { name = "leap"; repomd = "repodata/repomd.xml"; prefix = ""; url = "http://download.opensuse.org/distribution/leap/16.0/repo/oss" });
     ( "fedora40",
-      {
-        name = "fedora40";
-        repomd = "repodata/repomd.xml";
-        prefix = "";
-        url = "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os";
-        file = "fedora40.xml";
-      } );
+      { name = "fedora40"; repomd = "repodata/repomd.xml"; prefix = ""; url = "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os" }
+    );
   ]
 
 let distribution =
@@ -97,10 +77,42 @@ let version_of_string s =
 
 let string_of_version v = List.map string_of_int v |> String.concat "."
 
+type flag =
+  [ `EQ
+  | `GE
+  | `GT
+  | `LT
+  | `LE
+  ]
+
+let flag_of_string = function
+  | "EQ" -> `EQ
+  | "GE" -> `GE
+  | "GT" -> `GT
+  | "LT" -> `LT
+  | "LE" -> `LE
+  | _ -> assert false
+
+type con = {
+  flags : flag;
+  ver : int list;
+}
+
+let symbol_of_flag = function
+  | `EQ -> "="
+  | `GE -> ">="
+  | `GT -> ">"
+  | `LT -> "<"
+  | `LE -> "<="
+  | _ -> assert false
+
+let string_of_constraints = function
+  | Some c -> "{" ^ symbol_of_flag c.flags ^ " \"" ^ string_of_version c.ver ^ "\"}"
+  | _ -> ""
+
 type entry = {
   name : string;
-  flags : string option;
-  ver : int list option;
+  con : con option;
 }
 
 type details = {
@@ -117,19 +129,6 @@ type rpm = {
   location : string;
   details : details;
 }
-
-let symbol_of_flag = function
-  | "EQ" -> "="
-  | "GE" -> ">="
-  | "GT" -> ">"
-  | "LT" -> "<"
-  | "LE" -> "<="
-  | _ -> assert false
-
-let string_of_constraints e =
-  match (e.flags, e.ver) with
-  | Some flags, Some ver -> "{" ^ symbol_of_flag flags ^ " \"" ^ string_of_version ver ^ "\"}"
-  | _, _ -> ""
 
 let dots_to_dashes s = String.split_on_char '.' s |> String.concat "-"
 
@@ -153,7 +152,12 @@ let rpms =
                           Xml.map
                             (fun xml ->
                               let a = Xml.attribs xml in
-                              { name = List.assoc "name" a; flags = List.assoc_opt "flags" a; ver = List.assoc_opt "ver" a |> Option.map version_of_string })
+                              let con =
+                                match List.assoc_opt "flags" a with
+                                | Some flags -> Some { flags = flag_of_string flags; ver = List.assoc "ver" a |> version_of_string }
+                                | None -> None
+                              in
+                              { name = List.assoc "name" a; con })
                             xml
                         in
                         { acc with requires = lst }
@@ -162,7 +166,12 @@ let rpms =
                           Xml.map
                             (fun xml ->
                               let a = Xml.attribs xml in
-                              { name = List.assoc "name" a; flags = List.assoc_opt "flags" a; ver = List.assoc_opt "ver" a |> Option.map version_of_string })
+                              let con =
+                                match List.assoc_opt "flags" a with
+                                | Some flags -> Some { flags = flag_of_string flags; ver = List.assoc "ver" a |> version_of_string }
+                                | None -> None
+                              in
+                              { name = List.assoc "name" a; con })
                             xml
                         in
                         { acc with provides = lst }
@@ -171,7 +180,12 @@ let rpms =
                           Xml.map
                             (fun xml ->
                               let a = Xml.attribs xml in
-                              { name = List.assoc "name" a; flags = List.assoc_opt "flags" a; ver = List.assoc_opt "ver" a |> Option.map version_of_string })
+                              let con =
+                                match List.assoc_opt "flags" a with
+                                | Some flags -> Some { flags = flag_of_string flags; ver = List.assoc "ver" a |> version_of_string }
+                                | None -> None
+                              in
+                              { name = List.assoc "name" a; con })
                             xml
                         in
                         { acc with conflicts = lst }
@@ -192,31 +206,30 @@ let () = List.iter (fun rpm -> List.iter (fun p -> Hashtbl.add provides p.name (
 
 let tests =
   [
-    { name = "/usr/bin/less"; flags = None; ver = None };
-    { name = "/bin/sh"; flags = Some "EQ"; ver = Some [ 5; 9 ] };
-    { name = "libxml2.so.2()(64bit)"; flags = None; ver = None };
-    { name = "libxml2.so.2(LIBXML2_2.4.30)(64bit)"; flags = None; ver = None };
-    { name = "libgcc_s.so.1()(64bit)"; flags = None; ver = None };
-    { name = "python3"; flags = Some "GE"; ver = Some [ 3; 6 ] };
-    { name = "file-magic"; flags = Some "EQ"; ver = Some [ 5; 45 ] };
+    { name = "/usr/bin/less"; con = None };
+    { name = "/bin/sh"; con = Some { flags = `EQ; ver = [ 5; 9 ] } };
+    { name = "libxml2.so.2()(64bit)"; con = None };
+    { name = "libxml2.so.2(LIBXML2_2.4.30)(64bit)"; con = None };
+    { name = "libgcc_s.so.1()(64bit)"; con = None };
+    { name = "python3"; con = Some { flags = `GE; ver = [ 3; 6 ] } };
+    { name = "file-magic"; con = Some { flags = `EQ; ver = [ 5; 45 ] } };
   ]
 
 let search req =
   let matches =
     Hashtbl.find_all provides req.name
     |> List.filter_map (fun (pro, rpm) ->
-           match (req.flags, req.ver, pro.ver) with
-           | None, _, _
-           | Some _, _, None ->
+           match (req.con, pro.con) with
+           | None, _
+           | _, None ->
                Some (req, rpm)
-           | Some "EQ", Some reqver, Some prover -> if compare prover reqver = 0 then Some (req, rpm) else None
-           | Some "GE", Some reqver, Some prover -> if compare prover reqver >= 0 then Some (req, rpm) else None
-           | Some "GT", Some reqver, Some prover -> if compare prover reqver > 0 then Some (req, rpm) else None
-           | Some "LE", Some reqver, Some prover -> if compare prover reqver <= 0 then Some (req, rpm) else None
-           | Some "LT", Some reqver, Some prover -> if compare prover reqver < 0 then Some (req, rpm) else None
-           | Some v, _, _ ->
-               print_endline v;
-               assert false)
+           | Some reqc, Some proc -> (
+               match reqc.flags with
+               | `EQ -> if compare proc.ver reqc.ver = 0 then Some (req, rpm) else None
+               | `GE -> if compare proc.ver reqc.ver >= 0 then Some (req, rpm) else None
+               | `GT -> if compare proc.ver reqc.ver > 0 then Some (req, rpm) else None
+               | `LE -> if compare proc.ver reqc.ver <= 0 then Some (req, rpm) else None
+               | `LT -> if compare proc.ver reqc.ver < 0 then Some (req, rpm) else None))
   in
   if List.length matches = 0 then
     List.filter
@@ -224,13 +237,13 @@ let search req =
         let m = List.filter (fun file -> req.name = file) rpm.details.files in
         List.length m > 0)
       rpms
-    |> List.map (fun rpm -> ({ name = req.name; flags = None; ver = None }, rpm))
+    |> List.map (fun rpm -> ({ name = req.name; con = None }, rpm))
   else matches
 
 let latest_rpm r = if List.length r > 0 then Some (List.sort (fun (_, p1) (_, p2) -> compare p1.pkg p2.pkg) r |> List.hd) else None
-let () = List.map search tests |> List.flatten |> List.iter (fun (req, rpm) -> Printf.printf "%s @ %s\n" rpm.pkg (string_of_constraints req))
+let () = List.map search tests |> List.flatten |> List.iter (fun (req, rpm) -> Printf.printf "%s @ %s\n" rpm.pkg (string_of_constraints req.con))
 let r = List.filter_map (fun req -> search req |> latest_rpm) tests |> List.sort_uniq compare
-let () = List.iter (fun (req, rpm) -> Printf.printf "%s @ %s\n" rpm.pkg (string_of_constraints req)) r
+let () = List.iter (fun (req, rpm) -> Printf.printf "%s @ %s\n" rpm.pkg (string_of_constraints req.con)) r
 
 let mkdir_p s =
   String.split_on_char '/' s
@@ -265,7 +278,8 @@ let () =
       let () =
         List.iter
           (fun (req, p) ->
-            Printf.fprintf oc "  \"%s%s\" %s\n" distribution.prefix p.pkg (string_of_constraints { name = ""; flags = req.flags; ver = Some p.version }))
+            Printf.fprintf oc "  \"%s%s\" %s\n" distribution.prefix p.pkg
+              (string_of_constraints (req.con |> Option.map (fun { flags; _ } -> { flags; ver = p.version }))))
           pkgs
       in
       let () = Printf.fprintf oc "]\n" in
