@@ -31,24 +31,42 @@ Initially I ran into problems as there was a package called `opam` which caused 
 
 # Actual testing
 
-Create a `Dockerfile`.  This use the Docker image created by the base
-image builder to provide us with a precompiled `opam` executable.
-
 ```
-FROM ocurrent/opam-staging:opensuse-tumbleweed-opam-amd64 AS build
-
-FROM opensuse/tumbleweed:latest
-COPY --from=build /usr/bin/opam-2.2 /usr/bin/opam
-```
-
-docker build . -tag opensuse/tumbleweed:opam
-
-```
-docker run -v ~/opensuse/tumbleweed:/root/tumbleweed --rm -it opensuse/tumbleweed:opam
+docker run -v ~/opensuse/tumbleweed:/root/tumbleweed --rm -it opensuse/tumbleweed
+curl -L https://github.com/ocaml/opam/releases/download/2.2.1/opam-2.2.1-x86_64-linux -o /usr/bin/opam
+chmod +x /usr/bin/opam
 opam init -k local --bare --bypass-checks -a -y /root/tumbleweed
 opam switch create tumbleweed --empty
 OPAMJOBS=1 opam install nano git vim -y
 ```
+
+rpm -qa --qf "%{NAME} %{VERSION}\n" | sort | {
+echo 'opam-version: "2.0"' > ~/.opam/tumbleweed/.opam-switch/switch-state
+echo 'installed: [' >> ~/.opam/tumbleweed/.opam-switch/switch-state
+mkdir -p ~/.opam/tumbleweed/.opam-switch/install
+while read -r pkg ver ; do
+  ver="${ver%%+*}"
+  ver="${ver%%~*}"
+  ver="${ver%%-*}"
+  echo installing $pkg $ver
+  ls ~/.opam/repo/default/packages/$pkg/$pkg.$ver/opam
+  if [ -f ~/.opam/repo/default/packages/$pkg/$pkg.$ver/opam ] ; then
+    mkdir -p ~/.opam/tumbleweed/.opam-switch/packages/$pkg.$ver
+    cp ~/.opam/repo/default/packages/$pkg/$pkg.$ver/opam ~/.opam/tumbleweed/.opam-switch/packages/$pkg.$ver/opam
+    cp ~/.opam/repo/default/packages/$pkg/$pkg.$ver/opam ~/.opam/tumbleweed/.opam-switch/install/$pkg.changes
+    echo '"'$pkg.$ver'"' >> ~/.opam/tumbleweed/.opam-switch/switch-state
+    else
+    echo skipped
+  fi
+  done
+  echo ']' >> ~/.opam/tumbleweed/.opam-switch/switch-state
+}
+
+e.g.
+
+mkdir ~/.opam/tumbleweed/.opam-switch/packages/glibc-locale-base.2.40
+cp ~/tumbleweed/packages/glibc-locale-base/glibc-locale-base.2.40/opam ~/.opam/tumbleweed/.opam-switch/packages/glibc-locale-base.2.40/opam
+echo 'opam-version: "2.0"' > .opam-switch/install/glibc-locale-base.changes
 
 # Leap
 

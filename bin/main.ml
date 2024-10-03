@@ -1,14 +1,15 @@
 type distribution = {
   name : string;
+  image : string;
   prefix : string;
   url : string;
 }
 
 let distributions =
   [
-    ("tumbleweed", { name = "tumbleweed"; prefix = ""; url = "http://download.opensuse.org/tumbleweed/repo/oss" });
-    ("leap", { name = "leap"; prefix = ""; url = "http://download.opensuse.org/distribution/leap/16.0/repo/oss" });
-    ("fedora40", { name = "fedora40"; prefix = ""; url = "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os" });
+    ("tumbleweed", { name = "tumbleweed"; image = "opensuse/tumbleweed"; prefix = ""; url = "http://download.opensuse.org/tumbleweed/repo/oss" });
+    ("leap", { name = "leap"; image = "opensuse/leap"; prefix = ""; url = "http://download.opensuse.org/distribution/leap/16.0/repo/oss" });
+    ("fedora", { name = "fedora"; image = "fedora"; prefix = ""; url = "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os" });
   ]
 
 let distribution =
@@ -52,6 +53,18 @@ let _ =
 
 let primary = Xml.parse_file primary_xml
 
+let read file =
+  let ic = open_in file in
+  let rec loop input lines =
+    try
+      let line = input_line input in
+      loop input (line :: lines)
+    with End_of_file ->
+      close_in input;
+      lines
+  in
+  loop ic []
+
 let version_of_string s =
   let rec loop i r = function
     | [] -> i :: r
@@ -71,6 +84,11 @@ let version_of_string s =
         | _ -> i :: r)
   in
   List.init (String.length s) (String.get s) |> loop 0 [] |> List.rev
+
+let prepopulated_rpms_file = Filename.temp_file "rpm" ""
+let _ = Sys.command (Filename.quote_command "docker" ~stdout:prepopulated_rpms_file ["run"; "--rm"; distribution.image; "rpm"; "-qa"; "--qf"; "%{NAME} %{VERSION}\\n"])
+let prepopulated_rpms = read prepopulated_rpms_file |> List.map (fun s -> let l = String.split_on_char ' ' s in (List.nth l 0, version_of_string (List.nth l 1)))
+let () = Sys.remove prepopulated_rpms_file
 
 let string_of_version v = List.map string_of_int v |> String.concat "."
 
@@ -194,7 +212,7 @@ let tests =
     { name = "file-magic"; con = Some { flags = `EQ; ver = [ 5; 45 ] } };
   ]
 
-let search2 req =
+let search req =
   let matches =
     Hashtbl.find_all provides req.name
     |> List.filter_map (fun (pro, rpm) ->
@@ -219,9 +237,9 @@ let search2 req =
     |> List.map (fun rpm -> ({ name = req.name; con = None }, rpm))
   else matches
 
-let search req =
+let search2 req =
   let () = Printf.printf "Searching for %s: " req.name in
-  let answer = search2 req in
+  let answer = search req in
   if List.length answer = 0 then
     let () = Printf.printf "Not found\n" in
     []
@@ -259,26 +277,43 @@ let () =
       let _ = mkdir_p dir in
       let oc = open_out (dir ^ "/opam") in
       let () = Printf.fprintf oc "opam-version: \"2.0\"\n" in
-      let () = Printf.fprintf oc "build: [\n" in
       let rpm_filename = String.split_on_char '/' rpm.location |> List.rev |> List.hd in
-      let () = Printf.fprintf oc "  [%s]\n" ([ "/usr/bin/rpm"; "-U"; "--replacepkgs"; rpm_filename ] |> quoted_string) in
-      let () = Printf.fprintf oc "]\n" in
-      let () = Printf.fprintf oc "remove: [\n" in
-      let () = Printf.fprintf oc "  [%s]\n" ([ "/usr/bin/rpm"; "-e"; rpm_filename ] |> quoted_string) in
-      let () = Printf.fprintf oc "]\n" in
-      let pkgs = List.map (search) rpm.details.requires in
-      let met = List.fold_left (fun acc l -> acc && List.length l > 0) true pkgs in
-      let () = if not met then Printf.fprintf oc "flags: [ avoid-version ]\n" in
-      let pkgs = List.map (search) rpm.details.requires |> List.flatten |> List.sort_uniq (fun (_, rpm1) (_, rpm2) -> compare rpm1.pkg rpm2.pkg) in
-      let () = Printf.fprintf oc "depends: [\n" in
-      let () =
-        List.iter
-          (fun (req, p) ->
-            Printf.fprintf oc "  \"%s%s\" %s\n" distribution.prefix p.pkg
-              (string_of_constraints (req.con |> Option.map (fun { flags; _ } -> { flags; ver = p.version }))))
+      let () = Printf.fprintf oc "build: [%s]\n" ([ "/usr/bin/rpm"; "-U"; "--replacepkgs"; rpm_filename ] |> quoted_string) in
+      let () = Printf.fprintf oc "remove: [%s]\n" ([ "/usr/bin/rpm"; "-e"; rpm_filename ] |> quoted_string) in
+      let rec all_deps met res l =
+        let pkgs = List.map search l in
+        let met = met && List.fold_left (fun acc l -> acc && List.length l > 0) true pkgs in
+        let pkgs =
           pkgs
+          |> List.filter_map (fun l ->
+                 let l = List.sort (fun (_, rpm1) (_, rpm2) -> compare rpm1.pkg rpm2.pkg) l in
+                 if List.length l > 0 then Some (List.hd l) else None)
+        in
+        let pkgs = pkgs |> List.append res |> List.sort_uniq (fun (_, rpm1) (_, rpm2) -> compare rpm1.pkg rpm2.pkg) in
+        (*
+        let () = List.iter (fun (entry, rpm) -> Printf.printf "satisfy %s with %s\n" entry.name rpm.pkg) pkgs in
+           *)
+        (met, pkgs)
+        (*
+        if List.length pkgs = List.length res then (met, pkgs) else all_deps met pkgs (List.fold_left (fun acc (_, rpm) -> acc @ rpm.details.requires) [] pkgs)
+           *)
       in
-      let () = Printf.fprintf oc "]\n" in
+      let met, pkgs = all_deps true [] rpm.details.requires in
+      let () = if not met then Printf.fprintf oc "flags: [ avoid-version ]\n" in
+      let print_deps () =
+          let () = Printf.fprintf oc "depends: [\n" in
+          let () =
+            List.iter
+              (fun (req, p) ->
+                Printf.fprintf oc "  \"%s%s\" %s\n" distribution.prefix p.pkg
+                  (string_of_constraints (req.con |> Option.map (fun { flags; _ } -> { flags; ver = p.version }))))
+              pkgs
+          in
+          Printf.fprintf oc "]\n" in
+      let () = match List.assoc_opt rpm.pkg prepopulated_rpms with
+        | None -> print_deps ()
+        | Some ver when (compare rpm.version ver <> 0) -> print_deps ()
+        | Some _ -> () in
       (*
       let () =
         if List.length rpm.details.conflicts > 0 then
