@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Net-CalDAVTalk-0.12-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-CalDAVTalk-0.12-21.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Data-ICal" 
+  "perl-Data-ICal-TimeZone" {>= "1.23"}
+  "perl-DateTime-Format-ICal" {>= "0.9"}
+  "perl-DateTime-Format-ISO8601" {>= "0.8"}
+  "perl-DateTime-TimeZone" 
+  "perl-Digest-SHA" 
+  "perl-JSON-XS" 
+  "perl-MIME-Base64" 
+  "perl-MIME-Types" 
+  "perl-Net-DAVTalk" {>= "0.2"}
+  "perl-Text-LevenshteinXS" {>= "0.3"}
+  "perl-Text-VCardFast" {>= "0.6"}
+  "perl-URI" 
+  "perl-XML-Spice" 
+  "perl-base" 
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "perl-Net-CalDAVTalk-0.12-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Net-CalDAVTalk-0.12-21.fc40.noarch.rpm"
+}

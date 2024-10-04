@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libpeas-devel-2.0.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpeas-devel-2.0.2-1.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.74"}
+  "libpeas" {= "2.0.2"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libpeas-devel-2.0.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libpeas-devel-2.0.2-1.fc40.x86_64.rpm"
+}

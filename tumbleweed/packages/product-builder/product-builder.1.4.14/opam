@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "product-builder-1.4.14-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "product-builder-1.4.14-1.4.x86_64.rpm"]
+depends: [
+  "bash" 
+  "build" 
+  "checkmedia" 
+  "inst-source-utils" 
+  "libxslt-tools" 
+  "mkisofs" 
+  "perl" {>= "5.38.2"}
+  "perl-Class-Singleton" 
+  "perl-Config-IniFiles" {>= "2.49"}
+  "perl-File-Slurp" 
+  "perl-JSON" 
+  "perl-Readonly" 
+  "perl-XML-LibXML" 
+  "perl-XML-SAX" 
+  "perl-base" 
+  "perl-libwww-perl" 
+  "product-builder-plugin-Tumbleweed" 
+  "syslinux" 
+]
+extra-source "product-builder-1.4.14-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/product-builder-1.4.14-1.4.x86_64.rpm"
+}

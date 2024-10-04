@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nomacs-lang-3.19.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nomacs-lang-3.19.1-1.1.noarch.rpm"]
+depends: [
+  "nomacs" {= "3.19.1"}
+]
+extra-source "nomacs-lang-3.19.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nomacs-lang-3.19.1-1.1.noarch.rpm"
+}

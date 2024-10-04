@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pinball-0.3.4-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pinball-0.3.4-16.fc40.x86_64.rpm"]
+depends: [
+  "SDL_image" 
+  "SDL_mixer" 
+  "fluid-soundfont-lite-patches" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libICE" 
+  "libSM" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libstdc++" 
+  "libtool-ltdl" 
+  "mesa-libGLU" 
+  "opengl-games-utils" 
+  "sdl12-compat" 
+]
+extra-source "pinball-0.3.4-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pinball-0.3.4-16.fc40.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "netbeans-javaparser-6.8-21.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netbeans-javaparser-6.8-21.11.noarch.rpm"]
+depends: [
+  "java-11-openj9" {>= "1.8"}
+  "javapackages-tools" 
+]
+extra-source "netbeans-javaparser-6.8-21.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/netbeans-javaparser-6.8-21.11.noarch.rpm"
+}

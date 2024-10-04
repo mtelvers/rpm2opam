@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "musique-lang-1.12-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "musique-lang-1.12-2.1.noarch.rpm"]
+depends: [
+  "musique" {= "1.12"}
+]
+extra-source "musique-lang-1.12-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/musique-lang-1.12-2.1.noarch.rpm"
+}

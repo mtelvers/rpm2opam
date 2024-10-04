@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "upmpdcli-uprcl-1.8.16-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "upmpdcli-uprcl-1.8.16-1.1.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "python311-mutagen" 
+  "python311-requests" 
+  "python311-waitress" 
+  "upmpdcli" {= "1.8.16"}
+]
+extra-source "upmpdcli-uprcl-1.8.16-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/upmpdcli-uprcl-1.8.16-1.1.noarch.rpm"
+}

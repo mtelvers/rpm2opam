@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-configparser2+default-devel-2.1.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-configparser2+default-devel-2.1.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-configparser2-devel" {= "2.1.0"}
+]
+extra-source "rust-configparser2+default-devel-2.1.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-configparser2+default-devel-2.1.0-2.fc40.noarch.rpm"
+}

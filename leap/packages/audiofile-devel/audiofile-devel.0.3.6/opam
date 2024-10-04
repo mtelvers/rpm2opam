@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "audiofile-devel-0.3.6-lp160.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "audiofile-devel-0.3.6-lp160.1.2.x86_64.rpm"]
+depends: [
+  "libaudiofile1" {= "0.3.6"}
+  "pkgconf-pkg-config" 
+]
+extra-source "audiofile-devel-0.3.6-lp160.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/audiofile-devel-0.3.6-lp160.1.2.x86_64.rpm"
+}

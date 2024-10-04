@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "root-geom-webviewer-6.30.04-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "root-geom-webviewer-6.30.04-2.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "root-core" 
+  "root-geom" 
+  "root-graf3d-csg" 
+  "root-gui-webdisplay" 
+  "root-io" 
+]
+extra-source "root-geom-webviewer-6.30.04-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/root-geom-webviewer-6.30.04-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "backintime-1.4.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "backintime-1.4.3-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "cron" 
+  "libnotify-tools" 
+  "openssh" 
+  "pkexec" 
+  "python311" {>= "3.8"}
+  "python311-dbus-python" 
+  "python311-keyring" 
+  "python311-packaging" 
+  "rsync" 
+]
+extra-source "backintime-1.4.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/backintime-1.4.3-1.1.noarch.rpm"
+}

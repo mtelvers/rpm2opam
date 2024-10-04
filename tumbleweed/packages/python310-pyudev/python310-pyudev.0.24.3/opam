@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pyudev-0.24.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pyudev-0.24.3-1.1.noarch.rpm"]
+depends: [
+  "libudev-mini1" 
+  "python310-base" {= "3.10"}
+]
+extra-source "python310-pyudev-0.24.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-pyudev-0.24.3-1.1.noarch.rpm"
+}

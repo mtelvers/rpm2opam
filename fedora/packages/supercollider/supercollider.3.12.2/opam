@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "supercollider-3.12.2-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "supercollider-3.12.2-12.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "avahi-libs" 
+  "boost-filesystem" 
+  "boost-program-options" 
+  "boost-thread" 
+  "emacs" 
+  "fftw-libs-single" 
+  "glibc" 
+  "jack-audio-connection-kit" 
+  "libX11" 
+  "libgcc" 
+  "libsndfile" 
+  "libstdc++" 
+  "qjackctl" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtsvg" 
+  "qt5-qtwebchannel" 
+  "qt5-qtwebengine" 
+  "qt5-qtwebsockets" 
+  "readline" 
+  "systemd-libs" 
+  "yaml-cpp" 
+]
+extra-source "supercollider-3.12.2-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/supercollider-3.12.2-12.fc40.x86_64.rpm"
+}

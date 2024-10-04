@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libicu-devel-74.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libicu-devel-74.2-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libicu" {= "74.2"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libicu-devel-74.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libicu-devel-74.2-1.fc40.x86_64.rpm"
+}

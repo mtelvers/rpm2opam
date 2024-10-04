@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-openapi-spec-validator-0.7.1-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-openapi-spec-validator-0.7.1-1.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-base" {= "3.10"}
+  "python310-jsonschema" 
+  "python310-jsonschema-path" 
+  "python310-lazy-object-proxy" 
+  "python310-openapi-schema-validator" 
+  "update-alternatives" 
+]
+extra-source "python310-openapi-spec-validator-0.7.1-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-openapi-spec-validator-0.7.1-1.3.noarch.rpm"
+}

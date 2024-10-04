@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-gobject-3.48.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-gobject-3.48.1-1.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "cairo-gobject" 
+  "glib2" 
+  "glibc" 
+  "python3" {= "3.12"}
+  "python3-cairo" {>= "1.16.0"}
+  "python3-gobject-base" {= "3.48.1"}
+]
+extra-source "python3-gobject-3.48.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-gobject-3.48.1-1.fc40.x86_64.rpm"
+}

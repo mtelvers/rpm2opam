@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "latex2html-2023.2-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "latex2html-2023.2-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "netpbm-progs" 
+  "perl-Carp" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-File-Copy" 
+  "perl-Getopt-Long" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Sys-Hostname" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.3.0"}
+  "perl-vars" 
+  "poppler-utils" 
+  "tex-preview" 
+  "texlive-collection-latexrecommended" 
+  "texlive-dvips" 
+  "texlive-url" 
+]
+extra-source "latex2html-2023.2-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/latex2html-2023.2-4.fc40.noarch.rpm"
+}

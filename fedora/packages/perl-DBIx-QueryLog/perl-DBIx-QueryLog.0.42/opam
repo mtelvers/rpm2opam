@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-DBIx-QueryLog-0.42-17.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DBIx-QueryLog-0.42-17.fc40.noarch.rpm"]
+depends: [
+  "perl-DBI" 
+  "perl-Data-Dumper" 
+  "perl-Term-ANSIColor" 
+  "perl-Text-ASCIITable" 
+  "perl-Time-HiRes" 
+  "perl-constant" 
+  "perl-libs" {>= "5.8.0"}
+]
+extra-source "perl-DBIx-QueryLog-0.42-17.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-DBIx-QueryLog-0.42-17.fc40.noarch.rpm"
+}

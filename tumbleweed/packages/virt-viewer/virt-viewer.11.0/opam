@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "virt-viewer-11.0-5.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "virt-viewer-11.0-5.3.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libgtk-vnc-2_0-0" 
+  "libgvnc-1_0-0" 
+  "libpango-1_0-0" 
+  "libspice-client-glib-2_0-8" 
+  "libspice-client-gtk-3_0-5" 
+  "libvirt-glib-1_0-0" 
+  "libvirt-libs" 
+  "libvte-2_91-0" 
+  "libxml2-2" 
+  "netcat-openbsd" 
+]
+extra-source "virt-viewer-11.0-5.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/virt-viewer-11.0-5.3.x86_64.rpm"
+}

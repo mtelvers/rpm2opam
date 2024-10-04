@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "klevernotes-lang-1.0.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "klevernotes-lang-1.0.0-1.1.noarch.rpm"]
+depends: [
+  "klevernotes" {= "1.0.0"}
+]
+extra-source "klevernotes-lang-1.0.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/klevernotes-lang-1.0.0-1.1.noarch.rpm"
+}

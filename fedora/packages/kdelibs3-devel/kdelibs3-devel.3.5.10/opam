@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kdelibs3-devel-3.5.10-128.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kdelibs3-devel-3.5.10-128.fc40.x86_64.rpm"]
+depends: [
+  "arts-devel" 
+  "bash" 
+  "gcc-c++" 
+  "glibc" 
+  "kdelibs3" 
+  "kdnssd-avahi-devel" 
+  "libstdc++" 
+  "openssl-devel" 
+  "qt3" 
+  "qt3-devel" 
+]
+extra-source "kdelibs3-devel-3.5.10-128.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kdelibs3-devel-3.5.10-128.fc40.x86_64.rpm"
+}

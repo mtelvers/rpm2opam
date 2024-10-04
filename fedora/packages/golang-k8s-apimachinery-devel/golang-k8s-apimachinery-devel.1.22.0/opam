@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-k8s-apimachinery-devel-1.22.0-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-k8s-apimachinery-devel-1.22.0-8.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-k8s-klog-2-devel" 
+  "compat-golang-sigs-k8s-structured-merge-diff-4-devel" 
+  "go-filesystem" 
+  "golang-github-davecgh-spew-devel" 
+  "golang-github-evanphx-json-patch-devel" 
+  "golang-github-gogo-protobuf-devel" 
+  "golang-github-google-cmp-devel" 
+  "golang-github-google-gofuzz-devel" 
+  "golang-github-google-uuid-devel" 
+  "golang-github-googleapis-gnostic-devel" 
+  "golang-github-json-iterator-devel" 
+  "golang-github-moby-spdystream-devel" 
+  "golang-github-modern-reflect2-devel" 
+  "golang-github-mxk-flowrate-devel" 
+  "golang-github-protobuf-devel" 
+  "golang-github-spf13-pflag-devel" 
+  "golang-gopkg-inf-0-devel" 
+  "golang-k8s-kube-openapi-devel" 
+  "golang-sigs-k8s-yaml-devel" 
+  "golang-x-net-devel" 
+]
+extra-source "golang-k8s-apimachinery-devel-1.22.0-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-k8s-apimachinery-devel-1.22.0-8.fc40.noarch.rpm"
+}

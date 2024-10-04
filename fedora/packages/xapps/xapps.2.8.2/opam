@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xapps-2.8.2-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xapps-2.8.2-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cairo" 
+  "cairo-gobject" 
+  "fpaste" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libX11" 
+  "libdbusmenu-gtk3" 
+  "libgcc" 
+  "libgnomekbd" 
+  "pango" 
+  "python3" 
+  "python3-xapps-overrides" {= "2.8.2"}
+  "xdg-utils" 
+  "xorg-x11-xinit" 
+]
+extra-source "xapps-2.8.2-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xapps-2.8.2-2.fc40.x86_64.rpm"
+}

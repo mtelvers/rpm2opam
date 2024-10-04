@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "eekboard-1.0.8-11.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eekboard-1.0.8-11.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libXtst6" 
+  "libatspi0" 
+  "libcairo2" 
+  "libcroco-0_6-3" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+  "libxklavier16" 
+]
+extra-source "eekboard-1.0.8-11.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/eekboard-1.0.8-11.3.x86_64.rpm"
+}

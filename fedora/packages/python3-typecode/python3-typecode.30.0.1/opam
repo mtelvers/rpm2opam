@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-typecode-30.0.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-typecode-30.0.1-1.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-binaryornot" 
+  "python3-commoncode" {>= "30.2"}
+  "python3-pdfminer" {>= "20200101"}
+  "python3-plugincode" {>= "30"}
+  "python3-pygments" 
+]
+extra-source "python3-typecode-30.0.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-typecode-30.0.1-1.fc40.noarch.rpm"
+}

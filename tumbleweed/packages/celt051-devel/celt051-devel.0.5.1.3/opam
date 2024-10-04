@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "celt051-devel-0.5.1.3-10.35.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "celt051-devel-0.5.1.3-10.35.x86_64.rpm"]
+depends: [
+  "libcelt051-0" {= "0.5.1.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "celt051-devel-0.5.1.3-10.35.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/celt051-devel-0.5.1.3-10.35.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pydantic-2.8.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pydantic-2.8.0-1.1.noarch.rpm"]
+depends: [
+  "python312-annotated-types" {>= "0.4.0"}
+  "python312-base" {= "3.12"}
+  "python312-pydantic-core" {= "2.20.0"}
+  "python312-typing_extensions" {>= "4.6.1"}
+]
+extra-source "python312-pydantic-2.8.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pydantic-2.8.0-1.1.noarch.rpm"
+}

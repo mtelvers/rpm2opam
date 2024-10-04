@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "onedrive-2.4.25-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "onedrive-2.4.25-6.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "ldc-libs" 
+  "libcurl" 
+  "libgcc" 
+  "sqlite-libs" 
+  "systemd" 
+]
+extra-source "onedrive-2.4.25-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/onedrive-2.4.25-6.fc40.x86_64.rpm"
+}

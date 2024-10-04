@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-pager-prof-0.1.1.0-1.23.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-pager-prof-0.1.1.0-1.23.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-conduit-extra-prof" 
+  "ghc-conduit-prof" 
+  "ghc-directory-prof" 
+  "ghc-pager-devel" {= "0.1.1.0"}
+  "ghc-process-prof" 
+  "ghc-resourcet-prof" 
+  "ghc-safe-prof" 
+  "ghc-terminfo-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unix-prof" 
+]
+extra-source "ghc-pager-prof-0.1.1.0-1.23.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-pager-prof-0.1.1.0-1.23.x86_64.rpm"
+}

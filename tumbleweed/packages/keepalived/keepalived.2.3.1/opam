@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "keepalived-2.3.1+git59.b6681f98-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "keepalived-2.3.1+git59.b6681f98-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libmagic1" 
+  "libmnl0" 
+  "libnftnl11" 
+  "libnl3-200" 
+  "libopenssl3" 
+  "libpcre2-8-0" 
+  "libsnmp40" 
+  "libsystemd0" 
+  "shadow" 
+]
+extra-source "keepalived-2.3.1+git59.b6681f98-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/keepalived-2.3.1+git59.b6681f98-1.1.x86_64.rpm"
+}

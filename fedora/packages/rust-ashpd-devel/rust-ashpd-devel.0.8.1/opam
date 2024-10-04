@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ashpd-devel-0.8.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ashpd-devel-0.8.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.75"}
+  "rust-enumflags2+default-devel" 
+  "rust-futures-channel+default-devel" 
+  "rust-futures-util+default-devel" 
+  "rust-rand-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde_repr+default-devel" 
+  "rust-url+default-devel" 
+  "rust-url+serde-devel" 
+  "rust-zbus+url-devel" 
+  "rust-zbus-devel" 
+]
+extra-source "rust-ashpd-devel-0.8.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ashpd-devel-0.8.1-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libfplll-devel-5.4.5-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfplll-devel-5.4.5-3.fc40.x86_64.rpm"]
+depends: [
+  "cr-marcstevens-snippets-thread_pool-devel" 
+  "libfplll" 
+  "pkgconf-pkg-config" 
+  "qd-devel" 
+]
+extra-source "libfplll-devel-5.4.5-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libfplll-devel-5.4.5-3.fc40.x86_64.rpm"
+}

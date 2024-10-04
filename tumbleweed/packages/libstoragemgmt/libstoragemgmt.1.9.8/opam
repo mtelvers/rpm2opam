@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libstoragemgmt-1.9.8-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libstoragemgmt-1.9.8-3.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libconfig11" 
+  "libsqlite3-0" 
+  "libstoragemgmt1" 
+  "python3-libstoragemgmt" 
+  "python311-base" 
+  "python311-six" 
+  "systemd" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "libstoragemgmt-1.9.8-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libstoragemgmt-1.9.8-3.2.x86_64.rpm"
+}

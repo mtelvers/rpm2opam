@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sgml-skel-0.7.2-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sgml-skel-0.7.2-1.7.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-gawk" 
+  "coreutils" 
+  "findutils" 
+  "libxml2-tools" 
+  "libxslt-tools" 
+  "sed" 
+]
+extra-source "sgml-skel-0.7.2-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sgml-skel-0.7.2-1.7.noarch.rpm"
+}

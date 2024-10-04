@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-webauthn-2.2.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-webauthn-2.2.0-1.1.noarch.rpm"]
+depends: [
+  "python312-asn1crypto" {>= "1.4.0"}
+  "python312-base" {= "3.12"}
+  "python312-cbor2" {>= "5.4.6"}
+  "python312-cryptography" {>= "41.0.7"}
+  "python312-pyOpenSSL" {>= "23.3.0"}
+]
+extra-source "python312-webauthn-2.2.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-webauthn-2.2.0-1.1.noarch.rpm"
+}

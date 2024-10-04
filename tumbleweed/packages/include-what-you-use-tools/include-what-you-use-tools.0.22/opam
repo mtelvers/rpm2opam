@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "include-what-you-use-tools-0.22-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "include-what-you-use-tools-0.22-1.1.noarch.rpm"]
+depends: [
+  "include-what-you-use" {= "0.22"}
+  "python311-base" 
+]
+extra-source "include-what-you-use-tools-0.22-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/include-what-you-use-tools-0.22-1.1.noarch.rpm"
+}

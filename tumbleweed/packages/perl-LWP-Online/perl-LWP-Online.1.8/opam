@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-LWP-Online-1.08-12.27.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-LWP-Online-1.08-12.27.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-URI" {>= "1.35"}
+  "perl-libwww-perl" {>= "5.805"}
+]
+extra-source "perl-LWP-Online-1.08-12.27.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-LWP-Online-1.08-12.27.noarch.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "podman-5.2.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "podman-5.2.3-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "catatonit" {>= "0.1.7"}
+  "conmon" {>= "2.0.24"}
+  "crun" 
+  "fuse-overlayfs" 
+  "glibc" 
+  "iptables" 
+  "kernel-debug" 
+  "libcontainers-common" {>= "20230214"}
+  "libgpgme11" 
+  "libseccomp2" 
+  "netavark" 
+  "passt" 
+  "timezone" 
+]
+extra-source "podman-5.2.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/podman-5.2.3-1.1.x86_64.rpm"
+}

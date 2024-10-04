@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-premailer-3.10.0-1.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-premailer-3.10.0-1.10.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-cachetools" 
+  "python312-cssselect" 
+  "python312-cssutils" 
+  "python312-lxml" 
+  "python312-requests" 
+]
+extra-source "python312-premailer-3.10.0-1.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-premailer-3.10.0-1.10.noarch.rpm"
+}

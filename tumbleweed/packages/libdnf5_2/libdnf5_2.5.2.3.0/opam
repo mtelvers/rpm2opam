@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libdnf5_2-5.2.3.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdnf5_2-5.2.3.0-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libbz2-1" 
+  "libfmt10" 
+  "libgcc_s1" 
+  "libjson-c5" 
+  "liblzma5" 
+  "libmodulemd2" 
+  "librepo0" 
+  "libsqlite3-0" {>= "3.35.0"}
+  "libstdc++6" 
+  "libxml2-2" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+  "rpm" 
+]
+extra-source "libdnf5_2-5.2.3.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libdnf5_2-5.2.3.0-1.1.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocproxy-1.60-11.20190728gitc98f06d.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocproxy-1.60-11.20190728gitc98f06d.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libevent" 
+  "openconnect" 
+]
+extra-source "ocproxy-1.60-11.20190728gitc98f06d.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocproxy-1.60-11.20190728gitc98f06d.fc40.x86_64.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "aircrack-ng-1.7-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "aircrack-ng-1.7-7.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "hwloc-libs" 
+  "libgcc" 
+  "libnl3" 
+  "libpcap" 
+  "libstdc++" 
+  "openssl-libs" 
+  "pcre" 
+  "sqlite-libs" 
+  "util-linux" 
+  "zlib-ng-compat" 
+]
+extra-source "aircrack-ng-1.7-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/aircrack-ng-1.7-7.fc40.x86_64.rpm"
+}

@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tycho-1.6.0-17.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tycho-1.6.0-17.3.noarch.rpm"]
+depends: [
+  "apache-commons-compress" 
+  "apache-commons-exec" 
+  "apache-commons-lang3" 
+  "bash-sh" 
+  "decentxml" 
+  "ecj" {>= "4.7.3"}
+  "eclipse-platform" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-archiver" 
+  "maven-clean-plugin" 
+  "maven-lib" 
+  "maven-local" 
+  "maven-source-plugin" 
+  "maven-surefire" 
+  "objectweb-asm" 
+  "plexus-archiver" 
+  "plexus-compiler" 
+  "plexus-containers-component-annotations" 
+  "plexus-utils" 
+  "plexus-xml" 
+  "slf4j" 
+  "tesla-polyglot-common" 
+  "xmvn-api" 
+  "xmvn-core" 
+  "xmvn-minimal" {>= "3"}
+]
+extra-source "tycho-1.6.0-17.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tycho-1.6.0-17.3.noarch.rpm"
+}

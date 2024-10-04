@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "drraw-2.2-0.32.b2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "drraw-2.2-0.32.b2.fc40.noarch.rpm"]
+depends: [
+  "mod_perl" 
+  "perl-CGI" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Find" 
+  "perl-POSIX" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-vars" 
+  "rrdtool-perl" 
+]
+extra-source "drraw-2.2-0.32.b2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/drraw-2.2-0.32.b2.fc40.noarch.rpm"
+}

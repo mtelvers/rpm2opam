@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Term-Clui-1.76-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Term-Clui-1.76-14.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" 
+  "perl-Term-ReadLine-Gnu" 
+  "perl-Term-Size" 
+  "perl-TermReadKey" 
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "perl-Term-Clui-1.76-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Term-Clui-1.76-14.fc40.noarch.rpm"
+}

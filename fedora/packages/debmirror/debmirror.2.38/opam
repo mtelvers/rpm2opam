@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "debmirror-2.38-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "debmirror-2.38-3.fc40.noarch.rpm"]
+depends: [
+  "bzip2" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "gnupg2" 
+  "gzip" 
+  "patch" 
+  "perl-Digest-MD5" 
+  "perl-Digest-SHA" 
+  "perl-Fcntl" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-IO-Compress" 
+  "perl-LockFile-Simple" 
+  "perl-PathTools" 
+  "perl-Storable" 
+  "perl-if" 
+  "perl-interpreter" 
+  "perl-libnet" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+  "rsync" 
+]
+extra-source "debmirror-2.38-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/debmirror-2.38-3.fc40.noarch.rpm"
+}

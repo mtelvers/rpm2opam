@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pagure-loadjson-5.14.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pagure-loadjson-5.14.1-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "pagure" {= "5.14.1"}
+  "systemd" 
+]
+extra-source "pagure-loadjson-5.14.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pagure-loadjson-5.14.1-2.1.noarch.rpm"
+}

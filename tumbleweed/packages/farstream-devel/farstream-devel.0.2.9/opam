@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "farstream-devel-0.2.9+5-2.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "farstream-devel-0.2.9+5-2.7.x86_64.rpm"]
+depends: [
+  "gstreamer-devel" 
+  "libfarstream-0_2-5" {= "0.2.9"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Farstream-0_2" {= "0.2.9"}
+]
+extra-source "farstream-devel-0.2.9+5-2.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/farstream-devel-0.2.9+5-2.7.x86_64.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "syslog-ng-grpc-4.6.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "syslog-ng-grpc-4.6.0-3.fc40.x86_64.rpm"]
+depends: [
+  "abseil-cpp" 
+  "c-ares" 
+  "glibc" 
+  "grpc" 
+  "grpc-cpp" 
+  "libgcc" 
+  "libstdc++" 
+  "openssl-libs" 
+  "protobuf" 
+  "re2" 
+  "syslog-ng" 
+  "zlib-ng-compat" 
+]
+extra-source "syslog-ng-grpc-4.6.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/syslog-ng-grpc-4.6.0-3.fc40.x86_64.rpm"
+}

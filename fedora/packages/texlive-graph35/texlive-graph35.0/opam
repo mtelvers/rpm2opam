@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-graph35-svn65138-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-graph35-svn65138-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-kpathsea" 
+]
+extra-source "texlive-graph35-svn65138-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-graph35-svn65138-71.fc40.noarch.rpm"
+}

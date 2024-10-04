@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qtspell-qt6-1.0.1-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qtspell-qt6-1.0.1-10.fc40.x86_64.rpm"]
+depends: [
+  "enchant2" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+]
+extra-source "qtspell-qt6-1.0.1-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qtspell-qt6-1.0.1-10.fc40.x86_64.rpm"
+}

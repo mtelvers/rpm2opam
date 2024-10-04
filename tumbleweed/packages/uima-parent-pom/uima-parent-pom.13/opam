@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "uima-parent-pom-13-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "uima-parent-pom-13-1.1.noarch.rpm"]
+depends: [
+  "apache-parent" 
+  "build-helper-maven-plugin" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "uima-parent-pom-13-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/uima-parent-pom-13-1.1.noarch.rpm"
+}

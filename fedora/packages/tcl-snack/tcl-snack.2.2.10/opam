@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tcl-snack-2.2.10-59.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tcl-snack-2.2.10-59.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "glibc" 
+  "libX11" 
+  "libogg" 
+  "libvorbis" 
+  "mpg123-libs" 
+  "tcl" {= "8.6"}
+]
+extra-source "tcl-snack-2.2.10-59.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tcl-snack-2.2.10-59.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-hgettext-prof-0.1.40.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hgettext-prof-0.1.40.1-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-Cabal-prof" 
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+  "ghc-hgettext-devel" {= "0.1.40.1"}
+  "ghc-process-prof" 
+  "ghc-setlocale-prof" 
+]
+extra-source "ghc-hgettext-prof-0.1.40.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-hgettext-prof-0.1.40.1-6.fc40.x86_64.rpm"
+}

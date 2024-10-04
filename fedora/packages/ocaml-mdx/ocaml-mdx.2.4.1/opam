@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-mdx-2.4.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-mdx-2.4.1-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libzstd" 
+  "ocaml" {= "2125"}
+  "ocaml-astring" {= "4"}
+  "ocaml-camlp-streams" {= "0"}
+  "ocaml-compiler-libs" {= "0"}
+  "ocaml-csexp" {= "1"}
+  "ocaml-findlib" {= "0"}
+  "ocaml-fmt" {= "49"}
+  "ocaml-logs" {= "0"}
+  "ocaml-re" {= "0"}
+  "ocaml-result" {= "0"}
+  "ocaml-runtime" 
+  "ocaml-version" {= "0"}
+]
+extra-source "ocaml-mdx-2.4.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-mdx-2.4.1-1.fc40.x86_64.rpm"
+}

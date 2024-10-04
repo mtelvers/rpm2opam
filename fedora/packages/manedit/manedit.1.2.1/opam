@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "manedit-1.2.1-32.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "manedit-1.2.1-32.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bzip2-libs" 
+  "glib" 
+  "glibc" 
+  "gtk+" 
+  "libX11" 
+  "libXext" 
+  "libXi" 
+  "libgcc" 
+  "libstdc++" 
+  "man-db" 
+  "xorg-x11-fonts-ISO8859-15-100dpi" 
+  "zlib-ng-compat" 
+]
+extra-source "manedit-1.2.1-32.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/manedit-1.2.1-32.fc40.x86_64.rpm"
+}

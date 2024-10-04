@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ruby-build-dependencies-mri-20240917-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ruby-build-dependencies-mri-20240917-1.1.noarch.rpm"]
+depends: [
+  "automake" 
+  "bison" 
+  "gcc" 
+  "gdbm-devel" 
+  "gperf" 
+  "graphviz" 
+  "libffi-devel" 
+  "libjpeg62-devel" 
+  "libopenssl-devel" 
+  "libyaml-devel" 
+  "readline-devel" 
+  "tk-devel" 
+]
+extra-source "ruby-build-dependencies-mri-20240917-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ruby-build-dependencies-mri-20240917-1.1.noarch.rpm"
+}

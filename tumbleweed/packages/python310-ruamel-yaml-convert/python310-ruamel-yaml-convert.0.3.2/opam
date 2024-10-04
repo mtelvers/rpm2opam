@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-ruamel.yaml.convert-0.3.2-1.22.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-ruamel.yaml.convert-0.3.2-1.22.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-python-dateutil" 
+  "python310-ruamel-base" {>= "1.0.0"}
+  "python310-ruamel-yaml" 
+]
+extra-source "python310-ruamel.yaml.convert-0.3.2-1.22.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-ruamel.yaml.convert-0.3.2-1.22.noarch.rpm"
+}

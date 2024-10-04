@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pyramid-debugtoolbar-4.12.1-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pyramid-debugtoolbar-4.12.1-1.2.noarch.rpm"]
+depends: [
+  "python311-Pygments" 
+  "python311-base" {= "3.11"}
+  "python311-pyramid" {>= "1.4"}
+  "python311-pyramid-mako" {>= "0.3.1"}
+]
+extra-source "python311-pyramid-debugtoolbar-4.12.1-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pyramid-debugtoolbar-4.12.1-1.2.noarch.rpm"
+}

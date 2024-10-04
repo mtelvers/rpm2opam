@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pacemaker-cluster-libs-2.1.7-4.fc40.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pacemaker-cluster-libs-2.1.7-4.fc40.2.x86_64.rpm"]
+depends: [
+  "bzip2-libs" 
+  "corosynclib" 
+  "dbus-libs" 
+  "glib2" 
+  "glibc" 
+  "gnutls" 
+  "libqb" 
+  "libuuid" 
+  "libxml2" 
+  "libxslt" 
+  "pacemaker-libs" 
+  "pam-libs" 
+]
+extra-source "pacemaker-cluster-libs-2.1.7-4.fc40.2.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pacemaker-cluster-libs-2.1.7-4.fc40.2.x86_64.rpm"
+}

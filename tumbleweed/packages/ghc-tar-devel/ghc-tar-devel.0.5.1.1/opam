@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-tar-devel-0.5.1.1-15.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-tar-devel-0.5.1.1-15.6.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-array-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-deepseq-devel" 
+  "ghc-directory-devel" 
+  "ghc-filepath-devel" 
+  "ghc-tar" {= "0.5.1.1"}
+  "ghc-time-devel" 
+]
+extra-source "ghc-tar-devel-0.5.1.1-15.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-tar-devel-0.5.1.1-15.6.x86_64.rpm"
+}

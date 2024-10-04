@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-surefire-3.2.5-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-surefire-3.2.5-2.1.noarch.rpm"]
+depends: [
+  "apache-commons-compress" 
+  "apache-commons-io" 
+  "apache-commons-lang3" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "maven-common-artifact-filters" 
+  "maven-resolver-util" 
+  "maven-shared-utils" 
+  "plexus-languages" 
+  "procps" 
+]
+extra-source "maven-surefire-3.2.5-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-surefire-3.2.5-2.1.noarch.rpm"
+}

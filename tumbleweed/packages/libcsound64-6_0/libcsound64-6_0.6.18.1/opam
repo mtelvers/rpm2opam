@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcsound64-6_0-6.18.1-5.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcsound64-6_0-6.18.1-5.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libsndfile1" 
+]
+extra-source "libcsound64-6_0-6.18.1-5.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcsound64-6_0-6.18.1-5.1.x86_64.rpm"
+}

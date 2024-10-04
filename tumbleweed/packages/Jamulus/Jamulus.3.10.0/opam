@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "Jamulus-3.10.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Jamulus-3.10.0-1.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "jack" {>= "1.9.21"}
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Multimedia5" 
+  "libQt5Network5" 
+  "libQt5Widgets5" 
+  "libQt5Xml5" 
+  "libgcc_s1" 
+  "libjack0" 
+  "libopus0" 
+  "libstdc++6" 
+  "shadow" 
+  "system-user-nobody" 
+  "systemd" 
+]
+extra-source "Jamulus-3.10.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/Jamulus-3.10.0-1.3.x86_64.rpm"
+}

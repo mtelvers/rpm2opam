@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-hint-prof-0.9.0.7-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hint-prof-0.9.0.7-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-directory-prof" 
+  "ghc-exceptions-prof" 
+  "ghc-filepath-prof" 
+  "ghc-ghc-boot-prof" 
+  "ghc-ghc-paths-prof" 
+  "ghc-ghc-prof" 
+  "ghc-hint-devel" {= "0.9.0.7"}
+  "ghc-random-prof" 
+  "ghc-temporary-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unix-prof" 
+]
+extra-source "ghc-hint-prof-0.9.0.7-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-hint-prof-0.9.0.7-3.fc40.x86_64.rpm"
+}

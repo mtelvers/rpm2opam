@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-HTML-Mason-1.60-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTML-Mason-1.60-4.fc40.noarch.rpm"]
+depends: [
+  "httpd-filesystem" 
+  "mod_perl" 
+  "perl-CGI" {>= "2.46"}
+  "perl-CHI" {>= "0.21"}
+  "perl-Cache-Cache" {>= "1"}
+  "perl-Class-Container" {>= "0.7"}
+  "perl-Data-Dumper" 
+  "perl-Exception-Class" {>= "1.15"}
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-Getopt-Std" 
+  "perl-HTML-Parser" 
+  "perl-IO" 
+  "perl-Log-Any" 
+  "perl-Params-Validate" {>= "0.70"}
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" {>= "1.1"}
+  "perl-Test-Simple" 
+  "perl-YAML" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-vars" 
+]
+extra-source "perl-HTML-Mason-1.60-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-HTML-Mason-1.60-4.fc40.noarch.rpm"
+}

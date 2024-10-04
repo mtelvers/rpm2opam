@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-IO-Async-0.802-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-IO-Async-0.802-6.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Encode" {>= "2.11"}
+  "perl-Errno" 
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-File-stat" 
+  "perl-Future" {>= "0.26"}
+  "perl-Future-IO" 
+  "perl-Heap" 
+  "perl-IO" 
+  "perl-IO-Socket-IP" 
+  "perl-POSIX" 
+  "perl-Scalar-List-Utils" 
+  "perl-Sereal-Decoder" 
+  "perl-Sereal-Encoder" 
+  "perl-Socket" {>= "2.7"}
+  "perl-Struct-Dumb" 
+  "perl-Test-Fatal" 
+  "perl-Test-Metrics-Any" 
+  "perl-Test-Refcount" 
+  "perl-Test-Simple" 
+  "perl-Time-HiRes" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-threads" 
+]
+extra-source "perl-IO-Async-0.802-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-IO-Async-0.802-6.fc40.noarch.rpm"
+}

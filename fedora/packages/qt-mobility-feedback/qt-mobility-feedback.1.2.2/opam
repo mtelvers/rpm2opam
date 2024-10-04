@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qt-mobility-feedback-1.2.2-0.47.20140317git169da60c.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qt-mobility-feedback-1.2.2-0.47.20140317git169da60c.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "qt" 
+  "qt-mobility-common" {= "1.2.2"}
+  "qt-mobility-multimediakit" 
+  "qt-x11" 
+]
+extra-source "qt-mobility-feedback-1.2.2-0.47.20140317git169da60c.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qt-mobility-feedback-1.2.2-0.47.20140317git169da60c.fc40.x86_64.rpm"
+}

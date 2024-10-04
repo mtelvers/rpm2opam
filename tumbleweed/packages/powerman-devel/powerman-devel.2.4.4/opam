@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "powerman-devel-2.4.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "powerman-devel-2.4.4-1.1.x86_64.rpm"]
+depends: [
+  "libpowerman0" {= "2.4.4"}
+  "pkgconf-pkg-config" 
+]
+extra-source "powerman-devel-2.4.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/powerman-devel-2.4.4-1.1.x86_64.rpm"
+}

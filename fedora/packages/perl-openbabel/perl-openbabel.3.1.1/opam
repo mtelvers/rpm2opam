@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-openbabel-3.1.1-24.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-openbabel-3.1.1-24.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "openbabel-libs" 
+  "perl-DynaLoader" 
+  "perl-Exporter" 
+  "perl-base" 
+  "perl-libs" 
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-openbabel-3.1.1-24.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-openbabel-3.1.1-24.fc40.x86_64.rpm"
+}

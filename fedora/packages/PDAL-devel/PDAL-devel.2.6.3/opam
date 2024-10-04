@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "PDAL-devel-2.6.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "PDAL-devel-2.6.3-1.fc40.x86_64.rpm"]
+depends: [
+  "PDAL-libs" {= "2.6.3"}
+  "bash" 
+  "cmake-filesystem" 
+  "gdal-devel" 
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "PDAL-devel-2.6.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/PDAL-devel-2.6.3-1.fc40.x86_64.rpm"
+}

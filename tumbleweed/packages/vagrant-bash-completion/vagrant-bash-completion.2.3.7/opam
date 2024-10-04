@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vagrant-bash-completion-2.3.7-8.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vagrant-bash-completion-2.3.7-8.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-completion" 
+  "vagrant" {= "2.3.7"}
+]
+extra-source "vagrant-bash-completion-2.3.7-8.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/vagrant-bash-completion-2.3.7-8.1.noarch.rpm"
+}

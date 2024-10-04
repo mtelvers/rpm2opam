@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-gobject-base-3.46.0-6.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-gobject-base-3.46.0-6.el10.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "gobject-introspection" {>= "1.64.0"}
+  "libffi" 
+  "python3" {= "3.12"}
+  "python3-gobject-base-noarch" {= "3.46.0"}
+]
+extra-source "python3-gobject-base-3.46.0-6.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/python3-gobject-base-3.46.0-6.el10.x86_64.rpm"
+}

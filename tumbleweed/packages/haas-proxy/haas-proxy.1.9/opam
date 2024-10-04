@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "haas-proxy-1.9-1.21.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "haas-proxy-1.9-1.21.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-Twisted" 
+  "python311-base" {= "3.11"}
+  "python311-cachetools" 
+  "python311-pycryptodome" 
+  "python311-service_identity" 
+  "sshpass" 
+  "systemd" 
+]
+extra-source "haas-proxy-1.9-1.21.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/haas-proxy-1.9-1.21.noarch.rpm"
+}

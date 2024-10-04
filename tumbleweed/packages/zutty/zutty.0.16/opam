@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zutty-0.16-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zutty-0.16-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXmu6" 
+  "libfreetype6" 
+  "libgcc_s1" 
+  "libglvnd" 
+  "libstdc++6" 
+]
+extra-source "zutty-0.16-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/zutty-0.16-1.1.x86_64.rpm"
+}

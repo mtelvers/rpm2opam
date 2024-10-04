@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ocaml-pcre-devel-7.5.0-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-pcre-devel-7.5.0-3.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libpcre1" 
+  "ocaml" {= "8"}
+  "ocaml-pcre" {= "7.5.0"}
+  "pcre-devel" 
+]
+extra-source "ocaml-pcre-devel-7.5.0-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ocaml-pcre-devel-7.5.0-3.3.x86_64.rpm"
+}

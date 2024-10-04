@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-reflection-prof-2.1.8-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-reflection-prof-2.1.8-1.2.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-reflection-devel" {= "2.1.8"}
+  "ghc-template-haskell-prof" 
+]
+extra-source "ghc-reflection-prof-2.1.8-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-reflection-prof-2.1.8-1.2.x86_64.rpm"
+}

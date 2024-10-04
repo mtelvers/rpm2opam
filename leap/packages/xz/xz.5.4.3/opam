@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xz-5.4.3-slfo.1.1.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xz-5.4.3-slfo.1.1.11.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "liblzma5" 
+]
+extra-source "xz-5.4.3-slfo.1.1.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/xz-5.4.3-slfo.1.1.11.x86_64.rpm"
+}

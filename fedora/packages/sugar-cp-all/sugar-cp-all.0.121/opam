@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sugar-cp-all-0.121-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sugar-cp-all-0.121-1.fc40.noarch.rpm"]
+depends: [
+  "sugar" {= "0.121"}
+  "sugar-cp-background" 
+  "sugar-cp-backup" 
+  "sugar-cp-datetime" 
+  "sugar-cp-frame" 
+  "sugar-cp-keyboard" 
+  "sugar-cp-language" 
+  "sugar-cp-modemconfiguration" 
+  "sugar-cp-network" 
+  "sugar-cp-updater" 
+  "sugar-cp-webaccount" 
+]
+extra-source "sugar-cp-all-0.121-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sugar-cp-all-0.121-1.fc40.noarch.rpm"
+}

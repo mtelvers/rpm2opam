@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "policycoreutils-devel-3.6-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "policycoreutils-devel-3.6-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libselinux" 
+  "make" 
+  "policycoreutils-python-utils" {= "3.6"}
+  "python3" 
+  "python3-dnf" 
+]
+extra-source "policycoreutils-devel-3.6-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/policycoreutils-devel-3.6-3.fc40.x86_64.rpm"
+}

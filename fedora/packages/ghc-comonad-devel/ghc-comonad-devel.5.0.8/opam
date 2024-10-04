@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-comonad-devel-5.0.8-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-comonad-devel-5.0.8-12.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-comonad" {= "5.0.8"}
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-distributive-devel" 
+  "ghc-indexed-traversable-devel" 
+  "ghc-tagged-devel" 
+  "ghc-transformers-compat-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-comonad-devel-5.0.8-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-comonad-devel-5.0.8-12.fc40.x86_64.rpm"
+}

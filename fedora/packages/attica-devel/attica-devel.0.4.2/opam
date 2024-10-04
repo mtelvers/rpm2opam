@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "attica-devel-0.4.2-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "attica-devel-0.4.2-29.fc40.x86_64.rpm"]
+depends: [
+  "attica" {= "0.4.2"}
+  "pkgconf-pkg-config" 
+]
+extra-source "attica-devel-0.4.2-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/attica-devel-0.4.2-29.fc40.x86_64.rpm"
+}

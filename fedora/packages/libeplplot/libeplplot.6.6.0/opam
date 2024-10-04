@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libeplplot-6.6.0-30.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libeplplot-6.6.0-30.fc40.x86_64.rpm"]
+depends: [
+  "expat" 
+  "gd" 
+  "glibc" 
+  "libharu" 
+  "libpng" 
+  "pcre2" 
+  "zlib-ng-compat" 
+]
+extra-source "libeplplot-6.6.0-30.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libeplplot-6.6.0-30.fc40.x86_64.rpm"
+}

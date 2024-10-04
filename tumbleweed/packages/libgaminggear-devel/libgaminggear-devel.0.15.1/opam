@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgaminggear-devel-0.15.1-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgaminggear-devel-0.15.1-4.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "gtk2-devel" 
+  "libcanberra-devel" 
+  "libgaminggear0" {= "0.15.1"}
+  "libgaminggearfx0" {= "0.15.1"}
+  "libgaminggearwidget0" {= "0.15.1"}
+  "libnotify-devel" 
+  "pkgconf-pkg-config" 
+  "sqlite3-devel" 
+]
+extra-source "libgaminggear-devel-0.15.1-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgaminggear-devel-0.15.1-4.1.x86_64.rpm"
+}

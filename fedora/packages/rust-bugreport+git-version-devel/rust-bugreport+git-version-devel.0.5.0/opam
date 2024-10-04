@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-bugreport+git-version-devel-0.5.0-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-bugreport+git-version-devel-0.5.0-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bugreport-devel" {= "0.5.0"}
+  "rust-git-version+default-devel" 
+]
+extra-source "rust-bugreport+git-version-devel-0.5.0-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-bugreport+git-version-devel-0.5.0-6.fc40.noarch.rpm"
+}

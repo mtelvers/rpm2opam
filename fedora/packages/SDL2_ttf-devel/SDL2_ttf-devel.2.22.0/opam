@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "SDL2_ttf-devel-2.22.0-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "SDL2_ttf-devel-2.22.0-2.fc40.x86_64.rpm"]
+depends: [
+  "SDL2-devel" 
+  "SDL2_ttf" {= "2.22.0"}
+  "cmake-filesystem" 
+  "freetype-devel" 
+  "harfbuzz-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "SDL2_ttf-devel-2.22.0-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/SDL2_ttf-devel-2.22.0-2.fc40.x86_64.rpm"
+}

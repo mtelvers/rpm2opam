@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "guile22-2.2.7-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "guile22-2.2.7-11.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "gc" 
+  "glibc" 
+  "gmp" 
+  "libffi" 
+  "libtool-ltdl" 
+  "libunistring" 
+  "libxcrypt" 
+  "ncurses-libs" 
+  "readline" 
+]
+extra-source "guile22-2.2.7-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/guile22-2.2.7-11.fc40.x86_64.rpm"
+}

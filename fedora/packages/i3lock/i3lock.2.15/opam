@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "i3lock-2.15-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "i3lock-2.15-1.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "glibc" 
+  "libev" 
+  "libxcb" 
+  "libxkbcommon" 
+  "libxkbcommon-x11" 
+  "pam-libs" 
+  "xcb-util" 
+  "xcb-util-image" 
+  "xcb-util-xrm" 
+]
+extra-source "i3lock-2.15-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/i3lock-2.15-1.fc40.x86_64.rpm"
+}

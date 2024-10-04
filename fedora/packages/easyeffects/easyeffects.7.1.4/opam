@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "easyeffects-7.1.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "easyeffects-7.1.4-1.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "calf" 
+  "dbus-common" 
+  "fftw-libs-double" 
+  "fftw-libs-single" 
+  "glib2" 
+  "glibc" 
+  "gsl" 
+  "gtk4" 
+  "hicolor-icon-theme" 
+  "libadwaita" 
+  "libbs2b" 
+  "libebur128" 
+  "libgcc" 
+  "libsamplerate" 
+  "libsigc++30" 
+  "libsndfile" 
+  "libstdc++" 
+  "lilv-libs" 
+  "lsp-plugins-lv2" 
+  "lv2-calf-plugins" {>= "0.90.0"}
+  "lv2-mdala-plugins" 
+  "pango" 
+  "pipewire-libs" 
+  "rnnoise" 
+  "soundtouch" 
+  "speexdsp" 
+  "tbb" 
+  "zita-convolver" 
+]
+extra-source "easyeffects-7.1.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/easyeffects-7.1.4-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "atril-1.28.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "atril-1.28.0-1.1.x86_64.rpm"]
+depends: [
+  "atril-backends" {= "1.28.0"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libICE6" 
+  "libSM6" 
+  "libatk-1_0-0" 
+  "libatrildocument3" 
+  "libatrilview3" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libmate-desktop-2-17" 
+  "libsecret-1-0" 
+  "libxml2-2" 
+  "mate-desktop-gschemas" {>= "1.28"}
+]
+extra-source "atril-1.28.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/atril-1.28.0-1.1.x86_64.rpm"
+}

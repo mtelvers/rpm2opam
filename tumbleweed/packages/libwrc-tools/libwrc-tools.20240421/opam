@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libwrc-tools-20240421-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libwrc-tools-20240421-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbfio1" 
+  "libcerror1" 
+  "libclocale1" 
+  "libcnotify1" 
+  "libexe1" 
+  "libfwnt1" 
+  "libwrc1" 
+]
+extra-source "libwrc-tools-20240421-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libwrc-tools-20240421-1.1.x86_64.rpm"
+}

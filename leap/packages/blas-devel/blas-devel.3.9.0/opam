@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "blas-devel-3.9.0-slfo.1.2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "blas-devel-3.9.0-slfo.1.2.5.x86_64.rpm"]
+depends: [
+  "libblas3" {= "3.9.0"}
+]
+extra-source "blas-devel-3.9.0-slfo.1.2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/blas-devel-3.9.0-slfo.1.2.5.x86_64.rpm"
+}

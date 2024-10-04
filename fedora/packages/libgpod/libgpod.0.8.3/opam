@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libgpod-0.8.3-51.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgpod-0.8.3-51.fc40.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "libimobiledevice" 
+  "libplist" 
+  "libusb1" 
+  "libxml2" 
+  "sg3_utils-libs" 
+  "sqlite-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "libgpod-0.8.3-51.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libgpod-0.8.3-51.fc40.x86_64.rpm"
+}

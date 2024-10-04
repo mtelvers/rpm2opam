@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libexpat-devel-32bit-2.6.3-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libexpat-devel-32bit-2.6.3-2.1.x86_64.rpm"]
+depends: [
+  "libexpat-devel" {= "2.6.3"}
+  "libexpat1-32bit" {= "2.6.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libexpat-devel-32bit-2.6.3-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libexpat-devel-32bit-2.6.3-2.1.x86_64.rpm"
+}

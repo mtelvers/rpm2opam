@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-python-pptx-0.6.23-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-python-pptx-0.6.23-2.2.noarch.rpm"]
+depends: [
+  "python310-Pillow" {>= "3.3.2"}
+  "python310-XlsxWriter" {>= "0.5.7"}
+  "python310-base" {= "3.10"}
+  "python310-lxml" {>= "3.1.0"}
+]
+extra-source "python310-python-pptx-0.6.23-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-python-pptx-0.6.23-2.2.noarch.rpm"
+}

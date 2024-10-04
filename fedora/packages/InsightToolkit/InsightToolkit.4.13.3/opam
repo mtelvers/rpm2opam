@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "InsightToolkit-4.13.3-15.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "InsightToolkit-4.13.3-15.fc39.x86_64.rpm"]
+depends: [
+  "expat" 
+  "fftw-libs-double" 
+  "fftw-libs-single" 
+  "gdcm" 
+  "glibc" {>= "2.37.9000"}
+  "hdf5" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libminc" 
+  "libpng" 
+  "libstdc++" 
+  "libtiff" 
+  "vxl" 
+  "zlib-ng-compat" 
+]
+extra-source "InsightToolkit-4.13.3-15.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/InsightToolkit-4.13.3-15.fc39.x86_64.rpm"
+}

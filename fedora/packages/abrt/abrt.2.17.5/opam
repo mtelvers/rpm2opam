@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "abrt-2.17.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "abrt-2.17.5-1.fc40.x86_64.rpm"]
+depends: [
+  "abrt-libs" {= "2.17.5"}
+  "bash" 
+  "dmidecode" 
+  "glib2" 
+  "glibc" 
+  "json-c" 
+  "libgcc" 
+  "libreport" {>= "2.17.13"}
+  "libreport-plugin-systemd-journal" 
+  "libreport-plugin-ureport" 
+  "python3" 
+  "python3-abrt" {= "2.17.5"}
+  "python3-augeas" 
+  "python3-dbus" 
+  "rpm-libs" 
+  "satyr" 
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "abrt-2.17.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/abrt-2.17.5-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wslay-1.1.1-2.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wslay-1.1.1-2.13.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libnettle8" 
+  "libstdc++6" 
+  "libwslay0" 
+]
+extra-source "wslay-1.1.1-2.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/wslay-1.1.1-2.13.x86_64.rpm"
+}

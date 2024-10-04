@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pandas-html-2.2.2-7.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pandas-html-2.2.2-7.1.noarch.rpm"]
+depends: [
+  "python311-beautifulsoup4" {>= "4.11.2"}
+  "python311-html5lib" {>= "1.1"}
+  "python311-lxml" {>= "4.9.2"}
+  "python311-pandas" {= "2.2.2"}
+]
+extra-source "python311-pandas-html-2.2.2-7.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pandas-html-2.2.2-7.1.noarch.rpm"
+}

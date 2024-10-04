@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Mail-Server-IMAP4-3.008-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mail-Server-IMAP4-3.008-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Digest-MD5" 
+  "perl-Mail-Box" {>= "3"}
+  "perl-Mail-Box-IMAP4" 
+  "perl-TimeDate" 
+  "perl-base" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-Mail-Server-IMAP4-3.008-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Mail-Server-IMAP4-3.008-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "postgis-3.4.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgis-3.4.2-1.fc40.x86_64.rpm"]
+depends: [
+  "SFCGAL" 
+  "gdal-libs" 
+  "geos" 
+  "glibc" 
+  "json-c" 
+  "libgcc" 
+  "libstdc++" 
+  "libxml2" 
+  "pcre2" 
+  "perl-POSIX" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "proj" 
+  "protobuf-c" 
+]
+extra-source "postgis-3.4.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/postgis-3.4.2-1.fc40.x86_64.rpm"
+}

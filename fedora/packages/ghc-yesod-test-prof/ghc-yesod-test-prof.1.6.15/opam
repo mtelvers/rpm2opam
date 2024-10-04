@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-yesod-test-prof-1.6.15-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-yesod-test-prof-1.6.15-5.fc40.x86_64.rpm"]
+depends: [
+  "ghc-HUnit-prof" 
+  "ghc-aeson-prof" 
+  "ghc-attoparsec-prof" 
+  "ghc-base-prof" 
+  "ghc-blaze-builder-prof" 
+  "ghc-blaze-html-prof" 
+  "ghc-blaze-markup-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-case-insensitive-prof" 
+  "ghc-conduit-prof" 
+  "ghc-containers-prof" 
+  "ghc-cookie-prof" 
+  "ghc-hspec-core-prof" 
+  "ghc-html-conduit-prof" 
+  "ghc-http-types-prof" 
+  "ghc-memory-prof" 
+  "ghc-mtl-prof" 
+  "ghc-network-prof" 
+  "ghc-pretty-show-prof" 
+  "ghc-text-prof" 
+  "ghc-time-prof" 
+  "ghc-transformers-prof" 
+  "ghc-wai-extra-prof" 
+  "ghc-wai-prof" 
+  "ghc-xml-conduit-prof" 
+  "ghc-xml-types-prof" 
+  "ghc-yesod-core-prof" 
+  "ghc-yesod-test-devel" {= "1.6.15"}
+]
+extra-source "ghc-yesod-test-prof-1.6.15-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-yesod-test-prof-1.6.15-5.fc40.x86_64.rpm"
+}

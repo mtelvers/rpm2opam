@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-theseer-tokenizer-1.2.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-theseer-tokenizer-1.2.3-1.fc40.noarch.rpm"]
+depends: [
+  "php-common" {>= "7.0"}
+  "php-fedora-autoloader" 
+  "php-xml" 
+]
+extra-source "php-theseer-tokenizer-1.2.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-theseer-tokenizer-1.2.3-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ahash-devel-0.8.8-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ahash-devel-0.8.8-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.72.0"}
+  "rust-cfg-if+default-devel" 
+  "rust-once_cell+alloc-devel" 
+  "rust-once_cell-devel" 
+  "rust-version_check+default-devel" 
+  "rust-zerocopy+simd-devel" 
+  "rust-zerocopy-devel" 
+]
+extra-source "rust-ahash-devel-0.8.8-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ahash-devel-0.8.8-2.fc40.noarch.rpm"
+}

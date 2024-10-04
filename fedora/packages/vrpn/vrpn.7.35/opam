@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vrpn-07.35-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vrpn-07.35-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "freeglut" 
+  "glibc" 
+  "gpm-libs" 
+  "hidapi" 
+  "jsoncpp" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libglvnd-opengl" 
+  "libstdc++" 
+  "libusb1" 
+  "mesa-libGLU" 
+  "wiiuse" 
+]
+extra-source "vrpn-07.35-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vrpn-07.35-2.fc40.x86_64.rpm"
+}

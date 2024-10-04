@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sysvinit-tools-doc-3.10-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sysvinit-tools-doc-3.10-1.1.noarch.rpm"]
+depends: [
+  "sysvinit-tools" 
+]
+extra-source "sysvinit-tools-doc-3.10-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sysvinit-tools-doc-3.10-1.1.noarch.rpm"
+}

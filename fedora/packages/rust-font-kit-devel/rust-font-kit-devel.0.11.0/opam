@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-font-kit-devel-0.11.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-font-kit-devel-0.11.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bitflags+default-devel" 
+  "rust-byteorder+default-devel" 
+  "rust-dirs-next+default-devel" 
+  "rust-float-ord+default-devel" 
+  "rust-freetype+default-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-log+default-devel" 
+  "rust-pathfinder_geometry+default-devel" 
+  "rust-pathfinder_simd+default-devel" 
+  "rust-walkdir+default-devel" 
+  "rust-yeslogic-fontconfig-sys+default-devel" 
+]
+extra-source "rust-font-kit-devel-0.11.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-font-kit-devel-0.11.0-3.fc40.noarch.rpm"
+}

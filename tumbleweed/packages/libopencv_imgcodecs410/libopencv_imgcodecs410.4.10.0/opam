@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libopencv_imgcodecs410-4.10.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libopencv_imgcodecs410-4.10.0-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libOpenEXR-3_2-31" 
+  "libgcc_s1" 
+  "libjpeg8" 
+  "libopencv410" 
+  "libopenjp2-7" 
+  "libpng16-16" 
+  "libstdc++6" 
+  "libtiff6" 
+  "libwebp7" 
+]
+extra-source "libopencv_imgcodecs410-4.10.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libopencv_imgcodecs410-4.10.0-1.3.x86_64.rpm"
+}

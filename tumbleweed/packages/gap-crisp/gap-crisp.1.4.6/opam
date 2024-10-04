@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-crisp-1.4.6-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-crisp-1.4.6-1.3.noarch.rpm"]
+depends: [
+  "bash" 
+  "gap" {>= "4.5"}
+]
+extra-source "gap-crisp-1.4.6-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-crisp-1.4.6-1.3.noarch.rpm"
+}

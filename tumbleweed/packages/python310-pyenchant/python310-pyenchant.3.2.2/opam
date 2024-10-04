@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pyenchant-3.2.2-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pyenchant-3.2.2-3.2.noarch.rpm"]
+depends: [
+  "enchant-2-backend-hunspell" 
+  "python310-base" {= "3.10"}
+]
+extra-source "python310-pyenchant-3.2.2-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-pyenchant-3.2.2-3.2.noarch.rpm"
+}

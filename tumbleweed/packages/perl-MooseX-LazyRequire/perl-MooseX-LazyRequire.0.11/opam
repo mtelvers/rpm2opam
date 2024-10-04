@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-LazyRequire-0.11-1.31.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-LazyRequire-0.11-1.31.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Moose" {>= "0.94"}
+  "perl-aliased" {>= "0.30"}
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-MooseX-LazyRequire-0.11-1.31.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-LazyRequire-0.11-1.31.noarch.rpm"
+}

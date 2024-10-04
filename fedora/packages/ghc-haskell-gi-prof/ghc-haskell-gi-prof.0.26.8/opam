@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-haskell-gi-prof-0.26.8-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-haskell-gi-prof-0.26.8-1.fc40.x86_64.rpm"]
+depends: [
+  "ghc-Cabal-prof" 
+  "ghc-ansi-terminal-prof" 
+  "ghc-attoparsec-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+  "ghc-haskell-gi-base-prof" 
+  "ghc-haskell-gi-devel" {= "0.26.8"}
+  "ghc-mtl-prof" 
+  "ghc-pretty-show-prof" 
+  "ghc-process-prof" 
+  "ghc-regex-tdfa-prof" 
+  "ghc-safe-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+  "ghc-xdg-basedir-prof" 
+  "ghc-xml-conduit-prof" 
+]
+extra-source "ghc-haskell-gi-prof-0.26.8-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-haskell-gi-prof-0.26.8-1.fc40.x86_64.rpm"
+}

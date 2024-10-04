@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-bluetooth-devel-46.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-bluetooth-devel-46.1-1.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.44"}
+  "gnome-bluetooth" {= "46.1"}
+  "gtk4-devel" {>= "4.4"}
+  "libadwaita-devel" {>= "1.4"}
+  "libgnome-bluetooth-3_0-13" {= "46.1"}
+  "libgnome-bluetooth-ui-3_0-13" {= "46.1"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-GnomeBluetooth-3_0" {= "46.1"}
+]
+extra-source "gnome-bluetooth-devel-46.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnome-bluetooth-devel-46.1-1.1.x86_64.rpm"
+}

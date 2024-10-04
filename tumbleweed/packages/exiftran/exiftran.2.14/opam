@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "exiftran-2.14-4.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "exiftran-2.14-4.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libexif12" 
+  "libjpeg8" 
+  "libpixman-1-0" 
+]
+extra-source "exiftran-2.14-4.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/exiftran-2.14-4.6.x86_64.rpm"
+}

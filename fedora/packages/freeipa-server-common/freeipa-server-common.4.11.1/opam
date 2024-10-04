@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "freeipa-server-common-4.11.1-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freeipa-server-common-4.11.1-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "freeipa-client-common" {= "4.11.1"}
+  "httpd" {>= "2.4.41"}
+  "systemd" {>= "246.6"}
+]
+extra-source "freeipa-server-common-4.11.1-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/freeipa-server-common-4.11.1-4.fc40.noarch.rpm"
+}

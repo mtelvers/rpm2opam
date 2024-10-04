@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lua-moonscript-0.5.0-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lua-moonscript-0.5.0-16.fc40.noarch.rpm"]
+depends: [
+  "lua" 
+  "lua-alt-getopt" {>= "0.7"}
+  "lua-filesystem" {>= "1.5"}
+  "lua-inotify" 
+  "lua-libs" {= "5.4"}
+  "lua-lpeg" {>= "0.12"}
+]
+extra-source "lua-moonscript-0.5.0-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lua-moonscript-0.5.0-16.fc40.noarch.rpm"
+}

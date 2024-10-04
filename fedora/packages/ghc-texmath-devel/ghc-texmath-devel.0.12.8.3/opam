@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-texmath-devel-0.12.8.3-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-texmath-devel-0.12.8.3-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-mtl-devel" 
+  "ghc-pandoc-types-devel" 
+  "ghc-parsec-devel" 
+  "ghc-split-devel" 
+  "ghc-syb-devel" 
+  "ghc-texmath" {= "0.12.8.3"}
+  "ghc-text-devel" 
+  "ghc-typst-symbols-devel" 
+  "ghc-xml-devel" 
+]
+extra-source "ghc-texmath-devel-0.12.8.3-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-texmath-devel-0.12.8.3-3.fc40.x86_64.rpm"
+}

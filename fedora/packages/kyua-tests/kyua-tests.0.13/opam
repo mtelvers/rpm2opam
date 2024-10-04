@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kyua-tests-0.13-15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kyua-tests-0.13-15.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "kyua" {= "0.13"}
+  "libatf-c++" 
+  "libatf-sh" 
+  "libgcc" 
+  "libstdc++" 
+  "lutok" 
+  "sqlite-libs" 
+]
+extra-source "kyua-tests-0.13-15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kyua-tests-0.13-15.fc40.x86_64.rpm"
+}

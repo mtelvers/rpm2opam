@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sendmail-8.18.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sendmail-8.18.1-1.fc40.x86_64.rpm"]
+depends: [
+  "alternatives" 
+  "bash" 
+  "coreutils" 
+  "cyrus-sasl" 
+  "cyrus-sasl-lib" 
+  "glibc" 
+  "libdb" 
+  "libnsl2" 
+  "openldap" 
+  "openssl" 
+  "openssl-libs" 
+  "procmail" 
+  "setup" {>= "2.5.31"}
+  "shadow-utils" 
+  "systemd" 
+  "tinycdb" 
+]
+extra-source "sendmail-8.18.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sendmail-8.18.1-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-isolate-3.5.1-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-isolate-3.5.1-6.fc40.noarch.rpm"]
+depends: [
+  "rubygems" {>= "1.8.2"}
+]
+extra-source "rubygem-isolate-3.5.1-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-isolate-3.5.1-6.fc40.noarch.rpm"
+}

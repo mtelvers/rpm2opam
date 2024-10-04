@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lagan-2.0-41.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lagan-2.0-41.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Path" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-IPC-Open3" 
+  "perl-PathTools" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.5.0"}
+]
+extra-source "lagan-2.0-41.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lagan-2.0-41.fc40.x86_64.rpm"
+}

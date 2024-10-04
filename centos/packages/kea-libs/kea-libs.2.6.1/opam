@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kea-libs-2.6.1-4.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kea-libs-2.6.1-4.el10.x86_64.rpm"]
+depends: [
+  "boost-system" 
+  "glibc" 
+  "libgcc" 
+  "libpq" 
+  "libstdc++" 
+  "log4cplus" 
+  "mariadb-connector-c" 
+  "openssl-libs" 
+]
+extra-source "kea-libs-2.6.1-4.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/kea-libs-2.6.1-4.el10.x86_64.rpm"
+}

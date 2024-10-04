@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-shiboken6-devel-6.7.2-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-shiboken6-devel-6.7.2-2.1.x86_64.rpm"]
+depends: [
+  "pkgconf-pkg-config" 
+  "python311-shiboken6" {= "6.7.2"}
+]
+extra-source "python311-shiboken6-devel-6.7.2-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-shiboken6-devel-6.7.2-2.1.x86_64.rpm"
+}

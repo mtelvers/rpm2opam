@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-Workers-0.24-1.32.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Workers-0.24-1.32.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Moose" 
+  "perl-POE" 
+  "perl-Package-Stash" 
+  "perl-Try-Tiny" 
+]
+extra-source "perl-MooseX-Workers-0.24-1.32.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-Workers-0.24-1.32.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-IPC-Signal-1.00-41.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-IPC-Signal-1.00-41.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" 
+  "perl-libs" {>= "5.3.0"}
+  "perl-vars" 
+]
+extra-source "perl-IPC-Signal-1.00-41.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-IPC-Signal-1.00-41.fc40.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "psmisc-lang-23.6-slfo.1.1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "psmisc-lang-23.6-slfo.1.1.7.noarch.rpm"]
+depends: [
+  "psmisc" {= "23.6"}
+]
+extra-source "psmisc-lang-23.6-slfo.1.1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/psmisc-lang-23.6-slfo.1.1.7.noarch.rpm"
+}

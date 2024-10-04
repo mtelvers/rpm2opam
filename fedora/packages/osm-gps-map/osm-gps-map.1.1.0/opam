@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "osm-gps-map-1.1.0-15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "osm-gps-map-1.1.0-15.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "cairo-gobject" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "harfbuzz" 
+  "libsoup" 
+  "pango" 
+  "zlib-ng-compat" 
+]
+extra-source "osm-gps-map-1.1.0-15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/osm-gps-map-1.1.0-15.fc40.x86_64.rpm"
+}

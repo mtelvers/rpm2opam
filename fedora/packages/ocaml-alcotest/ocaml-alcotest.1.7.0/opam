@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-alcotest-1.7.0-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-alcotest-1.7.0-9.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "ocaml" {= "24528204"}
+  "ocaml-astring" {= "4"}
+  "ocaml-cmdliner" {= "73"}
+  "ocaml-fmt" {= "49"}
+  "ocaml-re" {= "0"}
+  "ocaml-uutf" {= "0"}
+]
+extra-source "ocaml-alcotest-1.7.0-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-alcotest-1.7.0-9.fc40.x86_64.rpm"
+}

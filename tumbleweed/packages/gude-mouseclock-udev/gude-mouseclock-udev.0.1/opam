@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gude-mouseclock-udev-0.1-1.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gude-mouseclock-udev-0.1-1.11.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "system-user-ntp" 
+  "systemd" 
+]
+extra-source "gude-mouseclock-udev-0.1-1.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gude-mouseclock-udev-0.1-1.11.noarch.rpm"
+}

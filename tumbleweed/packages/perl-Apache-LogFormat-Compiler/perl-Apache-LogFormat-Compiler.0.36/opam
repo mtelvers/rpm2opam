@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Apache-LogFormat-Compiler-0.36-1.22.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Apache-LogFormat-Compiler-0.36-1.22.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-POSIX-strftime-Compiler" {>= "0.30"}
+]
+extra-source "perl-Apache-LogFormat-Compiler-0.36-1.22.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Apache-LogFormat-Compiler-0.36-1.22.noarch.rpm"
+}

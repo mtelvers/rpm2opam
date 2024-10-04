@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "systemd-zram-service-0.2.1-5.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "systemd-zram-service-0.2.1-5.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "kernel-debug" 
+  "systemd" 
+]
+extra-source "systemd-zram-service-0.2.1-5.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/systemd-zram-service-0.2.1-5.1.noarch.rpm"
+}

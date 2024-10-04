@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cinnamon-settings-daemon-6.0.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cinnamon-settings-daemon-6.0.0-4.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "cinnamon-desktop" {>= "6.0.0"}
+  "colord-libs" 
+  "cups-libs" 
+  "fontconfig" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "iio-sensor-proxy" 
+  "lcms2" 
+  "libX11" 
+  "libXext" 
+  "libXi" 
+  "libcanberra" 
+  "libcanberra-gtk3" 
+  "libgcc" 
+  "libgnomekbd" 
+  "libgudev" 
+  "libnotify" 
+  "libwacom" 
+  "libxklavier" 
+  "pango" 
+  "polkit-libs" 
+  "systemd-libs" 
+  "upower-libs" 
+]
+extra-source "cinnamon-settings-daemon-6.0.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cinnamon-settings-daemon-6.0.0-4.fc40.x86_64.rpm"
+}

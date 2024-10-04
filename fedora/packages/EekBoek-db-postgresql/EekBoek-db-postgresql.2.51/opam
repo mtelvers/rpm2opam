@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "EekBoek-db-postgresql-2.051-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "EekBoek-db-postgresql-2.051-9.fc40.noarch.rpm"]
+depends: [
+  "EekBoek" {= "2.51"}
+  "perl-DBD-Pg" {>= "1.41"}
+]
+extra-source "EekBoek-db-postgresql-2.051-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/EekBoek-db-postgresql-2.051-9.fc40.noarch.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bacula-storage-13.0.4-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bacula-storage-13.0.4-4.fc40.x86_64.rpm"]
+depends: [
+  "bacula-common" {= "13.0.4"}
+  "bacula-libs" {= "13.0.4"}
+  "bacula-libs-sql" {= "13.0.4"}
+  "bash" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "lzo" 
+  "mt-st" 
+  "mtx" 
+  "sdparm" 
+  "systemd" 
+  "zlib-ng-compat" 
+]
+extra-source "bacula-storage-13.0.4-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bacula-storage-13.0.4-4.fc40.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-gradedringforhomalg-2023.08.01-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-gradedringforhomalg-2023.08.01-1.2.noarch.rpm"]
+depends: [
+  "gap" {>= "4.12.1"}
+  "gap-gapdoc" {>= "1.0"}
+  "gap-homalg" {>= "2011.8.16"}
+  "gap-homalgtocas" {>= "2023.8.1"}
+  "gap-matricesforhomalg" {>= "2023.8.1"}
+  "gap-modules" {>= "2023.8.1"}
+  "gap-ringsforhomalg" {>= "2023.8.1"}
+]
+extra-source "gap-gradedringforhomalg-2023.08.01-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-gradedringforhomalg-2023.08.01-1.2.noarch.rpm"
+}

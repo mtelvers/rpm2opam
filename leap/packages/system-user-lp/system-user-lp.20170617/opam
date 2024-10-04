@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "system-user-lp-20170617-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "system-user-lp-20170617-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "sysuser-shadow" {>= "3.1"}
+]
+extra-source "system-user-lp-20170617-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/system-user-lp-20170617-slfo.1.1.3.noarch.rpm"
+}

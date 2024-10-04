@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ksystemlog-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ksystemlog-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "audit-libs" 
+  "glibc" 
+  "kf6-karchive" 
+  "kf6-kcolorscheme" 
+  "kf6-kcompletion" 
+  "kf6-kconfig" 
+  "kf6-kconfigwidgets" 
+  "kf6-kcoreaddons" 
+  "kf6-ki18n" 
+  "kf6-kio-widgets-libs" 
+  "kf6-kitemviews" 
+  "kf6-ktextwidgets" 
+  "kf6-kwidgetsaddons" 
+  "kf6-kxmlgui" 
+  "libstdc++" 
+  "qt6-qt5compat" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "systemd-libs" 
+]
+extra-source "ksystemlog-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/ksystemlog-24.02.1-1.fc40.x86_64.rpm"
+}

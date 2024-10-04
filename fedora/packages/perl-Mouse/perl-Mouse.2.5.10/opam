@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Mouse-2.5.10-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mouse-2.5.10-19.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-B" 
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Filter-Simple" 
+  "perl-Scalar-List-Utils" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-mro" 
+  "perl-overload" 
+  "perl-version" 
+]
+extra-source "perl-Mouse-2.5.10-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Mouse-2.5.10-19.fc40.x86_64.rpm"
+}

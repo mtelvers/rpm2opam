@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mumps-gnu-mvapich2-hpc-doc-5.3.5-5.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mumps-gnu-mvapich2-hpc-doc-5.3.5-5.3.noarch.rpm"]
+depends: [
+  "mumps_5_3_5-gnu-mvapich2-hpc-doc" {= "5.3.5"}
+]
+extra-source "mumps-gnu-mvapich2-hpc-doc-5.3.5-5.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mumps-gnu-mvapich2-hpc-doc-5.3.5-5.3.noarch.rpm"
+}

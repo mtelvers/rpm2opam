@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Email-Stuffer-0.020-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Email-Stuffer-0.020-5.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Email-MIME" 
+  "perl-Email-Sender" 
+  "perl-File-Basename" 
+  "perl-Module-Runtime" 
+  "perl-Params-Util" {>= "1.5"}
+  "perl-Scalar-List-Utils" 
+  "perl-libs" {>= "5.12.0"}
+]
+extra-source "perl-Email-Stuffer-0.020-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Email-Stuffer-0.020-5.fc40.noarch.rpm"
+}

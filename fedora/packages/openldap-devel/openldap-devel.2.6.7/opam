@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openldap-devel-2.6.7-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openldap-devel-2.6.7-1.fc40.x86_64.rpm"]
+depends: [
+  "cyrus-sasl-devel" 
+  "openldap" 
+  "pkgconf-pkg-config" 
+]
+extra-source "openldap-devel-2.6.7-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openldap-devel-2.6.7-1.fc40.x86_64.rpm"
+}

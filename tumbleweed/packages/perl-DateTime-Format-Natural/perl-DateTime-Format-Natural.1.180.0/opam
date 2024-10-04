@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-DateTime-Format-Natural-1.180.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DateTime-Format-Natural-1.180.0-2.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Clone" 
+  "perl-DateTime" 
+  "perl-DateTime-HiRes" 
+  "perl-DateTime-TimeZone" 
+  "perl-List-MoreUtils" 
+  "perl-Params-Validate" {>= "1.15"}
+  "perl-base" 
+  "perl-boolean" 
+]
+extra-source "perl-DateTime-Format-Natural-1.180.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-DateTime-Format-Natural-1.180.0-2.2.noarch.rpm"
+}

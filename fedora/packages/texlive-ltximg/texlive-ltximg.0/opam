@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-ltximg-svn59335-81.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-ltximg-svn59335-81.fc40.noarch.rpm"]
+depends: [
+  "perl-Archive-Tar" 
+  "perl-Data-Dumper" 
+  "perl-Env" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-FileHandle" 
+  "perl-Getopt-Long" 
+  "perl-IO-Compress" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Term-ANSIColor" 
+  "perl-autodie" 
+  "perl-if" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.26.0"}
+  "texlive-base" 
+  "texlive-kpathsea" 
+]
+extra-source "texlive-ltximg-svn59335-81.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-ltximg-svn59335-81.fc40.noarch.rpm"
+}

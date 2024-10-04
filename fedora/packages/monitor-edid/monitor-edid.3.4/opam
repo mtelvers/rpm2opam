@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "monitor-edid-3.4-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "monitor-edid-3.4-7.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libx86" 
+  "perl-Data-Dumper" 
+  "perl-File-Find" 
+  "perl-Getopt-Long" 
+  "perl-Parse-EDID" 
+  "perl-interpreter" 
+]
+extra-source "monitor-edid-3.4-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/monitor-edid-3.4-7.fc40.x86_64.rpm"
+}

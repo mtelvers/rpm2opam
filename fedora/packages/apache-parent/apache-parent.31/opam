@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "apache-parent-31-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apache-parent-31-5.fc40.noarch.rpm"]
+depends: [
+  "apache-resource-bundles" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "maven-enforcer-plugin" 
+  "maven-remote-resources-plugin" 
+]
+extra-source "apache-parent-31-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/apache-parent-31-5.fc40.noarch.rpm"
+}

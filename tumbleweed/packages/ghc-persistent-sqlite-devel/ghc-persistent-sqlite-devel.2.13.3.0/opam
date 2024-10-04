@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-persistent-sqlite-devel-2.13.3.0-1.30.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-persistent-sqlite-devel-2.13.3.0-1.30.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-aeson-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-conduit-devel" 
+  "ghc-containers-devel" 
+  "ghc-microlens-th-devel" 
+  "ghc-monad-logger-devel" 
+  "ghc-mtl-devel" 
+  "ghc-persistent-devel" 
+  "ghc-persistent-sqlite" {= "2.13.3.0"}
+  "ghc-resource-pool-devel" 
+  "ghc-resourcet-devel" 
+  "ghc-text-devel" 
+  "ghc-time-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unliftio-core-devel" 
+  "ghc-unordered-containers-devel" 
+  "glibc-devel" 
+  "sqlite3-devel" 
+]
+extra-source "ghc-persistent-sqlite-devel-2.13.3.0-1.30.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-persistent-sqlite-devel-2.13.3.0-1.30.x86_64.rpm"
+}

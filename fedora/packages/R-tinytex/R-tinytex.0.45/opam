@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-tinytex-0.45-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-tinytex-0.45-5.fc40.noarch.rpm"]
+depends: [
+  "R-core" {= "4.3"}
+  "R-xfun" {>= "0.29"}
+]
+extra-source "R-tinytex-0.45-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-tinytex-0.45-5.fc40.noarch.rpm"
+}

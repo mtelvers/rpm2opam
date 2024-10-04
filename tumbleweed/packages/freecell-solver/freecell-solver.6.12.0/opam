@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "freecell-solver-6.12.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freecell-solver-6.12.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libfreecell-solver0" 
+  "python3-pysol-cards" 
+  "python311-base" 
+  "python311-random2" 
+  "python311-six" 
+]
+extra-source "freecell-solver-6.12.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/freecell-solver-6.12.0-1.1.x86_64.rpm"
+}

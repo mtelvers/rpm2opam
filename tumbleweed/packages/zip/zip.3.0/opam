@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zip-3.0-24.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zip-3.0-24.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbz2-1" 
+]
+extra-source "zip-3.0-24.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/zip-3.0-24.1.x86_64.rpm"
+}

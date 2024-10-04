@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dnf-4.18.0-lp160.2.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dnf-4.18.0-lp160.2.14.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python3-dnf" {= "4.18.0"}
+  "python311-base" 
+]
+extra-source "dnf-4.18.0-lp160.2.14.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/dnf-4.18.0-lp160.2.14.noarch.rpm"
+}

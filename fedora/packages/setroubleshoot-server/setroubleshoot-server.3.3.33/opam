@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "setroubleshoot-server-3.3.33-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "setroubleshoot-server-3.3.33-1.fc40.x86_64.rpm"]
+depends: [
+  "audit" {>= "3.0.1"}
+  "audit-libs" 
+  "bash" 
+  "dbus" 
+  "dbus-libs" 
+  "glibc" 
+  "initscripts-service" 
+  "libcap-ng" 
+  "libselinux" 
+  "policycoreutils-python-utils" 
+  "polkit" 
+  "python3" 
+  "python3-audit" 
+  "python3-dasbus" 
+  "python3-dbus" 
+  "python3-gobject-base" {>= "3.11"}
+  "python3-libselinux" {>= "2.1.5"}
+  "python3-libxml2" 
+  "python3-rpm" 
+  "python3-six" 
+  "python3-systemd" {>= "206"}
+  "setroubleshoot-plugins" {>= "3.3.10"}
+]
+extra-source "setroubleshoot-server-3.3.33-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/setroubleshoot-server-3.3.33-1.fc40.x86_64.rpm"
+}

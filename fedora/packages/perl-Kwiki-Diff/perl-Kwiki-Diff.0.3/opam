@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Kwiki-Diff-0.03-51.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Kwiki-Diff-0.03-51.fc40.noarch.rpm"]
+depends: [
+  "perl-Algorithm-Diff" {>= "1.18"}
+  "perl-Kwiki" {>= "0.34"}
+  "perl-libs" 
+]
+extra-source "perl-Kwiki-Diff-0.03-51.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Kwiki-Diff-0.03-51.fc40.noarch.rpm"
+}

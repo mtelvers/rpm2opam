@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "marvin-bash-completion-0.2.6-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "marvin-bash-completion-0.2.6-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "marvin" {= "0.2.6"}
+]
+extra-source "marvin-bash-completion-0.2.6-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/marvin-bash-completion-0.2.6-1.1.noarch.rpm"
+}

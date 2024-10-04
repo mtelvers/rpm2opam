@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-httr-1.4.5-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-httr-1.4.5-5.fc40.noarch.rpm"]
+depends: [
+  "R-R6" 
+  "R-core" {= "4.3"}
+  "R-curl" {>= "3.0.0"}
+  "R-jsonlite" 
+  "R-mime" 
+  "R-openssl" {>= "0.8"}
+]
+extra-source "R-httr-1.4.5-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-httr-1.4.5-5.fc40.noarch.rpm"
+}

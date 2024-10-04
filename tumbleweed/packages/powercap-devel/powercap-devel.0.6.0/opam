@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "powercap-devel-0.6.0-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "powercap-devel-0.6.0-1.6.x86_64.rpm"]
+depends: [
+  "pkgconf-pkg-config" 
+  "powercap" {= "0.6.0"}
+]
+extra-source "powercap-devel-0.6.0-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/powercap-devel-0.6.0-1.6.x86_64.rpm"
+}

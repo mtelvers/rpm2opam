@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-flower-2.0.1-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-flower-2.0.1-1.3.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-celery" {>= "5.0.0"}
+  "python311-humanize" 
+  "python311-prometheus-client" {>= "0.8.0"}
+  "python311-pytz" 
+  "python311-tornado" {>= "5.0.0"}
+  "update-alternatives" 
+]
+extra-source "python311-flower-2.0.1-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-flower-2.0.1-1.3.noarch.rpm"
+}

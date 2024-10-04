@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw64-gcc-objc++-14.0.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-gcc-objc++-14.0.1-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gmp" 
+  "libgcc" 
+  "libmpc" 
+  "libstdc++" 
+  "mingw64-gcc-c++" {= "14.0.1"}
+  "mingw64-gcc-objc" {= "14.0.1"}
+  "mpfr" 
+  "zlib-ng-compat" 
+]
+extra-source "mingw64-gcc-objc++-14.0.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw64-gcc-objc++-14.0.1-1.fc40.x86_64.rpm"
+}

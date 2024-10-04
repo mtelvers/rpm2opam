@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gscan2pdf-2.13.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gscan2pdf-2.13.4-1.1.noarch.rpm"]
+depends: [
+  "djvulibre" 
+  "pdftk" 
+  "perl" 
+  "perl-Config-General" 
+  "perl-Date-Calc" 
+  "perl-Exception-Class" 
+  "perl-Filesys-Df" 
+  "perl-Glib" 
+  "perl-GooCanvas2" 
+  "perl-Gtk3" 
+  "perl-Gtk3-ImageView" 
+  "perl-Gtk3-SimpleList" 
+  "perl-Image-Sane" 
+  "perl-List-MoreUtils" 
+  "perl-Locale-Codes" 
+  "perl-Log-Log4perl" 
+  "perl-OSSP-uuid" 
+  "perl-PDF-Builder" 
+  "perl-PerlMagick" 
+  "perl-Proc-ProcessTable" 
+  "perl-Readonly" 
+  "perl-Set-IntSpan" 
+  "perl-Try-Tiny" 
+  "perl-base" 
+  "perl-gettext" 
+  "tiff" 
+  "typelib-1_0-GdkPixdata-2_0" {= "2.0"}
+  "typelib-1_0-GooCanvas-2_0" {= "2.0"}
+  "unpaper" 
+]
+extra-source "gscan2pdf-2.13.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gscan2pdf-2.13.4-1.1.noarch.rpm"
+}

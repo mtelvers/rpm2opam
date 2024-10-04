@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-inotify+futures-core-devel-0.10.2-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-inotify+futures-core-devel-0.10.2-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-futures-core+default-devel" 
+  "rust-inotify-devel" {= "0.10.2"}
+]
+extra-source "rust-inotify+futures-core-devel-0.10.2-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-inotify+futures-core-devel-0.10.2-2.fc40.noarch.rpm"
+}

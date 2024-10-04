@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "monitoring-plugins-rpc-2.3.5-slfo.1.1.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "monitoring-plugins-rpc-2.3.5-slfo.1.1.16.x86_64.rpm"]
+depends: [
+  "monitoring-plugins-common" {= "2.3.5"}
+  "perl" 
+  "perl-base" 
+  "rpcbind" 
+]
+extra-source "monitoring-plugins-rpc-2.3.5-slfo.1.1.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/monitoring-plugins-rpc-2.3.5-slfo.1.1.16.x86_64.rpm"
+}

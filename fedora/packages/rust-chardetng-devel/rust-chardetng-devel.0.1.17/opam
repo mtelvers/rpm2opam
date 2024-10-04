@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-chardetng-devel-0.1.17-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-chardetng-devel-0.1.17-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-cfg-if+default-devel" 
+  "rust-encoding_rs+alloc-devel" 
+  "rust-encoding_rs-devel" 
+  "rust-memchr-devel" 
+]
+extra-source "rust-chardetng-devel-0.1.17-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-chardetng-devel-0.1.17-2.fc40.noarch.rpm"
+}

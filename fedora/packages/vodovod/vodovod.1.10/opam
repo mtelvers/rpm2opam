@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vodovod-1.10r22-24.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vodovod-1.10r22-24.fc40.x86_64.rpm"]
+depends: [
+  "SDL_image" 
+  "SDL_mixer" 
+  "SDL_ttf" 
+  "coreutils" 
+  "dejavu-sans-mono-fonts" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "sdl12-compat" 
+]
+extra-source "vodovod-1.10r22-24.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vodovod-1.10r22-24.fc40.x86_64.rpm"
+}

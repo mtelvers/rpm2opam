@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "synergy-1.9.1-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "synergy-1.9.1-5.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "libX11-6" 
+  "libXext6" 
+  "libXi6" 
+  "libXinerama1" 
+  "libXrandr2" 
+  "libXtst6" 
+  "libcurl-mini4" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libstdc++6" 
+]
+extra-source "synergy-1.9.1-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/synergy-1.9.1-5.2.x86_64.rpm"
+}

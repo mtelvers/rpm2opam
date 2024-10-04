@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "open-test-reporting-cli-0.1.0~M2-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "open-test-reporting-cli-0.1.0~M2-2.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "open-test-reporting-events" {= "0.1.0.0"}
+  "open-test-reporting-tooling" {= "0.1.0.0"}
+  "picocli" 
+  "slf4j" 
+]
+extra-source "open-test-reporting-cli-0.1.0~M2-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/open-test-reporting-cli-0.1.0~M2-2.1.noarch.rpm"
+}

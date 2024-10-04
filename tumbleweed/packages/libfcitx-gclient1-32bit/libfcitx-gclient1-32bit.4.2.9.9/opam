@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfcitx-gclient1-32bit-4.2.9.9-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfcitx-gclient1-32bit-4.2.9.9-4.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libdbus-1-3-32bit" 
+  "libfcitx-utils0-32bit" 
+  "libgio-2_0-0-32bit" 
+  "libglib-2_0-0-32bit" 
+  "libgobject-2_0-0-32bit" 
+]
+extra-source "libfcitx-gclient1-32bit-4.2.9.9-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfcitx-gclient1-32bit-4.2.9.9-4.1.x86_64.rpm"
+}

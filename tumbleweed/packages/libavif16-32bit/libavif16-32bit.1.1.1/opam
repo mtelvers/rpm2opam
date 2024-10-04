@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libavif16-32bit-1.1.1-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libavif16-32bit-1.1.1-2.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libaom3-32bit" 
+  "libdav1d7-32bit" 
+  "libgcc_s1-32bit" 
+  "librav1e0_7-32bit" 
+  "libyuv0-32bit" 
+]
+extra-source "libavif16-32bit-1.1.1-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libavif16-32bit-1.1.1-2.2.x86_64.rpm"
+}

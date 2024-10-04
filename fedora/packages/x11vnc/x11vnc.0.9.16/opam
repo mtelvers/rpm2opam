@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "x11vnc-0.9.16^20230801gita61f364-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "x11vnc-0.9.16^20230801gita61f364-2.fc40.x86_64.rpm"]
+depends: [
+  "avahi-libs" 
+  "cairo" 
+  "glibc" 
+  "libX11" 
+  "libXcursor" 
+  "libXdamage" 
+  "libXext" 
+  "libXfixes" 
+  "libXi" 
+  "libXinerama" 
+  "libXrandr" 
+  "libXtst" 
+  "libdrm" 
+  "libvncserver" 
+  "libxcrypt" 
+  "openssl-libs" 
+  "tk" 
+  "xorg-x11-server-Xvfb" 
+]
+extra-source "x11vnc-0.9.16^20230801gita61f364-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/x11vnc-0.9.16^20230801gita61f364-2.fc40.x86_64.rpm"
+}

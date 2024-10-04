@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qodem-1.0.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qodem-1.0.1-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libSDL-1_2-0" 
+  "libgpm2" 
+  "libncurses6" 
+  "terminus-ttf-fonts" 
+  "xterm" 
+]
+extra-source "qodem-1.0.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/qodem-1.0.1-1.1.x86_64.rpm"
+}

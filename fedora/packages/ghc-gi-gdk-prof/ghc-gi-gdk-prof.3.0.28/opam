@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-gi-gdk-prof-3.0.28-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-gi-gdk-prof-3.0.28-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-gi-cairo-prof" 
+  "ghc-gi-gdk-devel" {= "3.0.28"}
+  "ghc-gi-gdkpixbuf-prof" 
+  "ghc-gi-gio-prof" 
+  "ghc-gi-glib-prof" 
+  "ghc-gi-gobject-prof" 
+  "ghc-gi-pango-prof" 
+  "ghc-haskell-gi-base-prof" 
+  "ghc-haskell-gi-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-gi-gdk-prof-3.0.28-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-gi-gdk-prof-3.0.28-3.fc40.x86_64.rpm"
+}

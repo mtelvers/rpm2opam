@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "spice-gtk-tools-0.42-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "spice-gtk-tools-0.42-4.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "gstreamer1" 
+  "gtk3" 
+  "libwayland-server" 
+  "spice-glib" 
+  "spice-gtk3" 
+]
+extra-source "spice-gtk-tools-0.42-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/spice-gtk-tools-0.42-4.fc40.x86_64.rpm"
+}

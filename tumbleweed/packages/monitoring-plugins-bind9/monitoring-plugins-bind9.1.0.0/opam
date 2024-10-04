@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "monitoring-plugins-bind9-1.0.0-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "monitoring-plugins-bind9-1.0.0-3.1.noarch.rpm"]
+depends: [
+  "bind-utils" 
+  "perl-base" 
+  "sudo" 
+]
+extra-source "monitoring-plugins-bind9-1.0.0-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/monitoring-plugins-bind9-1.0.0-3.1.noarch.rpm"
+}

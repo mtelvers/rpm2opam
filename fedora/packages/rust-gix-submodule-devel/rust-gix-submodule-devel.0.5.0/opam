@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gix-submodule-devel-0.5.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gix-submodule-devel-0.5.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-bstr-devel" 
+  "rust-gix-config+default-devel" 
+  "rust-gix-path+default-devel" 
+  "rust-gix-pathspec+default-devel" 
+  "rust-gix-refspec+default-devel" 
+  "rust-gix-url+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-gix-submodule-devel-0.5.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gix-submodule-devel-0.5.0-2.fc40.noarch.rpm"
+}

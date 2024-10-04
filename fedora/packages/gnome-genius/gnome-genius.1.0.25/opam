@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-genius-1.0.25-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-genius-1.0.25-10.fc40.x86_64.rpm"]
+depends: [
+  "amtk" 
+  "cairo" 
+  "gdk-pixbuf2" 
+  "genius" {= "1.0.25"}
+  "glib2" 
+  "glibc" 
+  "gmp" 
+  "gtk3" 
+  "gtksourceview4" 
+  "mpfr" 
+  "pango" 
+  "readline" 
+  "vte291" 
+]
+extra-source "gnome-genius-1.0.25-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-genius-1.0.25-10.fc40.x86_64.rpm"
+}

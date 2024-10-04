@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libosmocodec-devel-1.9.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libosmocodec-devel-1.9.3-1.1.x86_64.rpm"]
+depends: [
+  "libosmocodec4" {= "1.9.3"}
+  "libosmocore-devel" 
+  "libtalloc-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libosmocodec-devel-1.9.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libosmocodec-devel-1.9.3-1.1.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-edfnotes-svn21540.0.6b-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-edfnotes-svn21540.0.6b-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-kpathsea" 
+  "texlive-lineno" 
+]
+extra-source "texlive-edfnotes-svn21540.0.6b-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-edfnotes-svn21540.0.6b-71.fc40.noarch.rpm"
+}

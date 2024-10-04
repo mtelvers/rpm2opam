@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libtutf-devel-0.9.0+17-3.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libtutf-devel-0.9.0+17-3.7.x86_64.rpm"]
+depends: [
+  "libtutf1" {= "0.9.0"}
+]
+extra-source "libtutf-devel-0.9.0+17-3.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libtutf-devel-0.9.0+17-3.7.x86_64.rpm"
+}

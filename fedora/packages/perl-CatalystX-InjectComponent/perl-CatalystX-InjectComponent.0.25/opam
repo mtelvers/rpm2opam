@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CatalystX-InjectComponent-0.025-32.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CatalystX-InjectComponent-0.025-32.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Catalyst-Runtime" {>= "5.80000"}
+  "perl-Class-Inspector" 
+  "perl-Module-Pluggable" 
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-CatalystX-InjectComponent-0.025-32.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CatalystX-InjectComponent-0.025-32.fc40.noarch.rpm"
+}

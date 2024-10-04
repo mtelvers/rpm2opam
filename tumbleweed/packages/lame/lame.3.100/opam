@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lame-3.100-5.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lame-3.100-5.9.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libmp3lame0" 
+  "libncurses6" 
+]
+extra-source "lame-3.100-5.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lame-3.100-5.9.x86_64.rpm"
+}

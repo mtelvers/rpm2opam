@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lensfun-tools-0.3.4-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lensfun-tools-0.3.4-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "lensfun-data" 
+  "libgcc_s1" 
+  "liblensfun1" 
+  "libpng16-16" 
+  "libstdc++6" 
+  "python3-lensfun" {= "0.3.4"}
+  "python311-base" 
+]
+extra-source "lensfun-tools-0.3.4-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lensfun-tools-0.3.4-2.1.x86_64.rpm"
+}

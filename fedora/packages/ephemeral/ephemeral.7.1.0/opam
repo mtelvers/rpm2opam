@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ephemeral-7.1.0-6.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ephemeral-7.1.0-6.fc39.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "granite" 
+  "gtk3" 
+  "hicolor-icon-theme" 
+  "libdazzle" 
+  "libgee" 
+  "libsoup" 
+  "webkit2gtk4-0" 
+]
+extra-source "ephemeral-7.1.0-6.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/ephemeral-7.1.0-6.fc39.x86_64.rpm"
+}

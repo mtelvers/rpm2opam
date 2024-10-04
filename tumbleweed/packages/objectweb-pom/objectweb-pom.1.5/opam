@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "objectweb-pom-1.5-1.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "objectweb-pom-1.5-1.17.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "maven-enforcer-plugin" 
+]
+extra-source "objectweb-pom-1.5-1.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/objectweb-pom-1.5-1.17.noarch.rpm"
+}

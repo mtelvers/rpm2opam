@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-glycin-utils+default-devel-1.0.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-glycin-utils+default-devel-1.0.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-glycin-utils-devel" {= "1.0.1"}
+]
+extra-source "rust-glycin-utils+default-devel-1.0.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-glycin-utils+default-devel-1.0.1-1.fc40.noarch.rpm"
+}

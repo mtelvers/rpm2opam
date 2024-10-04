@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "asar-3.2.13-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "asar-3.2.13-1.1.noarch.rpm"]
+depends: [
+  "nodejs-common" 
+  "nodejs-default" {>= "0.10.0"}
+]
+extra-source "asar-3.2.13-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/asar-3.2.13-1.1.noarch.rpm"
+}

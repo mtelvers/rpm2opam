@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-pandoc-lua-marshal-devel-0.2.7.1-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-pandoc-lua-marshal-devel-0.2.7.1-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-aeson-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-exceptions-devel" 
+  "ghc-hslua-devel" 
+  "ghc-hslua-list-devel" 
+  "ghc-hslua-marshalling-devel" 
+  "ghc-pandoc-lua-marshal" {= "0.2.7.1"}
+  "ghc-pandoc-types-devel" 
+  "ghc-safe-devel" 
+  "ghc-text-devel" 
+]
+extra-source "ghc-pandoc-lua-marshal-devel-0.2.7.1-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-pandoc-lua-marshal-devel-0.2.7.1-1.2.x86_64.rpm"
+}

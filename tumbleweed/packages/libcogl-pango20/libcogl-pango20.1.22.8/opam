@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcogl-pango20-1.22.8-2.15.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcogl-pango20-1.22.8-2.15.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libcogl20" 
+  "libpango-1_0-0" 
+]
+extra-source "libcogl-pango20-1.22.8-2.15.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcogl-pango20-1.22.8-2.15.x86_64.rpm"
+}

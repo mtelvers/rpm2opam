@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kf6-baloo-file-6.0.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kf6-baloo-file-6.0.0-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf6-baloo-libs" 
+  "kf6-kconfig" 
+  "kf6-kcoreaddons" 
+  "kf6-kcrash" 
+  "kf6-kfilemetadata" 
+  "kf6-ki18n" 
+  "kf6-kidletime" 
+  "kf6-solid" 
+  "libstdc++" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+]
+extra-source "kf6-baloo-file-6.0.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kf6-baloo-file-6.0.0-3.fc40.x86_64.rpm"
+}

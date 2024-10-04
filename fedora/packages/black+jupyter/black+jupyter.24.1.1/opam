@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "black+jupyter-24.1.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "black+jupyter-24.1.1-1.fc40.noarch.rpm"]
+depends: [
+  "black" {= "24.1.1"}
+  "python3" {= "3.12"}
+  "python3-ipython" {>= "7.8"}
+  "python3-tokenize-rt" {>= "3.2"}
+]
+extra-source "black+jupyter-24.1.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/black+jupyter-24.1.1-1.fc40.noarch.rpm"
+}

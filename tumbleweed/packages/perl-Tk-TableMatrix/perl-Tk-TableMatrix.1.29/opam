@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Tk-TableMatrix-1.29-2.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Tk-TableMatrix-1.29-2.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl" 
+  "perl-Tk" {>= "800.22"}
+]
+extra-source "perl-Tk-TableMatrix-1.29-2.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-Tk-TableMatrix-1.29-2.7.x86_64.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lilypond-2.25.12-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lilypond-2.25.12-1.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "fontconfig" 
+  "freetype" 
+  "gc" 
+  "ghostscript" {>= "8.15"}
+  "glib2" 
+  "glibc" 
+  "guile22" 
+  "harfbuzz" 
+  "libgcc" 
+  "libpng" 
+  "libstdc++" 
+  "lilypond-emmentaler-fonts" {= "2.25.12"}
+  "pango" 
+  "python3" 
+  "texlive-tex-gyre" 
+  "zlib-ng-compat" 
+]
+extra-source "lilypond-2.25.12-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lilypond-2.25.12-1.fc40.x86_64.rpm"
+}

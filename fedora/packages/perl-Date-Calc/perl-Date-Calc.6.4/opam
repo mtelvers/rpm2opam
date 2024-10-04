@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Date-Calc-6.4-28.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Date-Calc-6.4-28.fc40.noarch.rpm"]
+depends: [
+  "perl-Bit-Vector" {>= "7.1"}
+  "perl-Carp-Clan" {>= "6.4"}
+  "perl-Exporter" 
+  "perl-POSIX" 
+  "perl-libs" 
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-Date-Calc-6.4-28.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Date-Calc-6.4-28.fc40.noarch.rpm"
+}

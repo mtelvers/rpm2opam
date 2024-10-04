@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "patterns-base-fips-20200505-54.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "patterns-base-fips-20200505-54.1.x86_64.rpm"]
+depends: [
+  "dracut-fips" 
+  "libcryptsetup12" 
+  "libcryptsetup12-32bit" 
+  "libfreebl3" 
+  "libfreebl3-32bit" 
+  "libgcrypt20" 
+  "libgnutls30" 
+  "libgnutls30-32bit" 
+  "libopenssl-3-fips-provider" 
+  "libopenssl-fips-provider" 
+  "libopenssl1_0_0" 
+  "libopenssl1_0_0-32bit" 
+  "libopenssl1_1" 
+  "libopenssl1_1-32bit" 
+  "libsoftokn3" 
+  "libsoftokn3-32bit" 
+  "openssh-fips" 
+  "strongswan-hmac" 
+]
+extra-source "patterns-base-fips-20200505-54.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/patterns-base-fips-20200505-54.1.x86_64.rpm"
+}

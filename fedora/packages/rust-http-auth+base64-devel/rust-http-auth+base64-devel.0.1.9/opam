@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-http-auth+base64-devel-0.1.9-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-http-auth+base64-devel-0.1.9-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-base64+default-devel" 
+  "rust-http-auth-devel" {= "0.1.9"}
+]
+extra-source "rust-http-auth+base64-devel-0.1.9-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-http-auth+base64-devel-0.1.9-1.fc40.noarch.rpm"
+}

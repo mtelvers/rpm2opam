@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-mptopdf-svn65952-81.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-mptopdf-svn65952-81.fc40.noarch.rpm"]
+depends: [
+  "coreutils" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "texlive-base" 
+  "texlive-kpathsea" 
+  "texlive-plain" 
+]
+extra-source "texlive-mptopdf-svn65952-81.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-mptopdf-svn65952-81.fc40.noarch.rpm"
+}

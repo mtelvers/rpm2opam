@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tv-common-3.107-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tv-common-3.107-3.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libX11-6" 
+  "libXaw7" 
+  "libXmu6" 
+  "libXt6" 
+  "libdv4" 
+  "libjpeg8" 
+  "libquicktime0" 
+  "libv4l2-0" 
+]
+extra-source "tv-common-3.107-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tv-common-3.107-3.2.x86_64.rpm"
+}

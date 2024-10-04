@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xpdf-devel-4.04-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xpdf-devel-4.04-11.fc40.x86_64.rpm"]
+depends: [
+  "fontconfig-devel" 
+  "freetype-devel" 
+  "libpaper-devel" 
+  "libpng-devel" 
+  "xpdf" 
+]
+extra-source "xpdf-devel-4.04-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xpdf-devel-4.04-11.fc40.x86_64.rpm"
+}

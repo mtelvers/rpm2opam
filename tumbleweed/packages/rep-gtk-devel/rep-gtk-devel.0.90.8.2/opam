@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rep-gtk-devel-0.90.8.2-1.34.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rep-gtk-devel-0.90.8.2-1.34.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf-devel" 
+  "gtk2-devel" 
+  "librep-devel" 
+  "pkgconf-pkg-config" 
+  "rep-gtk" {= "0.90.8.2"}
+]
+extra-source "rep-gtk-devel-0.90.8.2-1.34.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rep-gtk-devel-0.90.8.2-1.34.x86_64.rpm"
+}

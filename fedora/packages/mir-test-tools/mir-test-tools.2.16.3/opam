@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mir-test-tools-2.16.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mir-test-tools-2.16.3-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "boost-filesystem" 
+  "glibc" 
+  "gmock" 
+  "gtest" 
+  "libgcc" 
+  "libglvnd-egl" 
+  "libglvnd-gles" 
+  "libstdc++" 
+  "libwayland-client" 
+  "libwayland-server" 
+  "lttng-ust" 
+  "mir-common-libs" 
+  "mir-server-libs" 
+  "wlcs" 
+]
+extra-source "mir-test-tools-2.16.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mir-test-tools-2.16.3-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfcitx-config4-32bit-4.2.9.9-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfcitx-config4-32bit-4.2.9.9-4.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libfcitx-utils0-32bit" 
+]
+extra-source "libfcitx-config4-32bit-4.2.9.9-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfcitx-config4-32bit-4.2.9.9-4.1.x86_64.rpm"
+}

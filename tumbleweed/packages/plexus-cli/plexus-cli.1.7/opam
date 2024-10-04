@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plexus-cli-1.7-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plexus-cli-1.7-1.1.noarch.rpm"]
+depends: [
+  "apache-commons-cli" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "plexus-utils" 
+  "plexus-xml" 
+  "sisu-plexus" 
+]
+extra-source "plexus-cli-1.7-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/plexus-cli-1.7-1.1.noarch.rpm"
+}

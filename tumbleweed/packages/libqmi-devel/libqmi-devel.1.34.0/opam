@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqmi-devel-1.34.0-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqmi-devel-1.34.0-2.3.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libmbim-devel" {>= "1.18.0"}
+  "libqmi-glib5" {= "1.34.0"}
+  "libqrtr-glib-devel" {>= "1.0.0"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Qmi-1_0" {= "1.34.0"}
+]
+extra-source "libqmi-devel-1.34.0-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libqmi-devel-1.34.0-2.3.x86_64.rpm"
+}

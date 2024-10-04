@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-IO-Capture-Extended-0.13-27.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-IO-Capture-Extended-0.13-27.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" 
+  "perl-IO-Capture" {>= "0.5"}
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-IO-Capture-Extended-0.13-27.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-IO-Capture-Extended-0.13-27.fc40.noarch.rpm"
+}

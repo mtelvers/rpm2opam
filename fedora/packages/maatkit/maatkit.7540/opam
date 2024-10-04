@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "maatkit-7540-36.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maatkit-7540-36.fc40.noarch.rpm"]
+depends: [
+  "perl-DBD-MySQL" {>= "1.0"}
+  "perl-Data-Dumper" 
+  "perl-Digest-MD5" 
+  "perl-English" 
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-File-Find" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-Socket" 
+  "perl-TermReadKey" {>= "2.10"}
+  "perl-Thread-Queue" 
+  "perl-Time-HiRes" 
+  "perl-Time-Local" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-sigtrap" 
+  "perl-threads" 
+]
+extra-source "maatkit-7540-36.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/maatkit-7540-36.fc40.noarch.rpm"
+}

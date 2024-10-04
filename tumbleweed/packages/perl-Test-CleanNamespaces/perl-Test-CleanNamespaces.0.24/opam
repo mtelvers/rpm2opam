@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-CleanNamespaces-0.24-1.26.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-CleanNamespaces-0.24-1.26.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Module-Runtime" 
+  "perl-Package-Stash" {>= "0.14"}
+  "perl-Role-Tiny" {>= "1.3000"}
+  "perl-Sub-Identify" 
+]
+extra-source "perl-Test-CleanNamespaces-0.24-1.26.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-CleanNamespaces-0.24-1.26.noarch.rpm"
+}

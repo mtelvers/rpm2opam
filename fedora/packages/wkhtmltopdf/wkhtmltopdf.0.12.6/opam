@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "wkhtmltopdf-0.12.6-3.fc40.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wkhtmltopdf-0.12.6-3.fc40.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtsvg" 
+  "qt5-qtwebkit" 
+]
+extra-source "wkhtmltopdf-0.12.6-3.fc40.5.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/wkhtmltopdf-0.12.6-3.fc40.5.x86_64.rpm"
+}

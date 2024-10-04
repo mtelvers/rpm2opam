@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dex-0.9.0-1.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dex-0.9.0-1.11.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "python311" 
+]
+extra-source "dex-0.9.0-1.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dex-0.9.0-1.11.noarch.rpm"
+}

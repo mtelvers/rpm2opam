@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-selinux-devel-0.4.4-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-selinux-devel-0.4.4-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bitflags+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-reference-counted-singleton+default-devel" 
+  "rust-selinux-sys+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-selinux-devel-0.4.4-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-selinux-devel-0.4.4-1.fc40.noarch.rpm"
+}

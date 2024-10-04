@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gstreamer-plugins-bad-lang-1.22.9-slfo.1.1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gstreamer-plugins-bad-lang-1.22.9-slfo.1.1.8.noarch.rpm"]
+depends: [
+  "gstreamer-plugins-bad" {= "1.22.9"}
+]
+extra-source "gstreamer-plugins-bad-lang-1.22.9-slfo.1.1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/gstreamer-plugins-bad-lang-1.22.9-slfo.1.1.8.noarch.rpm"
+}

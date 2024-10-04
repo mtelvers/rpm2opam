@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mcabber-devel-1.1.3-0.5.20211025git87964c3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mcabber-devel-1.1.3-0.5.20211025git87964c3.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "loudmouth-devel" 
+  "mcabber" {= "1.1.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "mcabber-devel-1.1.3-0.5.20211025git87964c3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mcabber-devel-1.1.3-0.5.20211025git87964c3.fc40.x86_64.rpm"
+}

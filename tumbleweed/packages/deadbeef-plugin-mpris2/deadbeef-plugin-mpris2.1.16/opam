@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "deadbeef-plugin-mpris2-1.16-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deadbeef-plugin-mpris2-1.16-1.3.x86_64.rpm"]
+depends: [
+  "deadbeef" {>= "0.6.2"}
+  "glib2-stage1-devel" 
+  "glibc" 
+]
+extra-source "deadbeef-plugin-mpris2-1.16-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/deadbeef-plugin-mpris2-1.16-1.3.x86_64.rpm"
+}

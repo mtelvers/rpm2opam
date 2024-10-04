@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Crypt-GeneratePassword-0.05-25.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Crypt-GeneratePassword-0.05-25.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" 
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "perl-Crypt-GeneratePassword-0.05-25.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Crypt-GeneratePassword-0.05-25.fc40.noarch.rpm"
+}

@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postfixadmin-3.3.13-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postfixadmin-3.3.13-2.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "busybox-sendmail" 
+  "perl" 
+  "perl-DBI" 
+  "perl-Email-Sender" 
+  "perl-Email-Simple" 
+  "perl-Email-Valid" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-LockFile-Simple" 
+  "perl-Log-Log4perl" 
+  "perl-MIME-EncWords" 
+  "perl-Try-Tiny" 
+  "perl-base" 
+  "php8" 
+  "php8-mbstring" 
+  "php8-mysql" 
+  "php8-phar" 
+  "shadow" 
+  "system-user-wwwrun" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "postfixadmin-3.3.13-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/postfixadmin-3.3.13-2.2.noarch.rpm"
+}

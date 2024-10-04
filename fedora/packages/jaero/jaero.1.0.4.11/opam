@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jaero-1.0.4.11-10.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jaero-1.0.4.11-10.fc39.x86_64.rpm"]
+depends: [
+  "glibc" {>= "2.37.9000"}
+  "hicolor-icon-theme" 
+  "libacars" 
+  "libcorrect" 
+  "libgcc" 
+  "libogg" 
+  "libstdc++" 
+  "libvorbis" 
+  "qcustomplot-qt5" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtmultimedia" 
+  "unzip" 
+]
+extra-source "jaero-1.0.4.11-10.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jaero-1.0.4.11-10.fc39.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-data-default-instances-dlist-devel-0.0.1-11.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-data-default-instances-dlist-devel-0.0.1-11.9.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-data-default-class-devel" 
+  "ghc-data-default-instances-dlist" {= "0.0.1"}
+  "ghc-dlist-devel" 
+]
+extra-source "ghc-data-default-instances-dlist-devel-0.0.1-11.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-data-default-instances-dlist-devel-0.0.1-11.9.x86_64.rpm"
+}

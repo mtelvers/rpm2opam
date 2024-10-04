@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libscg-devel-2022.10.16-slfo.1.1.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libscg-devel-2022.10.16-slfo.1.1.12.x86_64.rpm"]
+depends: [
+  "librscg1_0" {= "2022.10.16"}
+  "libscg1_0" {= "2022.10.16"}
+  "libscgcmd1_0" {= "2022.10.16"}
+  "libschily-devel" 
+]
+extra-source "libscg-devel-2022.10.16-slfo.1.1.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libscg-devel-2022.10.16-slfo.1.1.12.x86_64.rpm"
+}

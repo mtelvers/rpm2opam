@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libyui-ncurses-rest-api-devel-4.6.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libyui-ncurses-rest-api-devel-4.6.3-1.1.x86_64.rpm"]
+depends: [
+  "glibc-devel" 
+  "libstdc++-devel" 
+  "libyui-ncurses-devel" {>= "4.6.3"}
+  "libyui-ncurses-rest-api16" {= "4.6.3"}
+  "libyui-rest-api-devel" {>= "4.6.3"}
+]
+extra-source "libyui-ncurses-rest-api-devel-4.6.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libyui-ncurses-rest-api-devel-4.6.3-1.1.x86_64.rpm"
+}

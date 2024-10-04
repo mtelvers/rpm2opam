@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nwipe-0.35-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nwipe-0.35-4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libconfig" 
+  "ncurses-libs" 
+  "parted" 
+]
+extra-source "nwipe-0.35-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nwipe-0.35-4.fc40.x86_64.rpm"
+}

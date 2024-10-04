@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-syntect4+dump-create-rs-devel-4.6.0-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-syntect4+dump-create-rs-devel-4.6.0-5.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-flate2+rust_backend-devel" 
+  "rust-flate2-devel" 
+  "rust-syntect4+bincode-devel" {= "4.6.0"}
+  "rust-syntect4-devel" {= "4.6.0"}
+]
+extra-source "rust-syntect4+dump-create-rs-devel-4.6.0-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-syntect4+dump-create-rs-devel-4.6.0-5.fc40.noarch.rpm"
+}

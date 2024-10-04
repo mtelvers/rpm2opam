@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "systemd-presets-branding-transactional-server-15.0-4.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "systemd-presets-branding-transactional-server-15.0-4.14.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "coreutils" 
+  "systemd-presets-common-SUSE" 
+]
+extra-source "systemd-presets-branding-transactional-server-15.0-4.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/systemd-presets-branding-transactional-server-15.0-4.14.noarch.rpm"
+}

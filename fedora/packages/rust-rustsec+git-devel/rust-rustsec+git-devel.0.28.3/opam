@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rustsec+git-devel-0.28.3-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rustsec+git-devel-0.28.3-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-gix+max-performance-safe-devel" 
+  "rust-gix+revision-devel" 
+  "rust-gix+worktree-mutation-devel" 
+  "rust-gix-devel" 
+  "rust-home+default-devel" 
+  "rust-rustsec-devel" {= "0.28.3"}
+  "rust-tame-index+git-devel" 
+  "rust-tame-index+native-certs-devel" 
+  "rust-tame-index+sparse-devel" 
+  "rust-tame-index-devel" 
+  "rust-time+formatting-devel" 
+  "rust-time+serde-devel" 
+  "rust-time-devel" 
+]
+extra-source "rust-rustsec+git-devel-0.28.3-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rustsec+git-devel-0.28.3-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-crossbeam0.7-devel-0.7.3-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-crossbeam0.7-devel-0.7.3-10.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-cfg-if+default-devel" 
+  "rust-crossbeam-epoch-devel" 
+  "rust-crossbeam-utils-devel" 
+]
+extra-source "rust-crossbeam0.7-devel-0.7.3-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-crossbeam0.7-devel-0.7.3-10.fc40.noarch.rpm"
+}

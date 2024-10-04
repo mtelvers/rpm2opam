@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-time+std-devel-0.3.34-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-time+std-devel-0.3.34-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-deranged+std-devel" 
+  "rust-time+alloc-devel" {= "0.3.34"}
+  "rust-time-devel" {= "0.3.34"}
+]
+extra-source "rust-time+std-devel-0.3.34-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-time+std-devel-0.3.34-1.fc40.noarch.rpm"
+}

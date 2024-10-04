@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ptscotch-mpich-devel-6.1.0-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ptscotch-mpich-devel-6.1.0-3.3.x86_64.rpm"]
+depends: [
+  "gcc-fortran" 
+  "libptscotch0-mpich" {= "6.1.0"}
+  "mpich-devel" 
+  "scotch-devel" 
+]
+extra-source "ptscotch-mpich-devel-6.1.0-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ptscotch-mpich-devel-6.1.0-3.3.x86_64.rpm"
+}

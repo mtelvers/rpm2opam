@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Class-Mix-0.006-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Class-Mix-0.006-21.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-Params-Classify" {>= "0.0"}
+  "perl-constant" 
+  "perl-if" 
+  "perl-libs" 
+  "perl-mro" 
+  "perl-parent" 
+]
+extra-source "perl-Class-Mix-0.006-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Class-Mix-0.006-21.fc40.noarch.rpm"
+}

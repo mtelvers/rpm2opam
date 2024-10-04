@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-yaml-devel-0.11.11.2-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-yaml-devel-0.11.11.2-19.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-devel" 
+  "ghc-attoparsec-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-conduit-devel" 
+  "ghc-containers-devel" 
+  "ghc-directory-devel" 
+  "ghc-filepath-devel" 
+  "ghc-libyaml-devel" 
+  "ghc-mtl-devel" 
+  "ghc-resourcet-devel" 
+  "ghc-scientific-devel" 
+  "ghc-template-haskell-devel" 
+  "ghc-text-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-vector-devel" 
+  "ghc-yaml" {= "0.11.11.2"}
+]
+extra-source "ghc-yaml-devel-0.11.11.2-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-yaml-devel-0.11.11.2-19.fc40.x86_64.rpm"
+}

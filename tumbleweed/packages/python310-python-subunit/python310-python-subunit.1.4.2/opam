@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-python-subunit-1.4.2-3.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-python-subunit-1.4.2-3.7.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-extras" 
+  "python310-testtools" {>= "1.8.0"}
+  "python311-base" 
+]
+extra-source "python310-python-subunit-1.4.2-3.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-python-subunit-1.4.2-3.7.noarch.rpm"
+}

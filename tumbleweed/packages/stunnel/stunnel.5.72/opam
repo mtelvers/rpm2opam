@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "stunnel-5.72-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "stunnel-5.72-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "coreutils" 
+  "fillup" 
+  "glibc" 
+  "libopenssl3" 
+  "libwrap0" 
+  "perl-base" 
+  "shadow" 
+  "system-user-nobody" 
+]
+extra-source "stunnel-5.72-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/stunnel-5.72-2.1.x86_64.rpm"
+}

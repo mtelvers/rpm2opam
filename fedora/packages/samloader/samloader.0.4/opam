@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "samloader-0.4~20221223git95d2ac8-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "samloader-0.4~20221223git95d2ac8-5.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-pycryptodomex" 
+  "python3-requests" 
+  "python3-tqdm" 
+]
+extra-source "samloader-0.4~20221223git95d2ac8-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/samloader-0.4~20221223git95d2ac8-5.fc40.noarch.rpm"
+}

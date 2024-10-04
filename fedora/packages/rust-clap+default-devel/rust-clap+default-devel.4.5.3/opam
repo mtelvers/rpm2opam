@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-clap+default-devel-4.5.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-clap+default-devel-4.5.3-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-clap+color-devel" {= "4.5.3"}
+  "rust-clap+error-context-devel" {= "4.5.3"}
+  "rust-clap+help-devel" {= "4.5.3"}
+  "rust-clap+std-devel" {= "4.5.3"}
+  "rust-clap+suggestions-devel" {= "4.5.3"}
+  "rust-clap+usage-devel" {= "4.5.3"}
+  "rust-clap-devel" {= "4.5.3"}
+]
+extra-source "rust-clap+default-devel-4.5.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-clap+default-devel-4.5.3-1.fc40.noarch.rpm"
+}

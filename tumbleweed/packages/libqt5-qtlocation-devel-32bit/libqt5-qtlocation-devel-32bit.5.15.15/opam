@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqt5-qtlocation-devel-32bit-5.15.15+kde7-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqt5-qtlocation-devel-32bit-5.15.15+kde7-1.1.x86_64.rpm"]
+depends: [
+  "libQt5Core-devel" 
+  "libQt5Gui-devel" 
+  "libQt5Location5-32bit" {= "5.15.15"}
+  "libQt5Network-devel" 
+  "libQt5Positioning5-32bit" {= "5.15.15"}
+  "libQt5PositioningQuick5-32bit" {= "5.15.15"}
+  "libqt5-qtdeclarative-devel" 
+  "libqt5-qtlocation-devel" {= "5.15.15"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libqt5-qtlocation-devel-32bit-5.15.15+kde7-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libqt5-qtlocation-devel-32bit-5.15.15+kde7-1.1.x86_64.rpm"
+}

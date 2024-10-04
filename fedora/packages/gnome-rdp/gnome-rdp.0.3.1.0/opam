@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-rdp-0.3.1.0-34.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-rdp-0.3.1.0-34.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gnome-keyring-sharp" {= "1.0.0.0"}
+  "gtk-sharp2" {= "2.12.0.0"}
+  "libappindicator" 
+  "libappindicator-sharp" {= "0.2.0.0"}
+  "mono-core" {= "4.0.0.0"}
+  "mono-data-sqlite" {= "4.0.0.0"}
+  "rdesktop" {>= "1.6.0"}
+  "tigervnc" 
+  "tigervnc-server" 
+]
+extra-source "gnome-rdp-0.3.1.0-34.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-rdp-0.3.1.0-34.fc40.x86_64.rpm"
+}

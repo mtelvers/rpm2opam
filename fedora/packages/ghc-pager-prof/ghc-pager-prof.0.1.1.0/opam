@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-pager-prof-0.1.1.0-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-pager-prof-0.1.1.0-16.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-conduit-extra-prof" 
+  "ghc-conduit-prof" 
+  "ghc-directory-prof" 
+  "ghc-pager-devel" {= "0.1.1.0"}
+  "ghc-process-prof" 
+  "ghc-resourcet-prof" 
+  "ghc-safe-prof" 
+  "ghc-terminfo-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unix-prof" 
+]
+extra-source "ghc-pager-prof-0.1.1.0-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-pager-prof-0.1.1.0-16.fc40.x86_64.rpm"
+}

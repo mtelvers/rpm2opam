@@ -1,0 +1,48 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pgadmin4-8.8-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pgadmin4-8.8-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "python311-Authlib" {>= "1.3.0"}
+  "python311-Flask" {>= "3.0"}
+  "python311-Flask-Babel" {>= "4.0.0"}
+  "python311-Flask-Compress" {>= "1.4.0"}
+  "python311-Flask-Login" {>= "0.4.1"}
+  "python311-Flask-Mail" {>= "0.9.1"}
+  "python311-Flask-Migrate" {>= "4.0"}
+  "python311-Flask-Paranoid" {>= "0.2.0"}
+  "python311-Flask-SQLAlchemy" {>= "3.1"}
+  "python311-Flask-Security-Too" {>= "5.4.0"}
+  "python311-Flask-SocketIO" {>= "5.3.0"}
+  "python311-Flask-WTF" {>= "1.2"}
+  "python311-SQLAlchemy" {>= "2.0"}
+  "python311-WTForms" {>= "3.1"}
+  "python311-Werkzeug" {>= "3.0"}
+  "python311-base" 
+  "python311-bcrypt" {>= "4.0"}
+  "python311-cryptography" {>= "42.0"}
+  "python311-eventlet" {>= "0.33.3"}
+  "python311-httpagentparser" {>= "1.9"}
+  "python311-jsonformatter" {>= "0.3.2"}
+  "python311-keyring" {>= "24.0"}
+  "python311-ldap3" {>= "2.5.1"}
+  "python311-libgravatar" {>= "1.0.0"}
+  "python311-passlib" {>= "1.7.2"}
+  "python311-psutil" {>= "5.9.0"}
+  "python311-psycopg" {>= "3.1.12"}
+  "python311-pyotp" {>= "2.0"}
+  "python311-python-dateutil" {>= "2.8.0"}
+  "python311-pytz" {>= "2024.0"}
+  "python311-qrcode" {>= "7.0"}
+  "python311-sqlparse" {>= "0.3.0"}
+  "python311-sshtunnel" {>= "0.1.5"}
+  "python311-typer" {>= "0.12.0"}
+  "python311-urllib3_1" {< "2"}
+  "python311-user-agents" {>= "2.2"}
+  "system-user-pgadmin" 
+  "systemd" 
+]
+extra-source "pgadmin4-8.8-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pgadmin4-8.8-1.1.noarch.rpm"
+}

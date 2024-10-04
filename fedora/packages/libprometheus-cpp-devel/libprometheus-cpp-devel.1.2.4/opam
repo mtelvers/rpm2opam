@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libprometheus-cpp-devel-1.2.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libprometheus-cpp-devel-1.2.4-1.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "libcurl-devel" 
+  "libprometheus-cpp" {= "1.2.4"}
+  "pkgconf-pkg-config" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "libprometheus-cpp-devel-1.2.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libprometheus-cpp-devel-1.2.4-1.fc40.x86_64.rpm"
+}

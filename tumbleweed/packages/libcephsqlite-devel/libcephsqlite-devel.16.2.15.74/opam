@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcephsqlite-devel-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcephsqlite-devel-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm"]
+depends: [
+  "libcephsqlite" {= "16.2.15.74"}
+  "librados-devel" {= "16.2.15.74"}
+  "libradospp-devel" {= "16.2.15.74"}
+  "sqlite3-devel" 
+]
+extra-source "libcephsqlite-devel-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcephsqlite-devel-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm"
+}

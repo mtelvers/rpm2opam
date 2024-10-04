@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpmem-devel-2.1.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpmem-devel-2.1.0-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libndctl6" 
+  "libpmem1" {= "2.1.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libpmem-devel-2.1.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpmem-devel-2.1.0-2.1.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-xdg+serde-devel-2.5.2-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-xdg+serde-devel-2.5.2-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-xdg-devel" {= "2.5.2"}
+]
+extra-source "rust-xdg+serde-devel-2.5.2-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-xdg+serde-devel-2.5.2-2.fc40.noarch.rpm"
+}

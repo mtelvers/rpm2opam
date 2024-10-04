@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-modernc-sqlite-devel-1.27.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-modernc-sqlite-devel-1.27.0-4.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-mattn-sqlite3-devel" 
+  "golang-modernc-libc-devel" 
+  "golang-modernc-mathutil-devel" 
+  "golang-modernc-tcl-devel" 
+  "golang-x-sys-devel" 
+]
+extra-source "golang-modernc-sqlite-devel-1.27.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-modernc-sqlite-devel-1.27.0-4.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-ftfy-6.0.3-2.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-ftfy-6.0.3-2.5.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-wcwidth" 
+  "update-alternatives" 
+]
+extra-source "python311-ftfy-6.0.3-2.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-ftfy-6.0.3-2.5.noarch.rpm"
+}

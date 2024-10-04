@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-exsheets-2024.216.0.0.21ksvn67300-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-exsheets-2024.216.0.0.21ksvn67300-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-cntformats" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-l3kernel" 
+  "texlive-l3packages" 
+  "texlive-listings" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tasks" 
+  "texlive-translations" 
+  "texlive-ulem" 
+  "texlive-xcolor" 
+]
+extra-source "texlive-exsheets-2024.216.0.0.21ksvn67300-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-exsheets-2024.216.0.0.21ksvn67300-55.1.noarch.rpm"
+}

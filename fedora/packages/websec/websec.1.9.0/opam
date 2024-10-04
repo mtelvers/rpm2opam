@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "websec-1.9.0-36.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "websec-1.9.0-36.fc40.noarch.rpm"]
+depends: [
+  "esmtp" 
+  "perl-File-Copy" 
+  "perl-File-Temp" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" 
+  "perl-HTTP-Date" 
+  "perl-HTTP-Message" 
+  "perl-IO-Socket-SSL" 
+  "perl-LWP-Protocol-https" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Pod-Usage" 
+  "perl-URI" 
+  "perl-interpreter" 
+  "perl-libwww-perl" 
+  "perl-vars" 
+]
+extra-source "websec-1.9.0-36.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/websec-1.9.0-36.fc40.noarch.rpm"
+}

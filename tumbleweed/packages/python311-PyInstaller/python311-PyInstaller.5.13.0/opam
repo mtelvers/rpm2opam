@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-PyInstaller-5.13.0-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-PyInstaller-5.13.0-1.5.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libz-ng-compat1" 
+  "python311-altgraph" 
+  "python311-base" 
+  "python311-devel" 
+  "python311-pyinstaller-hooks-contrib" {>= "2021.4"}
+  "python311-setuptools" {>= "42.0.0"}
+  "update-alternatives" 
+]
+extra-source "python311-PyInstaller-5.13.0-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-PyInstaller-5.13.0-1.5.x86_64.rpm"
+}

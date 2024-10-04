@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-podlators-5.01-502.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-podlators-5.01-502.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long" 
+  "perl-POSIX" 
+  "perl-PathTools" {>= "0.8"}
+  "perl-Pod-Simple" {>= "3.26"}
+  "perl-Pod-Usage" 
+  "perl-Term-ANSIColor" 
+  "perl-Term-Cap" 
+  "perl-interpreter" 
+]
+extra-source "perl-podlators-5.01-502.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-podlators-5.01-502.fc40.noarch.rpm"
+}

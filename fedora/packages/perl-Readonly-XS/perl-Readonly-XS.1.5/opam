@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Readonly-XS-1.05-50.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Readonly-XS-1.05-50.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-Carp" 
+  "perl-Readonly" {>= "1.2"}
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-Readonly-XS-1.05-50.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Readonly-XS-1.05-50.fc40.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghostscript-10.03.1-slfo.1.1.18.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghostscript-10.03.1-slfo.1.1.18.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libcups2" 
+  "libfreetype6" 
+  "libjpeg8" 
+  "libopenjp2-7" 
+  "libpng16-16" 
+  "libtiff6" 
+  "libz-ng-compat1" 
+  "update-alternatives" 
+]
+extra-source "ghostscript-10.03.1-slfo.1.1.18.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/ghostscript-10.03.1-slfo.1.1.18.x86_64.rpm"
+}

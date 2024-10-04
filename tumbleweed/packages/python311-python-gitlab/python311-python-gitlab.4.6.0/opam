@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-python-gitlab-4.6.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-python-gitlab-4.6.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-PyYAML" {>= "6.0.1"}
+  "python311-argcomplete" {>= "1.10.0"}
+  "python311-base" {= "3.11"}
+  "python311-requests" {>= "2.22.0"}
+  "python311-requests-toolbelt" {>= "0.9.1"}
+  "update-alternatives" 
+]
+extra-source "python311-python-gitlab-4.6.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-python-gitlab-4.6.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vino-lang-3.22.0-9.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vino-lang-3.22.0-9.11.noarch.rpm"]
+depends: [
+  "vino" {= "3.22.0"}
+]
+extra-source "vino-lang-3.22.0-9.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/vino-lang-3.22.0-9.11.noarch.rpm"
+}

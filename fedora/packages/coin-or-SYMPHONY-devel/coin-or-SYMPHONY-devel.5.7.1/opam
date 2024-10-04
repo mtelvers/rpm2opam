@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "coin-or-SYMPHONY-devel-5.7.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coin-or-SYMPHONY-devel-5.7.1-1.fc40.x86_64.rpm"]
+depends: [
+  "coin-or-Cgl-devel" 
+  "coin-or-Clp-devel" 
+  "coin-or-CoinUtils-devel" 
+  "coin-or-DyLP-devel" 
+  "coin-or-Osi-devel" 
+  "coin-or-SYMPHONY" {= "5.7.1"}
+  "coin-or-Vol-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "coin-or-SYMPHONY-devel-5.7.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/coin-or-SYMPHONY-devel-5.7.1-1.fc40.x86_64.rpm"
+}

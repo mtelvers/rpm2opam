@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ashpd+gtk4_wayland-devel-0.8.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ashpd+gtk4_wayland-devel-0.8.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-ashpd+gdk4wayland-devel" {= "0.8.1"}
+  "rust-ashpd+glib-devel" {= "0.8.1"}
+  "rust-ashpd-devel" {= "0.8.1"}
+  "rust-gtk4+default-devel" 
+]
+extra-source "rust-ashpd+gtk4_wayland-devel-0.8.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ashpd+gtk4_wayland-devel-0.8.1-1.fc40.noarch.rpm"
+}

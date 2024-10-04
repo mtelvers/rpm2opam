@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "typelib-1_0-Rest-0_7-0.8.1-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "typelib-1_0-Rest-0_7-0.8.1-3.3.x86_64.rpm"]
+depends: [
+  "girepository-1_0" {= "2.0"}
+  "librest-0_7-0" 
+  "typelib-1_0-GLib-2_0" {= "2.0"}
+  "typelib-1_0-GModule-2_0" {= "2.0"}
+  "typelib-1_0-GObject-2_0" {= "2.0"}
+  "typelib-1_0-Gio-2_0" {= "2.0"}
+  "typelib-1_0-Soup-2_4" {= "2.4"}
+]
+extra-source "typelib-1_0-Rest-0_7-0.8.1-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/typelib-1_0-Rest-0_7-0.8.1-3.3.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cgit-1.2.3-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cgit-1.2.3-2.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "libz-ng-compat1" 
+  "python311-base" 
+  "system-user-wwwrun" 
+]
+extra-source "cgit-1.2.3-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cgit-1.2.3-2.1.x86_64.rpm"
+}

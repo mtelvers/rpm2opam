@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "octave-forge-secs1d-0.0.9-1.24.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "octave-forge-secs1d-0.0.9-1.24.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "octave-cli" {>= "3.0"}
+  "octave-forge-bim" 
+]
+extra-source "octave-forge-secs1d-0.0.9-1.24.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/octave-forge-secs1d-0.0.9-1.24.noarch.rpm"
+}

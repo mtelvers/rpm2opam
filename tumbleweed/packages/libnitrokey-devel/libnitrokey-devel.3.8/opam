@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnitrokey-devel-3.8-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnitrokey-devel-3.8-1.6.x86_64.rpm"]
+depends: [
+  "libhidapi-devel" 
+  "libnitrokey3" {= "3.8"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libnitrokey-devel-3.8-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libnitrokey-devel-3.8-1.6.x86_64.rpm"
+}

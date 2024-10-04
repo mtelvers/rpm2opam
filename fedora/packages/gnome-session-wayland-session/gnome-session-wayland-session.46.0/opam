@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-session-wayland-session-46.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-session-wayland-session-46.0-1.fc40.x86_64.rpm"]
+depends: [
+  "gnome-session" {= "46.0"}
+  "xorg-x11-server-Xwayland" {>= "1.20.99.1"}
+]
+extra-source "gnome-session-wayland-session-46.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-session-wayland-session-46.0-1.fc40.x86_64.rpm"
+}

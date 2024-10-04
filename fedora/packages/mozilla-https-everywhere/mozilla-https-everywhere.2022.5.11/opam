@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mozilla-https-everywhere-2022.5.11-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mozilla-https-everywhere-2022.5.11-5.fc40.noarch.rpm"]
+depends: [
+  "mozilla-filesystem" 
+]
+extra-source "mozilla-https-everywhere-2022.5.11-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mozilla-https-everywhere-2022.5.11-5.fc40.noarch.rpm"
+}

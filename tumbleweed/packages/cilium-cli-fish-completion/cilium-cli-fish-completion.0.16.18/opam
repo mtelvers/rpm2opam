@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cilium-cli-fish-completion-0.16.18-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cilium-cli-fish-completion-0.16.18-2.1.noarch.rpm"]
+depends: [
+  "cilium-cli" {= "0.16.18"}
+]
+extra-source "cilium-cli-fish-completion-0.16.18-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cilium-cli-fish-completion-0.16.18-2.1.noarch.rpm"
+}

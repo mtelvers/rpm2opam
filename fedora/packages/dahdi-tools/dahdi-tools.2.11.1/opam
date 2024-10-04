@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dahdi-tools-2.11.1-31.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dahdi-tools-2.11.1-31.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dahdi-tools-libs" {= "2.11.1"}
+  "glibc" 
+  "libusb1" 
+  "newt" 
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long" 
+  "perl-Getopt-Std" 
+  "perl-Socket" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "shadow-utils" 
+  "systemd" 
+  "systemd-udev" 
+]
+extra-source "dahdi-tools-2.11.1-31.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dahdi-tools-2.11.1-31.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-DBIx-Class-Schema-Config-0.001014-1.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DBIx-Class-Schema-Config-0.001014-1.15.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Config-Any" {>= "0.23"}
+  "perl-DBD-SQLite" 
+  "perl-DBIx-Class" {>= "0.8100"}
+  "perl-File-HomeDir" 
+  "perl-Hash-Merge" 
+  "perl-URI" 
+  "perl-namespace-clean" 
+]
+extra-source "perl-DBIx-Class-Schema-Config-0.001014-1.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-DBIx-Class-Schema-Config-0.001014-1.15.noarch.rpm"
+}

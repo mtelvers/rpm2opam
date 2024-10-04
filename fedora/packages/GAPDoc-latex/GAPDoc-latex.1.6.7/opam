@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "GAPDoc-latex-1.6.7-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "GAPDoc-latex-1.6.7-2.fc40.noarch.rpm"]
+depends: [
+  "GAPDoc" {= "1.6.7"}
+  "gap-online-help" 
+  "ghostscript" 
+  "texlive-amsfonts" 
+  "texlive-babel-english" 
+  "texlive-cm-super" 
+  "texlive-collection-basic" 
+  "texlive-ec" 
+  "texlive-enumitem" 
+  "texlive-fancyvrb" 
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-grfext" 
+  "texlive-helvetic" 
+  "texlive-latex" 
+  "texlive-pslatex" 
+  "texlive-psnfss" 
+  "texlive-rsfs" 
+  "texlive-symbol" 
+  "texlive-times" 
+]
+extra-source "GAPDoc-latex-1.6.7-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/GAPDoc-latex-1.6.7-2.fc40.noarch.rpm"
+}

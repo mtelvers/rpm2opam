@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zypp-gui-0.3.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zypp-gui-0.3.0-1.3.x86_64.rpm"]
+depends: [
+  "PackageKit" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libadwaita-1-0" 
+  "libcairo2" 
+  "libgcc_s1" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-4-1" 
+  "libpackagekit-glib2-18" 
+  "libpango-1_0-0" 
+  "pkexec" 
+]
+extra-source "zypp-gui-0.3.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/zypp-gui-0.3.0-1.3.x86_64.rpm"
+}

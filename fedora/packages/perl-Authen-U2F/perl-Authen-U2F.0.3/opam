@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Authen-U2F-0.003-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Authen-U2F-0.003-6.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Crypt-OpenSSL-X509" {>= "1.806"}
+  "perl-CryptX" 
+  "perl-Digest-SHA" 
+  "perl-Exporter-Tiny" 
+  "perl-JSON" 
+  "perl-MIME-Base64" {>= "3.11"}
+  "perl-Math-Random-Secure" 
+  "perl-Try-Tiny" 
+  "perl-Type-Tiny" 
+  "perl-libs" 
+  "perl-namespace-autoclean" 
+  "perl-parent" 
+]
+extra-source "perl-Authen-U2F-0.003-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Authen-U2F-0.003-6.fc40.noarch.rpm"
+}

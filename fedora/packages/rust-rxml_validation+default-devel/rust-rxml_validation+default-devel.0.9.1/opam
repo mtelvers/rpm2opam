@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rxml_validation+default-devel-0.9.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rxml_validation+default-devel-0.9.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-rxml_validation-devel" {= "0.9.1"}
+]
+extra-source "rust-rxml_validation+default-devel-0.9.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rxml_validation+default-devel-0.9.1-2.fc40.noarch.rpm"
+}

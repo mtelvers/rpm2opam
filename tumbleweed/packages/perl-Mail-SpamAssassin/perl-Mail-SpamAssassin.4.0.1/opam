@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Mail-SpamAssassin-4.0.1-77.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mail-SpamAssassin-4.0.1-77.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Archive-Zip" 
+  "perl-Digest-SHA1" 
+  "perl-HTML-Parser" {>= "3.43"}
+  "perl-Mail-DKIM" {>= "0.31"}
+  "perl-Net-DNS" {>= "0.69"}
+  "perl-NetAddr-IP" {>= "4.10"}
+  "perl-base" 
+]
+extra-source "perl-Mail-SpamAssassin-4.0.1-77.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Mail-SpamAssassin-4.0.1-77.2.noarch.rpm"
+}

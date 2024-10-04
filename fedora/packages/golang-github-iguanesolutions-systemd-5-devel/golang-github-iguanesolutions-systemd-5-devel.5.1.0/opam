@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-iguanesolutions-systemd-5-devel-5.1.0-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-iguanesolutions-systemd-5-devel-5.1.0-7.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-godbus-dbus-5-devel" 
+  "go-filesystem" 
+  "golang-github-miekg-dns-devel" 
+  "golang-x-net-devel" 
+]
+extra-source "golang-github-iguanesolutions-systemd-5-devel-5.1.0-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-iguanesolutions-systemd-5-devel-5.1.0-7.fc40.noarch.rpm"
+}

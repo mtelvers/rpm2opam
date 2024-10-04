@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-breakpoint-prof-0.1.2.1-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-breakpoint-prof-0.1.2.1-16.fc40.x86_64.rpm"]
+depends: [
+  "ghc-ansi-terminal-prof" 
+  "ghc-base-prof" 
+  "ghc-breakpoint-devel" {= "0.1.2.1"}
+  "ghc-containers-prof" 
+  "ghc-ghc-prof" 
+  "ghc-haskeline-prof" 
+  "ghc-mtl-prof" 
+  "ghc-pretty-simple-prof" 
+  "ghc-template-haskell-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-breakpoint-prof-0.1.2.1-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-breakpoint-prof-0.1.2.1-16.fc40.x86_64.rpm"
+}

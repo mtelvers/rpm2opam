@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "netcdf-static-4.9.2-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netcdf-static-4.9.2-5.fc40.x86_64.rpm"]
+depends: [
+  "netcdf" {= "4.9.2"}
+]
+extra-source "netcdf-static-4.9.2-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/netcdf-static-4.9.2-5.fc40.x86_64.rpm"
+}

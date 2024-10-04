@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-chemschemex-2024.216.1.2svn46723-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-chemschemex-2024.216.1.2svn46723-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-bigfoot" 
+  "texlive-etoolbox" 
+  "texlive-fancylabel" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-graphics" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-pgf" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-xargs" 
+  "texlive-xifthen" 
+  "texlive-xkeyval" 
+]
+extra-source "texlive-chemschemex-2024.216.1.2svn46723-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-chemschemex-2024.216.1.2svn46723-56.1.noarch.rpm"
+}

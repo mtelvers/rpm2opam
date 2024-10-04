@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-shopify-sarama-devel-1.27.2-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-shopify-sarama-devel-1.27.2-12.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-davecgh-spew-devel" 
+  "golang-github-eapache-queue-devel" 
+  "golang-github-eapache-resiliency-devel" 
+  "golang-github-eapache-xerial-snappy-devel" 
+  "golang-github-jcmturner-gofork-devel" 
+  "golang-github-klauspost-compress-devel" 
+  "golang-github-pierrec-lz4-devel" 
+  "golang-github-rcrowley-metrics-devel" 
+  "golang-gopkg-jcmturner-gokrb5-7-devel" 
+  "golang-x-net-devel" 
+]
+extra-source "golang-github-shopify-sarama-devel-1.27.2-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-shopify-sarama-devel-1.27.2-12.fc40.noarch.rpm"
+}

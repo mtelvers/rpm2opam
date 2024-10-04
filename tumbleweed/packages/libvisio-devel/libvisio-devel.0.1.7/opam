@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvisio-devel-0.1.7-1.32.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvisio-devel-0.1.7-1.32.x86_64.rpm"]
+depends: [
+  "libicu-devel" 
+  "librevenge-devel" 
+  "libvisio-0_1-1" {= "0.1.7"}
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libvisio-devel-0.1.7-1.32.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libvisio-devel-0.1.7-1.32.x86_64.rpm"
+}

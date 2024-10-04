@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Spoon-0.24-52.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Spoon-0.24-52.fc40.noarch.rpm"]
+depends: [
+  "perl-CGI" 
+  "perl-Carp" 
+  "perl-DB_File" 
+  "perl-Data-Dumper" 
+  "perl-Encode" 
+  "perl-File-Path" 
+  "perl-IO-All" {>= "0.32"}
+  "perl-MIME-Base64" 
+  "perl-Scalar-List-Utils" 
+  "perl-Spiffy" {>= "0.24"}
+  "perl-Storable" 
+  "perl-Template-Toolkit" {>= "2.10"}
+  "perl-Time-HiRes" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-Spoon-0.24-52.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Spoon-0.24-52.fc40.noarch.rpm"
+}

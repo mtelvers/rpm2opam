@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gwenhywfar-devel-5.10.1-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gwenhywfar-devel-5.10.1-1.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-devel" 
+  "libgwengui-fox16-79" {>= "5.10.1"}
+  "libgwengui-gtk2-79" {>= "5.10.1"}
+  "libgwengui-gtk3-79" {>= "5.10.1"}
+  "libgwengui-qt5-79" {>= "5.10.1"}
+  "libgwenhywfar79" {= "5.10.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gwenhywfar-devel-5.10.1-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gwenhywfar-devel-5.10.1-1.8.x86_64.rpm"
+}

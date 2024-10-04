@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dpdk-kmp-default-22.11.1_k6.4.0_slfo.1.6-slfo.1.1.24.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dpdk-kmp-default-22.11.1_k6.4.0_slfo.1.6-slfo.1.1.24.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "grep" 
+  "kernel-default" {= "0"}
+  "suse-module-tools-scriptlets" 
+]
+extra-source "dpdk-kmp-default-22.11.1_k6.4.0_slfo.1.6-slfo.1.1.24.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/dpdk-kmp-default-22.11.1_k6.4.0_slfo.1.6-slfo.1.1.24.x86_64.rpm"
+}

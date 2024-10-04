@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sleuthkit-4.12.1-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sleuthkit-4.12.1-2.fc40.x86_64.rpm"]
+depends: [
+  "afflib" 
+  "file" 
+  "glibc" 
+  "libewf" 
+  "libgcc" 
+  "libstdc++" 
+  "mac-robber" 
+  "perl-POSIX" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "sleuthkit-libs" 
+]
+extra-source "sleuthkit-4.12.1-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sleuthkit-4.12.1-2.fc40.x86_64.rpm"
+}

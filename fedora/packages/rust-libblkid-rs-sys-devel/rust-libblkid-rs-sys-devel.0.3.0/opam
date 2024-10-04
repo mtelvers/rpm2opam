@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-libblkid-rs-sys-devel-0.3.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-libblkid-rs-sys-devel-0.3.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "libblkid-devel" 
+  "rust" {>= "1.71.1"}
+  "rust-bindgen+runtime-devel" 
+  "rust-bindgen-devel" 
+  "rust-cc+default-devel" 
+]
+extra-source "rust-libblkid-rs-sys-devel-0.3.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-libblkid-rs-sys-devel-0.3.0-1.fc40.noarch.rpm"
+}

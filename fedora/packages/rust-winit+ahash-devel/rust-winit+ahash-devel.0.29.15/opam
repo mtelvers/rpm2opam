@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-winit+ahash-devel-0.29.15-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-winit+ahash-devel-0.29.15-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-ahash+default-devel" 
+  "rust-ahash+no-rng-devel" 
+  "rust-winit-devel" {= "0.29.15"}
+]
+extra-source "rust-winit+ahash-devel-0.29.15-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-winit+ahash-devel-0.29.15-1.fc40.noarch.rpm"
+}

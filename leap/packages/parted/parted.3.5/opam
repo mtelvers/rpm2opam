@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "parted-3.5-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "parted-3.5-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libncurses6" 
+  "libparted-fs-resize0" 
+  "libparted2" 
+  "libreadline8" 
+  "libuuid1" 
+]
+extra-source "parted-3.5-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/parted-3.5-slfo.1.1.8.x86_64.rpm"
+}

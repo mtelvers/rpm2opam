@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nut-doc-html-2.8.2-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nut-doc-html-2.8.2-2.1.noarch.rpm"]
+depends: [
+  "nut-doc-images" {= "2.8.2"}
+]
+extra-source "nut-doc-html-2.8.2-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nut-doc-html-2.8.2-2.1.noarch.rpm"
+}

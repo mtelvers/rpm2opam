@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-XML-DOM-XPath-0.14-8.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XML-DOM-XPath-0.14-8.1.noarch.rpm"]
+depends: [
+  "perl" {>= "5.16"}
+  "perl-XML-DOM" 
+  "perl-XML-XPathEngine" {>= "0.1"}
+]
+extra-source "perl-XML-DOM-XPath-0.14-8.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-XML-DOM-XPath-0.14-8.1.noarch.rpm"
+}

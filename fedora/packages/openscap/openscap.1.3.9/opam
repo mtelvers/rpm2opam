@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openscap-1.3.9-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openscap-1.3.9-5.fc40.x86_64.rpm"]
+depends: [
+  "apt-libs" 
+  "bash" 
+  "bzip2-libs" 
+  "dbus" 
+  "dbus-libs" 
+  "glib2" 
+  "glibc" 
+  "libacl" 
+  "libblkid" 
+  "libcap" 
+  "libcurl" 
+  "libgcc" 
+  "libgcrypt" 
+  "libselinux" 
+  "libstdc++" 
+  "libxml2" 
+  "libxslt" 
+  "libyaml" 
+  "opendbx" 
+  "openldap" 
+  "pcre2" 
+  "popt" 
+  "procps-ng" 
+  "rpm-libs" 
+  "xmlsec1" 
+  "xmlsec1-openssl" 
+]
+extra-source "openscap-1.3.9-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openscap-1.3.9-5.fc40.x86_64.rpm"
+}

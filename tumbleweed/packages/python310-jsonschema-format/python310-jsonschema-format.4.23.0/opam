@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-jsonschema-format-4.23.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-jsonschema-format-4.23.0-1.1.noarch.rpm"]
+depends: [
+  "python310-fqdn" 
+  "python310-idna" 
+  "python310-isoduration" 
+  "python310-jsonpointer" {> "1.13"}
+  "python310-jsonschema" {= "4.23.0"}
+  "python310-rfc3339-validator" 
+  "python310-rfc3987" 
+  "python310-uri-template" 
+  "python310-webcolors" {>= "1.11"}
+]
+extra-source "python310-jsonschema-format-4.23.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-jsonschema-format-4.23.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "racket-8.14-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "racket-8.14-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libcairo2" 
+  "libedit0" 
+  "libglib-2_0-0" 
+  "libgtk-3-0" 
+  "liblz4-1" 
+  "libncurses6" 
+  "libpango-1_0-0" 
+  "libsqlite3-0" 
+  "libz-ng-compat1" 
+]
+extra-source "racket-8.14-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/racket-8.14-1.1.x86_64.rpm"
+}

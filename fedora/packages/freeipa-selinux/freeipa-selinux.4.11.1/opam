@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "freeipa-selinux-4.11.1-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freeipa-selinux-4.11.1-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "libselinux-utils" 
+  "policycoreutils" 
+  "policycoreutils-python-utils" 
+  "selinux-policy" {>= "40.13"}
+  "selinux-policy-targeted" 
+]
+extra-source "freeipa-selinux-4.11.1-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/freeipa-selinux-4.11.1-4.fc40.noarch.rpm"
+}

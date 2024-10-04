@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-z3-devel-4.13.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-z3-devel-4.13.0-1.fc40.x86_64.rpm"]
+depends: [
+  "ocaml" {= "2125"}
+  "ocaml-z3" {= "4.13.0"}
+  "ocaml-zarith" {= "0"}
+  "ocaml-zarith-devel" 
+]
+extra-source "ocaml-z3-devel-4.13.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-z3-devel-4.13.0-1.fc40.x86_64.rpm"
+}

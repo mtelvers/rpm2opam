@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "llvm16-doc-16.0.6-9.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "llvm16-doc-16.0.6-9.1.noarch.rpm"]
+depends: [
+  "llvm16" {= "16.0.6"}
+]
+extra-source "llvm16-doc-16.0.6-9.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/llvm16-doc-16.0.6-9.1.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libxplayer-plparser18-1.0.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxplayer-plparser18-1.0.3-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libarchive13" 
+  "libgcrypt20" 
+  "libgmime-3_0-0" 
+  "libsoup-2_4-1" 
+  "libxml2-2" 
+  "xplayer-plparser" {>= "1.0.3"}
+]
+extra-source "libxplayer-plparser18-1.0.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libxplayer-plparser18-1.0.3-1.1.x86_64.rpm"
+}

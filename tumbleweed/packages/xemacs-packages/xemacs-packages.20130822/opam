@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xemacs-packages-20130822-15.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xemacs-packages-20130822-15.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "perl-base" 
+]
+extra-source "xemacs-packages-20130822-15.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xemacs-packages-20130822-15.1.noarch.rpm"
+}

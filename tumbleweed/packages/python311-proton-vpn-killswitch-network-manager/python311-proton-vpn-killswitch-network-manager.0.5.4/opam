@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-proton-vpn-killswitch-network-manager-0.5.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-proton-vpn-killswitch-network-manager-0.5.4-1.1.noarch.rpm"]
+depends: [
+  "NetworkManager" 
+  "python311-base" {= "3.11"}
+  "python311-gobject" 
+  "python311-packaging" 
+  "python311-proton-vpn-api-core" 
+  "python311-proton-vpn-logger" 
+  "python311-pycairo" 
+]
+extra-source "python311-proton-vpn-killswitch-network-manager-0.5.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-proton-vpn-killswitch-network-manager-0.5.4-1.1.noarch.rpm"
+}

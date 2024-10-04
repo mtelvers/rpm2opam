@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "webalizer-2.23_08-24.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "webalizer-2.23_08-24.fc40.x86_64.rpm"]
+depends: [
+  "GeoIP" 
+  "bash" 
+  "bzip2-libs" 
+  "crontabs" 
+  "gd" 
+  "glibc" 
+  "httpd" 
+  "libdb" 
+  "shadow-utils" 
+  "zlib-ng-compat" 
+]
+extra-source "webalizer-2.23_08-24.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/webalizer-2.23_08-24.fc40.x86_64.rpm"
+}

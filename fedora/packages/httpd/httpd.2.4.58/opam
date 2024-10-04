@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "httpd-2.4.58-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "httpd-2.4.58-7.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "fedora-logos-httpd" 
+  "glibc" 
+  "httpd-core" {= "2.4.58"}
+  "libbrotli" 
+  "libselinux" 
+  "systemd" 
+  "systemd-libs" 
+]
+extra-source "httpd-2.4.58-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/httpd-2.4.58-7.fc40.x86_64.rpm"
+}

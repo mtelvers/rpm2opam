@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "resctl-bench-2.1.2-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "resctl-bench-2.1.2-11.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "rd-agent" {= "2.1.2"}
+  "rd-hashd" {= "2.1.2"}
+]
+extra-source "resctl-bench-2.1.2-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/resctl-bench-2.1.2-11.fc40.x86_64.rpm"
+}

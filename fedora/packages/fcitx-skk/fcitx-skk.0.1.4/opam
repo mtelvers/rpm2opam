@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fcitx-skk-0.1.4-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fcitx-skk-0.1.4-9.fc40.x86_64.rpm"]
+depends: [
+  "fcitx" 
+  "fcitx-libs" 
+  "fcitx-qt5" 
+  "glib2" 
+  "glibc" 
+  "libgcc" 
+  "libskk" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "skkdic" 
+]
+extra-source "fcitx-skk-0.1.4-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fcitx-skk-0.1.4-9.fc40.x86_64.rpm"
+}

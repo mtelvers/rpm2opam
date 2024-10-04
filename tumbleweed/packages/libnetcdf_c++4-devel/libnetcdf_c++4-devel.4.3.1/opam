@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnetcdf_c++4-devel-4.3.1-7.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnetcdf_c++4-devel-4.3.1-7.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "libnetcdf_c++4-1" {= "4.3.1"}
+  "netcdf-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libnetcdf_c++4-devel-4.3.1-7.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libnetcdf_c++4-devel-4.3.1-7.1.x86_64.rpm"
+}

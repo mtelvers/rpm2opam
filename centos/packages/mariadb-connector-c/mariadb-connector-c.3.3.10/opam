@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mariadb-connector-c-3.3.10-1.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mariadb-connector-c-3.3.10-1.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "krb5-libs" 
+  "libcurl" 
+  "libzstd" 
+  "mariadb-connector-c-config" 
+  "openssl-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "mariadb-connector-c-3.3.10-1.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/mariadb-connector-c-3.3.10-1.el10.x86_64.rpm"
+}

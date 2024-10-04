@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Sys-Virt-tests-10.1.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Sys-Virt-tests-10.1.0-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "perl-Sys-Hostname" 
+  "perl-Sys-Virt" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-Time-HiRes" 
+  "perl-XML-XPath" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Sys-Virt-tests-10.1.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Sys-Virt-tests-10.1.0-1.fc40.x86_64.rpm"
+}

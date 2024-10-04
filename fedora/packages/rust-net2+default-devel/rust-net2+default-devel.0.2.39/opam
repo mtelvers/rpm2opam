@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-net2+default-devel-0.2.39-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-net2+default-devel-0.2.39-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-net2+duration-devel" {= "0.2.39"}
+  "rust-net2-devel" {= "0.2.39"}
+]
+extra-source "rust-net2+default-devel-0.2.39-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-net2+default-devel-0.2.39-3.fc40.noarch.rpm"
+}

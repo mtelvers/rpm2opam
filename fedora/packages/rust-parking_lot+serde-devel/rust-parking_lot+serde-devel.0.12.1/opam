@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-parking_lot+serde-devel-0.12.1-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-parking_lot+serde-devel-0.12.1-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-lock_api+serde-devel" 
+  "rust-parking_lot-devel" {= "0.12.1"}
+]
+extra-source "rust-parking_lot+serde-devel-0.12.1-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-parking_lot+serde-devel-0.12.1-6.fc40.noarch.rpm"
+}

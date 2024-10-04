@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Dancer2-Plugin-DBIC-0.0100-1.18.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Dancer2-Plugin-DBIC-0.0100-1.18.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-DBICx-Sugar" {>= "0.200"}
+  "perl-Dancer2" {>= "0.153002"}
+]
+extra-source "perl-Dancer2-Plugin-DBIC-0.0100-1.18.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Dancer2-Plugin-DBIC-0.0100-1.18.noarch.rpm"
+}

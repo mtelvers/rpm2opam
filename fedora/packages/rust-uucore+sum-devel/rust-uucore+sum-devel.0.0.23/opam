@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-uucore+sum-devel-0.0.23-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-uucore+sum-devel-0.0.23-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-uucore+blake2b_simd-devel" {= "0.0.23"}
+  "rust-uucore+blake3-devel" {= "0.0.23"}
+  "rust-uucore+digest-devel" {= "0.0.23"}
+  "rust-uucore+hex-devel" {= "0.0.23"}
+  "rust-uucore+md-5-devel" {= "0.0.23"}
+  "rust-uucore+memchr-devel" {= "0.0.23"}
+  "rust-uucore+sha1-devel" {= "0.0.23"}
+  "rust-uucore+sha2-devel" {= "0.0.23"}
+  "rust-uucore+sha3-devel" {= "0.0.23"}
+  "rust-uucore+sm3-devel" {= "0.0.23"}
+  "rust-uucore-devel" {= "0.0.23"}
+]
+extra-source "rust-uucore+sum-devel-0.0.23-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-uucore+sum-devel-0.0.23-2.fc40.noarch.rpm"
+}

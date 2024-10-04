@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-mismath-2024.216.2.12svn70255-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-mismath-2024.216.2.12svn70255-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-amsmath" 
+  "texlive-decimalcomma" 
+  "texlive-esvect" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-ibrackets" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-l3packages" 
+  "texlive-latex" 
+  "texlive-mathtools" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tools" 
+  "texlive-xkeyval" 
+]
+extra-source "texlive-mismath-2024.216.2.12svn70255-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-mismath-2024.216.2.12svn70255-57.1.noarch.rpm"
+}

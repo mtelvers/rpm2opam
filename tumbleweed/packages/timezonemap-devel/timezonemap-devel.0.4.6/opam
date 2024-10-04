@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "timezonemap-devel-0.4.6-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "timezonemap-devel-0.4.6-1.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "gtk3-devel" 
+  "json-glib-devel" 
+  "libtimezonemap1" {= "0.4.6"}
+  "pkgconf-pkg-config" 
+]
+extra-source "timezonemap-devel-0.4.6-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/timezonemap-devel-0.4.6-1.1.x86_64.rpm"
+}

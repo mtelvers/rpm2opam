@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-fedora-devel-2.1.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-fedora-devel-2.1.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.67.0"}
+  "rust-bytes+default-devel" 
+  "rust-cookie+default-devel" 
+  "rust-cookie_store+default-devel" 
+  "rust-dirs+default-devel" 
+  "rust-log+default-devel" 
+  "rust-reqwest+cookies-devel" 
+  "rust-reqwest+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde_json+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-url+default-devel" 
+]
+extra-source "rust-fedora-devel-2.1.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-fedora-devel-2.1.1-2.fc40.noarch.rpm"
+}

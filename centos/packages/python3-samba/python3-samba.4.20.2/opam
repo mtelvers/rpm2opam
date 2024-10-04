@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-samba-4.20.2-104.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-samba-4.20.2-104.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gnutls" 
+  "krb5-libs" 
+  "libcom_err" 
+  "libgcc" 
+  "libldb" 
+  "libsmbclient" {= "4.20.2"}
+  "libtalloc" 
+  "libtevent" 
+  "libwbclient" {= "4.20.2"}
+  "python3" {= "3.12"}
+  "python3-cryptography" 
+  "python3-dns" 
+  "python3-ldb" 
+  "python3-libs" 
+  "python3-requests" 
+  "python3-talloc" 
+  "python3-tdb" 
+  "python3-tevent" 
+  "samba-client-libs" 
+  "samba-common-libs" 
+  "samba-dc-libs" 
+  "samba-libs" 
+]
+extra-source "python3-samba-4.20.2-104.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/python3-samba-4.20.2-104.el10.x86_64.rpm"
+}

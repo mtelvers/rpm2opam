@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postgresql14-llvmjit-devel-14.13-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql14-llvmjit-devel-14.13-1.1.x86_64.rpm"]
+depends: [
+  "clang18" {>= "18.1.8"}
+  "llvm18" {>= "18.1.8"}
+  "postgresql-llvmjit-devel" {>= "14"}
+  "postgresql14-llvmjit" {= "14.13"}
+  "postgresql14-server-devel" {= "14.13"}
+]
+extra-source "postgresql14-llvmjit-devel-14.13-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/postgresql14-llvmjit-devel-14.13-1.1.x86_64.rpm"
+}

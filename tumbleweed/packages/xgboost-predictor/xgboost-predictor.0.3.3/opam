@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xgboost-predictor-0.3.3-2.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xgboost-predictor-0.3.3-2.5.noarch.rpm"]
+depends: [
+  "jafama" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "xgboost-predictor-0.3.3-2.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xgboost-predictor-0.3.3-2.5.noarch.rpm"
+}

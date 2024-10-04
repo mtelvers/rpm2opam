@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmovit8-1.7.1-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmovit8-1.7.1-1.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libepoxy0" 
+  "libfftw3-3" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "libmovit8-1.7.1-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmovit8-1.7.1-1.5.x86_64.rpm"
+}

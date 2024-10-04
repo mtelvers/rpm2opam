@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pcsc-tools-gscriptor-1.7.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcsc-tools-gscriptor-1.7.0-3.fc40.x86_64.rpm"]
+depends: [
+  "pcsc-perl" 
+  "pcsc-tools" {= "1.7.0"}
+  "perl-Carp" 
+  "perl-File-Basename" 
+  "perl-Glib" 
+  "perl-Gtk3" 
+  "perl-POSIX" 
+  "perl-interpreter" 
+  "perl-libintl-perl" 
+  "perl-libs" 
+]
+extra-source "pcsc-tools-gscriptor-1.7.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pcsc-tools-gscriptor-1.7.0-3.fc40.x86_64.rpm"
+}

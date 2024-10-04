@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "guice-assistedinject-6.0.0-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "guice-assistedinject-6.0.0-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "google-errorprone-annotations" 
+  "google-guice" {= "6.0.0"}
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "guice-assistedinject-6.0.0-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/guice-assistedinject-6.0.0-slfo.1.1.3.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ax25-tools-1.0.4-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ax25-tools-1.0.4-10.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libax25" 
+  "zlib-ng-compat" 
+]
+extra-source "ax25-tools-1.0.4-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/ax25-tools-1.0.4-10.fc40.x86_64.rpm"
+}

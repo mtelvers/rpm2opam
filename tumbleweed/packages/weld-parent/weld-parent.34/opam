@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "weld-parent-34-1.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "weld-parent-34-1.17.noarch.rpm"]
+depends: [
+  "build-helper-maven-plugin" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "maven-source-plugin" 
+]
+extra-source "weld-parent-34-1.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/weld-parent-34-1.17.noarch.rpm"
+}

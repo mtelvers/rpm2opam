@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-typeface-2024.216.0.0.1svn27046-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-typeface-2024.216.0.0.1svn27046-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-anyfontsize" 
+  "texlive-carlisle" 
+  "texlive-etexcmds" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-fixmath" 
+  "texlive-iftex" 
+  "texlive-ifthenx" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-mathtools" 
+  "texlive-nfssext-cfr" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tools" 
+  "texlive-xcolor" 
+  "texlive-xkeyval" 
+]
+extra-source "texlive-typeface-2024.216.0.0.1svn27046-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-typeface-2024.216.0.0.1svn27046-55.1.noarch.rpm"
+}

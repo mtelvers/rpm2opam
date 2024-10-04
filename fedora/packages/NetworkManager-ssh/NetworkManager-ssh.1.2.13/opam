@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "NetworkManager-ssh-1.2.13-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "NetworkManager-ssh-1.2.13-1.fc40.x86_64.rpm"]
+depends: [
+  "NetworkManager" {>= "1.2.6"}
+  "NetworkManager-libnm" 
+  "dbus" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libnma" 
+  "libsecret" 
+  "openssh-clients" 
+  "shared-mime-info" 
+  "sshpass" 
+]
+extra-source "NetworkManager-ssh-1.2.13-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/NetworkManager-ssh-1.2.13-1.fc40.x86_64.rpm"
+}

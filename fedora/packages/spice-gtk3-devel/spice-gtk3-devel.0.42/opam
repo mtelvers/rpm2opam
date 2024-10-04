@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "spice-gtk3-devel-0.42-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "spice-gtk3-devel-0.42-4.fc40.x86_64.rpm"]
+depends: [
+  "cyrus-sasl-devel" 
+  "glib2-devel" {>= "2.38"}
+  "gobject-introspection-devel" {>= "0.94"}
+  "gstreamer1-devel" {>= "1.10"}
+  "gstreamer1-plugins-base-devel" {>= "1.10"}
+  "gtk3-devel" 
+  "json-glib-devel" 
+  "libX11-devel" 
+  "libcacard-devel" {>= "2.5.1"}
+  "libepoxy-devel" 
+  "libjpeg-turbo-devel" 
+  "libphodav-devel" 
+  "libsoup3-devel" {>= "3.0"}
+  "libusb1-devel" {>= "1.0.21"}
+  "lz4-devel" 
+  "openssl-devel" {>= "1.0.0"}
+  "opus-devel" {>= "0.9.14"}
+  "pixman-devel" {>= "0.17.7"}
+  "pkgconf-pkg-config" 
+  "spice-glib-devel" 
+  "spice-gtk3" 
+  "spice-protocol" {>= "0.14.3"}
+  "usbredir-devel" {>= "0.7.1"}
+  "wayland-devel" {>= "1.17.0"}
+  "zlib-ng-compat-devel" 
+]
+extra-source "spice-gtk3-devel-0.42-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/spice-gtk3-devel-0.42-4.fc40.x86_64.rpm"
+}

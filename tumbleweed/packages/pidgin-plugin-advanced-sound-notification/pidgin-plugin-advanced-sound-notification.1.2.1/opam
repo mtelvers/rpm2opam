@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pidgin-plugin-advanced-sound-notification-1.2.1-11.27.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pidgin-plugin-advanced-sound-notification-1.2.1-11.27.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgtk-2_0-0" 
+  "libpurple0" 
+  "pidgin" {>= "2.14.12"}
+]
+extra-source "pidgin-plugin-advanced-sound-notification-1.2.1-11.27.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pidgin-plugin-advanced-sound-notification-1.2.1-11.27.x86_64.rpm"
+}

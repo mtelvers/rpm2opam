@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "notejot-lang-3.4.9-1.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "notejot-lang-3.4.9-1.11.noarch.rpm"]
+depends: [
+  "notejot" {= "3.4.9"}
+]
+extra-source "notejot-lang-3.4.9-1.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/notejot-lang-3.4.9-1.11.noarch.rpm"
+}

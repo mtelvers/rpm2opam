@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "obs-service-source_validator-0.38-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "obs-service-source_validator-0.38-2.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "build" 
+  "busybox-cpio" 
+  "bzip2" 
+  "diffutils" 
+  "gpg2" 
+  "libxml2-tools" 
+  "patch" 
+  "perl-TimeDate" 
+  "perl-base" 
+  "python311-base" 
+  "unzip" 
+  "xz" 
+  "zstd" 
+]
+extra-source "obs-service-source_validator-0.38-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/obs-service-source_validator-0.38-2.1.noarch.rpm"
+}

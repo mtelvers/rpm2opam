@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghex-devel-46.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghex-devel-46.0-1.2.x86_64.rpm"]
+depends: [
+  "gtk4-devel" 
+  "libgtkhex-4-1" {= "46.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "ghex-devel-46.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghex-devel-46.0-1.2.x86_64.rpm"
+}

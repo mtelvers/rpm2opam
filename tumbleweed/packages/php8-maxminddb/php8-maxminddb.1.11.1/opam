@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "php8-maxminddb-1.11.1-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php8-maxminddb-1.11.1-1.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libmaxminddb0" 
+  "php8" {= "20230831"}
+]
+extra-source "php8-maxminddb-1.11.1-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/php8-maxminddb-1.11.1-1.4.x86_64.rpm"
+}

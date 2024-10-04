@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libwxsvg-devel-1.5.23-6.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libwxsvg-devel-1.5.23-6.2.x86_64.rpm"]
+depends: [
+  "libart_lgpl-devel" 
+  "libexif-devel" 
+  "libexpat-devel" 
+  "libwxsvg3" {= "1.5.23"}
+  "pango-devel" 
+  "pkgconf-pkg-config" 
+  "wxGTK3-3_2-devel" 
+  "wxsvg" {= "1.5.23"}
+]
+extra-source "libwxsvg-devel-1.5.23-6.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libwxsvg-devel-1.5.23-6.2.x86_64.rpm"
+}

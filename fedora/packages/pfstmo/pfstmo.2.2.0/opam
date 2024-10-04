@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pfstmo-2.2.0-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pfstmo-2.2.0-14.fc40.x86_64.rpm"]
+depends: [
+  "fftw-libs-double" 
+  "fftw-libs-single" 
+  "glibc" 
+  "gsl" 
+  "libgcc" 
+  "libgomp" 
+  "libstdc++" 
+  "pfstools-libs" 
+]
+extra-source "pfstmo-2.2.0-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pfstmo-2.2.0-14.fc40.x86_64.rpm"
+}

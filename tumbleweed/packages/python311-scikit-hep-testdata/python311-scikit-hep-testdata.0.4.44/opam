@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-scikit-hep-testdata-0.4.44-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-scikit-hep-testdata-0.4.44-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-PyYAML" 
+  "python311-base" 
+  "python311-requests" 
+  "scikit-hep-testdata-files" {= "0.4.44"}
+  "update-alternatives" 
+]
+extra-source "python311-scikit-hep-testdata-0.4.44-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-scikit-hep-testdata-0.4.44-1.1.noarch.rpm"
+}

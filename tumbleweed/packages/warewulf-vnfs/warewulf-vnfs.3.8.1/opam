@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "warewulf-vnfs-3.8.1-13.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "warewulf-vnfs-3.8.1-13.3.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-base" 
+  "warewulf-common" 
+]
+extra-source "warewulf-vnfs-3.8.1-13.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/warewulf-vnfs-3.8.1-13.3.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "smemstat-0.02.13-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "smemstat-0.02.13-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libncurses6" 
+]
+extra-source "smemstat-0.02.13-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/smemstat-0.02.13-1.3.x86_64.rpm"
+}

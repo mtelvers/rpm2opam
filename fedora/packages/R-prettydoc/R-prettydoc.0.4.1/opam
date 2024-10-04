@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-prettydoc-0.4.1-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-prettydoc-0.4.1-12.fc40.noarch.rpm"]
+depends: [
+  "R-core" {= "4.3"}
+  "R-rmarkdown" {>= "1.17"}
+  "open-sans-fonts" 
+]
+extra-source "R-prettydoc-0.4.1-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-prettydoc-0.4.1-12.fc40.noarch.rpm"
+}

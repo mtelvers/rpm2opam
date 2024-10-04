@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tlp-1.6.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tlp-1.6.0-2.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "ethtool" 
+  "hdparm" 
+  "iw" 
+  "pciutils" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "systemd" 
+  "systemd-udev" 
+  "usbutils" 
+  "util-linux" 
+]
+extra-source "tlp-1.6.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tlp-1.6.0-2.fc40.noarch.rpm"
+}

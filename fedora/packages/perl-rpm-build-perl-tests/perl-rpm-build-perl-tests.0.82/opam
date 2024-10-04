@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-rpm-build-perl-tests-0.82-45.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-rpm-build-perl-tests-0.82-45.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-AutoLoader" 
+  "perl-Data-Dumper" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Socket" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-Try-Tiny" 
+  "perl-autouse" 
+  "perl-base" 
+  "perl-debugger" 
+  "perl-encoding" 
+  "perl-fields" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.7.0"}
+  "perl-rpm-build-perl" 
+  "perl-rpm-build-perl-scripts" {= "0.82"}
+]
+extra-source "perl-rpm-build-perl-tests-0.82-45.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-rpm-build-perl-tests-0.82-45.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "stringtemplate-3.2.1-4.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "stringtemplate-3.2.1-4.2.noarch.rpm"]
+depends: [
+  "antlr-java" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "stringtemplate-3.2.1-4.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/stringtemplate-3.2.1-4.2.noarch.rpm"
+}

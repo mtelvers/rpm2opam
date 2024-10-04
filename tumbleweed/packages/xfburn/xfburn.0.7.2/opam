@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xfburn-0.7.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xfburn-0.7.2-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libburn4" 
+  "libexo-2-0" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgstpbutils-1_0-0" 
+  "libgstreamer-1_0-0" 
+  "libgtk-3-0" 
+  "libgudev-1_0-0" 
+  "libisofs6" 
+  "libxfce4ui-2-0" 
+  "libxfce4util7" 
+]
+extra-source "xfburn-0.7.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xfburn-0.7.2-1.1.x86_64.rpm"
+}

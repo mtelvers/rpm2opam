@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqt5-qtvirtualkeyboard-private-headers-devel-5.15.15+kde0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqt5-qtvirtualkeyboard-private-headers-devel-5.15.15+kde0-1.1.x86_64.rpm"]
+depends: [
+  "libQt5Core-private-headers-devel" {>= "5.15.15"}
+  "libQt5Gui-private-headers-devel" {>= "5.15.15"}
+  "libqt5-qtvirtualkeyboard-devel" {= "5.15.15"}
+]
+extra-source "libqt5-qtvirtualkeyboard-private-headers-devel-5.15.15+kde0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libqt5-qtvirtualkeyboard-private-headers-devel-5.15.15+kde0-1.1.x86_64.rpm"
+}

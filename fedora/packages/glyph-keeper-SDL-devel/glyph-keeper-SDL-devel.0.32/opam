@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "glyph-keeper-SDL-devel-0.32-38.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glyph-keeper-SDL-devel-0.32-38.fc40.x86_64.rpm"]
+depends: [
+  "glyph-keeper-SDL" {= "0.32"}
+  "sdl12-compat-devel" 
+]
+extra-source "glyph-keeper-SDL-devel-0.32-38.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/glyph-keeper-SDL-devel-0.32-38.fc40.x86_64.rpm"
+}

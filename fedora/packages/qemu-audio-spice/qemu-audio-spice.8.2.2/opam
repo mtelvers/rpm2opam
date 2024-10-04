@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qemu-audio-spice-8.2.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qemu-audio-spice-8.2.2-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "qemu-common" {= "8.2.2"}
+  "qemu-ui-spice-core" {= "8.2.2"}
+  "spice-server" 
+]
+extra-source "qemu-audio-spice-8.2.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qemu-audio-spice-8.2.2-1.fc40.x86_64.rpm"
+}

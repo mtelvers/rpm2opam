@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "inxi-3.3.36-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "inxi-3.3.36-1.1.noarch.rpm"]
+depends: [
+  "pciutils" 
+  "perl-base" 
+  "procps" 
+  "util-linux" 
+]
+extra-source "inxi-3.3.36-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/inxi-3.3.36-1.1.noarch.rpm"
+}

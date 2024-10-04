@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-void-devel-0.7.3-6.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-void-devel-0.7.3-6.9.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-void" {= "0.7.3"}
+]
+extra-source "ghc-void-devel-0.7.3-6.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-void-devel-0.7.3-6.9.x86_64.rpm"
+}

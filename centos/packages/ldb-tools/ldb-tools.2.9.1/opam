@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ldb-tools-2.9.1-5.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ldb-tools-2.9.1-5.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libldb" {= "2.9.1"}
+  "libtalloc" 
+  "libtdb" 
+  "libtevent" 
+  "popt" 
+]
+extra-source "ldb-tools-2.9.1-5.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/ldb-tools-2.9.1-5.el10.x86_64.rpm"
+}

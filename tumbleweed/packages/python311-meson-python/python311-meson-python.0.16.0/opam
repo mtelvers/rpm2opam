@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-meson-python-0.16.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-meson-python-0.16.0-2.1.noarch.rpm"]
+depends: [
+  "meson" {>= "0.63.3"}
+  "python311-base" {= "3.11"}
+  "python311-packaging" {>= "0.19"}
+  "python311-pyproject-metadata" {>= "0.7.1"}
+]
+extra-source "python311-meson-python-0.16.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-meson-python-0.16.0-2.1.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "parole-lang-4.18.1-lp160.1.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "parole-lang-4.18.1-lp160.1.17.noarch.rpm"]
+depends: [
+  "parole" {= "4.18.1"}
+]
+extra-source "parole-lang-4.18.1-lp160.1.17.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/parole-lang-4.18.1-lp160.1.17.noarch.rpm"
+}

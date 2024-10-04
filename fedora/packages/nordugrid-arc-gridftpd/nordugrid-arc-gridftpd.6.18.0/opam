@@ -1,0 +1,43 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nordugrid-arc-gridftpd-6.18.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nordugrid-arc-gridftpd-6.18.0-6.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "glibmm2-4" 
+  "globus-common" 
+  "globus-ftp-control" 
+  "globus-gsi-cert-utils" 
+  "globus-gsi-credential" 
+  "globus-gss-assist" 
+  "globus-gssapi-gsi" 
+  "globus-io" 
+  "globus-openssl-module" 
+  "libdb-cxx" 
+  "libgcc" 
+  "libsigc++20" 
+  "libstdc++" 
+  "libtool-ltdl" 
+  "libuuid" 
+  "libxml2" 
+  "libxslt" 
+  "logrotate" 
+  "nordugrid-arc" 
+  "nordugrid-arc-arcctl-service" {= "6.18.0"}
+  "nordugrid-arc-plugins-globus-common" 
+  "nordugrid-arc-plugins-gridftp" {= "6.18.0"}
+  "nspr" 
+  "nss" 
+  "nss-util" 
+  "openldap" 
+  "openssl-libs" 
+  "sqlite-libs" 
+  "systemd" 
+  "xmlsec1" 
+  "xmlsec1-openssl" 
+  "zlib-ng-compat" 
+]
+extra-source "nordugrid-arc-gridftpd-6.18.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nordugrid-arc-gridftpd-6.18.0-6.fc40.x86_64.rpm"
+}

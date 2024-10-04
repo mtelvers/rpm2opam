@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-simplelog0.11+termcolor-devel-0.11.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-simplelog0.11+termcolor-devel-0.11.2-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-simplelog0-11-devel" {= "0.11.2"}
+  "rust-termcolor+default-devel" 
+]
+extra-source "rust-simplelog0.11+termcolor-devel-0.11.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-simplelog0.11+termcolor-devel-0.11.2-3.fc40.noarch.rpm"
+}

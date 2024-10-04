@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Array-Diff-0.09-1.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Array-Diff-0.09-1.14.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Algorithm-Diff" {>= "1.19"}
+  "perl-Class-Accessor" 
+]
+extra-source "perl-Array-Diff-0.09-1.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Array-Diff-0.09-1.14.noarch.rpm"
+}

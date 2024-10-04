@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-teubner-2024.216.5.8.3svn68074-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-teubner-2024.216.5.8.3svn68074-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-cm-super" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-graphics" 
+  "texlive-greek-fontenc" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-pxfonts" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tools" 
+  "texlive-txfonts" 
+]
+extra-source "texlive-teubner-2024.216.5.8.3svn68074-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-teubner-2024.216.5.8.3svn68074-57.1.noarch.rpm"
+}

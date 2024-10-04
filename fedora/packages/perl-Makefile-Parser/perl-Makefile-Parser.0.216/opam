@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Makefile-Parser-0.216-27.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Makefile-Parser-0.216-27.fc40.noarch.rpm"]
+depends: [
+  "perl-Class-Accessor" 
+  "perl-Class-Trigger" {>= "0.13"}
+  "perl-File-Slurp" 
+  "perl-File-stat" 
+  "perl-Getopt-Long" 
+  "perl-Getopt-Std" 
+  "perl-IPC-Run3" {>= "0.36"}
+  "perl-List-MoreUtils" 
+  "perl-Makefile-DOM" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-Text-Balanced" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-overload" 
+]
+extra-source "perl-Makefile-Parser-0.216-27.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Makefile-Parser-0.216-27.fc40.noarch.rpm"
+}

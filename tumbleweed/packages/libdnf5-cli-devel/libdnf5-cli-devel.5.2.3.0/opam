@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libdnf5-cli-devel-5.2.3.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdnf5-cli-devel-5.2.3.0-1.1.x86_64.rpm"]
+depends: [
+  "fmt-10-devel" 
+  "libdnf5-cli2" {= "5.2.3.0"}
+  "libsmartcols-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libdnf5-cli-devel-5.2.3.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libdnf5-cli-devel-5.2.3.0-1.1.x86_64.rpm"
+}

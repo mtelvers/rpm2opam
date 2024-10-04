@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-flit-3.9.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-flit-3.9.0-1.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-docutils" 
+  "python312-flit-core" {>= "3.9.0"}
+  "python312-requests" 
+  "python312-tomli-w" 
+  "update-alternatives" 
+]
+extra-source "python312-flit-3.9.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-flit-3.9.0-1.3.noarch.rpm"
+}

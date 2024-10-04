@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libacars-2-2-2.2.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libacars-2-2-2.2.0-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libjansson4" 
+  "libxml2-2" 
+  "libz-ng-compat1" 
+]
+extra-source "libacars-2-2-2.2.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libacars-2-2-2.2.0-1.3.x86_64.rpm"
+}

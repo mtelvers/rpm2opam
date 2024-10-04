@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "setroubleshoot-plugins-lang-3.3.14-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "setroubleshoot-plugins-lang-3.3.14-1.5.noarch.rpm"]
+depends: [
+  "setroubleshoot-plugins" {= "3.3.14"}
+]
+extra-source "setroubleshoot-plugins-lang-3.3.14-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/setroubleshoot-plugins-lang-3.3.14-1.5.noarch.rpm"
+}

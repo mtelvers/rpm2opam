@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vsomeip3-examples-3.3.8-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vsomeip3-examples-3.3.8-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "vsomeip3" 
+]
+extra-source "vsomeip3-examples-3.3.8-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vsomeip3-examples-3.3.8-3.fc40.x86_64.rpm"
+}

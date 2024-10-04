@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nagios-theme-exfoliation-4.5.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nagios-theme-exfoliation-4.5.4-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "nagios-theme-switcher" 
+  "nagios-www" {>= "3.0"}
+]
+extra-source "nagios-theme-exfoliation-4.5.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nagios-theme-exfoliation-4.5.4-1.1.noarch.rpm"
+}

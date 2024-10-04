@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "booth-test-1.1-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "booth-test-1.1-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "booth-arbitrator" {= "1.1"}
+  "booth-site" {= "1.1"}
+  "gdb" 
+  "hostname" 
+  "iproute" 
+  "perl-interpreter" 
+  "psmisc" 
+  "python3" 
+]
+extra-source "booth-test-1.1-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/booth-test-1.1-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mimetreeparser-imports-24.08.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mimetreeparser-imports-24.08.1-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf6-kirigami-imports" 
+  "libKPim6MimeTreeParserCore6" {= "24.8.1"}
+  "libKPim6MimeTreeParserWidgets6" {= "24.8.1"}
+  "libQt6Core6" 
+  "libQt6Qml6" 
+  "libstdc++6" 
+  "qt6-webengine-imports" {>= "4"}
+  "qtdeclarative-imports-provides-qt6" {>= "1"}
+]
+extra-source "mimetreeparser-imports-24.08.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mimetreeparser-imports-24.08.1-1.1.x86_64.rpm"
+}

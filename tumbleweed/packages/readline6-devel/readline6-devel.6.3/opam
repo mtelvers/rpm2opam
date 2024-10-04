@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "readline6-devel-6.3-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "readline6-devel-6.3-4.2.x86_64.rpm"]
+depends: [
+  "libreadline6" {= "6.3"}
+  "ncurses-devel" 
+]
+extra-source "readline6-devel-6.3-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/readline6-devel-6.3-4.2.x86_64.rpm"
+}

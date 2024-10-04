@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-ftp-server-5.0.0-lp160.3.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-ftp-server-5.0.0-lp160.3.12.noarch.rpm"]
+depends: [
+  "yast2" {>= "4.2.57"}
+  "yast2-ruby-bindings" {>= "1.0.0"}
+  "yast2-users" {>= "4.2.4"}
+]
+extra-source "yast2-ftp-server-5.0.0-lp160.3.12.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/yast2-ftp-server-5.0.0-lp160.3.12.noarch.rpm"
+}

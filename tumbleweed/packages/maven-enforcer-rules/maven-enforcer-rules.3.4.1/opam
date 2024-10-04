@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-enforcer-rules-3.4.1-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-enforcer-rules-3.4.1-1.6.noarch.rpm"]
+depends: [
+  "apache-commons-codec" 
+  "apache-commons-io" 
+  "apache-commons-lang3" 
+  "bsh2" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-enforcer-api" {= "3.4.1"}
+  "maven-resolver-util" 
+  "plexus-utils" 
+]
+extra-source "maven-enforcer-rules-3.4.1-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-enforcer-rules-3.4.1-1.6.noarch.rpm"
+}

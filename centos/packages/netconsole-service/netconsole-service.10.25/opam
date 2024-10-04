@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "netconsole-service-10.25-1.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netconsole-service-10.25-1.el10.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "filesystem" {>= "3"}
+  "gawk" 
+  "glibc-common" 
+  "initscripts" {= "10.26"}
+  "iproute" 
+  "iputils" 
+  "kmod" 
+  "sed" 
+  "util-linux" 
+]
+extra-source "netconsole-service-10.25-1.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/netconsole-service-10.25-1.el10.noarch.rpm"
+}

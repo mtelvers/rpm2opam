@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "variety-0.8.12-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "variety-0.8.12-2.2.noarch.rpm"]
+depends: [
+  "ImageMagick" 
+  "bash" 
+  "libnotify4" 
+  "python3-gexiv2" 
+  "python311-Pillow" 
+  "python311-base" 
+  "python311-beautifulsoup4" 
+  "python311-configobj" 
+  "python311-dbus-python" 
+  "python311-gobject-Gdk" 
+  "python311-httplib2" 
+  "python311-lxml" 
+  "python311-pycairo" 
+  "python311-pycurl" 
+  "python311-requests" 
+  "typelib-1_0-AppIndicator3-0_1" {= "0.1"}
+  "typelib-1_0-GExiv2-0_10" {= "0.10"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Notify-0_7" {= "0.7"}
+  "typelib-1_0-Pango-1_0" 
+  "yelp" 
+]
+extra-source "variety-0.8.12-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/variety-0.8.12-2.2.noarch.rpm"
+}

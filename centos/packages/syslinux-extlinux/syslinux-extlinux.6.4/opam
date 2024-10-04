@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "syslinux-extlinux-6.04-0.29.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "syslinux-extlinux-6.04-0.29.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "syslinux" 
+  "syslinux-extlinux-nonlinux" {= "6.4"}
+]
+extra-source "syslinux-extlinux-6.04-0.29.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/syslinux-extlinux-6.04-0.29.el10.x86_64.rpm"
+}

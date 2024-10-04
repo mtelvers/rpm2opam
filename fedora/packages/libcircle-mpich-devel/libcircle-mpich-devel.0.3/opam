@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libcircle-mpich-devel-0.3-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcircle-mpich-devel-0.3-16.fc40.x86_64.rpm"]
+depends: [
+  "libcircle-mpich" {= "0.3"}
+]
+extra-source "libcircle-mpich-devel-0.3-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libcircle-mpich-devel-0.3-16.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jasper-4.2.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jasper-4.2.4-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libGLU1" 
+  "libglut3" 
+  "libglvnd" 
+  "libjasper7" 
+]
+extra-source "jasper-4.2.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/jasper-4.2.4-1.1.x86_64.rpm"
+}

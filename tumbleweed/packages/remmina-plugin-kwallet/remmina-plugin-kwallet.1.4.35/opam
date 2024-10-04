@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "remmina-plugin-kwallet-1.4.35-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "remmina-plugin-kwallet-1.4.35-2.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libKF5Wallet5" 
+  "libQt5Core5" 
+  "libgcc_s1" 
+  "remmina" {= "1.4.35"}
+]
+extra-source "remmina-plugin-kwallet-1.4.35-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/remmina-plugin-kwallet-1.4.35-2.2.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-regex-automata+unicode-age-devel-0.4.6-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-regex-automata+unicode-age-devel-0.4.6-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-regex-automata-devel" {= "0.4.6"}
+  "rust-regex-syntax+unicode-age-devel" 
+  "rust-regex-syntax-devel" 
+]
+extra-source "rust-regex-automata+unicode-age-devel-0.4.6-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-regex-automata+unicode-age-devel-0.4.6-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "graphviz-2.49.3-11.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "graphviz-2.49.3-11.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "bitstream-vera-fonts" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "graphviz-plugins-core" {= "2.49.3"}
+  "libcdt5" 
+  "libcgraph6" 
+  "libexpat1" 
+  "libgts-0_7-5" 
+  "libgvc6" 
+  "libgvpr2" 
+  "liblab_gamut1" 
+]
+extra-source "graphviz-2.49.3-11.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/graphviz-2.49.3-11.1.x86_64.rpm"
+}

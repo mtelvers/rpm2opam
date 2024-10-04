@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "obs-scm-bridge-0.5.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "obs-scm-bridge-0.5.0-1.1.noarch.rpm"]
+depends: [
+  "build" {>= "20211125"}
+  "git-core" 
+  "git-lfs" 
+  "perl" 
+  "perl-Crypt-SSLeay" 
+  "perl-TimeDate" 
+  "perl-URI" 
+  "perl-XML-Parser" 
+  "perl-YAML-LibYAML" 
+  "perl-libwww-perl" 
+  "python311-base" 
+]
+extra-source "obs-scm-bridge-0.5.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/obs-scm-bridge-0.5.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-tls-session-manager-prof-0.0.6-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-tls-session-manager-prof-0.0.6-1.1.x86_64.rpm"]
+depends: [
+  "ghc-auto-update-prof" 
+  "ghc-base-prof" 
+  "ghc-basement-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-clock-prof" 
+  "ghc-crypto-token-prof" 
+  "ghc-memory-prof" 
+  "ghc-psqueues-prof" 
+  "ghc-serialise-prof" 
+  "ghc-tls-prof" 
+  "ghc-tls-session-manager-devel" {= "0.0.6"}
+]
+extra-source "ghc-tls-session-manager-prof-0.0.6-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-tls-session-manager-prof-0.0.6-1.1.x86_64.rpm"
+}

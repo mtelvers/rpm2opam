@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "patterns-base-kvm_host-6.0-slfo.1.3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "patterns-base-kvm_host-6.0-slfo.1.3.1.x86_64.rpm"]
+depends: [
+  "gnutls" 
+  "guestfs-tools" 
+  "libvirt-client" 
+  "libvirt-daemon-config-network" 
+  "libvirt-daemon-hooks" 
+  "libvirt-daemon-qemu" 
+  "libvirt-nss" 
+  "lzop" 
+  "netcat-openbsd" 
+  "python311-libvirt-python" 
+  "qemu" 
+  "qemu-block-iscsi" 
+  "qemu-block-rbd" 
+  "qemu-block-ssh" 
+  "qemu-hw-display-virtio-gpu-pci" 
+  "qemu-hw-usb-host" 
+  "qemu-ksm" 
+  "qemu-lang" 
+  "qemu-tools" 
+  "qemu-x86" 
+  "tftp" 
+  "virt-top" 
+]
+extra-source "patterns-base-kvm_host-6.0-slfo.1.3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/patterns-base-kvm_host-6.0-slfo.1.3.1.x86_64.rpm"
+}

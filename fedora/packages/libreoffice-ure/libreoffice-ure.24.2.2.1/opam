@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libreoffice-ure-24.2.2.1-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libreoffice-ure-24.2.2.1-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "java-21-openjdk-headless" 
+  "libgcc" 
+  "libicu" 
+  "liblangtag" 
+  "libreoffice-ure-common" {= "24.2.2.1"}
+  "libstdc++" 
+  "libxml2" 
+  "unzip" 
+  "zlib-ng-compat" 
+]
+extra-source "libreoffice-ure-24.2.2.1-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libreoffice-ure-24.2.2.1-3.fc40.x86_64.rpm"
+}

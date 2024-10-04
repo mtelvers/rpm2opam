@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "GtkAda3-devel-24.0.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "GtkAda3-devel-24.0.0-1.fc40.x86_64.rpm"]
+depends: [
+  "GtkAda3" {= "24.0.0"}
+  "fedora-gnat-project-common" 
+  "glibc" 
+  "libgcc" 
+  "libgnat" 
+]
+extra-source "GtkAda3-devel-24.0.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/GtkAda3-devel-24.0.0-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Git-Repository-Plugin-AUTOLOAD-tests-1.003-26.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Git-Repository-Plugin-AUTOLOAD-tests-1.003-26.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-ExtUtils-MakeMaker" 
+  "perl-File-Temp" 
+  "perl-Git-Repository" 
+  "perl-Git-Repository-Plugin-AUTOLOAD" {= "1.3"}
+  "perl-IO" 
+  "perl-IPC-Open3" 
+  "perl-PathTools" 
+  "perl-Test-Git" 
+  "perl-Test-Harness" 
+  "perl-Test-Requires-Git" {>= "1.5"}
+  "perl-Test-Simple" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "perl-Git-Repository-Plugin-AUTOLOAD-tests-1.003-26.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Git-Repository-Plugin-AUTOLOAD-tests-1.003-26.fc40.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-cliff-4.3.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-cliff-4.3.0-1.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-autopage" {>= "0.4"}
+  "python3-cmd2" {>= "1"}
+  "python3-importlib-metadata" {>= "4.4"}
+  "python3-prettytable" {>= "0.7.2"}
+  "python3-pyyaml" {>= "3.12"}
+  "python3-stevedore" {>= "2.0.1"}
+]
+extra-source "python3-cliff-4.3.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-cliff-4.3.0-1.fc40.noarch.rpm"
+}

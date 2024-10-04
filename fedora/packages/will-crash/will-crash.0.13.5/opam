@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "will-crash-0.13.5-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "will-crash-0.13.5-6.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "java-21-openjdk-headless" {>= "1.7.0.0"}
+  "javapackages-tools" 
+  "libstdc++" 
+  "perl-interpreter" 
+  "python3" 
+  "ruby" 
+  "rubypick" 
+]
+extra-source "will-crash-0.13.5-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/will-crash-0.13.5-6.fc40.x86_64.rpm"
+}

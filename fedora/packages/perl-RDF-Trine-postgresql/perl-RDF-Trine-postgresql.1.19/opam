@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-RDF-Trine-postgresql-1.019-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-RDF-Trine-postgresql-1.019-23.fc40.noarch.rpm"]
+depends: [
+  "perl-DBD-Pg" 
+  "perl-RDF-Trine" 
+  "perl-Scalar-List-Utils" {>= "1.24"}
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-RDF-Trine-postgresql-1.019-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-RDF-Trine-postgresql-1.019-23.fc40.noarch.rpm"
+}

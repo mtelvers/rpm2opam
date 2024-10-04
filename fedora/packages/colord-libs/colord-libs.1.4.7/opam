@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "colord-libs-1.4.7-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "colord-libs-1.4.7-3.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "lcms2" 
+  "libgcc" 
+  "libgusb" 
+  "systemd-libs" 
+]
+extra-source "colord-libs-1.4.7-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/colord-libs-1.4.7-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-try-lock+default-devel-0.2.5-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-try-lock+default-devel-0.2.5-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-try-lock-devel" {= "0.2.5"}
+]
+extra-source "rust-try-lock+default-devel-0.2.5-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-try-lock+default-devel-0.2.5-2.fc40.noarch.rpm"
+}

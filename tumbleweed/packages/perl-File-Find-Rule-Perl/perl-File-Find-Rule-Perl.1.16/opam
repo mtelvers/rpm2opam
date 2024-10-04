@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-File-Find-Rule-Perl-1.16-1.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-Find-Rule-Perl-1.16-1.11.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-File-Find-Rule" {>= "0.20"}
+  "perl-Params-Util" {>= "0.38"}
+]
+extra-source "perl-File-Find-Rule-Perl-1.16-1.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-File-Find-Rule-Perl-1.16-1.11.noarch.rpm"
+}

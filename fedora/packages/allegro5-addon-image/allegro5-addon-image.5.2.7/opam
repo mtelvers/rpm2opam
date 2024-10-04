@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "allegro5-addon-image-5.2.7-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "allegro5-addon-image-5.2.7-9.fc40.x86_64.rpm"]
+depends: [
+  "allegro5" {= "5.2.7"}
+  "freeimage" 
+  "glibc" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libwebp" 
+]
+extra-source "allegro5-addon-image-5.2.7-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/allegro5-addon-image-5.2.7-9.fc40.x86_64.rpm"
+}

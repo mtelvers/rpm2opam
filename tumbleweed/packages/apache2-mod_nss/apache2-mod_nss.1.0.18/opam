@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "apache2-mod_nss-1.0.18-7.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apache2-mod_nss-1.0.18-7.1.x86_64.rpm"]
+depends: [
+  "apache2" {>= "2.4.18"}
+  "bash" 
+  "bash-sh" 
+  "findutils" 
+  "glibc" 
+  "iproute2" 
+  "mozilla-nspr" 
+  "mozilla-nss" 
+  "mozilla-nss-tools" 
+  "perl-base" 
+  "system-user-wwwrun" 
+]
+extra-source "apache2-mod_nss-1.0.18-7.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/apache2-mod_nss-1.0.18-7.1.x86_64.rpm"
+}

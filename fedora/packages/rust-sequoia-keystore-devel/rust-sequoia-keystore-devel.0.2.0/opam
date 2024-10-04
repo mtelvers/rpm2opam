@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-sequoia-keystore-devel-0.2.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-sequoia-keystore-devel-0.2.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.70"}
+  "rust-anyhow+default-devel" 
+  "rust-capnp+default-devel" 
+  "rust-capnpc+default-devel" 
+  "rust-dirs+default-devel" 
+  "rust-env_logger+default-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-log+default-devel" 
+  "rust-paste+default-devel" 
+  "rust-sequoia-ipc+default-devel" 
+  "rust-sequoia-keystore-backend+default-devel" 
+  "rust-sequoia-keystore-softkeys+default-devel" 
+  "rust-sequoia-openpgp-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-tokio+default-devel" 
+  "rust-tokio+io-std-devel" 
+  "rust-tokio+macros-devel" 
+  "rust-tokio+net-devel" 
+  "rust-tokio+rt-devel" 
+  "rust-tokio-util+compat-devel" 
+  "rust-tokio-util+default-devel" 
+]
+extra-source "rust-sequoia-keystore-devel-0.2.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-sequoia-keystore-devel-0.2.0-2.fc40.noarch.rpm"
+}

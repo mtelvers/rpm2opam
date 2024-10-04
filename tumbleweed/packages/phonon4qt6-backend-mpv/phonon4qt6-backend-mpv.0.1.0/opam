@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "phonon4qt6-backend-mpv-0.1.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "phonon4qt6-backend-mpv-0.1.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt6Core6" 
+  "libQt6Gui6" 
+  "libQt6OpenGLWidgets6" 
+  "libQt6Widgets6" 
+  "libmpv2" 
+  "libphonon4qt6" {>= "4.10.60"}
+  "libstdc++6" 
+]
+extra-source "phonon4qt6-backend-mpv-0.1.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/phonon4qt6-backend-mpv-0.1.0-1.1.x86_64.rpm"
+}

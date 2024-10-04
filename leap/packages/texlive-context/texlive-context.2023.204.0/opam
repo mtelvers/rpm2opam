@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-context-2023.204.svn66546-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-context-2023.204.svn66546-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "perl" 
+  "perl-Tk" 
+  "perl-base" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-amsfonts" {>= "2023"}
+  "texlive-context-bin" {>= "2023"}
+  "texlive-context-fonts" {>= "2023"}
+  "texlive-filesystem" {>= "2023"}
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-lm" {>= "2023"}
+  "texlive-lm-math" {>= "2023"}
+  "texlive-luatex" {>= "2023"}
+  "texlive-luatex-bin" 
+  "texlive-manfnt-font" {>= "2023"}
+  "texlive-mflogo-font" {>= "2023"}
+  "texlive-pst-plot" 
+  "texlive-pstricks" 
+  "texlive-scripts" 
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-stmaryrd" {>= "2023"}
+]
+extra-source "texlive-context-2023.204.svn66546-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-context-2023.204.svn66546-slfo.1.1.4.noarch.rpm"
+}

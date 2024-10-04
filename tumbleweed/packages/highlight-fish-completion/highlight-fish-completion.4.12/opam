@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "highlight-fish-completion-4.12-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "highlight-fish-completion-4.12-1.1.noarch.rpm"]
+depends: [
+  "fish" 
+  "highlight" 
+]
+extra-source "highlight-fish-completion-4.12-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/highlight-fish-completion-4.12-1.1.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-securemem-prof-0.1.10-26.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-securemem-prof-0.1.10-26.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-byteable-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-memory-prof" 
+  "ghc-securemem-devel" {= "0.1.10"}
+]
+extra-source "ghc-securemem-prof-0.1.10-26.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-securemem-prof-0.1.10-26.fc40.x86_64.rpm"
+}

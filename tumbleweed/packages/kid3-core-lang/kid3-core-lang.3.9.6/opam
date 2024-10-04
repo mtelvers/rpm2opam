@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kid3-core-lang-3.9.6-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kid3-core-lang-3.9.6-1.1.noarch.rpm"]
+depends: [
+  "kid3-core" {= "3.9.6"}
+]
+extra-source "kid3-core-lang-3.9.6-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kid3-core-lang-3.9.6-1.1.noarch.rpm"
+}

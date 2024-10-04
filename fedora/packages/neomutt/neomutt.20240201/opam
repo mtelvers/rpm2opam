@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "neomutt-20240201-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "neomutt-20240201-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cyrus-sasl-lib" 
+  "glibc" 
+  "gnutls" 
+  "gpgme" 
+  "krb5-libs" 
+  "libidn2" 
+  "libzstd" 
+  "lmdb-libs" 
+  "lua-libs" 
+  "lz4-libs" 
+  "mailcap" 
+  "ncurses-libs" 
+  "notmuch" 
+  "pcre2" 
+  "perl-interpreter" 
+  "python3" 
+  "sqlite-libs" 
+  "tokyocabinet" 
+  "zlib-ng-compat" 
+]
+extra-source "neomutt-20240201-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/neomutt-20240201-1.fc40.x86_64.rpm"
+}

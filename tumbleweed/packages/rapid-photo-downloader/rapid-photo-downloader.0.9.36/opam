@@ -1,0 +1,42 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rapid-photo-downloader-0.9.36-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rapid-photo-downloader-0.9.36-1.2.noarch.rpm"]
+depends: [
+  "exiftool" 
+  "ifuse" 
+  "imobiledevice-tools" 
+  "libQt5Svg5" 
+  "python311" {>= "3.10"}
+  "python311-Babel" 
+  "python311-PyPrind" {>= "2.9.4"}
+  "python311-arrow" {>= "0.9.0"}
+  "python311-base" 
+  "python311-colorlog" {>= "2.6"}
+  "python311-colour" 
+  "python311-easygui" {>= "0.98.1"}
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-gphoto2" {>= "1.8.0"}
+  "python311-packaging" 
+  "python311-psutil" {>= "3.4.2"}
+  "python311-pymediainfo" {>= "2.2.0"}
+  "python311-python-dateutil" {>= "2.7"}
+  "python311-pyxdg" {>= "0.25"}
+  "python311-pyzmq" {>= "16.0.2"}
+  "python311-qt5" {>= "5.15.6"}
+  "python311-requests" 
+  "python311-show-in-file-manager" {>= "1.1.2"}
+  "python311-sortedcontainers" 
+  "python311-tenacity" 
+  "python311-tornado" 
+  "typelib-1_0-GExiv2-0_10" {= "0.10"}
+  "typelib-1_0-GLib-2_0" {= "2.0"}
+  "typelib-1_0-GUdev-1_0" {= "1.0"}
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gst-1_0" {= "1.0"}
+  "typelib-1_0-Notify-0_7" {= "0.7"}
+  "typelib-1_0-UDisks-2_0" {= "2.0"}
+]
+extra-source "rapid-photo-downloader-0.9.36-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/rapid-photo-downloader-0.9.36-1.2.noarch.rpm"
+}

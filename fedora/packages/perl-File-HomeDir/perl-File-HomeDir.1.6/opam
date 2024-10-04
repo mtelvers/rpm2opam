@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-File-HomeDir-1.006-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-HomeDir-1.006-12.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-File-Path" {>= "2.1"}
+  "perl-File-Temp" {>= "0.19"}
+  "perl-File-Which" {>= "0.5"}
+  "perl-PathTools" {>= "3.12"}
+  "perl-base" 
+  "perl-libs" {>= "5.8.3"}
+  "perl-vars" 
+]
+extra-source "perl-File-HomeDir-1.006-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-File-HomeDir-1.006-12.fc40.noarch.rpm"
+}

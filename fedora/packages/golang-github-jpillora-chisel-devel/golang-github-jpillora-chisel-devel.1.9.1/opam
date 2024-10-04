@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-jpillora-chisel-devel-1.9.1-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-jpillora-chisel-devel-1.9.1-5.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-armon-socks5-devel" 
+  "golang-github-fsnotify-devel" 
+  "golang-github-gorilla-websocket-devel" 
+  "golang-github-jpillora-backoff-devel" 
+  "golang-github-jpillora-requestlog-devel" 
+  "golang-github-jpillora-sizestr-devel" 
+  "golang-x-crypto-devel" 
+  "golang-x-net-devel" 
+  "golang-x-sync-devel" 
+]
+extra-source "golang-github-jpillora-chisel-devel-1.9.1-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-jpillora-chisel-devel-1.9.1-5.fc40.noarch.rpm"
+}

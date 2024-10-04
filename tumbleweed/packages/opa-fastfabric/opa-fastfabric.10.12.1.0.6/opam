@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "opa-fastfabric-10.12.1.0.6-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opa-fastfabric-10.12.1.0.6-3.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "expect" 
+  "glibc" 
+  "libexpat1" 
+  "libibumad3" 
+  "libibverbs1" 
+  "libopenssl3" 
+  "libz-ng-compat1" 
+  "opa-basic-tools" 
+  "perl-base" 
+  "tcl" 
+]
+extra-source "opa-fastfabric-10.12.1.0.6-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/opa-fastfabric-10.12.1.0.6-3.2.x86_64.rpm"
+}

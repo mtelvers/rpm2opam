@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dist-git-selinux-1.17-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dist-git-selinux-1.17-5.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "policycoreutils" 
+  "selinux-policy" {>= "40.9"}
+]
+extra-source "dist-git-selinux-1.17-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dist-git-selinux-1.17-5.fc40.noarch.rpm"
+}

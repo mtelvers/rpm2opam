@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "wxGTK-3.2.4-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wxGTK-3.2.4-5.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "cairo" 
+  "fontconfig" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libSM" 
+  "libX11" 
+  "libXtst" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libmspack" 
+  "libpng" 
+  "libstdc++" 
+  "libtiff" 
+  "libxkbcommon" 
+  "pango" 
+  "wxBase" 
+  "wxGTK-i18n" {= "3.2.4"}
+]
+extra-source "wxGTK-3.2.4-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/wxGTK-3.2.4-5.fc40.x86_64.rpm"
+}

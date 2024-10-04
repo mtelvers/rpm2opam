@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "msolve-0.6.5-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "msolve-0.6.5-2.fc40.x86_64.rpm"]
+depends: [
+  "flint" 
+  "glibc" 
+  "gmp" 
+  "libgcc" 
+  "libgomp" 
+  "msolve-libs" 
+]
+extra-source "msolve-0.6.5-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/msolve-0.6.5-2.fc40.x86_64.rpm"
+}

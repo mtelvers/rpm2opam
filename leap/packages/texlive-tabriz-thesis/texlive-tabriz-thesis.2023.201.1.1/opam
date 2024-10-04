@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-tabriz-thesis-2023.201.1.1svn51729-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-tabriz-thesis-2023.201.1.1svn51729-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-amscls" 
+  "texlive-amsfonts" 
+  "texlive-amsmath" 
+  "texlive-fancyhdr" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-framed" 
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-lastpage" 
+  "texlive-latex" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-tocbibind" 
+]
+extra-source "texlive-tabriz-thesis-2023.201.1.1svn51729-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-tabriz-thesis-2023.201.1.1svn51729-slfo.1.1.4.noarch.rpm"
+}

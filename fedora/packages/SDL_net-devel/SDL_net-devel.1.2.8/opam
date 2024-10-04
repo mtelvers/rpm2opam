@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "SDL_net-devel-1.2.8-27.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "SDL_net-devel-1.2.8-27.fc40.x86_64.rpm"]
+depends: [
+  "SDL_net" {= "1.2.8"}
+  "pkgconf-pkg-config" 
+  "sdl12-compat-devel" {>= "1.2.4"}
+]
+extra-source "SDL_net-devel-1.2.8-27.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/SDL_net-devel-1.2.8-27.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-peg+default-devel-0.8.2-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-peg+default-devel-0.8.2-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-peg+std-devel" {= "0.8.2"}
+  "rust-peg-devel" {= "0.8.2"}
+]
+extra-source "rust-peg+default-devel-0.8.2-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-peg+default-devel-0.8.2-2.fc40.noarch.rpm"
+}

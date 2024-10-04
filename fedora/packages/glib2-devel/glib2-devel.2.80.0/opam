@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "glib2-devel-2.80.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glib2-devel-2.80.0-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "elfutils-libelf" 
+  "glib2" {= "2.80.0"}
+  "glibc" 
+  "libffi" 
+  "libffi-devel" {>= "3.0.0"}
+  "libmount-devel" {>= "2.23"}
+  "libselinux-devel" {>= "2.2"}
+  "pcre2-devel" {>= "10.32"}
+  "pkgconf-pkg-config" 
+  "python3" 
+  "python3-packaging" 
+  "sysprof-capture-devel" {>= "3.38.0"}
+  "zlib-ng-compat-devel" 
+]
+extra-source "glib2-devel-2.80.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/glib2-devel-2.80.0-1.fc40.x86_64.rpm"
+}

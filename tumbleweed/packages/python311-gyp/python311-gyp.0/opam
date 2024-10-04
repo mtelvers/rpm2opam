@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-gyp-0+git.20230301-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-gyp-0+git.20230301-1.7.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "ninja" 
+  "python311-base" 
+  "python311-setuptools" 
+  "update-alternatives" 
+]
+extra-source "python311-gyp-0+git.20230301-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-gyp-0+git.20230301-1.7.noarch.rpm"
+}

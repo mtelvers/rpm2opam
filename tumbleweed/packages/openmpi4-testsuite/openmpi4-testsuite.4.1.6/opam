@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openmpi4-testsuite-4.1.6-6.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openmpi4-testsuite-4.1.6-6.1.noarch.rpm"]
+depends: [
+  "mpi-selector" 
+  "openmpi4-config" 
+  "openmpi4-libs" {= "4.1.6"}
+  "openssh" 
+]
+extra-source "openmpi4-testsuite-4.1.6-6.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/openmpi4-testsuite-4.1.6-6.1.noarch.rpm"
+}

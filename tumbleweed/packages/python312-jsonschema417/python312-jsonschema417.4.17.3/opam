@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-jsonschema417-4.17.3-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-jsonschema417-4.17.3-1.6.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "python312-attrs" {>= "17.4.0"}
+  "python312-base" 
+  "python312-pyrsistent" {>= "0.14.0"}
+]
+extra-source "python312-jsonschema417-4.17.3-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-jsonschema417-4.17.3-1.6.noarch.rpm"
+}

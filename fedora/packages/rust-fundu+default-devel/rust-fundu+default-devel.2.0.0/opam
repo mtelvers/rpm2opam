@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-fundu+default-devel-2.0.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-fundu+default-devel-2.0.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-fundu+standard-devel" {= "2.0.0"}
+  "rust-fundu-devel" {= "2.0.0"}
+]
+extra-source "rust-fundu+default-devel-2.0.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-fundu+default-devel-2.0.0-2.fc40.noarch.rpm"
+}

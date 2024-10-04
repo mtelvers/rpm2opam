@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-logicpuzzle-2023.201.2.5svn34491-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-logicpuzzle-2023.201.2.5svn34491-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-filesystem" {>= "2023"}
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-marginnote" 
+  "texlive-pgf" 
+  "texlive-ragged2e" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-xkeyval" 
+]
+extra-source "texlive-logicpuzzle-2023.201.2.5svn34491-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-logicpuzzle-2023.201.2.5svn34491-slfo.1.1.4.noarch.rpm"
+}

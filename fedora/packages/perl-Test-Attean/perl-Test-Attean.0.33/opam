@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-Attean-0.033-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Attean-0.033-5.fc40.noarch.rpm"]
+depends: [
+  "perl-Attean" 
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Encode" 
+  "perl-Getopt-Long" 
+  "perl-HTTP-Message" 
+  "perl-List-MoreUtils" 
+  "perl-PathTools" 
+  "perl-Plack" 
+  "perl-Regexp-Common" 
+  "perl-Scalar-List-Utils" 
+  "perl-Test-Modern" {>= "0.12"}
+  "perl-Test-Moose" 
+  "perl-Test-Roo" 
+  "perl-Text-CSV" 
+  "perl-Try-Tiny" 
+  "perl-Type-Tiny" 
+  "perl-URI" 
+  "perl-XML-Simple" 
+  "perl-libs" {>= "5.14.0"}
+]
+extra-source "perl-Test-Attean-0.033-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-Attean-0.033-5.fc40.noarch.rpm"
+}

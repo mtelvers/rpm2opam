@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-lcms2-devel-6.1.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-lcms2-devel-6.1.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bytemuck+default-devel" 
+  "rust-foreign-types+default-devel" 
+  "rust-lcms2-sys+default-devel" 
+]
+extra-source "rust-lcms2-devel-6.1.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-lcms2-devel-6.1.0-1.fc40.noarch.rpm"
+}

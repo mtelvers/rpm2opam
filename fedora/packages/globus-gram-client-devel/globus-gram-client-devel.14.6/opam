@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "globus-gram-client-devel-14.6-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "globus-gram-client-devel-14.6-6.fc40.x86_64.rpm"]
+depends: [
+  "globus-common-devel" {>= "14"}
+  "globus-gram-client" {= "14.6"}
+  "globus-gram-protocol-devel" {>= "11"}
+  "globus-gss-assist-devel" {>= "8"}
+  "globus-io-devel" {>= "9"}
+  "globus-rsl-devel" {>= "9"}
+  "pkgconf-pkg-config" 
+]
+extra-source "globus-gram-client-devel-14.6-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/globus-gram-client-devel-14.6-6.fc40.x86_64.rpm"
+}

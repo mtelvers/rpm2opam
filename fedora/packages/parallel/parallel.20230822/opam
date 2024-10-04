@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "parallel-20230822-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "parallel-20230822-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-FileHandle" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-IPC-Open3" 
+  "perl-POSIX" 
+  "perl-Symbol" 
+  "perl-Thread-Queue" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-threads" 
+  "perl-threads-shared" 
+]
+extra-source "parallel-20230822-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/parallel-20230822-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-platex-tools-svn66185-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-platex-tools-svn66185-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-kpathsea" 
+  "texlive-platex" 
+]
+extra-source "texlive-platex-tools-svn66185-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-platex-tools-svn66185-71.fc40.noarch.rpm"
+}

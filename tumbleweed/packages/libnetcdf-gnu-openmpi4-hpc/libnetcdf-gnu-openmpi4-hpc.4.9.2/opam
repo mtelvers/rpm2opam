@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnetcdf-gnu-openmpi4-hpc-4.9.2-2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnetcdf-gnu-openmpi4-hpc-4.9.2-2.5.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "libnetcdf_4_9_2-gnu-openmpi4-hpc" {= "4.9.2"}
+]
+extra-source "libnetcdf-gnu-openmpi4-hpc-4.9.2-2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libnetcdf-gnu-openmpi4-hpc-4.9.2-2.5.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "llvm16-16.0.6-9.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "llvm16-16.0.6-9.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libLLVM16" 
+  "libstdc++6" 
+  "update-alternatives" 
+]
+extra-source "llvm16-16.0.6-9.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/llvm16-16.0.6-9.1.x86_64.rpm"
+}

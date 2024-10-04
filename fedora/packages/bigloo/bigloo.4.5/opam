@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bigloo-4.5b-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bigloo-4.5b-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bigloo-libs" {= "4.5"}
+  "emacs-filesystem" {>= "29.2"}
+  "gcc" 
+  "glibc" 
+  "glibc-devel" 
+  "gmp-devel" 
+  "indent" 
+  "javapackages-filesystem" 
+  "libatomic_ops-devel" 
+  "libgcc" 
+  "libunistring-devel" 
+  "libuv-devel" 
+]
+extra-source "bigloo-4.5b-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bigloo-4.5b-3.fc40.x86_64.rpm"
+}

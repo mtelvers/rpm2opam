@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-theme-oxygen-5.0.1-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-theme-oxygen-5.0.1-1.4.noarch.rpm"]
+depends: [
+  "kf6-oxygen-icons" 
+  "yast2-theme" {= "5.0.1"}
+]
+extra-source "yast2-theme-oxygen-5.0.1-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/yast2-theme-oxygen-5.0.1-1.4.noarch.rpm"
+}

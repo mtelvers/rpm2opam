@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fedora-jam-backgrounds-kde-2.0.0-8.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fedora-jam-backgrounds-kde-2.0.0-8.fc39.noarch.rpm"]
+depends: [
+  "fedora-jam-backgrounds-single" {= "2.0.0"}
+  "kde-filesystem" 
+]
+extra-source "fedora-jam-backgrounds-kde-2.0.0-8.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fedora-jam-backgrounds-kde-2.0.0-8.fc39.noarch.rpm"
+}

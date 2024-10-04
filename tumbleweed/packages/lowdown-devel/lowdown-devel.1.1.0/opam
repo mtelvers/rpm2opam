@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lowdown-devel-1.1.0+git20231119.1200b9f-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lowdown-devel-1.1.0+git20231119.1200b9f-1.1.x86_64.rpm"]
+depends: [
+  "liblowdown1" {= "1.1.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "lowdown-devel-1.1.0+git20231119.1200b9f-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lowdown-devel-1.1.0+git20231119.1200b9f-1.1.x86_64.rpm"
+}

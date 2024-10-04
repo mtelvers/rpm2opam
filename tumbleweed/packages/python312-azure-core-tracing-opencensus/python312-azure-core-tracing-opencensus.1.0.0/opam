@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-azure-core-tracing-opencensus-1.0.0b9-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-azure-core-tracing-opencensus-1.0.0b9-2.1.noarch.rpm"]
+depends: [
+  "python312-azure-core" 
+  "python312-azure-nspkg" {>= "3.0.0"}
+  "python312-base" {= "3.12"}
+  "python312-opencensus" {>= "0.6.0"}
+  "python312-opencensus-ext-azure" {>= "0.3.1"}
+  "python312-opencensus-ext-threading" 
+]
+extra-source "python312-azure-core-tracing-opencensus-1.0.0b9-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-azure-core-tracing-opencensus-1.0.0b9-2.1.noarch.rpm"
+}

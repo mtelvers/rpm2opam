@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-x509-devel-1.7.7-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-x509-devel-1.7.7-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-asn1-encoding-devel" 
+  "ghc-asn1-parse-devel" 
+  "ghc-asn1-types-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-cryptonite-devel" 
+  "ghc-hourglass-devel" 
+  "ghc-memory-devel" 
+  "ghc-pem-devel" 
+  "ghc-transformers-devel" 
+  "ghc-x509" {= "1.7.7"}
+]
+extra-source "ghc-x509-devel-1.7.7-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-x509-devel-1.7.7-6.fc40.x86_64.rpm"
+}

@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "calamares-3.3.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "calamares-3.3.5-1.fc40.x86_64.rpm"]
+depends: [
+  "NetworkManager" 
+  "bash" 
+  "calamares-libs" {= "3.3.5"}
+  "console-setup" 
+  "coreutils" 
+  "dnf" 
+  "dosfstools" 
+  "dracut" 
+  "e2fsprogs" 
+  "efibootmgr" 
+  "fedora-logos" 
+  "fedora-release" 
+  "gawk" 
+  "glibc" 
+  "grub2-efi-x64" 
+  "grub2-pc" 
+  "hicolor-icon-theme" 
+  "kdesu" 
+  "kf6-kcoreaddons" 
+  "kf6-kcrash" 
+  "libgcc" 
+  "libstdc++" 
+  "ntfsprogs" 
+  "os-prober" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qt6-qtdeclarative" 
+  "rsync" 
+  "setxkbmap" 
+  "shadow-utils" 
+  "systemd" 
+  "upower" 
+  "util-linux" 
+]
+extra-source "calamares-3.3.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/calamares-3.3.5-1.fc40.x86_64.rpm"
+}

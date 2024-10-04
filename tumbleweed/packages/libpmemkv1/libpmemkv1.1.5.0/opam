@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpmemkv1-1.5.0-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpmemkv1-1.5.0-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libmemkind0" 
+  "libpmemkv_json_config1" {>= "1.5.0"}
+  "libpmemobj1" 
+  "libstdc++6" 
+]
+extra-source "libpmemkv1-1.5.0-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpmemkv1-1.5.0-2.2.x86_64.rpm"
+}

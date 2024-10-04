@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "oxygen-mono-fonts-5.4.3-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "oxygen-mono-fonts-5.4.3-23.fc40.noarch.rpm"]
+depends: [
+  "oxygen-fonts-common" {= "5.4.3"}
+]
+extra-source "oxygen-mono-fonts-5.4.3-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/oxygen-mono-fonts-5.4.3-23.fc40.noarch.rpm"
+}

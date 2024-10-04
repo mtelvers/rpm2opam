@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sundials-mpich-6.6.2-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sundials-mpich-6.6.2-7.fc40.x86_64.rpm"]
+depends: [
+  "SuperLUMT64-double" 
+  "gcc-gfortran" 
+  "glibc" 
+  "hypre-mpich" 
+  "libgcc" 
+  "libgfortran" 
+  "libgomp" 
+  "mpich" 
+  "suitesparse64" 
+]
+extra-source "sundials-mpich-6.6.2-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sundials-mpich-6.6.2-7.fc40.x86_64.rpm"
+}

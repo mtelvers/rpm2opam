@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kscreenlocker-lang-5.27.11-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kscreenlocker-lang-5.27.11-1.2.noarch.rpm"]
+depends: [
+  "kscreenlocker" {= "5.27.11"}
+]
+extra-source "kscreenlocker-lang-5.27.11-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kscreenlocker-lang-5.27.11-1.2.noarch.rpm"
+}

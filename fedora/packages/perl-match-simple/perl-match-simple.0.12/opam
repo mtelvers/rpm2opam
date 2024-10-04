@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-match-simple-0.012-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-match-simple-0.012-4.fc40.noarch.rpm"]
+depends: [
+  "perl-B" 
+  "perl-Carp" 
+  "perl-Exporter-Tiny" {>= "0.26"}
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-Sub-Infix" {>= "0.4"}
+  "perl-libs" {>= "5.6.1"}
+  "perl-overload" 
+]
+extra-source "perl-match-simple-0.012-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-match-simple-0.012-4.fc40.noarch.rpm"
+}

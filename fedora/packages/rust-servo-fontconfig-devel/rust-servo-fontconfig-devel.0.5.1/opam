@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-servo-fontconfig-devel-0.5.1-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-servo-fontconfig-devel-0.5.1-11.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cargo" 
+  "rust-libc+default-devel" 
+  "rust-servo-fontconfig-sys+default-devel" 
+]
+extra-source "rust-servo-fontconfig-devel-0.5.1-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-servo-fontconfig-devel-0.5.1-11.fc40.noarch.rpm"
+}

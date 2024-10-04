@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "intltool-0.51.0-8.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "intltool-0.51.0-8.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gettext-tools" 
+  "perl-XML-Parser" 
+  "perl-base" 
+]
+extra-source "intltool-0.51.0-8.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/intltool-0.51.0-8.3.noarch.rpm"
+}

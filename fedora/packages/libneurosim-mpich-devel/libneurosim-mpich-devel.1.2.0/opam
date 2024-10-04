@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libneurosim-mpich-devel-1.2.0-11.20210110.gitafc003f.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libneurosim-mpich-devel-1.2.0-11.20210110.gitafc003f.fc40.x86_64.rpm"]
+depends: [
+  "libneurosim-mpich" {= "1.2.0"}
+  "mpich" 
+]
+extra-source "libneurosim-mpich-devel-1.2.0-11.20210110.gitafc003f.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libneurosim-mpich-devel-1.2.0-11.20210110.gitafc003f.fc40.x86_64.rpm"
+}

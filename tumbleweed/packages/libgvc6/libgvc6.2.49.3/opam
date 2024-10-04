@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgvc6-2.49.3-11.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgvc6-2.49.3-11.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcdt5" 
+  "libcgraph6" 
+  "libexpat1" 
+  "libltdl7" 
+  "libpathplan4" 
+  "libz-ng-compat1" 
+]
+extra-source "libgvc6-2.49.3-11.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgvc6-2.49.3-11.1.x86_64.rpm"
+}

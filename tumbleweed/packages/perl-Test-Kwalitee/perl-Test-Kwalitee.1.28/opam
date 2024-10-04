@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-Kwalitee-1.28-1.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Kwalitee-1.28-1.15.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Module-CPANTS-Analyse" {>= "0.92"}
+  "perl-base" 
+]
+extra-source "perl-Test-Kwalitee-1.28-1.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-Kwalitee-1.28-1.15.noarch.rpm"
+}

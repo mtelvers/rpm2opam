@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Alien-Base-2.80-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Alien-Base-2.80-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Capture-Tiny" {>= "0.17"}
+  "perl-Carp" 
+  "perl-DynaLoader" 
+  "perl-Exporter" 
+  "perl-FFI-CheckLib" 
+  "perl-File-Find" 
+  "perl-JSON-PP" 
+  "perl-Path-Tiny" {>= "0.77"}
+  "perl-Scalar-List-Utils" 
+  "perl-Storable" 
+  "perl-Text-ParseWords" {>= "3.26"}
+  "perl-libs" {>= "5.8.4"}
+  "pkgconf-pkg-config" 
+]
+extra-source "perl-Alien-Base-2.80-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Alien-Base-2.80-4.fc40.noarch.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rpick-devel-0.9.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rpick-devel-0.9.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.66"}
+  "rust-clap+default-devel" 
+  "rust-clap+derive-devel" 
+  "rust-clap+env-devel" 
+  "rust-dirs-next+default-devel" 
+  "rust-prettytable-rs+default-devel" 
+  "rust-rand+default-devel" 
+  "rust-rand_distr+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde_yaml+default-devel" 
+  "rust-statrs+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-rpick-devel-0.9.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rpick-devel-0.9.0-2.fc40.noarch.rpm"
+}

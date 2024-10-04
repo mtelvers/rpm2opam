@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rclone-bash-completion-1.68.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rclone-bash-completion-1.68.1-1.1.noarch.rpm"]
+depends: [
+  "rclone" {= "1.68.1"}
+]
+extra-source "rclone-bash-completion-1.68.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/rclone-bash-completion-1.68.1-1.1.noarch.rpm"
+}

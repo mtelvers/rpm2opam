@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "graphlcd-devel-2.0.3-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "graphlcd-devel-2.0.3-5.fc40.x86_64.rpm"]
+depends: [
+  "glcddrivers" {= "2.0.3"}
+  "glcdgraphics" {= "2.0.3"}
+  "glcdskin" {= "2.0.3"}
+]
+extra-source "graphlcd-devel-2.0.3-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/graphlcd-devel-2.0.3-5.fc40.x86_64.rpm"
+}

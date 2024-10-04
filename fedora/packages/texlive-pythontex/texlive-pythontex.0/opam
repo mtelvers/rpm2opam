@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-pythontex-svn59514-81.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-pythontex-svn59514-81.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "texlive-base" 
+  "texlive-currfile" 
+  "texlive-etex-pkg" 
+  "texlive-etoolbox" 
+  "texlive-fancyvrb" 
+  "texlive-fvextra" 
+  "texlive-kpathsea" 
+  "texlive-newfloat" 
+  "texlive-pgfopts" 
+  "texlive-upquote" 
+  "texlive-xcolor" 
+  "texlive-xstring" 
+]
+extra-source "texlive-pythontex-svn59514-81.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-pythontex-svn59514-81.fc40.noarch.rpm"
+}

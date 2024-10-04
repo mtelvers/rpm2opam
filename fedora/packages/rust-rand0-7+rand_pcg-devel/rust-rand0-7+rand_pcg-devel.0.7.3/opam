@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rand0.7+rand_pcg-devel-0.7.3-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rand0.7+rand_pcg-devel-0.7.3-10.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-rand0-7-devel" {= "0.7.3"}
+  "rust-rand_pcg+default-devel" 
+]
+extra-source "rust-rand0.7+rand_pcg-devel-0.7.3-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rand0.7+rand_pcg-devel-0.7.3-10.fc40.noarch.rpm"
+}

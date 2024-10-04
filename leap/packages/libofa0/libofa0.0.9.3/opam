@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libofa0-0.9.3-lp160.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libofa0-0.9.3-lp160.1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libfftw3-3" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "libofa0-0.9.3-lp160.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libofa0-0.9.3-lp160.1.2.x86_64.rpm"
+}

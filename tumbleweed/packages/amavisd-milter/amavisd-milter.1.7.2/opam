@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "amavisd-milter-1.7.2-1.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "amavisd-milter-1.7.2-1.10.x86_64.rpm"]
+depends: [
+  "amavisd-new" 
+  "bash-sh" 
+  "glibc" 
+  "libmilter1_0" 
+]
+extra-source "amavisd-milter-1.7.2-1.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/amavisd-milter-1.7.2-1.10.x86_64.rpm"
+}

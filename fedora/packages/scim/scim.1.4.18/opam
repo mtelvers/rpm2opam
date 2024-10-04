@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "scim-1.4.18-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scim-1.4.18-9.fc40.x86_64.rpm"]
+depends: [
+  "alternatives" 
+  "atk" 
+  "bash" 
+  "cairo" 
+  "fontconfig" 
+  "freetype" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "harfbuzz" 
+  "im-chooser" 
+  "imsettings" 
+  "libX11" 
+  "libgcc" 
+  "libstdc++" 
+  "libtool-ltdl" 
+  "pango" 
+  "scim-libs" 
+]
+extra-source "scim-1.4.18-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/scim-1.4.18-9.fc40.x86_64.rpm"
+}

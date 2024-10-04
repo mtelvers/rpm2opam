@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "opencv-4.9.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opencv-4.9.0-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "opencv-calib3d" 
+  "opencv-core" 
+  "opencv-data" {= "4.9.0"}
+  "opencv-dnn" 
+  "opencv-features2d" 
+  "opencv-highgui" 
+  "opencv-imgcodecs" 
+  "opencv-imgproc" 
+  "opencv-objdetect" 
+  "opencv-videoio" 
+  "opencv-xobjdetect" 
+]
+extra-source "opencv-4.9.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/opencv-4.9.0-3.fc40.x86_64.rpm"
+}

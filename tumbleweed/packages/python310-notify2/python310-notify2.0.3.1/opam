@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-notify2-0.3.1-4.18.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-notify2-0.3.1-4.18.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-dbus-python" 
+]
+extra-source "python310-notify2-0.3.1-4.18.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-notify2-0.3.1-4.18.noarch.rpm"
+}

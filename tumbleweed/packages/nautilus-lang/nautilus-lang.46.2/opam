@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nautilus-lang-46.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nautilus-lang-46.2-1.1.noarch.rpm"]
+depends: [
+  "nautilus" {= "46.2"}
+]
+extra-source "nautilus-lang-46.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nautilus-lang-46.2-1.1.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "redland-mysql-1.0.17-37.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "redland-mysql-1.0.17-37.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libtool-ltdl" 
+  "mariadb-connector-c" 
+  "raptor2" 
+  "rasqal" 
+  "redland" 
+]
+extra-source "redland-mysql-1.0.17-37.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/redland-mysql-1.0.17-37.fc40.x86_64.rpm"
+}

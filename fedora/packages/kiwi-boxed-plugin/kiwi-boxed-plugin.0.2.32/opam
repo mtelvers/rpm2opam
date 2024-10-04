@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kiwi-boxed-plugin-0.2.32-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kiwi-boxed-plugin-0.2.32-1.fc40.noarch.rpm"]
+depends: [
+  "python3-kiwi-boxed-plugin" {= "0.2.32"}
+]
+extra-source "kiwi-boxed-plugin-0.2.32-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kiwi-boxed-plugin-0.2.32-1.fc40.noarch.rpm"
+}

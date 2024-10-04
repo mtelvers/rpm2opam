@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-cryptonite-prof-0.30-2.17.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-cryptonite-prof-0.30-2.17.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-basement-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-cryptonite-devel" {= "0.30"}
+  "ghc-deepseq-prof" 
+  "ghc-memory-prof" 
+]
+extra-source "ghc-cryptonite-prof-0.30-2.17.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-cryptonite-prof-0.30-2.17.x86_64.rpm"
+}

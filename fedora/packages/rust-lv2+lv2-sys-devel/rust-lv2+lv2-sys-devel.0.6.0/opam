@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-lv2+lv2-sys-devel-0.6.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-lv2+lv2-sys-devel-0.6.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-lv2-devel" {= "0.6.0"}
+  "rust-lv2-sys+default-devel" 
+]
+extra-source "rust-lv2+lv2-sys-devel-0.6.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-lv2+lv2-sys-devel-0.6.0-2.fc40.noarch.rpm"
+}

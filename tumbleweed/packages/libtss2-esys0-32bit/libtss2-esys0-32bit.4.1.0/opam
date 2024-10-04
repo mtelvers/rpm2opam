@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libtss2-esys0-32bit-4.1.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libtss2-esys0-32bit-4.1.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libopenssl3-32bit" 
+  "libtss2-mu0-32bit" 
+  "libtss2-sys1-32bit" 
+]
+extra-source "libtss2-esys0-32bit-4.1.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libtss2-esys0-32bit-4.1.0-1.1.x86_64.rpm"
+}

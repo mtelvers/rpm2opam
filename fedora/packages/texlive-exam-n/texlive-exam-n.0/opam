@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-exam-n-svn64674-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-exam-n-svn64674-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-amsmath" 
+  "texlive-babel" 
+  "texlive-base" 
+  "texlive-fancyhdr" 
+  "texlive-graphics" 
+  "texlive-iftex" 
+  "texlive-kpathsea" 
+  "texlive-latex" 
+  "texlive-psnfss" 
+]
+extra-source "texlive-exam-n-svn64674-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-exam-n-svn64674-71.fc40.noarch.rpm"
+}

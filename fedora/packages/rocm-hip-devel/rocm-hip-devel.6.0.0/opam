@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rocm-hip-devel-6.0.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rocm-hip-devel-6.0.0-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cmake-filesystem" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Which" 
+  "perl-Getopt-Std" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-URI" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "rocm-comgr-devel" 
+  "rocm-hip" 
+  "rocm-runtime-devel" {>= "6.0"}
+]
+extra-source "rocm-hip-devel-6.0.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rocm-hip-devel-6.0.0-3.fc40.x86_64.rpm"
+}

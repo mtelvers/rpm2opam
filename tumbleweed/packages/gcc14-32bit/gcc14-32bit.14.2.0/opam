@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcc14-32bit-14.2.0+git10526-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcc14-32bit-14.2.0+git10526-2.1.x86_64.rpm"]
+depends: [
+  "gcc14" {= "14.2.0"}
+  "glibc-32bit" 
+  "glibc-devel-32bit" 
+  "libasan8-32bit" {>= "14.2.0"}
+  "libatomic1-32bit" {>= "14.2.0"}
+  "libgcc_s1-32bit" {>= "14.2.0"}
+  "libgomp1-32bit" {>= "14.2.0"}
+  "libitm1-32bit" {>= "14.2.0"}
+  "libubsan1-32bit" {>= "14.2.0"}
+]
+extra-source "gcc14-32bit-14.2.0+git10526-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gcc14-32bit-14.2.0+git10526-2.1.x86_64.rpm"
+}

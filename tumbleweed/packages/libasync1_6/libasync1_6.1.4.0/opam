@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libasync1_6-1.4.0-6.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libasync1_6-1.4.0-6.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5Network5" 
+  "libQt5Widgets5" 
+  "libasound2" 
+  "libgcc_s1" 
+  "libgsm1" 
+  "libopus0" 
+  "libsigc-2_0-0" 
+  "libspeex1" 
+  "libstdc++6" 
+]
+extra-source "libasync1_6-1.4.0-6.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libasync1_6-1.4.0-6.2.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libusbguard1-1.1.3-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libusbguard1-1.1.3-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libabsl_lite_2401_0_0" 
+  "libgcc_s1" 
+  "libprotobuf25_4_0" 
+  "libqb100" 
+  "libsodium26" 
+  "libstdc++6" 
+]
+extra-source "libusbguard1-1.1.3-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libusbguard1-1.1.3-1.2.x86_64.rpm"
+}

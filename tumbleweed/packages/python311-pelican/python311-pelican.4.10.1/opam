@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pelican-4.10.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pelican-4.10.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-Jinja2" {>= "3.1.2"}
+  "python311-Pygments" {>= "2.16.1"}
+  "python311-Unidecode" {>= "1.3.7"}
+  "python311-base" 
+  "python311-blinker" {>= "1.7.0"}
+  "python311-docutils" {>= "0.20.1"}
+  "python311-feedgenerator" {>= "2.1.0"}
+  "python311-ordered-set" {>= "4.1.0"}
+  "python311-python-dateutil" {>= "2.8.2"}
+  "python311-rich" {>= "13.6.0"}
+  "python311-watchfiles" {>= "0.21.0"}
+  "update-alternatives" 
+]
+extra-source "python311-pelican-4.10.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pelican-4.10.1-1.1.noarch.rpm"
+}

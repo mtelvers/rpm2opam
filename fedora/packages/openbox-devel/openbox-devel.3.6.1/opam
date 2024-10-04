@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openbox-devel-3.6.1-26.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openbox-devel-3.6.1-26.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "imlib2-devel" 
+  "libXft-devel" 
+  "libxml2-devel" 
+  "openbox-libs" 
+  "pango-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "openbox-devel-3.6.1-26.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openbox-devel-3.6.1-26.fc40.x86_64.rpm"
+}

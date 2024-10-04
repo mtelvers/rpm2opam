@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-showtext-0.9.5-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-showtext-0.9.5-6.fc40.x86_64.rpm"]
+depends: [
+  "R-core" {= "4.3"}
+  "R-showtextdb" {>= "2.0"}
+  "R-sysfonts" {>= "0.7.1"}
+  "freetype" 
+  "glibc" 
+]
+extra-source "R-showtext-0.9.5-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-showtext-0.9.5-6.fc40.x86_64.rpm"
+}

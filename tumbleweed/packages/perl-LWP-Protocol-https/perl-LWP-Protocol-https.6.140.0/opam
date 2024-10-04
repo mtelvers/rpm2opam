@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-LWP-Protocol-https-6.140.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-LWP-Protocol-https-6.140.0-1.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-IO-Socket-SSL" {>= "1.970"}
+  "perl-Net-HTTP" {>= "6"}
+  "perl-libwww-perl" {>= "6.6"}
+]
+extra-source "perl-LWP-Protocol-https-6.140.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-LWP-Protocol-https-6.140.0-1.2.noarch.rpm"
+}

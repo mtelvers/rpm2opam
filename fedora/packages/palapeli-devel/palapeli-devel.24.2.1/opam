@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "palapeli-devel-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "palapeli-devel-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "glibc" 
+  "kf6-karchive" 
+  "kf6-kcoreaddons" 
+  "kf6-kio-gui" 
+  "libstdc++" 
+  "palapeli-libs" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+]
+extra-source "palapeli-devel-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/palapeli-devel-24.02.1-1.fc40.x86_64.rpm"
+}

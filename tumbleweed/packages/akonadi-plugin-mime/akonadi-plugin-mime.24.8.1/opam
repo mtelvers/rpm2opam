@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "akonadi-plugin-mime-24.08.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "akonadi-plugin-mime-24.08.1-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libKPim6AkonadiCore6" 
+  "libKPim6AkonadiMime6" 
+  "libKPim6AkonadiPrivate6" 
+  "libKPim6Mime6" 
+  "libQt6Core6" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "akonadi-plugin-mime-24.08.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/akonadi-plugin-mime-24.08.1-1.1.x86_64.rpm"
+}

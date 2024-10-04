@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gd-2.3.3-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gd-2.3.3-16.fc40.x86_64.rpm"]
+depends: [
+  "fontconfig" 
+  "freetype" 
+  "glibc" 
+  "libX11" 
+  "libXpm" 
+  "libavif" 
+  "libimagequant" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libtiff" 
+  "libwebp" 
+  "zlib-ng-compat" 
+]
+extra-source "gd-2.3.3-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gd-2.3.3-16.fc40.x86_64.rpm"
+}

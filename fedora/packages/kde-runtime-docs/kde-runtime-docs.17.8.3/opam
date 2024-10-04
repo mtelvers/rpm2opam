@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kde-runtime-docs-17.08.3-30.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kde-runtime-docs-17.08.3-30.fc40.noarch.rpm"]
+depends: [
+  "kde-runtime" {= "17.8.3"}
+]
+extra-source "kde-runtime-docs-17.08.3-30.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kde-runtime-docs-17.08.3-30.fc40.noarch.rpm"
+}

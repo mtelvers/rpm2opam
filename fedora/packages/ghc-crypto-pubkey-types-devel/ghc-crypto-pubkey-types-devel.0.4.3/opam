@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-crypto-pubkey-types-devel-0.4.3-31.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-crypto-pubkey-types-devel-0.4.3-31.fc40.x86_64.rpm"]
+depends: [
+  "ghc-asn1-encoding-devel" 
+  "ghc-asn1-types-devel" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-crypto-pubkey-types" {= "0.4.3"}
+]
+extra-source "ghc-crypto-pubkey-types-devel-0.4.3-31.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-crypto-pubkey-types-devel-0.4.3-31.fc40.x86_64.rpm"
+}

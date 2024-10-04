@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pkgutil-resolve-name-1.3.10-2.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pkgutil-resolve-name-1.3.10-2.7.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+]
+extra-source "python312-pkgutil-resolve-name-1.3.10-2.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pkgutil-resolve-name-1.3.10-2.7.noarch.rpm"
+}

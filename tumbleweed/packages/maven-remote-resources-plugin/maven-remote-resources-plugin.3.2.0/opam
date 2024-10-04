@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-remote-resources-plugin-3.2.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-remote-resources-plugin-3.2.0-1.3.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-archiver" 
+  "maven-common-artifact-filters" 
+  "maven-filtering" 
+  "maven-resolver-util" 
+  "plexus-resources" 
+  "plexus-utils" 
+  "velocity-engine-core" 
+]
+extra-source "maven-remote-resources-plugin-3.2.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-remote-resources-plugin-3.2.0-1.3.noarch.rpm"
+}

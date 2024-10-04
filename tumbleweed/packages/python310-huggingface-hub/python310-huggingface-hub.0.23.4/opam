@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-huggingface-hub-0.23.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-huggingface-hub-0.23.4-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-PyYAML" {>= "5.1"}
+  "python310-base" {= "3.10"}
+  "python310-filelock" 
+  "python310-fsspec" {>= "2023.5.0"}
+  "python310-packaging" {>= "20.9"}
+  "python310-requests" 
+  "python310-tqdm" {>= "4.42.1"}
+  "python310-typing_extensions" {>= "3.7.4.3"}
+]
+extra-source "python310-huggingface-hub-0.23.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-huggingface-hub-0.23.4-1.1.noarch.rpm"
+}

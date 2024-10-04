@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-espresso-mpich-4.2.1-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-espresso-mpich-4.2.1-10.fc40.x86_64.rpm"]
+depends: [
+  "boost-mpich" 
+  "boost-serialization" 
+  "espresso-common" {= "4.2.1"}
+  "fftw-libs-double" 
+  "glibc" 
+  "gsl" 
+  "libgcc" 
+  "libstdc++" 
+  "mpich" 
+  "python3" {= "3.12"}
+  "python3-h5py" 
+]
+extra-source "python3-espresso-mpich-4.2.1-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-espresso-mpich-4.2.1-10.fc40.x86_64.rpm"
+}

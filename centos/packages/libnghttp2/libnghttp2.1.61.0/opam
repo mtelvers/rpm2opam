@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnghttp2-1.61.0-2.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnghttp2-1.61.0-2.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+]
+extra-source "libnghttp2-1.61.0-2.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/libnghttp2-1.61.0-2.el10.x86_64.rpm"
+}

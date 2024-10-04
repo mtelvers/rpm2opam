@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "btfs-2.24-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "btfs-2.24-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcurl-mini4" 
+  "libfuse2" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libstdc++6" 
+  "libtorrent-rasterbar2_0" 
+  "python311-base" 
+]
+extra-source "btfs-2.24-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/btfs-2.24-2.1.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-lalrpop+default-devel-0.20.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-lalrpop+default-devel-0.20.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-lalrpop+lexer-devel" {= "0.20.0"}
+  "rust-lalrpop+unicode-devel" {= "0.20.0"}
+  "rust-lalrpop-devel" {= "0.20.0"}
+]
+extra-source "rust-lalrpop+default-devel-0.20.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-lalrpop+default-devel-0.20.0-2.fc40.noarch.rpm"
+}

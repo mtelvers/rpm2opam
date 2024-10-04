@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-netlink-devel-1.1.1.0-4.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-netlink-devel-1.1.1.0-4.16.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-cereal-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-monad-loops-devel" 
+  "ghc-netlink" {= "1.1.1.0"}
+  "ghc-pretty-hex-devel" 
+  "ghc-unix-devel" 
+]
+extra-source "ghc-netlink-devel-1.1.1.0-4.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-netlink-devel-1.1.1.0-4.16.x86_64.rpm"
+}

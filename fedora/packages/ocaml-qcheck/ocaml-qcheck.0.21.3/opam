@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-qcheck-0.21.3-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-qcheck-0.21.3-6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "ocaml" {= "2125"}
+  "ocaml-ounit" {= "5"}
+  "ocaml-qcheck-core" {= "0"}
+  "ocaml-qcheck-ounit" {= "7"}
+]
+extra-source "ocaml-qcheck-0.21.3-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-qcheck-0.21.3-6.fc40.x86_64.rpm"
+}

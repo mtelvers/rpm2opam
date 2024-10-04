@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gyp-0.1-0.52.fcd686f1git.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gyp-0.1-0.52.fcd686f1git.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-setuptools" 
+]
+extra-source "gyp-0.1-0.52.fcd686f1git.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gyp-0.1-0.52.fcd686f1git.fc40.noarch.rpm"
+}

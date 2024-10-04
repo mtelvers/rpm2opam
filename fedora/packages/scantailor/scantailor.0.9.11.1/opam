@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "scantailor-0.9.11.1-37.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scantailor-0.9.11.1-37.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libXrender" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libstdc++" 
+  "libtiff" 
+  "qt" 
+  "qt-x11" 
+]
+extra-source "scantailor-0.9.11.1-37.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/scantailor-0.9.11.1-37.fc40.x86_64.rpm"
+}

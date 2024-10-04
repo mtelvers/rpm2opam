@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "profanity-libs-0.14.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "profanity-libs-0.14.0-3.fc40.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gpgme" 
+  "libcurl" 
+  "libgcrypt" 
+  "libnotify" 
+  "libotr" 
+  "libsignal-protocol-c" 
+  "libstrophe" 
+  "ncurses-libs" 
+  "profanity" {= "0.14.0"}
+  "python3-libs" 
+  "qrencode-libs" 
+  "readline" 
+  "sqlite-libs" 
+]
+extra-source "profanity-libs-0.14.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/profanity-libs-0.14.0-3.fc40.x86_64.rpm"
+}

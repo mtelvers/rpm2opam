@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rmt-server-2.18-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rmt-server-2.18-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "gpg2" 
+  "libexslt0" 
+  "libffi8" 
+  "libmariadb3" 
+  "libopenssl3" 
+  "libruby3_3-3_3" 
+  "libsqlite3-0" 
+  "libxml2-2" 
+  "libxslt1" 
+  "libz-ng-compat1" 
+  "nginx" 
+  "rmt-server-config" 
+  "ruby3-3" 
+  "ruby3-3-rubygem-bundler" 
+  "shadow" 
+  "timezone" 
+  "util-linux" 
+]
+extra-source "rmt-server-2.18-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rmt-server-2.18-1.1.x86_64.rpm"
+}

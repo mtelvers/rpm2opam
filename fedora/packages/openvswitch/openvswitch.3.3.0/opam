@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openvswitch-3.3.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openvswitch-3.3.0-1.fc40.x86_64.rpm"]
+depends: [
+  "alternatives" 
+  "bash" 
+  "glibc" 
+  "iproute" 
+  "kmod" 
+  "libatomic" 
+  "libbpf" 
+  "libcap-ng" 
+  "libxdp" 
+  "numactl-libs" 
+  "openssl" 
+  "openssl-libs" 
+  "sed" 
+  "shadow-utils" 
+  "systemd" 
+  "unbound-libs" 
+]
+extra-source "openvswitch-3.3.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openvswitch-3.3.0-1.fc40.x86_64.rpm"
+}

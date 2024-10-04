@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ring-devel-0.17.8-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ring-devel-0.17.8-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.61.0"}
+  "rust-cc-devel" 
+  "rust-cfg-if-devel" 
+  "rust-getrandom+default-devel" 
+  "rust-libc-devel" 
+  "rust-spin+once-devel" 
+  "rust-spin-devel" 
+  "rust-untrusted+default-devel" 
+]
+extra-source "rust-ring-devel-0.17.8-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ring-devel-0.17.8-1.fc40.noarch.rpm"
+}

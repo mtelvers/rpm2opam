@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gcc-objc-14.0.1-0.15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcc-objc-14.0.1-0.15.fc40.x86_64.rpm"]
+depends: [
+  "gcc" {= "14.0.1"}
+  "glibc" 
+  "gmp" 
+  "libmpc" 
+  "libobjc" {= "14.0.1"}
+  "libzstd" 
+  "mpfr" 
+  "zlib-ng-compat" 
+]
+extra-source "gcc-objc-14.0.1-0.15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gcc-objc-14.0.1-0.15.fc40.x86_64.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lxc-6.0.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lxc-6.0.2-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "libapparmor1" 
+  "libcap-progs" 
+  "libcap2" 
+  "libdbus-1-3" 
+  "libgcc_s1" 
+  "liblxc1" 
+  "libseccomp2" 
+  "libselinux1" 
+  "lxcfs" 
+  "lxcfs-hooks-lxc" 
+  "rsync" 
+]
+extra-source "lxc-6.0.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lxc-6.0.2-1.1.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-4ti2interface-2023.02.04-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-4ti2interface-2023.02.04-1.2.noarch.rpm"]
+depends: [
+  "4ti2" 
+  "bash-sh" 
+  "gap" {>= "4.12.1"}
+  "gap-io" {>= "4.2"}
+]
+extra-source "gap-4ti2interface-2023.02.04-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-4ti2interface-2023.02.04-1.2.noarch.rpm"
+}

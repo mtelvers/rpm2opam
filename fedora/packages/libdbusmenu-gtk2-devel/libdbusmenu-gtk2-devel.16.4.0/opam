@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libdbusmenu-gtk2-devel-16.04.0-27.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdbusmenu-gtk2-devel-16.04.0-27.fc40.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf2-devel" 
+  "gtk2-devel" 
+  "libdbusmenu" {= "16.4.0"}
+  "libdbusmenu-devel" 
+  "libdbusmenu-gtk2" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libdbusmenu-gtk2-devel-16.04.0-27.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libdbusmenu-gtk2-devel-16.04.0-27.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "trousers-devel-0.3.15-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trousers-devel-0.3.15-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "glibc-devel" 
+  "libopenssl-devel" 
+  "libtspi1" {= "0.3.15"}
+  "trousers" {= "0.3.15"}
+]
+extra-source "trousers-devel-0.3.15-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/trousers-devel-0.3.15-slfo.1.1.7.x86_64.rpm"
+}

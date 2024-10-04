@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libarm_compute_graph40-24.08-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libarm_compute_graph40-24.08-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libarm_compute40" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "libarm_compute_graph40-24.08-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libarm_compute_graph40-24.08-1.1.x86_64.rpm"
+}

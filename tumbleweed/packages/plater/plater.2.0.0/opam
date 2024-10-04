@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plater-2.0.0~rc7.1599393390.c451359-3.19.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plater-2.0.0~rc7.1599393390.c451359-3.19.noarch.rpm"]
+depends: [
+  "Printrun-common" {= "2.0.0"}
+  "python311-base" 
+  "python311-wxPython" 
+]
+extra-source "plater-2.0.0~rc7.1599393390.c451359-3.19.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/plater-2.0.0~rc7.1599393390.c451359-3.19.noarch.rpm"
+}

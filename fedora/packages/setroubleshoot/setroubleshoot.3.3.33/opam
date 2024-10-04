@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "setroubleshoot-3.3.33-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "setroubleshoot-3.3.33-1.fc40.x86_64.rpm"]
+depends: [
+  "dbus" 
+  "desktop-file-utils" 
+  "gtk3" 
+  "libnotify" 
+  "libreport-gtk" {>= "2.2.1"}
+  "python3" 
+  "python3-dasbus" 
+  "python3-gobject" 
+  "python3-libreport" 
+  "setroubleshoot-server" {= "3.3.33"}
+  "xdg-utils" 
+]
+extra-source "setroubleshoot-3.3.33-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/setroubleshoot-3.3.33-1.fc40.x86_64.rpm"
+}

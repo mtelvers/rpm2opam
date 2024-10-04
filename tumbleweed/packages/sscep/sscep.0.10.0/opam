@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sscep-0.10.0-1.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sscep-0.10.0-1.12.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libopenssl3" 
+]
+extra-source "sscep-0.10.0-1.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sscep-0.10.0-1.12.x86_64.rpm"
+}

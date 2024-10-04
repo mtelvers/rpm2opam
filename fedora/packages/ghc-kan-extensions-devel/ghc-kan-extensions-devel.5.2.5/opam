@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-kan-extensions-devel-5.2.5-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-kan-extensions-devel-5.2.5-5.fc40.x86_64.rpm"]
+depends: [
+  "ghc-adjunctions-devel" 
+  "ghc-array-devel" 
+  "ghc-base-devel" 
+  "ghc-comonad-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-contravariant-devel" 
+  "ghc-distributive-devel" 
+  "ghc-free-devel" 
+  "ghc-invariant-devel" 
+  "ghc-kan-extensions" {= "5.2.5"}
+  "ghc-mtl-devel" 
+  "ghc-profunctors-devel" 
+  "ghc-semigroupoids-devel" 
+  "ghc-tagged-devel" 
+  "ghc-transformers-compat-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-kan-extensions-devel-5.2.5-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-kan-extensions-devel-5.2.5-5.fc40.x86_64.rpm"
+}

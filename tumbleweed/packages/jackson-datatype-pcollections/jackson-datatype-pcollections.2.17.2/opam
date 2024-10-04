@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jackson-datatype-pcollections-2.17.2-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jackson-datatype-pcollections-2.17.2-2.1.noarch.rpm"]
+depends: [
+  "jackson-core" 
+  "jackson-databind" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "pcollections" 
+]
+extra-source "jackson-datatype-pcollections-2.17.2-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jackson-datatype-pcollections-2.17.2-2.1.noarch.rpm"
+}

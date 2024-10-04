@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "disk-encryption-tool-1+git20240826.c956112-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "disk-encryption-tool-1+git20240826.c956112-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "cryptsetup" 
+  "keyutils" 
+  "pcr-oracle" 
+  "qrencode" 
+  "systemd" 
+  "tpm2-0-tools" 
+]
+extra-source "disk-encryption-tool-1+git20240826.c956112-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/disk-encryption-tool-1+git20240826.c956112-1.1.noarch.rpm"
+}

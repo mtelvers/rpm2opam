@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tuned-2.22.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tuned-2.22.1-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "dbus" 
+  "ethtool" 
+  "gawk" 
+  "hdparm" 
+  "iproute" 
+  "kmod" 
+  "polkit" 
+  "python3" 
+  "python3-dbus" 
+  "python3-gobject-base" 
+  "python3-linux-procfs" 
+  "python3-perf" 
+  "python3-pyudev" 
+  "systemd" 
+  "util-linux" 
+  "virt-what" 
+]
+extra-source "tuned-2.22.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tuned-2.22.1-1.fc40.noarch.rpm"
+}

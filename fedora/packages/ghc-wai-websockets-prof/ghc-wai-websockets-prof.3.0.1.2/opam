@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-wai-websockets-prof-3.0.1.2-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-wai-websockets-prof-3.0.1.2-14.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-case-insensitive-prof" 
+  "ghc-http-types-prof" 
+  "ghc-network-prof" 
+  "ghc-transformers-prof" 
+  "ghc-wai-prof" 
+  "ghc-wai-websockets-devel" {= "3.0.1.2"}
+  "ghc-websockets-prof" 
+]
+extra-source "ghc-wai-websockets-prof-3.0.1.2-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-wai-websockets-prof-3.0.1.2-14.fc40.x86_64.rpm"
+}

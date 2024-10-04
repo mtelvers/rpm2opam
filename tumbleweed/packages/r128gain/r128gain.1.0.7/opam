@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "r128gain-1.0.7-2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "r128gain-1.0.7-2.3.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-crcmod" {>= "1.7"}
+  "python311-ffmpeg-python" {>= "0.2"}
+  "python311-mutagen" {>= "1.43"}
+  "python311-tqdm" {>= "4.28.1"}
+]
+extra-source "r128gain-1.0.7-2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/r128gain-1.0.7-2.3.noarch.rpm"
+}

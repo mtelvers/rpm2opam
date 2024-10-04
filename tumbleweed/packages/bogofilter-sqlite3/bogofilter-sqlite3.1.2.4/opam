@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bogofilter-sqlite3-1.2.4-16.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bogofilter-sqlite3-1.2.4-16.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "bogofilter-common" {= "1.2.4"}
+  "glibc" 
+  "libgsl28" 
+  "libgslcblas0" 
+  "libsqlite3-0" 
+  "update-alternatives" 
+]
+extra-source "bogofilter-sqlite3-1.2.4-16.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/bogofilter-sqlite3-1.2.4-16.3.x86_64.rpm"
+}

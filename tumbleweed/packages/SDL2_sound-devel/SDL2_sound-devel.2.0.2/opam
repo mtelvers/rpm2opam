@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "SDL2_sound-devel-2.0.2-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "SDL2_sound-devel-2.0.2-1.4.x86_64.rpm"]
+depends: [
+  "SDL2-devel" 
+  "glibc" 
+  "libSDL2-2_0-0" 
+  "libSDL2_sound2" 
+  "pkgconf-pkg-config" 
+]
+extra-source "SDL2_sound-devel-2.0.2-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/SDL2_sound-devel-2.0.2-1.4.x86_64.rpm"
+}

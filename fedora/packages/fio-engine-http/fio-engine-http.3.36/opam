@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fio-engine-http-3.36-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fio-engine-http-3.36-3.fc40.x86_64.rpm"]
+depends: [
+  "fio" {= "3.36"}
+  "glibc" 
+  "libcurl" 
+  "openssl-libs" 
+]
+extra-source "fio-engine-http-3.36-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fio-engine-http-3.36-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-HTML-Restrict-3.0.2-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTML-Restrict-3.0.2-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dump" 
+  "perl-HTML-Parser" 
+  "perl-Moo" {>= "1.2000"}
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-Sub-Quote" 
+  "perl-Type-Tiny" {>= "1.1"}
+  "perl-URI" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-namespace-clean" 
+  "perl-version" 
+]
+extra-source "perl-HTML-Restrict-3.0.2-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-HTML-Restrict-3.0.2-4.fc40.noarch.rpm"
+}

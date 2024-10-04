@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-grep-searcher-devel-0.1.13-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-grep-searcher-devel-0.1.13-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bstr+std-devel" 
+  "rust-bstr-devel" 
+  "rust-encoding_rs+default-devel" 
+  "rust-encoding_rs_io+default-devel" 
+  "rust-grep-matcher+default-devel" 
+  "rust-log+default-devel" 
+  "rust-memchr+default-devel" 
+  "rust-memmap2+default-devel" 
+]
+extra-source "rust-grep-searcher-devel-0.1.13-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-grep-searcher-devel-0.1.13-2.fc40.noarch.rpm"
+}

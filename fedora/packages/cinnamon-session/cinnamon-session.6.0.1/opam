@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cinnamon-session-6.0.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cinnamon-session-6.0.1-5.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cinnamon-control-center-filesystem" 
+  "cinnamon-desktop" {>= "6.0.0"}
+  "dbus-x11" 
+  "dconf" 
+  "fedora-logos" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libICE" 
+  "libSM" 
+  "libX11" 
+  "libXau" 
+  "libXcomposite" 
+  "libcanberra" 
+  "libglvnd-glx" 
+  "polkit-gnome" 
+  "python3" 
+  "systemd-libs" 
+]
+extra-source "cinnamon-session-6.0.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cinnamon-session-6.0.1-5.fc40.x86_64.rpm"
+}

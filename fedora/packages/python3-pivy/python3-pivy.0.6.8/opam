@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-pivy-0.6.8-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-pivy-0.6.8-7.fc40.x86_64.rpm"]
+depends: [
+  "Coin4" 
+  "SoQt" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "python3" 
+  "qt5-qtbase" 
+]
+extra-source "python3-pivy-0.6.8-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-pivy-0.6.8-7.fc40.x86_64.rpm"
+}

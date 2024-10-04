@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Catalyst-View-Component-SubInclude-0.10-39.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Catalyst-View-Component-SubInclude-0.10-39.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Catalyst-Plugin-SubRequest" 
+  "perl-Catalyst-Runtime" {>= "5.80014"}
+  "perl-Catalyst-View-TT" 
+  "perl-List-MoreUtils" 
+  "perl-Moose" 
+  "perl-MooseX-Types" 
+  "perl-URI" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+  "perl-namespace-clean" 
+]
+extra-source "perl-Catalyst-View-Component-SubInclude-0.10-39.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Catalyst-View-Component-SubInclude-0.10-39.fc40.noarch.rpm"
+}

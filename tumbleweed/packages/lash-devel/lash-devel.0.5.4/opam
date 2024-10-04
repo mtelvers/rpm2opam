@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lash-devel-0.5.4-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lash-devel-0.5.4-4.1.x86_64.rpm"]
+depends: [
+  "alsa-devel" 
+  "glibc-devel" 
+  "libjack-devel" 
+  "liblash1" {= "0.5.4"}
+  "libuuid-devel" 
+  "pkgconf-pkg-config" 
+  "readline-devel" 
+]
+extra-source "lash-devel-0.5.4-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lash-devel-0.5.4-4.1.x86_64.rpm"
+}

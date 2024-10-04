@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-gi-atk-devel-2.0.27-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-gi-atk-devel-2.0.27-3.fc40.x86_64.rpm"]
+depends: [
+  "atk-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-gi-atk" {= "2.0.27"}
+  "ghc-gi-glib-devel" 
+  "ghc-gi-gobject-devel" 
+  "ghc-haskell-gi-base-devel" 
+  "ghc-haskell-gi-devel" 
+  "ghc-haskell-gi-overloading-devel" 
+  "ghc-text-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-gi-atk-devel-2.0.27-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-gi-atk-devel-2.0.27-3.fc40.x86_64.rpm"
+}

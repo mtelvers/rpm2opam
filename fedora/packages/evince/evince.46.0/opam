@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "evince-46.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "evince-46.0-1.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "cairo-gobject" 
+  "evince-libs" {= "46.0"}
+  "evince-previewer" {= "46.0"}
+  "evince-thumbnailer" {= "46.0"}
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gnome-desktop3" 
+  "gtk3" 
+  "libgcc" 
+  "libhandy" 
+  "libsecret" 
+  "pango" 
+]
+extra-source "evince-46.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/evince-46.0-1.fc40.x86_64.rpm"
+}

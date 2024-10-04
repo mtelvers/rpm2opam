@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgrpc1_62-1.62.1-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgrpc1_62-1.62.1-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libabsl_2401_0_0" 
+  "libabsl_lite_2401_0_0" 
+  "libcares2" 
+  "libgcc_s1" 
+  "libgrpc39" 
+  "libprotobuf25_4_0" 
+  "libprotoc25_4_0" 
+  "libre2-11" 
+  "libstdc++6" 
+  "libupb39" 
+  "libz-ng-compat1" 
+]
+extra-source "libgrpc1_62-1.62.1-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgrpc1_62-1.62.1-2.2.x86_64.rpm"
+}

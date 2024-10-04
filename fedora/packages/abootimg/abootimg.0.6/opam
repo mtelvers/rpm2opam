@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "abootimg-0.6-31.20230721git7e127fe.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "abootimg-0.6-31.20230721git7e127fe.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libblkid" 
+]
+extra-source "abootimg-0.6-31.20230721git7e127fe.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/abootimg-0.6-31.20230721git7e127fe.fc40.x86_64.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dnsdist-1.9.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dnsdist-1.9.0-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "fstrm" 
+  "glibc" 
+  "libcap" 
+  "libedit" 
+  "libgcc" 
+  "libnghttp2" 
+  "libsodium" 
+  "libstdc++" 
+  "lmdb-libs" 
+  "luajit" 
+  "openssl-libs" 
+  "re2" 
+  "shadow-utils" 
+  "systemd" 
+  "systemd-libs" 
+  "tinycdb" 
+]
+extra-source "dnsdist-1.9.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dnsdist-1.9.0-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rle-decode-fast+default-devel-1.0.3-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rle-decode-fast+default-devel-1.0.3-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-rle-decode-fast-devel" {= "1.0.3"}
+]
+extra-source "rust-rle-decode-fast+default-devel-1.0.3-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rle-decode-fast+default-devel-1.0.3-6.fc40.noarch.rpm"
+}

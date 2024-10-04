@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "neatvnc-devel-0.8.1-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "neatvnc-devel-0.8.1-1.2.x86_64.rpm"]
+depends: [
+  "aml-devel" {>= "0.3.0"}
+  "ffmpeg-4-libavcodec-devel" 
+  "ffmpeg-4-libavfilter-devel" 
+  "ffmpeg-4-libavutil-devel" 
+  "gmp-devel" 
+  "libdrm-devel" 
+  "libgbm-devel" 
+  "libgnutls-devel" 
+  "libjpeg8-devel" 
+  "libneatvnc0" {= "0.8.1"}
+  "libnettle-devel" 
+  "libpixman-1-0-devel" 
+  "pkgconf-pkg-config" 
+  "zlib-devel" 
+]
+extra-source "neatvnc-devel-0.8.1-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/neatvnc-devel-0.8.1-1.2.x86_64.rpm"
+}

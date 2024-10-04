@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "freeopcua-devel-0-48.20220717.bd13aee.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freeopcua-devel-0-48.20220717.bd13aee.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "freeopcua" {= "0"}
+  "mbedtls-devel" 
+  "pkgconf-pkg-config" 
+  "spdlog-devel" 
+]
+extra-source "freeopcua-devel-0-48.20220717.bd13aee.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/freeopcua-devel-0-48.20220717.bd13aee.fc40.x86_64.rpm"
+}

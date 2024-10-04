@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Devel-Cover-Report-Codecov-0.25-1.22.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Devel-Cover-Report-Codecov-0.25-1.22.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Capture-Tiny" {>= "0.30"}
+  "perl-Devel-Cover" 
+  "perl-Furl" {>= "3.7"}
+  "perl-IO-Socket-SSL" {>= "2.16"}
+  "perl-JSON-XS" {>= "3.1"}
+  "perl-Module-Find" {>= "0.13"}
+  "perl-Sub-Retry" {>= "0.6"}
+  "perl-URI" {>= "1.60"}
+]
+extra-source "perl-Devel-Cover-Report-Codecov-0.25-1.22.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Devel-Cover-Report-Codecov-0.25-1.22.noarch.rpm"
+}

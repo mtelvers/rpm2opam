@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "opennlp-1.5.3-4.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opennlp-1.5.3-4.6.noarch.rpm"]
+depends: [
+  "apache-parent" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "maven-compiler-plugin" 
+]
+extra-source "opennlp-1.5.3-4.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/opennlp-1.5.3-4.6.noarch.rpm"
+}

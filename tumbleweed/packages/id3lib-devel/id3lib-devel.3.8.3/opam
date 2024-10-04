@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "id3lib-devel-3.8.3-269.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "id3lib-devel-3.8.3-269.2.x86_64.rpm"]
+depends: [
+  "libid3-3_8-3" {= "3.8.3"}
+  "libstdc++-devel" 
+]
+extra-source "id3lib-devel-3.8.3-269.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/id3lib-devel-3.8.3-269.2.x86_64.rpm"
+}

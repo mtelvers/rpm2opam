@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvsapm-devel-20240503-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvsapm-devel-20240503-1.1.x86_64.rpm"]
+depends: [
+  "libbfio-devel" 
+  "libvsapm1" {= "20240503"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libvsapm-devel-20240503-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libvsapm-devel-20240503-1.1.x86_64.rpm"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnuplot-5.4.9-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnuplot-5.4.9-3.fc40.x86_64.rpm"]
+depends: [
+  "alternatives" 
+  "bash" 
+  "cairo" 
+  "dejavu-sans-fonts" 
+  "gd" 
+  "glib2" 
+  "glibc" 
+  "gnuplot-common" {= "5.4.9"}
+  "libcerf" 
+  "libgcc" 
+  "libstdc++" 
+  "lua-libs" 
+  "pango" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtsvg" 
+]
+extra-source "gnuplot-5.4.9-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnuplot-5.4.9-3.fc40.x86_64.rpm"
+}

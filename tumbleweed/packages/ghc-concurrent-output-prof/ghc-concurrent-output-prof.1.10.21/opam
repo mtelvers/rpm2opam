@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-concurrent-output-prof-1.10.21-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-concurrent-output-prof-1.10.21-1.6.x86_64.rpm"]
+depends: [
+  "ghc-ansi-terminal-prof" 
+  "ghc-async-prof" 
+  "ghc-base-prof" 
+  "ghc-concurrent-output-devel" {= "1.10.21"}
+  "ghc-directory-prof" 
+  "ghc-exceptions-prof" 
+  "ghc-process-prof" 
+  "ghc-stm-prof" 
+  "ghc-terminal-size-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unix-prof" 
+]
+extra-source "ghc-concurrent-output-prof-1.10.21-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-concurrent-output-prof-1.10.21-1.6.x86_64.rpm"
+}

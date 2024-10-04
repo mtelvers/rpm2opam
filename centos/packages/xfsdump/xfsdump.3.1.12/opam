@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xfsdump-3.1.12-5.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xfsdump-3.1.12-5.el10.x86_64.rpm"]
+depends: [
+  "attr" {>= "2.0.0"}
+  "glibc" 
+  "libattr" 
+  "libgcc" 
+  "libuuid" 
+  "ncurses-libs" 
+  "xfsprogs" 
+]
+extra-source "xfsdump-3.1.12-5.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/xfsdump-3.1.12-5.el10.x86_64.rpm"
+}

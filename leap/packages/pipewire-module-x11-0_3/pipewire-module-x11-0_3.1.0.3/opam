@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pipewire-module-x11-0_3-1.0.3-slfo.1.1.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pipewire-module-x11-0_3-1.0.3-slfo.1.1.9.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXfixes3" 
+  "libcanberra0" 
+  "libpipewire-0_3-0" 
+  "pipewire" {>= "1.0.3"}
+]
+extra-source "pipewire-module-x11-0_3-1.0.3-slfo.1.1.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/pipewire-module-x11-0_3-1.0.3-slfo.1.1.9.x86_64.rpm"
+}

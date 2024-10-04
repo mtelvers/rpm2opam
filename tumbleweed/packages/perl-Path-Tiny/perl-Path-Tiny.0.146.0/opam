@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Path-Tiny-0.146.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Path-Tiny-0.146.0-1.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-File-Path" {>= "2.7"}
+  "perl-File-Temp" {>= "0.19"}
+  "perl-base" {>= "5.45"}
+]
+extra-source "perl-Path-Tiny-0.146.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Path-Tiny-0.146.0-1.2.noarch.rpm"
+}

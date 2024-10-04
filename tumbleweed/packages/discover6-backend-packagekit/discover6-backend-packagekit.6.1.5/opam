@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "discover6-backend-packagekit-6.1.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "discover6-backend-packagekit-6.1.5-1.1.x86_64.rpm"]
+depends: [
+  "PackageKit" 
+  "discover6" {= "6.1.5"}
+  "glibc" 
+  "libAppStreamQt3" 
+  "libKF6ConfigCore6" 
+  "libKF6CoreAddons6" 
+  "libKF6I18n6" 
+  "libKF6IconThemes6" 
+  "libKF6KIO6" 
+  "libKF6Service6" 
+  "libQCoro6Core0" 
+  "libQt6Core6" 
+  "libQt6DBus6" 
+  "libQt6Gui6" 
+  "libmarkdown3" 
+  "libpackagekitqt6-1" 
+  "libstdc++6" 
+  "libzypp-plugin-appdata" 
+]
+extra-source "discover6-backend-packagekit-6.1.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/discover6-backend-packagekit-6.1.5-1.1.x86_64.rpm"
+}

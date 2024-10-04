@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cranc-1.1.0-15.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cranc-1.1.0-15.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-click" 
+  "python3-git-url-parse" 
+  "python3-libpagure" 
+  "python3-pygit2" 
+  "python3-requests" 
+]
+extra-source "cranc-1.1.0-15.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cranc-1.1.0-15.fc40.noarch.rpm"
+}

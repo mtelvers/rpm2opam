@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MooseX-Types-Path-Class-0.09-24.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Types-Path-Class-0.09-24.fc40.noarch.rpm"]
+depends: [
+  "perl-Moose" {>= "0.39"}
+  "perl-MooseX-Types" 
+  "perl-Path-Class" {>= "0.16"}
+  "perl-if" 
+  "perl-libs" 
+]
+extra-source "perl-MooseX-Types-Path-Class-0.09-24.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MooseX-Types-Path-Class-0.09-24.fc40.noarch.rpm"
+}

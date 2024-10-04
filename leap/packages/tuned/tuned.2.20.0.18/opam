@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tuned-2.20.0.18+git.7b1a20b-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tuned-2.20.0.18+git.7b1a20b-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "cpupower" {>= "4.19"}
+  "ethtool" 
+  "gawk" 
+  "hdparm" 
+  "polkit" 
+  "python311-base" 
+  "python311-configobj" 
+  "python311-dbus-python" 
+  "python311-decorator" 
+  "python311-gobject" 
+  "python311-linux-procfs" 
+  "python311-pyudev" 
+  "systemd" 
+  "util-linux" 
+  "virt-what" 
+]
+extra-source "tuned-2.20.0.18+git.7b1a20b-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/tuned-2.20.0.18+git.7b1a20b-slfo.1.1.3.noarch.rpm"
+}

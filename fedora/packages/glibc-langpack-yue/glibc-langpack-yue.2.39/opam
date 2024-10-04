@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "glibc-langpack-yue-2.39-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glibc-langpack-yue-2.39-6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" {= "2.39"}
+  "glibc-common" {= "2.39"}
+]
+extra-source "glibc-langpack-yue-2.39-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/glibc-langpack-yue-2.39-6.fc40.x86_64.rpm"
+}

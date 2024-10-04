@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gix+serde-devel-0.55.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gix+serde-devel-0.55.2-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-gix-attributes+default-devel" 
+  "rust-gix-attributes+serde-devel" 
+  "rust-gix-commitgraph+serde-devel" 
+  "rust-gix-credentials+default-devel" 
+  "rust-gix-credentials+serde-devel" 
+  "rust-gix-devel" {= "0.55.2"}
+  "rust-gix-ignore+default-devel" 
+  "rust-gix-ignore+serde-devel" 
+  "rust-gix-index+default-devel" 
+  "rust-gix-index+serde-devel" 
+  "rust-gix-mailmap+default-devel" 
+  "rust-gix-mailmap+serde-devel" 
+  "rust-gix-object+serde-devel" 
+  "rust-gix-odb+serde-devel" 
+  "rust-gix-pack+serde-devel" 
+  "rust-gix-protocol+default-devel" 
+  "rust-gix-protocol+serde-devel" 
+  "rust-gix-ref+serde-devel" 
+  "rust-gix-revision+serde-devel" 
+  "rust-gix-transport+default-devel" 
+  "rust-gix-transport+serde-devel" 
+  "rust-gix-url+serde-devel" 
+  "rust-gix-worktree+serde-devel" 
+  "rust-gix-worktree-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde-devel" 
+]
+extra-source "rust-gix+serde-devel-0.55.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gix+serde-devel-0.55.2-3.fc40.noarch.rpm"
+}

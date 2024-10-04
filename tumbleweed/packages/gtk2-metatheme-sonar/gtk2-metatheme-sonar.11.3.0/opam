@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtk2-metatheme-sonar-11.3.0-31.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk2-metatheme-sonar-11.3.0-31.3.noarch.rpm"]
+depends: [
+  "gtk2-engine-murrine" 
+  "metatheme-sonar-common" {= "11.3.0"}
+]
+extra-source "gtk2-metatheme-sonar-11.3.0-31.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gtk2-metatheme-sonar-11.3.0-31.3.noarch.rpm"
+}

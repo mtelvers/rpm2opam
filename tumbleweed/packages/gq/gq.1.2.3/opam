@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gq-1.2.3-93.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gq-1.2.3-93.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcrypt20" 
+  "libgdk_pixbuf-2_0-0" 
+  "libglade-2_0-0" 
+  "libgnome-keyring0" 
+  "libgtk-2_0-0" 
+  "libldap2" 
+  "libpango-1_0-0" 
+  "libxml2-2" 
+]
+extra-source "gq-1.2.3-93.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gq-1.2.3-93.2.x86_64.rpm"
+}

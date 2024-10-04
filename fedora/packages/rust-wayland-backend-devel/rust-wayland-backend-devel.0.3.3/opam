@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-wayland-backend-devel-0.3.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-wayland-backend-devel-0.3.3-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-cc+default-devel" 
+  "rust-downcast-rs+default-devel" 
+  "rust-rustix+default-devel" 
+  "rust-rustix+event-devel" 
+  "rust-rustix+fs-devel" 
+  "rust-rustix+net-devel" 
+  "rust-rustix+process-devel" 
+  "rust-scoped-tls+default-devel" 
+  "rust-smallvec+const_generics-devel" 
+  "rust-smallvec+const_new-devel" 
+  "rust-smallvec+default-devel" 
+  "rust-smallvec+union-devel" 
+  "rust-wayland-sys+default-devel" 
+]
+extra-source "rust-wayland-backend-devel-0.3.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-wayland-backend-devel-0.3.3-1.fc40.noarch.rpm"
+}

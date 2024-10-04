@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "spatialite-gui-2.1.0-0.18.beta1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "spatialite-gui-2.1.0-0.18.beta1.fc40.x86_64.rpm"]
+depends: [
+  "freexl" 
+  "geos" 
+  "glibc" 
+  "libcurl" 
+  "libgcc" 
+  "libpq" 
+  "librasterlite2" 
+  "libspatialite" 
+  "libstdc++" 
+  "libxlsxwriter" 
+  "proj" 
+  "sqlite-libs" 
+  "virtualpg" 
+  "wxBase" 
+  "wxGTK" 
+  "zlib-ng-compat" 
+]
+extra-source "spatialite-gui-2.1.0-0.18.beta1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/spatialite-gui-2.1.0-0.18.beta1.fc40.x86_64.rpm"
+}

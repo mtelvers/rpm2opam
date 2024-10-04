@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qemu-guest-agent-9.1.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qemu-guest-agent-9.1.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libnuma1" 
+  "libudev-mini1" 
+  "liburing2" 
+  "system-group-kvm" 
+  "udev" 
+]
+extra-source "qemu-guest-agent-9.1.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/qemu-guest-agent-9.1.0-1.1.x86_64.rpm"
+}

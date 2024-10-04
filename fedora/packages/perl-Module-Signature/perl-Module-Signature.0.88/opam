@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Module-Signature-0.88-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Signature-0.88-9.fc40.noarch.rpm"]
+depends: [
+  "gnupg2" 
+  "perl-Digest-SHA" 
+  "perl-Exporter" 
+  "perl-ExtUtils-Manifest" 
+  "perl-File-Temp" 
+  "perl-IO" 
+  "perl-PathTools" 
+  "perl-Text-Diff" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.5.0"}
+  "perl-vars" 
+  "perl-version" 
+]
+extra-source "perl-Module-Signature-0.88-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Module-Signature-0.88-9.fc40.noarch.rpm"
+}

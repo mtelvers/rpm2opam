@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "monitoring-plugins-ipmi-sensor1-1.3-105.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "monitoring-plugins-ipmi-sensor1-1.3-105.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "ipmitool" 
+]
+extra-source "monitoring-plugins-ipmi-sensor1-1.3-105.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/monitoring-plugins-ipmi-sensor1-1.3-105.2.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-byte-unit4+default-devel-4.0.19-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-byte-unit4+default-devel-4.0.19-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-byte-unit4+std-devel" {= "4.0.19"}
+  "rust-byte-unit4+u128-devel" {= "4.0.19"}
+  "rust-byte-unit4-devel" {= "4.0.19"}
+]
+extra-source "rust-byte-unit4+default-devel-4.0.19-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-byte-unit4+default-devel-4.0.19-1.fc40.noarch.rpm"
+}

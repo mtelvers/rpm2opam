@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ShellCheck-0.10.0-1.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ShellCheck-0.10.0-1.16.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libffi8" 
+  "libgmp10" 
+  "libnuma1" 
+]
+extra-source "ShellCheck-0.10.0-1.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ShellCheck-0.10.0-1.16.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "metacity-devel-3.52.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "metacity-devel-3.52.0-1.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "gtk3-devel" 
+  "libmetacity3" {= "3.52.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "metacity-devel-3.52.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/metacity-devel-3.52.0-1.1.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Crypt-PBKDF2-0.161520-1.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Crypt-PBKDF2-0.161520-1.15.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Digest-HMAC" {>= "1.1"}
+  "perl-Digest-SHA3" {>= "0.22"}
+  "perl-Module-Runtime" 
+  "perl-Moo" {>= "2"}
+  "perl-Try-Tiny" {>= "0.4"}
+  "perl-Type-Tiny" 
+  "perl-base" {>= "1.16"}
+  "perl-namespace-autoclean" 
+  "perl-strictures" {>= "2"}
+]
+extra-source "perl-Crypt-PBKDF2-0.161520-1.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Crypt-PBKDF2-0.161520-1.15.noarch.rpm"
+}

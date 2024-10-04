@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-ospd-openvas-22.4.5-1.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-ospd-openvas-22.4.5-1.10.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-base" {= "3.10"}
+  "python310-defusedxml" {>= "0.6"}
+  "python310-lxml" {>= "4.5.2"}
+  "python310-packaging" 
+  "python310-paho-mqtt" {>= "1.5.1"}
+  "python310-psutil" {>= "5.5.1"}
+  "python310-python-gnupg" {>= "0.4.8"}
+  "python310-redis" {>= "3.5.3"}
+]
+extra-source "python310-ospd-openvas-22.4.5-1.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-ospd-openvas-22.4.5-1.10.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xreader-plugin-pdfdocument-4.2.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xreader-plugin-pdfdocument-4.2.2-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libpoppler-glib8" 
+  "libxml2-2" 
+  "libxreaderdocument3" 
+]
+extra-source "xreader-plugin-pdfdocument-4.2.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xreader-plugin-pdfdocument-4.2.2-1.1.x86_64.rpm"
+}

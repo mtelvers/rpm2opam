@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-pocketsphinx5-5~git20200227.e40da77-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-pocketsphinx5-5~git20200227.e40da77-3.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libpocketsphinx3" 
+  "libsphinxbase3" 
+  "pocketsphinx5" {= "5"}
+  "python3-sphinxbase5" 
+  "python311-base" {= "3.11"}
+]
+extra-source "python3-pocketsphinx5-5~git20200227.e40da77-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python3-pocketsphinx5-5~git20200227.e40da77-3.2.x86_64.rpm"
+}

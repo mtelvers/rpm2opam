@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "snap-confine-2.61.2-0.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "snap-confine-2.61.2-0.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcap" 
+  "libgcc" 
+  "libseccomp" 
+  "libselinux" 
+  "systemd-libs" 
+]
+extra-source "snap-confine-2.61.2-0.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/snap-confine-2.61.2-0.fc40.x86_64.rpm"
+}

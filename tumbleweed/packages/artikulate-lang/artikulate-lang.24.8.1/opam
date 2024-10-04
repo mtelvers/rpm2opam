@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "artikulate-lang-24.08.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "artikulate-lang-24.08.1-1.1.noarch.rpm"]
+depends: [
+  "artikulate" {= "24.8.1"}
+]
+extra-source "artikulate-lang-24.08.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/artikulate-lang-24.08.1-1.1.noarch.rpm"
+}

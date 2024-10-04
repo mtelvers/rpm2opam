@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-gvisor-20211129.0-2.20211217git9bd5098.fc36.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-gvisor-20211129.0-2.20211217git9bd5098.fc36.x86_64.rpm"]
+depends: [
+  "glibc" 
+]
+extra-source "golang-gvisor-20211129.0-2.20211217git9bd5098.fc36.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-gvisor-20211129.0-2.20211217git9bd5098.fc36.x86_64.rpm"
+}

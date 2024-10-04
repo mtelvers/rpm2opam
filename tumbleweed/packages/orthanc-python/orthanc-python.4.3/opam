@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "orthanc-python-4.3-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "orthanc-python-4.3-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libboost_filesystem1_86_0" 
+  "libboost_thread1_86_0" 
+  "libgcc_s1" 
+  "libjsoncpp25" 
+  "libpython3_11-1_0" 
+  "libstdc++6" 
+  "orthanc" 
+]
+extra-source "orthanc-python-4.3-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/orthanc-python-4.3-1.2.x86_64.rpm"
+}

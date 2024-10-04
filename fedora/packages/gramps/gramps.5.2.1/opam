@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gramps-5.2.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gramps-5.2.1-1.fc40.noarch.rpm"]
+depends: [
+  "gnu-free-fonts-common" 
+  "gnu-free-mono-fonts" 
+  "gnu-free-sans-fonts" 
+  "gnu-free-serif-fonts" 
+  "graphviz" 
+  "gtk3" 
+  "gtkspell3" 
+  "hicolor-icon-theme" 
+  "libgexiv2" 
+  "librsvg2" 
+  "osm-gps-map-gobject" 
+  "pango" 
+  "python3" 
+  "python3-bsddb3" 
+  "python3-gobject" 
+  "python3-pyicu" 
+  "rcs" 
+  "xdg-utils" 
+]
+extra-source "gramps-5.2.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gramps-5.2.1-1.fc40.noarch.rpm"
+}

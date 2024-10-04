@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libsigrok-0.5.2-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsigrok-0.5.2-12.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "libftdi" 
+  "libieee1284" 
+  "libserialport" 
+  "libtirpc" 
+  "libusb1" 
+  "libzip" 
+]
+extra-source "libsigrok-0.5.2-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libsigrok-0.5.2-12.fc40.x86_64.rpm"
+}

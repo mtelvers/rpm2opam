@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcc13-13.3.1+git8964-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcc13-13.3.1+git8964-1.1.x86_64.rpm"]
+depends: [
+  "binutils" 
+  "cpp13" {= "13.3.1"}
+  "glibc" 
+  "glibc-devel" 
+  "libasan8" {>= "13.3.1"}
+  "libatomic1" {>= "13.3.1"}
+  "libgcc_s1" {>= "13.3.1"}
+  "libgmp10" 
+  "libgomp1" {>= "13.3.1"}
+  "libhwasan0" {>= "13.3.1"}
+  "libisl23" 
+  "libitm1" {>= "13.3.1"}
+  "liblsan0" {>= "13.3.1"}
+  "libmpc3" 
+  "libmpfr6" 
+  "libtsan2" {>= "13.3.1"}
+  "libubsan1" {>= "13.3.1"}
+  "libz-ng-compat1" 
+  "libzstd1" 
+]
+extra-source "gcc13-13.3.1+git8964-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gcc13-13.3.1+git8964-1.1.x86_64.rpm"
+}

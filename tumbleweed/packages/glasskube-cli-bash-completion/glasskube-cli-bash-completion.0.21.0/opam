@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glasskube-cli-bash-completion-0.21.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glasskube-cli-bash-completion-0.21.0-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "glasskube-cli" {= "0.21.0"}
+]
+extra-source "glasskube-cli-bash-completion-0.21.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/glasskube-cli-bash-completion-0.21.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gigolo-0.5.3-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gigolo-0.5.3-1.3.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgtk-3-0" 
+  "xdg-utils" 
+]
+extra-source "gigolo-0.5.3-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gigolo-0.5.3-1.3.x86_64.rpm"
+}

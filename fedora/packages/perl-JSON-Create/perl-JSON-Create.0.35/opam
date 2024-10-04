@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-JSON-Create-0.35-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-JSON-Create-0.35-10.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-B" 
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-JSON-Parse" {>= "0.60"}
+  "perl-Scalar-List-Utils" 
+  "perl-Unicode-UTF8" {>= "0.62"}
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-JSON-Create-0.35-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-JSON-Create-0.35-10.fc40.x86_64.rpm"
+}

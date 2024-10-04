@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-arabluatex-2023.201.1.20svn54512-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-arabluatex-2023.201.1.20svn54512-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-adjustbox" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-fontspec" 
+  "texlive-iftex" 
+  "texlive-koma-script" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-l3packages" 
+  "texlive-lua-ul" 
+  "texlive-luacode" 
+  "texlive-luacolor" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-xcolor" 
+  "texlive-xkeyval" 
+  "texlive-xstring" 
+]
+extra-source "texlive-arabluatex-2023.201.1.20svn54512-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-arabluatex-2023.201.1.20svn54512-slfo.1.1.4.noarch.rpm"
+}

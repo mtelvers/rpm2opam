@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cockpit-machines-316-slfo.1.1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cockpit-machines-316-slfo.1.1.1.noarch.rpm"]
+depends: [
+  "cockpit-bridge" {>= "215"}
+  "libvirt-client" 
+  "libvirt-daemon-qemu" 
+  "libvirt-dbus" {>= "1.2.0"}
+  "qemu-spice" 
+  "virt-install" 
+]
+extra-source "cockpit-machines-316-slfo.1.1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/cockpit-machines-316-slfo.1.1.1.noarch.rpm"
+}

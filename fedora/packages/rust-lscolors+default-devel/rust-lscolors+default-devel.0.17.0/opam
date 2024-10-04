@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-lscolors+default-devel-0.17.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-lscolors+default-devel-0.17.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-lscolors+nu-ansi-term-devel" {= "0.17.0"}
+  "rust-lscolors-devel" {= "0.17.0"}
+]
+extra-source "rust-lscolors+default-devel-0.17.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-lscolors+default-devel-0.17.0-1.fc40.noarch.rpm"
+}

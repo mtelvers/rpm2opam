@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gtk4+xml_validation-devel-0.8.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gtk4+xml_validation-devel-0.8.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-gtk4-devel" {= "0.8.1"}
+  "rust-gtk4-macros+xml_validation-devel" 
+]
+extra-source "rust-gtk4+xml_validation-devel-0.8.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gtk4+xml_validation-devel-0.8.1-1.fc40.noarch.rpm"
+}

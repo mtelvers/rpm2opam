@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "killerd-1.1-127.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "killerd-1.1-127.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "systemd" 
+]
+extra-source "killerd-1.1-127.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/killerd-1.1-127.2.x86_64.rpm"
+}

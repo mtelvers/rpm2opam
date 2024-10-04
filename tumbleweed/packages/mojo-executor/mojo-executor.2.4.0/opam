@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mojo-executor-2.4.0-3.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mojo-executor-2.4.0-3.3.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "plexus-utils" 
+]
+extra-source "mojo-executor-2.4.0-3.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mojo-executor-2.4.0-3.3.noarch.rpm"
+}

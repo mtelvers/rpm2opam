@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "debugbreak-devel-1.0~git.20210702-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "debugbreak-devel-1.0~git.20210702-1.4.noarch.rpm"]
+depends: [
+  "debugbreak" {= "1.0"}
+]
+extra-source "debugbreak-devel-1.0~git.20210702-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/debugbreak-devel-1.0~git.20210702-1.4.noarch.rpm"
+}

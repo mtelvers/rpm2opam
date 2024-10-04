@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "centos-packager-0.7.0-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "centos-packager-0.7.0-13.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "bc" 
+  "curl" 
+  "fasjson-client" 
+  "koji" 
+  "krb5-workstation" 
+  "mock" 
+  "openssh-clients" 
+  "openssl" 
+  "python3-fasjson-client" 
+  "redhat-rpm-config" 
+  "rpm-build" 
+  "rpmdevtools" 
+  "rpmlint" 
+]
+extra-source "centos-packager-0.7.0-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/centos-packager-0.7.0-13.fc40.noarch.rpm"
+}

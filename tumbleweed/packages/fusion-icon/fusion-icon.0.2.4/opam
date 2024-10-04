@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fusion-icon-0.2.4-1.21.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fusion-icon-0.2.4-1.21.noarch.rpm"]
+depends: [
+  "Mesa-demo-x" 
+  "bash-sh" 
+  "python311-base" 
+  "python311-compizconfig" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-qt5" 
+  "typelib-1_0-AppIndicator3-0_1" {= "0.1"}
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "xvinfo" 
+]
+extra-source "fusion-icon-0.2.4-1.21.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/fusion-icon-0.2.4-1.21.noarch.rpm"
+}

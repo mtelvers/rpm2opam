@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-semigroups-5.3.7-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-semigroups-5.3.7-2.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "gap" {>= "4.12"}
+  "gap-datastructures" {>= "0.2.5"}
+  "gap-digraphs" {>= "1.6.2"}
+  "gap-genss" {>= "1.6.5"}
+  "gap-images" {>= "1.3.1"}
+  "gap-io" {>= "4.5.1"}
+  "gap-orb" {>= "4.8.2"}
+  "glibc" 
+  "libgcc_s1" 
+  "libsemigroups2" 
+  "libstdc++6" 
+]
+extra-source "gap-semigroups-5.3.7-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gap-semigroups-5.3.7-2.1.x86_64.rpm"
+}

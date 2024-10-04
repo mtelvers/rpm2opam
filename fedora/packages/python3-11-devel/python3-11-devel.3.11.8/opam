@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3.11-devel-3.11.8-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3.11-devel-3.11.8-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "pkgconf-pkg-config" 
+  "pyproject-rpm-macros" 
+  "python-rpm-macros" 
+  "python3-11" {= "3.11.8"}
+  "python3-11-libs" 
+  "python3-rpm-generators" 
+  "python3-rpm-macros" 
+]
+extra-source "python3.11-devel-3.11.8-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3.11-devel-3.11.8-2.fc40.x86_64.rpm"
+}

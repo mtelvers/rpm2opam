@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libzbc-gui-6.1.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libzbc-gui-6.1.0-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libgtk-3-0" 
+  "libzbc6" 
+]
+extra-source "libzbc-gui-6.1.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libzbc-gui-6.1.0-1.1.x86_64.rpm"
+}

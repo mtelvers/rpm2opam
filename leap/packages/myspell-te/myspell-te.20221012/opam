@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["/usr/bin/zypper" "-n" "install" "myspell-te-20221012-slfo.1.1.3.noarch.rpm"]
+]
+remove: [
+  ["/usr/bin/zypper" "-n" "remove" "myspell-te-20221012-slfo.1.1.3.noarch.rpm"]
+]
+depends: [
+  "myspell-dictionaries" 
+  "myspell-te_IN" 
+]
+extra-source "myspell-te-20221012-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/myspell-te-20221012-slfo.1.1.3.noarch.rpm"
+}

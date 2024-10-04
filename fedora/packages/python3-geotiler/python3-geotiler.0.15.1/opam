@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-geotiler-0.15.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-geotiler-0.15.1-1.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-aiohttp" {>= "2.3.5"}
+  "python3-cairo" 
+  "python3-cytoolz" {>= "0.8.2"}
+  "python3-lxml" 
+  "python3-pillow" {>= "10"}
+  "python3-setuptools" 
+]
+extra-source "python3-geotiler-0.15.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-geotiler-0.15.1-1.fc40.noarch.rpm"
+}

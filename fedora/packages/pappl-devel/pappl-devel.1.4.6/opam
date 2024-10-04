@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pappl-devel-1.4.6-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pappl-devel-1.4.6-1.fc40.x86_64.rpm"]
+depends: [
+  "avahi-devel" 
+  "bash" 
+  "gnutls-devel" {>= "3.0"}
+  "libjpeg-turbo-devel" 
+  "libpng-devel" {>= "1.6"}
+  "libusb1-devel" {>= "1.0"}
+  "pappl" {= "1.4.6"}
+  "pkgconf-pkg-config" 
+  "zlib-ng-compat-devel" {>= "1.0"}
+]
+extra-source "pappl-devel-1.4.6-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pappl-devel-1.4.6-1.fc40.x86_64.rpm"
+}

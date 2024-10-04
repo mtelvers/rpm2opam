@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-typed-arena1+default-devel-1.7.0-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-typed-arena1+default-devel-1.7.0-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-typed-arena1+std-devel" {= "1.7.0"}
+  "rust-typed-arena1-devel" {= "1.7.0"}
+]
+extra-source "rust-typed-arena1+default-devel-1.7.0-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-typed-arena1+default-devel-1.7.0-6.fc40.noarch.rpm"
+}

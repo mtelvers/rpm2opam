@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "resteasy-3.0.26-4.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "resteasy-3.0.26-4.6.noarch.rpm"]
+depends: [
+  "resteasy-atom-provider" {= "3.0.26"}
+  "resteasy-client" {= "3.0.26"}
+  "resteasy-core" {= "3.0.26"}
+  "resteasy-jackson2-provider" {= "3.0.26"}
+  "resteasy-jaxb-provider" {= "3.0.26"}
+]
+extra-source "resteasy-3.0.26-4.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/resteasy-3.0.26-4.6.noarch.rpm"
+}

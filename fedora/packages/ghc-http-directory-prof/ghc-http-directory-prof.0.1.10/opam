@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-http-directory-prof-0.1.10-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-http-directory-prof-0.1.10-9.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-html-conduit-prof" 
+  "ghc-http-client-prof" 
+  "ghc-http-client-tls-prof" 
+  "ghc-http-conduit-prof" 
+  "ghc-http-date-prof" 
+  "ghc-http-directory-devel" {= "0.1.10"}
+  "ghc-http-types-prof" 
+  "ghc-network-uri-prof" 
+  "ghc-text-prof" 
+  "ghc-time-prof" 
+  "ghc-xml-conduit-prof" 
+]
+extra-source "ghc-http-directory-prof-0.1.10-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-http-directory-prof-0.1.10-9.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dogtag-pki-tests-11.5.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dogtag-pki-tests-11.5.0-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "python3-flake8" 
+  "python3-pylint" 
+]
+extra-source "dogtag-pki-tests-11.5.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dogtag-pki-tests-11.5.0-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jwnl-1.4~rc3-2.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jwnl-1.4~rc3-2.14.noarch.rpm"]
+depends: [
+  "apache-commons-logging" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "jwnl-1.4~rc3-2.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jwnl-1.4~rc3-2.14.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libwvstreams-devel-4.6.1-43.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libwvstreams-devel-4.6.1-43.fc40.x86_64.rpm"]
+depends: [
+  "libwvstreams" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libwvstreams-devel-4.6.1-43.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libwvstreams-devel-4.6.1-43.fc40.x86_64.rpm"
+}

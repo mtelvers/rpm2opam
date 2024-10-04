@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-persistent-sqlite-devel-2.13.1.0-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-persistent-sqlite-devel-2.13.1.0-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-conduit-devel" 
+  "ghc-containers-devel" 
+  "ghc-microlens-th-devel" 
+  "ghc-monad-logger-devel" 
+  "ghc-mtl-devel" 
+  "ghc-persistent-devel" 
+  "ghc-persistent-sqlite" {= "2.13.1.0"}
+  "ghc-resource-pool-devel" 
+  "ghc-resourcet-devel" 
+  "ghc-text-devel" 
+  "ghc-time-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unliftio-core-devel" 
+  "ghc-unordered-containers-devel" 
+  "sqlite-devel" 
+]
+extra-source "ghc-persistent-sqlite-devel-2.13.1.0-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-persistent-sqlite-devel-2.13.1.0-8.fc40.x86_64.rpm"
+}

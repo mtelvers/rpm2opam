@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-ServiceNow-API-1.01-34.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-ServiceNow-API-1.01-34.fc40.noarch.rpm"]
+depends: [
+  "perl-File-Basename" 
+  "perl-MIME-Base64" 
+  "perl-MIME-Types" 
+  "perl-SOAP-Lite" 
+  "perl-libs" 
+]
+extra-source "perl-ServiceNow-API-1.01-34.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-ServiceNow-API-1.01-34.fc40.noarch.rpm"
+}

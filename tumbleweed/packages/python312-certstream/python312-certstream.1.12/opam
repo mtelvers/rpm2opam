@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-certstream-1.12-1.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-certstream-1.12-1.14.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-termcolor" 
+  "python311-websocket-client" {>= "0.48.0"}
+  "python312-base" 
+  "update-alternatives" 
+]
+extra-source "python312-certstream-1.12-1.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-certstream-1.12-1.14.noarch.rpm"
+}

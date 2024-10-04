@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "scotch-gnu-hpc-devel-6.1.0-3.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scotch-gnu-hpc-devel-6.1.0-3.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "scotch_6_1_0-gnu-hpc-devel" {= "6.1.0"}
+]
+extra-source "scotch-gnu-hpc-devel-6.1.0-3.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/scotch-gnu-hpc-devel-6.1.0-3.4.noarch.rpm"
+}

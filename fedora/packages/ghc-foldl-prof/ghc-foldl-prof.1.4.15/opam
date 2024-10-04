@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-foldl-prof-1.4.15-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-foldl-prof-1.4.15-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-comonad-prof" 
+  "ghc-containers-prof" 
+  "ghc-contravariant-prof" 
+  "ghc-foldl-devel" {= "1.4.15"}
+  "ghc-hashable-prof" 
+  "ghc-primitive-prof" 
+  "ghc-profunctors-prof" 
+  "ghc-random-prof" 
+  "ghc-semigroupoids-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unordered-containers-prof" 
+  "ghc-vector-prof" 
+]
+extra-source "ghc-foldl-prof-1.4.15-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-foldl-prof-1.4.15-3.fc40.x86_64.rpm"
+}

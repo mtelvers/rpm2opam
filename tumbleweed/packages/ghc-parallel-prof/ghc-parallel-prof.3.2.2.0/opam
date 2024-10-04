@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-parallel-prof-3.2.2.0-14.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-parallel-prof-3.2.2.0-14.2.x86_64.rpm"]
+depends: [
+  "ghc-array-prof" 
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-parallel-devel" {= "3.2.2.0"}
+]
+extra-source "ghc-parallel-prof-3.2.2.0-14.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-parallel-prof-3.2.2.0-14.2.x86_64.rpm"
+}

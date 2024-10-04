@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pulseaudio-module-x11-16.1-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pulseaudio-module-x11-16.1-7.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libICE" 
+  "libSM" 
+  "libX11" 
+  "libXtst" 
+  "libxcb" 
+  "pulseaudio" 
+  "pulseaudio-libs" 
+  "pulseaudio-utils" 
+]
+extra-source "pulseaudio-module-x11-16.1-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pulseaudio-module-x11-16.1-7.fc40.x86_64.rpm"
+}

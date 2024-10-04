@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-String-ToIdentifier-EN-0.12-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-String-ToIdentifier-EN-0.12-20.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" 
+  "perl-Lingua-EN-Inflect-Phrase" 
+  "perl-Text-Unidecode" 
+  "perl-Unicode-UCD" 
+  "perl-base" 
+  "perl-libs" {>= "5.8.1"}
+  "perl-namespace-clean" 
+]
+extra-source "perl-String-ToIdentifier-EN-0.12-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-String-ToIdentifier-EN-0.12-20.fc40.noarch.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libgnome-2.32.1-30.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgnome-2.32.1-30.fc40.x86_64.rpm"]
+depends: [
+  "GConf2" 
+  "ORBit2" 
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "gnome-vfs2" 
+  "libbonobo" 
+  "libcanberra" 
+  "libutempter" 
+  "popt" 
+]
+extra-source "libgnome-2.32.1-30.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libgnome-2.32.1-30.fc40.x86_64.rpm"
+}

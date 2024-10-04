@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "whois-bash-completion-5.5.23-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "whois-bash-completion-5.5.23-1.2.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "whois" 
+]
+extra-source "whois-bash-completion-5.5.23-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/whois-bash-completion-5.5.23-1.2.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sugarjar-1.1.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sugarjar-1.1.1-2.fc40.noarch.rpm"]
+depends: [
+  "gh" 
+  "git" 
+  "git-core" 
+  "rubygem-deep_merge" 
+  "rubygem-mixlib-log" 
+  "rubygem-mixlib-shellout" 
+  "rubygem-pastel" 
+  "rubygems" 
+  "rubypick" 
+]
+extra-source "sugarjar-1.1.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sugarjar-1.1.1-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mpfrcx-devel-0.6.3-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mpfrcx-devel-0.6.3-1.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "gmp-devel" 
+  "libmpfrcx1" {= "0.6.3"}
+  "mpc-devel" 
+  "mpfr-devel" 
+]
+extra-source "mpfrcx-devel-0.6.3-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mpfrcx-devel-0.6.3-1.8.x86_64.rpm"
+}

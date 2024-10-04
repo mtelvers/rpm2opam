@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mypaint-lang-2.0.1-5.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mypaint-lang-2.0.1-5.1.noarch.rpm"]
+depends: [
+  "mypaint" {= "2.0.1"}
+]
+extra-source "mypaint-lang-2.0.1-5.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mypaint-lang-2.0.1-5.1.noarch.rpm"
+}

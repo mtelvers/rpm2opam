@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-ptmap-devel-2.0.5-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-ptmap-devel-2.0.5-19.fc40.x86_64.rpm"]
+depends: [
+  "ocaml" {= "0"}
+  "ocaml-ptmap" {= "2.0.5"}
+]
+extra-source "ocaml-ptmap-devel-2.0.5-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-ptmap-devel-2.0.5-19.fc40.x86_64.rpm"
+}

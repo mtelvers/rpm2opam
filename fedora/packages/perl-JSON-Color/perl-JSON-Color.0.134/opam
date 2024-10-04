@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-JSON-Color-0.134-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-JSON-Color-0.134-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Color-ANSI-Util" 
+  "perl-ColorThemeBase-Static" 
+  "perl-ColorThemeRole-ANSI" 
+  "perl-ColorThemes-Standard" 
+  "perl-Exporter" 
+  "perl-Graphics-ColorNamesLite-WWW" 
+  "perl-Module-Load-Util" {>= "0.9"}
+  "perl-Role-Tiny" 
+  "perl-Term-ANSIColor" {>= "3.0"}
+  "perl-libs" {>= "5.10.1"}
+  "perl-parent" 
+]
+extra-source "perl-JSON-Color-0.134-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-JSON-Color-0.134-4.fc40.noarch.rpm"
+}

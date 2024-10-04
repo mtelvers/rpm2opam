@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "default-fonts-core-sans-4.1-2.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "default-fonts-core-sans-4.1-2.el10.noarch.rpm"]
+depends: [
+  "google-noto-sans-vf-fonts" 
+  "redhat-text-vf-fonts" 
+]
+extra-source "default-fonts-core-sans-4.1-2.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/default-fonts-core-sans-4.1-2.el10.noarch.rpm"
+}

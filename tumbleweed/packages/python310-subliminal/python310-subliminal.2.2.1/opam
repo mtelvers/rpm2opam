@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-subliminal-2.2.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-subliminal-2.2.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-babelfish" {>= "0.6.1"}
+  "python310-base" {= "3.10"}
+  "python310-beautifulsoup4" {>= "4.4.0"}
+  "python310-chardet" {>= "5.0"}
+  "python310-click" {>= "8.0"}
+  "python310-click-option-group" {>= "0.5.6"}
+  "python310-dogpile-cache" {>= "1.0"}
+  "python310-enzyme" {>= "0.5.0"}
+  "python310-guessit" {>= "3.0.0"}
+  "python310-platformdirs" {>= "3"}
+  "python310-pysubs2" {>= "1.7"}
+  "python310-rarfile" {>= "2.7"}
+  "python310-requests" {>= "2.7.0"}
+  "python310-srt" {>= "3.5"}
+  "python310-stevedore" {>= "3.0"}
+  "python310-tomli" {>= "2"}
+  "update-alternatives" 
+]
+extra-source "python310-subliminal-2.2.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-subliminal-2.2.1-1.1.noarch.rpm"
+}

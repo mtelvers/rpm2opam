@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glassfish-jaxb-2.3.1-9.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glassfish-jaxb-2.3.1-9.1.noarch.rpm"]
+depends: [
+  "glassfish-jaxb-bom" {= "2.3.1"}
+  "glassfish-jaxb-bom-ext" {= "2.3.1"}
+  "glassfish-jaxb-codemodel" {= "2.3.1"}
+  "glassfish-jaxb-codemodel-annotation-compiler" {= "2.3.1"}
+  "glassfish-jaxb-codemodel-parent" {= "2.3.1"}
+  "glassfish-jaxb-external-parent" {= "2.3.1"}
+  "glassfish-jaxb-jxc" {= "2.3.1"}
+  "glassfish-jaxb-parent" {= "2.3.1"}
+  "glassfish-jaxb-relaxng-datatype" {= "2.3.1"}
+  "glassfish-jaxb-rngom" {= "2.3.1"}
+  "glassfish-jaxb-runtime" {= "2.3.1"}
+  "glassfish-jaxb-runtime-parent" {= "2.3.1"}
+  "glassfish-jaxb-txw-parent" {= "2.3.1"}
+  "glassfish-jaxb-txw2" {= "2.3.1"}
+  "glassfish-jaxb-txwc2" {= "2.3.1"}
+  "glassfish-jaxb-xjc" {= "2.3.1"}
+  "glassfish-jaxb-xsom" {= "2.3.1"}
+  "java-11-openj9-headless" {>= "1.8"}
+]
+extra-source "glassfish-jaxb-2.3.1-9.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/glassfish-jaxb-2.3.1-9.1.noarch.rpm"
+}

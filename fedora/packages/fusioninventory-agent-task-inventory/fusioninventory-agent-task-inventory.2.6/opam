@@ -1,0 +1,42 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fusioninventory-agent-task-inventory-2.6-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fusioninventory-agent-task-inventory-2.6-11.fc40.x86_64.rpm"]
+depends: [
+  "fusioninventory-agent" {= "2.6"}
+  "perl-Digest-SHA" 
+  "perl-Encode" 
+  "perl-English" 
+  "perl-File-Basename" 
+  "perl-File-Find" 
+  "perl-File-Temp" 
+  "perl-File-Which" 
+  "perl-File-stat" 
+  "perl-FusionInventory-Agent" 
+  "perl-Getopt-Long" 
+  "perl-JSON-PP" 
+  "perl-MIME-Base64" 
+  "perl-Memoize" 
+  "perl-Net-CUPS" 
+  "perl-POSIX" 
+  "perl-Parse-EDID" 
+  "perl-Pod-Usage" 
+  "perl-Scalar-List-Utils" 
+  "perl-Storable" 
+  "perl-Sys-Hostname" 
+  "perl-Time-HiRes" 
+  "perl-Time-Local" 
+  "perl-UNIVERSAL-require" 
+  "perl-User-pwent" 
+  "perl-XML-TreePP" 
+  "perl-YAML-Tiny" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libnet" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+  "perl-parent" 
+]
+extra-source "fusioninventory-agent-task-inventory-2.6-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fusioninventory-agent-task-inventory-2.6-11.fc40.x86_64.rpm"
+}

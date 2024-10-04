@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "procps-ng-4.0.4-4.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "procps-ng-4.0.4-4.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "ncurses-libs" 
+  "systemd-libs" 
+]
+extra-source "procps-ng-4.0.4-4.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/procps-ng-4.0.4-4.el10.x86_64.rpm"
+}

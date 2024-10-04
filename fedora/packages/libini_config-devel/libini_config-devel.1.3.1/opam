@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libini_config-devel-1.3.1-56.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libini_config-devel-1.3.1-56.fc40.x86_64.rpm"]
+depends: [
+  "libbasicobjects-devel" {= "0.1.1"}
+  "libcollection-devel" {= "0.7.0"}
+  "libini_config" {= "1.3.1"}
+  "libref_array-devel" {= "0.1.5"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libini_config-devel-1.3.1-56.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libini_config-devel-1.3.1-56.fc40.x86_64.rpm"
+}

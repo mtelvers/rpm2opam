@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmumps-gnu-openmpi4-hpc-5.3.5-5.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmumps-gnu-openmpi4-hpc-5.3.5-5.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "libmumps_5_3_5-gnu-openmpi4-hpc" {= "5.3.5"}
+]
+extra-source "libmumps-gnu-openmpi4-hpc-5.3.5-5.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmumps-gnu-openmpi4-hpc-5.3.5-5.3.x86_64.rpm"
+}

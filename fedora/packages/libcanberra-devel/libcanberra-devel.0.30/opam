@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libcanberra-devel-0.30-35.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcanberra-devel-0.30-35.fc40.x86_64.rpm"]
+depends: [
+  "gtk2-devel" 
+  "gtk3-devel" 
+  "libcanberra" {= "0.30"}
+  "libcanberra-gtk2" {= "0.30"}
+  "libcanberra-gtk3" {= "0.30"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libcanberra-devel-0.30-35.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libcanberra-devel-0.30-35.fc40.x86_64.rpm"
+}

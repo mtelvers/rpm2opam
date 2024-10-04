@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xvkbd-4.1-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xvkbd-4.1-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXaw3d8" 
+  "libXmu6" 
+  "libXt6" 
+  "libXtst6" 
+]
+extra-source "xvkbd-4.1-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xvkbd-4.1-2.2.x86_64.rpm"
+}

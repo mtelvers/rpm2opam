@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "maven-doxia-test-docs-1.12.0-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-doxia-test-docs-1.12.0-7.fc40.noarch.rpm"]
+depends: [
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "maven-doxia-test-docs-1.12.0-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/maven-doxia-test-docs-1.12.0-7.fc40.noarch.rpm"
+}

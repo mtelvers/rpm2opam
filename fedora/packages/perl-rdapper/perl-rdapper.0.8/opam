@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-rdapper-0.08-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-rdapper-0.08-23.fc40.noarch.rpm"]
+depends: [
+  "perl-Getopt-Long" 
+  "perl-HTTP-Message" 
+  "perl-IO-Socket-SSL" 
+  "perl-JSON" 
+  "perl-JSON-Path" 
+  "perl-LWP-Protocol-https" 
+  "perl-MIME-Base64" 
+  "perl-MIME-Types" 
+  "perl-Mozilla-CA" 
+  "perl-POSIX" 
+  "perl-Pod-Usage" 
+  "perl-URI" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-libwww-perl" {>= "6.0"}
+]
+extra-source "perl-rdapper-0.08-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-rdapper-0.08-23.fc40.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "agenda-lang-1.1.2-1.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "agenda-lang-1.1.2-1.14.noarch.rpm"]
+depends: [
+  "agenda" {= "1.1.2"}
+]
+extra-source "agenda-lang-1.1.2-1.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/agenda-lang-1.1.2-1.14.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-backgrounds-46.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-backgrounds-46.0-2.1.noarch.rpm"]
+depends: [
+  "gdk-pixbuf-loader-jxl" 
+  "gdk-pixbuf-loader-rsvg" 
+  "webp-pixbuf-loader" 
+]
+extra-source "gnome-backgrounds-46.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-backgrounds-46.0-2.1.noarch.rpm"
+}

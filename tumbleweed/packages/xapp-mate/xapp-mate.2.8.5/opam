@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xapp-mate-2.8.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xapp-mate-2.8.5-1.1.noarch.rpm"]
+depends: [
+  "libxapp1" {= "2.8.5"}
+  "python311-base" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-MatePanelApplet-4_0" {= "4.0"}
+  "typelib-1_0-XApp-1_0" {= "1.0"}
+]
+extra-source "xapp-mate-2.8.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xapp-mate-2.8.5-1.1.noarch.rpm"
+}

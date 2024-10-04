@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "appstream-glib-lang-0.8.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "appstream-glib-lang-0.8.3-1.1.noarch.rpm"]
+depends: [
+  "appstream-glib" {= "0.8.3"}
+]
+extra-source "appstream-glib-lang-0.8.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/appstream-glib-lang-0.8.3-1.1.noarch.rpm"
+}

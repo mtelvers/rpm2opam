@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libmodsecurity-3.0.12-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmodsecurity-3.0.12-2.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcurl" 
+  "libgcc" 
+  "libmaxminddb" 
+  "libstdc++" 
+  "libxml2" 
+  "lmdb-libs" 
+  "pcre2" 
+  "ssdeep-libs" 
+  "yajl" 
+]
+extra-source "libmodsecurity-3.0.12-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libmodsecurity-3.0.12-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qutebrowser-3.1.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qutebrowser-3.1.0-2.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-jinja2" 
+  "python3-pyqt6" 
+  "python3-pyyaml" 
+  "qt6-qtbase" 
+  "qt6-qtdeclarative" 
+  "qt6-qtwebengine" 
+]
+extra-source "qutebrowser-3.1.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qutebrowser-3.1.0-2.fc40.noarch.rpm"
+}

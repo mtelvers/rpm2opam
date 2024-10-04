@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Pod-Coverage-0.23-6.18.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Pod-Coverage-0.23-6.18.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Devel-Symdump" {>= "2.1"}
+  "perl-Pod-Parser" {>= "0.21"}
+  "perl-base" 
+]
+extra-source "perl-Pod-Coverage-0.23-6.18.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Pod-Coverage-0.23-6.18.noarch.rpm"
+}

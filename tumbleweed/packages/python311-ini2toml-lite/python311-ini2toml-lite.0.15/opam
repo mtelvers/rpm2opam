@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-ini2toml-lite-0.15-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-ini2toml-lite-0.15-1.1.noarch.rpm"]
+depends: [
+  "python311-importlib-metadata" 
+  "python311-ini2toml" {= "0.15"}
+  "python311-tomli" 
+  "python311-tomli-w" 
+]
+extra-source "python311-ini2toml-lite-0.15-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-ini2toml-lite-0.15-1.1.noarch.rpm"
+}

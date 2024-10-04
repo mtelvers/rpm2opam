@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-deferred-folds-prof-0.9.18.5-1.21.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-deferred-folds-prof-0.9.18.5-1.21.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-deferred-folds-devel" {= "0.9.18.5"}
+  "ghc-foldl-prof" 
+  "ghc-hashable-prof" 
+  "ghc-primitive-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unordered-containers-prof" 
+  "ghc-vector-prof" 
+]
+extra-source "ghc-deferred-folds-prof-0.9.18.5-1.21.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-deferred-folds-prof-0.9.18.5-1.21.x86_64.rpm"
+}

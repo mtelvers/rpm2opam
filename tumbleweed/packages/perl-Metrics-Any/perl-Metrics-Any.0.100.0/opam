@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Metrics-Any-0.100.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Metrics-Any-0.100.0-2.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Scalar-List-Utils" {>= "1.29"}
+]
+extra-source "perl-Metrics-Any-0.100.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Metrics-Any-0.100.0-2.2.noarch.rpm"
+}

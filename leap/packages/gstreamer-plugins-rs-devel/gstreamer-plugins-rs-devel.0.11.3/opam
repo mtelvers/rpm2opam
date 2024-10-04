@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gstreamer-plugins-rs-devel-0.11.3-slfo.1.1.29.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gstreamer-plugins-rs-devel-0.11.3-slfo.1.1.29.x86_64.rpm"]
+depends: [
+  "cairo-devel" 
+  "dav1d-devel" 
+  "glib2-devel" 
+  "gstreamer-devel" {>= "1.20"}
+  "gstreamer-plugins-bad-devel" {>= "1.20"}
+  "gstreamer-plugins-base-devel" 
+  "gstreamer-plugins-rs" {= "0.11.3"}
+  "gtk4-devel" 
+  "libopenssl-3-devel" 
+  "libsodium-devel" 
+  "libwebp-devel" 
+  "pango-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "gstreamer-plugins-rs-devel-0.11.3-slfo.1.1.29.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/gstreamer-plugins-rs-devel-0.11.3-slfo.1.1.29.x86_64.rpm"
+}

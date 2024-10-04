@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "orsa-mpich-devel-0.7.0-77.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "orsa-mpich-devel-0.7.0-77.fc40.x86_64.rpm"]
+depends: [
+  "orsa-headers" {= "0.7.0"}
+  "orsa-mpich" {= "0.7.0"}
+]
+extra-source "orsa-mpich-devel-0.7.0-77.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/orsa-mpich-devel-0.7.0-77.fc40.x86_64.rpm"
+}

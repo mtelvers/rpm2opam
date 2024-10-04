@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-ghp-import-2.1.0-3.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-ghp-import-2.1.0-3.6.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-python-dateutil" {>= "2.8.1"}
+  "update-alternatives" 
+]
+extra-source "python311-ghp-import-2.1.0-3.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-ghp-import-2.1.0-3.6.noarch.rpm"
+}

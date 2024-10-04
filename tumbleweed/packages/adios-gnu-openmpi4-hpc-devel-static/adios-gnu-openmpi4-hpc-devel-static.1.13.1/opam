@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "adios-gnu-openmpi4-hpc-devel-static-1.13.1-7.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "adios-gnu-openmpi4-hpc-devel-static-1.13.1-7.4.noarch.rpm"]
+depends: [
+  "adios_1_13_1-gnu-openmpi4-hpc-devel-static" {= "1.13.1"}
+  "bash-sh" 
+]
+extra-source "adios-gnu-openmpi4-hpc-devel-static-1.13.1-7.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/adios-gnu-openmpi4-hpc-devel-static-1.13.1-7.4.noarch.rpm"
+}

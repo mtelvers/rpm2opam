@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "farbfeld-4-2.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "farbfeld-4-2.7.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libjpeg8" 
+  "libpng16-16" 
+]
+extra-source "farbfeld-4-2.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/farbfeld-4-2.7.x86_64.rpm"
+}

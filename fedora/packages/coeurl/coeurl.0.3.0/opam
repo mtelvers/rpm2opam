@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "coeurl-0.3.0-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coeurl-0.3.0-7.fc40.x86_64.rpm"]
+depends: [
+  "fmt" 
+  "glibc" 
+  "libcurl" 
+  "libevent" 
+  "libgcc" 
+  "libstdc++" 
+  "spdlog" 
+]
+extra-source "coeurl-0.3.0-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/coeurl-0.3.0-7.fc40.x86_64.rpm"
+}

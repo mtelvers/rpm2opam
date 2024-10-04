@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-maps-46.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-maps-46.0-1.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "dbus" 
+  "gdk-pixbuf2" 
+  "geoclue2-libs" 
+  "geocode-glib" 
+  "gjs" 
+  "glib2" 
+  "glibc" 
+  "gobject-introspection" 
+  "gsettings-desktop-schemas" 
+  "gtk4" 
+  "json-glib" 
+  "libadwaita" {>= "1.4"}
+  "libgcc" 
+  "libgweather" 
+  "libportal" 
+  "librsvg2" 
+  "libshumate" {>= "1.2"}
+  "libsoup3" 
+  "libxml2" 
+  "pango" 
+  "rest" 
+]
+extra-source "gnome-maps-46.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-maps-46.0-1.fc40.x86_64.rpm"
+}

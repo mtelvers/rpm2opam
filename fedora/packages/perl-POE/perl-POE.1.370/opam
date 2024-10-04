@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-POE-1.370-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-POE-1.370-9.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Curses" {>= "1.8"}
+  "perl-Data-Dumper" 
+  "perl-Errno" {>= "1.9"}
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-FileHandle" 
+  "perl-HTTP-Date" 
+  "perl-HTTP-Message" 
+  "perl-IO" {>= "1.27"}
+  "perl-IO-Pipely" {>= "0.5"}
+  "perl-IO-Tty" 
+  "perl-POSIX" {>= "1.2"}
+  "perl-PathTools" {>= "0.87"}
+  "perl-Scalar-List-Utils" 
+  "perl-Socket" {>= "1.7"}
+  "perl-Storable" {>= "2.26"}
+  "perl-Symbol" 
+  "perl-Sys-Hostname" 
+  "perl-Term-Cap" {>= "1.10"}
+  "perl-TermReadKey" {>= "2.21"}
+  "perl-Time-HiRes" {>= "1.59"}
+  "perl-URI" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-POE-1.370-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-POE-1.370-9.fc40.noarch.rpm"
+}

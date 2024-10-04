@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jthread-devel-1.3.3-1.21.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jthread-devel-1.3.3-1.21.x86_64.rpm"]
+depends: [
+  "libjthread1_3_3" {= "1.3.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "jthread-devel-1.3.3-1.21.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/jthread-devel-1.3.3-1.21.x86_64.rpm"
+}

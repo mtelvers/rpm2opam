@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Spreadsheet-XLSX-0.180.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Spreadsheet-XLSX-0.180.0-1.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Archive-Zip" {>= "1.18"}
+  "perl-Spreadsheet-ParseExcel" 
+]
+extra-source "perl-Spreadsheet-XLSX-0.180.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Spreadsheet-XLSX-0.180.0-1.2.noarch.rpm"
+}

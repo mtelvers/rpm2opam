@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openmpi4-gnu-hpc-docs-4.1.6-slfo.1.1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openmpi4-gnu-hpc-docs-4.1.6-slfo.1.1.9.noarch.rpm"]
+depends: [
+  "openmpi_4_1_6-gnu-hpc-docs" {= "4.1.6"}
+]
+extra-source "openmpi4-gnu-hpc-docs-4.1.6-slfo.1.1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/openmpi4-gnu-hpc-docs-4.1.6-slfo.1.1.9.noarch.rpm"
+}

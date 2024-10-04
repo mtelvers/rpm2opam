@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "slang-devel-2.3.3-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "slang-devel-2.3.3-3.2.x86_64.rpm"]
+depends: [
+  "libslang2" {= "2.3.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "slang-devel-2.3.3-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/slang-devel-2.3.3-3.2.x86_64.rpm"
+}

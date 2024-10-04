@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pinta-1.7.1-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pinta-1.7.1-7.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gtk-sharp2" {= "2.12.0.0"}
+  "hicolor-icon-theme" 
+  "mono-addins" {= "1.0.0.0"}
+  "mono-core" {= "4.84.0.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "pinta-1.7.1-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pinta-1.7.1-7.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nsdiff-1.82-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nsdiff-1.82-9.fc40.noarch.rpm"]
+depends: [
+  "bind-utils" 
+  "perl-File-Temp" 
+  "perl-Getopt-Std" 
+  "perl-POSIX" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.10"}
+]
+extra-source "nsdiff-1.82-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nsdiff-1.82-9.fc40.noarch.rpm"
+}

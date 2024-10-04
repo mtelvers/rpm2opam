@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mat2-dolphin-0.13.4-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mat2-dolphin-0.13.4-3.fc40.noarch.rpm"]
+depends: [
+  "dolphin" 
+  "hicolor-icon-theme" 
+  "kdialog" 
+  "kf5-filesystem" 
+  "python3-libmat2" {= "0.13.4"}
+]
+extra-source "mat2-dolphin-0.13.4-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mat2-dolphin-0.13.4-3.fc40.noarch.rpm"
+}

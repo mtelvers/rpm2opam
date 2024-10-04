@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "SoQt-1.6.0-15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "SoQt-1.6.0-15.fc40.x86_64.rpm"]
+depends: [
+  "Coin4" 
+  "glibc" 
+  "libX11" 
+  "libXi" 
+  "libgcc" 
+  "libglvnd-opengl" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "SoQt-1.6.0-15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/SoQt-1.6.0-15.fc40.x86_64.rpm"
+}

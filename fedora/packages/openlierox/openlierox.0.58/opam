@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openlierox-0.58-0.30.rc5.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openlierox-0.58-0.30.rc5.fc39.x86_64.rpm"]
+depends: [
+  "SDL_image" 
+  "SDL_mixer" 
+  "gd" 
+  "glibc" {>= "2.37.9000"}
+  "hawknl" 
+  "hicolor-icon-theme" 
+  "libX11" 
+  "libcurl" 
+  "libgcc" 
+  "libstdc++" 
+  "libxml2" 
+  "libzip" 
+  "sdl12-compat" 
+  "zlib-ng-compat" 
+]
+extra-source "openlierox-0.58-0.30.rc5.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openlierox-0.58-0.30.rc5.fc39.x86_64.rpm"
+}

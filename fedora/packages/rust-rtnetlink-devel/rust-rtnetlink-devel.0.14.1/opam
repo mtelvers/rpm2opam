@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rtnetlink-devel-0.14.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rtnetlink-devel-0.14.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.66.1"}
+  "rust-futures+default-devel" 
+  "rust-log+default-devel" 
+  "rust-netlink-packet-core+default-devel" 
+  "rust-netlink-packet-route+default-devel" 
+  "rust-netlink-packet-utils+default-devel" 
+  "rust-netlink-proto-devel" 
+  "rust-netlink-sys+default-devel" 
+  "rust-nix+fs-devel" 
+  "rust-nix+mount-devel" 
+  "rust-nix+sched-devel" 
+  "rust-nix+signal-devel" 
+  "rust-nix-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-rtnetlink-devel-0.14.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rtnetlink-devel-0.14.1-1.fc40.noarch.rpm"
+}

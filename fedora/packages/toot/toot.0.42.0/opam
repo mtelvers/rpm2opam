@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "toot-0.42.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "toot-0.42.0-2.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-beautifulsoup4" 
+  "python3-click" 
+  "python3-requests" 
+  "python3-tomlkit" 
+  "python3-urwid" 
+  "python3-wcwidth" {>= "0.1.7"}
+]
+extra-source "toot-0.42.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/toot-0.42.0-2.fc40.noarch.rpm"
+}

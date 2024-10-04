@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jrosetta-1.0.4-6.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jrosetta-1.0.4-6.4.noarch.rpm"]
+depends: [
+  "java-11-openj9" {>= "1.6"}
+  "javapackages-tools" {>= "1.5"}
+]
+extra-source "jrosetta-1.0.4-6.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jrosetta-1.0.4-6.4.noarch.rpm"
+}

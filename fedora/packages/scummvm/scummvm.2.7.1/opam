@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "scummvm-2.7.1-1.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scummvm-2.7.1-1.fc39.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "alsa-lib" 
+  "flac-libs" 
+  "fluidsynth-libs" 
+  "freetype" 
+  "fribidi" 
+  "giflib" 
+  "glib2" 
+  "glibc" {>= "2.37.9000"}
+  "gtk3" 
+  "hicolor-icon-theme" 
+  "libcurl" 
+  "libjpeg-turbo" 
+  "libmad" 
+  "libmpeg2" 
+  "libogg" 
+  "libpng" 
+  "libstdc++" 
+  "libtheora" 
+  "libvorbis" 
+  "readline" 
+  "scummvm-data" {= "2.7.1"}
+  "speech-dispatcher" 
+  "zlib-ng-compat" 
+]
+extra-source "scummvm-2.7.1-1.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/scummvm-2.7.1-1.fc39.x86_64.rpm"
+}

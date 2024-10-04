@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Messaging-Message-1.7-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Messaging-Message-1.7-8.fc40.noarch.rpm"]
+depends: [
+  "perl-Digest-MD5" 
+  "perl-Encode" 
+  "perl-JSON" 
+  "perl-MIME-Base64" 
+  "perl-No-Worries" 
+  "perl-Params-Validate" 
+  "perl-libs" {>= "5.5.0"}
+]
+extra-source "perl-Messaging-Message-1.7-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Messaging-Message-1.7-8.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "coin-or-OS-doc-2.10.3-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coin-or-OS-doc-2.10.3-11.fc40.x86_64.rpm"]
+depends: [
+  "coin-or-Bcp-doc" 
+  "coin-or-Couenne-doc" 
+  "coin-or-OS" {= "2.10.3"}
+]
+extra-source "coin-or-OS-doc-2.10.3-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/coin-or-OS-doc-2.10.3-11.fc40.x86_64.rpm"
+}

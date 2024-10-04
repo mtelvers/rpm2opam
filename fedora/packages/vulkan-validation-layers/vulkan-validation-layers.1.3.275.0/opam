@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vulkan-validation-layers-1.3.275.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vulkan-validation-layers-1.3.275.0-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "spirv-tools-libs" 
+]
+extra-source "vulkan-validation-layers-1.3.275.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vulkan-validation-layers-1.3.275.0-1.fc40.x86_64.rpm"
+}

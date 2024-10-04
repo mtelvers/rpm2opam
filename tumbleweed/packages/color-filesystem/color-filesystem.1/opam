@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "color-filesystem-1-13.20.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "color-filesystem-1-13.20.noarch.rpm"]
+depends: [
+  "filesystem" 
+  "rpm" 
+]
+extra-source "color-filesystem-1-13.20.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/color-filesystem-1-13.20.noarch.rpm"
+}

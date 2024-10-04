@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "meld-3.22.2-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "meld-3.22.2-1.2.noarch.rpm"]
+depends: [
+  "patch" 
+  "python311-base" 
+  "python311-gobject-Gdk" 
+  "python311-pycairo" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-GtkSource-300" 
+  "typelib-1_0-GtkSource-4" {= "4"}
+  "typelib-1_0-Pango-1_0" 
+]
+extra-source "meld-3.22.2-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/meld-3.22.2-1.2.noarch.rpm"
+}

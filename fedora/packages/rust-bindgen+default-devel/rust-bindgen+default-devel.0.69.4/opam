@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-bindgen+default-devel-0.69.4-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-bindgen+default-devel-0.69.4-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bindgen+logging-devel" {= "0.69.4"}
+  "rust-bindgen+prettyplease-devel" {= "0.69.4"}
+  "rust-bindgen+runtime-devel" {= "0.69.4"}
+  "rust-bindgen+which-rustfmt-devel" {= "0.69.4"}
+  "rust-bindgen-devel" {= "0.69.4"}
+]
+extra-source "rust-bindgen+default-devel-0.69.4-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-bindgen+default-devel-0.69.4-1.fc40.noarch.rpm"
+}

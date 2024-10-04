@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-serde_with+chrono-devel-3.6.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-serde_with+chrono-devel-3.6.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-serde_with+chrono_0_4-devel" {= "3.6.1"}
+  "rust-serde_with-devel" {= "3.6.1"}
+]
+extra-source "rust-serde_with+chrono-devel-3.6.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-serde_with+chrono-devel-3.6.1-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-zbus-devel-4.1.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-zbus-devel-4.1.2-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.75"}
+  "rust-async-broadcast+default-devel" 
+  "rust-async-trait+default-devel" 
+  "rust-derivative+default-devel" 
+  "rust-enumflags2+default-devel" 
+  "rust-enumflags2+serde-devel" 
+  "rust-event-listener+default-devel" 
+  "rust-futures-core+default-devel" 
+  "rust-futures-sink+default-devel" 
+  "rust-futures-util+sink-devel" 
+  "rust-futures-util+std-devel" 
+  "rust-futures-util-devel" 
+  "rust-hex+default-devel" 
+  "rust-nix+socket-devel" 
+  "rust-nix+uio-devel" 
+  "rust-nix+user-devel" 
+  "rust-nix-devel" 
+  "rust-ordered-stream+default-devel" 
+  "rust-rand+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde_repr+default-devel" 
+  "rust-sha1+default-devel" 
+  "rust-sha1+std-devel" 
+  "rust-static_assertions+default-devel" 
+  "rust-tracing+default-devel" 
+  "rust-xdg-home+default-devel" 
+  "rust-zbus_macros+default-devel" {= "4.1.2"}
+  "rust-zbus_names+default-devel" 
+  "rust-zvariant+enumflags2-devel" 
+  "rust-zvariant-devel" 
+]
+extra-source "rust-zbus-devel-4.1.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-zbus-devel-4.1.2-1.fc40.noarch.rpm"
+}

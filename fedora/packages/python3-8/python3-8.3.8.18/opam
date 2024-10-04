@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3.8-3.8.18-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3.8-3.8.18-7.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bzip2-libs" 
+  "expat" 
+  "gdbm-libs" 
+  "glibc" 
+  "libffi" 
+  "libnsl2" 
+  "libtirpc" 
+  "libuuid" 
+  "libxcrypt" 
+  "ncurses-libs" 
+  "openssl-libs" 
+  "pkgconf-pkg-config" 
+  "python-pip-wheel" 
+  "python-setuptools-wheel" 
+  "readline" 
+  "sqlite-libs" 
+  "tcl" 
+  "tk" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "python3.8-3.8.18-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3.8-3.8.18-7.fc40.x86_64.rpm"
+}

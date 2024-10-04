@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libenchant-2-2-2.2.15-3.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libenchant-2-2-2.2.15-3.8.x86_64.rpm"]
+depends: [
+  "enchant-2-backend-aspell" 
+  "enchant-data" {>= "2.2.15"}
+  "glib2-stage1-devel" 
+  "glibc" 
+]
+extra-source "libenchant-2-2-2.2.15-3.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libenchant-2-2-2.2.15-3.8.x86_64.rpm"
+}

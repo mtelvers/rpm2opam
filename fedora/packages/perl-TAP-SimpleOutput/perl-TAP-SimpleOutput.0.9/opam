@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-TAP-SimpleOutput-0.009-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-TAP-SimpleOutput-0.009-22.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Class-Load" 
+  "perl-Perl-Version" 
+  "perl-Sub-Exporter-Progressive" 
+  "perl-Test-Simple" {>= "0.98"}
+  "perl-libs" 
+]
+extra-source "perl-TAP-SimpleOutput-0.009-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-TAP-SimpleOutput-0.009-22.fc40.noarch.rpm"
+}

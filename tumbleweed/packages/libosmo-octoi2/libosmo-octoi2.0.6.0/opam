@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libosmo-octoi2-0.6.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libosmo-octoi2-0.6.0-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libosmocore21" 
+  "libosmovty13" 
+  "libtalloc2" 
+]
+extra-source "libosmo-octoi2-0.6.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libosmo-octoi2-0.6.0-1.3.x86_64.rpm"
+}

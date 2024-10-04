@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sblim-gather-provider-2.2.9-32.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sblim-gather-provider-2.2.9-32.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "sblim-cmpi-base" 
+  "sblim-gather" 
+  "sblim-sfcb" 
+]
+extra-source "sblim-gather-provider-2.2.9-32.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sblim-gather-provider-2.2.9-32.fc40.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pywbem-1.7.2-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pywbem-1.7.2-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-PyYAML" {>= "5.3.1"}
+  "python312-base" 
+  "python312-certifi" {>= "2019.11.28"}
+  "python312-ply" {>= "3.10"}
+  "python312-requests" {>= "2.25.0"}
+  "python312-six" {>= "1.16.0"}
+  "python312-urllib3" {>= "1.26.5"}
+  "python312-yamlloader" {>= "0.5.5"}
+  "update-alternatives" 
+]
+extra-source "python312-pywbem-1.7.2-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pywbem-1.7.2-2.1.noarch.rpm"
+}

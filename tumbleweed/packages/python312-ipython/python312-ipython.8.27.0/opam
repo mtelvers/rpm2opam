@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-ipython-8.27.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-ipython-8.27.0-1.1.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "python312" 
+  "python312-Pygments" {>= "2.4.0"}
+  "python312-base" 
+  "python312-decorator" 
+  "python312-jedi" {>= "0.16"}
+  "python312-matplotlib-inline" 
+  "python312-pexpect" {>= "4.3"}
+  "python312-prompt_toolkit" 
+  "python312-stack-data" 
+  "python312-traitlets" {>= "5.13.0"}
+]
+extra-source "python312-ipython-8.27.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-ipython-8.27.0-1.1.noarch.rpm"
+}

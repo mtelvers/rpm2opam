@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "slurm-lua-23.11.5-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "slurm-lua-23.11.5-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "liblua5_4-5" 
+  "slurm" {= "23.11.5"}
+]
+extra-source "slurm-lua-23.11.5-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/slurm-lua-23.11.5-1.3.x86_64.rpm"
+}

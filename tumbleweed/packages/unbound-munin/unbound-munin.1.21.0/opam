@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "unbound-munin-1.21.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "unbound-munin-1.21.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "bc" 
+  "munin-node" 
+  "unbound" {= "1.21.0"}
+]
+extra-source "unbound-munin-1.21.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/unbound-munin-1.21.0-1.1.noarch.rpm"
+}

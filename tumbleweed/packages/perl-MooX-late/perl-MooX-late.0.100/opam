@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooX-late-0.100-2.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooX-late-0.100-2.17.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Moo" {>= "2"}
+  "perl-Sub-HandlesVia" {>= "0.13"}
+  "perl-Type-Tiny" {>= "1.1"}
+]
+extra-source "perl-MooX-late-0.100-2.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooX-late-0.100-2.17.noarch.rpm"
+}

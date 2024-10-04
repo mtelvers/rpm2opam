@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "redfish-finder-0.4-5.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "redfish-finder-0.4-5.1.noarch.rpm"]
+depends: [
+  "NetworkManager" 
+  "bash-sh" 
+  "dmidecode" 
+  "python311" 
+  "python311-base" 
+]
+extra-source "redfish-finder-0.4-5.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/redfish-finder-0.4-5.1.noarch.rpm"
+}

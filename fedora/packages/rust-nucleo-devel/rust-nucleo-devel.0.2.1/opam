@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-nucleo-devel-0.2.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-nucleo-devel-0.2.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-nucleo-matcher+default-devel" 
+  "rust-parking_lot+arc_lock-devel" 
+  "rust-parking_lot+default-devel" 
+  "rust-parking_lot+send_guard-devel" 
+  "rust-rayon+default-devel" 
+]
+extra-source "rust-nucleo-devel-0.2.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-nucleo-devel-0.2.1-2.fc40.noarch.rpm"
+}

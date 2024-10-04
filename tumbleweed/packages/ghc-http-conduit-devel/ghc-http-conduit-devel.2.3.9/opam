@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-http-conduit-devel-2.3.9-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-http-conduit-devel-2.3.9-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-aeson-devel" 
+  "ghc-attoparsec-aeson-devel" 
+  "ghc-attoparsec-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-conduit-devel" 
+  "ghc-conduit-extra-devel" 
+  "ghc-http-client-devel" 
+  "ghc-http-client-tls-devel" 
+  "ghc-http-conduit" {= "2.3.9"}
+  "ghc-http-types-devel" 
+  "ghc-mtl-devel" 
+  "ghc-resourcet-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unliftio-core-devel" 
+]
+extra-source "ghc-http-conduit-devel-2.3.9-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-http-conduit-devel-2.3.9-1.1.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cephfs-shell-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cephfs-shell-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm"]
+depends: [
+  "python3-cephfs" 
+  "python311-base" 
+  "python311-cmd2" 
+  "python311-colorama" 
+]
+extra-source "cephfs-shell-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cephfs-shell-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm"
+}

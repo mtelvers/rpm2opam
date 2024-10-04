@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-shell-search-provider-gnome-terminal-3.50.1-lp160.2.22.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-shell-search-provider-gnome-terminal-3.50.1-lp160.2.22.noarch.rpm"]
+depends: [
+  "gnome-terminal" {= "3.50.1"}
+]
+extra-source "gnome-shell-search-provider-gnome-terminal-3.50.1-lp160.2.22.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/gnome-shell-search-provider-gnome-terminal-3.50.1-lp160.2.22.noarch.rpm"
+}

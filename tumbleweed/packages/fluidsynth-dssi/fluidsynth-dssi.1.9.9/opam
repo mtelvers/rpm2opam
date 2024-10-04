@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fluidsynth-dssi-1.9.9+git13012019-1.24.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fluidsynth-dssi-1.9.9+git13012019-1.24.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libfluidsynth3" 
+  "libgtk-2_0-0" 
+  "liblo7" 
+]
+extra-source "fluidsynth-dssi-1.9.9+git13012019-1.24.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/fluidsynth-dssi-1.9.9+git13012019-1.24.x86_64.rpm"
+}

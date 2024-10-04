@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sanlock-3.9.3-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sanlock-3.9.3-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "libaio1" 
+  "libblkid1" 
+  "libsanlock1" 
+  "libuuid1" 
+  "shadow" 
+  "system-group-hardware" 
+  "systemd" 
+]
+extra-source "sanlock-3.9.3-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sanlock-3.9.3-2.1.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-os_display+default-devel-0.1.3-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-os_display+default-devel-0.1.3-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-os_display+alloc-devel" {= "0.1.3"}
+  "rust-os_display+native-devel" {= "0.1.3"}
+  "rust-os_display+std-devel" {= "0.1.3"}
+  "rust-os_display-devel" {= "0.1.3"}
+]
+extra-source "rust-os_display+default-devel-0.1.3-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-os_display+default-devel-0.1.3-6.fc40.noarch.rpm"
+}

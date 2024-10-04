@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Mojolicious-Plugin-AssetPack-2.14-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mojolicious-Plugin-AssetPack-2.14-3.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-File-Which" {>= "1.21"}
+  "perl-IPC-Run3" {>= "0.48"}
+  "perl-Mojolicious" {>= "9.0"}
+]
+extra-source "perl-Mojolicious-Plugin-AssetPack-2.14-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Mojolicious-Plugin-AssetPack-2.14-3.2.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-WWW-Salesforce-0.304-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-WWW-Salesforce-0.304-7.fc40.noarch.rpm"]
+depends: [
+  "perl-DateTime" 
+  "perl-IO-Socket-SSL" {>= "1.94"}
+  "perl-LWP-Protocol-https" {>= "6.0"}
+  "perl-SOAP-Lite" {>= "1.0"}
+  "perl-URI" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-WWW-Salesforce-0.304-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-WWW-Salesforce-0.304-7.fc40.noarch.rpm"
+}

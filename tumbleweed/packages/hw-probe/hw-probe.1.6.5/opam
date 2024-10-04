@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hw-probe-1.6.5-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hw-probe-1.6.5-1.3.noarch.rpm"]
+depends: [
+  "acpica" 
+  "bash-sh" 
+  "curl" 
+  "dmidecode" 
+  "hdparm" 
+  "hwinfo" 
+  "lsb-release" 
+  "pciutils" 
+  "perl-base" 
+  "perl-libwww-perl" 
+  "sensors" 
+  "smartmontools" 
+  "sysstat" 
+  "usbutils" 
+  "util-linux" 
+]
+extra-source "hw-probe-1.6.5-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/hw-probe-1.6.5-1.3.noarch.rpm"
+}

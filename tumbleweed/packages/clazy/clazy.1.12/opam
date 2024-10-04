@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "clazy-1.12git.20240630T203330~f3fb82c-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clazy-1.12git.20240630T203330~f3fb82c-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "clang18" {= "18.1.8"}
+  "glibc" 
+  "libLLVM18" 
+  "libclang-cpp18" 
+  "libstdc++6" 
+]
+extra-source "clazy-1.12git.20240630T203330~f3fb82c-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/clazy-1.12git.20240630T203330~f3fb82c-1.1.x86_64.rpm"
+}

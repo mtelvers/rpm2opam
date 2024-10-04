@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-Rmpfr-0.8.9-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-Rmpfr-0.8.9-6.fc40.x86_64.rpm"]
+depends: [
+  "R-core" {= "4.3"}
+  "R-gmp" {>= "0.6.1"}
+  "glibc" 
+  "gmp" 
+  "mpfr" 
+]
+extra-source "R-Rmpfr-0.8.9-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-Rmpfr-0.8.9-6.fc40.x86_64.rpm"
+}

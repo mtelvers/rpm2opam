@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-http-date-devel-0.0.11-2.24.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-http-date-devel-0.0.11-2.24.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-array-devel" 
+  "ghc-attoparsec-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-http-date" {= "0.0.11"}
+  "ghc-time-devel" 
+]
+extra-source "ghc-http-date-devel-0.0.11-2.24.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-http-date-devel-0.0.11-2.24.x86_64.rpm"
+}

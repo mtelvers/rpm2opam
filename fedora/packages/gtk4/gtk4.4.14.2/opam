@@ -1,0 +1,45 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gtk4-4.14.2-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk4-4.14.2-2.fc40.x86_64.rpm"]
+depends: [
+  "adwaita-icon-theme" 
+  "cairo" {>= "1.14.0"}
+  "cairo-gobject" {>= "1.14.0"}
+  "colord-libs" 
+  "cups-libs" 
+  "fontconfig" 
+  "fribidi" 
+  "gdk-pixbuf2" 
+  "gdk-pixbuf2-modules" 
+  "glib2" {>= "2.76.0"}
+  "glibc" 
+  "graphene" 
+  "gstreamer1" 
+  "gstreamer1-plugins-bad-free-libs" 
+  "gstreamer1-plugins-base" 
+  "gtk-update-icon-cache" 
+  "harfbuzz" 
+  "hicolor-icon-theme" 
+  "libX11" 
+  "libXcursor" 
+  "libXdamage" 
+  "libXext" 
+  "libXfixes" 
+  "libXi" 
+  "libXinerama" 
+  "libXrandr" 
+  "libepoxy" {>= "1.4"}
+  "libjpeg-turbo" 
+  "libpng" 
+  "libtiff" 
+  "libtracker-sparql" 
+  "libwayland-client" {>= "1.21.0"}
+  "libwayland-cursor" {>= "1.21.0"}
+  "libwayland-egl" 
+  "libxkbcommon" 
+  "pango" 
+  "vulkan-loader" 
+]
+extra-source "gtk4-4.14.2-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gtk4-4.14.2-2.fc40.x86_64.rpm"
+}

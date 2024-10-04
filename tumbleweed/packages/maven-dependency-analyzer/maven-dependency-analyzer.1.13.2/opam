@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-dependency-analyzer-1.13.2-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-dependency-analyzer-1.13.2-1.4.noarch.rpm"]
+depends: [
+  "apache-commons-io" 
+  "atinject" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "maven-lib" 
+  "objectweb-asm" 
+  "slf4j" 
+]
+extra-source "maven-dependency-analyzer-1.13.2-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-dependency-analyzer-1.13.2-1.4.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "paranamer-ant-2.8-4.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "paranamer-ant-2.8-4.4.noarch.rpm"]
+depends: [
+  "ant" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "paranamer-generator" {= "2.8"}
+]
+extra-source "paranamer-ant-2.8-4.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/paranamer-ant-2.8-4.4.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "monitoring-plugins-smart-6.14.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "monitoring-plugins-smart-6.14.3-1.1.noarch.rpm"]
+depends: [
+  "monitoring-plugins-common" 
+  "perl" 
+  "perl-base" 
+  "smartmontools" {>= "5.39"}
+  "sudo" 
+]
+extra-source "monitoring-plugins-smart-6.14.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/monitoring-plugins-smart-6.14.3-1.1.noarch.rpm"
+}

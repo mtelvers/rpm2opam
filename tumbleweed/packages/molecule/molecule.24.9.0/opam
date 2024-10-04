@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "molecule-24.9.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "molecule-24.9.0-1.1.noarch.rpm"]
+depends: [
+  "ansible-core" {>= "2.12.10"}
+  "python3-ansible-compat" {>= "24.6.1"}
+  "python311-Jinja2" {>= "2.11.3"}
+  "python311-PyYAML" {>= "5.1"}
+  "python311-base" 
+  "python311-click" {>= "8.0"}
+  "python311-click-help-colors" {>= "0.9"}
+  "python311-enrich" {>= "1.2.7"}
+  "python311-jsonschema" {>= "4.9.1"}
+  "python311-packaging" 
+  "python311-pluggy" {>= "0.7.1"}
+  "python311-rich" {>= "9.5.1"}
+  "python311-wcmatch" {>= "8.1.2"}
+]
+extra-source "molecule-24.9.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/molecule-24.9.0-1.1.noarch.rpm"
+}

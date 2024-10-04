@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-gcsfs-2024.3.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-gcsfs-2024.3.1-1.1.noarch.rpm"]
+depends: [
+  "python310-aiohttp" 
+  "python310-base" {= "3.10"}
+  "python310-decorator" {> "4.1.2"}
+  "python310-fsspec" {= "2024.3.1"}
+  "python310-google-auth" {>= "1.2"}
+  "python310-google-auth-oauthlib" 
+  "python310-google-cloud-storage" 
+  "python310-requests" 
+]
+extra-source "python310-gcsfs-2024.3.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-gcsfs-2024.3.1-1.1.noarch.rpm"
+}

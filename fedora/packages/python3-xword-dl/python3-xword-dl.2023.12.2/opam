@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-xword-dl-2023.12.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-xword-dl-2023.12.2-3.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-beautifulsoup4" 
+  "python3-dateparser" 
+  "python3-html2text" 
+  "python3-lxml" 
+  "python3-puzpy" 
+  "python3-pyyaml" 
+  "python3-requests" 
+  "python3-unidecode" 
+  "python3-xmltodict" 
+]
+extra-source "python3-xword-dl-2023.12.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-xword-dl-2023.12.2-3.fc40.noarch.rpm"
+}

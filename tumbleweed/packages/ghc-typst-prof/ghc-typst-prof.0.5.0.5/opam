@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-typst-prof-0.5.0.5-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-typst-prof-0.5.0.5-1.3.x86_64.rpm"]
+depends: [
+  "ghc-aeson-prof" 
+  "ghc-array-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-cassava-prof" 
+  "ghc-containers-prof" 
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+  "ghc-mtl-prof" 
+  "ghc-ordered-containers-prof" 
+  "ghc-parsec-prof" 
+  "ghc-pretty-prof" 
+  "ghc-regex-tdfa-prof" 
+  "ghc-scientific-prof" 
+  "ghc-text-prof" 
+  "ghc-time-prof" 
+  "ghc-toml-parser-prof" 
+  "ghc-typst-devel" {= "0.5.0.5"}
+  "ghc-typst-symbols-prof" 
+  "ghc-vector-prof" 
+  "ghc-xml-conduit-prof" 
+  "ghc-yaml-prof" 
+]
+extra-source "ghc-typst-prof-0.5.0.5-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-typst-prof-0.5.0.5-1.3.x86_64.rpm"
+}

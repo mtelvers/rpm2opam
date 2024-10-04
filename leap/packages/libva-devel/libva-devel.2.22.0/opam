@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libva-devel-2.22.0-slfo.1.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libva-devel-2.22.0-slfo.1.1.1.x86_64.rpm"]
+depends: [
+  "libX11-devel" 
+  "libXfixes-devel" 
+  "libdrm-devel" 
+  "libva-drm2" {= "2.22.0"}
+  "libva-wayland2" {= "2.22.0"}
+  "libva-x11-2" {= "2.22.0"}
+  "libva2" {= "2.22.0"}
+  "pkgconf-pkg-config" 
+  "wayland-devel" 
+]
+extra-source "libva-devel-2.22.0-slfo.1.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libva-devel-2.22.0-slfo.1.1.1.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "slurm-openlava-22.05.11-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "slurm-openlava-22.05.11-3.fc40.x86_64.rpm"]
+depends: [
+  "pcp-testsuite" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" {>= "2.24"}
+  "perl-POSIX" 
+  "perl-Switch" 
+  "perl-autouse" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "slurm-perlapi" 
+]
+extra-source "slurm-openlava-22.05.11-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/slurm-openlava-22.05.11-3.fc40.x86_64.rpm"
+}

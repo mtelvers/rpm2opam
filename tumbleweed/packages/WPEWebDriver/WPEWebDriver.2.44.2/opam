@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "WPEWebDriver-2.44.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "WPEWebDriver-2.44.2-1.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libatomic1" 
+  "libbacktrace0" 
+  "libgcc_s1" 
+  "libicu75" 
+  "libsoup-3_0-0" 
+  "libstdc++6" 
+  "libsystemd0" 
+]
+extra-source "WPEWebDriver-2.44.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/WPEWebDriver-2.44.2-1.2.x86_64.rpm"
+}

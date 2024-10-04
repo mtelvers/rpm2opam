@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fbb-7.0.11-1.fc40.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fbb-7.0.11-1.fc40.7.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libax25" 
+  "ncurses-libs" 
+  "systemd" 
+]
+extra-source "fbb-7.0.11-1.fc40.7.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fbb-7.0.11-1.fc40.7.x86_64.rpm"
+}

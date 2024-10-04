@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-pymod2pkg-0.28.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-pymod2pkg-0.28.0-1.3.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-distro" 
+  "python311-pbr" {>= "2.0.0"}
+]
+extra-source "python3-pymod2pkg-0.28.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-pymod2pkg-0.28.0-1.3.noarch.rpm"
+}

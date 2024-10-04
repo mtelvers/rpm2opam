@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw32-gstreamer1-plugins-base-1.22.9-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw32-gstreamer1-plugins-base-1.22.9-1.fc40.noarch.rpm"]
+depends: [
+  "mingw32-angleproject" 
+  "mingw32-cairo" 
+  "mingw32-crt" 
+  "mingw32-filesystem" {>= "95"}
+  "mingw32-gettext" 
+  "mingw32-glib2" 
+  "mingw32-gstreamer1" 
+  "mingw32-libgcc" 
+  "mingw32-libjpeg-turbo" 
+  "mingw32-libogg" 
+  "mingw32-libpng" 
+  "mingw32-libtheora" 
+  "mingw32-libvorbis" 
+  "mingw32-orc" 
+  "mingw32-pango" 
+  "mingw32-zlib" 
+]
+extra-source "mingw32-gstreamer1-plugins-base-1.22.9-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw32-gstreamer1-plugins-base-1.22.9-1.fc40.noarch.rpm"
+}

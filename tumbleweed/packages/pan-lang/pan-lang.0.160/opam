@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pan-lang-0.160-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pan-lang-0.160-1.1.noarch.rpm"]
+depends: [
+  "pan" {= "0.160"}
+]
+extra-source "pan-lang-0.160-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pan-lang-0.160-1.1.noarch.rpm"
+}

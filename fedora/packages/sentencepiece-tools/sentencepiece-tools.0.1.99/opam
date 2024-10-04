@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sentencepiece-tools-0.1.99-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sentencepiece-tools-0.1.99-2.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gperftools-libs" 
+  "libgcc" 
+  "libstdc++" 
+  "sentencepiece-libs" 
+]
+extra-source "sentencepiece-tools-0.1.99-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sentencepiece-tools-0.1.99-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tlpui-1.6.5-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tlpui-1.6.5-2.1.noarch.rpm"]
+depends: [
+  "python311-PyYAML" 
+  "python311-base" {= "3.11"}
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "tlp" 
+]
+extra-source "tlpui-1.6.5-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tlpui-1.6.5-2.1.noarch.rpm"
+}

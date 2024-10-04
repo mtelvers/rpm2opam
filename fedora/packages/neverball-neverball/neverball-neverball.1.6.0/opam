@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "neverball-neverball-1.6.0-31.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "neverball-neverball-1.6.0-31.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "SDL2_ttf" 
+  "dejavu-sans-fonts" 
+  "glibc" 
+  "libglvnd-glx" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libvorbis" 
+  "neverball" {= "1.6.0"}
+  "opengl-games-utils" 
+  "physfs" 
+]
+extra-source "neverball-neverball-1.6.0-31.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/neverball-neverball-1.6.0-31.fc40.x86_64.rpm"
+}

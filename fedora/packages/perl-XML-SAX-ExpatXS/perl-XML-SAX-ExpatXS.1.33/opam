@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-XML-SAX-ExpatXS-1.33-39.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XML-SAX-ExpatXS-1.33-39.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "expat" 
+  "glibc" 
+  "perl-Carp" 
+  "perl-DynaLoader" 
+  "perl-IO" 
+  "perl-XML-SAX" {>= "0.96"}
+  "perl-XML-SAX-Base" 
+  "perl-libs" 
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-XML-SAX-ExpatXS-1.33-39.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-XML-SAX-ExpatXS-1.33-39.fc40.x86_64.rpm"
+}

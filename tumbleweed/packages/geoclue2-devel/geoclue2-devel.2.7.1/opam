@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "geoclue2-devel-2.7.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "geoclue2-devel-2.7.1-2.1.x86_64.rpm"]
+depends: [
+  "geoclue2" {= "2.7.1"}
+  "glib2-devel" {>= "2.68.0"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Geoclue-2_0" {= "2.7.1"}
+]
+extra-source "geoclue2-devel-2.7.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/geoclue2-devel-2.7.1-2.1.x86_64.rpm"
+}

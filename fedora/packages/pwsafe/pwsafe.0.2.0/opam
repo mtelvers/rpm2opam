@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pwsafe-0.2.0-42.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pwsafe-0.2.0-42.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11" 
+  "libXmu" 
+  "libgcc" 
+  "libstdc++" 
+  "openssl-libs" 
+  "readline" 
+]
+extra-source "pwsafe-0.2.0-42.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pwsafe-0.2.0-42.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnotcurses++3-3.0.9-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnotcurses++3-3.0.9-3.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libnotcurses-core3" 
+  "libnotcurses3" 
+  "libstdc++6" 
+]
+extra-source "libnotcurses++3-3.0.9-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libnotcurses++3-3.0.9-3.2.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qt6-quick3d-private-devel-6.7.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qt6-quick3d-private-devel-6.7.2-1.2.x86_64.rpm"]
+depends: [
+  "qt6-core-private-devel" {= "6.7.2"}
+  "qt6-gui-private-devel" {= "6.7.2"}
+  "qt6-qml-private-devel" {= "6.7.2"}
+  "qt6-quick-private-devel" {= "6.7.2"}
+  "qt6-quick3d-devel" {= "6.7.2"}
+  "qt6-quick3druntimerender-private-devel" {= "6.7.2"}
+]
+extra-source "qt6-quick3d-private-devel-6.7.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/qt6-quick3d-private-devel-6.7.2-1.2.x86_64.rpm"
+}

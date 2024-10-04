@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-initial-setup-46.alpha-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-initial-setup-46.alpha-12.fc40.x86_64.rpm"]
+depends: [
+  "NetworkManager-libnm" 
+  "accountsservice-libs" 
+  "bash" 
+  "cairo" 
+  "fontconfig" 
+  "gdk-pixbuf2" 
+  "gdm" 
+  "geoclue2-libs" {>= "2.3.1"}
+  "geocode-glib" 
+  "glib2" {>= "2.63.1"}
+  "glibc" 
+  "gnome-desktop4" {>= "44.0"}
+  "gtk4" 
+  "ibus-libs" 
+  "krb5-libs" 
+  "libadwaita" 
+  "libgcc" 
+  "libgweather" 
+  "libnma-gtk4" 
+  "libpwquality" 
+  "libsecret" 
+  "pango" 
+  "polkit" 
+  "polkit-libs" 
+  "shadow-utils" 
+  "tecla" 
+  "webkitgtk6-0" 
+]
+extra-source "gnome-initial-setup-46.alpha-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-initial-setup-46.alpha-12.fc40.x86_64.rpm"
+}

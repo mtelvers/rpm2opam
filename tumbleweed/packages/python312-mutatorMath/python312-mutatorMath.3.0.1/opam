@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-mutatorMath-3.0.1-4.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-mutatorMath-3.0.1-4.11.noarch.rpm"]
+depends: [
+  "python312-FontTools" 
+  "python312-base" {= "3.12"}
+  "python312-defcon" 
+  "python312-fontMath" 
+  "python312-fs" 
+]
+extra-source "python312-mutatorMath-3.0.1-4.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-mutatorMath-3.0.1-4.11.noarch.rpm"
+}

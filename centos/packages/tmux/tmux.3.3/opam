@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tmux-3.3a-10.20230918gitb202a2f.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tmux-3.3a-10.20230918gitb202a2f.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libevent" 
+  "ncurses-libs" 
+  "systemd-libs" 
+]
+extra-source "tmux-3.3a-10.20230918gitb202a2f.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/tmux-3.3a-10.20230918gitb202a2f.el10.x86_64.rpm"
+}

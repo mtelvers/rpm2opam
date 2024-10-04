@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-BerkeleyDB-0.65-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-BerkeleyDB-0.65-8.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libdb" {= "5.3.28"}
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-IO" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-BerkeleyDB-0.65-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-BerkeleyDB-0.65-8.fc40.x86_64.rpm"
+}

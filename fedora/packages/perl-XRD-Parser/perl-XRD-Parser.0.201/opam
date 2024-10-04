@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-XRD-Parser-0.201-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XRD-Parser-0.201-14.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" {>= "0"}
+  "perl-Digest-SHA" {>= "0"}
+  "perl-Encode" {>= "0"}
+  "perl-HTTP-Link-Parser" {>= "0.102"}
+  "perl-RDF-Trine" {>= "0.135"}
+  "perl-Role-Commons" {>= "0"}
+  "perl-Scalar-List-Utils" {>= "0"}
+  "perl-URI" {>= "0"}
+  "perl-XML-LibXML" {>= "1.70"}
+  "perl-constant" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-libwww-perl" {>= "0"}
+]
+extra-source "perl-XRD-Parser-0.201-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-XRD-Parser-0.201-14.fc40.noarch.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-educe+default-devel-0.4.23-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-educe+default-devel-0.4.23-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-educe+Clone-devel" {= "0.4.23"}
+  "rust-educe+Copy-devel" {= "0.4.23"}
+  "rust-educe+Debug-devel" {= "0.4.23"}
+  "rust-educe+Default-devel" {= "0.4.23"}
+  "rust-educe+Deref-devel" {= "0.4.23"}
+  "rust-educe+DerefMut-devel" {= "0.4.23"}
+  "rust-educe+Eq-devel" {= "0.4.23"}
+  "rust-educe+Hash-devel" {= "0.4.23"}
+  "rust-educe+Ord-devel" {= "0.4.23"}
+  "rust-educe+PartialEq-devel" {= "0.4.23"}
+  "rust-educe+PartialOrd-devel" {= "0.4.23"}
+  "rust-educe-devel" {= "0.4.23"}
+]
+extra-source "rust-educe+default-devel-0.4.23-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-educe+default-devel-0.4.23-2.fc40.noarch.rpm"
+}

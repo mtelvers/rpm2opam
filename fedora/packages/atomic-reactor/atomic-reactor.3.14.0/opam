@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "atomic-reactor-3.14.0-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "atomic-reactor-3.14.0-7.fc40.noarch.rpm"]
+depends: [
+  "git" {>= "1.7.10"}
+  "python3" 
+  "python3-atomic-reactor" {= "3.14.0"}
+]
+extra-source "atomic-reactor-3.14.0-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/atomic-reactor-3.14.0-7.fc40.noarch.rpm"
+}

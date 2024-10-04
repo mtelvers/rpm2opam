@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libpanel-devel-1.6.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpanel-devel-1.6.0-1.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.74"}
+  "gtk4-devel" {>= "4.8"}
+  "libadwaita-devel" {>= "1.2"}
+  "libpanel" {= "1.6.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libpanel-devel-1.6.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libpanel-devel-1.6.0-1.fc40.x86_64.rpm"
+}

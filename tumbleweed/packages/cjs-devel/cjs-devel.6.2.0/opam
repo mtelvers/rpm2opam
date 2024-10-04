@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cjs-devel-6.2.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cjs-devel-6.2.0-1.1.x86_64.rpm"]
+depends: [
+  "cairo-devel" 
+  "cjs" {= "6.2.0"}
+  "glib2-devel" {>= "2.66.0"}
+  "gobject-introspection-devel" {>= "1.66.0"}
+  "libcjs0" {= "6.2.0"}
+  "libffi-devel" 
+  "mozjs115-devel" 
+  "pkgconf-pkg-config" 
+  "typelib-1_0-CjsPrivate-1_0" {= "6.2.0"}
+]
+extra-source "cjs-devel-6.2.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cjs-devel-6.2.0-1.1.x86_64.rpm"
+}

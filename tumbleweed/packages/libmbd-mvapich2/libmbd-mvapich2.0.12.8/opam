@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmbd-mvapich2-0.12.8-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmbd-mvapich2-0.12.8-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libblas3" 
+  "libgcc_s1" 
+  "libgfortran5" 
+  "liblapack3" 
+  "libscalapack2-mvapich2" 
+  "mpich" 
+]
+extra-source "libmbd-mvapich2-0.12.8-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmbd-mvapich2-0.12.8-1.2.x86_64.rpm"
+}

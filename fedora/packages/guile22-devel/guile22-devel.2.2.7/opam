@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "guile22-devel-2.2.7-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "guile22-devel-2.2.7-11.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gc-devel" 
+  "gmp-devel" 
+  "guile22" {= "2.2.7"}
+  "pkgconf-pkg-config" 
+]
+extra-source "guile22-devel-2.2.7-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/guile22-devel-2.2.7-11.fc40.x86_64.rpm"
+}

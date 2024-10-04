@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mlterm-scim-3.9.3-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mlterm-scim-3.9.3-5.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "mlterm-common" 
+  "scim" 
+]
+extra-source "mlterm-scim-3.9.3-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mlterm-scim-3.9.3-5.2.x86_64.rpm"
+}

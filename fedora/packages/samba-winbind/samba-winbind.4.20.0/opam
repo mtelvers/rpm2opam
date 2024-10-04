@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "samba-winbind-4.20.0-0.5.rc4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "samba-winbind-4.20.0-0.5.rc4.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "gnutls" 
+  "krb5-libs" 
+  "libcom_err" 
+  "libldb" 
+  "libtalloc" 
+  "libtdb" 
+  "libtevent" 
+  "libwbclient" {= "4.20.0"}
+  "openldap" 
+  "popt" 
+  "samba-client-libs" 
+  "samba-common" {= "4.20.0"}
+  "samba-common-libs" 
+  "samba-common-tools" {= "4.20.0"}
+  "samba-dcerpc" {= "4.20.0"}
+  "samba-libs" 
+  "samba-winbind-modules" {= "4.20.0"}
+]
+extra-source "samba-winbind-4.20.0-0.5.rc4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/samba-winbind-4.20.0-0.5.rc4.fc40.x86_64.rpm"
+}

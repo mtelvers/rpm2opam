@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-ipaclient-4.11.1-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-ipaclient-4.11.1-4.fc40.noarch.rpm"]
+depends: [
+  "augeas-libs" {>= "1.12.0"}
+  "freeipa-client-common" {= "4.11.1"}
+  "freeipa-common" {= "4.11.1"}
+  "python3" {= "3.12"}
+  "python3-augeas" 
+  "python3-dns" {>= "1.15"}
+  "python3-ipalib" {= "4.11.1"}
+  "python3-jinja2" 
+]
+extra-source "python3-ipaclient-4.11.1-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-ipaclient-4.11.1-4.fc40.noarch.rpm"
+}

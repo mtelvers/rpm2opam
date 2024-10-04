@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-gom-0.5.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-gom-0.5.3-1.1.x86_64.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "typelib-1_0-Gom-1_0" 
+]
+extra-source "python3-gom-0.5.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python3-gom-0.5.3-1.1.x86_64.rpm"
+}

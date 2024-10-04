@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ciano-0.2.4-1.33.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ciano-0.2.4-1.33.x86_64.rpm"]
+depends: [
+  "ImageMagick" 
+  "ffmpeg-4" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgee-0_8-2" 
+  "libgranite6" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+]
+extra-source "ciano-0.2.4-1.33.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ciano-0.2.4-1.33.x86_64.rpm"
+}

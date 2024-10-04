@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mailgraph-apache-1.14-10.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mailgraph-apache-1.14-10.2.noarch.rpm"]
+depends: [
+  "apache2-mod_perl" 
+  "mailgraph" {= "1.14"}
+  "perl-base" 
+]
+extra-source "mailgraph-apache-1.14-10.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mailgraph-apache-1.14-10.2.noarch.rpm"
+}

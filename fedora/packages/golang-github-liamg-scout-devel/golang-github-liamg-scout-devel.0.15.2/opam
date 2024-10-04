@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-liamg-scout-devel-0.15.2-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-liamg-scout-devel-0.15.2-6.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-avast-retry-devel" 
+  "golang-github-liamg-tml-devel" 
+  "golang-github-sirupsen-logrus-devel" 
+  "golang-github-spf13-cobra-devel" 
+]
+extra-source "golang-github-liamg-scout-devel-0.15.2-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-liamg-scout-devel-0.15.2-6.fc40.noarch.rpm"
+}

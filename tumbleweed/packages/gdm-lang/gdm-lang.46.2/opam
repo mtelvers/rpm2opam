@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gdm-lang-46.2-6.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdm-lang-46.2-6.1.noarch.rpm"]
+depends: [
+  "gdm" {= "46.2"}
+]
+extra-source "gdm-lang-46.2-6.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gdm-lang-46.2-6.1.noarch.rpm"
+}

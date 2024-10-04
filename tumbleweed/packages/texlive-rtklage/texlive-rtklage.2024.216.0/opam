@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-rtklage-2024.216.svn15878-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-rtklage-2024.216.svn15878-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-babel" 
+  "texlive-eso-pic" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-graphics" 
+  "texlive-jura" 
+  "texlive-koma-script" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-numprint" 
+  "texlive-oberdiek" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tools" 
+]
+extra-source "texlive-rtklage-2024.216.svn15878-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-rtklage-2024.216.svn15878-56.1.noarch.rpm"
+}

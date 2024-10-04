@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "remmina-1.4.35-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "remmina-1.4.35-2.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libappindicator3-1" 
+  "libavahi-client3" 
+  "libavahi-common3" 
+  "libavahi-ui-gtk3-0" 
+  "libcairo2" 
+  "libcurl-mini4" 
+  "libgcrypt20" 
+  "libgtk-3-0" 
+  "libjson-glib-1_0-0" 
+  "libopenssl3" 
+  "libpango-1_0-0" 
+  "libsodium26" 
+  "libssh4" 
+  "libvte-2_91-0" 
+]
+extra-source "remmina-1.4.35-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/remmina-1.4.35-2.2.x86_64.rpm"
+}

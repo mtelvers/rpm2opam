@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lemonldap-ng-selinux-2.18.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lemonldap-ng-selinux-2.18.2-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "libselinux-utils" 
+  "policycoreutils" 
+  "policycoreutils-python-utils" 
+  "selinux-policy" {>= "40.11"}
+  "selinux-policy-targeted" 
+]
+extra-source "lemonldap-ng-selinux-2.18.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lemonldap-ng-selinux-2.18.2-1.fc40.noarch.rpm"
+}

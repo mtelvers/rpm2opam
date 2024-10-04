@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ior-3.3.0-3.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ior-3.3.0-3.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libhdf5-200" 
+  "librados2" 
+  "openmpi4-libs" 
+]
+extra-source "ior-3.3.0-3.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ior-3.3.0-3.4.x86_64.rpm"
+}

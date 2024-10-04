@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-hudl-fargo-devel-1.4.0-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-hudl-fargo-devel-1.4.0-7.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-cenkalti-backoff-4-devel" 
+  "go-filesystem" 
+  "golang-github-clbanning-mxj-devel" 
+  "golang-github-franela-goreq-devel" 
+  "golang-github-miekg-dns-devel" 
+  "golang-github-op-logging-devel" 
+  "golang-gopkg-gcfg-1-devel" 
+]
+extra-source "golang-github-hudl-fargo-devel-1.4.0-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-hudl-fargo-devel-1.4.0-7.fc40.noarch.rpm"
+}

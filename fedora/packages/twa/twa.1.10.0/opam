@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "twa-1.10.0-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "twa-1.10.0-8.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "bind-utils" 
+  "curl" 
+  "gawk" 
+  "jq" 
+  "nmap-ncat" 
+]
+extra-source "twa-1.10.0-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/twa-1.10.0-8.fc40.noarch.rpm"
+}

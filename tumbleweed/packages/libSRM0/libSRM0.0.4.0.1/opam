@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libSRM0-0.4.0.1-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libSRM0-0.4.0.1-1.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libdisplay-info2" 
+  "libdrm2" 
+  "libgbm1" 
+  "libglvnd" 
+  "libudev-mini1" 
+]
+extra-source "libSRM0-0.4.0.1-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libSRM0-0.4.0.1-1.4.x86_64.rpm"
+}

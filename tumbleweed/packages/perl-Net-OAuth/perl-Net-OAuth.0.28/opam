@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Net-OAuth-0.28-5.33.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-OAuth-0.28-5.33.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Accessor" {>= "0.31"}
+  "perl-Class-Data-Inheritable" {>= "0.6"}
+  "perl-Digest-HMAC" {>= "1.1"}
+  "perl-Digest-SHA1" {>= "2.12"}
+  "perl-URI" {>= "3.28"}
+  "perl-base" {>= "5.47"}
+  "perl-libwww-perl" {>= "1"}
+]
+extra-source "perl-Net-OAuth-0.28-5.33.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Net-OAuth-0.28-5.33.noarch.rpm"
+}

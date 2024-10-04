@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zlib-ng-devel-2.1.6-lp160.1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zlib-ng-devel-2.1.6-lp160.1.4.x86_64.rpm"]
+depends: [
+  "libz-ng2" {= "2.1.6"}
+  "pkgconf-pkg-config" 
+]
+extra-source "zlib-ng-devel-2.1.6-lp160.1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/zlib-ng-devel-2.1.6-lp160.1.4.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-iwlib-1.6.2-1.26.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-iwlib-1.6.2-1.26.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libiw30" 
+  "python312-base" {= "3.12"}
+  "python312-cffi" 
+]
+extra-source "python312-iwlib-1.6.2-1.26.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-iwlib-1.6.2-1.26.x86_64.rpm"
+}

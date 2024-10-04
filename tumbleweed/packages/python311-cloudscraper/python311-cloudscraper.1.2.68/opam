@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-cloudscraper-1.2.68-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-cloudscraper-1.2.68-1.2.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-pyparsing" {>= "2.4.7"}
+  "python311-requests" {>= "2.9.2"}
+  "python311-requests-toolbelt" {>= "0.9.1"}
+]
+extra-source "python311-cloudscraper-1.2.68-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-cloudscraper-1.2.68-1.2.noarch.rpm"
+}

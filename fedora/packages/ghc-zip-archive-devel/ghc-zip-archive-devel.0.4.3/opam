@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-zip-archive-devel-0.4.3-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-zip-archive-devel-0.4.3-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-array-devel" 
+  "ghc-base-devel" 
+  "ghc-binary-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-digest-devel" 
+  "ghc-directory-devel" 
+  "ghc-filepath-devel" 
+  "ghc-mtl-devel" 
+  "ghc-pretty-devel" 
+  "ghc-text-devel" 
+  "ghc-time-devel" 
+  "ghc-unix-devel" 
+  "ghc-zip-archive" {= "0.4.3"}
+  "ghc-zlib-devel" 
+]
+extra-source "ghc-zip-archive-devel-0.4.3-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-zip-archive-devel-0.4.3-3.fc40.x86_64.rpm"
+}

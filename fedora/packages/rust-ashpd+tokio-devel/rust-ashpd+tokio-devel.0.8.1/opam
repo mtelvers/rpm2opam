@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ashpd+tokio-devel-0.8.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ashpd+tokio-devel-0.8.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-ashpd-devel" {= "0.8.1"}
+  "rust-tokio+fs-devel" 
+  "rust-tokio+io-util-devel" 
+  "rust-tokio-devel" 
+  "rust-zbus+tokio-devel" 
+]
+extra-source "rust-ashpd+tokio-devel-0.8.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ashpd+tokio-devel-0.8.1-1.fc40.noarch.rpm"
+}

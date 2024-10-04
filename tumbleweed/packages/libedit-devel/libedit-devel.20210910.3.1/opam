@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libedit-devel-20210910.3.1-2.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libedit-devel-20210910.3.1-2.7.x86_64.rpm"]
+depends: [
+  "glibc-devel" 
+  "libedit0" {= "20210910.3.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libedit-devel-20210910.3.1-2.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libedit-devel-20210910.3.1-2.7.x86_64.rpm"
+}

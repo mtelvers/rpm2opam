@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "winpdb-2.0.0-0.17.dev5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "winpdb-2.0.0-0.17.dev5.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-crypto" 
+  "python3-wxpython4" 
+]
+extra-source "winpdb-2.0.0-0.17.dev5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/winpdb-2.0.0-0.17.dev5.fc40.noarch.rpm"
+}

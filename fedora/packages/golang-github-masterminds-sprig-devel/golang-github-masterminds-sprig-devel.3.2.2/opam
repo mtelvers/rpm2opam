@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-masterminds-sprig-devel-3.2.2-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-masterminds-sprig-devel-3.2.2-8.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-imdario-mergo-devel" 
+  "compat-golang-github-masterminds-semver-3-devel" 
+  "go-filesystem" 
+  "golang-github-google-uuid-devel" 
+  "golang-github-huandu-xstrings-devel" 
+  "golang-github-masterminds-goutils-devel" 
+  "golang-github-mitchellh-copystructure-devel" 
+  "golang-github-shopspring-decimal-devel" 
+  "golang-github-spf13-cast-devel" 
+  "golang-x-crypto-devel" 
+]
+extra-source "golang-github-masterminds-sprig-devel-3.2.2-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-masterminds-sprig-devel-3.2.2-8.fc40.noarch.rpm"
+}

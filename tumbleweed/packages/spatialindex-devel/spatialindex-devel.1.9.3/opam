@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "spatialindex-devel-1.9.3-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "spatialindex-devel-1.9.3-3.2.x86_64.rpm"]
+depends: [
+  "libspatialindex6" {= "1.9.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "spatialindex-devel-1.9.3-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/spatialindex-devel-1.9.3-3.2.x86_64.rpm"
+}

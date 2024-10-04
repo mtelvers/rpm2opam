@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Net-CardDAVTalk-0.09-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-CardDAVTalk-0.09-20.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Encode" 
+  "perl-File-MMagic" {>= "1.30"}
+  "perl-List-MoreUtils" {>= "0.1"}
+  "perl-List-Pairwise" {>= "1.0"}
+  "perl-MIME-Base64" 
+  "perl-Net-DAVTalk" {>= "0.8"}
+  "perl-Text-VCardFast" {>= "0.7"}
+  "perl-TimeDate" {>= "2.24"}
+  "perl-URI" 
+  "perl-XML-Spice" {>= "0.4"}
+  "perl-base" 
+  "perl-libs" {>= "5.14.0"}
+]
+extra-source "perl-Net-CardDAVTalk-0.09-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Net-CardDAVTalk-0.09-20.fc40.noarch.rpm"
+}

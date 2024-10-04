@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-k8s-client-devel-1.22.0-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-k8s-client-devel-1.22.0-8.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-imdario-mergo-devel" 
+  "compat-golang-k8s-klog-2-devel" 
+  "compat-golang-sigs-k8s-structured-merge-diff-4-devel" 
+  "go-filesystem" 
+  "golang-github-davecgh-spew-devel" 
+  "golang-github-evanphx-json-patch-devel" 
+  "golang-github-googleapis-gnostic-devel" 
+  "golang-github-gregjones-httpcache-devel" 
+  "golang-github-groupcache-devel" 
+  "golang-github-peterbourgon-diskv-devel" 
+  "golang-github-protobuf-devel" 
+  "golang-github-spf13-pflag-devel" 
+  "golang-k8s-api-devel" 
+  "golang-k8s-apimachinery-devel" 
+  "golang-k8s-utils-devel" 
+  "golang-x-net-devel" 
+  "golang-x-oauth2-devel" 
+  "golang-x-term-devel" 
+  "golang-x-time-devel" 
+]
+extra-source "golang-k8s-client-devel-1.22.0-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-k8s-client-devel-1.22.0-8.fc40.noarch.rpm"
+}

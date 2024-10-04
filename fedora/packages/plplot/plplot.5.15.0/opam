@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "plplot-5.15.0-63.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plplot-5.15.0-63.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gnu-free-mono-fonts" 
+  "gnu-free-sans-fonts" 
+  "gnu-free-serif-fonts" 
+  "plplot-libs" 
+  "python3" {= "3.12"}
+  "python3-libs" 
+  "python3-numpy" 
+]
+extra-source "plplot-5.15.0-63.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/plplot-5.15.0-63.fc40.x86_64.rpm"
+}

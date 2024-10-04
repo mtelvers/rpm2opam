@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-cryst-4.1.27-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-cryst-4.1.27-1.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gap" {>= "4.11"}
+  "gap-polycyclic" {>= "2.16"}
+]
+extra-source "gap-cryst-4.1.27-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-cryst-4.1.27-1.3.noarch.rpm"
+}

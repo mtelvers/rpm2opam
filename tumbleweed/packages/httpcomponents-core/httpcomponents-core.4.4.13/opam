@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "httpcomponents-core-4.4.13-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "httpcomponents-core-4.4.13-3.2.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "httpcomponents-core-4.4.13-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/httpcomponents-core-4.4.13-3.2.noarch.rpm"
+}

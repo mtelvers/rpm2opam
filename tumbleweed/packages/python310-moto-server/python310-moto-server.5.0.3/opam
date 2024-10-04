@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-moto-server-5.0.3-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-moto-server-5.0.3-1.2.noarch.rpm"]
+depends: [
+  "python310-Flask" 
+  "python310-Flask-Cors" 
+  "python310-moto-all" {= "5.0.3"}
+]
+extra-source "python310-moto-server-5.0.3-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-moto-server-5.0.3-1.2.noarch.rpm"
+}

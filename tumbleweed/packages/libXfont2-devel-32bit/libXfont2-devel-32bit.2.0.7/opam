@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libXfont2-devel-32bit-2.0.7-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libXfont2-devel-32bit-2.0.7-1.1.x86_64.rpm"]
+depends: [
+  "freetype2-devel" 
+  "libXfont2-2-32bit" {= "2.0.7"}
+  "libXfont2-devel" {= "2.0.7"}
+  "libfontenc-devel" 
+  "pkgconf-pkg-config" 
+  "xorgproto-devel" 
+  "zlib-devel" 
+]
+extra-source "libXfont2-devel-32bit-2.0.7-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libXfont2-devel-32bit-2.0.7-1.1.x86_64.rpm"
+}

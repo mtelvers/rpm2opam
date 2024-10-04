@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-bundle-plugin-5.1.9-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-bundle-plugin-5.1.9-3.1.noarch.rpm"]
+depends: [
+  "aqute-bndlib" 
+  "felix-bundlerepository" 
+  "felix-utils" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "jdom" 
+  "maven-archiver" 
+  "maven-dependency-tree" 
+  "maven-doxia-sink-api" 
+  "maven-doxia-sitetools" 
+  "maven-reporting-api" 
+  "osgi-core" 
+  "plexus-build-api0" 
+  "plexus-utils" 
+  "slf4j" 
+]
+extra-source "maven-bundle-plugin-5.1.9-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-bundle-plugin-5.1.9-3.1.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "apache-commons-el-1.0-5.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apache-commons-el-1.0-5.1.noarch.rpm"]
+depends: [
+  "apache-commons-logging" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "apache-commons-el-1.0-5.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/apache-commons-el-1.0-5.1.noarch.rpm"
+}

@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "blogilo-17.08.3-30.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "blogilo-17.08.3-30.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "blogilo-libs" {= "17.8.3"}
+  "glibc" 
+  "hicolor-icon-theme" 
+  "kf5-kblog" 
+  "kf5-kconfig-core" 
+  "kf5-kconfig-gui" 
+  "kf5-kconfigwidgets" 
+  "kf5-kcoreaddons" 
+  "kf5-kcrash" 
+  "kf5-kdbusaddons" 
+  "kf5-ki18n" 
+  "kf5-kio-core-libs" 
+  "kf5-kio-file-widgets" 
+  "kf5-knotifications" 
+  "kf5-ktexteditor" 
+  "kf5-ktextwidgets" 
+  "kf5-kwallet-libs" 
+  "kf5-kwidgetsaddons" 
+  "kf5-kxmlgui" 
+  "kf5-messagelib-libs" 
+  "kf5-pimcommon" 
+  "libgcc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtwebengine" 
+]
+extra-source "blogilo-17.08.3-30.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/blogilo-17.08.3-30.fc40.x86_64.rpm"
+}

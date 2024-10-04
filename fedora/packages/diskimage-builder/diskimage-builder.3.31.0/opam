@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "diskimage-builder-3.31.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "diskimage-builder-3.31.0-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "curl" 
+  "dosfstools" 
+  "e2fsprogs" 
+  "gdisk" 
+  "git-core" 
+  "kpartx" 
+  "lvm2" 
+  "python3" 
+  "python3-flake8" 
+  "python3-jsonschema" {>= "3.0.2"}
+  "python3-networkx" {>= "2.3"}
+  "python3-pyyaml" {>= "3.12"}
+  "python3-stevedore" {>= "1.20"}
+  "qemu-img" 
+  "tar" 
+  "xfsprogs" 
+]
+extra-source "diskimage-builder-3.31.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/diskimage-builder-3.31.0-4.fc40.noarch.rpm"
+}

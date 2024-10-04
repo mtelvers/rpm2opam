@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xmpsolve-3.2.1-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xmpsolve-3.2.1-20.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gmp" 
+  "hicolor-icon-theme" 
+  "libgcc" 
+  "libstdc++" 
+  "mpsolve-libs" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtdeclarative" 
+  "shared-mime-info" 
+]
+extra-source "xmpsolve-3.2.1-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xmpsolve-3.2.1-20.fc40.x86_64.rpm"
+}

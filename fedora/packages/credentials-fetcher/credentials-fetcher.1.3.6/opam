@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "credentials-fetcher-1.3.6-0.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "credentials-fetcher-1.3.6-0.fc40.x86_64.rpm"]
+depends: [
+  "abseil-cpp" 
+  "awscli2" 
+  "bind-utils" 
+  "dotnet-runtime-6-0" 
+  "glib2" 
+  "glibc" 
+  "grpc" 
+  "grpc-cpp" 
+  "jsoncpp" 
+  "krb5-libs" 
+  "libcom_err" 
+  "libgcc" 
+  "libkadm5" 
+  "libstdc++" 
+  "openldap" 
+  "openldap-clients" 
+  "openssl-libs" 
+  "protobuf" 
+  "systemd-libs" 
+]
+extra-source "credentials-fetcher-1.3.6-0.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/credentials-fetcher-1.3.6-0.fc40.x86_64.rpm"
+}

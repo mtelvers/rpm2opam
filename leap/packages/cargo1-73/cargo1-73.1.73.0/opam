@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cargo1.73-1.73.0-slfo.1.1.27.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cargo1.73-1.73.0-slfo.1.1.27.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcurl-mini4" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libz-ng-compat1" 
+  "rust1-73" {= "1.73.0"}
+]
+extra-source "cargo1.73-1.73.0-slfo.1.1.27.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/cargo1.73-1.73.0-slfo.1.1.27.x86_64.rpm"
+}

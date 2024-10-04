@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pagein-bash-completion-0.01.09-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pagein-bash-completion-0.01.09-1.6.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "pagein" {= "0.1.9"}
+]
+extra-source "pagein-bash-completion-0.01.09-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pagein-bash-completion-0.01.09-1.6.noarch.rpm"
+}

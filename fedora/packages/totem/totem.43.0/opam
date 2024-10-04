@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "totem-43.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "totem-43.0-4.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "cairo-gobject" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gnome-desktop3" 
+  "gobject-introspection" 
+  "grilo" 
+  "grilo-plugins" 
+  "gsettings-desktop-schemas" 
+  "gstreamer1" 
+  "gstreamer1-plugins-base" {>= "1.6.0"}
+  "gstreamer1-plugins-good" 
+  "gstreamer1-plugins-good-gtk" 
+  "gstreamer1-plugins-ugly-free" 
+  "gtk3" {>= "3.19.4"}
+  "gvfs-fuse" 
+  "iso-codes" 
+  "libgcc" 
+  "libhandy" 
+  "libpeas1" 
+  "libpeas1-gtk" 
+  "libpeas1-loader-python3" 
+  "libportal" 
+  "libportal-gtk3" 
+  "pango" 
+  "python3-gobject" 
+  "totem-pl-parser" 
+  "totem-video-thumbnailer" {= "43.0"}
+]
+extra-source "totem-43.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/totem-43.0-4.fc40.x86_64.rpm"
+}

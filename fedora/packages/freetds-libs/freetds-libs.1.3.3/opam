@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "freetds-libs-1.3.3-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freetds-libs-1.3.3-7.fc40.x86_64.rpm"]
+depends: [
+  "freetds" {= "1.3.3"}
+  "glibc" 
+  "gmp" 
+  "gnutls" 
+  "krb5-libs" 
+  "nettle" 
+  "unixODBC" 
+]
+extra-source "freetds-libs-1.3.3-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/freetds-libs-1.3.3-7.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pqiv-ffmpeg-2.13.1-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pqiv-ffmpeg-2.13.1-1.2.x86_64.rpm"]
+depends: [
+  "ffmpeg-7-mini-libs" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libgtk-3-0" 
+  "pqiv" {= "2.13.1"}
+]
+extra-source "pqiv-ffmpeg-2.13.1-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pqiv-ffmpeg-2.13.1-1.2.x86_64.rpm"
+}

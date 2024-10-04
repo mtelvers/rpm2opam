@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "open-isns-0.102-2.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "open-isns-0.102-2.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "glibc" 
+  "libopenssl3" 
+  "systemd" 
+]
+extra-source "open-isns-0.102-2.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/open-isns-0.102-2.4.x86_64.rpm"
+}

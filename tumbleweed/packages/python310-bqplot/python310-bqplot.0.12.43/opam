@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-bqplot-0.12.43-8.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-bqplot-0.12.43-8.2.noarch.rpm"]
+depends: [
+  "jupyter-bqplot-notebook" {= "0.5.44"}
+  "python310-base" {= "3.10"}
+  "python310-ipywidgets" 
+  "python310-numpy" {>= "1.10.4"}
+  "python310-pandas" 
+  "python310-traitlets" {>= "4.3.0"}
+  "python310-traittypes" {>= "0.0.6"}
+]
+extra-source "python310-bqplot-0.12.43-8.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-bqplot-0.12.43-8.2.noarch.rpm"
+}

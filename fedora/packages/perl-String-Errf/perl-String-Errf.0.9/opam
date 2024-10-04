@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-String-Errf-0.009-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-String-Errf-0.009-5.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Params-Util" 
+  "perl-Scalar-List-Utils" 
+  "perl-String-Formatter" {>= "0.102081"}
+  "perl-Sub-Exporter" 
+  "perl-Time-Piece" 
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-String-Errf-0.009-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-String-Errf-0.009-5.fc40.noarch.rpm"
+}

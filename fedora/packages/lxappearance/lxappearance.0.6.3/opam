@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lxappearance-0.6.3^20230917git655fd083-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lxappearance-0.6.3^20230917git655fd083-3.fc40.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "libX11" 
+  "lxsession" {>= "0.4.0"}
+]
+extra-source "lxappearance-0.6.3^20230917git655fd083-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lxappearance-0.6.3^20230917git655fd083-3.fc40.x86_64.rpm"
+}

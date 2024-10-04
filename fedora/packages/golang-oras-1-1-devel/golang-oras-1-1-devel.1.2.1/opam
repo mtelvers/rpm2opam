@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-oras-1-1-devel-1.2.1-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-oras-1-1-devel-1.2.1-5.fc40.noarch.rpm"]
+depends: [
+  "containerd-devel" 
+  "go-filesystem" 
+  "golang-github-distribution-3-devel" 
+  "golang-github-docker-cli-devel" 
+  "golang-github-docker-connections-devel" 
+  "golang-github-docker-devel" 
+  "golang-github-opencontainers-digest-devel" 
+  "golang-github-opencontainers-image-spec-devel" 
+  "golang-github-pkg-errors-devel" 
+  "golang-github-sirupsen-logrus-devel" 
+  "golang-x-sync-devel" 
+]
+extra-source "golang-oras-1-1-devel-1.2.1-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-oras-1-1-devel-1.2.1-5.fc40.noarch.rpm"
+}

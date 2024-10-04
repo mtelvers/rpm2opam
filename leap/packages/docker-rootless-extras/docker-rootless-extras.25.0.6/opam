@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "docker-rootless-extras-25.0.6_ce-slfo.1.1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "docker-rootless-extras-25.0.6_ce-slfo.1.1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "docker" {= "25.0.6"}
+  "fuse-overlayfs" {>= "0.7"}
+  "rootlesskit" 
+  "slirp4netns" {>= "0.4"}
+]
+extra-source "docker-rootless-extras-25.0.6_ce-slfo.1.1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/docker-rootless-extras-25.0.6_ce-slfo.1.1.1.noarch.rpm"
+}

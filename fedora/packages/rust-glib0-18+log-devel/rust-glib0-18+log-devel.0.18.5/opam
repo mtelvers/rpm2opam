@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-glib0.18+log-devel-0.18.5-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-glib0.18+log-devel-0.18.5-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-glib0-18+rs-log-devel" {= "0.18.5"}
+  "rust-glib0-18-devel" {= "0.18.5"}
+]
+extra-source "rust-glib0.18+log-devel-0.18.5-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-glib0.18+log-devel-0.18.5-1.fc40.noarch.rpm"
+}

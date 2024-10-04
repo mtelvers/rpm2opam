@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "waynergy-0.17+0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "waynergy-0.17+0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libtls29" 
+  "libwayland-client0" 
+  "libxkbcommon0" 
+]
+extra-source "waynergy-0.17+0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/waynergy-0.17+0-1.1.x86_64.rpm"
+}

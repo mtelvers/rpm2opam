@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postgresql15-orafce-4.13.0+git3.25d74aa-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql15-orafce-4.13.0+git3.25d74aa-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "postgresql15-server" {= "15.8"}
+]
+extra-source "postgresql15-orafce-4.13.0+git3.25d74aa-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/postgresql15-orafce-4.13.0+git3.25d74aa-1.1.x86_64.rpm"
+}

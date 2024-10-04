@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-ipython-8.27.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-ipython-8.27.0-1.1.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "python310" 
+  "python310-Pygments" {>= "2.4.0"}
+  "python310-base" 
+  "python310-decorator" 
+  "python310-exceptiongroup" 
+  "python310-jedi" {>= "0.16"}
+  "python310-matplotlib-inline" 
+  "python310-pexpect" {>= "4.3"}
+  "python310-prompt_toolkit" 
+  "python310-stack-data" 
+  "python310-traitlets" {>= "5.13.0"}
+  "python310-typing_extensions" {>= "4.6"}
+]
+extra-source "python310-ipython-8.27.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-ipython-8.27.0-1.1.noarch.rpm"
+}

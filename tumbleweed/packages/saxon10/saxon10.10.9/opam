@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "saxon10-10.9-2.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "saxon10-10.9-2.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "update-alternatives" 
+]
+extra-source "saxon10-10.9-2.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/saxon10-10.9-2.4.noarch.rpm"
+}

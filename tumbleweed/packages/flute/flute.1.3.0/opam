@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "flute-1.3.0-6.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flute-1.3.0-6.11.noarch.rpm"]
+depends: [
+  "java-11-openj9" 
+  "javapackages-tools" 
+  "sac" 
+]
+extra-source "flute-1.3.0-6.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/flute-1.3.0-6.11.noarch.rpm"
+}

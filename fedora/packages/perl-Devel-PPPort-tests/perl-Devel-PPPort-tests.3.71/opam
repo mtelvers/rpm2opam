@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Devel-PPPort-tests-3.71-503.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Devel-PPPort-tests-3.71-503.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "perl-Devel-PPPort" {= "3.71"}
+  "perl-DynaLoader" 
+  "perl-File-Path" 
+  "perl-FindBin" 
+  "perl-PathTools" 
+  "perl-Test-Harness" 
+  "perl-interpreter" 
+  "perl-less" 
+  "perl-lib" 
+  "perl-libs" 
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-Devel-PPPort-tests-3.71-503.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Devel-PPPort-tests-3.71-503.fc40.x86_64.rpm"
+}

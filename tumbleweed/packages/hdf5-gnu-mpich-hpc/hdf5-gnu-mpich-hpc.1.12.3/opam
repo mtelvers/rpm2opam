@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hdf5-gnu-mpich-hpc-1.12.3-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hdf5-gnu-mpich-hpc-1.12.3-1.2.noarch.rpm"]
+depends: [
+  "hdf5_1_12_3-gnu-mpich-hpc" {= "1.12.3"}
+]
+extra-source "hdf5-gnu-mpich-hpc-1.12.3-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/hdf5-gnu-mpich-hpc-1.12.3-1.2.noarch.rpm"
+}

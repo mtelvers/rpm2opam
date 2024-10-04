@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kdb-lang-3.2.0-lp160.1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kdb-lang-3.2.0-lp160.1.2.noarch.rpm"]
+depends: [
+  "libKDb3-4" {= "3.2.0"}
+]
+extra-source "kdb-lang-3.2.0-lp160.1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/kdb-lang-3.2.0-lp160.1.2.noarch.rpm"
+}

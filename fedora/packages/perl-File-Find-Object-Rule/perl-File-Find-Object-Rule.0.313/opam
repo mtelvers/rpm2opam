@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-File-Find-Object-Rule-0.0313-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-Find-Object-Rule-0.0313-8.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Class-XSAccessor" 
+  "perl-File-Basename" 
+  "perl-File-Find-Object" 
+  "perl-Number-Compare" 
+  "perl-PathTools" 
+  "perl-Text-Glob" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-vars" 
+]
+extra-source "perl-File-Find-Object-Rule-0.0313-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-File-Find-Object-Rule-0.0313-8.fc40.noarch.rpm"
+}

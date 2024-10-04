@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libavif-devel-1.1.1-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libavif-devel-1.1.1-2.2.x86_64.rpm"]
+depends: [
+  "dav1d-devel" 
+  "libaom-devel" 
+  "libavif16" {= "1.1.1"}
+  "pkgconf-pkg-config" 
+  "rav1e-devel" 
+]
+extra-source "libavif-devel-1.1.1-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libavif-devel-1.1.1-2.2.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-calamine-devel-0.24.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-calamine-devel-0.24.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-byteorder+default-devel" 
+  "rust-codepage+default-devel" 
+  "rust-encoding_rs+default-devel" 
+  "rust-log+default-devel" 
+  "rust-quick-xml+default-devel" 
+  "rust-quick-xml+encoding-devel" 
+  "rust-serde+default-devel" 
+  "rust-zip+deflate-devel" 
+  "rust-zip-devel" 
+]
+extra-source "rust-calamine-devel-0.24.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-calamine-devel-0.24.0-1.fc40.noarch.rpm"
+}

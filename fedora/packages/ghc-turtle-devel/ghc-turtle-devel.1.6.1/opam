@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-turtle-devel-1.6.1-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-turtle-devel-1.6.1-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-ansi-wl-pprint-devel" 
+  "ghc-async-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-clock-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-directory-devel" 
+  "ghc-exceptions-devel" 
+  "ghc-filepath-devel" 
+  "ghc-foldl-devel" 
+  "ghc-hostname-devel" 
+  "ghc-managed-devel" 
+  "ghc-optional-args-devel" 
+  "ghc-optparse-applicative-devel" 
+  "ghc-process-devel" 
+  "ghc-stm-devel" 
+  "ghc-streaming-commons-devel" 
+  "ghc-temporary-devel" 
+  "ghc-text-devel" 
+  "ghc-time-devel" 
+  "ghc-transformers-devel" 
+  "ghc-turtle" {= "1.6.1"}
+  "ghc-unix-compat-devel" 
+  "ghc-unix-devel" 
+]
+extra-source "ghc-turtle-devel-1.6.1-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-turtle-devel-1.6.1-3.fc40.x86_64.rpm"
+}

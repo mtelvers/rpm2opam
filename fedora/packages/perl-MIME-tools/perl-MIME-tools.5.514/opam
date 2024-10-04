@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MIME-tools-5.514-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MIME-tools-5.514-1.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Convert-BinHex" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-File-Path" 
+  "perl-File-Temp" {>= "0.18"}
+  "perl-FileHandle" 
+  "perl-Getopt-Std" 
+  "perl-IO" 
+  "perl-IPC-Open3" 
+  "perl-MIME-Base64" {>= "2.4"}
+  "perl-MailTools" {>= "1.5"}
+  "perl-PathTools" 
+  "perl-Symbol" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" {>= "5.1.0"}
+  "perl-vars" 
+  "perl-version" 
+]
+extra-source "perl-MIME-tools-5.514-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MIME-tools-5.514-1.fc40.noarch.rpm"
+}

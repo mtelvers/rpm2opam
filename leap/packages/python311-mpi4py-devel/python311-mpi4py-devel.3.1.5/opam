@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["/usr/bin/zypper" "-n" "install" "python311-mpi4py-devel-3.1.5-slfo.1.1.18.x86_64.rpm"]
+]
+remove: [
+  ["/usr/bin/zypper" "-n" "remove" "python311-mpi4py-devel"]
+]
+depends: [
+  "python-mpi4py-common-devel" {= "3.1.5"}
+  "python311-devel" 
+  "python311-mpi4py" {= "3.1.5"}
+]
+extra-source "python311-mpi4py-devel-3.1.5-slfo.1.1.18.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/python311-mpi4py-devel-3.1.5-slfo.1.1.18.x86_64.rpm"
+}

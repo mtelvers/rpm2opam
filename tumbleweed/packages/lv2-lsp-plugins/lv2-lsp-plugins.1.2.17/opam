@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lv2-lsp-plugins-1.2.17-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lv2-lsp-plugins-1.2.17-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXrandr2" 
+  "libcairo2" 
+  "libfreetype6" 
+  "libsndfile1" 
+  "libstdc++6" 
+  "lsp-plugins-common" {= "1.2.17"}
+]
+extra-source "lv2-lsp-plugins-1.2.17-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lv2-lsp-plugins-1.2.17-1.1.x86_64.rpm"
+}

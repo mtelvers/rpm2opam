@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "v4l2loopback-autoload-0.13.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "v4l2loopback-autoload-0.13.2-1.1.noarch.rpm"]
+depends: [
+  "systemd" 
+  "v4l2loopback-kmp-default" 
+]
+extra-source "v4l2loopback-autoload-0.13.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/v4l2loopback-autoload-0.13.2-1.1.noarch.rpm"
+}

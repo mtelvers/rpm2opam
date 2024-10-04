@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-docshots-2023.201.0.0.4.0svn65141-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-docshots-2023.201.0.0.4.0svn65141-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-fancyvrb" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-graphics" 
+  "texlive-iexec" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-pdfcrop" {>= "2023"}
+  "texlive-pdftexcmds" 
+  "texlive-pgf" 
+  "texlive-pgf-blur" {>= "2023"}
+  "texlive-pgfopts" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-xcolor" 
+]
+extra-source "texlive-docshots-2023.201.0.0.4.0svn65141-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-docshots-2023.201.0.0.4.0svn65141-slfo.1.1.4.noarch.rpm"
+}

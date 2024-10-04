@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "knockd-0.8-2.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "knockd-0.8-2.11.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libpcap1" 
+  "systemd" 
+]
+extra-source "knockd-0.8-2.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/knockd-0.8-2.11.x86_64.rpm"
+}

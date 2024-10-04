@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "javacc-demo-7.0.13-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "javacc-demo-7.0.13-5.fc40.noarch.rpm"]
+depends: [
+  "javacc" {= "7.0.13"}
+]
+extra-source "javacc-demo-7.0.13-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/javacc-demo-7.0.13-5.fc40.noarch.rpm"
+}

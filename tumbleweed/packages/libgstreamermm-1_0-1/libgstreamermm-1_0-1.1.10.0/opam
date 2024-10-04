@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgstreamermm-1_0-1-1.10.0-6.15.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgstreamermm-1_0-1-1.10.0-6.15.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcc_s1" 
+  "libgiomm-2_4-1" 
+  "libglibmm-2_4-1" 
+  "libgstaudio-1_0-0" 
+  "libgstpbutils-1_0-0" 
+  "libgstreamer-1_0-0" 
+  "libgstsdp-1_0-0" 
+  "libgstvideo-1_0-0" 
+  "libsigc-2_0-0" 
+  "libstdc++6" 
+]
+extra-source "libgstreamermm-1_0-1-1.10.0-6.15.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgstreamermm-1_0-1-1.10.0-6.15.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-text-builder-linear-prof-0.1.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-text-builder-linear-prof-0.1.3-1.1.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-ghc-bignum-prof" 
+  "ghc-quote-quot-prof" 
+  "ghc-text-builder-linear-devel" {= "0.1.3"}
+  "ghc-text-prof" 
+]
+extra-source "ghc-text-builder-linear-prof-0.1.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-text-builder-linear-prof-0.1.3-1.1.x86_64.rpm"
+}

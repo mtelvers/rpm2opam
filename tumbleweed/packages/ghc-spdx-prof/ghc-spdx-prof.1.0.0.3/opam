@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-spdx-prof-1.0.0.3-2.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-spdx-prof-1.0.0.3-2.7.x86_64.rpm"]
+depends: [
+  "ghc-Cabal-prof" 
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-spdx-devel" {= "1.0.0.3"}
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-spdx-prof-1.0.0.3-2.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-spdx-prof-1.0.0.3-2.7.x86_64.rpm"
+}

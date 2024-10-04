@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pygtk2-devel-2.24.0-43.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pygtk2-devel-2.24.0-43.fc40.x86_64.rpm"]
+depends: [
+  "gtk2-devel" 
+  "pkgconf-pkg-config" 
+  "pygobject2-devel" 
+  "pygtk2" {= "2.24.0"}
+  "pygtk2-codegen" {= "2.24.0"}
+  "pygtk2-doc" {= "2.24.0"}
+  "python2-cairo-devel" 
+]
+extra-source "pygtk2-devel-2.24.0-43.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pygtk2-devel-2.24.0-43.fc40.x86_64.rpm"
+}

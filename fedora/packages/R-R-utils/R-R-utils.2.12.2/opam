@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-R.utils-2.12.2-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-R.utils-2.12.2-4.fc40.noarch.rpm"]
+depends: [
+  "R-R-methodsS3" 
+  "R-R-oo" 
+  "R-core" {= "4.3"}
+]
+extra-source "R-R.utils-2.12.2-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-R.utils-2.12.2-4.fc40.noarch.rpm"
+}

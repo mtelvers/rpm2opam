@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-constraints-devel-0.14.2-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-constraints-devel-0.14.2-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-binary-devel" 
+  "ghc-boring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-constraints" {= "0.14.2"}
+  "ghc-deepseq-devel" 
+  "ghc-hashable-devel" 
+  "ghc-mtl-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-constraints-devel-0.14.2-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-constraints-devel-0.14.2-2.1.x86_64.rpm"
+}

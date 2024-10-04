@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsensors4-devel-3.6.0-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsensors4-devel-3.6.0-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "glibc-devel" 
+  "libsensors4" {= "3.6.0"}
+]
+extra-source "libsensors4-devel-3.6.0-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libsensors4-devel-3.6.0-slfo.1.1.7.x86_64.rpm"
+}

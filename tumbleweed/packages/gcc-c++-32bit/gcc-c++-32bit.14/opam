@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcc-c++-32bit-14-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcc-c++-32bit-14-2.1.x86_64.rpm"]
+depends: [
+  "gcc-32bit" {= "14"}
+  "gcc-c++" {= "14"}
+  "gcc14-c++-32bit" 
+]
+extra-source "gcc-c++-32bit-14-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gcc-c++-32bit-14-2.1.x86_64.rpm"
+}

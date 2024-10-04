@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnetfilter_conntrack3-32bit-1.1.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnetfilter_conntrack3-32bit-1.1.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libmnl0-32bit" 
+  "libnfnetlink0-32bit" 
+]
+extra-source "libnetfilter_conntrack3-32bit-1.1.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libnetfilter_conntrack3-32bit-1.1.0-1.1.x86_64.rpm"
+}

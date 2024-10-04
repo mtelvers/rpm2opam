@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dx-4.4.4-67.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dx-4.4.4-67.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dx-libs" 
+  "glibc" 
+  "hdf" 
+  "libX11" 
+  "libXinerama" 
+  "libXpm" 
+  "libXt" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libstdc++" 
+  "mesa-libGLU" 
+  "motif" 
+  "netcdf" 
+  "openssh-clients" 
+]
+extra-source "dx-4.4.4-67.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dx-4.4.4-67.fc40.x86_64.rpm"
+}

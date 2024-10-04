@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-cornice-6.0.1-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-cornice-6.0.1-2.2.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-pyramid" {>= "1.7"}
+  "python312-venusian" 
+]
+extra-source "python312-cornice-6.0.1-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-cornice-6.0.1-2.2.noarch.rpm"
+}

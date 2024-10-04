@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cmctl-zsh-completion-2.1.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cmctl-zsh-completion-2.1.1-1.1.noarch.rpm"]
+depends: [
+  "cmctl" {= "2.1.1"}
+]
+extra-source "cmctl-zsh-completion-2.1.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cmctl-zsh-completion-2.1.1-1.1.noarch.rpm"
+}

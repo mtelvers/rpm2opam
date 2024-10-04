@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-io_forhomalg-2023.02.04-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-io_forhomalg-2023.02.04-1.2.noarch.rpm"]
+depends: [
+  "gap" {>= "4.12.1"}
+  "gap-homalgtocas" {>= "2009.6.18"}
+  "gap-io" {>= "2.3"}
+]
+extra-source "gap-io_forhomalg-2023.02.04-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-io_forhomalg-2023.02.04-1.2.noarch.rpm"
+}

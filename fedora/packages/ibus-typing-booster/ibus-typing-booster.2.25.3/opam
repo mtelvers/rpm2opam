@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ibus-typing-booster-2.25.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibus-typing-booster-2.25.3-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cldr-emoji-annotation" 
+  "ibus" {>= "1.5.3"}
+  "m17n-lib" 
+  "python3" 
+  "python3-dbus" 
+  "python3-distro" 
+  "python3-enchant" 
+  "python3-packaging" 
+  "python3-pyxdg" 
+  "unicode-ucd" 
+]
+extra-source "ibus-typing-booster-2.25.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/ibus-typing-booster-2.25.3-1.fc40.noarch.rpm"
+}

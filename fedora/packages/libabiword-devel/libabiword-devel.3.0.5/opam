@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libabiword-devel-3.0.5-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libabiword-devel-3.0.5-12.fc40.x86_64.rpm"]
+depends: [
+  "cairo-devel" 
+  "enchant-devel" {>= "1.2.0"}
+  "fribidi-devel" {>= "0.10.4"}
+  "glib2-devel" {>= "2.6.0"}
+  "goffice-devel" {>= "0.10.0"}
+  "gtk3-devel" {>= "3.0.8"}
+  "libX11-devel" 
+  "libabiword" {= "3.0.5"}
+  "libgsf-devel" {>= "1.14.18"}
+  "librsvg2-devel" {>= "2.16.0"}
+  "libxslt-devel" 
+  "pango-devel" 
+  "pkgconf-pkg-config" 
+  "wv-devel" {>= "1.2.0"}
+]
+extra-source "libabiword-devel-3.0.5-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libabiword-devel-3.0.5-12.fc40.x86_64.rpm"
+}

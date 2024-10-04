@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libvirt-daemon-driver-network-10.1.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvirt-daemon-driver-network-10.1.0-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dnsmasq" {>= "2.41"}
+  "glib2" 
+  "glibc" 
+  "iptables-legacy" 
+  "libgcc" 
+  "libtirpc" 
+  "libvirt-daemon-common" {= "10.1.0"}
+  "libvirt-libs" {= "10.1.0"}
+]
+extra-source "libvirt-daemon-driver-network-10.1.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libvirt-daemon-driver-network-10.1.0-1.fc40.x86_64.rpm"
+}

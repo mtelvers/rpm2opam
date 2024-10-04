@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-consolekit-1.7.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-consolekit-1.7.1-1.1.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-click" {>= "7.1.2"}
+  "python312-deprecation-alias" {>= "0.1.1"}
+  "python312-domdf-python-tools" {>= "3.8.0"}
+  "python312-mistletoe" {>= "0.7.2"}
+  "python312-typing_extensions" {>= "3.10.0.0"}
+]
+extra-source "python312-consolekit-1.7.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-consolekit-1.7.1-1.1.noarch.rpm"
+}

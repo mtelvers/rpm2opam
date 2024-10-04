@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openvr-samples-1.26.7-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openvr-samples-1.26.7-3.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "glibc" 
+  "libGLEW" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libstdc++" 
+  "openvr-api" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "vulkan-loader" 
+]
+extra-source "openvr-samples-1.26.7-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openvr-samples-1.26.7-3.fc40.x86_64.rpm"
+}

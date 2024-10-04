@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpsl-0.21.5-4.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpsl-0.21.5-4.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libidn2" 
+  "libunistring" 
+  "publicsuffix-list-dafsa" 
+]
+extra-source "libpsl-0.21.5-4.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/libpsl-0.21.5-4.el10.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-cinemagoer-2023.5.1-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-cinemagoer-2023.5.1-3.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-SQLAlchemy" 
+  "python311-base" 
+  "python311-lxml" 
+  "update-alternatives" 
+]
+extra-source "python311-cinemagoer-2023.5.1-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-cinemagoer-2023.5.1-3.1.noarch.rpm"
+}

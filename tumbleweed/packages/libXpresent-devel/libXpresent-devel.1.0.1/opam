@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libXpresent-devel-1.0.1-2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libXpresent-devel-1.0.1-2.5.x86_64.rpm"]
+depends: [
+  "libX11-devel" 
+  "libXext-devel" 
+  "libXfixes-devel" 
+  "libXpresent1" {= "1.0.1"}
+  "libXrandr-devel" 
+  "pkgconf-pkg-config" 
+  "xorgproto-devel" {>= "1.0"}
+]
+extra-source "libXpresent-devel-1.0.1-2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libXpresent-devel-1.0.1-2.5.x86_64.rpm"
+}

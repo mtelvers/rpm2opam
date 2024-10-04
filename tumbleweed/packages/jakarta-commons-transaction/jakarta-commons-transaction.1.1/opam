@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jakarta-commons-transaction-1.1-28.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jakarta-commons-transaction-1.1-28.11.noarch.rpm"]
+depends: [
+  "apache-commons-codec" 
+  "geronimo-jta-1_1-api" 
+  "reload4j" 
+  "xerces-j2" 
+  "xml-commons-apis" 
+]
+extra-source "jakarta-commons-transaction-1.1-28.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jakarta-commons-transaction-1.1-28.11.noarch.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-xmonad-contrib-prof-0.18.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-xmonad-contrib-prof-0.18.1-1.1.x86_64.rpm"]
+depends: [
+  "ghc-X11-prof" 
+  "ghc-X11-xft-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+  "ghc-mtl-prof" 
+  "ghc-process-prof" 
+  "ghc-random-prof" 
+  "ghc-time-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unix-prof" 
+  "ghc-utf8-string-prof" 
+  "ghc-xmonad-contrib-devel" {= "0.18.1"}
+  "ghc-xmonad-prof" 
+]
+extra-source "ghc-xmonad-contrib-prof-0.18.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-xmonad-contrib-prof-0.18.1-1.1.x86_64.rpm"
+}

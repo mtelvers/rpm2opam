@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "plasma-firewall-6.0.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plasma-firewall-6.0.3-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf6-kcmutils" 
+  "kf6-kcoreaddons" 
+  "kf6-ki18n" 
+  "libstdc++" 
+  "plasma-firewall-firewalld" {= "6.0.3"}
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qt6-qtdeclarative" 
+]
+extra-source "plasma-firewall-6.0.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/plasma-firewall-6.0.3-1.fc40.x86_64.rpm"
+}

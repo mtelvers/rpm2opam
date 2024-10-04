@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pax-3.4-44.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pax-3.4-44.fc40.x86_64.rpm"]
+depends: [
+  "alternatives" 
+  "bash" 
+  "glibc" 
+]
+extra-source "pax-3.4-44.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pax-3.4-44.fc40.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-aws-sam-translator-1.89.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-aws-sam-translator-1.89.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-base" {= "3.10"}
+  "python310-boto3" {>= "1.19.5"}
+  "python310-jsonschema" {>= "3.2"}
+  "python310-pydantic" {>= "1.8"}
+  "python310-typing_extensions" {>= "4.4.0"}
+  "update-alternatives" 
+]
+extra-source "python310-aws-sam-translator-1.89.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-aws-sam-translator-1.89.0-1.1.noarch.rpm"
+}

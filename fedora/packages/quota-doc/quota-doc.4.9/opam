@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "quota-doc-4.09-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "quota-doc-4.09-5.fc40.noarch.rpm"]
+depends: [
+  "quota" {= "4.9"}
+]
+extra-source "quota-doc-4.09-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/quota-doc-4.09-5.fc40.noarch.rpm"
+}

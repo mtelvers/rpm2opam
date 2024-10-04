@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-cmdargs-prof-0.10.22-1.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-cmdargs-prof-0.10.22-1.16.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-cmdargs-devel" {= "0.10.22"}
+  "ghc-filepath-prof" 
+  "ghc-process-prof" 
+  "ghc-template-haskell-prof" 
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-cmdargs-prof-0.10.22-1.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-cmdargs-prof-0.10.22-1.16.x86_64.rpm"
+}

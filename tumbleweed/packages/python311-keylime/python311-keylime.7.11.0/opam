@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-keylime-7.11.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-keylime-7.11.0-1.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "libtss2-tcti-device0" 
+  "libtss2-tcti-tabrmd0" 
+  "procps" 
+  "python311-PyYAML" 
+  "python311-SQLAlchemy" 
+  "python311-alembic" 
+  "python311-base" 
+  "python311-cryptography" 
+  "python311-gpg" 
+  "python311-jsonschema" 
+  "python311-lark" 
+  "python311-packaging" 
+  "python311-psutil" 
+  "python311-pyzmq" 
+  "python311-requests" 
+  "python311-tornado" 
+  "python311-typing_extensions" 
+  "tpm2-0-abrmd" 
+  "tpm2-0-tools" 
+  "tpm2-0-tss" 
+  "update-alternatives" 
+]
+extra-source "python311-keylime-7.11.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-keylime-7.11.0-1.3.noarch.rpm"
+}

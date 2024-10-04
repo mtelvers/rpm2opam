@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "compat-golang-github-azure-amqp-common-3-devel-4.2.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "compat-golang-github-azure-amqp-common-3-devel-4.2.0-3.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-azure-amqp-common-devel" {= "4.2.0"}
+]
+extra-source "compat-golang-github-azure-amqp-common-3-devel-4.2.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/compat-golang-github-azure-amqp-common-3-devel-4.2.0-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jaxb-txwc2-4.0.4-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jaxb-txwc2-4.0.4-6.fc40.noarch.rpm"]
+depends: [
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "jaxb-codemodel" {= "4.0.4"}
+  "jaxb-rngom" {= "4.0.4"}
+  "jaxb-txw2" {= "4.0.4"}
+  "jaxb-xsom" {= "4.0.4"}
+]
+extra-source "jaxb-txwc2-4.0.4-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jaxb-txwc2-4.0.4-6.fc40.noarch.rpm"
+}

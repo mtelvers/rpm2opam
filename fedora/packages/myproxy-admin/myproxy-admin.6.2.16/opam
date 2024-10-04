@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "myproxy-admin-6.2.16-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "myproxy-admin-6.2.16-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "globus-gsi-cert-utils-progs" 
+  "myproxy" {= "6.2.16"}
+  "myproxy-libs" 
+  "myproxy-server" {= "6.2.16"}
+  "perl-Data-Dumper" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Temp" 
+  "perl-File-stat" 
+  "perl-Getopt-Long" 
+  "perl-IPC-Open3" 
+  "perl-Pod-Usage" 
+  "perl-Socket" 
+  "perl-Time-Local" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "myproxy-admin-6.2.16-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/myproxy-admin-6.2.16-1.fc40.x86_64.rpm"
+}

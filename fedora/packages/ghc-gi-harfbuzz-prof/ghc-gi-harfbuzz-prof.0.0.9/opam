@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-gi-harfbuzz-prof-0.0.9-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-gi-harfbuzz-prof-0.0.9-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-gi-freetype2-prof" 
+  "ghc-gi-glib-prof" 
+  "ghc-gi-gobject-prof" 
+  "ghc-gi-harfbuzz-devel" {= "0.0.9"}
+  "ghc-haskell-gi-base-prof" 
+  "ghc-haskell-gi-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-gi-harfbuzz-prof-0.0.9-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-gi-harfbuzz-prof-0.0.9-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "debbuild-20.04.0-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "debbuild-20.04.0-13.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "bzip2" 
+  "dpkg" 
+  "dpkg-dev" 
+  "fakeroot" 
+  "gzip" 
+  "patch" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Find" 
+  "perl-Getopt-Long" 
+  "perl-Getopt-Std" 
+  "perl-IPC-Open3" 
+  "perl-Locale-gettext" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Pod-Usage" 
+  "perl-Text-Balanced" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-threads" 
+  "spax" 
+  "xz" 
+]
+extra-source "debbuild-20.04.0-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/debbuild-20.04.0-13.fc40.noarch.rpm"
+}

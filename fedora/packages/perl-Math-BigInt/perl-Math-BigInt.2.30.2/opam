@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Math-BigInt-2.0030.02-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Math-BigInt-2.0030.02-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" {>= "1.22"}
+  "perl-Exporter" 
+  "perl-Math-Complex" {>= "1.39"}
+  "perl-Scalar-List-Utils" 
+  "perl-constant" 
+  "perl-libs" {>= "5.6.1"}
+  "perl-overload" 
+]
+extra-source "perl-Math-BigInt-2.0030.02-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Math-BigInt-2.0030.02-3.fc40.noarch.rpm"
+}

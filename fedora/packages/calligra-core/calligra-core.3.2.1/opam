@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "calligra-core-3.2.1-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "calligra-core-3.2.1-29.fc40.x86_64.rpm"]
+depends: [
+  "calligra-libs" {= "3.2.1"}
+  "color-filesystem" 
+  "glibc" 
+  "kf5-kcoreaddons" 
+  "kf5-ki18n" 
+  "kf5-kio-core-libs" 
+  "kf5-kio-widgets-libs" 
+  "kf5-kservice" 
+  "kf5-kwidgetsaddons" 
+  "libstdc++" 
+  "lyx-fonts" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "calligra-core-3.2.1-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/calligra-core-3.2.1-29.fc40.x86_64.rpm"
+}

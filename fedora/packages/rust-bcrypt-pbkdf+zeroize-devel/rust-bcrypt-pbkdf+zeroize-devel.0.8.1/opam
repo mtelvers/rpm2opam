@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-bcrypt-pbkdf+zeroize-devel-0.8.1-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-bcrypt-pbkdf+zeroize-devel-0.8.1-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bcrypt-pbkdf-devel" {= "0.8.1"}
+  "rust-zeroize-devel" 
+]
+extra-source "rust-bcrypt-pbkdf+zeroize-devel-0.8.1-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-bcrypt-pbkdf+zeroize-devel-0.8.1-4.fc40.noarch.rpm"
+}

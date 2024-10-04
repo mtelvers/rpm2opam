@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgcin-im-client1-2.9.0-6.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgcin-im-client1-2.9.0-6.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libcairo2" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+]
+extra-source "libgcin-im-client1-2.9.0-6.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgcin-im-client1-2.9.0-6.2.x86_64.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "zabbix-server-mysql-6.0.27-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zabbix-server-mysql-6.0.27-1.fc40.x86_64.rpm"]
+depends: [
+  "OpenIPMI-libs" 
+  "alternatives" 
+  "bash" 
+  "glibc" 
+  "libcurl" 
+  "libevent" 
+  "libssh2" 
+  "libxml2" 
+  "mariadb-connector-c" 
+  "net-snmp-libs" 
+  "openldap" 
+  "openssl-libs" 
+  "pcre2" 
+  "unixODBC" 
+  "zabbix" {= "6.0.27"}
+  "zabbix-dbfiles-mysql" 
+  "zlib-ng-compat" 
+]
+extra-source "zabbix-server-mysql-6.0.27-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/z/zabbix-server-mysql-6.0.27-1.fc40.x86_64.rpm"
+}

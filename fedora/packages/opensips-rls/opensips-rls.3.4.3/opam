@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "opensips-rls-3.4.3-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opensips-rls-3.4.3-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libxml2" 
+  "opensips" {= "3.4.3"}
+  "opensips-presence" {= "3.4.3"}
+  "opensips-pua" {= "3.4.3"}
+  "opensips-xcap" {= "3.4.3"}
+]
+extra-source "opensips-rls-3.4.3-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/opensips-rls-3.4.3-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libgfortran-static-14.0.1-0.15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgfortran-static-14.0.1-0.15.fc40.x86_64.rpm"]
+depends: [
+  "gcc" {= "14.0.1"}
+  "libgfortran" {= "14.0.1"}
+  "libquadmath-static" {= "14.0.1"}
+]
+extra-source "libgfortran-static-14.0.1-0.15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libgfortran-static-14.0.1-0.15.fc40.x86_64.rpm"
+}

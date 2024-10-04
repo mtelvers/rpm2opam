@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-PDF-Haru-1.00-42.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-PDF-Haru-1.00-42.fc39.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libharu" 
+  "perl-AutoLoader" 
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-constant" 
+  "perl-libs" 
+]
+extra-source "perl-PDF-Haru-1.00-42.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-PDF-Haru-1.00-42.fc39.x86_64.rpm"
+}

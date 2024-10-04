@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgnunetjson0-0.21.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgnunetjson0-0.21.2-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgnunetutil16" 
+  "libjansson4" 
+  "libmicrohttpd12" 
+  "libz-ng-compat1" 
+]
+extra-source "libgnunetjson0-0.21.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgnunetjson0-0.21.2-1.1.x86_64.rpm"
+}

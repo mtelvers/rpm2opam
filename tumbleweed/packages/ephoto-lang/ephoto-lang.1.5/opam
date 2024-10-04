@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ephoto-lang-1.5-1.28.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ephoto-lang-1.5-1.28.noarch.rpm"]
+depends: [
+  "ephoto" {= "1.5"}
+]
+extra-source "ephoto-lang-1.5-1.28.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ephoto-lang-1.5-1.28.noarch.rpm"
+}

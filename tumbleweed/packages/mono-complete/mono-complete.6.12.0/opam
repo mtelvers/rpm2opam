@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mono-complete-6.12.0-7.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mono-complete-6.12.0-7.1.x86_64.rpm"]
+depends: [
+  "ibm-data-db2" {= "6.12.0"}
+  "libmono-2_0-1" {= "6.12.0"}
+  "libmono-2_0-devel" {= "6.12.0"}
+  "libmonoboehm-2_0-1" {= "6.12.0"}
+  "libmonoboehm-2_0-devel" {= "6.12.0"}
+  "libmonosgen-2_0-1" {= "6.12.0"}
+  "libmonosgen-2_0-devel" {= "6.12.0"}
+  "mono-core" {= "6.12.0"}
+  "mono-data" {= "6.12.0"}
+  "mono-data-oracle" {= "6.12.0"}
+  "mono-data-sqlite" {= "6.12.0"}
+  "mono-devel" {= "6.12.0"}
+  "mono-extras" {= "6.12.0"}
+  "mono-locale-extras" {= "6.12.0"}
+  "mono-mvc" {= "6.12.0"}
+  "mono-reactive" {= "6.12.0"}
+  "mono-wcf" {= "6.12.0"}
+  "mono-web" {= "6.12.0"}
+  "mono-winforms" {= "6.12.0"}
+  "mono-winfxcore" {= "6.12.0"}
+  "monodoc-core" {= "6.12.0"}
+]
+extra-source "mono-complete-6.12.0-7.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mono-complete-6.12.0-7.1.x86_64.rpm"
+}

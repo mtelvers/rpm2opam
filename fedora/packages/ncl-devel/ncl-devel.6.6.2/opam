@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ncl-devel-6.6.2-41.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ncl-devel-6.6.2-41.fc40.x86_64.rpm"]
+depends: [
+  "cairo-devel" 
+  "glibc" 
+  "libgomp" 
+  "ncl" {= "6.6.2"}
+  "tcsh" 
+]
+extra-source "ncl-devel-6.6.2-41.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/ncl-devel-6.6.2-41.fc40.x86_64.rpm"
+}

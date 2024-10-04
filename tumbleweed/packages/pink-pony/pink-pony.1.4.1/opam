@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pink-pony-1.4.1-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pink-pony-1.4.1-5.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libGLU1" 
+  "libIL1" 
+  "libImath-3_1-29" 
+  "libSDL-1_2-0" 
+  "libSDL_mixer-1_2-0" 
+  "libabsl_2401_0_0" 
+  "libabsl_lite_2401_0_0" 
+  "libftgl2" 
+  "libgcc_s1" 
+  "libglfw2" 
+  "libglvnd" 
+  "libprotobuf25_4_0" 
+  "libsigc-2_0-0" 
+  "libstdc++6" 
+  "pink-pony-data" {= "1.4.1"}
+]
+extra-source "pink-pony-1.4.1-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pink-pony-1.4.1-5.2.x86_64.rpm"
+}

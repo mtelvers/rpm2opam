@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-luaquotes-2023.201.1.4.0svn65652-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-luaquotes-2023.201.1.4.0svn65652-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-filesystem" {>= "2023"}
+  "texlive-fontspec" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-luacode" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+]
+extra-source "texlive-luaquotes-2023.201.1.4.0svn65652-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-luaquotes-2023.201.1.4.0svn65652-slfo.1.1.4.noarch.rpm"
+}

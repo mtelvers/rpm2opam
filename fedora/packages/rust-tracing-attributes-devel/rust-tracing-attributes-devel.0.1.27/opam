@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tracing-attributes-devel-0.1.27-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tracing-attributes-devel-0.1.27-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.56.0"}
+  "rust-proc-macro2+default-devel" 
+  "rust-quote+default-devel" 
+  "rust-syn+clone-impls-devel" 
+  "rust-syn+extra-traits-devel" 
+  "rust-syn+full-devel" 
+  "rust-syn+parsing-devel" 
+  "rust-syn+printing-devel" 
+  "rust-syn+proc-macro-devel" 
+  "rust-syn+visit-mut-devel" 
+  "rust-syn-devel" 
+]
+extra-source "rust-tracing-attributes-devel-0.1.27-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tracing-attributes-devel-0.1.27-2.fc40.noarch.rpm"
+}

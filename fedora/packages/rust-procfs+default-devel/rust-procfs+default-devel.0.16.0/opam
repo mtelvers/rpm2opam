@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-procfs+default-devel-0.16.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-procfs+default-devel-0.16.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-procfs+chrono-devel" {= "0.16.0"}
+  "rust-procfs+flate2-devel" {= "0.16.0"}
+  "rust-procfs-core+default-devel" 
+  "rust-procfs-devel" {= "0.16.0"}
+]
+extra-source "rust-procfs+default-devel-0.16.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-procfs+default-devel-0.16.0-3.fc40.noarch.rpm"
+}

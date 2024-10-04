@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnvidia-egl-wayland1-1.1.16-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnvidia-egl-wayland1-1.1.16-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libdrm2" 
+  "libwayland-client0" 
+  "libwayland-server0" 
+]
+extra-source "libnvidia-egl-wayland1-1.1.16-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libnvidia-egl-wayland1-1.1.16-1.1.x86_64.rpm"
+}

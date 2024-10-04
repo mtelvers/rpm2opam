@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-pyqtchart-5.15.5-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-pyqtchart-5.15.5-12.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libstdc++" 
+  "python3" {= "3.12"}
+  "python3-pyqt5-sip" 
+  "python3-qt5" 
+  "python3-qt5-base" {>= "5.15.4"}
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtcharts" 
+]
+extra-source "python3-pyqtchart-5.15.5-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-pyqtchart-5.15.5-12.fc40.x86_64.rpm"
+}

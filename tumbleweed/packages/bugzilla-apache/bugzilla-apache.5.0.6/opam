@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bugzilla-apache-5.0.6-7.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bugzilla-apache-5.0.6-7.1.noarch.rpm"]
+depends: [
+  "apache2" 
+  "apache2-mod_perl" {>= "1.999022"}
+  "system-user-wwwrun" 
+]
+extra-source "bugzilla-apache-5.0.6-7.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/bugzilla-apache-5.0.6-7.1.noarch.rpm"
+}

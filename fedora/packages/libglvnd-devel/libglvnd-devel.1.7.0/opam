@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libglvnd-devel-1.7.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libglvnd-devel-1.7.0-4.fc40.x86_64.rpm"]
+depends: [
+  "libX11-devel" 
+  "libglvnd" 
+  "libglvnd-core-devel" {= "1.7.0"}
+  "libglvnd-egl" 
+  "libglvnd-gles" 
+  "libglvnd-glx" 
+  "libglvnd-opengl" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libglvnd-devel-1.7.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libglvnd-devel-1.7.0-4.fc40.x86_64.rpm"
+}

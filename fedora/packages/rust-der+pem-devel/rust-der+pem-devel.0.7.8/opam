@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-der+pem-devel-0.7.8-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-der+pem-devel-0.7.8-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-der+alloc-devel" {= "0.7.8"}
+  "rust-der+zeroize-devel" {= "0.7.8"}
+  "rust-der-devel" {= "0.7.8"}
+  "rust-pem-rfc7468+alloc-devel" 
+  "rust-pem-rfc7468+default-devel" 
+]
+extra-source "rust-der+pem-devel-0.7.8-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-der+pem-devel-0.7.8-2.fc40.noarch.rpm"
+}

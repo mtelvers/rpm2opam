@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-brian2-2.5.4-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-brian2-2.5.4-5.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "python3" {= "3.12"}
+  "python3-cython" {>= "0.29"}
+  "python3-jinja2" {>= "2.7"}
+  "python3-numpy" {>= "1.21"}
+  "python3-packaging" 
+  "python3-pyparsing" 
+  "python3-setuptools" {>= "61"}
+  "python3-sympy" {>= "1.2"}
+]
+extra-source "python3-brian2-2.5.4-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-brian2-2.5.4-5.fc40.x86_64.rpm"
+}

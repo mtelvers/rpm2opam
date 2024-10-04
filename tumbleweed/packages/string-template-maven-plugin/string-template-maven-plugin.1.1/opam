@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "string-template-maven-plugin-1.1-3.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "string-template-maven-plugin-1.1-3.7.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-lib" 
+  "maven-resolver-util" 
+  "mojo-executor" 
+  "stringtemplate4" 
+]
+extra-source "string-template-maven-plugin-1.1-3.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/string-template-maven-plugin-1.1-3.7.noarch.rpm"
+}

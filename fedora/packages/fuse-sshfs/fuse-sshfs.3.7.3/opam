@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fuse-sshfs-3.7.3-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fuse-sshfs-3.7.3-7.fc40.x86_64.rpm"]
+depends: [
+  "fuse3" {>= "3.1.0"}
+  "fuse3-libs" 
+  "glib2" 
+  "glibc" 
+  "openssh-clients" 
+]
+extra-source "fuse-sshfs-3.7.3-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fuse-sshfs-3.7.3-7.fc40.x86_64.rpm"
+}

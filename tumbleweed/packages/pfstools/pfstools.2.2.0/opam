@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pfstools-2.2.0-4.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pfstools-2.2.0-4.6.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dcraw" 
+  "glibc" 
+  "libMagick++-7_Q16HDRI5" 
+  "libgcc_s1" 
+  "libnetpbm11" 
+  "libpfs2" 
+  "libstdc++6" 
+  "libtiff6" 
+  "python311-base" 
+]
+extra-source "pfstools-2.2.0-4.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pfstools-2.2.0-4.6.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "winetricks-20230212-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "winetricks-20230212-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cabextract" 
+  "gzip" 
+  "hicolor-icon-theme" 
+  "kdialog" 
+  "unzip" 
+  "wget2-wget" 
+  "which" 
+  "wine-common" 
+]
+extra-source "winetricks-20230212-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/winetricks-20230212-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libphysfs-devel-3.2.0-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libphysfs-devel-3.2.0-1.6.x86_64.rpm"]
+depends: [
+  "libphysfs1" {= "3.2.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libphysfs-devel-3.2.0-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libphysfs-devel-3.2.0-1.6.x86_64.rpm"
+}

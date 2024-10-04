@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-http-client-restricted-devel-0.0.5-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-http-client-restricted-devel-0.0.5-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-connection-devel" 
+  "ghc-data-default-devel" 
+  "ghc-http-client-devel" 
+  "ghc-http-client-restricted" {= "0.0.5"}
+  "ghc-http-client-tls-devel" 
+  "ghc-network-bsd-devel" 
+  "ghc-network-devel" 
+  "ghc-utf8-string-devel" 
+]
+extra-source "ghc-http-client-restricted-devel-0.0.5-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-http-client-restricted-devel-0.0.5-6.fc40.x86_64.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-warp-tls-prof-3.4.6-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-warp-tls-prof-3.4.6-1.1.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-data-default-class-prof" 
+  "ghc-network-prof" 
+  "ghc-recv-prof" 
+  "ghc-streaming-commons-prof" 
+  "ghc-tls-prof" 
+  "ghc-tls-session-manager-prof" 
+  "ghc-unliftio-prof" 
+  "ghc-wai-prof" 
+  "ghc-warp-prof" 
+  "ghc-warp-tls-devel" {= "3.4.6"}
+]
+extra-source "ghc-warp-tls-prof-3.4.6-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-warp-tls-prof-3.4.6-1.1.x86_64.rpm"
+}

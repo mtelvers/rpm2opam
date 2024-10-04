@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "util-linux-2.40-0.9.rc1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "util-linux-2.40-0.9.rc1.fc40.x86_64.rpm"]
+depends: [
+  "audit-libs" {>= "1.0.6"}
+  "authselect-libs" 
+  "bash" 
+  "coreutils" 
+  "glibc" 
+  "libblkid" {= "2.40"}
+  "libcap-ng" 
+  "libfdisk" 
+  "libmount" {= "2.40"}
+  "libselinux" 
+  "libsmartcols" {= "2.40"}
+  "libutempter" 
+  "libuuid" {= "2.40"}
+  "ncurses-libs" 
+  "pam" {>= "1.1.3"}
+  "pam-libs" 
+  "readline" 
+  "systemd-libs" 
+  "util-linux-core" {= "2.40"}
+  "zlib-ng-compat" 
+]
+extra-source "util-linux-2.40-0.9.rc1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/util-linux-2.40-0.9.rc1.fc40.x86_64.rpm"
+}

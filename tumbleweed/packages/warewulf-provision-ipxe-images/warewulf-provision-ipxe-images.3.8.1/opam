@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "warewulf-provision-ipxe-images-3.8.1-13.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "warewulf-provision-ipxe-images-3.8.1-13.3.noarch.rpm"]
+depends: [
+  "warewulf-provision-server" 
+]
+extra-source "warewulf-provision-ipxe-images-3.8.1-13.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/warewulf-provision-ipxe-images-3.8.1-13.3.noarch.rpm"
+}

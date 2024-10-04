@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ceph-mgr-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ceph-mgr-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ceph-base" {= "16.2.15.74"}
+  "ceph-common" 
+  "ceph-mgr-modules-core" {= "16.2.15.74"}
+  "glibc" 
+  "libcephsqlite" {= "16.2.15.74"}
+  "libfmt9" 
+  "libgcc_s1" 
+  "libpython3_11-1_0" 
+  "librados2" 
+  "libstdc++6" 
+  "libtcmalloc4" 
+]
+extra-source "ceph-mgr-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ceph-mgr-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm"
+}

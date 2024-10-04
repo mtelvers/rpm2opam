@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pipewire-libjack-0_3-devel-1.2.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pipewire-libjack-0_3-devel-1.2.5-1.1.x86_64.rpm"]
+depends: [
+  "pipewire-libjack-0_3" {= "1.2.5"}
+  "pkgconf-pkg-config" 
+]
+extra-source "pipewire-libjack-0_3-devel-1.2.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pipewire-libjack-0_3-devel-1.2.5-1.1.x86_64.rpm"
+}

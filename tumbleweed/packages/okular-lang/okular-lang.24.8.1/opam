@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "okular-lang-24.08.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "okular-lang-24.08.1-1.1.noarch.rpm"]
+depends: [
+  "okular" {= "24.8.1"}
+]
+extra-source "okular-lang-24.08.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/okular-lang-24.08.1-1.1.noarch.rpm"
+}

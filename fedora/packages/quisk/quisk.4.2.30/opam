@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "quisk-4.2.30-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "quisk-4.2.30-1.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "fftw-libs-double" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "portaudio" 
+  "pulseaudio-libs" 
+  "python3" 
+  "python3-wxpython4" 
+]
+extra-source "quisk-4.2.30-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/quisk-4.2.30-1.fc40.x86_64.rpm"
+}

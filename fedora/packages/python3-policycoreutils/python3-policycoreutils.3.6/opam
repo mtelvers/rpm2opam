@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-policycoreutils-3.6-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-policycoreutils-3.6-3.fc40.noarch.rpm"]
+depends: [
+  "checkpolicy" 
+  "policycoreutils" {= "3.6"}
+  "python3" {= "3.12"}
+  "python3-audit" {>= "3.0"}
+  "python3-distro" 
+  "python3-libselinux" 
+  "python3-libsemanage" {>= "3.6"}
+  "python3-setools" {>= "4.4.0"}
+]
+extra-source "python3-policycoreutils-3.6-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-policycoreutils-3.6-3.fc40.noarch.rpm"
+}

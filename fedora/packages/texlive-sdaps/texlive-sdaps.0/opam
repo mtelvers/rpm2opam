@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-sdaps-svn65345-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-sdaps-svn65345-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-environ" 
+  "texlive-kpathsea" 
+  "texlive-lastpage" 
+  "texlive-pgf" 
+  "texlive-qrcode" 
+  "texlive-sectsty" 
+  "texlive-translator" 
+]
+extra-source "texlive-sdaps-svn65345-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-sdaps-svn65345-71.fc40.noarch.rpm"
+}

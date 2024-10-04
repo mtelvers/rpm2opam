@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "catfish-4.18.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "catfish-4.18.0-2.2.noarch.rpm"]
+depends: [
+  "gdk-pixbuf-loader-rsvg" 
+  "gsettings-backend-dconf" 
+  "plocate" 
+  "python311-base" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-gobject-cairo" 
+  "python311-pexpect" 
+  "python311-pycairo" 
+  "sudo" 
+  "typelib-1_0-GLib-2_0" {= "2.0"}
+  "typelib-1_0-GObject-2_0" {= "2.0"}
+  "typelib-1_0-GdkPixbuf-2_0" {= "2.0"}
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" {= "1.0"}
+  "typelib-1_0-Xfconf-0" {= "0"}
+]
+extra-source "catfish-4.18.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/catfish-4.18.0-2.2.noarch.rpm"
+}

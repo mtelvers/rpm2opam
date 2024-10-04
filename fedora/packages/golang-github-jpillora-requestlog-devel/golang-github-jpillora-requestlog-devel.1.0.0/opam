@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-jpillora-requestlog-devel-1.0.0-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-jpillora-requestlog-devel-1.0.0-11.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-andrew-d-termutil-devel" 
+  "golang-github-jpillora-ansi-devel" 
+  "golang-github-jpillora-sizestr-devel" 
+  "golang-github-tomasen-realip-devel" 
+]
+extra-source "golang-github-jpillora-requestlog-devel-1.0.0-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-jpillora-requestlog-devel-1.0.0-11.fc40.noarch.rpm"
+}

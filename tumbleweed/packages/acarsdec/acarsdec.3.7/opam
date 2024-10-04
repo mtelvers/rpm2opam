@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "acarsdec-3.7-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "acarsdec-3.7-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libacars-2-2" 
+  "libsndfile1" 
+]
+extra-source "acarsdec-3.7-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/acarsdec-3.7-2.2.x86_64.rpm"
+}

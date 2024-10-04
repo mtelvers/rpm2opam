@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bitmap-opentype-fonts-all-0.3-47.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bitmap-opentype-fonts-all-0.3-47.fc40.noarch.rpm"]
+depends: [
+  "bitmap-console-opentype-fonts" {= "0.3"}
+  "bitmap-fangsongti-opentype-fonts" {= "0.3"}
+  "bitmap-fixed-opentype-fonts" {= "0.3"}
+  "bitmap-lucida-typewriter-opentype-fonts" {= "0.3"}
+  "ucs-miscfixed-opentype-fonts" 
+]
+extra-source "bitmap-opentype-fonts-all-0.3-47.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bitmap-opentype-fonts-all-0.3-47.fc40.noarch.rpm"
+}

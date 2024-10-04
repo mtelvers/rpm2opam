@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ostree-2024.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ostree-2024.5-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "composefs" 
+  "dracut" 
+  "fuse3-libs" 
+  "glib2" 
+  "glibc" 
+  "gnupg2" 
+  "libarchive" 
+  "libgcc" 
+  "libselinux" 
+  "openssl-libs" 
+  "ostree-libs" 
+  "systemd" 
+  "systemd-libs" 
+]
+extra-source "ostree-2024.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ostree-2024.5-1.fc40.x86_64.rpm"
+}

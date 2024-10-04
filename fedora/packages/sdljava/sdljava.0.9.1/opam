@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sdljava-0.9.1-62.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sdljava-0.9.1-62.fc40.x86_64.rpm"]
+depends: [
+  "SDL_gfx" 
+  "SDL_image" 
+  "SDL_mixer" 
+  "SDL_ttf" 
+  "freetype" 
+  "ftgl" 
+  "glibc" 
+  "java-21-openjdk" 
+  "javapackages-filesystem" 
+  "jdom" 
+  "libGLEW" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "mesa-libGLU" 
+  "sdl12-compat" 
+  "zlib-ng-compat" 
+]
+extra-source "sdljava-0.9.1-62.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sdljava-0.9.1-62.fc40.x86_64.rpm"
+}

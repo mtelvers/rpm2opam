@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-menus-lang-3.36.0-3.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-menus-lang-3.36.0-3.5.noarch.rpm"]
+depends: [
+  "gnome-menus" {= "3.36.0"}
+]
+extra-source "gnome-menus-lang-3.36.0-3.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-menus-lang-3.36.0-3.5.noarch.rpm"
+}

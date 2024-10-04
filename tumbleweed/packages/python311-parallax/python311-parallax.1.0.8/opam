@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-parallax-1.0.8-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-parallax-1.0.8-3.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "openssh" 
+  "python311-base" 
+  "update-alternatives" 
+]
+extra-source "python311-parallax-1.0.8-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-parallax-1.0.8-3.1.noarch.rpm"
+}

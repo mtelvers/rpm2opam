@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-jackc-pgtype-devel-1.6.2-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-jackc-pgtype-devel-1.6.2-9.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-gofrs-uuid-devel" 
+  "golang-github-jackc-pgconn-devel" 
+  "golang-github-jackc-pgio-devel" 
+  "golang-github-shopspring-decimal-devel" 
+  "golang-x-xerrors-devel" 
+]
+extra-source "golang-github-jackc-pgtype-devel-1.6.2-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-jackc-pgtype-devel-1.6.2-9.fc40.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-broom-1.0.5-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-broom-1.0.5-3.fc40.noarch.rpm"]
+depends: [
+  "R-backports" 
+  "R-core" {= "4.3"}
+  "R-dplyr" {>= "1.0.0"}
+  "R-ellipsis" 
+  "R-generics" {>= "0.0.2"}
+  "R-glue" 
+  "R-lifecycle" 
+  "R-purrr" 
+  "R-rlang" 
+  "R-stringr" 
+  "R-tibble" {>= "3.0.0"}
+  "R-tidyr" {>= "1.0.0"}
+]
+extra-source "R-broom-1.0.5-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-broom-1.0.5-3.fc40.noarch.rpm"
+}

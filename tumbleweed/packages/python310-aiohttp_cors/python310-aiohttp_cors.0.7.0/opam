@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-aiohttp_cors-0.7.0-5.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-aiohttp_cors-0.7.0-5.5.noarch.rpm"]
+depends: [
+  "python310" {>= "3.4.2"}
+  "python310-async_timeout" {>= "2.0.0"}
+  "python310-base" {= "3.10"}
+  "python310-chardet" 
+  "python310-multidict" {>= "3.3.0"}
+  "python310-yarl" {>= "0.13.0"}
+]
+extra-source "python310-aiohttp_cors-0.7.0-5.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-aiohttp_cors-0.7.0-5.5.noarch.rpm"
+}

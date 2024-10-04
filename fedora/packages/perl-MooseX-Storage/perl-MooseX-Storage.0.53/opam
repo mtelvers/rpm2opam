@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MooseX-Storage-0.53-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Storage-0.53-13.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Digest" 
+  "perl-IO" 
+  "perl-IO-stringy" 
+  "perl-JSON-MaybeXS" {>= "1.1000"}
+  "perl-Module-Runtime" 
+  "perl-Moose" {>= "0.99"}
+  "perl-Scalar-List-Utils" 
+  "perl-Storable" 
+  "perl-String-RewritePrefix" 
+  "perl-YAML" 
+  "perl-libs" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-MooseX-Storage-0.53-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MooseX-Storage-0.53-13.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libunity-devel-7.1.4-35.20190319.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libunity-devel-7.1.4-35.20190319.fc40.x86_64.rpm"]
+depends: [
+  "dee-devel" 
+  "glib2-devel" 
+  "libdbusmenu-devel" 
+  "libunity" {= "7.1.4"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libunity-devel-7.1.4-35.20190319.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libunity-devel-7.1.4-35.20190319.fc40.x86_64.rpm"
+}

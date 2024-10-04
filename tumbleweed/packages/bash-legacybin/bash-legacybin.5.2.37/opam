@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bash-legacybin-5.2.37-14.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bash-legacybin-5.2.37-14.1.noarch.rpm"]
+depends: [
+  "bash" {= "5.2.37"}
+]
+extra-source "bash-legacybin-5.2.37-14.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/bash-legacybin-5.2.37-14.1.noarch.rpm"
+}

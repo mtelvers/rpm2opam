@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "realmd-0.17.1-2.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "realmd-0.17.1-2.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "krb5" 
+  "libldap2" 
+  "libpolkit-gobject-1-0" 
+  "systemd" 
+]
+extra-source "realmd-0.17.1-2.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/realmd-0.17.1-2.4.x86_64.rpm"
+}

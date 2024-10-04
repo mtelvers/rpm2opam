@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Pod-Spell-CommonMistakes-1.002-28.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Pod-Spell-CommonMistakes-1.002-28.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" 
+  "perl-IO-stringy" {>= "2.110"}
+  "perl-Pod-Spell" {>= "1.1"}
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-Pod-Spell-CommonMistakes-1.002-28.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Pod-Spell-CommonMistakes-1.002-28.fc40.noarch.rpm"
+}

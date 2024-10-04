@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nordugrid-arc-datadelivery-service-6.18.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nordugrid-arc-datadelivery-service-6.18.0-6.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "glibmm2-4" 
+  "libgcc" 
+  "libsigc++20" 
+  "libstdc++" 
+  "libtool-ltdl" 
+  "libuuid" 
+  "libxml2" 
+  "libxslt" 
+  "logrotate" 
+  "nordugrid-arc" 
+  "nordugrid-arc-arcctl-service" {= "6.18.0"}
+  "nordugrid-arc-hed" {= "6.18.0"}
+  "nordugrid-arc-plugins-needed" {= "6.18.0"}
+  "nspr" 
+  "nss" 
+  "nss-util" 
+  "openssl-libs" 
+  "systemd" 
+  "xmlsec1" 
+  "xmlsec1-openssl" 
+  "zlib-ng-compat" 
+]
+extra-source "nordugrid-arc-datadelivery-service-6.18.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nordugrid-arc-datadelivery-service-6.18.0-6.fc40.x86_64.rpm"
+}

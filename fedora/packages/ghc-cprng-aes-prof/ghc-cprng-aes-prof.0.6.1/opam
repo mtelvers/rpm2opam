@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-cprng-aes-prof-0.6.1-33.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-cprng-aes-prof-0.6.1-33.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-byteable-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-cipher-aes-prof" 
+  "ghc-cprng-aes-devel" {= "0.6.1"}
+  "ghc-crypto-random-prof" 
+]
+extra-source "ghc-cprng-aes-prof-0.6.1-33.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-cprng-aes-prof-0.6.1-33.fc40.x86_64.rpm"
+}

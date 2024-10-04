@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-plotters-svg+bitmap_encoder-devel-0.3.5-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-plotters-svg+bitmap_encoder-devel-0.3.5-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-plotters-svg+image-devel" {= "0.3.5"}
+  "rust-plotters-svg-devel" {= "0.3.5"}
+]
+extra-source "rust-plotters-svg+bitmap_encoder-devel-0.3.5-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-plotters-svg+bitmap_encoder-devel-0.3.5-3.fc40.noarch.rpm"
+}

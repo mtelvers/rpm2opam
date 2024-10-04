@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python-streamlink-bash-completion-6.6.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python-streamlink-bash-completion-6.6.2-1.fc40.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "python3-streamlink" {= "6.6.2"}
+]
+extra-source "python-streamlink-bash-completion-6.6.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python-streamlink-bash-completion-6.6.2-1.fc40.noarch.rpm"
+}

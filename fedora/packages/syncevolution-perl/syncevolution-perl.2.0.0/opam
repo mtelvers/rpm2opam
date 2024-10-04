@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "syncevolution-perl-2.0.0-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "syncevolution-perl-2.0.0-12.fc40.x86_64.rpm"]
+depends: [
+  "perl-Digest-MD5" 
+  "perl-MIME-Base64" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "syncevolution" {= "2.0.0"}
+]
+extra-source "syncevolution-perl-2.0.0-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/syncevolution-perl-2.0.0-12.fc40.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "iscsi-initiator-utils-6.2.1.9-20.gita65a472.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "iscsi-initiator-utils-6.2.1.9-20.gita65a472.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "fedora-release-common" 
+  "glibc" 
+  "iscsi-initiator-utils-iscsiuio" {>= "6.2.1.9"}
+  "isns-utils-libs" 
+  "kmod-libs" 
+  "libmount" 
+  "openssl-libs" 
+  "systemd" 
+  "systemd-libs" 
+]
+extra-source "iscsi-initiator-utils-6.2.1.9-20.gita65a472.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/iscsi-initiator-utils-6.2.1.9-20.gita65a472.fc40.x86_64.rpm"
+}

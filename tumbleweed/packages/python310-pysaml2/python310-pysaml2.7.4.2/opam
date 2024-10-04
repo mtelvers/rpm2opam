@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pysaml2-7.4.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pysaml2-7.4.2-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-Paste" 
+  "python310-base" 
+  "python310-cryptography" {>= "3.1"}
+  "python310-defusedxml" 
+  "python310-importlib-resources" 
+  "python310-pyOpenSSL" 
+  "python310-pymongo" {>= "3.5"}
+  "python310-python-dateutil" 
+  "python310-pytz" 
+  "python310-repoze-who" 
+  "python310-requests" {>= "1.0.0"}
+  "python310-xmlschema" {>= "1.2.1"}
+  "python310-zope-interface" 
+  "update-alternatives" 
+]
+extra-source "python310-pysaml2-7.4.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-pysaml2-7.4.2-1.2.x86_64.rpm"
+}

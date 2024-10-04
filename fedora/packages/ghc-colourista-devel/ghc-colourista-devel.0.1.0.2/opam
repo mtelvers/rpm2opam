@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-colourista-devel-0.1.0.2-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-colourista-devel-0.1.0.2-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-ansi-terminal-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-colourista" {= "0.1.0.2"}
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-text-devel" 
+]
+extra-source "ghc-colourista-devel-0.1.0.2-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-colourista-devel-0.1.0.2-8.fc40.x86_64.rpm"
+}

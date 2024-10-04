@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "netfetch-bash-completion-5.2.10-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netfetch-bash-completion-5.2.10-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "netfetch" {= "5.2.10"}
+]
+extra-source "netfetch-bash-completion-5.2.10-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/netfetch-bash-completion-5.2.10-1.1.noarch.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "wordpress-6.4.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wordpress-6.4.3-1.fc40.noarch.rpm"]
+depends: [
+  "ca-certificates" 
+  "caddy" 
+  "httpd" 
+  "httpd-filesystem" 
+  "nginx-filesystem" 
+  "php-common" {>= "7.2"}
+  "php-fpm" 
+  "php-gd" 
+  "php-intl" 
+  "php-mbstring" 
+  "php-mysqlnd" 
+  "php-pecl-zip" 
+  "php-sodium" 
+  "php-xml" 
+]
+extra-source "wordpress-6.4.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/wordpress-6.4.3-1.fc40.noarch.rpm"
+}

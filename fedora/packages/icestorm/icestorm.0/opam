@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "icestorm-0-0.32.20231218git1a40ae7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "icestorm-0-0.32.20231218git1a40ae7.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libftdi" 
+  "libgcc" 
+  "libstdc++" 
+  "python3" 
+]
+extra-source "icestorm-0-0.32.20231218git1a40ae7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/icestorm-0-0.32.20231218git1a40ae7.fc40.x86_64.rpm"
+}

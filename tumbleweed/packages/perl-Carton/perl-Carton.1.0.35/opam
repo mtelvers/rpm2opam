@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Carton-1.0.35-1.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Carton-1.0.35-1.11.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-CPAN-Meta-Requirements" {>= "2.121000"}
+  "perl-Class-Tiny" {>= "1.1"}
+  "perl-Menlo-Legacy" {>= "1.9018"}
+  "perl-Module-CPANfile" {>= "0.9031"}
+  "perl-Path-Tiny" {>= "0.33"}
+  "perl-Try-Tiny" {>= "0.9"}
+  "perl-base" 
+]
+extra-source "perl-Carton-1.0.35-1.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Carton-1.0.35-1.11.noarch.rpm"
+}

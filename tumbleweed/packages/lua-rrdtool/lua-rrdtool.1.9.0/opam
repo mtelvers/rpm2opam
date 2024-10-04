@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lua-rrdtool-1.9.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lua-rrdtool-1.9.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "liblua5_4-5" 
+  "librrd8" 
+  "rrdtool" {= "1.9.0"}
+]
+extra-source "lua-rrdtool-1.9.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lua-rrdtool-1.9.0-1.1.x86_64.rpm"
+}

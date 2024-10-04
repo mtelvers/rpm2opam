@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kim-api-examples-2.2.1-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kim-api-examples-2.2.1-9.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kim-api" {= "2.2.1"}
+  "libgcc" 
+  "libgfortran" 
+  "libstdc++" 
+]
+extra-source "kim-api-examples-2.2.1-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kim-api-examples-2.2.1-9.fc40.x86_64.rpm"
+}

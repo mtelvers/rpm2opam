@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "adios_1_13_1-gnu-mpich-hpc-1.13.1-7.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "adios_1_13_1-gnu-mpich-hpc-1.13.1-7.4.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "gnu-compilers-hpc" 
+  "libbz2-1" 
+  "liblz4-1" 
+  "libz-ng-compat1" 
+  "lua-lmod" 
+  "mpich-gnu-hpc" 
+  "python311-PyYAML" 
+  "python311-base" 
+]
+extra-source "adios_1_13_1-gnu-mpich-hpc-1.13.1-7.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/adios_1_13_1-gnu-mpich-hpc-1.13.1-7.4.x86_64.rpm"
+}

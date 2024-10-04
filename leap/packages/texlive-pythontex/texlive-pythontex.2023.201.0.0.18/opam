@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-pythontex-2023.201.0.0.18svn59514-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-pythontex-2023.201.0.0.18svn59514-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "python311-base" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-currfile" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-fvextra" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-newfloat" 
+  "texlive-pgfopts" 
+  "texlive-pythontex-bin" {>= "2023"}
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-upquote" 
+  "texlive-xcolor" 
+  "texlive-xstring" 
+]
+extra-source "texlive-pythontex-2023.201.0.0.18svn59514-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-pythontex-2023.201.0.0.18svn59514-slfo.1.1.4.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kubernetes-kubelet-1.31.0-45.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kubernetes-kubelet-1.31.0-45.1.x86_64.rpm"]
+depends: [
+  "kubernetes1-31-kubelet" {= "1.31.0"}
+]
+extra-source "kubernetes-kubelet-1.31.0-45.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kubernetes-kubelet-1.31.0-45.1.x86_64.rpm"
+}

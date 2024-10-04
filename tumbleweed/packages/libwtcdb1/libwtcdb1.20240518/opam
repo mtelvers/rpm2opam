@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libwtcdb1-20240518-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libwtcdb1-20240518-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbfio1" 
+  "libcdata1" 
+  "libcerror1" 
+  "libclocale1" 
+  "libcnotify1" 
+]
+extra-source "libwtcdb1-20240518-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libwtcdb1-20240518-1.1.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-HsYAML-devel-0.2.1.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-HsYAML-devel-0.2.1.1-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-HsYAML" {= "0.2.1.1"}
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-deepseq-devel" 
+  "ghc-mtl-devel" 
+  "ghc-parsec-devel" 
+  "ghc-text-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-HsYAML-devel-0.2.1.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-HsYAML-devel-0.2.1.1-6.fc40.x86_64.rpm"
+}

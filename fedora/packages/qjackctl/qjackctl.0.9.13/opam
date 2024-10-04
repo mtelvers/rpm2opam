@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qjackctl-0.9.13-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qjackctl-0.9.13-1.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "jack-audio-connection-kit" 
+  "libgcc" 
+  "libstdc++" 
+  "portaudio" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+]
+extra-source "qjackctl-0.9.13-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qjackctl-0.9.13-1.fc40.x86_64.rpm"
+}

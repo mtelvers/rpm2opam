@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sratom-devel-0.6.14-2.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sratom-devel-0.6.14-2.4.x86_64.rpm"]
+depends: [
+  "libsratom-0-0" {= "0.6.14"}
+  "lv2-devel" {>= "1.18.4"}
+  "pkgconf-pkg-config" 
+  "serd-devel" {>= "0.30.10"}
+  "sord-devel" {>= "0.16.10"}
+]
+extra-source "sratom-devel-0.6.14-2.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sratom-devel-0.6.14-2.4.x86_64.rpm"
+}

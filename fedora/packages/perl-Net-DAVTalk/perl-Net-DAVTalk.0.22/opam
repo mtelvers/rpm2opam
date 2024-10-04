@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Net-DAVTalk-0.22-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-DAVTalk-0.22-8.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-DateTime-Format-ISO8601" 
+  "perl-DateTime-TimeZone" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-HTTP-Tiny" {>= "0.16"}
+  "perl-JSON" 
+  "perl-MIME-Base64" 
+  "perl-Tie-DataUUID" {>= "1.2"}
+  "perl-URI" {>= "1.60"}
+  "perl-XML-Fast" {>= "0.11"}
+  "perl-XML-Spice" {>= "0.3"}
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-Net-DAVTalk-0.22-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Net-DAVTalk-0.22-8.fc40.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cheese-44.1-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cheese-44.1-3.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gnome-video-effects" 
+  "libcanberra-gtk3-0" 
+  "libcheese-gtk25" 
+  "libcheese8" 
+  "libclutter-1_0-0" 
+  "libclutter-gtk-1_0-0" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgnome-desktop-3-20" 
+  "libgstreamer-1_0-0" 
+  "libgtk-3-0" 
+]
+extra-source "cheese-44.1-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cheese-44.1-3.1.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xloadimage-4.1-37.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xloadimage-4.1-37.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libtiff" 
+]
+extra-source "xloadimage-4.1-37.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xloadimage-4.1-37.fc40.x86_64.rpm"
+}

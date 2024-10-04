@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-zope.security-7.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-zope.security-7.1-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "python310-base" {= "3.10"}
+  "python310-pytz" 
+  "python310-zope-component" 
+  "python310-zope-configuration" 
+  "python310-zope-i18nmessageid" 
+  "python310-zope-interface" 
+  "python310-zope-location" 
+  "python310-zope-proxy" {>= "4.3.0"}
+  "python310-zope-schema" {>= "4.2.0"}
+]
+extra-source "python310-zope.security-7.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-zope.security-7.1-1.1.x86_64.rpm"
+}

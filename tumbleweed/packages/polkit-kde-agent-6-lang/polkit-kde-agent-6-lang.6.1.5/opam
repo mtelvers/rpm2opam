@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "polkit-kde-agent-6-lang-6.1.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "polkit-kde-agent-6-lang-6.1.5-1.1.noarch.rpm"]
+depends: [
+  "polkit-kde-agent-6" {= "6.1.5"}
+]
+extra-source "polkit-kde-agent-6-lang-6.1.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/polkit-kde-agent-6-lang-6.1.5-1.1.noarch.rpm"
+}

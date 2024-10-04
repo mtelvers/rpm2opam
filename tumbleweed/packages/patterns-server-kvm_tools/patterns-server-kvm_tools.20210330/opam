@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "patterns-server-kvm_tools-20210330-8.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "patterns-server-kvm_tools-20210330-8.3.x86_64.rpm"]
+depends: [
+  "libvirt-client" 
+  "libvirt-daemon-config-network" 
+  "libvirt-daemon-qemu" 
+  "patterns-aeon-base" {= "0"}
+  "tigervnc" 
+  "virt-install" 
+  "virt-manager" 
+]
+extra-source "patterns-server-kvm_tools-20210330-8.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/patterns-server-kvm_tools-20210330-8.3.x86_64.rpm"
+}

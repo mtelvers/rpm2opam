@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-headers-devel-0.3.9-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-headers-devel-0.3.9-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.56"}
+  "rust-base64+default-devel" 
+  "rust-bytes+default-devel" 
+  "rust-headers-core+default-devel" 
+  "rust-http+default-devel" 
+  "rust-httpdate+default-devel" 
+  "rust-mime+default-devel" 
+  "rust-sha1+default-devel" 
+]
+extra-source "rust-headers-devel-0.3.9-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-headers-devel-0.3.9-2.fc40.noarch.rpm"
+}

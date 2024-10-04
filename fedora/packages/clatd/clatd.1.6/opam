@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "clatd-1.6-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clatd-1.6-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "iproute" 
+  "iptables-legacy" 
+  "perl-File-Temp" 
+  "perl-IO-Socket-IP" 
+  "perl-Net-DNS" 
+  "perl-Net-IP" 
+  "perl-interpreter" 
+  "systemd" 
+  "tayga" 
+]
+extra-source "clatd-1.6-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/clatd-1.6-4.fc40.noarch.rpm"
+}

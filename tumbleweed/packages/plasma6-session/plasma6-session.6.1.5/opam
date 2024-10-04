@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plasma6-session-6.1.5-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plasma6-session-6.1.5-2.1.noarch.rpm"]
+depends: [
+  "breeze6" {>= "6.1.5"}
+  "breeze6-decoration" {>= "6.1.5"}
+  "kf6-kwindowsystem" {>= "6.2.0"}
+  "kwayland-integration6" 
+  "libqt5-qtwayland" 
+  "pipewire" 
+  "plasma6-desktop" {>= "6.1.5"}
+  "plasma6-workspace" {>= "6.1.5"}
+  "polkit-kde-agent-6" {>= "6.1.5"}
+  "powerdevil6" {>= "6.1.5"}
+  "qt6-wayland" 
+  "systemsettings6" {>= "6.1.5"}
+  "xdg-user-dirs" 
+  "xwayland" 
+]
+extra-source "plasma6-session-6.1.5-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/plasma6-session-6.1.5-2.1.noarch.rpm"
+}

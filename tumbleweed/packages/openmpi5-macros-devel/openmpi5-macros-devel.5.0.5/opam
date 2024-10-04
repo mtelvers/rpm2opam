@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openmpi5-macros-devel-5.0.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openmpi5-macros-devel-5.0.5-1.1.x86_64.rpm"]
+depends: [
+  "openmpi5-devel" {= "5.0.5"}
+]
+extra-source "openmpi5-macros-devel-5.0.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openmpi5-macros-devel-5.0.5-1.1.x86_64.rpm"
+}

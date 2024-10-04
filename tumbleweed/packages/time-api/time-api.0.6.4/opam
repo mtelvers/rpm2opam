@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "time-api-0.6.4-4.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "time-api-0.6.4-4.3.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "time-api-0.6.4-4.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/time-api-0.6.4-4.3.noarch.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Tk-Getopt-0.51-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Tk-Getopt-0.51-22.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long" 
+  "perl-PathTools" 
+  "perl-Safe" 
+  "perl-Tk" 
+  "perl-constant" 
+  "perl-libs" {>= "5.5.0"}
+  "perl-vars" 
+]
+extra-source "perl-Tk-Getopt-0.51-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Tk-Getopt-0.51-22.fc40.noarch.rpm"
+}

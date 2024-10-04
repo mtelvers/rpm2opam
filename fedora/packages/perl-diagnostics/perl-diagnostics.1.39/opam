@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-diagnostics-1.39-506.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-diagnostics-1.39-506.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Getopt-Std" 
+  "perl-Text-Tabs+Wrap" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.9.1"}
+]
+extra-source "perl-diagnostics-1.39-506.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-diagnostics-1.39-506.fc40.noarch.rpm"
+}

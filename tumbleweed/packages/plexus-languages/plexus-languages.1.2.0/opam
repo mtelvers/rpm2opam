@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plexus-languages-1.2.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plexus-languages-1.2.0-2.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "objectweb-asm" 
+  "qdox" 
+]
+extra-source "plexus-languages-1.2.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/plexus-languages-1.2.0-2.1.noarch.rpm"
+}

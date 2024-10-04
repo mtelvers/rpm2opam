@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-num-bigint0.3+default-devel-0.3.3-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-num-bigint0.3+default-devel-0.3.3-7.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-num-bigint0-3+std-devel" {= "0.3.3"}
+  "rust-num-bigint0-3-devel" {= "0.3.3"}
+]
+extra-source "rust-num-bigint0.3+default-devel-0.3.3-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-num-bigint0.3+default-devel-0.3.3-7.fc40.noarch.rpm"
+}

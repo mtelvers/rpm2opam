@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-online-accounts-devel-3.50.4-slfo.1.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-online-accounts-devel-3.50.4-slfo.1.1.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.67.4"}
+  "gtk4-devel" 
+  "libadwaita-devel" 
+  "libgoa-1_0-0" {= "3.50.4"}
+  "libgoa-backend-1_0-2" {= "3.50.4"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Goa-1_0" {= "3.50.4"}
+]
+extra-source "gnome-online-accounts-devel-3.50.4-slfo.1.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/gnome-online-accounts-devel-3.50.4-slfo.1.1.1.x86_64.rpm"
+}

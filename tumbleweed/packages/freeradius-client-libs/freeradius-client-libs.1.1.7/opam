@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "freeradius-client-libs-1.1.7-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freeradius-client-libs-1.1.7-3.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libnettle8" 
+]
+extra-source "freeradius-client-libs-1.1.7-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/freeradius-client-libs-1.1.7-3.2.x86_64.rpm"
+}

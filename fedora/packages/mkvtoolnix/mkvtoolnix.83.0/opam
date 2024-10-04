@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mkvtoolnix-83.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mkvtoolnix-83.0-1.fc40.x86_64.rpm"]
+depends: [
+  "boost-filesystem" 
+  "flac-libs" 
+  "fmt" 
+  "glibc" 
+  "gmp" 
+  "libdvdread" 
+  "libebml" {>= "1.4.4"}
+  "libgcc" 
+  "libmatroska" {>= "1.7.1"}
+  "libogg" 
+  "libstdc++" 
+  "libvorbis" 
+  "pugixml" 
+  "qt6-qtbase" 
+  "zlib-ng-compat" 
+]
+extra-source "mkvtoolnix-83.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mkvtoolnix-83.0-1.fc40.x86_64.rpm"
+}

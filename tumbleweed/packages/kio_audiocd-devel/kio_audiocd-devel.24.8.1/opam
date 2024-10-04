@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kio_audiocd-devel-24.08.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kio_audiocd-devel-24.08.1-1.1.x86_64.rpm"]
+depends: [
+  "kio_audiocd" {= "24.8.1"}
+]
+extra-source "kio_audiocd-devel-24.08.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kio_audiocd-devel-24.08.1-1.1.x86_64.rpm"
+}

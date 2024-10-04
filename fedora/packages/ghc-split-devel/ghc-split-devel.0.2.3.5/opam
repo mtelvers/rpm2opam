@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-split-devel-0.2.3.5-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-split-devel-0.2.3.5-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-split" {= "0.2.3.5"}
+]
+extra-source "ghc-split-devel-0.2.3.5-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-split-devel-0.2.3.5-6.fc40.x86_64.rpm"
+}

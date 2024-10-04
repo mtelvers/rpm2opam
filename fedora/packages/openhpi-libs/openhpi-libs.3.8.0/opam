@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openhpi-libs-3.8.0-27.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openhpi-libs-3.8.0-27.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "libgcc" 
+  "libgcrypt" 
+  "libstdc++" 
+  "libuuid" 
+  "net-snmp-libs" 
+  "openssl-libs" 
+]
+extra-source "openhpi-libs-3.8.0-27.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openhpi-libs-3.8.0-27.fc40.x86_64.rpm"
+}

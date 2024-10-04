@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "powwow-devel-1.2.23-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "powwow-devel-1.2.23-7.fc40.x86_64.rpm"]
+depends: [
+  "powwow" {= "1.2.23"}
+]
+extra-source "powwow-devel-1.2.23-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/powwow-devel-1.2.23-7.fc40.x86_64.rpm"
+}

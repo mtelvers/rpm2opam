@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-maps-lang-46.11-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-maps-lang-46.11-1.1.noarch.rpm"]
+depends: [
+  "gnome-maps" {= "46.11"}
+]
+extra-source "gnome-maps-lang-46.11-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-maps-lang-46.11-1.1.noarch.rpm"
+}

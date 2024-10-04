@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sourcextractor++-0.21-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sourcextractor++-0.21-4.fc40.x86_64.rpm"]
+depends: [
+  "CCfits" 
+  "boost-filesystem" 
+  "boost-program-options" 
+  "boost-python3" 
+  "boost-thread" 
+  "cfitsio" 
+  "cmake-filesystem" 
+  "elements" 
+  "elements-alexandria" 
+  "fftw-libs-double" 
+  "fftw-libs-single" 
+  "glibc" 
+  "gsl" 
+  "levmar" 
+  "libgcc" 
+  "libstdc++" 
+  "log4cpp" 
+  "onnxruntime" 
+  "python3" {= "3.12"}
+  "python3-astropy" 
+  "python3-libs" 
+  "wcslib" 
+]
+extra-source "sourcextractor++-0.21-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sourcextractor++-0.21-4.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vagrant-openstack-provider-0.13.0-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vagrant-openstack-provider-0.13.0-13.fc40.noarch.rpm"]
+depends: [
+  "rubygem-colorize" 
+  "rubygem-public_suffix" 
+  "rubygem-sshkey" 
+  "rubygem-terminal-table" 
+  "vagrant" {>= "1.9.1"}
+]
+extra-source "vagrant-openstack-provider-0.13.0-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vagrant-openstack-provider-0.13.0-13.fc40.noarch.rpm"
+}

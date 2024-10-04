@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-below-model-devel-0.7.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-below-model-devel-0.7.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-anyhow+default-devel" 
+  "rust-async-trait+default-devel" 
+  "rust-below-btrfs+default-devel" 
+  "rust-below-common+default-devel" 
+  "rust-below-gpu-stats+default-devel" 
+  "rust-below_derive+default-devel" 
+  "rust-cgroupfs+default-devel" 
+  "rust-fb_procfs+default-devel" 
+  "rust-hostname+default-devel" 
+  "rust-os_info+default-devel" 
+  "rust-regex+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde+rc-devel" 
+  "rust-serde_json+default-devel" 
+  "rust-serde_json+float_roundtrip-devel" 
+  "rust-serde_json+unbounded_depth-devel" 
+  "rust-slog+default-devel" 
+  "rust-slog+max_level_trace-devel" 
+  "rust-slog+nested-values-devel" 
+]
+extra-source "rust-below-model-devel-0.7.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-below-model-devel-0.7.1-2.fc40.noarch.rpm"
+}

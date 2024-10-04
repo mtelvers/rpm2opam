@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-textshaping-0.3.6-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-textshaping-0.3.6-6.fc40.x86_64.rpm"]
+depends: [
+  "R-core" {= "4.3"}
+  "R-systemfonts" {>= "1.0.0"}
+  "freetype" 
+  "fribidi" 
+  "glibc" 
+  "harfbuzz" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "R-textshaping-0.3.6-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-textshaping-0.3.6-6.fc40.x86_64.rpm"
+}

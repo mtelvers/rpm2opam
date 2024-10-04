@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cyrus-sasl-bdb-crammd5-2.1.28-9.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cyrus-sasl-bdb-crammd5-2.1.28-9.1.x86_64.rpm"]
+depends: [
+  "cyrus-sasl-bdb" {= "2.1.28"}
+  "glibc" 
+]
+extra-source "cyrus-sasl-bdb-crammd5-2.1.28-9.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cyrus-sasl-bdb-crammd5-2.1.28-9.1.x86_64.rpm"
+}

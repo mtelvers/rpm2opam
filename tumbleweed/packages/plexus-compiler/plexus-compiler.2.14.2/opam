@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plexus-compiler-2.14.2-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plexus-compiler-2.14.2-1.2.noarch.rpm"]
+depends: [
+  "atinject" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "plexus-utils" 
+  "slf4j" 
+]
+extra-source "plexus-compiler-2.14.2-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/plexus-compiler-2.14.2-1.2.noarch.rpm"
+}

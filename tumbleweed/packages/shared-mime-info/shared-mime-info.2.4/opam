@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "shared-mime-info-2.4-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "shared-mime-info-2.4-2.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libxml2-2" 
+]
+extra-source "shared-mime-info-2.4-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/shared-mime-info-2.4-2.2.x86_64.rpm"
+}

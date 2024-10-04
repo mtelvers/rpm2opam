@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "uhttpmock-devel-0.10.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "uhttpmock-devel-0.10.0-1.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.38"}
+  "libsoup3-devel" {>= "3.1.2"}
+  "pkgconf-pkg-config" 
+  "uhttpmock" 
+]
+extra-source "uhttpmock-devel-0.10.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/uhttpmock-devel-0.10.0-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "imake-1.0.10-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "imake-1.0.10-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gcc" 
+  "glibc" 
+  "perl-interpreter" 
+]
+extra-source "imake-1.0.10-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/imake-1.0.10-1.fc40.x86_64.rpm"
+}

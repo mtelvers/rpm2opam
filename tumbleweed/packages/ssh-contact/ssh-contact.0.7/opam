@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ssh-contact-0.7-9.32.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ssh-contact-0.7-9.32.x86_64.rpm"]
+depends: [
+  "ssh-contact-client" {= "0.7"}
+  "ssh-contact-service" {= "0.7"}
+]
+extra-source "ssh-contact-0.7-9.32.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ssh-contact-0.7-9.32.x86_64.rpm"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-beamertheme-focus-2024.216.3.4.0svn69742-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-beamertheme-focus-2024.216.3.4.0svn69742-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-appendixnumberbeamer" 
+  "texlive-bookmark" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-fira" 
+  "texlive-firamath-otf" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-pgf" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+]
+extra-source "texlive-beamertheme-focus-2024.216.3.4.0svn69742-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-beamertheme-focus-2024.216.3.4.0svn69742-57.1.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "GConf2-3.2.6-41.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "GConf2-3.2.6-41.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dbus" 
+  "dbus-glib" 
+  "dbus-libs" 
+  "glib2" 
+  "glibc" 
+  "libxml2" 
+  "polkit-libs" 
+  "procps-ng" 
+]
+extra-source "GConf2-3.2.6-41.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/GConf2-3.2.6-41.fc40.x86_64.rpm"
+}

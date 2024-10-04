@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-apache-cloudstack-cloudmonkey-devel-6.2.0-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-apache-cloudstack-cloudmonkey-devel-6.2.0-10.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-chzyer-readline-devel" 
+  "go-filesystem" 
+  "golang-github-briandowns-spinner-devel" 
+  "golang-github-gofrs-flock-devel" 
+  "golang-github-google-shlex-devel" 
+  "golang-github-mitchellh-homedir-devel" 
+  "golang-github-olekukonko-tablewriter-devel" 
+  "golang-gopkg-ini-1-devel" 
+]
+extra-source "golang-github-apache-cloudstack-cloudmonkey-devel-6.2.0-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-apache-cloudstack-cloudmonkey-devel-6.2.0-10.fc40.noarch.rpm"
+}

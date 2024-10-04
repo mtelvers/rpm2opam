@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libwpd-tools-0.10.3-3.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libwpd-tools-0.10.3-3.12.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "librevenge-0_0-0" 
+  "librevenge-generators-0_0-0" 
+  "librevenge-stream-0_0-0" 
+  "libwpd-0_10-10" 
+]
+extra-source "libwpd-tools-0.10.3-3.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libwpd-tools-0.10.3-3.12.x86_64.rpm"
+}

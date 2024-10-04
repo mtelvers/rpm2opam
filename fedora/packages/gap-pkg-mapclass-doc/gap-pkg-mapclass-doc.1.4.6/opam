@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gap-pkg-mapclass-doc-1.4.6-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-pkg-mapclass-doc-1.4.6-10.fc40.noarch.rpm"]
+depends: [
+  "gap-online-help" 
+  "gap-pkg-mapclass" {= "1.4.6"}
+]
+extra-source "gap-pkg-mapclass-doc-1.4.6-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gap-pkg-mapclass-doc-1.4.6-10.fc40.noarch.rpm"
+}

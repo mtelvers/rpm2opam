@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openbsc-bsc-sccplite-1.4.1-1.15.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openbsc-bsc-sccplite-1.4.1-1.15.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libosmocore21" 
+  "libosmonetif11" 
+  "libosmovty13" 
+  "libtalloc2" 
+]
+extra-source "openbsc-bsc-sccplite-1.4.1-1.15.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openbsc-bsc-sccplite-1.4.1-1.15.x86_64.rpm"
+}

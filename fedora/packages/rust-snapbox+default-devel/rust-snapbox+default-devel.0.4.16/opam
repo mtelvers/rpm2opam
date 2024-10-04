@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-snapbox+default-devel-0.4.16-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-snapbox+default-devel-0.4.16-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-snapbox+color-auto-devel" {= "0.4.16"}
+  "rust-snapbox+diff-devel" {= "0.4.16"}
+  "rust-snapbox-devel" {= "0.4.16"}
+]
+extra-source "rust-snapbox+default-devel-0.4.16-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-snapbox+default-devel-0.4.16-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-inline-snapshot-0.12.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-inline-snapshot-0.12.1-1.1.noarch.rpm"]
+depends: [
+  "python310-asttokens" {>= "2.0.5"}
+  "python310-base" {= "3.10"}
+  "python310-black" {>= "23.3.0"}
+  "python310-click" {>= "8.1.4"}
+  "python310-executing" {>= "2.0.0"}
+  "python310-rich" {>= "13.7.1"}
+  "python310-toml" {>= "0.10.2"}
+  "python310-types-toml" {>= "0.10.8.7"}
+  "python310-typing_extensions" 
+]
+extra-source "python310-inline-snapshot-0.12.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-inline-snapshot-0.12.1-1.1.noarch.rpm"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "janus-gateway-1.2.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "janus-gateway-1.2.1-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ffmpeg-6-mini-libs" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libconfig11" 
+  "libcurl-mini4" 
+  "libjansson4" 
+  "liblua5_4-5" 
+  "libmicrohttpd12" 
+  "libnice10" 
+  "libogg0" 
+  "libopenssl3" 
+  "libpaho-mqtt1" 
+  "libpcap1" 
+  "libsofia-sip-ua0" 
+  "libsrtp2-1" 
+  "libusrsctp2" 
+  "libwebsockets19" 
+  "libz-ng-compat1" 
+  "shadow" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "janus-gateway-1.2.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/janus-gateway-1.2.1-1.1.x86_64.rpm"
+}

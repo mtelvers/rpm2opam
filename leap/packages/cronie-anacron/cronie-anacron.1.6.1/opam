@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cronie-anacron-1.6.1-slfo.1.1.22.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cronie-anacron-1.6.1-slfo.1.1.22.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "cronie" {= "1.6.1"}
+  "glibc" 
+]
+extra-source "cronie-anacron-1.6.1-slfo.1.1.22.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/cronie-anacron-1.6.1-slfo.1.1.22.x86_64.rpm"
+}

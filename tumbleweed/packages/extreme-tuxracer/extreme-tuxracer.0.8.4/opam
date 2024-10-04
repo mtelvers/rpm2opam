@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "extreme-tuxracer-0.8.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "extreme-tuxracer-0.8.4-1.1.x86_64.rpm"]
+depends: [
+  "extreme-tuxracer-data" {= "0.8.4"}
+  "glibc" 
+  "libGLU1" 
+  "libgcc_s1" 
+  "libglvnd" 
+  "libsfml2-2_6" 
+  "libstdc++6" 
+]
+extra-source "extreme-tuxracer-0.8.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/extreme-tuxracer-0.8.4-1.1.x86_64.rpm"
+}

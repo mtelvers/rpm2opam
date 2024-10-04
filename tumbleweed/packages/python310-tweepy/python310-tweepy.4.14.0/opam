@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-tweepy-4.14.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-tweepy-4.14.0-1.2.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-oauthlib" 
+  "python310-requests" 
+  "python310-requests-oauthlib" 
+]
+extra-source "python310-tweepy-4.14.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-tweepy-4.14.0-1.2.noarch.rpm"
+}

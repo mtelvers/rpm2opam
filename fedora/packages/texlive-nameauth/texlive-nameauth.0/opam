@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-nameauth-svn65738-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-nameauth-svn65738-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-bigfoot" 
+  "texlive-etoolbox" 
+  "texlive-kpathsea" 
+  "texlive-trimspaces" 
+  "texlive-xargs" 
+]
+extra-source "texlive-nameauth-svn65738-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-nameauth-svn65738-71.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "alure-devel-1.2-30.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "alure-devel-1.2-30.fc40.x86_64.rpm"]
+depends: [
+  "alure" {= "1.2"}
+  "openal-soft-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "alure-devel-1.2-30.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/alure-devel-1.2-30.fc40.x86_64.rpm"
+}

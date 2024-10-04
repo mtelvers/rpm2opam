@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nodejs18-18.19.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nodejs18-18.19.0-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "ca-certificates" 
+  "glibc" 
+  "libuv" {>= "1.44.2"}
+  "nodejs18-libs" 
+]
+extra-source "nodejs18-18.19.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nodejs18-18.19.0-3.fc40.x86_64.rpm"
+}

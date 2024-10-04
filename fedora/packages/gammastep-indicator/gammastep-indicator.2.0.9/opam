@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gammastep-indicator-2.0.9-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gammastep-indicator-2.0.9-6.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gammastep" {= "2.0.9"}
+  "gtk3" 
+  "libappindicator-gtk3" 
+  "python3" 
+  "python3-gobject-base" 
+  "python3-pyxdg" 
+]
+extra-source "gammastep-indicator-2.0.9-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gammastep-indicator-2.0.9-6.fc40.x86_64.rpm"
+}

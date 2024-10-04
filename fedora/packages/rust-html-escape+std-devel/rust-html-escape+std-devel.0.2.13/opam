@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-html-escape+std-devel-0.2.13-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-html-escape+std-devel-0.2.13-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-html-escape-devel" {= "0.2.13"}
+]
+extra-source "rust-html-escape+std-devel-0.2.13-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-html-escape+std-devel-0.2.13-4.fc40.noarch.rpm"
+}

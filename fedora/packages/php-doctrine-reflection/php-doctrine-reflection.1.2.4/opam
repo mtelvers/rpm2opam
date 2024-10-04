@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-doctrine-reflection-1.2.4-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-doctrine-reflection-1.2.4-3.fc40.noarch.rpm"]
+depends: [
+  "php-common" {>= "7.1"}
+  "php-doctrine-annotations" 
+  "php-fedora-autoloader" 
+]
+extra-source "php-doctrine-reflection-1.2.4-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-doctrine-reflection-1.2.4-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cross-avr-gcc14-14.2.0+git10526-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cross-avr-gcc14-14.2.0+git10526-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "cross-avr-binutils" 
+  "glibc" 
+  "libgmp10" 
+  "libisl23" 
+  "libmpc3" 
+  "libmpfr6" 
+  "libstdc++6-devel-gcc14" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+  "update-alternatives" 
+]
+extra-source "cross-avr-gcc14-14.2.0+git10526-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cross-avr-gcc14-14.2.0+git10526-2.1.x86_64.rpm"
+}

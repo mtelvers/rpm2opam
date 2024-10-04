@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pydrive2-1.18.1-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pydrive2-1.18.1-1.3.noarch.rpm"]
+depends: [
+  "python310-PyYAML" {>= "3.0"}
+  "python310-base" {= "3.10"}
+  "python310-google-api-python-client" {>= "1.12.5"}
+  "python310-google-auth" {>= "2.6.6"}
+  "python310-google-auth-httplib2" {>= "0.1.0"}
+  "python310-google-auth-oauthlib" {>= "0.5.1"}
+  "python310-pyOpenSSL" {>= "19.1.0"}
+]
+extra-source "python310-pydrive2-1.18.1-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-pydrive2-1.18.1-1.3.noarch.rpm"
+}

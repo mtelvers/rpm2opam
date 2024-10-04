@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cups-backends-1.1-lp160.1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cups-backends-1.1-lp160.1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "cups" 
+  "perl-base" 
+]
+extra-source "cups-backends-1.1-lp160.1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/cups-backends-1.1-lp160.1.1.noarch.rpm"
+}

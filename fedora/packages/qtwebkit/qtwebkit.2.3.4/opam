@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qtwebkit-2.3.4-39.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qtwebkit-2.3.4-39.fc39.x86_64.rpm"]
+depends: [
+  "fontconfig" 
+  "glib2" {>= "2.77.0"}
+  "glibc" {>= "2.37.9000"}
+  "gstreamer1" 
+  "gstreamer1-plugins-base" 
+  "libX11" 
+  "libXrender" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libstdc++" 
+  "libwebp" 
+  "libxml2" 
+  "libxslt" 
+  "mozilla-filesystem" 
+  "qt" 
+  "qt-mobility-location" 
+  "qt-mobility-sensors" 
+  "qt-x11" 
+  "sqlite-libs" 
+  "systemd-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "qtwebkit-2.3.4-39.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qtwebkit-2.3.4-39.fc39.x86_64.rpm"
+}

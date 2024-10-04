@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kwin-devel-6.0.3.1-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kwin-devel-6.0.3.1-2.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "kf6-kconfig-devel" 
+  "kf6-kservice-devel" 
+  "kf6-kwindowsystem-devel" 
+  "kwin-common" {= "6.0.3.1"}
+  "kwin-libs" {= "6.0.3.1"}
+]
+extra-source "kwin-devel-6.0.3.1-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kwin-devel-6.0.3.1-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lutok-tests-0.4-26.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lutok-tests-0.4-26.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libatf-c++" {>= "0.20"}
+  "libgcc" 
+  "libstdc++" 
+  "lua-libs" 
+  "lutok" 
+  "lutok-devel" {= "0.4"}
+]
+extra-source "lutok-tests-0.4-26.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lutok-tests-0.4-26.fc40.x86_64.rpm"
+}

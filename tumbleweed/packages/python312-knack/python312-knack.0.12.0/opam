@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-knack-0.12.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-knack-0.12.0-1.1.noarch.rpm"]
+depends: [
+  "python312-PyYAML" 
+  "python312-Pygments" 
+  "python312-argcomplete" 
+  "python312-base" {= "3.12"}
+  "python312-jmespath" 
+  "python312-tabulate" 
+]
+extra-source "python312-knack-0.12.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-knack-0.12.0-1.1.noarch.rpm"
+}

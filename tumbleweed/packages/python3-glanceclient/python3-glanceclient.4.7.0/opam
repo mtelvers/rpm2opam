@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-glanceclient-4.7.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-glanceclient-4.7.0-1.1.noarch.rpm"]
+depends: [
+  "python3-keystoneauth1" {>= "3.6.2"}
+  "python3-oslo-i18n" {>= "3.15.3"}
+  "python3-oslo-utils" {>= "3.33.0"}
+  "python311-base" 
+  "python311-pbr" {>= "2.0.0"}
+  "python311-prettytable" {>= "0.7.1"}
+  "python311-pyOpenSSL" {>= "17.1.0"}
+  "python311-requests" {>= "2.14.2"}
+  "python311-warlock" {>= "1.2.0"}
+  "python311-wrapt" {>= "1.7.0"}
+]
+extra-source "python3-glanceclient-4.7.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-glanceclient-4.7.0-1.1.noarch.rpm"
+}

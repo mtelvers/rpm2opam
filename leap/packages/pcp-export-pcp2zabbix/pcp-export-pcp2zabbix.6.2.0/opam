@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pcp-export-pcp2zabbix-6.2.0-slfo.1.1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcp-export-pcp2zabbix-6.2.0-slfo.1.1.6.noarch.rpm"]
+depends: [
+  "pcp" 
+  "python3-pcp" {= "6.2.0"}
+]
+extra-source "pcp-export-pcp2zabbix-6.2.0-slfo.1.1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/pcp-export-pcp2zabbix-6.2.0-slfo.1.1.6.noarch.rpm"
+}

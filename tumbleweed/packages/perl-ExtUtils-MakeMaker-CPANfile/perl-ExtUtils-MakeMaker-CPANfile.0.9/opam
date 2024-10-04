@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-ExtUtils-MakeMaker-CPANfile-0.09-1.25.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-ExtUtils-MakeMaker-CPANfile-0.09-1.25.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Module-CPANfile" 
+  "perl-base" {>= "0.76"}
+]
+extra-source "perl-ExtUtils-MakeMaker-CPANfile-0.09-1.25.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-ExtUtils-MakeMaker-CPANfile-0.09-1.25.noarch.rpm"
+}

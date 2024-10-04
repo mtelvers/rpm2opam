@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gkrellm-cpupower-0.2-2.29.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gkrellm-cpupower-0.2-2.29.x86_64.rpm"]
+depends: [
+  "cpupower" 
+  "gkrellm" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcpupower1" 
+  "libgtk-2_0-0" 
+]
+extra-source "gkrellm-cpupower-0.2-2.29.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gkrellm-cpupower-0.2-2.29.x86_64.rpm"
+}

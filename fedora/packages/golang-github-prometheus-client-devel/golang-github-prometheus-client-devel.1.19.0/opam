@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-prometheus-client-devel-1.19.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-prometheus-client-devel-1.19.0-1.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-cespare-xxhash-2-devel" 
+  "go-filesystem" 
+  "golang-github-beorn7-perks-devel" 
+  "golang-github-davecgh-spew-devel" 
+  "golang-github-json-iterator-devel" 
+  "golang-github-prometheus-client-model-devel" 
+  "golang-github-prometheus-common-devel" 
+  "golang-github-prometheus-procfs-devel" 
+  "golang-google-protobuf-devel" 
+]
+extra-source "golang-github-prometheus-client-devel-1.19.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-prometheus-client-devel-1.19.0-1.fc40.noarch.rpm"
+}

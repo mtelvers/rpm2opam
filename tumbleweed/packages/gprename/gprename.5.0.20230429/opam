@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gprename-5.0.20230429-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gprename-5.0.20230429-1.2.noarch.rpm"]
+depends: [
+  "gdk-pixbuf-devel" 
+  "perl-Gtk3" 
+  "perl-Pango" 
+  "perl-base" 
+  "perl-gettext" 
+  "perl-libintl-perl" 
+]
+extra-source "gprename-5.0.20230429-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gprename-5.0.20230429-1.2.noarch.rpm"
+}

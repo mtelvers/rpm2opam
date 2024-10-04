@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "novnc-1.5.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "novnc-1.5.0-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "python311-websockify" {>= "0.9.0"}
+  "which" 
+]
+extra-source "novnc-1.5.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/novnc-1.5.0-1.1.noarch.rpm"
+}

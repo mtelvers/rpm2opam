@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plasma6-kimpanel-ibus-6.1.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plasma6-kimpanel-ibus-6.1.5-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libQt6Core6" 
+  "libQt6DBus6" 
+  "libQt6Gui6" 
+  "libibus-1_0-5" 
+  "libstdc++6" 
+  "libxcb-keysyms1" 
+  "libxcb1" 
+  "plasma6-desktop" {= "6.1.5"}
+]
+extra-source "plasma6-kimpanel-ibus-6.1.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/plasma6-kimpanel-ibus-6.1.5-1.1.x86_64.rpm"
+}

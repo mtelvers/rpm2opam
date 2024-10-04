@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-cursive-tabs-devel-0.6.0-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-cursive-tabs-devel-0.6.0-8.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cargo" 
+  "rust-crossbeam+default-devel" 
+  "rust-cursive_core+default-devel" 
+  "rust-log+default-devel" 
+  "rust-num+default-devel" 
+]
+extra-source "rust-cursive-tabs-devel-0.6.0-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-cursive-tabs-devel-0.6.0-8.fc40.noarch.rpm"
+}

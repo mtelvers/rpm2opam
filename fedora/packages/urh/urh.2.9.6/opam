@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "urh-2.9.6-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "urh-2.9.6-2.fc40.x86_64.rpm"]
+depends: [
+  "airspyone_host" 
+  "glibc" 
+  "hackrf" 
+  "libgcc" 
+  "libgomp" 
+  "libstdc++" 
+  "python3" 
+  "python3-cython" 
+  "python3-numpy" 
+  "python3-psutil" 
+  "python3-qt5" 
+  "rtl-sdr" 
+  "uhd" 
+]
+extra-source "urh-2.9.6-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/urh-2.9.6-2.fc40.x86_64.rpm"
+}

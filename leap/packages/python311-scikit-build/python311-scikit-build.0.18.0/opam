@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-scikit-build-0.18.0-slfo.1.1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-scikit-build-0.18.0-slfo.1.1.2.noarch.rpm"]
+depends: [
+  "cmake" {>= "3.5"}
+  "python311-base" {= "3.11"}
+  "python311-distro" 
+  "python311-packaging" 
+  "python311-setuptools" {>= "42.0.0"}
+  "python311-wheel" {>= "0.32.0"}
+]
+extra-source "python311-scikit-build-0.18.0-slfo.1.1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/python311-scikit-build-0.18.0-slfo.1.1.2.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libclc-0.2.0+llvm18.1.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libclc-0.2.0+llvm18.1.0-2.2.noarch.rpm"]
+depends: [
+  "pkgconf-pkg-config" 
+]
+extra-source "libclc-0.2.0+llvm18.1.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libclc-0.2.0+llvm18.1.0-2.2.noarch.rpm"
+}

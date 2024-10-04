@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnatcoll-bindings-devel-21.0.0-17.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnatcoll-bindings-devel-21.0.0-17.fc40.x86_64.rpm"]
+depends: [
+  "fedora-gnat-project-common" 
+  "gnatcoll-core-devel" 
+  "gnatcoll-gmp" {= "21.0.0"}
+  "gnatcoll-iconv" {= "21.0.0"}
+  "gnatcoll-readline" {= "21.0.0"}
+  "gnatcoll-syslog" {= "21.0.0"}
+]
+extra-source "gnatcoll-bindings-devel-21.0.0-17.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnatcoll-bindings-devel-21.0.0-17.fc40.x86_64.rpm"
+}

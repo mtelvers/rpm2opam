@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "feedbackd-devel-0.2.1-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "feedbackd-devel-0.2.1-1.4.x86_64.rpm"]
+depends: [
+  "feedbackd" {= "0.2.1"}
+  "glib2-devel" {>= "2.50.0"}
+  "libfeedback-0_0-0" {= "0.2.1"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Lfb-0_0" {= "0.2.1"}
+]
+extra-source "feedbackd-devel-0.2.1-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/feedbackd-devel-0.2.1-1.4.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libarchive13-32bit-3.7.6-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libarchive13-32bit-3.7.6-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libacl1-32bit" 
+  "libbz2-1-32bit" 
+  "liblz4-1-32bit" 
+  "liblzma5-32bit" 
+  "libopenssl3-32bit" 
+  "libxml2-2-32bit" 
+  "libz1-32bit" 
+  "libzstd1-32bit" 
+]
+extra-source "libarchive13-32bit-3.7.6-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libarchive13-32bit-3.7.6-1.1.x86_64.rpm"
+}

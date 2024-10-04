@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gitweb-2.44.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gitweb-2.44.0-1.fc40.noarch.rpm"]
+depends: [
+  "git" {= "2.44.0"}
+  "perl-CGI" 
+  "perl-Digest-MD5" 
+  "perl-Encode" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Find" 
+  "perl-Time-HiRes" 
+  "perl-constant" 
+  "perl-filetest" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.8.1"}
+]
+extra-source "gitweb-2.44.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gitweb-2.44.0-1.fc40.noarch.rpm"
+}

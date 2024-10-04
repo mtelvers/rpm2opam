@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zypper-1.14.77-slfo.1.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zypper-1.14.77-slfo.1.1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libaugeas0" 
+  "libgcc_s1" 
+  "libreadline8" 
+  "libstdc++6" 
+  "libxml2-2" 
+  "libzypp" {>= "17.35.11"}
+]
+extra-source "zypper-1.14.77-slfo.1.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/zypper-1.14.77-slfo.1.1.2.x86_64.rpm"
+}

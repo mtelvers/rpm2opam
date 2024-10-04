@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "device-mapper-event-1.02.197-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "device-mapper-event-1.02.197-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "device-mapper" {= "1.2.197"}
+  "device-mapper-event-libs" {= "1.2.197"}
+  "device-mapper-libs" 
+  "glibc" 
+  "libgcc" 
+  "systemd" 
+]
+extra-source "device-mapper-event-1.02.197-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/device-mapper-event-1.02.197-1.fc40.x86_64.rpm"
+}

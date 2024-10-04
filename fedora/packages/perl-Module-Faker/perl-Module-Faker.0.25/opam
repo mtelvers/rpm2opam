@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Module-Faker-0.025-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Faker-0.025-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Archive-Any-Create" 
+  "perl-CPAN-DistnameInfo" 
+  "perl-CPAN-Meta" {>= "2.130880"}
+  "perl-CPAN-Meta-Requirements" 
+  "perl-Carp" 
+  "perl-Data-OptList" 
+  "perl-Encode" 
+  "perl-File-Next" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long-Descriptive" 
+  "perl-Moose" {>= "0.33"}
+  "perl-Path-Class" {>= "0.6"}
+  "perl-Storable" 
+  "perl-Text-Template" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.14.0"}
+]
+extra-source "perl-Module-Faker-0.025-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Module-Faker-0.025-4.fc40.noarch.rpm"
+}

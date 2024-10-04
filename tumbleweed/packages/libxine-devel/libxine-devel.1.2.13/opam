@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libxine-devel-1.2.13-5.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxine-devel-1.2.13-5.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "freetype2-devel" 
+  "glibc-devel" 
+  "libv4l-devel" 
+  "libxine2" {= "1.2.13"}
+  "pkgconf-pkg-config" 
+  "zlib-devel" 
+]
+extra-source "libxine-devel-1.2.13-5.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libxine-devel-1.2.13-5.1.x86_64.rpm"
+}

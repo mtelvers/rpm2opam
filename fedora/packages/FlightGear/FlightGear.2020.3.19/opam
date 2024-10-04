@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "FlightGear-2020.3.19-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "FlightGear-2020.3.19-4.fc40.x86_64.rpm"]
+depends: [
+  "FlightGear-data" {>= "2020.3.19"}
+  "OpenSceneGraph-libs" 
+  "OpenThreads" 
+  "SimGear" 
+  "dbus-libs" 
+  "freeglut" 
+  "freetype" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "iaxclient" 
+  "libGLEW" 
+  "libX11" 
+  "libevent" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libpng" 
+  "libstdc++" 
+  "opengl-games-utils" 
+  "plib" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtdeclarative" 
+  "sqlite-libs" 
+  "systemd-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "FlightGear-2020.3.19-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/FlightGear-2020.3.19-4.fc40.x86_64.rpm"
+}

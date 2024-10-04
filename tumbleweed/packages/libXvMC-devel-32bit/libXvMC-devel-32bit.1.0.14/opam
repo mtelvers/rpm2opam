@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libXvMC-devel-32bit-1.0.14-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libXvMC-devel-32bit-1.0.14-1.2.x86_64.rpm"]
+depends: [
+  "libX11-devel" {>= "1.6"}
+  "libXext-devel" 
+  "libXv-devel" 
+  "libXvMC-devel" {= "1.0.14"}
+  "libXvMC1-32bit" {= "1.0.14"}
+  "pkgconf-pkg-config" 
+  "xorgproto-devel" 
+]
+extra-source "libXvMC-devel-32bit-1.0.14-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libXvMC-devel-32bit-1.0.14-1.2.x86_64.rpm"
+}

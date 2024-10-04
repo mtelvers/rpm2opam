@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libOpenSceneGraph-devel-3.6.5-9.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libOpenSceneGraph-devel-3.6.5-9.3.x86_64.rpm"]
+depends: [
+  "SDL2-devel" 
+  "freeglut-devel" 
+  "freetype2-devel" 
+  "giflib-devel" 
+  "libOpenSceneGraph161" {= "3.6.5"}
+  "libOpenThreads-devel" {= "3.6.5"}
+  "libXrandr-devel" 
+  "libcurl-devel" 
+  "libjpeg62-devel" 
+  "libpng12-compat-devel" 
+  "libpoppler-glib-devel" 
+  "librsvg-devel" 
+  "libtiff-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libOpenSceneGraph-devel-3.6.5-9.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libOpenSceneGraph-devel-3.6.5-9.3.x86_64.rpm"
+}

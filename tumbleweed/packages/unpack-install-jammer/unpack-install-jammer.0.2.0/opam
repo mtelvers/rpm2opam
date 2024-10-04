@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "unpack-install-jammer-0.2.0-1.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "unpack-install-jammer-0.2.0-1.12.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Compress-Raw-Lzma" 
+  "perl-Data-Dump" 
+  "perl-File-HomeDir" 
+  "perl-Modern-Perl" 
+  "perl-Term-ProgressBar" 
+  "perl-base" 
+]
+extra-source "unpack-install-jammer-0.2.0-1.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/unpack-install-jammer-0.2.0-1.12.noarch.rpm"
+}

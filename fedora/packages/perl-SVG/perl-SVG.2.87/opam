@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-SVG-2.87-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-SVG-2.87-7.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" 
+  "perl-Scalar-List-Utils" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-SVG-2.87-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-SVG-2.87-7.fc40.noarch.rpm"
+}

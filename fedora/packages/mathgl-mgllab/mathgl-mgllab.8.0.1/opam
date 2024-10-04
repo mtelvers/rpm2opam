@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mathgl-mgllab-8.0.1-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mathgl-mgllab-8.0.1-10.fc40.x86_64.rpm"]
+depends: [
+  "fltk" 
+  "glibc" 
+  "libgcc" 
+  "libgomp" 
+  "libstdc++" 
+  "mathgl" 
+  "mathgl-fltk" 
+]
+extra-source "mathgl-mgllab-8.0.1-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mathgl-mgllab-8.0.1-10.fc40.x86_64.rpm"
+}

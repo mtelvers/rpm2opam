@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libjcat-devel-0.2.1-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libjcat-devel-0.2.1-1.3.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.45.8"}
+  "jcat-tool" {= "0.2.1"}
+  "json-glib-devel" {>= "1.1.1"}
+  "libgnutls-devel" {>= "3.6.0"}
+  "libjcat1" {= "0.2.1"}
+  "libnettle-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libjcat-devel-0.2.1-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libjcat-devel-0.2.1-1.3.x86_64.rpm"
+}

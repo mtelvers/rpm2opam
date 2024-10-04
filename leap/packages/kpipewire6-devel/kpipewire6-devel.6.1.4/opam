@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kpipewire6-devel-6.1.4-lp160.1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kpipewire6-devel-6.1.4-lp160.1.3.x86_64.rpm"]
+depends: [
+  "kpipewire6-imports" {= "6.1.4"}
+  "libKPipeWire6" {= "6.1.4"}
+  "libKPipeWireDmaBuf6" {= "6.1.4"}
+  "libKPipeWireRecord6" {= "6.1.4"}
+  "libepoxy-devel" 
+  "pipewire-devel" 
+]
+extra-source "kpipewire6-devel-6.1.4-lp160.1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/kpipewire6-devel-6.1.4-lp160.1.3.x86_64.rpm"
+}

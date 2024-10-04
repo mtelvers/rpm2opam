@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zypper-aptitude-1.14.77-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zypper-aptitude-1.14.77-1.1.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-base" 
+  "zypper" 
+]
+extra-source "zypper-aptitude-1.14.77-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/zypper-aptitude-1.14.77-1.1.noarch.rpm"
+}

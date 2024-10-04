@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "elementary-icon-theme-gimp-palette-5.1.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "elementary-icon-theme-gimp-palette-5.1.0-2.1.noarch.rpm"]
+depends: [
+  "elementary-icon-theme" {= "5.1.0"}
+  "gimp" 
+]
+extra-source "elementary-icon-theme-gimp-palette-5.1.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/elementary-icon-theme-gimp-palette-5.1.0-2.1.noarch.rpm"
+}

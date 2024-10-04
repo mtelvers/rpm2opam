@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kicad-packages3D-8.0.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kicad-packages3D-8.0.5-1.1.noarch.rpm"]
+depends: [
+  "kicad-footprints" {= "8.0.5"}
+]
+extra-source "kicad-packages3D-8.0.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kicad-packages3D-8.0.5-1.1.noarch.rpm"
+}

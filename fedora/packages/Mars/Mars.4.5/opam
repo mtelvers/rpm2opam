@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "Mars-4.5-26.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Mars-4.5-26.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "java-17-openjdk" 
+]
+extra-source "Mars-4.5-26.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/Mars-4.5-26.fc40.noarch.rpm"
+}

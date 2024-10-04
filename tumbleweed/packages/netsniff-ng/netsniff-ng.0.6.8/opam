@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "netsniff-ng-0.6.8-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netsniff-ng-0.6.8-3.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcli1_10" 
+  "libncurses6" 
+  "libnet9" 
+  "libnetfilter_conntrack3" 
+  "libnl3-200" 
+  "libpcap1" 
+  "libsodium26" 
+  "liburcu8" 
+]
+extra-source "netsniff-ng-0.6.8-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/netsniff-ng-0.6.8-3.3.x86_64.rpm"
+}

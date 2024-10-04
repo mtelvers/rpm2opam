@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "elementary-files-devel-6.5.3-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "elementary-files-devel-6.5.3-3.fc40.x86_64.rpm"]
+depends: [
+  "elementary-files" {= "6.5.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "elementary-files-devel-6.5.3-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/elementary-files-devel-6.5.3-3.fc40.x86_64.rpm"
+}

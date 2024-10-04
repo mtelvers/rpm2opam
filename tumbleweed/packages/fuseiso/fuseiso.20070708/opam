@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fuseiso-20070708-52.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fuseiso-20070708-52.2.x86_64.rpm"]
+depends: [
+  "fuse" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libfuse2" 
+  "libz-ng-compat1" 
+]
+extra-source "fuseiso-20070708-52.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/fuseiso-20070708-52.2.x86_64.rpm"
+}

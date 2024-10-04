@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lugaru-1.2-2.26.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lugaru-1.2-2.26.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libGLU1" 
+  "libSDL2-2_0-0" 
+  "libgcc_s1" 
+  "libglvnd" 
+  "libjpeg8" 
+  "libopenal1" 
+  "libpng16-16" 
+  "libstdc++6" 
+  "libvorbisfile3" 
+  "lugaru-data" {= "1.2"}
+]
+extra-source "lugaru-1.2-2.26.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lugaru-1.2-2.26.x86_64.rpm"
+}

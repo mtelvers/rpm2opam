@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sazanami-fonts-all-0.20040629-46.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sazanami-fonts-all-0.20040629-46.fc40.noarch.rpm"]
+depends: [
+  "sazanami-gothic-fonts" {= "0.20040629"}
+  "sazanami-mincho-fonts" {= "0.20040629"}
+]
+extra-source "sazanami-fonts-all-0.20040629-46.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sazanami-fonts-all-0.20040629-46.fc40.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "polkit-devel-123-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "polkit-devel-123-4.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.30.0"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libpolkit-agent-1-0" {= "123"}
+  "libpolkit-gobject-1-0" {= "123"}
+  "pkgconf-pkg-config" 
+  "polkit" {= "123"}
+  "typelib-1_0-Polkit-1_0" {= "123"}
+]
+extra-source "polkit-devel-123-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/polkit-devel-123-4.1.x86_64.rpm"
+}

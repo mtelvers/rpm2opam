@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-diadia-2023.201.1.1svn37656-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-diadia-2023.201.1.1svn37656-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-amsfonts" 
+  "texlive-amsmath" 
+  "texlive-booktabs" 
+  "texlive-colortbl" 
+  "texlive-diadia-bin" {>= "2023"}
+  "texlive-environ" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-luatex-bin" 
+  "texlive-pgf" 
+  "texlive-pgfplots" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-tcolorbox" 
+  "texlive-tools" 
+  "texlive-translations" 
+  "texlive-xkeyval" 
+]
+extra-source "texlive-diadia-2023.201.1.1svn37656-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-diadia-2023.201.1.1svn37656-slfo.1.1.4.noarch.rpm"
+}

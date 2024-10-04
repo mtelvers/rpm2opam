@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-Rivet-3.1.10-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-Rivet-3.1.10-1.2.x86_64.rpm"]
+depends: [
+  "Rivet-data" {= "3.1.10"}
+  "glibc" 
+  "libHepMC3-3" 
+  "libRivet-3_1_10" 
+  "libgcc_s1" 
+  "libpython3_11-1_0" 
+  "libstdc++6" 
+  "python311-base" 
+]
+extra-source "python3-Rivet-3.1.10-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python3-Rivet-3.1.10-1.2.x86_64.rpm"
+}

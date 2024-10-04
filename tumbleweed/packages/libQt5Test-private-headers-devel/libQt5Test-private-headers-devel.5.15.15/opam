@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libQt5Test-private-headers-devel-5.15.15+kde127-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libQt5Test-private-headers-devel-5.15.15+kde127-1.2.noarch.rpm"]
+depends: [
+  "libQt5Core-private-headers-devel" {= "5.15.15"}
+  "libQt5Test-devel" {= "5.15.15"}
+]
+extra-source "libQt5Test-private-headers-devel-5.15.15+kde127-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libQt5Test-private-headers-devel-5.15.15+kde127-1.2.noarch.rpm"
+}

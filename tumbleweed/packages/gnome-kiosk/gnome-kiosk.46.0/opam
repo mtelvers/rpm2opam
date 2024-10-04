@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-kiosk-46.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-kiosk-46.0-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gnome-session" 
+  "libX11-6" 
+  "libglvnd" 
+  "libgnome-desktop-4-2" 
+  "libibus-1_0-5" 
+  "libsystemd0" 
+  "mutter" 
+]
+extra-source "gnome-kiosk-46.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnome-kiosk-46.0-1.2.x86_64.rpm"
+}

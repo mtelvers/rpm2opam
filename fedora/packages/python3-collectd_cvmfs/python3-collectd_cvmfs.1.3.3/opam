@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-collectd_cvmfs-1.3.3-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-collectd_cvmfs-1.3.3-13.fc40.noarch.rpm"]
+depends: [
+  "collectd-python" 
+  "python3" {= "3.12"}
+  "python3-psutil" 
+  "python3-pyxattr" 
+]
+extra-source "python3-collectd_cvmfs-1.3.3-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-collectd_cvmfs-1.3.3-13.fc40.noarch.rpm"
+}

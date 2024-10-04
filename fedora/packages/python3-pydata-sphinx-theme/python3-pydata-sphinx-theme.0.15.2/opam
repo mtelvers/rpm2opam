@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-pydata-sphinx-theme-0.15.2-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-pydata-sphinx-theme-0.15.2-4.fc40.noarch.rpm"]
+depends: [
+  "fontawesome-fonts-all" 
+  "python3" {= "3.12"}
+  "python3-accessible-pygments" 
+  "python3-babel" 
+  "python3-beautifulsoup4" 
+  "python3-docutils" 
+  "python3-packaging" 
+  "python3-pygments" {>= "2.7"}
+  "python3-sphinx" {>= "5"}
+  "python3-typing-extensions" 
+]
+extra-source "python3-pydata-sphinx-theme-0.15.2-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-pydata-sphinx-theme-0.15.2-4.fc40.noarch.rpm"
+}

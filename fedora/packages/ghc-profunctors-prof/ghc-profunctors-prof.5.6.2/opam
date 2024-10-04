@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-profunctors-prof-5.6.2-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-profunctors-prof-5.6.2-12.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-orphans-prof" 
+  "ghc-base-prof" 
+  "ghc-bifunctors-prof" 
+  "ghc-comonad-prof" 
+  "ghc-contravariant-prof" 
+  "ghc-distributive-prof" 
+  "ghc-profunctors-devel" {= "5.6.2"}
+  "ghc-tagged-prof" 
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-profunctors-prof-5.6.2-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-profunctors-prof-5.6.2-12.fc40.x86_64.rpm"
+}

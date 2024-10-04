@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libstaroffice-tools-0.0.7-3.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libstaroffice-tools-0.0.7-3.11.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "librevenge-0_0-0" 
+  "librevenge-generators-0_0-0" 
+  "librevenge-stream-0_0-0" 
+  "libstaroffice-0_0-0" 
+  "libstdc++6" 
+]
+extra-source "libstaroffice-tools-0.0.7-3.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libstaroffice-tools-0.0.7-3.11.x86_64.rpm"
+}

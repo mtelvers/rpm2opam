@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "flake-pilot-firecracker-dracut-netstart-3.0.13-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flake-pilot-firecracker-dracut-netstart-3.0.13-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "systemd-network" 
+]
+extra-source "flake-pilot-firecracker-dracut-netstart-3.0.13-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/flake-pilot-firecracker-dracut-netstart-3.0.13-2.1.noarch.rpm"
+}

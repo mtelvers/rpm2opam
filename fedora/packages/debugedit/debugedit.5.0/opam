@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "debugedit-5.0-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "debugedit-5.0-14.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "binutils" 
+  "coreutils" 
+  "dwz" 
+  "elfutils" 
+  "elfutils-libelf" 
+  "elfutils-libs" 
+  "findutils" 
+  "gawk" 
+  "gdb-headless" 
+  "glibc" 
+  "grep" 
+  "sed" 
+  "xz" 
+]
+extra-source "debugedit-5.0-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/debugedit-5.0-14.fc40.x86_64.rpm"
+}

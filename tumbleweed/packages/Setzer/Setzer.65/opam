@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "Setzer-65-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Setzer-65-1.4.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-bibtexparser" 
+  "python311-gobject-Gdk" 
+  "python311-pexpect" 
+  "python311-pycairo" 
+  "typelib-1_0-Adw-1" {= "1"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Graphene-1_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-4_0" 
+  "typelib-1_0-GtkSource-5" {= "5"}
+  "typelib-1_0-Pango-1_0" 
+  "typelib-1_0-Poppler-0_18" {= "0.18"}
+  "typelib-1_0-WebKit-6_0" {= "6.0"}
+  "typelib-1_0-Xdp-1_0" {= "1.0"}
+]
+extra-source "Setzer-65-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/Setzer-65-1.4.noarch.rpm"
+}

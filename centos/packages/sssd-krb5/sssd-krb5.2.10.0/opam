@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sssd-krb5-2.10.0~beta2-3.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sssd-krb5-2.10.0~beta2-3.el10.x86_64.rpm"]
+depends: [
+  "dbus-libs" 
+  "glibc" 
+  "keyutils-libs" 
+  "krb5-libs" 
+  "libbasicobjects" 
+  "libcap" 
+  "libcollection" 
+  "libcom_err" 
+  "libdhash" 
+  "libini_config" 
+  "libldb" 
+  "libref_array" 
+  "libselinux" 
+  "libtalloc" 
+  "libtdb" 
+  "libtevent" 
+  "libunistring" 
+  "openssl-libs" 
+  "pcre2" 
+  "popt" 
+  "sssd-common" 
+  "sssd-krb5-common" {= "2.10.0"}
+  "systemd-libs" 
+]
+extra-source "sssd-krb5-2.10.0~beta2-3.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/sssd-krb5-2.10.0~beta2-3.el10.x86_64.rpm"
+}

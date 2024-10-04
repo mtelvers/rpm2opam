@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-OneTuple-prof-0.4.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-OneTuple-prof-0.4.2-1.2.x86_64.rpm"]
+depends: [
+  "ghc-OneTuple-devel" {= "0.4.2"}
+  "ghc-base-prof" 
+  "ghc-template-haskell-prof" 
+]
+extra-source "ghc-OneTuple-prof-0.4.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-OneTuple-prof-0.4.2-1.2.x86_64.rpm"
+}

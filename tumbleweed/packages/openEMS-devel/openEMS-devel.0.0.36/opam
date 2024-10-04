@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openEMS-devel-0.0.36-2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openEMS-devel-0.0.36-2.5.x86_64.rpm"]
+depends: [
+  "libnf2ff0" {= "0.0.36"}
+  "libopenEMS0" {= "0.0.36"}
+]
+extra-source "openEMS-devel-0.0.36-2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openEMS-devel-0.0.36-2.5.x86_64.rpm"
+}

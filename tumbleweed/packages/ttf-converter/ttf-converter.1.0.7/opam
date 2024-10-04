@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ttf-converter-1.0.7-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ttf-converter-1.0.7-3.2.noarch.rpm"]
+depends: [
+  "fontforge" 
+  "ftdump" 
+  "python311-base" 
+]
+extra-source "ttf-converter-1.0.7-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ttf-converter-1.0.7-3.2.noarch.rpm"
+}

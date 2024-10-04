@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-nu-lsp-devel-0.91.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-nu-lsp-devel-0.91.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-crossbeam-channel+default-devel" 
+  "rust-lsp-server+default-devel" 
+  "rust-lsp-types+default-devel" 
+  "rust-miette+default-devel" 
+  "rust-nu-cli+default-devel" 
+  "rust-nu-parser+default-devel" 
+  "rust-nu-protocol+default-devel" 
+  "rust-reedline+default-devel" 
+  "rust-ropey+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde_json+default-devel" 
+]
+extra-source "rust-nu-lsp-devel-0.91.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-nu-lsp-devel-0.91.0-1.fc40.noarch.rpm"
+}

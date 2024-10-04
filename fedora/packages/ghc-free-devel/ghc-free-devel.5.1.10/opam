@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-free-devel-5.1.10-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-free-devel-5.1.10-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-comonad-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-distributive-devel" 
+  "ghc-exceptions-devel" 
+  "ghc-free" {= "5.1.10"}
+  "ghc-indexed-traversable-devel" 
+  "ghc-mtl-devel" 
+  "ghc-profunctors-devel" 
+  "ghc-semigroupoids-devel" 
+  "ghc-template-haskell-devel" 
+  "ghc-th-abstraction-devel" 
+  "ghc-transformers-base-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-free-devel-5.1.10-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-free-devel-5.1.10-6.fc40.x86_64.rpm"
+}

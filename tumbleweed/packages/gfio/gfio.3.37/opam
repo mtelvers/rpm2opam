@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gfio-3.37-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gfio-3.37-2.1.x86_64.rpm"]
+depends: [
+  "fio" {= "3.37"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libaio1" 
+  "libcairo2" 
+  "libcurl-mini4" 
+  "libgfapi0" 
+  "libgtk-2_0-0" 
+  "libibverbs1" 
+  "libiscsi10" 
+  "libnbd0" 
+  "libnuma1" 
+  "libopenssl3" 
+  "libpmem1" 
+  "librados2" 
+  "librbd1" 
+  "librdmacm1" 
+  "libz-ng-compat1" 
+]
+extra-source "gfio-3.37-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gfio-3.37-2.1.x86_64.rpm"
+}

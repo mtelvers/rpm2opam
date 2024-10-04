@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-futures-test-devel-0.3.30-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-futures-test-devel-0.3.30-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.56"}
+  "rust-futures-core-devel" 
+  "rust-futures-executor-devel" 
+  "rust-futures-io-devel" 
+  "rust-futures-macro-devel" {= "0.3.30"}
+  "rust-futures-sink-devel" 
+  "rust-futures-task-devel" 
+  "rust-futures-util-devel" 
+  "rust-pin-project+default-devel" 
+  "rust-pin-utils-devel" 
+]
+extra-source "rust-futures-test-devel-0.3.30-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-futures-test-devel-0.3.30-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-RPM-VersionCompare-0.1.1-49.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-RPM-VersionCompare-0.1.1-49.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-AutoLoader" 
+  "perl-Exporter" 
+  "perl-libs" 
+  "perl-version" {>= "0.77"}
+  "rpm-libs" 
+]
+extra-source "perl-RPM-VersionCompare-0.1.1-49.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-RPM-VersionCompare-0.1.1-49.fc40.x86_64.rpm"
+}

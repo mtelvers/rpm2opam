@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "opencascade-draw-7.6.3-4.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opencascade-draw-7.6.3-4.fc39.x86_64.rpm"]
+depends: [
+  "glibc" {>= "2.37.9000"}
+  "libX11" 
+  "libgcc" 
+  "libstdc++" 
+  "opencascade-foundation" 
+  "opencascade-modeling" 
+  "opencascade-ocaf" 
+  "tbb2020-3" 
+  "tcl" 
+  "tk" 
+  "vtk" 
+]
+extra-source "opencascade-draw-7.6.3-4.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/opencascade-draw-7.6.3-4.fc39.x86_64.rpm"
+}

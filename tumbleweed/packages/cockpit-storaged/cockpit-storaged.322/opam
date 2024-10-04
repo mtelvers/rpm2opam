@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cockpit-storaged-322-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cockpit-storaged-322-1.1.noarch.rpm"]
+depends: [
+  "cockpit-system" {>= "266"}
+  "libudisks2-0_btrfs" {>= "2.9"}
+  "libudisks2-0_lvm2" {>= "2.9"}
+  "python311-base" 
+  "python311-dbus-python" 
+  "udisks2" {>= "2.9"}
+]
+extra-source "cockpit-storaged-322-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cockpit-storaged-322-1.1.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "new-session-manager-1.3.2-8.fc38.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "new-session-manager-1.3.2-8.fc38.x86_64.rpm"]
+depends: [
+  "fltk" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "jack-audio-connection-kit" 
+  "libgcc" 
+  "liblo" 
+  "libstdc++" 
+]
+extra-source "new-session-manager-1.3.2-8.fc38.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/new-session-manager-1.3.2-8.fc38.x86_64.rpm"
+}

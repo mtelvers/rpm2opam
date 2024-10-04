@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-DBD-CSV-0.60-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DBD-CSV-0.60-5.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-DBI" {>= "0.44"}
+  "perl-DynaLoader" 
+  "perl-Exporter" 
+  "perl-IO" 
+  "perl-SQL-Statement" {>= "1.405"}
+  "perl-Text-CSV_XS" {>= "1.45"}
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-DBD-CSV-0.60-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-DBD-CSV-0.60-5.fc40.noarch.rpm"
+}

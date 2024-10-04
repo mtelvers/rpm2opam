@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-Twisted-tls-24.7.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-Twisted-tls-24.7.0-1.1.noarch.rpm"]
+depends: [
+  "python311-Twisted" {= "24.7.0"}
+  "python311-idna" {>= "2.4"}
+  "python311-pyOpenSSL" {>= "16.0.0"}
+  "python311-service_identity" {>= "18.1.0"}
+]
+extra-source "python311-Twisted-tls-24.7.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-Twisted-tls-24.7.0-1.1.noarch.rpm"
+}

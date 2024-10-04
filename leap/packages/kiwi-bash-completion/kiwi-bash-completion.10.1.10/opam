@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kiwi-bash-completion-10.1.10-slfo.1.1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kiwi-bash-completion-10.1.10-slfo.1.1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "python3-kiwi" {= "10.1.10"}
+]
+extra-source "kiwi-bash-completion-10.1.10-slfo.1.1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/kiwi-bash-completion-10.1.10-slfo.1.1.1.noarch.rpm"
+}

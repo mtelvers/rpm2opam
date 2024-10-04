@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dbus-broker-35-6.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dbus-broker-35-6.el10.x86_64.rpm"]
+depends: [
+  "audit-libs" 
+  "bash" 
+  "dbus-common" 
+  "expat" 
+  "glibc" 
+  "libcap-ng" 
+  "libgcc" 
+  "libselinux" 
+  "shadow-utils" 
+  "systemd-libs" 
+]
+extra-source "dbus-broker-35-6.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/dbus-broker-35-6.el10.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plexus-component-metadata-2.2.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plexus-component-metadata-2.2.0-2.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "jdom2" 
+  "objectweb-asm" 
+  "plexus-containers-component-annotations" 
+  "plexus-utils" 
+  "plexus-xml" 
+  "qdox" 
+]
+extra-source "plexus-component-metadata-2.2.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/plexus-component-metadata-2.2.0-2.1.noarch.rpm"
+}

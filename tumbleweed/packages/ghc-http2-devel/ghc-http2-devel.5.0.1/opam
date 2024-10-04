@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-http2-devel-5.0.1-1.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-http2-devel-5.0.1-1.13.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-array-devel" 
+  "ghc-async-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-case-insensitive-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-http-types-devel" 
+  "ghc-http2" {= "5.0.1"}
+  "ghc-network-byte-order-devel" 
+  "ghc-network-control-devel" 
+  "ghc-network-devel" 
+  "ghc-stm-devel" 
+  "ghc-time-manager-devel" 
+  "ghc-unix-time-devel" 
+  "ghc-unliftio-devel" 
+]
+extra-source "ghc-http2-devel-5.0.1-1.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-http2-devel-5.0.1-1.13.x86_64.rpm"
+}

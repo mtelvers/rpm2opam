@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libshaderc-2023.8-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libshaderc-2023.8-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "spirv-tools-libs" 
+]
+extra-source "libshaderc-2023.8-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libshaderc-2023.8-1.fc40.x86_64.rpm"
+}

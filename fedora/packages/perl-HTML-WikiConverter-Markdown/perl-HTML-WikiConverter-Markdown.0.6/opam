@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-HTML-WikiConverter-Markdown-0.06-27.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTML-WikiConverter-Markdown-0.06-27.fc40.noarch.rpm"]
+depends: [
+  "perl-HTML-Parser" 
+  "perl-HTML-Tagset" 
+  "perl-HTML-WikiConverter" {>= "0.67"}
+  "perl-Params-Validate" 
+  "perl-URI" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-HTML-WikiConverter-Markdown-0.06-27.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-HTML-WikiConverter-Markdown-0.06-27.fc40.noarch.rpm"
+}

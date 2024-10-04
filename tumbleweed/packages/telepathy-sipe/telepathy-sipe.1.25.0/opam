@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "telepathy-sipe-1.25.0-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "telepathy-sipe-1.25.0-3.3.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "krb5" 
+  "libdbus-glib-1-2" 
+  "libfreerdp2-2" 
+  "libgmime-3_0-0" 
+  "libtelepathy-glib0" 
+  "libxml2-2" 
+  "mozilla-nspr" 
+  "mozilla-nss" 
+]
+extra-source "telepathy-sipe-1.25.0-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/telepathy-sipe-1.25.0-3.3.x86_64.rpm"
+}

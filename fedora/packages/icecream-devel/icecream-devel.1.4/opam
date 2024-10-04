@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "icecream-devel-1.4-0.12.rc1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "icecream-devel-1.4-0.12.rc1.fc40.x86_64.rpm"]
+depends: [
+  "icecream" {= "1.4"}
+  "libarchive-devel" 
+  "libcap-ng-devel" 
+  "libzstd-devel" 
+  "lzo-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "icecream-devel-1.4-0.12.rc1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/icecream-devel-1.4-0.12.rc1.fc40.x86_64.rpm"
+}

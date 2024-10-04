@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-oxipng+zopfli-devel-9.0.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-oxipng+zopfli-devel-9.0.0-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-oxipng-devel" {= "9.0.0"}
+  "rust-zopfli+std-devel" 
+  "rust-zopfli+zlib-devel" 
+  "rust-zopfli-devel" 
+]
+extra-source "rust-oxipng+zopfli-devel-9.0.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-oxipng+zopfli-devel-9.0.0-4.fc40.noarch.rpm"
+}

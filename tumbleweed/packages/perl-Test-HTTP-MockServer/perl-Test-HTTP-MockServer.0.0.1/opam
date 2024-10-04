@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-HTTP-MockServer-0.0.1-2.16.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-HTTP-MockServer-0.0.1-2.16.noarch.rpm"]
+depends: [
+  "libnss_usrfiles2" 
+  "netcfg" 
+  "perl" 
+  "perl-HTTP-Message" 
+  "perl-HTTP-Parser" 
+  "perl-JSON-XS" 
+]
+extra-source "perl-Test-HTTP-MockServer-0.0.1-2.16.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-HTTP-MockServer-0.0.1-2.16.noarch.rpm"
+}

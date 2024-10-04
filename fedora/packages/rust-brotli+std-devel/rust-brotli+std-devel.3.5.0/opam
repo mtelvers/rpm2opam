@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-brotli+std-devel-3.5.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-brotli+std-devel-3.5.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-brotli+alloc-stdlib-devel" {= "3.5.0"}
+  "rust-brotli-decompressor+std-devel" 
+  "rust-brotli-devel" {= "3.5.0"}
+]
+extra-source "rust-brotli+std-devel-3.5.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-brotli+std-devel-3.5.0-1.fc40.noarch.rpm"
+}

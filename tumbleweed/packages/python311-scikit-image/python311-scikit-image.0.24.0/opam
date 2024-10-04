@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-scikit-image-0.24.0-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-scikit-image-0.24.0-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "python311-Pillow" {>= "9.1"}
+  "python311-PyWavelets" {>= "1.1.1"}
+  "python311-base" {= "3.11"}
+  "python311-imageio" {>= "2.33"}
+  "python311-lazy-loader" {>= "0.4"}
+  "python311-networkx" {>= "2.8"}
+  "python311-numpy" {>= "1.23"}
+  "python311-packaging" {>= "21.0"}
+  "python311-scipy" {>= "1.9"}
+  "python311-tifffile" {>= "2022.8.12"}
+  "update-alternatives" 
+]
+extra-source "python311-scikit-image-0.24.0-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-scikit-image-0.24.0-2.2.x86_64.rpm"
+}

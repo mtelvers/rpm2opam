@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "trilinos-gnu-mpich-hpc-devel-14.0.0-5.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trilinos-gnu-mpich-hpc-devel-14.0.0-5.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "trilinos_14_0_0-gnu-mpich-hpc-devel" {= "14.0.0"}
+]
+extra-source "trilinos-gnu-mpich-hpc-devel-14.0.0-5.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/trilinos-gnu-mpich-hpc-devel-14.0.0-5.4.noarch.rpm"
+}

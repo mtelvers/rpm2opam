@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vtk-openmpi-java-9.2.6-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vtk-openmpi-java-9.2.6-12.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "java-21-openjdk" 
+  "libgcc" 
+  "libstdc++" 
+  "vtk-java" 
+  "vtk-openmpi" 
+  "vtk-openmpi-qt" 
+]
+extra-source "vtk-openmpi-java-9.2.6-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vtk-openmpi-java-9.2.6-12.fc40.x86_64.rpm"
+}

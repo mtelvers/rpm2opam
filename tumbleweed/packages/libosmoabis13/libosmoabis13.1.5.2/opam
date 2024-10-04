@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libosmoabis13-1.5.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libosmoabis13-1.5.2-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libosmo-e1d1" 
+  "libosmocore21" 
+  "libosmogsm20" 
+  "libosmoisdn0" 
+  "libosmovty13" 
+  "libtalloc2" 
+]
+extra-source "libosmoabis13-1.5.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libosmoabis13-1.5.2-1.1.x86_64.rpm"
+}

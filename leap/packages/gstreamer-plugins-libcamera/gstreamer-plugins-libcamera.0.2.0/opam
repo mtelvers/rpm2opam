@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gstreamer-plugins-libcamera-0.2.0-slfo.1.1.24.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gstreamer-plugins-libcamera-0.2.0-slfo.1.1.24.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcamera-base0_2" 
+  "libcamera0_2" 
+  "libgcc_s1" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libgstallocators-1_0-0" 
+  "libgstreamer-1_0-0" 
+  "libgstvideo-1_0-0" 
+  "libstdc++6" 
+]
+extra-source "gstreamer-plugins-libcamera-0.2.0-slfo.1.1.24.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/gstreamer-plugins-libcamera-0.2.0-slfo.1.1.24.x86_64.rpm"
+}

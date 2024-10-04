@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-which-devel-6.0.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-which-devel-6.0.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.70"}
+  "rust-either+default-devel" 
+  "rust-home+default-devel" 
+  "rust-rustix+fs-devel" 
+  "rust-rustix+std-devel" 
+  "rust-rustix-devel" 
+]
+extra-source "rust-which-devel-6.0.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-which-devel-6.0.0-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Authen-SCRAM-0.011-19.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Authen-SCRAM-0.011-19.fc40.noarch.rpm"]
+depends: [
+  "perl-Authen-SASL-SASLprep" {>= "1.100"}
+  "perl-Carp" 
+  "perl-Crypt-URandom" 
+  "perl-Encode" 
+  "perl-MIME-Base64" 
+  "perl-Moo" {>= "1.1000"}
+  "perl-PBKDF2-Tiny" {>= "0.3"}
+  "perl-Try-Tiny" 
+  "perl-Type-Tiny" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-namespace-clean" 
+]
+extra-source "perl-Authen-SCRAM-0.011-19.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Authen-SCRAM-0.011-19.fc40.noarch.rpm"
+}

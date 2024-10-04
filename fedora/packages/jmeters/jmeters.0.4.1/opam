@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jmeters-0.4.1-27.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jmeters-0.4.1-27.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "clthreads" 
+  "clxclient" 
+  "glibc" 
+  "jack-audio-connection-kit" 
+  "libX11" 
+  "libgcc" 
+  "libpng" 
+  "libstdc++" 
+]
+extra-source "jmeters-0.4.1-27.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jmeters-0.4.1-27.fc40.x86_64.rpm"
+}

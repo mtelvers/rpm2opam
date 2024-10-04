@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "khard-0.17.0-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "khard-0.17.0-13.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-atomicwrites" 
+  "python3-configobj" 
+  "python3-ruamel-yaml" 
+  "python3-unidecode" 
+  "python3-vobject" 
+]
+extra-source "khard-0.17.0-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/khard-0.17.0-13.fc40.noarch.rpm"
+}

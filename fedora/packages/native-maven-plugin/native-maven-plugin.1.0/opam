@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "native-maven-plugin-1.0-0.18.alpha.11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "native-maven-plugin-1.0-0.18.alpha.11.fc40.noarch.rpm"]
+depends: [
+  "bcel" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "maven-lib" 
+  "maven-native" {= "1.0.0"}
+  "maven-native-components" {= "1.0.0"}
+  "plexus-archiver" 
+  "plexus-utils" 
+]
+extra-source "native-maven-plugin-1.0-0.18.alpha.11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/native-maven-plugin-1.0-0.18.alpha.11.fc40.noarch.rpm"
+}

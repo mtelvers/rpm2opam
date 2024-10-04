@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gocr-gui-0.52-3.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gocr-gui-0.52-3.6.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gocr" {= "0.52"}
+  "tk" 
+]
+extra-source "gocr-gui-0.52-3.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gocr-gui-0.52-3.6.noarch.rpm"
+}

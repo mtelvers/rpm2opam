@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-grpc-xs-tests-0.38-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-grpc-xs-tests-0.38-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Data-Dumper" 
+  "perl-Devel-Peek" 
+  "perl-File-Basename" 
+  "perl-PathTools" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-grpc-xs" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-grpc-xs-tests-0.38-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-grpc-xs-tests-0.38-4.fc40.noarch.rpm"
+}

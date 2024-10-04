@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xdg-utils-screensaver-1.2.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xdg-utils-screensaver-1.2.1-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "perl" 
+  "perl-Net-DBus" 
+  "perl-X11-Protocol" 
+  "xdg-utils" {= "1.2.1"}
+]
+extra-source "xdg-utils-screensaver-1.2.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xdg-utils-screensaver-1.2.1-2.1.noarch.rpm"
+}

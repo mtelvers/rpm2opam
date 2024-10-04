@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-conduit-prof-1.3.5-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-conduit-prof-1.3.5-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-conduit-devel" {= "1.3.5"}
+  "ghc-directory-prof" 
+  "ghc-exceptions-prof" 
+  "ghc-filepath-prof" 
+  "ghc-mono-traversable-prof" 
+  "ghc-mtl-prof" 
+  "ghc-primitive-prof" 
+  "ghc-resourcet-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unix-prof" 
+  "ghc-unliftio-core-prof" 
+  "ghc-vector-prof" 
+]
+extra-source "ghc-conduit-prof-1.3.5-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-conduit-prof-1.3.5-3.fc40.x86_64.rpm"
+}

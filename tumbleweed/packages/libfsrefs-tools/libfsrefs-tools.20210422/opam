@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfsrefs-tools-20210422-3.14.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfsrefs-tools-20210422-3.14.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbfio1" 
+  "libcerror1" 
+  "libclocale1" 
+  "libcnotify1" 
+  "libfsrefs1" 
+]
+extra-source "libfsrefs-tools-20210422-3.14.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfsrefs-tools-20210422-3.14.x86_64.rpm"
+}

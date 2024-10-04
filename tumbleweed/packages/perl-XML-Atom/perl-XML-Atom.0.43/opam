@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-XML-Atom-0.43-1.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XML-Atom-0.43-1.15.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Data-Inheritable" 
+  "perl-DateTime" 
+  "perl-DateTime-TimeZone" 
+  "perl-URI" 
+  "perl-XML-LibXML" {>= "2.202"}
+  "perl-XML-XPath" {>= "1.20"}
+  "perl-base" 
+  "perl-libwww-perl" 
+]
+extra-source "perl-XML-Atom-0.43-1.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-XML-Atom-0.43-1.15.noarch.rpm"
+}

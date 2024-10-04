@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "udisks-1.0.5-26.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "udisks-1.0.5-26.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dbus" {>= "1.2"}
+  "dbus-glib" 
+  "dbus-libs" 
+  "device-mapper-libs" 
+  "dosfstools" 
+  "e2fsprogs" 
+  "glib2" 
+  "glibc" 
+  "libatasmart" {>= "0.14"}
+  "libgudev" 
+  "mdadm" {>= "2.6.7"}
+  "mtools" 
+  "ntfsprogs" 
+  "parted" 
+  "polkit-libs" 
+  "sg3_utils-libs" 
+  "smp_utils" {>= "0.94"}
+  "systemd" 
+  "systemd-libs" 
+  "systemd-udev" {>= "143"}
+  "util-linux" 
+  "xfsprogs" 
+]
+extra-source "udisks-1.0.5-26.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/udisks-1.0.5-26.fc40.x86_64.rpm"
+}

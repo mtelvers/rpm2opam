@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-yaml-devel-0.11.11.2-1.35.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-yaml-devel-0.11.11.2-1.35.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-aeson-devel" 
+  "ghc-attoparsec-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-conduit-devel" 
+  "ghc-containers-devel" 
+  "ghc-directory-devel" 
+  "ghc-filepath-devel" 
+  "ghc-libyaml-devel" 
+  "ghc-mtl-devel" 
+  "ghc-resourcet-devel" 
+  "ghc-scientific-devel" 
+  "ghc-template-haskell-devel" 
+  "ghc-text-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-vector-devel" 
+  "ghc-yaml" {= "0.11.11.2"}
+]
+extra-source "ghc-yaml-devel-0.11.11.2-1.35.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-yaml-devel-0.11.11.2-1.35.x86_64.rpm"
+}

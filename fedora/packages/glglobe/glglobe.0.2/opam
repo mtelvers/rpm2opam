@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "glglobe-0.2-41.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glglobe-0.2-41.fc40.x86_64.rpm"]
+depends: [
+  "freeglut" 
+  "glibc" 
+  "libXaw" 
+  "libXext" 
+  "libXi" 
+  "libglvnd-glx" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "mesa-libGLU" 
+  "zlib-ng-compat" 
+]
+extra-source "glglobe-0.2-41.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/glglobe-0.2-41.fc40.x86_64.rpm"
+}

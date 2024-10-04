@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tumbler-4.18.2-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tumbler-4.18.2-2.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "freetype" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "libgsf" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libxfce4util" 
+  "poppler-glib" 
+]
+extra-source "tumbler-4.18.2-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tumbler-4.18.2-2.fc40.x86_64.rpm"
+}

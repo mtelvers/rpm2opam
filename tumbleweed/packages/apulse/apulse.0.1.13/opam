@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "apulse-0.1.13-2.17.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apulse-0.1.13-2.17.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libasound2" 
+  "libpulse0" 
+  "python311-base" 
+]
+extra-source "apulse-0.1.13-2.17.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/apulse-0.1.13-2.17.x86_64.rpm"
+}

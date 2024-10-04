@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "deadbeef-lang-1.9.6-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deadbeef-lang-1.9.6-2.2.noarch.rpm"]
+depends: [
+  "deadbeef" {= "1.9.6"}
+]
+extra-source "deadbeef-lang-1.9.6-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/deadbeef-lang-1.9.6-2.2.noarch.rpm"
+}

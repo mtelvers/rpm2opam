@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-easy-file-prof-0.2.5-21.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-easy-file-prof-0.2.5-21.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-directory-prof" 
+  "ghc-easy-file-devel" {= "0.2.5"}
+  "ghc-filepath-prof" 
+  "ghc-time-prof" 
+  "ghc-unix-prof" 
+]
+extra-source "ghc-easy-file-prof-0.2.5-21.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-easy-file-prof-0.2.5-21.fc40.x86_64.rpm"
+}

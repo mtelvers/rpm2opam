@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "abrt-desktop-2.17.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "abrt-desktop-2.17.5-1.fc40.x86_64.rpm"]
+depends: [
+  "abrt" {= "2.17.5"}
+  "abrt-addon-ccpp" 
+  "abrt-addon-kerneloops" 
+  "abrt-addon-pstoreoops" 
+  "abrt-addon-vmcore" 
+  "abrt-addon-xorg" 
+  "abrt-gui" 
+  "abrt-plugin-bodhi" 
+  "gdb-headless" 
+  "gnome-abrt" 
+  "libreport-fedora" {>= "2.17.13"}
+  "libreport-plugin-bugzilla" {>= "2.17.13"}
+  "libreport-plugin-logger" {>= "2.17.13"}
+  "libreport-plugin-ureport" {>= "2.17.13"}
+  "python3-abrt-addon" 
+]
+extra-source "abrt-desktop-2.17.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/abrt-desktop-2.17.5-1.fc40.x86_64.rpm"
+}

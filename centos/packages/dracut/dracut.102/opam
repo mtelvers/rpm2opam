@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dracut-102-3.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dracut-102-3.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "cpio" 
+  "filesystem" {>= "2.1.0"}
+  "findutils" 
+  "glibc" 
+  "grep" 
+  "gzip" 
+  "kmod" 
+  "kmod-libs" 
+  "libgcc" 
+  "libkcapi-hmaccalc" 
+  "procps-ng" 
+  "sed" 
+  "systemd" {>= "219"}
+  "util-linux" {>= "2.21"}
+  "xz" 
+]
+extra-source "dracut-102-3.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/dracut-102-3.el10.x86_64.rpm"
+}

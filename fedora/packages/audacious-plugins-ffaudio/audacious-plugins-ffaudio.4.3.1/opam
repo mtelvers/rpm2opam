@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "audacious-plugins-ffaudio-4.3.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "audacious-plugins-ffaudio-4.3.1-5.fc40.x86_64.rpm"]
+depends: [
+  "audacious-libs" {= "48"}
+  "audacious-plugins" {>= "4.3"}
+  "glibc" 
+  "libavcodec-free" 
+  "libavformat-free" 
+  "libavutil-free" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "audacious-plugins-ffaudio-4.3.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/audacious-plugins-ffaudio-4.3.1-5.fc40.x86_64.rpm"
+}

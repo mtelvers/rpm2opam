@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pcmanx-gtk2-1.3-1.31.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcmanx-gtk2-1.3-1.31.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "desktop-file-utils" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libXft2" 
+  "libcairo2" 
+  "libfontconfig1" 
+  "libfreetype6" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-2_0-0" 
+  "libltdl7" 
+  "libnotify4" 
+  "libpango-1_0-0" 
+  "libstdc++6" 
+]
+extra-source "pcmanx-gtk2-1.3-1.31.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pcmanx-gtk2-1.3-1.31.x86_64.rpm"
+}

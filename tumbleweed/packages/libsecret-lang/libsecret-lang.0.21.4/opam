@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsecret-lang-0.21.4-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsecret-lang-0.21.4-1.2.noarch.rpm"]
+depends: [
+  "libsecret-1-0" {= "0.21.4"}
+]
+extra-source "libsecret-lang-0.21.4-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libsecret-lang-0.21.4-1.2.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Sub-Exporter-0.991-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Sub-Exporter-0.991-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-OptList" {>= "0.100"}
+  "perl-Package-Generator" 
+  "perl-Params-Util" {>= "0.14"}
+  "perl-Sub-Install" {>= "0.92"}
+  "perl-libs" {>= "5.12.0"}
+]
+extra-source "perl-Sub-Exporter-0.991-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Sub-Exporter-0.991-3.fc40.noarch.rpm"
+}

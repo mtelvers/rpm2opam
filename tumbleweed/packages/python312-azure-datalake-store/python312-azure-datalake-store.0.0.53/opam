@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-azure-datalake-store-0.0.53-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-azure-datalake-store-0.0.53-2.1.noarch.rpm"]
+depends: [
+  "python312-azure-nspkg" {>= "3.0.0"}
+  "python312-base" {= "3.12"}
+  "python312-cffi" 
+  "python312-msal" 
+  "python312-requests" {>= "2.20.0"}
+]
+extra-source "python312-azure-datalake-store-0.0.53-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-azure-datalake-store-0.0.53-2.1.noarch.rpm"
+}

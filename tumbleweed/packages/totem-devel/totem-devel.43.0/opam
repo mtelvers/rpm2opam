@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "totem-devel-43.0-4.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "totem-devel-43.0-4.3.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.72.0"}
+  "gtk3-devel" {>= "3.22.0"}
+  "pkgconf-pkg-config" 
+  "totem" {= "43.0"}
+  "totem-pl-parser-devel" {>= "3.26.5"}
+]
+extra-source "totem-devel-43.0-4.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/totem-devel-43.0-4.3.x86_64.rpm"
+}

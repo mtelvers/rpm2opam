@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-castellan-5.1.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-castellan-5.1.1-1.1.noarch.rpm"]
+depends: [
+  "python3-barbicanclient" {>= "5.5.0"}
+  "python3-keystoneauth1" {>= "3.4.0"}
+  "python3-oslo-config" {>= "6.4.0"}
+  "python3-oslo-context" {>= "2.19.2"}
+  "python3-oslo-i18n" {>= "3.15.3"}
+  "python3-oslo-log" {>= "3.36.0"}
+  "python3-oslo-utils" {>= "3.33.0"}
+  "python311-Babel" 
+  "python311-base" {= "3.11"}
+  "python311-cryptography" {>= "2.7"}
+  "python311-requests" {>= "2.18.0"}
+  "python311-stevedore" {>= "1.20.0"}
+]
+extra-source "python3-castellan-5.1.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-castellan-5.1.1-1.1.noarch.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-libhandy-sys-devel-0.10.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-libhandy-sys-devel-0.10.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "libhandy-devel" {>= "1"}
+  "rust-gdk-pixbuf-sys+default-devel" 
+  "rust-gdk-sys+default-devel" 
+  "rust-gio-sys+default-devel" 
+  "rust-glib-sys+default-devel" 
+  "rust-gobject-sys+default-devel" 
+  "rust-gtk-sys+default-devel" 
+  "rust-gtk-sys+v3_24-devel" 
+  "rust-libc+default-devel" 
+  "rust-pango-sys+default-devel" 
+  "rust-pkg-config+default-devel" 
+  "rust-system-deps+default-devel" 
+]
+extra-source "rust-libhandy-sys-devel-0.10.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-libhandy-sys-devel-0.10.0-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "erlang-gettext-2.1.0-0.31.20170123git2bcba56.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "erlang-gettext-2.1.0-0.31.20170123git2bcba56.fc40.noarch.rpm"]
+depends: [
+  "erlang-erts" 
+  "erlang-kernel" 
+  "erlang-stdlib" 
+]
+extra-source "erlang-gettext-2.1.0-0.31.20170123git2bcba56.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/erlang-gettext-2.1.0-0.31.20170123git2bcba56.fc40.noarch.rpm"
+}

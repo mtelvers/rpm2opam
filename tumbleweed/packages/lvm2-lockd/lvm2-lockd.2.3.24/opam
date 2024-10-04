@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lvm2-lockd-2.03.24-5.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lvm2-lockd-2.03.24-5.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "corosync" 
+  "device-mapper" {>= "2.3.24"}
+  "glibc" 
+  "libdlm" {>= "4.0.9"}
+  "libdlm3" 
+  "libsanlock1" 
+  "libudev-mini1" 
+  "lvm2" {= "2.3.24"}
+  "sanlock" {>= "3.3.0"}
+  "systemd" 
+]
+extra-source "lvm2-lockd-2.03.24-5.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lvm2-lockd-2.03.24-5.1.x86_64.rpm"
+}

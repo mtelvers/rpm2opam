@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libpurple-2.14.12-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpurple-2.14.12-8.fc40.x86_64.rpm"]
+depends: [
+  "NetworkManager-libnm" 
+  "avahi-glib" 
+  "avahi-libs" 
+  "bash" 
+  "ca-certificates" 
+  "cyrus-sasl-lib" 
+  "cyrus-sasl-md5" 
+  "cyrus-sasl-plain" 
+  "cyrus-sasl-scram" 
+  "dbus-glib" 
+  "dbus-libs" 
+  "farstream02" 
+  "glib2" {>= "2.79.1"}
+  "glibc" 
+  "gstreamer1" 
+  "gstreamer1-plugins-base" 
+  "libgadu" 
+  "libidn" 
+  "libxml2" 
+  "meanwhile" 
+  "nspr" 
+  "nss" 
+  "nss-util" 
+  "python3" 
+  "python3-dbus" 
+]
+extra-source "libpurple-2.14.12-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libpurple-2.14.12-8.fc40.x86_64.rpm"
+}

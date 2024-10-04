@@ -1,0 +1,45 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "krita-5.2.2-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "krita-5.2.2-7.fc40.x86_64.rpm"]
+depends: [
+  "OpenColorIO" 
+  "exiv2-libs" 
+  "giflib" 
+  "glibc" 
+  "gsl" 
+  "imath" 
+  "kf5-kcompletion" 
+  "kf5-kconfig-core" 
+  "kf5-kcoreaddons" 
+  "kf5-kcrash" 
+  "kf5-ki18n" 
+  "kf5-kwidgetsaddons" 
+  "kf5-libkdcraw" 
+  "krita-libs" {= "5.2.2"}
+  "kseexpr" 
+  "lcms2" 
+  "libgcc" 
+  "libheif" 
+  "libjpeg-turbo" 
+  "libjxl" 
+  "libmypaint" 
+  "libpng" 
+  "libstdc++" 
+  "libtiff" 
+  "libwebp" 
+  "openexr-libs" 
+  "openjpeg2" 
+  "openms" 
+  "poppler-qt5" 
+  "python3-libs" 
+  "python3-pyqt5-sip" {>= "12.7"}
+  "python3-qt5-base" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtdeclarative" 
+  "qt5-qtsvg" 
+  "turbojpeg" 
+]
+extra-source "krita-5.2.2-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/krita-5.2.2-7.fc40.x86_64.rpm"
+}

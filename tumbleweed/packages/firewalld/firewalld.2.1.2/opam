@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "firewalld-2.1.2-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "firewalld-2.1.2-3.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "nftables" 
+  "python3-firewall" {= "2.1.2"}
+  "python311-base" 
+  "python311-gobject" 
+  "python311-nftables" 
+  "typelib-1_0-GObject-2_0" 
+]
+extra-source "firewalld-2.1.2-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/firewalld-2.1.2-3.1.noarch.rpm"
+}

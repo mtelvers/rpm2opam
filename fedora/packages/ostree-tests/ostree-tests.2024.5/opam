@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ostree-tests-2024.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ostree-tests-2024.5-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gjs" 
+  "glib2" 
+  "glibc" 
+  "gpgme" 
+  "libarchive" 
+  "libgcc" 
+  "libsoup3" 
+  "openssl-libs" 
+  "ostree" {= "2024.5"}
+  "ostree-libs" 
+  "python3" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "ostree-tests-2024.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ostree-tests-2024.5-1.fc40.x86_64.rpm"
+}

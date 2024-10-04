@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Mojo-Pg-4.27-1.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mojo-Pg-4.27-1.12.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-DBD-Pg" {>= "3.7004"}
+  "perl-Mojolicious" {>= "8.50"}
+  "perl-SQL-Abstract-Pg" {>= "1.0"}
+]
+extra-source "perl-Mojo-Pg-4.27-1.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Mojo-Pg-4.27-1.12.noarch.rpm"
+}

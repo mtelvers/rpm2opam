@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dotnet-sdk-8.0-8.0.102-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dotnet-sdk-8.0-8.0.102-1.fc40.x86_64.rpm"]
+depends: [
+  "aspnetcore-runtime-8-0" {>= "8.0.2"}
+  "aspnetcore-targeting-pack-8-0" {>= "8.0.2"}
+  "dotnet-apphost-pack-8-0" {>= "8.0.2"}
+  "dotnet-runtime-8-0" {>= "8.0.2"}
+  "dotnet-targeting-pack-8-0" {>= "8.0.2"}
+  "dotnet-templates-8-0" {>= "8.0.102"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "netstandard-targeting-pack-2-1" {>= "8.0.102"}
+]
+extra-source "dotnet-sdk-8.0-8.0.102-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dotnet-sdk-8.0-8.0.102-1.fc40.x86_64.rpm"
+}

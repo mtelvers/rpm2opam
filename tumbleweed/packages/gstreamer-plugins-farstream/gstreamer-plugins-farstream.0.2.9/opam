@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gstreamer-plugins-farstream-0.2.9+5-2.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gstreamer-plugins-farstream-0.2.9+5-2.7.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gstreamer-plugins-bad" {>= "1.4"}
+  "gstreamer-plugins-good" {>= "1.4"}
+  "libgstreamer-1_0-0" 
+  "libgstrtp-1_0-0" 
+]
+extra-source "gstreamer-plugins-farstream-0.2.9+5-2.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gstreamer-plugins-farstream-0.2.9+5-2.7.x86_64.rpm"
+}

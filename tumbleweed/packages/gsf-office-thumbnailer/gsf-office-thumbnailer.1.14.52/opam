@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gsf-office-thumbnailer-1.14.52-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gsf-office-thumbnailer-1.14.52-1.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgsf-1-114" 
+]
+extra-source "gsf-office-thumbnailer-1.14.52-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gsf-office-thumbnailer-1.14.52-1.2.x86_64.rpm"
+}

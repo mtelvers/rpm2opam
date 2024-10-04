@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-insta-cmd-devel-0.4.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-insta-cmd-devel-0.4.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.57.0"}
+  "rust-insta+default-devel" 
+  "rust-insta+serde-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde_json+default-devel" 
+]
+extra-source "rust-insta-cmd-devel-0.4.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-insta-cmd-devel-0.4.0-3.fc40.noarch.rpm"
+}

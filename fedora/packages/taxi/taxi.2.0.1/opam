@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "taxi-2.0.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "taxi-2.0.1-6.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "glib2" 
+  "glibc" 
+  "granite" 
+  "gtk3" 
+  "hicolor-icon-theme" 
+  "libgee" 
+  "libhandy" 
+  "libsoup" 
+]
+extra-source "taxi-2.0.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/taxi-2.0.1-6.fc40.x86_64.rpm"
+}

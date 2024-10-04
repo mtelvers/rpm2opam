@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kde-workspace-devel-4.11.22-41.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kde-workspace-devel-4.11.22-41.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "kdelibs-devel" 
+  "libkworkspace" {= "4.11.22"}
+]
+extra-source "kde-workspace-devel-4.11.22-41.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kde-workspace-devel-4.11.22-41.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "superpaper-2.2.1-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "superpaper-2.2.1-1.4.noarch.rpm"]
+depends: [
+  "python311-Pillow" {>= "7.0.0"}
+  "python311-base" 
+  "python311-numpy" {>= "1.18.0"}
+  "python311-screeninfo" {>= "0.6.1"}
+  "python311-system_hotkey" {>= "1.0.2"}
+  "python311-wxPython" 
+  "python311-xcffib" {>= "0.8.0"}
+  "python311-xpybutil" {>= "0.0.5"}
+]
+extra-source "superpaper-2.2.1-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/superpaper-2.2.1-1.4.noarch.rpm"
+}

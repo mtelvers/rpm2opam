@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vagrant-vbguest-0.32.0-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vagrant-vbguest-0.32.0-1.5.x86_64.rpm"]
+depends: [
+  "ruby3-3-rubygem-i18n" 
+  "ruby3-3-rubygem-log4r" 
+  "ruby3-3-rubygem-micromachine" 
+  "vagrant" 
+  "virtualbox" 
+]
+extra-source "vagrant-vbguest-0.32.0-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vagrant-vbguest-0.32.0-1.5.x86_64.rpm"
+}

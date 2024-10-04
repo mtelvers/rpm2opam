@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ansible-variables-0.8.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ansible-variables-0.8.0-1.1.noarch.rpm"]
+depends: [
+  "ansible-core" {>= "2.12.0"}
+  "bash-sh" 
+  "python311-base" 
+  "python311-rich" 
+  "update-alternatives" 
+]
+extra-source "ansible-variables-0.8.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ansible-variables-0.8.0-1.1.noarch.rpm"
+}

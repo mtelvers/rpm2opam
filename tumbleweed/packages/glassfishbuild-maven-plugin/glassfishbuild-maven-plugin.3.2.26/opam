@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glassfishbuild-maven-plugin-3.2.26-3.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glassfishbuild-maven-plugin-3.2.26-3.4.noarch.rpm"]
+depends: [
+  "ant" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-archiver" 
+  "maven-common-artifact-filters" 
+  "maven-lib" 
+  "maven-plugin-annotations" 
+]
+extra-source "glassfishbuild-maven-plugin-3.2.26-3.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/glassfishbuild-maven-plugin-3.2.26-3.4.noarch.rpm"
+}

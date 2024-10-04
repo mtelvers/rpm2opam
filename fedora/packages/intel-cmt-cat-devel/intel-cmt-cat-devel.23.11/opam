@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "intel-cmt-cat-devel-23.11-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "intel-cmt-cat-devel-23.11-3.fc40.x86_64.rpm"]
+depends: [
+  "intel-cmt-cat" {= "23.11"}
+]
+extra-source "intel-cmt-cat-devel-23.11-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/intel-cmt-cat-devel-23.11-3.fc40.x86_64.rpm"
+}

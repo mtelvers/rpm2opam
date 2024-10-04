@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tuxmath-2.0.3-18.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tuxmath-2.0.3-18.fc40.x86_64.rpm"]
+depends: [
+  "SDL_image" 
+  "SDL_mixer" 
+  "SDL_net" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "sdl12-compat" 
+  "t4k_common" 
+]
+extra-source "tuxmath-2.0.3-18.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tuxmath-2.0.3-18.fc40.x86_64.rpm"
+}

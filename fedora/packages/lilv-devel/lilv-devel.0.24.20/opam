@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lilv-devel-0.24.20-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lilv-devel-0.24.20-3.fc40.x86_64.rpm"]
+depends: [
+  "lilv-libs" 
+  "lv2-devel" {>= "1.18.2"}
+  "pkgconf-pkg-config" 
+  "serd-devel" {>= "0.30.10"}
+  "sord-devel" {>= "0.16.10"}
+  "sratom-devel" {>= "0.6.10"}
+]
+extra-source "lilv-devel-0.24.20-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lilv-devel-0.24.20-3.fc40.x86_64.rpm"
+}

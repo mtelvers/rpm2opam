@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-dns-2.6.1-1.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-dns-2.6.1-1.el10.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+]
+extra-source "python3-dns-2.6.1-1.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/python3-dns-2.6.1-1.el10.noarch.rpm"
+}

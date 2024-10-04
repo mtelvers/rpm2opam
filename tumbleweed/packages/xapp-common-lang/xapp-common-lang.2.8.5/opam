@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xapp-common-lang-2.8.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xapp-common-lang-2.8.5-1.1.noarch.rpm"]
+depends: [
+  "xapp-common" {= "2.8.5"}
+]
+extra-source "xapp-common-lang-2.8.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xapp-common-lang-2.8.5-1.1.noarch.rpm"
+}

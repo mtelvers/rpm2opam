@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "grpc-devel-1.62.1-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grpc-devel-1.62.1-2.2.x86_64.rpm"]
+depends: [
+  "abseil-cpp-devel" 
+  "c-ares-devel" 
+  "glibc" 
+  "libabsl_lite_2401_0_0" 
+  "libgcc_s1" 
+  "libgrpc++1_62" {= "1.62.1"}
+  "libgrpc1_62" {= "1.62.1"}
+  "libgrpc39" {= "1.62.1"}
+  "libopenssl-1_0_0-devel" 
+  "libprotobuf25_4_0" 
+  "libprotoc25_4_0" 
+  "libstdc++6" 
+  "libupb39" {= "1.62.1"}
+  "pkgconf-pkg-config" 
+  "re2-devel" 
+  "zlib-devel" 
+]
+extra-source "grpc-devel-1.62.1-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/grpc-devel-1.62.1-2.2.x86_64.rpm"
+}

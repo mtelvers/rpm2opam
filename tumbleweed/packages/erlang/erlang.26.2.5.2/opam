@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "erlang-26.2.5.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "erlang-26.2.5.2-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "erlang-epmd" 
+  "glibc" 
+  "libgcc_s1" 
+  "libncurses6" 
+  "libodbc2" 
+  "libopenssl3" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+]
+extra-source "erlang-26.2.5.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/erlang-26.2.5.2-1.2.x86_64.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "povray-3.7.0.10-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "povray-3.7.0.10-3.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "libImath-3_1-29" 
+  "libOpenEXR-3_2-31" 
+  "libSDL-1_2-0" 
+  "libboost_thread1_86_0" 
+  "libgcc_s1" 
+  "libjpeg8" 
+  "libpng16-16" 
+  "libstdc++6" 
+  "libtiff6" 
+  "libz-ng-compat1" 
+]
+extra-source "povray-3.7.0.10-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/povray-3.7.0.10-3.2.x86_64.rpm"
+}

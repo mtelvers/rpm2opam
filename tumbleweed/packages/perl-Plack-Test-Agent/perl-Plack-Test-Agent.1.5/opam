@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Plack-Test-Agent-1.5-1.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Plack-Test-Agent-1.5-1.17.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-HTTP-Cookies" 
+  "perl-HTTP-Message" 
+  "perl-Plack" 
+  "perl-Test-TCP" 
+  "perl-Test-WWW-Mechanize" 
+  "perl-base" 
+]
+extra-source "perl-Plack-Test-Agent-1.5-1.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Plack-Test-Agent-1.5-1.17.noarch.rpm"
+}

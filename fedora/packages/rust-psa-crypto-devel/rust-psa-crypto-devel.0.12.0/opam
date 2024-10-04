@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-psa-crypto-devel-0.12.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-psa-crypto-devel-0.12.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.66.0"}
+  "rust-log+default-devel" 
+  "rust-psa-crypto-sys-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde-devel" 
+  "rust-zeroize+default-devel" 
+  "rust-zeroize+zeroize_derive-devel" 
+]
+extra-source "rust-psa-crypto-devel-0.12.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-psa-crypto-devel-0.12.0-2.fc40.noarch.rpm"
+}

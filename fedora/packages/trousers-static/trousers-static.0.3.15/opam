@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "trousers-static-0.3.15-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trousers-static-0.3.15-10.fc40.x86_64.rpm"]
+depends: [
+  "trousers-devel" {= "0.3.15"}
+]
+extra-source "trousers-static-0.3.15-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/trousers-static-0.3.15-10.fc40.x86_64.rpm"
+}

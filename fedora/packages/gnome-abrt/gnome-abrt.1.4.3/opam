@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-abrt-1.4.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-abrt-1.4.3-1.fc40.x86_64.rpm"]
+depends: [
+  "abrt-libs" 
+  "glib2" {>= "2.63.2"}
+  "glibc" 
+  "gobject-introspection" {>= "1.63.1"}
+  "gtk3" 
+  "libreport-gtk" 
+  "python3" 
+  "python3-beautifulsoup4" 
+  "python3-dbus" 
+  "python3-gobject" 
+  "python3-humanize" 
+  "python3-libreport" 
+]
+extra-source "gnome-abrt-1.4.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-abrt-1.4.3-1.fc40.x86_64.rpm"
+}

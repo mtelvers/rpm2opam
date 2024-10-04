@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python-base-2.7.18-49.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python-base-2.7.18-49.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libbz2-1" 
+  "libcrypt1" 
+  "libffi8" 
+  "libpython2_7-1_0" 
+  "libz-ng-compat1" 
+]
+extra-source "python-base-2.7.18-49.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python-base-2.7.18-49.1.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bladeRF-2023.02-18.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bladeRF-2023.02-18.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbladeRF2" 
+  "libtecla_r1" 
+]
+extra-source "bladeRF-2023.02-18.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/bladeRF-2023.02-18.1.x86_64.rpm"
+}

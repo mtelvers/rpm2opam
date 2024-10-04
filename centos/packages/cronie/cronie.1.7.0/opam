@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cronie-1.7.0-5.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cronie-1.7.0-5.el10.x86_64.rpm"]
+depends: [
+  "audit-libs" 
+  "bash" 
+  "coreutils" 
+  "cronie-anacron" 
+  "glibc" 
+  "libselinux" {>= "2.0.64"}
+  "pam" {>= "1.0.1"}
+  "pam-libs" 
+  "sed" 
+]
+extra-source "cronie-1.7.0-5.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/cronie-1.7.0-5.el10.x86_64.rpm"
+}

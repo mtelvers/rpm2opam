@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "oci-cli-3.37.10-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "oci-cli-3.37.10-1.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-arrow" {>= "1"}
+  "python3-certifi" 
+  "python3-click" {>= "8.0.4"}
+  "python3-cryptography" 
+  "python3-dateutil" 
+  "python3-jmespath" {>= "0.10"}
+  "python3-oci" {= "2.122"}
+  "python3-prompt-toolkit" {>= "3.0.29"}
+  "python3-pyOpenSSL" 
+  "python3-pytz" {>= "2016.10"}
+  "python3-pyyaml" {>= "5.4.0.1"}
+  "python3-six" {>= "1.15"}
+  "python3-terminaltables" {>= "3.1"}
+]
+extra-source "oci-cli-3.37.10-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/oci-cli-3.37.10-1.fc40.noarch.rpm"
+}

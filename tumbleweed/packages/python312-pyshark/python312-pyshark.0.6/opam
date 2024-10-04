@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pyshark-0.6-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pyshark-0.6-1.3.noarch.rpm"]
+depends: [
+  "python312-appdirs" 
+  "python312-base" {= "3.12"}
+  "python312-lxml" 
+  "python312-py" 
+  "python312-termcolor" 
+  "wireshark" 
+]
+extra-source "python312-pyshark-0.6-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pyshark-0.6-1.3.noarch.rpm"
+}

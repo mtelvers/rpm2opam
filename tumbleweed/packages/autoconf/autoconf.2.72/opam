@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "autoconf-2.72-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "autoconf-2.72-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "info" 
+  "m4" {>= "1.4.16"}
+  "perl-base" 
+]
+extra-source "autoconf-2.72-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/autoconf-2.72-2.1.noarch.rpm"
+}

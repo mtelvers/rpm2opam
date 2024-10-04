@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-aiohttp-3.10.6-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-aiohttp-3.10.6-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "python311-aiohappyeyeballs" {>= "2.3.0"}
+  "python311-aiosignal" {>= "1.1.2"}
+  "python311-attrs" {>= "17.3.0"}
+  "python311-base" {= "3.11"}
+  "python311-charset-normalizer" 
+  "python311-frozenlist" {>= "1.1.1"}
+  "python311-multidict" 
+  "python311-yarl" 
+]
+extra-source "python311-aiohttp-3.10.6-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-aiohttp-3.10.6-1.1.x86_64.rpm"
+}

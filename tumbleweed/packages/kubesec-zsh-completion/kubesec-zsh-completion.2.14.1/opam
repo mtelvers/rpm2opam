@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kubesec-zsh-completion-2.14.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kubesec-zsh-completion-2.14.1-1.1.noarch.rpm"]
+depends: [
+  "kubesec" {= "2.14.1"}
+]
+extra-source "kubesec-zsh-completion-2.14.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kubesec-zsh-completion-2.14.1-1.1.noarch.rpm"
+}

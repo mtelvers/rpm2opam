@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-matplotlib-latex-3.9.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-matplotlib-latex-3.9.0-1.2.noarch.rpm"]
+depends: [
+  "python312-matplotlib" {= "3.9.0"}
+  "texlive-cm-super" 
+  "texlive-dvipng" 
+  "texlive-dvips" 
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-helvetic" 
+  "texlive-latex" 
+  "texlive-ncntrsbk" 
+  "texlive-pgf" 
+  "texlive-psfrag" 
+  "texlive-psnfss" 
+  "texlive-sfmath" 
+  "texlive-tex" 
+  "texlive-txfonts" 
+  "texlive-type1cm" 
+  "texlive-ucs" 
+  "texlive-underscore" 
+  "texlive-xcolor" 
+  "texlive-xetex" 
+]
+extra-source "python312-matplotlib-latex-3.9.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-matplotlib-latex-3.9.0-1.2.noarch.rpm"
+}

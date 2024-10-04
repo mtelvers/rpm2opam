@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-lazr.restfulclient-0.14.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-lazr.restfulclient-0.14.5-1.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-distro" 
+  "python311-httplib2" 
+  "python311-oauthlib" 
+  "python311-setuptools" 
+  "python311-six" 
+  "python311-wadllib" {>= "1.1.4"}
+]
+extra-source "python311-lazr.restfulclient-0.14.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-lazr.restfulclient-0.14.5-1.1.noarch.rpm"
+}

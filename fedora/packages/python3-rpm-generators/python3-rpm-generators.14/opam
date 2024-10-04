@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-rpm-generators-14-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-rpm-generators-14-10.fc40.noarch.rpm"]
+depends: [
+  "python-srpm-macros" {>= "3.10"}
+  "python3" 
+  "python3-packaging" 
+  "rpm" {> "4.15.90"}
+]
+extra-source "python3-rpm-generators-14-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-rpm-generators-14-10.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ceph-mgr-rook-16.2.15.74+gc5dd01a91d8-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ceph-mgr-rook-16.2.15.74+gc5dd01a91d8-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "ceph-mgr" {= "16.2.15.74"}
+  "python311-jsonpatch" 
+  "python311-kubernetes" 
+]
+extra-source "ceph-mgr-rook-16.2.15.74+gc5dd01a91d8-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ceph-mgr-rook-16.2.15.74+gc5dd01a91d8-1.2.noarch.rpm"
+}

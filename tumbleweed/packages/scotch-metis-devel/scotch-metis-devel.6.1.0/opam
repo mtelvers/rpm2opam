@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "scotch-metis-devel-6.1.0-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scotch-metis-devel-6.1.0-3.3.x86_64.rpm"]
+depends: [
+  "libscotch0" 
+  "scotch-devel" {= "6.1.0"}
+]
+extra-source "scotch-metis-devel-6.1.0-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/scotch-metis-devel-6.1.0-3.3.x86_64.rpm"
+}

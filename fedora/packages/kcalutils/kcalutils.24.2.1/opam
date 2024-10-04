@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kcalutils-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kcalutils-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf6-kcalendarcore" 
+  "kf6-kcodecs" 
+  "kf6-kcoreaddons" 
+  "kf6-ki18n" 
+  "kf6-kiconthemes" 
+  "kf6-ktexttemplate" 
+  "kf6-kwidgetsaddons" 
+  "kidentitymanagement" 
+  "libgcc" 
+  "libstdc++" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+]
+extra-source "kcalutils-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kcalutils-24.02.1-1.fc40.x86_64.rpm"
+}

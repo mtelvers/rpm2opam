@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-petri-nets-2024.216.svn39165-54.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-petri-nets-2024.216.svn39165-54.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "perl-Digest-MD5" 
+  "perl-base" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-amsfonts" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-graphics" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-petri-nets-bin" {>= "2024"}
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+]
+extra-source "texlive-petri-nets-2024.216.svn39165-54.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-petri-nets-2024.216.svn39165-54.1.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgtop-2.40.0-slfo.1.1.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgtop-2.40.0-slfo.1.1.12.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libXau6" 
+  "libglib-2_0-0" 
+  "libgtop-2_0-11" 
+]
+extra-source "libgtop-2.40.0-slfo.1.1.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libgtop-2.40.0-slfo.1.1.12.x86_64.rpm"
+}

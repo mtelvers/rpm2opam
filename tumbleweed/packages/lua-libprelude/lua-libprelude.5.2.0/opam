@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lua-libprelude-5.2.0-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lua-libprelude-5.2.0-3.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "liblua5_4-5" 
+  "libprelude28" 
+  "libpreludecpp12" 
+  "libstdc++6" 
+  "lua51" 
+]
+extra-source "lua-libprelude-5.2.0-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lua-libprelude-5.2.0-3.3.x86_64.rpm"
+}

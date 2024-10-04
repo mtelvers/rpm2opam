@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "snapper-devel-0.10.4-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "snapper-devel-0.10.4-4.fc40.x86_64.rpm"]
+depends: [
+  "boost-devel" 
+  "btrfs-progs-devel" 
+  "libacl-devel" 
+  "libmount-devel" 
+  "libstdc++-devel" 
+  "libxml2-devel" 
+  "snapper-libs" 
+]
+extra-source "snapper-devel-0.10.4-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/snapper-devel-0.10.4-4.fc40.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "open-iscsi-2.1.9-104.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "open-iscsi-2.1.9-104.3.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "coreutils" 
+  "glibc" 
+  "libkmod2" 
+  "libmount1" 
+  "libopeniscsiusr0" 
+  "libopenssl3" 
+  "libsystemd0" 
+  "open-isns" 
+  "systemd" 
+]
+extra-source "open-iscsi-2.1.9-104.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/open-iscsi-2.1.9-104.3.x86_64.rpm"
+}

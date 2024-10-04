@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-IO-Pipely-0.006-1.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-IO-Pipely-0.006-1.12.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-base" {>= "5.72"}
+]
+extra-source "perl-IO-Pipely-0.006-1.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-IO-Pipely-0.006-1.12.noarch.rpm"
+}

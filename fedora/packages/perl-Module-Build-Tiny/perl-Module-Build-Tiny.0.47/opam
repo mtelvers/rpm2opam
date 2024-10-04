@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Module-Build-Tiny-0.047-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Build-Tiny-0.047-3.fc40.noarch.rpm"]
+depends: [
+  "perl-CPAN-Meta" 
+  "perl-DynaLoader" 
+  "perl-Exporter" {>= "5.57"}
+  "perl-ExtUtils-CBuilder" 
+  "perl-ExtUtils-Config" {>= "0.3"}
+  "perl-ExtUtils-Helpers" {>= "0.20"}
+  "perl-ExtUtils-Install" 
+  "perl-ExtUtils-InstallPaths" {>= "0.2"}
+  "perl-ExtUtils-ParseXS" 
+  "perl-File-Basename" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-Getopt-Long" {>= "2.36"}
+  "perl-JSON-PP" {>= "2"}
+  "perl-PathTools" 
+  "perl-Test-Harness" 
+  "perl-libs" 
+  "perl-podlators" 
+]
+extra-source "perl-Module-Build-Tiny-0.047-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Module-Build-Tiny-0.047-3.fc40.noarch.rpm"
+}

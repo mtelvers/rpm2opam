@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Gtk3-ImageView-10-1.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Gtk3-ImageView-10-1.14.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Cairo" 
+  "perl-Glib" {>= "1.210"}
+  "perl-Gtk3" 
+  "perl-Readonly" 
+  "perl-base" 
+]
+extra-source "perl-Gtk3-ImageView-10-1.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Gtk3-ImageView-10-1.14.noarch.rpm"
+}

@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-hyperxmp-2024.216.5.12svn68251-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-hyperxmp-2024.216.5.12svn68251-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "perl-base" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-atenddvi" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-hyperref" 
+  "texlive-hyperxmp-bin" {>= "2024"}
+  "texlive-ifmtarg" 
+  "texlive-iftex" 
+  "texlive-intcalc" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-kvoptions" 
+  "texlive-latex" 
+  "texlive-luacode" 
+  "texlive-oberdiek" 
+  "texlive-pdfescape" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-stringenc" 
+]
+extra-source "texlive-hyperxmp-2024.216.5.12svn68251-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-hyperxmp-2024.216.5.12svn68251-56.1.noarch.rpm"
+}

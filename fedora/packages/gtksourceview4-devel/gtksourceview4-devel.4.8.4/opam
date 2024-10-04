@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gtksourceview4-devel-4.8.4-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtksourceview4-devel-4.8.4-6.fc40.x86_64.rpm"]
+depends: [
+  "fribidi-devel" {>= "0.19.7"}
+  "glib2-devel" {>= "2.48"}
+  "gtk3-devel" {>= "3.24"}
+  "gtksourceview4" {= "4.8.4"}
+  "libxml2-devel" {>= "2.6"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gtksourceview4-devel-4.8.4-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gtksourceview4-devel-4.8.4-6.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-rsc-svn41923-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-rsc-svn41923-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-achemso" 
+  "texlive-base" 
+  "texlive-kpathsea" 
+  "texlive-kvoptions" 
+  "texlive-mciteplus" 
+  "texlive-natbib" 
+]
+extra-source "texlive-rsc-svn41923-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-rsc-svn41923-71.fc40.noarch.rpm"
+}

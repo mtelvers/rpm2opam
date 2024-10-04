@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtg-0.6-1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtg-0.6-1.8.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-gobject-Gdk" 
+  "python311-liblarch" 
+  "python311-liblarch-gtk" 
+  "python311-lxml" 
+  "python311-pycairo" 
+]
+extra-source "gtg-0.6-1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gtg-0.6-1.8.noarch.rpm"
+}

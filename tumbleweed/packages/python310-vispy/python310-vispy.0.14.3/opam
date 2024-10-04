@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-vispy-0.14.3-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-vispy-0.14.3-1.2.x86_64.rpm"]
+depends: [
+  "fontconfig" 
+  "glibc" 
+  "python310-base" {= "3.10"}
+  "python310-freetype-py" 
+  "python310-hsluv" 
+  "python310-kiwisolver" 
+  "python310-numpy" 
+  "python310-packaging" 
+]
+extra-source "python310-vispy-0.14.3-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-vispy-0.14.3-1.2.x86_64.rpm"
+}

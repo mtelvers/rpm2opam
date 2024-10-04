@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nut-drivers-net-2.8.2-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nut-drivers-net-2.8.2-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libneon27" 
+  "libsnmp40" 
+  "libsystemd0" 
+  "nut" {= "2.8.2"}
+]
+extra-source "nut-drivers-net-2.8.2-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/nut-drivers-net-2.8.2-2.1.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-HTML-TreeBuilder-XPath-0.14-1.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTML-TreeBuilder-XPath-0.14-1.14.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-HTML-Tree" 
+  "perl-XML-XPathEngine" {>= "0.12"}
+]
+extra-source "perl-HTML-TreeBuilder-XPath-0.14-1.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-HTML-TreeBuilder-XPath-0.14-1.14.noarch.rpm"
+}

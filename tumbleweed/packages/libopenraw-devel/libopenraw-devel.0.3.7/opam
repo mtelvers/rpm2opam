@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libopenraw-devel-0.3.7-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libopenraw-devel-0.3.7-1.5.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf-devel" 
+  "libopenraw9" {= "0.3.7"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libopenraw-devel-0.3.7-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libopenraw-devel-0.3.7-1.5.x86_64.rpm"
+}

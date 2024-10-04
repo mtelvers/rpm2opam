@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-Flask-Security-Too-5.4.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-Flask-Security-Too-5.4.3-1.1.noarch.rpm"]
+depends: [
+  "python311-Flask" {>= "2.3.2"}
+  "python311-Flask-Babel" {>= "3.1.0"}
+  "python311-Flask-Login" {>= "0.6.2"}
+  "python311-Flask-Principal" {>= "0.4.0"}
+  "python311-Flask-WTF" {>= "1.1.2"}
+  "python311-MarkupSafe" {>= "2.1.0"}
+  "python311-WTForms" {>= "3.0.0"}
+  "python311-Werkzeug" {>= "2.3.3"}
+  "python311-base" {= "3.11"}
+  "python311-bcrypt" {>= "4.0.1"}
+  "python311-bleach" {>= "6.0.0"}
+  "python311-cryptography" {>= "40.0.2"}
+  "python311-email-validator" {>= "2.0"}
+  "python311-importlib-resources" {>= "5.10.0"}
+  "python311-itsdangerous" {>= "1.1.0"}
+  "python311-passlib" {>= "1.7.4"}
+  "python311-webauthn" {>= "2.0.0"}
+]
+extra-source "python311-Flask-Security-Too-5.4.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-Flask-Security-Too-5.4.3-1.1.noarch.rpm"
+}

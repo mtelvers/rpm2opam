@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zeal-0.7.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zeal-0.7.2-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libQt6Concurrent6" 
+  "libQt6Core6" 
+  "libQt6Gui6" 
+  "libQt6Network6" 
+  "libQt6Sql6" {>= "6.2.0"}
+  "libQt6WebChannel6" 
+  "libQt6WebEngineCore6" 
+  "libQt6WebEngineWidgets6" 
+  "libQt6Widgets6" 
+  "libX11-6" 
+  "libarchive13" 
+  "libgcc_s1" 
+  "libsqlite3-0" 
+  "libstdc++6" 
+  "libxcb-keysyms1" 
+  "libxcb1" 
+  "update-desktop-files" 
+]
+extra-source "zeal-0.7.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/zeal-0.7.2-1.1.x86_64.rpm"
+}

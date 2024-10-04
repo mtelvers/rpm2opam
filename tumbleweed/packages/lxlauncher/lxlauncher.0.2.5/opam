@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lxlauncher-0.2.5-17.27.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lxlauncher-0.2.5-17.27.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libcairo2" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-2_0-0" 
+  "libmenu-cache3" 
+  "libstartup-notification-1-0" 
+]
+extra-source "lxlauncher-0.2.5-17.27.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lxlauncher-0.2.5-17.27.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jnr-process-0.4.12-2.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jnr-process-0.4.12-2.5.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "jnr-constants" 
+  "jnr-enxio" 
+  "jnr-posix" 
+]
+extra-source "jnr-process-0.4.12-2.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jnr-process-0.4.12-2.5.noarch.rpm"
+}

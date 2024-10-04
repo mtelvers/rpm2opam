@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tuned-utils-2.22.1.2+git.86ac977-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tuned-utils-2.22.1.2+git.86ac977-3.1.noarch.rpm"]
+depends: [
+  "powertop" 
+  "python311-base" 
+  "tuned" {= "2.22.1.2"}
+]
+extra-source "tuned-utils-2.22.1.2+git.86ac977-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tuned-utils-2.22.1.2+git.86ac977-3.1.noarch.rpm"
+}

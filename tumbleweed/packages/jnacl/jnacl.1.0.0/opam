@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jnacl-1.0.0-5.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jnacl-1.0.0-5.3.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "jnacl-1.0.0-5.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jnacl-1.0.0-5.3.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tmate-2.4.0-5.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tmate-2.4.0-5.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libevent-2_1-7" 
+  "libmsgpack-c2" 
+  "libncurses6" 
+  "libssh4" 
+]
+extra-source "tmate-2.4.0-5.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tmate-2.4.0-5.4.x86_64.rpm"
+}

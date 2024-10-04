@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vavoom-1.33-43.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vavoom-1.33-43.fc40.x86_64.rpm"]
+depends: [
+  "vavoom-doom-shareware" {= "1.33"}
+  "vavoom-engine" {= "1.33"}
+  "vavoom-heretic-shareware" {= "1.33"}
+  "vavoom-hexen-demo" {= "1.33"}
+  "vavoom-strife-demo" {= "1.33"}
+]
+extra-source "vavoom-1.33-43.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vavoom-1.33-43.fc40.x86_64.rpm"
+}

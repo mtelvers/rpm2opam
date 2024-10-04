@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "shigofumi-0.9-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "shigofumi-0.9-9.fc40.x86_64.rpm"]
+depends: [
+  "file-libs" 
+  "glibc" 
+  "libconfuse" 
+  "libisds" 
+  "libxml2" 
+  "readline" 
+]
+extra-source "shigofumi-0.9-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/shigofumi-0.9-9.fc40.x86_64.rpm"
+}

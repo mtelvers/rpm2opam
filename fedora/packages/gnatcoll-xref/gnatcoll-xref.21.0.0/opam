@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnatcoll-xref-21.0.0-13.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnatcoll-xref-21.0.0-13.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gnatcoll-core" 
+  "gnatcoll-iconv" 
+  "gnatcoll-sql" {= "21.0.0"}
+  "gnatcoll-sqlite" {= "21.0.0"}
+  "libgcc" 
+  "libgnat" 
+  "libgpr" 
+  "sqlite-libs" 
+  "xmlada" 
+]
+extra-source "gnatcoll-xref-21.0.0-13.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnatcoll-xref-21.0.0-13.fc40.x86_64.rpm"
+}

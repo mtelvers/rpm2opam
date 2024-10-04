@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gdlmm-devel-3.7.3-8.25.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdlmm-devel-3.7.3-8.25.x86_64.rpm"]
+depends: [
+  "gdl-devel" {>= "3.7"}
+  "glibmm2_4-devel" {>= "2.16"}
+  "gtkmm3-devel" {>= "3.0"}
+  "libgdlmm-3_0-2" {= "3.7.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gdlmm-devel-3.7.3-8.25.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gdlmm-devel-3.7.3-8.25.x86_64.rpm"
+}

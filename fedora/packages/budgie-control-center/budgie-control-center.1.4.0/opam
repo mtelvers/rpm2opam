@@ -1,0 +1,63 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "budgie-control-center-1.4.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "budgie-control-center-1.4.0-1.fc40.x86_64.rpm"]
+depends: [
+  "ModemManager-glib" 
+  "NetworkManager-libnm" 
+  "accountsservice" 
+  "accountsservice-libs" 
+  "alsa-lib" 
+  "atk" 
+  "budgie-control-center-common" {= "1.4.0"}
+  "cairo" 
+  "cheese-libs" {>= "3.28.0"}
+  "colord" 
+  "colord-gtk" 
+  "colord-libs" 
+  "cups-libs" 
+  "cups-pk-helper" 
+  "dbus" 
+  "fontconfig" 
+  "fprintd" 
+  "gcr3-base" 
+  "gdk-pixbuf2" 
+  "glib2" {>= "2.64"}
+  "glibc" 
+  "glx-utils" 
+  "gnome-bluetooth" 
+  "gnome-bluetooth3-34-libs" 
+  "gnome-desktop3" {>= "42.0"}
+  "gnome-settings-daemon" {>= "42.0"}
+  "gsettings-desktop-schemas" {>= "42.0"}
+  "gsound" 
+  "gtk3" {>= "3.24"}
+  "ibus-libs" 
+  "iso-codes" 
+  "krb5-libs" 
+  "libX11" 
+  "libXi" 
+  "libepoxy" 
+  "libgcc" 
+  "libgtop2" 
+  "libgudev" 
+  "libhandy" 
+  "libnma" 
+  "libpwquality" 
+  "libsecret" 
+  "libsmbclient" 
+  "libudisks2" 
+  "libwacom" 
+  "libxml2" 
+  "malcontent" 
+  "malcontent-control" 
+  "malcontent-libs" 
+  "pango" 
+  "polkit-libs" 
+  "pulseaudio-libs" 
+  "pulseaudio-libs-glib2" 
+  "upower" {>= "0.99.8"}
+  "upower-libs" 
+]
+extra-source "budgie-control-center-1.4.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/budgie-control-center-1.4.0-1.fc40.x86_64.rpm"
+}

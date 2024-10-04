@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openbox-3.6.1-26.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openbox-3.6.1-26.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "libICE" 
+  "libSM" 
+  "libX11" 
+  "libXcursor" 
+  "libXext" 
+  "libXinerama" 
+  "libXrandr" 
+  "openbox-libs" 
+  "python3" 
+  "python3-pyxdg" 
+  "redhat-menus" 
+  "startup-notification" 
+]
+extra-source "openbox-3.6.1-26.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openbox-3.6.1-26.fc40.x86_64.rpm"
+}

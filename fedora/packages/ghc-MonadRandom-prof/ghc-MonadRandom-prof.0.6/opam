@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-MonadRandom-prof-0.6-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-MonadRandom-prof-0.6-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-MonadRandom-devel" {= "0.6"}
+  "ghc-base-prof" 
+  "ghc-mtl-prof" 
+  "ghc-primitive-prof" 
+  "ghc-random-prof" 
+  "ghc-transformers-compat-prof" 
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-MonadRandom-prof-0.6-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-MonadRandom-prof-0.6-3.fc40.x86_64.rpm"
+}

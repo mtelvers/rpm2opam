@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-graphics-devel-5.1.2-17.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-graphics-devel-5.1.2-17.fc40.x86_64.rpm"]
+depends: [
+  "libX11-devel" 
+  "ocaml" {= "2125"}
+  "ocaml-graphics" {= "5.1.2"}
+]
+extra-source "ocaml-graphics-devel-5.1.2-17.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-graphics-devel-5.1.2-17.fc40.x86_64.rpm"
+}

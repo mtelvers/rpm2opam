@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cjs-6.0.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cjs-6.0.0-3.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "cairo-gobject" 
+  "glib2" {>= "2.66.0"}
+  "glibc" 
+  "gobject-introspection" {>= "1.66.0"}
+  "gtk3" {>= "3.20"}
+  "libX11" 
+  "libffi" 
+  "libgcc" 
+  "libstdc++" 
+  "mozjs102" 
+  "readline" 
+]
+extra-source "cjs-6.0.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cjs-6.0.0-3.fc40.x86_64.rpm"
+}

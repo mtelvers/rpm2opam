@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "globus-gram-job-manager-condor-3.0-19.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "globus-gram-job-manager-condor-3.0-19.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "globus-common" 
+  "globus-gass-cache-program" {>= "5"}
+  "globus-gatekeeper" {>= "9"}
+  "globus-gram-job-manager" {>= "13"}
+  "globus-gram-job-manager-scripts" {>= "4"}
+  "globus-gram-protocol" 
+  "perl-IPC-Open3" 
+  "perl-libs" 
+]
+extra-source "globus-gram-job-manager-condor-3.0-19.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/globus-gram-job-manager-condor-3.0-19.fc40.noarch.rpm"
+}

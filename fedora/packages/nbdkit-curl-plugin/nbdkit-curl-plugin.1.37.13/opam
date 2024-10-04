@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nbdkit-curl-plugin-1.37.13-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nbdkit-curl-plugin-1.37.13-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcurl" 
+  "libgcc" 
+  "nbdkit-server" {= "1.37.13"}
+]
+extra-source "nbdkit-curl-plugin-1.37.13-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nbdkit-curl-plugin-1.37.13-1.fc40.x86_64.rpm"
+}

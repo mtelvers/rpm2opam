@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ImageMagick-djvu-7.1.1.26-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ImageMagick-djvu-7.1.1.26-5.fc40.x86_64.rpm"]
+depends: [
+  "ImageMagick-libs" {= "7.1.1.26"}
+  "bzip2-libs" 
+  "djvulibre-libs" 
+  "fftw-libs-double" 
+  "fontconfig" 
+  "freetype" 
+  "glib2" 
+  "glibc" 
+  "lcms2" 
+  "libICE" 
+  "libSM" 
+  "libX11" 
+  "libXext" 
+  "libXt" 
+  "libjpeg-turbo" 
+  "liblqr-1" 
+  "libraqm" 
+  "libtool-ltdl" 
+  "libxml2" 
+  "libzip" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "ImageMagick-djvu-7.1.1.26-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/ImageMagick-djvu-7.1.1.26-5.fc40.x86_64.rpm"
+}

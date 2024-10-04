@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Array-Diff-0.09-17.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Array-Diff-0.09-17.fc40.noarch.rpm"]
+depends: [
+  "perl-Algorithm-Diff" {>= "1.19"}
+  "perl-Class-Accessor" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-Array-Diff-0.09-17.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Array-Diff-0.09-17.fc40.noarch.rpm"
+}

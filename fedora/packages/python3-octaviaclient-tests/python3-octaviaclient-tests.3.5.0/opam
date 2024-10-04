@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-octaviaclient-tests-3.5.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-octaviaclient-tests-3.5.0-3.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-fixtures" {>= "1.3.1"}
+  "python3-mock" 
+  "python3-octaviaclient" {= "3.5.0"}
+  "python3-openstackclient" 
+  "python3-osc-lib" {>= "1.14.1"}
+  "python3-osc-lib-tests" 
+  "python3-oslo-log" 
+  "python3-stestr" 
+  "python3-subunit" {>= "0.0.18"}
+  "python3-testtools" 
+  "python3-webob" {>= "1.2.3"}
+]
+extra-source "python3-octaviaclient-tests-3.5.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-octaviaclient-tests-3.5.0-3.fc40.noarch.rpm"
+}

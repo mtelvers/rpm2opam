@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "imagefactory-plugins-vSphere-1.1.16-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "imagefactory-plugins-vSphere-1.1.16-11.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "imagefactory" {= "1.0"}
+  "imagefactory-plugins" 
+  "python3" {= "3.12"}
+  "python3-pyyaml" 
+  "qemu-img" 
+]
+extra-source "imagefactory-plugins-vSphere-1.1.16-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/imagefactory-plugins-vSphere-1.1.16-11.fc40.noarch.rpm"
+}

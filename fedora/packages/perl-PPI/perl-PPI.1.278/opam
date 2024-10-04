@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-PPI-1.278-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-PPI-1.278-1.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Class-XSAccessor" 
+  "perl-Clone" {>= "0.30"}
+  "perl-Digest-MD5" {>= "2.35"}
+  "perl-Exporter" 
+  "perl-File-Path" 
+  "perl-Params-Util" {>= "1.0"}
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-Storable" {>= "2.17"}
+  "perl-Task-Weaken" 
+  "perl-constant" 
+  "perl-if" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-overload" 
+]
+extra-source "perl-PPI-1.278-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-PPI-1.278-1.fc40.noarch.rpm"
+}

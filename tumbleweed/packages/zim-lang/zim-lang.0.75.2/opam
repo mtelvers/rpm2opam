@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zim-lang-0.75.2-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zim-lang-0.75.2-2.2.noarch.rpm"]
+depends: [
+  "zim" {= "0.75.2"}
+]
+extra-source "zim-lang-0.75.2-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/zim-lang-0.75.2-2.2.noarch.rpm"
+}

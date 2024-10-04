@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-jumplines-2024.216.0.0.2svn37553-58.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-jumplines-2024.216.0.0.2svn37553-58.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-babel" 
+  "texlive-bookmark" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-hyperref" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-l3packages" 
+  "texlive-luacolor" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tcolorbox" 
+  "texlive-tocloft" 
+  "texlive-xcolor" 
+  "texlive-xkeyval" 
+]
+extra-source "texlive-jumplines-2024.216.0.0.2svn37553-58.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-jumplines-2024.216.0.0.2svn37553-58.1.noarch.rpm"
+}

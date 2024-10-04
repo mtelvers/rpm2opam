@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-tabular-prof-0.2.2.8-4.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-tabular-prof-0.2.2.8-4.16.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-csv-prof" 
+  "ghc-html-prof" 
+  "ghc-mtl-prof" 
+  "ghc-tabular-devel" {= "0.2.2.8"}
+]
+extra-source "ghc-tabular-prof-0.2.2.8-4.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-tabular-prof-0.2.2.8-4.16.x86_64.rpm"
+}

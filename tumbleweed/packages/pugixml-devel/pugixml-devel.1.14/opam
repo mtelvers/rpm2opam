@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pugixml-devel-1.14-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pugixml-devel-1.14-1.3.x86_64.rpm"]
+depends: [
+  "libpugixml1" {= "1.14"}
+  "pkgconf-pkg-config" 
+]
+extra-source "pugixml-devel-1.14-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pugixml-devel-1.14-1.3.x86_64.rpm"
+}

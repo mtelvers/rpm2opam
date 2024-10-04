@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-ansible-compat-4.1.11-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-ansible-compat-4.1.11-1.fc40.noarch.rpm"]
+depends: [
+  "ansible-core" {>= "2.12"}
+  "python3" {= "3.12"}
+  "python3-jsonschema" {>= "4.6"}
+  "python3-packaging" 
+  "python3-pyyaml" 
+  "python3-subprocess-tee" {>= "0.4.1"}
+]
+extra-source "python3-ansible-compat-4.1.11-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-ansible-compat-4.1.11-1.fc40.noarch.rpm"
+}

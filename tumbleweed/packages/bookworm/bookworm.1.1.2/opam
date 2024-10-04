@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bookworm-1.1.2-2.14.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bookworm-1.1.2-2.14.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "html2text" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgee-0_8-2" 
+  "libgranite6" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+  "libpoppler-glib8" 
+  "libsoup-2_4-1" 
+  "libsqlite3-0" 
+  "libwebkit2gtk-4_0-37" 
+  "libxml2-2" 
+  "poppler-tools" 
+  "python311-base" 
+]
+extra-source "bookworm-1.1.2-2.14.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/bookworm-1.1.2-2.14.x86_64.rpm"
+}

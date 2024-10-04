@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xwayland-run-0.0.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xwayland-run-0.0.4-1.1.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "dbus-1-daemon" 
+  "python311-base" {= "3.11"}
+  "weston" 
+  "xauth" 
+  "xwayland" 
+]
+extra-source "xwayland-run-0.0.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xwayland-run-0.0.4-1.1.noarch.rpm"
+}

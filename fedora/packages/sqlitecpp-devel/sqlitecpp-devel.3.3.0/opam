@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sqlitecpp-devel-3.3.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sqlitecpp-devel-3.3.0-3.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "sqlitecpp" 
+]
+extra-source "sqlitecpp-devel-3.3.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sqlitecpp-devel-3.3.0-3.fc40.x86_64.rpm"
+}

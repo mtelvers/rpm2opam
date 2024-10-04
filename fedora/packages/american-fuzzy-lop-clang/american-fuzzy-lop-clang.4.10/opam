@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "american-fuzzy-lop-clang-4.10c-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "american-fuzzy-lop-clang-4.10c-1.fc40.x86_64.rpm"]
+depends: [
+  "american-fuzzy-lop" {= "4.10"}
+  "clang17" {= "17"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "lld" 
+]
+extra-source "american-fuzzy-lop-clang-4.10c-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/american-fuzzy-lop-clang-4.10c-1.fc40.x86_64.rpm"
+}

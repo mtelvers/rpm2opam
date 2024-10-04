@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mate-netbook-1.26.0-1.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mate-netbook-1.26.0-1.13.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libatk-1_0-0" 
+  "libcairo2" 
+  "libfakekey0" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libmate-panel-applet-4-1" 
+  "libpango-1_0-0" 
+  "libwnck-3-0" 
+  "mate-panel" {>= "1.26"}
+]
+extra-source "mate-netbook-1.26.0-1.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mate-netbook-1.26.0-1.13.x86_64.rpm"
+}

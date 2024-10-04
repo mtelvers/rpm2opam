@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnuhealth-client-4.4.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnuhealth-client-4.4.0-1.3.noarch.rpm"]
+depends: [
+  "gnu-free-fonts" 
+  "gobject-introspection" 
+  "opencv" 
+  "python311-GooCalendar" {>= "0.5"}
+  "python311-base" 
+  "python311-chardet" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-gobject-cairo" 
+  "python311-numpy" 
+  "python311-opencv" 
+  "python311-pycairo" 
+  "python311-python-dateutil" 
+  "python311-python-gnupg" 
+  "python311-pytz" 
+  "python311-setuptools" 
+  "python311-simplejson" 
+]
+extra-source "gnuhealth-client-4.4.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnuhealth-client-4.4.0-1.3.noarch.rpm"
+}

@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-pynitrokey-0.4.50-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-pynitrokey-0.4.50-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "intelhex" 
+  "python311-base" 
+  "python311-certifi" {>= "14.5.14"}
+  "python311-cffi" 
+  "python311-click" {>= "8.1.6"}
+  "python311-click-aliases" 
+  "python311-cryptography" 
+  "python311-ecdsa" 
+  "python311-fido2" 
+  "python311-frozendict" {>= "2.3.4"}
+  "python311-nethsm" 
+  "python311-nkdfu" 
+  "python311-protobuf" {>= "3.17.3"}
+  "python311-pyserial" 
+  "python311-python-dateutil" {>= "2.7.0"}
+  "python311-pyusb" 
+  "python311-requests" 
+  "python311-semver" 
+  "python311-spsdk" 
+  "python311-tlv8" 
+  "python311-tqdm" 
+  "python311-typing_extensions" {>= "4.3.0"}
+  "python311-urllib3" {>= "1.26.7"}
+  "update-alternatives" 
+]
+extra-source "python3-pynitrokey-0.4.50-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-pynitrokey-0.4.50-1.1.noarch.rpm"
+}

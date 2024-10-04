@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gucharmap-lang-15.1.5-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gucharmap-lang-15.1.5-2.1.noarch.rpm"]
+depends: [
+  "gucharmap" {= "15.1.5"}
+]
+extra-source "gucharmap-lang-15.1.5-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gucharmap-lang-15.1.5-2.1.noarch.rpm"
+}

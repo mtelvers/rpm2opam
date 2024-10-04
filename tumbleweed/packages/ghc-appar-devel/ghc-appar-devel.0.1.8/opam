@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-appar-devel-0.1.8-4.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-appar-devel-0.1.8-4.9.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-appar" {= "0.1.8"}
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+]
+extra-source "ghc-appar-devel-0.1.8-4.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-appar-devel-0.1.8-4.9.x86_64.rpm"
+}

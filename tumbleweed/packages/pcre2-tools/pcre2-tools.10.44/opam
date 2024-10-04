@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pcre2-tools-10.44-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcre2-tools-10.44-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbz2-1" 
+  "libedit0" 
+  "libpcre2-16-0" 
+  "libpcre2-32-0" 
+  "libpcre2-8-0" 
+  "libpcre2-posix3" 
+  "libz-ng-compat1" 
+]
+extra-source "pcre2-tools-10.44-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pcre2-tools-10.44-1.1.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ruby-gnomevfs-0.90.4-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ruby-gnomevfs-0.90.4-19.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "gnome-vfs2" 
+  "ruby-libs" 
+  "rubygem-glib2" {>= "0.90.4"}
+]
+extra-source "ruby-gnomevfs-0.90.4-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/ruby-gnomevfs-0.90.4-19.fc40.x86_64.rpm"
+}

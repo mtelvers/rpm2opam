@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw64-pango-1.51.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-pango-1.51.0-3.fc40.noarch.rpm"]
+depends: [
+  "mingw64-cairo" 
+  "mingw64-crt" 
+  "mingw64-filesystem" 
+  "mingw64-fontconfig" 
+  "mingw64-freetype" 
+  "mingw64-fribidi" 
+  "mingw64-gettext" 
+  "mingw64-glib2" 
+  "mingw64-harfbuzz" 
+  "pkgconf-pkg-config" 
+]
+extra-source "mingw64-pango-1.51.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw64-pango-1.51.0-3.fc40.noarch.rpm"
+}

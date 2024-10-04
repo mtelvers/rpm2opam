@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-xerox-0.4.1-2.21.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-xerox-0.4.1-2.21.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-base" 
+  "update-alternatives" 
+  "xclip" 
+]
+extra-source "python310-xerox-0.4.1-2.21.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-xerox-0.4.1-2.21.noarch.rpm"
+}

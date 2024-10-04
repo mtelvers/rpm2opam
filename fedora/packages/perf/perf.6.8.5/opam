@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perf-6.8.5-301.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perf-6.8.5-301.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bzip2" 
+  "elfutils-libelf" 
+  "elfutils-libs" 
+  "glibc" 
+  "libbabeltrace" 
+  "libcap" 
+  "libstdc++" 
+  "libtraceevent" 
+  "libzstd" 
+  "numactl-libs" 
+  "openssl-libs" 
+  "perl-Exporter" 
+  "perl-POSIX" 
+  "perl-lib" 
+  "perl-libs" 
+  "python3-libs" 
+  "slang" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "perf-6.8.5-301.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perf-6.8.5-301.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pecan-1.5.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pecan-1.5.1-1.1.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "python311-Mako" {>= "0.4.0"}
+  "python311-WebOb" {>= "1.8"}
+  "python311-WebTest" {>= "1.3.1"}
+  "python311-base" 
+  "python311-logutils" {>= "0.3"}
+  "python311-setuptools" 
+]
+extra-source "python311-pecan-1.5.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pecan-1.5.1-1.1.noarch.rpm"
+}

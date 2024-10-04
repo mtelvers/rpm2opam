@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nbdkit-bash-completion-1.40.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nbdkit-bash-completion-1.40.3-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" {>= "2.0"}
+  "nbdkit-server" {= "1.40.3"}
+]
+extra-source "nbdkit-bash-completion-1.40.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nbdkit-bash-completion-1.40.3-1.1.noarch.rpm"
+}

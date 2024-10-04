@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libchamplain-devel-0.12.21-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libchamplain-devel-0.12.21-1.7.x86_64.rpm"]
+depends: [
+  "cairo-devel" {>= "1.4"}
+  "clutter-devel" {>= "1.24"}
+  "clutter-gtk-devel" {>= "1.0"}
+  "glib2-devel" {>= "2.68"}
+  "gtk3-devel" {>= "3.0"}
+  "libchamplain-0_12-0" {= "0.12.21"}
+  "libsoup-devel" {>= "3.0"}
+  "pkgconf-pkg-config" 
+  "sqlite3-devel" {>= "3.0"}
+  "typelib-1_0-Champlain-0_12" {= "0.12.21"}
+]
+extra-source "libchamplain-devel-0.12.21-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libchamplain-devel-0.12.21-1.7.x86_64.rpm"
+}

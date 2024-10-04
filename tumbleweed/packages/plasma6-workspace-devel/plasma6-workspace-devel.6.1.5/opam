@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plasma6-workspace-devel-6.1.5-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plasma6-workspace-devel-6.1.5-2.1.x86_64.rpm"]
+depends: [
+  "kf6-kitemmodels-devel" {>= "6.2.0"}
+  "layer-shell-qt6-devel" {>= "6.1.5"}
+  "libplasma6-devel" {>= "6.1.5"}
+  "plasma6-workspace-libs" {= "6.1.5"}
+  "qt6-core-devel" {>= "6.6.0"}
+  "qt6-gui-devel" {>= "6.6.0"}
+  "qt6-quick-devel" {>= "6.6.0"}
+]
+extra-source "plasma6-workspace-devel-6.1.5-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/plasma6-workspace-devel-6.1.5-2.1.x86_64.rpm"
+}

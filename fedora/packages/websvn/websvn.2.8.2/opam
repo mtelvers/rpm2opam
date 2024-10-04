@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "websvn-2.8.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "websvn-2.8.2-3.fc40.noarch.rpm"]
+depends: [
+  "diffutils" 
+  "enscript" 
+  "httpd" 
+  "php" {>= "5.4.0"}
+  "php-erusev-parsedown" 
+  "php-geshi" 
+  "php-mbstring" 
+  "php-pear" 
+  "php-xml" 
+  "sed" 
+]
+extra-source "websvn-2.8.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/websvn-2.8.2-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "virtualbox-devel-7.1.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "virtualbox-devel-7.1.0-2.1.x86_64.rpm"]
+depends: [
+  "python3-virtualbox" {= "7.1.0"}
+  "virtualbox" {= "7.1.0"}
+]
+extra-source "virtualbox-devel-7.1.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/virtualbox-devel-7.1.0-2.1.x86_64.rpm"
+}

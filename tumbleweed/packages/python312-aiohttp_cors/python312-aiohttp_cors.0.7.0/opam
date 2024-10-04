@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-aiohttp_cors-0.7.0-5.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-aiohttp_cors-0.7.0-5.5.noarch.rpm"]
+depends: [
+  "python312" {>= "3.4.2"}
+  "python312-async_timeout" {>= "2.0.0"}
+  "python312-base" {= "3.12"}
+  "python312-chardet" 
+  "python312-multidict" {>= "3.3.0"}
+  "python312-yarl" {>= "0.13.0"}
+]
+extra-source "python312-aiohttp_cors-0.7.0-5.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-aiohttp_cors-0.7.0-5.5.noarch.rpm"
+}

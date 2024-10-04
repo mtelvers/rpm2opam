@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gio0.18-devel-0.18.4-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gio0.18-devel-0.18.4-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.70"}
+  "rust-futures-channel+default-devel" 
+  "rust-futures-core-devel" 
+  "rust-futures-io+default-devel" 
+  "rust-futures-util-devel" 
+  "rust-gio-sys+default-devel" 
+  "rust-glib+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-pin-project-lite+default-devel" 
+  "rust-smallvec+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-gio0.18-devel-0.18.4-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gio0.18-devel-0.18.4-1.fc40.noarch.rpm"
+}

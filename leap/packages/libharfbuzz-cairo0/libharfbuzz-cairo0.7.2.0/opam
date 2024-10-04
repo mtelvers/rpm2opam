@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libharfbuzz-cairo0-7.2.0-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libharfbuzz-cairo0-7.2.0-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcairo2" 
+  "libharfbuzz0" 
+]
+extra-source "libharfbuzz-cairo0-7.2.0-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libharfbuzz-cairo0-7.2.0-slfo.1.1.8.x86_64.rpm"
+}

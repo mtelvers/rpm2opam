@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "translate-toolkit-3.12.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "translate-toolkit-3.12.2-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "gettext" 
+  "python3" 
+  "python3-Levenshtein" 
+  "python3-aeidon" 
+  "python3-beautifulsoup4" 
+  "python3-chardet" 
+  "python3-cheroot" 
+  "python3-enchant" 
+  "python3-iniparse" 
+  "python3-lxml" 
+  "python3-phply" 
+  "python3-pycountry" 
+  "python3-ruamel-yaml" 
+  "python3-simplejson" 
+  "python3-six" 
+  "python3-vobject" 
+]
+extra-source "translate-toolkit-3.12.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/translate-toolkit-3.12.2-1.fc40.noarch.rpm"
+}

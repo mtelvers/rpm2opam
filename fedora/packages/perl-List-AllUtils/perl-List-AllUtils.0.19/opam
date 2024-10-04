@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-List-AllUtils-0.19-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-List-AllUtils-0.19-12.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" 
+  "perl-List-SomeUtils" {>= "0.58"}
+  "perl-List-UtilsBy" {>= "0.11"}
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-List-AllUtils-0.19-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-List-AllUtils-0.19-12.fc40.noarch.rpm"
+}

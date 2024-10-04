@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "poppler-sharp-devel-0.0.3-34.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "poppler-sharp-devel-0.0.3-34.fc40.x86_64.rpm"]
+depends: [
+  "pkgconf-pkg-config" 
+  "poppler-sharp" {= "0.0.3"}
+]
+extra-source "poppler-sharp-devel-0.0.3-34.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/poppler-sharp-devel-0.0.3-34.fc40.x86_64.rpm"
+}

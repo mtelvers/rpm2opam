@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "geronimo-j2ee-connector-1_5-api-1.2-slfo.1.1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "geronimo-j2ee-connector-1_5-api-1.2-slfo.1.1.5.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "geronimo-jta-1_0_1B-api" 
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "update-alternatives" 
+]
+extra-source "geronimo-j2ee-connector-1_5-api-1.2-slfo.1.1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/geronimo-j2ee-connector-1_5-api-1.2-slfo.1.1.5.noarch.rpm"
+}

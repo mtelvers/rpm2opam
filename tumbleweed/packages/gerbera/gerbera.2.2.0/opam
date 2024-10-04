@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gerbera-2.2.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gerbera-2.2.0-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ffmpeg-7-mini-libs" 
+  "glibc" 
+  "libcurl-mini4" 
+  "libduktape207" 
+  "libebml5" 
+  "libexiv2-28" 
+  "libffmpegthumbnailer4" 
+  "libfmt11" 
+  "libgcc_s1" 
+  "libixml11" 
+  "libmagic1" 
+  "libmatroska7" 
+  "libpugixml1" 
+  "libspdlog1_14" 
+  "libsqlite3-0" 
+  "libstdc++6" 
+  "libtag2" 
+  "libupnp17" 
+  "libuuid1" 
+  "logrotate" 
+  "systemd" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "gerbera-2.2.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gerbera-2.2.0-1.2.x86_64.rpm"
+}

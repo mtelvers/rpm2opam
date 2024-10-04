@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-graphviz-devel-2999.20.1.0-40.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-graphviz-devel-2999.20.1.0-40.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-colour-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-directory-devel" 
+  "ghc-dlist-devel" 
+  "ghc-fgl-devel" 
+  "ghc-filepath-devel" 
+  "ghc-graphviz" {= "2999.20.1.0"}
+  "ghc-mtl-devel" 
+  "ghc-polyparse-devel" 
+  "ghc-process-devel" 
+  "ghc-temporary-devel" 
+  "ghc-text-devel" 
+  "ghc-wl-pprint-text-devel" 
+]
+extra-source "ghc-graphviz-devel-2999.20.1.0-40.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-graphviz-devel-2999.20.1.0-40.fc40.x86_64.rpm"
+}

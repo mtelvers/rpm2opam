@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cross-s390x-gcc14-14.2.0+git10526-slfo.1.1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cross-s390x-gcc14-14.2.0+git10526-slfo.1.1.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "cross-s390x-binutils" 
+  "cross-s390x-glibc-devel" 
+  "glibc" 
+  "libgmp10" 
+  "libisl23" 
+  "libmpc3" 
+  "libmpfr6" 
+  "libstdc++6-devel-gcc14" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+  "update-alternatives" 
+]
+extra-source "cross-s390x-gcc14-14.2.0+git10526-slfo.1.1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/cross-s390x-gcc14-14.2.0+git10526-slfo.1.1.3.x86_64.rpm"
+}

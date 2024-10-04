@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "build2-0.16.0-3.fc40~bootstrap.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "build2-0.16.0-3.fc40~bootstrap.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbuild2" 
+  "libbutl" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "build2-0.16.0-3.fc40~bootstrap.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/build2-0.16.0-3.fc40~bootstrap.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "flarq-4.2.05-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flarq-4.2.05-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libfltk1_3" 
+  "libflxmlrpc1" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "update-desktop-files" 
+]
+extra-source "flarq-4.2.05-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/flarq-4.2.05-1.1.x86_64.rpm"
+}

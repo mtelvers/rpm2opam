@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nest-3.6-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nest-3.6-8.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "gsl" 
+  "libgcc" 
+  "libgomp" 
+  "libneurosim" 
+  "libstdc++" 
+  "libtool-ltdl" 
+  "ncurses-libs" 
+  "nest-common" 
+  "python3" 
+  "readline" 
+]
+extra-source "nest-3.6-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nest-3.6-8.fc40.x86_64.rpm"
+}

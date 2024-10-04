@@ -1,0 +1,48 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "paraview-5.11.2-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "paraview-5.11.2-5.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cgnslib-libs" 
+  "double-conversion" 
+  "expat" 
+  "freetype" 
+  "gdal-libs" 
+  "glibc" 
+  "hdf5" {= "1.12.1"}
+  "jsoncpp" 
+  "libGLEW" 
+  "libX11" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libglvnd-opengl" 
+  "libjpeg-turbo" 
+  "libogg" 
+  "libpng" 
+  "libstdc++" 
+  "libtheora" 
+  "libtiff" 
+  "libxml2" 
+  "lz4-libs" 
+  "netcdf" 
+  "paraview-data" {= "5.11.2"}
+  "protobuf" 
+  "pugixml" 
+  "python3-autobahn" 
+  "python3-libs" 
+  "python3-netcdf4" 
+  "python3-numpy" 
+  "python3-pygments" 
+  "python3-six" 
+  "python3-twisted" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtsvg" 
+  "qt5-qttools-libs-help" 
+  "qt5-qtx11extras" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "paraview-5.11.2-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/paraview-5.11.2-5.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-doc-utils-0.20.10-22.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-doc-utils-0.20.10-22.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "libxslt-tools" 
+  "python311-libxml2" 
+]
+extra-source "gnome-doc-utils-0.20.10-22.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-doc-utils-0.20.10-22.2.noarch.rpm"
+}

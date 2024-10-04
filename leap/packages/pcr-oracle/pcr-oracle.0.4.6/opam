@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pcr-oracle-0.4.6-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcr-oracle-0.4.6-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libopenssl3" 
+  "libtss2-esys0" 
+  "libtss2-mu0" 
+  "libtss2-rc0" 
+  "libtss2-tcti-device0" 
+]
+extra-source "pcr-oracle-0.4.6-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/pcr-oracle-0.4.6-slfo.1.1.8.x86_64.rpm"
+}

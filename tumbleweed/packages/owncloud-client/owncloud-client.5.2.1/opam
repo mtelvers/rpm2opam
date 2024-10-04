@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "owncloud-client-5.2.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "owncloud-client-5.2.1-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libLibreGraphAPI1" 
+  "libQt6Core6" 
+  "libQt6DBus6" 
+  "libQt6Gui6" 
+  "libQt6Network6" 
+  "libQt6Widgets6" 
+  "libkdsingleapplication-qt6-1_1" 
+  "libowncloudsync0" 
+  "libstdc++6" 
+  "owncloud-icons" {= "5.2.1"}
+  "qt6-sql-sqlite" 
+]
+extra-source "owncloud-client-5.2.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/owncloud-client-5.2.1-2.1.x86_64.rpm"
+}

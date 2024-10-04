@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "blitz-devel-1.0.2-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "blitz-devel-1.0.2-16.fc40.x86_64.rpm"]
+depends: [
+  "blitz" {= "1.0.2"}
+  "pkgconf-pkg-config" 
+]
+extra-source "blitz-devel-1.0.2-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/blitz-devel-1.0.2-16.fc40.x86_64.rpm"
+}

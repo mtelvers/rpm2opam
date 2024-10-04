@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lmms-1.2.2-15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lmms-1.2.2-15.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "calf" 
+  "fftw-libs-single" 
+  "fltk" 
+  "fluidsynth-libs" 
+  "glibc" {>= "2.38.9000"}
+  "hicolor-icon-theme" 
+  "ladspa-caps-plugins" 
+  "ladspa-tap-plugins" 
+  "libX11" 
+  "libgcc" 
+  "libogg" 
+  "libsamplerate" 
+  "libsndfile" 
+  "libstdc++" 
+  "libvorbis" 
+  "libxcb" 
+  "pulseaudio-libs" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtx11extras" 
+  "shared-mime-info" 
+  "stk" 
+  "zlib-ng-compat" 
+]
+extra-source "lmms-1.2.2-15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lmms-1.2.2-15.fc40.x86_64.rpm"
+}

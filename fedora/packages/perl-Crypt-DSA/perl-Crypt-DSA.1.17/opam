@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Crypt-DSA-1.17-40.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Crypt-DSA-1.17-40.fc40.noarch.rpm"]
+depends: [
+  "openssl" 
+  "perl-Carp" 
+  "perl-Convert-ASN1" 
+  "perl-Convert-PEM" 
+  "perl-Data-Buffer" 
+  "perl-Digest-SHA1" 
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-File-Which" 
+  "perl-IPC-Open3" 
+  "perl-MIME-Base64" 
+  "perl-Math-BigInt" {>= "1.78"}
+  "perl-Math-BigInt-GMP" 
+  "perl-PathTools" 
+  "perl-Symbol" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-vars" 
+]
+extra-source "perl-Crypt-DSA-1.17-40.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Crypt-DSA-1.17-40.fc40.noarch.rpm"
+}

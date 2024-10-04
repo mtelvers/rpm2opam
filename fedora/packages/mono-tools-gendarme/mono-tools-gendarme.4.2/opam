@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mono-tools-gendarme-4.2-30.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mono-tools-gendarme-4.2-30.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "mono-cecil" {= "0.10.4.0"}
+  "mono-core" {= "4.0.0.0"}
+  "mono-tools" {= "4.2"}
+  "mono-web" {= "4.0.0.0"}
+  "mono-winforms" {= "4.0.0.0"}
+  "sharpziplib" {= "1.3.3.0"}
+]
+extra-source "mono-tools-gendarme-4.2-30.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mono-tools-gendarme-4.2-30.fc40.x86_64.rpm"
+}

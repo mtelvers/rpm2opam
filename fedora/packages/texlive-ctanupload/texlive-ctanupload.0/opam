@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-ctanupload-svn26313-81.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-ctanupload-svn26313-81.fc40.noarch.rpm"]
+depends: [
+  "perl-HTML-Formatter" 
+  "perl-HTML-Tree" 
+  "perl-WWW-Mechanize" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "texlive-base" 
+  "texlive-kpathsea" 
+]
+extra-source "texlive-ctanupload-svn26313-81.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-ctanupload-svn26313-81.fc40.noarch.rpm"
+}

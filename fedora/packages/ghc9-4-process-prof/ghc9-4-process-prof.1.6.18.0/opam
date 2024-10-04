@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc9.4-process-prof-1.6.18.0-27.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc9.4-process-prof-1.6.18.0-27.fc40.x86_64.rpm"]
+depends: [
+  "ghc9-4-base-prof" 
+  "ghc9-4-deepseq-prof" 
+  "ghc9-4-directory-prof" 
+  "ghc9-4-filepath-prof" 
+  "ghc9-4-process-devel" {= "1.6.18.0"}
+  "ghc9-4-unix-prof" 
+]
+extra-source "ghc9.4-process-prof-1.6.18.0-27.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc9.4-process-prof-1.6.18.0-27.fc40.x86_64.rpm"
+}

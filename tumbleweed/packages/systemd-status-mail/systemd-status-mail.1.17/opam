@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "systemd-status-mail-1.17-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "systemd-status-mail-1.17-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-sendmail" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "systemd-status-mail-1.17-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/systemd-status-mail-1.17-1.1.noarch.rpm"
+}

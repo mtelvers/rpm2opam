@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glassfish-hk2-2.5.0-9.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glassfish-hk2-2.5.0-9.3.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "maven-bundle-plugin" 
+  "maven-compiler-plugin" 
+  "maven-jar-plugin" 
+  "maven-surefire-plugin" 
+]
+extra-source "glassfish-hk2-2.5.0-9.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/glassfish-hk2-2.5.0-9.3.noarch.rpm"
+}

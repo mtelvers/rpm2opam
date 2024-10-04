@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-RCurl-1.98.1.8-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-RCurl-1.98.1.8-6.fc40.x86_64.rpm"]
+depends: [
+  "R-bitops" 
+  "R-core" {= "4.3"}
+  "glibc" 
+  "libcurl" 
+  "texlive-collection-latexrecommended" 
+]
+extra-source "R-RCurl-1.98.1.8-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-RCurl-1.98.1.8-6.fc40.x86_64.rpm"
+}

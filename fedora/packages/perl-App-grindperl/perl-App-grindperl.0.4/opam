@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-App-grindperl-0.004-25.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-App-grindperl-0.004-25.fc40.noarch.rpm"]
+depends: [
+  "git" 
+  "make" 
+  "perl-Carp" 
+  "perl-File-Copy" 
+  "perl-File-HomeDir" {>= "0.98"}
+  "perl-Getopt-Lucid" 
+  "perl-Path-Class" 
+  "perl-PathTools" 
+  "perl-autodie" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-App-grindperl-0.004-25.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-App-grindperl-0.004-25.fc40.noarch.rpm"
+}

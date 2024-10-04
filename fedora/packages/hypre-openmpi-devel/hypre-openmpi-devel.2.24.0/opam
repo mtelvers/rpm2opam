@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hypre-openmpi-devel-2.24.0-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hypre-openmpi-devel-2.24.0-11.fc40.x86_64.rpm"]
+depends: [
+  "flexiblas-devel" 
+  "hypre-openmpi" {= "2.24.0"}
+  "openmpi-devel" 
+  "ptscotch-openmpi-devel" 
+  "superlu_dist-openmpi-devel" 
+]
+extra-source "hypre-openmpi-devel-2.24.0-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hypre-openmpi-devel-2.24.0-11.fc40.x86_64.rpm"
+}

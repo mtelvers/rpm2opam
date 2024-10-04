@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "booksorg-0.3.1-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "booksorg-0.3.1-10.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "poppler-qt5" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "booksorg-0.3.1-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/booksorg-0.3.1-10.fc40.x86_64.rpm"
+}

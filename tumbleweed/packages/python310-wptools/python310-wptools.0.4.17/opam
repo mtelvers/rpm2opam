@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-wptools-0.4.17-5.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-wptools-0.4.17-5.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-base" {= "3.10"}
+  "python310-certifi" {>= "2017.7.27.1"}
+  "python310-html2text" {>= "2016.9.19"}
+  "python310-lxml" {>= "3.8.0"}
+  "python310-pycurl" {>= "7.43.0"}
+  "update-alternatives" 
+]
+extra-source "python310-wptools-0.4.17-5.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-wptools-0.4.17-5.2.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zynaddsubfx-dssi-3.0.6-3.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zynaddsubfx-dssi-3.0.6-3.6.x86_64.rpm"]
+depends: [
+  "dssi" 
+  "glibc" 
+  "libfftw3-3" 
+  "libgcc_s1" 
+  "liblo7" 
+  "libmxml1" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "zynaddsubfx-common" {= "3.0.6"}
+]
+extra-source "zynaddsubfx-dssi-3.0.6-3.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/zynaddsubfx-dssi-3.0.6-3.6.x86_64.rpm"
+}

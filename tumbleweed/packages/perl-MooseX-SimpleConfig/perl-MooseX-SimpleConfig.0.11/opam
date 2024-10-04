@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-SimpleConfig-0.11-1.31.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-SimpleConfig-0.11-1.31.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Config-Any" {>= "0.13"}
+  "perl-Moose" 
+  "perl-MooseX-ConfigFromFile" 
+]
+extra-source "perl-MooseX-SimpleConfig-0.11-1.31.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-SimpleConfig-0.11-1.31.noarch.rpm"
+}

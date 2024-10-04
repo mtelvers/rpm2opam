@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-mitmproxy-10.2.2-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-mitmproxy-10.2.2-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-Brotli" {>= "1.0"}
+  "python311-Flask" {>= "1.1.1"}
+  "python311-aioquic" {>= "0.9.4"}
+  "python311-asgiref" {>= "3.2.10"}
+  "python311-base" 
+  "python311-certifi" {>= "2019.9.11"}
+  "python311-click" {>= "7.0"}
+  "python311-cryptography" {>= "38.0"}
+  "python311-h11" {>= "0.11"}
+  "python311-h2" {>= "4.1"}
+  "python311-hyperframe" {>= "6.0"}
+  "python311-kaitaistruct" {>= "0.10"}
+  "python311-ldap3" {>= "2.8"}
+  "python311-mitmproxy-rs" {>= "0.5.1"}
+  "python311-mitmproxy-wireguard" {>= "0.1.6"}
+  "python311-msgpack" {>= "1.0.0"}
+  "python311-passlib" {>= "1.6.5"}
+  "python311-protobuf" {>= "3.14"}
+  "python311-publicsuffix2" {>= "2.20190812"}
+  "python311-pyOpenSSL" {>= "22.1"}
+  "python311-pyparsing" {>= "2.4.2"}
+  "python311-pyperclip" {>= "1.6.0"}
+  "python311-ruamel-yaml" {>= "0.16"}
+  "python311-sortedcontainers" {>= "2.3"}
+  "python311-tornado" {>= "6.1"}
+  "python311-urwid" {>= "2.1.1"}
+  "python311-wsproto" {>= "1.0"}
+  "python311-zstandard" {>= "0.11"}
+  "update-alternatives" 
+]
+extra-source "python311-mitmproxy-10.2.2-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-mitmproxy-10.2.2-1.2.noarch.rpm"
+}

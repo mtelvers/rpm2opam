@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openclonk-8.1-22.20210103git701bcf3.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openclonk-8.1-22.20210103git701bcf3.fc39.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "freealut" 
+  "freetype" 
+  "glibc" {>= "2.37.9000"}
+  "hicolor-icon-theme" 
+  "libX11" 
+  "libcurl" 
+  "libepoxy" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libstdc++" 
+  "libvorbis" 
+  "openal-soft" 
+  "openclonk-data" {= "8.1"}
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "readline" 
+  "tinyxml" 
+  "zlib-ng-compat" 
+]
+extra-source "openclonk-8.1-22.20210103git701bcf3.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openclonk-8.1-22.20210103git701bcf3.fc39.x86_64.rpm"
+}

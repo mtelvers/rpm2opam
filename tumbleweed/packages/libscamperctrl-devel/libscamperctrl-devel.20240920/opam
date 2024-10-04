@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libscamperctrl-devel-20240920-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libscamperctrl-devel-20240920-1.1.x86_64.rpm"]
+depends: [
+  "libscamperctrl2" {= "20240920"}
+]
+extra-source "libscamperctrl-devel-20240920-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libscamperctrl-devel-20240920-1.1.x86_64.rpm"
+}

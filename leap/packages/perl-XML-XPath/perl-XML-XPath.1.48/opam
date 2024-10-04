@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-XML-XPath-1.48-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XML-XPath-1.48-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "perl" 
+  "perl-XML-Parser" {>= "2.23"}
+  "perl-base" {>= "1.45"}
+]
+extra-source "perl-XML-XPath-1.48-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/perl-XML-XPath-1.48-slfo.1.1.3.noarch.rpm"
+}

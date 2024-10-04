@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wol-udev-rules-0.7.1-163.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wol-udev-rules-0.7.1-163.1.noarch.rpm"]
+depends: [
+  "ethtool" 
+  "udev" 
+]
+extra-source "wol-udev-rules-0.7.1-163.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/wol-udev-rules-0.7.1-163.1.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-Rcpp-examples-1.0.12-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-Rcpp-examples-1.0.12-3.fc40.x86_64.rpm"]
+depends: [
+  "R-Rcpp" {= "1.0.12"}
+  "R-littler" 
+  "bash" 
+]
+extra-source "R-Rcpp-examples-1.0.12-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-Rcpp-examples-1.0.12-3.fc40.x86_64.rpm"
+}

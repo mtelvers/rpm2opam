@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tokio-socks-devel-0.5.1-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tokio-socks-devel-0.5.1-9.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cargo" 
+  "rust-either+default-devel" 
+  "rust-futures-util-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-tokio+default-devel" 
+  "rust-tokio+io-util-devel" 
+  "rust-tokio+net-devel" 
+]
+extra-source "rust-tokio-socks-devel-0.5.1-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tokio-socks-devel-0.5.1-9.fc40.noarch.rpm"
+}

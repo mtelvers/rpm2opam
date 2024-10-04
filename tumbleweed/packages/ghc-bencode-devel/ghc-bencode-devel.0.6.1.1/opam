@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-bencode-devel-0.6.1.1-4.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-bencode-devel-0.6.1.1-4.16.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-bencode" {= "0.6.1.1"}
+  "ghc-binary-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-parsec-devel" 
+  "ghc-transformers-compat-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-bencode-devel-0.6.1.1-4.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-bencode-devel-0.6.1.1-4.16.x86_64.rpm"
+}

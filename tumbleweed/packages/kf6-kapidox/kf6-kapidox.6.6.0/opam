@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kf6-kapidox-6.6.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kf6-kapidox-6.6.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "doxygen" 
+  "graphviz" 
+  "graphviz-gd" 
+  "python311-Jinja2" 
+  "python311-base" 
+  "qt6-tools" 
+]
+extra-source "kf6-kapidox-6.6.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kf6-kapidox-6.6.0-1.1.noarch.rpm"
+}

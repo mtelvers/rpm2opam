@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mathgl-tex-8.0.1-8.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mathgl-tex-8.0.1-8.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "mathgl-tools" {>= "8.0.1"}
+  "texlive" 
+]
+extra-source "mathgl-tex-8.0.1-8.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mathgl-tex-8.0.1-8.2.noarch.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "drgeo-1.1.0-51.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "drgeo-1.1.0-51.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "compat-guile18" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "libgcc" 
+  "libglade2" 
+  "libstdc++" 
+  "libxcrypt" 
+  "libxml2" 
+  "pango" 
+]
+extra-source "drgeo-1.1.0-51.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/drgeo-1.1.0-51.fc40.x86_64.rpm"
+}

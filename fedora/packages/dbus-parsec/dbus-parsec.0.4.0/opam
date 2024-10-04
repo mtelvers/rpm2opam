@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dbus-parsec-0.4.0-5.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dbus-parsec-0.4.0-5.fc39.x86_64.rpm"]
+depends: [
+  "dbus-libs" 
+  "glibc" 
+  "libgcc" 
+  "parsec" 
+  "systemd" 
+]
+extra-source "dbus-parsec-0.4.0-5.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dbus-parsec-0.4.0-5.fc39.x86_64.rpm"
+}

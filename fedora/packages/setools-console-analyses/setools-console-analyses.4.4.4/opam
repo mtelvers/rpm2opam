@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "setools-console-analyses-4.4.4-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "setools-console-analyses-4.4.4-2.fc40.x86_64.rpm"]
+depends: [
+  "libselinux" {>= "3.6"}
+  "python3" 
+  "python3-networkx" 
+  "python3-setools" {= "4.4.4"}
+]
+extra-source "setools-console-analyses-4.4.4-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/setools-console-analyses-4.4.4-2.fc40.x86_64.rpm"
+}

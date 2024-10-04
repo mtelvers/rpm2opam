@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rk-devel-1.8-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rk-devel-1.8-1.3.x86_64.rpm"]
+depends: [
+  "librk0" {= "1.8"}
+  "pkgconf-pkg-config" 
+]
+extra-source "rk-devel-1.8-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rk-devel-1.8-1.3.x86_64.rpm"
+}

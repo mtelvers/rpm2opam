@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "quota-nfs-4.09-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "quota-nfs-4.09-2.6.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "libtirpc3" 
+  "libwrap0" 
+  "nfs-kernel-server" 
+  "quota" {= "4.9"}
+  "rpcbind" 
+]
+extra-source "quota-nfs-4.09-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/quota-nfs-4.09-2.6.x86_64.rpm"
+}

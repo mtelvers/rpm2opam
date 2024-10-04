@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kde-runtime-17.08.3-30.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kde-runtime-17.08.3-30.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "attica" 
+  "bash" 
+  "dbus" 
+  "glibc" 
+  "kde-runtime-flags" {= "17.8.3"}
+  "kde-runtime-libs" {= "17.8.3"}
+  "kde4-filesystem" {= "2"}
+  "kdelibs" 
+  "libX11" 
+  "libcanberra" 
+  "libstdc++" 
+  "oxygen-icon-theme" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "phonon-qt4" 
+  "pulseaudio-libs" 
+  "pulseaudio-libs-glib2" 
+  "qt" 
+  "qt-x11" 
+  "util-linux" 
+]
+extra-source "kde-runtime-17.08.3-30.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kde-runtime-17.08.3-30.fc40.x86_64.rpm"
+}

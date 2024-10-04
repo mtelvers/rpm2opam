@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cacti-1.2.27-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cacti-1.2.27-1.1.noarch.rpm"]
+depends: [
+  "apache2" 
+  "apache2-mod_php8" {>= "7.0"}
+  "bash-sh" 
+  "busybox-coreutils" 
+  "logrotate" 
+  "net-snmp" 
+  "perl-base" 
+  "php8" 
+  "php8-cli" 
+  "php8-ctype" 
+  "php8-gd" 
+  "php8-gmp" 
+  "php8-ldap" 
+  "php8-mbstring" 
+  "php8-mysql" {>= "7.0"}
+  "php8-openssl" 
+  "php8-posix" 
+  "php8-snmp" {>= "7.0"}
+  "php8-sockets" {>= "7.0"}
+  "php8-zlib" 
+  "rrdtool" 
+  "system-user-wwwrun" 
+  "systemd" 
+]
+extra-source "cacti-1.2.27-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cacti-1.2.27-1.1.noarch.rpm"
+}

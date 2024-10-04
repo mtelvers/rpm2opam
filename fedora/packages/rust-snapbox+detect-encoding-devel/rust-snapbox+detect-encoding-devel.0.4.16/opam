@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-snapbox+detect-encoding-devel-0.4.16-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-snapbox+detect-encoding-devel-0.4.16-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-content_inspector+default-devel" 
+  "rust-snapbox-devel" {= "0.4.16"}
+]
+extra-source "rust-snapbox+detect-encoding-devel-0.4.16-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-snapbox+detect-encoding-devel-0.4.16-2.fc40.noarch.rpm"
+}

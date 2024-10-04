@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqt5-qtquick3d-imports-5.15.15+kde1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqt5-qtquick3d-imports-5.15.15+kde1-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Quick3D5" 
+  "libQt5Quick3DAssetImport5" {= "5.15.15"}
+  "libQtQuick5" 
+  "libqt5-qtquick3d-tools" 
+  "libstdc++6" 
+  "qtdeclarative-imports-provides-qt5" {>= "14"}
+]
+extra-source "libqt5-qtquick3d-imports-5.15.15+kde1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libqt5-qtquick3d-imports-5.15.15+kde1-1.1.x86_64.rpm"
+}

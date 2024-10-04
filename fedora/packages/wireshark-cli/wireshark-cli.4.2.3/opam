@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "wireshark-cli-4.2.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wireshark-cli-4.2.3-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "c-ares" 
+  "compat-lua-libs" 
+  "glib2" 
+  "glibc" 
+  "gnutls" 
+  "krb5-libs" 
+  "libcap" 
+  "libgcrypt" 
+  "libmaxminddb" 
+  "libnghttp2" 
+  "libnl3" 
+  "libpcap" 
+  "libsmi" 
+  "libssh" 
+  "libxml2" 
+  "libzstd" 
+  "pcre2" 
+  "shadow-utils" 
+  "speexdsp" 
+  "systemd-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "wireshark-cli-4.2.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/wireshark-cli-4.2.3-1.fc40.x86_64.rpm"
+}

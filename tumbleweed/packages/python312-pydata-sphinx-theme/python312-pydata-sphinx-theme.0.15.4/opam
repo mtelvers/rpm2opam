@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pydata-sphinx-theme-0.15.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pydata-sphinx-theme-0.15.4-1.1.noarch.rpm"]
+depends: [
+  "python312-Babel" 
+  "python312-Pygments" 
+  "python312-Sphinx" 
+  "python312-accessible-pygments" 
+  "python312-base" {= "3.12"}
+  "python312-beautifulsoup4" 
+  "python312-docutils" 
+  "python312-packaging" 
+  "python312-sphinx-theme-builder" 
+  "python312-typing_extensions" 
+]
+extra-source "python312-pydata-sphinx-theme-0.15.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pydata-sphinx-theme-0.15.4-1.1.noarch.rpm"
+}

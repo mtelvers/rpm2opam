@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libksieve-devel-24.08.0-lp160.1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libksieve-devel-24.08.0-lp160.1.4.x86_64.rpm"]
+depends: [
+  "kf6-syntax-highlighting-devel" {>= "6.3.0"}
+  "libksieve6" {= "24.8.0"}
+]
+extra-source "libksieve-devel-24.08.0-lp160.1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libksieve-devel-24.08.0-lp160.1.4.x86_64.rpm"
+}

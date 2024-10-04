@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ufraw-0.23-0.21.20210425.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ufraw-0.23-0.21.20210425.fc40.x86_64.rpm"]
+depends: [
+  "bzip2-libs" 
+  "cfitsio" 
+  "exiv2-libs" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "gtkimageview" 
+  "lcms2" 
+  "lensfun" 
+  "libgcc" 
+  "libgomp" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libstdc++" 
+  "libtiff" 
+  "ufraw-common" {= "0.23"}
+  "zlib-ng-compat" 
+]
+extra-source "ufraw-0.23-0.21.20210425.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/ufraw-0.23-0.21.20210425.fc40.x86_64.rpm"
+}

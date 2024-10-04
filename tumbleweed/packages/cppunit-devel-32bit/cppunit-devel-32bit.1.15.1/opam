@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cppunit-devel-32bit-1.15.1-1.18.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cppunit-devel-32bit-1.15.1-1.18.x86_64.rpm"]
+depends: [
+  "cppunit-devel" {= "1.15.1"}
+  "libcppunit-1_15-1-32bit" {= "1.15.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "cppunit-devel-32bit-1.15.1-1.18.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cppunit-devel-32bit-1.15.1-1.18.x86_64.rpm"
+}

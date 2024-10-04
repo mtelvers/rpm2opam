@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jemalloc-5.3.0-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jemalloc-5.3.0-1.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "libjemalloc2" {= "5.3.0"}
+]
+extra-source "jemalloc-5.3.0-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/jemalloc-5.3.0-1.8.x86_64.rpm"
+}

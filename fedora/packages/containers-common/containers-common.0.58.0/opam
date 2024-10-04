@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "containers-common-0.58.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "containers-common-0.58.0-2.fc40.noarch.rpm"]
+depends: [
+  "container-selinux" 
+  "fuse-overlayfs" 
+]
+extra-source "containers-common-0.58.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/containers-common-0.58.0-2.fc40.noarch.rpm"
+}

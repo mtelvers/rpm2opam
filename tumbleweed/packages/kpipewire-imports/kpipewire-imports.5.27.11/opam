@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kpipewire-imports-5.27.11-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kpipewire-imports-5.27.11-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libKPipeWire5" 
+  "libKPipeWireDmaBuf5" {= "5.27.11"}
+  "libKPipeWireRecord5" 
+  "libQt5Core5" 
+  "libQtQuick5" 
+  "libstdc++6" 
+]
+extra-source "kpipewire-imports-5.27.11-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kpipewire-imports-5.27.11-1.2.x86_64.rpm"
+}

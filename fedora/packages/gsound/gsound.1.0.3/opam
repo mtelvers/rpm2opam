@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gsound-1.0.3-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gsound-1.0.3-8.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "libcanberra" 
+]
+extra-source "gsound-1.0.3-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gsound-1.0.3-8.fc40.x86_64.rpm"
+}

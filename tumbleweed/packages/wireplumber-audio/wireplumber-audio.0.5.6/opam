@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wireplumber-audio-0.5.6-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wireplumber-audio-0.5.6-1.1.noarch.rpm"]
+depends: [
+  "libwireplumber-0_5-0" {= "0.5.6"}
+]
+extra-source "wireplumber-audio-0.5.6-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/wireplumber-audio-0.5.6-1.1.noarch.rpm"
+}

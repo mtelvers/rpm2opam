@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libsane-hpaio-3.23.12-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsane-hpaio-3.23.12-6.fc40.x86_64.rpm"]
+depends: [
+  "avahi" 
+  "avahi-libs" 
+  "cups-libs" 
+  "dbus-libs" 
+  "glibc" 
+  "hplip-libs" {= "3.23.12"}
+  "libusb1" 
+  "net-snmp-libs" 
+  "openssl-libs" 
+  "sane-backends" 
+]
+extra-source "libsane-hpaio-3.23.12-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libsane-hpaio-3.23.12-6.fc40.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-sklearn-nature-inspired-algorithms-0.12.0-15.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-sklearn-nature-inspired-algorithms-0.12.0-15.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-matplotlib" 
+  "python3-niapy" 
+  "python3-numpy" 
+  "python3-pandas" 
+  "python3-scikit-learn" 
+  "python3-scipy" 
+  "python3-seaborn" 
+  "python3-toml" 
+]
+extra-source "python3-sklearn-nature-inspired-algorithms-0.12.0-15.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-sklearn-nature-inspired-algorithms-0.12.0-15.fc40.noarch.rpm"
+}

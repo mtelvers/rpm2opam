@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-dateparser-1.1.8-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-dateparser-1.1.8-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-python-dateutil" 
+  "python311-pytz" 
+  "python311-regex" 
+  "python311-tzlocal" 
+  "update-alternatives" 
+]
+extra-source "python311-dateparser-1.1.8-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/python311-dateparser-1.1.8-slfo.1.1.4.noarch.rpm"
+}

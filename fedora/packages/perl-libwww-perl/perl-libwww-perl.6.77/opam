@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-libwww-perl-6.77-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-libwww-perl-6.77-1.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dump" 
+  "perl-Digest-MD5" 
+  "perl-Encode" {>= "2.12"}
+  "perl-Encode-Locale" 
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-File-Copy" 
+  "perl-File-Listing" {>= "6"}
+  "perl-Getopt-Long" 
+  "perl-HTML-Parser" 
+  "perl-HTTP-Cookies" {>= "6"}
+  "perl-HTTP-Date" {>= "6"}
+  "perl-HTTP-Message" 
+  "perl-HTTP-Negotiate" {>= "6"}
+  "perl-IO" 
+  "perl-LWP-MediaTypes" {>= "6"}
+  "perl-MIME-Base64" {>= "2.1"}
+  "perl-Module-Load" 
+  "perl-NTLM" {>= "1.2"}
+  "perl-Net-HTTP" {>= "6.18"}
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-Try-Tiny" 
+  "perl-URI" {>= "1.10"}
+  "perl-WWW-RobotRules" {>= "6"}
+  "perl-interpreter" 
+  "perl-libnet" {>= "2.58"}
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-libwww-perl-6.77-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-libwww-perl-6.77-1.fc40.noarch.rpm"
+}

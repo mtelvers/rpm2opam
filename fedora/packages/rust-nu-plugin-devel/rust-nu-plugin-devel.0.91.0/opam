@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-nu-plugin-devel-0.91.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-nu-plugin-devel-0.91.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bincode+default-devel" 
+  "rust-log+default-devel" 
+  "rust-miette+default-devel" 
+  "rust-nu-engine+default-devel" 
+  "rust-nu-protocol+default-devel" 
+  "rust-rmp-serde+default-devel" 
+  "rust-semver+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde_json+default-devel" 
+  "rust-typetag+default-devel" 
+]
+extra-source "rust-nu-plugin-devel-0.91.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-nu-plugin-devel-0.91.0-1.fc40.noarch.rpm"
+}

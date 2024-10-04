@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "samba-ceph-4.20.2+git.348.4fb6af61307-slfo.1.1.18.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "samba-ceph-4.20.2+git.348.4fb6af61307-slfo.1.1.18.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcephfs2" 
+  "librados2" 
+  "libtalloc2" 
+  "libtevent0" 
+  "samba" {= "4.20.2"}
+  "samba-client-libs" 
+]
+extra-source "samba-ceph-4.20.2+git.348.4fb6af61307-slfo.1.1.18.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/samba-ceph-4.20.2+git.348.4fb6af61307-slfo.1.1.18.x86_64.rpm"
+}

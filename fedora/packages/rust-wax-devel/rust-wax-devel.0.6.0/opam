@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-wax-devel-0.6.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-wax-devel-0.6.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.64.0"}
+  "rust-const_format+default-devel" 
+  "rust-itertools+default-devel" 
+  "rust-nom+default-devel" 
+  "rust-pori+default-devel" {= "0.0.0"}
+  "rust-regex+perf-devel" 
+  "rust-regex+std-devel" 
+  "rust-regex+unicode-case-devel" 
+  "rust-regex-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-wax-devel-0.6.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-wax-devel-0.6.0-2.fc40.noarch.rpm"
+}

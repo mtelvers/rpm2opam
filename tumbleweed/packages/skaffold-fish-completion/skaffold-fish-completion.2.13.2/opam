@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "skaffold-fish-completion-2.13.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "skaffold-fish-completion-2.13.2-1.1.noarch.rpm"]
+depends: [
+  "skaffold" {= "2.13.2"}
+]
+extra-source "skaffold-fish-completion-2.13.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/skaffold-fish-completion-2.13.2-1.1.noarch.rpm"
+}

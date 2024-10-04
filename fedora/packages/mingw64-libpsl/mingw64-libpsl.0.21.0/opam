@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw64-libpsl-0.21.0-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-libpsl-0.21.0-13.fc40.noarch.rpm"]
+depends: [
+  "mingw64-crt" 
+  "mingw64-filesystem" 
+  "mingw64-libidn2" 
+  "mingw64-libunistring" 
+  "mingw64-win-iconv" 
+  "publicsuffix-list" 
+  "python3" 
+]
+extra-source "mingw64-libpsl-0.21.0-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw64-libpsl-0.21.0-13.fc40.noarch.rpm"
+}

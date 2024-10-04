@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "asdcplib-tools-2.12.3-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "asdcplib-tools-2.12.3-4.fc40.x86_64.rpm"]
+depends: [
+  "asdcplib" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "asdcplib-tools-2.12.3-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/asdcplib-tools-2.12.3-4.fc40.x86_64.rpm"
+}

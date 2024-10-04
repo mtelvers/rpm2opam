@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libxkbcommon-x11-devel-1.6.0-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxkbcommon-x11-devel-1.6.0-2.fc40.x86_64.rpm"]
+depends: [
+  "libxcb-devel" {>= "1.10"}
+  "libxkbcommon-devel" 
+  "libxkbcommon-x11" {= "1.6.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libxkbcommon-x11-devel-1.6.0-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libxkbcommon-x11-devel-1.6.0-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-papergrid-devel-0.10.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-papergrid-devel-0.10.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bytecount+default-devel" 
+  "rust-fnv+default-devel" 
+  "rust-unicode-width+default-devel" 
+]
+extra-source "rust-papergrid-devel-0.10.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-papergrid-devel-0.10.0-2.fc40.noarch.rpm"
+}

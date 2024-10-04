@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "drpm-0.5.2-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "drpm-0.5.2-5.fc40.x86_64.rpm"]
+depends: [
+  "bzip2-libs" 
+  "glibc" 
+  "libzstd" 
+  "openssl-libs" 
+  "rpm-libs" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "drpm-0.5.2-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/drpm-0.5.2-5.fc40.x86_64.rpm"
+}

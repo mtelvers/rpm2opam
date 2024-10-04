@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-skyfield-1.48-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-skyfield-1.48-1.3.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-certifi" {>= "2017.4.17"}
+  "python310-jplephem" {>= "2.13"}
+  "python310-numpy" 
+  "python310-sgp4" {>= "2.2"}
+]
+extra-source "python310-skyfield-1.48-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-skyfield-1.48-1.3.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "diffmk-1.0-161.35.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "diffmk-1.0-161.35.noarch.rpm"]
+depends: [
+  "perl" {= "5.40.0"}
+  "perl-Algorithm-Diff" 
+  "perl-XML-DOM" 
+  "perl-XML-Parser" 
+  "perl-base" 
+]
+extra-source "diffmk-1.0-161.35.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/diffmk-1.0-161.35.noarch.rpm"
+}

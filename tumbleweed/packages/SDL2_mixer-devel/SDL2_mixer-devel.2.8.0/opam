@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "SDL2_mixer-devel-2.8.0-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "SDL2_mixer-devel-2.8.0-3.1.x86_64.rpm"]
+depends: [
+  "SDL2-devel" {>= "2.0.9"}
+  "fluidsynth-devel" 
+  "libSDL2_mixer-2_0-0" {= "2.8.0"}
+  "libxmp-devel" 
+  "mpg123-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "SDL2_mixer-devel-2.8.0-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/SDL2_mixer-devel-2.8.0-3.1.x86_64.rpm"
+}

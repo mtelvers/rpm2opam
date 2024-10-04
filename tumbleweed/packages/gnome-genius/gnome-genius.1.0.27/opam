@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-genius-1.0.27-1.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-genius-1.0.27-1.12.x86_64.rpm"]
+depends: [
+  "genius" {= "1.0.27"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgmp10" 
+  "libgtk-3-0" 
+  "libgtksourceview-4-0" 
+  "libmpfr6" 
+  "libpango-1_0-0" 
+  "libreadline8" 
+  "libvte-2_91-0" 
+]
+extra-source "gnome-genius-1.0.27-1.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnome-genius-1.0.27-1.12.x86_64.rpm"
+}

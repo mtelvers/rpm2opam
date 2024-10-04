@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "superlu-gnu-hpc-devel-6.0.0-slfo.1.1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "superlu-gnu-hpc-devel-6.0.0-slfo.1.1.7.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "superlu_6_0_0-gnu-hpc-devel" {= "6.0.0"}
+]
+extra-source "superlu-gnu-hpc-devel-6.0.0-slfo.1.1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/superlu-gnu-hpc-devel-6.0.0-slfo.1.1.7.noarch.rpm"
+}

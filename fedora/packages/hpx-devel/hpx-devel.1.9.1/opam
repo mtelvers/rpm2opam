@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hpx-devel-1.9.1-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hpx-devel-1.9.1-2.fc40.x86_64.rpm"]
+depends: [
+  "asio-devel" 
+  "boost-devel" 
+  "cmake-filesystem" 
+  "gcc-c++" 
+  "glibc" 
+  "gperftools-devel" 
+  "gperftools-libs" 
+  "hwloc-devel" 
+  "hwloc-libs" 
+  "libatomic" 
+  "libgcc" 
+  "libstdc++" 
+  "pkgconf-pkg-config" 
+]
+extra-source "hpx-devel-1.9.1-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hpx-devel-1.9.1-2.fc40.x86_64.rpm"
+}

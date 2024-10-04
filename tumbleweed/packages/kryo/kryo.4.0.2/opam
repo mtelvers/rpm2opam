@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kryo-4.0.2-4.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kryo-4.0.2-4.3.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "minlog" 
+  "objenesis" 
+  "reflectasm" 
+]
+extra-source "kryo-4.0.2-4.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kryo-4.0.2-4.3.noarch.rpm"
+}

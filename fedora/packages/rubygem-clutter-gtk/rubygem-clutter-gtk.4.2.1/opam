@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-clutter-gtk-4.2.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-clutter-gtk-4.2.1-1.fc40.noarch.rpm"]
+depends: [
+  "clutter-gtk" 
+  "rubygem-clutter" {>= "4.2.1"}
+  "rubygem-clutter-gdk" {>= "4.2.1"}
+  "rubygem-gtk3" {>= "4.2.1"}
+  "rubygems" 
+]
+extra-source "rubygem-clutter-gtk-4.2.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-clutter-gtk-4.2.1-1.fc40.noarch.rpm"
+}

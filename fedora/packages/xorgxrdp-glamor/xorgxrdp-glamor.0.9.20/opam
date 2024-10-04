@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xorgxrdp-glamor-0.9.20-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xorgxrdp-glamor-0.9.20-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libepoxy" 
+  "xorg-x11-server-Xorg" 
+]
+extra-source "xorgxrdp-glamor-0.9.20-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xorgxrdp-glamor-0.9.20-1.fc40.x86_64.rpm"
+}

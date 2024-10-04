@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "a2ps-4.15.6-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "a2ps-4.15.6-1.fc40.x86_64.rpm"]
+depends: [
+  "ImageMagick" 
+  "bash" 
+  "coreutils" 
+  "cups-client" 
+  "emacs-filesystem" 
+  "file" 
+  "gc" 
+  "ghostscript" 
+  "glibc" 
+  "libpaper" 
+  "perl-interpreter" 
+  "psutils" 
+  "texlive-collection-fontsrecommended" 
+]
+extra-source "a2ps-4.15.6-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/a2ps-4.15.6-1.fc40.x86_64.rpm"
+}

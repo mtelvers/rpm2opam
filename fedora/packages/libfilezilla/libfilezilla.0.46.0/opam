@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libfilezilla-0.46.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfilezilla-0.46.0-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gmp" 
+  "gnutls" 
+  "libgcc" 
+  "libstdc++" 
+  "libxcrypt" 
+  "nettle" 
+]
+extra-source "libfilezilla-0.46.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libfilezilla-0.46.0-1.fc40.x86_64.rpm"
+}

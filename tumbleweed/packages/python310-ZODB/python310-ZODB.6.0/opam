@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-ZODB-6.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-ZODB-6.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-BTrees" {>= "4.2.0"}
+  "python310-ZConfig" 
+  "python310-base" 
+  "python310-persistent" {>= "4.4.0"}
+  "python310-transaction" {>= "2.4.0"}
+  "python310-zc-lockfile" 
+  "python310-zodbpickle" {>= "1.0.1"}
+  "python310-zope-interface" 
+  "update-alternatives" 
+]
+extra-source "python310-ZODB-6.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-ZODB-6.0-1.1.noarch.rpm"
+}

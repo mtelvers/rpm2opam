@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CGI-Compile-0.26-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CGI-Compile-0.26-3.fc40.noarch.rpm"]
+depends: [
+  "perl-File-Basename" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-File-pushd" 
+  "perl-PathTools" 
+  "perl-Sub-Name" 
+  "perl-libs" {>= "5.8.0"}
+]
+extra-source "perl-CGI-Compile-0.26-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CGI-Compile-0.26-3.fc40.noarch.rpm"
+}

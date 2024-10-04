@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Apache-RPC-0.82-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Apache-RPC-0.82-11.fc40.noarch.rpm"]
+depends: [
+  "mod_perl" 
+  "perl-CGI" 
+  "perl-PathTools" 
+  "perl-RPC-XML" 
+  "perl-Socket" 
+  "perl-base" 
+  "perl-libs" {>= "5.8.8"}
+  "perl-subs" 
+  "perl-vars" 
+]
+extra-source "perl-Apache-RPC-0.82-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Apache-RPC-0.82-11.fc40.noarch.rpm"
+}

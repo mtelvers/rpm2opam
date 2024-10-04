@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-reproject-0.14.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-reproject-0.14.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "python311-astropy" {>= "5"}
+  "python311-astropy-healpix" {>= "1"}
+  "python311-base" {= "3.11"}
+  "python311-cloudpickle" 
+  "python311-dask-array" {>= "2021.8"}
+  "python311-fsspec" 
+  "python311-numpy" {>= "1.23"}
+  "python311-scipy" {>= "1.9"}
+  "python311-zarr" 
+]
+extra-source "python311-reproject-0.14.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-reproject-0.14.0-1.1.x86_64.rpm"
+}

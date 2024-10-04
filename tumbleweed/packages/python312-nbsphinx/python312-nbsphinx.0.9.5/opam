@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-nbsphinx-0.9.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-nbsphinx-0.9.5-1.1.noarch.rpm"]
+depends: [
+  "python312-Jinja2" 
+  "python312-Sphinx" {>= "1.8"}
+  "python312-base" {= "3.12"}
+  "python312-docutils" 
+  "python312-nbconvert" {>= "5.5"}
+  "python312-nbformat" 
+  "python312-traitlets" {>= "5"}
+]
+extra-source "python312-nbsphinx-0.9.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-nbsphinx-0.9.5-1.1.noarch.rpm"
+}

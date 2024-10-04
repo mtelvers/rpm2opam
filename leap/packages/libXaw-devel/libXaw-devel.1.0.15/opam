@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libXaw-devel-1.0.15-slfo.1.1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libXaw-devel-1.0.15-slfo.1.1.6.x86_64.rpm"]
+depends: [
+  "libX11-devel" 
+  "libXaw6" {= "1.0.15"}
+  "libXaw7" {= "1.0.15"}
+  "libXaw8" {= "1.0.15"}
+  "libXext-devel" 
+  "libXmu-devel" 
+  "libXpm-devel" 
+  "libXt-devel" 
+  "pkgconf-pkg-config" 
+  "xorgproto-devel" 
+]
+extra-source "libXaw-devel-1.0.15-slfo.1.1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libXaw-devel-1.0.15-slfo.1.1.6.x86_64.rpm"
+}

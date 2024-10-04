@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cockpit-packagekit-322-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cockpit-packagekit-322-1.1.noarch.rpm"]
+depends: [
+  "PackageKit" 
+  "cockpit-bridge" {>= "266"}
+  "polkit" 
+]
+extra-source "cockpit-packagekit-322-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cockpit-packagekit-322-1.1.noarch.rpm"
+}

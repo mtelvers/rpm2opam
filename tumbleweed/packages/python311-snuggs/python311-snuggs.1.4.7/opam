@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-snuggs-1.4.7-4.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-snuggs-1.4.7-4.4.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-numpy" 
+  "python311-pyparsing" 
+]
+extra-source "python311-snuggs-1.4.7-4.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-snuggs-1.4.7-4.4.noarch.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lighttpd-1.4.76-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lighttpd-1.4.76-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "libbrotlienc1" 
+  "libcrypt1" 
+  "libdbi3" 
+  "libopenssl3" 
+  "libpcre2-8-0" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+  "shadow" 
+  "spawn-fcgi" 
+  "systemd" 
+]
+extra-source "lighttpd-1.4.76-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lighttpd-1.4.76-1.1.x86_64.rpm"
+}

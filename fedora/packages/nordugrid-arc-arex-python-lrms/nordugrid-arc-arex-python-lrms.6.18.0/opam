@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nordugrid-arc-arex-python-lrms-6.18.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nordugrid-arc-arex-python-lrms-6.18.0-6.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "nordugrid-arc-arex" {= "6.18.0"}
+  "perl-Inline" 
+  "perl-Inline-Python" 
+  "perl-POSIX" 
+  "perl-libs" 
+  "python3" {= "3.12"}
+  "python3-nordugrid-arc" {= "6.18.0"}
+]
+extra-source "nordugrid-arc-arex-python-lrms-6.18.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nordugrid-arc-arex-python-lrms-6.18.0-6.fc40.x86_64.rpm"
+}

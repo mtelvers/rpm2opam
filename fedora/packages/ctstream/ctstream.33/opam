@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ctstream-33-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ctstream-33-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Getopt-Std" 
+  "perl-HTTP-Message" 
+  "perl-IO" 
+  "perl-JSON" {>= "2.0"}
+  "perl-LWP-Protocol-https" 
+  "perl-URI" 
+  "perl-XML-XPath" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+  "perl-open" 
+]
+extra-source "ctstream-33-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/ctstream-33-4.fc40.noarch.rpm"
+}

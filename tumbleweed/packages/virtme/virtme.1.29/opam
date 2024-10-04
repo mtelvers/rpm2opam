@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "virtme-1.29-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "virtme-1.29-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-static" 
+  "python311-argcomplete" 
+  "python311-base" 
+  "python311-requests" 
+  "python311-setuptools" 
+  "qemu" 
+  "virtiofsd" 
+]
+extra-source "virtme-1.29-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/virtme-1.29-1.1.noarch.rpm"
+}

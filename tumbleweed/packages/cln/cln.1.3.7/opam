@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cln-1.3.7-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cln-1.3.7-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libgcc_s1" 
+  "libgmp10" 
+  "libstdc++6" 
+]
+extra-source "cln-1.3.7-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cln-1.3.7-1.2.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "grub2-tools-extra-2.06-119.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grub2-tools-extra-2.06-119.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "device-mapper-libs" 
+  "file" 
+  "freetype" 
+  "gettext-runtime" 
+  "glibc" 
+  "grub2-common" {= "2.6"}
+  "grub2-tools-minimal" {= "2.6"}
+  "mtools" 
+  "os-prober" 
+  "xz-libs" 
+]
+extra-source "grub2-tools-extra-2.06-119.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/grub2-tools-extra-2.06-119.fc40.x86_64.rpm"
+}

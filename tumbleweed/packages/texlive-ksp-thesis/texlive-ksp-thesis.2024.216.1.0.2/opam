@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-ksp-thesis-2024.216.1.0.2svn39080-58.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-ksp-thesis-2024.216.1.0.2svn39080-58.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-arsclassica" 
+  "texlive-classicthesis" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-hyperref" 
+  "texlive-koma-script" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-ragged2e" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-xkeyval" 
+]
+extra-source "texlive-ksp-thesis-2024.216.1.0.2svn39080-58.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-ksp-thesis-2024.216.1.0.2svn39080-58.1.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lftp-scripts-4.9.2-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lftp-scripts-4.9.2-13.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "lftp" {>= "4.9.2"}
+  "perl-DBI" 
+  "perl-Digest-MD5" 
+  "perl-String-CRC32" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "lftp-scripts-4.9.2-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lftp-scripts-4.9.2-13.fc40.noarch.rpm"
+}

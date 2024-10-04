@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ptl-devel-2.3.3-1.15.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ptl-devel-2.3.3-1.15.x86_64.rpm"]
+depends: [
+  "libptl2" {= "2.3.3"}
+  "pkgconf-pkg-config" 
+  "tbb-devel" {= "2021.12.0"}
+]
+extra-source "ptl-devel-2.3.3-1.15.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ptl-devel-2.3.3-1.15.x86_64.rpm"
+}

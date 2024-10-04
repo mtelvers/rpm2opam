@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-dirtyjson-1.0.8-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-dirtyjson-1.0.8-1.9.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+]
+extra-source "python312-dirtyjson-1.0.8-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-dirtyjson-1.0.8-1.9.noarch.rpm"
+}

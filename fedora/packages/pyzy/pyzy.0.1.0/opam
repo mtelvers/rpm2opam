@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pyzy-0.1.0-33.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pyzy-0.1.0-33.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "libuuid" 
+  "pyzy-db-android" {= "0.1.0"}
+  "sqlite-libs" 
+]
+extra-source "pyzy-0.1.0-33.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pyzy-0.1.0-33.fc40.x86_64.rpm"
+}

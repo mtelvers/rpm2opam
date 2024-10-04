@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rpm-build-4.19.1.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rpm-build-4.19.1.1-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "binutils" 
+  "bzip2" 
+  "cpio" 
+  "debugedit" {>= "0.3"}
+  "diffutils" 
+  "elfutils" {>= "0.128"}
+  "elfutils-libelf" 
+  "file" 
+  "findutils" 
+  "gawk" 
+  "gdb-headless" 
+  "glibc" 
+  "grep" 
+  "gzip" 
+  "patch" {>= "2.5"}
+  "pkgconf-pkg-config" {>= "0.24"}
+  "popt" 
+  "readline" 
+  "redhat-rpm-config" 
+  "rpm" {= "4.19.1.1"}
+  "rpm-build-libs" 
+  "rpm-libs" 
+  "sed" 
+  "tar" 
+  "unzip" 
+  "xz" 
+  "zstd" 
+]
+extra-source "rpm-build-4.19.1.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rpm-build-4.19.1.1-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mtools-4.0.43-6.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mtools-4.0.43-6.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "glibc-gconv-extra" 
+]
+extra-source "mtools-4.0.43-6.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/mtools-4.0.43-6.el10.x86_64.rpm"
+}

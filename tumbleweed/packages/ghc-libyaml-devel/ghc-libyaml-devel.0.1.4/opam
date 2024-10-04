@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-libyaml-devel-0.1.4-1.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-libyaml-devel-0.1.4-1.9.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-conduit-devel" 
+  "ghc-libyaml" {= "0.1.4"}
+  "ghc-resourcet-devel" 
+  "libyaml-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "ghc-libyaml-devel-0.1.4-1.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-libyaml-devel-0.1.4-1.9.x86_64.rpm"
+}

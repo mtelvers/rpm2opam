@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "erlang-gproc-0.9.0-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "erlang-gproc-0.9.0-9.fc40.noarch.rpm"]
+depends: [
+  "erlang-erts" 
+  "erlang-gen_leader" 
+  "erlang-kernel" 
+  "erlang-mnesia" 
+  "erlang-runtime_tools" 
+  "erlang-stdlib" 
+]
+extra-source "erlang-gproc-0.9.0-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/erlang-gproc-0.9.0-9.fc40.noarch.rpm"
+}

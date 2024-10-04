@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dtkwidget-5.6.12-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dtkwidget-5.6.12-3.fc40.x86_64.rpm"]
+depends: [
+  "dtkcore" 
+  "dtkgui" 
+  "glibc" 
+  "gsettings-qt" 
+  "libX11" 
+  "libXext" 
+  "libXi" 
+  "libgcc" 
+  "libstdc++" 
+  "libxcb" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtsvg" 
+  "qt5-qtx11extras" 
+  "startup-notification" 
+  "xcb-util" 
+]
+extra-source "dtkwidget-5.6.12-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dtkwidget-5.6.12-3.fc40.x86_64.rpm"
+}

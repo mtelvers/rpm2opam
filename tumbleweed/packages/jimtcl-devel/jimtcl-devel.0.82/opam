@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jimtcl-devel-0.82-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jimtcl-devel-0.82-1.4.x86_64.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "jimtcl" {= "0.82"}
+  "libjim0_82" {= "0.82"}
+  "libopenssl-1_0_0-devel" 
+  "pkgconf-pkg-config" 
+  "zlib-devel" 
+]
+extra-source "jimtcl-devel-0.82-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/jimtcl-devel-0.82-1.4.x86_64.rpm"
+}

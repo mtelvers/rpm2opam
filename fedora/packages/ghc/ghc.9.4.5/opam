@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-9.4.5-140.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-9.4.5-140.fc40.x86_64.rpm"]
+depends: [
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-devel" {= "9.4.5"}
+  "ghc-ghc-boot-devel" {= "9.4.5"}
+  "ghc-ghc-compact-devel" {= "0.1.0.0"}
+  "ghc-ghc-devel" {= "9.4.5"}
+  "ghc-ghc-heap-devel" {= "9.4.5"}
+  "ghc-ghci-devel" {= "9.4.5"}
+  "ghc-hpc-devel" {= "0.6.1.0"}
+  "ghc-libiserv-devel" {= "9.4.5"}
+]
+extra-source "ghc-9.4.5-140.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-9.4.5-140.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-intelhex-2.3.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-intelhex-2.3.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "update-alternatives" 
+]
+extra-source "python311-intelhex-2.3.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-intelhex-2.3.0-1.1.noarch.rpm"
+}

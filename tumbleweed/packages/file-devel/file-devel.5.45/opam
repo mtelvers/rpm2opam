@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "file-devel-5.45-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "file-devel-5.45-3.1.x86_64.rpm"]
+depends: [
+  "glibc-devel" 
+  "libmagic1" {= "5.45"}
+  "pkgconf-pkg-config" 
+]
+extra-source "file-devel-5.45-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/file-devel-5.45-3.1.x86_64.rpm"
+}

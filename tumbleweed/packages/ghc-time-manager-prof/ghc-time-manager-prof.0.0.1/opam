@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-time-manager-prof-0.0.1-1.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-time-manager-prof-0.0.1-1.12.x86_64.rpm"]
+depends: [
+  "ghc-auto-update-prof" 
+  "ghc-base-prof" 
+  "ghc-time-manager-devel" {= "0.0.1"}
+  "ghc-unliftio-prof" 
+]
+extra-source "ghc-time-manager-prof-0.0.1-1.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-time-manager-prof-0.0.1-1.12.x86_64.rpm"
+}

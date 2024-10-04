@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-gridpapers-2024.217.1.0.2svn58723-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-gridpapers-2024.217.1.0.2svn58723-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-everypage" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-geometry" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-kvoptions" 
+  "texlive-pagecolor" 
+  "texlive-pgf" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tikzpagenodes" 
+  "texlive-xcolor" 
+  "texlive-xkeyval" 
+]
+extra-source "texlive-gridpapers-2024.217.1.0.2svn58723-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-gridpapers-2024.217.1.0.2svn58723-56.1.noarch.rpm"
+}

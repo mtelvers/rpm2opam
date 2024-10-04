@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "octave-forge-financial-0.5.3-1.20.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "octave-forge-financial-0.5.3-1.20.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "octave-cli" {>= "4.0.0"}
+  "octave-forge-io" {>= "1.0.18"}
+]
+extra-source "octave-forge-financial-0.5.3-1.20.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/octave-forge-financial-0.5.3-1.20.noarch.rpm"
+}

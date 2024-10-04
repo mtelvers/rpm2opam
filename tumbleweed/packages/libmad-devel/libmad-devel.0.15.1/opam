@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmad-devel-0.15.1b-7.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmad-devel-0.15.1b-7.2.x86_64.rpm"]
+depends: [
+  "libmad0" {= "0.15.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libmad-devel-0.15.1b-7.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmad-devel-0.15.1b-7.2.x86_64.rpm"
+}

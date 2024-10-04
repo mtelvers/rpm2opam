@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "clatd-1.6-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clatd-1.6-1.5.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "iproute2" 
+  "iptables" 
+  "perl" 
+  "perl-File-Temp" 
+  "perl-Net-DNS" 
+  "perl-Net-IP" 
+  "perl-base" 
+  "tayga" 
+]
+extra-source "clatd-1.6-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/clatd-1.6-1.5.noarch.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-sigs-k8s-apiserver-network-proxy-devel-0.0.24-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-sigs-k8s-apiserver-network-proxy-devel-0.0.24-8.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-k8s-klog-2-devel" 
+  "go-filesystem" 
+  "golang-github-google-uuid-devel" 
+  "golang-github-mock-devel" 
+  "golang-github-prometheus-client-devel" 
+  "golang-github-protobuf-devel" 
+  "golang-github-spf13-cobra-devel" 
+  "golang-github-spf13-pflag-devel" 
+  "golang-k8s-api-devel" 
+  "golang-k8s-apimachinery-devel" 
+  "golang-k8s-client-devel" 
+  "golang-k8s-component-base-devel" 
+  "golang-x-net-devel" 
+]
+extra-source "golang-sigs-k8s-apiserver-network-proxy-devel-0.0.24-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-sigs-k8s-apiserver-network-proxy-devel-0.0.24-8.fc40.noarch.rpm"
+}

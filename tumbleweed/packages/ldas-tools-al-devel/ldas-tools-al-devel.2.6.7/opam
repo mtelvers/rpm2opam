@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ldas-tools-al-devel-2.6.7-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ldas-tools-al-devel-2.6.7-1.1.x86_64.rpm"]
+depends: [
+  "libldastoolsal7" {= "2.6.7"}
+  "pkgconf-pkg-config" 
+]
+extra-source "ldas-tools-al-devel-2.6.7-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ldas-tools-al-devel-2.6.7-1.1.x86_64.rpm"
+}

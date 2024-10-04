@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mkvtoolnix-gui-83.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mkvtoolnix-gui-83.0-1.fc40.x86_64.rpm"]
+depends: [
+  "boost-filesystem" 
+  "cmark-lib" 
+  "flac-libs" 
+  "fmt" 
+  "glibc" 
+  "gmp" 
+  "hicolor-icon-theme" 
+  "libdvdread" 
+  "libebml" 
+  "libgcc" 
+  "libmatroska" 
+  "libstdc++" 
+  "libvorbis" 
+  "mkvtoolnix" {= "83.0"}
+  "pugixml" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qt6-qtmultimedia" 
+]
+extra-source "mkvtoolnix-gui-83.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mkvtoolnix-gui-83.0-1.fc40.x86_64.rpm"
+}

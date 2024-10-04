@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "k3guitune-1.01-35.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "k3guitune-1.01-35.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "arts" 
+  "bio2jack" 
+  "fftw-libs-double" 
+  "glibc" 
+  "kdelibs3" 
+  "libgcc" 
+  "libstdc++" 
+  "qt3" 
+]
+extra-source "k3guitune-1.01-35.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/k3guitune-1.01-35.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-time-compat-prof-1.9.6.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-time-compat-prof-1.9.6.1-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-orphans-prof" 
+  "ghc-base-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-hashable-prof" 
+  "ghc-time-compat-devel" {= "1.9.6.1"}
+  "ghc-time-prof" 
+]
+extra-source "ghc-time-compat-prof-1.9.6.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-time-compat-prof-1.9.6.1-6.fc40.x86_64.rpm"
+}

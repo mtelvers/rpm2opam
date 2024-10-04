@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "patterns-kde-kde_plasma-20240311-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "patterns-kde-kde_plasma-20240311-2.2.noarch.rpm"]
+depends: [
+  "desktop-data-openSUSE" 
+  "kf6-qqc2-desktop-style" 
+  "patterns-aeon-base" 
+  "plasma6-nm" 
+  "plasma6-pa" 
+  "plasma6-session" 
+  "polkit-default-privs" 
+]
+extra-source "patterns-kde-kde_plasma-20240311-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/patterns-kde-kde_plasma-20240311-2.2.noarch.rpm"
+}

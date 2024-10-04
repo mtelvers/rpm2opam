@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gpg2-2.4.5-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gpg2-2.4.5-2.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libassuan9" 
+  "libbz2-1" 
+  "libgcrypt20" 
+  "libgpg-error0" 
+  "libksba8" 
+  "libnpth0" 
+  "libreadline8" 
+  "libsqlite3-0" 
+  "libusb-1_0-0" 
+  "libz-ng-compat1" 
+  "pinentry" 
+]
+extra-source "gpg2-2.4.5-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gpg2-2.4.5-2.2.x86_64.rpm"
+}

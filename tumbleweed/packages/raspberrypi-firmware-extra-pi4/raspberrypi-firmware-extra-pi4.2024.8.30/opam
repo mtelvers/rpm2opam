@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "raspberrypi-firmware-extra-pi4-2024.08.30-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "raspberrypi-firmware-extra-pi4-2024.08.30-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "raspberrypi-firmware" {= "2024.8.30"}
+  "util-linux" 
+]
+extra-source "raspberrypi-firmware-extra-pi4-2024.08.30-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/raspberrypi-firmware-extra-pi4-2024.08.30-1.1.noarch.rpm"
+}

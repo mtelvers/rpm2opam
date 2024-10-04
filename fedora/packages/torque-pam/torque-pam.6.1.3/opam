@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "torque-pam-6.1.3-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "torque-pam-6.1.3-10.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "hwloc-libs" 
+  "jsoncpp" 
+  "libgcc" 
+  "libstdc++" 
+  "libxml2" 
+  "munge-libs" 
+  "pam-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "torque-pam-6.1.3-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/torque-pam-6.1.3-10.fc40.x86_64.rpm"
+}

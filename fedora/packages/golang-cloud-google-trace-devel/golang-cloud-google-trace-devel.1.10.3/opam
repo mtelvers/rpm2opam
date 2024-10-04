@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-cloud-google-trace-devel-1.10.3-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-cloud-google-trace-devel-1.10.3-4.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-googleapis-gax-devel" 
+  "golang-google-api-devel" 
+  "golang-google-genproto-devel" 
+  "golang-google-protobuf-devel" 
+]
+extra-source "golang-cloud-google-trace-devel-1.10.3-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-cloud-google-trace-devel-1.10.3-4.fc40.noarch.rpm"
+}

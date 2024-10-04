@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nqp-2024.04-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nqp-2024.04-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "moarvm" {>= "2024.4"}
+]
+extra-source "nqp-2024.04-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/nqp-2024.04-1.1.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pymacaroons-pynacl-0.9.3-6.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pymacaroons-pynacl-0.9.3-6.2.noarch.rpm"]
+depends: [
+  "python310-PyNaCl" 
+  "python310-base" {= "3.10"}
+  "python310-cffi" 
+  "python310-six" 
+]
+extra-source "python310-pymacaroons-pynacl-0.9.3-6.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-pymacaroons-pynacl-0.9.3-6.2.noarch.rpm"
+}

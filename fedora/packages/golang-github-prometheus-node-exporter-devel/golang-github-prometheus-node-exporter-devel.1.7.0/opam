@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-prometheus-node-exporter-devel-1.7.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-prometheus-node-exporter-devel-1.7.0-3.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-coreos-systemd-22-devel" 
+  "compat-golang-github-godbus-dbus-5-devel" 
+  "go-filesystem" 
+  "golang-github-alecthomas-kingpin2-devel" 
+  "golang-github-beevik-ntp-devel" 
+  "golang-github-dennwc-btrfs-devel" 
+  "golang-github-ema-qdisc-devel" 
+  "golang-github-hashicorp-envparse-devel" 
+  "golang-github-hodgesds-perf-utils-devel" 
+  "golang-github-jsimonetti-rtnetlink-devel" 
+  "golang-github-kit-log-devel" 
+  "golang-github-mattn-xmlrpc-devel" 
+  "golang-github-mdlayher-ethtool-devel" 
+  "golang-github-mdlayher-netlink-devel" 
+  "golang-github-mdlayher-wifi-devel" 
+  "golang-github-opencontainers-selinux-devel" 
+  "golang-github-prometheus-client-devel" 
+  "golang-github-prometheus-client-model-devel" 
+  "golang-github-prometheus-common-devel" 
+  "golang-github-prometheus-exporter-toolkit-devel" 
+  "golang-github-prometheus-procfs-devel" 
+  "golang-github-safchain-ethtool-devel" 
+  "golang-x-exp-devel" 
+  "golang-x-sys-devel" 
+]
+extra-source "golang-github-prometheus-node-exporter-devel-1.7.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-prometheus-node-exporter-devel-1.7.0-3.fc40.noarch.rpm"
+}

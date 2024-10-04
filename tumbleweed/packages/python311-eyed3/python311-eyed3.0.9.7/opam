@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-eyed3-0.9.7-2.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-eyed3-0.9.7-2.5.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-chardet" {>= "4.0.0"}
+  "python311-colorama" {>= "0.4.4"}
+  "python311-deprecation" {>= "2.1.0"}
+  "python311-filetype" {>= "1.0.7"}
+  "python311-idna" {>= "2.10"}
+  "python311-packaging" {>= "20.8"}
+  "python311-pyparsing" {>= "2.4.7"}
+  "python311-requests" {>= "2.25.1"}
+  "python311-six" {>= "1.15.0"}
+  "python311-toml" {>= "0.10.2"}
+  "python311-urllib3" {>= "1.26.2"}
+]
+extra-source "python311-eyed3-0.9.7-2.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-eyed3-0.9.7-2.5.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "canutils-pengutronix-4.0.6.g26-1.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "canutils-pengutronix-4.0.6.g26-1.16.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libsocketcan2" 
+]
+extra-source "canutils-pengutronix-4.0.6.g26-1.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/canutils-pengutronix-4.0.6.g26-1.16.x86_64.rpm"
+}

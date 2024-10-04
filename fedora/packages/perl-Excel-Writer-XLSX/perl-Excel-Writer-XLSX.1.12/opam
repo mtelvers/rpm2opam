@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Excel-Writer-XLSX-1.12-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Excel-Writer-XLSX-1.12-1.fc40.noarch.rpm"]
+depends: [
+  "perl-Archive-Zip" {>= "1.3"}
+  "perl-Carp" 
+  "perl-Digest-MD5" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Find" 
+  "perl-File-Temp" {>= "0.19"}
+  "perl-Getopt-Long" 
+  "perl-IO" {>= "1.14"}
+  "perl-Pod-Usage" 
+  "perl-Scalar-List-Utils" 
+  "perl-autouse" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.8.2"}
+]
+extra-source "perl-Excel-Writer-XLSX-1.12-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Excel-Writer-XLSX-1.12-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fonts-config-20231210+git0.f7216ba-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fonts-config-20231210+git0.f7216ba-1.3.noarch.rpm"]
+depends: [
+  "aaa_base" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "coreutils" 
+  "fillup" 
+  "fontconfig" {>= "2.14"}
+  "gawk" 
+  "perl" 
+  "perl-base" 
+]
+extra-source "fonts-config-20231210+git0.f7216ba-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/fonts-config-20231210+git0.f7216ba-1.3.noarch.rpm"
+}

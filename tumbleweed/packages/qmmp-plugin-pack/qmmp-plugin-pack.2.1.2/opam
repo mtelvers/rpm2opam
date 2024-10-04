@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qmmp-plugin-pack-2.1.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qmmp-plugin-pack-2.1.2-1.2.x86_64.rpm"]
+depends: [
+  "qmmp" {>= "2.1.0"}
+]
+extra-source "qmmp-plugin-pack-2.1.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/qmmp-plugin-pack-2.1.2-1.2.x86_64.rpm"
+}

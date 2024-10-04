@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-olivetin-devel-2022.11.14-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-olivetin-devel-2022.11.14-8.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-robfig-cron-3-devel" 
+  "go-filesystem" 
+  "golang-github-fsnotify-devel" 
+  "golang-github-google-uuid-devel" 
+  "golang-github-grpc-ecosystem-gateway-2-devel" 
+  "golang-github-jwt-4-devel" 
+  "golang-github-sirupsen-logrus-devel" 
+  "golang-github-spf13-viper-devel" 
+  "golang-google-genproto-devel" 
+  "golang-google-grpc-devel" 
+  "golang-google-protobuf-devel" 
+  "golang-x-exp-devel" 
+]
+extra-source "golang-github-olivetin-devel-2022.11.14-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-olivetin-devel-2022.11.14-8.fc40.noarch.rpm"
+}

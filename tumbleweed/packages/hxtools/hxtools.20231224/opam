@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hxtools-20231224-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hxtools-20231224-1.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "fd0ssh" 
+  "glibc" 
+  "hxtools-scripts" {= "20231224"}
+  "libHX32" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "ofl" 
+  "sysinfo" {= "20231224"}
+]
+extra-source "hxtools-20231224-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/hxtools-20231224-1.3.x86_64.rpm"
+}

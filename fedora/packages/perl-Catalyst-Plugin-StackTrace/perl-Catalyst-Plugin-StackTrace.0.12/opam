@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Catalyst-Plugin-StackTrace-0.12-26.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Catalyst-Plugin-StackTrace-0.12-26.fc40.noarch.rpm"]
+depends: [
+  "perl-Catalyst-Runtime" {>= "5.70"}
+  "perl-Devel-StackTrace" 
+  "perl-HTML-Parser" 
+  "perl-MRO-Compat" 
+  "perl-Moose" 
+  "perl-MooseX-Emulate-Class-Accessor-Fast" 
+  "perl-Scalar-List-Utils" 
+  "perl-libs" {>= "5.8.1"}
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-Catalyst-Plugin-StackTrace-0.12-26.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Catalyst-Plugin-StackTrace-0.12-26.fc40.noarch.rpm"
+}

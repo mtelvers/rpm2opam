@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "neovim-0.10.1-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "neovim-0.10.1-3.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "gperf" 
+  "libluajit-5_1-2" 
+  "libluv1" 
+  "libmsgpack-c2" 
+  "libtree-sitter0_23" 
+  "libunibilium4" 
+  "libuv1" 
+  "libvterm0" 
+  "lua51-compat-5-3" 
+  "lua51-compat-5-3-bit32" 
+  "lua51-lpeg" 
+  "lua51-luarocks" 
+  "lua51-luv" 
+  "lua51-mpack" 
+  "tree-sitter-c" {>= "0.21.3"}
+  "tree-sitter-lua" 
+  "tree-sitter-markdown" 
+  "tree-sitter-python" 
+  "tree-sitter-query" {>= "0.4.0"}
+  "tree-sitter-vim" 
+  "tree-sitter-vimdoc" {>= "3.0.0"}
+  "xdg-utils" 
+]
+extra-source "neovim-0.10.1-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/neovim-0.10.1-3.1.x86_64.rpm"
+}

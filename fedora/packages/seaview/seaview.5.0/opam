@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "seaview-5.0-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "seaview-5.0-9.fc40.x86_64.rpm"]
+depends: [
+  "fltk" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "zlib-ng-compat" 
+]
+extra-source "seaview-5.0-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/seaview-5.0-9.fc40.x86_64.rpm"
+}

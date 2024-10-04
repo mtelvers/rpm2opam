@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "virt-manager-4.1.0-28.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "virt-manager-4.1.0-28.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "dbus-1-x11" 
+  "dconf" 
+  "gstreamer-plugins-good" 
+  "libgtk-3-0" 
+  "python311-base" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-gobject-cairo" 
+  "python311-pycairo" 
+  "typelib-1_0-AppIndicator3-0_1" {= "0.1"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-GtkSource-300" 
+  "typelib-1_0-GtkSource-3_0" {= "3.0"}
+  "typelib-1_0-GtkVnc-2_0" {= "2.0"}
+  "typelib-1_0-LibvirtGLib-1_0" {= "1.0"}
+  "typelib-1_0-Pango-1_0" 
+  "typelib-1_0-SpiceClientGlib-2_0" 
+  "typelib-1_0-SpiceClientGtk-3_0" {= "3.0"}
+  "typelib-1_0-Vte-2_91" {= "2.91"}
+  "virt-install" 
+  "virt-manager-common" {= "4.1.0"}
+]
+extra-source "virt-manager-4.1.0-28.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/virt-manager-4.1.0-28.1.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "atf-tests-0.21-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "atf-tests-0.21-4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libatf-c" {= "0.21"}
+  "libatf-c++" {= "0.21"}
+  "libatf-c++-devel" {= "0.21"}
+  "libatf-c-devel" {= "0.21"}
+  "libatf-sh" 
+  "libatf-sh-devel" {= "0.21"}
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "atf-tests-0.21-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/atf-tests-0.21-4.fc40.x86_64.rpm"
+}

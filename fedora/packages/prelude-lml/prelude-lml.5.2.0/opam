@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "prelude-lml-5.2.0-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "prelude-lml-5.2.0-20.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "gnutls" 
+  "libicu" 
+  "libprelude" 
+  "pcre" 
+  "systemd" 
+]
+extra-source "prelude-lml-5.2.0-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/prelude-lml-5.2.0-20.fc40.x86_64.rpm"
+}

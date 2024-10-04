@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Regexp-Grammars-1.058-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Regexp-Grammars-1.058-5.fc40.noarch.rpm"]
+depends: [
+  "perl-Data-Dumper" 
+  "perl-Scalar-List-Utils" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-mro" 
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-Regexp-Grammars-1.058-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Regexp-Grammars-1.058-5.fc40.noarch.rpm"
+}

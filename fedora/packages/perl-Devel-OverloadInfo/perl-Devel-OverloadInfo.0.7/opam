@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Devel-OverloadInfo-0.007-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Devel-OverloadInfo-0.007-10.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" {>= "5.57"}
+  "perl-MRO-Compat" 
+  "perl-Package-Stash" {>= "0.14"}
+  "perl-Scalar-List-Utils" 
+  "perl-libs" 
+  "perl-overload" 
+]
+extra-source "perl-Devel-OverloadInfo-0.007-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Devel-OverloadInfo-0.007-10.fc40.noarch.rpm"
+}

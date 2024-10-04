@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "links-2.20.2-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "links-2.20.2-14.fc40.x86_64.rpm"]
+depends: [
+  "alternatives" 
+  "bash" 
+  "bzip2-libs" 
+  "cairo" 
+  "coreutils" 
+  "fontconfig" 
+  "freetype" 
+  "glib2" 
+  "glibc" 
+  "gpm-libs" 
+  "libX11" 
+  "libbrotli" 
+  "libevent" 
+  "libgomp" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "librsvg2" 
+  "libtiff" 
+  "libzstd" 
+  "openssl-libs" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "links-2.20.2-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/links-2.20.2-14.fc40.x86_64.rpm"
+}

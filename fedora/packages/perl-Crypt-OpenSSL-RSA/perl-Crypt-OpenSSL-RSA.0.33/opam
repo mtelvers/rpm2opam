@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Crypt-OpenSSL-RSA-0.33-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Crypt-OpenSSL-RSA-0.33-5.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "openssl-libs" 
+  "perl-AutoLoader" 
+  "perl-Carp" 
+  "perl-Crypt-OpenSSL-Bignum" 
+  "perl-Crypt-OpenSSL-Random" 
+  "perl-libs" 
+]
+extra-source "perl-Crypt-OpenSSL-RSA-0.33-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Crypt-OpenSSL-RSA-0.33-5.fc40.x86_64.rpm"
+}

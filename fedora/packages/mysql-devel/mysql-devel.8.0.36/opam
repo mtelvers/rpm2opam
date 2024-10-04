@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mysql-devel-8.0.36-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mysql-devel-8.0.36-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "libzstd-devel" 
+  "mysql-libs" 
+  "openssl-devel" 
+  "pkgconf-pkg-config" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "mysql-devel-8.0.36-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mysql-devel-8.0.36-3.fc40.x86_64.rpm"
+}

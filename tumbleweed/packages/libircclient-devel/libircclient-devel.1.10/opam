@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libircclient-devel-1.10-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libircclient-devel-1.10-2.1.x86_64.rpm"]
+depends: [
+  "libircclient1" {= "1.10"}
+]
+extra-source "libircclient-devel-1.10-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libircclient-devel-1.10-2.1.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-POSIX-AtFork-tests-0.04-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-POSIX-AtFork-tests-0.04-16.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-POSIX" 
+  "perl-POSIX-AtFork" 
+  "perl-Test-Harness" 
+  "perl-Test-SharedFork" 
+  "perl-Test-Simple" {>= "0.88"}
+  "perl-libs" 
+]
+extra-source "perl-POSIX-AtFork-tests-0.04-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-POSIX-AtFork-tests-0.04-16.fc40.noarch.rpm"
+}

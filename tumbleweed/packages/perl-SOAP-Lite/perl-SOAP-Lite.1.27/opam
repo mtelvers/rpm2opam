@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-SOAP-Lite-1.27-4.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-SOAP-Lite-1.27-4.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Inspector" 
+  "perl-IO-SessionData" {>= "1.3"}
+  "perl-IO-Socket-SSL" 
+  "perl-LWP-Protocol-https" 
+  "perl-Scalar-List-Utils" 
+  "perl-Task-Weaken" 
+  "perl-URI" 
+  "perl-XML-Parser" {>= "2.23"}
+  "perl-XML-Parser-Lite" {>= "0.715"}
+  "perl-base" 
+  "perl-libwww-perl" 
+]
+extra-source "perl-SOAP-Lite-1.27-4.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-SOAP-Lite-1.27-4.2.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "grail-3.1.1-1.24.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grail-3.1.1-1.24.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXext6" 
+  "libXi6" 
+  "libframe6" 
+  "libgrail6" 
+]
+extra-source "grail-3.1.1-1.24.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/grail-3.1.1-1.24.x86_64.rpm"
+}

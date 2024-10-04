@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "oras-zsh-completion-1.2.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "oras-zsh-completion-1.2.0-1.1.noarch.rpm"]
+depends: [
+  "oras" {= "1.2.0"}
+]
+extra-source "oras-zsh-completion-1.2.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/oras-zsh-completion-1.2.0-1.1.noarch.rpm"
+}

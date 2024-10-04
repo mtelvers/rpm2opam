@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "glabels-libs-3.4.1-24.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glabels-libs-3.4.1-24.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "glabels-templates" {= "3.4.1"}
+  "glib2" 
+  "glibc" 
+  "harfbuzz" 
+  "libxml2" 
+  "pango" 
+]
+extra-source "glabels-libs-3.4.1-24.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/glabels-libs-3.4.1-24.fc40.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "powerprofilesctl-zsh-completion-0.22-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "powerprofilesctl-zsh-completion-0.22-2.1.noarch.rpm"]
+depends: [
+  "power-profiles-daemon" {= "0.22"}
+  "zsh" 
+]
+extra-source "powerprofilesctl-zsh-completion-0.22-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/powerprofilesctl-zsh-completion-0.22-2.1.noarch.rpm"
+}

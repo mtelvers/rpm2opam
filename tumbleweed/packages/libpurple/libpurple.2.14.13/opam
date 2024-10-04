@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpurple-2.14.13-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpurple-2.14.13-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "ca-certificates-mozilla" 
+  "cyrus-sasl-digestmd5" 
+  "cyrus-sasl-plain" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libavahi-client3" 
+  "libavahi-common3" 
+  "libavahi-glib1" 
+  "libdbus-1-3" 
+  "libgadu3" 
+  "libgnutls30" 
+  "libgstreamer-1_0-0" 
+  "libidn12" 
+  "libpurple-branding-openSUSE" 
+  "libpurple-client0" 
+  "libpurple0" {= "2.14.13"}
+  "libsasl2-3" 
+  "libxml2-2" 
+  "mozilla-nspr" 
+  "mozilla-nss" 
+  "perl" 
+  "python311-dbus-python" 
+]
+extra-source "libpurple-2.14.13-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpurple-2.14.13-1.1.x86_64.rpm"
+}

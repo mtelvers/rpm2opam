@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Module-Locate-1.80-25.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Locate-1.80-25.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-IO" 
+  "perl-PathTools" 
+  "perl-libs" {>= "5.8.8"}
+  "perl-overload" 
+]
+extra-source "perl-Module-Locate-1.80-25.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Module-Locate-1.80-25.fc40.noarch.rpm"
+}

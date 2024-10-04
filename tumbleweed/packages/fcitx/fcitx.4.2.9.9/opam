@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fcitx-4.2.9.9-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fcitx-4.2.9.9-4.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "fcitx-branding-openSUSE" {= "4.2.9.9"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libXext6" 
+  "libXfixes3" 
+  "libXinerama1" 
+  "libXrender1" 
+  "libcairo2" 
+  "libdbus-1-3" 
+  "libfcitx-config4" 
+  "libfcitx-core0" 
+  "libfcitx-utils0" 
+  "libjson-c5" 
+  "liblua5_4-5" 
+  "libpango-1_0-0" 
+  "libuuid1" 
+  "libxkbcommon0" 
+  "libxkbfile1" 
+  "libxml2-2" 
+]
+extra-source "fcitx-4.2.9.9-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/fcitx-4.2.9.9-4.1.x86_64.rpm"
+}

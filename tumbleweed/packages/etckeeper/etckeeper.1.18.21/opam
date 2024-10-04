@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "etckeeper-1.18.21-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "etckeeper-1.18.21-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "systemd" 
+]
+extra-source "etckeeper-1.18.21-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/etckeeper-1.18.21-1.1.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "docbook_3-3.1-773.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "docbook_3-3.1-773.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "docbook_4" 
+  "iso_ent" 
+  "libxml2-tools" 
+  "sgml-skel" 
+]
+extra-source "docbook_3-3.1-773.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/docbook_3-3.1-773.3.noarch.rpm"
+}

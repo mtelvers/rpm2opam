@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-TransactionalMethods-0.009-2.26.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-TransactionalMethods-0.009-2.26.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Moose" {>= "1.21"}
+  "perl-Sub-Name" 
+  "perl-aliased" 
+]
+extra-source "perl-MooseX-TransactionalMethods-0.009-2.26.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-TransactionalMethods-0.009-2.26.noarch.rpm"
+}

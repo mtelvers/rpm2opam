@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nant-0.92+git20130131-11.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nant-0.92+git20130131-11.1.noarch.rpm"]
+depends: [
+  "mono-core" {>= "1.0.3300.0"}
+  "mono-data" {>= "1.0.3300.0"}
+  "mono-web" {= "2.0.0.0"}
+  "mono-winforms" {= "1.0.5000.0"}
+]
+extra-source "nant-0.92+git20130131-11.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nant-0.92+git20130131-11.1.noarch.rpm"
+}

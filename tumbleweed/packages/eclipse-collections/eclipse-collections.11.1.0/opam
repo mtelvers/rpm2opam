@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "eclipse-collections-11.1.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eclipse-collections-11.1.0-1.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "junit" 
+  "stringtemplate4" 
+]
+extra-source "eclipse-collections-11.1.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/eclipse-collections-11.1.0-1.1.noarch.rpm"
+}

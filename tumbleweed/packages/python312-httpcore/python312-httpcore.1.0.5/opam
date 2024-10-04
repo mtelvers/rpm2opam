@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-httpcore-1.0.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-httpcore-1.0.5-1.1.noarch.rpm"]
+depends: [
+  "python312-anyio" 
+  "python312-base" {= "3.12"}
+  "python312-certifi" 
+  "python312-h11" 
+  "python312-sniffio" 
+]
+extra-source "python312-httpcore-1.0.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-httpcore-1.0.5-1.1.noarch.rpm"
+}

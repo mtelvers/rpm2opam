@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dist-git-1.17-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dist-git-1.17-5.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "crudini" 
+  "dist-git-selinux" 
+  "git" 
+  "git-daemon" 
+  "httpd" 
+  "mod_ssl" 
+  "perl-Sys-Syslog" 
+  "python3" 
+  "python3-requests" 
+  "shadow-utils" 
+]
+extra-source "dist-git-1.17-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dist-git-1.17-5.fc40.noarch.rpm"
+}

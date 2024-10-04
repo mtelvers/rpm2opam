@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Lucy-0.6.2-21.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Lucy-0.6.2-21.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-Carp" 
+  "perl-Clownfish" {>= "0.6000"}
+  "perl-Exporter" 
+  "perl-IO" 
+  "perl-IO-Compress" 
+  "perl-Scalar-List-Utils" 
+  "perl-Storable" 
+  "perl-base" 
+  "perl-libs" 
+  "perl-overload" 
+]
+extra-source "perl-Lucy-0.6.2-21.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Lucy-0.6.2-21.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "DSDP-devel-5.8-36.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "DSDP-devel-5.8-36.fc40.x86_64.rpm"]
+depends: [
+  "DSDP" {= "5.8"}
+]
+extra-source "DSDP-devel-5.8-36.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/DSDP-devel-5.8-36.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "trng-devel-4.26-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trng-devel-4.26-1.1.x86_64.rpm"]
+depends: [
+  "libtrng4-25" {= "4.26"}
+]
+extra-source "trng-devel-4.26-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/trng-devel-4.26-1.1.x86_64.rpm"
+}

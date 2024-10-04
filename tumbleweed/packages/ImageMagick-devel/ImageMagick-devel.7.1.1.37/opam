@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ImageMagick-devel-7.1.1.37-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ImageMagick-devel-7.1.1.37-1.2.x86_64.rpm"]
+depends: [
+  "ImageMagick" {= "7.1.1.37"}
+  "bash-sh" 
+  "glibc-devel" 
+  "libMagickCore-7_Q16HDRI10" {= "7.1.1.37"}
+  "libMagickWand-7_Q16HDRI10" {= "7.1.1.37"}
+  "libbz2-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "ImageMagick-devel-7.1.1.37-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ImageMagick-devel-7.1.1.37-1.2.x86_64.rpm"
+}

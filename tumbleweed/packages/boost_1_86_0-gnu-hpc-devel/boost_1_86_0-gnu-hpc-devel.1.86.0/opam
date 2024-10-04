@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "boost_1_86_0-gnu-hpc-devel-1.86.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "boost_1_86_0-gnu-hpc-devel-1.86.0-1.1.x86_64.rpm"]
+depends: [
+  "boost_1_86_0-gnu-hpc" 
+  "glibc" 
+  "libbz2-1" 
+  "libgcc_s1" 
+  "libicu75" 
+  "liblzma5" 
+  "libquadmath0" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+]
+extra-source "boost_1_86_0-gnu-hpc-devel-1.86.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/boost_1_86_0-gnu-hpc-devel-1.86.0-1.1.x86_64.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-lestrrat-jwx-devel-1.2.26-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-lestrrat-jwx-devel-1.2.26-3.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-goccy-json-devel" 
+  "golang-github-goccy-yaml-devel" 
+  "golang-github-lestrrat-backoff-2-devel" 
+  "golang-github-lestrrat-blackmagic-devel" 
+  "golang-github-lestrrat-codegen-devel" 
+  "golang-github-lestrrat-httpcc-devel" 
+  "golang-github-lestrrat-iter-devel" 
+  "golang-github-lestrrat-option-devel" 
+  "golang-github-pkg-errors-devel" 
+  "golang-github-stretchr-testify-devel" 
+  "golang-github-urfave-cli-2-devel" 
+  "golang-x-crypto-devel" 
+]
+extra-source "golang-github-lestrrat-jwx-devel-1.2.26-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-lestrrat-jwx-devel-1.2.26-3.fc40.noarch.rpm"
+}

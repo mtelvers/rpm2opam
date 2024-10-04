@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpxbackend-1_0-32bit-0.5.7-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpxbackend-1_0-32bit-0.5.7-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libcurl4-32bit" 
+  "libduktape207-32bit" 
+  "libgio-2_0-0-32bit" 
+  "libglib-2_0-0-32bit" 
+  "libgobject-2_0-0-32bit" 
+]
+extra-source "libpxbackend-1_0-32bit-0.5.7-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpxbackend-1_0-32bit-0.5.7-1.1.x86_64.rpm"
+}

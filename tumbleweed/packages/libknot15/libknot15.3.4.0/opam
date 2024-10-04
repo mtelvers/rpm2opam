@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libknot15-3.4.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libknot15-3.4.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libdnssec9" 
+  "libgnutls30" 
+  "liblmdb-0_9_30" 
+  "libngtcp2-16" 
+  "libngtcp2_crypto_gnutls8" 
+]
+extra-source "libknot15-3.4.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libknot15-3.4.0-1.1.x86_64.rpm"
+}

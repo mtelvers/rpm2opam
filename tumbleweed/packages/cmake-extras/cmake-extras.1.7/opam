@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cmake-extras-1.7-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cmake-extras-1.7-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "clang" 
+  "cmake" 
+  "doxygen" 
+  "gcovr" 
+  "gettext-runtime" 
+  "glib2-devel" 
+  "gmock" 
+  "gobject-introspection-devel" 
+  "intltool" 
+  "lcov" 
+  "llvm-gold" 
+  "pkgconf-pkg-config" 
+  "python311-base" 
+  "qmlpluginexports-qt5" 
+  "vala" 
+]
+extra-source "cmake-extras-1.7-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cmake-extras-1.7-1.1.noarch.rpm"
+}

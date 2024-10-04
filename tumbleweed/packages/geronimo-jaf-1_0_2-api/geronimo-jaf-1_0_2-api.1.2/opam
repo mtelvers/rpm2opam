@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "geronimo-jaf-1_0_2-api-1.2-40.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "geronimo-jaf-1_0_2-api-1.2-40.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "update-alternatives" 
+]
+extra-source "geronimo-jaf-1_0_2-api-1.2-40.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/geronimo-jaf-1_0_2-api-1.2-40.4.noarch.rpm"
+}

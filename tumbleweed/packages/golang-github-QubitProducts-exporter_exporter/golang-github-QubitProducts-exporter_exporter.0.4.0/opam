@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "golang-github-QubitProducts-exporter_exporter-0.4.0-10.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-QubitProducts-exporter_exporter-0.4.0-10.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "shadow" 
+]
+extra-source "golang-github-QubitProducts-exporter_exporter-0.4.0-10.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/golang-github-QubitProducts-exporter_exporter-0.4.0-10.8.x86_64.rpm"
+}

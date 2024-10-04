@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-ase-3.22.1-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-ase-3.22.1-11.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-matplotlib" {>= "3.1"}
+  "python3-numpy" {>= "1.15"}
+  "python3-scipy" {>= "1.1"}
+]
+extra-source "python3-ase-3.22.1-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-ase-3.22.1-11.fc40.noarch.rpm"
+}

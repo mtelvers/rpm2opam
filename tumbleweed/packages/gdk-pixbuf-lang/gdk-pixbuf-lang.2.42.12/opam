@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gdk-pixbuf-lang-2.42.12-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdk-pixbuf-lang-2.42.12-2.1.noarch.rpm"]
+depends: [
+  "libgdk_pixbuf-2_0-0" {= "2.42.12"}
+]
+extra-source "gdk-pixbuf-lang-2.42.12-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gdk-pixbuf-lang-2.42.12-2.1.noarch.rpm"
+}

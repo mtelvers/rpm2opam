@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wireless-regdb-2024.01.23-2.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wireless-regdb-2024.01.23-2.el10.noarch.rpm"]
+depends: [
+  "bash" 
+  "iw" 
+  "systemd" {>= "190"}
+  "systemd-udev" 
+]
+extra-source "wireless-regdb-2024.01.23-2.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/wireless-regdb-2024.01.23-2.el10.noarch.rpm"
+}

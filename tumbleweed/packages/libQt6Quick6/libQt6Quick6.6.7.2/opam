@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libQt6Quick6-6.7.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libQt6Quick6-6.7.2-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt6Core6" 
+  "libQt6Gui6" 
+  "libQt6Network6" 
+  "libQt6OpenGL6" 
+  "libQt6Qml6" 
+  "libQt6QmlModels6" 
+  "libstdc++6" 
+]
+extra-source "libQt6Quick6-6.7.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libQt6Quick6-6.7.2-1.2.x86_64.rpm"
+}

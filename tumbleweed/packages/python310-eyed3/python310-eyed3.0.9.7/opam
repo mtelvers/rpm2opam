@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-eyed3-0.9.7-2.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-eyed3-0.9.7-2.5.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-chardet" {>= "4.0.0"}
+  "python310-colorama" {>= "0.4.4"}
+  "python310-deprecation" {>= "2.1.0"}
+  "python310-filetype" {>= "1.0.7"}
+  "python310-idna" {>= "2.10"}
+  "python310-packaging" {>= "20.8"}
+  "python310-pyparsing" {>= "2.4.7"}
+  "python310-requests" {>= "2.25.1"}
+  "python310-six" {>= "1.15.0"}
+  "python310-toml" {>= "0.10.2"}
+  "python310-urllib3" {>= "1.26.2"}
+]
+extra-source "python310-eyed3-0.9.7-2.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-eyed3-0.9.7-2.5.noarch.rpm"
+}

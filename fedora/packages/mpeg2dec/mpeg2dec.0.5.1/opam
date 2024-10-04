@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mpeg2dec-0.5.1-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mpeg2dec-0.5.1-29.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11" 
+  "libXext" 
+  "libXv" 
+  "libmpeg2" {= "0.5.1"}
+  "sdl12-compat" 
+]
+extra-source "mpeg2dec-0.5.1-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mpeg2dec-0.5.1-29.fc40.x86_64.rpm"
+}

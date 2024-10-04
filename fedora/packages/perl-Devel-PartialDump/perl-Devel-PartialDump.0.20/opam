@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Devel-PartialDump-0.20-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Devel-PartialDump-0.20-21.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Class-Tiny" 
+  "perl-Scalar-List-Utils" 
+  "perl-Sub-Exporter" 
+  "perl-libs" 
+  "perl-namespace-clean" {>= "0.19"}
+  "perl-overload" 
+]
+extra-source "perl-Devel-PartialDump-0.20-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Devel-PartialDump-0.20-21.fc40.noarch.rpm"
+}

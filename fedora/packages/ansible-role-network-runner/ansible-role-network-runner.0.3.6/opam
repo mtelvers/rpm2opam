@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ansible-role-network-runner-0.3.6-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ansible-role-network-runner-0.3.6-12.fc40.noarch.rpm"]
+depends: [
+  "ansible" {>= "2.6"}
+]
+extra-source "ansible-role-network-runner-0.3.6-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/ansible-role-network-runner-0.3.6-12.fc40.noarch.rpm"
+}

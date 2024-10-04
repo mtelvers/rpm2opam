@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "trace-cmd-python3-3.2-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trace-cmd-python3-3.2-2.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libtraceevent" 
+  "libtracefs" 
+  "python3" 
+  "trace-cmd" {= "3.2"}
+]
+extra-source "trace-cmd-python3-3.2-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/trace-cmd-python3-3.2-2.fc40.x86_64.rpm"
+}

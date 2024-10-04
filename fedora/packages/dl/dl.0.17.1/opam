@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dl-0.17.1-18.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dl-0.17.1-18.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "caddy" 
+  "php" {>= "5.3"}
+  "php-cli" 
+  "php-common" 
+  "php-mbstring" 
+  "php-pdo" 
+  "php-php-gettext" 
+  "policycoreutils-python-utils" 
+  "sqlite" 
+]
+extra-source "dl-0.17.1-18.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dl-0.17.1-18.fc40.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "aws-c-common-devel-0.9.28-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "aws-c-common-devel-0.9.28-1.1.x86_64.rpm"]
+depends: [
+  "libaws-c-common1" {= "0.9.28"}
+]
+extra-source "aws-c-common-devel-0.9.28-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/aws-c-common-devel-0.9.28-1.1.x86_64.rpm"
+}

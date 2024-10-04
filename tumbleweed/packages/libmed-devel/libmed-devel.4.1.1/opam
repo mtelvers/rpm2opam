@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmed-devel-4.1.1-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmed-devel-4.1.1-2.2.x86_64.rpm"]
+depends: [
+  "hdf5-devel" {>= "1.10.2"}
+  "libmed11" {= "4.1.1"}
+  "libmedC11" {= "4.1.1"}
+  "libmedimport0" {= "4.1.1"}
+]
+extra-source "libmed-devel-4.1.1-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmed-devel-4.1.1-2.2.x86_64.rpm"
+}

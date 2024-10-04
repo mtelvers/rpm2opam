@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "khealthcertificate-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "khealthcertificate-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf6-karchive" 
+  "kf6-kcodecs" 
+  "kf6-ki18n" 
+  "libstdc++" 
+  "openssl-libs" 
+  "qt6-qtbase" 
+  "qt6-qtdeclarative" 
+  "zlib-ng-compat" 
+]
+extra-source "khealthcertificate-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/khealthcertificate-24.02.1-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tpm2-tss-engine-devel-1.2.0-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tpm2-tss-engine-devel-1.2.0-3.1.x86_64.rpm"]
+depends: [
+  "tpm2-tss-engine" {= "1.2.0"}
+]
+extra-source "tpm2-tss-engine-devel-1.2.0-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tpm2-tss-engine-devel-1.2.0-3.1.x86_64.rpm"
+}

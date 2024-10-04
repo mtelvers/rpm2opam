@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-App-Cme-1.040-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-App-Cme-1.040-1.fc40.noarch.rpm"]
+depends: [
+  "perl-App-Cmd" 
+  "perl-Config-Model" {>= "2.124"}
+  "perl-Config-Model-CursesUI" 
+  "perl-Config-Model-TkUI" 
+  "perl-Data-Dumper" 
+  "perl-Encode" 
+  "perl-File-HomeDir" 
+  "perl-JSON" 
+  "perl-Log-Log4perl" 
+  "perl-Path-Tiny" 
+  "perl-Pod-POM" 
+  "perl-Scalar-List-Utils" 
+  "perl-Tk" 
+  "perl-YAML-PP" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.10.1"}
+  "perl-open" 
+]
+extra-source "perl-App-Cme-1.040-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-App-Cme-1.040-1.fc40.noarch.rpm"
+}

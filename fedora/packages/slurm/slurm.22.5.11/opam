@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "slurm-22.05.11-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "slurm-22.05.11-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dbus-libs" 
+  "freeipmi" 
+  "glibc" 
+  "hdf5" 
+  "hwloc-libs" 
+  "infiniband-diags" 
+  "json-c" 
+  "libaec" 
+  "libcurl" 
+  "libibumad" 
+  "libjwt" 
+  "libyaml" 
+  "lua-libs" 
+  "lz4-libs" 
+  "mariadb-connector-c" 
+  "munge" 
+  "munge-libs" 
+  "numactl-libs" 
+  "pmix" 
+  "readline" 
+  "s-nail" 
+  "slurm-libs" 
+  "systemd" 
+  "ucx" 
+  "zlib-ng-compat" 
+]
+extra-source "slurm-22.05.11-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/slurm-22.05.11-3.fc40.x86_64.rpm"
+}

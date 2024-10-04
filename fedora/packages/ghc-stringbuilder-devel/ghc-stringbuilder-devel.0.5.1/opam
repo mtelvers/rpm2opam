@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-stringbuilder-devel-0.5.1-28.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-stringbuilder-devel-0.5.1-28.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-stringbuilder" {= "0.5.1"}
+]
+extra-source "ghc-stringbuilder-devel-0.5.1-28.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-stringbuilder-devel-0.5.1-28.fc40.x86_64.rpm"
+}

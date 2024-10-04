@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvirt-10.7.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvirt-10.7.0-1.1.x86_64.rpm"]
+depends: [
+  "libvirt-client" {= "10.7.0"}
+  "libvirt-client-qemu" {= "10.7.0"}
+  "libvirt-daemon" {= "10.7.0"}
+  "libvirt-daemon-config-network" {= "10.7.0"}
+  "libvirt-daemon-config-nwfilter" {= "10.7.0"}
+  "libvirt-daemon-driver-libxl" {= "10.7.0"}
+  "libvirt-daemon-driver-network" {= "10.7.0"}
+  "libvirt-daemon-driver-nodedev" {= "10.7.0"}
+  "libvirt-daemon-driver-nwfilter" {= "10.7.0"}
+  "libvirt-daemon-driver-qemu" {= "10.7.0"}
+  "libvirt-daemon-driver-secret" {= "10.7.0"}
+  "libvirt-daemon-driver-storage" {= "10.7.0"}
+  "libvirt-libs" {= "10.7.0"}
+]
+extra-source "libvirt-10.7.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libvirt-10.7.0-1.1.x86_64.rpm"
+}

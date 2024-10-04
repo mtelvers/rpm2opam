@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-hetznercloud-cli-devel-1.42.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-hetznercloud-cli-devel-1.42.0-4.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-hetznercloud-hcloud-2-devel" 
+  "go-filesystem" 
+  "golang-github-cheggaaa-pb-devel" 
+  "golang-github-dustin-humanize-devel" 
+  "golang-github-fatih-structs-devel" 
+  "golang-github-goccy-yaml-devel" 
+  "golang-github-guptarohit-asciigraph-devel" 
+  "golang-github-mock-devel" 
+  "golang-github-pelletier-toml-2-devel" 
+  "golang-github-spf13-cobra-devel" 
+  "golang-github-spf13-pflag-devel" 
+  "golang-github-stretchr-testify-devel" 
+  "golang-x-crypto-devel" 
+  "golang-x-term-devel" 
+]
+extra-source "golang-github-hetznercloud-cli-devel-1.42.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-hetznercloud-cli-devel-1.42.0-4.fc40.noarch.rpm"
+}

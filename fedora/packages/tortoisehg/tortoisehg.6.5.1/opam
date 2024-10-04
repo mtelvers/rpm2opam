@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tortoisehg-6.5.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tortoisehg-6.5.1-2.fc40.noarch.rpm"]
+depends: [
+  "mercurial" 
+  "python3" 
+  "python3-gobject-base" 
+  "python3-iniparse" 
+  "python3-pygments" 
+  "python3-qscintilla-qt6" 
+]
+extra-source "tortoisehg-6.5.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tortoisehg-6.5.1-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "netperfmeter-pdfproctools-1.9.4-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netperfmeter-pdfproctools-1.9.4-1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "ghostscript" 
+  "perl" {>= "5.8.0"}
+  "perl-PDF-API2" 
+  "perl-base" 
+  "qpdf" 
+]
+extra-source "netperfmeter-pdfproctools-1.9.4-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/netperfmeter-pdfproctools-1.9.4-1.4.noarch.rpm"
+}

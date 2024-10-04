@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-spki+arbitrary-devel-0.7.3-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-spki+arbitrary-devel-0.7.3-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-arbitrary+default-devel" 
+  "rust-arbitrary+derive-devel" 
+  "rust-der+arbitrary-devel" 
+  "rust-spki+std-devel" {= "0.7.3"}
+  "rust-spki-devel" {= "0.7.3"}
+]
+extra-source "rust-spki+arbitrary-devel-0.7.3-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-spki+arbitrary-devel-0.7.3-2.fc40.noarch.rpm"
+}

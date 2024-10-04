@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jmol-16.1.63-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jmol-16.1.63-1.fc40.noarch.rpm"]
+depends: [
+  "apache-commons-cli" 
+  "bash" 
+  "hicolor-icon-theme" 
+  "java-21-openjdk" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+  "jni-inchi" 
+  "naga" 
+]
+extra-source "jmol-16.1.63-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jmol-16.1.63-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jgmenu-xfce4-4.4.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jgmenu-xfce4-4.4.1-6.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "jgmenu" {= "4.4.1"}
+  "libxfce4util" 
+  "xfce4-panel" 
+]
+extra-source "jgmenu-xfce4-4.4.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jgmenu-xfce4-4.4.1-6.fc40.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-deploy-plugin-3.0.0~M2-1.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-deploy-plugin-3.0.0~M2-1.12.noarch.rpm"]
+depends: [
+  "apache-commons-io" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-artifact-transfer" 
+  "maven-resolver-api" 
+  "maven-resolver-util" 
+  "plexus-utils" 
+]
+extra-source "maven-deploy-plugin-3.0.0~M2-1.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-deploy-plugin-3.0.0~M2-1.12.noarch.rpm"
+}

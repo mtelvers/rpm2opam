@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Net-SNMP-6.0.1-40.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-SNMP-6.0.1-40.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Crypt-DES" {>= "2.3"}
+  "perl-Digest-HMAC" {>= "1.0"}
+  "perl-Digest-MD5" {>= "2.11"}
+  "perl-Digest-SHA1" {>= "1.2"}
+  "perl-Errno" 
+  "perl-Exporter" 
+  "perl-IO" 
+  "perl-Math-BigInt" 
+  "perl-Socket" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Net-SNMP-6.0.1-40.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Net-SNMP-6.0.1-40.fc40.noarch.rpm"
+}

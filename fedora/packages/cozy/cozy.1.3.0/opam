@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cozy-1.3.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cozy-1.3.0-1.fc40.noarch.rpm"]
+depends: [
+  "file" 
+  "glib2" 
+  "gstreamer1-plugins-bad-free" 
+  "gstreamer1-plugins-good" 
+  "gstreamer1-plugins-ugly-free" 
+  "hicolor-icon-theme" 
+  "libadwaita" {>= "1.4.0"}
+  "python3" 
+  "python3-distro" 
+  "python3-gobject-base" 
+  "python3-inject" {>= "4.3.1"}
+  "python3-mutagen" 
+  "python3-peewee" {>= "3.9.6"}
+  "python3-pytz" 
+  "python3-requests" 
+]
+extra-source "cozy-1.3.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cozy-1.3.0-1.fc40.noarch.rpm"
+}

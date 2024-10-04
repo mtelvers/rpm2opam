@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-text-metrics-devel-0.3.2-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-text-metrics-devel-0.3.2-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-text-devel" 
+  "ghc-text-metrics" {= "0.3.2"}
+  "ghc-vector-devel" 
+]
+extra-source "ghc-text-metrics-devel-0.3.2-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-text-metrics-devel-0.3.2-8.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "deepin-qt-dbus-factory-devel-5.5.22-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deepin-qt-dbus-factory-devel-5.5.22-8.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "deepin-qt-dbus-factory" {= "5.5.22"}
+  "pkgconf-pkg-config" 
+]
+extra-source "deepin-qt-dbus-factory-devel-5.5.22-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/deepin-qt-dbus-factory-devel-5.5.22-8.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtkwave-examples-3.3.114-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtkwave-examples-3.3.114-1.6.noarch.rpm"]
+depends: [
+  "gtkwave" {= "3.3.114"}
+]
+extra-source "gtkwave-examples-3.3.114-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gtkwave-examples-3.3.114-1.6.noarch.rpm"
+}

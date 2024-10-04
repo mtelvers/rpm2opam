@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "djvu2pdf-0.9.2-9.20.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "djvu2pdf-0.9.2-9.20.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "djvulibre" 
+  "ghostscript" 
+]
+extra-source "djvu2pdf-0.9.2-9.20.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/djvu2pdf-0.9.2-9.20.noarch.rpm"
+}

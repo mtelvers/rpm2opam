@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nikto-2.5.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nikto-2.5.0-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Getopt-Long" 
+  "perl-JSON-PP" 
+  "perl-Net" 
+  "perl-Net-SSLeay" 
+  "perl-Scalar-List-Utils" 
+  "perl-Text-ParseWords" 
+  "perl-Time-HiRes" 
+  "perl-bignum" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "nikto-2.5.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nikto-2.5.0-4.fc40.noarch.rpm"
+}

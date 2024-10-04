@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "baresip-video-3.11.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "baresip-video-3.11.0-1.2.x86_64.rpm"]
+depends: [
+  "baresip" {= "3.11.0"}
+  "ffmpeg-7-mini-libs" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libSDL2-2_0-0" 
+  "libX11-6" 
+  "libXext6" 
+  "libaom3" 
+  "libgstreamer-1_0-0" 
+  "libvpx9" 
+]
+extra-source "baresip-video-3.11.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/baresip-video-3.11.0-1.2.x86_64.rpm"
+}

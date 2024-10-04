@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gramps-lang-5.2.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gramps-lang-5.2.3-1.1.noarch.rpm"]
+depends: [
+  "gramps" {= "5.2.3"}
+]
+extra-source "gramps-lang-5.2.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gramps-lang-5.2.3-1.1.noarch.rpm"
+}

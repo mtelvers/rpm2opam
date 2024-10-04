@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "uwsgi-2.0.25.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "uwsgi-2.0.25.1-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libcap2" 
+  "libcrypt1" 
+  "libcurl-mini4" 
+  "libjansson4" 
+  "libopenssl3" 
+  "libpcre2-8-0" 
+  "libsystemd0" 
+  "libuuid1" 
+  "libwrap0" 
+  "libxml2-2" 
+  "libz-ng-compat1" 
+  "systemd" 
+]
+extra-source "uwsgi-2.0.25.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/uwsgi-2.0.25.1-2.1.x86_64.rpm"
+}

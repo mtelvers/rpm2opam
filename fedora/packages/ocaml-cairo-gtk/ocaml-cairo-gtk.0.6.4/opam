@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-cairo-gtk-0.6.4-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-cairo-gtk-0.6.4-11.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "glibc" 
+  "gtk2" 
+  "ocaml" {= "2125"}
+  "ocaml-cairo" {= "574"}
+  "ocaml-lablgtk" {= "635"}
+]
+extra-source "ocaml-cairo-gtk-0.6.4-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-cairo-gtk-0.6.4-11.fc40.x86_64.rpm"
+}

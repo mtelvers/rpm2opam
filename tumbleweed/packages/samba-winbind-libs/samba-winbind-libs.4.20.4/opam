@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "samba-winbind-libs-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "samba-winbind-libs-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "krb5" 
+  "libcom_err2" 
+  "libldap2" 
+  "libldb2" 
+  "libtalloc2" 
+  "libtdb1" 
+  "libtevent0" 
+  "pam" 
+  "samba-client-libs" 
+]
+extra-source "samba-winbind-libs-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/samba-winbind-libs-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm"
+}

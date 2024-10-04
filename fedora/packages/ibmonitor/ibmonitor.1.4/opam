@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ibmonitor-1.4-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibmonitor-1.4-29.fc40.noarch.rpm"]
+depends: [
+  "perl-Data-Dumper" 
+  "perl-Getopt-Long" 
+  "perl-Term-ANSIColor" 
+  "perl-TermReadKey" 
+  "perl-Time-HiRes" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "ibmonitor-1.4-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/ibmonitor-1.4-29.fc40.noarch.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-oras-devel-0.15.1-1.20221105git690716b.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-oras-devel-0.15.1-1.20221105git690716b.fc39.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-docker-cli-devel" 
+  "golang-github-moby-term-devel" 
+  "golang-github-need-being-tree-devel" 
+  "golang-github-onsi-ginkgo-2-devel" 
+  "golang-github-onsi-gomega-devel" 
+  "golang-github-opencontainers-digest-devel" 
+  "golang-github-opencontainers-image-spec-devel" 
+  "golang-github-sirupsen-logrus-devel" 
+  "golang-github-spf13-cobra-devel" 
+  "golang-github-spf13-pflag-devel" 
+]
+extra-source "golang-oras-devel-0.15.1-1.20221105git690716b.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-oras-devel-0.15.1-1.20221105git690716b.fc39.noarch.rpm"
+}

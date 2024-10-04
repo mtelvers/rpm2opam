@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mono-addins-msbuild-1.3.3-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mono-addins-msbuild-1.3.3-3.1.noarch.rpm"]
+depends: [
+  "mono-addins" {= "1.0.0.0"}
+  "mono-core" {= "4.0.0.0"}
+  "mono-devel" {= "4.0.0.0"}
+]
+extra-source "mono-addins-msbuild-1.3.3-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mono-addins-msbuild-1.3.3-3.1.noarch.rpm"
+}

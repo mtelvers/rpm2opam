@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgio-2_0-0-2.80.5-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgio-2_0-0-2.80.5-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "dbus-1" 
+  "gio-branding-openSUSE" {= "2.80.5"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libmount1" 
+  "libselinux1" 
+  "libz-ng-compat1" 
+  "shared-mime-info" 
+]
+extra-source "libgio-2_0-0-2.80.5-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgio-2_0-0-2.80.5-2.1.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-POE-Component-DBIAgent-0.26-45.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-POE-Component-DBIAgent-0.26-45.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Class-MethodMaker" 
+  "perl-DBI" 
+  "perl-Data-Dumper" 
+  "perl-POE" {>= "0.17"}
+  "perl-Storable" 
+  "perl-Time-HiRes" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-POE-Component-DBIAgent-0.26-45.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-POE-Component-DBIAgent-0.26-45.fc40.noarch.rpm"
+}

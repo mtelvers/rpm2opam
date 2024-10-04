@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lua-timerwheel-1.0.2-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lua-timerwheel-1.0.2-8.fc40.noarch.rpm"]
+depends: [
+  "lua-coxpcall" 
+  "lua-libs" {= "5.4"}
+]
+extra-source "lua-timerwheel-1.0.2-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lua-timerwheel-1.0.2-8.fc40.noarch.rpm"
+}

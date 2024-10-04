@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plymouth-devel-22.02.122+94.4bd41a3-11.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plymouth-devel-22.02.122+94.4bd41a3-11.1.x86_64.rpm"]
+depends: [
+  "libply-boot-client5" {= "22.2.122"}
+  "libply-splash-core5" {= "22.2.122"}
+  "libply-splash-graphics5" {= "22.2.122"}
+  "libply5" {= "22.2.122"}
+  "pkgconf-pkg-config" 
+  "plymouth" {= "22.2.122"}
+]
+extra-source "plymouth-devel-22.02.122+94.4bd41a3-11.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/plymouth-devel-22.02.122+94.4bd41a3-11.1.x86_64.rpm"
+}

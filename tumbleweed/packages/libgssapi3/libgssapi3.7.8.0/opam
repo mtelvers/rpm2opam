@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgssapi3-7.8.0-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgssapi3-7.8.0-4.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libasn1-8" 
+  "libcom_err2" 
+  "libhcrypto4" 
+  "libheimbase1" 
+  "libheimntlm0" 
+  "libkrb5-26" 
+  "libroken18" 
+]
+extra-source "libgssapi3-7.8.0-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgssapi3-7.8.0-4.1.x86_64.rpm"
+}

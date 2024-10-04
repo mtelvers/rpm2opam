@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "iputils-20240117-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "iputils-20240117-4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcap" 
+  "libidn2" 
+]
+extra-source "iputils-20240117-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/iputils-20240117-4.fc40.x86_64.rpm"
+}

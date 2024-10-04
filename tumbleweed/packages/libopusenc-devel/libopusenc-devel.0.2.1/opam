@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libopusenc-devel-0.2.1-1.19.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libopusenc-devel-0.2.1-1.19.x86_64.rpm"]
+depends: [
+  "libopus-devel" {>= "1.1"}
+  "libopusenc0" {= "0.2.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libopusenc-devel-0.2.1-1.19.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libopusenc-devel-0.2.1-1.19.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "flickrnet-3.5-8.20.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flickrnet-3.5-8.20.noarch.rpm"]
+depends: [
+  "mono-core" {= "2.0.0.0"}
+  "mono-winforms" {= "2.0.0.0"}
+]
+extra-source "flickrnet-3.5-8.20.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/flickrnet-3.5-8.20.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "heatshrink-devel-0.4.1-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "heatshrink-devel-0.4.1-1.3.x86_64.rpm"]
+depends: [
+  "libheatshrink0_4_1" {= "0.4.1"}
+  "libheatshrink_dynalloc0_4_1" {= "0.4.1"}
+]
+extra-source "heatshrink-devel-0.4.1-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/heatshrink-devel-0.4.1-1.3.x86_64.rpm"
+}

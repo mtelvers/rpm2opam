@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "thermald-2.5.7.17.git+fc7464a-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "thermald-2.5.7.17.git+fc7464a-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "kernel-debug" 
+  "libevdev2" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libupower-glib3" 
+  "libxml2-2" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "thermald-2.5.7.17.git+fc7464a-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/thermald-2.5.7.17.git+fc7464a-1.1.x86_64.rpm"
+}

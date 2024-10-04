@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "notify-sharp-0.4.0.r3032-11.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "notify-sharp-0.4.0.r3032-11.1.noarch.rpm"]
+depends: [
+  "dbus-sharp" {= "1.0.0.0"}
+  "dbus-sharp-glib" {= "1.0.0.0"}
+  "glib-sharp2" {= "2.12.0.0"}
+  "gtk-sharp2" {= "2.12.0.0"}
+  "mono-core" {= "4.0.0.0"}
+]
+extra-source "notify-sharp-0.4.0.r3032-11.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/notify-sharp-0.4.0.r3032-11.1.noarch.rpm"
+}

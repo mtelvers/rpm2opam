@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Text-VCardFast-tests-0.11-26.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Text-VCardFast-tests-0.11-26.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "perl-Data-Dumper" 
+  "perl-Encode" 
+  "perl-FindBin" 
+  "perl-JSON-XS" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-Text-VCardFast" {= "0.11"}
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Text-VCardFast-tests-0.11-26.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Text-VCardFast-tests-0.11-26.fc40.noarch.rpm"
+}

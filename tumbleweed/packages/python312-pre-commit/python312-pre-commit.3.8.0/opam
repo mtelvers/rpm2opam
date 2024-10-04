@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pre-commit-3.8.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pre-commit-3.8.0-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "python312-PyYAML" {>= "5.1"}
+  "python312-base" {= "3.12"}
+  "python312-cfgv" {>= "2.0.0"}
+  "python312-identify" {>= "1.0.0"}
+  "python312-nodeenv" {>= "0.11.1"}
+  "python312-virtualenv" {>= "20.10.0"}
+  "update-alternatives" 
+]
+extra-source "python312-pre-commit-3.8.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pre-commit-3.8.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kicad-doc-it-8.0.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kicad-doc-it-8.0.5-1.1.noarch.rpm"]
+depends: [
+  "kicad-doc-en" {= "8.0.5"}
+]
+extra-source "kicad-doc-it-8.0.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kicad-doc-it-8.0.5-1.1.noarch.rpm"
+}

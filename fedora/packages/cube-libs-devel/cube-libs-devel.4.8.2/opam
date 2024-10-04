@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cube-libs-devel-4.8.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cube-libs-devel-4.8.2-3.fc40.x86_64.rpm"]
+depends: [
+  "cube-guilib" 
+  "cube-libs" {= "4.8.2"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "cube-libs-devel-4.8.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cube-libs-devel-4.8.2-3.fc40.x86_64.rpm"
+}

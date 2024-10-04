@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "annobin-annocheck-12.42-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "annobin-annocheck-12.42-1.fc40.x86_64.rpm"]
+depends: [
+  "annobin-docs" {= "12.42"}
+  "cpio" 
+  "elfutils-libelf" 
+  "elfutils-libs" 
+  "glibc" 
+  "rpm" 
+  "rpm-libs" 
+]
+extra-source "annobin-annocheck-12.42-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/annobin-annocheck-12.42-1.fc40.x86_64.rpm"
+}

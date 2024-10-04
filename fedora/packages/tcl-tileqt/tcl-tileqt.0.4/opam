@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tcl-tileqt-0.4-0.36.b1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tcl-tileqt-0.4-0.36.b1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libICE" 
+  "libSM" 
+  "libX11" 
+  "libXext" 
+  "libgcc" 
+  "libpng" 
+  "qt-x11" 
+  "tcl" {= "8.6"}
+  "zlib-ng-compat" 
+]
+extra-source "tcl-tileqt-0.4-0.36.b1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tcl-tileqt-0.4-0.36.b1.fc40.x86_64.rpm"
+}

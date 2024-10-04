@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-IO-Compress-Lzma-2.212.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-IO-Compress-Lzma-2.212.0-1.1.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Compress-Raw-Lzma" {>= "2.212"}
+]
+extra-source "perl-IO-Compress-Lzma-2.212.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-IO-Compress-Lzma-2.212.0-1.1.noarch.rpm"
+}

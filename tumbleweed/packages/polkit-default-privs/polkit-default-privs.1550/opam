@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "polkit-default-privs-1550+20240708.7e0e3f4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "polkit-default-privs-1550+20240708.7e0e3f4-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "perl-base" 
+  "polkit" 
+]
+extra-source "polkit-default-privs-1550+20240708.7e0e3f4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/polkit-default-privs-1550+20240708.7e0e3f4-1.1.noarch.rpm"
+}

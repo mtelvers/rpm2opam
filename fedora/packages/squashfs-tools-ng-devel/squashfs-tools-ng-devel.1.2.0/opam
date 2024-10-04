@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "squashfs-tools-ng-devel-1.2.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "squashfs-tools-ng-devel-1.2.0-4.fc40.x86_64.rpm"]
+depends: [
+  "libzstd-devel" 
+  "lz4-devel" 
+  "pkgconf-pkg-config" 
+  "squashfs-tools-ng-libs" 
+  "xz-devel" {>= "5.0.0"}
+  "zlib-ng-compat-devel" 
+]
+extra-source "squashfs-tools-ng-devel-1.2.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/squashfs-tools-ng-devel-1.2.0-4.fc40.x86_64.rpm"
+}

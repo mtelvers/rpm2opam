@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "obs-service-compose_kiwi_description-2.1.1-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "obs-service-compose_kiwi_description-2.1.1-1.3.noarch.rpm"]
+depends: [
+  "git" 
+  "python311-base" 
+  "python311-kiwi-keg" {= "2.1.1"}
+]
+extra-source "obs-service-compose_kiwi_description-2.1.1-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/obs-service-compose_kiwi_description-2.1.1-1.3.noarch.rpm"
+}

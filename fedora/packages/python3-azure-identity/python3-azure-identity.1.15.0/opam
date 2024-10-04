@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-azure-identity-1.15.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-azure-identity-1.15.0-1.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-azure-core" 
+  "python3-cryptography" {>= "2.5"}
+  "python3-msal" 
+  "python3-msal-extensions" 
+]
+extra-source "python3-azure-identity-1.15.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-azure-identity-1.15.0-1.fc40.noarch.rpm"
+}

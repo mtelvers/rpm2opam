@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc9.4-text-2.0.2-27.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc9.4-text-2.0.2-27.fc40.x86_64.rpm"]
+depends: [
+  "ghc9-4-array" 
+  "ghc9-4-base" 
+  "ghc9-4-binary" 
+  "ghc9-4-bytestring" 
+  "ghc9-4-containers" 
+  "ghc9-4-deepseq" 
+  "ghc9-4-ghc-bignum" 
+  "ghc9-4-ghc-boot-th" 
+  "ghc9-4-pretty" 
+  "ghc9-4-template-haskell" 
+  "glibc" 
+  "gmp" 
+]
+extra-source "ghc9.4-text-2.0.2-27.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc9.4-text-2.0.2-27.fc40.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vsgExamples-1.0.7-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vsgExamples-1.0.7-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libvsg14" 
+  "libvsgImGui0" 
+  "libvsgXchange1" 
+  "libvulkan1" 
+]
+extra-source "vsgExamples-1.0.7-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vsgExamples-1.0.7-1.3.x86_64.rpm"
+}

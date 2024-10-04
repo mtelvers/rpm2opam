@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ivy-local-6.2.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ivy-local-6.2.0-1.3.noarch.rpm"]
+depends: [
+  "ant" 
+  "apache-ivy" {>= "2.3.0"}
+  "javapackages-ivy" {>= "6.2.0"}
+  "xmvn-connector-ivy" 
+  "xmvn-install" 
+  "xmvn-resolve" 
+]
+extra-source "ivy-local-6.2.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ivy-local-6.2.0-1.3.noarch.rpm"
+}

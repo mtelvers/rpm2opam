@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "prosody-0.12.4-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "prosody-0.12.4-4.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libicu" 
+  "lua" 
+  "lua-expat" 
+  "lua-filesystem" 
+  "lua-libs" {= "5.4"}
+  "lua-sec" 
+  "lua-socket" 
+  "openssl" 
+  "openssl-libs" 
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "prosody-0.12.4-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/prosody-0.12.4-4.fc40.x86_64.rpm"
+}

@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "anjuta-3.34.0-23.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "anjuta-3.34.0-23.fc40.x86_64.rpm"]
+depends: [
+  "anjuta-libs" {= "3.34.0"}
+  "autoconf" 
+  "autogen" 
+  "automake" 
+  "gdb" {>= "7.0"}
+  "gdk-pixbuf2" 
+  "git" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "gtksourceview3" 
+  "hicolor-icon-theme" 
+  "libgda5-sqlite" {>= "5.1.0"}
+  "libgdl" 
+  "libxml2" 
+  "perl-English" 
+  "perl-File-Basename" 
+  "perl-File-Temp" 
+  "perl-Text-Tabs+Wrap" 
+  "perl-diagnostics" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "anjuta-3.34.0-23.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/anjuta-3.34.0-23.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "resalloc-webui-5.4-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "resalloc-webui-5.4-1.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-flask" 
+  "python3-resalloc" {= "5.4"}
+  "resalloc-server" 
+]
+extra-source "resalloc-webui-5.4-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/resalloc-webui-5.4-1.fc40.noarch.rpm"
+}

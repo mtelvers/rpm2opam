@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "coin-or-Osi-doc-0.108.9-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coin-or-Osi-doc-0.108.9-2.fc40.noarch.rpm"]
+depends: [
+  "coin-or-CoinUtils-doc" 
+  "coin-or-Osi" {= "0.108.9"}
+]
+extra-source "coin-or-Osi-doc-0.108.9-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/coin-or-Osi-doc-0.108.9-2.fc40.noarch.rpm"
+}

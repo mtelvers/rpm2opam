@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openshot-qt-3.2.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openshot-qt-3.2.0-1.1.noarch.rpm"]
+depends: [
+  "python3-openshot" {>= "0.3.3"}
+  "python311-base" 
+  "python311-pyxdg" 
+  "python311-pyzmq" 
+  "python311-qt5" 
+  "python311-qtwebengine-qt5" 
+  "python311-requests" 
+]
+extra-source "openshot-qt-3.2.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/openshot-qt-3.2.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jless-0.9.0-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jless-0.9.0-1.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libxcb-render0" 
+  "libxcb-shape0" 
+  "libxcb-xfixes0" 
+  "libxcb1" 
+]
+extra-source "jless-0.9.0-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/jless-0.9.0-1.4.x86_64.rpm"
+}

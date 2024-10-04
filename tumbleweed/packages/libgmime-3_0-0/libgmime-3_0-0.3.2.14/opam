@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgmime-3_0-0-3.2.14-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgmime-3_0-0-3.2.14-2.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgpgme11" 
+  "libidn2-0" 
+  "libz-ng-compat1" 
+]
+extra-source "libgmime-3_0-0-3.2.14-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgmime-3_0-0-3.2.14-2.2.x86_64.rpm"
+}

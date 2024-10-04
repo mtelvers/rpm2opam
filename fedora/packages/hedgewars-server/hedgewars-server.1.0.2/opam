@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hedgewars-server-1.0.2-5.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hedgewars-server-1.0.2-5.fc39.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "gmp" 
+  "hedgewars" {= "1.0.2"}
+  "libffi" 
+  "systemd" 
+]
+extra-source "hedgewars-server-1.0.2-5.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hedgewars-server-1.0.2-5.fc39.x86_64.rpm"
+}

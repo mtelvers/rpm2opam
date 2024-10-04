@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plexus-resources-1.0~a7-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plexus-resources-1.0~a7-4.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "plexus-utils" 
+  "sisu-plexus" 
+]
+extra-source "plexus-resources-1.0~a7-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/plexus-resources-1.0~a7-4.1.noarch.rpm"
+}

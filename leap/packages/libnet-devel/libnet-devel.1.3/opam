@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnet-devel-1.3-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnet-devel-1.3-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "libnet9" {= "1.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libnet-devel-1.3-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libnet-devel-1.3-slfo.1.1.7.x86_64.rpm"
+}

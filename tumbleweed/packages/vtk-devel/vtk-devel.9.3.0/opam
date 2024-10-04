@@ -1,0 +1,51 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vtk-devel-9.3.0-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vtk-devel-9.3.0-2.2.x86_64.rpm"]
+depends: [
+  "Mesa-libGL-devel" 
+  "cgns-devel" 
+  "cmake" {>= "3.4"}
+  "double-conversion-devel" 
+  "fast_float-devel" 
+  "ffmpeg-4-libavcodec-devel" 
+  "ffmpeg-4-libavdevice-devel" 
+  "ffmpeg-4-libavformat-devel" 
+  "ffmpeg-4-libavutil-devel" 
+  "ffmpeg-4-libswscale-devel" 
+  "fmt-devel" 
+  "freetype2-devel" 
+  "gcc-c++" 
+  "gl2ps-devel" 
+  "glibc" 
+  "hdf5-devel" 
+  "jsoncpp-devel" 
+  "libQt5Core-devel" 
+  "libQt5OpenGL-devel" 
+  "libQt5OpenGLExtensions-devel-static" 
+  "libQt5Sql-devel" 
+  "libQt5Widgets-devel" 
+  "libexpat-devel" 
+  "libgcc_s1" 
+  "libiodbc-devel" 
+  "libjpeg62-devel" 
+  "liblz4-devel" {>= "1.7.3"}
+  "libmariadb-devel" 
+  "libnetcdf_c++-devel" 
+  "libpng12-compat-devel" 
+  "libstdc++6" 
+  "libtheora-devel" 
+  "libtiff-devel" 
+  "libvtk1" {= "9.3.0"}
+  "netcdf-devel" 
+  "nlohmann_json-devel" 
+  "pugixml-devel" {>= "1.11"}
+  "python3-vtk" {= "9.3.0"}
+  "utfcpp-devel" 
+  "verdict-devel" 
+  "vtk-qt" {= "9.3.0"}
+  "xz-devel" 
+  "zlib-devel" 
+]
+extra-source "vtk-devel-9.3.0-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vtk-devel-9.3.0-2.2.x86_64.rpm"
+}

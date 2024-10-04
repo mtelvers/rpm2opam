@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Catalyst-Engine-Apache-1.16-37.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Catalyst-Engine-Apache-1.16-37.fc40.noarch.rpm"]
+depends: [
+  "mod_perl" 
+  "perl-Catalyst-Runtime" 
+  "perl-PathTools" 
+  "perl-URI" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" 
+]
+extra-source "perl-Catalyst-Engine-Apache-1.16-37.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Catalyst-Engine-Apache-1.16-37.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rpc2-devel-2.10-34.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rpc2-devel-2.10-34.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "lwp-devel" 
+  "pkgconf-pkg-config" 
+  "rpc2" 
+]
+extra-source "rpc2-devel-2.10-34.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rpc2-devel-2.10-34.fc40.x86_64.rpm"
+}

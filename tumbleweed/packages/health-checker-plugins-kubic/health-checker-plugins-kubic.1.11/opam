@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "health-checker-plugins-kubic-1.11+git20240730.5dafd6a-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "health-checker-plugins-kubic-1.11+git20240730.5dafd6a-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "health-checker" {>= "1.11"}
+]
+extra-source "health-checker-plugins-kubic-1.11+git20240730.5dafd6a-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/health-checker-plugins-kubic-1.11+git20240730.5dafd6a-1.1.noarch.rpm"
+}

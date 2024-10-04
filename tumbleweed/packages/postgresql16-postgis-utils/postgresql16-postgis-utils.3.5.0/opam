@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postgresql16-postgis-utils-3.5.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql16-postgis-utils-3.5.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "perl-DBD-Pg" 
+  "perl-base" 
+  "postgresql16-postgis" {= "3.5.0"}
+]
+extra-source "postgresql16-postgis-utils-3.5.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/postgresql16-postgis-utils-3.5.0-1.1.noarch.rpm"
+}

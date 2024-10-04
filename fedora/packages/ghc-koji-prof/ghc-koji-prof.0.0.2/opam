@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-koji-prof-0.0.2-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-koji-prof-0.0.2-12.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-haxr-prof" 
+  "ghc-koji-devel" {= "0.0.2"}
+  "ghc-mtl-prof" 
+]
+extra-source "ghc-koji-prof-0.0.2-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-koji-prof-0.0.2-12.fc40.x86_64.rpm"
+}

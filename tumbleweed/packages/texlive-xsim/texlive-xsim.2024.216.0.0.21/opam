@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-xsim-2024.216.0.0.21svn61988-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-xsim-2024.216.0.0.21svn61988-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-accsupp" 
+  "texlive-acro" 
+  "texlive-amsmath" 
+  "texlive-bookmark" 
+  "texlive-booktabs" 
+  "texlive-cnltx" 
+  "texlive-csquotes" 
+  "texlive-datetime2" 
+  "texlive-embrac" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-geometry" 
+  "texlive-hyperref" 
+  "texlive-imakeidx" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-l3packages" 
+  "texlive-lipsum" 
+  "texlive-marginnote" 
+  "texlive-newtx" 
+  "texlive-refcount" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tcolorbox" 
+  "texlive-tools" 
+  "texlive-translations" 
+]
+extra-source "texlive-xsim-2024.216.0.0.21svn61988-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-xsim-2024.216.0.0.21svn61988-55.1.noarch.rpm"
+}

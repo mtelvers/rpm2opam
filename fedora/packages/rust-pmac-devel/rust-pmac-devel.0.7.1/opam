@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-pmac-devel-0.7.1-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-pmac-devel-0.7.1-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.56"}
+  "rust-cipher+default-devel" 
+  "rust-dbl+default-devel" 
+  "rust-digest+default-devel" 
+  "rust-digest+mac-devel" 
+]
+extra-source "rust-pmac-devel-0.7.1-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-pmac-devel-0.7.1-3.fc40.noarch.rpm"
+}

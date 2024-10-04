@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ortp-devel-5.3.37-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ortp-devel-5.3.37-1.1.x86_64.rpm"]
+depends: [
+  "bctoolbox-devel" 
+  "cmake" 
+  "libortp15" {= "5.3.37"}
+  "pkgconf-pkg-config" 
+]
+extra-source "ortp-devel-5.3.37-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ortp-devel-5.3.37-1.1.x86_64.rpm"
+}

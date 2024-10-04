@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "st-0.9-2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "st-0.9-2.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXft2" 
+  "libfontconfig1" 
+  "terminfo" 
+]
+extra-source "st-0.9-2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/st-0.9-2.5.x86_64.rpm"
+}

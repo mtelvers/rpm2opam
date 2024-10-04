@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "votca-common-2024.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "votca-common-2024.2-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "busybox-gawk" 
+  "perl" 
+  "perl-base" 
+  "python311-base" 
+]
+extra-source "votca-common-2024.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/votca-common-2024.2-1.1.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnotcurses3-3.0.9-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnotcurses3-3.0.9-3.2.x86_64.rpm"]
+depends: [
+  "ffmpeg-6-mini-libs" 
+  "glibc" 
+  "libnotcurses-core3" 
+]
+extra-source "libnotcurses3-3.0.9-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libnotcurses3-3.0.9-3.2.x86_64.rpm"
+}

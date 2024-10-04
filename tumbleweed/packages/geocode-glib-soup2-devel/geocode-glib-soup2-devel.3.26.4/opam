@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "geocode-glib-soup2-devel-3.26.4-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "geocode-glib-soup2-devel-3.26.4-1.7.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libgeocode-glib0" {= "3.26.4"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-GeocodeGlib-1_0" {= "3.26.4"}
+]
+extra-source "geocode-glib-soup2-devel-3.26.4-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/geocode-glib-soup2-devel-3.26.4-1.7.x86_64.rpm"
+}

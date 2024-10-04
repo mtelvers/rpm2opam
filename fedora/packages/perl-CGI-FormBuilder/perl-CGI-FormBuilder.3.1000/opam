@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CGI-FormBuilder-3.1000-25.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CGI-FormBuilder-3.1000-25.fc40.noarch.rpm"]
+depends: [
+  "perl-CGI-FastTemplate" 
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-HTML-Template" {>= "2.6"}
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-Template-Toolkit" {>= "2.8"}
+  "perl-Text-Template" {>= "1.43"}
+  "perl-base" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-overload" 
+]
+extra-source "perl-CGI-FormBuilder-3.1000-25.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CGI-FormBuilder-3.1000-25.fc40.noarch.rpm"
+}

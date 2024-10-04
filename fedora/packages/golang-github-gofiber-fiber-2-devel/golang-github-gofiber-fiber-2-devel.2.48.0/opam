@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-gofiber-fiber-2-devel-2.48.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-gofiber-fiber-2-devel-2.48.0-4.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-google-uuid-devel" 
+  "golang-github-mattn-colorable-devel" 
+  "golang-github-mattn-isatty-devel" 
+  "golang-github-mattn-runewidth-devel" 
+  "golang-github-tinylib-msgp-devel" 
+  "golang-github-valyala-bytebufferpool-devel" 
+  "golang-github-valyala-fasthttp-devel" 
+  "golang-x-sys-devel" 
+]
+extra-source "golang-github-gofiber-fiber-2-devel-2.48.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-gofiber-fiber-2-devel-2.48.0-4.fc40.noarch.rpm"
+}

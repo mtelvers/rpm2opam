@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-statsmodels-0.14.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-statsmodels-0.14.3-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "python311-base" {= "3.11"}
+  "python311-numpy" {>= "1.22.3"}
+  "python311-packaging" {>= "21.3"}
+  "python311-pandas" {>= "1.4"}
+  "python311-patsy" {>= "0.5.6"}
+  "python311-scipy" {>= "1.8"}
+]
+extra-source "python311-statsmodels-0.14.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-statsmodels-0.14.3-1.1.x86_64.rpm"
+}

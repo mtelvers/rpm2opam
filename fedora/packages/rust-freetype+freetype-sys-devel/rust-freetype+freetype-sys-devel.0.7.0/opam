@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-freetype+freetype-sys-devel-0.7.0-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-freetype+freetype-sys-devel-0.7.0-10.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-freetype-devel" {= "0.7.0"}
+  "rust-freetype-sys+default-devel" 
+]
+extra-source "rust-freetype+freetype-sys-devel-0.7.0-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-freetype+freetype-sys-devel-0.7.0-10.fc40.noarch.rpm"
+}

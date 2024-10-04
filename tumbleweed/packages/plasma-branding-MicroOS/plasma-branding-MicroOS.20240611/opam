@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plasma-branding-MicroOS-20240611-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plasma-branding-MicroOS-20240611-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "flatpak" 
+  "kdialog" 
+  "libqt5-qdbus" 
+  "sound-theme-freedesktop" 
+  "transactional-update" 
+]
+extra-source "plasma-branding-MicroOS-20240611-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/plasma-branding-MicroOS-20240611-1.2.noarch.rpm"
+}

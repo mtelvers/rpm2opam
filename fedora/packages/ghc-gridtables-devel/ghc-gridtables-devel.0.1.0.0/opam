@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-gridtables-devel-0.1.0.0-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-gridtables-devel-0.1.0.0-29.fc40.x86_64.rpm"]
+depends: [
+  "ghc-array-devel" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-doclayout-devel" 
+  "ghc-gridtables" {= "0.1.0.0"}
+  "ghc-parsec-devel" 
+  "ghc-text-devel" 
+]
+extra-source "ghc-gridtables-devel-0.1.0.0-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-gridtables-devel-0.1.0.0-29.fc40.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "collectd-web-js-5.12.0.134.g4cebbfc-1.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "collectd-web-js-5.12.0.134.g4cebbfc-1.12.noarch.rpm"]
+depends: [
+  "apache2" 
+  "perl" 
+  "perl-CGI" 
+  "perl-Config-General" 
+  "perl-HTML-Parser" 
+  "perl-JSON" 
+  "perl-base" 
+  "perl-rrdtool" 
+  "rrdtool" 
+]
+extra-source "collectd-web-js-5.12.0.134.g4cebbfc-1.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/collectd-web-js-5.12.0.134.g4cebbfc-1.12.noarch.rpm"
+}

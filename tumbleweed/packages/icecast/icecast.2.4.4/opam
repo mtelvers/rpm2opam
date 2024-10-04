@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "icecast-2.4.4-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "icecast-2.4.4-4.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libcurl-mini4" 
+  "libogg0" 
+  "libopenssl3" 
+  "libspeex1" 
+  "libtheora0" 
+  "libvorbis0" 
+  "libxml2-2" 
+  "libxslt1" 
+  "shadow" 
+  "systemd" 
+]
+extra-source "icecast-2.4.4-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/icecast-2.4.4-4.2.x86_64.rpm"
+}

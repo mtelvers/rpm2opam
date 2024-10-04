@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "helix-fish-completion-24.07-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "helix-fish-completion-24.07-2.1.noarch.rpm"]
+depends: [
+  "helix" {= "24.7"}
+]
+extra-source "helix-fish-completion-24.07-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/helix-fish-completion-24.07-2.1.noarch.rpm"
+}

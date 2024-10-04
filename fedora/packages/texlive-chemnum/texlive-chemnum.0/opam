@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-chemnum-svn57490-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-chemnum-svn57490-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-chemgreek" 
+  "texlive-kpathsea" 
+  "texlive-l3kernel" 
+  "texlive-l3packages" 
+  "texlive-psfrag" 
+  "texlive-translations" 
+]
+extra-source "texlive-chemnum-svn57490-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-chemnum-svn57490-71.fc40.noarch.rpm"
+}

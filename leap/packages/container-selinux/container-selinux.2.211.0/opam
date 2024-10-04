@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "container-selinux-2.211.0-slfo.1.1.23.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "container-selinux-2.211.0-slfo.1.1.23.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-sed" 
+  "policycoreutils" 
+  "selinux-policy" {>= "20240604"}
+  "selinux-policy-minimum" {>= "20240604"}
+  "selinux-policy-targeted" {>= "20240604"}
+  "selinux-tools" 
+]
+extra-source "container-selinux-2.211.0-slfo.1.1.23.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/container-selinux-2.211.0-slfo.1.1.23.noarch.rpm"
+}

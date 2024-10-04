@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qemacs-0.3.3-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qemacs-0.3.3-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXext6" 
+  "libXv1" 
+]
+extra-source "qemacs-0.3.3-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/qemacs-0.3.3-2.2.x86_64.rpm"
+}

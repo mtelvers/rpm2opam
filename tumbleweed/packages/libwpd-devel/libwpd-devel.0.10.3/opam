@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libwpd-devel-0.10.3-3.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libwpd-devel-0.10.3-3.12.x86_64.rpm"]
+depends: [
+  "librevenge-devel" 
+  "libstdc++-devel" 
+  "libwpd-0_10-10" {= "0.10.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libwpd-devel-0.10.3-3.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libwpd-devel-0.10.3-3.12.x86_64.rpm"
+}

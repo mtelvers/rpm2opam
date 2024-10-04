@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-cfonts-devel-1.1.3-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-cfonts-devel-1.1.3-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-exitcode+default-devel" 
+  "rust-rand+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde_json+default-devel" 
+  "rust-strum+default-devel" 
+  "rust-strum_macros+default-devel" 
+  "rust-supports-color+default-devel" 
+  "rust-terminal_size+default-devel" 
+]
+extra-source "rust-cfonts-devel-1.1.3-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-cfonts-devel-1.1.3-2.fc40.noarch.rpm"
+}

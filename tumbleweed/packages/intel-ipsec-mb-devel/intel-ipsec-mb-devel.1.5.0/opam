@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "intel-ipsec-mb-devel-1.5.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "intel-ipsec-mb-devel-1.5.0-1.3.x86_64.rpm"]
+depends: [
+  "libIPSec_MB1" {= "1.5.0"}
+]
+extra-source "intel-ipsec-mb-devel-1.5.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/intel-ipsec-mb-devel-1.5.0-1.3.x86_64.rpm"
+}

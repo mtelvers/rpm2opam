@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-wezterm-bidi+default-devel-0.2.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-wezterm-bidi+default-devel-0.2.2-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-wezterm-bidi-devel" {= "0.2.2"}
+]
+extra-source "rust-wezterm-bidi+default-devel-0.2.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-wezterm-bidi+default-devel-0.2.2-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "eid-viewer-5.1.11-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eid-viewer-5.1.11-1.5.x86_64.rpm"]
+depends: [
+  "eid-mw" 
+  "eid-mw-libs" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libcurl-mini4" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libopenssl3" 
+  "libpango-1_0-0" 
+  "libproxy1" 
+  "libxml2-2" 
+  "pcsc-ccid" 
+  "pcsc-lite" 
+]
+extra-source "eid-viewer-5.1.11-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/eid-viewer-5.1.11-1.5.x86_64.rpm"
+}

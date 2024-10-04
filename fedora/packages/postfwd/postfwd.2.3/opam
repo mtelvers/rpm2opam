@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "postfwd-2.03-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postfwd-2.03-9.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Data-Dumper" 
+  "perl-Digest-MD5" 
+  "perl-Exporter" 
+  "perl-Getopt-Long" {>= "2.25"}
+  "perl-IO" 
+  "perl-Net-CIDR-Lite" 
+  "perl-Net-DNS" 
+  "perl-Net-Server" 
+  "perl-NetAddr-IP" 
+  "perl-POSIX" 
+  "perl-Pod-Usage" 
+  "perl-Storable" 
+  "perl-Sys-Syslog" 
+  "perl-Time-HiRes" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-podlators" 
+  "perl-vars" 
+  "shadow-utils" 
+  "systemd" 
+  "util-linux-core" 
+]
+extra-source "postfwd-2.03-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/postfwd-2.03-9.fc40.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pytesseract-0.3.13-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pytesseract-0.3.13-1.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-Pillow" 
+  "python310-base" 
+  "python310-setuptools" 
+  "tesseract-ocr-devel" 
+  "tesseract-ocr-traineddata-deu" 
+  "tesseract-ocr-traineddata-eng" 
+  "update-alternatives" 
+]
+extra-source "python310-pytesseract-0.3.13-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-pytesseract-0.3.13-1.3.noarch.rpm"
+}

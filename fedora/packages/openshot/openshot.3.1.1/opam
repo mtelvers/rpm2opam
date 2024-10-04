@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openshot-3.1.1-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openshot-3.1.1-6.fc40.noarch.rpm"]
+depends: [
+  "ffmpeg-free" 
+  "python3" {= "3.12"}
+  "python3-httplib2" 
+  "python3-libopenshot" {>= "0.3.2"}
+  "python3-qt5" 
+  "python3-qt5-webengine" 
+  "python3-requests" 
+  "python3-setuptools" 
+  "python3-zmq" 
+]
+extra-source "openshot-3.1.1-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openshot-3.1.1-6.fc40.noarch.rpm"
+}

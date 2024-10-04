@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "appstream-glib-devel-0.8.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "appstream-glib-devel-0.8.3-1.1.x86_64.rpm"]
+depends: [
+  "appstream-glib" {= "0.8.3"}
+  "gdk-pixbuf-devel" 
+  "glib2-devel" 
+  "libappstream-glib8" {= "0.8.3"}
+  "libarchive-devel" 
+  "libuuid-devel" 
+  "pkgconf-pkg-config" 
+  "typelib-1_0-AppStreamGlib-1_0" {= "0.8.3"}
+]
+extra-source "appstream-glib-devel-0.8.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/appstream-glib-devel-0.8.3-1.1.x86_64.rpm"
+}

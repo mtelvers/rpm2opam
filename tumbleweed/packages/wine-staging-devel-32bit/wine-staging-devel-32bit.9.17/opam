@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wine-staging-devel-32bit-9.17-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wine-staging-devel-32bit-9.17-1.1.x86_64.rpm"]
+depends: [
+  "wine-staging-devel" {= "9.17"}
+]
+extra-source "wine-staging-devel-32bit-9.17-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/wine-staging-devel-32bit-9.17-1.1.x86_64.rpm"
+}

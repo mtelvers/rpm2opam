@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "octave-brain2mesh-0.5-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "octave-brain2mesh-0.5-13.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "octave" 
+  "octave-image" 
+  "octave-iso2mesh" 
+  "octave-jnifti" 
+  "octave-jsonlab" 
+  "octave-zmat" 
+]
+extra-source "octave-brain2mesh-0.5-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/octave-brain2mesh-0.5-13.fc40.noarch.rpm"
+}

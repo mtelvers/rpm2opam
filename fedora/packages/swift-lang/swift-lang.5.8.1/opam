@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "swift-lang-5.8.1-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "swift-lang-5.8.1-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "binutils-gold" 
+  "gcc" 
+  "glibc" 
+  "glibc-devel" 
+  "libcurl" 
+  "libedit" 
+  "libgcc" 
+  "libstdc++" 
+  "libuuid" 
+  "libxml2" 
+  "lldb" 
+  "ncurses-devel" 
+  "ncurses-libs" 
+  "python3" 
+  "python3-libs" 
+  "sqlite-libs" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "swift-lang-5.8.1-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/swift-lang-5.8.1-2.fc40.x86_64.rpm"
+}

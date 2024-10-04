@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mailutils-imap4d-3.16-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mailutils-imap4d-3.16-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "krb5" 
+  "libgsasl18" 
+  "libmailutils9" 
+  "libwrap0" 
+]
+extra-source "mailutils-imap4d-3.16-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mailutils-imap4d-3.16-2.2.x86_64.rpm"
+}

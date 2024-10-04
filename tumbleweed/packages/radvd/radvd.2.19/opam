@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "radvd-2.19-3.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "radvd-2.19-3.7.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "system-user-daemon" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "radvd-2.19-3.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/radvd-2.19-3.7.x86_64.rpm"
+}

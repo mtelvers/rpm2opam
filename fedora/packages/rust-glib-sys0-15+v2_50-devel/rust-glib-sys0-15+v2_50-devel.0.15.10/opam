@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-glib-sys0.15+v2_50-devel-0.15.10-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-glib-sys0.15+v2_50-devel-0.15.10-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "glib2-devel" {>= "2.50"}
+  "rust-glib-sys0-15-devel" {= "0.15.10"}
+]
+extra-source "rust-glib-sys0.15+v2_50-devel-0.15.10-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-glib-sys0.15+v2_50-devel-0.15.10-4.fc40.noarch.rpm"
+}

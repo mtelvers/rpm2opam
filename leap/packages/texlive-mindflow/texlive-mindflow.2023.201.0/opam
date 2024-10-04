@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-mindflow-2023.201.svn65236-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-mindflow-2023.201.svn65236-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-filesystem" {>= "2023"}
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-kvoptions" 
+  "texlive-lineno" 
+  "texlive-nowidow" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-tcolorbox" 
+  "texlive-tools" 
+  "texlive-xcolor" 
+]
+extra-source "texlive-mindflow-2023.201.svn65236-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-mindflow-2023.201.svn65236-slfo.1.1.4.noarch.rpm"
+}

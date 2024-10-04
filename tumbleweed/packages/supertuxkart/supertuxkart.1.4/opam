@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "supertuxkart-1.4-4.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "supertuxkart-1.4-4.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libSDL2-2_0-0" 
+  "libcurl-mini4" 
+  "libfreetype6" 
+  "libgcc_s1" 
+  "libharfbuzz0" 
+  "libjpeg8" 
+  "libmcpp0" 
+  "libopenal1" 
+  "libopenssl3" 
+  "libpng16-16" 
+  "libstdc++6" 
+  "libvorbisfile3" 
+  "libwiiuse0" 
+  "libz-ng-compat1" 
+  "supertuxkart-data" {= "1.4"}
+]
+extra-source "supertuxkart-1.4-4.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/supertuxkart-1.4-4.6.x86_64.rpm"
+}

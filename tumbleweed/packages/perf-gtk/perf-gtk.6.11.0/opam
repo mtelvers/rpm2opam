@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perf-gtk-6.11.0-86.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perf-gtk-6.11.0-86.4.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgtk-2_0-0" 
+  "perf" {= "6.11.0"}
+]
+extra-source "perf-gtk-6.11.0-86.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perf-gtk-6.11.0-86.4.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "crypto-policies-scripts-20230920.570ea89-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "crypto-policies-scripts-20230920.570ea89-3.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "crypto-policies" {= "20230920.570"}
+  "python311-base" 
+]
+extra-source "crypto-policies-scripts-20230920.570ea89-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/crypto-policies-scripts-20230920.570ea89-3.2.noarch.rpm"
+}

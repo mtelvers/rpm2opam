@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "make-it-quick-0.3.2-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "make-it-quick-0.3.2-6.fc40.noarch.rpm"]
+depends: [
+  "make" {>= "3.82"}
+  "sed" 
+]
+extra-source "make-it-quick-0.3.2-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/make-it-quick-0.3.2-6.fc40.noarch.rpm"
+}

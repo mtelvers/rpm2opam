@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-num-format+num-bigint-devel-0.4.4-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-num-format+num-bigint-devel-0.4.4-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-num-bigint+default-devel" 
+  "rust-num-format-devel" {= "0.4.4"}
+]
+extra-source "rust-num-format+num-bigint-devel-0.4.4-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-num-format+num-bigint-devel-0.4.4-4.fc40.noarch.rpm"
+}

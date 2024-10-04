@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lollypop-1.4.37-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lollypop-1.4.37-7.fc40.noarch.rpm"]
+depends: [
+  "gdk-pixbuf2" 
+  "gobject-introspection" 
+  "gstreamer1-plugins-base" 
+  "gstreamer1-plugins-good" 
+  "gtk3" 
+  "libhandy" {>= "1.5"}
+  "libnotify" {>= "0.7.6"}
+  "pango" 
+  "python3" 
+  "python3-beautifulsoup4" 
+  "python3-cairo" 
+  "python3-dbus" 
+  "python3-gobject" 
+  "python3-gstreamer1" 
+  "python3-pillow" 
+  "totem-pl-parser" 
+  "yt-dlp" 
+]
+extra-source "lollypop-1.4.37-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lollypop-1.4.37-7.fc40.noarch.rpm"
+}

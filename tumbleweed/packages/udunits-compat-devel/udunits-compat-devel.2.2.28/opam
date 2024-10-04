@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "udunits-compat-devel-2.2.28-1.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "udunits-compat-devel-2.2.28-1.13.x86_64.rpm"]
+depends: [
+  "udunits-compat" {= "2.2.28"}
+  "udunits2-devel" {= "2.2.28"}
+]
+extra-source "udunits-compat-devel-2.2.28-1.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/udunits-compat-devel-2.2.28-1.13.x86_64.rpm"
+}

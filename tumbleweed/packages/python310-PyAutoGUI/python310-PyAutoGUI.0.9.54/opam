@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-PyAutoGUI-0.9.54-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-PyAutoGUI-0.9.54-1.5.noarch.rpm"]
+depends: [
+  "python310-Pillow" 
+  "python310-PyMsgBox" 
+  "python310-PyScreeze" 
+  "python310-PyTweening" {>= "1.0.1"}
+  "python310-base" {= "3.10"}
+  "python310-python-xlib" 
+]
+extra-source "python310-PyAutoGUI-0.9.54-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-PyAutoGUI-0.9.54-1.5.noarch.rpm"
+}

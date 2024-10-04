@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "verilator-5.014-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "verilator-5.014-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libstdc++" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-PathTools" 
+  "perl-Pod-Usage" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-vars" 
+  "pkgconf-pkg-config" 
+  "python3" 
+]
+extra-source "verilator-5.014-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/verilator-5.014-3.fc40.x86_64.rpm"
+}

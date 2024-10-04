@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lua53-luv-1.45.0~0-4.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lua53-luv-1.45.0~0-4.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "liblua5_3-5" 
+  "libuv1" 
+  "lua53" 
+]
+extra-source "lua53-luv-1.45.0~0-4.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lua53-luv-1.45.0~0-4.3.x86_64.rpm"
+}

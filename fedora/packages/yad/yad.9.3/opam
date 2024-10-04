@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "yad-9.3-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yad-9.3-8.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cairo" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gspell" 
+  "gtk3" 
+  "gtksourceview3" 
+  "pango" 
+]
+extra-source "yad-9.3-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/y/yad-9.3-8.fc40.x86_64.rpm"
+}

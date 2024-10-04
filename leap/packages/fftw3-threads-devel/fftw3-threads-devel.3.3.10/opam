@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fftw3-threads-devel-3.3.10-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fftw3-threads-devel-3.3.10-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "fftw3-devel" {= "3.3.10"}
+  "glibc-devel" 
+  "libfftw3_threads3" {= "3.3.10"}
+]
+extra-source "fftw3-threads-devel-3.3.10-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/fftw3-threads-devel-3.3.10-slfo.1.1.7.x86_64.rpm"
+}

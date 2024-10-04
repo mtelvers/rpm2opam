@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libykpiv-devel-2.6.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libykpiv-devel-2.6.1-1.1.x86_64.rpm"]
+depends: [
+  "libopenssl-1_0_0-devel" 
+  "libykpiv2" {= "2.6.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libykpiv-devel-2.6.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libykpiv-devel-2.6.1-1.1.x86_64.rpm"
+}

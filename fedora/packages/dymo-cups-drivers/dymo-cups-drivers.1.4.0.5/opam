@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dymo-cups-drivers-1.4.0.5-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dymo-cups-drivers-1.4.0.5-19.fc40.x86_64.rpm"]
+depends: [
+  "cups" 
+  "cups-libs" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "dymo-cups-drivers-1.4.0.5-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dymo-cups-drivers-1.4.0.5-19.fc40.x86_64.rpm"
+}

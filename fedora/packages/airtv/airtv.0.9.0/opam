@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "airtv-0.9.0-24.20180824git096b61a.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "airtv-0.9.0-24.20180824git096b61a.fc40.x86_64.rpm"]
+depends: [
+  "avahi-compat-libdns_sd" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "qt" 
+  "qt-x11" 
+  "shairplay-libs" 
+]
+extra-source "airtv-0.9.0-24.20180824git096b61a.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/airtv-0.9.0-24.20180824git096b61a.fc40.x86_64.rpm"
+}

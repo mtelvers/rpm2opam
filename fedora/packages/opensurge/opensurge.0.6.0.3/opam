@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "opensurge-0.6.0.3-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opensurge-0.6.0.3-5.fc40.x86_64.rpm"]
+depends: [
+  "allegro5" 
+  "allegro5-addon-acodec" 
+  "allegro5-addon-audio" 
+  "allegro5-addon-dialog" 
+  "allegro5-addon-image" 
+  "allegro5-addon-ttf" 
+  "glibc" 
+  "opensurge-data" {= "0.6.0.3"}
+  "surgescript" 
+]
+extra-source "opensurge-0.6.0.3-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/opensurge-0.6.0.3-5.fc40.x86_64.rpm"
+}

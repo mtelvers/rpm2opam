@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-xcharter-2024.216.1.25svn67742-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-xcharter-2024.216.1.25svn67742-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-carlisle" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-fontaxes" 
+  "texlive-fontspec" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-mweights" 
+  "texlive-newtx" 
+  "texlive-realscripts" 
+  "texlive-scripts" 
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-xcharter-fonts" {>= "2024"}
+  "texlive-xcharter-math" 
+  "texlive-xkeyval" 
+  "texlive-xstring" 
+]
+extra-source "texlive-xcharter-2024.216.1.25svn67742-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-xcharter-2024.216.1.25svn67742-55.1.noarch.rpm"
+}

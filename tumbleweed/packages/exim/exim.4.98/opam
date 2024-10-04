@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "exim-4.98-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "exim-4.98-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "coreutils" 
+  "fillup" 
+  "glibc" 
+  "libcrypt1" 
+  "libdb-4_8" 
+  "libldap2" 
+  "libmariadb3" 
+  "libopenssl3" 
+  "libpcre2-8-0" 
+  "libpq5" 
+  "libsasl2-3" 
+  "libspf2-2" 
+  "libsqlite3-0" 
+  "logrotate" 
+  "pam" 
+  "perl-File-FcntlLock" 
+  "perl-base" 
+  "permissions" 
+  "system-user-mail" 
+  "systemd" 
+]
+extra-source "exim-4.98-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/exim-4.98-1.1.x86_64.rpm"
+}

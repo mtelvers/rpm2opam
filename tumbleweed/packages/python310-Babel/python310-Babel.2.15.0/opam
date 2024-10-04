@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-Babel-2.15.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-Babel-2.15.0-1.1.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "python310-base" 
+  "python310-pytz" {>= "2015.7"}
+]
+extra-source "python310-Babel-2.15.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-Babel-2.15.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-fsnotify-prof-0.4.1.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-fsnotify-prof-0.4.1.0-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-async-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+  "ghc-fsnotify-devel" {= "0.4.1.0"}
+  "ghc-hinotify-prof" 
+  "ghc-monad-control-prof" 
+  "ghc-safe-exceptions-prof" 
+  "ghc-text-prof" 
+  "ghc-time-prof" 
+  "ghc-unix-compat-prof" 
+  "ghc-unix-prof" 
+]
+extra-source "ghc-fsnotify-prof-0.4.1.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-fsnotify-prof-0.4.1.0-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "signon-qt5-8.60^20240205.c8ad982-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "signon-qt5-8.60^20240205.c8ad982-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+]
+extra-source "signon-qt5-8.60^20240205.c8ad982-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/signon-qt5-8.60^20240205.c8ad982-1.fc40.x86_64.rpm"
+}

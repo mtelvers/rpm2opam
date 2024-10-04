@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-extra-prof-1.7.14-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-extra-prof-1.7.14-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-clock-prof" 
+  "ghc-directory-prof" 
+  "ghc-extra-devel" {= "1.7.14"}
+  "ghc-filepath-prof" 
+  "ghc-process-prof" 
+  "ghc-time-prof" 
+  "ghc-unix-prof" 
+]
+extra-source "ghc-extra-prof-1.7.14-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-extra-prof-1.7.14-3.fc40.x86_64.rpm"
+}

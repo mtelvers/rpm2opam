@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libthrift_c_glib0-0.17.0-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libthrift_c_glib0-0.17.0-3.3.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libopenssl3" 
+  "libz-ng-compat1" 
+]
+extra-source "libthrift_c_glib0-0.17.0-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libthrift_c_glib0-0.17.0-3.3.x86_64.rpm"
+}

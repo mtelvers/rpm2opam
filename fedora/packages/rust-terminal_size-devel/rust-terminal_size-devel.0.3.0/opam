@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-terminal_size-devel-0.3.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-terminal_size-devel-0.3.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-rustix+default-devel" 
+  "rust-rustix+termios-devel" 
+]
+extra-source "rust-terminal_size-devel-0.3.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-terminal_size-devel-0.3.0-2.fc40.noarch.rpm"
+}

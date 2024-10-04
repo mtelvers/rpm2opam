@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "CGAL-demos-source-5.6.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "CGAL-demos-source-5.6.1-1.fc40.noarch.rpm"]
+depends: [
+  "CGAL-devel" {= "5.6.1"}
+  "bash" 
+]
+extra-source "CGAL-demos-source-5.6.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/CGAL-demos-source-5.6.1-1.fc40.noarch.rpm"
+}

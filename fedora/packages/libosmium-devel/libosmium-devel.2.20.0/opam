@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libosmium-devel-2.20.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libosmium-devel-2.20.0-3.fc40.x86_64.rpm"]
+depends: [
+  "boost-devel" 
+  "bzip2-devel" 
+  "expat-devel" 
+  "gdal-devel" 
+  "gdalcpp-devel" {>= "1.3.0"}
+  "geos-devel" 
+  "lz4-devel" 
+  "protozero-devel" {>= "1.6.3"}
+  "sparsehash-devel" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "libosmium-devel-2.20.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libosmium-devel-2.20.0-3.fc40.x86_64.rpm"
+}

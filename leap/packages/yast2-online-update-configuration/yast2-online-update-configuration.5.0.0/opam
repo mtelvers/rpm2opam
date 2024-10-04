@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-online-update-configuration-5.0.0-lp160.3.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-online-update-configuration-5.0.0-lp160.3.12.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "yast2" {>= "2.21.0"}
+  "yast2-packager" {>= "2.17.0"}
+  "yast2-pkg-bindings" {>= "2.17.20"}
+  "yast2-ruby-bindings" {>= "1.0.0"}
+]
+extra-source "yast2-online-update-configuration-5.0.0-lp160.3.12.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/yast2-online-update-configuration-5.0.0-lp160.3.12.noarch.rpm"
+}

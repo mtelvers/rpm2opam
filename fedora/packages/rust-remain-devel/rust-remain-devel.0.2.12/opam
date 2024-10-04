@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-remain-devel-0.2.12-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-remain-devel-0.2.12-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.56"}
+  "rust-proc-macro2+default-devel" 
+  "rust-quote+default-devel" 
+  "rust-syn+default-devel" 
+  "rust-syn+full-devel" 
+  "rust-syn+visit-mut-devel" 
+]
+extra-source "rust-remain-devel-0.2.12-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-remain-devel-0.2.12-2.fc40.noarch.rpm"
+}

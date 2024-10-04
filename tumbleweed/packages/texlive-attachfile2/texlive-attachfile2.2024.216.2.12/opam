@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-attachfile2-2024.216.2.12svn69505-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-attachfile2-2024.216.2.12svn69505-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "perl-Digest-MD5" 
+  "perl-base" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-attachfile2-bin" {>= "2024"}
+  "texlive-filesystem" {>= "2024"}
+  "texlive-graphics" 
+  "texlive-hycolor" 
+  "texlive-hyperref" 
+  "texlive-iftex" 
+  "texlive-infwarerr" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-kvoptions" 
+  "texlive-ltxcmds" 
+  "texlive-pdfescape" 
+  "texlive-pdftexcmds" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+]
+extra-source "texlive-attachfile2-2024.216.2.12svn69505-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-attachfile2-2024.216.2.12svn69505-56.1.noarch.rpm"
+}

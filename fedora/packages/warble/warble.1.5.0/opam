@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "warble-1.5.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "warble-1.5.0-4.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "glib2" 
+  "glibc" 
+  "granite" 
+  "gtk3" 
+  "libgee" 
+  "libhandy" 
+]
+extra-source "warble-1.5.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/warble-1.5.0-4.fc40.x86_64.rpm"
+}

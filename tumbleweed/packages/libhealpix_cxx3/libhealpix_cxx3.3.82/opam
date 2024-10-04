@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libhealpix_cxx3-3.82-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libhealpix_cxx3-3.82-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcfitsio10" 
+  "libgcc_s1" 
+  "libgomp1" 
+  "libsharp0" 
+  "libstdc++6" 
+]
+extra-source "libhealpix_cxx3-3.82-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libhealpix_cxx3-3.82-1.3.x86_64.rpm"
+}

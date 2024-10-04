@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "eurephia-admin-1.1.1-11.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eurephia-admin-1.1.1-11.fc39.x86_64.rpm"]
+depends: [
+  "eurephia-sqlite3" {= "1.1.1"}
+  "glibc" 
+  "libxml2" 
+  "libxslt" 
+  "openssl-libs" 
+]
+extra-source "eurephia-admin-1.1.1-11.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/eurephia-admin-1.1.1-11.fc39.x86_64.rpm"
+}

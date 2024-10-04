@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-esptool-4.7.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-esptool-4.7.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-PyYAML" {>= "5.1"}
+  "python312-base" 
+  "python312-bitstring" {>= "3.1.6"}
+  "python312-cryptography" {>= "2.1.4"}
+  "python312-ecdsa" {>= "0.16.0"}
+  "python312-intelhex" 
+  "python312-pyserial" {>= "3.0"}
+  "python312-reedsolo" {>= "1.5.3"}
+  "update-alternatives" 
+]
+extra-source "python312-esptool-4.7.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-esptool-4.7.0-1.1.noarch.rpm"
+}

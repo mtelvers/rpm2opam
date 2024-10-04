@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openarc-1.0.0-0.18.Beta3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openarc-1.0.0-0.18.Beta3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "jansson" 
+  "libopenarc" {= "1.0.0"}
+  "openssl-libs" 
+  "sendmail-milter" 
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "openarc-1.0.0-0.18.Beta3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openarc-1.0.0-0.18.Beta3.fc40.x86_64.rpm"
+}

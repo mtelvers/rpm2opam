@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "Coin4-devel-4.0.2-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Coin4-devel-4.0.2-1.3.x86_64.rpm"]
+depends: [
+  "Mesa-dri-devel" 
+  "Mesa-libGL-devel" 
+  "fontconfig-devel" 
+  "freetype2-devel" 
+  "glu-devel" 
+  "libCoin80" {= "4.0.2"}
+  "libX11-devel" 
+  "libbz2-devel" 
+  "openal-soft-devel" 
+  "pkgconf-pkg-config" 
+  "zlib-devel" 
+]
+extra-source "Coin4-devel-4.0.2-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/Coin4-devel-4.0.2-1.3.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-contrib-opencensus-exporter-ocagent-devel-0.7.1-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-contrib-opencensus-exporter-ocagent-devel-0.7.1-16.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-census-instrumentation-opencensus-proto-devel-0-2" 
+  "golang-github-protobuf-devel" 
+  "golang-google-api-devel" 
+  "golang-google-grpc-devel" 
+  "golang-opencensus-devel" 
+]
+extra-source "golang-contrib-opencensus-exporter-ocagent-devel-0.7.1-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-contrib-opencensus-exporter-ocagent-devel-0.7.1-16.fc40.noarch.rpm"
+}

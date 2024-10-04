@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnuastro-devel-0.22-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnuastro-devel-0.22-1.3.x86_64.rpm"]
+depends: [
+  "cfitsio-devel" 
+  "gsl-devel" 
+  "libgit2-devel" 
+  "libgnuastro20" {= "0.22"}
+  "libjpeg62-devel" 
+  "libtiff-devel" 
+  "pkgconf-pkg-config" 
+  "wcslib-devel" 
+  "xz-devel" 
+]
+extra-source "gnuastro-devel-0.22-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnuastro-devel-0.22-1.3.x86_64.rpm"
+}

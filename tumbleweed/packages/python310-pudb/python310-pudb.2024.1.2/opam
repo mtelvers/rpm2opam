@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pudb-2024.1.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pudb-2024.1.2-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-Pygments" {>= "2.7.4"}
+  "python310-base" {= "3.10"}
+  "python310-jedi" {>= "0.18"}
+  "python310-packaging" {>= "20.0"}
+  "python310-urwid" {>= "2.4"}
+  "python310-urwid-readline" 
+  "update-alternatives" 
+]
+extra-source "python310-pudb-2024.1.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-pudb-2024.1.2-1.1.noarch.rpm"
+}

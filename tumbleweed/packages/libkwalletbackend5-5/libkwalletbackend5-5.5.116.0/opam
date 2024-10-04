@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libkwalletbackend5-5-5.116.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libkwalletbackend5-5-5.116.0-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libKF5I18n5" 
+  "libKF5Notifications5" 
+  "libKF5WidgetsAddons5" 
+  "libQt5Core5" 
+  "libgcrypt20" 
+  "libgpgmepp6" 
+  "libstdc++6" 
+]
+extra-source "libkwalletbackend5-5-5.116.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libkwalletbackend5-5-5.116.0-2.1.x86_64.rpm"
+}

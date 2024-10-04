@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libpng12-devel-1.2.57-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpng12-devel-1.2.57-20.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "libpng12" 
+  "pkgconf-pkg-config" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "libpng12-devel-1.2.57-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libpng12-devel-1.2.57-20.fc40.x86_64.rpm"
+}

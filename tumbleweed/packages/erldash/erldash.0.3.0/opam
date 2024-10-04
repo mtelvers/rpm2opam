@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "erldash-0.3.0+0-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "erldash-0.3.0+0-2.2.x86_64.rpm"]
+depends: [
+  "erlang" {>= "23.0"}
+  "glibc" 
+  "libgcc_s1" 
+]
+extra-source "erldash-0.3.0+0-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/erldash-0.3.0+0-2.2.x86_64.rpm"
+}

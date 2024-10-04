@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rhythmbox-3.4.7-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rhythmbox-3.4.7-4.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "brasero-libs" 
+  "cairo" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gobject-introspection" 
+  "grilo" 
+  "gstreamer1" 
+  "gstreamer1-plugins-base" 
+  "gstreamer1-plugins-good" 
+  "gtk3" {>= "3.20.0"}
+  "json-glib" 
+  "libX11" 
+  "libdmapsharing4" 
+  "libgcc" 
+  "libgpod" 
+  "libgudev" 
+  "libmtp" 
+  "libnotify" 
+  "libpeas1" 
+  "libpeas1-gtk" 
+  "libpeas1-loader-python3" 
+  "libsecret" {>= "0.18"}
+  "libsoup3" 
+  "libtdb" 
+  "libxml2" 
+  "media-player-info" 
+  "pango" 
+  "python3-gobject" 
+  "python3-mako" 
+  "totem-pl-parser" 
+]
+extra-source "rhythmbox-3.4.7-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rhythmbox-3.4.7-4.fc40.x86_64.rpm"
+}

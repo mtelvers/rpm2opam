@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xvinfo-1.1.5-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xvinfo-1.1.5-1.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXv1" 
+]
+extra-source "xvinfo-1.1.5-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xvinfo-1.1.5-1.6.x86_64.rpm"
+}

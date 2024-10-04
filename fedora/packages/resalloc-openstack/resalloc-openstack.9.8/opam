@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "resalloc-openstack-9.8-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "resalloc-openstack-9.8-1.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-cinderclient" 
+  "python3-glanceclient" 
+  "python3-keystoneauth1" 
+  "python3-neutronclient" 
+  "python3-novaclient" 
+]
+extra-source "resalloc-openstack-9.8-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/resalloc-openstack-9.8-1.fc40.noarch.rpm"
+}

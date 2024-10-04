@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-charset+default-devel-0.1.3-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-charset+default-devel-0.1.3-7.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-charset-devel" {= "0.1.3"}
+]
+extra-source "rust-charset+default-devel-0.1.3-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-charset+default-devel-0.1.3-7.fc40.noarch.rpm"
+}

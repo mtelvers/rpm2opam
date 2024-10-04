@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Email-MIME-Kit-3.000008-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Email-MIME-Kit-3.000008-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Email-MIME" {>= "1.930"}
+  "perl-Email-MessageID" {>= "1.400"}
+  "perl-Encode" 
+  "perl-File-Basename" 
+  "perl-JSON" {>= "2"}
+  "perl-Module-Runtime" 
+  "perl-Moose" {>= "0.65"}
+  "perl-PathTools" 
+  "perl-String-RewritePrefix" 
+  "perl-YAML-LibYAML" 
+  "perl-libs" {>= "5.20.0"}
+]
+extra-source "perl-Email-MIME-Kit-3.000008-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Email-MIME-Kit-3.000008-3.fc40.noarch.rpm"
+}

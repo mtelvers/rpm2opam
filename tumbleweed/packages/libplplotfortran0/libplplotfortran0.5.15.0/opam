@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libplplotfortran0-5.15.0-20.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libplplotfortran0-5.15.0-20.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libgfortran5" 
+  "libplplot17" 
+]
+extra-source "libplplotfortran0-5.15.0-20.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libplplotfortran0-5.15.0-20.2.x86_64.rpm"
+}

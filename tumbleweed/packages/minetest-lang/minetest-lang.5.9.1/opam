@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "minetest-lang-5.9.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "minetest-lang-5.9.1-1.1.noarch.rpm"]
+depends: [
+  "minetest" {= "5.9.1"}
+]
+extra-source "minetest-lang-5.9.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/minetest-lang-5.9.1-1.1.noarch.rpm"
+}

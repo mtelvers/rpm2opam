@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-python-box-7.2.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-python-box-7.2.0-1.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-msgpack" {>= "1.0.0"}
+  "python311-ruamel-yaml" {>= "0.17"}
+  "python311-toml" {>= "0.10.2"}
+]
+extra-source "python311-python-box-7.2.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-python-box-7.2.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-pdfbook2-svn53521-81.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-pdfbook2-svn53521-81.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "texlive-base" 
+  "texlive-kpathsea" 
+  "texlive-pdfcrop" 
+  "texlive-pdfjam" 
+]
+extra-source "texlive-pdfbook2-svn53521-81.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-pdfbook2-svn53521-81.fc40.noarch.rpm"
+}

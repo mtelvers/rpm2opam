@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-ORLite-Mirror-1.24-34.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-ORLite-Mirror-1.24-34.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-File-Copy" 
+  "perl-File-HomeDir" {>= "0.69"}
+  "perl-File-Path" {>= "2.4"}
+  "perl-File-Remove" {>= "1.42"}
+  "perl-File-ShareDir" {>= "1.0"}
+  "perl-IO-Compress" {>= "2.8"}
+  "perl-LWP-Online" {>= "1.7"}
+  "perl-ORLite" {>= "1.37"}
+  "perl-Params-Util" {>= "0.33"}
+  "perl-PathTools" {>= "0.80"}
+  "perl-libs" {>= "5.6.0"}
+  "perl-libwww-perl" {>= "5.806"}
+  "perl-vars" 
+]
+extra-source "perl-ORLite-Mirror-1.24-34.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-ORLite-Mirror-1.24-34.fc40.noarch.rpm"
+}

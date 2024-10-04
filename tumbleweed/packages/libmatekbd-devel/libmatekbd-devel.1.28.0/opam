@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmatekbd-devel-1.28.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmatekbd-devel-1.28.0-1.2.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.25.0"}
+  "gtk3-devel" {>= "3.22.0"}
+  "libmatekbd6" {= "1.28.0"}
+  "libmatekbdui6" {= "1.28.0"}
+  "libxklavier-devel" {>= "5.2"}
+  "matekbd-common" {= "1.28.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libmatekbd-devel-1.28.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmatekbd-devel-1.28.0-1.2.x86_64.rpm"
+}

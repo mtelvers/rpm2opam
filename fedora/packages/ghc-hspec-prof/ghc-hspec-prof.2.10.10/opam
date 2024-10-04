@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-hspec-prof-2.10.10-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hspec-prof-2.10.10-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-QuickCheck-prof" 
+  "ghc-base-prof" 
+  "ghc-hspec-core-prof" 
+  "ghc-hspec-devel" {= "2.10.10"}
+  "ghc-hspec-discover-prof" 
+  "ghc-hspec-expectations-prof" 
+]
+extra-source "ghc-hspec-prof-2.10.10-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-hspec-prof-2.10.10-3.fc40.x86_64.rpm"
+}

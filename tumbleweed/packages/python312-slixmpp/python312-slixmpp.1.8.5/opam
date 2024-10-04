@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-slixmpp-1.8.5-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-slixmpp-1.8.5-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libidn12" 
+  "python312-aiodns" 
+  "python312-aiohttp" 
+  "python312-base" {= "3.12"}
+  "python312-cryptography" 
+  "python312-pyasn1" 
+  "python312-pyasn1-modules" 
+]
+extra-source "python312-slixmpp-1.8.5-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-slixmpp-1.8.5-1.2.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gstreamer-plugin-python-1.24.8-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gstreamer-plugin-python-1.24.8-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgstreamer-1_0-0" 
+  "libpython3_11-1_0" 
+]
+extra-source "gstreamer-plugin-python-1.24.8-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gstreamer-plugin-python-1.24.8-1.1.x86_64.rpm"
+}

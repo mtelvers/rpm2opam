@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libtiger-devel-0.3.4-28.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libtiger-devel-0.3.4-28.fc40.x86_64.rpm"]
+depends: [
+  "libkate-devel" {>= "0.2.7"}
+  "libtiger" {= "0.3.4"}
+  "pango-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libtiger-devel-0.3.4-28.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libtiger-devel-0.3.4-28.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mkosi-initrd-tukit-24.3-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mkosi-initrd-tukit-24.3-2.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "mkosi" {= "24.3"}
+  "read-only-root-fs" 
+]
+extra-source "mkosi-initrd-tukit-24.3-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mkosi-initrd-tukit-24.3-2.1.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-virtualenv-clone-0.5.7-1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-virtualenv-clone-0.5.7-1.8.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-virtualenv" 
+  "update-alternatives" 
+]
+extra-source "python312-virtualenv-clone-0.5.7-1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-virtualenv-clone-0.5.7-1.8.noarch.rpm"
+}

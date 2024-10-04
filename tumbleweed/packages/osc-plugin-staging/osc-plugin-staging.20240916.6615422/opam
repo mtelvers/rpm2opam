@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "osc-plugin-staging-20240916.6615422-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "osc-plugin-staging-20240916.6615422-1.1.noarch.rpm"]
+depends: [
+  "osc" {>= "0.160.0"}
+  "osclib" {= "20240916.6615422"}
+]
+extra-source "osc-plugin-staging-20240916.6615422-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/osc-plugin-staging-20240916.6615422-1.1.noarch.rpm"
+}

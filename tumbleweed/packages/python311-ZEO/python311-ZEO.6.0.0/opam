@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-ZEO-6.0.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-ZEO-6.0.0-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-ZConfig" 
+  "python311-ZODB" {>= "5.5.1"}
+  "python311-base" 
+  "python311-persistent" {>= "4.1.0"}
+  "python311-transaction" {>= "2.0.3"}
+  "python311-zc-lockfile" 
+  "python311-zdaemon" 
+  "python311-zope-interface" 
+  "update-alternatives" 
+]
+extra-source "python311-ZEO-6.0.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-ZEO-6.0.0-1.2.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lazarus-lcl-gtk2-3.4-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lazarus-lcl-gtk2-3.4-1.3.x86_64.rpm"]
+depends: [
+  "gtk2-devel" 
+  "lazarus-lcl" {= "3.4"}
+]
+extra-source "lazarus-lcl-gtk2-3.4-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lazarus-lcl-gtk2-3.4-1.3.x86_64.rpm"
+}

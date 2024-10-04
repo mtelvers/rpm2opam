@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "playonlinux-4.4-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "playonlinux-4.4-10.fc40.x86_64.rpm"]
+depends: [
+  "ImageMagick" 
+  "bash" 
+  "cabextract" 
+  "curl" 
+  "gettext-runtime" 
+  "glibc" 
+  "gnupg2" 
+  "icoutils" 
+  "jq" 
+  "libX11" 
+  "libglvnd-glx" 
+  "nmap-ncat" 
+  "p7zip-plugins" 
+  "python3" 
+  "python3-natsort" 
+  "python3-wxpython4" 
+  "tar" 
+  "unzip" 
+  "wget2-wget" 
+  "wine" 
+  "xterm" 
+]
+extra-source "playonlinux-4.4-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/playonlinux-4.4-10.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dracut-transactional-update-4.8.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dracut-transactional-update-4.8.3-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "tukit" {= "4.8.3"}
+]
+extra-source "dracut-transactional-update-4.8.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dracut-transactional-update-4.8.3-1.1.noarch.rpm"
+}

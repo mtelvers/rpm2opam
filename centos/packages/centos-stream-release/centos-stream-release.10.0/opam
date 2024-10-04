@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "centos-stream-release-10.0-0.20.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "centos-stream-release-10.0-0.20.el10.noarch.rpm"]
+depends: [
+  "centos-stream-repos" 
+]
+extra-source "centos-stream-release-10.0-0.20.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/centos-stream-release-10.0-0.20.el10.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libfm-gtk2-devel-1.3.2^20230916git5346a539-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfm-gtk2-devel-1.3.2^20230916git5346a539-1.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "gtk2-devel" {>= "2.18.0"}
+  "libfm-devel" {>= "1.3.2"}
+  "libfm-gtk-devel-common" {= "1.3.2"}
+  "libfm-gtk2" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libfm-gtk2-devel-1.3.2^20230916git5346a539-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libfm-gtk2-devel-1.3.2^20230916git5346a539-1.fc40.x86_64.rpm"
+}

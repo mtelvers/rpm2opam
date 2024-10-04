@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "issue-generator-1.13-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "issue-generator-1.13-2.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+]
+extra-source "issue-generator-1.13-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/issue-generator-1.13-2.1.noarch.rpm"
+}

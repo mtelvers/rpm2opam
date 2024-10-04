@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ltris2-2.0.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ltris2-2.0.1-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libSDL2-2_0-0" 
+  "libSDL2_image-2_0-0" 
+  "libSDL2_mixer-2_0-0" 
+  "libSDL2_ttf-2_0-0" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "ltris2-2.0.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ltris2-2.0.1-1.1.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "f28-backgrounds-extras-gnome-28.1.5-11.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "f28-backgrounds-extras-gnome-28.1.5-11.fc39.noarch.rpm"]
+depends: [
+  "f28-backgrounds-extras-base" {= "28.1.5"}
+]
+extra-source "f28-backgrounds-extras-gnome-28.1.5-11.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/f28-backgrounds-extras-gnome-28.1.5-11.fc39.noarch.rpm"
+}

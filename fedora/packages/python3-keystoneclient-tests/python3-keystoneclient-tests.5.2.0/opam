@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-keystoneclient-tests-5.2.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-keystoneclient-tests-5.2.0-3.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-fixtures" 
+  "python3-keystoneclient" {= "5.2.0"}
+  "python3-lxml" 
+  "python3-mock" 
+  "python3-oauthlib" 
+  "python3-oslotest" 
+  "python3-requests-mock" 
+  "python3-stestr" 
+  "python3-testresources" 
+  "python3-testscenarios" 
+  "python3-testtools" 
+]
+extra-source "python3-keystoneclient-tests-5.2.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-keystoneclient-tests-5.2.0-3.fc40.noarch.rpm"
+}

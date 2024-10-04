@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-devtools-2.4.2-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-devtools-2.4.2-11.fc40.noarch.rpm"]
+depends: [
+  "R-callr" {>= "3.6.0"}
+  "R-cli" {>= "2.4.0"}
+  "R-core" {= "4.3"}
+  "R-desc" {>= "1.3.0"}
+  "R-ellipsis" {>= "0.3.1"}
+  "R-fs" {>= "1.5.0"}
+  "R-httr" {>= "1.4.2"}
+  "R-lifecycle" {>= "1.0.0"}
+  "R-memoise" {>= "2.0.0"}
+  "R-pkgbuild" {>= "1.2.0"}
+  "R-pkgload" {>= "1.2.1"}
+  "R-rcmdcheck" {>= "1.3.3"}
+  "R-remotes" {>= "2.3.0"}
+  "R-rlang" {>= "0.4.10"}
+  "R-roxygen2" {>= "7.1.1"}
+  "R-rstudioapi" {>= "0.13"}
+  "R-rversions" {>= "2.0.2"}
+  "R-sessioninfo" {>= "1.1.1"}
+  "R-testthat" {>= "3.0.2"}
+  "R-usethis" {>= "2.0.1"}
+  "R-withr" {>= "2.4.1"}
+]
+extra-source "R-devtools-2.4.2-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-devtools-2.4.2-11.fc40.noarch.rpm"
+}

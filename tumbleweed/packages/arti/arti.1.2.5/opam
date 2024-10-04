@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "arti-1.2.5~0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "arti-1.2.5~0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libsqlite3-0" 
+]
+extra-source "arti-1.2.5~0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/arti-1.2.5~0-1.1.x86_64.rpm"
+}

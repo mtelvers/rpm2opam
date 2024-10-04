@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-jaxb2-plugin-0.14.0-3.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-jaxb2-plugin-0.14.0-3.4.noarch.rpm"]
+depends: [
+  "apache-commons-lang3" 
+  "codemodel" 
+  "glassfish-activation" 
+  "glassfish-dtd-parser" 
+  "glassfish-fastinfoset" 
+  "glassfish-jaxb-api" 
+  "glassfish-jaxb-codemodel" 
+  "glassfish-jaxb-rngom" 
+  "glassfish-jaxb-runtime" 
+  "glassfish-jaxb-txw2" 
+  "glassfish-jaxb-xjc" 
+  "istack-commons-runtime" 
+  "istack-commons-tools" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "junit" 
+  "maven-lib" 
+  "maven-plugin-annotations" 
+  "plexus-build-api0" 
+  "plexus-utils" 
+  "slf4j" 
+  "stax-ex" 
+  "xml-commons-resolver" 
+  "xsom" 
+]
+extra-source "maven-jaxb2-plugin-0.14.0-3.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-jaxb2-plugin-0.14.0-3.4.noarch.rpm"
+}

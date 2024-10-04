@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libcutl-devel-1.10.0-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcutl-devel-1.10.0-29.fc40.x86_64.rpm"]
+depends: [
+  "libcutl" {= "1.10.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libcutl-devel-1.10.0-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libcutl-devel-1.10.0-29.fc40.x86_64.rpm"
+}

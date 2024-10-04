@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dita-1.1-84.20.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dita-1.1-84.20.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "gawk" 
+  "grep" 
+  "libxml2-tools" 
+  "sed" 
+  "sgml-skel" 
+]
+extra-source "dita-1.1-84.20.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dita-1.1-84.20.noarch.rpm"
+}

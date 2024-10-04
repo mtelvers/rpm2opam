@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "spack-0.22.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "spack-0.22.1-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "bzip2" 
+  "coreutils" 
+  "curl" 
+  "gawk" 
+  "gcc-c++" 
+  "gcc-fortran" 
+  "git" 
+  "gpg2" 
+  "gzip" 
+  "hwloc" 
+  "hwloc-devel" 
+  "libbz2-devel" 
+  "lsb-release" 
+  "make" 
+  "patch" 
+  "patchelf" 
+  "polkit" 
+  "python3-clingo" 
+  "spack-recipes" {= "0.22.1"}
+  "sudo" 
+  "system-user-nobody" 
+  "tar" 
+  "unzip" 
+  "xz" 
+  "zstd" 
+]
+extra-source "spack-0.22.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/spack-0.22.1-1.1.noarch.rpm"
+}

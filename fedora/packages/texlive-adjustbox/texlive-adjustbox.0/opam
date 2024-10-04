@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-adjustbox-svn64967-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-adjustbox-svn64967-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-collectbox" 
+  "texlive-graphics" 
+  "texlive-ifoddpage" 
+  "texlive-kpathsea" 
+  "texlive-pgf" 
+  "texlive-tools" 
+  "texlive-varwidth" 
+  "texlive-xkeyval" 
+]
+extra-source "texlive-adjustbox-svn64967-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-adjustbox-svn64967-71.fc40.noarch.rpm"
+}

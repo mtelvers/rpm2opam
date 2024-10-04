@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "chealpix-devel-3.82-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "chealpix-devel-3.82-1.3.x86_64.rpm"]
+depends: [
+  "cfitsio-devel" 
+  "libchealpix0" {= "3.82"}
+  "libsharp-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "chealpix-devel-3.82-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/chealpix-devel-3.82-1.3.x86_64.rpm"
+}

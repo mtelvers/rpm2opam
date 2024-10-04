@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pangomm-devel-2.46.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pangomm-devel-2.46.4-1.fc40.x86_64.rpm"]
+depends: [
+  "cairomm-devel" {>= "1.2.2"}
+  "glibmm2-4-devel" {>= "2.48.0"}
+  "pango-devel" {>= "1.45.1"}
+  "pangomm" 
+  "pkgconf-pkg-config" 
+]
+extra-source "pangomm-devel-2.46.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pangomm-devel-2.46.4-1.fc40.x86_64.rpm"
+}

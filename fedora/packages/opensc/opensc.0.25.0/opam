@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "opensc-0.25.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opensc-0.25.0-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "openssl-libs" 
+  "pcsc-lite" 
+  "pcsc-lite-libs" 
+  "readline" 
+  "zlib-ng-compat" 
+]
+extra-source "opensc-0.25.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/opensc-0.25.0-1.fc40.x86_64.rpm"
+}

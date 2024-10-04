@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nagios-4.5.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nagios-4.5.4-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "busybox-util-linux" 
+  "coreutils" 
+  "fillup" 
+  "glibc" 
+  "grep" 
+  "libopenssl3" 
+  "mailx" 
+  "permissions" 
+  "sed" 
+  "system-user-nagios" 
+]
+extra-source "nagios-4.5.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/nagios-4.5.4-1.1.x86_64.rpm"
+}

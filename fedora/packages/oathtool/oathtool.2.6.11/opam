@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "oathtool-2.6.11-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "oathtool-2.6.11-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "liboath" 
+]
+extra-source "oathtool-2.6.11-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/oathtool-2.6.11-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "foliate-3.1.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "foliate-3.1.0-3.fc40.noarch.rpm"]
+depends: [
+  "gjs" {>= "1.76"}
+  "hicolor-icon-theme" 
+  "libadwaita" {>= "1.4"}
+  "webkitgtk6-0" {>= "2.40.1"}
+]
+extra-source "foliate-3.1.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/foliate-3.1.0-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "apitrace-11.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apitrace-11.1-6.fc40.x86_64.rpm"]
+depends: [
+  "apitrace-libs" {= "11.1"}
+  "glibc" 
+  "libX11" 
+  "libbrotli" 
+  "libgcc" 
+  "libpng" 
+  "libstdc++" 
+  "python3-pillow" 
+  "snappy" 
+  "zlib-ng-compat" 
+]
+extra-source "apitrace-11.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/apitrace-11.1-6.fc40.x86_64.rpm"
+}

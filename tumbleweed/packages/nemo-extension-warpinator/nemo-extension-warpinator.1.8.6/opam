@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nemo-extension-warpinator-1.8.6-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nemo-extension-warpinator-1.8.6-1.1.noarch.rpm"]
+depends: [
+  "nemo" 
+  "python311-base" 
+  "warpinator" {= "1.8.6"}
+]
+extra-source "nemo-extension-warpinator-1.8.6-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nemo-extension-warpinator-1.8.6-1.1.noarch.rpm"
+}

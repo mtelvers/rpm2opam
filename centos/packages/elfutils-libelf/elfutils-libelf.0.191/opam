@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "elfutils-libelf-0.191-5.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "elfutils-libelf-0.191-5.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libzstd" 
+  "zlib-ng-compat" 
+]
+extra-source "elfutils-libelf-0.191-5.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/elfutils-libelf-0.191-5.el10.x86_64.rpm"
+}

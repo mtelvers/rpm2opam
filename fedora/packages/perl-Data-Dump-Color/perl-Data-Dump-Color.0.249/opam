@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Data-Dump-Color-0.249-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Data-Dump-Color-0.249-4.fc40.noarch.rpm"]
+depends: [
+  "perl-ColorThemeBase-Static" 
+  "perl-Data-Dump" 
+  "perl-Exporter" 
+  "perl-MIME-Base64" 
+  "perl-Term-ANSIColor" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.10.1"}
+  "perl-overload" 
+  "perl-parent" 
+  "perl-subs" 
+  "perl-vars" 
+]
+extra-source "perl-Data-Dump-Color-0.249-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Data-Dump-Color-0.249-4.fc40.noarch.rpm"
+}

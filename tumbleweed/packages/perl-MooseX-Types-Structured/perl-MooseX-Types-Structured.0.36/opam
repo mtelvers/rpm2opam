@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-Types-Structured-0.36-1.28.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Types-Structured-0.36-1.28.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Devel-PartialDump" {>= "0.13"}
+  "perl-Moose" 
+  "perl-MooseX-Types" {>= "0.22"}
+  "perl-Sub-Exporter" {>= "0.982"}
+  "perl-namespace-clean" {>= "0.19"}
+]
+extra-source "perl-MooseX-Types-Structured-0.36-1.28.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-Types-Structured-0.36-1.28.noarch.rpm"
+}

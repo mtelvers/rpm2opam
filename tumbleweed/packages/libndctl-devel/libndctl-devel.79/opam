@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libndctl-devel-79-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libndctl-devel-79-1.1.x86_64.rpm"]
+depends: [
+  "libndctl6" {= "79"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libndctl-devel-79-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libndctl-devel-79-1.1.x86_64.rpm"
+}

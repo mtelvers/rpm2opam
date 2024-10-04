@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-streebog0.9+std-devel-0.9.2-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-streebog0.9+std-devel-0.9.2-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-digest+std-devel" 
+  "rust-streebog0-9-devel" {= "0.9.2"}
+]
+extra-source "rust-streebog0.9+std-devel-0.9.2-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-streebog0.9+std-devel-0.9.2-6.fc40.noarch.rpm"
+}

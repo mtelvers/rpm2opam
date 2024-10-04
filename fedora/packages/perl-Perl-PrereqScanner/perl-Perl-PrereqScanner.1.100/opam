@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Perl-PrereqScanner-1.100-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Perl-PrereqScanner-1.100-4.fc40.noarch.rpm"]
+depends: [
+  "perl-CPAN-Meta-Requirements" {>= "2.124"}
+  "perl-Carp" 
+  "perl-File-Find" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" 
+  "perl-Getopt-Long-Descriptive" 
+  "perl-Module-Path" 
+  "perl-Moo" {>= "2.0"}
+  "perl-PPI" {>= "1.215"}
+  "perl-Params-Util" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-String-RewritePrefix" {>= "0.5"}
+  "perl-Type-Tiny" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-Perl-PrereqScanner-1.100-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Perl-PrereqScanner-1.100-4.fc40.noarch.rpm"
+}

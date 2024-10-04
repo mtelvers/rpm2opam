@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tigervnc-server-1.13.1-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tigervnc-server-1.13.1-12.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "gmp" 
+  "gnutls" 
+  "libX11" 
+  "libXdamage" 
+  "libXext" 
+  "libXfixes" 
+  "libXrandr" 
+  "libXtst" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libselinux" 
+  "libstdc++" 
+  "nettle" 
+  "pam-libs" 
+  "perl-interpreter" 
+  "pixman" 
+  "systemd" 
+  "tigervnc-selinux" 
+  "tigervnc-server-minimal" {= "1.13.1"}
+  "xorg-x11-xauth" 
+  "xorg-x11-xinit" 
+  "zlib-ng-compat" 
+]
+extra-source "tigervnc-server-1.13.1-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tigervnc-server-1.13.1-12.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "httpd-devel-2.4.58-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "httpd-devel-2.4.58-7.fc40.x86_64.rpm"]
+depends: [
+  "apr-devel" 
+  "apr-util-devel" 
+  "bash" 
+  "httpd-core" {= "2.4.58"}
+  "libtool" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "pkgconf-pkg-config" 
+]
+extra-source "httpd-devel-2.4.58-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/httpd-devel-2.4.58-7.fc40.x86_64.rpm"
+}

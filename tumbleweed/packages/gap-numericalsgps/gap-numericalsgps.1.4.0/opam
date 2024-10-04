@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-numericalsgps-1.4.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-numericalsgps-1.4.0-1.1.noarch.rpm"]
+depends: [
+  "gap" {>= "4.7"}
+]
+extra-source "gap-numericalsgps-1.4.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-numericalsgps-1.4.0-1.1.noarch.rpm"
+}

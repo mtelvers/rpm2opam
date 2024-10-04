@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "osbuild-composer-core-103-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "osbuild-composer-core-103-1.fc40.x86_64.rpm"]
+depends: [
+  "device-mapper-libs" 
+  "glibc" 
+  "gpgme" 
+  "libxcrypt" 
+  "osbuild-depsolve-dnf" {>= "109"}
+]
+extra-source "osbuild-composer-core-103-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/osbuild-composer-core-103-1.fc40.x86_64.rpm"
+}

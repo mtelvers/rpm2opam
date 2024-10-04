@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vim-plugin-gnupg-2.7.1-60.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vim-plugin-gnupg-2.7.1-60.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gpg2" 
+]
+extra-source "vim-plugin-gnupg-2.7.1-60.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/vim-plugin-gnupg-2.7.1-60.3.noarch.rpm"
+}

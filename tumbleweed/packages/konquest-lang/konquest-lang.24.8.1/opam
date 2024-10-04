@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "konquest-lang-24.08.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "konquest-lang-24.08.1-1.1.noarch.rpm"]
+depends: [
+  "konquest" {= "24.8.1"}
+]
+extra-source "konquest-lang-24.08.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/konquest-lang-24.08.1-1.1.noarch.rpm"
+}

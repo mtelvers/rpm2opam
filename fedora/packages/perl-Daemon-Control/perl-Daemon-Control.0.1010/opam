@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Daemon-Control-0.001010-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Daemon-Control-0.001010-16.fc40.noarch.rpm"]
+depends: [
+  "perl-File-Path" {>= "2.8"}
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-libs" {>= "5.8.1"}
+]
+extra-source "perl-Daemon-Control-0.001010-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Daemon-Control-0.001010-16.fc40.noarch.rpm"
+}

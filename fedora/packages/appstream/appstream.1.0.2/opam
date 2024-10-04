@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "appstream-1.0.2-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "appstream-1.0.2-2.fc40.x86_64.rpm"]
+depends: [
+  "appstream-data" 
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "libcurl" 
+  "libgcc" 
+  "libstemmer" 
+  "libxml2" 
+  "libxmlb" 
+  "libyaml" 
+  "libzstd" 
+  "systemd-libs" 
+]
+extra-source "appstream-1.0.2-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/appstream-1.0.2-2.fc40.x86_64.rpm"
+}

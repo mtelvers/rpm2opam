@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vectorscan-devel-5.4.11-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vectorscan-devel-5.4.11-1.1.x86_64.rpm"]
+depends: [
+  "libhs5-vectorscan5" {= "5.4.11"}
+  "pkgconf-pkg-config" 
+]
+extra-source "vectorscan-devel-5.4.11-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vectorscan-devel-5.4.11-1.1.x86_64.rpm"
+}

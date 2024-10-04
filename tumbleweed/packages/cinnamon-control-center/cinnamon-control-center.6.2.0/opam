@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cinnamon-control-center-6.2.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cinnamon-control-center-6.2.0-1.1.x86_64.rpm"]
+depends: [
+  "accountsservice" 
+  "adwaita-icon-theme" 
+  "cinnamon-control-center-common" {= "6.2.0"}
+  "cinnamon-settings-daemon" 
+  "desktop-data-openSUSE" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gnome-online-accounts" 
+  "libX11-6" 
+  "libcinnamon-control-center1" 
+  "libcinnamon-menu-3-0" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libnotify4" 
+  "libpango-1_0-0" 
+  "polkit-gnome" 
+]
+extra-source "cinnamon-control-center-6.2.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cinnamon-control-center-6.2.0-1.1.x86_64.rpm"
+}

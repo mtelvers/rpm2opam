@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kiwi-cli-10.0.11-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kiwi-cli-10.0.11-1.fc40.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "python3-kiwi" {= "10.0.11"}
+]
+extra-source "kiwi-cli-10.0.11-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kiwi-cli-10.0.11-1.fc40.noarch.rpm"
+}

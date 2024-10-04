@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maxima-exec-clisp-5.47.0-2.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maxima-exec-clisp-5.47.0-2.10.x86_64.rpm"]
+depends: [
+  "clisp" 
+  "glibc" 
+  "libffcall0" 
+  "libncurses6" 
+  "libreadline8" 
+  "libsigsegv2" 
+]
+extra-source "maxima-exec-clisp-5.47.0-2.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/maxima-exec-clisp-5.47.0-2.10.x86_64.rpm"
+}

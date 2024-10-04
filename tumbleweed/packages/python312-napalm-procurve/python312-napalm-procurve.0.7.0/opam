@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-napalm-procurve-0.7.0-6.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-napalm-procurve-0.7.0-6.7.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-napalm" {>= "3.0.0"}
+  "python312-netmiko" 
+]
+extra-source "python312-napalm-procurve-0.7.0-6.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-napalm-procurve-0.7.0-6.7.noarch.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Pipeline-3.12-48.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Pipeline-3.12-48.fc40.noarch.rpm"]
+depends: [
+  "perl-Class-ISA" {>= "0.1"}
+  "perl-Data-UUID" {>= "0.1"}
+  "perl-Error" {>= "0.15"}
+  "perl-IO" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" {>= "0.1"}
+  "perl-Storable" 
+  "perl-base" 
+  "perl-libs" 
+  "perl-threads" 
+]
+extra-source "perl-Pipeline-3.12-48.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Pipeline-3.12-48.fc40.noarch.rpm"
+}

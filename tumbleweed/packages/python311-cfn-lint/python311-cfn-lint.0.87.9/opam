@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-cfn-lint-0.87.9-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-cfn-lint-0.87.9-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "git-core" 
+  "python311-PyYAML" {>= "5.4"}
+  "python311-aws-sam-translator" {>= "1.89.0"}
+  "python311-base" 
+  "python311-jschema-to-python" {>= "1.2.3"}
+  "python311-jsonpatch" 
+  "python311-jsonschema" 
+  "python311-junit-xml" {>= "1.9"}
+  "python311-networkx" {>= "2.4"}
+  "python311-regex" 
+  "python311-sarif-om" {>= "1.0.4"}
+  "python311-sympy" {>= "1.0.0"}
+  "update-alternatives" 
+]
+extra-source "python311-cfn-lint-0.87.9-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-cfn-lint-0.87.9-1.2.noarch.rpm"
+}

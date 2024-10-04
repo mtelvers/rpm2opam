@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Text-ParseWords-tests-3.31-502.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Text-ParseWords-tests-3.31-502.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Scalar-List-Utils" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-Text-ParseWords" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Text-ParseWords-tests-3.31-502.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Text-ParseWords-tests-3.31-502.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-app_dirs2-devel-2.5.5-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-app_dirs2-devel-2.5.5-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-xdg+default-devel" 
+]
+extra-source "rust-app_dirs2-devel-2.5.5-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-app_dirs2-devel-2.5.5-1.fc40.noarch.rpm"
+}

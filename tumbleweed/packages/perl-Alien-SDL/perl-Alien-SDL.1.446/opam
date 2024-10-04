@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Alien-SDL-1.446-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Alien-SDL-1.446-5.2.x86_64.rpm"]
+depends: [
+  "perl" 
+  "perl-Capture-Tiny" 
+  "perl-File-ShareDir" {>= "1.0"}
+  "perl-File-Which" 
+  "perl-base" 
+]
+extra-source "perl-Alien-SDL-1.446-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-Alien-SDL-1.446-5.2.x86_64.rpm"
+}

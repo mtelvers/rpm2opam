@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gdl-devel-3.40.0-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdl-devel-3.40.0-4.1.x86_64.rpm"]
+depends: [
+  "gtk3-devel" 
+  "libgdl-3-5" {= "3.40.0"}
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Gdl-3" {= "3.40.0"}
+]
+extra-source "gdl-devel-3.40.0-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gdl-devel-3.40.0-4.1.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-assembly-plugin-javadoc-3.6.0-5.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-assembly-plugin-javadoc-3.6.0-5.3.noarch.rpm"]
+depends: [
+  "javapackages-filesystem" 
+]
+extra-source "maven-assembly-plugin-javadoc-3.6.0-5.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-assembly-plugin-javadoc-3.6.0-5.3.noarch.rpm"
+}

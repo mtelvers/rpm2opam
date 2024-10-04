@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vdirsyncer-0.19.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vdirsyncer-0.19.2-1.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-aiohttp-oauthlib" 
+  "python3-atomicwrites" {>= "0.1.7"}
+  "python3-click" {>= "5.0"}
+  "python3-click-log" {>= "0.4"}
+  "python3-click-threading" {>= "0.4.0"}
+  "python3-icalendar" 
+  "python3-lxml" {>= "3.1"}
+  "python3-requests" {>= "2.10"}
+  "python3-requests-toolbelt" {>= "0.4.0"}
+  "python3-vdirsyncer" {= "0.19.2"}
+  "sqlite" 
+]
+extra-source "vdirsyncer-0.19.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vdirsyncer-0.19.2-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtk-sharp-beans-devel-2.14.1-23.15.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk-sharp-beans-devel-2.14.1-23.15.x86_64.rpm"]
+depends: [
+  "glib-sharp2" 
+  "gtk-sharp-beans" {= "2.14.1"}
+  "gtk-sharp2" 
+  "pkgconf-pkg-config" 
+]
+extra-source "gtk-sharp-beans-devel-2.14.1-23.15.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gtk-sharp-beans-devel-2.14.1-23.15.x86_64.rpm"
+}

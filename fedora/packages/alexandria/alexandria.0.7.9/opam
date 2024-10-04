@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "alexandria-0.7.9-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "alexandria-0.7.9-7.fc40.noarch.rpm"]
+depends: [
+  "GConf2" 
+  "bash" 
+  "ruby-libs" 
+  "rubygem-gdk_pixbuf2" 
+  "rubygem-gettext" 
+  "rubygem-glib2" 
+  "rubygem-goocanvas" {>= "2"}
+  "rubygem-gstreamer" 
+  "rubygem-gtk3" 
+  "rubygem-htmlentities" 
+  "rubygem-image_size" 
+  "rubygem-marc" 
+  "rubygem-nokogiri" 
+  "rubygem-psych" 
+  "rubygem-rexml" 
+  "rubygem-syck" 
+  "rubygem-zoom" {>= "0.3.0"}
+  "rubypick" 
+]
+extra-source "alexandria-0.7.9-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/alexandria-0.7.9-7.fc40.noarch.rpm"
+}

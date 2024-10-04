@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "budgie-screensaver-5.1.0+0-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "budgie-screensaver-5.1.0+0-5.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libXxf86vm1" 
+  "libcairo2" 
+  "libdbus-1-3" 
+  "libdbus-glib-1-2" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgnome-desktop-3-20" 
+  "libgtk-3-0" 
+  "libsystemd0" 
+  "pam" 
+  "procps" 
+]
+extra-source "budgie-screensaver-5.1.0+0-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/budgie-screensaver-5.1.0+0-5.2.x86_64.rpm"
+}

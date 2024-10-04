@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fig2ps-1.5-24.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fig2ps-1.5-24.fc40.noarch.rpm"]
+depends: [
+  "ghostscript" 
+  "gv" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-PathTools" 
+  "perl-interpreter" 
+  "texlive-collection-latexrecommended" 
+  "texlive-dvips" 
+  "transfig" 
+]
+extra-source "fig2ps-1.5-24.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fig2ps-1.5-24.fc40.noarch.rpm"
+}

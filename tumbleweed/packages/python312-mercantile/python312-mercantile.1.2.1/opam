@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-mercantile-1.2.1-1.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-mercantile-1.2.1-1.11.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-click" {>= "3.0"}
+  "update-alternatives" 
+]
+extra-source "python312-mercantile-1.2.1-1.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-mercantile-1.2.1-1.11.noarch.rpm"
+}

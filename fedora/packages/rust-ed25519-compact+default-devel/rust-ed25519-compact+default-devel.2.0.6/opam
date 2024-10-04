@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ed25519-compact+default-devel-2.0.6-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ed25519-compact+default-devel-2.0.6-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-ed25519-compact+pem-devel" {= "2.0.6"}
+  "rust-ed25519-compact+random-devel" {= "2.0.6"}
+  "rust-ed25519-compact+std-devel" {= "2.0.6"}
+  "rust-ed25519-compact+x25519-devel" {= "2.0.6"}
+  "rust-ed25519-compact-devel" {= "2.0.6"}
+]
+extra-source "rust-ed25519-compact+default-devel-2.0.6-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ed25519-compact+default-devel-2.0.6-2.fc40.noarch.rpm"
+}

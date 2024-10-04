@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "icewm-minimal-session-3.4.6-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "icewm-minimal-session-3.4.6-1.fc40.noarch.rpm"]
+depends: [
+  "icewm" {= "3.4.6"}
+]
+extra-source "icewm-minimal-session-3.4.6-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/icewm-minimal-session-3.4.6-1.fc40.noarch.rpm"
+}

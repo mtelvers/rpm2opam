@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "uget-lang-2.2.3-3.19.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "uget-lang-2.2.3-3.19.noarch.rpm"]
+depends: [
+  "uget" {= "2.2.3"}
+]
+extra-source "uget-lang-2.2.3-3.19.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/uget-lang-2.2.3-3.19.noarch.rpm"
+}

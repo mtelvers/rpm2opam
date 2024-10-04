@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kdiagram-devel-2.8.0-1.25.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kdiagram-devel-2.8.0-1.25.x86_64.rpm"]
+depends: [
+  "libKChart2" {= "2.8.0"}
+  "libKGantt2" {= "2.8.0"}
+  "libQt5Core-devel" {>= "5.12.0"}
+  "libQt5PrintSupport-devel" {>= "5.12.0"}
+  "libQt5Widgets-devel" {>= "5.12.0"}
+  "libqt5-qtsvg-devel" {>= "5.12.0"}
+]
+extra-source "kdiagram-devel-2.8.0-1.25.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kdiagram-devel-2.8.0-1.25.x86_64.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "stardict-3.0.6-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "stardict-3.0.6-2.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libenchant1" 
+  "libespeak-ng1" 
+  "libgcc_s1" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+  "libsigc-2_0-0" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+]
+extra-source "stardict-3.0.6-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/stardict-3.0.6-2.2.x86_64.rpm"
+}

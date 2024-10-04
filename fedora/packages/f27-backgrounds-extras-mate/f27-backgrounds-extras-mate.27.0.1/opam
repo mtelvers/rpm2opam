@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "f27-backgrounds-extras-mate-27.0.1-13.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "f27-backgrounds-extras-mate-27.0.1-13.fc39.noarch.rpm"]
+depends: [
+  "f27-backgrounds-extras-base" {= "27.0.1"}
+]
+extra-source "f27-backgrounds-extras-mate-27.0.1-13.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/f27-backgrounds-extras-mate-27.0.1-13.fc39.noarch.rpm"
+}

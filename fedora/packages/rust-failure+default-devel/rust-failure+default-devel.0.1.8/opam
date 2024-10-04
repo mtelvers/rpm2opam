@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-failure+default-devel-0.1.8-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-failure+default-devel-0.1.8-11.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-failure+derive-devel" {= "0.1.8"}
+  "rust-failure+std-devel" {= "0.1.8"}
+  "rust-failure-devel" {= "0.1.8"}
+]
+extra-source "rust-failure+default-devel-0.1.8-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-failure+default-devel-0.1.8-11.fc40.noarch.rpm"
+}

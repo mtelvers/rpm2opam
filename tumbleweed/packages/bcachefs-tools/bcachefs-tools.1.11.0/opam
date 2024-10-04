@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bcachefs-tools-1.11.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bcachefs-tools-1.11.0-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "libaio1" 
+  "libblkid1" 
+  "libgcc_s1" 
+  "libkeyutils1" 
+  "liblz4-1" 
+  "libsodium26" 
+  "libudev-mini1" 
+  "liburcu8" 
+  "libuuid1" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+  "python311-base" 
+]
+extra-source "bcachefs-tools-1.11.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/bcachefs-tools-1.11.0-1.1.x86_64.rpm"
+}

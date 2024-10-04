@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-referencing-0.35.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-referencing-0.35.1-1.1.noarch.rpm"]
+depends: [
+  "python312-attrs" {>= "22.2.0"}
+  "python312-base" {= "3.12"}
+  "python312-rpds-py" {>= "0.7.0"}
+]
+extra-source "python312-referencing-0.35.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-referencing-0.35.1-1.1.noarch.rpm"
+}

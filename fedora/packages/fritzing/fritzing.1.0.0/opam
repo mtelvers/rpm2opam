@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fritzing-1.0.0-4.20230425.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fritzing-1.0.0-4.20230425.fc40.x86_64.rpm"]
+depends: [
+  "electronics-menu" 
+  "fritzing-parts" {= "1.0.0"}
+  "glibc" 
+  "google-droid-sans-fonts" 
+  "google-droid-sans-mono-fonts" 
+  "libgcc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtserialport" 
+  "qt5-qtsvg" 
+  "quazip-qt5" 
+]
+extra-source "fritzing-1.0.0-4.20230425.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fritzing-1.0.0-4.20230425.fc40.x86_64.rpm"
+}

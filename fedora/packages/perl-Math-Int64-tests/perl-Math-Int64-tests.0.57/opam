@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Math-Int64-tests-0.57-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Math-Int64-tests-0.57-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "perl-Math-Int64" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" {>= "0.88"}
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Math-Int64-tests-0.57-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Math-Int64-tests-0.57-1.fc40.x86_64.rpm"
+}

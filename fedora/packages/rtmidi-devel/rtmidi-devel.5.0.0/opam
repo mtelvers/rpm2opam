@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rtmidi-devel-5.0.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rtmidi-devel-5.0.0-4.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib-devel" 
+  "bash" 
+  "jack-audio-connection-kit-devel" 
+  "pkgconf-pkg-config" 
+  "rtmidi" 
+]
+extra-source "rtmidi-devel-5.0.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rtmidi-devel-5.0.0-4.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "initscripts-service-10.21-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "initscripts-service-10.21-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "filesystem" {>= "3"}
+  "gawk" 
+  "systemd" 
+]
+extra-source "initscripts-service-10.21-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/initscripts-service-10.21-1.fc40.noarch.rpm"
+}

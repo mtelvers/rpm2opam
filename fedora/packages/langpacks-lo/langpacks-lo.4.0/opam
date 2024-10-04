@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "langpacks-lo-4.0-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "langpacks-lo-4.0-12.fc40.noarch.rpm"]
+depends: [
+  "langpacks-core-lo" 
+  "langpacks-fonts-lo" 
+]
+extra-source "langpacks-lo-4.0-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/langpacks-lo-4.0-12.fc40.noarch.rpm"
+}

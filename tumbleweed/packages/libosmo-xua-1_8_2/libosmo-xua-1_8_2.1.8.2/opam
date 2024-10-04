@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libosmo-xua-1_8_2-1.8.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libosmo-xua-1_8_2-1.8.2-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libosmocore21" 
+  "libtalloc2" 
+]
+extra-source "libosmo-xua-1_8_2-1.8.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libosmo-xua-1_8_2-1.8.2-1.1.x86_64.rpm"
+}

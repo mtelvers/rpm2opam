@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "modem-manager-gui-mm-ModemManager-0.0.20-13.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "modem-manager-gui-mm-ModemManager-0.0.20-13.fc40.x86_64.rpm"]
+depends: [
+  "ModemManager" {>= "0.7.0"}
+  "gdbm-libs" 
+  "glib2" 
+  "glibc" 
+]
+extra-source "modem-manager-gui-mm-ModemManager-0.0.20-13.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/modem-manager-gui-mm-ModemManager-0.0.20-13.fc40.x86_64.rpm"
+}

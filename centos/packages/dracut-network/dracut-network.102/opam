@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dracut-network-102-3.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dracut-network-102-3.el10.x86_64.rpm"]
+depends: [
+  "NetworkManager" {>= "1.20"}
+  "bash" 
+  "dracut" {= "102"}
+  "iproute" 
+  "iputils" 
+  "jq" 
+]
+extra-source "dracut-network-102-3.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/dracut-network-102-3.el10.x86_64.rpm"
+}

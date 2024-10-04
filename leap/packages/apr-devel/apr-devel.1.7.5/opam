@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "apr-devel-1.7.5-slfo.1.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apr-devel-1.7.5-slfo.1.1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "libapr1-0" {= "1.7.5"}
+  "pkgconf-pkg-config" 
+]
+extra-source "apr-devel-1.7.5-slfo.1.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/apr-devel-1.7.5-slfo.1.1.1.x86_64.rpm"
+}

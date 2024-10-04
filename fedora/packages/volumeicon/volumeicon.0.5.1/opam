@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "volumeicon-0.5.1-15.20230208gitb034dd1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "volumeicon-0.5.1-15.20230208gitb034dd1.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "cairo" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" {>= "2.38.9000"}
+  "gtk3" 
+  "libX11" 
+  "libnotify" 
+  "pavucontrol" 
+]
+extra-source "volumeicon-0.5.1-15.20230208gitb034dd1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/volumeicon-0.5.1-15.20230208gitb034dd1.fc40.x86_64.rpm"
+}

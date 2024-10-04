@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Authen-SASL-Cyrus-0.13-12.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Authen-SASL-Cyrus-0.13-12.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libsasl2-3" 
+  "perl" 
+  "perl-Authen-SASL" 
+]
+extra-source "perl-Authen-SASL-Cyrus-0.13-12.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-Authen-SASL-Cyrus-0.13-12.3.x86_64.rpm"
+}

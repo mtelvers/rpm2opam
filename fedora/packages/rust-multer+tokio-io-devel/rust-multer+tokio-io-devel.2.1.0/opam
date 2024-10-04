@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-multer+tokio-io-devel-2.1.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-multer+tokio-io-devel-2.1.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-multer+tokio-devel" {= "2.1.0"}
+  "rust-multer+tokio-util-devel" {= "2.1.0"}
+  "rust-multer-devel" {= "2.1.0"}
+]
+extra-source "rust-multer+tokio-io-devel-2.1.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-multer+tokio-io-devel-2.1.0-3.fc40.noarch.rpm"
+}

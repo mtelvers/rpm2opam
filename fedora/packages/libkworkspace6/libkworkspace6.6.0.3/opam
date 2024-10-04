@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libkworkspace6-6.0.3-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libkworkspace6-6.0.3-2.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf6-kconfig" 
+  "kf6-kcoreaddons" 
+  "kf6-ki18n" 
+  "kf6-kpackage" 
+  "kf6-kservice" 
+  "kf6-kwindowsystem" 
+  "libXau" 
+  "libplasma" 
+  "libstdc++" 
+  "libwayland-client" 
+  "libxcb" 
+  "plasma-workspace-common" {= "6.0.3"}
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qt6-qtwayland" 
+]
+extra-source "libkworkspace6-6.0.3-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libkworkspace6-6.0.3-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-Unit-0.25-49.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Unit-0.25-49.fc40.noarch.rpm"]
+depends: [
+  "perl-Benchmark" 
+  "perl-Carp" 
+  "perl-Class-Inner" 
+  "perl-Data-Dumper" 
+  "perl-Devel-Symdump" 
+  "perl-Error" 
+  "perl-FileHandle" 
+  "perl-Getopt-Long" 
+  "perl-Tk" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.2.0"}
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-Test-Unit-0.25-49.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-Unit-0.25-49.fc40.noarch.rpm"
+}

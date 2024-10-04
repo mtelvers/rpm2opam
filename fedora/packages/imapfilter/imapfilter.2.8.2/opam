@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "imapfilter-2.8.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "imapfilter-2.8.2-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "lua-libs" 
+  "openssl-libs" 
+  "pcre2" 
+]
+extra-source "imapfilter-2.8.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/imapfilter-2.8.2-3.fc40.x86_64.rpm"
+}

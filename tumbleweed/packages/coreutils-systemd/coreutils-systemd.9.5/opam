@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "coreutils-systemd-9.5-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coreutils-systemd-9.5-4.1.x86_64.rpm"]
+depends: [
+  "coreutils" {= "9.5"}
+  "glibc" 
+  "libsystemd0" 
+]
+extra-source "coreutils-systemd-9.5-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/coreutils-systemd-9.5-4.1.x86_64.rpm"
+}

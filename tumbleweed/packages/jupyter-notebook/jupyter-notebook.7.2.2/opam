@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jupyter-notebook-7.2.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jupyter-notebook-7.2.2-1.1.noarch.rpm"]
+depends: [
+  "python310-notebook" {= "7.2.2"}
+]
+extra-source "jupyter-notebook-7.2.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jupyter-notebook-7.2.2-1.1.noarch.rpm"
+}

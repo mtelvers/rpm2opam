@@ -1,0 +1,39 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-mitmproxy-10.2.2-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-mitmproxy-10.2.2-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-Brotli" {>= "1.0"}
+  "python310-Flask" {>= "1.1.1"}
+  "python310-aioquic" {>= "0.9.4"}
+  "python310-asgiref" {>= "3.2.10"}
+  "python310-base" 
+  "python310-certifi" {>= "2019.9.11"}
+  "python310-click" {>= "7.0"}
+  "python310-cryptography" {>= "38.0"}
+  "python310-h11" {>= "0.11"}
+  "python310-h2" {>= "4.1"}
+  "python310-hyperframe" {>= "6.0"}
+  "python310-kaitaistruct" {>= "0.10"}
+  "python310-ldap3" {>= "2.8"}
+  "python310-mitmproxy-rs" {>= "0.5.1"}
+  "python310-mitmproxy-wireguard" {>= "0.1.6"}
+  "python310-msgpack" {>= "1.0.0"}
+  "python310-passlib" {>= "1.6.5"}
+  "python310-protobuf" {>= "3.14"}
+  "python310-publicsuffix2" {>= "2.20190812"}
+  "python310-pyOpenSSL" {>= "22.1"}
+  "python310-pyparsing" {>= "2.4.2"}
+  "python310-pyperclip" {>= "1.6.0"}
+  "python310-ruamel-yaml" {>= "0.16"}
+  "python310-sortedcontainers" {>= "2.3"}
+  "python310-tornado" {>= "6.1"}
+  "python310-typing_extensions" {>= "4.3"}
+  "python310-urwid" {>= "2.1.1"}
+  "python310-wsproto" {>= "1.0"}
+  "python310-zstandard" {>= "0.11"}
+  "update-alternatives" 
+]
+extra-source "python310-mitmproxy-10.2.2-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-mitmproxy-10.2.2-1.2.noarch.rpm"
+}

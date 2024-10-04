@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw32-libglade2-static-2.6.4-38.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw32-libglade2-static-2.6.4-38.fc40.noarch.rpm"]
+depends: [
+  "mingw32-libglade2" {= "2.6.4"}
+]
+extra-source "mingw32-libglade2-static-2.6.4-38.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw32-libglade2-static-2.6.4-38.fc40.noarch.rpm"
+}

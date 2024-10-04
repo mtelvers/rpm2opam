@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lv2-c++-tools-devel-1.0.5-21.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lv2-c++-tools-devel-1.0.5-21.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "boost-system" 
+  "glibc" 
+  "gtkmm2-4-devel" {>= "2.6.0"}
+  "libgcc" 
+  "libstdc++" 
+  "lv2-c++-tools" 
+  "pkgconf-pkg-config" 
+]
+extra-source "lv2-c++-tools-devel-1.0.5-21.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lv2-c++-tools-devel-1.0.5-21.fc40.x86_64.rpm"
+}

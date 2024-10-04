@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-users-5.0.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-users-5.0.2-1.1.x86_64.rpm"]
+depends: [
+  "cracklib" 
+  "glibc" 
+  "libcrack2" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "perl-Digest-SHA1" 
+  "perl-X500-DN" 
+  "perl-base" 
+  "perl-gettext" 
+  "yast2" {>= "5.0.9"}
+  "yast2-core" 
+  "yast2-country" 
+  "yast2-ldap" {>= "5.0.0"}
+  "yast2-pam" {>= "5.0.0"}
+  "yast2-perl-bindings" {>= "5.0.4"}
+  "yast2-ruby-bindings" {>= "5.0.0"}
+  "yast2-security" {>= "5.0.1"}
+]
+extra-source "yast2-users-5.0.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/yast2-users-5.0.2-1.1.x86_64.rpm"
+}

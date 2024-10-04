@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "caribou-0.4.21-38.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "caribou-0.4.21-38.fc40.x86_64.rpm"]
+depends: [
+  "at-spi2-core" 
+  "bash" 
+  "cairo" 
+  "cairo-gobject" 
+  "caribou-gtk3-module" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gobject-introspection" 
+  "gtk3" 
+  "harfbuzz" 
+  "libX11" 
+  "libXtst" 
+  "libgee" 
+  "libwayland-server" 
+  "libxklavier" 
+  "libxml2" 
+  "pango" 
+  "python3-caribou" {= "0.4.21"}
+  "zlib-ng-compat" 
+]
+extra-source "caribou-0.4.21-38.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/caribou-0.4.21-38.fc40.x86_64.rpm"
+}

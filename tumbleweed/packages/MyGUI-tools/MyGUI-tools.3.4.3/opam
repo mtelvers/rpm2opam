@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "MyGUI-tools-3.4.3-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "MyGUI-tools-3.4.3-1.4.x86_64.rpm"]
+depends: [
+  "MyGUI" {= "3.4.3"}
+  "MyGUI-devel" 
+  "bash" 
+  "glibc" 
+  "libMyGUICommon3_4_3" 
+  "libMyGUIEngine3_4_3" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "MyGUI-tools-3.4.3-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/MyGUI-tools-3.4.3-1.4.x86_64.rpm"
+}

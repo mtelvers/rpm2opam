@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-Roo-1.004-26.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Roo-1.004-26.fc40.noarch.rpm"]
+depends: [
+  "perl-Moo" 
+  "perl-MooX-Types-MooseLike" 
+  "perl-Sub-Install" 
+  "perl-Test-Simple" {>= "0.96"}
+  "perl-libs" {>= "5.8.1"}
+  "perl-strictures" 
+]
+extra-source "perl-Test-Roo-1.004-26.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-Roo-1.004-26.fc40.noarch.rpm"
+}

@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "subscription-manager-1.30.2-1.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "subscription-manager-1.30.2-1.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dmidecode" 
+  "glib2" 
+  "glibc" 
+  "iproute" 
+  "libdnf-plugin-subscription-manager" {= "1.30.2"}
+  "python3" 
+  "python3-cloud-what" {= "1.30.2"}
+  "python3-dateutil" 
+  "python3-dbus" 
+  "python3-decorator" 
+  "python3-dnf" 
+  "python3-dnf-plugins-core" 
+  "python3-gobject-base" 
+  "python3-iniparse" 
+  "python3-inotify" 
+  "python3-librepo" 
+  "python3-subscription-manager-rhsm" {= "1.30.2"}
+  "subscription-manager-rhsm-certificates" 
+  "systemd" 
+  "usermode" 
+  "virt-what" 
+]
+extra-source "subscription-manager-1.30.2-1.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/subscription-manager-1.30.2-1.el10.x86_64.rpm"
+}

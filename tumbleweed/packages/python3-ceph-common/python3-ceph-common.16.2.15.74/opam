@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-ceph-common-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-ceph-common-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm"]
+depends: [
+  "python311-PyYAML" 
+  "python311-base" {= "3.11"}
+]
+extra-source "python3-ceph-common-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python3-ceph-common-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm"
+}

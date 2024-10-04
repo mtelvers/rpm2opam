@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kst-fits-2.0.8-50.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kst-fits-2.0.8-50.fc40.x86_64.rpm"]
+depends: [
+  "cfitsio" {= "4.4.0"}
+  "glibc" 
+  "kst" {= "2.0.8"}
+  "libgcc" 
+  "libstdc++" 
+  "qt" 
+]
+extra-source "kst-fits-2.0.8-50.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kst-fits-2.0.8-50.fc40.x86_64.rpm"
+}

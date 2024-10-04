@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libgxps-0.3.2-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgxps-0.3.2-8.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "freetype" 
+  "glib2" 
+  "glibc" 
+  "lcms2" 
+  "libarchive" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libtiff" 
+]
+extra-source "libgxps-0.3.2-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libgxps-0.3.2-8.fc40.x86_64.rpm"
+}

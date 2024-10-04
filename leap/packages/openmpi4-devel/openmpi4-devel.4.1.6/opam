@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openmpi4-devel-4.1.6-slfo.1.1.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openmpi4-devel-4.1.6-slfo.1.1.9.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libstdc++-build-devel" 
+  "openmpi4" {= "4.1.6"}
+  "openmpi4-libs" 
+  "rdma-core-devel" 
+]
+extra-source "openmpi4-devel-4.1.6-slfo.1.1.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/openmpi4-devel-4.1.6-slfo.1.1.9.x86_64.rpm"
+}

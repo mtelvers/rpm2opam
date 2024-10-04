@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fltk-devel-static-1.3.9-2.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fltk-devel-static-1.3.9-2.4.x86_64.rpm"]
+depends: [
+  "fltk-devel" {= "1.3.9"}
+  "libfltk1_3" {= "1.3.9"}
+]
+extra-source "fltk-devel-static-1.3.9-2.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/fltk-devel-static-1.3.9-2.4.x86_64.rpm"
+}

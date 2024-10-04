@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "noson-app-5.4.0-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "noson-app-5.4.0-1.7.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Network5" 
+  "libQt5QuickControls2-5" 
+  "libQtQuick5" 
+  "libgcc_s1" 
+  "libnoson2" 
+  "libstdc++6" 
+]
+extra-source "noson-app-5.4.0-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/noson-app-5.4.0-1.7.x86_64.rpm"
+}

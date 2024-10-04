@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libXi-devel-1.8.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libXi-devel-1.8.1-5.fc40.x86_64.rpm"]
+depends: [
+  "libX11-devel" 
+  "libXext-devel" 
+  "libXfixes-devel" 
+  "libXi" {= "1.8.1"}
+  "pkgconf-pkg-config" 
+  "xorg-x11-proto-devel" 
+]
+extra-source "libXi-devel-1.8.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libXi-devel-1.8.1-5.fc40.x86_64.rpm"
+}

@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-lt3graph-2024.216.0.0.1.9svn45913-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-lt3graph-2024.216.0.0.1.9svn45913-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-etoolbox" 
+  "texlive-filecontents" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-l3kernel" 
+  "texlive-l3packages" 
+  "texlive-latex" 
+  "texlive-listings" 
+  "texlive-marginnote" 
+  "texlive-mdframed" 
+  "texlive-needspace" 
+  "texlive-noindentafter" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-withargs" 
+  "texlive-xcolor" 
+]
+extra-source "texlive-lt3graph-2024.216.0.0.1.9svn45913-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-lt3graph-2024.216.0.0.1.9svn45913-55.1.noarch.rpm"
+}

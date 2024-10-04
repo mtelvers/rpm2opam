@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "infinoted-0.7.2-4.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "infinoted-0.7.2-4.11.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libdaemon0" 
+  "libgnutls30" 
+  "libinfinity-0_7-0" 
+  "libxml2-2" 
+  "pam" 
+]
+extra-source "infinoted-0.7.2-4.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/infinoted-0.7.2-4.11.x86_64.rpm"
+}

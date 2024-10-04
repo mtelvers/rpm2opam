@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CBOR-XS-1.87-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CBOR-XS-1.87-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-Exporter" 
+  "perl-Math-BigInt" 
+  "perl-Time-Piece" 
+  "perl-Types-Serialiser" 
+  "perl-URI" 
+  "perl-common-sense" 
+  "perl-libs" 
+]
+extra-source "perl-CBOR-XS-1.87-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CBOR-XS-1.87-3.fc40.x86_64.rpm"
+}

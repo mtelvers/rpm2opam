@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sysprof-cli-46.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sysprof-cli-46.0-1.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "json-glib" 
+  "kernel-tools" 
+  "libdex" 
+  "libgcc" 
+  "libstdc++" 
+  "libsysprof" {= "46.0"}
+  "polkit-libs" 
+  "systemd-libs" 
+]
+extra-source "sysprof-cli-46.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sysprof-cli-46.0-1.fc40.x86_64.rpm"
+}

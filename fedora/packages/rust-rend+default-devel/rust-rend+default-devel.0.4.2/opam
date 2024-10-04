@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rend+default-devel-0.4.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rend+default-devel-0.4.2-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-rend+std-devel" {= "0.4.2"}
+  "rust-rend-devel" {= "0.4.2"}
+]
+extra-source "rust-rend+default-devel-0.4.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rend+default-devel-0.4.2-1.fc40.noarch.rpm"
+}

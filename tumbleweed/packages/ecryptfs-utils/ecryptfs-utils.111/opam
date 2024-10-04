@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ecryptfs-utils-111-9.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ecryptfs-utils-111-9.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "kernel-debug" 
+  "libecryptfs1" 
+  "libkeyutils1" 
+  "libopenssl3" 
+  "libpkcs11-helper1" 
+  "libtspi1" 
+  "pam" 
+  "pam-config" 
+  "permissions" 
+]
+extra-source "ecryptfs-utils-111-9.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ecryptfs-utils-111-9.1.x86_64.rpm"
+}

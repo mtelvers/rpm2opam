@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hw-probe-1.6.5-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hw-probe-1.6.5-4.fc40.noarch.rpm"]
+depends: [
+  "curl" 
+  "hdparm" 
+  "hwinfo" 
+  "lm_sensors" 
+  "pciutils" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-PathTools" 
+  "perl-interpreter" 
+  "perl-libwww-perl" 
+  "smartmontools" 
+  "sysstat" 
+  "usbutils" 
+  "util-linux" 
+]
+extra-source "hw-probe-1.6.5-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hw-probe-1.6.5-4.fc40.noarch.rpm"
+}

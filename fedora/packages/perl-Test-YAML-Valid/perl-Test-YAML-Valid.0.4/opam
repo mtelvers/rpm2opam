@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-YAML-Valid-0.04-42.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-YAML-Valid-0.04-42.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-Test-Simple" 
+  "perl-YAML" {>= "0.60"}
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-Test-YAML-Valid-0.04-42.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-YAML-Valid-0.04-42.fc40.noarch.rpm"
+}

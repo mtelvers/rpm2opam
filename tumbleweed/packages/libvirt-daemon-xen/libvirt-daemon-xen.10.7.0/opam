@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvirt-daemon-xen-10.7.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvirt-daemon-xen-10.7.0-1.1.x86_64.rpm"]
+depends: [
+  "libvirt-daemon-driver-libxl" {= "10.7.0"}
+  "libvirt-daemon-driver-network" {= "10.7.0"}
+  "libvirt-daemon-driver-nodedev" {= "10.7.0"}
+  "libvirt-daemon-driver-nwfilter" {= "10.7.0"}
+  "libvirt-daemon-driver-secret" {= "10.7.0"}
+  "libvirt-daemon-driver-storage" {= "10.7.0"}
+  "libvirt-daemon-lock" {= "10.7.0"}
+  "libvirt-daemon-plugin-lockd" {= "10.7.0"}
+  "xen" 
+]
+extra-source "libvirt-daemon-xen-10.7.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libvirt-daemon-xen-10.7.0-1.1.x86_64.rpm"
+}

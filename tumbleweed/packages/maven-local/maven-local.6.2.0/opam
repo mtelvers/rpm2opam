@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-local-6.2.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-local-6.2.0-1.3.noarch.rpm"]
+depends: [
+  "javapackages-local" {>= "6.2.0"}
+  "javapackages-tools" {>= "6.2.0"}
+  "maven-compiler-plugin" 
+  "maven-jar-plugin" 
+  "maven-resources-plugin" 
+  "maven-surefire-plugin" 
+  "xmvn-connector" 
+  "xmvn-install" 
+  "xmvn-minimal" 
+  "xmvn-mojo" 
+  "xmvn-resolve" 
+]
+extra-source "maven-local-6.2.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-local-6.2.0-1.3.noarch.rpm"
+}

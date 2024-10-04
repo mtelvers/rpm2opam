@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sane-backends-devel-1.2.1-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sane-backends-devel-1.2.1-8.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "libieee1284-devel" 
+  "libjpeg-turbo-devel" 
+  "libtiff-devel" 
+  "libusb1-devel" 
+  "pkgconf-pkg-config" 
+  "sane-backends" {= "1.2.1"}
+  "sane-backends-drivers-cameras" {= "1.2.1"}
+  "sane-backends-drivers-scanners" {= "1.2.1"}
+  "sane-backends-libs" 
+]
+extra-source "sane-backends-devel-1.2.1-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sane-backends-devel-1.2.1-8.fc40.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bscalc-2.10-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bscalc-2.10-2.1.noarch.rpm"]
+depends: [
+  "libbytesize1" {= "2.10"}
+  "python311-base" 
+]
+extra-source "bscalc-2.10-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/bscalc-2.10-2.1.noarch.rpm"
+}

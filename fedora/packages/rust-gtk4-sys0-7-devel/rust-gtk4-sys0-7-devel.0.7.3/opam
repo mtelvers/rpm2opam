@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gtk4-sys0.7-devel-0.7.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gtk4-sys0.7-devel-0.7.3-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "gtk4-devel" {>= "4.0.0"}
+  "rust" {>= "1.70"}
+  "rust-cairo-sys-rs+default-devel" 
+  "rust-gdk-pixbuf-sys+default-devel" 
+  "rust-gdk4-sys+default-devel" 
+  "rust-gio-sys+default-devel" 
+  "rust-glib-sys+default-devel" 
+  "rust-gobject-sys+default-devel" 
+  "rust-graphene-sys+default-devel" 
+  "rust-gsk4-sys+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-pango-sys+default-devel" 
+  "rust-system-deps+default-devel" 
+]
+extra-source "rust-gtk4-sys0.7-devel-0.7.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gtk4-sys0.7-devel-0.7.3-1.fc40.noarch.rpm"
+}

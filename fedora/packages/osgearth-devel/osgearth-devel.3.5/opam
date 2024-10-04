@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "osgearth-devel-3.5-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "osgearth-devel-3.5-4.fc40.x86_64.rpm"]
+depends: [
+  "OpenSceneGraph-devel" 
+  "cmake-filesystem" 
+  "osgearth" 
+]
+extra-source "osgearth-devel-3.5-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/osgearth-devel-3.5-4.fc40.x86_64.rpm"
+}

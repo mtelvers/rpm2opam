@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cedilla-0.7-7.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cedilla-0.7-7.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "clisp" 
+  "ghostscript-fonts-std" 
+  "texlive" 
+  "xorg-x11-fonts" 
+]
+extra-source "cedilla-0.7-7.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cedilla-0.7-7.2.noarch.rpm"
+}

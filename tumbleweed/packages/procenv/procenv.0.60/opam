@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "procenv-0.60-1.14.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "procenv-0.60-1.14.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcap2" 
+  "libnuma1" 
+]
+extra-source "procenv-0.60-1.14.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/procenv-0.60-1.14.x86_64.rpm"
+}

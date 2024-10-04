@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "NsCDE-2.2-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "NsCDE-2.2-2.6.x86_64.rpm"]
+depends: [
+  "fvwm2" 
+  "glibc" 
+  "ksh" 
+  "libX11-6" 
+  "libXext6" 
+  "libXpm4" 
+  "python311-base" 
+]
+extra-source "NsCDE-2.2-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/NsCDE-2.2-2.6.x86_64.rpm"
+}

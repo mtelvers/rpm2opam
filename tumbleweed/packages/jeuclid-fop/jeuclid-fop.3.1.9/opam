@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jeuclid-fop-3.1.9-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jeuclid-fop-3.1.9-3.2.noarch.rpm"]
+depends: [
+  "jeuclid" {= "3.1.9"}
+  "xmlgraphics-fop" {>= "0.95"}
+]
+extra-source "jeuclid-fop-3.1.9-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jeuclid-fop-3.1.9-3.2.noarch.rpm"
+}

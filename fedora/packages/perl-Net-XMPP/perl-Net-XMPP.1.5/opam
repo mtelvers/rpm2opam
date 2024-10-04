@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Net-XMPP-1.05-27.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-XMPP-1.05-27.fc40.noarch.rpm"]
+depends: [
+  "perl-Authen-SASL" {>= "2.12"}
+  "perl-Carp" 
+  "perl-Digest-SHA" 
+  "perl-FileHandle" 
+  "perl-MIME-Base64" 
+  "perl-POSIX" 
+  "perl-Scalar-List-Utils" 
+  "perl-Time-Local" 
+  "perl-XML-Stream" {>= "1.24"}
+  "perl-base" 
+  "perl-libs" {>= "5.3.0"}
+  "perl-vars" 
+]
+extra-source "perl-Net-XMPP-1.05-27.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Net-XMPP-1.05-27.fc40.noarch.rpm"
+}

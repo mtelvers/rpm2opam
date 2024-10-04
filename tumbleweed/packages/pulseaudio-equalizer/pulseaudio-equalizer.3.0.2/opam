@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pulseaudio-equalizer-3.0.2-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pulseaudio-equalizer-3.0.2-1.9.noarch.rpm"]
+depends: [
+  "bash" 
+  "bc" 
+  "ladspa-swh-plugins" 
+  "pipewire-pulseaudio" 
+  "pulseaudio-utils" 
+  "python311-base" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+]
+extra-source "pulseaudio-equalizer-3.0.2-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pulseaudio-equalizer-3.0.2-1.9.noarch.rpm"
+}

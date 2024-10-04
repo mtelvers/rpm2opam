@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Object-Pluggable-1.29-1.27.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Object-Pluggable-1.29-1.27.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Task-Weaken" 
+  "perl-base" {>= "1.17"}
+]
+extra-source "perl-Object-Pluggable-1.29-1.27.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Object-Pluggable-1.29-1.27.noarch.rpm"
+}

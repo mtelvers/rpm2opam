@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-certomancer-0.12.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-certomancer-0.12.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-PyYAML" {>= "5.4.1"}
+  "python310-asn1crypto" {>= "1.5"}
+  "python310-base" 
+  "python310-click" {>= "7.1.2"}
+  "python310-cryptography" {>= "3.4.7"}
+  "python310-python-dateutil" {>= "2.8.1"}
+  "python310-tzlocal" {>= "2.1"}
+  "update-alternatives" 
+]
+extra-source "python310-certomancer-0.12.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-certomancer-0.12.0-1.1.noarch.rpm"
+}

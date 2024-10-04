@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "coq-devel-8.20.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coq-devel-8.20.0-1.1.x86_64.rpm"]
+depends: [
+  "coq" {= "8.20.0"}
+  "ocaml" {>= "4.9.0"}
+  "ocaml-compiler-libs" {= "0"}
+  "ocaml-findlib-devel" {= "0"}
+  "ocaml-zarith-devel" {= "6"}
+]
+extra-source "coq-devel-8.20.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/coq-devel-8.20.0-1.1.x86_64.rpm"
+}

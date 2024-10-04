@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-time-manager-devel-0.0.0-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-time-manager-devel-0.0.0-19.fc40.x86_64.rpm"]
+depends: [
+  "ghc-auto-update-devel" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-time-manager" {= "0.0.0"}
+]
+extra-source "ghc-time-manager-devel-0.0.0-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-time-manager-devel-0.0.0-19.fc40.x86_64.rpm"
+}

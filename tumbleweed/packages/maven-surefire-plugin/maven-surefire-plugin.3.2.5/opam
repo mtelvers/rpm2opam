@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-surefire-plugin-3.2.5-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-surefire-plugin-3.2.5-2.2.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-surefire" 
+]
+extra-source "maven-surefire-plugin-3.2.5-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-surefire-plugin-3.2.5-2.2.noarch.rpm"
+}

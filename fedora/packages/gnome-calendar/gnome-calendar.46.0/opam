@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-calendar-46.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-calendar-46.0-1.fc40.x86_64.rpm"]
+depends: [
+  "evolution-data-server" {>= "3.45.1"}
+  "geoclue2-libs" 
+  "glib2" {>= "2.67.5"}
+  "glibc" 
+  "graphene" 
+  "gsettings-desktop-schemas" {>= "3.21.2"}
+  "gtk4" {>= "4.11.2"}
+  "libadwaita" {>= "1.5"}
+  "libgcc" 
+  "libgweather" 
+  "libical" {>= "3.0.5"}
+  "libical-glib" 
+  "libsoup3" 
+  "pango" 
+]
+extra-source "gnome-calendar-46.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-calendar-46.0-1.fc40.x86_64.rpm"
+}

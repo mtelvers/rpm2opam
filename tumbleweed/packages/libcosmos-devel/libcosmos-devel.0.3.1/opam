@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcosmos-devel-0.3.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcosmos-devel-0.3.1-1.1.x86_64.rpm"]
+depends: [
+  "libcosmos-3" {= "0.3.1"}
+  "libstdc++-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libcosmos-devel-0.3.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcosmos-devel-0.3.1-1.1.x86_64.rpm"
+}

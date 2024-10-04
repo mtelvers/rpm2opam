@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmt32emu-devel-2.7.1-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmt32emu-devel-2.7.1-1.3.x86_64.rpm"]
+depends: [
+  "libmt32emu2" {= "2.7.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libmt32emu-devel-2.7.1-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmt32emu-devel-2.7.1-1.3.x86_64.rpm"
+}

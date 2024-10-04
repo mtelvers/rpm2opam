@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libbullet-devel-3.17-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libbullet-devel-3.17-2.3.x86_64.rpm"]
+depends: [
+  "libBulletFileLoader3_17" {= "3.17"}
+  "libBulletInverseDynamicsUtils3_17" {= "3.17"}
+  "libBulletWorldImporter3_17" {= "3.17"}
+  "libBulletXmlWorldImporter3_17" {= "3.17"}
+  "libConvexDecomposition3_17" {= "3.17"}
+  "libGIMPACTUtils3_17" {= "3.17"}
+  "libHACD3_17" {= "3.17"}
+  "libbullet3_17" {= "3.17"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libbullet-devel-3.17-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libbullet-devel-3.17-2.3.x86_64.rpm"
+}

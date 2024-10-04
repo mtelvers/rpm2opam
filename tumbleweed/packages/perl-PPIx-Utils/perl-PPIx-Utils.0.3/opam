@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-PPIx-Utils-0.003-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-PPIx-Utils-0.003-1.6.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-B-Keywords" {>= "1.9"}
+  "perl-PPI" {>= "1.250"}
+]
+extra-source "perl-PPIx-Utils-0.003-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-PPIx-Utils-0.003-1.6.noarch.rpm"
+}

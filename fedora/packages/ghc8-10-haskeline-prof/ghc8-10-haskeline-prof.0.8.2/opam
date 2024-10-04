@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc8.10-haskeline-prof-0.8.2-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc8.10-haskeline-prof-0.8.2-14.fc40.x86_64.rpm"]
+depends: [
+  "ghc8-10-base-prof" 
+  "ghc8-10-bytestring-prof" 
+  "ghc8-10-containers-prof" 
+  "ghc8-10-directory-prof" 
+  "ghc8-10-exceptions-prof" 
+  "ghc8-10-filepath-prof" 
+  "ghc8-10-haskeline-devel" {= "0.8.2"}
+  "ghc8-10-process-prof" 
+  "ghc8-10-stm-prof" 
+  "ghc8-10-terminfo-prof" 
+  "ghc8-10-transformers-prof" 
+  "ghc8-10-unix-prof" 
+]
+extra-source "ghc8.10-haskeline-prof-0.8.2-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc8.10-haskeline-prof-0.8.2-14.fc40.x86_64.rpm"
+}

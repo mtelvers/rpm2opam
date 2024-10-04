@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "f2fs-tools-1.16.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "f2fs-tools-1.16.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libblkid1" 
+  "libf2fs10" 
+  "libselinux1" 
+  "libuuid1" 
+]
+extra-source "f2fs-tools-1.16.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/f2fs-tools-1.16.0-1.1.x86_64.rpm"
+}

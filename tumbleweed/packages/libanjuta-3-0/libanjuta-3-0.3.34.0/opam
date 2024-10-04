@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libanjuta-3-0-3.34.0-6.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libanjuta-3-0-3.34.0-6.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgdl-3-5" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+  "libxml2-2" 
+]
+extra-source "libanjuta-3-0-3.34.0-6.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libanjuta-3-0-3.34.0-6.1.x86_64.rpm"
+}

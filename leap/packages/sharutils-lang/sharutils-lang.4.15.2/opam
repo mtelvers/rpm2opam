@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sharutils-lang-4.15.2-slfo.1.1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sharutils-lang-4.15.2-slfo.1.1.7.noarch.rpm"]
+depends: [
+  "sharutils" {= "4.15.2"}
+]
+extra-source "sharutils-lang-4.15.2-slfo.1.1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/sharutils-lang-4.15.2-slfo.1.1.7.noarch.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-sev-devel-1.2.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-sev-devel-1.2.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bincode+default-devel" 
+  "rust-bitfield+default-devel" 
+  "rust-bitflags+default-devel" 
+  "rust-codicon+default-devel" 
+  "rust-dirs+default-devel" 
+  "rust-hex+default-devel" 
+  "rust-iocuddle+default-devel" 
+  "rust-kvm-ioctls+default-devel" {>= "0.12.0"}
+  "rust-libc+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde-big-array+default-devel" 
+  "rust-serde_bytes+default-devel" 
+  "rust-static_assertions+default-devel" 
+  "rust-uuid+default-devel" 
+  "rust-uuid+serde-devel" 
+]
+extra-source "rust-sev-devel-1.2.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-sev-devel-1.2.1-2.fc40.noarch.rpm"
+}

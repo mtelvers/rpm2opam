@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-multimap+default-devel-0.8.3-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-multimap+default-devel-0.8.3-9.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-multimap+serde_impl-devel" {= "0.8.3"}
+  "rust-multimap-devel" {= "0.8.3"}
+]
+extra-source "rust-multimap+default-devel-0.8.3-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-multimap+default-devel-0.8.3-9.fc40.noarch.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw64-llvm-17.0.6-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-llvm-17.0.6-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "mingw64-crt" 
+  "mingw64-filesystem" {>= "95"}
+  "mingw64-libffi" 
+  "mingw64-libgcc" 
+  "mingw64-libstdc++" 
+  "mingw64-winpthreads" 
+  "mingw64-zlib" 
+]
+extra-source "mingw64-llvm-17.0.6-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw64-llvm-17.0.6-3.fc40.x86_64.rpm"
+}

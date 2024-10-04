@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-cassava-devel-0.5.3.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-cassava-devel-0.5.3.2-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-Only-devel" 
+  "ghc-array-devel" 
+  "ghc-attoparsec-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-cassava" {= "0.5.3.2"}
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-deepseq-devel" 
+  "ghc-hashable-devel" 
+  "ghc-scientific-devel" 
+  "ghc-text-devel" 
+  "ghc-text-short-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-cassava-devel-0.5.3.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-cassava-devel-0.5.3.2-1.1.x86_64.rpm"
+}

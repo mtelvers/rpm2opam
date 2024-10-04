@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-jcmturner-gokrb5-devel-8.4.4-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-jcmturner-gokrb5-devel-8.4.4-3.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-hashicorp-uuid-devel" 
+  "golang-github-jcmturner-aescts-devel" 
+  "golang-github-jcmturner-dnsutils-devel" 
+  "golang-github-jcmturner-gofork-devel" 
+  "golang-github-jcmturner-goidentity-devel" 
+  "golang-github-jcmturner-rpc-devel" 
+  "golang-x-crypto-devel" 
+]
+extra-source "golang-github-jcmturner-gokrb5-devel-8.4.4-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-jcmturner-gokrb5-devel-8.4.4-3.fc40.noarch.rpm"
+}

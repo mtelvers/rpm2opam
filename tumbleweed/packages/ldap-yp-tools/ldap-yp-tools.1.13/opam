@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ldap-yp-tools-1.13-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ldap-yp-tools-1.13-3.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libldap2" 
+  "perl" 
+  "perl-URI" 
+  "perl-base" 
+  "perl-ldap" 
+]
+extra-source "ldap-yp-tools-1.13-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ldap-yp-tools-1.13-3.1.x86_64.rpm"
+}

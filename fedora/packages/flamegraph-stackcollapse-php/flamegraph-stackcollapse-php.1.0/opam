@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "flamegraph-stackcollapse-php-1.0-17.20231107gitcd9ee4c.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flamegraph-stackcollapse-php-1.0-17.20231107gitcd9ee4c.fc40.noarch.rpm"]
+depends: [
+  "flamegraph" {= "1.0"}
+  "php-cli" 
+]
+extra-source "flamegraph-stackcollapse-php-1.0-17.20231107gitcd9ee4c.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/flamegraph-stackcollapse-php-1.0-17.20231107gitcd9ee4c.fc40.noarch.rpm"
+}

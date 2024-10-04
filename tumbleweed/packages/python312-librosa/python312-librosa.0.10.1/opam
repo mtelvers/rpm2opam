@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-librosa-0.10.1-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-librosa-0.10.1-3.1.noarch.rpm"]
+depends: [
+  "python312-SoundFile" {>= "0.12.1"}
+  "python312-audioread" {>= "2.1.9"}
+  "python312-base" {= "3.12"}
+  "python312-decorator" {>= "4.3.0"}
+  "python312-joblib" {>= "0.14"}
+  "python312-lazy-loader" {>= "0.1"}
+  "python312-msgpack" {>= "1.0"}
+  "python312-numba" {>= "0.51.0"}
+  "python312-numpy" {>= "1.22.3"}
+  "python312-pooch" {>= "1.0"}
+  "python312-scikit-learn" {>= "0.20.0"}
+  "python312-scipy" {>= "1.2.0"}
+  "python312-soxr" {>= "0.3.2"}
+  "python312-typing_extensions" {>= "4.1.1"}
+]
+extra-source "python312-librosa-0.10.1-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-librosa-0.10.1-3.1.noarch.rpm"
+}

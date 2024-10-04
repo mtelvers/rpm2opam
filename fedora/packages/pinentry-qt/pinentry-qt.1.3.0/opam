@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pinentry-qt-1.3.0-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pinentry-qt-1.3.0-2.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "kf6-kguiaddons" 
+  "kf6-kwindowsystem" 
+  "libassuan" 
+  "libgcc" 
+  "libgpg-error" 
+  "libsecret" 
+  "libstdc++" 
+  "ncurses-libs" 
+  "pinentry" {= "1.3.0"}
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+]
+extra-source "pinentry-qt-1.3.0-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pinentry-qt-1.3.0-2.fc40.x86_64.rpm"
+}

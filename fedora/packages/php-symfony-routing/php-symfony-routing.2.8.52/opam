@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-symfony-routing-2.8.52-10.fc38.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-symfony-routing-2.8.52-10.fc38.noarch.rpm"]
+depends: [
+  "php-common" 
+  "php-doctrine-annotations" 
+  "php-symfony-config" {= "2.8.52"}
+  "php-symfony-dependency-injection" {= "2.8.52"}
+  "php-symfony-expression-language" {= "2.8.52"}
+  "php-symfony-http-foundation" {= "2.8.52"}
+  "php-symfony-yaml" {= "2.8.52"}
+]
+extra-source "php-symfony-routing-2.8.52-10.fc38.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-symfony-routing-2.8.52-10.fc38.noarch.rpm"
+}

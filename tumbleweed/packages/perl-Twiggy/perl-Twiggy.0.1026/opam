@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Twiggy-0.1026-1.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Twiggy-0.1026-1.17.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-AnyEvent" 
+  "perl-HTTP-Message" 
+  "perl-Plack" {>= "0.99"}
+  "perl-Try-Tiny" 
+  "perl-base" 
+]
+extra-source "perl-Twiggy-0.1026-1.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Twiggy-0.1026-1.17.noarch.rpm"
+}

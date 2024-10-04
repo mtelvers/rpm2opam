@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nwchem-openmpi-7.2.2-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nwchem-openmpi-7.2.2-4.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "flexiblas-netlib" 
+  "ga-openmpi" 
+  "glibc" 
+  "libgcc" 
+  "libgfortran" 
+  "libxc" 
+  "nwchem" {= "7.2.2"}
+  "openmpi" 
+  "python3-libs" 
+  "scalapack-openmpi" 
+]
+extra-source "nwchem-openmpi-7.2.2-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nwchem-openmpi-7.2.2-4.fc40.x86_64.rpm"
+}

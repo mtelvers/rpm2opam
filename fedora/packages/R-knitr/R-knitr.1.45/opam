@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-knitr-1.45-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-knitr-1.45-3.fc40.noarch.rpm"]
+depends: [
+  "R-core" 
+  "R-evaluate" {>= "0.15"}
+  "R-highr" 
+  "R-xfun" {>= "0.39"}
+  "R-yaml" {>= "2.1.19"}
+]
+extra-source "R-knitr-1.45-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-knitr-1.45-3.fc40.noarch.rpm"
+}

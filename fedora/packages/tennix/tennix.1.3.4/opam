@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tennix-1.3.4-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tennix-1.3.4-3.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "SDL2_gfx" 
+  "SDL2_image" 
+  "SDL2_mixer" 
+  "SDL2_net" 
+  "SDL2_ttf" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "tennix-1.3.4-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tennix-1.3.4-3.fc40.x86_64.rpm"
+}

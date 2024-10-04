@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wlroots-0_17-devel-0.17.3-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wlroots-0_17-devel-0.17.3-1.2.x86_64.rpm"]
+depends: [
+  "Mesa-libEGL-devel" 
+  "Mesa-libGLESv2-devel" 
+  "libdisplay-info-devel" 
+  "libdrm-devel" {>= "2.4.114"}
+  "libgbm-devel" 
+  "libinput-devel" {>= "1.14.0"}
+  "libpixman-1-0-devel" {>= "0.42.0"}
+  "libwlroots12" {= "0.17.3"}
+  "libxcb-devel" 
+  "libxkbcommon-devel" 
+  "pkgconf-pkg-config" 
+  "seatd-devel" {>= "0.2.0"}
+  "systemd-devel" 
+  "vulkan-devel" {>= "1.2.182"}
+  "wayland-devel" 
+  "xcb-util-errors-devel" 
+  "xcb-util-renderutil-devel" 
+  "xcb-util-wm-devel" 
+]
+extra-source "wlroots-0_17-devel-0.17.3-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/wlroots-0_17-devel-0.17.3-1.2.x86_64.rpm"
+}

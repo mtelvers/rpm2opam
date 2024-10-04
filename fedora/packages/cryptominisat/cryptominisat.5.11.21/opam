@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cryptominisat-5.11.21-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cryptominisat-5.11.21-1.fc40.x86_64.rpm"]
+depends: [
+  "cryptominisat-libs" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "zlib-ng-compat" 
+]
+extra-source "cryptominisat-5.11.21-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cryptominisat-5.11.21-1.fc40.x86_64.rpm"
+}

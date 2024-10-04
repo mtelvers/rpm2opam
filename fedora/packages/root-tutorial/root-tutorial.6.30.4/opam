@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "root-tutorial-6.30.04-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "root-tutorial-6.30.04-2.fc40.noarch.rpm"]
+depends: [
+  "root" {= "6.30.4"}
+]
+extra-source "root-tutorial-6.30.04-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/root-tutorial-6.30.04-2.fc40.noarch.rpm"
+}

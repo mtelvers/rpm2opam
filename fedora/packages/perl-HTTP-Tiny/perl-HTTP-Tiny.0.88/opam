@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-HTTP-Tiny-0.088-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTTP-Tiny-0.088-5.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Errno" 
+  "perl-Fcntl" 
+  "perl-IO" 
+  "perl-IO-Socket-SSL" {>= "1.56"}
+  "perl-MIME-Base64" 
+  "perl-Mozilla-CA" 
+  "perl-Net-SSLeay" {>= "1.49"}
+  "perl-Socket" 
+  "perl-Time-Local" 
+]
+extra-source "perl-HTTP-Tiny-0.088-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-HTTP-Tiny-0.088-5.fc40.noarch.rpm"
+}

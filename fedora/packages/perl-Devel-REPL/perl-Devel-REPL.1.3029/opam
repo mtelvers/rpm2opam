@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Devel-REPL-1.003029-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Devel-REPL-1.003029-8.fc40.noarch.rpm"]
+depends: [
+  "perl-B" {>= "0.62"}
+  "perl-Devel-Peek" 
+  "perl-Devel-REPL-Plugin-Completion" 
+  "perl-Devel-REPL-Plugin-DDS" 
+  "perl-Devel-REPL-Plugin-LexEnv" 
+  "perl-Devel-REPL-Plugin-MultiLine-PPI" 
+  "perl-Module-Runtime" 
+  "perl-Moose" {>= "0.93"}
+  "perl-MooseX-Getopt" {>= "0.18"}
+  "perl-MooseX-Object-Pluggable" {>= "0.9"}
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-Term-ANSIColor" 
+  "perl-Term-ReadLine" 
+  "perl-Time-HiRes" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.8.1"}
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-Devel-REPL-1.003029-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Devel-REPL-1.003029-8.fc40.noarch.rpm"
+}

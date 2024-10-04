@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-swiftmailer6-6.3.0-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-swiftmailer6-6.3.0-7.fc40.noarch.rpm"]
+depends: [
+  "php-bcmath" 
+  "php-common" {>= "7.0.0"}
+  "php-egulias-email-validator" 
+  "php-intl" 
+  "php-mbstring" 
+  "php-xml" 
+]
+extra-source "php-swiftmailer6-6.3.0-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-swiftmailer6-6.3.0-7.fc40.noarch.rpm"
+}

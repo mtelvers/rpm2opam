@@ -1,0 +1,67 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "freeipa-server-4.11.1-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freeipa-server-4.11.1-4.fc40.x86_64.rpm"]
+depends: [
+  "389-ds-base" {>= "2.4.3"}
+  "acl" 
+  "bash" 
+  "certmonger" {>= "0.79.7"}
+  "chrony" 
+  "cracklib-dicts" 
+  "cyrus-sasl-gssapi" 
+  "dogtag-pki-acme" 
+  "dogtag-pki-ca" {>= "10.10.5"}
+  "dogtag-pki-kra" {>= "10.10.5"}
+  "fontawesome4-fonts" 
+  "freeipa-client" {= "4.11.1"}
+  "freeipa-common" {= "4.11.1"}
+  "freeipa-server-common" {= "4.11.1"}
+  "glibc" 
+  "gssproxy" {>= "0.7.0"}
+  "gzip" 
+  "httpd" {>= "2.4.41"}
+  "jansson" 
+  "krb5-libs" 
+  "krb5-server" {= "9.0"}
+  "libcom_err" 
+  "libgcc" 
+  "libpwquality" 
+  "libsss_certmap" 
+  "libsss_nss_idmap" 
+  "libtalloc" 
+  "libtevent" 
+  "libunistring" 
+  "libuuid" 
+  "libverto" 
+  "mod_auth_gssapi" {>= "1.5.0"}
+  "mod_lookup_identity" {>= "0.9.9"}
+  "mod_session" {>= "2.4.41"}
+  "mod_ssl" {>= "2.4.41"}
+  "nss-tools" {>= "3.44.0"}
+  "oddjob" 
+  "open-sans-fonts" 
+  "openldap" 
+  "openldap-clients" {> "2.4.35"}
+  "openssl" {> "1.1.1"}
+  "openssl-libs" 
+  "p11-kit" 
+  "policycoreutils" {>= "2.1.12"}
+  "popt" 
+  "python3" 
+  "python3-gssapi" {>= "1.2.0"}
+  "python3-ipaserver" {= "4.11.1"}
+  "python3-ldap" {>= "3.1.0"}
+  "python3-mod_wsgi" 
+  "python3-systemd" 
+  "samba-client-libs" 
+  "selinux-policy" {>= "38.28"}
+  "shadow-utils" 
+  "slapi-nis" {>= "0.56.5"}
+  "softhsm" {>= "2.0.0"}
+  "sssd-dbus" {>= "2.9.2"}
+  "systemd" 
+  "tar" 
+]
+extra-source "freeipa-server-4.11.1-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/freeipa-server-4.11.1-4.fc40.x86_64.rpm"
+}

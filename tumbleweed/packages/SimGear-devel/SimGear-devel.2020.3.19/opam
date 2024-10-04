@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "SimGear-devel-2020.3.19-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "SimGear-devel-2020.3.19-1.4.x86_64.rpm"]
+depends: [
+  "libOpenSceneGraph-devel" {= "3.6.5"}
+  "libSimGearCore-2020_3_19" {= "2020.3.19"}
+  "openal-soft-devel" 
+  "udns-devel" 
+  "xz-devel" 
+  "zlib-devel" 
+]
+extra-source "SimGear-devel-2020.3.19-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/SimGear-devel-2020.3.19-1.4.x86_64.rpm"
+}

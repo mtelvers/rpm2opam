@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-askama_shared+percent-encoding-devel-0.12.2-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-askama_shared+percent-encoding-devel-0.12.2-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-askama_shared-devel" {= "0.12.2"}
+  "rust-percent-encoding+default-devel" 
+]
+extra-source "rust-askama_shared+percent-encoding-devel-0.12.2-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-askama_shared+percent-encoding-devel-0.12.2-6.fc40.noarch.rpm"
+}

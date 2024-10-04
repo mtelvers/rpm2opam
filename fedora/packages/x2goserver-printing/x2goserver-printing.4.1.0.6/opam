@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "x2goserver-printing-4.1.0.6-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "x2goserver-printing-4.1.0.6-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Path" 
+  "perl-Sys-Syslog" 
+  "perl-X2Go-Log" 
+  "perl-X2Go-Server" 
+  "perl-X2Go-Server-DB" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "x2goserver" {= "4.1.0.6"}
+]
+extra-source "x2goserver-printing-4.1.0.6-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/x2goserver-printing-4.1.0.6-3.fc40.x86_64.rpm"
+}

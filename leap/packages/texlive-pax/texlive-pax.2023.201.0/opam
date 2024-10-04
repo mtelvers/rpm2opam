@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-pax-2023.201.svn63509-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-pax-2023.201.svn63509-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "java-11-openjdk" 
+  "perl-File-Which" 
+  "perl-base" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-auxhook" 
+  "texlive-etexcmds" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-graphics" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-kvoptions" 
+  "texlive-kvsetkeys" 
+  "texlive-ltxcmds" 
+  "texlive-pax-bin" {>= "2023"}
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+]
+extra-source "texlive-pax-2023.201.svn63509-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-pax-2023.201.svn63509-slfo.1.1.4.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-siphasher+serde_std-devel-1.0.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-siphasher+serde_std-devel-1.0.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde+std-devel" 
+  "rust-siphasher+std-devel" {= "1.0.1"}
+  "rust-siphasher-devel" {= "1.0.1"}
+]
+extra-source "rust-siphasher+serde_std-devel-1.0.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-siphasher+serde_std-devel-1.0.1-1.fc40.noarch.rpm"
+}

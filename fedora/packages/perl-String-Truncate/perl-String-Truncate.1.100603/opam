@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-String-Truncate-1.100603-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-String-Truncate-1.100603-5.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Sub-Exporter" {>= "0.953"}
+  "perl-Sub-Install" {>= "0.3"}
+  "perl-libs" 
+]
+extra-source "perl-String-Truncate-1.100603-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-String-Truncate-1.100603-5.fc40.noarch.rpm"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-jupyterlab-4.2.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-jupyterlab-4.2.5-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "jupyter-jupyterlab" {= "4.2.5"}
+  "nodejs-common" 
+  "python311-Jinja2" {>= "3.0.3"}
+  "python311-async-lru" {>= "1.0.0"}
+  "python311-base" 
+  "python311-httpx" {>= "0.25.0"}
+  "python311-importlib-metadata" 
+  "python311-importlib-resources" 
+  "python311-ipykernel" {>= "6.5.0"}
+  "python311-jupyter-core" 
+  "python311-jupyter-lsp" {>= "2.0.0"}
+  "python311-jupyter-server" 
+  "python311-jupyterlab-server" 
+  "python311-notebook-shim" {>= "0.2"}
+  "python311-packaging" 
+  "python311-setuptools" {>= "40.1"}
+  "python311-tomli" 
+  "python311-tornado" {>= "6.2.0"}
+  "python311-traitlets" 
+  "update-alternatives" 
+]
+extra-source "python311-jupyterlab-4.2.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-jupyterlab-4.2.5-1.1.noarch.rpm"
+}

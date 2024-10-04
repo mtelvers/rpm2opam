@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gap-pkg-resclasses-4.7.3-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-pkg-resclasses-4.7.3-11.fc40.noarch.rpm"]
+depends: [
+  "gap-core" 
+  "gap-pkg-polycyclic" 
+  "gap-pkg-utils" 
+]
+extra-source "gap-pkg-resclasses-4.7.3-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gap-pkg-resclasses-4.7.3-11.fc40.noarch.rpm"
+}

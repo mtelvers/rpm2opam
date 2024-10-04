@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Object-HashBase-tools-0.013-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Object-HashBase-tools-0.013-1.fc40.noarch.rpm"]
+depends: [
+  "perl-Object-HashBase" 
+  "perl-Test-Simple" {>= "0.98"}
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-Object-HashBase-tools-0.013-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Object-HashBase-tools-0.013-1.fc40.noarch.rpm"
+}

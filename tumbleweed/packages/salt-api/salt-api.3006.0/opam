@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "salt-api-3006.0-24.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "salt-api-3006.0-24.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-CherryPy" {>= "3.2.2"}
+  "python311-base" 
+  "salt" {= "3006.0"}
+  "salt-master" {= "3006.0"}
+]
+extra-source "salt-api-3006.0-24.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/salt-api-3006.0-24.1.x86_64.rpm"
+}

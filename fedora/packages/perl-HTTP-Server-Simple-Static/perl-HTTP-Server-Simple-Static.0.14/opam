@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-HTTP-Server-Simple-Static-0.14-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTTP-Server-Simple-Static-0.14-20.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" 
+  "perl-HTTP-Date" 
+  "perl-IO" 
+  "perl-PathTools" 
+  "perl-URI" 
+  "perl-base" 
+  "perl-libs" {>= "5.10.0"}
+]
+extra-source "perl-HTTP-Server-Simple-Static-0.14-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-HTTP-Server-Simple-Static-0.14-20.fc40.noarch.rpm"
+}

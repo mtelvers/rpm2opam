@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fbrnch-1.3.3-17.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fbrnch-1.3.3-17.fc40.x86_64.rpm"]
+depends: [
+  "bodhi-client" 
+  "curl" 
+  "fedora-packager-kerberos" 
+  "fedpkg" 
+  "git-core" 
+  "glibc" 
+  "gmp" 
+  "koji" 
+  "libffi" 
+  "ncurses-libs" 
+  "openssh-clients" 
+  "openssl-libs" 
+  "rpm-build" 
+  "rpmdevtools" 
+  "zlib-ng-compat" 
+]
+extra-source "fbrnch-1.3.3-17.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fbrnch-1.3.3-17.fc40.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fiona-fio-1.9.6-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fiona-fio-1.9.6-1.3.noarch.rpm"]
+depends: [
+  "python311-Fiona" {= "1.9.6"}
+  "python311-base" 
+]
+extra-source "fiona-fio-1.9.6-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/fiona-fio-1.9.6-1.3.noarch.rpm"
+}

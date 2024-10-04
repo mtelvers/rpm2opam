@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "snapper-zypp-plugin-0.11.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "snapper-zypp-plugin-0.11.2-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libdbus-1-3" 
+  "libgcc_s1" 
+  "libjson-c5" 
+  "libsnapper7" 
+  "libstdc++6" 
+  "libxml2-2" 
+  "libzypp" {= "1"}
+  "snapper" {= "0.11.2"}
+]
+extra-source "snapper-zypp-plugin-0.11.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/snapper-zypp-plugin-0.11.2-1.2.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-th-lift-instances-devel-0.1.20-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-th-lift-instances-devel-0.1.20-5.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-template-haskell-devel" 
+  "ghc-text-devel" 
+  "ghc-th-lift-devel" 
+  "ghc-th-lift-instances" {= "0.1.20"}
+  "ghc-transformers-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-th-lift-instances-devel-0.1.20-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-th-lift-instances-devel-0.1.20-5.fc40.x86_64.rpm"
+}

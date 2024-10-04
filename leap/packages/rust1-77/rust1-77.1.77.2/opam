@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rust1.77-1.77.2-lp160.1.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust1.77-1.77.2-lp160.1.12.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "gcc13" 
+  "glibc" 
+  "glibc-devel" 
+  "libLLVM17" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "lld17" 
+]
+extra-source "rust1.77-1.77.2-lp160.1.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/rust1.77-1.77.2-lp160.1.12.x86_64.rpm"
+}

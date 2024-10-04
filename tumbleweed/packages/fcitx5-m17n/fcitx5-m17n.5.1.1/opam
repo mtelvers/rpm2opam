@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fcitx5-m17n-5.1.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fcitx5-m17n-5.1.1-1.1.x86_64.rpm"]
+depends: [
+  "fcitx5" 
+  "glibc" 
+  "libFcitx5Config6" 
+  "libFcitx5Core7" 
+  "libFcitx5Utils2" 
+  "libgcc_s1" 
+  "libm17n0" 
+  "libstdc++6" 
+  "m17n-db" 
+]
+extra-source "fcitx5-m17n-5.1.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/fcitx5-m17n-5.1.1-1.1.x86_64.rpm"
+}

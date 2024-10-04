@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pywbem-1.4.1-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pywbem-1.4.1-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-PyYAML" {>= "5.3.1"}
+  "python311-base" 
+  "python311-nocasedict" {>= "1.0.1"}
+  "python311-nocaselist" {>= "1.0.3"}
+  "python311-ply" {>= "3.10"}
+  "python311-requests" {>= "2.25.0"}
+  "python311-six" {>= "1.16.0"}
+  "python311-urllib3" {>= "1.26.5"}
+  "python311-yamlloader" {>= "0.5.5"}
+  "update-alternatives" 
+]
+extra-source "python311-pywbem-1.4.1-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/python311-pywbem-1.4.1-slfo.1.1.4.noarch.rpm"
+}

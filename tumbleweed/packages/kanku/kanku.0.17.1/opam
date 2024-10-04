@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kanku-0.17.1-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kanku-0.17.1-1.2.noarch.rpm"]
+depends: [
+  "kanku-cli" {= "0.17.1"}
+  "kanku-dispatcher" {= "0.17.1"}
+  "kanku-iptables" {= "0.17.1"}
+  "kanku-scheduler" {= "0.17.1"}
+  "kanku-triggerd" {= "0.17.1"}
+  "kanku-web" {= "0.17.1"}
+  "kanku-worker" {= "0.17.1"}
+]
+extra-source "kanku-0.17.1-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kanku-0.17.1-1.2.noarch.rpm"
+}

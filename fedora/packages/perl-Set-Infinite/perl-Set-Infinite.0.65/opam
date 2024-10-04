@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Set-Infinite-0.65-40.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Set-Infinite-0.65-40.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Exporter" 
+  "perl-POSIX" 
+  "perl-Time-Local" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" {>= "5.5.0"}
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-Set-Infinite-0.65-40.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Set-Infinite-0.65-40.fc40.noarch.rpm"
+}

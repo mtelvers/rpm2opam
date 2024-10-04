@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nginx-module-njs-0.8.5-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nginx-module-njs-0.8.5-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libxml2-2" 
+  "nginx" {= "1.27.1"}
+]
+extra-source "nginx-module-njs-0.8.5-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/nginx-module-njs-0.8.5-1.2.x86_64.rpm"
+}

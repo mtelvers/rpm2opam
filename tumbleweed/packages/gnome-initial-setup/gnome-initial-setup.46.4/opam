@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-initial-setup-46.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-initial-setup-46.4-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "geoclue2" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gnome-getting-started-docs" 
+  "krb5" 
+  "libaccountsservice0" 
+  "libadwaita-1-0" 
+  "libfontconfig1" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgdm1" 
+  "libgeocode-glib-2-0" 
+  "libgnome-desktop-4-2" 
+  "libgtk-4-1" 
+  "libgweather-4-0" 
+  "libharfbuzz0" 
+  "libibus-1_0-5" 
+  "libnm0" 
+  "libnma-gtk4-0" 
+  "libpango-1_0-0" 
+  "libpolkit-gobject-1-0" 
+  "libpwquality1" 
+  "libsecret-1-0" 
+  "libwebkitgtk-6_0-4" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "gnome-initial-setup-46.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnome-initial-setup-46.4-1.1.x86_64.rpm"
+}

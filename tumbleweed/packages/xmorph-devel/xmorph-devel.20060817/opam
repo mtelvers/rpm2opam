@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xmorph-devel-20060817-251.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xmorph-devel-20060817-251.2.x86_64.rpm"]
+depends: [
+  "glibc-devel" 
+  "xmorph" {= "20060817"}
+]
+extra-source "xmorph-devel-20060817-251.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xmorph-devel-20060817-251.2.x86_64.rpm"
+}

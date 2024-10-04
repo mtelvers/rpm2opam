@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openmpi4-macros-devel-4.1.6-6.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openmpi4-macros-devel-4.1.6-6.1.x86_64.rpm"]
+depends: [
+  "openmpi4-devel" {= "4.1.6"}
+]
+extra-source "openmpi4-macros-devel-4.1.6-6.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openmpi4-macros-devel-4.1.6-6.1.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvsgpt1-20240504-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvsgpt1-20240504-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbfio1" 
+  "libcdata1" 
+  "libcerror1" 
+  "libclocale1" 
+  "libcnotify1" 
+  "libcthreads1" 
+  "libfcache1" 
+  "libfdata1" 
+]
+extra-source "libvsgpt1-20240504-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libvsgpt1-20240504-1.1.x86_64.rpm"
+}

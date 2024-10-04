@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-teubner-2023.201.5.7.3svn64600-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-teubner-2023.201.5.7.3svn64600-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-cm-super" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-graphics" 
+  "texlive-greek-fontenc" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-pxfonts" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-tools" 
+  "texlive-txfonts" 
+]
+extra-source "texlive-teubner-2023.201.5.7.3svn64600-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-teubner-2023.201.5.7.3svn64600-slfo.1.1.4.noarch.rpm"
+}

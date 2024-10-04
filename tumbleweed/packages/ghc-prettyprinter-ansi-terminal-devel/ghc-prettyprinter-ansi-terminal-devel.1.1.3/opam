@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-prettyprinter-ansi-terminal-devel-1.1.3-2.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-prettyprinter-ansi-terminal-devel-1.1.3-2.10.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-ansi-terminal-devel" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-prettyprinter-ansi-terminal" {= "1.1.3"}
+  "ghc-prettyprinter-devel" 
+  "ghc-text-devel" 
+]
+extra-source "ghc-prettyprinter-ansi-terminal-devel-1.1.3-2.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-prettyprinter-ansi-terminal-devel-1.1.3-2.10.x86_64.rpm"
+}

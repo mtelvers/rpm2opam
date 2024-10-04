@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-ipynb-devel-0.2-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-ipynb-devel-0.2-29.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-devel" 
+  "ghc-base-devel" 
+  "ghc-base64-bytestring-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-ipynb" {= "0.2"}
+  "ghc-text-devel" 
+  "ghc-unordered-containers-devel" 
+]
+extra-source "ghc-ipynb-devel-0.2-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-ipynb-devel-0.2-29.fc40.x86_64.rpm"
+}

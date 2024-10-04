@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dnsconfd-0.0.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dnsconfd-0.0.2-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "dbus-common" 
+  "dnsconfd-selinux" 
+  "dnsconfd-unbound" 
+  "python3" 
+  "python3-dbus" 
+  "python3-gobject-base" 
+  "shadow-utils" 
+]
+extra-source "dnsconfd-0.0.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dnsconfd-0.0.2-1.fc40.noarch.rpm"
+}

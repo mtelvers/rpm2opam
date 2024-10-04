@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lingot-1.1.1-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lingot-1.1.1-11.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "cairo" 
+  "fftw-libs-double" 
+  "fftw-libs-single" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "jack-audio-connection-kit" 
+  "json-c" 
+  "pulseaudio-libs" 
+]
+extra-source "lingot-1.1.1-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lingot-1.1.1-11.fc40.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-ORLite-2.00-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-ORLite-2.00-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-DBD-SQLite" {>= "1.27"}
+  "perl-DBI" {>= "1.607"}
+  "perl-File-Basename" 
+  "perl-File-Path" {>= "2.8"}
+  "perl-File-Remove" 
+  "perl-File-Temp" 
+  "perl-Params-Util" {>= "1.0"}
+  "perl-PathTools" {>= "0.80"}
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "perl-ORLite-2.00-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-ORLite-2.00-3.fc40.noarch.rpm"
+}

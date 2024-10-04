@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qlipper-5.1.2-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qlipper-5.1.2-16.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11" 
+  "libgcc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "qlipper-5.1.2-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qlipper-5.1.2-16.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-ovsdbapp-2.8.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-ovsdbapp-2.8.0-1.1.noarch.rpm"]
+depends: [
+  "python3-ovs" {>= "2.10.0"}
+  "python311-base" {= "3.11"}
+  "python311-fixtures" {>= "3.0.0"}
+  "python311-netaddr" {>= "0.10.0"}
+  "python311-pbr" {>= "2.0.0"}
+  "python311-six" 
+]
+extra-source "python3-ovsdbapp-2.8.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-ovsdbapp-2.8.0-1.1.noarch.rpm"
+}

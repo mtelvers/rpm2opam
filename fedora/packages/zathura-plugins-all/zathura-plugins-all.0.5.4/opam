@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "zathura-plugins-all-0.5.4-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zathura-plugins-all-0.5.4-2.fc40.x86_64.rpm"]
+depends: [
+  "zathura-cb" 
+  "zathura-djvu" 
+  "zathura-pdf-poppler" 
+  "zathura-ps" 
+]
+extra-source "zathura-plugins-all-0.5.4-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/z/zathura-plugins-all-0.5.4-2.fc40.x86_64.rpm"
+}

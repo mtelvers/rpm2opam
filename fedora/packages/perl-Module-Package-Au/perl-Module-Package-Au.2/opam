@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Module-Package-Au-2-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Package-Au-2-29.fc40.noarch.rpm"]
+depends: [
+  "perl-Module-Install-GithubMeta" {>= "0.10"}
+  "perl-Module-Install-ReadmeFromPod" {>= "0.12"}
+  "perl-Module-Install-ReadmeMarkdownFromPod" {>= "0.3"}
+  "perl-Module-Package" {>= "0.24"}
+  "perl-Pod-Markdown" {>= "1.301"}
+  "perl-base" 
+  "perl-libs" {>= "5.8.3"}
+]
+extra-source "perl-Module-Package-Au-2-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Module-Package-Au-2-29.fc40.noarch.rpm"
+}

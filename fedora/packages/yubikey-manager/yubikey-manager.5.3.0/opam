@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "yubikey-manager-5.3.0-1.20240131git758d270.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yubikey-manager-5.3.0-1.20240131git758d270.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-yubikey-manager" {= "5.3.0"}
+  "systemd-udev" 
+]
+extra-source "yubikey-manager-5.3.0-1.20240131git758d270.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/y/yubikey-manager-5.3.0-1.20240131git758d270.fc40.noarch.rpm"
+}

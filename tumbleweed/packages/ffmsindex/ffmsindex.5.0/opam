@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ffmsindex-5.0+0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ffmsindex-5.0+0-1.2.x86_64.rpm"]
+depends: [
+  "ffmpeg-7-mini-libs" 
+  "glibc" 
+  "libffms2-5" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "ffmsindex-5.0+0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ffmsindex-5.0+0-1.2.x86_64.rpm"
+}

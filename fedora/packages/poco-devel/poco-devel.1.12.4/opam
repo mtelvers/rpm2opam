@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "poco-devel-1.12.4-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "poco-devel-1.12.4-6.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "expat-devel" 
+  "openssl-devel" 
+  "pcre2-devel" 
+  "poco-activerecord" 
+  "poco-crypto" 
+  "poco-data" 
+  "poco-debug" 
+  "poco-encodings" 
+  "poco-foundation" 
+  "poco-json" 
+  "poco-jwt" 
+  "poco-mongodb" 
+  "poco-mysql" 
+  "poco-net" 
+  "poco-netssl" 
+  "poco-odbc" 
+  "poco-pagecompiler" {= "1.12.4"}
+  "poco-prometheus" 
+  "poco-sqlite" 
+  "poco-util" 
+  "poco-xml" 
+  "poco-zip" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "poco-devel-1.12.4-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/poco-devel-1.12.4-6.fc40.x86_64.rpm"
+}

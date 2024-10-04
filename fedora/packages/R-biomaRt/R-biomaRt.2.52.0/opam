@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-biomaRt-2.52.0-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-biomaRt-2.52.0-6.fc40.noarch.rpm"]
+depends: [
+  "R-AnnotationDbi" 
+  "R-BiocFileCache" 
+  "R-XML" {>= "3.99.0.7"}
+  "R-core" {= "4.3"}
+  "R-digest" 
+  "R-httr" 
+  "R-progress" 
+  "R-rappdirs" 
+  "R-stringr" 
+  "R-xml2" 
+  "texlive-collection-latexrecommended" 
+]
+extra-source "R-biomaRt-2.52.0-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-biomaRt-2.52.0-6.fc40.noarch.rpm"
+}

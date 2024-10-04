@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Mojo-Pg-4.27-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mojo-Pg-4.27-7.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-DBD-Pg" 
+  "perl-DBI" 
+  "perl-Mojolicious" 
+  "perl-SQL-Abstract" {>= "1.85"}
+  "perl-SQL-Abstract-Pg" 
+  "perl-Scalar-List-Utils" 
+  "perl-constant" 
+  "perl-libs" 
+]
+extra-source "perl-Mojo-Pg-4.27-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Mojo-Pg-4.27-7.fc40.noarch.rpm"
+}

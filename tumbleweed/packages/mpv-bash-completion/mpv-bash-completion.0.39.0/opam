@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mpv-bash-completion-0.39.0+git20240923.b64c53f730bd-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mpv-bash-completion-0.39.0+git20240923.b64c53f730bd-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "mpv" {= "0.39.0"}
+]
+extra-source "mpv-bash-completion-0.39.0+git20240923.b64c53f730bd-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mpv-bash-completion-0.39.0+git20240923.b64c53f730bd-1.1.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glassfish-jsp-2.3.4-6.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glassfish-jsp-2.3.4-6.3.noarch.rpm"]
+depends: [
+  "glassfish-el" 
+  "glassfish-jsp-api" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "glassfish-jsp-2.3.4-6.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/glassfish-jsp-2.3.4-6.3.noarch.rpm"
+}

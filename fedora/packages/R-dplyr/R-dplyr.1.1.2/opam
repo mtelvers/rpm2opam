@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-dplyr-1.1.2-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-dplyr-1.1.2-4.fc40.x86_64.rpm"]
+depends: [
+  "R-R6" 
+  "R-cli" {>= "3.4.0"}
+  "R-core" {= "4.3"}
+  "R-generics" 
+  "R-glue" {>= "1.3.2"}
+  "R-lifecycle" {>= "1.0.3"}
+  "R-magrittr" {>= "1.5"}
+  "R-pillar" {>= "1.9.0"}
+  "R-rlang" {>= "1.1.0"}
+  "R-tibble" {>= "3.2.0"}
+  "R-tidyselect" {>= "1.2.0"}
+  "R-vctrs" {>= "0.6.0"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "R-dplyr-1.1.2-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-dplyr-1.1.2-4.fc40.x86_64.rpm"
+}

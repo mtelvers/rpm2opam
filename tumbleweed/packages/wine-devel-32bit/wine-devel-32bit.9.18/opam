@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wine-devel-32bit-9.18-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wine-devel-32bit-9.18-1.1.x86_64.rpm"]
+depends: [
+  "wine-devel" {= "9.18"}
+]
+extra-source "wine-devel-32bit-9.18-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/wine-devel-32bit-9.18-1.1.x86_64.rpm"
+}

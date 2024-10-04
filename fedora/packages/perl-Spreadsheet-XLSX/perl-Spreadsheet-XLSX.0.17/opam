@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Spreadsheet-XLSX-0.17-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Spreadsheet-XLSX-0.17-8.fc40.noarch.rpm"]
+depends: [
+  "perl-Archive-Zip" 
+  "perl-Exporter" 
+  "perl-Spreadsheet-ParseExcel" 
+  "perl-base" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-vars" 
+]
+extra-source "perl-Spreadsheet-XLSX-0.17-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Spreadsheet-XLSX-0.17-8.fc40.noarch.rpm"
+}

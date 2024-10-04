@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-dense-linear-algebra-devel-0.1.0.0-17.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-dense-linear-algebra-devel-0.1.0.0-17.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-deepseq-devel" 
+  "ghc-dense-linear-algebra" {= "0.1.0.0"}
+  "ghc-math-functions-devel" 
+  "ghc-primitive-devel" 
+  "ghc-vector-algorithms-devel" 
+  "ghc-vector-binary-instances-devel" 
+  "ghc-vector-devel" 
+  "ghc-vector-th-unbox-devel" 
+]
+extra-source "ghc-dense-linear-algebra-devel-0.1.0.0-17.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-dense-linear-algebra-devel-0.1.0.0-17.fc40.x86_64.rpm"
+}

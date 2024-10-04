@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "geolite2legacy-0+git20210326.05733c4-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "geolite2legacy-0+git20210326.05733c4-1.4.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-ipaddr" 
+]
+extra-source "geolite2legacy-0+git20210326.05733c4-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/geolite2legacy-0+git20210326.05733c4-1.4.noarch.rpm"
+}

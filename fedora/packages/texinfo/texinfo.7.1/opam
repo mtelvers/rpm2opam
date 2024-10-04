@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texinfo-7.1-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texinfo-7.1-2.fc40.x86_64.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-DynaLoader" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Path" 
+  "perl-Getopt-Long" 
+  "perl-IPC-Open3" 
+  "perl-MIME-Base64" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Pod-Simple" 
+  "perl-Storable" 
+  "perl-Symbol" 
+  "perl-Text-Unidecode" 
+  "perl-Unicode-EastAsianWidth" 
+  "perl-Unicode-Normalize" 
+  "perl-if" 
+  "perl-interpreter" 
+  "perl-libintl-perl" 
+  "perl-libs" {>= "5.0.0"}
+  "perl-vars" 
+]
+extra-source "texinfo-7.1-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texinfo-7.1-2.fc40.x86_64.rpm"
+}

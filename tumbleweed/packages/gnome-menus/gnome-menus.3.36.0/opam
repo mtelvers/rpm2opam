@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-menus-3.36.0-3.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-menus-3.36.0-3.5.x86_64.rpm"]
+depends: [
+  "gnome-menus-branding-openSUSE" {= "3.36.0"}
+]
+extra-source "gnome-menus-3.36.0-3.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnome-menus-3.36.0-3.5.x86_64.rpm"
+}

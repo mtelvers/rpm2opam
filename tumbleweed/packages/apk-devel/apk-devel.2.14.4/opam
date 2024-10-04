@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "apk-devel-2.14.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apk-devel-2.14.4-1.1.x86_64.rpm"]
+depends: [
+  "libapk2_14_0" {= "2.14.4"}
+  "libopenssl-1_0_0-devel" 
+  "pkgconf-pkg-config" 
+  "zlib-devel" 
+]
+extra-source "apk-devel-2.14.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/apk-devel-2.14.4-1.1.x86_64.rpm"
+}

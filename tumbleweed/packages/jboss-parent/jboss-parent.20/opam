@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jboss-parent-20-1.24.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jboss-parent-20-1.24.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "maven-source-plugin" 
+]
+extra-source "jboss-parent-20-1.24.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jboss-parent-20-1.24.noarch.rpm"
+}

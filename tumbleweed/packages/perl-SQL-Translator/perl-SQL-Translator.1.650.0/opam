@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-SQL-Translator-1.650.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-SQL-Translator-1.650.0-2.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Carp-Clan" 
+  "perl-DBI" {>= "1.54"}
+  "perl-File-ShareDir" {>= "1.0"}
+  "perl-Moo" {>= "1.3"}
+  "perl-Package-Variant" {>= "1.1001"}
+  "perl-Parse-RecDescent" {>= "1.967009"}
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-Sub-Quote" 
+  "perl-Try-Tiny" {>= "0.4"}
+  "perl-base" 
+]
+extra-source "perl-SQL-Translator-1.650.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-SQL-Translator-1.650.0-2.2.noarch.rpm"
+}

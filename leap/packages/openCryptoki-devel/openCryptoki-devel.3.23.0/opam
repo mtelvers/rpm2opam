@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openCryptoki-devel-3.23.0-slfo.1.2.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openCryptoki-devel-3.23.0-slfo.1.2.13.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "glibc-devel" 
+  "libopenssl-devel" 
+  "libopenssl3" 
+  "openldap2-devel" 
+  "pkgconf-pkg-config" 
+  "trousers-devel" 
+]
+extra-source "openCryptoki-devel-3.23.0-slfo.1.2.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/openCryptoki-devel-3.23.0-slfo.1.2.13.x86_64.rpm"
+}

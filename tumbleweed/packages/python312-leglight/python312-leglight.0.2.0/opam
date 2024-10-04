@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-leglight-0.2.0-1.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-leglight-0.2.0-1.13.x86_64.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-requests" {>= "2.22.0"}
+  "python312-zeroconf" {>= "0.24.3"}
+]
+extra-source "python312-leglight-0.2.0-1.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-leglight-0.2.0-1.13.x86_64.rpm"
+}

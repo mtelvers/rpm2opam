@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "monitoring-plugins-haproxy-1.1g6790d7f-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "monitoring-plugins-haproxy-1.1g6790d7f-2.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-HTTP-Message" 
+  "perl-LWP-Protocol-https" 
+  "perl-Nagios-Plugin" 
+  "perl-base" 
+  "perl-gettext" 
+  "perl-libwww-perl" 
+]
+extra-source "monitoring-plugins-haproxy-1.1g6790d7f-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/monitoring-plugins-haproxy-1.1g6790d7f-2.2.noarch.rpm"
+}

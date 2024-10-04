@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-ocg-p-svn28803.0.4-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-ocg-p-svn28803.0.4-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-datatool" 
+  "texlive-eso-pic" 
+  "texlive-iftex" 
+  "texlive-kpathsea" 
+  "texlive-listings" 
+  "texlive-pgf" 
+  "texlive-xkeyval" 
+]
+extra-source "texlive-ocg-p-svn28803.0.4-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-ocg-p-svn28803.0.4-71.fc40.noarch.rpm"
+}

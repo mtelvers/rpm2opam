@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-deferred-folds-prof-0.9.18.3-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-deferred-folds-prof-0.9.18.3-16.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-deferred-folds-devel" {= "0.9.18.3"}
+  "ghc-foldl-prof" 
+  "ghc-hashable-prof" 
+  "ghc-primitive-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unordered-containers-prof" 
+  "ghc-vector-prof" 
+]
+extra-source "ghc-deferred-folds-prof-0.9.18.3-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-deferred-folds-prof-0.9.18.3-16.fc40.x86_64.rpm"
+}

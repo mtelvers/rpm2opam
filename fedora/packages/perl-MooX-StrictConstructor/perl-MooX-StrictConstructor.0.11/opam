@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MooX-StrictConstructor-0.011-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooX-StrictConstructor-0.011-13.fc40.noarch.rpm"]
+depends: [
+  "perl-B" 
+  "perl-Class-Method-Modifiers" 
+  "perl-Moo" {>= "1.1000"}
+  "perl-constant" 
+  "perl-libs" 
+  "perl-strictures" {>= "1"}
+]
+extra-source "perl-MooX-StrictConstructor-0.011-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MooX-StrictConstructor-0.011-13.fc40.noarch.rpm"
+}

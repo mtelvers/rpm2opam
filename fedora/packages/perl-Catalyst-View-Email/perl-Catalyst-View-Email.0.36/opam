@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Catalyst-View-Email-0.36-25.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Catalyst-View-Email-0.36-25.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Catalyst-Runtime" {>= "5.7"}
+  "perl-Email-MIME" 
+  "perl-Email-Sender" 
+  "perl-Encode" 
+  "perl-Module-Runtime" 
+  "perl-Moose" 
+  "perl-Scalar-List-Utils" 
+  "perl-libs" 
+]
+extra-source "perl-Catalyst-View-Email-0.36-25.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Catalyst-View-Email-0.36-25.fc40.noarch.rpm"
+}

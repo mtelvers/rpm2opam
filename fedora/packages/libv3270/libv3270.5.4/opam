@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libv3270-5.4-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libv3270-5.4-10.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "lib3270" 
+  "libgcc" 
+  "pango" 
+]
+extra-source "libv3270-5.4-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libv3270-5.4-10.fc40.x86_64.rpm"
+}

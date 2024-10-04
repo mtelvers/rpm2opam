@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ddnet-18.0.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ddnet-18.0.3-1.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "ddnet-data" {= "18.0.3"}
+  "freetype" 
+  "glib2" 
+  "glibc" 
+  "json-parser" 
+  "libGLEW" 
+  "libcurl" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libnotify" 
+  "libpng" 
+  "libstdc++" 
+  "openssl-libs" 
+  "opusfile" 
+  "sqlite-libs" 
+  "vulkan-loader" 
+  "wavpack" 
+  "zlib-ng-compat" 
+]
+extra-source "ddnet-18.0.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/ddnet-18.0.3-1.fc40.x86_64.rpm"
+}

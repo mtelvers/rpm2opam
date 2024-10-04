@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libloudmouth-1-0-1.5.4-1.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libloudmouth-1-0-1.5.4-1.9.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "krb5" 
+  "libidn12" 
+  "libopenssl3" 
+]
+extra-source "libloudmouth-1-0-1.5.4-1.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libloudmouth-1-0-1.5.4-1.9.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "eclipse-jdt-4.15-15.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eclipse-jdt-4.15-15.4.noarch.rpm"]
+depends: [
+  "apiguardian" 
+  "eclipse-platform" {= "4.15"}
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "junit" {>= "4.12"}
+  "junit5" {>= "5.4.0"}
+  "junit5-minimal" 
+  "opentest4j" 
+]
+extra-source "eclipse-jdt-4.15-15.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/eclipse-jdt-4.15-15.4.noarch.rpm"
+}

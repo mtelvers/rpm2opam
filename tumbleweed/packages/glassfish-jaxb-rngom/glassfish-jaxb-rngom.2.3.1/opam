@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glassfish-jaxb-rngom-2.3.1-9.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glassfish-jaxb-rngom-2.3.1-9.1.noarch.rpm"]
+depends: [
+  "glassfish-jaxb-relaxng-datatype" {= "2.3.1"}
+  "javapackages-filesystem" 
+]
+extra-source "glassfish-jaxb-rngom-2.3.1-9.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/glassfish-jaxb-rngom-2.3.1-9.1.noarch.rpm"
+}

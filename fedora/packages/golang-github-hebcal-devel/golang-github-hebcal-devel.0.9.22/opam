@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-hebcal-devel-0.9.22-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-hebcal-devel-0.9.22-4.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-dustin-humanize-devel" 
+  "golang-github-hebcal-gematriya-devel" 
+  "golang-github-hebcal-greg-devel" 
+  "golang-github-hebcal-hdate-devel" 
+  "golang-github-nathan-osman-sunrise-devel" 
+]
+extra-source "golang-github-hebcal-devel-0.9.22-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-hebcal-devel-0.9.22-4.fc40.noarch.rpm"
+}

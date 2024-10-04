@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-CPAN-Uploader-0.103018-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CPAN-Uploader-0.103018-1.6.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Getopt-Long-Descriptive" {>= "0.84"}
+  "perl-HTTP-Message" 
+  "perl-LWP-Protocol-https" {>= "1"}
+  "perl-Term-ReadKey" 
+  "perl-base" 
+  "perl-libwww-perl" 
+]
+extra-source "perl-CPAN-Uploader-0.103018-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-CPAN-Uploader-0.103018-1.6.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-pretty-simple-prof-4.1.2.0-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-pretty-simple-prof-4.1.2.0-7.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-mtl-prof" 
+  "ghc-pretty-simple-devel" {= "4.1.2.0"}
+  "ghc-prettyprinter-ansi-terminal-prof" 
+  "ghc-prettyprinter-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-pretty-simple-prof-4.1.2.0-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-pretty-simple-prof-4.1.2.0-7.fc40.x86_64.rpm"
+}

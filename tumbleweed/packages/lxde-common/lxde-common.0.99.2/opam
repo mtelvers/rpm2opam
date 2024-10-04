@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lxde-common-0.99.2-2.23.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lxde-common-0.99.2-2.23.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "lxde-common-branding-openSUSE" 
+  "update-alternatives" 
+]
+extra-source "lxde-common-0.99.2-2.23.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/lxde-common-0.99.2-2.23.noarch.rpm"
+}

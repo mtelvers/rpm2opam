@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-bifunctors-prof-5.6.2-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-bifunctors-prof-5.6.2-1.6.x86_64.rpm"]
+depends: [
+  "ghc-assoc-prof" 
+  "ghc-base-prof" 
+  "ghc-bifunctors-devel" {= "5.6.2"}
+  "ghc-comonad-prof" 
+  "ghc-containers-prof" 
+  "ghc-tagged-prof" 
+  "ghc-template-haskell-prof" 
+  "ghc-th-abstraction-prof" 
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-bifunctors-prof-5.6.2-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-bifunctors-prof-5.6.2-1.6.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-jenkinsapi-0.3.13-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-jenkinsapi-0.3.13-1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-base" 
+  "python310-pytz" {>= "2014.4"}
+  "python310-requests" {>= "2.3.0"}
+  "python310-six" {>= "1.10.0"}
+  "update-alternatives" 
+]
+extra-source "python310-jenkinsapi-0.3.13-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-jenkinsapi-0.3.13-1.4.noarch.rpm"
+}

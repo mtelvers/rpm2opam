@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpeas2-loader-python-2.0.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpeas2-loader-python-2.0.3-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libpeas-2-0" 
+  "libpython3_11-1_0" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+]
+extra-source "libpeas2-loader-python-2.0.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpeas2-loader-python-2.0.3-1.1.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-wagon-ssh-external-3.5.3-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-wagon-ssh-external-3.5.3-2.2.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "maven-wagon-provider-api" {= "3.5.3"}
+  "maven-wagon-ssh-common" {= "3.5.3"}
+  "plexus-utils" 
+]
+extra-source "maven-wagon-ssh-external-3.5.3-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-wagon-ssh-external-3.5.3-2.2.noarch.rpm"
+}

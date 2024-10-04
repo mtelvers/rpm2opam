@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "axis-1.4-309.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "axis-1.4-309.2.noarch.rpm"]
+depends: [
+  "apache-commons-httpclient" 
+  "apache-commons-logging" 
+  "glassfish-activation-api" 
+  "jakarta-commons-discovery" 
+  "java-11-openj9" {>= "1.8"}
+  "java-11-openj9-headless" 
+  "javamail" 
+  "javapackages-filesystem" 
+  "reload4j" 
+  "wsdl4j" 
+  "xerces-j2" 
+]
+extra-source "axis-1.4-309.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/axis-1.4-309.2.noarch.rpm"
+}

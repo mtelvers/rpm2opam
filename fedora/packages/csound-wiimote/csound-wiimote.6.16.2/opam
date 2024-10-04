@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "csound-wiimote-6.16.2-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "csound-wiimote-6.16.2-12.fc40.x86_64.rpm"]
+depends: [
+  "csound" {= "6.16.2"}
+  "glibc" 
+  "wiiuse" 
+]
+extra-source "csound-wiimote-6.16.2-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/csound-wiimote-6.16.2-12.fc40.x86_64.rpm"
+}

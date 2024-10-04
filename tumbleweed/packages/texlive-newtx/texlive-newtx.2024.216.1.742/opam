@@ -1,0 +1,39 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-newtx-2024.216.1.742svn70491-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-newtx-2024.216.1.742svn70491-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-amscls" 
+  "texlive-amsmath" 
+  "texlive-carlisle" 
+  "texlive-erewhon" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-fontaxes" 
+  "texlive-fontspec" 
+  "texlive-iftex" 
+  "texlive-kastrup" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-mweights" 
+  "texlive-newtx-fonts" {>= "2024"}
+  "texlive-oberdiek" 
+  "texlive-scripts" 
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-txfonts" 
+  "texlive-unicode-math" 
+  "texlive-xcolor" 
+  "texlive-xkeyval" 
+  "texlive-xpatch" 
+  "texlive-xstring" 
+]
+extra-source "texlive-newtx-2024.216.1.742svn70491-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-newtx-2024.216.1.742svn70491-57.1.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-th-reify-many-prof-0.1.10-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-th-reify-many-prof-0.1.10-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-mtl-prof" 
+  "ghc-safe-prof" 
+  "ghc-template-haskell-prof" 
+  "ghc-th-expand-syns-prof" 
+  "ghc-th-reify-many-devel" {= "0.1.10"}
+]
+extra-source "ghc-th-reify-many-prof-0.1.10-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-th-reify-many-prof-0.1.10-8.fc40.x86_64.rpm"
+}

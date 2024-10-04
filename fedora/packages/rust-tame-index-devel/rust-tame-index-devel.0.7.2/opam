@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tame-index-devel-0.7.2-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tame-index-devel-0.7.2-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.67.0"}
+  "rust-camino+default-devel" 
+  "rust-home+default-devel" 
+  "rust-http+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-memchr+default-devel" 
+  "rust-semver+default-devel" 
+  "rust-semver+serde-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde+rc-devel" 
+  "rust-serde_json+default-devel" 
+  "rust-smol_str+default-devel" 
+  "rust-smol_str+serde-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-toml+default-devel" 
+  "rust-twox-hash-devel" 
+]
+extra-source "rust-tame-index-devel-0.7.2-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tame-index-devel-0.7.2-2.fc40.noarch.rpm"
+}

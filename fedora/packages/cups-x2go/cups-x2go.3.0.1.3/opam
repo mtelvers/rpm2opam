@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cups-x2go-3.0.1.3-19.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cups-x2go-3.0.1.3-19.fc40.noarch.rpm"]
+depends: [
+  "cups" 
+  "ghostscript" 
+  "openssh-clients" 
+  "perl-Errno" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Temp" 
+  "perl-IPC-Open3" 
+  "perl-Sys-Hostname" 
+  "perl-Sys-Syslog" 
+  "perl-Text-ParseWords" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "cups-x2go-3.0.1.3-19.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cups-x2go-3.0.1.3-19.fc40.noarch.rpm"
+}

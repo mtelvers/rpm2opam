@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-cairo-sys-rs0.15+x11-devel-0.15.1-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-cairo-sys-rs0.15+x11-devel-0.15.1-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-cairo-sys-rs0-15-devel" {= "0.15.1"}
+  "rust-x11+default-devel" 
+  "rust-x11+xlib-devel" 
+]
+extra-source "rust-cairo-sys-rs0.15+x11-devel-0.15.1-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-cairo-sys-rs0.15+x11-devel-0.15.1-4.fc40.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-openssl-devel-0.10.63-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-openssl-devel-0.10.63-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bitflags+default-devel" 
+  "rust-cfg-if+default-devel" 
+  "rust-foreign-types+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-openssl-macros+default-devel" 
+  "rust-openssl-sys+default-devel" 
+]
+extra-source "rust-openssl-devel-0.10.63-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-openssl-devel-0.10.63-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-branding-MicroOS-20230420-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-branding-MicroOS-20230420-1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "flatpak" 
+  "gio-branding-openSUSE" 
+  "sound-theme-freedesktop" 
+  "transactional-update" 
+  "zenity" 
+]
+extra-source "gnome-branding-MicroOS-20230420-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-branding-MicroOS-20230420-1.4.noarch.rpm"
+}

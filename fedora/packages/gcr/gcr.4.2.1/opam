@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gcr-4.2.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcr-4.2.1-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gcr-libs" {= "4.2.1"}
+  "glib2" 
+  "glibc" 
+  "gnupg2" 
+  "gtk4" 
+  "libsecret" 
+  "openssh-clients" 
+  "pango" 
+  "systemd-libs" 
+]
+extra-source "gcr-4.2.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gcr-4.2.1-1.fc40.x86_64.rpm"
+}

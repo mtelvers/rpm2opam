@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lilypond-emmentaler-fonts-2.25.12-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lilypond-emmentaler-fonts-2.25.12-1.fc40.noarch.rpm"]
+depends: [
+  "fonts-filesystem" 
+  "lilypond-fonts-common" {= "2.25.12"}
+]
+extra-source "lilypond-emmentaler-fonts-2.25.12-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lilypond-emmentaler-fonts-2.25.12-1.fc40.noarch.rpm"
+}

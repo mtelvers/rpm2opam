@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "osbs-client-1.15.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "osbs-client-1.15.0-3.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-osbs-client" {= "1.15.0"}
+  "python3-requests" 
+  "python3-requests-kerberos" 
+]
+extra-source "osbs-client-1.15.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/osbs-client-1.15.0-3.fc40.noarch.rpm"
+}

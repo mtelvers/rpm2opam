@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "receptorctl-1.4.4-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "receptorctl-1.4.4-2.fc40.x86_64.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-click" 
+  "python3-dateutil" 
+  "python3-pyyaml" 
+  "python3-receptor-python-worker" 
+]
+extra-source "receptorctl-1.4.4-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/receptorctl-1.4.4-2.fc40.x86_64.rpm"
+}

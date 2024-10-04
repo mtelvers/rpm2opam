@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "man2html-1.6-35.g.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "man2html-1.6-35.g.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "httpd" 
+  "man2html-core" {= "1.6"}
+]
+extra-source "man2html-1.6-35.g.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/man2html-1.6-35.g.fc40.x86_64.rpm"
+}

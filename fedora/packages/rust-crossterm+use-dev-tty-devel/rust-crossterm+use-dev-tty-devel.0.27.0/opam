@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-crossterm+use-dev-tty-devel-0.27.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-crossterm+use-dev-tty-devel-0.27.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-crossterm+filedescriptor-devel" {= "0.27.0"}
+  "rust-crossterm-devel" {= "0.27.0"}
+]
+extra-source "rust-crossterm+use-dev-tty-devel-0.27.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-crossterm+use-dev-tty-devel-0.27.0-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Growl-GNTP-0.21-1.29.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Growl-GNTP-0.21-1.29.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Crypt-CBC" {>= "2.29"}
+  "perl-OSSP-uuid" {>= "0.149"}
+  "perl-base" {>= "5.45"}
+]
+extra-source "perl-Growl-GNTP-0.21-1.29.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Growl-GNTP-0.21-1.29.noarch.rpm"
+}

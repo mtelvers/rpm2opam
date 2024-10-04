@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gio-qt-0.0.12-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gio-qt-0.0.12-4.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "glibmm2-4" 
+  "libgcc" 
+  "libsigc++20" 
+  "libstdc++" 
+  "qt5-qtbase" 
+]
+extra-source "gio-qt-0.0.12-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gio-qt-0.0.12-4.fc40.x86_64.rpm"
+}

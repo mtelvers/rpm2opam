@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bullet-devel-3.08-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bullet-devel-3.08-9.fc40.x86_64.rpm"]
+depends: [
+  "bullet" {= "3.8"}
+  "cmake" 
+  "cmake-filesystem" 
+  "pkgconf-pkg-config" 
+]
+extra-source "bullet-devel-3.08-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bullet-devel-3.08-9.fc40.x86_64.rpm"
+}

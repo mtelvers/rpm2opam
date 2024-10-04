@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "liboauth0-1.0.3-lp160.3.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "liboauth0-1.0.3-lp160.3.11.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcurl-mini4" 
+  "libopenssl3" 
+]
+extra-source "liboauth0-1.0.3-lp160.3.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/liboauth0-1.0.3-lp160.3.11.x86_64.rpm"
+}

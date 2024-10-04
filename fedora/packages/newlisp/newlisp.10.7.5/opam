@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "newlisp-10.7.5-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "newlisp-10.7.5-11.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gmp-devel" 
+  "gsl-devel" 
+  "libpq-devel" 
+  "mariadb-connector-c-devel" 
+  "openssl-devel" 
+  "readline" 
+  "sqlite-devel" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "newlisp-10.7.5-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/newlisp-10.7.5-11.fc40.x86_64.rpm"
+}

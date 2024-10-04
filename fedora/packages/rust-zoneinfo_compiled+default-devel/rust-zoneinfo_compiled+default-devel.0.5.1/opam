@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-zoneinfo_compiled+default-devel-0.5.1-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-zoneinfo_compiled+default-devel-0.5.1-9.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-zoneinfo_compiled-devel" {= "0.5.1"}
+]
+extra-source "rust-zoneinfo_compiled+default-devel-0.5.1-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-zoneinfo_compiled+default-devel-0.5.1-9.fc40.noarch.rpm"
+}

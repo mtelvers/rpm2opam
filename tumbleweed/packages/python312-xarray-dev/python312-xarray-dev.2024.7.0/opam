@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-xarray-dev-2024.7.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-xarray-dev-2024.7.0-1.1.noarch.rpm"]
+depends: [
+  "python312-hypothesis" 
+  "python312-pytest" 
+  "python312-pytest-cov" 
+  "python312-pytest-env" 
+  "python312-pytest-timeout" 
+  "python312-pytest-xdist" 
+  "python312-ruff" 
+  "python312-xarray" {= "2024.7.0"}
+]
+extra-source "python312-xarray-dev-2024.7.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-xarray-dev-2024.7.0-1.1.noarch.rpm"
+}

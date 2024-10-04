@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "deepin-daemon-5.14.45-2.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deepin-daemon-5.14.45-2.8.x86_64.rpm"]
+depends: [
+  "acpid" 
+  "bash-sh" 
+  "gvfs" 
+  "iw" 
+  "libgdk_pixbuf_xlib-2_0-0" 
+  "upower" 
+  "util-linux" 
+  "wallpaper-branding-openSUSE" 
+  "xdotool" 
+  "xvfb-run" 
+]
+extra-source "deepin-daemon-5.14.45-2.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/deepin-daemon-5.14.45-2.8.x86_64.rpm"
+}

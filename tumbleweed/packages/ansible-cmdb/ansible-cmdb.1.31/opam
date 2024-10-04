@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ansible-cmdb-1.31-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ansible-cmdb-1.31-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-Mako" 
+  "python311-PyYAML" 
+  "python311-base" 
+  "python311-jsonxs" 
+]
+extra-source "ansible-cmdb-1.31-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ansible-cmdb-1.31-2.1.noarch.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "motif-devel-2.3.8-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "motif-devel-2.3.8-3.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libMrm4" {= "2.3.8"}
+  "libUil4" {= "2.3.8"}
+  "libX11-devel" 
+  "libXft-devel" 
+  "libXm4" {= "2.3.8"}
+  "libXt-devel" 
+  "libXt6" 
+  "printproto-devel" 
+  "xorgproto-devel" 
+]
+extra-source "motif-devel-2.3.8-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/motif-devel-2.3.8-3.1.x86_64.rpm"
+}

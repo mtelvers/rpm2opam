@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sleuthkit-devel-4.12.1-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sleuthkit-devel-4.12.1-1.6.x86_64.rpm"]
+depends: [
+  "libtsk19" {= "4.12.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "sleuthkit-devel-4.12.1-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sleuthkit-devel-4.12.1-1.6.x86_64.rpm"
+}

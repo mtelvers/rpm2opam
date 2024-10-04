@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "quake3-1.36-46.svn2102.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "quake3-1.36-46.svn2102.fc40.x86_64.rpm"]
+depends: [
+  "autodownloader" 
+  "bash" 
+  "glibc" 
+  "libglvnd-glx" 
+  "libjpeg-turbo" 
+  "libvorbis" 
+  "sdl12-compat" 
+  "speex" 
+  "speexdsp" 
+  "tar" 
+  "zlib-ng-compat" 
+]
+extra-source "quake3-1.36-46.svn2102.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/quake3-1.36-46.svn2102.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Fuse-0.16.1-1.31.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Fuse-0.16.1-1.31.x86_64.rpm"]
+depends: [
+  "fuse" 
+  "glibc" 
+  "libfuse2" 
+  "perl" {= "5.40.0"}
+]
+extra-source "perl-Fuse-0.16.1-1.31.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-Fuse-0.16.1-1.31.x86_64.rpm"
+}

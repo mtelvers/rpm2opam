@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glassfish-jaxb-api-2.4.0-7.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glassfish-jaxb-api-2.4.0-7.1.noarch.rpm"]
+depends: [
+  "glassfish-activation-api" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "glassfish-jaxb-api-2.4.0-7.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/glassfish-jaxb-api-2.4.0-7.1.noarch.rpm"
+}

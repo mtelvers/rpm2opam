@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "slurm-torque-22.05.11-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "slurm-torque-22.05.11-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "pcp-testsuite" 
+  "perl-English" 
+  "perl-File-Basename" 
+  "perl-File-Temp" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" {>= "2.24"}
+  "perl-POSIX" 
+  "perl-autouse" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "slurm" {= "22.5.11"}
+  "slurm-perlapi" 
+]
+extra-source "slurm-torque-22.05.11-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/slurm-torque-22.05.11-3.fc40.x86_64.rpm"
+}

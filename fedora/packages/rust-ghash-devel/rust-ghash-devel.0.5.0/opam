@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ghash-devel-0.5.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ghash-devel-0.5.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.56"}
+  "rust-opaque-debug+default-devel" 
+  "rust-polyval+default-devel" 
+]
+extra-source "rust-ghash-devel-0.5.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ghash-devel-0.5.0-3.fc40.noarch.rpm"
+}

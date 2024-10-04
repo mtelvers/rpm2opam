@@ -1,0 +1,61 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "copr-frontend-1.202-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "copr-frontend-1.202-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "copr-frontend-fedora" {= "5"}
+  "copr-selinux" 
+  "crontabs" 
+  "curl" 
+  "httpd" 
+  "js-jquery" 
+  "js-jquery-ui" 
+  "modulemd-tools" {>= "0.6"}
+  "python3" 
+  "python3-CommonMark" 
+  "python3-XStatic-Bootstrap-SCSS" 
+  "python3-XStatic-DataTables" 
+  "python3-XStatic-Patternfly" 
+  "python3-alembic" 
+  "python3-anytree" 
+  "python3-authlib" 
+  "python3-backoff" {>= "1.9.0"}
+  "python3-blinker" 
+  "python3-click" 
+  "python3-copr-common" {>= "0.19.1"}
+  "python3-dateutil" 
+  "python3-email-validator" 
+  "python3-flask" 
+  "python3-flask-caching" 
+  "python3-flask-openid" 
+  "python3-flask-restx" 
+  "python3-flask-sqlalchemy" 
+  "python3-flask-whooshee" 
+  "python3-flask-wtf" 
+  "python3-gobject" 
+  "python3-html2text" 
+  "python3-html5-parser" 
+  "python3-humanize" 
+  "python3-ldap" 
+  "python3-lxml" 
+  "python3-markdown" 
+  "python3-mod_wsgi" 
+  "python3-munch" 
+  "python3-netaddr" 
+  "python3-openid-teams" 
+  "python3-psycopg2" 
+  "python3-pygal" 
+  "python3-pygments" 
+  "python3-pylibravatar" 
+  "python3-pytz" 
+  "python3-redis" 
+  "python3-requests" 
+  "python3-sqlalchemy-utils" 
+  "python3-templated-dictionary" 
+  "python3-wtforms" {>= "2.2.1"}
+  "python3-zmq" 
+  "redis" 
+]
+extra-source "copr-frontend-1.202-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/copr-frontend-1.202-1.fc40.noarch.rpm"
+}

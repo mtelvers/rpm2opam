@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Lingua-StopWords-tests-0.12-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Lingua-StopWords-tests-0.12-10.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Lingua-StopWords" {= "0.12"}
+  "perl-Test-Harness" 
+  "perl-Test-More-UTF8" 
+  "perl-Test-Simple" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+]
+extra-source "perl-Lingua-StopWords-tests-0.12-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Lingua-StopWords-tests-0.12-10.fc40.noarch.rpm"
+}

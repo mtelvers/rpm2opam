@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-Quart-0.19.6-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-Quart-0.19.6-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-Flask" {>= "3.0"}
+  "python312-Jinja2" 
+  "python312-MarkupSafe" 
+  "python312-Werkzeug" {>= "3.0"}
+  "python312-aiofiles" 
+  "python312-base" 
+  "python312-blinker" {>= "1.6"}
+  "python312-click" {>= "8.0"}
+  "python312-hypercorn" {>= "0.11.2"}
+  "python312-itsdangerous" 
+  "update-alternatives" 
+]
+extra-source "python312-Quart-0.19.6-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-Quart-0.19.6-1.1.noarch.rpm"
+}

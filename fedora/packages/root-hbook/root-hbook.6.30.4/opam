@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "root-hbook-6.30.04-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "root-hbook-6.30.04-2.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libgfortran" 
+  "libstdc++" 
+  "root-core" 
+  "root-hist" 
+  "root-io" 
+  "root-tree" 
+]
+extra-source "root-hbook-6.30.04-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/root-hbook-6.30.04-2.fc40.x86_64.rpm"
+}

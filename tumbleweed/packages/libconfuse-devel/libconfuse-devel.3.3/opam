@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libconfuse-devel-3.3-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libconfuse-devel-3.3-2.6.x86_64.rpm"]
+depends: [
+  "libconfuse2" {= "3.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libconfuse-devel-3.3-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libconfuse-devel-3.3-2.6.x86_64.rpm"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ipsilon-base-3.0.4-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ipsilon-base-3.0.4-13.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "fontawesome4-fonts" 
+  "httpd" 
+  "ipsilon-filesystem" {= "3.0.4"}
+  "ipsilon-openid" {= "3.0.4"}
+  "mod_ssl" 
+  "open-sans-fonts" 
+  "pam" 
+  "python3" 
+  "python3-cherrypy" 
+  "python3-jinja2" 
+  "python3-lxml" 
+  "python3-mod_wsgi" 
+  "python3-sqlalchemy" 
+  "shadow-utils" 
+]
+extra-source "ipsilon-base-3.0.4-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/ipsilon-base-3.0.4-13.fc40.noarch.rpm"
+}

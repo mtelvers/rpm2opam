@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "numatop-2.4-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "numatop-2.4-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libncurses6" 
+  "libnuma1" 
+]
+extra-source "numatop-2.4-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/numatop-2.4-1.3.x86_64.rpm"
+}

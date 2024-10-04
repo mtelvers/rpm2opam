@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libKF6PulseAudioQt5-1.5.0-lp160.1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libKF6PulseAudioQt5-1.5.0-lp160.1.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt6Core6" 
+  "libQt6DBus6" 
+  "libQt6Gui6" 
+  "libpulse-mainloop-glib0" 
+  "libpulse0" 
+  "libstdc++6" 
+]
+extra-source "libKF6PulseAudioQt5-1.5.0-lp160.1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libKF6PulseAudioQt5-1.5.0-lp160.1.5.x86_64.rpm"
+}

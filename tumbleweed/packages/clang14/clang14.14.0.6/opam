@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "clang14-14.0.6-15.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clang14-14.0.6-15.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libLLVM14" 
+  "libclang-cpp14" 
+  "libclang13" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libxml2-2" 
+  "python311-base" 
+  "update-alternatives" 
+]
+extra-source "clang14-14.0.6-15.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/clang14-14.0.6-15.1.x86_64.rpm"
+}

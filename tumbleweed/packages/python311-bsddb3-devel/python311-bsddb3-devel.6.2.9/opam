@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-bsddb3-devel-6.2.9-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-bsddb3-devel-6.2.9-4.1.x86_64.rpm"]
+depends: [
+  "python311-bsddb3" {= "6.2.9"}
+]
+extra-source "python311-bsddb3-devel-6.2.9-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-bsddb3-devel-6.2.9-4.1.x86_64.rpm"
+}

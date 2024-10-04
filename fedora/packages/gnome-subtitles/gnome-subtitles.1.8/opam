@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-subtitles-1.8-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-subtitles-1.8-8.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "enchant2" 
+  "gstreamer1-plugins-good-gtk" 
+  "gtk-sharp3" {= "3.0.0.0"}
+  "hicolor-icon-theme" 
+  "mono-core" {= "4.0.0.0"}
+  "mono-locale-extras" 
+]
+extra-source "gnome-subtitles-1.8-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-subtitles-1.8-8.fc40.x86_64.rpm"
+}

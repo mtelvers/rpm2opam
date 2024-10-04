@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gridsite-devel-3.0.0-0.29.20240125git1200598.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gridsite-devel-3.0.0-0.29.20240125git1200598.fc40.x86_64.rpm"]
+depends: [
+  "gridsite-libs" {= "3.0.0"}
+  "libxml2-devel" 
+  "openssl-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "gridsite-devel-3.0.0-0.29.20240125git1200598.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gridsite-devel-3.0.0-0.29.20240125git1200598.fc40.x86_64.rpm"
+}

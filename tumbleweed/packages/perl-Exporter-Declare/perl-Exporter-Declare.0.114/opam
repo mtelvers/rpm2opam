@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Exporter-Declare-0.114-1.31.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Exporter-Declare-0.114-1.31.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Meta-Builder" {>= "0.3"}
+  "perl-aliased" 
+]
+extra-source "perl-Exporter-Declare-0.114-1.31.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Exporter-Declare-0.114-1.31.noarch.rpm"
+}

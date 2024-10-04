@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-symfony-validator-2.8.52-10.fc38.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-symfony-validator-2.8.52-10.fc38.noarch.rpm"]
+depends: [
+  "php-common" 
+  "php-doctrine-annotations" 
+  "php-doctrine-cache" 
+  "php-egulias-email-validator" 
+  "php-intl" 
+  "php-symfony-config" {= "2.8.52"}
+  "php-symfony-expression-language" {= "2.8.52"}
+  "php-symfony-http-foundation" {= "2.8.52"}
+  "php-symfony-intl" {= "2.8.52"}
+  "php-symfony-property-access" {= "2.8.52"}
+  "php-symfony-translation" {= "2.8.52"}
+  "php-symfony-yaml" {= "2.8.52"}
+  "php-xml" 
+]
+extra-source "php-symfony-validator-2.8.52-10.fc38.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-symfony-validator-2.8.52-10.fc38.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libavformat-free-devel-6.1.1-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libavformat-free-devel-6.1.1-8.fc40.x86_64.rpm"]
+depends: [
+  "libavcodec-free-devel" {= "6.1.1"}
+  "libavformat-free" 
+  "libavutil-free-devel" {= "6.1.1"}
+  "libswresample-free-devel" {= "6.1.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libavformat-free-devel-6.1.1-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libavformat-free-devel-6.1.1-8.fc40.x86_64.rpm"
+}

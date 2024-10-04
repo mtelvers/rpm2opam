@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-uri-bytestring-prof-0.3.3.1-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-uri-bytestring-prof-0.3.3.1-10.fc40.x86_64.rpm"]
+depends: [
+  "ghc-attoparsec-prof" 
+  "ghc-base-prof" 
+  "ghc-blaze-builder-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-template-haskell-prof" 
+  "ghc-th-lift-instances-prof" 
+  "ghc-uri-bytestring-devel" {= "0.3.3.1"}
+]
+extra-source "ghc-uri-bytestring-prof-0.3.3.1-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-uri-bytestring-prof-0.3.3.1-10.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "anaconda-live-40.22.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "anaconda-live-40.22.3-1.fc40.noarch.rpm"]
+depends: [
+  "anaconda-gui" {= "40.22.3"}
+  "bash" 
+  "usermode" 
+  "xisxwayland" 
+  "zenity" 
+]
+extra-source "anaconda-live-40.22.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/anaconda-live-40.22.3-1.fc40.noarch.rpm"
+}

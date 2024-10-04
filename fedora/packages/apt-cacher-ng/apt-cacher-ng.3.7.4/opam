@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "apt-cacher-ng-3.7.4-6.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apt-cacher-ng-3.7.4-6.fc39.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bzip2-libs" 
+  "c-ares" 
+  "crontabs" 
+  "fuse-libs" 
+  "glibc" {>= "2.37.9000"}
+  "libevent" 
+  "libgcc" 
+  "libstdc++" 
+  "logrotate" 
+  "openssl-libs" 
+  "perl-MIME-Base64" 
+  "perl-Socket" 
+  "perl-Sys-Hostname" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "systemd" 
+  "systemd-libs" 
+  "xz" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "apt-cacher-ng-3.7.4-6.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/apt-cacher-ng-3.7.4-6.fc39.x86_64.rpm"
+}

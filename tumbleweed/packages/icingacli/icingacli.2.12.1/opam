@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "icingacli-2.12.1-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "icingacli-2.12.1-2.2.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "icinga-l10n" {>= "1.1.0"}
+  "icingaweb2-common" {= "2.12.1"}
+  "php-icinga" {= "2.12.1"}
+  "php8-cli" 
+]
+extra-source "icingacli-2.12.1-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/icingacli-2.12.1-2.2.noarch.rpm"
+}

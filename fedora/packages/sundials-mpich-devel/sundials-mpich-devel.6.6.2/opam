@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sundials-mpich-devel-6.6.2-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sundials-mpich-devel-6.6.2-7.fc40.x86_64.rpm"]
+depends: [
+  "sundials-mpich" {= "6.6.2"}
+]
+extra-source "sundials-mpich-devel-6.6.2-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sundials-mpich-devel-6.6.2-7.fc40.x86_64.rpm"
+}

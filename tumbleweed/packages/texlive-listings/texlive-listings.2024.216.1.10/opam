@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-listings-2024.216.1.10svn70045-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-listings-2024.216.1.10svn70045-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-algorithms" 
+  "texlive-fancyvrb" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-graphics" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-upquote" 
+  "texlive-url" 
+]
+extra-source "texlive-listings-2024.216.1.10svn70045-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-listings-2024.216.1.10svn70045-57.1.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libtool-2.4.7-3.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libtool-2.4.7-3.9.x86_64.rpm"]
+depends: [
+  "automake" {> "1.4"}
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "libltdl7" {= "2.4.7"}
+  "m4" {>= "1.4.16"}
+  "tar" 
+]
+extra-source "libtool-2.4.7-3.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libtool-2.4.7-3.9.x86_64.rpm"
+}

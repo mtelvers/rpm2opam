@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "niri-0.1.9-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "niri-0.1.9-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libdisplay-info2" 
+  "libgbm1" 
+  "libgcc_s1" 
+  "libinput10" 
+  "libpango-1_0-0" 
+  "libpipewire-0_3-0" 
+  "libpixman-1-0" 
+  "libseat1" 
+  "libudev-mini1" 
+  "libxkbcommon0" 
+]
+extra-source "niri-0.1.9-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/niri-0.1.9-1.1.x86_64.rpm"
+}

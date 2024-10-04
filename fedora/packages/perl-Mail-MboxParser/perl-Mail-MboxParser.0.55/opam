@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Mail-MboxParser-0.55-41.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mail-MboxParser-0.55-41.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-File-Temp" 
+  "perl-IO" 
+  "perl-MIME-tools" {>= "5"}
+  "perl-Mail-Mbox-MessageParser" 
+  "perl-Symbol" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" {>= "5.4.0"}
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-Mail-MboxParser-0.55-41.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Mail-MboxParser-0.55-41.fc40.noarch.rpm"
+}

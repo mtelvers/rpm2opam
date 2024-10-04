@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-mptcp-pm-devel-0.1.3-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-mptcp-pm-devel-0.1.3-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-anyhow+default-devel" 
+  "rust-byteorder+default-devel" 
+  "rust-futures+default-devel" 
+  "rust-genetlink-devel" 
+  "rust-log+default-devel" 
+  "rust-netlink-packet-core+default-devel" 
+  "rust-netlink-packet-generic+default-devel" 
+  "rust-netlink-packet-utils+default-devel" 
+  "rust-netlink-proto-devel" 
+  "rust-netlink-sys+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-mptcp-pm-devel-0.1.3-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-mptcp-pm-devel-0.1.3-3.fc40.noarch.rpm"
+}

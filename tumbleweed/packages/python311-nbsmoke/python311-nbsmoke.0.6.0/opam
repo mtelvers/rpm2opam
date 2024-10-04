@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-nbsmoke-0.6.0-5.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-nbsmoke-0.6.0-5.2.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-ipykernel" 
+  "python311-jupyter-client" 
+  "python311-nbconvert" 
+  "python311-nbformat" 
+  "python311-param" 
+  "python311-pyflakes" 
+  "python311-pytest" {>= "3.1.1"}
+]
+extra-source "python311-nbsmoke-0.6.0-5.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-nbsmoke-0.6.0-5.2.noarch.rpm"
+}

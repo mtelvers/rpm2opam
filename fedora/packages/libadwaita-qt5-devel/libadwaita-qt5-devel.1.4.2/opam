@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libadwaita-qt5-devel-1.4.2-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libadwaita-qt5-devel-1.4.2-7.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "libadwaita-qt5" {= "1.4.2"}
+  "pkgconf-pkg-config" 
+  "qt5-qtbase-devel" 
+]
+extra-source "libadwaita-qt5-devel-1.4.2-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libadwaita-qt5-devel-1.4.2-7.fc40.x86_64.rpm"
+}

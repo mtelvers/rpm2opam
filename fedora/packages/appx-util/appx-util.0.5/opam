@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "appx-util-0.5-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "appx-util-0.5-4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "openssl-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "appx-util-0.5-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/appx-util-0.5-4.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-Flask-doc-3.0.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-Flask-doc-3.0.3-1.1.noarch.rpm"]
+depends: [
+  "python311-Flask" {= "3.0.3"}
+]
+extra-source "python311-Flask-doc-3.0.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-Flask-doc-3.0.3-1.1.noarch.rpm"
+}

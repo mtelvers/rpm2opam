@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "typelib-1_0-EBook-1_2-3.52.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "typelib-1_0-EBook-1_2-3.52.4-1.1.x86_64.rpm"]
+depends: [
+  "girepository-1_0" {= "2.0"}
+  "libcamel-1_2-64" 
+  "libebook-1_2-21" 
+  "libebook-contacts-1_2-4" 
+  "libedata-book-1_2-27" 
+  "libedataserver-1_2-27" 
+  "typelib-1_0-Camel-1_2" {= "1.2"}
+  "typelib-1_0-EBookContacts-1_2" {= "1.2"}
+  "typelib-1_0-EDataServer-1_2" {= "1.2"}
+  "typelib-1_0-GLib-2_0" {= "2.0"}
+  "typelib-1_0-GModule-2_0" {= "2.0"}
+  "typelib-1_0-GObject-2_0" {= "2.0"}
+  "typelib-1_0-Gio-2_0" {= "2.0"}
+  "typelib-1_0-Json-1_0" {= "1.0"}
+  "typelib-1_0-Soup-3_0" {= "3.0"}
+]
+extra-source "typelib-1_0-EBook-1_2-3.52.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/typelib-1_0-EBook-1_2-3.52.4-1.1.x86_64.rpm"
+}

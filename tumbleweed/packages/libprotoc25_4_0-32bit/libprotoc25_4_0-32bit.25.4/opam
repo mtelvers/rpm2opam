@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libprotoc25_4_0-32bit-25.4-13.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libprotoc25_4_0-32bit-25.4-13.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libabsl_2401_0_0-32bit" 
+  "libabsl_lite_2401_0_0-32bit" 
+  "libgcc_s1-32bit" 
+  "libprotobuf25_4_0-32bit" 
+  "libstdc++6-32bit" 
+]
+extra-source "libprotoc25_4_0-32bit-25.4-13.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libprotoc25_4_0-32bit-25.4-13.1.x86_64.rpm"
+}

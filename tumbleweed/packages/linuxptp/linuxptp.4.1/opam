@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "linuxptp-4.1-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "linuxptp-4.1-1.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "systemd" 
+]
+extra-source "linuxptp-4.1-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/linuxptp-4.1-1.3.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libgdamm-4.99.11-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgdamm-4.99.11-19.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "glibmm2-4" {>= "2.46.1"}
+  "libgcc" 
+  "libgda5" 
+  "libsigc++20" 
+  "libstdc++" 
+  "libxml2" 
+]
+extra-source "libgdamm-4.99.11-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libgdamm-4.99.11-19.fc40.x86_64.rpm"
+}

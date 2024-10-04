@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnuhealth-thalamus-0.9.14-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnuhealth-thalamus-0.9.14-2.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "python311-Flask" 
+  "python311-Flask-HTTPAuth" 
+  "python311-Flask-RESTful" 
+  "python311-Flask-WTF" 
+  "python311-base" {= "3.11"}
+  "python311-bcrypt" 
+  "python311-psycopg2" 
+]
+extra-source "gnuhealth-thalamus-0.9.14-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnuhealth-thalamus-0.9.14-2.2.noarch.rpm"
+}

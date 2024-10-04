@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "reuse-4.0.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "reuse-4.0.3-1.1.x86_64.rpm"]
+depends: [
+  "python311" {>= "3.8"}
+  "python311-Jinja2" 
+  "python311-attrs" 
+  "python311-base" 
+  "python311-binaryornot" 
+  "python311-boolean-py" 
+  "python311-license-expression" 
+  "python311-python-debian" 
+  "python311-tomlkit" 
+]
+extra-source "reuse-4.0.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/reuse-4.0.3-1.1.x86_64.rpm"
+}

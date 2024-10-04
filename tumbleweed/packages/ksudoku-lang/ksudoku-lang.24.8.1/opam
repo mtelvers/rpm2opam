@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ksudoku-lang-24.08.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ksudoku-lang-24.08.1-1.1.noarch.rpm"]
+depends: [
+  "ksudoku" {= "24.8.1"}
+]
+extra-source "ksudoku-lang-24.08.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ksudoku-lang-24.08.1-1.1.noarch.rpm"
+}

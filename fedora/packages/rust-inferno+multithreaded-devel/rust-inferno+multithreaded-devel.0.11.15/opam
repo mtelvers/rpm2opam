@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-inferno+multithreaded-devel-0.11.15-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-inferno+multithreaded-devel-0.11.15-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-inferno+crossbeam-channel-devel" {= "0.11.15"}
+  "rust-inferno+crossbeam-utils-devel" {= "0.11.15"}
+  "rust-inferno+dashmap-devel" {= "0.11.15"}
+  "rust-inferno-devel" {= "0.11.15"}
+]
+extra-source "rust-inferno+multithreaded-devel-0.11.15-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-inferno+multithreaded-devel-0.11.15-4.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tamil-gtk2im-2.2-304.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tamil-gtk2im-2.2-304.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gtk2-tools" {>= "2.24.20"}
+  "libgtk-2_0-0" 
+]
+extra-source "tamil-gtk2im-2.2-304.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tamil-gtk2im-2.2-304.2.x86_64.rpm"
+}

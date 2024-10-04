@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gitslave-2.0.2-10.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gitslave-2.0.2-10.2.noarch.rpm"]
+depends: [
+  "git-core" 
+  "perl" 
+  "perl-base" 
+]
+extra-source "gitslave-2.0.2-10.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gitslave-2.0.2-10.2.noarch.rpm"
+}

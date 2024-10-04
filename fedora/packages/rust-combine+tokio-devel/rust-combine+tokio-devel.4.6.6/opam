@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-combine+tokio-devel-4.6.6-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-combine+tokio-devel-4.6.6-5.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-combine+futures-core-03-devel" {= "4.6.6"}
+  "rust-combine+pin-project-lite-devel" {= "4.6.6"}
+  "rust-combine+tokio-dep-devel" {= "4.6.6"}
+  "rust-combine-devel" {= "4.6.6"}
+  "rust-tokio-util+codec-devel" 
+  "rust-tokio-util+io-devel" 
+  "rust-tokio-util-devel" 
+]
+extra-source "rust-combine+tokio-devel-4.6.6-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-combine+tokio-devel-4.6.6-5.fc40.noarch.rpm"
+}

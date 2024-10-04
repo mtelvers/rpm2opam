@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rmlint-2.10.1-18.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rmlint-2.10.1-18.fc40.x86_64.rpm"]
+depends: [
+  "elfutils-libelf" 
+  "glib2" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "json-glib" 
+  "libblkid" 
+  "python3" {= "3.12"}
+]
+extra-source "rmlint-2.10.1-18.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rmlint-2.10.1-18.fc40.x86_64.rpm"
+}

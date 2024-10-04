@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xrootd-libs-devel-5.7.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xrootd-libs-devel-5.7.0-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "xrootd-libs" {= "5.7.0"}
+]
+extra-source "xrootd-libs-devel-5.7.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xrootd-libs-devel-5.7.0-1.1.x86_64.rpm"
+}

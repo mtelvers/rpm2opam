@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-protonvpn-nm-lib-3.16.0-2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-protonvpn-nm-lib-3.16.0-2.3.noarch.rpm"]
+depends: [
+  "NetworkManager-openvpn" 
+  "dbus-1-x11" 
+  "python312-Jinja2" 
+  "python312-base" {= "3.12"}
+  "python312-dbus-python" 
+  "python312-distro" 
+  "python312-gobject" 
+  "python312-keyring" 
+  "python312-proton-client" {>= "0.5.0"}
+  "python312-pyxdg" 
+  "python312-systemd" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-NM-1_0" {= "1.0"}
+]
+extra-source "python312-protonvpn-nm-lib-3.16.0-2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-protonvpn-nm-lib-3.16.0-2.3.noarch.rpm"
+}

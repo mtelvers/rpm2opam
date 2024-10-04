@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-wrapfig2-2024.216.7.0.0svn69513-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-wrapfig2-2024.216.7.0.0svn69513-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-float" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-l3packages" 
+  "texlive-pict2e" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-xcolor" 
+  "texlive-xkeyval" 
+]
+extra-source "texlive-wrapfig2-2024.216.7.0.0svn69513-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-wrapfig2-2024.216.7.0.0svn69513-55.1.noarch.rpm"
+}

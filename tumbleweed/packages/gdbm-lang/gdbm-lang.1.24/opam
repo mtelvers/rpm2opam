@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gdbm-lang-1.24-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdbm-lang-1.24-1.1.noarch.rpm"]
+depends: [
+  "libgdbm6" {= "1.24"}
+]
+extra-source "gdbm-lang-1.24-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gdbm-lang-1.24-1.1.noarch.rpm"
+}

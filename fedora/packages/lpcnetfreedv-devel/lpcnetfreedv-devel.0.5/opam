@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lpcnetfreedv-devel-0.5-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lpcnetfreedv-devel-0.5-5.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "glibc" 
+  "lpcnetfreedv" 
+]
+extra-source "lpcnetfreedv-devel-0.5-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lpcnetfreedv-devel-0.5-5.fc40.x86_64.rpm"
+}

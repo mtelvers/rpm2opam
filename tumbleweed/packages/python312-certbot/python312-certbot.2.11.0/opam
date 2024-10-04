@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-certbot-2.11.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-certbot-2.11.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-ConfigArgParse" {>= "1.5.3"}
+  "python312-acme" {>= "2.11.0"}
+  "python312-base" 
+  "python312-configobj" {>= "5.0.6"}
+  "python312-cryptography" {>= "3.2.1"}
+  "python312-distro" {>= "1.0.1"}
+  "python312-josepy" {>= "1.9.0"}
+  "python312-parsedatetime" {>= "2.4"}
+  "python312-pyRFC3339" 
+  "python312-pytz" {>= "2019.3"}
+  "python312-setuptools" {>= "41.6.0"}
+  "update-alternatives" 
+]
+extra-source "python312-certbot-2.11.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-certbot-2.11.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-PPIx-Utilities-1.001000-14.22.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-PPIx-Utilities-1.001000-14.22.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Exception-Class" 
+  "perl-PPI" {>= "1.208"}
+  "perl-Readonly" 
+  "perl-Task-Weaken" 
+]
+extra-source "perl-PPIx-Utilities-1.001000-14.22.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-PPIx-Utilities-1.001000-14.22.noarch.rpm"
+}

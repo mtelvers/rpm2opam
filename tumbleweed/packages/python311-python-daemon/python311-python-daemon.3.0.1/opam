@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-python-daemon-3.0.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-python-daemon-3.0.1-2.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-lockfile" {>= "0.10"}
+  "python311-packaging" 
+  "python311-setuptools" {>= "62.4.0"}
+]
+extra-source "python311-python-daemon-3.0.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-python-daemon-3.0.1-2.1.noarch.rpm"
+}

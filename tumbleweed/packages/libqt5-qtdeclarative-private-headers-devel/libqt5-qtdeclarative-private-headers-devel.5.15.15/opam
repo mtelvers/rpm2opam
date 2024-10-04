@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqt5-qtdeclarative-private-headers-devel-5.15.15+kde25-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqt5-qtdeclarative-private-headers-devel-5.15.15+kde25-1.1.noarch.rpm"]
+depends: [
+  "libQt5Core-private-headers-devel" {>= "5.15.15"}
+  "libQt5Gui-private-headers-devel" {>= "5.15.15"}
+  "libQt5Test-private-headers-devel" {>= "5.15.15"}
+  "libQt5Widgets-private-headers-devel" {>= "5.15.15"}
+  "libqt5-qtdeclarative-devel" {= "5.15.15"}
+]
+extra-source "libqt5-qtdeclarative-private-headers-devel-5.15.15+kde25-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libqt5-qtdeclarative-private-headers-devel-5.15.15+kde25-1.1.noarch.rpm"
+}

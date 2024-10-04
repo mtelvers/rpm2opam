@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-netlink-sys+mio-devel-0.8.5-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-netlink-sys+mio-devel-0.8.5-8.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-mio+default-devel" 
+  "rust-mio+os-ext-devel" 
+  "rust-mio+os-poll-devel" 
+  "rust-netlink-sys-devel" {= "0.8.5"}
+]
+extra-source "rust-netlink-sys+mio-devel-0.8.5-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-netlink-sys+mio-devel-0.8.5-8.fc40.noarch.rpm"
+}

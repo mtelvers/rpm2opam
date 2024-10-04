@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-megaparsec-devel-9.6.1-1.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-megaparsec-devel-9.6.1-1.9.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-case-insensitive-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-deepseq-devel" 
+  "ghc-megaparsec" {= "9.6.1"}
+  "ghc-mtl-devel" 
+  "ghc-parser-combinators-devel" 
+  "ghc-scientific-devel" 
+  "ghc-text-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-megaparsec-devel-9.6.1-1.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-megaparsec-devel-9.6.1-1.9.x86_64.rpm"
+}

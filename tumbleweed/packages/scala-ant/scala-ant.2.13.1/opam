@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "scala-ant-2.13.1-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scala-ant-2.13.1-3.1.noarch.rpm"]
+depends: [
+  "scala" {>= "2.13.1"}
+]
+extra-source "scala-ant-2.13.1-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/scala-ant-2.13.1-3.1.noarch.rpm"
+}

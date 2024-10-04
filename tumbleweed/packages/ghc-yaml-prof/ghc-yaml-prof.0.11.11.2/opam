@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-yaml-prof-0.11.11.2-1.35.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-yaml-prof-0.11.11.2-1.35.x86_64.rpm"]
+depends: [
+  "ghc-aeson-prof" 
+  "ghc-attoparsec-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-conduit-prof" 
+  "ghc-containers-prof" 
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+  "ghc-libyaml-prof" 
+  "ghc-mtl-prof" 
+  "ghc-resourcet-prof" 
+  "ghc-scientific-prof" 
+  "ghc-template-haskell-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unordered-containers-prof" 
+  "ghc-vector-prof" 
+  "ghc-yaml-devel" {= "0.11.11.2"}
+]
+extra-source "ghc-yaml-prof-0.11.11.2-1.35.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-yaml-prof-0.11.11.2-1.35.x86_64.rpm"
+}

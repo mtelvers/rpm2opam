@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "unzboot-0.1~git.20230318.3285b55-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "unzboot-0.1~git.20230318.3285b55-3.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "zlib-ng-compat" 
+]
+extra-source "unzboot-0.1~git.20230318.3285b55-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/unzboot-0.1~git.20230318.3285b55-3.fc40.x86_64.rpm"
+}

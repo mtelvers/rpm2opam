@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "monotone-1.1-48.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "monotone-1.1-48.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "botan" 
+  "glibc" 
+  "libgcc" 
+  "libidn" 
+  "libstdc++" 
+  "lua-libs" 
+  "pcre" 
+  "perl-English" 
+  "perl-File-Basename" 
+  "perl-PathTools" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.8.5"}
+  "python3" 
+  "sqlite-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "monotone-1.1-48.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/monotone-1.1-48.fc40.x86_64.rpm"
+}

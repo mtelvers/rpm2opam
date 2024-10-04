@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-theme-breeze-5.0.1-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-theme-breeze-5.0.1-1.4.noarch.rpm"]
+depends: [
+  "bash" 
+  "kf6-breeze-icons" 
+  "yast2-theme" {= "5.0.1"}
+]
+extra-source "yast2-theme-breeze-5.0.1-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/yast2-theme-breeze-5.0.1-1.4.noarch.rpm"
+}

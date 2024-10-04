@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MooX-HandlesVia-0.001009-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooX-HandlesVia-0.001009-12.fc40.noarch.rpm"]
+depends: [
+  "perl-Class-Method-Modifiers" 
+  "perl-Data-Perl" {>= "0.2006"}
+  "perl-Module-Runtime" 
+  "perl-Moo" 
+  "perl-Role-Tiny" 
+  "perl-libs" 
+  "perl-strictures" {>= "1"}
+]
+extra-source "perl-MooX-HandlesVia-0.001009-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MooX-HandlesVia-0.001009-12.fc40.noarch.rpm"
+}

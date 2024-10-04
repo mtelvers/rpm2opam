@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Task-Kensho-Toolchain-0.41-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Task-Kensho-Toolchain-0.41-9.fc40.noarch.rpm"]
+depends: [
+  "perl-App-FatPacker" 
+  "perl-App-cpanminus" 
+  "perl-App-cpm" 
+  "perl-CPAN-Mini" 
+  "perl-Pinto" 
+  "perl-libs" 
+  "perl-local-lib" 
+  "perl-version" 
+  "perlbrew" 
+]
+extra-source "perl-Task-Kensho-Toolchain-0.41-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Task-Kensho-Toolchain-0.41-9.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libldm-devel-0.2.4-15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libldm-devel-0.2.4-15.fc40.x86_64.rpm"]
+depends: [
+  "device-mapper-devel" {>= "1.0"}
+  "glib2-devel" {>= "2.32.0"}
+  "json-glib-devel" {>= "0.14.0"}
+  "libldm" {= "0.2.4"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libldm-devel-0.2.4-15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libldm-devel-0.2.4-15.fc40.x86_64.rpm"
+}

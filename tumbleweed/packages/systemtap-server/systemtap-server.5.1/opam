@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "systemtap-server-5.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "systemtap-server-5.1-1.1.x86_64.rpm"]
+depends: [
+  "avahi" 
+  "avahi-utils" 
+  "bash" 
+  "bash-sh" 
+  "coreutils" 
+  "glibc" 
+  "libavahi-client3" 
+  "libavahi-common3" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "mozilla-nspr" 
+  "mozilla-nss" 
+  "mozilla-nss-tools" 
+  "systemtap" {= "5.1"}
+  "unzip" 
+  "zip" 
+]
+extra-source "systemtap-server-5.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/systemtap-server-5.1-1.1.x86_64.rpm"
+}

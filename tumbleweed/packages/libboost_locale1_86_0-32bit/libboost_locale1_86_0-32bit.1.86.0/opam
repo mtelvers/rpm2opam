@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libboost_locale1_86_0-32bit-1.86.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libboost_locale1_86_0-32bit-1.86.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libboost_thread1_86_0-32bit" 
+  "libgcc_s1-32bit" 
+  "libicu75-32bit" 
+  "libstdc++6-32bit" 
+]
+extra-source "libboost_locale1_86_0-32bit-1.86.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libboost_locale1_86_0-32bit-1.86.0-1.1.x86_64.rpm"
+}

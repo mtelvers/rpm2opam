@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libblkid-devel-32bit-2.40.1-5.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libblkid-devel-32bit-2.40.1-5.1.x86_64.rpm"]
+depends: [
+  "libblkid-devel" {= "2.40.1"}
+  "libblkid1-32bit" {= "2.40.1"}
+  "libeconf-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libblkid-devel-32bit-2.40.1-5.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libblkid-devel-32bit-2.40.1-5.1.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-standback+std-devel-0.2.17-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-standback+std-devel-0.2.17-9.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-standback-devel" {= "0.2.17"}
+]
+extra-source "rust-standback+std-devel-0.2.17-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-standback+std-devel-0.2.17-9.fc40.noarch.rpm"
+}

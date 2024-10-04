@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pdsh-mod-netgroup-2.34-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pdsh-mod-netgroup-2.34-11.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "pdsh" {= "2.34"}
+]
+extra-source "pdsh-mod-netgroup-2.34-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pdsh-mod-netgroup-2.34-11.fc40.x86_64.rpm"
+}

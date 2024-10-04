@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "myrepos-utils-0.0.4.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "myrepos-utils-0.0.4.2-1.fc40.noarch.rpm"]
+depends: [
+  "myrepos" 
+  "python3" 
+  "python3-click" 
+]
+extra-source "myrepos-utils-0.0.4.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/myrepos-utils-0.0.4.2-1.fc40.noarch.rpm"
+}

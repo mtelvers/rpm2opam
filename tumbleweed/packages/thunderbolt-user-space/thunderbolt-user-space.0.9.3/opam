@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "thunderbolt-user-space-0.9.3-5.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "thunderbolt-user-space-0.9.3-5.4.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "libboost_filesystem1_86_0" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "procps" 
+]
+extra-source "thunderbolt-user-space-0.9.3-5.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/thunderbolt-user-space-0.9.3-5.4.x86_64.rpm"
+}

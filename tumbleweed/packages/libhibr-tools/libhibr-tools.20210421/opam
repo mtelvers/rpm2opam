@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libhibr-tools-20210421-3.18.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libhibr-tools-20210421-3.18.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcdata1" 
+  "libcerror1" 
+  "libclocale1" 
+  "libcnotify1" 
+  "libfuse2" 
+  "libhibr1" 
+]
+extra-source "libhibr-tools-20210421-3.18.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libhibr-tools-20210421-3.18.x86_64.rpm"
+}

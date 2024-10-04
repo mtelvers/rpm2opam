@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mapserver-ruby-8.0.1-13.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mapserver-ruby-8.0.1-13.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "mapserver" {= "8.0.1"}
+  "mapserver-libs" 
+  "ruby-libs" 
+]
+extra-source "mapserver-ruby-8.0.1-13.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mapserver-ruby-8.0.1-13.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-sr-emersion-hut-devel-0.3.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-sr-emersion-hut-devel-0.3.0-4.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-dustin-humanize-devel" 
+  "golang-github-juju-ansiterm-devel" 
+  "golang-github-spf13-cobra-devel" 
+  "golang-sr-emersion-gqlclient-devel" 
+  "golang-sr-emersion-scfg-devel" 
+  "golang-x-oauth2-devel" 
+  "golang-x-term-devel" 
+]
+extra-source "golang-sr-emersion-hut-devel-0.3.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-sr-emersion-hut-devel-0.3.0-4.fc40.noarch.rpm"
+}

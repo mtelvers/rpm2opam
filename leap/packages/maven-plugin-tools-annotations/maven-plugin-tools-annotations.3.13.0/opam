@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-plugin-tools-annotations-3.13.0-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-plugin-tools-annotations-3.13.0-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "jsoup" 
+  "maven-lib" 
+  "maven-plugin-annotations" {= "3.13.0"}
+  "maven-plugin-tools-api" {= "3.13.0"}
+  "objectweb-asm" 
+  "plexus-archiver" 
+  "plexus-utils" 
+  "qdox" 
+  "sisu-plexus" 
+  "slf4j" 
+]
+extra-source "maven-plugin-tools-annotations-3.13.0-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/maven-plugin-tools-annotations-3.13.0-slfo.1.1.3.noarch.rpm"
+}

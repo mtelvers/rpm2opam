@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Syntax-Keyword-Dynamically-0.13-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Syntax-Keyword-Dynamically-0.13-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-Carp" 
+  "perl-Future-AsyncAwait" {= "2"}
+  "perl-XS-Parse-Keyword" 
+  "perl-libs" {>= "5.14.0"}
+]
+extra-source "perl-Syntax-Keyword-Dynamically-0.13-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Syntax-Keyword-Dynamically-0.13-3.fc40.x86_64.rpm"
+}

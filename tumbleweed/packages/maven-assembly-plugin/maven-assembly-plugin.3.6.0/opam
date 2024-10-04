@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-assembly-plugin-3.6.0-5.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-assembly-plugin-3.6.0-5.3.noarch.rpm"]
+depends: [
+  "apache-commons-codec" 
+  "apache-commons-io" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-archiver" 
+  "maven-common-artifact-filters" 
+  "maven-filtering" 
+  "plexus-archiver" 
+  "plexus-interpolation" 
+  "plexus-io" 
+  "plexus-utils" 
+  "plexus-xml" 
+]
+extra-source "maven-assembly-plugin-3.6.0-5.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-assembly-plugin-3.6.0-5.3.noarch.rpm"
+}

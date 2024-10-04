@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libscamperfile-devel-20240920-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libscamperfile-devel-20240920-1.1.x86_64.rpm"]
+depends: [
+  "libscamperfile9" {= "20240920"}
+]
+extra-source "libscamperfile-devel-20240920-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libscamperfile-devel-20240920-1.1.x86_64.rpm"
+}

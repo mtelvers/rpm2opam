@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "firefox-pkcs11-loader-3.13.6-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "firefox-pkcs11-loader-3.13.6-12.fc40.x86_64.rpm"]
+depends: [
+  "mozilla-filesystem" 
+  "opensc" 
+  "pcsc-lite" 
+  "pcsc-lite-ccid" 
+]
+extra-source "firefox-pkcs11-loader-3.13.6-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/firefox-pkcs11-loader-3.13.6-12.fc40.x86_64.rpm"
+}

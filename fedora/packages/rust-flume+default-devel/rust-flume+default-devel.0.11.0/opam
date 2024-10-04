@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-flume+default-devel-0.11.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-flume+default-devel-0.11.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-flume+async-devel" {= "0.11.0"}
+  "rust-flume+eventual-fairness-devel" {= "0.11.0"}
+  "rust-flume+select-devel" {= "0.11.0"}
+  "rust-flume-devel" {= "0.11.0"}
+]
+extra-source "rust-flume+default-devel-0.11.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-flume+default-devel-0.11.0-2.fc40.noarch.rpm"
+}

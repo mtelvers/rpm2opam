@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xhtml2fo-style-xsl-20051222-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xhtml2fo-style-xsl-20051222-29.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "xhtml1-dtds" 
+  "xml-common" {>= "0.6.3"}
+]
+extra-source "xhtml2fo-style-xsl-20051222-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xhtml2fo-style-xsl-20051222-29.fc40.noarch.rpm"
+}

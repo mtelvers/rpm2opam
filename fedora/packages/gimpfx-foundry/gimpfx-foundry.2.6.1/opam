@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gimpfx-foundry-2.6.1-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gimpfx-foundry-2.6.1-21.fc40.noarch.rpm"]
+depends: [
+  "gimp" {>= "2.6.0"}
+]
+extra-source "gimpfx-foundry-2.6.1-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gimpfx-foundry-2.6.1-21.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cdemu-client-3.2.5-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cdemu-client-3.2.5-1.9.noarch.rpm"]
+depends: [
+  "python311" 
+  "python311-base" 
+  "python311-dbus-python" 
+  "python311-gobject" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-Gio-2_0" 
+]
+extra-source "cdemu-client-3.2.5-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cdemu-client-3.2.5-1.9.noarch.rpm"
+}

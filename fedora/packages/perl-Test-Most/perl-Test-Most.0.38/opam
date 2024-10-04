@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-Most-0.38-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Most-0.38-5.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Data-Dumper-Names" {>= "0.3"}
+  "perl-Exception-Class" 
+  "perl-Exporter" 
+  "perl-Test-Deep" {>= "0.119"}
+  "perl-Test-Differences" {>= "0.64"}
+  "perl-Test-Exception" {>= "0.43"}
+  "perl-Test-Harness" {>= "3.35"}
+  "perl-Test-Simple" 
+  "perl-Test-Warn" {>= "0.30"}
+  "perl-Time-HiRes" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-Test-Most-0.38-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-Most-0.38-5.fc40.noarch.rpm"
+}

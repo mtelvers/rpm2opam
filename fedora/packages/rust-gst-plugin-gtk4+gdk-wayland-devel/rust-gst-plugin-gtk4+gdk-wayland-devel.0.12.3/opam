@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gst-plugin-gtk4+gdk-wayland-devel-0.12.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gst-plugin-gtk4+gdk-wayland-devel-0.12.3-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-gdk4-wayland+default-devel" 
+  "rust-gdk4-wayland+v4_4-devel" 
+  "rust-gst-plugin-gtk4-devel" {= "0.12.3"}
+]
+extra-source "rust-gst-plugin-gtk4+gdk-wayland-devel-0.12.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gst-plugin-gtk4+gdk-wayland-devel-0.12.3-1.fc40.noarch.rpm"
+}

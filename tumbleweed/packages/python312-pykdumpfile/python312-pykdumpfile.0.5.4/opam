@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pykdumpfile-0.5.4-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pykdumpfile-0.5.4-1.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libaddrxlat3" 
+  "libkdumpfile10" 
+  "python312-base" {= "3.12"}
+  "python312-cffi" {= "1.17.0"}
+]
+extra-source "python312-pykdumpfile-0.5.4-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-pykdumpfile-0.5.4-1.6.x86_64.rpm"
+}

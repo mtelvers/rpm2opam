@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Finance-YahooQuote-0.26-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Finance-YahooQuote-0.26-20.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" 
+  "perl-Getopt-Long" 
+  "perl-HTTP-Message" 
+  "perl-Text-ParseWords" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.5.0"}
+  "perl-libwww-perl" 
+  "perl-vars" 
+]
+extra-source "perl-Finance-YahooQuote-0.26-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Finance-YahooQuote-0.26-20.fc40.noarch.rpm"
+}

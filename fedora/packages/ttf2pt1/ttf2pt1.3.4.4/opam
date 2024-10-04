@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ttf2pt1-3.4.4-47.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ttf2pt1-3.4.4-47.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "freetype" 
+  "glibc" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "t1lib" 
+  "t1utils" 
+]
+extra-source "ttf2pt1-3.4.4-47.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/ttf2pt1-3.4.4-47.fc40.x86_64.rpm"
+}

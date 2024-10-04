@@ -1,0 +1,44 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gajim-1.9.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gajim-1.9.4-1.1.noarch.rpm"]
+depends: [
+  "ca-certificates-mozilla" 
+  "python311-Pillow" {>= "10.4.0"}
+  "python311-SQLAlchemy" {>= "2.0.32"}
+  "python311-base" 
+  "python311-cryptography" {>= "43.0.1"}
+  "python311-css-parser" 
+  "python311-emoji" {>= "2.13.2"}
+  "python311-gobject" {>= "3.48.2"}
+  "python311-gobject-Gdk" 
+  "python311-gobject-cairo" 
+  "python311-gssapi" 
+  "python311-keyring" 
+  "python311-nbxmpp" 
+  "python311-omemo-dr" 
+  "python311-packaging" 
+  "python311-precis-i18n" {>= "1.1.0"}
+  "python311-pycairo" {>= "1.26.1"}
+  "python311-qrcode" {>= "8.0"}
+  "sqlite3" {>= "3.46.0"}
+  "typelib-1_0-AyatanaAppIndicator3-0_1" {= "0.5.93"}
+  "typelib-1_0-Farstream-0_2" {= "0.2.9"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GSound-1_0" {= "1.0.3"}
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Geoclue-2_0" {= "2.7.1"}
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gspell-1" {= "1.12.2"}
+  "typelib-1_0-Gst-1_0" {= "1.24.8"}
+  "typelib-1_0-GstPbutils-1_0" {= "1.24.8"}
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-GtkSource-300" 
+  "typelib-1_0-GtkSource-4" {= "4.8.4"}
+  "typelib-1_0-Pango-1_0" 
+  "typelib-1_0-Soup-2_4" 
+  "typelib-1_0-Soup-3_0" {= "3.6.0"}
+]
+extra-source "gajim-1.9.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gajim-1.9.4-1.1.noarch.rpm"
+}

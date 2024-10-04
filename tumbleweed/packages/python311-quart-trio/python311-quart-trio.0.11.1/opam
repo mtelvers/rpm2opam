@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-quart-trio-0.11.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-quart-trio-0.11.1-2.1.noarch.rpm"]
+depends: [
+  "python311-Quart" {>= "0.19"}
+  "python311-base" {= "3.11"}
+  "python311-exceptiongroup" 
+  "python311-hypercorn" {>= "0.12"}
+  "python311-trio" {>= "0.19"}
+]
+extra-source "python311-quart-trio-0.11.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-quart-trio-0.11.1-2.1.noarch.rpm"
+}

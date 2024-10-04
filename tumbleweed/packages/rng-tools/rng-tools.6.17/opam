@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rng-tools-6.17-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rng-tools-6.17-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libcap2" 
+  "libopenssl3" 
+  "libp11-3" 
+  "opensc" 
+  "systemd" 
+]
+extra-source "rng-tools-6.17-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rng-tools-6.17-2.1.x86_64.rpm"
+}

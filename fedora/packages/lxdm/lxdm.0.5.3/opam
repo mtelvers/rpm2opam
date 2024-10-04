@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lxdm-0.5.3^20220831git2d4ba970-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lxdm-0.5.3^20220831git2d4ba970-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cairo" 
+  "desktop-backgrounds-compat" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libX11" 
+  "libxcb" 
+  "openssh-clients" 
+  "pam" 
+  "pam-libs" 
+  "pango" 
+  "systemd" 
+  "webp-pixbuf-loader" 
+]
+extra-source "lxdm-0.5.3^20220831git2d4ba970-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lxdm-0.5.3^20220831git2d4ba970-3.fc40.x86_64.rpm"
+}

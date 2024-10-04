@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "laptop-mode-tools-gui-1.74-3.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "laptop-mode-tools-gui-1.74-3.11.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "laptop-mode-tools" {= "1.74"}
+  "python311-qt5" 
+]
+extra-source "laptop-mode-tools-gui-1.74-3.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/laptop-mode-tools-gui-1.74-3.11.noarch.rpm"
+}

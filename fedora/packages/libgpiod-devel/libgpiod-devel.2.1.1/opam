@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libgpiod-devel-2.1.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgpiod-devel-2.1.1-1.fc40.x86_64.rpm"]
+depends: [
+  "libgpiod" {= "2.1.1"}
+  "libgpiod-c++" {= "2.1.1"}
+  "pkgconf-pkg-config" 
+  "python3-libgpiod" {= "2.1.1"}
+]
+extra-source "libgpiod-devel-2.1.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libgpiod-devel-2.1.1-1.fc40.x86_64.rpm"
+}

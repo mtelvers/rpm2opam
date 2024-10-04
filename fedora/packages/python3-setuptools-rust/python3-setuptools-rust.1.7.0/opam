@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-setuptools-rust-1.7.0-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-setuptools-rust-1.7.0-9.fc40.noarch.rpm"]
+depends: [
+  "cargo-rpm-macros" 
+  "python3" {= "3.12"}
+  "python3-semantic_version" 
+  "python3-setuptools" {>= "62.4"}
+  "python3-typing-extensions" {>= "3.7.4.3"}
+]
+extra-source "python3-setuptools-rust-1.7.0-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-setuptools-rust-1.7.0-9.fc40.noarch.rpm"
+}

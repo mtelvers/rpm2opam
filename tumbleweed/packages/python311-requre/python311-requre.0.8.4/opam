@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-requre-0.8.4-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-requre-0.8.4-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-GitPython" 
+  "python311-PyYAML" 
+  "python311-base" 
+  "python311-click" 
+  "python311-requests" 
+  "update-alternatives" 
+]
+extra-source "python311-requre-0.8.4-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-requre-0.8.4-1.2.noarch.rpm"
+}

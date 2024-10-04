@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgsf-lang-1.14.52-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgsf-lang-1.14.52-1.2.noarch.rpm"]
+depends: [
+  "libgsf-1-114" {= "1.14.52"}
+]
+extra-source "libgsf-lang-1.14.52-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libgsf-lang-1.14.52-1.2.noarch.rpm"
+}

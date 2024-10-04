@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-arraysort-2023.201.1.0svn31576-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-arraysort-2023.201.1.0svn31576-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-arrayjobx" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-lcg" 
+  "texlive-macroswap" 
+  "texlive-pdftexcmds" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-tools" 
+  "texlive-xargs" 
+]
+extra-source "texlive-arraysort-2023.201.1.0svn31576-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-arraysort-2023.201.1.0svn31576-slfo.1.1.4.noarch.rpm"
+}

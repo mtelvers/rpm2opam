@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "transmission-remote-gtk-1.6.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "transmission-remote-gtk-1.6.0-3.fc40.x86_64.rpm"]
+depends: [
+  "GeoIP" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "json-glib" 
+  "libappindicator-gtk3" 
+  "libgcc" 
+  "libsoup3" 
+  "pango" 
+]
+extra-source "transmission-remote-gtk-1.6.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/transmission-remote-gtk-1.6.0-3.fc40.x86_64.rpm"
+}

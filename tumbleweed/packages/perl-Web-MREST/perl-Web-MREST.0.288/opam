@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Web-MREST-0.288-1.26.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Web-MREST-0.288-1.26.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "perl" 
+  "perl-App-CELL" {>= "0.209"}
+  "perl-File-ShareDir" 
+  "perl-HTTP-Message" 
+  "perl-JSON" 
+  "perl-LWP-Protocol-https" {>= "6.4"}
+  "perl-Module-Runtime" 
+  "perl-Params-Validate" {>= "1.6"}
+  "perl-Path-Router" {>= "0.12"}
+  "perl-Plack" 
+  "perl-Plack-Middleware-LogErrors" 
+  "perl-Plack-Middleware-Session" 
+  "perl-Test-Deep" 
+  "perl-Try-Tiny" 
+  "perl-URI" 
+  "perl-Web-MREST-CLI" {>= "0.276"}
+  "perl-Web-Machine" {>= "0.15"}
+  "perl-base" 
+  "perl-libwww-perl" {>= "6.5"}
+]
+extra-source "perl-Web-MREST-0.288-1.26.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Web-MREST-0.288-1.26.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "librest-devel-0.9.1-slfo.1.1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "librest-devel-0.9.1-slfo.1.1.6.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.44"}
+  "json-glib-devel" 
+  "librest-1_0-0" {= "0.9.1"}
+  "libsoup-devel" {>= "2.99.2"}
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Rest-1_0" {= "0.9.1"}
+]
+extra-source "librest-devel-0.9.1-slfo.1.1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/librest-devel-0.9.1-slfo.1.1.6.x86_64.rpm"
+}

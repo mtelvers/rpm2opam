@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-qrbill-svn66301-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-qrbill-svn66301-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-fontspec" 
+  "texlive-graphics" 
+  "texlive-iftex" 
+  "texlive-koma-script" 
+  "texlive-kpathsea" 
+  "texlive-l3kernel" 
+  "texlive-l3packages" 
+  "texlive-numprint" 
+  "texlive-qrcode" 
+]
+extra-source "texlive-qrbill-svn66301-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-qrbill-svn66301-71.fc40.noarch.rpm"
+}

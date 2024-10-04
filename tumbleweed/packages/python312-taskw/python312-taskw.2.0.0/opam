@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-taskw-2.0.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-taskw-2.0.0-2.1.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-kitchen" 
+  "python312-python-dateutil" 
+  "python312-pytz" 
+  "taskwarrior" 
+]
+extra-source "python312-taskw-2.0.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-taskw-2.0.0-2.1.noarch.rpm"
+}

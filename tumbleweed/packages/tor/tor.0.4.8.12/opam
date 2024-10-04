@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tor-0.4.8.12-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tor-0.4.8.12-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "libcap2" 
+  "libevent-2_1-7" 
+  "liblzma5" 
+  "libopenssl3" 
+  "libscrypt0" 
+  "libsystemd0" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+  "logrotate" 
+]
+extra-source "tor-0.4.8.12-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tor-0.4.8.12-1.1.x86_64.rpm"
+}

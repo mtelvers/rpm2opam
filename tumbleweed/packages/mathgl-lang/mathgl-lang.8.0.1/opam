@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mathgl-lang-8.0.1-8.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mathgl-lang-8.0.1-8.2.noarch.rpm"]
+depends: [
+  "libmgl8" {= "8.0.1"}
+]
+extra-source "mathgl-lang-8.0.1-8.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mathgl-lang-8.0.1-8.2.noarch.rpm"
+}

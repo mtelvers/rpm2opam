@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "eclipse-contributor-tools-4.15-15.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eclipse-contributor-tools-4.15-15.4.x86_64.rpm"]
+depends: [
+  "eclipse-egit" 
+  "eclipse-emf-runtime" 
+  "eclipse-jdt" {= "3.21.0.0"}
+  "eclipse-pde" {= "3.13.300.0"}
+  "eclipse-platform" {= "4.15"}
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "jgit" 
+]
+extra-source "eclipse-contributor-tools-4.15-15.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/eclipse-contributor-tools-4.15-15.4.x86_64.rpm"
+}

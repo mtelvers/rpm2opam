@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "quota-4.09-7.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "quota-4.09-7.el10.x86_64.rpm"]
+depends: [
+  "e2fsprogs-libs" 
+  "glibc" 
+  "libtirpc" 
+  "quota-nls" {= "4.9"}
+]
+extra-source "quota-4.09-7.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/quota-4.09-7.el10.x86_64.rpm"
+}

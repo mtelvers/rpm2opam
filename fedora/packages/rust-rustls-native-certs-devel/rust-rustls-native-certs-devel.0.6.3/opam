@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rustls-native-certs-devel-0.6.3-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rustls-native-certs-devel-0.6.3-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.60"}
+  "rust-openssl-probe+default-devel" 
+  "rust-rustls-pemfile+default-devel" 
+]
+extra-source "rust-rustls-native-certs-devel-0.6.3-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rustls-native-certs-devel-0.6.3-3.fc40.noarch.rpm"
+}

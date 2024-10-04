@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tcpd-7.6-897.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tcpd-7.6-897.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libwrap0" 
+]
+extra-source "tcpd-7.6-897.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tcpd-7.6-897.1.x86_64.rpm"
+}

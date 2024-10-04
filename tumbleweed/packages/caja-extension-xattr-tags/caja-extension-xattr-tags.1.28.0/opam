@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "caja-extension-xattr-tags-1.28.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "caja-extension-xattr-tags-1.28.0-2.1.x86_64.rpm"]
+depends: [
+  "caja" {>= "1.28"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcaja-extension1" 
+]
+extra-source "caja-extension-xattr-tags-1.28.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/caja-extension-xattr-tags-1.28.0-2.1.x86_64.rpm"
+}

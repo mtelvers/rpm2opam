@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "unifont-viewer-15.0.01-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "unifont-viewer-15.0.01-4.fc40.noarch.rpm"]
+depends: [
+  "perl-GD" 
+  "perl-Wx" 
+  "perl-base" 
+  "perl-fields" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "unifont-viewer-15.0.01-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/unifont-viewer-15.0.01-4.fc40.noarch.rpm"
+}

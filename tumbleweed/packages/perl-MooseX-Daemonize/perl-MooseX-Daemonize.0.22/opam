@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-Daemonize-0.22-1.21.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Daemonize-0.22-1.21.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-File-Path" {>= "2.80000"}
+  "perl-Moose" 
+  "perl-MooseX-Getopt" 
+  "perl-MooseX-Types-Path-Class" 
+  "perl-Sub-Exporter" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-MooseX-Daemonize-0.22-1.21.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-Daemonize-0.22-1.21.noarch.rpm"
+}

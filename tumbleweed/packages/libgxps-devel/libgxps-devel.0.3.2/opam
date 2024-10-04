@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgxps-devel-0.3.2+5-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgxps-devel-0.3.2+5-1.3.x86_64.rpm"]
+depends: [
+  "cairo-devel" {>= "1.10.0"}
+  "glib2-devel" {>= "2.36.0"}
+  "libarchive-devel" {>= "2.8.0"}
+  "libgxps2" {= "0.3.2"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-GXPS-0_1" {= "0.3.2"}
+]
+extra-source "libgxps-devel-0.3.2+5-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgxps-devel-0.3.2+5-1.3.x86_64.rpm"
+}

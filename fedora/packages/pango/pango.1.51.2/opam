@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pango-1.51.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pango-1.51.2-1.fc40.x86_64.rpm"]
+depends: [
+  "cairo" {>= "1.12.10"}
+  "fontconfig" {>= "2.13.0"}
+  "freetype" {>= "2.1.5"}
+  "fribidi" {>= "1.0.6"}
+  "glib2" {>= "2.62"}
+  "glibc" 
+  "harfbuzz" {>= "2.6.0"}
+  "libX11" 
+  "libXft" {>= "2.0.0"}
+  "libXrender" 
+  "libthai" {>= "0.1.9"}
+]
+extra-source "pango-1.51.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pango-1.51.2-1.fc40.x86_64.rpm"
+}

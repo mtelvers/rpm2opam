@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Getopt-Long-Descriptive-0.114-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Getopt-Long-Descriptive-0.114-2.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long" {>= "2.55"}
+  "perl-Params-Validate" {>= "0.97"}
+  "perl-Scalar-List-Utils" 
+  "perl-Sub-Exporter" {>= "0.972"}
+  "perl-libs" {>= "5.12.0"}
+  "perl-overload" 
+]
+extra-source "perl-Getopt-Long-Descriptive-0.114-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Getopt-Long-Descriptive-0.114-2.fc40.noarch.rpm"
+}

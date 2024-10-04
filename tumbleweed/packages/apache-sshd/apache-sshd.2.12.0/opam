@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "apache-sshd-2.12.0-2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apache-sshd-2.12.0-2.3.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "jcl-over-slf4j" 
+  "slf4j" 
+]
+extra-source "apache-sshd-2.12.0-2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/apache-sshd-2.12.0-2.3.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "opengl-games-utils-0.2-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opengl-games-utils-0.2-3.1.noarch.rpm"]
+depends: [
+  "Mesa-demo-x" 
+  "bash-sh" 
+  "zenity" 
+]
+extra-source "opengl-games-utils-0.2-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/opengl-games-utils-0.2-3.1.noarch.rpm"
+}

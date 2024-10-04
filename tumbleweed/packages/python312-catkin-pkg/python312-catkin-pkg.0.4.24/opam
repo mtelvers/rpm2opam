@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-catkin-pkg-0.4.24-2.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-catkin-pkg-0.4.24-2.12.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-docutils" 
+  "python312-pyparsing" 
+  "python312-python-dateutil" 
+  "python312-setuptools" 
+  "update-alternatives" 
+]
+extra-source "python312-catkin-pkg-0.4.24-2.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-catkin-pkg-0.4.24-2.12.noarch.rpm"
+}

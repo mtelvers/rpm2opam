@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "man-db-2.12.0-7.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "man-db-2.12.0-7.el10.x86_64.rpm"]
+depends: [
+  "alternatives" 
+  "bash" 
+  "coreutils" 
+  "gdbm-libs" 
+  "glibc" 
+  "grep" 
+  "groff-base" 
+  "gzip" 
+  "less" 
+  "libpipeline" 
+  "zlib-ng-compat" 
+]
+extra-source "man-db-2.12.0-7.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/man-db-2.12.0-7.el10.x86_64.rpm"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "suitesparse-devel-5.13.0-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "suitesparse-devel-5.13.0-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "gcc-build-c++" 
+  "libamd2" {= "2.4.6"}
+  "libbtf1" {= "1.2.6"}
+  "libcamd2" {= "2.4.6"}
+  "libccolamd2" {= "2.9.6"}
+  "libcholmod3" {= "3.0.14"}
+  "libcolamd2" {= "2.9.6"}
+  "libcsparse3" {= "3.2.0"}
+  "libcxsparse3" {= "3.2.0"}
+  "libgraphblas7" {= "7.2.0"}
+  "libklu1" {= "1.3.9"}
+  "libldl2" {= "2.2.6"}
+  "libmongoose2" {= "2.0.4"}
+  "libopenblas_pthreads-devel" 
+  "librbio2" {= "2.2.6"}
+  "libsliplu1" {= "1.0.2"}
+  "libspqr2" {= "2.1.0"}
+  "libsuitesparseconfig5" {= "5.13.0"}
+  "libumfpack5" {= "5.7.9"}
+  "metis-devel" 
+  "tbb-devel" 
+]
+extra-source "suitesparse-devel-5.13.0-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/suitesparse-devel-5.13.0-slfo.1.1.8.x86_64.rpm"
+}

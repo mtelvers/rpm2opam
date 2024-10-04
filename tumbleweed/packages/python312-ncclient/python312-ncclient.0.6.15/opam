@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-ncclient-0.6.15-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-ncclient-0.6.15-2.2.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-lxml" {>= "3.3.0"}
+  "python312-paramiko" {>= "1.15.0"}
+  "python312-setuptools" {> "0.6"}
+  "python312-six" 
+]
+extra-source "python312-ncclient-0.6.15-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-ncclient-0.6.15-2.2.noarch.rpm"
+}

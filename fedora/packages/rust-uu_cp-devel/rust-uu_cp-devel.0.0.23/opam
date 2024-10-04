@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-uu_cp-devel-0.0.23-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-uu_cp-devel-0.0.23-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-clap+cargo-devel" 
+  "rust-clap+default-devel" 
+  "rust-clap+wrap_help-devel" 
+  "rust-filetime+default-devel" 
+  "rust-indicatif+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-quick-error+default-devel" 
+  "rust-uucore+backup-control-devel" {>= "0.0.19"}
+  "rust-uucore+default-devel" {>= "0.0.19"}
+  "rust-uucore+entries-devel" {>= "0.0.19"}
+  "rust-uucore+fs-devel" {>= "0.0.19"}
+  "rust-uucore+mode-devel" {>= "0.0.19"}
+  "rust-uucore+perms-devel" {>= "0.0.19"}
+  "rust-uucore+update-control-devel" {>= "0.0.19"}
+  "rust-walkdir+default-devel" 
+  "rust-xattr+default-devel" 
+]
+extra-source "rust-uu_cp-devel-0.0.23-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-uu_cp-devel-0.0.23-1.fc40.noarch.rpm"
+}

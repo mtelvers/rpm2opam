@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-async-io1-devel-1.13.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-async-io1-devel-1.13.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.48"}
+  "rust-async-lock+default-devel" 
+  "rust-autocfg+default-devel" 
+  "rust-cfg-if+default-devel" 
+  "rust-concurrent-queue+default-devel" 
+  "rust-futures-lite+default-devel" 
+  "rust-log+default-devel" 
+  "rust-parking+default-devel" 
+  "rust-polling+default-devel" 
+  "rust-rustix+fs-devel" 
+  "rust-rustix+std-devel" 
+  "rust-rustix-devel" 
+  "rust-slab+default-devel" 
+  "rust-socket2+all-devel" 
+  "rust-socket2+default-devel" 
+  "rust-waker-fn+default-devel" 
+]
+extra-source "rust-async-io1-devel-1.13.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-async-io1-devel-1.13.0-2.fc40.noarch.rpm"
+}

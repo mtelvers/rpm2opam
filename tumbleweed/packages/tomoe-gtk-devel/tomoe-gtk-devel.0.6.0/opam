@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tomoe-gtk-devel-0.6.0-44.29.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tomoe-gtk-devel-0.6.0-44.29.x86_64.rpm"]
+depends: [
+  "gtk2-devel" {>= "2.4.0"}
+  "gucharmap-devel" 
+  "pkgconf-pkg-config" 
+  "tomoe-devel" 
+  "tomoe-gtk" {= "0.6.0"}
+]
+extra-source "tomoe-gtk-devel-0.6.0-44.29.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tomoe-gtk-devel-0.6.0-44.29.x86_64.rpm"
+}

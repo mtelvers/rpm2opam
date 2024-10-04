@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-yapf-0.40.2-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-yapf-0.40.2-4.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-importlib-metadata" {>= "6.6"}
+  "python3-platformdirs" {>= "3.5.1"}
+  "python3-setuptools" 
+  "python3-tomli" {>= "2.0.1"}
+]
+extra-source "python3-yapf-0.40.2-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-yapf-0.40.2-4.fc40.noarch.rpm"
+}

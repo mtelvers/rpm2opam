@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bitlbee-3.6-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bitlbee-3.6-5.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcrypt20" 
+  "libgnutls30" 
+  "libotr5" 
+  "libpurple0" 
+  "logrotate" 
+  "shadow" 
+  "system-user-bitlbee" 
+]
+extra-source "bitlbee-3.6-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/bitlbee-3.6-5.2.x86_64.rpm"
+}

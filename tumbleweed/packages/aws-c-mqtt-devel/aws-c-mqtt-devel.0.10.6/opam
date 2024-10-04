@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "aws-c-mqtt-devel-0.10.6-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "aws-c-mqtt-devel-0.10.6-1.1.x86_64.rpm"]
+depends: [
+  "libaws-c-mqtt1_0_0" {= "0.10.6"}
+]
+extra-source "aws-c-mqtt-devel-0.10.6-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/aws-c-mqtt-devel-0.10.6-1.1.x86_64.rpm"
+}

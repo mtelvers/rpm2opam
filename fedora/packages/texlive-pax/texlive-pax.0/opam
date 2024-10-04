@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-pax-svn63509-81.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-pax-svn63509-81.fc40.noarch.rpm"]
+depends: [
+  "perl-File-Which" 
+  "perl-Getopt-Long" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "texlive-auxhook" 
+  "texlive-base" 
+  "texlive-etexcmds" 
+  "texlive-graphics" 
+  "texlive-iftex" 
+  "texlive-kpathsea" 
+  "texlive-kvoptions" 
+  "texlive-kvsetkeys" 
+  "texlive-ltxcmds" 
+]
+extra-source "texlive-pax-svn63509-81.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-pax-svn63509-81.fc40.noarch.rpm"
+}

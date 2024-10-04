@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libXcursor-devel-1.2.1-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libXcursor-devel-1.2.1-7.fc40.x86_64.rpm"]
+depends: [
+  "libX11-devel" 
+  "libXcursor" {= "1.2.1"}
+  "libXfixes-devel" 
+  "libXrender-devel" 
+  "pkgconf-pkg-config" 
+  "xorg-x11-proto-devel" 
+]
+extra-source "libXcursor-devel-1.2.1-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libXcursor-devel-1.2.1-7.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "commoncpp2-1.8.1-31.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "commoncpp2-1.8.1-31.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "zlib-ng-compat" 
+]
+extra-source "commoncpp2-1.8.1-31.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/commoncpp2-1.8.1-31.fc40.x86_64.rpm"
+}

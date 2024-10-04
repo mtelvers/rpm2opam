@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fence-agents-azure-arm-4.15.0+git.1724675137.ca9ae93a-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fence-agents-azure-arm-4.15.0+git.1724675137.ca9ae93a-1.1.noarch.rpm"]
+depends: [
+  "fence-agents-common" {= "4.15.0"}
+  "python311-azure-common" 
+  "python311-azure-identity" 
+  "python311-azure-mgmt-compute" 
+  "python311-azure-mgmt-network" 
+  "python311-base" 
+  "python311-msrestazure" 
+  "python311-pexpect" 
+  "python311-pycurl" 
+]
+extra-source "fence-agents-azure-arm-4.15.0+git.1724675137.ca9ae93a-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/fence-agents-azure-arm-4.15.0+git.1724675137.ca9ae93a-1.1.noarch.rpm"
+}

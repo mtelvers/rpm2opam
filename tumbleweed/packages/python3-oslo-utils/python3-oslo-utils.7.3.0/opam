@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-oslo.utils-7.3.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-oslo.utils-7.3.0-2.1.noarch.rpm"]
+depends: [
+  "python3-debtcollector" {>= "1.2.0"}
+  "python3-oslo-i18n" {>= "3.15.3"}
+  "python311-base" {= "3.11"}
+  "python311-iso8601" {>= "0.1.11"}
+  "python311-netaddr" {>= "0.10.0"}
+  "python311-netifaces" {>= "0.10.4"}
+  "python311-pyparsing" {>= "2.1.0"}
+  "python311-pytz" {>= "2013.6"}
+]
+extra-source "python3-oslo.utils-7.3.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-oslo.utils-7.3.0-2.1.noarch.rpm"
+}

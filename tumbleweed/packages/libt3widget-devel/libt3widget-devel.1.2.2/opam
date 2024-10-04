@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libt3widget-devel-1.2.2-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libt3widget-devel-1.2.2-1.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libt3key-devel" {>= "0.2.0"}
+  "libt3widget2" {= "1.2.2"}
+  "libt3window-devel" {>= "0.4.0"}
+  "libtranscript-devel" {>= "0.2.2"}
+  "libxcb1" 
+  "pcre2-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libt3widget-devel-1.2.2-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libt3widget-devel-1.2.2-1.8.x86_64.rpm"
+}

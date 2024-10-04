@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Dancer2-Plugin-Auth-Extensible-0.710-1.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Dancer2-Plugin-Auth-Extensible-0.710-1.15.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Crypt-SaltedHash" 
+  "perl-Dancer2" {>= "0.204000"}
+  "perl-File-Share" 
+  "perl-HTTP-BrowserDetect" 
+  "perl-Module-Runtime" 
+  "perl-Moo" 
+  "perl-Plack" {>= "1.29"}
+  "perl-Session-Token" 
+  "perl-Try-Tiny" 
+  "perl-URI" 
+  "perl-YAML" 
+  "perl-base" 
+  "perl-namespace-clean" 
+]
+extra-source "perl-Dancer2-Plugin-Auth-Extensible-0.710-1.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Dancer2-Plugin-Auth-Extensible-0.710-1.15.noarch.rpm"
+}

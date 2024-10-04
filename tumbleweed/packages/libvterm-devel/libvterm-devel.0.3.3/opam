@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvterm-devel-0.3.3-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvterm-devel-0.3.3-1.3.x86_64.rpm"]
+depends: [
+  "libvterm0" {= "0.3.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libvterm-devel-0.3.3-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libvterm-devel-0.3.3-1.3.x86_64.rpm"
+}

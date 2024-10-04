@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "novprog-lang-3.2.3-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "novprog-lang-3.2.3-1.2.noarch.rpm"]
+depends: [
+  "novprog" {= "3.2.3"}
+]
+extra-source "novprog-lang-3.2.3-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/novprog-lang-3.2.3-1.2.noarch.rpm"
+}

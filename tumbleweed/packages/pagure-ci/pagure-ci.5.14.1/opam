@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pagure-ci-5.14.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pagure-ci-5.14.1-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "pagure" {= "5.14.1"}
+  "python311-python-jenkins" 
+  "systemd" 
+]
+extra-source "pagure-ci-5.14.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pagure-ci-5.14.1-2.1.noarch.rpm"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-DAV-prof-1.3.4-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-DAV-prof-1.3.4-19.fc40.x86_64.rpm"]
+depends: [
+  "ghc-DAV-devel" {= "1.3.4"}
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-case-insensitive-prof" 
+  "ghc-containers-prof" 
+  "ghc-data-default-prof" 
+  "ghc-exceptions-prof" 
+  "ghc-http-client-prof" 
+  "ghc-http-client-tls-prof" 
+  "ghc-http-types-prof" 
+  "ghc-lens-prof" 
+  "ghc-mtl-prof" 
+  "ghc-transformers-base-prof" 
+  "ghc-transformers-compat-prof" 
+  "ghc-transformers-prof" 
+  "ghc-utf8-string-prof" 
+  "ghc-xml-conduit-prof" 
+  "ghc-xml-hamlet-prof" 
+]
+extra-source "ghc-DAV-prof-1.3.4-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-DAV-prof-1.3.4-19.fc40.x86_64.rpm"
+}

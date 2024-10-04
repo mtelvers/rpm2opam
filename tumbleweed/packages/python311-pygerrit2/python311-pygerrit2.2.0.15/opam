@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pygerrit2-2.0.15-1.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pygerrit2-2.0.15-1.10.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-pbr" {>= "0.8.0"}
+  "python311-requests" {>= "2.20.0"}
+]
+extra-source "python311-pygerrit2-2.0.15-1.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pygerrit2-2.0.15-1.10.noarch.rpm"
+}

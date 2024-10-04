@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-DBIx-Class-DeploymentHandler-0.002234-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DBIx-Class-DeploymentHandler-0.002234-1.1.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Carp-Clan" 
+  "perl-Context-Preserve" {>= "0.1"}
+  "perl-DBIx-Class" {>= "0.8121"}
+  "perl-Log-Contextual" {>= "0.5005"}
+  "perl-Module-Runtime" {>= "0.1"}
+  "perl-Moose" {>= "1"}
+  "perl-MooseX-Role-Parameterized" {>= "0.18"}
+  "perl-Path-Class" {>= "0.26"}
+  "perl-SQL-SplitStatement" {>= "1.20"}
+  "perl-SQL-Translator" {>= "1.63"}
+  "perl-Sub-Exporter-Progressive" 
+  "perl-Text-Brew" {>= "0.2"}
+  "perl-Try-Tiny" 
+  "perl-YAML" {>= "0.66"}
+  "perl-base" {>= "0.225"}
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-DBIx-Class-DeploymentHandler-0.002234-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-DBIx-Class-DeploymentHandler-0.002234-1.1.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "switchdesk-gui-5.0.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "switchdesk-gui-5.0.2-3.fc40.noarch.rpm"]
+depends: [
+  "desktop-file-utils" 
+  "python3" 
+  "python3-gobject-base" 
+  "switchdesk" {= "5.0.2"}
+]
+extra-source "switchdesk-gui-5.0.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/switchdesk-gui-5.0.2-3.fc40.noarch.rpm"
+}

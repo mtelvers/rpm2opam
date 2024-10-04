@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-ase-3.23.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-ase-3.23.0-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-matplotlib" {>= "3.1.0"}
+  "python312-numpy" {>= "1.15.0"}
+  "python312-scipy" {>= "1.1.0"}
+  "update-alternatives" 
+]
+extra-source "python312-ase-3.23.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-ase-3.23.0-2.1.noarch.rpm"
+}

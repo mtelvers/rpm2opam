@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-flake8-bugbear-24.2.6-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-flake8-bugbear-24.2.6-1.2.noarch.rpm"]
+depends: [
+  "python312-attrs" {>= "19.2.0"}
+  "python312-base" {= "3.12"}
+  "python312-flake8" {>= "6.0.0"}
+]
+extra-source "python312-flake8-bugbear-24.2.6-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-flake8-bugbear-24.2.6-1.2.noarch.rpm"
+}

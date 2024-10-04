@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-formatting-devel-7.2.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-formatting-devel-7.2.0-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-clock-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-double-conversion-devel" 
+  "ghc-formatting" {= "7.2.0"}
+  "ghc-old-locale-devel" 
+  "ghc-scientific-devel" 
+  "ghc-text-devel" 
+  "ghc-time-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-formatting-devel-7.2.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-formatting-devel-7.2.0-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Log-Dispatchouli-3.007-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Log-Dispatchouli-3.007-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Log-Dispatch" 
+  "perl-Log-Dispatch-Array" 
+  "perl-Params-Util" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-String-Flogger" 
+  "perl-Sub-Exporter" 
+  "perl-Sub-Exporter-GlobExporter" {>= "0.2"}
+  "perl-Try-Tiny" {>= "0.4"}
+  "perl-experimental" 
+  "perl-libs" {>= "5.20.0"}
+  "perl-overload" 
+]
+extra-source "perl-Log-Dispatchouli-3.007-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Log-Dispatchouli-3.007-3.fc40.noarch.rpm"
+}

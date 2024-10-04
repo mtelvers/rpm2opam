@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "selinux-policy-doc-20240930-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "selinux-policy-doc-20240930-1.1.noarch.rpm"]
+depends: [
+  "selinux-policy" {= "20240930"}
+  "xdg-utils" 
+]
+extra-source "selinux-policy-doc-20240930-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/selinux-policy-doc-20240930-1.1.noarch.rpm"
+}

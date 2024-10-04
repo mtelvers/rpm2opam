@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-k9-devel-0.11.6-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-k9-devel-0.11.6-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-anyhow+default-devel" 
+  "rust-colored+default-devel" 
+  "rust-diff+default-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-proc-macro2+span-locations-devel" 
+  "rust-proc-macro2-0-4-devel" 
+  "rust-syn+default-devel" 
+  "rust-syn+extra-traits-devel" 
+  "rust-syn+full-devel" 
+  "rust-syn+visit-devel" 
+  "rust-term_size+default-devel" 
+]
+extra-source "rust-k9-devel-0.11.6-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-k9-devel-0.11.6-4.fc40.noarch.rpm"
+}

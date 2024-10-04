@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-jupyter-1.0.0-13.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-jupyter-1.0.0-13.2.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-ipykernel" 
+  "python310-ipywidgets" 
+  "python310-jupyter-core" 
+  "python310-jupyter_console" 
+  "python310-nbconvert" 
+  "python310-notebook" 
+  "python310-qtconsole" 
+]
+extra-source "python310-jupyter-1.0.0-13.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-jupyter-1.0.0-13.2.noarch.rpm"
+}

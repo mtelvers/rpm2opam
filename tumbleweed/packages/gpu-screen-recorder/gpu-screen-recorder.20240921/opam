@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gpu-screen-recorder-20240921-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gpu-screen-recorder-20240921-1.1.x86_64.rpm"]
+depends: [
+  "ffmpeg-7-mini-libs" 
+  "glibc" 
+  "libX11-6" 
+  "libXcomposite1" 
+  "libXdamage1" 
+  "libXfixes3" 
+  "libXrandr2" 
+  "libcap2" 
+  "libdbus-1-3" 
+  "libdrm2" 
+  "libgcc_s1" 
+  "libpipewire-0_3-0" 
+  "libpulse0" 
+  "libstdc++6" 
+  "libva-drm2" 
+  "libva2" 
+  "libwayland-client0" 
+  "libwayland-egl1" 
+]
+extra-source "gpu-screen-recorder-20240921-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gpu-screen-recorder-20240921-1.1.x86_64.rpm"
+}

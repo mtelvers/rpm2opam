@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-fsspec-2024.3.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-fsspec-2024.3.1-1.1.noarch.rpm"]
+depends: [
+  "fuse" 
+  "python311-base" {= "3.11"}
+]
+extra-source "python311-fsspec-2024.3.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-fsspec-2024.3.1-1.1.noarch.rpm"
+}

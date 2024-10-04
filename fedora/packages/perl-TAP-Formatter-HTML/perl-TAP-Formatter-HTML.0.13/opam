@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-TAP-Formatter-HTML-0.13-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-TAP-Formatter-HTML-0.13-3.fc40.noarch.rpm"]
+depends: [
+  "perl-File-Temp" {>= "0.17"}
+  "perl-IO" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Template-Toolkit" {>= "2.14"}
+  "perl-Test-Harness" 
+  "perl-URI" {>= "1.35"}
+  "perl-accessors" {>= "0.2"}
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" 
+]
+extra-source "perl-TAP-Formatter-HTML-0.13-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-TAP-Formatter-HTML-0.13-3.fc40.noarch.rpm"
+}

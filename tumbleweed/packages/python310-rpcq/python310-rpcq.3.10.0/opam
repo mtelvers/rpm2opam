@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-rpcq-3.10.0-1.16.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-rpcq-3.10.0-1.16.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-msgpack" {>= "0.6"}
+  "python310-python-rapidjson" 
+  "python310-pyzmq" {>= "17"}
+  "python310-ruamel-yaml" 
+]
+extra-source "python310-rpcq-3.10.0-1.16.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-rpcq-3.10.0-1.16.noarch.rpm"
+}

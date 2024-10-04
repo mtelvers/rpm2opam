@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gstreamer-devel-32bit-1.24.8-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gstreamer-devel-32bit-1.24.8-1.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "gstreamer-devel" {= "1.24.8"}
+  "libdw-devel" 
+  "libgstreamer-1_0-0-32bit" {= "1.24.8"}
+  "libunwind-devel" 
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Gst-1_0-32bit" {= "1.24.8"}
+]
+extra-source "gstreamer-devel-32bit-1.24.8-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gstreamer-devel-32bit-1.24.8-1.1.x86_64.rpm"
+}

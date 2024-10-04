@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-md2workflow-plugins-redmine-1.4.18-4.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-md2workflow-plugins-redmine-1.4.18-4.17.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-md2workflow" {= "1.4.18"}
+  "python312-python-redmine" 
+]
+extra-source "python312-md2workflow-plugins-redmine-1.4.18-4.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-md2workflow-plugins-redmine-1.4.18-4.17.noarch.rpm"
+}

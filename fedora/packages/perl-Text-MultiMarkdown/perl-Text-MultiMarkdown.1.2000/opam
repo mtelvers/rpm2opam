@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Text-MultiMarkdown-1.002000-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Text-MultiMarkdown-1.002000-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Digest-MD5" 
+  "perl-Encode" 
+  "perl-Getopt-Long" 
+  "perl-HTML-Parser" 
+  "perl-Text-Markdown" {>= "1.26"}
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.8.0"}
+]
+extra-source "perl-Text-MultiMarkdown-1.002000-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Text-MultiMarkdown-1.002000-3.fc40.noarch.rpm"
+}

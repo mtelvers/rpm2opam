@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "amanda-client-3.5.4-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "amanda-client-3.5.4-6.fc40.x86_64.rpm"]
+depends: [
+  "amanda" {= "3.5.4"}
+  "amanda-libs" {= "3.5.4"}
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "grep" 
+  "perl-Carp" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-FileHandle" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-IPC-Open3" 
+  "perl-JSON" 
+  "perl-MIME-Base64" 
+  "perl-POSIX" 
+  "perl-Symbol" 
+  "perl-Sys-Hostname" 
+  "perl-XML-Simple" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "readline" 
+]
+extra-source "amanda-client-3.5.4-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/amanda-client-3.5.4-6.fc40.x86_64.rpm"
+}

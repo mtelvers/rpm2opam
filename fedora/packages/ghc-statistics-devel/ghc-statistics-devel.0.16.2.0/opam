@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-statistics-devel-0.16.2.0-17.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-statistics-devel-0.16.2.0-17.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-devel" 
+  "ghc-async-devel" 
+  "ghc-base-devel" 
+  "ghc-binary-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-data-default-class-devel" 
+  "ghc-deepseq-devel" 
+  "ghc-dense-linear-algebra-devel" 
+  "ghc-math-functions-devel" 
+  "ghc-mwc-random-devel" 
+  "ghc-parallel-devel" 
+  "ghc-primitive-devel" 
+  "ghc-random-devel" 
+  "ghc-statistics" {= "0.16.2.0"}
+  "ghc-vector-algorithms-devel" 
+  "ghc-vector-binary-instances-devel" 
+  "ghc-vector-devel" 
+  "ghc-vector-th-unbox-devel" 
+]
+extra-source "ghc-statistics-devel-0.16.2.0-17.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-statistics-devel-0.16.2.0-17.fc40.x86_64.rpm"
+}

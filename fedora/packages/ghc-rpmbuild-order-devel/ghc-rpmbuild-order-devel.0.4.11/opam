@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-rpmbuild-order-devel-0.4.11-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-rpmbuild-order-devel-0.4.11-1.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-case-insensitive-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-directory-devel" 
+  "ghc-extra-devel" 
+  "ghc-fgl-devel" 
+  "ghc-filepath-devel" 
+  "ghc-graphviz-devel" 
+  "ghc-regex-tdfa-devel" 
+  "ghc-rpmbuild-order" {= "0.4.11"}
+  "ghc-simple-cmd-devel" 
+]
+extra-source "ghc-rpmbuild-order-devel-0.4.11-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-rpmbuild-order-devel-0.4.11-1.fc40.x86_64.rpm"
+}

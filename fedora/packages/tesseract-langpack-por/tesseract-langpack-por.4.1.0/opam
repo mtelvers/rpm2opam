@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tesseract-langpack-por-4.1.0-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tesseract-langpack-por-4.1.0-7.fc40.noarch.rpm"]
+depends: [
+  "tesseract" 
+  "tesseract-tessdata-doc" {= "4.1.0"}
+]
+extra-source "tesseract-langpack-por-4.1.0-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tesseract-langpack-por-4.1.0-7.fc40.noarch.rpm"
+}

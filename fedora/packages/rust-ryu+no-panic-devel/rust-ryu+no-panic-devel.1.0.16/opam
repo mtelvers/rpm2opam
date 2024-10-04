@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ryu+no-panic-devel-1.0.16-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ryu+no-panic-devel-1.0.16-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-no-panic+default-devel" 
+  "rust-ryu-devel" {= "1.0.16"}
+]
+extra-source "rust-ryu+no-panic-devel-1.0.16-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ryu+no-panic-devel-1.0.16-2.fc40.noarch.rpm"
+}

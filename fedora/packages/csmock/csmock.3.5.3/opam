@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "csmock-3.5.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "csmock-3.5.3-1.fc40.noarch.rpm"]
+depends: [
+  "csmock-common" {>= "3.5.3"}
+  "csmock-plugin-clang" {>= "3.5.3"}
+  "csmock-plugin-cppcheck" {>= "3.5.3"}
+  "csmock-plugin-gitleaks" {>= "3.5.3"}
+  "csmock-plugin-shellcheck" {>= "3.5.3"}
+]
+extra-source "csmock-3.5.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/csmock-3.5.3-1.fc40.noarch.rpm"
+}

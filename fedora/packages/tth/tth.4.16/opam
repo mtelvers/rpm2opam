@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tth-4.16-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tth-4.16-4.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "ghostscript" 
+  "glibc" 
+  "netpbm-progs" 
+  "texlive-amsfonts" 
+  "texlive-bibtex" 
+  "texlive-cm" 
+  "texlive-dvips" 
+  "texlive-ec" 
+  "texlive-graphics" 
+  "texlive-gsftopk" 
+  "texlive-helvetic" 
+  "texlive-hyperref" 
+  "texlive-hyphen-base" 
+  "texlive-knuth-lib" 
+  "texlive-latex" 
+  "texlive-makeindex" 
+  "texlive-mfware" 
+  "texlive-natbib" 
+  "texlive-preprint" 
+  "texlive-rsfs" 
+  "texlive-symbol" 
+  "texlive-tex" 
+  "texlive-times" 
+  "tth-tex" {= "4.16"}
+]
+extra-source "tth-4.16-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tth-4.16-4.fc40.x86_64.rpm"
+}

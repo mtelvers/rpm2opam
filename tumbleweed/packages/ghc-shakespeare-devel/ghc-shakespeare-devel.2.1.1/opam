@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-shakespeare-devel-2.1.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-shakespeare-devel-2.1.1-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-aeson-devel" 
+  "ghc-base-devel" 
+  "ghc-blaze-html-devel" 
+  "ghc-blaze-markup-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-directory-devel" 
+  "ghc-exceptions-devel" 
+  "ghc-file-embed-devel" 
+  "ghc-parsec-devel" 
+  "ghc-process-devel" 
+  "ghc-scientific-devel" 
+  "ghc-shakespeare" {= "2.1.1"}
+  "ghc-template-haskell-devel" 
+  "ghc-text-devel" 
+  "ghc-th-lift-devel" 
+  "ghc-time-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-shakespeare-devel-2.1.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-shakespeare-devel-2.1.1-1.1.x86_64.rpm"
+}

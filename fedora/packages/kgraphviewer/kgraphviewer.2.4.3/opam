@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kgraphviewer-2.4.3-13.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kgraphviewer-2.4.3-13.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "graphviz" 
+  "kf5-filesystem" 
+  "kf5-kconfig-core" 
+  "kf5-kconfig-gui" 
+  "kf5-kconfigwidgets" 
+  "kf5-kcoreaddons" 
+  "kf5-ki18n" 
+  "kf5-kparts" 
+  "kf5-kwidgetsaddons" 
+  "kf5-kxmlgui" 
+  "kgraphviewer-libs" {= "2.4.3"}
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "kgraphviewer-2.4.3-13.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kgraphviewer-2.4.3-13.fc40.x86_64.rpm"
+}

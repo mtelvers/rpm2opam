@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-lzma-conduit-prof-1.2.3-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-lzma-conduit-prof-1.2.3-20.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-conduit-prof" 
+  "ghc-lzma-conduit-devel" {= "1.2.3"}
+  "ghc-lzma-prof" 
+  "ghc-resourcet-prof" 
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-lzma-conduit-prof-1.2.3-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-lzma-conduit-prof-1.2.3-20.fc40.x86_64.rpm"
+}

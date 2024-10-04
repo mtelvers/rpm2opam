@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "devhelp-43.0-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "devhelp-43.0-2.6.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+  "libwebkit2gtk-4_1-0" 
+]
+extra-source "devhelp-43.0-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/devhelp-43.0-2.6.x86_64.rpm"
+}

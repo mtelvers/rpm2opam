@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maliit-framework-tests-2.3.0-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maliit-framework-tests-2.3.0-1.5.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5DBus5" 
+  "libQt5Gui5" 
+  "libQt5Test5" 
+  "libgcc_s1" 
+  "libmaliit-glib2" 
+  "libmaliit-plugins2" 
+  "libstdc++6" 
+  "libwayland-client0" 
+  "qtdeclarative-imports-provides-qt5" 
+]
+extra-source "maliit-framework-tests-2.3.0-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/maliit-framework-tests-2.3.0-1.5.x86_64.rpm"
+}

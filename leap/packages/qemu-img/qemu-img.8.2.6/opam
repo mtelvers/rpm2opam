@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qemu-img-8.2.6-slfo.1.2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qemu-img-8.2.6-slfo.1.2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libaio1" 
+  "libgcrypt20" 
+  "libglib-2_0-0" 
+  "libgmodule-2_0-0" 
+  "libgnutls30" 
+  "libnuma1" 
+  "libselinux1" 
+  "liburing2" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+  "pam" 
+]
+extra-source "qemu-img-8.2.6-slfo.1.2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/qemu-img-8.2.6-slfo.1.2.1.x86_64.rpm"
+}

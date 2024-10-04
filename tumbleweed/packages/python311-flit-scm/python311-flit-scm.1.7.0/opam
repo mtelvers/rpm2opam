@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-flit-scm-1.7.0-2.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-flit-scm-1.7.0-2.8.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-flit-core" {>= "3.5"}
+  "python311-setuptools_scm" {>= "6.4"}
+]
+extra-source "python311-flit-scm-1.7.0-2.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-flit-scm-1.7.0-2.8.noarch.rpm"
+}

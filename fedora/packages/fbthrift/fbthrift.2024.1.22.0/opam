@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fbthrift-2024.01.22.00-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fbthrift-2024.01.22.00-1.fc40.x86_64.rpm"]
+depends: [
+  "boost-context" 
+  "boost-filesystem" 
+  "double-conversion" 
+  "fbthrift-devel" 
+  "fizz" 
+  "fmt" 
+  "folly" 
+  "gflags" 
+  "glibc" 
+  "glog" 
+  "libgcc" 
+  "libstdc++" 
+  "openssl-libs" 
+  "wangle" 
+  "zlib-ng-compat" 
+]
+extra-source "fbthrift-2024.01.22.00-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fbthrift-2024.01.22.00-1.fc40.x86_64.rpm"
+}

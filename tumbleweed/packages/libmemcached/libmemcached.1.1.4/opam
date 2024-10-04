@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmemcached-1.1.4-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmemcached-1.1.4-3.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libevent-2_1-7" 
+  "libgcc_s1" 
+  "libmemcached11" 
+  "libmemcachedutil2" 
+  "libstdc++6" 
+]
+extra-source "libmemcached-1.1.4-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmemcached-1.1.4-3.2.x86_64.rpm"
+}

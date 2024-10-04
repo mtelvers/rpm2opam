@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-fclabels-prof-2.0.5.1-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-fclabels-prof-2.0.5.1-11.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-orphans-prof" 
+  "ghc-base-prof" 
+  "ghc-fclabels-devel" {= "2.0.5.1"}
+  "ghc-mtl-prof" 
+  "ghc-template-haskell-prof" 
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-fclabels-prof-2.0.5.1-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-fclabels-prof-2.0.5.1-11.fc40.x86_64.rpm"
+}

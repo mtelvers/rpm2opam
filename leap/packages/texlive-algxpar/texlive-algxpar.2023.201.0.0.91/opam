@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-algxpar-2023.201.0.0.91svn56006-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-algxpar-2023.201.0.0.91svn56006-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-algorithmicx" 
+  "texlive-amsfonts" 
+  "texlive-amsmath" 
+  "texlive-fancyvrb" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-listings" 
+  "texlive-ragged2e" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-tcolorbox" 
+  "texlive-xcolor" 
+]
+extra-source "texlive-algxpar-2023.201.0.0.91svn56006-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-algxpar-2023.201.0.0.91svn56006-slfo.1.1.4.noarch.rpm"
+}

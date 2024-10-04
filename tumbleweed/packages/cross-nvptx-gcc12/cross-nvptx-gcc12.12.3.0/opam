@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cross-nvptx-gcc12-12.3.0+git1204-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cross-nvptx-gcc12-12.3.0+git1204-4.2.x86_64.rpm"]
+depends: [
+  "cross-nvptx-newlib12-devel" {>= "12.3.0"}
+  "nvptx-tools" 
+  "update-alternatives" 
+]
+extra-source "cross-nvptx-gcc12-12.3.0+git1204-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cross-nvptx-gcc12-12.3.0+git1204-4.2.x86_64.rpm"
+}

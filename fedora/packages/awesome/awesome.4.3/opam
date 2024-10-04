@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "awesome-4.3-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "awesome-4.3-16.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cairo" 
+  "cairo-gobject" 
+  "dbus-libs" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "libX11" 
+  "libxcb" 
+  "libxdg-basedir" 
+  "libxkbcommon" 
+  "libxkbcommon-x11" 
+  "lua-lgi" {>= "0.8.0"}
+  "lua-libs" 
+  "pango" {>= "1.19.3"}
+  "rlwrap" 
+  "startup-notification" 
+  "xcb-util" 
+  "xcb-util-cursor" 
+  "xcb-util-keysyms" 
+  "xcb-util-wm" 
+  "xcb-util-xrm" 
+  "xterm" 
+]
+extra-source "awesome-4.3-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/awesome-4.3-16.fc40.x86_64.rpm"
+}

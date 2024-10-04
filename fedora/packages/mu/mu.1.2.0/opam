@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mu-1.2.0-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mu-1.2.0-12.fc40.noarch.rpm"]
+depends: [
+  "black" {>= "19.10"}
+  "esptool" {>= "3"}
+  "hicolor-icon-theme" 
+  "pgzero" {>= "1.2.1"}
+  "python3" 
+  "python3-adafruit-board-toolkit" 
+  "python3-click" 
+  "python3-flake8" {>= "3.8.3"}
+  "python3-flask" {>= "2"}
+  "python3-ipykernel" {>= "4.1"}
+  "python3-ipython_genutils" {>= "0.2"}
+  "python3-jupyter-client" {>= "4.1"}
+  "python3-microfs" {>= "1.3"}
+  "python3-nudatus" {>= "0.0.3"}
+  "python3-platformdirs" 
+  "python3-pyqtchart" 
+  "python3-pyserial" {>= "3.4"}
+  "python3-qscintilla-qt5" {>= "2.10.7"}
+  "python3-qt5" {>= "5.11"}
+  "python3-qt5-base" {>= "5.13.2"}
+  "python3-qtconsole" 
+  "python3-requests" {>= "2"}
+  "python3-semver" {>= "2.8"}
+  "python3-virtualenv" {>= "20"}
+  "python3-wheel" 
+  "uflash" {>= "2"}
+]
+extra-source "mu-1.2.0-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mu-1.2.0-12.fc40.noarch.rpm"
+}

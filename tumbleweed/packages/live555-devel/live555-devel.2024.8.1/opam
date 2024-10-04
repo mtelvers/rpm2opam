@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "live555-devel-2024.08.01-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "live555-devel-2024.08.01-1.1.x86_64.rpm"]
+depends: [
+  "libBasicUsageEnvironment2" {= "2024.8.1"}
+  "libUsageEnvironment3" {= "2024.8.1"}
+  "libgroupsock30" {= "2024.8.1"}
+  "libliveMedia112" {= "2024.8.1"}
+  "libopenssl-1_0_0-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "live555-devel-2024.08.01-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/live555-devel-2024.08.01-1.1.x86_64.rpm"
+}

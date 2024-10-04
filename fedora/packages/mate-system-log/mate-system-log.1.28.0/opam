@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mate-system-log-1.28.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mate-system-log-1.28.0-1.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libgcc" 
+  "mate-desktop-libs" 
+  "mate-utils-common" {= "1.28.0"}
+  "pango" 
+  "usermode" 
+  "zlib-ng-compat" 
+]
+extra-source "mate-system-log-1.28.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mate-system-log-1.28.0-1.fc40.x86_64.rpm"
+}

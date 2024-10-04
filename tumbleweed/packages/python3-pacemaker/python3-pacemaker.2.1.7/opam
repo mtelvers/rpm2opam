@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-pacemaker-2.1.7+20240711.239cba384-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-pacemaker-2.1.7+20240711.239cba384-1.1.noarch.rpm"]
+depends: [
+  "pacemaker-libs" {= "2.1.7"}
+  "python311" 
+  "python311-base" {= "3.11.10"}
+]
+extra-source "python3-pacemaker-2.1.7+20240711.239cba384-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-pacemaker-2.1.7+20240711.239cba384-1.1.noarch.rpm"
+}

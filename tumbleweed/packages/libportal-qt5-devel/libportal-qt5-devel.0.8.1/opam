@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libportal-qt5-devel-0.8.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libportal-qt5-devel-0.8.1-1.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libQt5Core-devel" 
+  "libQt5Gui-devel" 
+  "libQt5Widgets-devel" 
+  "libportal-devel" 
+  "libportal-qt5-1" {= "0.8.1"}
+  "libqt5-qtx11extras-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libportal-qt5-devel-0.8.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libportal-qt5-devel-0.8.1-1.1.x86_64.rpm"
+}

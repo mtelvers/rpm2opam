@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "google-noto-sans-cjk-fonts-2.004-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "google-noto-sans-cjk-fonts-2.004-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "google-noto-sans-jp-fonts" {= "2.4"}
+  "google-noto-sans-kr-fonts" {= "2.4"}
+  "google-noto-sans-sc-fonts" {= "2.4"}
+  "google-noto-sans-tc-fonts" {= "2.4"}
+]
+extra-source "google-noto-sans-cjk-fonts-2.004-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/google-noto-sans-cjk-fonts-2.004-slfo.1.1.3.noarch.rpm"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MooseX-App-1.43-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-App-1.43-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Config-Any" 
+  "perl-Encode" 
+  "perl-File-Basename" 
+  "perl-File-HomeDir" 
+  "perl-I18N-Langinfo" 
+  "perl-IO-Interactive" 
+  "perl-Module-Pluggable" 
+  "perl-Moose" {>= "2.0"}
+  "perl-PathTools" 
+  "perl-Pod-Elemental" 
+  "perl-Pod-Perldoc" 
+  "perl-Scalar-List-Utils" 
+  "perl-Term-ANSIColor" 
+  "perl-TermReadKey" 
+  "perl-Text-WagnerFischer" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-namespace-autoclean" 
+  "perl-overload" 
+]
+extra-source "perl-MooseX-App-1.43-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MooseX-App-1.43-3.fc40.noarch.rpm"
+}

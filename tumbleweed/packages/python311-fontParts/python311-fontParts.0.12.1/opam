@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-fontParts-0.12.1-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-fontParts-0.12.1-2.2.noarch.rpm"]
+depends: [
+  "python311-FontTools" {>= "4.28.5"}
+  "python311-base" {= "3.11"}
+  "python311-booleanOperations" {>= "0.9.0"}
+  "python311-defcon" {>= "0.10.0"}
+  "python311-fontMath" {>= "0.9.1"}
+  "python311-fs" {>= "2.2.0"}
+  "python311-lxml" {>= "4.0"}
+]
+extra-source "python311-fontParts-0.12.1-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-fontParts-0.12.1-2.2.noarch.rpm"
+}

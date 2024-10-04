@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "npm22-22.3.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "npm22-22.3.0-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "nodejs-common" {>= "5.0"}
+  "nodejs22" 
+  "system-user-nobody" 
+]
+extra-source "npm22-22.3.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/npm22-22.3.0-1.1.x86_64.rpm"
+}

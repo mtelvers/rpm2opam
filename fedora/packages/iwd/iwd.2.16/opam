@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "iwd-2.16-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "iwd-2.16-1.fc40.x86_64.rpm"]
+depends: [
+  "dbus" 
+  "glibc" 
+  "libell" 
+  "libgcc" 
+  "readline" 
+  "systemd" 
+]
+extra-source "iwd-2.16-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/iwd-2.16-1.fc40.x86_64.rpm"
+}

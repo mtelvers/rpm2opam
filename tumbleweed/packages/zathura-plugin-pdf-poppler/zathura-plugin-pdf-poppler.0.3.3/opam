@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zathura-plugin-pdf-poppler-0.3.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zathura-plugin-pdf-poppler-0.3.3-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libgirara-gtk3-4" 
+  "libpoppler-glib8" 
+  "zathura" {>= "0.5.3"}
+]
+extra-source "zathura-plugin-pdf-poppler-0.3.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/zathura-plugin-pdf-poppler-0.3.3-1.1.x86_64.rpm"
+}

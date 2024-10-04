@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rand_isaac+serde-devel-0.3.0-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rand_isaac+serde-devel-0.3.0-7.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-rand_isaac-devel" {= "0.3.0"}
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+]
+extra-source "rust-rand_isaac+serde-devel-0.3.0-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rand_isaac+serde-devel-0.3.0-7.fc40.noarch.rpm"
+}

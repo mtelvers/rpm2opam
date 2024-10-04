@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "php-mapscriptng-8.0.1-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-mapscriptng-8.0.1-4.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libmapserver2" 
+  "php8" 
+  "php8-gd" 
+]
+extra-source "php-mapscriptng-8.0.1-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/php-mapscriptng-8.0.1-4.1.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Module-Build-Prereqs-FromCPANfile-0.02-1.18.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Build-Prereqs-FromCPANfile-0.02-1.18.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Module-CPANfile" {>= "1.0"}
+  "perl-base" {>= "0.80"}
+]
+extra-source "perl-Module-Build-Prereqs-FromCPANfile-0.02-1.18.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Module-Build-Prereqs-FromCPANfile-0.02-1.18.noarch.rpm"
+}

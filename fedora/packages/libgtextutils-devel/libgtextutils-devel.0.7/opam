@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libgtextutils-devel-0.7-34.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgtextutils-devel-0.7-34.fc40.x86_64.rpm"]
+depends: [
+  "libgtextutils" {= "0.7"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libgtextutils-devel-0.7-34.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libgtextutils-devel-0.7-34.fc40.x86_64.rpm"
+}

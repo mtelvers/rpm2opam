@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hugs98-glut-2006.09-50.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hugs98-glut-2006.09-50.fc40.x86_64.rpm"]
+depends: [
+  "hugs98" {= "2006.9"}
+  "hugs98-opengl" {= "2006.9"}
+]
+extra-source "hugs98-glut-2006.09-50.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hugs98-glut-2006.09-50.fc40.x86_64.rpm"
+}

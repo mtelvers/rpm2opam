@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-mathics-pygments-1.0.2-1.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-mathics-pygments-1.0.2-1.15.noarch.rpm"]
+depends: [
+  "python311-Mathics-Scanner" {>= "1.2.0"}
+  "python311-Pygments" {>= "2"}
+  "python311-base" {= "3.11"}
+]
+extra-source "python311-mathics-pygments-1.0.2-1.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-mathics-pygments-1.0.2-1.15.noarch.rpm"
+}

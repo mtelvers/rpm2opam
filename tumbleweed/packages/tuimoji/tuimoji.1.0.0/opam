@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tuimoji-1.0.0-1.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tuimoji-1.0.0-1.14.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-urwid" 
+  "xclip" 
+]
+extra-source "tuimoji-1.0.0-1.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tuimoji-1.0.0-1.14.noarch.rpm"
+}

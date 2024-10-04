@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glib-networking-2.80.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glib-networking-2.80.0-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ca-certificates-mozilla" 
+  "glib2-stage1-devel" 
+  "glib2-tools" 
+  "glibc" 
+  "gsettings-desktop-schemas" 
+  "libgnutls30" 
+  "libproxy1" 
+]
+extra-source "glib-networking-2.80.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/glib-networking-2.80.0-1.2.x86_64.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-num-bigint-dig-devel-0.8.4-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-num-bigint-dig-devel-0.8.4-2.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cargo" 
+  "rust" {>= "1.56"}
+  "rust-byteorder-devel" 
+  "rust-lazy_static+spin_no_std-devel" 
+  "rust-lazy_static-devel" 
+  "rust-libm+default-devel" 
+  "rust-num-integer+i128-devel" 
+  "rust-num-integer-devel" 
+  "rust-num-iter-devel" 
+  "rust-num-traits+i128-devel" 
+  "rust-num-traits-devel" 
+  "rust-smallvec-devel" 
+]
+extra-source "rust-num-bigint-dig-devel-0.8.4-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-num-bigint-dig-devel-0.8.4-2.fc40.noarch.rpm"
+}

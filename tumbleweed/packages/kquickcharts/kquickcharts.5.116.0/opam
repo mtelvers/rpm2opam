@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kquickcharts-5.116.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kquickcharts-5.116.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kirigami2" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5QuickControls2-5" 
+  "libQtQuick5" 
+  "libqt5-qtquickcontrols2" 
+  "libstdc++6" 
+  "qtdeclarative-imports-provides-qt5" {>= "13"}
+]
+extra-source "kquickcharts-5.116.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kquickcharts-5.116.0-1.1.x86_64.rpm"
+}

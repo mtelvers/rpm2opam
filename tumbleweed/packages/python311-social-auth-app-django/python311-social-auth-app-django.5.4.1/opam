@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-social-auth-app-django-5.4.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-social-auth-app-django-5.4.1-1.1.noarch.rpm"]
+depends: [
+  "python311-Django" {>= "2.2"}
+  "python311-base" {= "3.11"}
+  "python311-python-jose" 
+  "python311-social-auth-core" {>= "4.1.0"}
+]
+extra-source "python311-social-auth-app-django-5.4.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-social-auth-app-django-5.4.1-1.1.noarch.rpm"
+}

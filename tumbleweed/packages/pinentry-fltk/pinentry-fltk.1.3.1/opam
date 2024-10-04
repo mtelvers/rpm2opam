@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pinentry-fltk-1.3.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pinentry-fltk-1.3.1-2.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libassuan9" 
+  "libfltk1_3" 
+  "libgcc_s1" 
+  "libgpg-error0" 
+  "libncurses6" 
+  "libsecret-1-0" 
+  "libstdc++6" 
+  "pinentry" 
+]
+extra-source "pinentry-fltk-1.3.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pinentry-fltk-1.3.1-2.1.x86_64.rpm"
+}

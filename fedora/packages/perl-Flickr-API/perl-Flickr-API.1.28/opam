@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Flickr-API-1.28-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Flickr-API-1.28-23.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Digest-MD5" 
+  "perl-Encode" 
+  "perl-Getopt-Long" 
+  "perl-HTTP-Message" {>= "1.56"}
+  "perl-Net-OAuth" 
+  "perl-Pod-Usage" 
+  "perl-Scalar-List-Utils" 
+  "perl-Storable" 
+  "perl-Term-ReadLine" 
+  "perl-URI" {>= "1.18"}
+  "perl-XML-LibXML-Simple" 
+  "perl-XML-Parser-Lite-Tree" {>= "0.6"}
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+  "perl-parent" 
+]
+extra-source "perl-Flickr-API-1.28-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Flickr-API-1.28-23.fc40.noarch.rpm"
+}

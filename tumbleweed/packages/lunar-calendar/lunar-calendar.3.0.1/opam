@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lunar-calendar-3.0.1-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lunar-calendar-3.0.1-1.4.x86_64.rpm"]
+depends: [
+  "liblunar-calendar-3_0-1" {= "3.0.1"}
+]
+extra-source "lunar-calendar-3.0.1-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lunar-calendar-3.0.1-1.4.x86_64.rpm"
+}

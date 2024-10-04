@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mysql-server-8.0.36-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mysql-server-8.0.36-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "glibc" 
+  "libaio" 
+  "libevent" 
+  "libgcc" 
+  "libicu" 
+  "libstdc++" 
+  "libtirpc" 
+  "libzstd" 
+  "lz4-libs" 
+  "mariadb-connector-c-config" 
+  "mecab" 
+  "mysql" {= "8.0.36"}
+  "mysql-common" {= "8.0.36"}
+  "mysql-errmsg" {= "8.0.36"}
+  "mysql-selinux" 
+  "numactl-libs" 
+  "openssl-libs" 
+  "perl-Getopt-Long" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "policycoreutils-python-utils" 
+  "protobuf-lite" 
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "mysql-server-8.0.36-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mysql-server-8.0.36-3.fc40.x86_64.rpm"
+}

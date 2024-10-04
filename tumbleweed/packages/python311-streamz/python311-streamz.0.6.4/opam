@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-streamz-0.6.4-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-streamz-0.6.4-4.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-setuptools" 
+  "python311-six" 
+  "python311-toolz" 
+  "python311-tornado" 
+  "python311-zict" 
+]
+extra-source "python311-streamz-0.6.4-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-streamz-0.6.4-4.1.noarch.rpm"
+}

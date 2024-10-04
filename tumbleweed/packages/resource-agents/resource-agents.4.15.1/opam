@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "resource-agents-4.15.1+git27.f2932e21-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "resource-agents-4.15.1+git27.f2932e21-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-util-linux" 
+  "cluster-glue-libs" 
+  "glibc" 
+  "libqb100" 
+  "pkgconf-pkg-config" 
+  "python311-base" 
+]
+extra-source "resource-agents-4.15.1+git27.f2932e21-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/resource-agents-4.15.1+git27.f2932e21-1.1.x86_64.rpm"
+}

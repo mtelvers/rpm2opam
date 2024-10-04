@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpq5-32bit-17.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpq5-32bit-17.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "krb5-32bit" 
+  "libldap2-32bit" 
+  "libopenssl3-32bit" 
+]
+extra-source "libpq5-32bit-17.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpq5-32bit-17.0-1.1.x86_64.rpm"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kaccounts-providers-24.08.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kaccounts-providers-24.08.1-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf6-kirigami-imports" 
+  "libKF6CoreAddons6" 
+  "libKF6I18n6" 
+  "libKF6KIO6" 
+  "libKF6Package6" 
+  "libQt6Core6" 
+  "libQt6Gui6" 
+  "libQt6Network6" 
+  "libQt6Qml6" 
+  "libQt6WebEngineCore6" 
+  "libQt6WebEngineQuick6" 
+  "libQt6Xml6" 
+  "libkaccounts6-2" 
+  "libstdc++6" 
+  "qt6-webengine-imports" {>= "10"}
+  "qtdeclarative-imports-provides-qt6" {>= "2"}
+  "signon-plugin-oauth2" 
+]
+extra-source "kaccounts-providers-24.08.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kaccounts-providers-24.08.1-1.1.x86_64.rpm"
+}

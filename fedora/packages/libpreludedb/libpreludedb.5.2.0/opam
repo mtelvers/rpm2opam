@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libpreludedb-5.2.0-13.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpreludedb-5.2.0-13.fc39.x86_64.rpm"]
+depends: [
+  "glibc" {>= "2.37.9000"}
+  "libgcc" 
+  "libprelude" 
+  "libstdc++" 
+]
+extra-source "libpreludedb-5.2.0-13.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libpreludedb-5.2.0-13.fc39.x86_64.rpm"
+}

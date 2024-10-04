@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-navi-devel-2.20.1-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-navi-devel-2.20.1-7.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cargo" 
+  "rust-anyhow+default-devel" 
+  "rust-clap+cargo-devel" 
+  "rust-clap+default-devel" 
+  "rust-clap+derive-devel" 
+  "rust-crossterm+default-devel" 
+  "rust-directories-next+default-devel" 
+  "rust-edit+default-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-regex+std-devel" 
+  "rust-regex+unicode-perl-devel" 
+  "rust-regex-devel" 
+  "rust-remove_dir_all+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde_yaml+default-devel" 
+  "rust-shellwords+default-devel" 
+  "rust-strip-ansi-escapes+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-walkdir+default-devel" 
+]
+extra-source "rust-navi-devel-2.20.1-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-navi-devel-2.20.1-7.fc40.noarch.rpm"
+}

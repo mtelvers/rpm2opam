@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-pandoc-server-prof-0.1.0.7-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-pandoc-server-prof-0.1.0.7-1.4.x86_64.rpm"]
+depends: [
+  "ghc-aeson-prof" 
+  "ghc-base-prof" 
+  "ghc-base64-bytestring-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-data-default-prof" 
+  "ghc-doctemplates-prof" 
+  "ghc-pandoc-prof" 
+  "ghc-pandoc-server-devel" {= "0.1.0.7"}
+  "ghc-pandoc-types-prof" 
+  "ghc-servant-server-prof" 
+  "ghc-skylighting-prof" 
+  "ghc-text-prof" 
+  "ghc-unicode-collation-prof" 
+  "ghc-wai-cors-prof" 
+  "ghc-wai-prof" 
+]
+extra-source "ghc-pandoc-server-prof-0.1.0.7-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-pandoc-server-prof-0.1.0.7-1.4.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sudo-devel-1.9.15-2.p5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sudo-devel-1.9.15-2.p5.fc40.x86_64.rpm"]
+depends: [
+  "sudo" {= "1.9.15"}
+]
+extra-source "sudo-devel-1.9.15-2.p5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sudo-devel-1.9.15-2.p5.fc40.x86_64.rpm"
+}

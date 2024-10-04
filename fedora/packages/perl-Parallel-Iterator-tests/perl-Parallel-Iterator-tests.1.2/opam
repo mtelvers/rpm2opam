@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Parallel-Iterator-tests-1.002-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Parallel-Iterator-tests-1.002-5.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-IO" 
+  "perl-POSIX" 
+  "perl-Parallel-Iterator" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+]
+extra-source "perl-Parallel-Iterator-tests-1.002-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Parallel-Iterator-tests-1.002-5.fc40.noarch.rpm"
+}

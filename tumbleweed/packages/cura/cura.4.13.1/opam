@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cura-4.13.1-2.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cura-4.13.1-2.7.noarch.rpm"]
+depends: [
+  "cura-engine" {>= "4.13.1"}
+  "libSavitar0" {>= "4.13.1"}
+  "libqt5-qtgraphicaleffects" {>= "12"}
+  "libqt5-qtquickcontrols" {>= "1"}
+  "libqt5-qtquickcontrols2" {>= "1"}
+  "python3-Arcus" {>= "4.13.1"}
+  "python3-pynest2d" 
+  "python311-Shapely" 
+  "python311-base" 
+  "python311-keyring" {>= "21"}
+  "python311-numpy" 
+  "python311-pyserial" 
+  "python311-qt5" {>= "5.10"}
+  "python311-requests" 
+  "python311-scipy" 
+  "python311-sentry-sdk" 
+  "qtdeclarative-imports-provides-qt5" {>= "14"}
+  "uranium" {>= "1"}
+]
+extra-source "cura-4.13.1-2.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cura-4.13.1-2.7.noarch.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-cxx-build-devel-1.0.119-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-cxx-build-devel-1.0.119-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.60"}
+  "rust-cc+default-devel" 
+  "rust-codespan-reporting+default-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-proc-macro2+span-locations-devel" 
+  "rust-proc-macro2-0-4-devel" 
+  "rust-quote-devel" 
+  "rust-scratch+default-devel" 
+  "rust-syn+clone-impls-devel" 
+  "rust-syn+full-devel" 
+  "rust-syn+parsing-devel" 
+  "rust-syn+printing-devel" 
+  "rust-syn-devel" 
+]
+extra-source "rust-cxx-build-devel-1.0.119-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-cxx-build-devel-1.0.119-1.fc40.noarch.rpm"
+}

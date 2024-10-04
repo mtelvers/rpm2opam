@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gedit-plugin-devhelp-43.0-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gedit-plugin-devhelp-43.0-2.6.x86_64.rpm"]
+depends: [
+  "devhelp" {= "43.0"}
+  "gedit" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+]
+extra-source "gedit-plugin-devhelp-43.0-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gedit-plugin-devhelp-43.0-2.6.x86_64.rpm"
+}

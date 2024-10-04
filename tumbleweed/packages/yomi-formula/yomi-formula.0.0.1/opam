@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yomi-formula-0.0.1+git.1630589391.4557cfd-2.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yomi-formula-0.0.1+git.1630589391.4557cfd-2.8.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "salt" 
+  "salt-standalone-formulas-configuration" 
+]
+extra-source "yomi-formula-0.0.1+git.1630589391.4557cfd-2.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/yomi-formula-0.0.1+git.1630589391.4557cfd-2.8.noarch.rpm"
+}

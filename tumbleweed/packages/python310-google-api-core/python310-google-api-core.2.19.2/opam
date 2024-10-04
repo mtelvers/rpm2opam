@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-google-api-core-2.19.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-google-api-core-2.19.2-1.1.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10.15"}
+  "python310-google-auth" {>= "2.34.0"}
+  "python310-googleapis-common-protos" {>= "1.65.0"}
+  "python310-grpcio" {>= "1.65.0"}
+  "python310-grpcio-status" {>= "1.62.2"}
+  "python310-proto-plus" 
+  "python310-protobuf" 
+  "python310-pytz" 
+  "python310-requests" {>= "2.32.3"}
+  "python310-setuptools" {>= "72.1.0"}
+]
+extra-source "python310-google-api-core-2.19.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-google-api-core-2.19.2-1.1.noarch.rpm"
+}

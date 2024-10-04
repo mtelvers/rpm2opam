@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-PDF-Reuse-0.39-24.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-PDF-Reuse-0.39-24.fc40.noarch.rpm"]
+depends: [
+  "perl-AutoLoader" 
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Digest-MD5" 
+  "perl-Exporter" 
+  "perl-IO-Compress" 
+  "perl-Text-PDF" 
+  "perl-autouse" 
+  "perl-constant" 
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "perl-PDF-Reuse-0.39-24.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-PDF-Reuse-0.39-24.fc40.noarch.rpm"
+}

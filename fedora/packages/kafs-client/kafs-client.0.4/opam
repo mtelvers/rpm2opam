@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kafs-client-0.4-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kafs-client-0.4-11.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "filesystem" 
+  "glibc" 
+  "kafs-client-libs" 
+  "keyutils" {>= "1.6"}
+  "keyutils-libs" 
+  "krb5-libs" 
+  "selinux-policy" {>= "3.7.19"}
+  "systemd" 
+]
+extra-source "kafs-client-0.4-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kafs-client-0.4-11.fc40.x86_64.rpm"
+}

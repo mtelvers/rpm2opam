@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-glib-macros0.18-devel-0.18.5-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-glib-macros0.18-devel-0.18.5-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.70"}
+  "rust-heck+default-devel" 
+  "rust-proc-macro-crate+default-devel" 
+  "rust-proc-macro-error+default-devel" 
+  "rust-proc-macro2+default-devel" 
+  "rust-quote+default-devel" 
+  "rust-syn+default-devel" 
+  "rust-syn+full-devel" 
+]
+extra-source "rust-glib-macros0.18-devel-0.18.5-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-glib-macros0.18-devel-0.18.5-1.fc40.noarch.rpm"
+}

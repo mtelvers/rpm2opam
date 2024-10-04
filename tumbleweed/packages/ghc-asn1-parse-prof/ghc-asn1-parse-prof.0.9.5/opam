@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-asn1-parse-prof-0.9.5-6.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-asn1-parse-prof-0.9.5-6.10.x86_64.rpm"]
+depends: [
+  "ghc-asn1-encoding-prof" 
+  "ghc-asn1-parse-devel" {= "0.9.5"}
+  "ghc-asn1-types-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+]
+extra-source "ghc-asn1-parse-prof-0.9.5-6.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-asn1-parse-prof-0.9.5-6.10.x86_64.rpm"
+}

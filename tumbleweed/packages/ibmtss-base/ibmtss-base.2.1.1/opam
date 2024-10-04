@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ibmtss-base-2.1.1-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibmtss-base-2.1.1-1.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "system-user-tss" 
+]
+extra-source "ibmtss-base-2.1.1-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ibmtss-base-2.1.1-1.3.noarch.rpm"
+}

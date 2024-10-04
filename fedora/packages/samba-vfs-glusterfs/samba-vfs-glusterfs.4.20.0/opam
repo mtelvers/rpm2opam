@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "samba-vfs-glusterfs-4.20.0-0.5.rc4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "samba-vfs-glusterfs-4.20.0-0.5.rc4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "glusterfs" {>= "3.4.0.16"}
+  "libgfapi0" {>= "3.4.0.16"}
+  "libtalloc" 
+  "libtevent" 
+  "libwbclient" {= "4.20.0"}
+  "samba" {= "4.20.0"}
+  "samba-client-libs" 
+  "samba-common-libs" {= "4.20.0"}
+  "samba-libs" {= "4.20.0"}
+]
+extra-source "samba-vfs-glusterfs-4.20.0-0.5.rc4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/samba-vfs-glusterfs-4.20.0-0.5.rc4.fc40.x86_64.rpm"
+}

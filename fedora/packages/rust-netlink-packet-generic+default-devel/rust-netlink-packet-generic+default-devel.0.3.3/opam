@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-netlink-packet-generic+default-devel-0.3.3-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-netlink-packet-generic+default-devel-0.3.3-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-netlink-packet-generic-devel" {= "0.3.3"}
+]
+extra-source "rust-netlink-packet-generic+default-devel-0.3.3-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-netlink-packet-generic+default-devel-0.3.3-4.fc40.noarch.rpm"
+}

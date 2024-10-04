@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bluez-devel-5.77-slfo.1.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bluez-devel-5.77-slfo.1.1.1.x86_64.rpm"]
+depends: [
+  "libbluetooth3" {= "5.77"}
+  "pkgconf-pkg-config" 
+]
+extra-source "bluez-devel-5.77-slfo.1.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/bluez-devel-5.77-slfo.1.1.1.x86_64.rpm"
+}

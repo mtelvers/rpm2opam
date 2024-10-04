@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libtrilinos14-14.0.0-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libtrilinos14-14.0.0-5.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libgomp1" 
+  "libhdf5-200" 
+  "libnetcdf19" 
+  "libopenblas_openmp0" 
+  "libstdc++6" 
+]
+extra-source "libtrilinos14-14.0.0-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libtrilinos14-14.0.0-5.2.x86_64.rpm"
+}

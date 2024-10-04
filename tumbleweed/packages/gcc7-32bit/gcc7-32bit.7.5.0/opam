@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcc7-32bit-7.5.0+r278197-17.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcc7-32bit-7.5.0+r278197-17.1.x86_64.rpm"]
+depends: [
+  "gcc7" {= "7.5.0"}
+  "glibc-32bit" 
+  "glibc-devel-32bit" 
+  "libasan4-32bit" {>= "7.5.0"}
+  "libatomic1-32bit" {>= "7.5.0"}
+  "libcilkrts5-32bit" {>= "7.5.0"}
+  "libgcc_s1-32bit" {>= "7.5.0"}
+  "libgomp1-32bit" {>= "7.5.0"}
+  "libitm1-32bit" {>= "7.5.0"}
+  "libmpx2-gcc7-32bit" {>= "7.5.0"}
+  "libmpxwrappers2-gcc7-32bit" {>= "7.5.0"}
+  "libubsan0-32bit" {>= "7.5.0"}
+]
+extra-source "gcc7-32bit-7.5.0+r278197-17.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gcc7-32bit-7.5.0+r278197-17.1.x86_64.rpm"
+}

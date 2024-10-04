@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libdevmapper1_03-32bit-2.03.24_1.02.198-5.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdevmapper1_03-32bit-2.03.24_1.02.198-5.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libselinux1-32bit" 
+  "libudev1-32bit" 
+]
+extra-source "libdevmapper1_03-32bit-2.03.24_1.02.198-5.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libdevmapper1_03-32bit-2.03.24_1.02.198-5.1.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mate-themes-3.22.26-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mate-themes-3.22.26-1.1.noarch.rpm"]
+depends: [
+  "gtk2-engine-clearlooks" 
+  "gtk2-engine-hcengine" 
+  "gtk2-engine-murrine" 
+]
+extra-source "mate-themes-3.22.26-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mate-themes-3.22.26-1.1.noarch.rpm"
+}

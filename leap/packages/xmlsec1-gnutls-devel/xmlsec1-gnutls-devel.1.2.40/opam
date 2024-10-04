@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xmlsec1-gnutls-devel-1.2.40-slfo.1.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xmlsec1-gnutls-devel-1.2.40-slfo.1.1.1.x86_64.rpm"]
+depends: [
+  "libgcrypt-devel" {>= "1.2.0"}
+  "libgnutls-devel" {>= "1.0.20"}
+  "libxml2-devel" {>= "2.8.0"}
+  "libxmlsec1-gnutls1" {= "1.2.40"}
+  "libxslt-devel" {>= "1.0.20"}
+  "pkgconf-pkg-config" 
+  "xmlsec1-devel" {= "1.2.40"}
+  "xmlsec1-openssl-devel" {= "1.2.40"}
+]
+extra-source "xmlsec1-gnutls-devel-1.2.40-slfo.1.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/xmlsec1-gnutls-devel-1.2.40-slfo.1.1.1.x86_64.rpm"
+}

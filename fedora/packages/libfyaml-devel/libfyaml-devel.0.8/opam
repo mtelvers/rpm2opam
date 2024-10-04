@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libfyaml-devel-0.8-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfyaml-devel-0.8-5.fc40.x86_64.rpm"]
+depends: [
+  "libfyaml" {= "0.8"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libfyaml-devel-0.8-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libfyaml-devel-0.8-5.fc40.x86_64.rpm"
+}

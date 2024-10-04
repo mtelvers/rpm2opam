@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gap-pkg-jupyterviz-doc-1.5.6-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-pkg-jupyterviz-doc-1.5.6-11.fc40.noarch.rpm"]
+depends: [
+  "gap-online-help" 
+  "gap-pkg-jupyterviz" {= "1.5.6"}
+  "python3" 
+]
+extra-source "gap-pkg-jupyterviz-doc-1.5.6-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gap-pkg-jupyterviz-doc-1.5.6-11.fc40.noarch.rpm"
+}

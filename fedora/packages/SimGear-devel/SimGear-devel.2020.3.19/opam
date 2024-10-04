@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "SimGear-devel-2020.3.19-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "SimGear-devel-2020.3.19-3.fc40.x86_64.rpm"]
+depends: [
+  "SimGear" {= "2020.3.19"}
+  "cmake-filesystem" 
+  "expat-devel" 
+  "libX11-devel" 
+  "libjpeg-turbo-devel" 
+  "mesa-libGL-devel" 
+  "plib-devel" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "SimGear-devel-2020.3.19-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/SimGear-devel-2020.3.19-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kdepim-17.12.3-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kdepim-17.12.3-14.fc40.x86_64.rpm"]
+depends: [
+  "akregator" {>= "17.12"}
+  "kaddressbook" {>= "17.12"}
+  "kalarm" {>= "17.12"}
+  "kdepim-common" {= "17.12.3"}
+  "kmail" {>= "17.12"}
+  "knotes" {>= "17.12"}
+  "kontact" {>= "17.12"}
+  "korganizer" {>= "17.12"}
+]
+extra-source "kdepim-17.12.3-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kdepim-17.12.3-14.fc40.x86_64.rpm"
+}

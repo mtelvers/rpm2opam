@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fcitx-pinyin-4.2.9.9-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fcitx-pinyin-4.2.9.9-7.fc40.x86_64.rpm"]
+depends: [
+  "fcitx" {= "4.2.9.9"}
+  "fcitx-data" {= "4.2.9.9"}
+  "fcitx-libs" {= "4.2.9.9"}
+  "glibc" 
+]
+extra-source "fcitx-pinyin-4.2.9.9-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fcitx-pinyin-4.2.9.9-7.fc40.x86_64.rpm"
+}

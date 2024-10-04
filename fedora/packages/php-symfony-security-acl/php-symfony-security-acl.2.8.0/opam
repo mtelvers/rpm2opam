@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-symfony-security-acl-2.8.0-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-symfony-security-acl-2.8.0-20.fc40.noarch.rpm"]
+depends: [
+  "php-common" {>= "5.3.9"}
+  "php-fedora-autoloader" 
+]
+extra-source "php-symfony-security-acl-2.8.0-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-symfony-security-acl-2.8.0-20.fc40.noarch.rpm"
+}

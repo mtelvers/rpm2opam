@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pyroma-4.2-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pyroma-4.2-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-Pygments" 
+  "python312-base" 
+  "python312-build" {>= "0.7"}
+  "python312-docutils" 
+  "python312-packaging" 
+  "python312-requests" 
+  "python312-setuptools" {>= "42"}
+  "python312-trove-classifiers" {>= "2022.6"}
+  "update-alternatives" 
+]
+extra-source "python312-pyroma-4.2-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pyroma-4.2-1.2.noarch.rpm"
+}

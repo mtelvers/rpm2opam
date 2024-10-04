@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dLeyna-0.8.3-2.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dLeyna-0.8.3-2.4.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgssdp-1_6-0" 
+  "libgupnp-1_6-0" 
+  "libgupnp-av-1_0-3" 
+  "libgupnp-dlna-2_0-4" 
+  "libsoup-3_0-0" 
+  "libxml2-2" 
+  "python311-base" {= "3.11"}
+]
+extra-source "dLeyna-0.8.3-2.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/dLeyna-0.8.3-2.4.x86_64.rpm"
+}

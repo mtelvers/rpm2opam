@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Gearman-2.004.015-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Gearman-2.004.015-21.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-IO" 
+  "perl-IO-Socket-IP" 
+  "perl-IO-Socket-SSL" 
+  "perl-List-MoreUtils" 
+  "perl-POSIX" 
+  "perl-Scalar-List-Utils" 
+  "perl-Socket" 
+  "perl-Storable" 
+  "perl-String-CRC32" 
+  "perl-Time-HiRes" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-fields" 
+  "perl-libs" 
+  "perl-version" {>= "0.77"}
+]
+extra-source "perl-Gearman-2.004.015-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Gearman-2.004.015-21.fc40.noarch.rpm"
+}

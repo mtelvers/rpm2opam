@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Authen-U2F-Tester-0.03-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Authen-U2F-Tester-0.03-6.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Crypt-OpenSSL-X509" 
+  "perl-CryptX" 
+  "perl-Digest-SHA" 
+  "perl-Exporter" 
+  "perl-JSON-MaybeXS" 
+  "perl-MIME-Base64" 
+  "perl-Moose" 
+  "perl-MooseX-AttributeShortcuts" 
+  "perl-MooseX-SingleArg" 
+  "perl-Scalar-List-Utils" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-namespace-autoclean" 
+  "perl-strictures" {>= "2"}
+]
+extra-source "perl-Authen-U2F-Tester-0.03-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Authen-U2F-Tester-0.03-6.fc40.noarch.rpm"
+}

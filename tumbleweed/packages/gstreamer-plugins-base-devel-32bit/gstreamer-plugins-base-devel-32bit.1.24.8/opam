@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gstreamer-plugins-base-devel-32bit-1.24.8-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gstreamer-plugins-base-devel-32bit-1.24.8-1.1.x86_64.rpm"]
+depends: [
+  "Mesa-libEGL-devel" 
+  "Mesa-libGLESv2-devel" 
+  "glib2-devel" {>= "2.64.0"}
+  "gstreamer-devel" {>= "1.24.0"}
+  "gstreamer-plugins-base-devel" {= "1.24.8"}
+  "libX11-devel" 
+  "libdrm-devel" {>= "2.4.98"}
+  "libgbm-devel" 
+  "libglvnd-devel" 
+  "libgstallocators-1_0-0-32bit" {= "1.24.8"}
+  "libgstapp-1_0-0-32bit" {= "1.24.8"}
+  "libgstaudio-1_0-0-32bit" {= "1.24.8"}
+  "libgstfft-1_0-0-32bit" {= "1.24.8"}
+  "libgstgl-1_0-0-32bit" {= "1.24.8"}
+  "libgstpbutils-1_0-0-32bit" {= "1.24.8"}
+  "libgstriff-1_0-0-32bit" {= "1.24.8"}
+  "libgstrtp-1_0-0-32bit" {= "1.24.8"}
+  "libgstrtsp-1_0-0-32bit" {= "1.24.8"}
+  "libgstsdp-1_0-0-32bit" {= "1.24.8"}
+  "libgsttag-1_0-0-32bit" {= "1.24.8"}
+  "libgstvideo-1_0-0-32bit" {= "1.24.8"}
+  "libgudev-1_0-devel" {>= "147"}
+  "orc" {>= "0.4.24"}
+  "pkgconf-pkg-config" 
+  "wayland-devel" {>= "1.11"}
+  "zlib-devel" 
+]
+extra-source "gstreamer-plugins-base-devel-32bit-1.24.8-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gstreamer-plugins-base-devel-32bit-1.24.8-1.1.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "disomaster-devel-5.0.8-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "disomaster-devel-5.0.8-1.7.x86_64.rpm"]
+depends: [
+  "libdisomaster1" {= "5.0.8"}
+  "pkgconf-pkg-config" 
+]
+extra-source "disomaster-devel-5.0.8-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/disomaster-devel-5.0.8-1.7.x86_64.rpm"
+}

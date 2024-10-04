@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "deepin-file-manager-5.8.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deepin-file-manager-5.8.3-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cryptsetup-libs" 
+  "deepin-file-manager-lib" {= "5.8.3"}
+  "deepin-shortcut-viewer" 
+  "deepin-terminal" 
+  "dtkcore" 
+  "dtkgui" 
+  "dtkwidget" 
+  "file-roller" 
+  "gio-qt" 
+  "glib2" 
+  "glibc" 
+  "gvfs-client" 
+  "jemalloc" 
+  "libX11" 
+  "libgcc" 
+  "libstdc++" 
+  "polkit-qt5-1" 
+  "poppler-cpp" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtmultimedia" 
+  "samba" 
+  "taglib" 
+  "udisks2-qt5" 
+  "xdg-user-dirs" 
+]
+extra-source "deepin-file-manager-5.8.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/deepin-file-manager-5.8.3-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openafs-kernel-source-1.8.12.g20240711-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openafs-kernel-source-1.8.12.g20240711-1.4.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "bison" 
+  "busybox-coreutils" 
+  "flex" 
+  "gcc" 
+  "kernel-devel" 
+  "perl-base" 
+]
+extra-source "openafs-kernel-source-1.8.12.g20240711-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/openafs-kernel-source-1.8.12.g20240711-1.4.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvamp-hostsdk3-32bit-2.10.0-1.24.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvamp-hostsdk3-32bit-2.10.0-1.24.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libstdc++6-32bit" 
+]
+extra-source "libvamp-hostsdk3-32bit-2.10.0-1.24.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libvamp-hostsdk3-32bit-2.10.0-1.24.x86_64.rpm"
+}

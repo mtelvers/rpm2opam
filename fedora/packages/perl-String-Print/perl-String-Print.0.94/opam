@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-String-Print-0.94-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-String-Print-0.94-13.fc40.noarch.rpm"]
+depends: [
+  "perl-Encode" 
+  "perl-HTML-Parser" 
+  "perl-POSIX" 
+  "perl-Scalar-List-Utils" 
+  "perl-TimeDate" {>= "2.30"}
+  "perl-Unicode-LineBreak" 
+  "perl-libs" 
+  "perl-locale" 
+  "perl-vars" 
+]
+extra-source "perl-String-Print-0.94-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-String-Print-0.94-13.fc40.noarch.rpm"
+}

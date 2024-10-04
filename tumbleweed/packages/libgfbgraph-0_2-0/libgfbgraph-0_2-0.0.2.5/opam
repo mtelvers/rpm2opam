@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgfbgraph-0_2-0-0.2.5-1.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgfbgraph-0_2-0-0.2.5-1.11.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgoa-1_0-0" 
+  "libjson-glib-1_0-0" 
+  "librest-0_7-0" 
+  "libsoup-2_4-1" 
+]
+extra-source "libgfbgraph-0_2-0-0.2.5-1.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgfbgraph-0_2-0-0.2.5-1.11.x86_64.rpm"
+}

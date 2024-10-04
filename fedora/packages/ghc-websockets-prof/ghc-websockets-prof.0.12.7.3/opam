@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-websockets-prof-0.12.7.3-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-websockets-prof-0.12.7.3-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-SHA-prof" 
+  "ghc-async-prof" 
+  "ghc-attoparsec-prof" 
+  "ghc-base-prof" 
+  "ghc-base64-bytestring-prof" 
+  "ghc-binary-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-case-insensitive-prof" 
+  "ghc-clock-prof" 
+  "ghc-containers-prof" 
+  "ghc-entropy-prof" 
+  "ghc-network-prof" 
+  "ghc-random-prof" 
+  "ghc-streaming-commons-prof" 
+  "ghc-text-prof" 
+  "ghc-websockets-devel" {= "0.12.7.3"}
+]
+extra-source "ghc-websockets-prof-0.12.7.3-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-websockets-prof-0.12.7.3-8.fc40.x86_64.rpm"
+}

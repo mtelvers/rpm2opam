@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-pasetors+sha2-devel-0.6.8-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-pasetors+sha2-devel-0.6.8-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-pasetors-devel" {= "0.6.8"}
+  "rust-sha2+default-devel" 
+]
+extra-source "rust-pasetors+sha2-devel-0.6.8-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-pasetors+sha2-devel-0.6.8-2.fc40.noarch.rpm"
+}

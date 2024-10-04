@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-io-extras+tokio-devel-0.18.1-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-io-extras+tokio-devel-0.18.1-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-io-extras-devel" {= "0.18.1"}
+  "rust-tokio+default-devel" 
+  "rust-tokio+fs-devel" 
+  "rust-tokio+io-std-devel" 
+  "rust-tokio+net-devel" 
+  "rust-tokio+process-devel" 
+]
+extra-source "rust-io-extras+tokio-devel-0.18.1-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-io-extras+tokio-devel-0.18.1-4.fc40.noarch.rpm"
+}

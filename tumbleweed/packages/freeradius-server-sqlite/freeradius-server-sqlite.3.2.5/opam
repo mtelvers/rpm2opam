@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "freeradius-server-sqlite-3.2.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freeradius-server-sqlite-3.2.5-1.1.x86_64.rpm"]
+depends: [
+  "freeradius-server" {= "3.2.5"}
+  "glibc" 
+  "libsqlite3-0" 
+]
+extra-source "freeradius-server-sqlite-3.2.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/freeradius-server-sqlite-3.2.5-1.1.x86_64.rpm"
+}

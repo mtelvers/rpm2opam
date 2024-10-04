@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ffmpeg-6-libavformat-devel-6.1.1-11.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ffmpeg-6-libavformat-devel-6.1.1-11.1.x86_64.rpm"]
+depends: [
+  "ffmpeg-6-libavcodec-devel" {= "6.1.1"}
+  "ffmpeg-6-libavutil-devel" {= "6.1.1"}
+  "ffmpeg-6-libswresample-devel" {= "6.1.1"}
+  "libavformat60" {= "6.1.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "ffmpeg-6-libavformat-devel-6.1.1-11.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ffmpeg-6-libavformat-devel-6.1.1-11.1.x86_64.rpm"
+}

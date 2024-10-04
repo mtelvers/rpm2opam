@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libgdata-devel-0.18.1-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgdata-devel-0.18.1-11.fc40.x86_64.rpm"]
+depends: [
+  "gcr-devel" 
+  "glib2-devel" {>= "2.44.0"}
+  "gnome-online-accounts-devel" {>= "3.8"}
+  "json-glib-devel" {>= "0.15"}
+  "libgdata" {= "0.18.1"}
+  "libsoup-devel" {>= "2.42.0"}
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libgdata-devel-0.18.1-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libgdata-devel-0.18.1-11.fc40.x86_64.rpm"
+}

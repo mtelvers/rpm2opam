@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gettext-runtime-0.22.5-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gettext-runtime-0.22.5-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gettext-envsubst" {= "0.22.5"}
+  "gettext-libs" {= "0.22.5"}
+  "glibc" 
+]
+extra-source "gettext-runtime-0.22.5-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gettext-runtime-0.22.5-2.fc40.x86_64.rpm"
+}

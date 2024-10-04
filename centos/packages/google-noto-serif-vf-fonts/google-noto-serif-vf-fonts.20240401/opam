@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "google-noto-serif-vf-fonts-20240401-4.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "google-noto-serif-vf-fonts-20240401-4.el10.noarch.rpm"]
+depends: [
+  "fonts-filesystem" 
+  "google-noto-fonts-common" {= "20240401"}
+]
+extra-source "google-noto-serif-vf-fonts-20240401-4.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/google-noto-serif-vf-fonts-20240401-4.el10.noarch.rpm"
+}

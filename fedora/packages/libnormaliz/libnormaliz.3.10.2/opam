@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libnormaliz-3.10.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnormaliz-3.10.2-1.fc40.x86_64.rpm"]
+depends: [
+  "cocoalib" 
+  "e-antic" 
+  "flint" 
+  "glibc" 
+  "gmp" 
+  "gmp-c++" 
+  "libgcc" 
+  "libgomp" 
+  "libnauty" 
+  "libstdc++" 
+  "openssl-libs" 
+]
+extra-source "libnormaliz-3.10.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libnormaliz-3.10.2-1.fc40.x86_64.rpm"
+}

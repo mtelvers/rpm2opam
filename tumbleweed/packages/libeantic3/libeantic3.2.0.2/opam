@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libeantic3-2.0.2-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libeantic3-2.0.2-1.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libflint19" 
+  "libgcc_s1" 
+  "libgmp10" 
+  "libstdc++6" 
+]
+extra-source "libeantic3-2.0.2-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libeantic3-2.0.2-1.6.x86_64.rpm"
+}

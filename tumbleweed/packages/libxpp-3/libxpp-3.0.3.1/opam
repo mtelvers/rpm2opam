@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libxpp-3-0.3.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxpp-3-0.3.1-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libcosmos-3" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "libxpp-3-0.3.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libxpp-3-0.3.1-1.1.x86_64.rpm"
+}

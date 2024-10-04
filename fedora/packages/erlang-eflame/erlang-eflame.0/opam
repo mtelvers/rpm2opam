@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "erlang-eflame-0-0.32.gita085181.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "erlang-eflame-0-0.32.gita085181.fc40.noarch.rpm"]
+depends: [
+  "erlang-erts" 
+  "erlang-kernel" 
+  "erlang-runtime_tools" 
+  "erlang-stdlib" 
+  "perl-Getopt-Long" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "erlang-eflame-0-0.32.gita085181.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/erlang-eflame-0-0.32.gita085181.fc40.noarch.rpm"
+}

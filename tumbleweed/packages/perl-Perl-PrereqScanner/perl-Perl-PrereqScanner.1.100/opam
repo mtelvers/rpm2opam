@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Perl-PrereqScanner-1.100-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Perl-PrereqScanner-1.100-1.6.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-CPAN-Meta-Requirements" {>= "2.124000"}
+  "perl-Getopt-Long-Descriptive" 
+  "perl-Module-Path" 
+  "perl-Moo" 
+  "perl-PPI" {>= "1.215"}
+  "perl-Params-Util" 
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-String-RewritePrefix" {>= "0.5"}
+  "perl-Type-Tiny" 
+  "perl-base" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-Perl-PrereqScanner-1.100-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Perl-PrereqScanner-1.100-1.6.noarch.rpm"
+}

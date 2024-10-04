@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-azure-mgmt-dns-8.1.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-azure-mgmt-dns-8.1.0-2.1.noarch.rpm"]
+depends: [
+  "python312-azure-common" 
+  "python312-azure-core" 
+  "python312-azure-mgmt-nspkg" {>= "3.0.0"}
+  "python312-azure-nspkg" {>= "3.0.0"}
+  "python312-base" {= "3.12"}
+  "python312-isodate" 
+  "python312-typing_extensions" 
+]
+extra-source "python312-azure-mgmt-dns-8.1.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-azure-mgmt-dns-8.1.0-2.1.noarch.rpm"
+}

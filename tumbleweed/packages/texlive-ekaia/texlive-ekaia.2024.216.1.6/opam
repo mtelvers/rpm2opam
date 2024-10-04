@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-ekaia-2024.216.1.06svn49594-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-ekaia-2024.216.1.06svn49594-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-babel" 
+  "texlive-basque-date" 
+  "texlive-ccicons" 
+  "texlive-fancyhdr" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-geometry" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-sectsty" 
+  "texlive-tools" 
+]
+extra-source "texlive-ekaia-2024.216.1.06svn49594-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-ekaia-2024.216.1.06svn49594-57.1.noarch.rpm"
+}

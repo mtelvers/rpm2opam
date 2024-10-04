@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-commonmark-pandoc-devel-0.2.2.1-1.17.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-commonmark-pandoc-devel-0.2.2.1-1.17.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-commonmark-devel" 
+  "ghc-commonmark-extensions-devel" 
+  "ghc-commonmark-pandoc" {= "0.2.2.1"}
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-pandoc-types-devel" 
+  "ghc-text-devel" 
+]
+extra-source "ghc-commonmark-pandoc-devel-0.2.2.1-1.17.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-commonmark-pandoc-devel-0.2.2.1-1.17.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Authen-Radius-0.32-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Authen-Radius-0.32-11.fc40.noarch.rpm"]
+depends: [
+  "perl-Data-Dumper" {>= "1"}
+  "perl-Data-HexDump" {>= "0.2"}
+  "perl-Digest-MD5" {>= "2.20"}
+  "perl-Exporter" 
+  "perl-FileHandle" 
+  "perl-IO" {>= "1.12"}
+  "perl-Net-IP" {>= "1.26"}
+  "perl-Time-HiRes" 
+  "perl-constant" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-vars" 
+]
+extra-source "perl-Authen-Radius-0.32-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Authen-Radius-0.32-11.fc40.noarch.rpm"
+}

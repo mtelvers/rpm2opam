@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nemo-extension-seahorse-6.2.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nemo-extension-seahorse-6.2.0-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcryptui0" 
+  "libdbus-glib-1-2" 
+  "libgcr-3-1" 
+  "libgpgme11" 
+  "libgtk-3-0" 
+  "libnemo-extension1" 
+  "libnotify4" 
+  "nautilus-extension-seahorse" {>= "3.0"}
+  "nemo" {>= "6.0.0"}
+]
+extra-source "nemo-extension-seahorse-6.2.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/nemo-extension-seahorse-6.2.0-1.1.x86_64.rpm"
+}

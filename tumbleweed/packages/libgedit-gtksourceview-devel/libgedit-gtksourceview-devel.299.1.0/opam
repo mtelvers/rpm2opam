@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgedit-gtksourceview-devel-299.1.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgedit-gtksourceview-devel-299.1.0-1.3.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.74"}
+  "gtk3-devel" {>= "3.20"}
+  "libgedit-gtksourceview-300-0" 
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+  "typelib-1_0-GtkSource-300" {= "299.1.0"}
+]
+extra-source "libgedit-gtksourceview-devel-299.1.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgedit-gtksourceview-devel-299.1.0-1.3.x86_64.rpm"
+}

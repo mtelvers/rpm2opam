@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "octave-forge-symbolic-3.2.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "octave-forge-symbolic-3.2.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "octave-cli" {>= "5.1"}
+  "python311-sympy" {>= "1.4"}
+]
+extra-source "octave-forge-symbolic-3.2.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/octave-forge-symbolic-3.2.1-1.1.noarch.rpm"
+}

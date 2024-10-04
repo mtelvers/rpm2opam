@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmount-devel-static-2.40.1-5.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmount-devel-static-2.40.1-5.1.x86_64.rpm"]
+depends: [
+  "libmount-devel" {= "2.40.1"}
+]
+extra-source "libmount-devel-static-2.40.1-5.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmount-devel-static-2.40.1-5.1.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libatomic-14.1.1-5.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libatomic-14.1.1-5.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+]
+extra-source "libatomic-14.1.1-5.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/libatomic-14.1.1-5.el10.x86_64.rpm"
+}

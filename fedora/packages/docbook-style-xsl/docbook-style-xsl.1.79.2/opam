@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "docbook-style-xsl-1.79.2-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "docbook-style-xsl-1.79.2-22.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "docbook-dtds" 
+  "libxml2" {>= "2.4.8"}
+  "xml-common" {>= "0.6.3"}
+]
+extra-source "docbook-style-xsl-1.79.2-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/docbook-style-xsl-1.79.2-22.fc40.noarch.rpm"
+}

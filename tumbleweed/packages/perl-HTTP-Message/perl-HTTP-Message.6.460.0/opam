@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-HTTP-Message-6.460.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTTP-Message-6.460.0-1.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Clone" {>= "0.46"}
+  "perl-Encode-Locale" {>= "1"}
+  "perl-HTTP-Date" {>= "6"}
+  "perl-IO-HTML" 
+  "perl-LWP-MediaTypes" {>= "6"}
+  "perl-URI" {>= "1.10"}
+  "perl-base" 
+]
+extra-source "perl-HTTP-Message-6.460.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-HTTP-Message-6.460.0-1.2.noarch.rpm"
+}

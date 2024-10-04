@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tower-http+compression-full-devel-0.4.4-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tower-http+compression-full-devel-0.4.4-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-tower-http+compression-br-devel" {= "0.4.4"}
+  "rust-tower-http+compression-deflate-devel" {= "0.4.4"}
+  "rust-tower-http+compression-gzip-devel" {= "0.4.4"}
+  "rust-tower-http+compression-zstd-devel" {= "0.4.4"}
+  "rust-tower-http-devel" {= "0.4.4"}
+]
+extra-source "rust-tower-http+compression-full-devel-0.4.4-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tower-http+compression-full-devel-0.4.4-2.fc40.noarch.rpm"
+}

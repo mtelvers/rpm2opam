@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bsdtar-3.7.4-slfo.1.1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bsdtar-3.7.4-slfo.1.1.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libacl1" 
+  "libarchive13" {>= "3.7.4"}
+  "libbz2-1" 
+  "liblz4-1" 
+  "liblzma5" 
+  "libopenssl3" 
+  "libxml2-2" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+]
+extra-source "bsdtar-3.7.4-slfo.1.1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/bsdtar-3.7.4-slfo.1.1.5.x86_64.rpm"
+}

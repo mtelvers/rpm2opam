@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sundials-devel-7.1.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sundials-devel-7.1.1-1.1.x86_64.rpm"]
+depends: [
+  "libsundials_arkode6" {= "7.1.1"}
+  "libsundials_core7" {= "7.1.1"}
+  "libsundials_cvode7" {= "7.1.1"}
+  "libsundials_cvodes7" {= "7.1.1"}
+  "libsundials_ida7" {= "7.1.1"}
+  "libsundials_idas6" {= "7.1.1"}
+  "libsundials_kinsol7" {= "7.1.1"}
+  "libsundials_nvec7" {= "7.1.1"}
+  "libsundials_sunlinsol5" {= "7.1.1"}
+  "libsundials_sunmatrix5" {= "7.1.1"}
+  "libsundials_sunnonlin4" {= "7.1.1"}
+]
+extra-source "sundials-devel-7.1.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sundials-devel-7.1.1-1.1.x86_64.rpm"
+}

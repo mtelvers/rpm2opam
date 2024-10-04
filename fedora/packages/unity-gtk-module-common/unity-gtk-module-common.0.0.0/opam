@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "unity-gtk-module-common-0.0.0+17.04.20170403-18.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "unity-gtk-module-common-0.0.0+17.04.20170403-18.fc39.noarch.rpm"]
+depends: [
+  "bash" 
+  "dbus" 
+  "gawk" 
+  "sed" 
+  "systemd" 
+]
+extra-source "unity-gtk-module-common-0.0.0+17.04.20170403-18.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/unity-gtk-module-common-0.0.0+17.04.20170403-18.fc39.noarch.rpm"
+}

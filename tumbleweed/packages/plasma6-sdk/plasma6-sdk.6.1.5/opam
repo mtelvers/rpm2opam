@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plasma6-sdk-6.1.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plasma6-sdk-6.1.5-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "kf6-kcmutils-imports" 
+  "kf6-kdeclarative-imports" 
+  "kf6-kirigami-imports" {>= "6.2.0"}
+  "kf6-kitemmodels-imports" 
+  "kf6-knewstuff-imports" {>= "62"}
+  "kf6-ksvg-imports" 
+  "libKF6Archive6" 
+  "libKF6ColorScheme6" 
+  "libKF6Completion6" 
+  "libKF6ConfigCore6" 
+  "libKF6ConfigWidgets6" 
+  "libKF6CoreAddons6" 
+  "libKF6DBusAddons6" 
+  "libKF6I18n6" 
+  "libKF6IconThemes6" 
+  "libKF6KIO6" 
+  "libKF6Package6" 
+  "libKF6TextEditor6" 
+  "libKF6WidgetsAddons6" 
+  "libPlasma5Support6" 
+  "libPlasma6" 
+  "libQt6Core6" 
+  "libQt6DBus6" 
+  "libQt6Gui6" 
+  "libQt6Qml6" 
+  "libQt6Quick6" 
+  "libQt6Widgets6" 
+  "libplasma6-components" 
+  "libstdc++6" 
+  "qt6-qt5compat-imports" 
+  "qtdeclarative-imports-provides-qt6" {>= "15"}
+]
+extra-source "plasma6-sdk-6.1.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/plasma6-sdk-6.1.5-1.1.x86_64.rpm"
+}

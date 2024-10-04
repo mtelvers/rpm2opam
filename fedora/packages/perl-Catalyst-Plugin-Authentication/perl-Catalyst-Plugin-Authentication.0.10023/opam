@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Catalyst-Plugin-Authentication-0.10023-28.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Catalyst-Plugin-Authentication-0.10023-28.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Catalyst-Plugin-Session" {>= "0.10"}
+  "perl-Catalyst-Runtime" 
+  "perl-Class-Inspector" 
+  "perl-Digest" 
+  "perl-MRO-Compat" 
+  "perl-Moose" 
+  "perl-MooseX-Emulate-Class-Accessor-Fast" 
+  "perl-Scalar-List-Utils" 
+  "perl-String-RewritePrefix" 
+  "perl-Tie-RefHash" 
+  "perl-Try-Tiny" 
+  "perl-base" 
+  "perl-libs" 
+  "perl-namespace-autoclean" 
+  "perl-namespace-clean" 
+]
+extra-source "perl-Catalyst-Plugin-Authentication-0.10023-28.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Catalyst-Plugin-Authentication-0.10023-28.fc40.noarch.rpm"
+}

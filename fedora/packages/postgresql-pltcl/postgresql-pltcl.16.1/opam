@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "postgresql-pltcl-16.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql-pltcl-16.1-6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "postgresql-server" {= "16.1"}
+  "tcl" 
+]
+extra-source "postgresql-pltcl-16.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/postgresql-pltcl-16.1-6.fc40.x86_64.rpm"
+}

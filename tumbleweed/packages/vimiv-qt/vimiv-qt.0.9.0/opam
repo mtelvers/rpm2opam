@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vimiv-qt-0.9.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vimiv-qt-0.9.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "python311-base" 
+  "python311-qt5" 
+]
+extra-source "vimiv-qt-0.9.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vimiv-qt-0.9.0-1.1.x86_64.rpm"
+}

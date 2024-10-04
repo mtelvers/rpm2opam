@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "echolinux-0.17a-33.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "echolinux-0.17a-33.fc39.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gsm" 
+  "libX11" 
+  "libXpm" 
+  "xforms" 
+]
+extra-source "echolinux-0.17a-33.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/echolinux-0.17a-33.fc39.x86_64.rpm"
+}

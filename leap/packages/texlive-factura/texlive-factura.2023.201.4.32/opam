@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-factura-2023.201.4.32svn61697-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-factura-2023.201.4.32svn61697-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-anyfontsize" 
+  "texlive-atbegshi" 
+  "texlive-babel" 
+  "texlive-datetime2" 
+  "texlive-environ" 
+  "texlive-eso-pic" 
+  "texlive-etoolbox" 
+  "texlive-fancyhdr" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-fp" 
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-l3packages" 
+  "texlive-latex" 
+  "texlive-numprint" 
+  "texlive-pgf" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-textpos" 
+  "texlive-tools" 
+  "texlive-xstring" 
+  "texlive-zref" 
+]
+extra-source "texlive-factura-2023.201.4.32svn61697-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-factura-2023.201.4.32svn61697-slfo.1.1.4.noarch.rpm"
+}

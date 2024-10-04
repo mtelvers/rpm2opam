@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "safeeyes-2.2.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "safeeyes-2.2.2-1.1.noarch.rpm"]
+depends: [
+  "python311-Babel" 
+  "python311-base" 
+  "python311-croniter" 
+  "python311-gobject" 
+  "python311-psutil" 
+  "python311-pycairo" {>= "1.11.1"}
+  "python311-python-xlib" 
+  "typelib-1_0-AppIndicator3-0_1" 
+  "typelib-1_0-Notify-0_7" 
+]
+extra-source "safeeyes-2.2.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/safeeyes-2.2.2-1.1.noarch.rpm"
+}

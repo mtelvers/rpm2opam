@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-kiwi-10.0.11-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-kiwi-10.0.11-1.fc40.noarch.rpm"]
+depends: [
+  "kiwi-systemdeps-core" {= "10.0.11"}
+  "python3" 
+  "python3-docopt" {>= "0.6.2"}
+  "python3-lxml" {>= "4.6"}
+  "python3-pyyaml" {>= "5.4"}
+  "python3-requests" {>= "2.25"}
+  "python3-setuptools" {>= "50"}
+  "python3-simplejson" {>= "3.17"}
+]
+extra-source "python3-kiwi-10.0.11-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-kiwi-10.0.11-1.fc40.noarch.rpm"
+}

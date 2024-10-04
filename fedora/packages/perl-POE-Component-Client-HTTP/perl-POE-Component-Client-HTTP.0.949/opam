@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-POE-Component-Client-HTTP-0.949-28.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-POE-Component-Client-HTTP-0.949-28.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Errno" 
+  "perl-HTTP-Message" {>= "5.810"}
+  "perl-Net-HTTP" 
+  "perl-POE" 
+  "perl-POE-Component-Client-Keepalive" {>= "0.2710"}
+  "perl-Socket" 
+  "perl-URI" {>= "1.37"}
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" 
+]
+extra-source "perl-POE-Component-Client-HTTP-0.949-28.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-POE-Component-Client-HTTP-0.949-28.fc40.noarch.rpm"
+}

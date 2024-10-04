@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "leveldb-1.23-slfo.1.2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "leveldb-1.23-slfo.1.2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libsnappy1" 
+  "libstdc++6" 
+]
+extra-source "leveldb-1.23-slfo.1.2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/leveldb-1.23-slfo.1.2.1.x86_64.rpm"
+}

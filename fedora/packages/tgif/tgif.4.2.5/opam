@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tgif-4.2.5-30.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tgif-4.2.5-30.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "ghostscript" 
+  "glibc" 
+  "libX11" 
+  "libXmu" 
+  "libXt" 
+  "libidn" 
+  "netpbm-progs" 
+  "xorg-x11-fonts-75dpi" 
+  "xorg-x11-fonts-ISO8859-1-75dpi" 
+  "zlib-ng-compat" 
+]
+extra-source "tgif-4.2.5-30.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tgif-4.2.5-30.fc40.x86_64.rpm"
+}

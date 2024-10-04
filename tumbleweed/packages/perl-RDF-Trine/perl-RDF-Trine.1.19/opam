@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-RDF-Trine-1.019-1.27.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-RDF-Trine-1.019-1.27.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "perl" 
+  "perl-Algorithm-Combinatorics" 
+  "perl-Cache-LRU" 
+  "perl-DBD-SQLite" {>= "1.14"}
+  "perl-DBI" 
+  "perl-DBIx-Connector" 
+  "perl-Error" 
+  "perl-HTTP-Negotiate" 
+  "perl-IRI" 
+  "perl-JSON" {>= "2"}
+  "perl-Log-Log4perl" 
+  "perl-Moose" {>= "2"}
+  "perl-MooseX-ArrayRef" 
+  "perl-OSSP-uuid" 
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-Set-Scalar" 
+  "perl-Text-CSV_XS" 
+  "perl-Text-Table" 
+  "perl-URI" {>= "1.52"}
+  "perl-XML-CommonNS" {>= "0.4"}
+  "perl-XML-Namespace" 
+  "perl-XML-SAX" {>= "0.96"}
+  "perl-base" 
+  "perl-libwww-perl" 
+]
+extra-source "perl-RDF-Trine-1.019-1.27.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-RDF-Trine-1.019-1.27.noarch.rpm"
+}

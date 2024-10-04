@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rsvndump-lang-0.6.2-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rsvndump-lang-0.6.2-1.3.noarch.rpm"]
+depends: [
+  "rsvndump" {= "0.6.2"}
+]
+extra-source "rsvndump-lang-0.6.2-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/rsvndump-lang-0.6.2-1.3.noarch.rpm"
+}

@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Web-ID-1.927-17.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Web-ID-1.927-17.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Crypt-X509" {>= "0.50"}
+  "perl-DateTime" {>= "0"}
+  "perl-Digest-SHA" 
+  "perl-Exporter-Tiny" 
+  "perl-File-ShareDir" 
+  "perl-File-Temp" 
+  "perl-List-MoreUtils" 
+  "perl-MIME-Base64" {>= "0"}
+  "perl-Math-BigInt" {>= "0"}
+  "perl-Moose" 
+  "perl-Path-Tiny" 
+  "perl-PathTools" 
+  "perl-Plack" 
+  "perl-RDF-Query" {>= "2.900"}
+  "perl-RDF-Trine" 
+  "perl-Type-Tiny" 
+  "perl-URI" {>= "0"}
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-match-simple" 
+  "perl-namespace-sweep" 
+]
+extra-source "perl-Web-ID-1.927-17.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Web-ID-1.927-17.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pydotplus-2.0.2-3.31.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pydotplus-2.0.2-3.31.noarch.rpm"]
+depends: [
+  "graphviz" 
+  "python311-base" {= "3.11"}
+  "python311-pyparsing" {>= "2.0.1"}
+]
+extra-source "python311-pydotplus-2.0.2-3.31.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pydotplus-2.0.2-3.31.noarch.rpm"
+}

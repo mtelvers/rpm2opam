@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pitivi-2023.03-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pitivi-2023.03-8.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "frei0r-plugins" 
+  "glib2" 
+  "glibc" 
+  "gnome-desktop3" 
+  "gobject-introspection" 
+  "gsound" 
+  "gst-editing-services" {>= "1.18.0"}
+  "gstreamer1" {>= "1.18.0"}
+  "gstreamer1-plugin-libav" {>= "1.18.0"}
+  "gstreamer1-plugins-bad-free" {>= "1.18.0"}
+  "gstreamer1-plugins-bad-free-opencv" {>= "1.18.0"}
+  "gstreamer1-plugins-good" {>= "1.18.0"}
+  "gstreamer1-plugins-good-gtk" {>= "1.18.0"}
+  "hicolor-icon-theme" 
+  "libnotify" 
+  "libpeas1" 
+  "opus-tools" 
+  "python3" 
+  "python3-cairo" {>= "1.0.0"}
+  "python3-canberra" 
+  "python3-gobject" 
+  "python3-gstreamer1" {>= "1.6.0"}
+  "python3-inotify" 
+  "python3-libs" 
+  "python3-matplotlib" 
+  "python3-matplotlib-gtk3" 
+  "python3-numpy" 
+  "python3-scipy" 
+  "yelp" 
+]
+extra-source "pitivi-2023.03-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pitivi-2023.03-8.fc40.x86_64.rpm"
+}

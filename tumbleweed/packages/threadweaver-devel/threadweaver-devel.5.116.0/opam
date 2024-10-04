@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "threadweaver-devel-5.116.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "threadweaver-devel-5.116.0-1.1.x86_64.rpm"]
+depends: [
+  "libKF5ThreadWeaver5" {= "5.116.0"}
+  "libQt5Core-devel" {>= "5.15.2"}
+]
+extra-source "threadweaver-devel-5.116.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/threadweaver-devel-5.116.0-1.1.x86_64.rpm"
+}

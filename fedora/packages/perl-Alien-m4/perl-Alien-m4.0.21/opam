@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Alien-m4-0.21-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Alien-m4-0.21-5.fc40.x86_64.rpm"]
+depends: [
+  "m4" {= "1.4.19"}
+  "perl-Alien-Base" {>= "0.38"}
+  "perl-Alien-Build" {>= "0.32"}
+  "perl-Capture-Tiny" 
+  "perl-Path-Tiny" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-Alien-m4-0.21-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Alien-m4-0.21-5.fc40.x86_64.rpm"
+}

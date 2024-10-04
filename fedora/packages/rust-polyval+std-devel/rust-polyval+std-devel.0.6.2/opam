@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-polyval+std-devel-0.6.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-polyval+std-devel-0.6.2-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-polyval-devel" {= "0.6.2"}
+  "rust-universal-hash+std-devel" 
+]
+extra-source "rust-polyval+std-devel-0.6.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-polyval+std-devel-0.6.2-1.fc40.noarch.rpm"
+}

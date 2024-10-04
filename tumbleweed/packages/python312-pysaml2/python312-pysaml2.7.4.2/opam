@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pysaml2-7.4.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pysaml2-7.4.2-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-Paste" 
+  "python312-base" 
+  "python312-cryptography" {>= "3.1"}
+  "python312-defusedxml" 
+  "python312-importlib-resources" 
+  "python312-pyOpenSSL" 
+  "python312-pymongo" {>= "3.5"}
+  "python312-python-dateutil" 
+  "python312-pytz" 
+  "python312-repoze-who" 
+  "python312-requests" {>= "1.0.0"}
+  "python312-xmlschema" {>= "1.2.1"}
+  "python312-zope-interface" 
+  "update-alternatives" 
+]
+extra-source "python312-pysaml2-7.4.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-pysaml2-7.4.2-1.2.x86_64.rpm"
+}

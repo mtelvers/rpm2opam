@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cpl-7.3.2-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cpl-7.3.2-6.fc40.x86_64.rpm"]
+depends: [
+  "cfitsio" 
+  "fftw-libs-double" 
+  "fftw-libs-single" 
+  "glibc" 
+  "libgcc" 
+  "libgomp" 
+  "wcslib" 
+]
+extra-source "cpl-7.3.2-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cpl-7.3.2-6.fc40.x86_64.rpm"
+}

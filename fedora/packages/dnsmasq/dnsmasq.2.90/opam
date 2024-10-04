@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dnsmasq-2.90-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dnsmasq-2.90-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dbus-libs" 
+  "glibc" 
+  "gmp" 
+  "libidn2" 
+  "libnetfilter_conntrack" 
+  "nettle" 
+]
+extra-source "dnsmasq-2.90-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dnsmasq-2.90-1.fc40.x86_64.rpm"
+}

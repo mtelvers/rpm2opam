@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-jxl-image-devel-0.4.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-jxl-image-devel-0.4.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-jxl-bitstream+default-devel" 
+  "rust-jxl-color+default-devel" 
+  "rust-jxl-grid+default-devel" 
+  "rust-tracing+std-devel" 
+  "rust-tracing-devel" 
+]
+extra-source "rust-jxl-image-devel-0.4.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-jxl-image-devel-0.4.1-2.fc40.noarch.rpm"
+}

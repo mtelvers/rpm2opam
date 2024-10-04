@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-cloudflare-cfssl-devel-1.6.4-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-cloudflare-cfssl-devel-1.6.4-6.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-cloudflare-backoff-devel" 
+  "golang-github-cloudflare-redoctober-devel" 
+  "golang-github-google-certificate-transparency-devel" 
+  "golang-github-jmhodges-clock-devel" 
+  "golang-github-jmoiron-sqlx-devel" 
+  "golang-github-kisielk-sqlstruct-devel" 
+  "golang-github-lib-pq-devel" 
+  "golang-github-mattn-sqlite3-devel" 
+  "golang-github-prometheus-client-devel" 
+  "golang-github-sql-driver-mysql-devel" 
+  "golang-github-zmap-zcrypto-devel" 
+  "golang-github-zmap-zlint-3-devel" 
+  "golang-x-crypto-devel" 
+]
+extra-source "golang-github-cloudflare-cfssl-devel-1.6.4-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-cloudflare-cfssl-devel-1.6.4-6.fc40.noarch.rpm"
+}

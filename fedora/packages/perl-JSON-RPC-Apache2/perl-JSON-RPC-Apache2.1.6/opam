@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-JSON-RPC-Apache2-1.06-27.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-JSON-RPC-Apache2-1.06-27.fc40.noarch.rpm"]
+depends: [
+  "mod_perl" 
+  "perl-Carp" 
+  "perl-HTTP-Message" 
+  "perl-JSON" 
+  "perl-base" 
+  "perl-lib" 
+  "perl-libs" 
+]
+extra-source "perl-JSON-RPC-Apache2-1.06-27.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-JSON-RPC-Apache2-1.06-27.fc40.noarch.rpm"
+}

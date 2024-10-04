@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libgnomeui-2.24.5-32.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgnomeui-2.24.5-32.fc40.x86_64.rpm"]
+depends: [
+  "GConf2" 
+  "atk" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gnome-vfs2" 
+  "gtk2" 
+  "libICE" 
+  "libSM" 
+  "libart_lgpl" 
+  "libbonoboui" 
+  "libglade2" 
+  "libgnome" 
+  "libgnome-keyring" 
+  "libgnomecanvas" 
+  "pango" 
+]
+extra-source "libgnomeui-2.24.5-32.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libgnomeui-2.24.5-32.fc40.x86_64.rpm"
+}

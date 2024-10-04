@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Sereal-5.004-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Sereal-5.004-1.6.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Sereal-Decoder" {>= "5.4"}
+  "perl-Sereal-Encoder" {>= "5.4"}
+]
+extra-source "perl-Sereal-5.004-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Sereal-5.004-1.6.noarch.rpm"
+}

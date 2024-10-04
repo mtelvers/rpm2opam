@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "compat-readline5-static-5.2-48.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "compat-readline5-static-5.2-48.fc40.x86_64.rpm"]
+depends: [
+  "compat-readline5-devel" {= "5.2"}
+]
+extra-source "compat-readline5-static-5.2-48.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/compat-readline5-static-5.2-48.fc40.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ffmpeg-6-mini-devel-6.1.1-11.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ffmpeg-6-mini-devel-6.1.1-11.1.x86_64.rpm"]
+depends: [
+  "ffmpeg-6-libavcodec-devel" {>= "60.31.102"}
+  "ffmpeg-6-libavfilter-devel" {>= "9.12.100"}
+  "ffmpeg-6-libavformat-devel" {>= "60.16.100"}
+  "ffmpeg-6-libavutil-devel" {>= "58.29.100"}
+  "ffmpeg-6-libpostproc-devel" {>= "57.3.100"}
+  "ffmpeg-6-libswresample-devel" {>= "4.12.100"}
+  "ffmpeg-6-libswscale-devel" {>= "7.5.100"}
+  "ffmpeg-6-mini-libs" {= "6.1.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "ffmpeg-6-mini-devel-6.1.1-11.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ffmpeg-6-mini-devel-6.1.1-11.1.x86_64.rpm"
+}

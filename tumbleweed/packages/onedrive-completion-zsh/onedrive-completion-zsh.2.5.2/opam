@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "onedrive-completion-zsh-2.5.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "onedrive-completion-zsh-2.5.2-1.1.noarch.rpm"]
+depends: [
+  "onedrive" {= "2.5.2"}
+  "zsh" 
+]
+extra-source "onedrive-completion-zsh-2.5.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/onedrive-completion-zsh-2.5.2-1.1.noarch.rpm"
+}

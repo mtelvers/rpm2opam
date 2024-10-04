@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cinnamon-themes-2.1.6-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cinnamon-themes-2.1.6-4.fc40.noarch.rpm"]
+depends: [
+  "filesystem" 
+  "mint-themes-gtk3" {= "2.1.6"}
+  "mint-themes-gtk4" {= "2.1.6"}
+]
+extra-source "cinnamon-themes-2.1.6-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cinnamon-themes-2.1.6-4.fc40.noarch.rpm"
+}

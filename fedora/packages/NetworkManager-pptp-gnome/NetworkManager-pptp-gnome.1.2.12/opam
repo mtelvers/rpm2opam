@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "NetworkManager-pptp-gnome-1.2.12-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "NetworkManager-pptp-gnome-1.2.12-6.fc40.x86_64.rpm"]
+depends: [
+  "NetworkManager-libnm" 
+  "NetworkManager-pptp" {= "1.2.12"}
+  "atk" 
+  "cairo" 
+  "cairo-gobject" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "graphene" 
+  "gtk3" 
+  "gtk4" 
+  "harfbuzz" 
+  "libgcc" 
+  "libnma" 
+  "libnma-gtk4" 
+  "libsecret" 
+  "pango" 
+  "vulkan-loader" 
+  "zlib-ng-compat" 
+]
+extra-source "NetworkManager-pptp-gnome-1.2.12-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/NetworkManager-pptp-gnome-1.2.12-6.fc40.x86_64.rpm"
+}

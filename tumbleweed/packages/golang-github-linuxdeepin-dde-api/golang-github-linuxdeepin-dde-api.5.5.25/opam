@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "golang-github-linuxdeepin-dde-api-5.5.25-2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-linuxdeepin-dde-api-5.5.25-2.3.noarch.rpm"]
+depends: [
+  "alsa-devel" 
+  "cairo-devel" 
+  "deepin-gir-generator" 
+  "gdk-pixbuf-xlib-devel" 
+  "glib2-devel" 
+  "golang-github-linuxdeepin-go-dbus-factory" {>= "1.9.17"}
+  "golang-github-linuxdeepin-go-lib" 
+  "golang-github-linuxdeepin-go-x11-client" 
+  "gtk3-devel" 
+  "libX11-devel" 
+  "libXcursor-devel" 
+  "libXfixes-devel" 
+  "libXi-devel" 
+  "libcanberra-devel" 
+  "libgudev-1_0-devel" 
+  "libpolkit-qt5-1-devel" 
+  "libpoppler-glib-devel" 
+  "libpulse-devel" 
+  "librsvg-devel" 
+  "systemd" 
+]
+extra-source "golang-github-linuxdeepin-dde-api-5.5.25-2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/golang-github-linuxdeepin-dde-api-5.5.25-2.3.noarch.rpm"
+}

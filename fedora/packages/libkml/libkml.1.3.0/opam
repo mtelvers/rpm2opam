@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libkml-1.3.0-47.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libkml-1.3.0-47.fc40.x86_64.rpm"]
+depends: [
+  "expat" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "uriparser" 
+  "zlib-ng-compat" 
+]
+extra-source "libkml-1.3.0-47.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libkml-1.3.0-47.fc40.x86_64.rpm"
+}

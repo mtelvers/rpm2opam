@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-CairoSVG-2.7.1-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-CairoSVG-2.7.1-1.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-Pillow" 
+  "python311-base" {= "3.11"}
+  "python311-cairocffi" 
+  "python311-cssselect2" 
+  "python311-defusedxml" 
+  "python311-tinycss2" 
+  "update-alternatives" 
+]
+extra-source "python311-CairoSVG-2.7.1-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-CairoSVG-2.7.1-1.3.noarch.rpm"
+}

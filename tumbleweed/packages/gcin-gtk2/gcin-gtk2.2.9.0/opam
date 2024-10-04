@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcin-gtk2-2.9.0-6.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcin-gtk2-2.9.0-6.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "gcin" {= "2.9.0"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gtk2-tools" {>= "2.24.20"}
+  "libgcin-im-client1" 
+  "libgtk-2_0-0" 
+  "libpango-1_0-0" 
+]
+extra-source "gcin-gtk2-2.9.0-6.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gcin-gtk2-2.9.0-6.2.x86_64.rpm"
+}

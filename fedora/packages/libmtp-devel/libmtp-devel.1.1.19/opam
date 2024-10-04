@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libmtp-devel-1.1.19-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmtp-devel-1.1.19-7.fc40.x86_64.rpm"]
+depends: [
+  "libmtp" {= "1.1.19"}
+  "libusb1-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libmtp-devel-1.1.19-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libmtp-devel-1.1.19-7.fc40.x86_64.rpm"
+}

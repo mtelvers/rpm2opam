@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "konsole-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "konsole-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "keditbookmarks" 
+  "kf6-kconfig" 
+  "kf6-kcoreaddons" 
+  "kf6-kcrash" 
+  "kf6-kdbusaddons" 
+  "kf6-kglobalaccel" 
+  "kf6-ki18n" 
+  "kf6-kservice" 
+  "kf6-kxmlgui" 
+  "konsole-part" {= "24.2.1"}
+  "libstdc++" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+]
+extra-source "konsole-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/konsole-24.02.1-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "neko-2.3.0-3.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "neko-2.3.0-3.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgtk-2_0-0" 
+  "libmbedcrypto7" 
+  "libmbedtls14" 
+  "libmbedx509-1" 
+  "libneko2" 
+  "libpcre1" 
+  "libsqlite3-0" 
+  "libz-ng-compat1" 
+]
+extra-source "neko-2.3.0-3.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/neko-2.3.0-3.5.x86_64.rpm"
+}

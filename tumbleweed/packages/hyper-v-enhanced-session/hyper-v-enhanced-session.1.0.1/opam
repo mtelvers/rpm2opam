@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hyper-v-enhanced-session-1.0.1-2.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hyper-v-enhanced-session-1.0.1-2.6.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "hyper-v" 
+  "kernel-debug" 
+  "lightdm" 
+  "vncmanager" 
+  "xmessage" 
+  "xorg-x11-Xvnc-novnc" 
+  "xorgxrdp" 
+  "xrdp" 
+]
+extra-source "hyper-v-enhanced-session-1.0.1-2.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/hyper-v-enhanced-session-1.0.1-2.6.noarch.rpm"
+}

@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mate-control-center-1.28.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mate-control-center-1.28.0-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gsettings-backend-dconf" 
+  "gsettings-desktop-schemas" 
+  "libX11-6" 
+  "libXcursor1" 
+  "libXi6" 
+  "libXss1" 
+  "libaccountsservice0" 
+  "libatk-1_0-0" 
+  "libayatana-appindicator3-1" 
+  "libcairo-gobject2" 
+  "libcairo2" 
+  "libcanberra-gtk3-0" 
+  "libcanberra0" 
+  "libdconf1" 
+  "libfontconfig1" 
+  "libfreetype6" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libgtop-2_0-11" 
+  "libmarco-private2" 
+  "libmate-desktop-2-17" 
+  "libmate-menu2" 
+  "libmatekbd6" 
+  "libmatekbdui6" 
+  "libpango-1_0-0" 
+  "libpolkit-gobject-1-0" 
+  "libudisks2-0" 
+  "libxklavier16" 
+  "libxml2-2" 
+  "mate-control-center-branding-openSUSE" {>= "1.28"}
+]
+extra-source "mate-control-center-1.28.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mate-control-center-1.28.0-1.1.x86_64.rpm"
+}

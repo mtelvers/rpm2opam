@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mariadb-tools-10.11.3-slfo.1.1.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mariadb-tools-10.11.3-slfo.1.1.9.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libaio1" 
+  "libcrypt1" 
+  "libedit0" 
+  "libgcc_s1" 
+  "libncurses6" 
+  "libopenssl3" 
+  "libpcre2-8-0" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "perl-DBD-mysql" 
+  "perl-base" 
+]
+extra-source "mariadb-tools-10.11.3-slfo.1.1.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/mariadb-tools-10.11.3-slfo.1.1.9.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "amarok-doc-2.9.71^git20231231.387c30d-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "amarok-doc-2.9.71^git20231231.387c30d-3.fc40.noarch.rpm"]
+depends: [
+  "amarok" {= "2.9.71"}
+]
+extra-source "amarok-doc-2.9.71^git20231231.387c30d-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/amarok-doc-2.9.71^git20231231.387c30d-3.fc40.noarch.rpm"
+}

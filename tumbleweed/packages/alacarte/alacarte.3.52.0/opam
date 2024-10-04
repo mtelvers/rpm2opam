@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "alacarte-3.52.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "alacarte-3.52.0-2.1.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-gobject-Gdk" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GMenu-3_0" {= "3.0"}
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+]
+extra-source "alacarte-3.52.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/alacarte-3.52.0-2.1.noarch.rpm"
+}

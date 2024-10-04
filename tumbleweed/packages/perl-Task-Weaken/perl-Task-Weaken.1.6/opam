@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Task-Weaken-1.06-2.24.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Task-Weaken-1.06-2.24.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Scalar-List-Utils" {>= "1.14"}
+]
+extra-source "perl-Task-Weaken-1.06-2.24.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Task-Weaken-1.06-2.24.noarch.rpm"
+}

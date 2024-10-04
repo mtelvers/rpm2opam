@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lirc-drv-irman-0.5.2-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lirc-drv-irman-0.5.2-20.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libirman" 
+  "lirc-compat" {>= "0.9.4"}
+  "lirc-libs" 
+]
+extra-source "lirc-drv-irman-0.5.2-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lirc-drv-irman-0.5.2-20.fc40.x86_64.rpm"
+}

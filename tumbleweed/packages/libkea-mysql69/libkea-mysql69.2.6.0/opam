@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libkea-mysql69-2.6.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libkea-mysql69-2.6.0-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libkea-asiolink71" 
+  "libkea-cc68" 
+  "libkea-database61" 
+  "libkea-exceptions33" 
+  "libkea-log61" 
+  "libkea-util84" 
+  "libmariadb3" 
+  "libstdc++6" 
+]
+extra-source "libkea-mysql69-2.6.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libkea-mysql69-2.6.0-1.2.x86_64.rpm"
+}

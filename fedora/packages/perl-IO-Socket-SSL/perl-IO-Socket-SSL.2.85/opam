@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-IO-Socket-SSL-2.085-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-IO-Socket-SSL-2.085-1.fc40.noarch.rpm"]
+depends: [
+  "openssl-libs" {>= "0.9.8"}
+  "perl-Carp" 
+  "perl-Errno" 
+  "perl-Exporter" 
+  "perl-HTTP-Tiny" 
+  "perl-IO" 
+  "perl-IO-Socket-IP" {>= "0.31"}
+  "perl-IO-Socket-SSL" 
+  "perl-Net-SSLeay" {>= "1.46"}
+  "perl-Socket" {>= "1.95"}
+  "perl-URI" 
+  "perl-constant" 
+  "perl-vars" 
+]
+extra-source "perl-IO-Socket-SSL-2.085-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-IO-Socket-SSL-2.085-1.fc40.noarch.rpm"
+}

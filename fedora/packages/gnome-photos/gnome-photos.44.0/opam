@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-photos-44.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-photos-44.0-4.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "babl" 
+  "cairo" 
+  "cairo-gobject" 
+  "gdk-pixbuf2" {>= "2.36.8"}
+  "gegl04" {>= "0.4.0"}
+  "geocode-glib" 
+  "glib2" {>= "2.62.0"}
+  "glibc" 
+  "gnome-online-accounts" 
+  "gtk3" {>= "3.22.16"}
+  "libdazzle" {>= "3.26.0"}
+  "libgcc" 
+  "libgexiv2" 
+  "libhandy" {>= "1.1.90"}
+  "libjpeg-turbo" 
+  "libpng" 
+  "libportal" 
+  "libportal-gtk3" 
+  "libtracker-sparql" 
+  "pango" 
+  "tracker-miners" {>= "3.0.0"}
+]
+extra-source "gnome-photos-44.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-photos-44.0-4.fc40.x86_64.rpm"
+}

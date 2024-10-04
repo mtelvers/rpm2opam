@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gdb-13.2-slfo.1.2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdb-13.2-slfo.1.2.6.x86_64.rpm"]
+depends: [
+  "babeltrace" 
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "libdebuginfod1" 
+  "libexpat1" 
+  "libgcc_s1" 
+  "libgmp10" 
+  "liblzma5" 
+  "libmpfr6" 
+  "libncurses6" 
+  "libpython3_11-1_0" 
+  "libreadline8" 
+  "libsource-highlight4" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+  "python311-base" 
+]
+extra-source "gdb-13.2-slfo.1.2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/gdb-13.2-slfo.1.2.6.x86_64.rpm"
+}

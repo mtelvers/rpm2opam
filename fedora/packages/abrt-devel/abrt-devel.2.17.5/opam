@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "abrt-devel-2.17.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "abrt-devel-2.17.5-1.fc40.x86_64.rpm"]
+depends: [
+  "abrt-libs" {= "2.17.5"}
+  "glib2-devel" 
+  "libreport-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "abrt-devel-2.17.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/abrt-devel-2.17.5-1.fc40.x86_64.rpm"
+}

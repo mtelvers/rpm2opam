@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mangohud-0.7.1-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mangohud-0.7.1-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "fmt" 
+  "glfw" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libGLEW" 
+  "libX11" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libstdc++" 
+  "spdlog" 
+  "vulkan-loader" 
+]
+extra-source "mangohud-0.7.1-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mangohud-0.7.1-3.fc40.x86_64.rpm"
+}

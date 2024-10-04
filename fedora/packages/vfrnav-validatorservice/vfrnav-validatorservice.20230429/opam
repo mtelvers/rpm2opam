@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vfrnav-validatorservice-20230429-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vfrnav-validatorservice-20230429-7.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "vfrnav" {= "20230429"}
+  "vfrnav-selinux" {= "20230429"}
+  "xorg-x11-server-Xvfb" 
+]
+extra-source "vfrnav-validatorservice-20230429-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vfrnav-validatorservice-20230429-7.fc40.x86_64.rpm"
+}

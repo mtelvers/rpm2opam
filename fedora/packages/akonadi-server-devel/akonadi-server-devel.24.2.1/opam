@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "akonadi-server-devel-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "akonadi-server-devel-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "akonadi-server" {= "24.2.1"}
+  "cmake-filesystem" 
+  "glibc" 
+  "kf6-kconfig-devel" 
+  "kf6-kconfigwidgets-devel" 
+  "kf6-kcoreaddons-devel" 
+  "kf6-kio-devel" 
+  "kf6-kitemmodels-devel" 
+  "kf6-kxmlgui-devel" 
+  "libgcc" 
+  "libstdc++" 
+  "qt6-qtbase" 
+  "qt6-qtbase-devel" 
+  "qt6-qtbase-gui" 
+]
+extra-source "akonadi-server-devel-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/akonadi-server-devel-24.02.1-1.fc40.x86_64.rpm"
+}

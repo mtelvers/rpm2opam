@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-9.8.2-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-9.8.2-2.1.x86_64.rpm"]
+depends: [
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-devel" {= "9.8.2"}
+  "ghc-ghc-boot-devel" {= "9.8.2"}
+  "ghc-ghc-compact-devel" {= "0.1.0.0"}
+  "ghc-ghc-devel" {= "9.8.2"}
+  "ghc-ghc-heap-devel" {= "9.8.2"}
+  "ghc-ghci-devel" {= "9.8.2"}
+  "ghc-hpc-devel" {= "0.7.0.0"}
+]
+extra-source "ghc-9.8.2-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-9.8.2-2.1.x86_64.rpm"
+}

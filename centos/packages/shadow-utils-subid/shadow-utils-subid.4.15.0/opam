@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "shadow-utils-subid-4.15.0-3.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "shadow-utils-subid-4.15.0-3.el10.x86_64.rpm"]
+depends: [
+  "audit-libs" 
+  "glibc" 
+  "libacl" 
+  "libattr" 
+  "libeconf" 
+  "libselinux" 
+  "libsemanage" 
+  "libxcrypt" 
+  "pam-libs" 
+]
+extra-source "shadow-utils-subid-4.15.0-3.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/shadow-utils-subid-4.15.0-3.el10.x86_64.rpm"
+}

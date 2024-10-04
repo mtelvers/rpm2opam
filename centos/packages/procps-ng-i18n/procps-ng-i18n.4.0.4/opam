@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "procps-ng-i18n-4.0.4-4.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "procps-ng-i18n-4.0.4-4.el10.noarch.rpm"]
+depends: [
+  "procps-ng" {= "4.0.4"}
+]
+extra-source "procps-ng-i18n-4.0.4-4.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/procps-ng-i18n-4.0.4-4.el10.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "highlight-gui-lang-4.12-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "highlight-gui-lang-4.12-1.1.noarch.rpm"]
+depends: [
+  "highlight-gui" {= "4.12"}
+]
+extra-source "highlight-gui-lang-4.12-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/highlight-gui-lang-4.12-1.1.noarch.rpm"
+}

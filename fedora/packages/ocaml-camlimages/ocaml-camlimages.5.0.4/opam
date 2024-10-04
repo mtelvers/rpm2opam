@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-camlimages-5.0.4-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-camlimages-5.0.4-20.fc40.x86_64.rpm"]
+depends: [
+  "freetype" 
+  "ghostscript" 
+  "giflib" 
+  "glibc" 
+  "libXpm" 
+  "libexif" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libtiff" 
+  "ocaml" {= "2125"}
+  "ocaml-graphics" {= "0"}
+  "ocaml-lablgtk" {= "9"}
+  "rgb" 
+]
+extra-source "ocaml-camlimages-5.0.4-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-camlimages-5.0.4-20.fc40.x86_64.rpm"
+}

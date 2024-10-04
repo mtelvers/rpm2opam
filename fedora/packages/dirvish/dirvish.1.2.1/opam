@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dirvish-1.2.1-30.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dirvish-1.2.1-30.fc40.noarch.rpm"]
+depends: [
+  "perl-File-Find" 
+  "perl-Getopt-Long" 
+  "perl-POSIX" 
+  "perl-Time-ParseDate" 
+  "perl-Time-Period" 
+  "perl-interpreter" 
+  "rsync" 
+]
+extra-source "dirvish-1.2.1-30.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dirvish-1.2.1-30.fc40.noarch.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-path-io-devel-1.8.1-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-path-io-devel-1.8.1-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-directory-devel" 
+  "ghc-dlist-devel" 
+  "ghc-exceptions-devel" 
+  "ghc-filepath-devel" 
+  "ghc-path-devel" 
+  "ghc-path-io" {= "1.8.1"}
+  "ghc-temporary-devel" 
+  "ghc-time-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unix-compat-devel" 
+]
+extra-source "ghc-path-io-devel-1.8.1-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-path-io-devel-1.8.1-3.fc40.x86_64.rpm"
+}

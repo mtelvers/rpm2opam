@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-path-dedot+lazy_static-devel-3.1.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-path-dedot+lazy_static-devel-3.1.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-lazy_static+default-devel" 
+  "rust-path-dedot-devel" {= "3.1.1"}
+]
+extra-source "rust-path-dedot+lazy_static-devel-3.1.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-path-dedot+lazy_static-devel-3.1.1-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "git-daemon-2.46.0-slfo.1.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "git-daemon-2.46.0-slfo.1.1.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "git-core" {= "2.46.0"}
+  "glibc" 
+  "libpcre2-8-0" 
+  "libsha1detectcoll1" 
+  "libz-ng-compat1" 
+  "systemd" 
+  "sysuser-shadow" {>= "3.1"}
+]
+extra-source "git-daemon-2.46.0-slfo.1.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/git-daemon-2.46.0-slfo.1.1.2.x86_64.rpm"
+}

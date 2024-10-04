@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "notmuch-0.38.2-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "notmuch-0.38.2-5.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "gmime30" 
+  "info" 
+  "libgcc" 
+  "libstdc++" 
+  "libtalloc" 
+  "sfsexp" 
+  "xapian-core-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "notmuch-0.38.2-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/notmuch-0.38.2-5.fc40.x86_64.rpm"
+}

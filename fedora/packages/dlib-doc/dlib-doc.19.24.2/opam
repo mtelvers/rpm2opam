@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dlib-doc-19.24.2-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dlib-doc-19.24.2-4.fc40.noarch.rpm"]
+depends: [
+  "dlib" {= "19.24.2"}
+]
+extra-source "dlib-doc-19.24.2-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dlib-doc-19.24.2-4.fc40.noarch.rpm"
+}

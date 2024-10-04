@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmodi-devel-20240507-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmodi-devel-20240507-1.1.x86_64.rpm"]
+depends: [
+  "libbfio-devel" 
+  "libmodi1" {= "20240507"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libmodi-devel-20240507-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmodi-devel-20240507-1.1.x86_64.rpm"
+}

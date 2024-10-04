@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rusqlite+session-devel-0.28.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rusqlite+session-devel-0.28.0-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-libsqlite3-sys+session-devel" 
+  "rust-rusqlite+hooks-devel" {= "0.28.0"}
+  "rust-rusqlite-devel" {= "0.28.0"}
+]
+extra-source "rust-rusqlite+session-devel-0.28.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rusqlite+session-devel-0.28.0-4.fc40.noarch.rpm"
+}

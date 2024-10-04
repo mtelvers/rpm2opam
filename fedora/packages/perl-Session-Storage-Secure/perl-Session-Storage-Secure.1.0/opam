@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Session-Storage-Secure-1.000-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Session-Storage-Secure-1.000-10.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Crypt-CBC" {>= "3.1"}
+  "perl-Crypt-Rijndael" 
+  "perl-Crypt-URandom" 
+  "perl-Digest-SHA" 
+  "perl-MIME-Base64" {>= "3.12"}
+  "perl-Math-Random-ISAAC-XS" 
+  "perl-Moo" 
+  "perl-MooX-Types-MooseLike" {>= "0.16"}
+  "perl-Sereal-Decoder" {>= "4.5"}
+  "perl-Sereal-Encoder" {>= "4.5"}
+  "perl-String-Compare-ConstantTime" 
+  "perl-libs" {>= "5.8.1"}
+  "perl-namespace-clean" 
+]
+extra-source "perl-Session-Storage-Secure-1.000-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Session-Storage-Secure-1.000-10.fc40.noarch.rpm"
+}

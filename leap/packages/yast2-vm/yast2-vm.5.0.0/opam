@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-vm-5.0.0-lp160.1.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-vm-5.0.0-lp160.1.12.x86_64.rpm"]
+depends: [
+  "yast2" {>= "3.0.4"}
+  "yast2-bootloader" {>= "3.1.35"}
+  "yast2-network" {>= "3.1.108"}
+  "yast2-ruby-bindings" {>= "1.0.0"}
+]
+extra-source "yast2-vm-5.0.0-lp160.1.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/yast2-vm-5.0.0-lp160.1.12.x86_64.rpm"
+}

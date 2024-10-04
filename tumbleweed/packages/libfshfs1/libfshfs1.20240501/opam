@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfshfs1-20240501-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfshfs1-20240501-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbfio1" 
+  "libcdata1" 
+  "libcerror1" 
+  "libclocale1" 
+  "libcnotify1" 
+  "libcthreads1" 
+  "libfcache1" 
+  "libfdata1" 
+  "libfmos1" 
+  "libuna1" 
+  "libz-ng-compat1" 
+]
+extra-source "libfshfs1-20240501-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfshfs1-20240501-1.1.x86_64.rpm"
+}

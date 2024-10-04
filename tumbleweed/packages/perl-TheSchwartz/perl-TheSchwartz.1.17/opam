@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-TheSchwartz-1.17-1.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-TheSchwartz-1.17-1.12.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Accessor" 
+  "perl-Data-ObjectDriver" {>= "0.4"}
+  "perl-base" 
+]
+extra-source "perl-TheSchwartz-1.17-1.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-TheSchwartz-1.17-1.12.noarch.rpm"
+}

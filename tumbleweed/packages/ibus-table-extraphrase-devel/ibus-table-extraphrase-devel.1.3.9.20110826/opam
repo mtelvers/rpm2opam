@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ibus-table-extraphrase-devel-1.3.9.20110826-9.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibus-table-extraphrase-devel-1.3.9.20110826-9.12.noarch.rpm"]
+depends: [
+  "ibus-table-devel" 
+  "ibus-table-extraphrase" {= "1.3.9.20110826"}
+  "pkgconf-pkg-config" 
+]
+extra-source "ibus-table-extraphrase-devel-1.3.9.20110826-9.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ibus-table-extraphrase-devel-1.3.9.20110826-9.12.noarch.rpm"
+}

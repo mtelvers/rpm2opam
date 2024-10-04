@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fedora-packager-0.6.0.7-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fedora-packager-0.6.0.7-9.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "bodhi-client" 
+  "curl" 
+  "fedpkg" {>= "1.0"}
+  "koji" {>= "1.11.0"}
+  "mock" 
+  "openssh-clients" 
+  "python3" 
+  "redhat-rpm-config" 
+  "rpm-build" 
+  "rpmautospec" 
+  "rpmdevtools" 
+  "rpmlint" 
+]
+extra-source "fedora-packager-0.6.0.7-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fedora-packager-0.6.0.7-9.fc40.noarch.rpm"
+}

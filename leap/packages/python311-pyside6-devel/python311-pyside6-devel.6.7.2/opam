@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pyside6-devel-6.7.2-lp160.1.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pyside6-devel-6.7.2-lp160.1.12.x86_64.rpm"]
+depends: [
+  "pkgconf-pkg-config" 
+  "python311-pyside6" {= "6.7.2"}
+  "python311-shiboken6-devel" 
+]
+extra-source "python311-pyside6-devel-6.7.2-lp160.1.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/python311-pyside6-devel-6.7.2-lp160.1.12.x86_64.rpm"
+}

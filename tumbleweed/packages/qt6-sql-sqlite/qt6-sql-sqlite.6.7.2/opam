@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qt6-sql-sqlite-6.7.2-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qt6-sql-sqlite-6.7.2-3.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt6Core6" 
+  "libQt6Sql6" 
+  "libsqlite3-0" 
+  "libstdc++6" 
+]
+extra-source "qt6-sql-sqlite-6.7.2-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/qt6-sql-sqlite-6.7.2-3.1.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ocfs2-tools-devel-static-1.8.8-6.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocfs2-tools-devel-static-1.8.8-6.1.x86_64.rpm"]
+depends: [
+  "libcom_err-devel" 
+  "libcom_err2" 
+  "ocfs2-tools" {= "1.8.8"}
+]
+extra-source "ocfs2-tools-devel-static-1.8.8-6.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ocfs2-tools-devel-static-1.8.8-6.1.x86_64.rpm"
+}

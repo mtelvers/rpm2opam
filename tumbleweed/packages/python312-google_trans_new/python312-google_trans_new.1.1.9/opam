@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-google_trans_new-1.1.9-3.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-google_trans_new-1.1.9-3.5.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-requests" 
+  "python312-urllib3" 
+]
+extra-source "python312-google_trans_new-1.1.9-3.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-google_trans_new-1.1.9-3.5.noarch.rpm"
+}

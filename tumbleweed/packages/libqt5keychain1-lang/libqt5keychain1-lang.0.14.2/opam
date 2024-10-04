@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqt5keychain1-lang-0.14.2-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqt5keychain1-lang-0.14.2-1.2.noarch.rpm"]
+depends: [
+  "libqt5keychain1" {= "0.14.2"}
+]
+extra-source "libqt5keychain1-lang-0.14.2-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libqt5keychain1-lang-0.14.2-1.2.noarch.rpm"
+}

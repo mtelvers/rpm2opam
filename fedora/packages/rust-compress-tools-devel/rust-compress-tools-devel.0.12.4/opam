@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-compress-tools-devel-0.12.4-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-compress-tools-devel-0.12.4-5.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "libarchive-devel" {>= "3.5.1"}
+  "rust" {>= "1.49.0"}
+  "rust-derive_more+display-devel" 
+  "rust-derive_more+error-devel" 
+  "rust-derive_more+from-devel" 
+  "rust-derive_more-devel" 
+  "rust-libc+default-devel" 
+  "rust-pkg-config+default-devel" 
+]
+extra-source "rust-compress-tools-devel-0.12.4-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-compress-tools-devel-0.12.4-5.fc40.noarch.rpm"
+}

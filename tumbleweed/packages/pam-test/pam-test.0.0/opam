@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pam-test-0.0+git.20191111-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pam-test-0.0+git.20191111-1.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "pam" 
+]
+extra-source "pam-test-0.0+git.20191111-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pam-test-0.0+git.20191111-1.4.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jeromq-0.5.2-2.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jeromq-0.5.2-2.6.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "jnacl" 
+]
+extra-source "jeromq-0.5.2-2.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jeromq-0.5.2-2.6.noarch.rpm"
+}

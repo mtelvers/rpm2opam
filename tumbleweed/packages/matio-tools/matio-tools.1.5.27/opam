@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "matio-tools-1.5.27-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "matio-tools-1.5.27-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libhdf5-200" 
+  "libmatio13" {= "1.5.27"}
+]
+extra-source "matio-tools-1.5.27-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/matio-tools-1.5.27-1.1.x86_64.rpm"
+}

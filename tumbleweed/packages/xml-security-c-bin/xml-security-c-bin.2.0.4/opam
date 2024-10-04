@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xml-security-c-bin-2.0.4-1.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xml-security-c-bin-2.0.4-1.12.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libstdc++6" 
+  "libxalan-c112" 
+  "libxerces-c-3_2" 
+  "libxml-security-c20" 
+]
+extra-source "xml-security-c-bin-2.0.4-1.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xml-security-c-bin-2.0.4-1.12.x86_64.rpm"
+}

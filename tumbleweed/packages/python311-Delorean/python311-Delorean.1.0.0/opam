@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-Delorean-1.0.0-4.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-Delorean-1.0.0-4.12.noarch.rpm"]
+depends: [
+  "python311-Babel" {>= "2.1.1"}
+  "python311-base" {= "3.11"}
+  "python311-humanize" {>= "0.5.1"}
+  "python311-python-dateutil" {>= "2.4.2"}
+  "python311-pytz" {>= "2015.7"}
+  "python311-tzlocal" {>= "1.2"}
+]
+extra-source "python311-Delorean-1.0.0-4.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-Delorean-1.0.0-4.12.noarch.rpm"
+}

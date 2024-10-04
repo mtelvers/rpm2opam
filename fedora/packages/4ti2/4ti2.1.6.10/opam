@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "4ti2-1.6.10-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "4ti2-1.6.10-9.fc40.x86_64.rpm"]
+depends: [
+  "4ti2-libs" {= "1.6.10"}
+  "Lmod" 
+  "bash" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "4ti2-1.6.10-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/4/4ti2-1.6.10-9.fc40.x86_64.rpm"
+}

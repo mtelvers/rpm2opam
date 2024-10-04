@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libitm-static-14.0.1-0.15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libitm-static-14.0.1-0.15.fc40.x86_64.rpm"]
+depends: [
+  "libitm-devel" {= "14.0.1"}
+]
+extra-source "libitm-static-14.0.1-0.15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libitm-static-14.0.1-0.15.fc40.x86_64.rpm"
+}

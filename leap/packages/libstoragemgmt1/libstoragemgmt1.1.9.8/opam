@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libstoragemgmt1-1.9.8-slfo.1.1.23.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libstoragemgmt1-1.9.8-slfo.1.1.23.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libglib-2_0-0" 
+  "libstdc++6" 
+  "libudev1" 
+]
+extra-source "libstoragemgmt1-1.9.8-slfo.1.1.23.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libstoragemgmt1-1.9.8-slfo.1.1.23.x86_64.rpm"
+}

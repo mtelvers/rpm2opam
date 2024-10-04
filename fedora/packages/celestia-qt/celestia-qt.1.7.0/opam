@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "celestia-qt-1.7.0~320231229.git6899839-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "celestia-qt-1.7.0~320231229.git6899839-5.fc40.x86_64.rpm"]
+depends: [
+  "celestia-common" {= "1.7.0"}
+  "fmt" 
+  "glibc" 
+  "libstdc++" 
+  "libwayland-client" 
+  "qt6-qt5compat" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+]
+extra-source "celestia-qt-1.7.0~320231229.git6899839-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/celestia-qt-1.7.0~320231229.git6899839-5.fc40.x86_64.rpm"
+}

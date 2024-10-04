@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcc12-12.3.0+git1204-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcc12-12.3.0+git1204-4.2.x86_64.rpm"]
+depends: [
+  "binutils" 
+  "cpp12" {= "12.3.0"}
+  "glibc" 
+  "glibc-devel" 
+  "libasan8" {>= "12.3.0"}
+  "libatomic1" {>= "12.3.0"}
+  "libgcc_s1" {>= "12.3.0"}
+  "libgmp10" 
+  "libgomp1" {>= "12.3.0"}
+  "libisl23" 
+  "libitm1" {>= "12.3.0"}
+  "liblsan0" {>= "12.3.0"}
+  "libmpc3" 
+  "libmpfr6" 
+  "libtsan2" {>= "12.3.0"}
+  "libubsan1" {>= "12.3.0"}
+  "libz-ng-compat1" 
+  "libzstd1" 
+]
+extra-source "gcc12-12.3.0+git1204-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gcc12-12.3.0+git1204-4.2.x86_64.rpm"
+}

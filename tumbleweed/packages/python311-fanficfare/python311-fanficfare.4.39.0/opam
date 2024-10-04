@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-fanficfare-4.39.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-fanficfare-4.39.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-Brotli" 
+  "python311-base" 
+  "python311-beautifulsoup4" 
+  "python311-chardet" 
+  "python311-cloudscraper" 
+  "python311-html2text" 
+  "python311-html5lib" 
+  "python311-requests" 
+  "python311-requests-file" 
+  "python311-urllib3" 
+  "update-alternatives" 
+]
+extra-source "python311-fanficfare-4.39.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-fanficfare-4.39.0-1.1.noarch.rpm"
+}

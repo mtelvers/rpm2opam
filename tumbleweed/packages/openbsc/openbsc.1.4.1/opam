@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openbsc-1.4.1-1.15.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openbsc-1.4.1-1.15.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libdbi-drivers-dbd-sqlite3" 
+  "libdbi3" 
+  "libosmoabis13" 
+  "libosmocore21" 
+  "libosmoctrl0" 
+  "libosmogsm20" 
+  "libosmovty13" 
+  "libsmpp34-1" 
+  "libtalloc2" 
+]
+extra-source "openbsc-1.4.1-1.15.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openbsc-1.4.1-1.15.x86_64.rpm"
+}

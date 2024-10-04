@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-zbus1+serde-xml-rs-devel-1.9.3-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-zbus1+serde-xml-rs-devel-1.9.3-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-serde-xml-rs+default-devel" 
+  "rust-zbus1-devel" {= "1.9.3"}
+]
+extra-source "rust-zbus1+serde-xml-rs-devel-1.9.3-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-zbus1+serde-xml-rs-devel-1.9.3-4.fc40.noarch.rpm"
+}

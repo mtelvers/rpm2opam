@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vlc-gui-qt-3.0.20-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vlc-gui-qt-3.0.20-12.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libX11" 
+  "libgcc" 
+  "libstdc++" 
+  "libwayland-client" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtsvg" 
+  "qt5-qtwayland" 
+  "qt5-qtx11extras" 
+  "vlc-cli" {= "3.0.20"}
+  "vlc-libs" 
+  "vlc-plugin-lua" {= "3.0.20"}
+  "vlc-plugins-base" {= "3.0.20"}
+  "vlc-plugins-video-out" {= "3.0.20"}
+]
+extra-source "vlc-gui-qt-3.0.20-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vlc-gui-qt-3.0.20-12.fc40.x86_64.rpm"
+}

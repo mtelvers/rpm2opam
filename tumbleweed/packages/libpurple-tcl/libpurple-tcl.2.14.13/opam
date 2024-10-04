@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpurple-tcl-2.14.13-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpurple-tcl-2.14.13-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libpurple" {= "2.14.13"}
+  "tcl" 
+  "tk" 
+]
+extra-source "libpurple-tcl-2.14.13-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpurple-tcl-2.14.13-1.1.x86_64.rpm"
+}

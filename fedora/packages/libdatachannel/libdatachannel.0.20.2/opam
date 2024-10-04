@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libdatachannel-0.20.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdatachannel-0.20.2-1.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "gnutls" 
+  "libgcc" 
+  "libnice" 
+  "libsrtp" 
+  "libstdc++" 
+  "nettle" 
+  "usrsctp" 
+]
+extra-source "libdatachannel-0.20.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libdatachannel-0.20.2-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["/usr/bin/zypper" "-n" "install" "hdf5-gnu-hpc-devel-1.12.2-slfo.1.1.16.noarch.rpm"]
+]
+remove: [
+  ["/usr/bin/zypper" "-n" "remove" "hdf5-gnu-hpc-devel-1.12.2-slfo.1.1.16.noarch.rpm"]
+]
+depends: [
+  "hdf5_1_12_2-gnu-hpc-devel" {= "1.12.2"}
+]
+extra-source "hdf5-gnu-hpc-devel-1.12.2-slfo.1.1.16.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/hdf5-gnu-hpc-devel-1.12.2-slfo.1.1.16.noarch.rpm"
+}

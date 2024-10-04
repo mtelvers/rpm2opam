@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-azure-schemaregistry-avroserializer-1.0.0b4-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-azure-schemaregistry-avroserializer-1.0.0b4-3.1.noarch.rpm"]
+depends: [
+  "python311-avro" {>= "1.10.0"}
+  "python311-azure-core" {>= "1.19.0"}
+  "python311-azure-nspkg" {>= "3.0.0"}
+  "python311-azure-schemaregistry" {>= "1.0.0"}
+  "python311-base" {= "3.11"}
+  "python311-msrest" {>= "0.5.0"}
+]
+extra-source "python311-azure-schemaregistry-avroserializer-1.0.0b4-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-azure-schemaregistry-avroserializer-1.0.0b4-3.1.noarch.rpm"
+}

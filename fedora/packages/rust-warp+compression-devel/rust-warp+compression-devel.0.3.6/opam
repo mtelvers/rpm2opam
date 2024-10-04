@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-warp+compression-devel-0.3.6-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-warp+compression-devel-0.3.6-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-warp+compression-brotli-devel" {= "0.3.6"}
+  "rust-warp+compression-gzip-devel" {= "0.3.6"}
+  "rust-warp-devel" {= "0.3.6"}
+]
+extra-source "rust-warp+compression-devel-0.3.6-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-warp+compression-devel-0.3.6-3.fc40.noarch.rpm"
+}

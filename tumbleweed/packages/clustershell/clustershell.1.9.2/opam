@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "clustershell-1.9.2-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clustershell-1.9.2-1.3.noarch.rpm"]
+depends: [
+  "python3-clustershell" {= "1.9.2"}
+  "vim" 
+]
+extra-source "clustershell-1.9.2-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/clustershell-1.9.2-1.3.noarch.rpm"
+}

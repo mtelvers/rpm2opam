@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-toml+display-devel-0.8.10-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-toml+display-devel-0.8.10-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-toml-devel" {= "0.8.10"}
+  "rust-toml_edit+display-devel" 
+  "rust-toml_edit+serde-devel" 
+  "rust-toml_edit-devel" 
+]
+extra-source "rust-toml+display-devel-0.8.10-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-toml+display-devel-0.8.10-1.fc40.noarch.rpm"
+}

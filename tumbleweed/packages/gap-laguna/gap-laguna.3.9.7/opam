@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-laguna-3.9.7-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-laguna-3.9.7-1.1.noarch.rpm"]
+depends: [
+  "gap" {>= "4.9"}
+  "gap-gapdoc" {>= "1.6.1"}
+]
+extra-source "gap-laguna-3.9.7-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-laguna-3.9.7-1.1.noarch.rpm"
+}

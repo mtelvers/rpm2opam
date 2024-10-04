@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-nilearn-0.10.3-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-nilearn-0.10.3-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "python3" {= "3.12"}
+  "python3-joblib" {>= "1"}
+  "python3-lxml" 
+  "python3-nibabel" {>= "4"}
+  "python3-numpy" {>= "1.19"}
+  "python3-packaging" 
+  "python3-pandas" {>= "1.1.5"}
+  "python3-requests" {>= "2.25"}
+  "python3-scikit-learn" {>= "1"}
+  "python3-scipy" {>= "1.8"}
+]
+extra-source "python3-nilearn-0.10.3-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-nilearn-0.10.3-3.fc40.noarch.rpm"
+}

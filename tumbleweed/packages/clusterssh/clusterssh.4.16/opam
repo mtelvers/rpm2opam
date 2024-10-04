@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "clusterssh-4.16-2.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clusterssh-4.16-2.4.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-CPAN-Changes" 
+  "perl-Exception-Class" 
+  "perl-File-Path" 
+  "perl-File-Slurp" 
+  "perl-File-Temp" 
+  "perl-File-Which" 
+  "perl-Module-Build" 
+  "perl-Readonly" 
+  "perl-Sort-Naturally" 
+  "perl-Test-Differences" 
+  "perl-Test-Pod" 
+  "perl-Test-Pod-Coverage" 
+  "perl-Test-Trap" 
+  "perl-Tk" 
+  "perl-Try-Tiny" 
+  "perl-X11-Protocol" 
+  "perl-X11-Protocol-Other" 
+  "perl-base" 
+  "xorg-x11-fonts-legacy" 
+  "xterm" 
+]
+extra-source "clusterssh-4.16-2.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/clusterssh-4.16-2.4.noarch.rpm"
+}

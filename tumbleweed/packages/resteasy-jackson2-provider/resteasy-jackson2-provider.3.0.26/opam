@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "resteasy-jackson2-provider-3.0.26-4.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "resteasy-jackson2-provider-3.0.26-4.6.noarch.rpm"]
+depends: [
+  "jackson-annotations" 
+  "jackson-core" 
+  "jackson-databind" 
+  "jackson-jaxrs-json-provider" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "tomcat-servlet-4_0-api" 
+]
+extra-source "resteasy-jackson2-provider-3.0.26-4.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/resteasy-jackson2-provider-3.0.26-4.6.noarch.rpm"
+}

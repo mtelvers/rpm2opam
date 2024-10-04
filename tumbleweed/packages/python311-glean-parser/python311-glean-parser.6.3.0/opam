@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-glean-parser-6.3.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-glean-parser-6.3.0-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-Jinja2" {>= "2.10.1"}
+  "python311-MarkupSafe" {>= "1.1.1"}
+  "python311-PyYAML" {>= "5.3.1"}
+  "python311-appdirs" {>= "1.4"}
+  "python311-base" 
+  "python311-click" {>= "7"}
+  "python311-diskcache" {>= "4"}
+  "python311-jsonschema" {>= "3.0.2"}
+  "python311-yamllint" {>= "1.18.0"}
+  "update-alternatives" 
+]
+extra-source "python311-glean-parser-6.3.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-glean-parser-6.3.0-2.1.noarch.rpm"
+}

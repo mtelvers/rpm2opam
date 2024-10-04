@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "aspell-devel-0.60.8.1-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "aspell-devel-0.60.8.1-1.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-devel" 
+  "info" 
+  "libaspell15" {= "0.60.8.1"}
+  "libpspell15" {= "0.60.8.1"}
+]
+extra-source "aspell-devel-0.60.8.1-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/aspell-devel-0.60.8.1-1.3.x86_64.rpm"
+}

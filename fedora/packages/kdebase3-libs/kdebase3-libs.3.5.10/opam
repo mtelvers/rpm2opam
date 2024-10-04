@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kdebase3-libs-3.5.10-81.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kdebase3-libs-3.5.10-81.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kdelibs3" {>= "3.5.10"}
+  "libX11" 
+  "libstdc++" 
+  "qt3" 
+  "zlib-ng-compat" 
+]
+extra-source "kdebase3-libs-3.5.10-81.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kdebase3-libs-3.5.10-81.fc40.x86_64.rpm"
+}

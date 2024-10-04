@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "freetype2-devel-32bit-2.13.2-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freetype2-devel-32bit-2.13.2-2.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "freetype2-devel" {= "2.13.2"}
+  "libbrotli-devel" 
+  "libbrotli-devel-32bit" 
+  "libbz2-devel" 
+  "libbz2-devel-32bit" 
+  "libfreetype6-32bit" 
+  "pkgconf-pkg-config" 
+  "zlib-devel" 
+  "zlib-devel-32bit" 
+]
+extra-source "freetype2-devel-32bit-2.13.2-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/freetype2-devel-32bit-2.13.2-2.2.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-intake-2.0.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-intake-2.0.5-1.1.noarch.rpm"]
+depends: [
+  "python310-PyYAML" 
+  "python310-appdirs" 
+  "python310-base" {= "3.10"}
+  "python310-fsspec" {>= "2023"}
+]
+extra-source "python310-intake-2.0.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-intake-2.0.5-1.1.noarch.rpm"
+}

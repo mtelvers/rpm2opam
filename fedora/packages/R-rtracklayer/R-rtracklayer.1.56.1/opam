@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-rtracklayer-1.56.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-rtracklayer-1.56.1-6.fc40.x86_64.rpm"]
+depends: [
+  "R-BiocGenerics" {>= "0.35.3"}
+  "R-BiocIO" 
+  "R-Biostrings" {>= "2.47.6"}
+  "R-GenomeInfoDb" {>= "1.15.2"}
+  "R-GenomicAlignments" {>= "1.15.6"}
+  "R-GenomicRanges" {>= "1.37.2"}
+  "R-IRanges" {>= "2.13.13"}
+  "R-RCurl" {>= "1.4.2"}
+  "R-Rsamtools" {>= "1.31.2"}
+  "R-S4Vectors" {>= "0.23.18"}
+  "R-XML" {>= "1.98.0"}
+  "R-XVector" {>= "0.19.7"}
+  "R-core" {= "4.3"}
+  "R-restfulr" {>= "0.0.13"}
+  "glibc" 
+  "openssl-libs" 
+  "texlive-collection-latexrecommended" 
+  "zlib-ng-compat" 
+]
+extra-source "R-rtracklayer-1.56.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-rtracklayer-1.56.1-6.fc40.x86_64.rpm"
+}

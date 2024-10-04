@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "goffice-devel-0.10.56-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "goffice-devel-0.10.56-3.fc40.x86_64.rpm"]
+depends: [
+  "cairo-devel" 
+  "glib2-devel" 
+  "goffice" {= "0.10.56"}
+  "gtk3-devel" 
+  "lasem-devel" 
+  "libgsf-devel" 
+  "librsvg2-devel" 
+  "libxml2-devel" 
+  "libxslt-devel" 
+  "pango-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "goffice-devel-0.10.56-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/goffice-devel-0.10.56-3.fc40.x86_64.rpm"
+}

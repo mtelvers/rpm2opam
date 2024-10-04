@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-alembic-1.13.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-alembic-1.13.3-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-Mako" 
+  "python311-SQLAlchemy" {>= "2.0.0"}
+  "python311-base" 
+  "python311-typing_extensions" {>= "4"}
+  "update-alternatives" 
+]
+extra-source "python311-alembic-1.13.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-alembic-1.13.3-1.1.noarch.rpm"
+}

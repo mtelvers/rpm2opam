@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Dist-Zilla-Plugin-StaticInstall-0.012-17.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Dist-Zilla-Plugin-StaticInstall-0.012-17.fc40.noarch.rpm"]
+depends: [
+  "perl-Dist-Zilla" 
+  "perl-Moose" 
+  "perl-MooseX-Types" 
+  "perl-Path-Tiny" 
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-Term-ANSIColor" {>= "3.0"}
+  "perl-autovivification" 
+  "perl-libs" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-Dist-Zilla-Plugin-StaticInstall-0.012-17.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Dist-Zilla-Plugin-StaticInstall-0.012-17.fc40.noarch.rpm"
+}

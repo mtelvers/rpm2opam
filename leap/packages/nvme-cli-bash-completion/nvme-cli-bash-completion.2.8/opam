@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nvme-cli-bash-completion-2.8-slfo.1.1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nvme-cli-bash-completion-2.8-slfo.1.1.8.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "bash-sh" 
+  "nvme-cli" {= "2.8"}
+]
+extra-source "nvme-cli-bash-completion-2.8-slfo.1.1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/nvme-cli-bash-completion-2.8-slfo.1.1.8.noarch.rpm"
+}

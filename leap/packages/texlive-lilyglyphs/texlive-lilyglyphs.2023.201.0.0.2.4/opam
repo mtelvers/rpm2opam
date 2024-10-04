@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-lilyglyphs-2023.201.0.0.2.4svn56473-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-lilyglyphs-2023.201.0.0.2.4svn56473-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "python311-base" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-adjustbox" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-graphics" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-lilyglyphs-bin" {>= "2023"}
+  "texlive-lilyglyphs-fonts" {>= "2023"}
+  "texlive-pgf" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+]
+extra-source "texlive-lilyglyphs-2023.201.0.0.2.4svn56473-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-lilyglyphs-2023.201.0.0.2.4svn56473-slfo.1.1.4.noarch.rpm"
+}

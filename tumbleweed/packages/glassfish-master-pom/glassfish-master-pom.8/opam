@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glassfish-master-pom-8-1.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glassfish-master-pom-8-1.15.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "maven-compiler-plugin" 
+]
+extra-source "glassfish-master-pom-8-1.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/glassfish-master-pom-8-1.15.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-fedora-dists-prof-2.1.1-17.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-fedora-dists-prof-2.1.1-17.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-prof" 
+  "ghc-base-prof" 
+  "ghc-cached-json-file-prof" 
+  "ghc-fedora-dists-devel" {= "2.1.1"}
+  "ghc-pdc-prof" 
+  "ghc-text-prof" 
+]
+extra-source "ghc-fedora-dists-prof-2.1.1-17.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-fedora-dists-prof-2.1.1-17.fc40.x86_64.rpm"
+}

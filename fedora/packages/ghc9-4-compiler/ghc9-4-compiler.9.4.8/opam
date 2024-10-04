@@ -1,0 +1,48 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc9.4-compiler-9.4.8-27.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc9.4-compiler-9.4.8-27.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gcc" 
+  "ghc9-4-Cabal" 
+  "ghc9-4-Cabal-syntax" 
+  "ghc9-4-array" 
+  "ghc9-4-base" 
+  "ghc9-4-base-devel" {= "4.17.2.1"}
+  "ghc9-4-binary" 
+  "ghc9-4-bytestring" 
+  "ghc9-4-containers" 
+  "ghc9-4-deepseq" 
+  "ghc9-4-directory" 
+  "ghc9-4-exceptions" 
+  "ghc9-4-filepath" 
+  "ghc9-4-filesystem" {= "9.4.8"}
+  "ghc9-4-ghc" 
+  "ghc9-4-ghc-bignum" 
+  "ghc9-4-ghc-boot" 
+  "ghc9-4-ghc-boot-th" 
+  "ghc9-4-ghc-heap" 
+  "ghc9-4-ghci" 
+  "ghc9-4-haskeline" 
+  "ghc9-4-hpc" 
+  "ghc9-4-libiserv" 
+  "ghc9-4-mtl" 
+  "ghc9-4-parsec" 
+  "ghc9-4-pretty" 
+  "ghc9-4-process" 
+  "ghc9-4-stm" 
+  "ghc9-4-template-haskell" 
+  "ghc9-4-terminfo" 
+  "ghc9-4-text" 
+  "ghc9-4-time" 
+  "ghc9-4-transformers" 
+  "ghc9-4-unix" 
+  "ghc9-4-xhtml" 
+  "glibc" 
+  "gmp" 
+  "libffi" 
+  "ncurses-libs" 
+]
+extra-source "ghc9.4-compiler-9.4.8-27.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc9.4-compiler-9.4.8-27.fc40.x86_64.rpm"
+}

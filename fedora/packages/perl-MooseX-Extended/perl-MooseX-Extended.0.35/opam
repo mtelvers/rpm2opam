@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MooseX-Extended-0.35-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Extended-0.35-3.fc40.noarch.rpm"]
+depends: [
+  "perl-B-Hooks-AtRuntime" 
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-Import-Into" 
+  "perl-Module-Load" 
+  "perl-Moose" 
+  "perl-MooseX-Role-WarnOnConflict" 
+  "perl-MooseX-StrictConstructor" 
+  "perl-Ref-Util" 
+  "perl-Storable" 
+  "perl-Type-Tiny" 
+  "perl-constant" 
+  "perl-libs" {>= "5.20.0"}
+  "perl-mro" 
+  "perl-namespace-autoclean" 
+  "perl-parent" 
+  "perl-true" 
+]
+extra-source "perl-MooseX-Extended-0.35-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MooseX-Extended-0.35-3.fc40.noarch.rpm"
+}

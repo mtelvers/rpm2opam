@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-wai-prof-3.2.3-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-wai-prof-3.2.3-11.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-http-types-prof" 
+  "ghc-network-prof" 
+  "ghc-text-prof" 
+  "ghc-vault-prof" 
+  "ghc-wai-devel" {= "3.2.3"}
+]
+extra-source "ghc-wai-prof-3.2.3-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-wai-prof-3.2.3-11.fc40.x86_64.rpm"
+}

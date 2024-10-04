@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "memory-constraints-20180406-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "memory-constraints-20180406-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "busybox-gawk" 
+  "coreutils" 
+]
+extra-source "memory-constraints-20180406-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/memory-constraints-20180406-slfo.1.1.3.noarch.rpm"
+}

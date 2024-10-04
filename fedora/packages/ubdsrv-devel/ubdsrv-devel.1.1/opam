@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ubdsrv-devel-1.1-1.rc1.20230207git58401cf.fc40.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ubdsrv-devel-1.1-1.rc1.20230207git58401cf.fc40.2.x86_64.rpm"]
+depends: [
+  "liburing-devel" 
+  "pkgconf-pkg-config" 
+  "ubdsrv" 
+]
+extra-source "ubdsrv-devel-1.1-1.rc1.20230207git58401cf.fc40.2.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/ubdsrv-devel-1.1-1.rc1.20230207git58401cf.fc40.2.x86_64.rpm"
+}

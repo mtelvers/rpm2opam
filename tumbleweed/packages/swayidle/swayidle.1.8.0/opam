@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "swayidle-1.8.0-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "swayidle-1.8.0-1.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libsystemd0" 
+  "libwayland-client0" 
+  "libwayland-server0" 
+]
+extra-source "swayidle-1.8.0-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/swayidle-1.8.0-1.6.x86_64.rpm"
+}

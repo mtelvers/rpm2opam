@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "alembic-devel-1.8.6-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "alembic-devel-1.8.6-2.2.x86_64.rpm"]
+depends: [
+  "libAlembic1_8" {= "1.8.6"}
+]
+extra-source "alembic-devel-1.8.6-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/alembic-devel-1.8.6-2.2.x86_64.rpm"
+}

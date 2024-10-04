@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-shell-extension-freon-55-3.20231215git8fee2fb.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-shell-extension-freon-55-3.20231215git8fee2fb.fc40.noarch.rpm"]
+depends: [
+  "gnome-shell" {>= "45"}
+  "gnome-shell-extension-common" 
+  "lm_sensors" 
+]
+extra-source "gnome-shell-extension-freon-55-3.20231215git8fee2fb.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-shell-extension-freon-55-3.20231215git8fee2fb.fc40.noarch.rpm"
+}

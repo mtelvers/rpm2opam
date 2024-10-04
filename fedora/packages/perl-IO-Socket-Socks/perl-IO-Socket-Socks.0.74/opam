@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-IO-Socket-Socks-0.74-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-IO-Socket-Socks-0.74-20.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Errno" 
+  "perl-Exporter" 
+  "perl-IO" 
+  "perl-IO-Socket-IP" {>= "0.36"}
+  "perl-Socket" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-IO-Socket-Socks-0.74-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-IO-Socket-Socks-0.74-20.fc40.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libhandy-devel-1.8.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libhandy-devel-1.8.3-1.fc40.x86_64.rpm"]
+depends: [
+  "glade-libs" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "gtk3-devel" 
+  "libgcc" 
+  "libhandy" {= "1.8.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libhandy-devel-1.8.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libhandy-devel-1.8.3-1.fc40.x86_64.rpm"
+}

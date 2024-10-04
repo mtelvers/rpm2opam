@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-publicsuffixlist-prof-0.1-44.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-publicsuffixlist-prof-0.1-44.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-cereal-prof" 
+  "ghc-containers-prof" 
+  "ghc-data-default-prof" 
+  "ghc-publicsuffixlist-devel" {= "0.1"}
+  "ghc-text-prof" 
+  "ghc-utf8-string-prof" 
+]
+extra-source "ghc-publicsuffixlist-prof-0.1-44.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-publicsuffixlist-prof-0.1-44.fc40.x86_64.rpm"
+}

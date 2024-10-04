@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plocate-1.1.22-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plocate-1.1.22-2.1.x86_64.rpm"]
+depends: [
+  "apparmor-abstractions" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "liburing2" 
+  "libzstd1" 
+  "system-user-nobody" 
+  "systemd" 
+]
+extra-source "plocate-1.1.22-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/plocate-1.1.22-2.1.x86_64.rpm"
+}

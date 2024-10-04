@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "policycoreutils-3.5-slfo.1.1.27.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "policycoreutils-3.5-slfo.1.1.27.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "gawk" 
+  "glibc" 
+  "libaudit1" 
+  "libselinux1" 
+  "libsemanage2" 
+  "libsepol2" 
+  "pam" 
+  "rpm" 
+  "selinux-tools" 
+  "util-linux" 
+]
+extra-source "policycoreutils-3.5-slfo.1.1.27.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/policycoreutils-3.5-slfo.1.1.27.x86_64.rpm"
+}

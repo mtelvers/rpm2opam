@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cpupower-lang-6.10.11-8.19.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cpupower-lang-6.10.11-8.19.noarch.rpm"]
+depends: [
+  "cpupower" {= "6.10.11"}
+]
+extra-source "cpupower-lang-6.10.11-8.19.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cpupower-lang-6.10.11-8.19.noarch.rpm"
+}

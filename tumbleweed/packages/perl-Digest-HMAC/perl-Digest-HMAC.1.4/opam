@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Digest-HMAC-1.04-1.16.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Digest-HMAC-1.04-1.16.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-base" {>= "1"}
+]
+extra-source "perl-Digest-HMAC-1.04-1.16.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Digest-HMAC-1.04-1.16.noarch.rpm"
+}

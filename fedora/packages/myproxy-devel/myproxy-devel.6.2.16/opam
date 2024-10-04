@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "myproxy-devel-6.2.16-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "myproxy-devel-6.2.16-1.fc40.x86_64.rpm"]
+depends: [
+  "globus-common-devel" {>= "14"}
+  "globus-gsi-callback-devel" {>= "4"}
+  "globus-gsi-cert-utils-devel" {>= "8"}
+  "globus-gsi-credential-devel" {>= "5"}
+  "globus-gsi-proxy-core-devel" {>= "6"}
+  "globus-gsi-sysconfig-devel" {>= "5"}
+  "globus-gss-assist-devel" {>= "8"}
+  "globus-gssapi-gsi-devel" {>= "9"}
+  "myproxy-libs" 
+  "pkgconf-pkg-config" 
+]
+extra-source "myproxy-devel-6.2.16-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/myproxy-devel-6.2.16-1.fc40.x86_64.rpm"
+}

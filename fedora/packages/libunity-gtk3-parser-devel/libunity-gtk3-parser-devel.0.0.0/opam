@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libunity-gtk3-parser-devel-0.0.0+17.04.20170403-18.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libunity-gtk3-parser-devel-0.0.0+17.04.20170403-18.fc39.x86_64.rpm"]
+depends: [
+  "gtk3-devel" 
+  "libunity-gtk-parser-devel" {= "0.0.0"}
+  "libunity-gtk3-parser" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libunity-gtk3-parser-devel-0.0.0+17.04.20170403-18.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libunity-gtk3-parser-devel-0.0.0+17.04.20170403-18.fc39.x86_64.rpm"
+}

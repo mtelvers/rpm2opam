@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-crossbeam-deque-devel-0.8.5-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-crossbeam-deque-devel-0.8.5-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.61"}
+  "rust-crossbeam-epoch-devel" 
+  "rust-crossbeam-utils-devel" 
+]
+extra-source "rust-crossbeam-deque-devel-0.8.5-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-crossbeam-deque-devel-0.8.5-2.fc40.noarch.rpm"
+}

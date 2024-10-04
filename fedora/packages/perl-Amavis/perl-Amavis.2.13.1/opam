@@ -1,0 +1,42 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Amavis-2.13.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Amavis-2.13.1-1.fc40.noarch.rpm"]
+depends: [
+  "perl-Archive-Zip" {>= "1.14"}
+  "perl-BerkeleyDB" 
+  "perl-Carp" 
+  "perl-Crypt-OpenSSL-RSA" 
+  "perl-DBI" 
+  "perl-Digest-MD5" 
+  "perl-Digest-SHA" 
+  "perl-Encode" 
+  "perl-Errno" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Temp" 
+  "perl-FileHandle" 
+  "perl-IO" 
+  "perl-IO-Compress" {>= "1.35"}
+  "perl-IO-Socket-SSL" 
+  "perl-JSON" 
+  "perl-LDAP" 
+  "perl-MIME-Base64" 
+  "perl-MIME-tools" 
+  "perl-Mail-DKIM" 
+  "perl-Net-DNS" 
+  "perl-Net-Server" 
+  "perl-POSIX" 
+  "perl-Scalar-List-Utils" 
+  "perl-Socket" 
+  "perl-Time-HiRes" 
+  "perl-Unix-Syslog" 
+  "perl-constant" 
+  "perl-libs" {>= "5.8.1"}
+  "perl-libwww-perl" 
+  "perl-subs" 
+  "perl-vars" 
+  "spamassassin" 
+]
+extra-source "perl-Amavis-2.13.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Amavis-2.13.1-1.fc40.noarch.rpm"
+}

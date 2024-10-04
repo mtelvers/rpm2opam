@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsatyr4-0.43-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsatyr4-0.43-4.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libdw1" 
+  "libelf1" 
+  "libjson-c5" 
+  "libstdc++6" 
+  "rpm" 
+]
+extra-source "libsatyr4-0.43-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libsatyr4-0.43-4.1.x86_64.rpm"
+}

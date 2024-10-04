@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-HTTP-Tiny-tests-0.088-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTTP-Tiny-tests-0.088-5.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "openssl" 
+  "perl-ExtUtils-MakeMaker" 
+  "perl-File-Basename" 
+  "perl-File-Temp" 
+  "perl-HTTP-Tiny" 
+  "perl-IO" 
+  "perl-IO-Socket-IP" {>= "0.32"}
+  "perl-IO-Socket-SSL" {>= "1.56"}
+  "perl-IPC-Cmd" 
+  "perl-Mozilla-CA" 
+  "perl-Net-SSLeay" {>= "1.49"}
+  "perl-PathTools" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" {>= "0.86"}
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "perl-open" 
+]
+extra-source "perl-HTTP-Tiny-tests-0.088-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-HTTP-Tiny-tests-0.088-5.fc40.noarch.rpm"
+}

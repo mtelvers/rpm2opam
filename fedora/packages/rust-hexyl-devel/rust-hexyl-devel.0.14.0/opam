@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-hexyl-devel-0.14.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-hexyl-devel-0.14.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.66"}
+  "rust-anyhow+default-devel" 
+  "rust-clap+cargo-devel" 
+  "rust-clap+color-devel" 
+  "rust-clap+error-context-devel" 
+  "rust-clap+help-devel" 
+  "rust-clap+std-devel" 
+  "rust-clap+suggestions-devel" 
+  "rust-clap+usage-devel" 
+  "rust-clap+wrap_help-devel" 
+  "rust-clap-devel" 
+  "rust-const_format+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-owo-colors+default-devel" 
+  "rust-supports-color+default-devel" 
+  "rust-terminal_size+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-hexyl-devel-0.14.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-hexyl-devel-0.14.0-2.fc40.noarch.rpm"
+}

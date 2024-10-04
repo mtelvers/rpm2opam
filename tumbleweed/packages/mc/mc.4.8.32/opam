@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mc-4.8.32-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mc-4.8.32-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libext2fs2" 
+  "libgpm2" 
+  "libslang2" 
+  "libssh2-1" 
+  "perl-base" 
+  "permissions" 
+  "python311-base" 
+]
+extra-source "mc-4.8.32-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mc-4.8.32-1.1.x86_64.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-reprex-2.0.2-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-reprex-2.0.2-9.fc40.noarch.rpm"]
+depends: [
+  "R-callr" {>= "3.6.0"}
+  "R-cli" {>= "3.2.0"}
+  "R-clipr" {>= "0.4.0"}
+  "R-core" {= "4.3"}
+  "R-fs" 
+  "R-glue" 
+  "R-knitr" {>= "1.23"}
+  "R-lifecycle" 
+  "R-rlang" {>= "1.0.0"}
+  "R-rmarkdown" 
+  "R-rstudioapi" 
+  "R-withr" {>= "2.3.0"}
+  "pandoc" {>= "1.12.3"}
+]
+extra-source "R-reprex-2.0.2-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-reprex-2.0.2-9.fc40.noarch.rpm"
+}

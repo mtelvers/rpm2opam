@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-beamertheme-focus-2023.210.3.3.0svn62551-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-beamertheme-focus-2023.210.3.3.0svn62551-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-appendixnumberbeamer" 
+  "texlive-bookmark" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-fira" 
+  "texlive-firamath-otf" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-pgf" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+]
+extra-source "texlive-beamertheme-focus-2023.210.3.3.0svn62551-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-beamertheme-focus-2023.210.3.3.0svn62551-slfo.1.1.4.noarch.rpm"
+}

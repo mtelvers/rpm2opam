@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "optee-client-devel-4.2.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "optee-client-devel-4.2.0-1.1.x86_64.rpm"]
+depends: [
+  "libckteec0" {= "4.2.0"}
+  "libseteec0" {= "4.2.0"}
+  "libteeacl0" {= "4.2.0"}
+  "libteec2" {= "4.2.0"}
+  "libuuid-devel" {>= "2.34"}
+  "pkgconf-pkg-config" 
+]
+extra-source "optee-client-devel-4.2.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/optee-client-devel-4.2.0-1.1.x86_64.rpm"
+}

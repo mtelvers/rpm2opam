@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "osbuild-composer-worker-103-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "osbuild-composer-worker-103-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "device-mapper-libs" 
+  "glibc" 
+  "gpgme" 
+  "krb5-libs" 
+  "libcom_err" 
+  "libxcrypt" 
+  "osbuild" {>= "109"}
+  "osbuild-depsolve-dnf" {>= "109"}
+  "osbuild-luks2" {>= "109"}
+  "osbuild-lvm2" {>= "109"}
+  "osbuild-ostree" {>= "109"}
+  "qemu-img" 
+  "systemd" 
+]
+extra-source "osbuild-composer-worker-103-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/osbuild-composer-worker-103-1.fc40.x86_64.rpm"
+}

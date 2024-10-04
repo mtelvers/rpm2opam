@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Glib-devel-1.3294-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Glib-devel-1.3294-2.fc40.x86_64.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-ExtUtils-MakeMaker" 
+  "perl-Glib" {= "1.3294"}
+  "perl-PathTools" 
+  "perl-libs" 
+]
+extra-source "perl-Glib-devel-1.3294-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Glib-devel-1.3294-2.fc40.x86_64.rpm"
+}

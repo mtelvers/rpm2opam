@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lib3270-devel-5.4+git20240817-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lib3270-devel-5.4+git20240817-1.1.x86_64.rpm"]
+depends: [
+  "lib3270-5_4" {= "5.4"}
+  "pkgconf-pkg-config" 
+]
+extra-source "lib3270-devel-5.4+git20240817-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lib3270-devel-5.4+git20240817-1.1.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "smartmontools-selinux-7.4-6.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "smartmontools-selinux-7.4-6.el10.noarch.rpm"]
+depends: [
+  "bash" 
+  "libselinux-utils" 
+  "policycoreutils" 
+  "selinux-policy" {>= "40.13.6"}
+  "selinux-policy-targeted" 
+]
+extra-source "smartmontools-selinux-7.4-6.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/smartmontools-selinux-7.4-6.el10.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "light-locker-1.9.0-1.20.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "light-locker-1.9.0-1.20.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libXext6" 
+  "libXss1" 
+  "libcairo2" 
+  "libdbus-1-3" 
+  "libdbus-glib-1-2" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+  "libsystemd0" 
+  "lightdm" {>= "1.7.10"}
+]
+extra-source "light-locker-1.9.0-1.20.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/light-locker-1.9.0-1.20.x86_64.rpm"
+}

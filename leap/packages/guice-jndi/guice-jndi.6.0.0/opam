@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "guice-jndi-6.0.0-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "guice-jndi-6.0.0-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "google-guice" {= "6.0.0"}
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "guice-jndi-6.0.0-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/guice-jndi-6.0.0-slfo.1.1.3.noarch.rpm"
+}

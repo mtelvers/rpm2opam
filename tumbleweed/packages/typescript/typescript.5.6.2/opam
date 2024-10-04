@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "typescript-5.6.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "typescript-5.6.2-1.1.noarch.rpm"]
+depends: [
+  "nodejs-common" 
+  "nodejs-default" {>= "14.17.0"}
+]
+extra-source "typescript-5.6.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/typescript-5.6.2-1.1.noarch.rpm"
+}

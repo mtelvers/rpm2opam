@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-autodie-2.37-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-autodie-2.37-3.fc40.noarch.rpm"]
+depends: [
+  "perl-B" 
+  "perl-Carp" 
+  "perl-Exporter" {>= "5.57"}
+  "perl-Fcntl" 
+  "perl-IPC-System-Simple" {>= "0.12"}
+  "perl-POSIX" 
+  "perl-Scalar-List-Utils" 
+  "perl-Tie-RefHash" 
+  "perl-constant" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-overload" 
+  "perl-parent" 
+]
+extra-source "perl-autodie-2.37-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-autodie-2.37-3.fc40.noarch.rpm"
+}

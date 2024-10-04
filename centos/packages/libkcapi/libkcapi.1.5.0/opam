@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libkcapi-1.5.0-2.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libkcapi-1.5.0-2.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "systemd" 
+]
+extra-source "libkcapi-1.5.0-2.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/libkcapi-1.5.0-2.el10.x86_64.rpm"
+}

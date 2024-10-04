@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-certvalidator-0.11.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-certvalidator-0.11.1-1.1.noarch.rpm"]
+depends: [
+  "python311-asn1crypto" {>= "0.18.1"}
+  "python311-base" {= "3.11"}
+  "python311-oscrypto" {>= "0.16.1"}
+]
+extra-source "python311-certvalidator-0.11.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-certvalidator-0.11.1-1.1.noarch.rpm"
+}

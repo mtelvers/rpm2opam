@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-hvplot-0.11.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-hvplot-0.11.0-1.1.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-bokeh" {>= "3.1"}
+  "python310-colorcet" {>= "2"}
+  "python310-holoviews" {>= "1.19.0"}
+  "python310-numpy" {>= "1.21"}
+  "python310-packaging" 
+  "python310-pandas" {>= "1.3"}
+  "python310-panel" {>= "1.0"}
+  "python310-param" 
+  "update-alternatives" 
+]
+extra-source "python310-hvplot-0.11.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-hvplot-0.11.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-prost-derive0.8-devel-0.8.0-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-prost-derive0.8-devel-0.8.0-5.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-anyhow+default-devel" 
+  "rust-itertools+default-devel" 
+  "rust-proc-macro2+default-devel" 
+  "rust-quote+default-devel" 
+  "rust-syn+default-devel" 
+  "rust-syn+extra-traits-devel" 
+]
+extra-source "rust-prost-derive0.8-devel-0.8.0-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-prost-derive0.8-devel-0.8.0-5.fc40.noarch.rpm"
+}

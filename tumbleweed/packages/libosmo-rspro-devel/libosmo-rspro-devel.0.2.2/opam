@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libosmo-rspro-devel-0.2.2-1.26.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libosmo-rspro-devel-0.2.2-1.26.x86_64.rpm"]
+depends: [
+  "libosmo-rspro1" {= "0.2.2"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libosmo-rspro-devel-0.2.2-1.26.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libosmo-rspro-devel-0.2.2-1.26.x86_64.rpm"
+}

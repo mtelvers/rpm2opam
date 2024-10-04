@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "junit5-guide-5.10.2-slfo.1.1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "junit5-guide-5.10.2-slfo.1.1.2.noarch.rpm"]
+depends: [
+  "junit5-javadoc" {= "5.10.2"}
+]
+extra-source "junit5-guide-5.10.2-slfo.1.1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/junit5-guide-5.10.2-slfo.1.1.2.noarch.rpm"
+}

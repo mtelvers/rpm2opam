@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-keyring-pam-32bit-46.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-keyring-pam-32bit-46.2-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "gnome-keyring-pam" {= "46.2"}
+  "libselinux1-32bit" 
+  "pam-32bit" 
+]
+extra-source "gnome-keyring-pam-32bit-46.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnome-keyring-pam-32bit-46.2-1.1.x86_64.rpm"
+}

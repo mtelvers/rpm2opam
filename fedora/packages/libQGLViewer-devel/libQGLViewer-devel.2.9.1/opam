@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libQGLViewer-devel-2.9.1-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libQGLViewer-devel-2.9.1-4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQGLViewer" {= "2.9.1"}
+  "libgcc" 
+  "libglvnd-glx" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-devel" 
+  "qt5-qtbase-gui" 
+  "qt5-qttools-devel" 
+]
+extra-source "libQGLViewer-devel-2.9.1-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libQGLViewer-devel-2.9.1-4.fc40.x86_64.rpm"
+}

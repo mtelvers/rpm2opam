@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "open-vm-tools-12.3.5-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "open-vm-tools-12.3.5-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "fuse3" 
+  "fuse3-libs" 
+  "glib2" 
+  "glibc" 
+  "grep" 
+  "iproute" 
+  "libdrm" 
+  "libgcc" 
+  "libmspack" 
+  "libtirpc" 
+  "libxml2" 
+  "openssl-libs" 
+  "pciutils" 
+  "sed" 
+  "systemd" 
+  "systemd-libs" 
+  "tar" 
+  "util-linux" 
+  "which" 
+  "xmlsec1" 
+  "xmlsec1-openssl" 
+]
+extra-source "open-vm-tools-12.3.5-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/open-vm-tools-12.3.5-3.fc40.x86_64.rpm"
+}

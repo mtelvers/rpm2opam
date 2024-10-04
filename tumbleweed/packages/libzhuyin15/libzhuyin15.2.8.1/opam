@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libzhuyin15-2.8.1-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libzhuyin15-2.8.1-1.8.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcc_s1" 
+  "libkyotocabinet16" 
+  "libpinyin-data" 
+  "libstdc++6" 
+]
+extra-source "libzhuyin15-2.8.1-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libzhuyin15-2.8.1-1.8.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kawa-3.1.1-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kawa-3.1.1-19.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "jakarta-servlet" 
+  "java-11-openjdk-headless" 
+  "ncurses-libs" 
+  "readline" 
+]
+extra-source "kawa-3.1.1-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kawa-3.1.1-19.fc40.x86_64.rpm"
+}

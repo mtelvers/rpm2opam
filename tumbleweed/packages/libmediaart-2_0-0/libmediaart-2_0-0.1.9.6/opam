@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmediaart-2_0-0-1.9.6-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmediaart-2_0-0-1.9.6-1.7.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgdk_pixbuf-2_0-0" 
+]
+extra-source "libmediaart-2_0-0-1.9.6-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmediaart-2_0-0-1.9.6-1.7.x86_64.rpm"
+}

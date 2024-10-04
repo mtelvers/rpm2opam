@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-x-net-devel-0.21.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-x-net-devel-0.21.0-1.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-x-crypto-devel" 
+  "golang-x-sys-devel" 
+  "golang-x-term-devel" 
+  "golang-x-text-devel" 
+]
+extra-source "golang-x-net-devel-0.21.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-x-net-devel-0.21.0-1.fc40.noarch.rpm"
+}

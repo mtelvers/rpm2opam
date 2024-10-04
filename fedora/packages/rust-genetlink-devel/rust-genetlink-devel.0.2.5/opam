@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-genetlink-devel-0.2.5-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-genetlink-devel-0.2.5-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-futures+default-devel" 
+  "rust-log+default-devel" 
+  "rust-netlink-packet-core+default-devel" 
+  "rust-netlink-packet-generic+default-devel" 
+  "rust-netlink-packet-utils+default-devel" 
+  "rust-netlink-proto-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-genetlink-devel-0.2.5-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-genetlink-devel-0.2.5-3.fc40.noarch.rpm"
+}

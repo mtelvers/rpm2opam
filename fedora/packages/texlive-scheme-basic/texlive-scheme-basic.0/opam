@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-scheme-basic-svn54191-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-scheme-basic-svn54191-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-collection-basic" 
+  "texlive-collection-latex" 
+]
+extra-source "texlive-scheme-basic-svn54191-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-scheme-basic-svn54191-71.fc40.noarch.rpm"
+}

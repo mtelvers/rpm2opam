@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "usbauth-1.0.5-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "usbauth-1.0.5-4.fc40.x86_64.rpm"]
+depends: [
+  "dbus-libs" 
+  "glibc" 
+  "libusbauth-configparser" 
+  "systemd" 
+  "systemd-libs" 
+  "systemd-udev" 
+]
+extra-source "usbauth-1.0.5-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/usbauth-1.0.5-4.fc40.x86_64.rpm"
+}

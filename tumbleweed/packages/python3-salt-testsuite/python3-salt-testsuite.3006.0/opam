@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-salt-testsuite-3006.0-24.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-salt-testsuite-3006.0-24.1.x86_64.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "docker" 
+  "git" 
+  "openssh" 
+  "python311-Genshi" 
+  "python311-Mako" 
+  "python311-base" {= "3.11"}
+  "python311-boto3" 
+  "python311-docker" 
+  "python311-pip" 
+  "python311-pygit2" 
+  "python311-pytest" {>= "7.0.1"}
+  "python311-pytest-httpserver" 
+  "python311-pytest-salt-factories" {>= "1.0.0"}
+  "python311-pytest-subtests" 
+  "python311-pytest-testinfra" 
+  "python311-yamllint" 
+  "salt" {= "3006.0"}
+]
+extra-source "python3-salt-testsuite-3006.0-24.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python3-salt-testsuite-3006.0-24.1.x86_64.rpm"
+}

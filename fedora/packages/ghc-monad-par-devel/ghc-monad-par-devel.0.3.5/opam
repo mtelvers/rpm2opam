@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-monad-par-devel-0.3.5-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-monad-par-devel-0.3.5-20.fc40.x86_64.rpm"]
+depends: [
+  "ghc-abstract-deque-devel" 
+  "ghc-abstract-par-devel" 
+  "ghc-array-devel" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-deepseq-devel" 
+  "ghc-monad-par" {= "0.3.5"}
+  "ghc-monad-par-extras-devel" 
+  "ghc-mtl-devel" 
+  "ghc-mwc-random-devel" 
+  "ghc-parallel-devel" 
+]
+extra-source "ghc-monad-par-devel-0.3.5-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-monad-par-devel-0.3.5-20.fc40.x86_64.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Daemon-Generic-0.85-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Daemon-Generic-0.85-22.fc40.noarch.rpm"]
+depends: [
+  "perl-AnyEvent" 
+  "perl-Carp" 
+  "perl-Event" 
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-File-Flock" 
+  "perl-File-Slurp" 
+  "perl-Getopt-Long" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Text-Tabs+Wrap" 
+  "perl-Time-HiRes" 
+  "perl-libs" 
+]
+extra-source "perl-Daemon-Generic-0.85-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Daemon-Generic-0.85-22.fc40.noarch.rpm"
+}

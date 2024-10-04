@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ant-proguard-6.2.0-1.25.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ant-proguard-6.2.0-1.25.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "proguard" {= "6.2.0"}
+]
+extra-source "ant-proguard-6.2.0-1.25.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ant-proguard-6.2.0-1.25.noarch.rpm"
+}

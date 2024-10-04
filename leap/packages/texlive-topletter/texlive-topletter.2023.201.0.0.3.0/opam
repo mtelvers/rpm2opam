@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-topletter-2023.201.0.0.3.0svn48182-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-topletter-2023.201.0.0.3.0svn48182-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-babel" 
+  "texlive-changepage" 
+  "texlive-fancyhdr" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-oberdiek" 
+  "texlive-psnfss" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-setspace" 
+]
+extra-source "texlive-topletter-2023.201.0.0.3.0svn48182-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-topletter-2023.201.0.0.3.0svn48182-slfo.1.1.4.noarch.rpm"
+}

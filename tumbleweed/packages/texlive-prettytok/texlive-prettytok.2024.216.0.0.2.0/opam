@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-prettytok-2024.216.0.0.2.0svn66884-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-prettytok-2024.216.0.0.2.0svn66884-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "python311-base" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-filecontentsdef" {>= "2024"}
+  "texlive-filesystem" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-l3kernel" {>= "2024"}
+  "texlive-l3packages" 
+  "texlive-precattl" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+]
+extra-source "texlive-prettytok-2024.216.0.0.2.0svn66884-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-prettytok-2024.216.0.0.2.0svn66884-55.1.noarch.rpm"
+}

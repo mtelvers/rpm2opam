@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtk2-metatheme-arc-20221218-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk2-metatheme-arc-20221218-1.4.noarch.rpm"]
+depends: [
+  "gtk2-engine-murrine" 
+  "metatheme-arc-common" {= "20221218"}
+]
+extra-source "gtk2-metatheme-arc-20221218-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gtk2-metatheme-arc-20221218-1.4.noarch.rpm"
+}

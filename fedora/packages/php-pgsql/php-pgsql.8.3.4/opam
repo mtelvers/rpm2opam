@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-pgsql-8.3.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-pgsql-8.3.4-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libpq" 
+  "php-pdo" {= "8.3.4"}
+]
+extra-source "php-pgsql-8.3.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-pgsql-8.3.4-1.fc40.x86_64.rpm"
+}

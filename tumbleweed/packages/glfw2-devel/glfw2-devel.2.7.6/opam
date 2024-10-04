@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glfw2-devel-2.7.6-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glfw2-devel-2.7.6-3.3.x86_64.rpm"]
+depends: [
+  "Mesa-libGL-devel" 
+  "libX11-devel" 
+  "libXrandr-devel" 
+  "libglfw2" {= "2.7.6"}
+  "pkgconf-pkg-config" 
+]
+extra-source "glfw2-devel-2.7.6-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/glfw2-devel-2.7.6-3.3.x86_64.rpm"
+}

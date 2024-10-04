@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmumps-ptscotch5_3_5-openmpi4-compat-5.3.5-5.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmumps-ptscotch5_3_5-openmpi4-compat-5.3.5-5.3.x86_64.rpm"]
+depends: [
+  "libmumps-scotch5_3_5" {= "5.3.5"}
+]
+extra-source "libmumps-ptscotch5_3_5-openmpi4-compat-5.3.5-5.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmumps-ptscotch5_3_5-openmpi4-compat-5.3.5-5.3.x86_64.rpm"
+}

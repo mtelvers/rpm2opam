@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Module-Build-Tiny-0.039-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Build-Tiny-0.039-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-ExtUtils-Config" {>= "0.3"}
+  "perl-ExtUtils-Helpers" {>= "0.20"}
+  "perl-ExtUtils-InstallPaths" {>= "0.2"}
+  "perl-base" {>= "2.36"}
+]
+extra-source "perl-Module-Build-Tiny-0.039-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/perl-Module-Build-Tiny-0.039-slfo.1.1.3.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "opal-3.10.11-17.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opal-3.10.11-17.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gsm" 
+  "libgcc" 
+  "libstdc++" 
+  "libtheora" 
+  "openssl-libs" 
+  "ptlib" 
+  "speex" 
+  "speexdsp" 
+]
+extra-source "opal-3.10.11-17.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/opal-3.10.11-17.fc40.x86_64.rpm"
+}

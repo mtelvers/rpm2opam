@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pipx-1.4.3-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pipx-1.4.3-3.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-argcomplete" {>= "1.9.4"}
+  "python3-packaging" {>= "20"}
+  "python3-platformdirs" {>= "2.1"}
+]
+extra-source "pipx-1.4.3-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pipx-1.4.3-3.fc40.noarch.rpm"
+}

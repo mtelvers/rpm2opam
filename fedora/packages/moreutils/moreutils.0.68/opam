@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "moreutils-0.68-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "moreutils-0.68-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-File-Basename" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-Getopt-Std" 
+  "perl-IO" 
+  "perl-IPC-Run" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Time-Duration" 
+  "perl-Time-HiRes" 
+  "perl-TimeDate" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "moreutils-0.68-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/moreutils-0.68-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libboost_coroutine1_86_0-devel-1.86.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libboost_coroutine1_86_0-devel-1.86.0-1.1.x86_64.rpm"]
+depends: [
+  "libboost_chrono1_86_0-devel" {= "1.86.0"}
+  "libboost_context1_86_0-devel" {= "1.86.0"}
+  "libboost_coroutine1_86_0" {= "1.86.0"}
+  "libboost_headers1_86_0-devel" {= "1.86.0"}
+  "libboost_thread1_86_0-devel" {= "1.86.0"}
+  "libstdc++-devel" 
+]
+extra-source "libboost_coroutine1_86_0-devel-1.86.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libboost_coroutine1_86_0-devel-1.86.0-1.1.x86_64.rpm"
+}

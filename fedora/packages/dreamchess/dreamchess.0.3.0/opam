@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dreamchess-0.3.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dreamchess-0.3.0-1.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "SDL2_image" 
+  "SDL2_mixer" 
+  "dreamchess-data" {= "0.3.0"}
+  "dreamchess-engine" 
+  "expat" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libGLEW" 
+  "libglvnd-glx" 
+  "mesa-libGLU" 
+]
+extra-source "dreamchess-0.3.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dreamchess-0.3.0-1.fc40.x86_64.rpm"
+}

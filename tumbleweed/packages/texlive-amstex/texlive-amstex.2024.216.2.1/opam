@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-amstex-2024.216.2.01svn70015-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-amstex-2024.216.2.01svn70015-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-amsfonts" {>= "2024"}
+  "texlive-amstex-bin" {>= "2024"}
+  "texlive-cm" {>= "2024"}
+  "texlive-filesystem" {>= "2024"}
+  "texlive-hyphen-base" 
+  "texlive-knuth-lib" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-pdftex" {>= "2024"}
+  "texlive-plain" {>= "2024"}
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tex" {>= "2024"}
+]
+extra-source "texlive-amstex-2024.216.2.01svn70015-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-amstex-2024.216.2.01svn70015-57.1.noarch.rpm"
+}

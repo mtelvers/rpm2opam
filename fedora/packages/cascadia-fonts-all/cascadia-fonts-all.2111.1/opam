@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cascadia-fonts-all-2111.01-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cascadia-fonts-all-2111.01-8.fc40.noarch.rpm"]
+depends: [
+  "cascadia-code-fonts" 
+  "cascadia-code-pl-fonts" 
+  "cascadia-mono-fonts" 
+  "cascadia-mono-pl-fonts" 
+]
+extra-source "cascadia-fonts-all-2111.01-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cascadia-fonts-all-2111.01-8.fc40.noarch.rpm"
+}

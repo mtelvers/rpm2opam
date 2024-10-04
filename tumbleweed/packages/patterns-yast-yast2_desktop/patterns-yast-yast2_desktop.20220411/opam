@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "patterns-yast-yast2_desktop-20220411-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "patterns-yast-yast2_desktop-20220411-1.6.x86_64.rpm"]
+depends: [
+  "yast2-country" 
+  "yast2-installation" 
+  "yast2-services-manager" 
+  "yast2-sysconfig" 
+  "yast2-users" 
+]
+extra-source "patterns-yast-yast2_desktop-20220411-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/patterns-yast-yast2_desktop-20220411-1.6.x86_64.rpm"
+}

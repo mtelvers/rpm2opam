@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "opensm-libs-3.3.24-10.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opensm-libs-3.3.24-10.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libibumad" 
+]
+extra-source "opensm-libs-3.3.24-10.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/opensm-libs-3.3.24-10.el10.x86_64.rpm"
+}

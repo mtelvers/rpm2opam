@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gstreamer-devel-1.24.5-slfo.1.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gstreamer-devel-1.24.5-slfo.1.1.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2-devel" 
+  "gstreamer" {= "1.24.5"}
+  "gstreamer-utils" {= "1.24.5"}
+  "libdw-devel" 
+  "libgstreamer-1_0-0" {= "1.24.5"}
+  "libunwind-devel" 
+  "pkgconf-pkg-config" 
+  "python311-base" 
+  "typelib-1_0-Gst-1_0" {= "1.24.5"}
+]
+extra-source "gstreamer-devel-1.24.5-slfo.1.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/gstreamer-devel-1.24.5-slfo.1.1.2.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nfs-ganesha-utils-5.7-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nfs-ganesha-utils-5.7-6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libntirpc" 
+  "nfs-ganesha" 
+  "python3" 
+  "python3-dbus" 
+  "python3-gobject" 
+  "python3-pyparsing" 
+]
+extra-source "nfs-ganesha-utils-5.7-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nfs-ganesha-utils-5.7-6.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "stgit-2.4.12-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "stgit-2.4.12-1.1.x86_64.rpm"]
+depends: [
+  "git-core" 
+  "glibc" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libz-ng-compat1" 
+]
+extra-source "stgit-2.4.12-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/stgit-2.4.12-1.1.x86_64.rpm"
+}

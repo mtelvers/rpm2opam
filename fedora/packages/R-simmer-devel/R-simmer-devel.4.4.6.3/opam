@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-simmer-devel-4.4.6.3-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-simmer-devel-4.4.6.3-3.fc40.x86_64.rpm"]
+depends: [
+  "R-core-devel" 
+  "R-simmer" {= "4.4.6.3"}
+]
+extra-source "R-simmer-devel-4.4.6.3-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-simmer-devel-4.4.6.3-3.fc40.x86_64.rpm"
+}

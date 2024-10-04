@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "NetworkManager-dns-dnsmasq-1.0-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "NetworkManager-dns-dnsmasq-1.0-1.4.noarch.rpm"]
+depends: [
+  "NetworkManager" 
+  "bash" 
+]
+extra-source "NetworkManager-dns-dnsmasq-1.0-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/NetworkManager-dns-dnsmasq-1.0-1.4.noarch.rpm"
+}

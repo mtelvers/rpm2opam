@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bash-lang-5.2.15-slfo.1.1.21.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bash-lang-5.2.15-slfo.1.1.21.noarch.rpm"]
+depends: [
+  "bash" {= "5.2.15"}
+]
+extra-source "bash-lang-5.2.15-slfo.1.1.21.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/bash-lang-5.2.15-slfo.1.1.21.noarch.rpm"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-luatex-2023.201.svn66546-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-luatex-2023.201.svn66546-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-cm" {>= "2023"}
+  "texlive-etex" {>= "2023"}
+  "texlive-filesystem" {>= "2023"}
+  "texlive-hyph-utf8" {>= "2023"}
+  "texlive-hyphen-base" 
+  "texlive-knuth-lib" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-manfnt" {>= "2023"}
+  "texlive-plain" {>= "2023"}
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-tex-ini-files" 
+  "texlive-unicode-data" 
+]
+extra-source "texlive-luatex-2023.201.svn66546-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-luatex-2023.201.svn66546-slfo.1.1.4.noarch.rpm"
+}

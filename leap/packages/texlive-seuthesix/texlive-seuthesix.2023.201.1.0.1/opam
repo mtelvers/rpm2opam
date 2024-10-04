@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-seuthesix-2023.201.1.0.1svn40088-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-seuthesix-2023.201.1.0.1svn40088-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-algorithms" 
+  "texlive-amscls" 
+  "texlive-amsfonts" 
+  "texlive-amsmath" 
+  "texlive-caption" 
+  "texlive-ctex" 
+  "texlive-eso-pic" 
+  "texlive-fancyhdr" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-natbib" 
+  "texlive-nomencl" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-tocloft" 
+  "texlive-tools" 
+]
+extra-source "texlive-seuthesix-2023.201.1.0.1svn40088-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-seuthesix-2023.201.1.0.1svn40088-slfo.1.1.4.noarch.rpm"
+}

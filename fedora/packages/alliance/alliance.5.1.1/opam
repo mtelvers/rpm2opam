@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "alliance-5.1.1-33.20160506gitd8c05cd.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "alliance-5.1.1-33.20160506gitd8c05cd.fc40.x86_64.rpm"]
+depends: [
+  "alliance-libs" {= "5.1.1"}
+  "bash" 
+  "glibc" 
+  "libX11" 
+  "libXpm" 
+  "libXt" 
+  "libgcc" 
+  "libstdc++" 
+  "motif" 
+  "xorg-x11-fonts-misc" 
+]
+extra-source "alliance-5.1.1-33.20160506gitd8c05cd.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/alliance-5.1.1-33.20160506gitd8c05cd.fc40.x86_64.rpm"
+}

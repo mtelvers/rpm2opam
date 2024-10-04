@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-power-manager-lang-43.0-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-power-manager-lang-43.0-1.6.noarch.rpm"]
+depends: [
+  "gnome-power-manager" {= "43.0"}
+]
+extra-source "gnome-power-manager-lang-43.0-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-power-manager-lang-43.0-1.6.noarch.rpm"
+}

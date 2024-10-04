@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Graph-0.9729-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Graph-0.9729-1.1.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Heap" {>= "0.80"}
+  "perl-Scalar-List-Utils" {>= "1.45"}
+  "perl-Set-Object" {>= "1.40"}
+]
+extra-source "perl-Graph-0.9729-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Graph-0.9729-1.1.noarch.rpm"
+}

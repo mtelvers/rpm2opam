@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-xfakebold-2024.216.0.0.10svn68929-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-xfakebold-2024.216.0.0.10svn68929-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-filesystem" {>= "2024"}
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-pdfrender" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-xkeyval" 
+]
+extra-source "texlive-xfakebold-2024.216.0.0.10svn68929-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-xfakebold-2024.216.0.0.10svn68929-55.1.noarch.rpm"
+}

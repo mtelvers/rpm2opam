@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CPAN-Plugin-Sysdeps-0.76-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CPAN-Plugin-Sysdeps-0.76-1.fc40.noarch.rpm"]
+depends: [
+  "dnf" 
+  "perl-CPAN" 
+  "perl-Data-Dumper" 
+  "perl-Getopt-Long" 
+  "perl-IPC-Open3" 
+  "perl-Scalar-List-Utils" 
+  "perl-Symbol" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "rpm" 
+]
+extra-source "perl-CPAN-Plugin-Sysdeps-0.76-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CPAN-Plugin-Sysdeps-0.76-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Module-ScanDeps-1.35-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-ScanDeps-1.35-3.fc40.noarch.rpm"]
+depends: [
+  "perl-B" 
+  "perl-Data-Dumper" 
+  "perl-DynaLoader" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-ExtUtils-MakeMaker" 
+  "perl-File-Basename" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-FileHandle" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" 
+  "perl-Module-Metadata" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-Text-ParseWords" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.8.1"}
+  "perl-subs" 
+  "perl-vars" 
+  "perl-version" 
+]
+extra-source "perl-Module-ScanDeps-1.35-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Module-ScanDeps-1.35-3.fc40.noarch.rpm"
+}

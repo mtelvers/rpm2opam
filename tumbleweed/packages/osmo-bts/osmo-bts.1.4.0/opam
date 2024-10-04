@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "osmo-bts-1.4.0-1.15.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "osmo-bts-1.4.0-1.15.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libosmoabis13" 
+  "libosmocodec4" 
+  "libosmocoding0" 
+  "libosmocore21" 
+  "libosmoctrl0" 
+  "libosmogsm20" 
+  "libosmotrau2" 
+  "libosmovty13" 
+  "libtalloc2" 
+]
+extra-source "osmo-bts-1.4.0-1.15.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/osmo-bts-1.4.0-1.15.x86_64.rpm"
+}

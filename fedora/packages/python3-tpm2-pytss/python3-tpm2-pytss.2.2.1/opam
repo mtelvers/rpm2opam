@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-tpm2-pytss-2.2.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-tpm2-pytss-2.2.1-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "python3" {= "3.12"}
+  "python3-asn1crypto" 
+  "python3-cffi" {>= "1"}
+  "python3-cryptography" {>= "3"}
+  "python3-packaging" 
+  "python3-pyyaml" 
+  "tpm2-tss" 
+  "tpm2-tss-fapi" 
+]
+extra-source "python3-tpm2-pytss-2.2.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-tpm2-pytss-2.2.1-1.fc40.x86_64.rpm"
+}

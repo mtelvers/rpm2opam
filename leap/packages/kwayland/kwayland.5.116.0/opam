@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kwayland-5.116.0-lp160.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kwayland-5.116.0-lp160.1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5WaylandClient5" 
+  "libglvnd" 
+  "libstdc++6" 
+  "libwayland-client0" 
+  "libwayland-server0" 
+]
+extra-source "kwayland-5.116.0-lp160.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/kwayland-5.116.0-lp160.1.2.x86_64.rpm"
+}

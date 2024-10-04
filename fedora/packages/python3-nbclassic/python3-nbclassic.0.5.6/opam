@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-nbclassic-0.5.6-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-nbclassic-0.5.6-5.fc40.noarch.rpm"]
+depends: [
+  "fontawesome4-fonts" 
+  "fontawesome4-fonts-web" 
+  "hicolor-icon-theme" 
+  "python-jupyter-filesystem" 
+  "python3" 
+  "python3-argon2-cffi" 
+  "python3-ipykernel" 
+  "python3-ipython_genutils" 
+  "python3-jinja2" 
+  "python3-jupyter-client" {>= "6.1.1"}
+  "python3-jupyter-core" {>= "4.6.1"}
+  "python3-jupyter-server" {>= "1.8"}
+  "python3-nbconvert" {>= "5"}
+  "python3-nbformat" 
+  "python3-nest-asyncio" {>= "1.5"}
+  "python3-notebook-shim" {>= "0.2.3"}
+  "python3-prometheus_client" 
+  "python3-send2trash" {>= "1.8"}
+  "python3-terminado" {>= "0.8.3"}
+  "python3-tornado" {>= "6.1"}
+  "python3-traitlets" {>= "4.2.1"}
+  "python3-zmq" {>= "17"}
+]
+extra-source "python3-nbclassic-0.5.6-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-nbclassic-0.5.6-5.fc40.noarch.rpm"
+}

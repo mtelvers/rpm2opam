@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libical-glib3-3.0.18-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libical-glib3-3.0.18-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libical3" 
+]
+extra-source "libical-glib3-3.0.18-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libical-glib3-3.0.18-1.1.x86_64.rpm"
+}

@@ -1,0 +1,53 @@
+opam-version: "2.0"
+build: [
+  ["/usr/bin/zypper" "-n" "install" "ruby3.2-rubygem-agama-yast-9.devel725-lp160.1.1.x86_64.rpm"]
+]
+remove: [
+  ["/usr/bin/zypper" "-n" "remove" "ruby3.2-rubygem-agama-yast"]
+]
+depends: [
+  "bcache-tools" 
+  "btrfsprogs" 
+  "cryptsetup" 
+  "dbus-1-daemon" 
+  "dmraid" 
+  "dosfstools" 
+  "e2fsprogs" 
+  "exfatprogs" 
+  "fcoe-utils" 
+  "fde-tools" 
+  "jfsutils" 
+  "lvm2" 
+  "mdadm" 
+  "multipath-tools" 
+  "nfs-client" 
+  "ntfs-3g" 
+  "ntfsprogs" 
+  "nvme-cli" 
+  "open-iscsi" 
+  "quota" 
+  "ruby3.2" {= "3.2.2"}
+  "ruby3.2-rubygem-cfa" {>= "1.0.2"}
+  "ruby3.2-rubygem-cfa_grub2" {>= "2.0.0"}
+  "ruby3.2-rubygem-cheetah" {>= "1.0.0"}
+  "ruby3.2-rubygem-eventmachine" {>= "1.2.7"}
+  "ruby3.2-rubygem-fast_gettext" {>= "2.3.0"}
+  "ruby3.2-rubygem-nokogiri" {>= "1.15.5"}
+  "ruby3.2-rubygem-ruby-dbus" {>= "0.23.1"}
+  "snapper" 
+  "suseconnect-ruby-bindings" 
+  "udftools" 
+  "update-alternatives" 
+  "util-linux-systemd" 
+  "xfsprogs" 
+  "yast2" {>= "4.6.2"}
+  "yast2-bootloader" 
+  "yast2-country" 
+  "yast2-hardware-detection" 
+  "yast2-schema" 
+  "yast2-storage-ng" {>= "5.0.17"}
+  "yast2-users" 
+]
+extra-source "ruby3.2-rubygem-agama-yast-9.devel725-lp160.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/ruby3.2-rubygem-agama-yast-9.devel725-lp160.1.1.x86_64.rpm"
+}

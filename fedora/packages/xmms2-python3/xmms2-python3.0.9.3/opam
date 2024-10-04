@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xmms2-python3-0.9.3-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xmms2-python3-0.9.3-4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "python3" {= "3.12"}
+  "xmms2" 
+]
+extra-source "xmms2-python3-0.9.3-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xmms2-python3-0.9.3-4.fc40.x86_64.rpm"
+}

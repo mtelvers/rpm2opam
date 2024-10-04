@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "firewall-applet-2.1.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "firewall-applet-2.1.1-1.fc40.noarch.rpm"]
+depends: [
+  "NetworkManager-libnm" 
+  "dbus-x11" 
+  "firewall-config" {= "2.1.1"}
+  "firewalld" {= "2.1.1"}
+  "hicolor-icon-theme" 
+  "libnotify" 
+  "python3" 
+  "python3-firewall" {= "2.1.1"}
+  "python3-gobject" 
+  "python3-pyqt6-base" 
+]
+extra-source "firewall-applet-2.1.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/firewall-applet-2.1.1-1.fc40.noarch.rpm"
+}

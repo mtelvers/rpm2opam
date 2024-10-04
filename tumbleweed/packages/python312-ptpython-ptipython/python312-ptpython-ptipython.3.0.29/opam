@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-ptpython-ptipython-3.0.29-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-ptpython-ptipython-3.0.29-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-ipython" 
+  "python312-ptpython" 
+]
+extra-source "python312-ptpython-ptipython-3.0.29-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-ptpython-ptipython-3.0.29-1.1.noarch.rpm"
+}

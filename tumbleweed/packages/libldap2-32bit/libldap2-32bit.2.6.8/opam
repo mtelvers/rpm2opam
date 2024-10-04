@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libldap2-32bit-2.6.8-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libldap2-32bit-2.6.8-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libopenssl3-32bit" 
+  "libsasl2-3-32bit" 
+]
+extra-source "libldap2-32bit-2.6.8-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libldap2-32bit-2.6.8-2.1.x86_64.rpm"
+}

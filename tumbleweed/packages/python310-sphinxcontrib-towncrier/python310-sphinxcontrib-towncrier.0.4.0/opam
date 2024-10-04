@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-sphinxcontrib-towncrier-0.4.0a0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-sphinxcontrib-towncrier-0.4.0a0-1.1.noarch.rpm"]
+depends: [
+  "python310-Sphinx" 
+  "python310-base" {= "3.10"}
+  "python310-towncrier" {>= "19.2"}
+]
+extra-source "python310-sphinxcontrib-towncrier-0.4.0a0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-sphinxcontrib-towncrier-0.4.0a0-1.1.noarch.rpm"
+}

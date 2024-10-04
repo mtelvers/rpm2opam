@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "smatch-1.73+20240222-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "smatch-1.73+20240222-1.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libopenssl3" 
+  "libsqlite3-0" 
+  "perl-base" 
+  "python311-base" 
+]
+extra-source "smatch-1.73+20240222-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/smatch-1.73+20240222-1.2.x86_64.rpm"
+}

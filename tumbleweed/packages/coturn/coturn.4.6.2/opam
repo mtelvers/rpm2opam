@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "coturn-4.6.2-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coturn-4.6.2-4.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "libevent-2_1-7" 
+  "libhiredis1_1_0" 
+  "libmariadb3" 
+  "libopenssl3" 
+  "libpq5" 
+  "libsqlite3-0" 
+  "shadow" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "coturn-4.6.2-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/coturn-4.6.2-4.1.x86_64.rpm"
+}

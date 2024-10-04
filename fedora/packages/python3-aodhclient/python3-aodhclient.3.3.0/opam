@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-aodhclient-3.3.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-aodhclient-3.3.0-3.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-keystoneauth1" {>= "1"}
+  "python3-osc-lib" {>= "1.0.1"}
+  "python3-oslo-i18n" {>= "1.5"}
+  "python3-oslo-serialization" {>= "1.4"}
+  "python3-oslo-utils" {>= "2"}
+  "python3-pbr" {>= "1.4"}
+  "python3-pyparsing" 
+]
+extra-source "python3-aodhclient-3.3.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-aodhclient-3.3.0-3.fc40.noarch.rpm"
+}

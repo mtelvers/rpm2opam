@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-smflatex-svn58910-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-smflatex-svn58910-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-ae" 
+  "texlive-amsfonts" 
+  "texlive-amsmath" 
+  "texlive-babel" 
+  "texlive-base" 
+  "texlive-kpathsea" 
+  "texlive-latex" 
+  "texlive-tools" 
+  "texlive-url" 
+  "texlive-xypic" 
+]
+extra-source "texlive-smflatex-svn58910-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-smflatex-svn58910-71.fc40.noarch.rpm"
+}

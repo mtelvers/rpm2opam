@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "util-linux-core-2.40-0.9.rc1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "util-linux-core-2.40-0.9.rc1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libblkid" 
+  "libmount" {= "2.40"}
+  "libselinux" 
+  "libsmartcols" 
+  "libuuid" {= "2.40"}
+  "libxcrypt" 
+  "ncurses-libs" 
+  "systemd-libs" 
+]
+extra-source "util-linux-core-2.40-0.9.rc1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/util-linux-core-2.40-0.9.rc1.fc40.x86_64.rpm"
+}

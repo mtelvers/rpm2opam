@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-SemVer-0.10.0-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-SemVer-0.10.0-1.7.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-base" {>= "0.82"}
+]
+extra-source "perl-SemVer-0.10.0-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-SemVer-0.10.0-1.7.noarch.rpm"
+}

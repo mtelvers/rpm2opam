@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "java-binfmt-misc-1.4-9.17.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "java-binfmt-misc-1.4-9.17.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "desktop-file-utils" 
+  "glibc" 
+  "shared-mime-info" 
+  "systemd" 
+]
+extra-source "java-binfmt-misc-1.4-9.17.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/java-binfmt-misc-1.4-9.17.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "amanith-devel-0.3-54.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "amanith-devel-0.3-54.fc40.x86_64.rpm"]
+depends: [
+  "amanith" {= "0.3"}
+  "glew-devel" 
+]
+extra-source "amanith-devel-0.3-54.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/amanith-devel-0.3-54.fc40.x86_64.rpm"
+}

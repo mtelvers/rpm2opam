@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ftstring-2.13.2-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ftstring-2.13.2-2.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libcairo2" 
+  "libfreetype6" 
+  "libpng16-16" 
+  "librsvg-2-2" 
+]
+extra-source "ftstring-2.13.2-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ftstring-2.13.2-2.2.x86_64.rpm"
+}

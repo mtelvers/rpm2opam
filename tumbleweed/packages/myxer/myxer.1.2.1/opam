@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "myxer-1.2.1~git0.f97f06a-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "myxer-1.2.1~git0.f97f06a-3.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo-gobject2" 
+  "libcairo2" 
+  "libgcc_s1" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+  "libpulse0" 
+]
+extra-source "myxer-1.2.1~git0.f97f06a-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/myxer-1.2.1~git0.f97f06a-3.2.x86_64.rpm"
+}

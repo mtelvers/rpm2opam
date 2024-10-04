@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "krb5-auth-dialog-lang-44.0.alpha1-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "krb5-auth-dialog-lang-44.0.alpha1-1.5.noarch.rpm"]
+depends: [
+  "krb5-auth-dialog" {= "44.0.0"}
+]
+extra-source "krb5-auth-dialog-lang-44.0.alpha1-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/krb5-auth-dialog-lang-44.0.alpha1-1.5.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "afftools-3.7.20-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "afftools-3.7.20-1.fc40.x86_64.rpm"]
+depends: [
+  "afflib" {= "3.7.20"}
+  "expat" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "openssl-libs" 
+]
+extra-source "afftools-3.7.20-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/afftools-3.7.20-1.fc40.x86_64.rpm"
+}

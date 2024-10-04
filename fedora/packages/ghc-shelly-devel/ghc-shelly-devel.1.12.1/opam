@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-shelly-devel-1.12.1-15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-shelly-devel-1.12.1-15.fc40.x86_64.rpm"]
+depends: [
+  "ghc-async-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-directory-devel" 
+  "ghc-enclosed-exceptions-devel" 
+  "ghc-exceptions-devel" 
+  "ghc-filepath-devel" 
+  "ghc-lifted-async-devel" 
+  "ghc-lifted-base-devel" 
+  "ghc-monad-control-devel" 
+  "ghc-mtl-devel" 
+  "ghc-process-devel" 
+  "ghc-shelly" {= "1.12.1"}
+  "ghc-text-devel" 
+  "ghc-time-devel" 
+  "ghc-transformers-base-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unix-compat-devel" 
+]
+extra-source "ghc-shelly-devel-1.12.1-15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-shelly-devel-1.12.1-15.fc40.x86_64.rpm"
+}

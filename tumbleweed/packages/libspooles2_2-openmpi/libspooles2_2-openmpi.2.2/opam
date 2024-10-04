@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libspooles2_2-openmpi-2.2-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libspooles2_2-openmpi-2.2-2.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "openmpi4-libs" 
+]
+extra-source "libspooles2_2-openmpi-2.2-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libspooles2_2-openmpi-2.2-2.3.x86_64.rpm"
+}

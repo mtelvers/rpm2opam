@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "remmina-devel-1.4.35-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "remmina-devel-1.4.35-2.2.x86_64.rpm"]
+depends: [
+  "pkgconf-pkg-config" 
+  "remmina" {= "1.4.35"}
+]
+extra-source "remmina-devel-1.4.35-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/remmina-devel-1.4.35-2.2.x86_64.rpm"
+}

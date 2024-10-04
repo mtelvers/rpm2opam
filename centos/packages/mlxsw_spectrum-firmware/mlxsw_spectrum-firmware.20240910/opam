@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mlxsw_spectrum-firmware-20240910-7.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mlxsw_spectrum-firmware-20240910-7.el10.noarch.rpm"]
+depends: [
+  "linux-firmware-whence" 
+]
+extra-source "mlxsw_spectrum-firmware-20240910-7.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/mlxsw_spectrum-firmware-20240910-7.el10.noarch.rpm"
+}

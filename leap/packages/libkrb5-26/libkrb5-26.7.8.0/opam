@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libkrb5-26-7.8.0-slfo.1.1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libkrb5-26-7.8.0-slfo.1.1.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libasn1-8" 
+  "libcom_err2" 
+  "libcrypt1" 
+  "libhcrypto4" 
+  "libheimbase1" 
+  "libhx509-5" 
+  "libroken18" 
+  "libsqlite3-0" 
+  "libwind0" 
+]
+extra-source "libkrb5-26-7.8.0-slfo.1.1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libkrb5-26-7.8.0-slfo.1.1.6.x86_64.rpm"
+}

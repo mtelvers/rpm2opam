@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-IO-Interface-1.09-30.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-IO-Interface-1.09-30.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-Carp" 
+  "perl-DynaLoader" 
+  "perl-Exporter" 
+  "perl-IO" 
+  "perl-libs" 
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-IO-Interface-1.09-30.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-IO-Interface-1.09-30.fc40.x86_64.rpm"
+}

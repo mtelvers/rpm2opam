@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "linux32-1.0-501.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "linux32-1.0-501.13.x86_64.rpm"]
+depends: [
+  "util-linux" {>= "2.16"}
+]
+extra-source "linux32-1.0-501.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/linux32-1.0-501.13.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "desktop-data-openSUSE-15.2.20200107-2.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "desktop-data-openSUSE-15.2.20200107-2.12.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "hicolor-icon-theme" 
+  "wallpaper-branding-openSUSE" {= "84.87.20240405"}
+]
+extra-source "desktop-data-openSUSE-15.2.20200107-2.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/desktop-data-openSUSE-15.2.20200107-2.12.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "subscription-manager-plugin-ostree-1.29.40-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "subscription-manager-plugin-ostree-1.29.40-2.fc40.x86_64.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-gobject-base" 
+  "python3-iniparse" {>= "0.4"}
+  "subscription-manager" {= "1.29.40"}
+]
+extra-source "subscription-manager-plugin-ostree-1.29.40-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/subscription-manager-plugin-ostree-1.29.40-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-xkbgroup-0.2.0-3.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-xkbgroup-0.2.0-3.17.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "update-alternatives" 
+  "xorg-x11-server" 
+]
+extra-source "python311-xkbgroup-0.2.0-3.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-xkbgroup-0.2.0-3.17.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sblim-wbemcli-1.6.3-27.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sblim-wbemcli-1.6.3-27.fc40.x86_64.rpm"]
+depends: [
+  "curl" {>= "7.9.3"}
+  "glibc" 
+  "libcurl" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "sblim-wbemcli-1.6.3-27.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sblim-wbemcli-1.6.3-27.fc40.x86_64.rpm"
+}

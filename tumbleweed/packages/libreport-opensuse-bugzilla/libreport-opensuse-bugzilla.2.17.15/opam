@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libreport-opensuse-bugzilla-2.17.15-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libreport-opensuse-bugzilla-2.17.15-1.1.noarch.rpm"]
+depends: [
+  "libreport-plugin-bugzilla" {= "2.17.15"}
+  "libreport-plugin-ureport" {= "2.17.15"}
+  "libreport_2" {= "2.17.15"}
+]
+extra-source "libreport-opensuse-bugzilla-2.17.15-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libreport-opensuse-bugzilla-2.17.15-1.1.noarch.rpm"
+}

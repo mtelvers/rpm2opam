@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "frozen-bubble-server-2.2.1-0.45.beta1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "frozen-bubble-server-2.2.1-0.45.beta1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "systemd" 
+]
+extra-source "frozen-bubble-server-2.2.1-0.45.beta1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/frozen-bubble-server-2.2.1-0.45.beta1.fc40.x86_64.rpm"
+}

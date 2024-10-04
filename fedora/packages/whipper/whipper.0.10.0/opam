@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "whipper-0.10.0-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "whipper-0.10.0-12.fc40.x86_64.rpm"]
+depends: [
+  "cdrdao" 
+  "flac" 
+  "glibc" 
+  "gobject-introspection" 
+  "libcdio-paranoia" 
+  "libsndfile" 
+  "python3" 
+  "python3-discid" 
+  "python3-gobject" 
+  "python3-musicbrainzngs" 
+  "python3-mutagen" 
+  "python3-pycdio" 
+  "python3-requests" 
+  "python3-ruamel-yaml" 
+  "python3-setuptools" 
+  "sox" 
+]
+extra-source "whipper-0.10.0-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/whipper-0.10.0-12.fc40.x86_64.rpm"
+}

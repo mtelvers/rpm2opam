@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libp256m-x86-64-v3-3.6.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libp256m-x86-64-v3-3.6.1-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "libp256m" {= "3.6.1"}
+]
+extra-source "libp256m-x86-64-v3-3.6.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libp256m-x86-64-v3-3.6.1-1.1.x86_64.rpm"
+}

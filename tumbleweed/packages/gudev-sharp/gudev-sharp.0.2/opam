@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gudev-sharp-0.2-21.14.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gudev-sharp-0.2-21.14.x86_64.rpm"]
+depends: [
+  "glib-sharp2" {= "2.12.0.0"}
+  "gtk-sharp2" 
+  "libgudev-1_0-0" 
+  "mono-core" {= "4.0.0.0"}
+]
+extra-source "gudev-sharp-0.2-21.14.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gudev-sharp-0.2-21.14.x86_64.rpm"
+}

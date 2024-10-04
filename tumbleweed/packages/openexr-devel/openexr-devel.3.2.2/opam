@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openexr-devel-3.2.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openexr-devel-3.2.2-1.2.x86_64.rpm"]
+depends: [
+  "Imath-devel" 
+  "libOpenEXR-3_2-31" {= "3.2.2"}
+  "libOpenEXRCore-3_2-31" {= "3.2.2"}
+  "libOpenEXRUtil-3_2-31" {= "3.2.2"}
+  "pkgconf-pkg-config" 
+  "zlib-devel" 
+]
+extra-source "openexr-devel-3.2.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openexr-devel-3.2.2-1.2.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-scatterplot3d-0.3.43-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-scatterplot3d-0.3.43-5.fc40.noarch.rpm"]
+depends: [
+  "R-core" {= "4.3"}
+]
+extra-source "R-scatterplot3d-0.3.43-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-scatterplot3d-0.3.43-5.fc40.noarch.rpm"
+}

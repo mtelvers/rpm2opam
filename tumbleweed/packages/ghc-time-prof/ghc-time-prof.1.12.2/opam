@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-time-prof-1.12.2-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-time-prof-1.12.2-2.1.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-time-devel" {= "1.12.2"}
+]
+extra-source "ghc-time-prof-1.12.2-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-time-prof-1.12.2-2.1.x86_64.rpm"
+}

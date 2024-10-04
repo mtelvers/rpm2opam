@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vim-plugin-latex-1.10.0+20220519-60.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vim-plugin-latex-1.10.0+20220519-60.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "perl-base" 
+  "texlive-latex" 
+  "vim" 
+]
+extra-source "vim-plugin-latex-1.10.0+20220519-60.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/vim-plugin-latex-1.10.0+20220519-60.3.noarch.rpm"
+}

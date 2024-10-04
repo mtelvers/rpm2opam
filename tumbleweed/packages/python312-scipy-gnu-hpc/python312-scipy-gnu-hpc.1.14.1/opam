@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-scipy-gnu-hpc-1.14.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-scipy-gnu-hpc-1.14.1-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-scipy_1_13_1-gnu-hpc" {= "1.14.1"}
+]
+extra-source "python312-scipy-gnu-hpc-1.14.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-scipy-gnu-hpc-1.14.1-1.1.x86_64.rpm"
+}

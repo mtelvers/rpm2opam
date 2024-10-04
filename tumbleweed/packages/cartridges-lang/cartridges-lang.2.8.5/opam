@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cartridges-lang-2.8.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cartridges-lang-2.8.5-1.1.noarch.rpm"]
+depends: [
+  "cartridges" {= "2.8.5"}
+]
+extra-source "cartridges-lang-2.8.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cartridges-lang-2.8.5-1.1.noarch.rpm"
+}

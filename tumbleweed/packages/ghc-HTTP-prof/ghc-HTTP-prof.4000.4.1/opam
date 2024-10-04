@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-HTTP-prof-4000.4.1-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-HTTP-prof-4000.4.1-3.2.x86_64.rpm"]
+depends: [
+  "ghc-HTTP-devel" {= "4000.4.1"}
+  "ghc-array-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-mtl-prof" 
+  "ghc-network-prof" 
+  "ghc-network-uri-prof" 
+  "ghc-parsec-prof" 
+  "ghc-time-prof" 
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-HTTP-prof-4000.4.1-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-HTTP-prof-4000.4.1-3.2.x86_64.rpm"
+}

@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hugin-2023.0.0-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hugin-2023.0.0-5.fc40.x86_64.rpm"]
+depends: [
+  "curl" 
+  "exiv2-libs" 
+  "fftw-libs-double" 
+  "glibc" 
+  "hugin-base" {= "2023.0.0"}
+  "lcms2" 
+  "libGLEW" 
+  "libX11" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libglvnd-opengl" 
+  "libgomp" 
+  "libpano13" 
+  "libstdc++" 
+  "libtiff" 
+  "mesa-libGLU" 
+  "shared-mime-info" 
+  "sqlite-libs" 
+  "vigra" 
+  "wxBase" 
+  "wxGTK" 
+  "wxGTK-gl" 
+]
+extra-source "hugin-2023.0.0-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hugin-2023.0.0-5.fc40.x86_64.rpm"
+}

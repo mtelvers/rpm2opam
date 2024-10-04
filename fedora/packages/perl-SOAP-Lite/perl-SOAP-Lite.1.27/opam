@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-SOAP-Lite-1.27-24.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-SOAP-Lite-1.27-24.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Class-Inspector" 
+  "perl-Data-Dumper" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-Getopt-Long" 
+  "perl-HTTP-Message" 
+  "perl-IO" 
+  "perl-IO-Compress" 
+  "perl-IO-SessionData" 
+  "perl-LWP-Protocol-https" 
+  "perl-MIME-Base64" 
+  "perl-MIME-Lite" 
+  "perl-MIME-tools" 
+  "perl-Scalar-List-Utils" 
+  "perl-Test" 
+  "perl-URI" 
+  "perl-XML-Parser" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libnet" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-libwww-perl" 
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-SOAP-Lite-1.27-24.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-SOAP-Lite-1.27-24.fc40.noarch.rpm"
+}

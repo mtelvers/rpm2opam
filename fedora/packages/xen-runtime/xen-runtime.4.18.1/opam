@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xen-runtime-4.18.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xen-runtime-4.18.1-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "ncurses-libs" 
+  "python3" 
+  "qemu-img" 
+  "systemd-libs" 
+  "xen-hypervisor" {= "4.18"}
+  "xen-libs" 
+  "yajl" 
+]
+extra-source "xen-runtime-4.18.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xen-runtime-4.18.1-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ocaml-fpath-devel-0.7.3-2.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-fpath-devel-0.7.3-2.13.x86_64.rpm"]
+depends: [
+  "ocaml" {= "5365"}
+  "ocaml-astring-devel" {= "73"}
+  "ocaml-compiler-libs" {= "0"}
+  "ocaml-compiler-libs-devel" 
+  "ocaml-fpath" {= "0.7.3"}
+  "ocaml-result-devel" 
+]
+extra-source "ocaml-fpath-devel-0.7.3-2.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ocaml-fpath-devel-0.7.3-2.13.x86_64.rpm"
+}

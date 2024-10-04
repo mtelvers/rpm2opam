@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpanel-devel-1.6.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpanel-devel-1.6.0-1.2.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.74"}
+  "gtk4-devel" {>= "4.8"}
+  "libadwaita-devel" {>= "1.2"}
+  "libpanel-1-1" {= "1.6.0"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Panel-1" {= "1.6.0"}
+]
+extra-source "libpanel-devel-1.6.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpanel-devel-1.6.0-1.2.x86_64.rpm"
+}

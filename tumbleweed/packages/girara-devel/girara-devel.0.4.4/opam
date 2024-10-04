@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "girara-devel-0.4.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "girara-devel-0.4.4-1.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.72"}
+  "gtk3-devel" {>= "3.24"}
+  "json-glib-devel" 
+  "libgirara-gtk3-4" {= "0.4.4"}
+  "pango-devel" {>= "1.50"}
+  "pkgconf-pkg-config" 
+]
+extra-source "girara-devel-0.4.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/girara-devel-0.4.4-1.1.x86_64.rpm"
+}

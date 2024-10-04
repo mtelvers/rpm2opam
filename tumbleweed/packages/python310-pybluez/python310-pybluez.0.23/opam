@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pybluez-0.23+git5096047f90a1f6a74ceb250aef6243e144170f92-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pybluez-0.23+git5096047f90a1f6a74ceb250aef6243e144170f92-2.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbluetooth3" 
+  "python310-base" {= "3.10"}
+]
+extra-source "python310-pybluez-0.23+git5096047f90a1f6a74ceb250aef6243e144170f92-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-pybluez-0.23+git5096047f90a1f6a74ceb250aef6243e144170f92-2.6.x86_64.rpm"
+}

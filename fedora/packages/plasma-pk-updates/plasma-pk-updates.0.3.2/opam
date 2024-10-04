@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "plasma-pk-updates-0.3.2-17.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plasma-pk-updates-0.3.2-17.fc40.x86_64.rpm"]
+depends: [
+  "PackageKit" 
+  "PackageKit-Qt5" 
+  "glibc" 
+  "kf5-kconfig-core" 
+  "kf5-kcoreaddons" 
+  "kf5-ki18n" 
+  "kf5-knotifications" 
+  "kf5-solid" {>= "5.75.0"}
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtdeclarative" 
+]
+extra-source "plasma-pk-updates-0.3.2-17.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/plasma-pk-updates-0.3.2-17.fc40.x86_64.rpm"
+}

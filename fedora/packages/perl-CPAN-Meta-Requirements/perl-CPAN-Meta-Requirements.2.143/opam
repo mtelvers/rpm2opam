@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CPAN-Meta-Requirements-2.143-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CPAN-Meta-Requirements-2.143-6.fc40.noarch.rpm"]
+depends: [
+  "perl-B" 
+  "perl-Carp" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-version" {>= "0.88"}
+]
+extra-source "perl-CPAN-Meta-Requirements-2.143-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CPAN-Meta-Requirements-2.143-6.fc40.noarch.rpm"
+}

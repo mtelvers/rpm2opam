@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "keylime-firewalld-7.11.0-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "keylime-firewalld-7.11.0-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-keylime" {= "7.11.0"}
+]
+extra-source "keylime-firewalld-7.11.0-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/keylime-firewalld-7.11.0-slfo.1.1.3.noarch.rpm"
+}

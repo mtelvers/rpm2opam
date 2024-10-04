@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "guestfs-tools-1.52.0-slfo.1.2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "guestfs-tools-1.52.0-slfo.1.2.6.x86_64.rpm"]
+depends: [
+  "curl" 
+  "glibc" 
+  "gpg2" 
+  "libcrypt1" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libguestfs" {>= "1.49"}
+  "libguestfs0" 
+  "libjansson4" 
+  "liblzma5" 
+  "libncurses6" 
+  "libosinfo-1_0-0" 
+  "libpcre2-8-0" 
+  "libvirt-libs" 
+  "libxml2-2" 
+  "xz" 
+]
+extra-source "guestfs-tools-1.52.0-slfo.1.2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/guestfs-tools-1.52.0-slfo.1.2.6.x86_64.rpm"
+}

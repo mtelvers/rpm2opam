@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "wxmedit-3.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wxmedit-3.2-1.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libcurl" 
+  "libgcc" 
+  "libicu" 
+  "libstdc++" 
+  "wxBase" 
+  "wxGTK" 
+]
+extra-source "wxmedit-3.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/wxmedit-3.2-1.fc40.x86_64.rpm"
+}

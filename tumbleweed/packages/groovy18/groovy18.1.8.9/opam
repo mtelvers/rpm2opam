@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "groovy18-1.8.9-9.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "groovy18-1.8.9-9.2.noarch.rpm"]
+depends: [
+  "ant" 
+  "ant-antlr" 
+  "ant-junit" 
+  "apache-commons-cli" 
+  "apache-commons-logging" 
+  "apache-ivy" 
+  "bash-sh" 
+  "bsf" 
+  "glassfish-jsp-api" 
+  "glassfish-servlet-api" 
+  "groovy18-lib" {= "1.8.9"}
+  "jansi" 
+  "jline" 
+  "junit" 
+  "xstream" 
+]
+extra-source "groovy18-1.8.9-9.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/groovy18-1.8.9-9.2.noarch.rpm"
+}

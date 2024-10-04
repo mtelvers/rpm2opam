@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nauty-2.8.8-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nauty-2.8.8-3.fc40.x86_64.rpm"]
+depends: [
+  "coreutils" 
+  "glibc" 
+  "gmp" 
+  "libnauty" {= "2.8.8"}
+  "zlib-ng-compat" 
+]
+extra-source "nauty-2.8.8-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nauty-2.8.8-3.fc40.x86_64.rpm"
+}

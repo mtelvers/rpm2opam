@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-compress-tools+async_support-devel-0.12.4-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-compress-tools+async_support-devel-0.12.4-5.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-compress-tools+async-trait-devel" {= "0.12.4"}
+  "rust-compress-tools+futures-channel-devel" {= "0.12.4"}
+  "rust-compress-tools+futures-core-devel" {= "0.12.4"}
+  "rust-compress-tools+futures-executor-devel" {= "0.12.4"}
+  "rust-compress-tools+futures-io-devel" {= "0.12.4"}
+  "rust-compress-tools+futures-util-devel" {= "0.12.4"}
+  "rust-compress-tools-devel" {= "0.12.4"}
+]
+extra-source "rust-compress-tools+async_support-devel-0.12.4-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-compress-tools+async_support-devel-0.12.4-5.fc40.noarch.rpm"
+}

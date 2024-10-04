@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fcitx-unikey-0.2.7-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fcitx-unikey-0.2.7-5.2.x86_64.rpm"]
+depends: [
+  "fcitx" 
+  "fcitx-qt5" 
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Widgets5" 
+  "libfcitx-config4" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "fcitx-unikey-0.2.7-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/fcitx-unikey-0.2.7-5.2.x86_64.rpm"
+}

@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-network-displays-0.92.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-network-displays-0.92.1-1.fc40.x86_64.rpm"]
+depends: [
+  "NetworkManager-libnm" {> "1.16.0"}
+  "NetworkManager-wifi" 
+  "avahi-gobject" 
+  "avahi-libs" 
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "gnome-desktop3" 
+  "gstreamer1" 
+  "gstreamer1-plugins-base" 
+  "gstreamer1-rtsp-server" 
+  "gtk4" 
+  "hicolor-icon-theme" 
+  "json-glib" 
+  "libadwaita" 
+  "libgcc" 
+  "libportal" 
+  "libportal-gtk4" 
+  "libsoup3" 
+  "pipewire-gstreamer" 
+  "protobuf-c" 
+  "pulseaudio-libs" 
+  "pulseaudio-libs-glib2" 
+]
+extra-source "gnome-network-displays-0.92.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-network-displays-0.92.1-1.fc40.x86_64.rpm"
+}

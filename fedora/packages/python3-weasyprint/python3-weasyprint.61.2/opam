@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-weasyprint-61.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-weasyprint-61.2-1.fc40.noarch.rpm"]
+depends: [
+  "dejavu-sans-fonts" 
+  "dejavu-sans-mono-fonts" 
+  "dejavu-serif-fonts" 
+  "pango" {>= "1.44.0"}
+  "python3" {= "3.12"}
+  "python3-cffi" {>= "0.6"}
+  "python3-cssselect2" {>= "0.1"}
+  "python3-fonttools" {>= "4"}
+  "python3-fonttools+woff" {>= "4"}
+  "python3-html5lib" {>= "1.1"}
+  "python3-pillow" {>= "9.1"}
+  "python3-pydyf" {>= "0.8"}
+  "python3-pyphen" {>= "0.9.1"}
+  "python3-tinycss2" {>= "1"}
+]
+extra-source "python3-weasyprint-61.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-weasyprint-61.2-1.fc40.noarch.rpm"
+}

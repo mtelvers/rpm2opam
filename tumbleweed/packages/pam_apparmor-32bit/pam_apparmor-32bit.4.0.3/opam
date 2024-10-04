@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pam_apparmor-32bit-4.0.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pam_apparmor-32bit-4.0.3-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libapparmor1-32bit" 
+  "pam-32bit" 
+]
+extra-source "pam_apparmor-32bit-4.0.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pam_apparmor-32bit-4.0.3-1.1.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "modsecurity-devel-3.0.12-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "modsecurity-devel-3.0.12-1.2.x86_64.rpm"]
+depends: [
+  "libmodsecurity3" {= "3.0.12"}
+  "pkgconf-pkg-config" 
+]
+extra-source "modsecurity-devel-3.0.12-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/modsecurity-devel-3.0.12-1.2.x86_64.rpm"
+}

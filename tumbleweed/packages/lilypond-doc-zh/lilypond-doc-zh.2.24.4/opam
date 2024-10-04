@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lilypond-doc-zh-2.24.4-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lilypond-doc-zh-2.24.4-1.2.noarch.rpm"]
+depends: [
+  "lilypond-doc" {= "2.24.4"}
+]
+extra-source "lilypond-doc-zh-2.24.4-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/lilypond-doc-zh-2.24.4-1.2.noarch.rpm"
+}

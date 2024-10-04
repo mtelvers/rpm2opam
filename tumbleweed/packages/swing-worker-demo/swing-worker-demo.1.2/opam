@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "swing-worker-demo-1.2-27.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "swing-worker-demo-1.2-27.2.noarch.rpm"]
+depends: [
+  "swing-worker" {= "1.2"}
+]
+extra-source "swing-worker-demo-1.2-27.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/swing-worker-demo-1.2-27.2.noarch.rpm"
+}

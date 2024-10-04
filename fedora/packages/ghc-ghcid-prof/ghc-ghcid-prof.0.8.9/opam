@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-ghcid-prof-0.8.9-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-ghcid-prof-0.8.9-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-ansi-terminal-prof" 
+  "ghc-base-prof" 
+  "ghc-cmdargs-prof" 
+  "ghc-directory-prof" 
+  "ghc-extra-prof" 
+  "ghc-filepath-prof" 
+  "ghc-ghcid-devel" {= "0.8.9"}
+  "ghc-process-prof" 
+  "ghc-time-prof" 
+]
+extra-source "ghc-ghcid-prof-0.8.9-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-ghcid-prof-0.8.9-3.fc40.x86_64.rpm"
+}

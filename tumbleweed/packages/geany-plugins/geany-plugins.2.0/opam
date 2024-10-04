@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "geany-plugins-2.0-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "geany-plugins-2.0-3.1.x86_64.rpm"]
+depends: [
+  "geany" {>= "2.0"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libenchant-2-2" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgeany0" 
+  "libgit2-1_8" 
+  "libgpgme11" 
+  "libgtk-3-0" 
+  "libgtkspell3-3-0" 
+  "liblua5_1-5" 
+  "libpango-1_0-0" 
+  "libsoup-2_4-1" 
+  "libwebkit2gtk-4_0-37" 
+  "libxml2-2" 
+  "lua51" 
+]
+extra-source "geany-plugins-2.0-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/geany-plugins-2.0-3.1.x86_64.rpm"
+}

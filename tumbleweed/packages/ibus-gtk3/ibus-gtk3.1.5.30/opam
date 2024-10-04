@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ibus-gtk3-1.5.30-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibus-gtk3-1.5.30-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "ibus" {= "1.5.30"}
+  "libgtk-3-0" 
+  "libibus-1_0-5" 
+  "libpango-1_0-0" 
+]
+extra-source "ibus-gtk3-1.5.30-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ibus-gtk3-1.5.30-1.1.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-lua-prof-2.3.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-lua-prof-2.3.1-5.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-lua-devel" {= "2.3.1"}
+]
+extra-source "ghc-lua-prof-2.3.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-lua-prof-2.3.1-5.fc40.x86_64.rpm"
+}

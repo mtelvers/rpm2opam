@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nomacs-plugins-3.17.2295-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nomacs-plugins-3.17.2295-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "nomacs" 
+  "opencv-core" 
+  "opencv-imgproc" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "nomacs-plugins-3.17.2295-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nomacs-plugins-3.17.2295-1.fc40.x86_64.rpm"
+}

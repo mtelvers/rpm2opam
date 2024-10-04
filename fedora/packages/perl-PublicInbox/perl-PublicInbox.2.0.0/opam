@@ -1,0 +1,57 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-PublicInbox-2.0.0~20230714git590023f-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-PublicInbox-2.0.0~20230714git590023f-2.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Compress-Raw-Zlib" 
+  "perl-Crypt-CBC" 
+  "perl-DBD-SQLite" 
+  "perl-DBI" 
+  "perl-Data-Dumper" 
+  "perl-Digest-MD5" 
+  "perl-Digest-SHA" 
+  "perl-Email-MIME" 
+  "perl-Email-MIME-ContentType" 
+  "perl-Encode" {>= "2.35"}
+  "perl-Errno" 
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-File-Path" 
+  "perl-File-Temp" {>= "0.19"}
+  "perl-Getopt-Long" 
+  "perl-HTTP-Date" 
+  "perl-HTTP-Message" 
+  "perl-IO" 
+  "perl-IO-Compress" 
+  "perl-IO-Socket-SSL" 
+  "perl-MIME-Base64" {>= "3.5"}
+  "perl-Mail-IMAPClient" 
+  "perl-POSIX" 
+  "perl-Parse-RecDescent" 
+  "perl-PathTools" 
+  "perl-Plack" 
+  "perl-Scalar-List-Utils" 
+  "perl-SelectSaver" 
+  "perl-Socket" 
+  "perl-Socket-MsgHdr" 
+  "perl-Symbol" 
+  "perl-Sys-Hostname" 
+  "perl-Sys-Syslog" 
+  "perl-Term-ANSIColor" 
+  "perl-Text-ParseWords" 
+  "perl-Text-Tabs+Wrap" 
+  "perl-Time-HiRes" 
+  "perl-Time-Local" 
+  "perl-URI" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libnet" 
+  "perl-libs" {>= "5.10.1"}
+  "perl-overload" 
+  "perl-parent" 
+  "perl-sort" 
+  "spamassassin" 
+]
+extra-source "perl-PublicInbox-2.0.0~20230714git590023f-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-PublicInbox-2.0.0~20230714git590023f-2.fc40.noarch.rpm"
+}

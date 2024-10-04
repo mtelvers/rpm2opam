@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libappindicator3-1-12.10.1~bzr20200706.298-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libappindicator3-1-12.10.1~bzr20200706.298-4.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libdbusmenu-glib4" 
+  "libdbusmenu-gtk3-4" 
+  "libgtk-3-0" 
+]
+extra-source "libappindicator3-1-12.10.1~bzr20200706.298-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libappindicator3-1-12.10.1~bzr20200706.298-4.1.x86_64.rpm"
+}

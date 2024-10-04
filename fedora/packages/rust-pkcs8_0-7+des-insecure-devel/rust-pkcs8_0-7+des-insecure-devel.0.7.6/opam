@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-pkcs8_0.7+des-insecure-devel-0.7.6-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-pkcs8_0.7+des-insecure-devel-0.7.6-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-pkcs5+default-devel" 
+  "rust-pkcs5+des-insecure-devel" 
+  "rust-pkcs8_0-7+encryption-devel" {= "0.7.6"}
+  "rust-pkcs8_0-7-devel" {= "0.7.6"}
+]
+extra-source "rust-pkcs8_0.7+des-insecure-devel-0.7.6-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-pkcs8_0.7+des-insecure-devel-0.7.6-3.fc40.noarch.rpm"
+}

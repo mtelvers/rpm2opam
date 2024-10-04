@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "virt-backup-0.2.25-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "virt-backup-0.2.25-11.fc40.noarch.rpm"]
+depends: [
+  "bzip2" 
+  "chunkfs" 
+  "gzip" 
+  "lvm2" 
+  "lzop" 
+  "perl-File-Copy" 
+  "perl-Getopt-Long" 
+  "perl-LockFile-Simple" 
+  "perl-PathTools" 
+  "perl-Sys-Virt" 
+  "perl-XML-Simple" 
+  "perl-interpreter" 
+  "qemu-img" 
+  "util-linux" 
+  "xz" 
+]
+extra-source "virt-backup-0.2.25-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/virt-backup-0.2.25-11.fc40.noarch.rpm"
+}

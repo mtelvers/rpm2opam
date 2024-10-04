@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dh-autoreconf-19-3.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dh-autoreconf-19-3.15.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-base" 
+]
+extra-source "dh-autoreconf-19-3.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dh-autoreconf-19-3.15.noarch.rpm"
+}

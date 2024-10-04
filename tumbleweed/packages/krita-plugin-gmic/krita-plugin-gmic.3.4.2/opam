@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "krita-plugin-gmic-3.4.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "krita-plugin-gmic-3.4.2-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gmic-data" {= "3.4.2"}
+  "krita" {= "5.2.6"}
+  "libKF5CoreAddons5" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Network5" 
+  "libQt5Widgets5" 
+  "libX11-6" 
+  "libfftw3_threads3" 
+  "libgcc_s1" 
+  "libgmic3" 
+  "libgomp1" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+]
+extra-source "krita-plugin-gmic-3.4.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/krita-plugin-gmic-3.4.2-1.2.x86_64.rpm"
+}

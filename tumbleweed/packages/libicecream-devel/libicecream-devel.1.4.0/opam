@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libicecream-devel-1.4.0-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libicecream-devel-1.4.0-3.2.x86_64.rpm"]
+depends: [
+  "libarchive-devel" 
+  "libcap-ng-devel" 
+  "libstdc++-devel" 
+  "libzstd-devel" 
+  "lzo-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libicecream-devel-1.4.0-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libicecream-devel-1.4.0-3.2.x86_64.rpm"
+}

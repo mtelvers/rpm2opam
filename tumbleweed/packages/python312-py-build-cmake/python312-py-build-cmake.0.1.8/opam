@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-py-build-cmake-0.1.8-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-py-build-cmake-0.1.8-1.5.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "cmake" 
+  "python312-base" 
+  "python312-click" 
+  "python312-distlib" 
+  "python312-flit-core" 
+  "update-alternatives" 
+]
+extra-source "python312-py-build-cmake-0.1.8-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-py-build-cmake-0.1.8-1.5.noarch.rpm"
+}

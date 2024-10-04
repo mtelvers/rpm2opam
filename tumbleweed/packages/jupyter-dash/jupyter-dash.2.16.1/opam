@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jupyter-dash-2.16.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jupyter-dash-2.16.1-2.1.noarch.rpm"]
+depends: [
+  "python310-dash" {= "2.16.1"}
+]
+extra-source "jupyter-dash-2.16.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jupyter-dash-2.16.1-2.1.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mousam-lang-1.3.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mousam-lang-1.3.2-1.1.noarch.rpm"]
+depends: [
+  "mousam" {= "1.3.2"}
+]
+extra-source "mousam-lang-1.3.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mousam-lang-1.3.2-1.1.noarch.rpm"
+}

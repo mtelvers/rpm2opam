@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xmount-0.7.6-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xmount-0.7.6-14.fc40.x86_64.rpm"]
+depends: [
+  "afflib" 
+  "fuse-libs" 
+  "glibc" 
+  "libewf" 
+  "zlib-ng-compat" 
+]
+extra-source "xmount-0.7.6-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xmount-0.7.6-14.fc40.x86_64.rpm"
+}

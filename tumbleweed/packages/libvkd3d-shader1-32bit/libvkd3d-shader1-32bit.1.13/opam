@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvkd3d-shader1-32bit-1.13-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvkd3d-shader1-32bit-1.13-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libSPIRV-Tools-2024_3-32bit" 
+]
+extra-source "libvkd3d-shader1-32bit-1.13-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libvkd3d-shader1-32bit-1.13-1.1.x86_64.rpm"
+}

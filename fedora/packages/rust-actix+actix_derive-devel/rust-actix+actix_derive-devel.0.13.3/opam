@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-actix+actix_derive-devel-0.13.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-actix+actix_derive-devel-0.13.3-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-actix-devel" {= "0.13.3"}
+  "rust-actix_derive+default-devel" 
+]
+extra-source "rust-actix+actix_derive-devel-0.13.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-actix+actix_derive-devel-0.13.3-1.fc40.noarch.rpm"
+}

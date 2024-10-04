@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Archive-Tar-3.02-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Archive-Tar-3.02-6.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-Getopt-Long" 
+  "perl-Getopt-Std" 
+  "perl-IO" 
+  "perl-IO-Compress" {>= "2.15"}
+  "perl-IO-Compress-Lzma" 
+  "perl-IO-Zlib" {>= "1.1"}
+  "perl-PathTools" 
+  "perl-Pod-Usage" 
+  "perl-Text-Diff" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.5.0"}
+  "perl-vars" 
+]
+extra-source "perl-Archive-Tar-3.02-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Archive-Tar-3.02-6.fc40.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-blockdiag-3.0.0-3.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-blockdiag-3.0.0-3.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-Pillow" {>= "3"}
+  "python312-base" 
+  "python312-funcparserlib" {>= "1.0.0"}
+  "python312-setuptools" 
+  "python312-webcolors" 
+  "update-alternatives" 
+]
+extra-source "python312-blockdiag-3.0.0-3.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-blockdiag-3.0.0-3.3.noarch.rpm"
+}

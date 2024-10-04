@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gummi-0.8.3-1.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gummi-0.8.3-1.10.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libgtksourceview-3_0-1" 
+  "libgtkspell0" 
+  "libgtkspell3-3-0" 
+  "libpango-1_0-0" 
+  "libpoppler-glib8" 
+  "libsynctex2" 
+  "texlive-latex" 
+]
+extra-source "gummi-0.8.3-1.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gummi-0.8.3-1.10.x86_64.rpm"
+}

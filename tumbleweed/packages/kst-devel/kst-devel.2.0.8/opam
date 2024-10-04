@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kst-devel-2.0.8-14.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kst-devel-2.0.8-14.10.x86_64.rpm"]
+depends: [
+  "kst" {= "2.0.8"}
+  "libQt5Concurrent-devel" 
+  "libQt5Core-devel" 
+  "libQt5Network-devel" 
+  "libQt5PrintSupport-devel" 
+  "libQt5Widgets-devel" 
+  "libQt5Xml-devel" 
+]
+extra-source "kst-devel-2.0.8-14.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kst-devel-2.0.8-14.10.x86_64.rpm"
+}

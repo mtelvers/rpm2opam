@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-opencensus-ext-azure-1.1.6-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-opencensus-ext-azure-1.1.6-3.1.noarch.rpm"]
+depends: [
+  "python311-azure-core" {>= "1.12.0"}
+  "python311-azure-identity" {>= "1.5.0"}
+  "python311-base" {= "3.11"}
+  "python311-opencensus" {>= "0.11.0"}
+  "python311-psutil" {>= "5.6.3"}
+  "python311-requests" {>= "2.19.0"}
+]
+extra-source "python311-opencensus-ext-azure-1.1.6-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-opencensus-ext-azure-1.1.6-3.1.noarch.rpm"
+}

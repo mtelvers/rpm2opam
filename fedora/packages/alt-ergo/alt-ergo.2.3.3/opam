@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "alt-ergo-2.3.3-17.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "alt-ergo-2.3.3-17.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gmp" 
+  "ocaml" {= "2125"}
+  "ocaml-alt-ergo-lib" {= "0"}
+  "ocaml-alt-ergo-parsers" {= "45"}
+  "ocaml-menhirlib" {= "0"}
+  "ocaml-num" {= "7414145"}
+  "zlib-ng-compat" 
+]
+extra-source "alt-ergo-2.3.3-17.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/alt-ergo-2.3.3-17.fc40.x86_64.rpm"
+}

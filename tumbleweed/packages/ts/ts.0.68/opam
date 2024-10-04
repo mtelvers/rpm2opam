@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ts-0.68-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ts-0.68-1.3.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Time-Duration" 
+  "perl-TimeDate" 
+  "perl-base" 
+]
+extra-source "ts-0.68-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ts-0.68-1.3.noarch.rpm"
+}

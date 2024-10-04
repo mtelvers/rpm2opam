@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-GooseMPL-0.12.1-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-GooseMPL-0.12.1-1.9.noarch.rpm"]
+depends: [
+  "python310-PyYAML" 
+  "python310-base" {= "3.10"}
+  "python310-deprecation" 
+  "python310-matplotlib" 
+  "python310-matplotlib-latex" 
+  "python310-numpy" 
+  "python310-scipy" 
+  "texlive-amsfonts" 
+  "texlive-amsmath" 
+  "texlive-tools" 
+]
+extra-source "python310-GooseMPL-0.12.1-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-GooseMPL-0.12.1-1.9.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libswresample5-32bit-7.0.2-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libswresample5-32bit-7.0.2-2.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libavutil59-32bit" 
+  "libsoxr0-32bit" 
+]
+extra-source "libswresample5-32bit-7.0.2-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libswresample5-32bit-7.0.2-2.3.x86_64.rpm"
+}

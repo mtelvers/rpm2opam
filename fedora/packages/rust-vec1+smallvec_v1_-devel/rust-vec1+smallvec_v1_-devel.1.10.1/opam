@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-vec1+smallvec_v1_-devel-1.10.1-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-vec1+smallvec_v1_-devel-1.10.1-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-smallvec+const_generics-devel" 
+  "rust-smallvec+const_new-devel" 
+  "rust-smallvec+default-devel" 
+  "rust-vec1-devel" {= "1.10.1"}
+]
+extra-source "rust-vec1+smallvec_v1_-devel-1.10.1-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-vec1+smallvec_v1_-devel-1.10.1-3.fc40.noarch.rpm"
+}

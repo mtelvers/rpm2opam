@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kdiagram6-devel-3.0.1-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kdiagram6-devel-3.0.1-1.2.x86_64.rpm"]
+depends: [
+  "libKChart6-3" {= "3.0.1"}
+  "libKGantt6-3" {= "3.0.1"}
+  "qt6-core-devel" {>= "6.6.0"}
+  "qt6-printsupport-devel" {>= "6.6.0"}
+  "qt6-svg-devel" {>= "6.6.0"}
+  "qt6-widgets-devel" {>= "6.6.0"}
+]
+extra-source "kdiagram6-devel-3.0.1-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kdiagram6-devel-3.0.1-1.2.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MooX-late-0.100-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooX-late-0.100-8.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Module-Runtime" 
+  "perl-Moo" {>= "1.6000"}
+  "perl-Scalar-List-Utils" 
+  "perl-Sub-HandlesVia" {>= "0.13"}
+  "perl-Type-Tiny" {>= "1.1"}
+  "perl-libs" {>= "5.8.0"}
+  "perl-overload" 
+]
+extra-source "perl-MooX-late-0.100-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MooX-late-0.100-8.fc40.noarch.rpm"
+}

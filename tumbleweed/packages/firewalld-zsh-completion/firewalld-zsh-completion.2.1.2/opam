@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "firewalld-zsh-completion-2.1.2-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "firewalld-zsh-completion-2.1.2-3.1.noarch.rpm"]
+depends: [
+  "firewalld" {= "2.1.2"}
+  "zsh" 
+]
+extra-source "firewalld-zsh-completion-2.1.2-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/firewalld-zsh-completion-2.1.2-3.1.noarch.rpm"
+}

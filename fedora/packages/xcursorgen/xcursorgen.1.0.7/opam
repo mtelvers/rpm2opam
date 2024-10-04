@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xcursorgen-1.0.7-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xcursorgen-1.0.7-9.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11" 
+  "libXcursor" 
+  "libpng" 
+]
+extra-source "xcursorgen-1.0.7-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xcursorgen-1.0.7-9.fc40.x86_64.rpm"
+}

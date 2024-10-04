@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mesa-libxatracker-24.0.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mesa-libxatracker-24.0.5-1.fc40.x86_64.rpm"]
+depends: [
+  "expat" 
+  "glibc" 
+  "libdrm" 
+  "libgcc" 
+  "libstdc++" 
+  "libzstd" 
+  "llvm-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "mesa-libxatracker-24.0.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mesa-libxatracker-24.0.5-1.fc40.x86_64.rpm"
+}

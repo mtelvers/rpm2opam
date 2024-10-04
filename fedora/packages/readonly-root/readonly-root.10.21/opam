@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "readonly-root-10.21-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "readonly-root-10.21-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "cpio" 
+  "filesystem" {>= "3"}
+  "findutils" 
+  "gawk" 
+  "hostname" 
+  "initscripts" {= "10.21"}
+  "ipcalc" 
+  "iproute" 
+  "util-linux" 
+]
+extra-source "readonly-root-10.21-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/readonly-root-10.21-1.fc40.noarch.rpm"
+}

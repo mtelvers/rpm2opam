@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-blake2+reset-devel-0.10.6-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-blake2+reset-devel-0.10.6-7.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-blake2-devel" {= "0.10.6"}
+]
+extra-source "rust-blake2+reset-devel-0.10.6-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-blake2+reset-devel-0.10.6-7.fc40.noarch.rpm"
+}

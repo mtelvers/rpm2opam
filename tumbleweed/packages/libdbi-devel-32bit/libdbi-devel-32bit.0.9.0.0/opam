@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libdbi-devel-32bit-0.9.0.g33-4.15.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdbi-devel-32bit-0.9.0.g33-4.15.x86_64.rpm"]
+depends: [
+  "libdbi-devel" {= "0.9.0.0"}
+  "libdbi3-32bit" {= "0.9.0.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libdbi-devel-32bit-0.9.0.g33-4.15.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libdbi-devel-32bit-0.9.0.g33-4.15.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "netplan-0.105-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netplan-0.105-7.fc40.x86_64.rpm"]
+depends: [
+  "dbus-common" 
+  "glib2" 
+  "glibc" 
+  "iproute" 
+  "libgcc" 
+  "netplan-default-backend-NetworkManager" 
+  "netplan-libs" 
+  "python3" 
+  "python3-netifaces" 
+  "python3-pyyaml" 
+  "systemd-libs" 
+]
+extra-source "netplan-0.105-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/netplan-0.105-7.fc40.x86_64.rpm"
+}

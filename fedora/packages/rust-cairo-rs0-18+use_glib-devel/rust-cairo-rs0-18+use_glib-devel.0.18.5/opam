@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-cairo-rs0.18+use_glib-devel-0.18.5-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-cairo-rs0.18+use_glib-devel-0.18.5-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-cairo-rs0-18+glib-devel" {= "0.18.5"}
+  "rust-cairo-rs0-18-devel" {= "0.18.5"}
+  "rust-cairo-sys-rs+use_glib-devel" 
+]
+extra-source "rust-cairo-rs0.18+use_glib-devel-0.18.5-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-cairo-rs0.18+use_glib-devel-0.18.5-1.fc40.noarch.rpm"
+}

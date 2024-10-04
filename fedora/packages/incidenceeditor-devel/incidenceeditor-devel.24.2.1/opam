@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "incidenceeditor-devel-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "incidenceeditor-devel-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "calendarsupport-devel" 
+  "cmake-filesystem" 
+  "eventviews-devel" 
+  "incidenceeditor" {= "24.2.1"}
+  "kcalutils-devel" 
+  "kf6-kcalendarcore-devel" 
+  "kmime-devel" 
+]
+extra-source "incidenceeditor-devel-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/incidenceeditor-devel-24.02.1-1.fc40.x86_64.rpm"
+}

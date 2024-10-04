@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-meh-gui-0.51-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-meh-gui-0.51-5.fc40.noarch.rpm"]
+depends: [
+  "gtk3" 
+  "libreport-gtk" {>= "2.0.18"}
+  "python3" {= "3.12"}
+  "python3-gobject" 
+  "python3-meh" {= "0.51"}
+]
+extra-source "python3-meh-gui-0.51-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-meh-gui-0.51-5.fc40.noarch.rpm"
+}

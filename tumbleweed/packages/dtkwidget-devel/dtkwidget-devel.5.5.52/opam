@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dtkwidget-devel-5.5.52-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dtkwidget-devel-5.5.52-2.3.x86_64.rpm"]
+depends: [
+  "dtkcore-devel" 
+  "dtkgui-devel" 
+  "libdtkwidget5" {= "5.5.52"}
+  "pkgconf-pkg-config" 
+]
+extra-source "dtkwidget-devel-5.5.52-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/dtkwidget-devel-5.5.52-2.3.x86_64.rpm"
+}

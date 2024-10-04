@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wpebackend-fdo-devel-1.14.2-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wpebackend-fdo-devel-1.14.2-1.5.x86_64.rpm"]
+depends: [
+  "libWPEBackend-fdo-1_0-1" {= "1.14.2"}
+  "libwpe-devel" {>= "1.6.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "wpebackend-fdo-devel-1.14.2-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/wpebackend-fdo-devel-1.14.2-1.5.x86_64.rpm"
+}

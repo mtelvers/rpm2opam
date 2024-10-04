@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnetcdf19-openmpi4-4.9.2-2.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnetcdf19-openmpi4-4.9.2-2.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libcurl-mini4" 
+  "libhdf5-200" 
+  "libhdf5-200-openmpi4" {= "1.12.3"}
+  "libhdf5_hl200" 
+  "libhdf5_hl200-openmpi4" {= "1.12.3"}
+  "libxml2-2" 
+  "openmpi4-libs" 
+]
+extra-source "libnetcdf19-openmpi4-4.9.2-2.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libnetcdf19-openmpi4-4.9.2-2.4.x86_64.rpm"
+}

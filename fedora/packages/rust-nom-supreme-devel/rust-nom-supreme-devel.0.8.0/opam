@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-nom-supreme-devel-0.8.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-nom-supreme-devel-0.8.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-brownstone+default-devel" 
+  "rust-indent_write+default-devel" 
+  "rust-joinery+default-devel" 
+  "rust-memchr+default-devel" 
+  "rust-nom+default-devel" 
+]
+extra-source "rust-nom-supreme-devel-0.8.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-nom-supreme-devel-0.8.0-3.fc40.noarch.rpm"
+}

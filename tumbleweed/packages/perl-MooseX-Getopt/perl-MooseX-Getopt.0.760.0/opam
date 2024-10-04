@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-Getopt-0.760.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Getopt-0.760.0-2.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Getopt-Long-Descriptive" {>= "0.88"}
+  "perl-Moose" 
+  "perl-MooseX-Role-Parameterized" {>= "1.1"}
+  "perl-Try-Tiny" 
+  "perl-base" {>= "2.37"}
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-MooseX-Getopt-0.760.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-Getopt-0.760.0-2.2.noarch.rpm"
+}

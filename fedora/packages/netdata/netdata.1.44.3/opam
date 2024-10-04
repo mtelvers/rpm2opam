@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "netdata-1.44.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netdata-1.44.3-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cups-libs" 
+  "curl" 
+  "glibc" 
+  "glyphicons-halflings-fonts" 
+  "json-c" 
+  "libcap" 
+  "libcurl" 
+  "libgcc" 
+  "libmnl" 
+  "libnetfilter_acct" 
+  "libstdc++" 
+  "libuuid" 
+  "libuv" 
+  "libyaml" 
+  "logrotate" 
+  "lz4-libs" 
+  "netdata-conf" {= "1.44.3"}
+  "netdata-data" {= "1.44.3"}
+  "nmap-ncat" 
+  "nodejs" 
+  "openssl-libs" 
+  "pcre2" 
+  "protobuf" 
+  "protobuf-c" 
+  "snappy" 
+  "zlib-ng-compat" 
+]
+extra-source "netdata-1.44.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/netdata-1.44.3-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-utf8-all-0.024-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-utf8-all-0.024-22.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Encode" 
+  "perl-Import-Into" 
+  "perl-PerlIO-utf8_strict" 
+  "perl-Symbol" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-open" 
+  "perl-parent" 
+]
+extra-source "perl-utf8-all-0.024-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-utf8-all-0.024-22.fc40.noarch.rpm"
+}

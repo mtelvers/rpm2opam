@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-sha1collisiondetection+clap-devel-0.3.4-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-sha1collisiondetection+clap-devel-0.3.4-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-clap+derive-devel" 
+  "rust-clap+help-devel" 
+  "rust-clap+std-devel" 
+  "rust-clap+wrap_help-devel" 
+  "rust-clap-devel" 
+  "rust-sha1collisiondetection-devel" {= "0.3.4"}
+]
+extra-source "rust-sha1collisiondetection+clap-devel-0.3.4-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-sha1collisiondetection+clap-devel-0.3.4-1.fc40.noarch.rpm"
+}

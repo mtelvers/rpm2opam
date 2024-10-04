@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-notify-debouncer-mini0.2+crossbeam-channel-devel-0.2.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-notify-debouncer-mini0.2+crossbeam-channel-devel-0.2.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-crossbeam-channel+default-devel" 
+  "rust-notify-debouncer-mini0-2-devel" {= "0.2.1"}
+]
+extra-source "rust-notify-debouncer-mini0.2+crossbeam-channel-devel-0.2.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-notify-debouncer-mini0.2+crossbeam-channel-devel-0.2.1-2.fc40.noarch.rpm"
+}

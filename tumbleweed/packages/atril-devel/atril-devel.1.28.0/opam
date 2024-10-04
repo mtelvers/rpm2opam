@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "atril-devel-1.28.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "atril-devel-1.28.0-1.1.x86_64.rpm"]
+depends: [
+  "atril-backends" {= "1.28.0"}
+  "glib2-devel" {>= "2.54.0"}
+  "gtk3-devel" {>= "3.22.0"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-AtrilDocument-1_5_0" {= "1.28.0"}
+  "typelib-1_0-AtrilView-1_5_0" {= "1.28.0"}
+]
+extra-source "atril-devel-1.28.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/atril-devel-1.28.0-1.1.x86_64.rpm"
+}

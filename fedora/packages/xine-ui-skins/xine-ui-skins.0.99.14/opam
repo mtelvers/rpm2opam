@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xine-ui-skins-0.99.14-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xine-ui-skins-0.99.14-6.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "xine-ui" {= "0.99.14"}
+]
+extra-source "xine-ui-skins-0.99.14-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xine-ui-skins-0.99.14-6.fc40.noarch.rpm"
+}

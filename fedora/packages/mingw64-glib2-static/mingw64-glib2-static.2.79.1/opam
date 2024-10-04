@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw64-glib2-static-2.79.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-glib2-static-2.79.1-1.fc40.noarch.rpm"]
+depends: [
+  "mingw64-gettext-static" 
+  "mingw64-glib2" {= "2.79.1"}
+]
+extra-source "mingw64-glib2-static-2.79.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw64-glib2-static-2.79.1-1.fc40.noarch.rpm"
+}

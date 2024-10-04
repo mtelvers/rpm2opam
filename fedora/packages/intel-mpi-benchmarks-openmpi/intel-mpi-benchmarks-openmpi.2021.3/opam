@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "intel-mpi-benchmarks-openmpi-2021.3-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "intel-mpi-benchmarks-openmpi-2021.3-7.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "intel-mpi-benchmarks-license" {= "2021.3"}
+  "libgcc" 
+  "libgomp" 
+  "libstdc++" 
+  "openmpi" 
+]
+extra-source "intel-mpi-benchmarks-openmpi-2021.3-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/intel-mpi-benchmarks-openmpi-2021.3-7.fc40.x86_64.rpm"
+}

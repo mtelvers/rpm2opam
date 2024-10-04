@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libxmlb-devel-0.3.19-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxmlb-devel-0.3.19-1.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.45.8"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "liblzma5" 
+  "libstemmer1d" 
+  "libxmlb2" 
+  "libzstd-devel" 
+  "libzstd1" 
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Xmlb-1_0" {= "0.3.19"}
+  "xmlb-tool" {= "0.3.19"}
+  "xz-devel" 
+]
+extra-source "libxmlb-devel-0.3.19-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libxmlb-devel-0.3.19-1.1.x86_64.rpm"
+}

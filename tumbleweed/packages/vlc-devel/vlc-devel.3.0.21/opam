@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vlc-devel-3.0.21-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vlc-devel-3.0.21-3.2.x86_64.rpm"]
+depends: [
+  "pkgconf-pkg-config" 
+  "vlc-jack" {= "3.0.21"}
+  "vlc-noX" {= "3.0.21"}
+  "vlc-vdpau" {= "3.0.21"}
+]
+extra-source "vlc-devel-3.0.21-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vlc-devel-3.0.21-3.2.x86_64.rpm"
+}

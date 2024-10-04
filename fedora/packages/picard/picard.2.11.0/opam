@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "picard-2.11.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "picard-2.11.0-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "hicolor-icon-theme" 
+  "python3" 
+  "python3-dateutil" 
+  "python3-discid" 
+  "python3-fasteners" 
+  "python3-jwt" 
+  "python3-libdiscid" 
+  "python3-markdown" 
+  "python3-mutagen" 
+  "python3-pyyaml" 
+  "python3-qt5" 
+  "python3-qt5-base" 
+  "python3-qt5-webkit" 
+  "qt5-qtmultimedia" 
+]
+extra-source "picard-2.11.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/picard-2.11.0-1.fc40.x86_64.rpm"
+}

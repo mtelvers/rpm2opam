@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "etrophy-devel-0.5.1-8.35.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "etrophy-devel-0.5.1-8.35.x86_64.rpm"]
+depends: [
+  "efl-devel" 
+  "etrophy-data" {= "0.5.1"}
+  "libetrophy0" {= "0.5.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "etrophy-devel-0.5.1-8.35.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/etrophy-devel-0.5.1-8.35.x86_64.rpm"
+}

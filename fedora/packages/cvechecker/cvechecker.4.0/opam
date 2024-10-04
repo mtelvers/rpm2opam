@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cvechecker-4.0-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cvechecker-4.0-11.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "jq" 
+  "libconfig" 
+  "mariadb-connector-c" 
+  "sqlite-libs" 
+]
+extra-source "cvechecker-4.0-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cvechecker-4.0-11.fc40.x86_64.rpm"
+}

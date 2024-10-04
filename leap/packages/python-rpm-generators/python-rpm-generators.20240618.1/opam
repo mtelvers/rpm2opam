@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python-rpm-generators-20240618.1e386da-slfo.1.1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python-rpm-generators-20240618.1e386da-slfo.1.1.2.noarch.rpm"]
+depends: [
+  "python-rpm-macros" {= "20240618.1"}
+  "python311-setuptools" 
+]
+extra-source "python-rpm-generators-20240618.1e386da-slfo.1.1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/python-rpm-generators-20240618.1e386da-slfo.1.1.2.noarch.rpm"
+}

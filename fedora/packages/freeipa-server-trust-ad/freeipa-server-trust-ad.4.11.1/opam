@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "freeipa-server-trust-ad-4.11.1-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freeipa-server-trust-ad-4.11.1-4.fc40.x86_64.rpm"]
+depends: [
+  "alternatives" 
+  "bash" 
+  "freeipa-common" {= "4.11.1"}
+  "freeipa-server" {= "4.11.1"}
+  "glibc" 
+  "krb5-libs" 
+  "libcom_err" 
+  "libpwquality" 
+  "libsss_idmap" 
+  "libtalloc" 
+  "libtevent" 
+  "openldap" 
+  "openssl-libs" 
+  "python3" 
+  "python3-libsss_nss_idmap" 
+  "python3-samba" 
+  "python3-sss" 
+  "samba" {>= "4.20.0"}
+  "samba-client-libs" 
+  "samba-winbind" 
+  "sssd-winbind-idmap" 
+]
+extra-source "freeipa-server-trust-ad-4.11.1-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/freeipa-server-trust-ad-4.11.1-4.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tokio0.2+time-devel-0.2.25-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tokio0.2+time-devel-0.2.25-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-tokio0-2+slab-devel" {= "0.2.25"}
+  "rust-tokio0-2-devel" {= "0.2.25"}
+]
+extra-source "rust-tokio0.2+time-devel-0.2.25-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tokio0.2+time-devel-0.2.25-3.fc40.noarch.rpm"
+}

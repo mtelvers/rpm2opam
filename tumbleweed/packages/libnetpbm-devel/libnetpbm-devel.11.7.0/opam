@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnetpbm-devel-11.7.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnetpbm-devel-11.7.0-1.1.x86_64.rpm"]
+depends: [
+  "libnetpbm11" {= "11.7.0"}
+]
+extra-source "libnetpbm-devel-11.7.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libnetpbm-devel-11.7.0-1.1.x86_64.rpm"
+}

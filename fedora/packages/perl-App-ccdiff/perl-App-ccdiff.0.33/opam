@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-App-ccdiff-0.33-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-App-ccdiff-0.33-4.fc40.noarch.rpm"]
+depends: [
+  "groff-base" 
+  "perl-Algorithm-Diff" 
+  "perl-File-Find" 
+  "perl-Getopt-Long" 
+  "perl-Pod-Usage" 
+  "perl-Scalar-List-Utils" 
+  "perl-Term-ANSIColor" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.14.0"}
+  "perl-podlators" 
+]
+extra-source "perl-App-ccdiff-0.33-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-App-ccdiff-0.33-4.fc40.noarch.rpm"
+}

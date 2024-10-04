@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ipset-devel-7.22-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ipset-devel-7.22-1.1.x86_64.rpm"]
+depends: [
+  "libipset13" {= "7.22"}
+  "libmnl-devel" {>= "1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "ipset-devel-7.22-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ipset-devel-7.22-1.1.x86_64.rpm"
+}

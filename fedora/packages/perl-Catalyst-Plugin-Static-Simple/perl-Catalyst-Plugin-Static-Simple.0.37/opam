@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Catalyst-Plugin-Static-Simple-0.37-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Catalyst-Plugin-Static-Simple-0.37-10.fc40.noarch.rpm"]
+depends: [
+  "perl-Catalyst-Runtime" {>= "5.80008"}
+  "perl-File-stat" 
+  "perl-IO" 
+  "perl-MIME-Types" {>= "1.25"}
+  "perl-MRO-Compat" 
+  "perl-Moose" 
+  "perl-PathTools" 
+  "perl-libs" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-Catalyst-Plugin-Static-Simple-0.37-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Catalyst-Plugin-Static-Simple-0.37-10.fc40.noarch.rpm"
+}

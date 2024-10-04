@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-csvkit-2.0.1-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-csvkit-2.0.1-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-SQLAlchemy" 
+  "python310-agate" {>= "1.6.3"}
+  "python310-agate-dbf" {>= "0.2.0"}
+  "python310-agate-excel" 
+  "python310-agate-sql" 
+  "python310-base" 
+  "python310-openpyxl" 
+  "python310-xlrd" 
+  "update-alternatives" 
+]
+extra-source "python310-csvkit-2.0.1-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-csvkit-2.0.1-1.2.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "liblo-devel-0.32-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "liblo-devel-0.32-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "liblo7" 
+  "pkgconf-pkg-config" 
+]
+extra-source "liblo-devel-0.32-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/liblo-devel-0.32-1.2.x86_64.rpm"
+}

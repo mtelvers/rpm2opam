@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "clipsmm-0.3.5-28.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clipsmm-0.3.5-28.fc40.x86_64.rpm"]
+depends: [
+  "clips-libs" 
+  "glib2" 
+  "glibc" 
+  "glibmm2-4" 
+  "libgcc" 
+  "libsigc++20" 
+  "libstdc++" 
+  "ncurses-libs" 
+]
+extra-source "clipsmm-0.3.5-28.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/clipsmm-0.3.5-28.fc40.x86_64.rpm"
+}

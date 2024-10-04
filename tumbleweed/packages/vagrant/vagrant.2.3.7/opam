@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vagrant-2.3.7-8.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vagrant-2.3.7-8.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "bsdtar" 
+  "curl" 
+  "openssh" 
+  "ruby3-3" 
+  "ruby3-3-rubygem-bcrypt_pbkdf" {>= "1.1"}
+  "ruby3-3-rubygem-childprocess" 
+  "ruby3-3-rubygem-ed25519" {>= "1.3.0"}
+  "ruby3-3-rubygem-erubi" 
+  "ruby3-3-rubygem-googleapis-common-protos-types" {>= "1.3"}
+  "ruby3-3-rubygem-grpc" 
+  "ruby3-3-rubygem-hashicorp-checkpoint" {>= "0.1.5"}
+  "ruby3-3-rubygem-i18n" {>= "1.8"}
+  "ruby3-3-rubygem-listen" {>= "3.6"}
+  "ruby3-3-rubygem-log4r" {< "1.1.11"}
+  "ruby3-3-rubygem-mime-types" {>= "3.3"}
+  "ruby3-3-rubygem-net-scp" 
+  "ruby3-3-rubygem-net-sftp" 
+  "ruby3-3-rubygem-net-ssh" 
+  "ruby3-3-rubygem-rb-kqueue" 
+  "ruby3-3-rubygem-rgl" {>= "0.6.6"}
+  "ruby3-3-rubygem-rubyzip" 
+  "ruby3-3-rubygem-vagrant_cloud" {>= "3.0"}
+  "ruby3-3-rubygem-winrm" {>= "2.3.4"}
+  "ruby3-3-rubygem-winrm-elevated" {>= "1.2.1"}
+  "ruby3-3-rubygem-winrm-fs" {>= "1.3.4"}
+  "shadow" 
+]
+extra-source "vagrant-2.3.7-8.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/vagrant-2.3.7-8.1.noarch.rpm"
+}

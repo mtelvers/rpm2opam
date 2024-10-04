@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-hypothesmith-0.3.3-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-hypothesmith-0.3.3-1.2.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-hypothesis" {>= "6.93.0"}
+  "python310-lark" {>= "0.10.1"}
+  "python310-libcst" {>= "0.4.0"}
+]
+extra-source "python310-hypothesmith-0.3.3-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-hypothesmith-0.3.3-1.2.noarch.rpm"
+}

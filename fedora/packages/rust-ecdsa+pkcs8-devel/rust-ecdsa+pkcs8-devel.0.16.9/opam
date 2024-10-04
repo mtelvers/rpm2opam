@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ecdsa+pkcs8-devel-0.16.9-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ecdsa+pkcs8-devel-0.16.9-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-ecdsa+der-devel" {= "0.16.9"}
+  "rust-ecdsa+digest-devel" {= "0.16.9"}
+  "rust-ecdsa-devel" {= "0.16.9"}
+  "rust-elliptic-curve+pkcs8-devel" 
+]
+extra-source "rust-ecdsa+pkcs8-devel-0.16.9-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ecdsa+pkcs8-devel-0.16.9-2.fc40.noarch.rpm"
+}

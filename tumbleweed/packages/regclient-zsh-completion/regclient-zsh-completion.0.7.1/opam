@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "regclient-zsh-completion-0.7.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "regclient-zsh-completion-0.7.1-1.1.noarch.rpm"]
+depends: [
+  "regclient" {= "0.7.1"}
+]
+extra-source "regclient-zsh-completion-0.7.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/regclient-zsh-completion-0.7.1-1.1.noarch.rpm"
+}

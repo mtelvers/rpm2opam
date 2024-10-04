@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-xmlrpc-light-devel-0.6.1-79.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-xmlrpc-light-devel-0.6.1-79.fc40.x86_64.rpm"]
+depends: [
+  "ocaml" {= "24528204"}
+  "ocaml-camlp-streams" {= "0"}
+  "ocaml-camlp-streams-devel" 
+  "ocaml-ocamlnet" {= "7"}
+  "ocaml-ocamlnet-devel" {= "0"}
+  "ocaml-ocamlnet-nethttpd-devel" 
+  "ocaml-xml-light" {= "21436804"}
+  "ocaml-xml-light-devel" 
+  "ocaml-xmlrpc-light" {= "0.6.1"}
+]
+extra-source "ocaml-xmlrpc-light-devel-0.6.1-79.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-xmlrpc-light-devel-0.6.1-79.fc40.x86_64.rpm"
+}

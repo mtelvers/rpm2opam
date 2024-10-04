@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "json-java-20240303-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "json-java-20240303-1.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "json-java-20240303-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/json-java-20240303-1.1.noarch.rpm"
+}

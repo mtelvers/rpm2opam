@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tomcat-jsp-2.3-api-9.0.83-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tomcat-jsp-2.3-api-9.0.83-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "tomcat-el-3-0-api" {= "9.0.83"}
+  "tomcat-servlet-4-0-api" {= "9.0.83"}
+]
+extra-source "tomcat-jsp-2.3-api-9.0.83-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tomcat-jsp-2.3-api-9.0.83-3.fc40.noarch.rpm"
+}

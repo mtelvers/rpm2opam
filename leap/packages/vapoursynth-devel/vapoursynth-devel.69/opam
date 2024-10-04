@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vapoursynth-devel-69-lp160.1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vapoursynth-devel-69-lp160.1.3.x86_64.rpm"]
+depends: [
+  "libvapoursynth-69" {= "69"}
+  "libvapoursynth-script0" {= "69"}
+  "pkgconf-pkg-config" 
+  "python311-devel" 
+  "zimg-devel" 
+]
+extra-source "vapoursynth-devel-69-lp160.1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/vapoursynth-devel-69-lp160.1.3.x86_64.rpm"
+}

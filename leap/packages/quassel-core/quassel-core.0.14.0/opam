@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "quassel-core-0.14.0-lp160.1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "quassel-core-0.14.0-lp160.1.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5Network5" 
+  "libQt5Sql5" 
+  "libQt5Sql5-mysql" 
+  "libgcc_s1" 
+  "libldap2" 
+  "libqca-qt5-2" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "logrotate" 
+  "shadow" 
+]
+extra-source "quassel-core-0.14.0-lp160.1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/quassel-core-0.14.0-lp160.1.3.x86_64.rpm"
+}

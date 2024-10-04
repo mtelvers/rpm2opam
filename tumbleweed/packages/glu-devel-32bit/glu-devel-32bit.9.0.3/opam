@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glu-devel-32bit-9.0.3-2.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glu-devel-32bit-9.0.3-2.4.x86_64.rpm"]
+depends: [
+  "glu-devel" {= "9.0.3"}
+  "libGLU1-32bit" {= "9.0.3"}
+  "libglvnd-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "glu-devel-32bit-9.0.3-2.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/glu-devel-32bit-9.0.3-2.4.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "llvm-vim-plugins-18-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "llvm-vim-plugins-18-2.2.noarch.rpm"]
+depends: [
+  "llvm18-vim-plugins" 
+]
+extra-source "llvm-vim-plugins-18-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/llvm-vim-plugins-18-2.2.noarch.rpm"
+}

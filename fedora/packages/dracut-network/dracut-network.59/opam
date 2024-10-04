@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dracut-network-059-22.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dracut-network-059-22.fc40.x86_64.rpm"]
+depends: [
+  "NetworkManager" {>= "1.20"}
+  "bash" 
+  "dracut" {= "59"}
+  "iproute" 
+  "iputils" 
+  "jq" 
+]
+extra-source "dracut-network-059-22.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dracut-network-059-22.fc40.x86_64.rpm"
+}

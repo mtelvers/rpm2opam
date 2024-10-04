@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plasma6-pa-6.1.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plasma6-pa-6.1.5-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "kf6-kcmutils-imports" 
+  "kf6-kconfig-imports" 
+  "kf6-kdeclarative-imports" 
+  "kf6-kirigami-imports" {>= "6.2.0"}
+  "kf6-kitemmodels-imports" 
+  "kf6-ksvg-imports" 
+  "kirigami-addons6" 
+  "libKF6ConfigCore6" 
+  "libKF6ConfigGui6" 
+  "libKF6CoreAddons6" 
+  "libKF6DBusAddons6" 
+  "libKF6GlobalAccel6" 
+  "libKF6I18n6" 
+  "libKF6KCMUtilsCore6" 
+  "libKF6KCMUtilsQuick6" 
+  "libKF6PulseAudioQt5" 
+  "libKF6StatusNotifierItem6" 
+  "libPlasma6" 
+  "libQt6Core6" 
+  "libQt6DBus6" 
+  "libQt6Gui6" 
+  "libQt6Qml6" 
+  "libQt6Quick6" 
+  "libQt6Widgets6" 
+  "libcanberra0" 
+  "libplasma6-components" 
+  "libpulse0" 
+  "libstdc++6" 
+  "pulseaudio-module-x11" 
+  "qtdeclarative-imports-provides-qt6" 
+]
+extra-source "plasma6-pa-6.1.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/plasma6-pa-6.1.5-1.1.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "weston-devel-13.0.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "weston-devel-13.0.1-1.1.x86_64.rpm"]
+depends: [
+  "libpixman-1-0-devel" {>= "0.25.2"}
+  "libweston-13-0" {= "13.0.1"}
+  "libxkbcommon-devel" {>= "0.3.0"}
+  "pkgconf-pkg-config" 
+  "wayland-devel" {>= "1.22.0"}
+]
+extra-source "weston-devel-13.0.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/weston-devel-13.0.1-1.1.x86_64.rpm"
+}

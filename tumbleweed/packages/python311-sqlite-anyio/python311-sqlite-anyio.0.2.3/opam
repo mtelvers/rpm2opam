@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-sqlite-anyio-0.2.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-sqlite-anyio-0.2.3-1.1.noarch.rpm"]
+depends: [
+  "python311" 
+  "python311-anyio" 
+  "python311-base" {= "3.11"}
+]
+extra-source "python311-sqlite-anyio-0.2.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-sqlite-anyio-0.2.3-1.1.noarch.rpm"
+}

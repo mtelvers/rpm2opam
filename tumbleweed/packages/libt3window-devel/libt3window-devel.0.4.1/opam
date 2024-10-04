@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libt3window-devel-0.4.1-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libt3window-devel-0.4.1-1.8.x86_64.rpm"]
+depends: [
+  "libt3window0" {= "0.4.1"}
+  "libtranscript-devel" {>= "0.2.2"}
+  "ncurses-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libt3window-devel-0.4.1-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libt3window-devel-0.4.1-1.8.x86_64.rpm"
+}

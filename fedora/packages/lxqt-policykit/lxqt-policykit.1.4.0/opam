@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lxqt-policykit-1.4.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lxqt-policykit-1.4.0-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "liblxqt" 
+  "libstdc++" 
+  "polkit-qt5-1" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "lxqt-policykit-1.4.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lxqt-policykit-1.4.0-3.fc40.x86_64.rpm"
+}

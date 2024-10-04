@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-crypton-connection-devel-0.3.2-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-crypton-connection-devel-0.3.2-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-basement-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-crypton-connection" {= "0.3.2"}
+  "ghc-crypton-x509-devel" 
+  "ghc-crypton-x509-store-devel" 
+  "ghc-crypton-x509-system-devel" 
+  "ghc-crypton-x509-validation-devel" 
+  "ghc-data-default-class-devel" 
+  "ghc-network-devel" 
+  "ghc-socks-devel" 
+  "ghc-tls-devel" 
+]
+extra-source "ghc-crypton-connection-devel-0.3.2-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-crypton-connection-devel-0.3.2-2.1.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "shepherd-bash-completion-0.10.2-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "shepherd-bash-completion-0.10.2-1.3.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "shepherd" {= "0.10.2"}
+]
+extra-source "shepherd-bash-completion-0.10.2-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/shepherd-bash-completion-0.10.2-1.3.noarch.rpm"
+}

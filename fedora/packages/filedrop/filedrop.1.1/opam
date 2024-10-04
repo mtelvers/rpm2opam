@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "filedrop-1.1-24.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "filedrop-1.1-24.fc40.noarch.rpm"]
+depends: [
+  "java-21-openjdk" {>= "1.6.0"}
+  "javapackages-tools" 
+]
+extra-source "filedrop-1.1-24.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/filedrop-1.1-24.fc40.noarch.rpm"
+}

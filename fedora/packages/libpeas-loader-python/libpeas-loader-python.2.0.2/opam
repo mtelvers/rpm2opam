@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libpeas-loader-python-2.0.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpeas-loader-python-2.0.2-1.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "libpeas" {= "2.0.2"}
+  "python3-gobject" 
+  "python3-libs" 
+]
+extra-source "libpeas-loader-python-2.0.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libpeas-loader-python-2.0.2-1.fc40.x86_64.rpm"
+}

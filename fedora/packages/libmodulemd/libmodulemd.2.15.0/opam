@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libmodulemd-2.15.0-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmodulemd-2.15.0-9.fc40.x86_64.rpm"]
+depends: [
+  "glib2" {>= "2.79.0"}
+  "glibc" 
+  "libgcc" 
+  "libyaml" 
+  "rpm-libs" 
+]
+extra-source "libmodulemd-2.15.0-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libmodulemd-2.15.0-9.fc40.x86_64.rpm"
+}

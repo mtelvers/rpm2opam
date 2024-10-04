@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-App-Nopaste-1.013-15.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-App-Nopaste-1.013-15.fc40.noarch.rpm"]
+depends: [
+  "openssh-clients" 
+  "perl-Browser-Open" 
+  "perl-Class-Load" 
+  "perl-Clipboard" 
+  "perl-Exporter" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long-Descriptive" 
+  "perl-HTTP-Message" 
+  "perl-JSON-MaybeXS" 
+  "perl-Module-Pluggable" 
+  "perl-Module-Runtime" 
+  "perl-POSIX" 
+  "perl-Path-Tiny" 
+  "perl-PathTools" 
+  "perl-URI" 
+  "perl-WWW-Mechanize" 
+  "perl-WWW-Pastebin-PastebinCom-Create" 
+  "perl-libs" {>= "5.8.3"}
+  "perl-libwww-perl" 
+  "perl-namespace-clean" {>= "0.19"}
+  "perl-parent" 
+]
+extra-source "perl-App-Nopaste-1.013-15.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-App-Nopaste-1.013-15.fc40.noarch.rpm"
+}

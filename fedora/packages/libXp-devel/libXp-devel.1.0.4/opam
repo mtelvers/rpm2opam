@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libXp-devel-1.0.4-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libXp-devel-1.0.4-6.fc40.x86_64.rpm"]
+depends: [
+  "libX11-devel" 
+  "libXau-devel" 
+  "libXext-devel" 
+  "libXp" {= "1.0.4"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libXp-devel-1.0.4-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libXp-devel-1.0.4-6.fc40.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ocaml-bos-devel-0.2.1-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-bos-devel-0.2.1-1.6.x86_64.rpm"]
+depends: [
+  "ocaml" {= "8"}
+  "ocaml-astring-devel" {= "73"}
+  "ocaml-bos" {= "0.2.1"}
+  "ocaml-compiler-libs" {= "0"}
+  "ocaml-compiler-libs-devel" 
+  "ocaml-fmt-devel" {= "4"}
+  "ocaml-fpath-devel" {= "7"}
+  "ocaml-logs-devel" {= "0"}
+  "ocaml-rresult-devel" {= "5"}
+]
+extra-source "ocaml-bos-devel-0.2.1-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ocaml-bos-devel-0.2.1-1.6.x86_64.rpm"
+}

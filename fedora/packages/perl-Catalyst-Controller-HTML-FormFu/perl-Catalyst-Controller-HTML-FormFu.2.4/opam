@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Catalyst-Controller-HTML-FormFu-2.04-19.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Catalyst-Controller-HTML-FormFu-2.04-19.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Catalyst-Component-InstancePerContext" 
+  "perl-Catalyst-Runtime" 
+  "perl-Config-Any" 
+  "perl-HTML-FormFu" 
+  "perl-Moose" 
+  "perl-MooseX-Attribute-Chained" {>= "1.0.1"}
+  "perl-PathTools" 
+  "perl-Regexp-Assemble" 
+  "perl-Scalar-List-Utils" 
+  "perl-Task-Weaken" 
+  "perl-libs" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-Catalyst-Controller-HTML-FormFu-2.04-19.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Catalyst-Controller-HTML-FormFu-2.04-19.fc40.noarch.rpm"
+}

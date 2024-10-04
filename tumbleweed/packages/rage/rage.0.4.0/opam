@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rage-0.4.0-1.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rage-0.4.0-1.10.x86_64.rpm"]
+depends: [
+  "efl" 
+  "evas-generic-loaders" {>= "1.22.3"}
+  "glibc" 
+]
+extra-source "rage-0.4.0-1.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rage-0.4.0-1.10.x86_64.rpm"
+}

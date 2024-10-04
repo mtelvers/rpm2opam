@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-cipher+std-devel-0.4.4-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-cipher+std-devel-0.4.4-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-cipher+alloc-devel" {= "0.4.4"}
+  "rust-cipher-devel" {= "0.4.4"}
+  "rust-crypto-common+std-devel" 
+  "rust-inout+std-devel" 
+]
+extra-source "rust-cipher+std-devel-0.4.4-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-cipher+std-devel-0.4.4-4.fc40.noarch.rpm"
+}

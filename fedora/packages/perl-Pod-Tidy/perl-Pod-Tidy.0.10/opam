@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Pod-Tidy-0.10-26.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Pod-Tidy-0.10-26.fc40.noarch.rpm"]
+depends: [
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-Getopt-Long" 
+  "perl-IO-String" 
+  "perl-PathTools" 
+  "perl-Pod-Parser" 
+  "perl-Pod-Simple" 
+  "perl-Pod-Usage" 
+  "perl-Pod-Wrap" 
+  "perl-Text-Glob" {>= "0.6"}
+  "perl-Text-Tabs+Wrap" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-Pod-Tidy-0.10-26.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Pod-Tidy-0.10-26.fc40.noarch.rpm"
+}

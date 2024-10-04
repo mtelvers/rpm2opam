@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "yt-dlp-zsh-completion-2024.03.10-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yt-dlp-zsh-completion-2024.03.10-1.fc40.noarch.rpm"]
+depends: [
+  "yt-dlp" {= "2024.3.10"}
+  "zsh" 
+]
+extra-source "yt-dlp-zsh-completion-2024.03.10-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/y/yt-dlp-zsh-completion-2024.03.10-1.fc40.noarch.rpm"
+}

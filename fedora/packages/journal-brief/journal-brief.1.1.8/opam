@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "journal-brief-1.1.8-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "journal-brief-1.1.8-9.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-journal-brief" {= "1.1.8"}
+  "python3-setuptools" 
+]
+extra-source "journal-brief-1.1.8-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/journal-brief-1.1.8-9.fc40.noarch.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "motion-4.6.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "motion-4.6.0-1.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "ffmpeg-7-mini-libs" 
+  "fillup" 
+  "glibc" 
+  "libjpeg8" 
+  "libmicrohttpd12" 
+  "libsqlite3-0" 
+  "libwebp7" 
+  "libwebpmux3" 
+  "shadow" 
+  "system-group-hardware" 
+  "systemd" 
+]
+extra-source "motion-4.6.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/motion-4.6.0-1.3.x86_64.rpm"
+}

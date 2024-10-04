@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "php8-imagick-3.7.0-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php8-imagick-3.7.0-3.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libMagickCore-7_Q16HDRI10" 
+  "libMagickWand-7_Q16HDRI10" 
+  "libgomp1" 
+  "php8" {= "20230831"}
+]
+extra-source "php8-imagick-3.7.0-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/php8-imagick-3.7.0-3.2.x86_64.rpm"
+}

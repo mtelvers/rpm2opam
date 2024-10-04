@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-futures+alloc-devel-0.3.30-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-futures+alloc-devel-0.3.30-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-futures-channel+alloc-devel" 
+  "rust-futures-core+alloc-devel" 
+  "rust-futures-devel" {= "0.3.30"}
+  "rust-futures-sink+alloc-devel" 
+  "rust-futures-task+alloc-devel" 
+  "rust-futures-util+alloc-devel" 
+]
+extra-source "rust-futures+alloc-devel-0.3.30-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-futures+alloc-devel-0.3.30-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "net-tools-2.0-0.72.20160912git.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "net-tools-2.0-0.72.20160912git.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libselinux" 
+  "systemd" 
+]
+extra-source "net-tools-2.0-0.72.20160912git.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/net-tools-2.0-0.72.20160912git.el10.x86_64.rpm"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-Kivy-2.3.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-Kivy-2.3.0-1.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libSDL2-2_0-0" 
+  "libSDL2_image-2_0-0" 
+  "libSDL2_mixer-2_0-0" 
+  "libSDL2_ttf-2_0-0" 
+  "libfontconfig1" 
+  "libfreetype6" 
+  "libglvnd" 
+  "libgstreamer-1_0-0" 
+  "libpango-1_0-0" 
+  "mtdev" 
+  "python311-base" 
+  "python312-Pillow" 
+  "python312-Pygments" 
+  "python312-base" {= "3.12"}
+  "python312-docutils" 
+  "python312-pyenchant" 
+  "python312-requests" 
+  "xclip" 
+]
+extra-source "python312-Kivy-2.3.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-Kivy-2.3.0-1.3.x86_64.rpm"
+}

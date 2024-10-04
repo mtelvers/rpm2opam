@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-nb2plots-0.7.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-nb2plots-0.7.2-3.fc40.noarch.rpm"]
+depends: [
+  "pandoc" 
+  "python3" 
+  "python3-ipython" {>= "7.16.3"}
+  "python3-ipython+notebook" {>= "7.16.3"}
+  "python3-matplotlib" {>= "3.2"}
+  "python3-nbconvert" {>= "6.0.7"}
+  "python3-numpy" {>= "1.20"}
+  "python3-sphinx" {>= "4"}
+  "python3-sphinxtesters" {>= "0.2.3"}
+  "python3-texext" {>= "0.6.6"}
+]
+extra-source "python3-nb2plots-0.7.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-nb2plots-0.7.2-3.fc40.noarch.rpm"
+}

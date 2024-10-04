@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xdg-utils-1.1.3+20210805-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xdg-utils-1.1.3+20210805-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "perl" 
+  "perl-Net-DBus" 
+  "perl-X11-Protocol" 
+  "which" 
+]
+extra-source "xdg-utils-1.1.3+20210805-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/xdg-utils-1.1.3+20210805-slfo.1.1.3.noarch.rpm"
+}

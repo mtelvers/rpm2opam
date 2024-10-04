@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vinagre-3.22.0-29.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vinagre-3.22.0-29.fc39.x86_64.rpm"]
+depends: [
+  "avahi-gobject" 
+  "avahi-libs" 
+  "avahi-ui-gtk3" 
+  "cairo" 
+  "dbus" 
+  "dbus-glib" 
+  "desktop-file-utils" {>= "0.22"}
+  "freerdp2-libs" 
+  "gdk-pixbuf2" 
+  "glib2" {>= "2.45.4"}
+  "glibc" 
+  "gtk-vnc2" 
+  "gtk3" 
+  "libsecret" 
+  "libxml2" 
+  "shared-mime-info" {>= "1.4"}
+  "spice-glib" 
+  "spice-gtk3" 
+  "telepathy-filesystem" 
+  "telepathy-glib" 
+  "vte291" 
+]
+extra-source "vinagre-3.22.0-29.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vinagre-3.22.0-29.fc39.x86_64.rpm"
+}

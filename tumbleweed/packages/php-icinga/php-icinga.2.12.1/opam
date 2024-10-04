@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "php-icinga-2.12.1-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-icinga-2.12.1-2.2.noarch.rpm"]
+depends: [
+  "icinga-php-library" {>= "0.13.0"}
+  "icinga-php-thirdparty" {>= "0.12.0"}
+  "php8" 
+  "php8-curl" 
+  "php8-dom" 
+  "php8-fileinfo" 
+  "php8-gd" 
+  "php8-gettext" 
+  "php8-intl" 
+  "php8-ldap" 
+  "php8-mbstring" 
+  "php8-mysql" 
+  "php8-openssl" 
+  "php8-pdo" 
+  "php8-pgsql" 
+  "php8-posix" 
+]
+extra-source "php-icinga-2.12.1-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/php-icinga-2.12.1-2.2.noarch.rpm"
+}

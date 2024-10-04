@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpng16-compat-devel-32bit-1.6.43-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpng16-compat-devel-32bit-1.6.43-3.1.x86_64.rpm"]
+depends: [
+  "libpng16-compat-devel" {= "1.6.43"}
+  "libpng16-devel-32bit" {= "1.6.43"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libpng16-compat-devel-32bit-1.6.43-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpng16-compat-devel-32bit-1.6.43-3.1.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sddm-wayland-sway-0.4.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sddm-wayland-sway-0.4.1-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "desktop-backgrounds-compat" 
+  "sddm" {>= "0.20.0"}
+  "sway" {>= "1.8"}
+]
+extra-source "sddm-wayland-sway-0.4.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sddm-wayland-sway-0.4.1-1.fc40.noarch.rpm"
+}

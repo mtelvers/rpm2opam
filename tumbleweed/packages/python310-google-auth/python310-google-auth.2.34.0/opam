@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-google-auth-2.34.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-google-auth-2.34.0-1.1.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-cachetools" {>= "2.0.0"}
+  "python310-pyasn1-modules" {>= "0.2.1"}
+  "python310-rsa" {>= "3.1.4"}
+  "python310-urllib3" 
+]
+extra-source "python310-google-auth-2.34.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-google-auth-2.34.0-1.1.noarch.rpm"
+}

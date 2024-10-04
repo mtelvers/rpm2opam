@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-grpc-ecosystem-gateway-2-devel-2.7.3-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-grpc-ecosystem-gateway-2-devel-2.7.3-12.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-glog-devel" 
+  "golang-github-protobuf-devel" 
+  "golang-google-genproto-devel" 
+  "golang-google-protobuf-devel" 
+  "golang-sigs-k8s-yaml-devel" 
+]
+extra-source "golang-github-grpc-ecosystem-gateway-2-devel-2.7.3-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-grpc-ecosystem-gateway-2-devel-2.7.3-12.fc40.noarch.rpm"
+}

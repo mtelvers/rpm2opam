@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpulse-devel-16.1-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpulse-devel-16.1-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libpulse-mainloop-glib0" {= "16.1"}
+  "libpulse0" {= "16.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libpulse-devel-16.1-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libpulse-devel-16.1-slfo.1.1.7.x86_64.rpm"
+}

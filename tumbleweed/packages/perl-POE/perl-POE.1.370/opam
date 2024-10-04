@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-POE-1.370-1.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-POE-1.370-1.14.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-IO-Pipely" {>= "0.5"}
+  "perl-IO-Tty" {>= "1.8"}
+  "perl-POE-Test-Loops" {>= "1.360"}
+  "perl-base" {>= "1.24"}
+]
+extra-source "perl-POE-1.370-1.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-POE-1.370-1.14.noarch.rpm"
+}

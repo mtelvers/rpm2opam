@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-virtkey-0.63.0-9.32.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-virtkey-0.63.0-9.32.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libXtst6" 
+  "libgtk-2_0-0" 
+  "libxkbfile1" 
+  "python311-base" {= "3.11"}
+]
+extra-source "python311-virtkey-0.63.0-9.32.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-virtkey-0.63.0-9.32.x86_64.rpm"
+}

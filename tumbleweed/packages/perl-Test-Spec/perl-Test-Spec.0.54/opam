@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-Spec-0.54-1.25.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Spec-0.54-1.25.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Devel-GlobalPhase" 
+  "perl-Package-Stash" {>= "0.23"}
+  "perl-Test-Deep" {>= "0.103"}
+  "perl-Test-Trap" 
+  "perl-Tie-IxHash" 
+]
+extra-source "perl-Test-Spec-0.54-1.25.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-Spec-0.54-1.25.noarch.rpm"
+}

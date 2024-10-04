@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lightdm-bash-completion-1.32.0-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lightdm-bash-completion-1.32.0-4.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "lightdm" 
+]
+extra-source "lightdm-bash-completion-1.32.0-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/lightdm-bash-completion-1.32.0-4.1.noarch.rpm"
+}

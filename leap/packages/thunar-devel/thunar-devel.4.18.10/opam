@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "thunar-devel-4.18.10-lp160.1.19.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "thunar-devel-4.18.10-lp160.1.19.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "gtk3-devel" 
+  "libthunarx-3-0" {= "4.18.10"}
+  "pkgconf-pkg-config" 
+  "thunar" {= "4.18.10"}
+]
+extra-source "thunar-devel-4.18.10-lp160.1.19.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/thunar-devel-4.18.10-lp160.1.19.x86_64.rpm"
+}

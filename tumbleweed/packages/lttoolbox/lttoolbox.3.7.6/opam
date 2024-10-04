@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lttoolbox-3.7.6-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lttoolbox-3.7.6-1.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libicu75" 
+  "liblttoolbox3" 
+  "libstdc++6" 
+  "libxml2-2" 
+]
+extra-source "lttoolbox-3.7.6-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lttoolbox-3.7.6-1.4.x86_64.rpm"
+}

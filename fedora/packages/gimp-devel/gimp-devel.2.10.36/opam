@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gimp-devel-2.10.36-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gimp-devel-2.10.36-2.fc40.x86_64.rpm"]
+depends: [
+  "cairo-devel" {>= "1.12.2"}
+  "gdk-pixbuf2-devel" {>= "2.30.8"}
+  "gegl04-devel" {>= "0.4.38"}
+  "gimp-devel-tools" {= "2.10.36"}
+  "gimp-libs" {= "2.10.36"}
+  "gtk2-devel" {>= "2.24.32"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gimp-devel-2.10.36-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gimp-devel-2.10.36-2.fc40.x86_64.rpm"
+}

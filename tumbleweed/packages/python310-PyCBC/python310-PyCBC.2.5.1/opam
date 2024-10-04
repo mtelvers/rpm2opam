@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-PyCBC-2.5.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-PyCBC-2.5.1-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgomp1" 
+  "libstdc++6" 
+  "python310-Cython" {>= "0.29"}
+  "python310-Jinja2" 
+  "python310-Mako" {>= "1.0.1"}
+  "python310-Pillow" 
+  "python310-astropy" {>= "2.0.3"}
+  "python310-base" {= "3.10"}
+  "python310-beautifulsoup4" {>= "4.6.0"}
+  "python310-gwdatafind" 
+  "python310-h5py" {>= "3.0"}
+  "python310-lal" 
+  "python310-lalframe" 
+  "python310-lalpulsar" 
+  "python310-lalsimulation" 
+  "python310-ligo-lw" {>= "1.7.0"}
+  "python310-ligo-segments" 
+  "python310-lscsoft-glue" 
+  "python310-matplotlib" {>= "1.5.1"}
+  "python310-mpld3" {>= "0.3"}
+  "python310-numpy" {>= "1.16.0"}
+  "python310-pegasus-wms-api" {>= "5.0.1"}
+  "python310-scipy" {>= "0.16"}
+  "python310-tqdm" 
+]
+extra-source "python310-PyCBC-2.5.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-PyCBC-2.5.1-2.1.x86_64.rpm"
+}

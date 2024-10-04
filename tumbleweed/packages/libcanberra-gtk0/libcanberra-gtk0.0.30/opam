@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcanberra-gtk0-0.30-18.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcanberra-gtk0-0.30-18.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libcanberra0" 
+  "libgtk-2_0-0" 
+]
+extra-source "libcanberra-gtk0-0.30-18.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcanberra-gtk0-0.30-18.1.x86_64.rpm"
+}

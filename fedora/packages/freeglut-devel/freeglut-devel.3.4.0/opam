@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "freeglut-devel-3.4.0-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freeglut-devel-3.4.0-7.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "freeglut" {= "3.4.0"}
+  "mesa-libGL-devel" 
+  "mesa-libGLU-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "freeglut-devel-3.4.0-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/freeglut-devel-3.4.0-7.fc40.x86_64.rpm"
+}

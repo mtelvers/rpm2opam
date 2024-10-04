@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jetbrains-mono-fonts-all-2.304-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jetbrains-mono-fonts-all-2.304-6.fc40.noarch.rpm"]
+depends: [
+  "jetbrains-mono-fonts" {= "2.304"}
+  "jetbrains-mono-nl-fonts" {= "2.304"}
+]
+extra-source "jetbrains-mono-fonts-all-2.304-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jetbrains-mono-fonts-all-2.304-6.fc40.noarch.rpm"
+}

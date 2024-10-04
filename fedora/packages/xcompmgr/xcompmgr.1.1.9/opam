@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xcompmgr-1.1.9-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xcompmgr-1.1.9-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11" 
+  "libXcomposite" 
+  "libXdamage" 
+  "libXext" 
+  "libXfixes" 
+  "libXrender" 
+]
+extra-source "xcompmgr-1.1.9-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xcompmgr-1.1.9-3.fc40.x86_64.rpm"
+}

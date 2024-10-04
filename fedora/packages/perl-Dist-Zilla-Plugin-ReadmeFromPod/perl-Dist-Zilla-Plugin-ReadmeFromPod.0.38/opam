@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Dist-Zilla-Plugin-ReadmeFromPod-0.38-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Dist-Zilla-Plugin-ReadmeFromPod-0.38-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Dist-Zilla" 
+  "perl-IO-String" 
+  "perl-Moose" 
+  "perl-Path-Tiny" {>= "0.4"}
+  "perl-Pod-Readme" {>= "1.2.0"}
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-libs" 
+]
+extra-source "perl-Dist-Zilla-Plugin-ReadmeFromPod-0.38-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Dist-Zilla-Plugin-ReadmeFromPod-0.38-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libKPublicTransportOnboard1-24.08.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libKPublicTransportOnboard1-24.08.1-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libKF6NetworkManagerQt6" 
+  "libKPublicTransport1" 
+  "libQt6Core6" 
+  "libQt6Network6" 
+  "libQt6Qml6" 
+  "libstdc++6" 
+]
+extra-source "libKPublicTransportOnboard1-24.08.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libKPublicTransportOnboard1-24.08.1-1.1.x86_64.rpm"
+}

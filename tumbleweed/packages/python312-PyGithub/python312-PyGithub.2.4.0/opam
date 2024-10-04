@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-PyGithub-2.4.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-PyGithub-2.4.0-1.1.noarch.rpm"]
+depends: [
+  "python312-Deprecated" 
+  "python312-PyJWT" {>= "2.4.0"}
+  "python312-PyNaCl" {>= "1.4.0"}
+  "python312-base" {= "3.12"}
+  "python312-cryptography" {>= "3.4"}
+  "python312-requests" {>= "2.14.0"}
+  "python312-typing_extensions" {>= "4.0.0"}
+  "python312-urllib3" {>= "1.26.0"}
+]
+extra-source "python312-PyGithub-2.4.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-PyGithub-2.4.0-1.1.noarch.rpm"
+}

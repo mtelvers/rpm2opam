@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rust-keylime-0.2.6+13-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-keylime-0.2.6+13-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libtss2-esys0" 
+  "libtss2-mu0" 
+  "libtss2-tcti-device0" 
+  "libtss2-tctildr0" 
+  "logrotate" 
+  "system-user-parsec" 
+  "sysuser-shadow" {>= "3.2"}
+  "tpm2-0-abrmd" 
+]
+extra-source "rust-keylime-0.2.6+13-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rust-keylime-0.2.6+13-1.1.x86_64.rpm"
+}

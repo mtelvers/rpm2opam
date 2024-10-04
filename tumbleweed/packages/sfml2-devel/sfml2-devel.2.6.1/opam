@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sfml2-devel-2.6.1-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sfml2-devel-2.6.1-2.3.x86_64.rpm"]
+depends: [
+  "Mesa-libGL-devel" 
+  "flac-devel" 
+  "freetype2-devel" 
+  "libogg-devel" 
+  "libsfml2-2_6" {= "2.6.1"}
+  "libvorbis-devel" 
+  "openal-soft-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "sfml2-devel-2.6.1-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sfml2-devel-2.6.1-2.3.x86_64.rpm"
+}

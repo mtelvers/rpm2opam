@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libstrophe-devel-0.13.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libstrophe-devel-0.13.1-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "expat-devel" 
+  "glibc" 
+  "libstrophe" {= "0.13.1"}
+  "openssl-devel" 
+  "pkgconf-pkg-config" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "libstrophe-devel-0.13.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libstrophe-devel-0.13.1-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "poxml-lang-24.08.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "poxml-lang-24.08.1-1.1.noarch.rpm"]
+depends: [
+  "kde-l10n-devel" {= "24.8.1"}
+]
+extra-source "poxml-lang-24.08.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/poxml-lang-24.08.1-1.1.noarch.rpm"
+}

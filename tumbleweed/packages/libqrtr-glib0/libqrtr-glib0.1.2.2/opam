@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqrtr-glib0-1.2.2-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqrtr-glib0-1.2.2-1.8.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+]
+extra-source "libqrtr-glib0-1.2.2-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libqrtr-glib0-1.2.2-1.8.x86_64.rpm"
+}

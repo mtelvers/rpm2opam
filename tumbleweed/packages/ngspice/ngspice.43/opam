@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ngspice-43-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ngspice-43-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXaw7" 
+  "libXft2" 
+  "libXt6" 
+  "libfftw3-3" 
+  "libfontconfig1" 
+  "libgcc_s1" 
+  "libgomp1" 
+  "libncurses6" 
+  "libreadline8" 
+  "libstdc++6" 
+  "ngspice-scripts" {= "43"}
+  "ngspice-xspice-cm" {= "43"}
+]
+extra-source "ngspice-43-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ngspice-43-1.1.x86_64.rpm"
+}

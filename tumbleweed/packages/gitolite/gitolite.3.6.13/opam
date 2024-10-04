@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gitolite-3.6.13-2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gitolite-3.6.13-2.3.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "git" 
+  "nginx" 
+  "perl" 
+  "perl-base" 
+  "system-user-wwwrun" 
+]
+extra-source "gitolite-3.6.13-2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gitolite-3.6.13-2.3.noarch.rpm"
+}

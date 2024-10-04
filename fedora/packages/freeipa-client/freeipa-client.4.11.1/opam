@@ -1,0 +1,46 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "freeipa-client-4.11.1-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freeipa-client-4.11.1-4.fc40.x86_64.rpm"]
+depends: [
+  "authselect" {>= "1.4.0"}
+  "autofs" 
+  "bash" 
+  "bind-utils" 
+  "certmonger" {>= "0.79.7"}
+  "chrony" 
+  "curl" 
+  "cyrus-sasl-gssapi" 
+  "freeipa-client-common" {= "4.11.1"}
+  "freeipa-common" {= "4.11.1"}
+  "glibc" 
+  "hostname" 
+  "jansson" 
+  "krb5-libs" 
+  "krb5-pkinit" {>= "1.21.2"}
+  "krb5-workstation" {>= "1.21.2"}
+  "libcom_err" 
+  "libcurl" {>= "7.21.7"}
+  "libini_config" 
+  "libnfsidmap" 
+  "libsss_autofs" 
+  "libsss_sudo" 
+  "nfs-utils" 
+  "nss-tools" {>= "3.44.0"}
+  "oddjob-mkhomedir" 
+  "openldap" 
+  "openssl-libs" 
+  "policycoreutils" 
+  "popt" 
+  "python3" 
+  "python3-gssapi" {>= "1.2.0"}
+  "python3-ipaclient" {= "4.11.1"}
+  "python3-ldap" {>= "3.1.0"}
+  "python3-sssdconfig" {>= "2.9.2"}
+  "sssd-idp" {>= "2.9.2"}
+  "sssd-ipa" {>= "2.9.2"}
+  "sssd-krb5" {>= "2.9.2"}
+  "sssd-tools" {>= "2.9.2"}
+]
+extra-source "freeipa-client-4.11.1-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/freeipa-client-4.11.1-4.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-plugin-tools-java-3.15.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-plugin-tools-java-3.15.0-1.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "maven-lib" 
+  "maven-plugin-tools-api" {= "3.15.0"}
+  "qdox" 
+  "sisu-plexus" 
+]
+extra-source "maven-plugin-tools-java-3.15.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-plugin-tools-java-3.15.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-bugzilla-redhat-devel-1.0.1-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-bugzilla-redhat-devel-1.0.1-7.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-devel" 
+  "ghc-base-devel" 
+  "ghc-blaze-builder-devel" 
+  "ghc-bugzilla-redhat" {= "1.0.1"}
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-connection-devel" 
+  "ghc-containers-devel" 
+  "ghc-http-conduit-devel" 
+  "ghc-http-types-devel" 
+  "ghc-iso8601-time-devel" 
+  "ghc-resourcet-devel" 
+  "ghc-text-devel" 
+  "ghc-time-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-bugzilla-redhat-devel-1.0.1-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-bugzilla-redhat-devel-1.0.1-7.fc40.x86_64.rpm"
+}

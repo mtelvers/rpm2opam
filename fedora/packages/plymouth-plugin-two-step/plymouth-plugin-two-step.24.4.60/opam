@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "plymouth-plugin-two-step-24.004.60-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plymouth-plugin-two-step-24.004.60-4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "plymouth" {= "24.4.60"}
+  "plymouth-core-libs" 
+  "plymouth-graphics-libs" 
+  "plymouth-plugin-label" {= "24.4.60"}
+]
+extra-source "plymouth-plugin-two-step-24.004.60-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/plymouth-plugin-two-step-24.004.60-4.fc40.x86_64.rpm"
+}

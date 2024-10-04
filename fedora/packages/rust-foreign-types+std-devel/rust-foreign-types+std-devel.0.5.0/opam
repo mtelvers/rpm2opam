@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-foreign-types+std-devel-0.5.0-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-foreign-types+std-devel-0.5.0-10.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-foreign-types-devel" {= "0.5.0"}
+  "rust-foreign-types-macros+std-devel" 
+]
+extra-source "rust-foreign-types+std-devel-0.5.0-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-foreign-types+std-devel-0.5.0-10.fc40.noarch.rpm"
+}

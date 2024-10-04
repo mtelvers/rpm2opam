@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fedora-upgrade-40.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fedora-upgrade-40.1-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cpio" 
+  "distribution-gpg-keys" {>= "1.51"}
+  "dnf" 
+  "dnf-plugins-core" 
+  "dnf-utils" 
+  "libselinux-utils" 
+  "policycoreutils" 
+  "remove-retired-packages" 
+  "rpmconf" 
+  "wget2-wget" 
+]
+extra-source "fedora-upgrade-40.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fedora-upgrade-40.1-1.fc40.noarch.rpm"
+}

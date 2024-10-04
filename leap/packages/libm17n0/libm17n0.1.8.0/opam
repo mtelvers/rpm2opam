@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libm17n0-1.8.0-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libm17n0-1.8.0-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXft2" 
+  "libXt6" 
+  "libfontconfig1" 
+  "libfreetype6" 
+  "libfribidi0" 
+  "libgd3" 
+  "libotf1" 
+  "libxml2-2" 
+  "m17n-db" 
+]
+extra-source "libm17n0-1.8.0-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libm17n0-1.8.0-slfo.1.1.7.x86_64.rpm"
+}

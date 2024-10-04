@@ -1,0 +1,46 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mogilefsd-2.73-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mogilefsd-2.73-22.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "glibc-common" 
+  "mogilefsd-storage-mysql" {= "2.73"}
+  "perl-Carp" 
+  "perl-DBI" 
+  "perl-Danga-Socket" {>= "1.56"}
+  "perl-Digest" 
+  "perl-Digest-MD5" 
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Path" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" 
+  "perl-HTTP-Message" 
+  "perl-IO" 
+  "perl-MIME-Base64" 
+  "perl-Net-HTTP" 
+  "perl-Net-Netmask" 
+  "perl-POSIX" 
+  "perl-Scalar-List-Utils" 
+  "perl-Socket" 
+  "perl-Symbol" 
+  "perl-Sys-Hostname" 
+  "perl-Sys-Syscall" {>= "0.22"}
+  "perl-Sys-Syslog" 
+  "perl-Time-HiRes" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-fields" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+  "perl-overload" 
+  "perl-vars" 
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "mogilefsd-2.73-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mogilefsd-2.73-22.fc40.noarch.rpm"
+}

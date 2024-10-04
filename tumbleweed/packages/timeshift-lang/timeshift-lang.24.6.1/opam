@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "timeshift-lang-24.06.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "timeshift-lang-24.06.1-1.1.noarch.rpm"]
+depends: [
+  "timeshift" {= "24.6.1"}
+]
+extra-source "timeshift-lang-24.06.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/timeshift-lang-24.06.1-1.1.noarch.rpm"
+}

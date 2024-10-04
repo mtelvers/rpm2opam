@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "php8-smbclient-1.1.1-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php8-smbclient-1.1.1-1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "php8" {= "20230831"}
+  "samba-client-libs" 
+]
+extra-source "php8-smbclient-1.1.1-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/php8-smbclient-1.1.1-1.7.x86_64.rpm"
+}

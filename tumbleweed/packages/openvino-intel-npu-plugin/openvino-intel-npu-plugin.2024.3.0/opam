@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openvino-intel-npu-plugin-2024.3.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openvino-intel-npu-plugin-2024.3.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libopenvino2430" 
+  "libpugixml1" 
+  "libstdc++6" 
+  "libtbb12" 
+]
+extra-source "openvino-intel-npu-plugin-2024.3.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openvino-intel-npu-plugin-2024.3.0-1.1.x86_64.rpm"
+}

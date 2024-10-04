@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libatlascpp-0_6-3-0.6.4-2.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libatlascpp-0_6-3-0.6.4-2.9.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "libatlascpp-0_6-3-0.6.4-2.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libatlascpp-0_6-3-0.6.4-2.9.x86_64.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nethack-vultures-2.1.2-36.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nethack-vultures-2.1.2-36.fc39.x86_64.rpm"]
+depends: [
+  "SDL_mixer" 
+  "SDL_ttf" 
+  "bash" 
+  "bitstream-vera-serif-fonts" 
+  "bzip2" 
+  "coreutils" 
+  "glibc" {>= "2.37.9000"}
+  "libpng" 
+  "logrotate" 
+  "sdl12-compat" 
+  "shadow-utils" 
+  "zlib-ng-compat" 
+]
+extra-source "nethack-vultures-2.1.2-36.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nethack-vultures-2.1.2-36.fc39.x86_64.rpm"
+}

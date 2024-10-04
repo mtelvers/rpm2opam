@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-test-unit-3.6.2-200.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-test-unit-3.6.2-200.fc40.noarch.rpm"]
+depends: [
+  "ruby-libs" 
+  "rubygem-power_assert" 
+  "rubygems" 
+]
+extra-source "rubygem-test-unit-3.6.2-200.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-test-unit-3.6.2-200.fc40.noarch.rpm"
+}

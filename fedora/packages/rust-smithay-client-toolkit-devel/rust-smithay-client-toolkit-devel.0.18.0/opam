@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-smithay-client-toolkit-devel-0.18.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-smithay-client-toolkit-devel-0.18.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "libxkbcommon-devel" 
+  "rust-bitflags+default-devel" 
+  "rust-cursor-icon+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-log+default-devel" 
+  "rust-memmap2+default-devel" 
+  "rust-rustix+default-devel" 
+  "rust-rustix+fs-devel" 
+  "rust-rustix+pipe-devel" 
+  "rust-rustix+shm-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-wayland-backend+default-devel" 
+  "rust-wayland-client+default-devel" 
+  "rust-wayland-csd-frame+default-devel" 
+  "rust-wayland-cursor+default-devel" 
+  "rust-wayland-protocols+client-devel" 
+  "rust-wayland-protocols+default-devel" 
+  "rust-wayland-protocols+staging-devel" 
+  "rust-wayland-protocols+unstable-devel" 
+  "rust-wayland-protocols-wlr+client-devel" 
+  "rust-wayland-protocols-wlr+default-devel" 
+  "rust-wayland-scanner+default-devel" 
+  "rust-xkeysym+default-devel" 
+]
+extra-source "rust-smithay-client-toolkit-devel-0.18.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-smithay-client-toolkit-devel-0.18.0-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "busybox-netcat-1.36.1-32.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "busybox-netcat-1.36.1-32.2.noarch.rpm"]
+depends: [
+  "busybox" {= "1.36.1"}
+]
+extra-source "busybox-netcat-1.36.1-32.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/busybox-netcat-1.36.1-32.2.noarch.rpm"
+}

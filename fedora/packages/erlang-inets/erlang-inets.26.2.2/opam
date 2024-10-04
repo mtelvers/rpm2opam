@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "erlang-inets-26.2.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "erlang-inets-26.2.2-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "erlang-erts" {= "26.2.2"}
+  "erlang-kernel" {= "26.2.2"}
+  "erlang-mnesia" {= "26.2.2"}
+  "erlang-runtime_tools" {= "26.2.2"}
+  "erlang-ssl" {= "26.2.2"}
+  "erlang-stdlib" {= "26.2.2"}
+]
+extra-source "erlang-inets-26.2.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/erlang-inets-26.2.2-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Pod-Weaver-4.019-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Pod-Weaver-4.019-5.fc40.noarch.rpm"]
+depends: [
+  "perl-Config-MVP" {>= "2"}
+  "perl-Config-MVP-Reader-INI" 
+  "perl-DateTime" 
+  "perl-List-MoreUtils" 
+  "perl-Log-Dispatchouli" {>= "1.100710"}
+  "perl-Module-Runtime" 
+  "perl-Moose" 
+  "perl-Params-Util" 
+  "perl-PathTools" 
+  "perl-Pod-Elemental" {>= "0.100220"}
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-String-Flogger" {>= "1"}
+  "perl-String-Formatter" {>= "0.100680"}
+  "perl-String-RewritePrefix" 
+  "perl-Text-Tabs+Wrap" 
+  "perl-Text-Template" 
+  "perl-experimental" 
+  "perl-libs" {>= "5.20.0"}
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-Pod-Weaver-4.019-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Pod-Weaver-4.019-5.fc40.noarch.rpm"
+}

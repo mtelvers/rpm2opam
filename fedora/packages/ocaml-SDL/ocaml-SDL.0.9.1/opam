@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-SDL-0.9.1-67.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-SDL-0.9.1-67.fc40.x86_64.rpm"]
+depends: [
+  "SDL_gfx" 
+  "SDL_image" 
+  "SDL_mixer" 
+  "SDL_ttf" 
+  "glibc" 
+  "ocaml" {= "2125"}
+  "ocaml-lablgl" {= "48"}
+  "sdl12-compat" 
+]
+extra-source "ocaml-SDL-0.9.1-67.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-SDL-0.9.1-67.fc40.x86_64.rpm"
+}

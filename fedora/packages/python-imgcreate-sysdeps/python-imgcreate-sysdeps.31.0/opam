@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python-imgcreate-sysdeps-31.0-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python-imgcreate-sysdeps-31.0-8.fc40.x86_64.rpm"]
+depends: [
+  "coreutils" 
+  "cryptsetup" 
+  "dosfstools" {>= "2.11"}
+  "dracut" 
+  "dracut-live" 
+  "dumpet" 
+  "e2fsprogs" 
+  "hfsplus-tools" 
+  "isomd5sum" 
+  "lorax" {>= "18.3"}
+  "parted" 
+  "policycoreutils" 
+  "rsync" 
+  "selinux-policy-targeted" 
+  "squashfs-tools" 
+  "sssd-client" 
+  "syslinux" {>= "6.2"}
+  "syslinux-extlinux" 
+  "syslinux-nonlinux" {>= "6.2"}
+  "util-linux" 
+  "xorriso" {>= "1.4.8"}
+]
+extra-source "python-imgcreate-sysdeps-31.0-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python-imgcreate-sysdeps-31.0-8.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-Flask-WTF-1.2.1-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-Flask-WTF-1.2.1-1.3.noarch.rpm"]
+depends: [
+  "python312-Flask" 
+  "python312-WTForms" 
+  "python312-Werkzeug" 
+  "python312-base" {= "3.12"}
+  "python312-itsdangerous" 
+]
+extra-source "python312-Flask-WTF-1.2.1-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-Flask-WTF-1.2.1-1.3.noarch.rpm"
+}

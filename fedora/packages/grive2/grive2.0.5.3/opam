@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "grive2-0.5.3-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grive2-0.5.3-7.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "boost-filesystem" 
+  "boost-program-options" 
+  "glibc" 
+  "inotify-tools" 
+  "libcurl" 
+  "libgcc" 
+  "libgcrypt" 
+  "libstdc++" 
+  "systemd" 
+  "yajl" 
+]
+extra-source "grive2-0.5.3-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/grive2-0.5.3-7.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-asciimatics-1.15.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-asciimatics-1.15.0-2.1.noarch.rpm"]
+depends: [
+  "python312-Pillow" {>= "2.7.0"}
+  "python312-base" {= "3.12"}
+  "python312-curses" 
+  "python312-pyfiglet" {>= "0.7.2"}
+  "python312-wcwidth" 
+]
+extra-source "python312-asciimatics-1.15.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-asciimatics-1.15.0-2.1.noarch.rpm"
+}

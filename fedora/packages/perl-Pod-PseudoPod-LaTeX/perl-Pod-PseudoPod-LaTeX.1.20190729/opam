@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Pod-PseudoPod-LaTeX-1.20190729-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Pod-PseudoPod-LaTeX-1.20190729-14.fc40.noarch.rpm"]
+depends: [
+  "perl-File-Basename" 
+  "perl-File-Path" 
+  "perl-Getopt-Long" 
+  "perl-PathTools" 
+  "perl-Pod-PseudoPod" {>= "0.15"}
+  "perl-Pod-Usage" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.8.6"}
+]
+extra-source "perl-Pod-PseudoPod-LaTeX-1.20190729-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Pod-PseudoPod-LaTeX-1.20190729-14.fc40.noarch.rpm"
+}

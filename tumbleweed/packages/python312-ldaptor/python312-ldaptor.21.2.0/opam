@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-ldaptor-21.2.0-4.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-ldaptor-21.2.0-4.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-Twisted-tls" 
+  "python312-base" {= "3.12"}
+  "python312-passlib" 
+  "python312-pyparsing" 
+  "python312-zope-interface" 
+  "update-alternatives" 
+]
+extra-source "python312-ldaptor-21.2.0-4.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-ldaptor-21.2.0-4.2.noarch.rpm"
+}

@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rusqlite+modern-full-devel-0.28.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rusqlite+modern-full-devel-0.28.0-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-rusqlite+array-devel" {= "0.28.0"}
+  "rust-rusqlite+backup-devel" {= "0.28.0"}
+  "rust-rusqlite+blob-devel" {= "0.28.0"}
+  "rust-rusqlite+chrono-devel" {= "0.28.0"}
+  "rust-rusqlite+collation-devel" {= "0.28.0"}
+  "rust-rusqlite+column_decltype-devel" {= "0.28.0"}
+  "rust-rusqlite+csvtab-devel" {= "0.28.0"}
+  "rust-rusqlite+extra_check-devel" {= "0.28.0"}
+  "rust-rusqlite+functions-devel" {= "0.28.0"}
+  "rust-rusqlite+hooks-devel" {= "0.28.0"}
+  "rust-rusqlite+i128_blob-devel" {= "0.28.0"}
+  "rust-rusqlite+limits-devel" {= "0.28.0"}
+  "rust-rusqlite+load_extension-devel" {= "0.28.0"}
+  "rust-rusqlite+modern_sqlite-devel" {= "0.28.0"}
+  "rust-rusqlite+serde_json-devel" {= "0.28.0"}
+  "rust-rusqlite+series-devel" {= "0.28.0"}
+  "rust-rusqlite+time-devel" {= "0.28.0"}
+  "rust-rusqlite+trace-devel" {= "0.28.0"}
+  "rust-rusqlite+unlock_notify-devel" {= "0.28.0"}
+  "rust-rusqlite+url-devel" {= "0.28.0"}
+  "rust-rusqlite+uuid-devel" {= "0.28.0"}
+  "rust-rusqlite+vtab-devel" {= "0.28.0"}
+  "rust-rusqlite+window-devel" {= "0.28.0"}
+  "rust-rusqlite-devel" {= "0.28.0"}
+]
+extra-source "rust-rusqlite+modern-full-devel-0.28.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rusqlite+modern-full-devel-0.28.0-4.fc40.noarch.rpm"
+}

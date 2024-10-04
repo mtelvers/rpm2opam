@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-App-Daemon-0.22-28.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-App-Daemon-0.22-28.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-Getopt-Std" 
+  "perl-Log-Log4perl" {>= "1.0"}
+  "perl-POSIX" 
+  "perl-Pod-Usage" 
+  "perl-Proc-ProcessTable" 
+  "perl-constant" 
+  "perl-libs" 
+]
+extra-source "perl-App-Daemon-0.22-28.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-App-Daemon-0.22-28.fc40.noarch.rpm"
+}

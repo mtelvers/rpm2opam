@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "modem-manager-gui-0.0.20-13.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "modem-manager-gui-0.0.20-13.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "filesystem" 
+  "gdbm-libs" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "gtkspell3" 
+  "hicolor-icon-theme" 
+  "mobile-broadband-provider-info" {>= "1.20120614"}
+  "modem-manager-gui-cm-NetworkManager" {= "0.0.20"}
+  "modem-manager-gui-mm-ModemManager" {= "0.0.20"}
+  "yelp" {>= "3.10"}
+]
+extra-source "modem-manager-gui-0.0.20-13.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/modem-manager-gui-0.0.20-13.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "power-profiles-daemon-0.22-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "power-profiles-daemon-0.22-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgudev-1_0-0" 
+  "libpolkit-gobject-1-0" 
+  "polkit" 
+  "python311-base" 
+  "python311-gobject" 
+]
+extra-source "power-profiles-daemon-0.22-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/power-profiles-daemon-0.22-2.1.x86_64.rpm"
+}

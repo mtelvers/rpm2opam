@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-ipywebrtc-0.6.0-5.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-ipywebrtc-0.6.0-5.2.noarch.rpm"]
+depends: [
+  "jupyter-ipywebrtc" {= "0.6.0"}
+  "python312-base" {= "3.12"}
+  "python312-ipywidgets" {>= "7.4.0"}
+]
+extra-source "python312-ipywebrtc-0.6.0-5.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-ipywebrtc-0.6.0-5.2.noarch.rpm"
+}

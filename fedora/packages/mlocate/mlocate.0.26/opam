@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mlocate-0.26-306.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mlocate-0.26-306.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "grep" 
+  "sed" 
+  "shadow-utils" 
+]
+extra-source "mlocate-0.26-306.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mlocate-0.26-306.fc40.x86_64.rpm"
+}

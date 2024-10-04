@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-smart-open-7.0.4-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-smart-open-7.0.4-1.2.noarch.rpm"]
+depends: [
+  "python311-azure-common" 
+  "python311-azure-core" 
+  "python311-azure-storage-blob" 
+  "python311-base" {= "3.11"}
+  "python311-boto3" 
+  "python311-google-cloud-storage" 
+  "python311-requests" 
+  "python311-urllib3_1" {< "2"}
+  "python311-wrapt" 
+  "python311-zstandard" 
+]
+extra-source "python311-smart-open-7.0.4-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-smart-open-7.0.4-1.2.noarch.rpm"
+}

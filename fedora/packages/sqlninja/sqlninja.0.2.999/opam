@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sqlninja-0.2.999-0.22.alpha1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sqlninja-0.2.999-0.22.alpha1.fc40.noarch.rpm"]
+depends: [
+  "perl-DBD-SQLite" 
+  "perl-DBI" 
+  "perl-IO-Socket-SSL" 
+  "perl-Net-DNS-Nameserver" 
+  "perl-Net-Pcap" 
+  "perl-Net-RawIP" 
+  "perl-NetPacket" 
+  "perl-interpreter" 
+]
+extra-source "sqlninja-0.2.999-0.22.alpha1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sqlninja-0.2.999-0.22.alpha1.fc40.noarch.rpm"
+}

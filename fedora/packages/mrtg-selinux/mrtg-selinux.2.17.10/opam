@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mrtg-selinux-2.17.10-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mrtg-selinux-2.17.10-8.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "libselinux-utils" 
+  "policycoreutils" 
+  "policycoreutils-python-utils" 
+  "selinux-policy" {>= "40.9"}
+  "selinux-policy-targeted" 
+]
+extra-source "mrtg-selinux-2.17.10-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mrtg-selinux-2.17.10-8.fc40.noarch.rpm"
+}

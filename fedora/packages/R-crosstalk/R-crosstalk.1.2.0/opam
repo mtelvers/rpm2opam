@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-crosstalk-1.2.0-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-crosstalk-1.2.0-6.fc40.noarch.rpm"]
+depends: [
+  "R-R6" 
+  "R-core" {= "4.3"}
+  "R-htmltools" {>= "0.3.6"}
+  "R-jsonlite" 
+  "R-lazyeval" 
+]
+extra-source "R-crosstalk-1.2.0-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-crosstalk-1.2.0-6.fc40.noarch.rpm"
+}

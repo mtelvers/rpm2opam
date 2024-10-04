@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libSavitar0-4.13.1-2.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libSavitar0-4.13.1-2.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libpugixml1" 
+  "libpython3_11-1_0" 
+  "libstdc++6" 
+  "python311-base" {= "3.11"}
+  "python311-qt5-sip" 
+]
+extra-source "libSavitar0-4.13.1-2.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libSavitar0-4.13.1-2.8.x86_64.rpm"
+}

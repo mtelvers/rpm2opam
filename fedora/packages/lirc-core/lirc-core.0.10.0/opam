@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lirc-core-0.10.0-42.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lirc-core-0.10.0-42.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "bash" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "libusb-compat-0-1" 
+  "libusb1" 
+  "lirc-libs" 
+  "python3" 
+  "systemd" 
+  "systemd-libs" 
+]
+extra-source "lirc-core-0.10.0-42.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lirc-core-0.10.0-42.fc40.x86_64.rpm"
+}

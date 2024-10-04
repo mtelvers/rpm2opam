@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cvs-1.12.13-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cvs-1.12.13-4.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "glibc" 
+  "krb5" 
+  "libcrypt1" 
+  "libz-ng-compat1" 
+  "openssh" 
+  "perl-base" 
+  "tcsh" 
+]
+extra-source "cvs-1.12.13-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cvs-1.12.13-4.1.x86_64.rpm"
+}

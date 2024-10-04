@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Class-Load-0.25-25.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Class-Load-0.25-25.fc40.noarch.rpm"]
+depends: [
+  "perl-Data-OptList" {>= "0.110"}
+  "perl-Exporter" 
+  "perl-Module-Implementation" {>= "0.4"}
+  "perl-Module-Runtime" {>= "0.12"}
+  "perl-Package-Stash" {>= "0.14"}
+  "perl-Scalar-List-Utils" 
+  "perl-Try-Tiny" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-Class-Load-0.25-25.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Class-Load-0.25-25.fc40.noarch.rpm"
+}

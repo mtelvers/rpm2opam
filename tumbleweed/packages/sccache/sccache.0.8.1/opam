@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sccache-0.8.1~31-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sccache-0.8.1~31-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "bubblewrap" 
+  "glibc" 
+  "libgcc_s1" 
+  "libopenssl3" 
+]
+extra-source "sccache-0.8.1~31-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sccache-0.8.1~31-1.1.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wlrctl-0.2.2~0-2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wlrctl-0.2.2~0-2.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libwayland-client0" 
+  "libxkbcommon0" 
+]
+extra-source "wlrctl-0.2.2~0-2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/wlrctl-0.2.2~0-2.5.x86_64.rpm"
+}

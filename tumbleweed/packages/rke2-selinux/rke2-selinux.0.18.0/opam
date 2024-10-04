@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rke2-selinux-0.18.stable.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rke2-selinux-0.18.stable.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "container-selinux" {>= "2.164.2"}
+  "policycoreutils" 
+  "selinux-policy-minimum" {>= "20210716"}
+  "selinux-tools" 
+]
+extra-source "rke2-selinux-0.18.stable.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/rke2-selinux-0.18.stable.1-1.1.noarch.rpm"
+}

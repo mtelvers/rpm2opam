@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "opendnssec-2.1.14-0.1rc1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opendnssec-2.1.14-0.1rc1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "ldns" 
+  "libxml2" 
+  "libxslt" 
+  "opencryptoki" 
+  "openssl-libs" 
+  "shadow-utils" 
+  "softhsm" {>= "2.5.0"}
+  "sqlite" 
+  "sqlite-libs" 
+  "systemd" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "opendnssec-2.1.14-0.1rc1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/opendnssec-2.1.14-0.1rc1.fc40.x86_64.rpm"
+}

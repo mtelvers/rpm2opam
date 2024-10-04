@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "git-remote-hg-1.0.4-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "git-remote-hg-1.0.4-3.fc40.noarch.rpm"]
+depends: [
+  "git-core" {>= "2.0.0"}
+  "mercurial" {>= "5.4"}
+  "python3" 
+]
+extra-source "git-remote-hg-1.0.4-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/git-remote-hg-1.0.4-3.fc40.noarch.rpm"
+}

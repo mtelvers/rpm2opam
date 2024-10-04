@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cri-o-1.24.3-2.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cri-o-1.24.3-2.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "cni" 
+  "cni-plugins" 
+  "conmon" 
+  "conntrack-tools" 
+  "glibc" 
+  "iproute2" 
+  "iptables" 
+  "libcontainers-common" {>= "0.0.1"}
+  "libdevmapper1_03" 
+  "libseccomp2" 
+  "patterns-base-apparmor" 
+  "runc" {>= "1.0.2"}
+]
+extra-source "cri-o-1.24.3-2.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cri-o-1.24.3-2.4.x86_64.rpm"
+}

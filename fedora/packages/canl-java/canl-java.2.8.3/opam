@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "canl-java-2.8.3-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "canl-java-2.8.3-6.fc40.noarch.rpm"]
+depends: [
+  "apache-commons-io" 
+  "bouncycastle" 
+  "bouncycastle-pkix" {>= "1.69"}
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "canl-java-2.8.3-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/canl-java-2.8.3-6.fc40.noarch.rpm"
+}

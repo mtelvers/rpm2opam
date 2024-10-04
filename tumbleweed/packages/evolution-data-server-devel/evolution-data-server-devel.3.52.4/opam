@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "evolution-data-server-devel-3.52.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "evolution-data-server-devel-3.52.4-1.1.x86_64.rpm"]
+depends: [
+  "evolution-data-server" {= "3.52.4"}
+  "glib2-devel" 
+  "gtk3-devel" 
+  "gtk4-devel" 
+  "json-glib-devel" 
+  "libcamel-1_2-64" {= "3.52.4"}
+  "libebackend-1_2-11" {= "3.52.4"}
+  "libebook-1_2-21" {= "3.52.4"}
+  "libebook-contacts-1_2-4" {= "3.52.4"}
+  "libecal-2_0-3" {= "3.52.4"}
+  "libedata-book-1_2-27" {= "3.52.4"}
+  "libedata-cal-2_0-2" {= "3.52.4"}
+  "libedataserver-1_2-27" {= "3.52.4"}
+  "libedataserverui-1_2-4" {= "3.52.4"}
+  "libedataserverui4-1_0-0" {= "3.52.4"}
+  "libical-glib-devel" 
+  "libsecret-devel" 
+  "libsoup-devel" 
+  "libxml2-devel" 
+  "openldap2-devel" 
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Camel-1_2" {= "3.52.4"}
+  "typelib-1_0-EBook-1_2" {= "3.52.4"}
+  "typelib-1_0-EBookContacts-1_2" {= "3.52.4"}
+  "typelib-1_0-EDataServer-1_2" {= "3.52.4"}
+  "typelib-1_0-EDataServerUI-1_2" {= "3.52.4"}
+  "typelib-1_0-EDataServerUI4-1_0" {= "3.52.4"}
+]
+extra-source "evolution-data-server-devel-3.52.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/evolution-data-server-devel-3.52.4-1.1.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcontainers-common-20240618-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcontainers-common-20240618-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-sed" 
+  "libcontainers-default-policy" {>= "20240618"}
+  "libcontainers-sles-mounts" 
+  "registries-conf-default" {>= "20240618"}
+]
+extra-source "libcontainers-common-20240618-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libcontainers-common-20240618-2.1.noarch.rpm"
+}

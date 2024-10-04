@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Gtk3-WebKit-0.06-31.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Gtk3-WebKit-0.06-31.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" 
+  "perl-Glib-Object-Introspection" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" 
+  "webkit2gtk4-1" 
+]
+extra-source "perl-Gtk3-WebKit-0.06-31.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Gtk3-WebKit-0.06-31.fc40.noarch.rpm"
+}

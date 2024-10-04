@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "spec-cleaner-1.2.3+1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "spec-cleaner-1.2.3+1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-python-rpm-spec" 
+]
+extra-source "spec-cleaner-1.2.3+1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/spec-cleaner-1.2.3+1-1.1.noarch.rpm"
+}

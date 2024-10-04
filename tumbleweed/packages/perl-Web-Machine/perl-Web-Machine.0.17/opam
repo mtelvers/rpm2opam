@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Web-Machine-0.17-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Web-Machine-0.17-3.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-HTTP-Headers-ActionPack" {>= "0.7"}
+  "perl-HTTP-Message" 
+  "perl-Hash-MultiValue" 
+  "perl-IO-Handle-Util" 
+  "perl-Module-Runtime" 
+  "perl-Plack" 
+  "perl-Sub-Exporter" 
+  "perl-Try-Tiny" 
+  "perl-base" 
+]
+extra-source "perl-Web-Machine-0.17-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Web-Machine-0.17-3.2.noarch.rpm"
+}

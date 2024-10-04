@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "liboauth2-devel-1.6.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "liboauth2-devel-1.6.1-1.fc40.x86_64.rpm"]
+depends: [
+  "cjose-devel" {>= "0.5.1"}
+  "jansson-devel" {>= "2.3"}
+  "libcurl-devel" 
+  "liboauth2" {= "1.6.1"}
+  "openssl-devel" {>= "1.0.1"}
+  "pcre2-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "liboauth2-devel-1.6.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/liboauth2-devel-1.6.1-1.fc40.x86_64.rpm"
+}

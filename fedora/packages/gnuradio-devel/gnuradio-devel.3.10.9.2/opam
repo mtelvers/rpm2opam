@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnuradio-devel-3.10.9.2-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnuradio-devel-3.10.9.2-2.fc40.x86_64.rpm"]
+depends: [
+  "boost-devel" 
+  "cmake" 
+  "cmake-filesystem" 
+  "gnuradio" {= "3.10.9.2"}
+  "pkgconf-pkg-config" 
+  "sdl12-compat-devel" 
+  "volk-devel" 
+]
+extra-source "gnuradio-devel-3.10.9.2-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnuradio-devel-3.10.9.2-2.fc40.x86_64.rpm"
+}

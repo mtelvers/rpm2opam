@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "eiciel-0.10.0-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eiciel-0.10.0-1.5.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libacl1" 
+  "libgcc_s1" 
+  "libgiomm-2_68-1" 
+  "libglibmm-2_68-1" 
+  "libgtk-4-1" 
+  "libgtkmm-4_0-0" 
+  "libsigc-3_0-0" 
+  "libstdc++6" 
+]
+extra-source "eiciel-0.10.0-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/eiciel-0.10.0-1.5.x86_64.rpm"
+}

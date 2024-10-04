@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-flake8-docstrings-1.7.0-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-flake8-docstrings-1.7.0-1.5.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-flake8" {>= "3"}
+  "python311-flake8-polyfill" 
+  "python311-pydocstyle" {>= "2.1.0"}
+]
+extra-source "python311-flake8-docstrings-1.7.0-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-flake8-docstrings-1.7.0-1.5.noarch.rpm"
+}

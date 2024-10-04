@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ncl-examples-6.6.2-41.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ncl-examples-6.6.2-41.fc40.noarch.rpm"]
+depends: [
+  "ncl-devel" {= "6.6.2"}
+  "tcsh" 
+]
+extra-source "ncl-examples-6.6.2-41.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/ncl-examples-6.6.2-41.fc40.noarch.rpm"
+}

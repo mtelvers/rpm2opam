@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "metamath-theories-0.198-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "metamath-theories-0.198-7.fc40.noarch.rpm"]
+depends: [
+  "metamath" {= "0.198"}
+]
+extra-source "metamath-theories-0.198-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/metamath-theories-0.198-7.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "salt-zsh-completion-3006.0-24.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "salt-zsh-completion-3006.0-24.1.noarch.rpm"]
+depends: [
+  "salt" {= "3006.0"}
+  "zsh" 
+]
+extra-source "salt-zsh-completion-3006.0-24.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/salt-zsh-completion-3006.0-24.1.noarch.rpm"
+}

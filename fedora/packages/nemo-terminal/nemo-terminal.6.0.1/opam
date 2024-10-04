@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nemo-terminal-6.0.1-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nemo-terminal-6.0.1-5.fc40.noarch.rpm"]
+depends: [
+  "nemo-python" {= "6.0.1"}
+  "python3" 
+  "vte291" 
+]
+extra-source "nemo-terminal-6.0.1-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nemo-terminal-6.0.1-5.fc40.noarch.rpm"
+}

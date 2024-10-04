@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-phpdocumentor-reflection-docblock4-4.3.4-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-phpdocumentor-reflection-docblock4-4.3.4-12.fc40.noarch.rpm"]
+depends: [
+  "php-common" {>= "7.0"}
+  "php-fedora-autoloader" 
+  "php-phpdocumentor-reflection-common" 
+  "php-phpdocumentor-type-resolver" 
+  "php-webmozart-assert" 
+]
+extra-source "php-phpdocumentor-reflection-docblock4-4.3.4-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-phpdocumentor-reflection-docblock4-4.3.4-12.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "budgie-desktop-defaults-0.5.1-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "budgie-desktop-defaults-0.5.1-4.fc40.noarch.rpm"]
+depends: [
+  "budgie-backgrounds" 
+  "budgie-desktop" 
+  "desktop-backgrounds-budgie" 
+  "materia-gtk-theme" 
+  "papirus-icon-theme" 
+  "slick-greeter" 
+]
+extra-source "budgie-desktop-defaults-0.5.1-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/budgie-desktop-defaults-0.5.1-4.fc40.noarch.rpm"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cloc-1.90-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cloc-1.90-9.fc40.noarch.rpm"]
+depends: [
+  "perl-Algorithm-Diff" 
+  "perl-Digest-MD5" 
+  "perl-Encode" 
+  "perl-File-Basename" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-POSIX" 
+  "perl-Parallel-ForkManager" 
+  "perl-PathTools" 
+  "perl-Regexp-Common" 
+  "perl-Scalar-List-Utils" 
+  "perl-Text-Tabs+Wrap" 
+  "perl-Time-HiRes" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "cloc-1.90-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cloc-1.90-9.fc40.noarch.rpm"
+}

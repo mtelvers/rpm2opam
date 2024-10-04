@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CPAN-Mini-1.111017-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CPAN-Mini-1.111017-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Find" 
+  "perl-File-HomeDir" {>= "0.57"}
+  "perl-File-Path" {>= "2.4"}
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-IO-Compress" {>= "1.20"}
+  "perl-PathTools" 
+  "perl-Pod-Usage" {>= "1.0"}
+  "perl-URI" {>= "1"}
+  "perl-interpreter" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-libwww-perl" {>= "5"}
+]
+extra-source "perl-CPAN-Mini-1.111017-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CPAN-Mini-1.111017-3.fc40.noarch.rpm"
+}

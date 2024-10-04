@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-File-ShareDir-ProjectDistDir-1.000009-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-ShareDir-ProjectDistDir-1.000009-22.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-File-ShareDir" 
+  "perl-Path-Class" 
+  "perl-Path-FindDev" 
+  "perl-Path-IsDev" 
+  "perl-Path-Tiny" 
+  "perl-Sub-Exporter" 
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "perl-File-ShareDir-ProjectDistDir-1.000009-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-File-ShareDir-ProjectDistDir-1.000009-22.fc40.noarch.rpm"
+}

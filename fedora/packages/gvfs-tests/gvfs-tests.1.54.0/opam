@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gvfs-tests-1.54.0-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gvfs-tests-1.54.0-2.fc40.x86_64.rpm"]
+depends: [
+  "gvfs" {= "1.54.0"}
+  "python3" 
+]
+extra-source "gvfs-tests-1.54.0-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gvfs-tests-1.54.0-2.fc40.x86_64.rpm"
+}

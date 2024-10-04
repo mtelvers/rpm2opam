@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "elk-8.7.2-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "elk-8.7.2-2.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libblas3" 
+  "libfftw3-3" 
+  "libgcc_s1" 
+  "libgfortran5" 
+  "libgomp1" 
+  "liblapack3" 
+  "libxc12" 
+  "wannier90-devel" 
+]
+extra-source "elk-8.7.2-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/elk-8.7.2-2.3.x86_64.rpm"
+}

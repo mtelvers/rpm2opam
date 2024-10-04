@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "R-core-packages-4.4.1-lp160.1.48.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-core-packages-4.4.1-lp160.1.48.x86_64.rpm"]
+depends: [
+  "R-compiler" 
+  "R-datasets" 
+  "R-grDevices" 
+  "R-graphics" 
+  "R-grid" 
+  "R-methods" 
+  "R-parallel" 
+  "R-splines" 
+  "R-stats" 
+  "R-stats4" 
+  "R-tcltk" 
+  "R-tools" 
+  "R-utils" 
+]
+extra-source "R-core-packages-4.4.1-lp160.1.48.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/R-core-packages-4.4.1-lp160.1.48.x86_64.rpm"
+}

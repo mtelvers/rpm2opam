@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pyqtgraph-0.13.7-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pyqtgraph-0.13.7-1.1.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-numpy" {>= "1.17"}
+  "python312-qt5" 
+]
+extra-source "python312-pyqtgraph-0.13.7-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pyqtgraph-0.13.7-1.1.noarch.rpm"
+}

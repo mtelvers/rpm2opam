@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-jupyterlab-server+test-2.25.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-jupyterlab-server+test-2.25.2-3.fc40.noarch.rpm"]
+depends: [
+  "hatch" 
+  "python3" {= "3.12"}
+  "python3-ipykernel" 
+  "python3-jupyterlab-server" {= "2.25.2"}
+  "python3-pytest" {>= "7"}
+  "python3-pytest-console-scripts" 
+  "python3-pytest-jupyter" {>= "0.6.2"}
+  "python3-pytest-jupyter+server" {>= "0.6.2"}
+  "python3-pytest-timeout" 
+  "python3-requests-mock" 
+  "python3-ruamel-yaml" 
+  "python3-sphinxcontrib-spelling" 
+  "python3-strict-rfc3339" 
+  "python3-werkzeug" 
+]
+extra-source "python3-jupyterlab-server+test-2.25.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-jupyterlab-server+test-2.25.2-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bumblebee-status-module-mocp-2.1.5-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bumblebee-status-module-mocp-2.1.5-4.1.noarch.rpm"]
+depends: [
+  "bumblebee-status" {= "2.1.5"}
+  "moc" 
+]
+extra-source "bumblebee-status-module-mocp-2.1.5-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/bumblebee-status-module-mocp-2.1.5-4.1.noarch.rpm"
+}

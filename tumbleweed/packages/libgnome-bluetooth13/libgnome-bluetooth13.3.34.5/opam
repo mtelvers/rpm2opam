@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgnome-bluetooth13-3.34.5-2.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgnome-bluetooth13-3.34.5-2.11.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libatk-1_0-0" 
+  "libcanberra-gtk3-0" 
+  "libcanberra0" 
+  "libgtk-3-0" 
+  "libnotify4" 
+  "libudev-mini1" 
+]
+extra-source "libgnome-bluetooth13-3.34.5-2.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgnome-bluetooth13-3.34.5-2.11.x86_64.rpm"
+}

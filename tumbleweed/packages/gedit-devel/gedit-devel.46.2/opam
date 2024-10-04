@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gedit-devel-46.2-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gedit-devel-46.2-2.2.x86_64.rpm"]
+depends: [
+  "gedit" {= "46.2"}
+  "glib2-devel" {>= "2.70"}
+  "gtk3-devel" {>= "3.7.10"}
+  "gtksourceview-devel" 
+  "libgedit-amtk-devel" 
+  "libpeas-devel" 
+  "pkgconf-pkg-config" 
+  "python3-gedit" 
+  "tepl-devel" {>= "6.8"}
+]
+extra-source "gedit-devel-46.2-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gedit-devel-46.2-2.2.x86_64.rpm"
+}

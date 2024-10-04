@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnuplot-latex-5.4.9-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnuplot-latex-5.4.9-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "gnuplot" {= "5.4.9"}
+  "tex-preview" 
+  "texlive-cm-super" 
+  "texlive-collection-latexrecommended" 
+  "texlive-ec" 
+  "texlive-ucs" 
+]
+extra-source "gnuplot-latex-5.4.9-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnuplot-latex-5.4.9-3.fc40.noarch.rpm"
+}

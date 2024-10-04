@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "eog-tests-45.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eog-tests-45.3-1.fc40.x86_64.rpm"]
+depends: [
+  "eog" {= "45.3"}
+  "python3-behave" 
+  "python3-dogtail" 
+]
+extra-source "eog-tests-45.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/eog-tests-45.3-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "frama-c-doc-28.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "frama-c-doc-28.1-1.fc40.noarch.rpm"]
+depends: [
+  "frama-c" {= "28.1"}
+]
+extra-source "frama-c-doc-28.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/frama-c-doc-28.1-1.fc40.noarch.rpm"
+}

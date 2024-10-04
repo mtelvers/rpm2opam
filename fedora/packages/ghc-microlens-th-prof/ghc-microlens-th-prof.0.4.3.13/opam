@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-microlens-th-prof-0.4.3.13-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-microlens-th-prof-0.4.3.13-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-microlens-prof" 
+  "ghc-microlens-th-devel" {= "0.4.3.13"}
+  "ghc-template-haskell-prof" 
+  "ghc-th-abstraction-prof" 
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-microlens-th-prof-0.4.3.13-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-microlens-th-prof-0.4.3.13-3.fc40.x86_64.rpm"
+}

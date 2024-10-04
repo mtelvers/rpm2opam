@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "caja-actions-1.28.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "caja-actions-1.28.0-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libICE6" 
+  "libSM6" 
+  "libcaja-extension1" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libgtop-2_0-11" 
+  "libuuid1" 
+]
+extra-source "caja-actions-1.28.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/caja-actions-1.28.0-1.1.x86_64.rpm"
+}

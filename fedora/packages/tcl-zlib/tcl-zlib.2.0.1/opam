@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tcl-zlib-2.0.1-0.34.svn40.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tcl-zlib-2.0.1-0.34.svn40.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "tcl" {= "8.6"}
+  "zlib-ng-compat" 
+]
+extra-source "tcl-zlib-2.0.1-0.34.svn40.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tcl-zlib-2.0.1-0.34.svn40.fc40.x86_64.rpm"
+}

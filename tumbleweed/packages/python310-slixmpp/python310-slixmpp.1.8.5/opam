@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-slixmpp-1.8.5-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-slixmpp-1.8.5-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libidn12" 
+  "python310-aiodns" 
+  "python310-aiohttp" 
+  "python310-base" {= "3.10"}
+  "python310-cryptography" 
+  "python310-pyasn1" 
+  "python310-pyasn1-modules" 
+]
+extra-source "python310-slixmpp-1.8.5-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-slixmpp-1.8.5-1.2.x86_64.rpm"
+}

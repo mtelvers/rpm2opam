@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "postgresql-upgrade-16.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql-upgrade-16.1-6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "krb5-libs" 
+  "libicu" 
+  "libselinux" 
+  "libxml2" 
+  "libxslt" 
+  "lz4-libs" 
+  "openldap" 
+  "pam-libs" 
+  "perl-libs" 
+  "postgresql-private-libs" 
+  "postgresql-server" {= "16.1"}
+  "python3-libs" 
+  "tcl" 
+  "uuid" 
+  "zlib-ng-compat" 
+]
+extra-source "postgresql-upgrade-16.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/postgresql-upgrade-16.1-6.fc40.x86_64.rpm"
+}

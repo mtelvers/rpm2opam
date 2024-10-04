@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "groff-full-1.23.0-slfo.1.1.25.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "groff-full-1.23.0-slfo.1.1.25.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "ghostscript" 
+  "glibc" 
+  "groff" {= "1.23.0"}
+  "libX11-6" 
+  "libXt6" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "netpbm" 
+  "perl-base" 
+  "psutils" 
+  "update-alternatives" 
+]
+extra-source "groff-full-1.23.0-slfo.1.1.25.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/groff-full-1.23.0-slfo.1.1.25.x86_64.rpm"
+}

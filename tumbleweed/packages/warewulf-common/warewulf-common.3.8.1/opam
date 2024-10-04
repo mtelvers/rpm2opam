@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "warewulf-common-3.8.1-13.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "warewulf-common-3.8.1-13.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "mariadb" 
+  "perl-base" 
+  "perl-warewulf-common" 
+  "shadow" 
+  "warewulf-doc" 
+]
+extra-source "warewulf-common-3.8.1-13.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/warewulf-common-3.8.1-13.2.noarch.rpm"
+}

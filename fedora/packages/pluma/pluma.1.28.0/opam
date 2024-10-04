@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pluma-1.28.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pluma-1.28.0-1.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "bash" 
+  "cairo" 
+  "cairo-gobject" 
+  "caja-schemas" 
+  "enchant" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gobject-introspection" 
+  "gtk3" 
+  "gtksourceview4" 
+  "harfbuzz" 
+  "libICE" 
+  "libSM" 
+  "libX11" 
+  "libpeas1" 
+  "libpeas1-gtk" 
+  "libpeas1-loader-python3" 
+  "libxml2" 
+  "mate-desktop-libs" 
+  "pango" 
+  "pluma-data" {= "1.28.0"}
+  "startup-notification" 
+  "zenity" 
+  "zlib-ng-compat" 
+]
+extra-source "pluma-1.28.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pluma-1.28.0-1.fc40.x86_64.rpm"
+}

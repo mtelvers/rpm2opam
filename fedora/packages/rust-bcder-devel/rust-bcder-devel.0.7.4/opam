@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-bcder-devel-0.7.4-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-bcder-devel-0.7.4-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bytes+default-devel" 
+  "rust-smallvec+default-devel" 
+]
+extra-source "rust-bcder-devel-0.7.4-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-bcder-devel-0.7.4-1.fc40.noarch.rpm"
+}

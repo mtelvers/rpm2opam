@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "selinux-policy-sandbox-40.13.6-1.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "selinux-policy-sandbox-40.13.6-1.el10.noarch.rpm"]
+depends: [
+  "bash" 
+  "selinux-policy" {= "40.13.9"}
+  "selinux-policy-targeted" {= "40.13.9"}
+]
+extra-source "selinux-policy-sandbox-40.13.6-1.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/selinux-policy-sandbox-40.13.6-1.el10.noarch.rpm"
+}

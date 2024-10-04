@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "elfutils-libs-0.191-5.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "elfutils-libs-0.191-5.el10.x86_64.rpm"]
+depends: [
+  "bzip2-libs" 
+  "elfutils-default-yama-scope" 
+  "elfutils-libelf" {= "0.191"}
+  "glibc" 
+  "libzstd" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "elfutils-libs-0.191-5.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/elfutils-libs-0.191-5.el10.x86_64.rpm"
+}

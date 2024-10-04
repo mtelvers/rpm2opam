@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-StrictConstructor-0.21-1.28.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-StrictConstructor-0.21-1.28.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Moose" {>= "0.94"}
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-MooseX-StrictConstructor-0.21-1.28.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-StrictConstructor-0.21-1.28.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rtkit-0.13-6.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rtkit-0.13-6.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "dbus-1" 
+  "glibc" 
+  "libcap2" 
+  "libdbus-1-3" 
+  "libsystemd0" 
+  "polkit" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "rtkit-0.13-6.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rtkit-0.13-6.2.x86_64.rpm"
+}

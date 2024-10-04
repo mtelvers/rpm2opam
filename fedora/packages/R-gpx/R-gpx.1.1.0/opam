@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-gpx-1.1.0-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-gpx-1.1.0-5.fc40.noarch.rpm"]
+depends: [
+  "R-core" {= "4.3"}
+  "R-lubridate" 
+  "R-rvest" 
+  "R-xml2" 
+]
+extra-source "R-gpx-1.1.0-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-gpx-1.1.0-5.fc40.noarch.rpm"
+}

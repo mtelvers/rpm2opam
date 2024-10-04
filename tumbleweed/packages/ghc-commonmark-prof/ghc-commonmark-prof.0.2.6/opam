@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-commonmark-prof-0.2.6-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-commonmark-prof-0.2.6-1.3.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-commonmark-devel" {= "0.2.6"}
+  "ghc-containers-prof" 
+  "ghc-parsec-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unicode-data-prof" 
+  "ghc-unicode-transforms-prof" 
+]
+extra-source "ghc-commonmark-prof-0.2.6-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-commonmark-prof-0.2.6-1.3.x86_64.rpm"
+}

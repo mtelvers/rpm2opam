@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "privoxy-3.0.34-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "privoxy-3.0.34-3.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libbrotlidec1" 
+  "libopenssl3" 
+  "libpcre1" 
+  "libpcreposix0" 
+  "libz-ng-compat1" 
+  "logrotate" 
+  "shadow" 
+]
+extra-source "privoxy-3.0.34-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/privoxy-3.0.34-3.2.x86_64.rpm"
+}

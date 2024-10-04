@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ntfs-3g-2022.10.3-slfo.1.3.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ntfs-3g-2022.10.3-slfo.1.3.5.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libfuse2" 
+  "libntfs-3g89" 
+  "update-alternatives" 
+]
+extra-source "ntfs-3g-2022.10.3-slfo.1.3.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/ntfs-3g-2022.10.3-slfo.1.3.5.x86_64.rpm"
+}

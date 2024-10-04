@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gambas3-gb-opengl-sge-3.18.4-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gambas3-gb-opengl-sge-3.18.4-5.fc40.x86_64.rpm"]
+depends: [
+  "gambas3-gb-opengl" {= "3.18.4"}
+  "gambas3-runtime" {= "3.18.4"}
+  "glibc" 
+  "libGLEW" 
+  "libX11" 
+  "libglvnd-glx" 
+  "libglvnd-opengl" 
+  "mesa-libGLU" 
+]
+extra-source "gambas3-gb-opengl-sge-3.18.4-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gambas3-gb-opengl-sge-3.18.4-5.fc40.x86_64.rpm"
+}

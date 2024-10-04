@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mupen64plus-ui-console-2.5.9-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mupen64plus-ui-console-2.5.9-3.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libSDL2-2_0-0" 
+  "libmupen64plus2" {= "2.5.9"}
+  "mupen64plus-plugin-audio-sdl" 
+  "mupen64plus-plugin-input-sdl" 
+  "mupen64plus-plugin-rsp-hle" 
+  "mupen64plus-plugin-video-glide64mk2" 
+]
+extra-source "mupen64plus-ui-console-2.5.9-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mupen64plus-ui-console-2.5.9-3.2.x86_64.rpm"
+}

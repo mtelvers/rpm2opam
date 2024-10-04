@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtkspell3-lang-3.0.10-3.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtkspell3-lang-3.0.10-3.10.noarch.rpm"]
+depends: [
+  "libgtkspell3-3-0" {= "3.0.10"}
+]
+extra-source "gtkspell3-lang-3.0.10-3.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gtkspell3-lang-3.0.10-3.10.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "etckeeper-bash-completion-1.18.21-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "etckeeper-bash-completion-1.18.21-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "etckeeper" {= "1.18.21"}
+]
+extra-source "etckeeper-bash-completion-1.18.21-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/etckeeper-bash-completion-1.18.21-1.1.noarch.rpm"
+}

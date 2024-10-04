@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mytop-1.7-28.b737f60.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mytop-1.7-28.b737f60.fc40.noarch.rpm"]
+depends: [
+  "perl-DBD-MySQL" {>= "1"}
+  "perl-DBI" 
+  "perl-Getopt-Long" 
+  "perl-Socket" 
+  "perl-Term-ANSIColor" 
+  "perl-TermReadKey" {>= "2.1"}
+  "perl-Time-HiRes" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.5.0"}
+  "perl-vars" 
+]
+extra-source "mytop-1.7-28.b737f60.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mytop-1.7-28.b737f60.fc40.noarch.rpm"
+}

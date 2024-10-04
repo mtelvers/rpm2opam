@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqmi-1.34.0-7.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqmi-1.34.0-7.el10.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "libgcc" 
+  "libmbim" 
+  "libqrtr-glib" 
+]
+extra-source "libqmi-1.34.0-7.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/libqmi-1.34.0-7.el10.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "globus-gss-assist-devel-12.7-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "globus-gss-assist-devel-12.7-6.fc40.x86_64.rpm"]
+depends: [
+  "globus-callout-devel" {>= "2"}
+  "globus-common-devel" {>= "14"}
+  "globus-gsi-cert-utils-devel" {>= "8"}
+  "globus-gsi-credential-devel" {>= "6"}
+  "globus-gsi-sysconfig-devel" {>= "7"}
+  "globus-gss-assist" {= "12.7"}
+  "globus-gssapi-gsi-devel" {>= "13"}
+  "pkgconf-pkg-config" 
+]
+extra-source "globus-gss-assist-devel-12.7-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/globus-gss-assist-devel-12.7-6.fc40.x86_64.rpm"
+}

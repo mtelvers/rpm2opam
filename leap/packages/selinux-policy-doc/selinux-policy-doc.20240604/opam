@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "selinux-policy-doc-20240604+git382.24f674cf-slfo.1.1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "selinux-policy-doc-20240604+git382.24f674cf-slfo.1.1.2.noarch.rpm"]
+depends: [
+  "selinux-policy" {= "20240604"}
+  "xdg-utils" 
+]
+extra-source "selinux-policy-doc-20240604+git382.24f674cf-slfo.1.1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/selinux-policy-doc-20240604+git382.24f674cf-slfo.1.1.2.noarch.rpm"
+}

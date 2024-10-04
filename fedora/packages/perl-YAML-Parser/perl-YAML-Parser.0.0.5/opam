@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-YAML-Parser-0.0.5-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-YAML-Parser-0.0.5-7.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-JSON-PP" 
+  "perl-Time-HiRes" 
+  "perl-XXX" 
+  "perl-YAML-PP" 
+  "perl-base" 
+  "perl-boolean" 
+  "perl-constant" 
+  "perl-libs" {>= "5.12.0"}
+  "perl-overload" 
+]
+extra-source "perl-YAML-Parser-0.0.5-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-YAML-Parser-0.0.5-7.fc40.noarch.rpm"
+}

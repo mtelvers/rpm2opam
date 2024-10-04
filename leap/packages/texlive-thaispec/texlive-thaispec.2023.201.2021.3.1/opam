@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-thaispec-2023.201.2021.03.01svn58019-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-thaispec-2023.201.2021.03.01svn58019-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-amscls" 
+  "texlive-amsfonts" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-fontspec" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-kvoptions" 
+  "texlive-mathspec" 
+  "texlive-mathtools" 
+  "texlive-polyglossia" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-setspace" 
+  "texlive-ucharclasses" 
+  "texlive-xpatch" 
+  "texlive-xstring" 
+]
+extra-source "texlive-thaispec-2023.201.2021.03.01svn58019-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-thaispec-2023.201.2021.03.01svn58019-slfo.1.1.4.noarch.rpm"
+}

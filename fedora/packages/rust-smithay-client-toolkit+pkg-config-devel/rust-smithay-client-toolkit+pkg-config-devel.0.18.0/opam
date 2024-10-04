@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-smithay-client-toolkit+pkg-config-devel-0.18.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-smithay-client-toolkit+pkg-config-devel-0.18.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-pkg-config+default-devel" 
+  "rust-smithay-client-toolkit-devel" {= "0.18.0"}
+]
+extra-source "rust-smithay-client-toolkit+pkg-config-devel-0.18.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-smithay-client-toolkit+pkg-config-devel-0.18.0-2.fc40.noarch.rpm"
+}

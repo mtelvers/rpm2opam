@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "erlang-riak_dt-2.1.4-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "erlang-riak_dt-2.1.4-20.fc40.noarch.rpm"]
+depends: [
+  "erlang-crypto" 
+  "erlang-erts" 
+  "erlang-kernel" 
+  "erlang-stdlib" 
+]
+extra-source "erlang-riak_dt-2.1.4-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/erlang-riak_dt-2.1.4-20.fc40.noarch.rpm"
+}

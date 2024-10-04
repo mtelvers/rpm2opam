@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "zeromq-devel-4.3.5-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zeromq-devel-4.3.5-16.fc40.x86_64.rpm"]
+depends: [
+  "krb5-devel" 
+  "libsodium-devel" 
+  "libunwind-devel" 
+  "openpgm-devel" {>= "5.2"}
+  "pkgconf-pkg-config" 
+  "zeromq" 
+]
+extra-source "zeromq-devel-4.3.5-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/z/zeromq-devel-4.3.5-16.fc40.x86_64.rpm"
+}

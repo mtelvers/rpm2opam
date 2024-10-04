@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-http2-prof-4.1.4-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-http2-prof-4.1.4-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-array-prof" 
+  "ghc-async-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-case-insensitive-prof" 
+  "ghc-containers-prof" 
+  "ghc-http-types-prof" 
+  "ghc-http2-devel" {= "4.1.4"}
+  "ghc-network-byte-order-prof" 
+  "ghc-network-prof" 
+  "ghc-psqueues-prof" 
+  "ghc-stm-prof" 
+  "ghc-time-manager-prof" 
+  "ghc-unix-time-prof" 
+  "ghc-unliftio-prof" 
+]
+extra-source "ghc-http2-prof-4.1.4-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-http2-prof-4.1.4-3.fc40.x86_64.rpm"
+}

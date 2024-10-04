@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ladspa-AMB-0.6.1-4.32.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ladspa-AMB-0.6.1-4.32.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "ladspa-AMB-0.6.1-4.32.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ladspa-AMB-0.6.1-4.32.x86_64.rpm"
+}

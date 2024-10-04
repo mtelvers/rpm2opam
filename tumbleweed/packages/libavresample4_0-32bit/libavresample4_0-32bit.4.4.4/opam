@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libavresample4_0-32bit-4.4.4-14.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libavresample4_0-32bit-4.4.4-14.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libavutil56_70-32bit" 
+]
+extra-source "libavresample4_0-32bit-4.4.4-14.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libavresample4_0-32bit-4.4.4-14.3.x86_64.rpm"
+}

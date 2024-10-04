@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw32-libxml2-2.12.5-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw32-libxml2-2.12.5-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "mingw32-crt" 
+  "mingw32-filesystem" 
+  "mingw32-win-iconv" 
+  "mingw32-zlib" 
+  "pkgconf-pkg-config" 
+]
+extra-source "mingw32-libxml2-2.12.5-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw32-libxml2-2.12.5-1.fc40.noarch.rpm"
+}

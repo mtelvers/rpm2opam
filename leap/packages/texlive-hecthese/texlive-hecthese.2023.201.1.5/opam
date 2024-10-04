@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-hecthese-2023.201.1.5svn60455-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-hecthese-2023.201.1.5svn60455-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-amsmath" 
+  "texlive-babel" 
+  "texlive-cite" 
+  "texlive-enumitem" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-graphics" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-memoir" 
+  "texlive-natbib" 
+  "texlive-numprint" 
+  "texlive-oberdiek" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-tocvsec2" 
+  "texlive-tools" 
+]
+extra-source "texlive-hecthese-2023.201.1.5svn60455-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-hecthese-2023.201.1.5svn60455-slfo.1.1.4.noarch.rpm"
+}

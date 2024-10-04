@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Math-PlanePath-129-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Math-PlanePath-129-11.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-Math-BigInt" 
+  "perl-Math-Factor-XS" 
+  "perl-Math-Libm" 
+  "perl-Math-NumSeq" 
+  "perl-Module-Load" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-constant" {>= "1.2"}
+  "perl-constant-defer" {>= "5"}
+  "perl-libs" {>= "5.4.0"}
+  "perl-vars" 
+]
+extra-source "perl-Math-PlanePath-129-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Math-PlanePath-129-11.fc40.noarch.rpm"
+}

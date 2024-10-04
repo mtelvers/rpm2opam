@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "conan-2.5.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "conan-2.5.0-1.1.noarch.rpm"]
+depends: [
+  "python311-Jinja2" 
+  "python311-PyYAML" {>= "6.0"}
+  "python311-base" 
+  "python311-colorama" {>= "0.4.3"}
+  "python311-distro" 
+  "python311-fasteners" {>= "0.15"}
+  "python311-patch-ng" {>= "1.17.4"}
+  "python311-python-dateutil" {>= "2.8.0"}
+  "python311-requests" {>= "2.25"}
+  "python311-urllib3" {>= "1.26.6"}
+]
+extra-source "conan-2.5.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/conan-2.5.0-1.1.noarch.rpm"
+}

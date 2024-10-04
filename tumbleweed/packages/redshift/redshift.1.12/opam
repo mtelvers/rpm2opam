@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "redshift-1.12-8.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "redshift-1.12-8.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libXxf86vm1" 
+  "libdrm2" 
+  "libxcb-randr0" 
+  "libxcb1" 
+  "systemd" 
+]
+extra-source "redshift-1.12-8.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/redshift-1.12-8.2.x86_64.rpm"
+}

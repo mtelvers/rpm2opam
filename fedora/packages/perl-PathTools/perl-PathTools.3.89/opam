@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-PathTools-3.89-502.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-PathTools-3.89-502.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-Carp" 
+  "perl-Errno" 
+  "perl-Exporter" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-constant" 
+]
+extra-source "perl-PathTools-3.89-502.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-PathTools-3.89-502.fc40.x86_64.rpm"
+}

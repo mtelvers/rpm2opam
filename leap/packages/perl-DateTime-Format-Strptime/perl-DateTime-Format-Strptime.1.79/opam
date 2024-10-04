@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-DateTime-Format-Strptime-1.79-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DateTime-Format-Strptime-1.79-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-DateTime" {>= "1.0"}
+  "perl-DateTime-Locale" {>= "1.300000"}
+  "perl-DateTime-TimeZone" {>= "2.9"}
+  "perl-Params-ValidationCompiler" 
+  "perl-Specio" 
+  "perl-Try-Tiny" 
+  "perl-base" 
+]
+extra-source "perl-DateTime-Format-Strptime-1.79-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/perl-DateTime-Format-Strptime-1.79-slfo.1.1.3.noarch.rpm"
+}

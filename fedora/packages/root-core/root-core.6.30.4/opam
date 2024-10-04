@@ -1,0 +1,47 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "root-core-6.30.04-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "root-core-6.30.04-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "gnu-free-mono-fonts" 
+  "gnu-free-sans-fonts" 
+  "gnu-free-serif-fonts" 
+  "google-droid-sans-fonts" 
+  "json-devel" {>= "3.9"}
+  "libgcc" 
+  "libstdc++" 
+  "libzstd" 
+  "lz4-libs" 
+  "pcre2" 
+  "root-cling" {= "6.30.4"}
+  "root-fonts" {= "6.30.4"}
+  "root-graf" {= "6.30.4"}
+  "root-graf-asimage" {= "6.30.4"}
+  "root-graf-gpad" {= "6.30.4"}
+  "root-graf-postscript" {= "6.30.4"}
+  "root-graf3d" {= "6.30.4"}
+  "root-hist" {= "6.30.4"}
+  "root-icons" {= "6.30.4"}
+  "root-io" {= "6.30.4"}
+  "root-mathcore" {= "6.30.4"}
+  "root-matrix" {= "6.30.4"}
+  "root-multiproc" 
+  "root-net" {= "6.30.4"}
+  "root-physics" {= "6.30.4"}
+  "root-tree" {= "6.30.4"}
+  "root-tree-dataframe" {= "6.30.4"}
+  "root-tree-player" {= "6.30.4"}
+  "root-vecops" {= "6.30.4"}
+  "tbb" 
+  "urw-base35-d050000l-fonts" 
+  "urw-base35-standard-symbols-ps-fonts" 
+  "urw-base35-z003-fonts" 
+  "xorg-x11-fonts-ISO8859-1-75dpi" 
+  "xxhash-libs" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "root-core-6.30.04-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/root-core-6.30.04-2.fc40.x86_64.rpm"
+}

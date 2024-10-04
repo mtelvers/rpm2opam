@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-AnyEvent-HTTP-2.25-1.20.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-AnyEvent-HTTP-2.25-1.20.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-AnyEvent" {>= "5.33"}
+  "perl-common-sense" {>= "3.3"}
+]
+extra-source "perl-AnyEvent-HTTP-2.25-1.20.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-AnyEvent-HTTP-2.25-1.20.noarch.rpm"
+}

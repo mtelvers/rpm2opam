@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libgfapi0-11.1-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgfapi0-11.1-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "glusterfs-client-xlators" {= "11.1"}
+  "gperftools-libs" 
+  "libacl" 
+  "libgfrpc0" 
+  "libgfxdr0" 
+  "libglusterfs0" 
+  "libtirpc" 
+  "libuuid" 
+  "openssl-libs" 
+  "userspace-rcu" 
+  "zlib-ng-compat" 
+]
+extra-source "libgfapi0-11.1-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libgfapi0-11.1-3.fc40.x86_64.rpm"
+}

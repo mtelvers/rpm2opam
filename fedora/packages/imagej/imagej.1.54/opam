@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "imagej-1.54i-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "imagej-1.54i-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "java-21-openjdk-devel" 
+  "javapackages-tools" 
+]
+extra-source "imagej-1.54i-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/imagej-1.54i-1.fc40.noarch.rpm"
+}

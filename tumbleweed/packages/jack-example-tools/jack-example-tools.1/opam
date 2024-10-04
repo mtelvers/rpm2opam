@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jack-example-tools-1-1.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jack-example-tools-1-1.9.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libasound2" 
+  "libjack0" 
+  "libjacknet0" 
+  "libjackserver0" 
+  "libopus0" 
+  "libreadline8" 
+  "libsamplerate0" 
+  "libsndfile1" 
+  "libstdc++6" 
+]
+extra-source "jack-example-tools-1-1.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/jack-example-tools-1-1.9.x86_64.rpm"
+}

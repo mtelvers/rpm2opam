@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libcamera-gstreamer-0.2.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcamera-gstreamer-0.2.0-3.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "gstreamer1" 
+  "gstreamer1-plugins-base" 
+  "libcamera" {= "0.2.0"}
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "libcamera-gstreamer-0.2.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libcamera-gstreamer-0.2.0-3.fc40.x86_64.rpm"
+}

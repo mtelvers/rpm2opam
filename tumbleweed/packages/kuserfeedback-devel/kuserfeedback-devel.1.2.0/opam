@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kuserfeedback-devel-1.2.0-1.23.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kuserfeedback-devel-1.2.0-1.23.x86_64.rpm"]
+depends: [
+  "libKUserFeedbackCore1" {= "1.2.0"}
+  "libKUserFeedbackWidgets1" {= "1.2.0"}
+]
+extra-source "kuserfeedback-devel-1.2.0-1.23.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kuserfeedback-devel-1.2.0-1.23.x86_64.rpm"
+}

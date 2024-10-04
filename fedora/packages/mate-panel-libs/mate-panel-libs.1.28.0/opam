@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mate-panel-libs-1.28.0-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mate-panel-libs-1.28.0-2.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "cairo-gobject" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libX11" 
+]
+extra-source "mate-panel-libs-1.28.0-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mate-panel-libs-1.28.0-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-pem-rfc7468_0.2+std-devel-0.2.4-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-pem-rfc7468_0.2+std-devel-0.2.4-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-pem-rfc7468_0-2+alloc-devel" {= "0.2.4"}
+  "rust-pem-rfc7468_0-2-devel" {= "0.2.4"}
+]
+extra-source "rust-pem-rfc7468_0.2+std-devel-0.2.4-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-pem-rfc7468_0.2+std-devel-0.2.4-3.fc40.noarch.rpm"
+}

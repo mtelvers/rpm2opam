@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libreoffice-l10n-ca-24.8.2.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libreoffice-l10n-ca-24.8.2.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "libreoffice" {= "24.8.2.1"}
+  "libreoffice-share-linker" 
+  "myspell-ca" 
+]
+extra-source "libreoffice-l10n-ca-24.8.2.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libreoffice-l10n-ca-24.8.2.1-1.1.noarch.rpm"
+}

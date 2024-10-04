@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-onsi-ginkgo-devel-1.16.5-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-onsi-ginkgo-devel-1.16.5-5.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-nxadm-tail-devel" 
+  "golang-github-task-slim-sprig-devel" 
+  "golang-x-sys-devel" 
+  "golang-x-tools-devel" 
+]
+extra-source "golang-github-onsi-ginkgo-devel-1.16.5-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-onsi-ginkgo-devel-1.16.5-5.fc40.noarch.rpm"
+}

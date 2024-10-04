@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dnssec-tools-2.2.3-23.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dnssec-tools-2.2.3-23.fc40.x86_64.rpm"]
+depends: [
+  "bind" 
+  "dnssec-tools-libs" 
+  "dnssec-tools-perlmods" 
+  "glibc" 
+  "openssl-libs" 
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Digest-BubbleBabble" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-Getopt-GUI-Long" 
+  "perl-Getopt-Long" 
+  "perl-GraphViz" 
+  "perl-IO" 
+  "perl-Net-DNS" 
+  "perl-Net-DNS-SEC" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-QWizard" 
+  "perl-Sys-Syslog" 
+  "perl-TimeDate" 
+  "perl-interpreter" 
+  "perl-libnet" 
+  "perl-libs" 
+]
+extra-source "dnssec-tools-2.2.3-23.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dnssec-tools-2.2.3-23.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kcalendarcore-devel-5.116.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kcalendarcore-devel-5.116.0-1.1.x86_64.rpm"]
+depends: [
+  "libKF5CalendarCore5" {= "5.116.0"}
+  "libQt5Core-devel" 
+  "libQt5Gui-devel" 
+  "libical-devel" {>= "3.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "kcalendarcore-devel-5.116.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kcalendarcore-devel-5.116.0-1.1.x86_64.rpm"
+}

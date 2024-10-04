@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "coin-or-lemon-1.3.1-31.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coin-or-lemon-1.3.1-31.fc40.x86_64.rpm"]
+depends: [
+  "coin-or-Cbc" 
+  "coin-or-Cgl" 
+  "coin-or-Clp" 
+  "coin-or-CoinUtils" 
+  "coin-or-Osi" 
+  "glibc" 
+  "glpk" 
+  "libgcc" 
+  "libsoplex" 
+  "libstdc++" 
+]
+extra-source "coin-or-lemon-1.3.1-31.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/coin-or-lemon-1.3.1-31.fc40.x86_64.rpm"
+}

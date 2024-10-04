@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "opensc-bash-completion-0.25.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opensc-bash-completion-0.25.1-2.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "opensc" {= "0.25.1"}
+]
+extra-source "opensc-bash-completion-0.25.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/opensc-bash-completion-0.25.1-2.1.noarch.rpm"
+}

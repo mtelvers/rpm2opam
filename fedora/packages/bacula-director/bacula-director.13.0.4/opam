@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bacula-director-13.0.4-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bacula-director-13.0.4-4.fc40.x86_64.rpm"]
+depends: [
+  "bacula-common" {= "13.0.4"}
+  "bacula-libs" {= "13.0.4"}
+  "bacula-libs-sql" {= "13.0.4"}
+  "bash" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "openldap" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "systemd" 
+]
+extra-source "bacula-director-13.0.4-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bacula-director-13.0.4-4.fc40.x86_64.rpm"
+}

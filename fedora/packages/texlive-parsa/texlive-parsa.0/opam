@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-parsa-svn54840-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-parsa-svn54840-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-adjustbox" 
+  "texlive-base" 
+  "texlive-fancyhdr" 
+  "texlive-float" 
+  "texlive-graphics" 
+  "texlive-kpathsea" 
+  "texlive-l3packages" 
+  "texlive-multirow" 
+]
+extra-source "texlive-parsa-svn54840-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-parsa-svn54840-71.fc40.noarch.rpm"
+}

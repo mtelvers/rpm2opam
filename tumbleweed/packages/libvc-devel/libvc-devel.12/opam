@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvc-devel-012-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvc-devel-012-1.5.x86_64.rpm"]
+depends: [
+  "libvc0" {= "12"}
+]
+extra-source "libvc-devel-012-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libvc-devel-012-1.5.x86_64.rpm"
+}

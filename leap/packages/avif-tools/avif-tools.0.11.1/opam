@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "avif-tools-0.11.1-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "avif-tools-0.11.1-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libavif15" 
+  "libjpeg8" 
+  "libpng16-16" 
+]
+extra-source "avif-tools-0.11.1-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/avif-tools-0.11.1-slfo.1.1.8.x86_64.rpm"
+}

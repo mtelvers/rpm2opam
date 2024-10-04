@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "resource-agents-4.13.0-2.fc40.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "resource-agents-4.13.0-2.fc40.3.x86_64.rpm"]
+depends: [
+  "bash" 
+  "e2fsprogs" 
+  "gawk" 
+  "glibc" 
+  "grep" 
+  "hostname" 
+  "iproute" 
+  "libqb" 
+  "lvm2" 
+  "net-tools" 
+  "nfs-utils" 
+  "pkgconf-pkg-config" 
+  "procps-ng" 
+  "psmisc" 
+  "python3" 
+  "sed" 
+  "util-linux-core" 
+  "xfsprogs" 
+]
+extra-source "resource-agents-4.13.0-2.fc40.3.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/resource-agents-4.13.0-2.fc40.3.x86_64.rpm"
+}

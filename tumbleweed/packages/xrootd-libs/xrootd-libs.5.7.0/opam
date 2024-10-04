@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xrootd-libs-5.7.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xrootd-libs-5.7.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "krb5" 
+  "libSciTokens0" 
+  "libcom_err2" 
+  "libcrypt1" 
+  "libcurl-mini4" 
+  "libdavix0" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libstdc++6" 
+  "libsystemd0" 
+  "libtinyxml0" 
+  "libxml2-2" 
+  "libz-ng-compat1" 
+  "xrootd-server-libs" 
+]
+extra-source "xrootd-libs-5.7.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xrootd-libs-5.7.0-1.1.x86_64.rpm"
+}

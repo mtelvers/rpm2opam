@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "a2jmidid-9-2.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "a2jmidid-9-2.16.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "glibc" 
+  "libasound2" 
+  "libdbus-1-3" 
+  "libjack0" 
+]
+extra-source "a2jmidid-9-2.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/a2jmidid-9-2.16.x86_64.rpm"
+}

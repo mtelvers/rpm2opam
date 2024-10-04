@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-spelling-2.2-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-spelling-2.2-12.fc40.noarch.rpm"]
+depends: [
+  "R-commonmark" 
+  "R-core" {= "4.3"}
+  "R-hunspell" {>= "3.0"}
+  "R-knitr" 
+  "R-xml2" 
+]
+extra-source "R-spelling-2.2-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-spelling-2.2-12.fc40.noarch.rpm"
+}

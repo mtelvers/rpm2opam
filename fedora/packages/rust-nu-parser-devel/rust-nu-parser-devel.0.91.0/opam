@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-nu-parser-devel-0.91.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-nu-parser-devel-0.91.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bytesize+default-devel" 
+  "rust-chrono+std-devel" 
+  "rust-chrono-devel" 
+  "rust-itertools+default-devel" 
+  "rust-log+default-devel" 
+  "rust-nu-engine+default-devel" 
+  "rust-nu-path+default-devel" 
+  "rust-nu-protocol+default-devel" 
+  "rust-serde_json+default-devel" 
+]
+extra-source "rust-nu-parser-devel-0.91.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-nu-parser-devel-0.91.0-1.fc40.noarch.rpm"
+}

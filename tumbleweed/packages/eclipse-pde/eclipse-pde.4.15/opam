@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "eclipse-pde-4.15-15.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eclipse-pde-4.15-15.4.x86_64.rpm"]
+depends: [
+  "eclipse-jdt" {= "4.15"}
+  "eclipse-platform" {= "4.15"}
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "junit" 
+  "objectweb-asm" {>= "7.0"}
+]
+extra-source "eclipse-pde-4.15-15.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/eclipse-pde-4.15-15.4.x86_64.rpm"
+}

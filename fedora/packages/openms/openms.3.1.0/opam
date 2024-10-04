@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openms-3.1.0-0.10.pre1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openms-3.1.0-0.10.pre1.fc40.x86_64.rpm"]
+depends: [
+  "R-core" 
+  "bzip2-libs" 
+  "cmake-filesystem" 
+  "coin-or-Cbc" 
+  "coin-or-Cgl" 
+  "coin-or-Clp" 
+  "coin-or-CoinUtils" 
+  "glibc" 
+  "libgcc" 
+  "libgomp" 
+  "libstdc++" 
+  "libsvm" 
+  "openms-data" {= "3.1.0"}
+  "percolator" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtdeclarative" 
+  "qt5-qtdeclarative-devel" 
+  "qt5-qtsvg" 
+  "qt5-qtwebchannel" 
+  "qt5-qtwebengine" 
+  "xerces-c" 
+  "zlib-ng-compat" 
+]
+extra-source "openms-3.1.0-0.10.pre1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openms-3.1.0-0.10.pre1.fc40.x86_64.rpm"
+}

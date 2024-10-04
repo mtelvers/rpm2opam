@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libshumate-devel-1.2.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libshumate-devel-1.2.3-1.1.x86_64.rpm"]
+depends: [
+  "cairo-devel" {>= "1.4"}
+  "glib2-devel" {>= "2.74.0"}
+  "gtk4-devel" 
+  "json-glib-devel" {>= "1.6"}
+  "libprotobuf-c-devel" 
+  "libshumate-1_0-1" {= "1.2.3"}
+  "libsoup-devel" {>= "3.0"}
+  "pkgconf-pkg-config" 
+  "sqlite3-devel" {>= "1.12.0"}
+  "typelib-1_0-Shumate-1_0" {= "1.2.3"}
+]
+extra-source "libshumate-devel-1.2.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libshumate-devel-1.2.3-1.1.x86_64.rpm"
+}

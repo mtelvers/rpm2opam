@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-sphinx-book-theme-0.1.3-1.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-sphinx-book-theme-0.1.3-1.12.noarch.rpm"]
+depends: [
+  "python312-PyYAML" 
+  "python312-Sphinx" {>= "2"}
+  "python312-base" {= "3.12"}
+  "python312-beautifulsoup4" {>= "4.6.1"}
+  "python312-click" 
+  "python312-docutils" {>= "0.15"}
+  "python312-pydata-sphinx-theme" 
+]
+extra-source "python312-sphinx-book-theme-0.1.3-1.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-sphinx-book-theme-0.1.3-1.12.noarch.rpm"
+}

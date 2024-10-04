@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmariadb-devel-3.3.10-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmariadb-devel-3.3.10-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libmariadb3" {= "3.3.10"}
+  "libopenssl-1_0_0-devel" 
+  "pkgconf-pkg-config" 
+  "zlib-devel" 
+]
+extra-source "libmariadb-devel-3.3.10-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmariadb-devel-3.3.10-2.1.x86_64.rpm"
+}

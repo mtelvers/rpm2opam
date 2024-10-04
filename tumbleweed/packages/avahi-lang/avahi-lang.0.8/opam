@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "avahi-lang-0.8-35.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "avahi-lang-0.8-35.1.noarch.rpm"]
+depends: [
+  "avahi" {= "0.8"}
+]
+extra-source "avahi-lang-0.8-35.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/avahi-lang-0.8-35.1.noarch.rpm"
+}

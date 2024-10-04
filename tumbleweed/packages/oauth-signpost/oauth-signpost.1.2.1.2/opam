@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "oauth-signpost-1.2.1.2-3.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "oauth-signpost-1.2.1.2-3.14.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "maven-compiler-plugin" 
+  "maven-jar-plugin" 
+]
+extra-source "oauth-signpost-1.2.1.2-3.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/oauth-signpost-1.2.1.2-3.14.noarch.rpm"
+}

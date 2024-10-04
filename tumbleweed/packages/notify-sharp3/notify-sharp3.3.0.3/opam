@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "notify-sharp3-3.0.3-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "notify-sharp3-3.0.3-3.1.noarch.rpm"]
+depends: [
+  "dbus-sharp-glib2" {= "2.0.0.0"}
+  "dbus-sharp2" {= "2.0.0.0"}
+  "glib-sharp3" {= "3.0.0.0"}
+  "gtk-sharp3" {= "3.0.0.0"}
+  "mono-core" {= "4.0.0.0"}
+]
+extra-source "notify-sharp3-3.0.3-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/notify-sharp3-3.0.3-3.1.noarch.rpm"
+}

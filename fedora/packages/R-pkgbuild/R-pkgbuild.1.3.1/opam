@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-pkgbuild-1.3.1-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-pkgbuild-1.3.1-6.fc40.noarch.rpm"]
+depends: [
+  "R-R6" 
+  "R-callr" {>= "3.2.0"}
+  "R-cli" 
+  "R-core" {= "4.3"}
+  "R-crayon" 
+  "R-desc" 
+  "R-prettyunits" 
+  "R-rprojroot" 
+  "R-withr" {>= "2.3.0"}
+]
+extra-source "R-pkgbuild-1.3.1-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-pkgbuild-1.3.1-6.fc40.noarch.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-POE-Server-TCP-tests-1.20-26.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-POE-Server-TCP-tests-1.20-26.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-IO" 
+  "perl-IPC-Open3" 
+  "perl-POE" 
+  "perl-PathTools" 
+  "perl-Socket" 
+  "perl-Test-Harness" 
+  "perl-Test-POE-Server-TCP" 
+  "perl-Test-Simple" 
+  "perl-Text-ParseWords" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "perl-Test-POE-Server-TCP-tests-1.20-26.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-POE-Server-TCP-tests-1.20-26.fc40.noarch.rpm"
+}

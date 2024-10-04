@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cpptasks-1.0b5-7.20.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cpptasks-1.0b5-7.20.noarch.rpm"]
+depends: [
+  "ant" 
+  "java-11-openj9" {>= "1.8"}
+]
+extra-source "cpptasks-1.0b5-7.20.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cpptasks-1.0b5-7.20.noarch.rpm"
+}

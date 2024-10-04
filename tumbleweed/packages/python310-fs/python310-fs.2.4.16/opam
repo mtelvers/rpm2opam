@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-fs-2.4.16-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-fs-2.4.16-4.1.noarch.rpm"]
+depends: [
+  "python310-appdirs" {>= "1.4.3"}
+  "python310-base" {= "3.10"}
+  "python310-psutil" 
+  "python310-pytz" 
+  "python310-setuptools" 
+  "python310-six" {>= "1.10.0"}
+]
+extra-source "python310-fs-2.4.16-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-fs-2.4.16-4.1.noarch.rpm"
+}

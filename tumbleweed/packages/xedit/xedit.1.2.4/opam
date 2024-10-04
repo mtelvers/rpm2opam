@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xedit-1.2.4-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xedit-1.2.4-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXaw7" 
+  "libXmu6" 
+  "libXt6" 
+]
+extra-source "xedit-1.2.4-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xedit-1.2.4-1.2.x86_64.rpm"
+}

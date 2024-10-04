@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nss-pam-ldapd-0.9.10-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nss-pam-ldapd-0.9.10-16.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "krb5-libs" 
+  "libgcc" 
+  "openldap" 
+  "pam-libs" 
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "nss-pam-ldapd-0.9.10-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nss-pam-ldapd-0.9.10-16.fc40.x86_64.rpm"
+}

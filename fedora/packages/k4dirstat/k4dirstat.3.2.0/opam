@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "k4dirstat-3.2.0-7.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "k4dirstat-3.2.0-7.fc39.x86_64.rpm"]
+depends: [
+  "glibc" {>= "2.37.9000"}
+  "kf5-kconfig-core" 
+  "kf5-kconfig-gui" 
+  "kf5-kconfigwidgets" 
+  "kf5-kcoreaddons" 
+  "kf5-ki18n" 
+  "kf5-kiconthemes" 
+  "kf5-kio-core-libs" 
+  "kf5-kio-widgets-libs" 
+  "kf5-kjobwidgets" 
+  "kf5-kwidgetsaddons" 
+  "kf5-kxmlgui" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "zlib-ng-compat" 
+]
+extra-source "k4dirstat-3.2.0-7.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/k4dirstat-3.2.0-7.fc39.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "units-2.23-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "units-2.23-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libreadline8" 
+  "python311-base" 
+  "python311-requests" 
+]
+extra-source "units-2.23-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/units-2.23-2.1.x86_64.rpm"
+}

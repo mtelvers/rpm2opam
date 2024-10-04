@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-wizards-prof-1.0.3-6.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-wizards-prof-1.0.3-6.13.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-control-monad-free-prof" 
+  "ghc-haskeline-prof" 
+  "ghc-mtl-prof" 
+  "ghc-transformers-prof" 
+  "ghc-wizards-devel" {= "1.0.3"}
+]
+extra-source "ghc-wizards-prof-1.0.3-6.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-wizards-prof-1.0.3-6.13.x86_64.rpm"
+}

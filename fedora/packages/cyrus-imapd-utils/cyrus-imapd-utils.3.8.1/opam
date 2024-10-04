@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cyrus-imapd-utils-3.8.1-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cyrus-imapd-utils-3.8.1-11.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cyrus-imapd-libs" {= "3.8.1"}
+  "cyrus-sasl-lib" 
+  "glibc" 
+  "openssl-libs" 
+  "perl-Cyrus" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-POSIX" 
+  "perl-Pod-Usage" 
+  "perl-Term-ReadLine" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+]
+extra-source "cyrus-imapd-utils-3.8.1-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cyrus-imapd-utils-3.8.1-11.fc40.x86_64.rpm"
+}

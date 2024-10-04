@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-scitokens-1.7.4-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-scitokens-1.7.4-1.5.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-PyJWT" {>= "2.2"}
+  "python312-base" 
+  "update-alternatives" 
+]
+extra-source "python312-scitokens-1.7.4-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-scitokens-1.7.4-1.5.noarch.rpm"
+}

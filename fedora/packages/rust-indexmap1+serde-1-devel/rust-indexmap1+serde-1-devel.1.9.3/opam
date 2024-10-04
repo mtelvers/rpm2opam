@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-indexmap1+serde-1-devel-1.9.3-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-indexmap1+serde-1-devel-1.9.3-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-indexmap1+serde-devel" {= "1.9.3"}
+  "rust-indexmap1-devel" {= "1.9.3"}
+]
+extra-source "rust-indexmap1+serde-1-devel-1.9.3-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-indexmap1+serde-1-devel-1.9.3-3.fc40.noarch.rpm"
+}

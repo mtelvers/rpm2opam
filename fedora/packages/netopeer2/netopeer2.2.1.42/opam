@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "netopeer2-2.1.42-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netopeer2-2.1.42-6.fc40.x86_64.rpm"]
+depends: [
+  "netopeer2-cli" {= "2.1.42"}
+  "netopeer2-server" {= "2.1.42"}
+]
+extra-source "netopeer2-2.1.42-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/netopeer2-2.1.42-6.fc40.x86_64.rpm"
+}

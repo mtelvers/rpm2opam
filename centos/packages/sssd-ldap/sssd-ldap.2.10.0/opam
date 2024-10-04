@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sssd-ldap-2.10.0~beta2-3.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sssd-ldap-2.10.0~beta2-3.el10.x86_64.rpm"]
+depends: [
+  "dbus-libs" 
+  "glibc" 
+  "keyutils-libs" 
+  "krb5-libs" 
+  "libbasicobjects" 
+  "libcap" 
+  "libcollection" 
+  "libcom_err" 
+  "libdhash" 
+  "libini_config" 
+  "libldb" 
+  "libref_array" 
+  "libselinux" 
+  "libsss_certmap" {= "2.10.0"}
+  "libsss_idmap" {= "2.10.0"}
+  "libtalloc" 
+  "libtdb" 
+  "libtevent" 
+  "libunistring" 
+  "openldap" 
+  "openssl-libs" 
+  "pcre2" 
+  "popt" 
+  "sssd-common" 
+  "sssd-krb5-common" {= "2.10.0"}
+  "systemd-libs" 
+]
+extra-source "sssd-ldap-2.10.0~beta2-3.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/sssd-ldap-2.10.0~beta2-3.el10.x86_64.rpm"
+}

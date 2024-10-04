@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-iscsi-lio-server-5.0.0-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-iscsi-lio-server-5.0.0-1.4.noarch.rpm"]
+depends: [
+  "python311-configshell-fb" 
+  "python311-rtslib-fb" 
+  "python311-targetcli-fb" 
+  "yast2" {>= "4.1.42"}
+  "yast2-ruby-bindings" {>= "1.0.0"}
+]
+extra-source "yast2-iscsi-lio-server-5.0.0-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/yast2-iscsi-lio-server-5.0.0-1.4.noarch.rpm"
+}

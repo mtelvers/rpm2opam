@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gpsman-6.4.1-25.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gpsman-6.4.1-25.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "tk" 
+  "tkimg" 
+]
+extra-source "gpsman-6.4.1-25.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gpsman-6.4.1-25.fc40.noarch.rpm"
+}

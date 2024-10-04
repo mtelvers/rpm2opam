@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-PDF-Create-1.46-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-PDF-Create-1.46-14.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-File-Share" 
+  "perl-FileHandle" 
+  "perl-Getopt-Long" 
+  "perl-JSON" 
+  "perl-POSIX" 
+  "perl-Scalar-List-Utils" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "perl-PDF-Create-1.46-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-PDF-Create-1.46-14.fc40.noarch.rpm"
+}

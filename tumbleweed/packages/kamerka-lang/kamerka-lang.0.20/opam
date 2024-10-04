@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kamerka-lang-0.20-2.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kamerka-lang-0.20-2.4.noarch.rpm"]
+depends: [
+  "kamerka" {= "0.20"}
+]
+extra-source "kamerka-lang-0.20-2.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kamerka-lang-0.20-2.4.noarch.rpm"
+}

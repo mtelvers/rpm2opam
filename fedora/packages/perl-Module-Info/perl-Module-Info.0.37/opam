@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Module-Info-0.37-25.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Info-0.37-25.fc40.noarch.rpm"]
+depends: [
+  "perl-B" 
+  "perl-B-Utils" {>= "0.27"}
+  "perl-Carp" 
+  "perl-Getopt-Long" 
+  "perl-PathTools" {>= "0.8"}
+  "perl-Safe" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-version" 
+]
+extra-source "perl-Module-Info-0.37-25.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Module-Info-0.37-25.fc40.noarch.rpm"
+}

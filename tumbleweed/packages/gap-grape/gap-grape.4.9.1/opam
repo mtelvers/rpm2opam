@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-grape-4.9.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-grape-4.9.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "bliss" 
+  "gap" {>= "4.11"}
+  "nauty" {>= "2.8.6"}
+]
+extra-source "gap-grape-4.9.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-grape-4.9.1-1.1.noarch.rpm"
+}

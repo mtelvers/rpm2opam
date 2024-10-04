@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "harfbuzz-tools-7.2.0-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "harfbuzz-tools-7.2.0-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcairo2" 
+  "libfreetype6" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libharfbuzz-cairo0" 
+  "libharfbuzz-gobject0" 
+  "libharfbuzz-subset0" 
+  "libharfbuzz0" 
+]
+extra-source "harfbuzz-tools-7.2.0-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/harfbuzz-tools-7.2.0-slfo.1.1.8.x86_64.rpm"
+}

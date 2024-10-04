@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-qcheck-alcotest-0.21.3-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-qcheck-alcotest-0.21.3-6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "ocaml" {= "2125"}
+  "ocaml-alcotest" {= "0"}
+  "ocaml-astring" {= "4"}
+  "ocaml-cmdliner" {= "73"}
+  "ocaml-fmt" {= "49"}
+  "ocaml-qcheck-core" {= "0"}
+]
+extra-source "ocaml-qcheck-alcotest-0.21.3-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-qcheck-alcotest-0.21.3-6.fc40.x86_64.rpm"
+}

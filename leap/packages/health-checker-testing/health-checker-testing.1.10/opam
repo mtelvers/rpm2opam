@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "health-checker-testing-1.10+git20240111.cb84209-slfo.1.2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "health-checker-testing-1.10+git20240111.cb84209-slfo.1.2.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "health-checker" {>= "1.10"}
+]
+extra-source "health-checker-testing-1.10+git20240111.cb84209-slfo.1.2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/health-checker-testing-1.10+git20240111.cb84209-slfo.1.2.2.noarch.rpm"
+}

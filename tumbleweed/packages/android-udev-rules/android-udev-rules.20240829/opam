@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "android-udev-rules-20240829-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "android-udev-rules-20240829-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "android-udev-rules-20240829-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/android-udev-rules-20240829-1.1.noarch.rpm"
+}

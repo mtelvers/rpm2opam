@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "patterns-devel-C-C++-devel_C_C++-20170319-lp160.1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "patterns-devel-C-C++-devel_C_C++-20170319-lp160.1.2.noarch.rpm"]
+depends: [
+  "gcc-build-c++" 
+  "libstdc++-build-devel" 
+  "patterns-base-apparmor" {= "0"}
+]
+extra-source "patterns-devel-C-C++-devel_C_C++-20170319-lp160.1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/patterns-devel-C-C++-devel_C_C++-20170319-lp160.1.2.noarch.rpm"
+}

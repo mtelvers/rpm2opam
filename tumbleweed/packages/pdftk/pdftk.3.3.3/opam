@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pdftk-3.3.3-3.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pdftk-3.3.3-3.3.noarch.rpm"]
+depends: [
+  "apache-commons-lang3" 
+  "bash" 
+  "bouncycastle" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+]
+extra-source "pdftk-3.3.3-3.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pdftk-3.3.3-3.3.noarch.rpm"
+}

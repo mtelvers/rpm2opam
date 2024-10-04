@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jdependency-1.2-5.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jdependency-1.2-5.1.noarch.rpm"]
+depends: [
+  "apache-commons-io" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "objectweb-asm" 
+]
+extra-source "jdependency-1.2-5.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jdependency-1.2-5.1.noarch.rpm"
+}

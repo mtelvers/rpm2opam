@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Catalyst-Plugin-Session-Store-FastMmap-0.16-34.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Catalyst-Plugin-Session-Store-FastMmap-0.16-34.fc40.noarch.rpm"]
+depends: [
+  "perl-Cache-FastMmap" {>= "1.29"}
+  "perl-Catalyst-Plugin-Session" {>= "0.27"}
+  "perl-Catalyst-Runtime" 
+  "perl-MRO-Compat" 
+  "perl-Moose" 
+  "perl-MooseX-Emulate-Class-Accessor-Fast" 
+  "perl-Path-Class" 
+  "perl-PathTools" 
+  "perl-libs" 
+  "perl-namespace-clean" 
+]
+extra-source "perl-Catalyst-Plugin-Session-Store-FastMmap-0.16-34.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Catalyst-Plugin-Session-Store-FastMmap-0.16-34.fc40.noarch.rpm"
+}

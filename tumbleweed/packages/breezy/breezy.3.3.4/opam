@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "breezy-3.3.4-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "breezy-3.3.4-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libpython3_11-1_0" 
+  "python311-PyYAML" 
+  "python311-base" 
+  "python311-configobj" 
+  "python311-dulwich" {>= "0.19.11"}
+  "python311-fastbencode" 
+  "python311-fastimport" {>= "0.9.8"}
+  "python311-merge3" 
+  "python311-patiencediff" 
+  "python311-urllib3" {>= "1.24.1"}
+]
+extra-source "breezy-3.3.4-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/breezy-3.3.4-1.3.x86_64.rpm"
+}

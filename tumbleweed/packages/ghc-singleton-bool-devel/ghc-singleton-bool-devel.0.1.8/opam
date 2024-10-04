@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-singleton-bool-devel-0.1.8-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-singleton-bool-devel-0.1.8-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-boring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-dec-devel" 
+  "ghc-deepseq-devel" 
+  "ghc-singleton-bool" {= "0.1.8"}
+  "ghc-some-devel" 
+]
+extra-source "ghc-singleton-bool-devel-0.1.8-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-singleton-bool-devel-0.1.8-1.2.x86_64.rpm"
+}

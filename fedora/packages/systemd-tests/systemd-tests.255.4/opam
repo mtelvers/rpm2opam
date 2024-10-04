@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "systemd-tests-255.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "systemd-tests-255.4-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dbus-libs" 
+  "glib2" 
+  "glibc" 
+  "kmod-libs" 
+  "libacl" 
+  "libblkid" 
+  "libcap" 
+  "libgcc" 
+  "libmount" 
+  "libseccomp" 
+  "libselinux" 
+  "libxcrypt" 
+  "libzstd" 
+  "lz4-libs" 
+  "openssl-libs" 
+  "python3" 
+  "systemd" 
+  "systemd-libs" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "systemd-tests-255.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/systemd-tests-255.4-1.fc40.x86_64.rpm"
+}

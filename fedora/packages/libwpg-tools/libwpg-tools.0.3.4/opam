@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libwpg-tools-0.3.4-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libwpg-tools-0.3.4-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "librevenge" 
+  "libstdc++" 
+  "libwpg" {= "0.3.4"}
+  "perl-Getopt-Std" 
+  "perl-interpreter" 
+]
+extra-source "libwpg-tools-0.3.4-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libwpg-tools-0.3.4-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-unliftio-devel-0.2.25.0-1.21.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-unliftio-devel-0.2.25.0-1.21.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-async-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-deepseq-devel" 
+  "ghc-directory-devel" 
+  "ghc-filepath-devel" 
+  "ghc-process-devel" 
+  "ghc-safe-exceptions-devel" 
+  "ghc-stm-devel" 
+  "ghc-time-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unix-devel" 
+  "ghc-unliftio" {= "0.2.25.0"}
+  "ghc-unliftio-core-devel" 
+]
+extra-source "ghc-unliftio-devel-0.2.25.0-1.21.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-unliftio-devel-0.2.25.0-1.21.x86_64.rpm"
+}

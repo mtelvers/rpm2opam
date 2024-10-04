@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cpprest-devel-2.10.19-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cpprest-devel-2.10.19-2.2.x86_64.rpm"]
+depends: [
+  "libcpprest2_10" {= "2.10.19"}
+  "pkgconf-pkg-config" 
+]
+extra-source "cpprest-devel-2.10.19-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cpprest-devel-2.10.19-2.2.x86_64.rpm"
+}

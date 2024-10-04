@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ncview-2.1.10-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ncview-2.1.10-1.fc40.x86_64.rpm"]
+depends: [
+  "expat" 
+  "glibc" 
+  "libICE" 
+  "libSM" 
+  "libX11" 
+  "libXaw" 
+  "libXt" 
+  "libpng" 
+  "netcdf" 
+  "udunits2" 
+]
+extra-source "ncview-2.1.10-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/ncview-2.1.10-1.fc40.x86_64.rpm"
+}

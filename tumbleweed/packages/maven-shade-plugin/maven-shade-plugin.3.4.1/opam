@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-shade-plugin-3.4.1-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-shade-plugin-3.4.1-1.9.noarch.rpm"]
+depends: [
+  "apache-commons-collections4" 
+  "apache-commons-io" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "jdependency" 
+  "jdom2" 
+  "maven-artifact-transfer" 
+  "maven-dependency-tree" 
+  "objectweb-asm" 
+  "plexus-utils" 
+  "slf4j" 
+]
+extra-source "maven-shade-plugin-3.4.1-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-shade-plugin-3.4.1-1.9.noarch.rpm"
+}

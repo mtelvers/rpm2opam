@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpsm2-devel-12.0.1-slfo.1.1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpsm2-devel-12.0.1-slfo.1.1.6.x86_64.rpm"]
+depends: [
+  "libpsm2-2" {= "12.0.1"}
+  "libuuid-devel" 
+]
+extra-source "libpsm2-devel-12.0.1-slfo.1.1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libpsm2-devel-12.0.1-slfo.1.1.6.x86_64.rpm"
+}

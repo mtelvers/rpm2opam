@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-config+preserve_order-devel-0.13.4-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-config+preserve_order-devel-0.13.4-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-config+indexmap-devel" {= "0.13.4"}
+  "rust-config-devel" {= "0.13.4"}
+  "rust-ron+default-devel" 
+  "rust-ron+indexmap-devel" 
+  "rust-serde_json+default-devel" 
+  "rust-serde_json+preserve_order-devel" 
+  "rust-toml+default-devel" 
+  "rust-toml+preserve_order-devel" 
+]
+extra-source "rust-config+preserve_order-devel-0.13.4-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-config+preserve_order-devel-0.13.4-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-signal-hook-mio+mio-0_8-devel-0.2.3-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-signal-hook-mio+mio-0_8-devel-0.2.3-8.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-mio+default-devel" 
+  "rust-mio+net-devel" 
+  "rust-mio+os-ext-devel" 
+  "rust-signal-hook-mio-devel" {= "0.2.3"}
+]
+extra-source "rust-signal-hook-mio+mio-0_8-devel-0.2.3-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-signal-hook-mio+mio-0_8-devel-0.2.3-8.fc40.noarch.rpm"
+}

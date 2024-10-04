@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "elfutils-libs-0.191-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "elfutils-libs-0.191-4.fc40.x86_64.rpm"]
+depends: [
+  "bzip2-libs" 
+  "elfutils-default-yama-scope" 
+  "elfutils-libelf" {= "0.191"}
+  "glibc" 
+  "libzstd" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "elfutils-libs-0.191-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/elfutils-libs-0.191-4.fc40.x86_64.rpm"
+}

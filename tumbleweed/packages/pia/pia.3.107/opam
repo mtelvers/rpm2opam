@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pia-3.107-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pia-3.107-3.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXaw7" 
+  "libXext6" 
+  "libXt6" 
+  "libXv1" 
+  "libglvnd" 
+  "libjpeg8" 
+  "tv-common" 
+]
+extra-source "pia-3.107-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pia-3.107-3.2.x86_64.rpm"
+}

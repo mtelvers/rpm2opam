@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-python-fedora-1.1.1-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-python-fedora-1.1.1-1.7.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-beautifulsoup4" 
+  "python312-kitchen" 
+  "python312-lockfile" 
+  "python312-munch" 
+  "python312-openidc-client" 
+  "python312-requests" 
+  "python312-six" {>= "1.4.0"}
+]
+extra-source "python312-python-fedora-1.1.1-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-python-fedora-1.1.1-1.7.noarch.rpm"
+}

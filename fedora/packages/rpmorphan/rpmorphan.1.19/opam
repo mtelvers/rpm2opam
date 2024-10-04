@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rpmorphan-1.19-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rpmorphan-1.19-4.fc40.noarch.rpm"]
+depends: [
+  "logrotate" 
+  "perl-Carp" 
+  "perl-Curses-UI" 
+  "perl-English" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long" 
+  "perl-POSIX" 
+  "perl-Pod-Usage" 
+  "perl-Tk" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "rpmorphan-1.19-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rpmorphan-1.19-4.fc40.noarch.rpm"
+}

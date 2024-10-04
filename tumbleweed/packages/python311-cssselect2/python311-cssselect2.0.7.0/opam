@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-cssselect2-0.7.0-2.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-cssselect2-0.7.0-2.8.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-tinycss2" 
+  "python311-webencodings" 
+]
+extra-source "python311-cssselect2-0.7.0-2.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-cssselect2-0.7.0-2.8.noarch.rpm"
+}

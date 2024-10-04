@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-panel-1.5.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-panel-1.5.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-Markdown" 
+  "python312-base" 
+  "python312-bleach" 
+  "python312-bokeh" 
+  "python312-linkify-it-py" 
+  "python312-markdown-it-py" 
+  "python312-mdit-py-plugins" 
+  "python312-packaging" 
+  "python312-pandas" {>= "1.2"}
+  "python312-param" 
+  "python312-pyviz-comms" {>= "2.0.0"}
+  "python312-requests" 
+  "python312-tqdm" 
+  "python312-typing_extensions" 
+  "update-alternatives" 
+]
+extra-source "python312-panel-1.5.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-panel-1.5.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-ekaia-svn49594-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-ekaia-svn49594-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-babel" 
+  "texlive-base" 
+  "texlive-fancyhdr" 
+  "texlive-geometry" 
+  "texlive-kpathsea" 
+  "texlive-sectsty" 
+  "texlive-tools" 
+]
+extra-source "texlive-ekaia-svn49594-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-ekaia-svn49594-71.fc40.noarch.rpm"
+}

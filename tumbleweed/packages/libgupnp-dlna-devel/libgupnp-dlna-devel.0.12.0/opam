@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgupnp-dlna-devel-0.12.0-1.14.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgupnp-dlna-devel-0.12.0-1.14.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "gstreamer-devel" 
+  "gstreamer-plugins-base-devel" 
+  "libgupnp-dlna-2_0-4" {= "0.12.0"}
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+  "typelib-1_0-GUPnPDLNA-2_0" {= "0.12.0"}
+  "typelib-1_0-GUPnPDLNAGst-2_0" {= "0.12.0"}
+]
+extra-source "libgupnp-dlna-devel-0.12.0-1.14.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgupnp-dlna-devel-0.12.0-1.14.x86_64.rpm"
+}

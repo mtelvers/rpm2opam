@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "integritysetup-2.7.3-2.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "integritysetup-2.7.3-2.el10.x86_64.rpm"]
+depends: [
+  "cryptsetup-libs" {= "2.7.3"}
+  "glibc" 
+  "libblkid" 
+  "libuuid" 
+  "popt" 
+]
+extra-source "integritysetup-2.7.3-2.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/integritysetup-2.7.3-2.el10.x86_64.rpm"
+}

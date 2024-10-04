@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mogilefsd-storage-mysql-2.73-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mogilefsd-storage-mysql-2.73-22.fc40.noarch.rpm"]
+depends: [
+  "perl-DBD-MySQL" 
+  "perl-DBI" {>= "1.44"}
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "mogilefsd-storage-mysql-2.73-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mogilefsd-storage-mysql-2.73-22.fc40.noarch.rpm"
+}

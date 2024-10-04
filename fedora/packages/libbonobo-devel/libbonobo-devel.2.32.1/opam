@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libbonobo-devel-2.32.1-27.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libbonobo-devel-2.32.1-27.fc40.x86_64.rpm"]
+depends: [
+  "ORBit2-devel" {>= "2.7.5"}
+  "glib2-devel" 
+  "libbonobo" 
+  "libxml2-devel" {>= "2.4.21"}
+  "pkgconf-pkg-config" 
+  "popt-devel" 
+]
+extra-source "libbonobo-devel-2.32.1-27.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libbonobo-devel-2.32.1-27.fc40.x86_64.rpm"
+}

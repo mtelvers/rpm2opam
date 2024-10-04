@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "log4net-1.2.10-79.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "log4net-1.2.10-79.3.noarch.rpm"]
+depends: [
+  "mono-core" {= "4.0.0.0"}
+  "mono-data" {= "4.0.0.0"}
+  "mono-web" {= "4.0.0.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "log4net-1.2.10-79.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/log4net-1.2.10-79.3.noarch.rpm"
+}

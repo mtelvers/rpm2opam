@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-fonts-tlwg-2024.216.0.0.7.3svn60817-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-fonts-tlwg-2024.216.0.0.7.3svn60817-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-filesystem" {>= "2024"}
+  "texlive-fonts-tlwg-fonts" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-scripts" 
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-xkeyval" 
+]
+extra-source "texlive-fonts-tlwg-2024.216.0.0.7.3svn60817-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-fonts-tlwg-2024.216.0.0.7.3svn60817-56.1.noarch.rpm"
+}

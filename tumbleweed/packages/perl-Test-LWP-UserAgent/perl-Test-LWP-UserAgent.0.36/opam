@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-LWP-UserAgent-0.036-1.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-LWP-UserAgent-0.036-1.12.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-HTTP-Date" 
+  "perl-HTTP-Message" 
+  "perl-Safe-Isa" 
+  "perl-Try-Tiny" 
+  "perl-URI" {>= "1.62"}
+  "perl-base" 
+  "perl-libwww-perl" 
+  "perl-namespace-clean" {>= "0.19"}
+]
+extra-source "perl-Test-LWP-UserAgent-0.036-1.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-LWP-UserAgent-0.036-1.12.noarch.rpm"
+}

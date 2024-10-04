@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-readr-1.4.0-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-readr-1.4.0-12.fc40.x86_64.rpm"]
+depends: [
+  "R-R6" 
+  "R-cli" 
+  "R-clipr" 
+  "R-core" {= "4.3"}
+  "R-crayon" 
+  "R-hms" {>= "0.4.1"}
+  "R-lifecycle" 
+  "R-rlang" 
+  "R-tibble" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "R-readr-1.4.0-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-readr-1.4.0-12.fc40.x86_64.rpm"
+}

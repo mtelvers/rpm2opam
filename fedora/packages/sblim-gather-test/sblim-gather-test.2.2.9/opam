@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sblim-gather-test-2.2.9-32.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sblim-gather-test-2.2.9-32.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "sblim-gather-provider" {= "2.2.9"}
+  "sblim-sfcb" 
+  "sblim-testsuite" 
+]
+extra-source "sblim-gather-test-2.2.9-32.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sblim-gather-test-2.2.9-32.fc40.x86_64.rpm"
+}

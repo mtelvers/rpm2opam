@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-tdewolff-minify-devel-2.20.18-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-tdewolff-minify-devel-2.20.18-1.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-tdewolff-parse-2-devel" 
+  "go-filesystem" 
+  "golang-github-djherbis-atime-devel" 
+  "golang-github-fsnotify-devel" 
+  "golang-github-matryer-try-devel" 
+  "golang-github-tdewolff-argp-devel" 
+]
+extra-source "golang-github-tdewolff-minify-devel-2.20.18-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-tdewolff-minify-devel-2.20.18-1.fc40.noarch.rpm"
+}

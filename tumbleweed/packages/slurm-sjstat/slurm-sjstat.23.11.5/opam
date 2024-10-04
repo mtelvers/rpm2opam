@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "slurm-sjstat-23.11.5-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "slurm-sjstat-23.11.5-1.3.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-base" 
+  "slurm" {= "23.11.5"}
+]
+extra-source "slurm-sjstat-23.11.5-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/slurm-sjstat-23.11.5-1.3.noarch.rpm"
+}

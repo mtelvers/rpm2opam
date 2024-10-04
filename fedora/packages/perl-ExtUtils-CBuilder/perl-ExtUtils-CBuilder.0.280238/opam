@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-ExtUtils-CBuilder-0.280238-502.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-ExtUtils-CBuilder-0.280238-502.fc40.noarch.rpm"]
+depends: [
+  "gcc" 
+  "gcc-c++" 
+  "perl-DynaLoader" 
+  "perl-ExtUtils-MakeMaker" {>= "6.30"}
+  "perl-File-Basename" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-IO" 
+  "perl-IPC-Cmd" 
+  "perl-PathTools" 
+  "perl-Perl-OSType" {>= "1"}
+  "perl-Text-ParseWords" 
+  "perl-devel" 
+  "perl-libs" 
+]
+extra-source "perl-ExtUtils-CBuilder-0.280238-502.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-ExtUtils-CBuilder-0.280238-502.fc40.noarch.rpm"
+}

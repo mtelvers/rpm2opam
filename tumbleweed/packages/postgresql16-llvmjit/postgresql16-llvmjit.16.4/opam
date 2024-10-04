@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postgresql16-llvmjit-16.4-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql16-llvmjit-16.4-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libLLVM18" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "postgresql-llvmjit" {>= "16"}
+  "postgresql16-server" {= "16.4"}
+]
+extra-source "postgresql16-llvmjit-16.4-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/postgresql16-llvmjit-16.4-2.1.x86_64.rpm"
+}

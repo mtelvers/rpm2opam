@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "finch-devel-2.14.12-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "finch-devel-2.14.12-8.fc40.x86_64.rpm"]
+depends: [
+  "finch" {= "2.14.12"}
+  "libgnt-devel" 
+  "libpurple-devel" {= "2.14.12"}
+  "ncurses-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "finch-devel-2.14.12-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/finch-devel-2.14.12-8.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libXdmcp-devel-1.1.5-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libXdmcp-devel-1.1.5-1.2.x86_64.rpm"]
+depends: [
+  "libXdmcp6" {= "1.1.5"}
+  "pkgconf-pkg-config" 
+  "xorgproto-devel" 
+]
+extra-source "libXdmcp-devel-1.1.5-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libXdmcp-devel-1.1.5-1.2.x86_64.rpm"
+}

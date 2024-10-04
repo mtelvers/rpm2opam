@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-fmt-devel-0.9.0-15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-fmt-devel-0.9.0-15.fc40.x86_64.rpm"]
+depends: [
+  "ocaml" {= "24528204"}
+  "ocaml-cmdliner" {= "73"}
+  "ocaml-cmdliner-devel" 
+  "ocaml-compiler-libs" {= "32"}
+  "ocaml-fmt" {= "0.9.0"}
+]
+extra-source "ocaml-fmt-devel-0.9.0-15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-fmt-devel-0.9.0-15.fc40.x86_64.rpm"
+}

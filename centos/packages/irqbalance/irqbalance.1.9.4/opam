@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "irqbalance-1.9.4-2.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "irqbalance-1.9.4-2.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "libcap-ng" 
+  "ncurses-libs" 
+  "numactl-libs" 
+  "systemd-libs" 
+]
+extra-source "irqbalance-1.9.4-2.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/irqbalance-1.9.4-2.el10.x86_64.rpm"
+}

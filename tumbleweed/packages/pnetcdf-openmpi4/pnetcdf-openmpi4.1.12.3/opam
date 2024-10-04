@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pnetcdf-openmpi4-1.12.3-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pnetcdf-openmpi4-1.12.3-2.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libpnetcdf4-mpich" 
+  "libpnetcdf4-openmpi4" {= "1.12.3"}
+  "openmpi4" 
+  "openmpi4-libs" 
+]
+extra-source "pnetcdf-openmpi4-1.12.3-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pnetcdf-openmpi4-1.12.3-2.3.x86_64.rpm"
+}

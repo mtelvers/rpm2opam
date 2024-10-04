@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "brltty-minimal-6.6-13.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "brltty-minimal-6.6-13.fc40.x86_64.rpm"]
+depends: [
+  "bluez-libs" 
+  "dbus-libs" 
+  "glibc" 
+  "pcre2-utf32" 
+  "python3" 
+]
+extra-source "brltty-minimal-6.6-13.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/brltty-minimal-6.6-13.fc40.x86_64.rpm"
+}

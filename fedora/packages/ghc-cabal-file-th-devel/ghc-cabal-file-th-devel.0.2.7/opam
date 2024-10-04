@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-cabal-file-th-devel-0.2.7-18.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-cabal-file-th-devel-0.2.7-18.fc40.x86_64.rpm"]
+depends: [
+  "ghc-Cabal-devel" 
+  "ghc-base-devel" 
+  "ghc-cabal-file-th" {= "0.2.7"}
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-directory-devel" 
+  "ghc-pretty-devel" 
+  "ghc-template-haskell-devel" 
+]
+extra-source "ghc-cabal-file-th-devel-0.2.7-18.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-cabal-file-th-devel-0.2.7-18.fc40.x86_64.rpm"
+}

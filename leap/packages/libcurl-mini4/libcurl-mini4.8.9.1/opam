@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcurl-mini4-8.9.1-slfo.1.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcurl-mini4-8.9.1-slfo.1.1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libidn2-0" 
+  "libnghttp2-14" 
+  "libopenssl3" 
+  "libpsl5" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+]
+extra-source "libcurl-mini4-8.9.1-slfo.1.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libcurl-mini4-8.9.1-slfo.1.1.1.x86_64.rpm"
+}

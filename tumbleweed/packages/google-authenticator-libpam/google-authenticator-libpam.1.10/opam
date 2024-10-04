@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "google-authenticator-libpam-1.10-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "google-authenticator-libpam-1.10-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "pam" 
+]
+extra-source "google-authenticator-libpam-1.10-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/google-authenticator-libpam-1.10-2.1.x86_64.rpm"
+}

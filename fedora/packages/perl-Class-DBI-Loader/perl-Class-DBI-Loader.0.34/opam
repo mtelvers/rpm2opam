@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Class-DBI-Loader-0.34-48.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Class-DBI-Loader-0.34-48.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Class-DBI" 
+  "perl-Class-DBI-Pg" 
+  "perl-Class-DBI-SQLite" 
+  "perl-Class-DBI-mysql" 
+  "perl-DBI" {>= "1.3"}
+  "perl-Lingua-EN-Inflect" 
+  "perl-Text-Balanced" 
+  "perl-base" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-Class-DBI-Loader-0.34-48.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Class-DBI-Loader-0.34-48.fc40.noarch.rpm"
+}

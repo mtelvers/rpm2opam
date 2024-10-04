@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rtklib-qt-2.4.3.b33-13.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rtklib-qt-2.4.3.b33-13.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtserialport" 
+  "rtklib" {= "2.4.3.0"}
+  "rtklib-libs" 
+]
+extra-source "rtklib-qt-2.4.3.b33-13.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rtklib-qt-2.4.3.b33-13.fc40.x86_64.rpm"
+}

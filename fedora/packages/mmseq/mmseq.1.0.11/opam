@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mmseq-1.0.11-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mmseq-1.0.11-19.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "boost-iostreams" 
+  "boost-regex" 
+  "flexiblas-netlib" 
+  "glibc" 
+  "gsl" 
+  "htslib" 
+  "libgcc" 
+  "libgomp" 
+  "libstdc++" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "ruby" 
+  "rubypick" 
+  "samtools" 
+]
+extra-source "mmseq-1.0.11-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mmseq-1.0.11-19.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gkrellm-sun-1.0.0-39.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gkrellm-sun-1.0.0-39.fc40.x86_64.rpm"]
+depends: [
+  "gkrellm" {>= "2.2.0"}
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "pango" 
+]
+extra-source "gkrellm-sun-1.0.0-39.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gkrellm-sun-1.0.0-39.fc40.x86_64.rpm"
+}

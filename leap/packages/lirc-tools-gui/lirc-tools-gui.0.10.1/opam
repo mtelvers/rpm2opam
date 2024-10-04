@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lirc-tools-gui-0.10.1-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lirc-tools-gui-0.10.1-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "liblirc0" 
+  "liblirc_client0" 
+  "lirc-core" {= "0.10.1"}
+  "xorg-x11-fonts-core" 
+]
+extra-source "lirc-tools-gui-0.10.1-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/lirc-tools-gui-0.10.1-slfo.1.1.8.x86_64.rpm"
+}

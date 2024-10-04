@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xone-kmp-default-0.3+git50.58004bf_k6.10.5_1-1.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xone-kmp-default-0.3+git50.58004bf_k6.10.5_1-1.11.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "grep" 
+  "kernel-default" {= "0"}
+  "suse-module-tools-scriptlets" 
+]
+extra-source "xone-kmp-default-0.3+git50.58004bf_k6.10.5_1-1.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xone-kmp-default-0.3+git50.58004bf_k6.10.5_1-1.11.x86_64.rpm"
+}

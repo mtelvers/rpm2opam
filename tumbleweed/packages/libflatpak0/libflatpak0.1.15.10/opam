@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libflatpak0-1.15.10-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libflatpak0-1.15.10-2.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libXau6" 
+  "libarchive13" 
+  "libcurl-mini4" 
+  "libdconf1" 
+  "libjson-glib-1_0-0" 
+  "libostree-1-1" 
+  "libseccomp2" 
+  "libsystemd0" 
+  "libwayland-client0" 
+  "libxml2-2" 
+  "libzstd1" 
+]
+extra-source "libflatpak0-1.15.10-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libflatpak0-1.15.10-2.1.x86_64.rpm"
+}

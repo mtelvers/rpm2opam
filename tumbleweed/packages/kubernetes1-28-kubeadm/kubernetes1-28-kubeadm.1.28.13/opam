@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kubernetes1.28-kubeadm-1.28.13-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kubernetes1.28-kubeadm-1.28.13-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "containerd" 
+  "cri-tools" 
+  "ebtables" 
+  "ethtool" 
+  "kernel-debug" 
+  "kubernetes1-28-kubelet" 
+  "shadow" 
+  "socat" 
+]
+extra-source "kubernetes1.28-kubeadm-1.28.13-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kubernetes1.28-kubeadm-1.28.13-2.1.x86_64.rpm"
+}

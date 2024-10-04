@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Config-ApacheFormat-1.2-33.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Config-ApacheFormat-1.2-33.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Class-MethodMaker" {>= "1.8"}
+  "perl-Data-Dumper" 
+  "perl-PathTools" {>= "0.82"}
+  "perl-Scalar-List-Utils" 
+  "perl-Text-Balanced" {>= "1.89"}
+  "perl-libs" {>= "5.6.1"}
+]
+extra-source "perl-Config-ApacheFormat-1.2-33.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Config-ApacheFormat-1.2-33.fc40.noarch.rpm"
+}

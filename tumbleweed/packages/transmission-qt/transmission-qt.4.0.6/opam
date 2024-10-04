@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "transmission-qt-4.0.6-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "transmission-qt-4.0.6-1.1.x86_64.rpm"]
+depends: [
+  "alts" 
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5DBus5" 
+  "libQt5Gui5" 
+  "libQt5Network5" 
+  "libQt5Widgets5" 
+  "libb64-0" 
+  "libcurl-mini4" 
+  "libdeflate0" 
+  "libevent-2_1-7" 
+  "libgcc_s1" 
+  "libminiupnpc17" 
+  "libopenssl3" 
+  "libpsl5" 
+  "libstdc++6" 
+  "transmission-common" {= "4.0.6"}
+]
+extra-source "transmission-qt-4.0.6-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/transmission-qt-4.0.6-1.1.x86_64.rpm"
+}

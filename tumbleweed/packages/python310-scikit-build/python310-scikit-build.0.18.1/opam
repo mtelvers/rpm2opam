@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-scikit-build-0.18.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-scikit-build-0.18.1-1.1.noarch.rpm"]
+depends: [
+  "cmake" {>= "3.5"}
+  "python310-base" {= "3.10"}
+  "python310-distro" 
+  "python310-packaging" 
+  "python310-setuptools" {>= "42.0.0"}
+  "python310-tomli" 
+  "python310-wheel" {>= "0.32.0"}
+]
+extra-source "python310-scikit-build-0.18.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-scikit-build-0.18.1-1.1.noarch.rpm"
+}

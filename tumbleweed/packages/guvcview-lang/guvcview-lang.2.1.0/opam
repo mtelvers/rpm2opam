@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "guvcview-lang-2.1.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "guvcview-lang-2.1.0-1.1.noarch.rpm"]
+depends: [
+  "guvcview" {= "2.1.0"}
+]
+extra-source "guvcview-lang-2.1.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/guvcview-lang-2.1.0-1.1.noarch.rpm"
+}

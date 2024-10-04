@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libteam5-1.32-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libteam5-1.32-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libnl3-200" 
+]
+extra-source "libteam5-1.32-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libteam5-1.32-2.1.x86_64.rpm"
+}

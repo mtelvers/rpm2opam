@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-der+arbitrary-devel-0.7.8-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-der+arbitrary-devel-0.7.8-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-arbitrary+default-devel" 
+  "rust-arbitrary+derive-devel" 
+  "rust-const-oid+arbitrary-devel" 
+  "rust-const-oid+default-devel" 
+  "rust-der+std-devel" {= "0.7.8"}
+  "rust-der-devel" {= "0.7.8"}
+]
+extra-source "rust-der+arbitrary-devel-0.7.8-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-der+arbitrary-devel-0.7.8-2.fc40.noarch.rpm"
+}

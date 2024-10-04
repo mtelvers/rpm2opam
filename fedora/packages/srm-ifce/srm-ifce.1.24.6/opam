@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "srm-ifce-1.24.6-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "srm-ifce-1.24.6-3.fc40.x86_64.rpm"]
+depends: [
+  "CGSI-gSOAP" 
+  "glib2" 
+  "glibc" 
+  "gsoap" 
+]
+extra-source "srm-ifce-1.24.6-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/srm-ifce-1.24.6-3.fc40.x86_64.rpm"
+}

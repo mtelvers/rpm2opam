@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "NetworkManager-wwan-1.48.10-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "NetworkManager-wwan-1.48.10-1.1.x86_64.rpm"]
+depends: [
+  "ModemManager" 
+  "NetworkManager" {= "1.48.10"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libmm-glib0" 
+  "libsystemd0" 
+]
+extra-source "NetworkManager-wwan-1.48.10-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/NetworkManager-wwan-1.48.10-1.1.x86_64.rpm"
+}

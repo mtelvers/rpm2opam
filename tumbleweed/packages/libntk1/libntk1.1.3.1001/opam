@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libntk1-1.3.1001-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libntk1-1.3.1001-4.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXft2" 
+  "libcairo2" 
+  "libfontconfig1" 
+  "libgcc_s1" 
+  "libglvnd" 
+  "libpng16-16" 
+  "libstdc++6" 
+]
+extra-source "libntk1-1.3.1001-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libntk1-1.3.1001-4.2.x86_64.rpm"
+}

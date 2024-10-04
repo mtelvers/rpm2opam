@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-filepath-devel-1.4.200.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-filepath-devel-1.4.200.1-2.1.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-deepseq-devel" 
+  "ghc-exceptions-devel" 
+  "ghc-filepath" {= "1.4.200.1"}
+  "ghc-template-haskell-devel" 
+]
+extra-source "ghc-filepath-devel-1.4.200.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-filepath-devel-1.4.200.1-2.1.x86_64.rpm"
+}

@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-RT-Client-REST-tests-0.72-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-RT-Client-REST-tests-0.72-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Data-Dumper" 
+  "perl-Encode" 
+  "perl-ExtUtils-MakeMaker" 
+  "perl-HTTP-Message" 
+  "perl-HTTP-Server-Simple" {>= "0.44"}
+  "perl-IO" 
+  "perl-IPC-Open3" 
+  "perl-Params-Validate" 
+  "perl-PathTools" 
+  "perl-RT-Client-REST" 
+  "perl-Socket" 
+  "perl-Test-Exception" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-Try-Tiny" 
+  "perl-blib" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-libwww-perl" 
+  "perl-parent" 
+  "perl-vars" 
+]
+extra-source "perl-RT-Client-REST-tests-0.72-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-RT-Client-REST-tests-0.72-4.fc40.noarch.rpm"
+}

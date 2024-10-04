@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-pep508_rs+modern-devel-0.2.4-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-pep508_rs+modern-devel-0.2.4-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-pep508_rs+anyhow-devel" {= "0.2.4"}
+  "rust-pep508_rs+serde-devel" {= "0.2.4"}
+  "rust-pep508_rs+toml-devel" {= "0.2.4"}
+  "rust-pep508_rs-devel" {= "0.2.4"}
+]
+extra-source "rust-pep508_rs+modern-devel-0.2.4-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-pep508_rs+modern-devel-0.2.4-2.fc40.noarch.rpm"
+}

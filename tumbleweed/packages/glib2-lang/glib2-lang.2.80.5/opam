@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glib2-lang-2.80.5-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glib2-lang-2.80.5-2.1.noarch.rpm"]
+depends: [
+  "libglib-2_0-0" {= "2.80.5"}
+]
+extra-source "glib2-lang-2.80.5-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/glib2-lang-2.80.5-2.1.noarch.rpm"
+}

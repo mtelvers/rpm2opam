@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-File-ReadBackwards-tests-1.06-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-ReadBackwards-tests-1.06-10.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Carp" 
+  "perl-Fcntl" 
+  "perl-File-ReadBackwards" 
+  "perl-File-Temp" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-File-ReadBackwards-tests-1.06-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-File-ReadBackwards-tests-1.06-10.fc40.noarch.rpm"
+}

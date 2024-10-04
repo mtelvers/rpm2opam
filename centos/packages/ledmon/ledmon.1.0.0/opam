@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ledmon-1.0.0-3.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ledmon-1.0.0-3.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "pciutils-libs" 
+  "sg3_utils-libs" 
+  "systemd-libs" 
+]
+extra-source "ledmon-1.0.0-3.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/ledmon-1.0.0-3.el10.x86_64.rpm"
+}

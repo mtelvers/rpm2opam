@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Module-Load-Util-0.010-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Load-Util-0.010-1.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" {>= "5.57"}
+  "perl-Regexp-Pattern-Perl" 
+  "perl-libs" 
+]
+extra-source "perl-Module-Load-Util-0.010-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Module-Load-Util-0.010-1.fc40.noarch.rpm"
+}

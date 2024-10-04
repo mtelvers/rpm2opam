@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xviewer-plugin-exif-display-3.4.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xviewer-plugin-exif-display-3.4.0-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libexif12" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libpeas-1_0-0" 
+  "libpeas-gtk-1_0-0" 
+  "xviewer-devel" 
+  "xviewer-plugins-data" {= "3.4.0"}
+]
+extra-source "xviewer-plugin-exif-display-3.4.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xviewer-plugin-exif-display-3.4.0-1.1.x86_64.rpm"
+}

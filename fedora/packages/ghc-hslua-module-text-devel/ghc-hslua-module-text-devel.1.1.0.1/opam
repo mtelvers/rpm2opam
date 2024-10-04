@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-hslua-module-text-devel-1.1.0.1-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hslua-module-text-devel-1.1.0.1-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-hslua-core-devel" 
+  "ghc-hslua-marshalling-devel" 
+  "ghc-hslua-module-text" {= "1.1.0.1"}
+  "ghc-hslua-packaging-devel" 
+  "ghc-text-devel" 
+]
+extra-source "ghc-hslua-module-text-devel-1.1.0.1-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-hslua-module-text-devel-1.1.0.1-3.fc40.x86_64.rpm"
+}

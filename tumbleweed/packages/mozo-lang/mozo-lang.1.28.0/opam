@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mozo-lang-1.28.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mozo-lang-1.28.0-1.1.noarch.rpm"]
+depends: [
+  "mozo" {= "1.28.0"}
+]
+extra-source "mozo-lang-1.28.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mozo-lang-1.28.0-1.1.noarch.rpm"
+}

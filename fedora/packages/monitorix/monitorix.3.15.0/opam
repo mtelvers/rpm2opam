@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "monitorix-3.15.0-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "monitorix-3.15.0-6.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "logrotate" 
+  "perl-CGI" 
+  "perl-Config-General" 
+  "perl-DBD-MySQL" 
+  "perl-DBD-Pg" 
+  "perl-DBI" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-FindBin" 
+  "perl-Getopt-Std" 
+  "perl-HTTP-Server-Simple" 
+  "perl-IO" 
+  "perl-IO-Socket-SSL" 
+  "perl-MIME-Base64" 
+  "perl-MIME-Lite" 
+  "perl-Net-IP" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Socket" 
+  "perl-Time-HiRes" 
+  "perl-XML-LibXML" 
+  "perl-XML-Simple" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-libwww-perl" 
+  "rrdtool-perl" 
+  "systemd" 
+]
+extra-source "monitorix-3.15.0-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/monitorix-3.15.0-6.fc40.noarch.rpm"
+}

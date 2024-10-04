@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "secrets-lang-9.6-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "secrets-lang-9.6-1.1.noarch.rpm"]
+depends: [
+  "secrets" {= "9.6"}
+]
+extra-source "secrets-lang-9.6-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/secrets-lang-9.6-1.1.noarch.rpm"
+}

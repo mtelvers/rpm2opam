@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gettext-runtime-0.22.5-3.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gettext-runtime-0.22.5-3.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gettext-envsubst" {= "0.22.5"}
+  "gettext-libs" {= "0.22.5"}
+  "glibc" 
+]
+extra-source "gettext-runtime-0.22.5-3.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/gettext-runtime-0.22.5-3.el10.x86_64.rpm"
+}

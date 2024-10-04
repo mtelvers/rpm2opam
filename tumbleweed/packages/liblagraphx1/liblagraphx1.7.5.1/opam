@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "liblagraphx1-7.5.1-50.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "liblagraphx1-7.5.1-50.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgomp1" 
+  "libgraphblas9" 
+  "liblagraph1" 
+]
+extra-source "liblagraphx1-7.5.1-50.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/liblagraphx1-7.5.1-50.2.x86_64.rpm"
+}

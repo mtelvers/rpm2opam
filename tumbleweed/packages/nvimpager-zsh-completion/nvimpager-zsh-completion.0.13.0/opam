@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nvimpager-zsh-completion-0.13.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nvimpager-zsh-completion-0.13.0-1.1.noarch.rpm"]
+depends: [
+  "nvimpager" {= "0.13.0"}
+  "zsh" 
+]
+extra-source "nvimpager-zsh-completion-0.13.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nvimpager-zsh-completion-0.13.0-1.1.noarch.rpm"
+}

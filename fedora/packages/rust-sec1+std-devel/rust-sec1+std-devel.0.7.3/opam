@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-sec1+std-devel-0.7.3-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-sec1+std-devel-0.7.3-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-der+default-devel" 
+  "rust-der+oid-devel" 
+  "rust-der+std-devel" 
+  "rust-sec1+alloc-devel" {= "0.7.3"}
+  "rust-sec1-devel" {= "0.7.3"}
+]
+extra-source "rust-sec1+std-devel-0.7.3-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-sec1+std-devel-0.7.3-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kdiff3-lang-1.11.2-lp160.1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kdiff3-lang-1.11.2-lp160.1.2.noarch.rpm"]
+depends: [
+  "kdiff3" {= "1.11.2"}
+]
+extra-source "kdiff3-lang-1.11.2-lp160.1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/kdiff3-lang-1.11.2-lp160.1.2.noarch.rpm"
+}

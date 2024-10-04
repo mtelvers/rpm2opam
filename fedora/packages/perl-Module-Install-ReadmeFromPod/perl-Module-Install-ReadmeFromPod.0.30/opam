@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Module-Install-ReadmeFromPod-0.30-24.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Install-ReadmeFromPod-0.30-24.fc40.noarch.rpm"]
+depends: [
+  "perl-Capture-Tiny" {>= "0.5"}
+  "perl-IO-All" 
+  "perl-Module-Install" {>= "1"}
+  "perl-Pod-Html" 
+  "perl-Pod-Markdown" {>= "2"}
+  "perl-base" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-podlators" 
+  "perl-vars" 
+]
+extra-source "perl-Module-Install-ReadmeFromPod-0.30-24.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Module-Install-ReadmeFromPod-0.30-24.fc40.noarch.rpm"
+}

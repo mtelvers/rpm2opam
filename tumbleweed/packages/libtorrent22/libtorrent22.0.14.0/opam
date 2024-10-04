@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libtorrent22-0.14.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libtorrent22-0.14.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+]
+extra-source "libtorrent22-0.14.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libtorrent22-0.14.0-1.1.x86_64.rpm"
+}

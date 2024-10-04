@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-cheggaaa-pb-devel-3.1.5-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-cheggaaa-pb-devel-3.1.5-1.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-fatih-color-devel" 
+  "golang-github-mattn-colorable-devel" 
+  "golang-github-mattn-isatty-devel" 
+  "golang-github-mattn-runewidth-devel" 
+  "golang-github-vividcortex-ewma-devel" 
+  "golang-x-sys-devel" 
+]
+extra-source "golang-github-cheggaaa-pb-devel-3.1.5-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-cheggaaa-pb-devel-3.1.5-1.fc40.noarch.rpm"
+}

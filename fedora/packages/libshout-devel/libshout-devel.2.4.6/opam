@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libshout-devel-2.4.6-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libshout-devel-2.4.6-6.fc40.x86_64.rpm"]
+depends: [
+  "libogg-devel" 
+  "libshout" {= "2.4.6"}
+  "libtheora-devel" 
+  "libvorbis-devel" 
+  "openssl-devel" 
+  "pkgconf-pkg-config" 
+  "speex-devel" 
+]
+extra-source "libshout-devel-2.4.6-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libshout-devel-2.4.6-6.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rd-agent-selinux-2.1.2-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rd-agent-selinux-2.1.2-10.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "libselinux-utils" 
+  "policycoreutils" 
+  "policycoreutils-python-utils" 
+  "selinux-policy" {>= "40.10"}
+  "selinux-policy-targeted" 
+]
+extra-source "rd-agent-selinux-2.1.2-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rd-agent-selinux-2.1.2-10.fc40.noarch.rpm"
+}

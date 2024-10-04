@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mr-1.20180726-1.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mr-1.20180726-1.14.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "perl" 
+]
+extra-source "mr-1.20180726-1.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mr-1.20180726-1.14.noarch.rpm"
+}

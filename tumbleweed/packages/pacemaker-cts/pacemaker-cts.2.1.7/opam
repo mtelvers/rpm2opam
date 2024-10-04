@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pacemaker-cts-2.1.7+20240711.239cba384-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pacemaker-cts-2.1.7+20240711.239cba384-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "pacemaker" {= "2.1.7"}
+  "procps" 
+  "psmisc" 
+  "python3-pacemaker" {= "2.1.7"}
+  "python311" 
+  "python311-base" 
+  "python311-psutil" 
+]
+extra-source "pacemaker-cts-2.1.7+20240711.239cba384-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pacemaker-cts-2.1.7+20240711.239cba384-1.1.noarch.rpm"
+}

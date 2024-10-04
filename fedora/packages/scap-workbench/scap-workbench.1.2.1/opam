@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "scap-workbench-1.2.1-15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scap-workbench-1.2.1-15.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "default-fonts-core-sans" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "openscap" 
+  "openscap-utils" {>= "1.2.11"}
+  "openssh-askpass" 
+  "openssh-clients" 
+  "polkit" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtxmlpatterns" 
+  "scap-security-guide" 
+  "util-linux" 
+]
+extra-source "scap-workbench-1.2.1-15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/scap-workbench-1.2.1-15.fc40.x86_64.rpm"
+}

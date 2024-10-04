@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "Mesa-libGL1-32bit-24.1.7-391.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Mesa-libGL1-32bit-24.1.7-391.1.x86_64.rpm"]
+depends: [
+  "Mesa-32bit" {= "24.1.7"}
+  "Mesa-libglapi0-32bit" 
+  "bash-sh" 
+  "glibc-32bit" 
+  "libX11-6-32bit" 
+  "libX11-xcb1-32bit" 
+  "libXext6-32bit" 
+  "libXfixes3-32bit" 
+  "libXxf86vm1-32bit" 
+  "libdrm2-32bit" 
+  "libglvnd-32bit" {>= "0.1.0"}
+  "libxcb-dri2-0-32bit" 
+  "libxcb-dri3-0-32bit" 
+  "libxcb-glx0-32bit" 
+  "libxcb-present0-32bit" 
+  "libxcb-randr0-32bit" 
+  "libxcb-shm0-32bit" 
+  "libxcb-sync1-32bit" 
+  "libxcb-xfixes0-32bit" 
+  "libxcb1-32bit" 
+  "libxshmfence1-32bit" 
+]
+extra-source "Mesa-libGL1-32bit-24.1.7-391.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/Mesa-libGL1-32bit-24.1.7-391.1.x86_64.rpm"
+}

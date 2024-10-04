@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "compat-golang-github-ns3777k-shodan-4-devel-4.2.0-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "compat-golang-github-ns3777k-shodan-4-devel-4.2.0-11.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-ns3777k-shodan-devel" {= "4.2.0"}
+]
+extra-source "compat-golang-github-ns3777k-shodan-4-devel-4.2.0-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/compat-golang-github-ns3777k-shodan-4-devel-4.2.0-11.fc40.noarch.rpm"
+}

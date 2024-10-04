@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Perl-Version-1.017-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Perl-Version-1.017-1.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long" 
+  "perl-PathTools" 
+  "perl-Pod-Usage" 
+  "perl-Scalar-List-Utils" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-overload" 
+]
+extra-source "perl-Perl-Version-1.017-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Perl-Version-1.017-1.fc40.noarch.rpm"
+}

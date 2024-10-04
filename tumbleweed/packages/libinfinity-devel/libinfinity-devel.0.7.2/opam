@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libinfinity-devel-0.7.2-4.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libinfinity-devel-0.7.2-4.11.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "gsasl-devel" 
+  "gtk2-devel" 
+  "gtk3-devel" {>= "3.10.0"}
+  "libgnutls-devel" 
+  "libinfinity-0_7-0" {= "0.7.2"}
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libinfinity-devel-0.7.2-4.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libinfinity-devel-0.7.2-4.11.x86_64.rpm"
+}

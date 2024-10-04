@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "etckeeper-brz-1.18.20-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "etckeeper-brz-1.18.20-5.fc40.noarch.rpm"]
+depends: [
+  "breezy" 
+  "etckeeper" {= "1.18.20"}
+  "python3" {= "3.12"}
+]
+extra-source "etckeeper-brz-1.18.20-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/etckeeper-brz-1.18.20-5.fc40.noarch.rpm"
+}

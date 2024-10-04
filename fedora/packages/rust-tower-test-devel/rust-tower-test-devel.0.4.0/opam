@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tower-test-devel-0.4.0-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tower-test-devel-0.4.0-9.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-futures-util-devel" 
+  "rust-pin-project+default-devel" 
+  "rust-tokio+default-devel" 
+  "rust-tokio+sync-devel" 
+  "rust-tokio-test+default-devel" 
+  "rust-tower-layer+default-devel" 
+  "rust-tower-service+default-devel" 
+]
+extra-source "rust-tower-test-devel-0.4.0-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tower-test-devel-0.4.0-9.fc40.noarch.rpm"
+}

@@ -1,0 +1,43 @@
+opam-version: "2.0"
+build: [
+  ["/usr/bin/zypper" "-n" "install" "389-ds-2.2.8~git65.347aae6-slfo.1.1.8.x86_64.rpm"]
+]
+remove: [
+  ["/usr/bin/zypper" "-n" "remove" "389-ds-2.2.8~git65.347aae6-slfo.1.1.8.x86_64.rpm"]
+]
+depends: [
+  "aaa_base" 
+  "acl" 
+  "bash-sh" 
+  "cyrus-sasl-plain" 
+  "db48-utils" 
+  "fillup" 
+  "glibc" 
+  "krb5" 
+  "lib389" {= "2.2.8"}
+  "libcom_err2" 
+  "libcrack2" 
+  "libcrypt1" 
+  "libdb-4_8" 
+  "libgcc_s1" 
+  "libicu73" 
+  "libjson-c5" 
+  "libldap2" 
+  "liblmdb-0_9_30" 
+  "libopenssl3" 
+  "libpcre2-8-0" 
+  "libsasl2-3" 
+  "libsvrcore0" 
+  "libsystemd0" 
+  "libz-ng-compat1" 
+  "mozilla-nspr" 
+  "mozilla-nss" 
+  "pam" 
+  "perl-base" 
+  "permissions" 
+  "python311-base" 
+  "sysuser-shadow" {>= "3.1"}
+]
+extra-source "389-ds-2.2.8~git65.347aae6-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/389-ds-2.2.8~git65.347aae6-slfo.1.1.8.x86_64.rpm"
+}

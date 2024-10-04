@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "maven-archetype-common-3.2.1.0.8b3bdb6-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-archetype-common-3.2.1.0.8b3bdb6-13.fc40.noarch.rpm"]
+depends: [
+  "apache-commons-collections" 
+  "apache-commons-io" 
+  "icu4j" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "jdom2" 
+  "maven-archetype-catalog" {= "3.3.0.0"}
+  "maven-archetype-descriptor" {= "3.3.0.0"}
+  "maven-artifact-transfer" 
+  "maven-invoker" 
+  "maven-lib" 
+  "plexus-containers-component-annotations" 
+  "plexus-utils" 
+  "plexus-velocity" 
+  "velocity" 
+]
+extra-source "maven-archetype-common-3.2.1.0.8b3bdb6-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/maven-archetype-common-3.2.1.0.8b3bdb6-13.fc40.noarch.rpm"
+}

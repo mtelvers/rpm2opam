@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-control-0.10.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-control-0.10.1-2.1.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-matplotlib" 
+  "python312-numpy" 
+  "python312-scipy" {>= "1.3"}
+]
+extra-source "python312-control-0.10.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-control-0.10.1-2.1.noarch.rpm"
+}

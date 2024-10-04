@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jupyter-lineup-widget-4.0.0-3.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jupyter-lineup-widget-4.0.0-3.3.noarch.rpm"]
+depends: [
+  "jupyter-notebook" 
+  "python310-lineup-widget" {= "4"}
+  "python311-ipywidgets" {>= "7.0.0"}
+]
+extra-source "jupyter-lineup-widget-4.0.0-3.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jupyter-lineup-widget-4.0.0-3.3.noarch.rpm"
+}

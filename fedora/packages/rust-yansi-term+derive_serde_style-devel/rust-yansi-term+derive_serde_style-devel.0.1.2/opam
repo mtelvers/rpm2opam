@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-yansi-term+derive_serde_style-devel-0.1.2-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-yansi-term+derive_serde_style-devel-0.1.2-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-yansi-term+serde-devel" {= "0.1.2"}
+  "rust-yansi-term-devel" {= "0.1.2"}
+]
+extra-source "rust-yansi-term+derive_serde_style-devel-0.1.2-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-yansi-term+derive_serde_style-devel-0.1.2-2.fc40.noarch.rpm"
+}

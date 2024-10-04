@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-acme-2.11.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-acme-2.11.0-1.1.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-cryptography" {>= "3.2.1"}
+  "python310-josepy" {>= "1.13.0"}
+  "python310-pyOpenSSL" {>= "17.5.0"}
+  "python310-pyRFC3339" 
+  "python310-pytz" {>= "2019.3"}
+  "python310-requests" {>= "2.20.0"}
+]
+extra-source "python310-acme-2.11.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-acme-2.11.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "wine-fonts-9.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wine-fonts-9.1-1.fc40.noarch.rpm"]
+depends: [
+  "liberation-mono-fonts" 
+  "liberation-narrow-fonts" 
+  "liberation-sans-fonts" 
+  "liberation-serif-fonts" 
+  "wine-arial-fonts" {= "9.1"}
+  "wine-courier-fonts" {= "9.1"}
+  "wine-fixedsys-fonts" {= "9.1"}
+  "wine-marlett-fonts" {= "9.1"}
+  "wine-ms-sans-serif-fonts" {= "9.1"}
+  "wine-small-fonts" {= "9.1"}
+  "wine-symbol-fonts" {= "9.1"}
+  "wine-system-fonts" {= "9.1"}
+  "wine-tahoma-fonts" {= "9.1"}
+  "wine-times-new-roman-fonts" {= "9.1"}
+  "wine-webdings-fonts" {= "9.1"}
+  "wine-wingdings-fonts" {= "9.1"}
+]
+extra-source "wine-fonts-9.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/wine-fonts-9.1-1.fc40.noarch.rpm"
+}

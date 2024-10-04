@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-keyring-1.3.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-keyring-1.3.1-6.fc40.x86_64.rpm"]
+depends: [
+  "R-R6" 
+  "R-askpass" 
+  "R-assertthat" 
+  "R-core" {= "4.3"}
+  "R-filelock" 
+  "R-openssl" 
+  "R-rappdirs" 
+  "R-sodium" 
+  "R-yaml" 
+  "glib2" 
+  "glibc" 
+  "libsecret" 
+]
+extra-source "R-keyring-1.3.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-keyring-1.3.1-6.fc40.x86_64.rpm"
+}

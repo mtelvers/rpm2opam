@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-base-2.27-510.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-base-2.27-510.el10.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+]
+extra-source "perl-base-2.27-510.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/perl-base-2.27-510.el10.noarch.rpm"
+}

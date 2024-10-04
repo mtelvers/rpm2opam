@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcpp-httplib0_18-0.18.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcpp-httplib0_18-0.18.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbrotlidec1" 
+  "libbrotlienc1" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+]
+extra-source "libcpp-httplib0_18-0.18.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcpp-httplib0_18-0.18.0-1.1.x86_64.rpm"
+}

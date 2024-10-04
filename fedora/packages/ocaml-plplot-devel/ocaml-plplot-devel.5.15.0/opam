@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-plplot-devel-5.15.0-63.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-plplot-devel-5.15.0-63.fc40.x86_64.rpm"]
+depends: [
+  "ocaml" {= "2125"}
+  "ocaml-plplot" {= "5.15.0"}
+  "pkgconf-pkg-config" 
+  "plplot-devel" 
+]
+extra-source "ocaml-plplot-devel-5.15.0-63.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-plplot-devel-5.15.0-63.fc40.x86_64.rpm"
+}

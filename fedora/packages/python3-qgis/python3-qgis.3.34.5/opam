@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-qgis-3.34.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-qgis-3.34.5-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "python3" {= "3.12"}
+  "python3-OWSLib" 
+  "python3-gdal" 
+  "python3-httplib2" 
+  "python3-jinja2" 
+  "python3-libs" 
+  "python3-matplotlib" 
+  "python3-psycopg2" 
+  "python3-pygments" 
+  "python3-pyyaml" 
+  "python3-qscintilla-qt5" 
+  "python3-qt5-webkit" 
+  "qca-qt5" 
+  "qgis" 
+  "qscintilla-qt5" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtlocation" 
+  "qt5-qtmultimedia" 
+  "qt5-qtsvg" 
+  "qt5-qtwebkit" 
+]
+extra-source "python3-qgis-3.34.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-qgis-3.34.5-1.fc40.x86_64.rpm"
+}

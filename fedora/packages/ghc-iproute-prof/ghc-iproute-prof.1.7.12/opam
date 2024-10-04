@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-iproute-prof-1.7.12-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-iproute-prof-1.7.12-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-appar-prof" 
+  "ghc-base-prof" 
+  "ghc-byteorder-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-iproute-devel" {= "1.7.12"}
+  "ghc-network-prof" 
+]
+extra-source "ghc-iproute-prof-1.7.12-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-iproute-prof-1.7.12-8.fc40.x86_64.rpm"
+}

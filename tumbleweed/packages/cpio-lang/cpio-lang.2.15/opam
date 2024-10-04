@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cpio-lang-2.15-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cpio-lang-2.15-3.1.noarch.rpm"]
+depends: [
+  "cpio" {= "2.15"}
+]
+extra-source "cpio-lang-2.15-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cpio-lang-2.15-3.1.noarch.rpm"
+}

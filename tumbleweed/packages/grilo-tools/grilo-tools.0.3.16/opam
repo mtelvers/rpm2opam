@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "grilo-tools-0.3.16-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grilo-tools-0.3.16-1.6.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgrilo-0_3-0" 
+  "libgtk-3-0" 
+  "liboauth0" 
+]
+extra-source "grilo-tools-0.3.16-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/grilo-tools-0.3.16-1.6.x86_64.rpm"
+}

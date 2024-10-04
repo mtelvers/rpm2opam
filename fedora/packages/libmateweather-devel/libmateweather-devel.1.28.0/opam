@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libmateweather-devel-1.28.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmateweather-devel-1.28.0-1.fc40.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf2-devel" 
+  "glib2-devel" 
+  "gtk3-devel" 
+  "libmateweather" {= "1.28.0"}
+  "libsoup-devel" 
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libmateweather-devel-1.28.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libmateweather-devel-1.28.0-1.fc40.x86_64.rpm"
+}

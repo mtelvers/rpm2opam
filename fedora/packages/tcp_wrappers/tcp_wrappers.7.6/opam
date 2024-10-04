@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tcp_wrappers-7.6-105.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tcp_wrappers-7.6-105.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libnsl2" 
+  "tcp_wrappers-libs" {= "7.6"}
+]
+extra-source "tcp_wrappers-7.6-105.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tcp_wrappers-7.6-105.fc40.x86_64.rpm"
+}

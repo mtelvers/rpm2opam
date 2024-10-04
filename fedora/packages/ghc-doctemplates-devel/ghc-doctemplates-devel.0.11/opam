@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-doctemplates-devel-0.11-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-doctemplates-devel-0.11-14.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-devel" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-doclayout-devel" 
+  "ghc-doctemplates" {= "0.11"}
+  "ghc-filepath-devel" 
+  "ghc-mtl-devel" 
+  "ghc-parsec-devel" 
+  "ghc-safe-devel" 
+  "ghc-scientific-devel" 
+  "ghc-text-conversions-devel" 
+  "ghc-text-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-doctemplates-devel-0.11-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-doctemplates-devel-0.11-14.fc40.x86_64.rpm"
+}

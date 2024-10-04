@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mtpaint-handbook-3.50-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mtpaint-handbook-3.50-3.1.noarch.rpm"]
+depends: [
+  "mtpaint" {= "3.50"}
+]
+extra-source "mtpaint-handbook-3.50-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mtpaint-handbook-3.50-3.1.noarch.rpm"
+}

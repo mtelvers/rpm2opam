@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-clock-0.8.4-1.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-clock-0.8.4-1.10.x86_64.rpm"]
+depends: [
+  "ghc-base" 
+  "ghc-ghc-bignum" 
+  "glibc" 
+  "libgmp10" 
+]
+extra-source "ghc-clock-0.8.4-1.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-clock-0.8.4-1.10.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "phpcov-9.0.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "phpcov-9.0.2-3.fc40.noarch.rpm"]
+depends: [
+  "coreutils" 
+  "php-common" {>= "8.1"}
+  "php-phpunit-Version" 
+  "php-phpunit-php-code-coverage10" 
+  "php-phpunit-php-file-iterator2" 
+  "php-sebastian-cli-parser" 
+  "php-sebastian-diff3" 
+  "phpunit10" 
+]
+extra-source "phpcov-9.0.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/phpcov-9.0.2-3.fc40.noarch.rpm"
+}

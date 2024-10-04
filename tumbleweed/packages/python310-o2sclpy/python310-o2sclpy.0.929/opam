@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-o2sclpy-0.929-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-o2sclpy-0.929-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "o2scl-devel" {>= "0.929"}
+  "python310-base" 
+  "python310-h5py" 
+  "python310-matplotlib" {>= "3.1"}
+  "python310-numpy" 
+  "python310-requests" 
+  "python310-yt" 
+  "texlive-latex" 
+  "update-alternatives" 
+]
+extra-source "python310-o2sclpy-0.929-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-o2sclpy-0.929-1.2.noarch.rpm"
+}

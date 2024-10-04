@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-openssh-keys-devel-0.6.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-openssh-keys-devel-0.6.2-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.58.0"}
+  "rust-base64+default-devel" 
+  "rust-byteorder+default-devel" 
+  "rust-md-5+default-devel" 
+  "rust-sha2+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-openssh-keys-devel-0.6.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-openssh-keys-devel-0.6.2-3.fc40.noarch.rpm"
+}

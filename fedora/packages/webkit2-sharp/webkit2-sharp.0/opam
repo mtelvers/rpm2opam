@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "webkit2-sharp-0-0.20.20170219gita59fd76.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "webkit2-sharp-0-0.20.20170219gita59fd76.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gtk-sharp3" {= "3.0.0.0"}
+  "mono-core" {= "4.0.0.0"}
+  "webkit2gtk4-0" 
+]
+extra-source "webkit2-sharp-0-0.20.20170219gita59fd76.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/webkit2-sharp-0-0.20.20170219gita59fd76.fc40.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "aws-c-common-devel-0.6.14-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "aws-c-common-devel-0.6.14-11.fc40.x86_64.rpm"]
+depends: [
+  "aws-c-common-libs" {= "0.6.14"}
+  "cmake-filesystem" 
+]
+extra-source "aws-c-common-devel-0.6.14-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/aws-c-common-devel-0.6.14-11.fc40.x86_64.rpm"
+}

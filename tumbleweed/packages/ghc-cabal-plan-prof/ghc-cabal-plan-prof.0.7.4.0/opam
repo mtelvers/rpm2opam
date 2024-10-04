@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-cabal-plan-prof-0.7.4.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-cabal-plan-prof-0.7.4.0-1.3.x86_64.rpm"]
+depends: [
+  "ghc-aeson-prof" 
+  "ghc-base-prof" 
+  "ghc-base16-bytestring-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-cabal-plan-devel" {= "0.7.4.0"}
+  "ghc-containers-prof" 
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+  "ghc-text-prof" 
+]
+extra-source "ghc-cabal-plan-prof-0.7.4.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-cabal-plan-prof-0.7.4.0-1.3.x86_64.rpm"
+}

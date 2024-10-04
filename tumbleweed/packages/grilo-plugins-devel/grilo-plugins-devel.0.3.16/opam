@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "grilo-plugins-devel-0.3.16-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grilo-plugins-devel-0.3.16-1.6.x86_64.rpm"]
+depends: [
+  "grilo-plugin-dleyna" {= "0.3.16"}
+  "grilo-plugin-tracker" {= "0.3.16"}
+  "grilo-plugins" {= "0.3.16"}
+  "pkgconf-pkg-config" 
+]
+extra-source "grilo-plugins-devel-0.3.16-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/grilo-plugins-devel-0.3.16-1.6.x86_64.rpm"
+}

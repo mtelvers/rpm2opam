@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-spotipy-2.24.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-spotipy-2.24.0-2.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-redis" {>= "3.5.3"}
+  "python311-requests" {>= "2.25.0"}
+  "python311-urllib3" {>= "1.26.0"}
+]
+extra-source "python311-spotipy-2.24.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-spotipy-2.24.0-2.1.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-Pod-Spelling-CommonMistakes-1.001-28.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Pod-Spelling-CommonMistakes-1.001-28.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" 
+  "perl-Pod-Spell-CommonMistakes" {>= "0.1"}
+  "perl-Test-Pod" {>= "1.40"}
+  "perl-Test-Simple" {>= "0.94"}
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-Test-Pod-Spelling-CommonMistakes-1.001-28.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-Pod-Spelling-CommonMistakes-1.001-28.fc40.noarch.rpm"
+}

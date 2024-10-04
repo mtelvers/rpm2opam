@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jarjar-1.4-5.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jarjar-1.4-5.2.noarch.rpm"]
+depends: [
+  "gnu-regexp" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+  "objectweb-anttask" 
+  "objectweb-asm" 
+]
+extra-source "jarjar-1.4-5.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jarjar-1.4-5.2.noarch.rpm"
+}

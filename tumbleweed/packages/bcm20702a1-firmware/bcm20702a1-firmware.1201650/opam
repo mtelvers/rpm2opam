@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bcm20702a1-firmware-1201650-9.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bcm20702a1-firmware-1201650-9.6.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "bluez" 
+  "coreutils" 
+  "unzip" 
+  "wget" 
+]
+extra-source "bcm20702a1-firmware-1201650-9.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/bcm20702a1-firmware-1201650-9.6.noarch.rpm"
+}

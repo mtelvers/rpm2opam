@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-recipecard-svn15878.2.0-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-recipecard-svn15878.2.0-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-boxedminipage" 
+  "texlive-geometry" 
+  "texlive-kpathsea" 
+  "texlive-latex" 
+  "texlive-tools" 
+]
+extra-source "texlive-recipecard-svn15878.2.0-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-recipecard-svn15878.2.0-71.fc40.noarch.rpm"
+}

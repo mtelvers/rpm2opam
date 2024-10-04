@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xdriinfo-1.0.7-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xdriinfo-1.0.7-1.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libglvnd" 
+]
+extra-source "xdriinfo-1.0.7-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xdriinfo-1.0.7-1.6.x86_64.rpm"
+}

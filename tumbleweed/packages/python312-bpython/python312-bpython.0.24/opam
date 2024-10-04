@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-bpython-0.24-3.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-bpython-0.24-3.5.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python-bpython-common" {= "0.24"}
+  "python312-Pygments" 
+  "python312-base" {= "3.12"}
+  "python312-curtsies" {>= "0.4"}
+  "python312-greenlet" 
+  "python312-pyxdg" 
+  "python312-requests" 
+  "update-alternatives" 
+]
+extra-source "python312-bpython-0.24-3.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-bpython-0.24-3.5.noarch.rpm"
+}

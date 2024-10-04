@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "garmintools-devel-0.10-27.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "garmintools-devel-0.10-27.fc40.x86_64.rpm"]
+depends: [
+  "garmintools" 
+  "libusb-compat-0-1-devel" 
+]
+extra-source "garmintools-devel-0.10-27.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/garmintools-devel-0.10-27.fc40.x86_64.rpm"
+}

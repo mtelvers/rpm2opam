@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-th-orphans-prof-0.13.14-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-th-orphans-prof-0.13.14-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-mtl-prof" 
+  "ghc-template-haskell-prof" 
+  "ghc-th-compat-prof" 
+  "ghc-th-lift-prof" 
+  "ghc-th-orphans-devel" {= "0.13.14"}
+  "ghc-th-reify-many-prof" 
+]
+extra-source "ghc-th-orphans-prof-0.13.14-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-th-orphans-prof-0.13.14-6.fc40.x86_64.rpm"
+}

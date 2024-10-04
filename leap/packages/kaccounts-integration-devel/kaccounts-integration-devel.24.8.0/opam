@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kaccounts-integration-devel-24.08.0-lp160.1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kaccounts-integration-devel-24.08.0-lp160.1.3.x86_64.rpm"]
+depends: [
+  "intltool" 
+  "kf6-kcoreaddons-devel" {>= "6.3.0"}
+  "libaccounts-glib-devel" 
+  "libaccounts-qt6-devel" 
+  "libkaccounts6-2" {= "24.8.0"}
+  "libsignon-qt6-devel" 
+  "qt6-widgets-devel" {>= "6.6.0"}
+]
+extra-source "kaccounts-integration-devel-24.08.0-lp160.1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/kaccounts-integration-devel-24.08.0-lp160.1.3.x86_64.rpm"
+}

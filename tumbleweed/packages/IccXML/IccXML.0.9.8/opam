@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "IccXML-0.9.8-2.31.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "IccXML-0.9.8-2.31.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libIccXML2" 
+  "libSampleICC2" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "IccXML-0.9.8-2.31.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/IccXML-0.9.8-2.31.x86_64.rpm"
+}

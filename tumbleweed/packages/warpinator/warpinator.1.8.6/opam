@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "warpinator-1.8.6-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "warpinator-1.8.6-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-PyNaCl" 
+  "python311-base" 
+  "python311-cryptography" 
+  "python311-gobject-Gdk" 
+  "python311-grpcio" 
+  "python311-netifaces" 
+  "python311-protobuf" 
+  "python311-qrcode" 
+  "python311-setproctitle" 
+  "python311-xapp" 
+  "python311-zeroconf" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-XApp-1_0" {= "1.0"}
+]
+extra-source "warpinator-1.8.6-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/warpinator-1.8.6-1.1.noarch.rpm"
+}

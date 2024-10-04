@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "adobe-mappings-pdf-devel-20190401-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "adobe-mappings-pdf-devel-20190401-7.fc40.noarch.rpm"]
+depends: [
+  "adobe-mappings-pdf" {= "20190401"}
+]
+extra-source "adobe-mappings-pdf-devel-20190401-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/adobe-mappings-pdf-devel-20190401-7.fc40.noarch.rpm"
+}

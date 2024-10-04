@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-xml-prof-1.3.14-13.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-xml-prof-1.3.14-13.16.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-text-prof" 
+  "ghc-xml-devel" {= "1.3.14"}
+]
+extra-source "ghc-xml-prof-1.3.14-13.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-xml-prof-1.3.14-13.16.x86_64.rpm"
+}

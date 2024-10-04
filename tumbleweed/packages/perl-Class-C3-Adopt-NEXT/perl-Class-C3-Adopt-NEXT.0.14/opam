@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Class-C3-Adopt-NEXT-0.14-1.31.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Class-C3-Adopt-NEXT-0.14-1.31.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-MRO-Compat" 
+  "perl-Scalar-List-Utils" {>= "1.33"}
+]
+extra-source "perl-Class-C3-Adopt-NEXT-0.14-1.31.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Class-C3-Adopt-NEXT-0.14-1.31.noarch.rpm"
+}

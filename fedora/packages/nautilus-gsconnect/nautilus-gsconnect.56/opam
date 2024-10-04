@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nautilus-gsconnect-56-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nautilus-gsconnect-56-3.fc40.noarch.rpm"]
+depends: [
+  "gnome-shell-extension-gsconnect" {= "56"}
+  "gobject-introspection" 
+  "nautilus-extensions" 
+  "nautilus-python" 
+]
+extra-source "nautilus-gsconnect-56-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nautilus-gsconnect-56-3.fc40.noarch.rpm"
+}

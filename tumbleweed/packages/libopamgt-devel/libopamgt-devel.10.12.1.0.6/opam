@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libopamgt-devel-10.12.1.0.6-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libopamgt-devel-10.12.1.0.6-3.2.x86_64.rpm"]
+depends: [
+  "libopamgt0" {= "10.12.1.0.6"}
+]
+extra-source "libopamgt-devel-10.12.1.0.6-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libopamgt-devel-10.12.1.0.6-3.2.x86_64.rpm"
+}

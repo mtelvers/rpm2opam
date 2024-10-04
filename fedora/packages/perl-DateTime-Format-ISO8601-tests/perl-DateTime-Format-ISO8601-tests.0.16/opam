@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-DateTime-Format-ISO8601-tests-0.16-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DateTime-Format-ISO8601-tests-0.16-11.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-DateTime" 
+  "perl-DateTime-Format-ISO8601" 
+  "perl-ExtUtils-MakeMaker" 
+  "perl-PathTools" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" {>= "1.302015"}
+  "perl-Test2-Suite" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-DateTime-Format-ISO8601-tests-0.16-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-DateTime-Format-ISO8601-tests-0.16-11.fc40.noarch.rpm"
+}

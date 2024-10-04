@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libass9-32bit-0.17.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libass9-32bit-0.17.3-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libfontconfig1-32bit" 
+  "libfreetype6-32bit" 
+  "libfribidi0-32bit" 
+  "libharfbuzz0-32bit" 
+  "libunibreak5-32bit" 
+]
+extra-source "libass9-32bit-0.17.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libass9-32bit-0.17.3-1.1.x86_64.rpm"
+}

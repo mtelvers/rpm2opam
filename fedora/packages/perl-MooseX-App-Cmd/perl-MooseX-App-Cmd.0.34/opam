@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MooseX-App-Cmd-0.34-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-App-Cmd-0.34-10.fc40.noarch.rpm"]
+depends: [
+  "perl-App-Cmd" {>= "0.321"}
+  "perl-Getopt-Long-Descriptive" {>= "0.91"}
+  "perl-Moose" 
+  "perl-MooseX-Getopt" {>= "0.18"}
+  "perl-MooseX-NonMoose" 
+  "perl-libs" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-MooseX-App-Cmd-0.34-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MooseX-App-Cmd-0.34-10.fc40.noarch.rpm"
+}

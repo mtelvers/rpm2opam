@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qemu-ui-sdl-8.2.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qemu-ui-sdl-8.2.2-1.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "SDL2_image" 
+  "glib2" 
+  "glibc" 
+  "libX11" 
+  "pixman" 
+  "qemu-common" {= "8.2.2"}
+  "qemu-ui-opengl" {= "8.2.2"}
+]
+extra-source "qemu-ui-sdl-8.2.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qemu-ui-sdl-8.2.2-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ldas-tools-framecpp-devel-3.0.4-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ldas-tools-framecpp-devel-3.0.4-1.2.x86_64.rpm"]
+depends: [
+  "ldas-tools-al-devel" 
+  "libboost_program_options-devel" 
+  "libframecpp16" {= "3.0.4"}
+  "libframecpp3-8" {= "3.0.4"}
+  "libframecpp4-10" {= "3.0.4"}
+  "libframecpp6-10" {= "3.0.4"}
+  "libframecpp7-6" {= "3.0.4"}
+  "libframecpp8-11" {= "3.0.4"}
+  "libframecpp9-0" {= "3.0.4"}
+  "libframecppc4" {= "3.0.4"}
+  "libframecppcmn12" {= "3.0.4"}
+  "libopenssl-1_0_0-devel" 
+  "libzstd-devel" 
+  "pkgconf-pkg-config" 
+  "zlib-devel" 
+]
+extra-source "ldas-tools-framecpp-devel-3.0.4-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ldas-tools-framecpp-devel-3.0.4-1.2.x86_64.rpm"
+}

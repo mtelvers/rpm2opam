@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "psblas3-mpich-devel-3.8.1-5.post2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "psblas3-mpich-devel-3.8.1-5.post2.fc40.x86_64.rpm"]
+depends: [
+  "psblas3-mpich" {= "3.8.1"}
+]
+extra-source "psblas3-mpich-devel-3.8.1-5.post2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/psblas3-mpich-devel-3.8.1-5.post2.fc40.x86_64.rpm"
+}

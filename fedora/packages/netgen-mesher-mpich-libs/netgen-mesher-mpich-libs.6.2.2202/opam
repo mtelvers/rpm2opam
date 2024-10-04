@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "netgen-mesher-mpich-libs-6.2.2202-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netgen-mesher-mpich-libs-6.2.2202-8.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libXmu" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libglvnd-opengl" 
+  "libjpeg-turbo" 
+  "libstdc++" 
+  "mesa-libGLU" 
+  "metis" 
+  "mpich" 
+  "netgen-mesher-mpich-devel" 
+  "opencascade-foundation" 
+  "opencascade-modeling" 
+  "opencascade-ocaf" 
+  "python3-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "netgen-mesher-mpich-libs-6.2.2202-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/netgen-mesher-mpich-libs-6.2.2202-8.fc40.x86_64.rpm"
+}

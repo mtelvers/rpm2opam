@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-jaraco.develop-8.2.0-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-jaraco.develop-8.2.0-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "python311-PyNaCl" 
+  "python311-autocommand" 
+  "python311-base" {= "3.11"}
+  "python311-build" 
+  "python311-jaraco-collections" 
+  "python311-jaraco-context" 
+  "python311-jaraco-ui" 
+  "python311-jaraco-vcs" {>= "1.1"}
+  "python311-keyring" 
+  "python311-packaging" 
+  "python311-path" 
+  "python311-requests-toolbelt" 
+  "python311-setuptools" 
+  "python311-subprocess-tee" 
+]
+extra-source "python311-jaraco.develop-8.2.0-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/python311-jaraco.develop-8.2.0-slfo.1.1.4.noarch.rpm"
+}

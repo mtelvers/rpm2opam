@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libserializer-1.1.6-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libserializer-1.1.6-2.2.noarch.rpm"]
+depends: [
+  "java-11-openj9" 
+  "javapackages-tools" 
+  "libbase" {>= "1.1.6"}
+]
+extra-source "libserializer-1.1.6-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libserializer-1.1.6-2.2.noarch.rpm"
+}

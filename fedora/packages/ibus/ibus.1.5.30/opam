@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ibus-1.5.30~rc1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibus-1.5.30~rc1-1.fc40.x86_64.rpm"]
+depends: [
+  "alternatives" 
+  "bash" 
+  "dconf" 
+  "desktop-file-utils" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "ibus-gtk2" 
+  "ibus-gtk3" {= "1.5.30"}
+  "ibus-libs" {= "1.5.30"}
+  "ibus-panel" 
+  "ibus-setup" {= "1.5.30"}
+  "iso-codes" 
+  "libX11" 
+  "libXfixes" 
+  "libXi" 
+  "pango" 
+  "python3" 
+  "python3-gobject" 
+  "setxkbmap" 
+  "xorg-x11-xinit" 
+]
+extra-source "ibus-1.5.30~rc1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/ibus-1.5.30~rc1-1.fc40.x86_64.rpm"
+}

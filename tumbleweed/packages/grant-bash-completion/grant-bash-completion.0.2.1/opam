@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "grant-bash-completion-0.2.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grant-bash-completion-0.2.1-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "grant" {= "0.2.1"}
+]
+extra-source "grant-bash-completion-0.2.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/grant-bash-completion-0.2.1-1.1.noarch.rpm"
+}

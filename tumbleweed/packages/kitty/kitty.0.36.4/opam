@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kitty-0.36.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kitty-0.36.4-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libX11-xcb1" 
+  "libXcursor1" 
+  "libdbus-1-3" 
+  "libharfbuzz0" 
+  "liblcms2-2" 
+  "libopenssl3" 
+  "libpng16-16" 
+  "libpython3_11-1_0" 
+  "libwayland-client0" 
+  "libxkbcommon-x11-0" 
+  "libxkbcommon0" 
+  "libxxhash0" 
+  "libz-ng-compat1" 
+]
+extra-source "kitty-0.36.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kitty-0.36.4-1.1.x86_64.rpm"
+}

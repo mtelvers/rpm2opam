@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tokio-uds-devel-0.2.7-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tokio-uds-devel-0.2.7-12.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bytes+default-devel" 
+  "rust-futures+default-devel" 
+  "rust-iovec+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-log+default-devel" 
+  "rust-mio+default-devel" 
+  "rust-mio-uds+default-devel" 
+  "rust-tokio-codec+default-devel" 
+  "rust-tokio-io+default-devel" 
+  "rust-tokio-reactor+default-devel" 
+]
+extra-source "rust-tokio-uds-devel-0.2.7-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tokio-uds-devel-0.2.7-12.fc40.noarch.rpm"
+}

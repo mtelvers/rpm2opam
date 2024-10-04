@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mate-polkit-lang-1.28.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mate-polkit-lang-1.28.1-1.1.noarch.rpm"]
+depends: [
+  "mate-polkit" {= "1.28.1"}
+]
+extra-source "mate-polkit-lang-1.28.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mate-polkit-lang-1.28.1-1.1.noarch.rpm"
+}

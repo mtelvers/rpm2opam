@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "atkmm2.36-doc-2.36.2-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "atkmm2.36-doc-2.36.2-5.fc40.noarch.rpm"]
+depends: [
+  "atkmm2-36" {= "2.36.2"}
+  "glibmm2-68-doc" 
+]
+extra-source "atkmm2.36-doc-2.36.2-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/atkmm2.36-doc-2.36.2-5.fc40.noarch.rpm"
+}

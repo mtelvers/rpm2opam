@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "osgi-compendium-7.0.0-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "osgi-compendium-7.0.0-4.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "osgi-compendium-7.0.0-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/osgi-compendium-7.0.0-4.1.noarch.rpm"
+}

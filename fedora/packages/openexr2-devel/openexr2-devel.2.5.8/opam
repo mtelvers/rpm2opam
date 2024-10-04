@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openexr2-devel-2.5.8-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openexr2-devel-2.5.8-7.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "ilmbase-devel" 
+  "openexr2-libs" 
+  "pkgconf-pkg-config" 
+]
+extra-source "openexr2-devel-2.5.8-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openexr2-devel-2.5.8-7.fc40.x86_64.rpm"
+}

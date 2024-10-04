@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "eksctl-bash-completion-0.191.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eksctl-bash-completion-0.191.0-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "eksctl" {= "0.191.0"}
+]
+extra-source "eksctl-bash-completion-0.191.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/eksctl-bash-completion-0.191.0-1.1.noarch.rpm"
+}

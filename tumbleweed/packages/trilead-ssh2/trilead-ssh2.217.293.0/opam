@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "trilead-ssh2-217.293.v56de4d4d3515-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trilead-ssh2-217.293.v56de4d4d3515-1.2.noarch.rpm"]
+depends: [
+  "ed25519-java" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "jbcrypt" 
+]
+extra-source "trilead-ssh2-217.293.v56de4d4d3515-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/trilead-ssh2-217.293.v56de4d4d3515-1.2.noarch.rpm"
+}

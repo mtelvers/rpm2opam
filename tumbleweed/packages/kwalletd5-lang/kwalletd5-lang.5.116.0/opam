@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kwalletd5-lang-5.116.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kwalletd5-lang-5.116.0-2.1.noarch.rpm"]
+depends: [
+  "kwalletd5" {= "5.116.0"}
+]
+extra-source "kwalletd5-lang-5.116.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kwalletd5-lang-5.116.0-2.1.noarch.rpm"
+}

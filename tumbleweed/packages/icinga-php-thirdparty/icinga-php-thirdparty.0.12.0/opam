@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "icinga-php-thirdparty-0.12.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "icinga-php-thirdparty-0.12.0-1.3.noarch.rpm"]
+depends: [
+  "bash" 
+  "php8" 
+  "php8-curl" 
+  "php8-iconv" 
+  "php8-soap" 
+  "php8-sockets" 
+]
+extra-source "icinga-php-thirdparty-0.12.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/icinga-php-thirdparty-0.12.0-1.3.noarch.rpm"
+}

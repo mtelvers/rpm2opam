@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-shippinglabel-2.0.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-shippinglabel-2.0.0-1.1.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-dist-meta" {>= "0.1.2"}
+  "python312-dom-toml" {>= "0.2.2"}
+  "python312-domdf-python-tools" {>= "3.1.0"}
+  "python312-packaging" {>= "20.9"}
+  "python312-typing_extensions" {>= "3.7.4.3"}
+]
+extra-source "python312-shippinglabel-2.0.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-shippinglabel-2.0.0-1.1.noarch.rpm"
+}

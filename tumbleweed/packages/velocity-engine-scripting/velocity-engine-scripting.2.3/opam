@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "velocity-engine-scripting-2.3-5.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "velocity-engine-scripting-2.3-5.3.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "11.0.24.0"}
+  "javapackages-filesystem" 
+  "velocity-engine-core" {= "2.3"}
+]
+extra-source "velocity-engine-scripting-2.3-5.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/velocity-engine-scripting-2.3-5.3.noarch.rpm"
+}

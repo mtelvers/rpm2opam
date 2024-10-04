@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libdjvulibre-devel-3.5.28-7.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdjvulibre-devel-3.5.28-7.2.x86_64.rpm"]
+depends: [
+  "libdjvulibre21" {= "3.5.28"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libdjvulibre-devel-3.5.28-7.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libdjvulibre-devel-3.5.28-7.2.x86_64.rpm"
+}

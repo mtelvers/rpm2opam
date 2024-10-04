@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "goobox-lang-3.6.0-4.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "goobox-lang-3.6.0-4.3.noarch.rpm"]
+depends: [
+  "goobox" {= "3.6.0"}
+]
+extra-source "goobox-lang-3.6.0-4.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/goobox-lang-3.6.0-4.3.noarch.rpm"
+}

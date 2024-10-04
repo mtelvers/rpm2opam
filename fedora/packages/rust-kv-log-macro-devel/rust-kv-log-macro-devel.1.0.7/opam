@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-kv-log-macro-devel-1.0.7-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-kv-log-macro-devel-1.0.7-11.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-log+default-devel" 
+  "rust-log+kv_unstable-devel" 
+]
+extra-source "rust-kv-log-macro-devel-1.0.7-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-kv-log-macro-devel-1.0.7-11.fc40.noarch.rpm"
+}

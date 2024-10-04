@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Carp-Clan-tests-6.08-18.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Carp-Clan-tests-6.08-18.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Carp-Clan" {= "6.8"}
+  "perl-ExtUtils-MakeMaker" 
+  "perl-Object-Deadly" 
+  "perl-PathTools" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-overload" 
+]
+extra-source "perl-Carp-Clan-tests-6.08-18.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Carp-Clan-tests-6.08-18.fc40.noarch.rpm"
+}

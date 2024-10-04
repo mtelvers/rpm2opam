@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "zbar-gtk-devel-0.23.93-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zbar-gtk-devel-0.23.93-2.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "gtk3-devel" 
+  "pkgconf-pkg-config" 
+  "zbar-devel" 
+  "zbar-gtk" 
+]
+extra-source "zbar-gtk-devel-0.23.93-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/z/zbar-gtk-devel-0.23.93-2.fc40.x86_64.rpm"
+}

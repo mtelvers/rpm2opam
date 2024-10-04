@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libast-devel-0.7.1-0.41.20080502cvs.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libast-devel-0.7.1-0.41.20080502cvs.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "libast" {= "0.7.1"}
+]
+extra-source "libast-devel-0.7.1-0.41.20080502cvs.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libast-devel-0.7.1-0.41.20080502cvs.fc40.x86_64.rpm"
+}

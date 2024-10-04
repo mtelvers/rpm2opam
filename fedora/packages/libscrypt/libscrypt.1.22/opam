@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libscrypt-1.22-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libscrypt-1.22-6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+]
+extra-source "libscrypt-1.22-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libscrypt-1.22-6.fc40.x86_64.rpm"
+}

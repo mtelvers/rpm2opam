@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-cursive_core0.2+unstable_scroll-devel-0.2.2-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-cursive_core0.2+unstable_scroll-devel-0.2.2-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-cursive_core0-2-devel" {= "0.2.2"}
+]
+extra-source "rust-cursive_core0.2+unstable_scroll-devel-0.2.2-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-cursive_core0.2+unstable_scroll-devel-0.2.2-4.fc40.noarch.rpm"
+}

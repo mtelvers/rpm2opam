@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gdk0.15+dox-devel-0.15.4-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gdk0.15+dox-devel-0.15.4-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-cairo-rs0-15+dox-devel" 
+  "rust-gdk-pixbuf0-15+dox-devel" 
+  "rust-gdk-sys0-15+dox-devel" 
+  "rust-gdk0-15-devel" {= "0.15.4"}
+  "rust-gio0-15+dox-devel" 
+  "rust-glib0-15+dox-devel" 
+  "rust-pango0-15+dox-devel" 
+]
+extra-source "rust-gdk0.15+dox-devel-0.15.4-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gdk0.15+dox-devel-0.15.4-4.fc40.noarch.rpm"
+}

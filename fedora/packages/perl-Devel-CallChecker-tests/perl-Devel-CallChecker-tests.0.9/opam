@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Devel-CallChecker-tests-0.009-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Devel-CallChecker-tests-0.009-5.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "perl-Devel-CallChecker" {= "0.9"}
+  "perl-DynaLoader" 
+  "perl-ExtUtils-CBuilder" 
+  "perl-ExtUtils-ParseXS" 
+  "perl-IO" {>= "1.3"}
+  "perl-PathTools" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-Thread-Semaphore" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-threads" 
+  "perl-threads-shared" 
+]
+extra-source "perl-Devel-CallChecker-tests-0.009-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Devel-CallChecker-tests-0.009-5.fc40.noarch.rpm"
+}

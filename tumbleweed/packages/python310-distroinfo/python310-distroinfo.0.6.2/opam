@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-distroinfo-0.6.2-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-distroinfo-0.6.2-1.6.noarch.rpm"]
+depends: [
+  "python310-PyYAML" 
+  "python310-base" {= "3.10"}
+  "python310-pbr" {>= "0.5.6"}
+  "python310-requests" 
+  "python310-six" 
+]
+extra-source "python310-distroinfo-0.6.2-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-distroinfo-0.6.2-1.6.noarch.rpm"
+}

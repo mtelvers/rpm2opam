@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Syntax-Highlight-Engine-Kate-0.14-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Syntax-Highlight-Engine-Kate-0.14-20.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-File-Basename" 
+  "perl-XML-Dumper" 
+  "perl-XML-TokeParser" 
+  "perl-base" 
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "perl-Syntax-Highlight-Engine-Kate-0.14-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Syntax-Highlight-Engine-Kate-0.14-20.fc40.noarch.rpm"
+}

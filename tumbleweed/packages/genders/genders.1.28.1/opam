@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "genders-1.28.1-2.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "genders-1.28.1-2.11.x86_64.rpm"]
+depends: [
+  "genders-base" 
+  "glibc" 
+  "libgenders0" 
+]
+extra-source "genders-1.28.1-2.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/genders-1.28.1-2.11.x86_64.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-easydtx-2024.216.0.0.1.0svn68514-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-easydtx-2024.216.0.0.1.0svn68514-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "perl-base" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-easydtx-bin" {>= "2024"}
+  "texlive-filesystem" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+]
+extra-source "texlive-easydtx-2024.216.0.0.1.0svn68514-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-easydtx-2024.216.0.0.1.0svn68514-57.1.noarch.rpm"
+}

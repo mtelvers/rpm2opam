@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-networkx+extra-3.2.1-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-networkx+extra-3.2.1-4.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-lxml" {>= "4.6"}
+  "python3-networkx" {= "3.2.1"}
+  "python3-pydot" {>= "1.4.2"}
+  "python3-pygraphviz" {>= "1.11"}
+  "python3-sympy" {>= "1.10"}
+]
+extra-source "python3-networkx+extra-3.2.1-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-networkx+extra-3.2.1-4.fc40.noarch.rpm"
+}

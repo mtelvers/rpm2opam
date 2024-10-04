@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mate-menu-lang-22.04.2-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mate-menu-lang-22.04.2-2.2.noarch.rpm"]
+depends: [
+  "mate-menu" {= "22.4.2"}
+]
+extra-source "mate-menu-lang-22.04.2-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mate-menu-lang-22.04.2-2.2.noarch.rpm"
+}

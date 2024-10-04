@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rsyslog-8.2406.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rsyslog-8.2406.0-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "libcurl-mini4" 
+  "libestr0" 
+  "libfastjson4" 
+  "liblogging0" 
+  "liblognorm5" 
+  "libopenssl3" 
+  "libsystemd0" 
+  "libuuid1" 
+  "libz-ng-compat1" 
+  "syslog-service" {>= "2.0"}
+]
+extra-source "rsyslog-8.2406.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rsyslog-8.2406.0-1.1.x86_64.rpm"
+}

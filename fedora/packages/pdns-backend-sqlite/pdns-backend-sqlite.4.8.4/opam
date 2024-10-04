@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pdns-backend-sqlite-4.8.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pdns-backend-sqlite-4.8.4-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "pdns" {= "4.8.4"}
+]
+extra-source "pdns-backend-sqlite-4.8.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pdns-backend-sqlite-4.8.4-1.fc40.x86_64.rpm"
+}

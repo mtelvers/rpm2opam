@@ -1,0 +1,39 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-economic-2023.211.svn32639-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-economic-2023.211.svn32639-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-amsmath" 
+  "texlive-babel" 
+  "texlive-caption" 
+  "texlive-endfloat" 
+  "texlive-endnotes" 
+  "texlive-fancyhdr" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-geometry" 
+  "texlive-koma-script" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-lm" 
+  "texlive-natbib" 
+  "texlive-psnfss" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-setspace" 
+  "texlive-soul" 
+  "texlive-stringstrings" 
+  "texlive-titlesec" 
+  "texlive-tools" 
+  "texlive-ulem" 
+  "texlive-url" 
+]
+extra-source "texlive-economic-2023.211.svn32639-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-economic-2023.211.svn32639-slfo.1.1.4.noarch.rpm"
+}

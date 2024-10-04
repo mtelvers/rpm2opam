@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc9.0-hpc-prof-0.6.1.0-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc9.0-hpc-prof-0.6.1.0-16.fc40.x86_64.rpm"]
+depends: [
+  "ghc9-0-base-prof" 
+  "ghc9-0-containers-prof" 
+  "ghc9-0-deepseq-prof" 
+  "ghc9-0-directory-prof" 
+  "ghc9-0-filepath-prof" 
+  "ghc9-0-hpc-devel" {= "0.6.1.0"}
+  "ghc9-0-time-prof" 
+]
+extra-source "ghc9.0-hpc-prof-0.6.1.0-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc9.0-hpc-prof-0.6.1.0-16.fc40.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-thalie-svn65249-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-thalie-svn65249-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-bigfoot" 
+  "texlive-etoolbox" 
+  "texlive-kpathsea" 
+  "texlive-latex" 
+  "texlive-pgfopts" 
+  "texlive-tools" 
+]
+extra-source "texlive-thalie-svn65249-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-thalie-svn65249-71.fc40.noarch.rpm"
+}

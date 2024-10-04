@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zapzap-5.3.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zapzap-5.3.1-1.1.noarch.rpm"]
+depends: [
+  "python311-PyQt6-WebEngine" 
+  "python311-PyQt6-sip" 
+  "python311-base" 
+  "python311-dbus-python" 
+]
+extra-source "zapzap-5.3.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/zapzap-5.3.1-1.1.noarch.rpm"
+}

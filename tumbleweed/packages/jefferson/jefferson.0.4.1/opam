@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jefferson-0.4.1+git.20220705-1.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jefferson-0.4.1+git.20220705-1.10.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-cstruct" {>= "2.1"}
+  "python311-pylzma" 
+]
+extra-source "jefferson-0.4.1+git.20220705-1.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jefferson-0.4.1+git.20220705-1.10.noarch.rpm"
+}

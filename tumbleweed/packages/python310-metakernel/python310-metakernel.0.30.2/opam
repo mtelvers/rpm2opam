@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-metakernel-0.30.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-metakernel-0.30.2-1.1.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-ipykernel" 
+  "python310-jedi" {>= "0.18"}
+  "python310-jupyter-core" {>= "4.9.2"}
+  "python310-pexpect" {>= "4.8"}
+]
+extra-source "python310-metakernel-0.30.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-metakernel-0.30.2-1.1.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gtkpod-devel-2.1.5-28.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtkpod-devel-2.1.5-28.fc40.x86_64.rpm"]
+depends: [
+  "anjuta-devel" {>= "3.0.0"}
+  "glib2-devel" 
+  "gtk3-devel" {>= "3.0.0"}
+  "gtkpod" {= "2.1.5"}
+  "libgdl-devel" {>= "3.0.0"}
+  "libgpod-devel" {>= "0.7.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gtkpod-devel-2.1.5-28.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gtkpod-devel-2.1.5-28.fc40.x86_64.rpm"
+}

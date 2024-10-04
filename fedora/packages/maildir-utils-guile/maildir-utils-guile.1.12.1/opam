@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "maildir-utils-guile-1.12.1-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maildir-utils-guile-1.12.1-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "gmime30" 
+  "guile30" 
+  "libgcc" 
+  "libstdc++" 
+  "maildir-utils" {= "1.12.1"}
+  "xapian-core-libs" 
+]
+extra-source "maildir-utils-guile-1.12.1-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/maildir-utils-guile-1.12.1-2.fc40.x86_64.rpm"
+}

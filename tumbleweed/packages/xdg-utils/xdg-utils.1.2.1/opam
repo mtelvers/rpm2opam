@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xdg-utils-1.2.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xdg-utils-1.2.1-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "which" 
+]
+extra-source "xdg-utils-1.2.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xdg-utils-1.2.1-2.1.noarch.rpm"
+}

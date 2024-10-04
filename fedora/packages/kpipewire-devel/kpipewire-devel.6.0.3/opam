@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kpipewire-devel-6.0.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kpipewire-devel-6.0.3-1.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "kpipewire" {= "6.0.3"}
+  "pipewire-devel" 
+]
+extra-source "kpipewire-devel-6.0.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kpipewire-devel-6.0.3-1.fc40.x86_64.rpm"
+}

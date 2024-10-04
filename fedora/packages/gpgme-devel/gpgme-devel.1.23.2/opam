@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gpgme-devel-1.23.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gpgme-devel-1.23.2-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2-devel" 
+  "glibc" 
+  "gpgme" {= "1.23.2"}
+  "libassuan" 
+  "libassuan-devel" 
+  "libgpg-error" 
+  "libgpg-error-devel" {>= "1.36"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gpgme-devel-1.23.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gpgme-devel-1.23.2-3.fc40.x86_64.rpm"
+}

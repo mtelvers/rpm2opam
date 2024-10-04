@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gsettings-backend-dconf-0.40.0-3.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gsettings-backend-dconf-0.40.0-3.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "dconf" {>= "0.40.0"}
+  "glib2-stage1-devel" 
+  "glib2-tools" 
+  "glibc" 
+]
+extra-source "gsettings-backend-dconf-0.40.0-3.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gsettings-backend-dconf-0.40.0-3.8.x86_64.rpm"
+}

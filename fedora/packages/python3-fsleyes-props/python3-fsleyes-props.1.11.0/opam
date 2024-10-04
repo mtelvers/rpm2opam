@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-fsleyes-props-1.11.0-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-fsleyes-props-1.11.0-6.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-fsleyes-widgets" {>= "0.6"}
+  "python3-fslpy" {>= "1.4"}
+  "python3-matplotlib" {>= "3.5"}
+  "python3-numpy" 
+  "python3-wxpython4" {>= "3.0.2"}
+]
+extra-source "python3-fsleyes-props-1.11.0-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-fsleyes-props-1.11.0-6.fc40.noarch.rpm"
+}

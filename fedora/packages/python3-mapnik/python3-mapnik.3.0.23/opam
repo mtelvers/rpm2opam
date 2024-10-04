@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-mapnik-3.0.23-29.20200224git7da019c.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-mapnik-3.0.23-29.20200224git7da019c.fc40.x86_64.rpm"]
+depends: [
+  "boost-python3" 
+  "boost-thread" 
+  "cairo" 
+  "glibc" 
+  "libgcc" 
+  "libicu" 
+  "libstdc++" 
+  "mapnik" 
+  "python3" {= "3.12"}
+]
+extra-source "python3-mapnik-3.0.23-29.20200224git7da019c.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-mapnik-3.0.23-29.20200224git7da019c.fc40.x86_64.rpm"
+}

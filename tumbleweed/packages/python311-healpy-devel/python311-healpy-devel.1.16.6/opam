@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-healpy-devel-1.16.6-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-healpy-devel-1.16.6-2.2.x86_64.rpm"]
+depends: [
+  "healpix_cxx-devel" 
+  "python311-devel" 
+  "python311-numpy-devel" 
+]
+extra-source "python311-healpy-devel-1.16.6-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-healpy-devel-1.16.6-2.2.x86_64.rpm"
+}

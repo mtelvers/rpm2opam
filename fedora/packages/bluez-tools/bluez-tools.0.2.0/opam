@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bluez-tools-0.2.0-0.23.git20170912.7cb788c.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bluez-tools-0.2.0-0.23.git20170912.7cb788c.fc40.x86_64.rpm"]
+depends: [
+  "bluez" 
+  "glib2" 
+  "glibc" 
+  "readline" 
+]
+extra-source "bluez-tools-0.2.0-0.23.git20170912.7cb788c.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bluez-tools-0.2.0-0.23.git20170912.7cb788c.fc40.x86_64.rpm"
+}

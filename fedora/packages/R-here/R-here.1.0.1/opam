@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-here-1.0.1-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-here-1.0.1-13.fc40.noarch.rpm"]
+depends: [
+  "R-core" {= "4.3"}
+  "R-rprojroot" {>= "2.0.2"}
+]
+extra-source "R-here-1.0.1-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-here-1.0.1-13.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Authen-DecHpwd-2.007-1.31.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Authen-DecHpwd-2.007-1.31.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl" 
+  "perl-Data-Integer" {>= "0.3"}
+  "perl-Digest-CRC" {>= "0.14"}
+  "perl-Scalar-String" 
+  "perl-base" 
+]
+extra-source "perl-Authen-DecHpwd-2.007-1.31.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-Authen-DecHpwd-2.007-1.31.x86_64.rpm"
+}

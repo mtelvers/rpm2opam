@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-shodan-1.31.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-shodan-1.31.0-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-XlsxWriter" 
+  "python312-base" 
+  "python312-click" 
+  "python312-click-plugins" 
+  "python312-colorama" 
+  "python312-requests" {>= "2.2.1"}
+  "python312-setuptools" 
+  "update-alternatives" 
+]
+extra-source "python312-shodan-1.31.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-shodan-1.31.0-1.2.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vrq-devel-1.0.134-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vrq-devel-1.0.134-10.fc40.x86_64.rpm"]
+depends: [
+  "vrq" {= "1.0.134"}
+]
+extra-source "vrq-devel-1.0.134-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vrq-devel-1.0.134-10.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jack-examples-4-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jack-examples-4-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "jack-audio-connection-kit" 
+  "jack-example-tools-common" {= "4"}
+  "libsndfile" 
+]
+extra-source "jack-examples-4-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jack-examples-4-3.fc40.x86_64.rpm"
+}

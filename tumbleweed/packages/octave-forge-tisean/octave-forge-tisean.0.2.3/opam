@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "octave-forge-tisean-0.2.3-2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "octave-forge-tisean-0.2.3-2.5.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "octave-cli" {>= "4.0.0"}
+  "octave-forge-signal" {>= "1.3.0"}
+]
+extra-source "octave-forge-tisean-0.2.3-2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/octave-forge-tisean-0.2.3-2.5.x86_64.rpm"
+}

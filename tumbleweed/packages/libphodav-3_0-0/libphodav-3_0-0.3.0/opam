@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libphodav-3_0-0-3.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libphodav-3_0-0-3.0-2.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libsoup-3_0-0" 
+  "libxml2-2" 
+]
+extra-source "libphodav-3_0-0-3.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libphodav-3_0-0-3.0-2.1.x86_64.rpm"
+}

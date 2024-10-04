@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-HTML-GenToc-3.20-37.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTML-GenToc-3.20-37.fc40.noarch.rpm"]
+depends: [
+  "perl-Data-Dumper" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long" {>= "2.34"}
+  "perl-HTML-LinkList" 
+  "perl-HTML-Parser" 
+  "perl-HTML-SimpleParse" 
+  "perl-Pod-Usage" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-HTML-GenToc-3.20-37.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-HTML-GenToc-3.20-37.fc40.noarch.rpm"
+}

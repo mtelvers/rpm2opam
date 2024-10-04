@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-moto-5.0.3-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-moto-5.0.3-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-Jinja2" {>= "2.10.1"}
+  "python312-Werkzeug" {>= "0.5"}
+  "python312-base" 
+  "python312-boto3" {>= "1.9.201"}
+  "python312-botocore" {>= "1.14.0"}
+  "python312-cryptography" {>= "3.3.1"}
+  "python312-python-dateutil" 
+  "python312-requests" {>= "2.5"}
+  "python312-responses" {>= "0.15.0"}
+  "python312-xmltodict" 
+  "update-alternatives" 
+]
+extra-source "python312-moto-5.0.3-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-moto-5.0.3-1.2.noarch.rpm"
+}

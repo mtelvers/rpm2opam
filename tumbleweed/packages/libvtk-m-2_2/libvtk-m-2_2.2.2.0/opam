@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvtk-m-2_2-2.2.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvtk-m-2_2-2.2.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libgomp1" 
+  "libstdc++6" 
+]
+extra-source "libvtk-m-2_2-2.2.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libvtk-m-2_2-2.2.0-1.1.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ndesk-dbus-glib-devel-0.4.1-59.21.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ndesk-dbus-glib-devel-0.4.1-59.21.noarch.rpm"]
+depends: [
+  "ndesk-dbus" 
+  "ndesk-dbus-glib" {= "0.4.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "ndesk-dbus-glib-devel-0.4.1-59.21.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ndesk-dbus-glib-devel-0.4.1-59.21.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nano-lang-8.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nano-lang-8.1-1.1.noarch.rpm"]
+depends: [
+  "nano" {= "8.1"}
+]
+extra-source "nano-lang-8.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nano-lang-8.1-1.1.noarch.rpm"
+}

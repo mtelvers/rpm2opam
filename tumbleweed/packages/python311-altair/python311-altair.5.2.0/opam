@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-altair-5.2.0-2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-altair-5.2.0-2.3.noarch.rpm"]
+depends: [
+  "python311-Jinja2" 
+  "python311-base" {= "3.11"}
+  "python311-jsonschema" {>= "3"}
+  "python311-numpy" 
+  "python311-packaging" 
+  "python311-pandas" {>= "0.25"}
+  "python311-toolz" 
+]
+extra-source "python311-altair-5.2.0-2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-altair-5.2.0-2.3.noarch.rpm"
+}

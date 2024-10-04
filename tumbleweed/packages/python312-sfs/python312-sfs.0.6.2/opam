@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-sfs-0.6.2-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-sfs-0.6.2-3.1.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-numpy" 
+  "python312-scipy" 
+]
+extra-source "python312-sfs-0.6.2-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-sfs-0.6.2-3.1.noarch.rpm"
+}

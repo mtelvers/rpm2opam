@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sequoia-sq-0.33.0-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sequoia-sq-0.33.0-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libgmp10" 
+  "libhogweed6" 
+  "libnettle8" 
+  "libopenssl3" 
+  "libsqlite3-0" 
+]
+extra-source "sequoia-sq-0.33.0-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sequoia-sq-0.33.0-2.2.x86_64.rpm"
+}

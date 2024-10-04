@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "screenie-20120406-18.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "screenie-20120406-18.fc40.noarch.rpm"]
+depends: [
+  "gawk" 
+  "perl-interpreter" 
+  "screen" 
+]
+extra-source "screenie-20120406-18.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/screenie-20120406-18.fc40.noarch.rpm"
+}

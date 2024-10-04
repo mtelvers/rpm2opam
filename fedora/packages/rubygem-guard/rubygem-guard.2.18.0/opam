@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-guard-2.18.0-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-guard-2.18.0-5.fc40.noarch.rpm"]
+depends: [
+  "rubygem-formatador" {>= "0.2.4"}
+  "rubygem-listen" 
+  "rubygem-lumberjack" 
+  "rubygem-nenv" 
+  "rubygem-notiffany" 
+  "rubygem-pry" {>= "0.13.0"}
+  "rubygem-shellany" 
+  "rubygem-thor" {>= "0.18.1"}
+  "rubygems" 
+  "rubypick" 
+]
+extra-source "rubygem-guard-2.18.0-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-guard-2.18.0-5.fc40.noarch.rpm"
+}

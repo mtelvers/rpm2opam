@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-GIS-Distance-0.20-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-GIS-Distance-0.20-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Class-Measure" 
+  "perl-Const-Fast" {>= "0.14"}
+  "perl-Exporter" 
+  "perl-Math-Complex" 
+  "perl-Scalar-List-Utils" 
+  "perl-libs" {>= "5.8.1"}
+  "perl-namespace-clean" {>= "0.24"}
+  "perl-parent" 
+  "perl-strictures" {>= "2"}
+]
+extra-source "perl-GIS-Distance-0.20-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-GIS-Distance-0.20-4.fc40.noarch.rpm"
+}

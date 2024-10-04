@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nmon-16p-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nmon-16p-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libncurses6" 
+]
+extra-source "nmon-16p-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/nmon-16p-1.3.x86_64.rpm"
+}

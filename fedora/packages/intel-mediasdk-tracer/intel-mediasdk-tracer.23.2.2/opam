@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "intel-mediasdk-tracer-23.2.2-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "intel-mediasdk-tracer-23.2.2-4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "intel-mediasdk" {= "23.2.2"}
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "intel-mediasdk-tracer-23.2.2-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/intel-mediasdk-tracer-23.2.2-4.fc40.x86_64.rpm"
+}

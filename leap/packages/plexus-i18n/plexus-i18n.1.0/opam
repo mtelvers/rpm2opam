@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plexus-i18n-1.0~beta10-slfo.1.2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plexus-i18n-1.0~beta10-slfo.1.2.3.noarch.rpm"]
+depends: [
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "plexus-utils" 
+  "sisu-plexus" 
+]
+extra-source "plexus-i18n-1.0~beta10-slfo.1.2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/plexus-i18n-1.0~beta10-slfo.1.2.3.noarch.rpm"
+}

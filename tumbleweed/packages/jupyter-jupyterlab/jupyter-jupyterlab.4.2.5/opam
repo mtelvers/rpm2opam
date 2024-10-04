@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jupyter-jupyterlab-4.2.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jupyter-jupyterlab-4.2.5-1.1.noarch.rpm"]
+depends: [
+  "jupyter-jupyterlab-filesystem" 
+  "nodejs-default" {>= "10"}
+  "npm-default" {>= "10"}
+]
+extra-source "jupyter-jupyterlab-4.2.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jupyter-jupyterlab-4.2.5-1.1.noarch.rpm"
+}

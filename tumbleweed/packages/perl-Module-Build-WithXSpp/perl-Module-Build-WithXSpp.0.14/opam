@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Module-Build-WithXSpp-0.14-3.31.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Build-WithXSpp-0.14-3.31.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-ExtUtils-CppGuess" {>= "0.4"}
+  "perl-ExtUtils-XSpp" {>= "0.11"}
+  "perl-Module-Build" {>= "0.26"}
+]
+extra-source "perl-Module-Build-WithXSpp-0.14-3.31.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Module-Build-WithXSpp-0.14-3.31.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-botocore-1.33.11-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-botocore-1.33.11-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-jmespath" 
+  "python311-python-dateutil" 
+  "python311-requests" 
+]
+extra-source "python311-botocore-1.33.11-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/python311-botocore-1.33.11-slfo.1.1.4.noarch.rpm"
+}

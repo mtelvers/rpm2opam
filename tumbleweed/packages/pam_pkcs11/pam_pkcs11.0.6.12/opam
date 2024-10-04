@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pam_pkcs11-0.6.12-7.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pam_pkcs11-0.6.12-7.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "libcurl-mini4" 
+  "libldap2" 
+  "libpcsclite1" 
+  "mozilla-nspr" 
+  "mozilla-nss" 
+  "pam" 
+  "systemd" 
+]
+extra-source "pam_pkcs11-0.6.12-7.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pam_pkcs11-0.6.12-7.1.x86_64.rpm"
+}

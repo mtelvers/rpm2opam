@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-TurboGears2-2.4.3-15.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-TurboGears2-2.4.3-15.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-backlash" 
+  "python3-chameleon" 
+  "python3-crank" 
+  "python3-decorator" 
+  "python3-formencode" 
+  "python3-genshi" {>= "0.5.1"}
+  "python3-jinja2" 
+  "python3-kajiki" {> "0.2.2"}
+  "python3-mako" 
+  "python3-markupsafe" 
+  "python3-paste-deploy" 
+  "python3-repoze-lru" 
+  "python3-repoze-tm2" {>= "1.0"}
+  "python3-repoze-who" 
+  "python3-repoze-who-plugins-sa" {>= "1.0.1"}
+  "python3-tw2-forms" 
+  "python3-webob" 
+  "python3-zope-sqlalchemy" {>= "0.4"}
+]
+extra-source "python3-TurboGears2-2.4.3-15.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-TurboGears2-2.4.3-15.fc40.noarch.rpm"
+}

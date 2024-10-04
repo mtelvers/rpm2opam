@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gpredict-2.2.1-18.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gpredict-2.2.1-18.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "goocanvas2" 
+  "gtk3" 
+  "hamlib" 
+  "hicolor-icon-theme" 
+  "libcurl" 
+  "pango" 
+]
+extra-source "gpredict-2.2.1-18.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gpredict-2.2.1-18.fc40.x86_64.rpm"
+}

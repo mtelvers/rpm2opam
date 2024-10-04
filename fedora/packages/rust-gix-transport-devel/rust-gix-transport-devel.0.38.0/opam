@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gix-transport-devel-0.38.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gix-transport-devel-0.38.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-bstr+std-devel" 
+  "rust-bstr+unicode-devel" 
+  "rust-bstr-devel" 
+  "rust-gix-command+default-devel" 
+  "rust-gix-features+default-devel" 
+  "rust-gix-packetline+default-devel" 
+  "rust-gix-quote+default-devel" 
+  "rust-gix-sec+default-devel" 
+  "rust-gix-url+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-gix-transport-devel-0.38.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gix-transport-devel-0.38.0-2.fc40.noarch.rpm"
+}

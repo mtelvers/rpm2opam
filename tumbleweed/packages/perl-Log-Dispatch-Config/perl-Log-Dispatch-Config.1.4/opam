@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Log-Dispatch-Config-1.04-9.31.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Log-Dispatch-Config-1.04-9.31.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-AppConfig" {>= "1.52"}
+  "perl-File-Temp" {>= "0.12"}
+  "perl-IO-stringy" 
+  "perl-Log-Dispatch" {>= "2"}
+]
+extra-source "perl-Log-Dispatch-Config-1.04-9.31.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Log-Dispatch-Config-1.04-9.31.noarch.rpm"
+}

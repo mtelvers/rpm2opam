@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-nats-io-streaming-server-devel-0.25.6-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-nats-io-streaming-server-devel-0.25.6-3.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-hashicorp-msgpack-2-devel" 
+  "compat-golang-github-nats-io-server-2-devel" 
+  "go-filesystem" 
+  "golang-etcd-bbolt-devel" 
+  "golang-github-gogo-protobuf-devel" 
+  "golang-github-hashicorp-hclog-devel" 
+  "golang-github-hashicorp-raft-devel" 
+  "golang-github-lib-pq-devel" 
+  "golang-github-nats-io-devel" 
+  "golang-github-nats-io-nuid-devel" 
+  "golang-github-nats-io-stan-devel" 
+  "golang-github-prometheus-procfs-devel" 
+  "golang-github-sql-driver-mysql-devel" 
+  "golang-x-crypto-devel" 
+]
+extra-source "golang-github-nats-io-streaming-server-devel-0.25.6-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-nats-io-streaming-server-devel-0.25.6-3.fc40.noarch.rpm"
+}

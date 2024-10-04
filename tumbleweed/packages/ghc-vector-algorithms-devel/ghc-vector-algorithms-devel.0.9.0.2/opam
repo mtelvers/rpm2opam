@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-vector-algorithms-devel-0.9.0.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-vector-algorithms-devel-0.9.0.2-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-bitvec-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-primitive-devel" 
+  "ghc-vector-algorithms" {= "0.9.0.2"}
+  "ghc-vector-devel" 
+]
+extra-source "ghc-vector-algorithms-devel-0.9.0.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-vector-algorithms-devel-0.9.0.2-1.2.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpcrecpp0-8.45-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpcrecpp0-8.45-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libpcre1" 
+  "libstdc++6" 
+]
+extra-source "libpcrecpp0-8.45-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libpcrecpp0-8.45-slfo.1.1.8.x86_64.rpm"
+}

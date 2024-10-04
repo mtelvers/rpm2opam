@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hyprland-devel-0.37.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hyprland-devel-0.37.1-1.fc40.x86_64.rpm"]
+depends: [
+  "cairo-devel" 
+  "cmake" 
+  "cpio" 
+  "hwdata-devel" 
+  "hyprland" {= "0.37.1"}
+  "hyprlang-devel" 
+  "libdisplay-info-devel" 
+  "libdrm-devel" 
+  "libglvnd-devel" 
+  "libinput-devel" {>= "1.23.0"}
+  "libliftoff-devel" {>= "0.4.1"}
+  "libseat-devel" 
+  "libxcb-devel" 
+  "libxkbcommon-devel" 
+  "mesa-libgbm-devel" 
+  "meson" 
+  "ninja-build" 
+  "pango-devel" 
+  "pixman-devel" {>= "0.42.0"}
+  "pkgconf-pkg-config" 
+  "systemd-devel" 
+  "wayland-devel" 
+  "wayland-protocols-devel" 
+  "xcb-util-renderutil-devel" 
+  "xcb-util-wm-devel" 
+  "xorg-x11-server-Xwayland-devel" 
+]
+extra-source "hyprland-devel-0.37.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hyprland-devel-0.37.1-1.fc40.x86_64.rpm"
+}

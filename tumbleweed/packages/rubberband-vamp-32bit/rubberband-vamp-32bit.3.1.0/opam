@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rubberband-vamp-32bit-3.1.0-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubberband-vamp-32bit-3.1.0-1.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libfftw3-3-32bit" 
+  "libgcc_s1-32bit" 
+  "libstdc++6-32bit" 
+  "libvamp-sdk2-32bit" 
+]
+extra-source "rubberband-vamp-32bit-3.1.0-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rubberband-vamp-32bit-3.1.0-1.8.x86_64.rpm"
+}

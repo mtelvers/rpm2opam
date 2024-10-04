@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bup-0.33.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bup-0.33.3-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "git-core" {>= "1.5.6"}
+  "glibc" 
+  "libpython3_11-1_0" 
+  "par2cmdline" 
+  "python311" 
+  "python311-fuse" 
+  "python311-pylibacl" 
+  "python311-pyxattr" 
+  "python311-tornado" 
+]
+extra-source "bup-0.33.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/bup-0.33.3-1.1.x86_64.rpm"
+}

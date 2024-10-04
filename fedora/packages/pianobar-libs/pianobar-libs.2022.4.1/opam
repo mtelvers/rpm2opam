@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pianobar-libs-2022.04.01-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pianobar-libs-2022.04.01-8.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "json-c" 
+  "libcurl" 
+  "libgcrypt" 
+]
+extra-source "pianobar-libs-2022.04.01-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pianobar-libs-2022.04.01-8.fc40.x86_64.rpm"
+}

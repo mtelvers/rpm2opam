@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kcbench-0.9.10-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kcbench-0.9.10-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "bc" 
+  "binutils" 
+  "bison" 
+  "curl" 
+  "elfutils-libelf-devel" 
+  "flex" 
+  "gawk" 
+  "gcc" 
+  "make" 
+  "openssl-devel" 
+  "perl-interpreter" 
+  "pkgconf-pkg-config" 
+  "procps-ng" 
+  "time" 
+  "util-linux" 
+]
+extra-source "kcbench-0.9.10-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kcbench-0.9.10-1.fc40.noarch.rpm"
+}

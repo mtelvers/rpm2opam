@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Reply-0.42-1.19.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Reply-0.42-1.19.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Config-INI-Reader-Ordered" 
+  "perl-Devel-LexAlias" 
+  "perl-Eval-Closure" {>= "0.11"}
+  "perl-File-HomeDir" 
+  "perl-Module-Runtime" 
+  "perl-Package-Stash" 
+  "perl-PadWalker" 
+  "perl-Try-Tiny" 
+  "perl-base" 
+]
+extra-source "perl-Reply-0.42-1.19.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Reply-0.42-1.19.noarch.rpm"
+}

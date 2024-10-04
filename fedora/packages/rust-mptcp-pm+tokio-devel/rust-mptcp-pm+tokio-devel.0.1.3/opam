@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-mptcp-pm+tokio-devel-0.1.3-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-mptcp-pm+tokio-devel-0.1.3-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-mptcp-pm-devel" {= "0.1.3"}
+  "rust-tokio+default-devel" 
+  "rust-tokio+rt-devel" 
+]
+extra-source "rust-mptcp-pm+tokio-devel-0.1.3-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-mptcp-pm+tokio-devel-0.1.3-3.fc40.noarch.rpm"
+}

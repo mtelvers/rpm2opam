@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "upmpdcli-subsonic-1.8.16-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "upmpdcli-subsonic-1.8.16-1.1.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "upmpdcli" {= "1.8.16"}
+]
+extra-source "upmpdcli-subsonic-1.8.16-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/upmpdcli-subsonic-1.8.16-1.1.noarch.rpm"
+}

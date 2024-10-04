@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-aeson-pretty-devel-0.8.10-1.30.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-aeson-pretty-devel-0.8.10-1.30.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-aeson-devel" 
+  "ghc-aeson-pretty" {= "0.8.10"}
+  "ghc-base-compat-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-scientific-devel" 
+  "ghc-text-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-aeson-pretty-devel-0.8.10-1.30.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-aeson-pretty-devel-0.8.10-1.30.x86_64.rpm"
+}

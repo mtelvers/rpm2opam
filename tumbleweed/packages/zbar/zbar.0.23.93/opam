@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zbar-0.23.93-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zbar-0.23.93-2.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libMagickWand-7_Q16HDRI10" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Widgets5" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libzbar0" 
+  "libzbarqt0" 
+]
+extra-source "zbar-0.23.93-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/zbar-0.23.93-2.3.x86_64.rpm"
+}

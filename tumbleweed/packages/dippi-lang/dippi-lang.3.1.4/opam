@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dippi-lang-3.1.4-1.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dippi-lang-3.1.4-1.10.noarch.rpm"]
+depends: [
+  "dippi" {= "3.1.4"}
+]
+extra-source "dippi-lang-3.1.4-1.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dippi-lang-3.1.4-1.10.noarch.rpm"
+}

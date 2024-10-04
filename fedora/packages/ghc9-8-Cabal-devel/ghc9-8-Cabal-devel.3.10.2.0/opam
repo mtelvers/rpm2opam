@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc9.8-Cabal-devel-3.10.2.0-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc9.8-Cabal-devel-3.10.2.0-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc9-8-Cabal" {= "3.10.2.0"}
+  "ghc9-8-Cabal-syntax-devel" 
+  "ghc9-8-array-devel" 
+  "ghc9-8-base-devel" 
+  "ghc9-8-bytestring-devel" 
+  "ghc9-8-compiler" {= "9.8.2"}
+  "ghc9-8-containers-devel" 
+  "ghc9-8-deepseq-devel" 
+  "ghc9-8-directory-devel" 
+  "ghc9-8-filepath-devel" 
+  "ghc9-8-mtl-devel" 
+  "ghc9-8-parsec-devel" 
+  "ghc9-8-pretty-devel" 
+  "ghc9-8-process-devel" 
+  "ghc9-8-text-devel" 
+  "ghc9-8-time-devel" 
+  "ghc9-8-transformers-devel" 
+  "ghc9-8-unix-devel" 
+]
+extra-source "ghc9.8-Cabal-devel-3.10.2.0-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc9.8-Cabal-devel-3.10.2.0-8.fc40.x86_64.rpm"
+}

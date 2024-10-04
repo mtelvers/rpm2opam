@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtk4-devel-4.16.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk4-devel-4.16.2-1.1.x86_64.rpm"]
+depends: [
+  "cairo-devel" {>= "1.18.0"}
+  "gdk-pixbuf-devel" {>= "2.30.0"}
+  "gettext-its-gtk4" {>= "4.16.2"}
+  "glib2-devel" {>= "2.76.0"}
+  "gtk4-devel-tools" {= "4.16.2"}
+  "gtk4-tools" {= "4.16.2"}
+  "libX11-devel" 
+  "libgraphene-devel" {>= "1.10.0"}
+  "libgtk-4-1" {= "4.16.2"}
+  "libxkbcommon-devel" {>= "0.2.0"}
+  "pango-devel" {>= "1.52.0"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Gtk-4_0" {= "4.16.2"}
+  "vulkan-devel" 
+  "wayland-devel" {>= "1.21.0"}
+]
+extra-source "gtk4-devel-4.16.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gtk4-devel-4.16.2-1.1.x86_64.rpm"
+}

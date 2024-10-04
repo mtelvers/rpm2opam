@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-pagure-prof-0.1.1-17.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-pagure-prof-0.1.1-17.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-prof" 
+  "ghc-base-prof" 
+  "ghc-http-query-prof" 
+  "ghc-pagure-devel" {= "0.1.1"}
+  "ghc-text-prof" 
+]
+extra-source "ghc-pagure-prof-0.1.1-17.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-pagure-prof-0.1.1-17.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgarcon-data-4.18.2-lp160.1.18.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgarcon-data-4.18.2-lp160.1.18.noarch.rpm"]
+depends: [
+  "libgarcon-branding-openSUSE" {= "4.18.2"}
+]
+extra-source "libgarcon-data-4.18.2-lp160.1.18.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/libgarcon-data-4.18.2-lp160.1.18.noarch.rpm"
+}

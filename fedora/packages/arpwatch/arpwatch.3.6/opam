@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "arpwatch-3.6-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "arpwatch-3.6-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "esmtp" 
+  "glibc" 
+  "libpcap" 
+  "python3" 
+  "shadow-utils" 
+]
+extra-source "arpwatch-3.6-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/arpwatch-3.6-3.fc40.x86_64.rpm"
+}

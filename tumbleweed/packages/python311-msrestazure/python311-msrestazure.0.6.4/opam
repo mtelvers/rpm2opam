@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-msrestazure-0.6.4-5.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-msrestazure-0.6.4-5.1.noarch.rpm"]
+depends: [
+  "python311-adal" 
+  "python311-base" {= "3.11"}
+  "python311-msrest" 
+  "python311-six" 
+]
+extra-source "python311-msrestazure-0.6.4-5.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-msrestazure-0.6.4-5.1.noarch.rpm"
+}

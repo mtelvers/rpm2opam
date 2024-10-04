@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-clap+debug-devel-4.5.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-clap+debug-devel-4.5.3-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-clap-devel" {= "4.5.3"}
+  "rust-clap_builder+debug-devel" {= "4.5.2"}
+  "rust-clap_derive+debug-devel" {= "4.5.3"}
+  "rust-clap_derive+default-devel" {= "4.5.3"}
+]
+extra-source "rust-clap+debug-devel-4.5.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-clap+debug-devel-4.5.3-1.fc40.noarch.rpm"
+}

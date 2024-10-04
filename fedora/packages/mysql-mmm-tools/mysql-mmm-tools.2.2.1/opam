@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mysql-mmm-tools-2.2.1-33.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mysql-mmm-tools-2.2.1-33.fc40.noarch.rpm"]
+depends: [
+  "mysql-mmm" {= "2.2.1"}
+  "perl-DBI" 
+  "perl-Data-Dumper" 
+  "perl-English" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long" 
+  "perl-Log-Log4perl" 
+  "perl-Path-Class" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "mysql-mmm-tools-2.2.1-33.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mysql-mmm-tools-2.2.1-33.fc40.noarch.rpm"
+}

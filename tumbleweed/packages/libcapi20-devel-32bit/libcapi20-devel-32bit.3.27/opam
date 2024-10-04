@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcapi20-devel-32bit-3.27-2.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcapi20-devel-32bit-3.27-2.9.x86_64.rpm"]
+depends: [
+  "libcapi20-3-32bit" {= "3.27"}
+  "libcapi20-devel" {= "3.27"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libcapi20-devel-32bit-3.27-2.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcapi20-devel-32bit-3.27-2.9.x86_64.rpm"
+}

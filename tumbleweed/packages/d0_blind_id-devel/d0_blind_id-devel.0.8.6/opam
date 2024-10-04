@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "d0_blind_id-devel-0.8.6-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "d0_blind_id-devel-0.8.6-1.4.x86_64.rpm"]
+depends: [
+  "libd0_blind_id0" {= "0.8.6"}
+  "libd0_rijndael0" {= "0.8.6"}
+  "pkgconf-pkg-config" 
+]
+extra-source "d0_blind_id-devel-0.8.6-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/d0_blind_id-devel-0.8.6-1.4.x86_64.rpm"
+}

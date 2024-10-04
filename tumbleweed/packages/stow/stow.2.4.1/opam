@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "stow-2.4.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "stow-2.4.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "perl" {>= "5.6.1"}
+  "perl-base" 
+]
+extra-source "stow-2.4.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/stow-2.4.1-1.1.noarch.rpm"
+}

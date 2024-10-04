@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-drm-devel-0.11.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-drm-devel-0.11.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-bitflags+default-devel" 
+  "rust-bytemuck+default-devel" 
+  "rust-bytemuck+derive-devel" 
+  "rust-bytemuck+extern_crate_alloc-devel" 
+  "rust-drm-ffi+default-devel" 
+  "rust-drm-fourcc+default-devel" 
+  "rust-rustix+default-devel" 
+  "rust-rustix+fs-devel" 
+  "rust-rustix+mm-devel" 
+]
+extra-source "rust-drm-devel-0.11.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-drm-devel-0.11.1-2.fc40.noarch.rpm"
+}

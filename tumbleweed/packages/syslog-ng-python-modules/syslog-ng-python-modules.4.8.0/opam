@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "syslog-ng-python-modules-4.8.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "syslog-ng-python-modules-4.8.0-2.1.x86_64.rpm"]
+depends: [
+  "python311-PyYAML" 
+  "python311-cachetools" 
+  "python311-certifi" 
+  "python311-charset-normalizer" 
+  "python311-google-auth" 
+  "python311-idna" 
+  "python311-kubernetes" 
+  "python311-pip" 
+  "python311-pyasn1" 
+  "python311-pyasn1-modules" 
+  "python311-python-dateutil" 
+  "python311-requests" 
+  "python311-rsa" 
+  "python311-six" 
+  "python311-websocket-client" 
+  "syslog-ng" {= "4.8.0"}
+  "syslog-ng-python" 
+]
+extra-source "syslog-ng-python-modules-4.8.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/syslog-ng-python-modules-4.8.0-2.1.x86_64.rpm"
+}

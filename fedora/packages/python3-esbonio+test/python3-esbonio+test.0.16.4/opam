@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-esbonio+test-0.16.4-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-esbonio+test-0.16.4-6.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-esbonio" {= "0.16.4"}
+  "python3-pytest" 
+  "python3-pytest-asyncio" 
+  "python3-pytest-cov" 
+  "python3-pytest-lsp" {>= "0.3.1"}
+  "python3-pytest-timeout" 
+]
+extra-source "python3-esbonio+test-0.16.4-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-esbonio+test-0.16.4-6.fc40.noarch.rpm"
+}

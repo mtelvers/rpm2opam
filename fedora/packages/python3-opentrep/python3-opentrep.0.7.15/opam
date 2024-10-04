@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-opentrep-0.07.15-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-opentrep-0.07.15-5.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "boost-python3" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "opentrep" 
+  "python3" {= "3.12"}
+  "python3-libs" 
+]
+extra-source "python3-opentrep-0.07.15-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-opentrep-0.07.15-5.fc40.x86_64.rpm"
+}

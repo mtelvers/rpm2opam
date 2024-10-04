@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "liblavjpeg-2_2-0-2.2.1-2.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "liblavjpeg-2_2-0-2.2.1-2.10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libjpeg8" 
+  "libmjpegutils-2_2-0" 
+]
+extra-source "liblavjpeg-2_2-0-2.2.1-2.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/liblavjpeg-2_2-0-2.2.1-2.10.x86_64.rpm"
+}

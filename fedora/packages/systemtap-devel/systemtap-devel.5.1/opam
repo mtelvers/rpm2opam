@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "systemtap-devel-5.1~pre17062192g5fd8daba-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "systemtap-devel-5.1~pre17062192g5fd8daba-1.fc40.x86_64.rpm"]
+depends: [
+  "avahi-libs" 
+  "bash" 
+  "boost-system" 
+  "dyninst" 
+  "elfutils-debuginfod-client" 
+  "elfutils-devel" {>= "0.179"}
+  "elfutils-libelf" 
+  "elfutils-libs" 
+  "gcc" 
+  "glibc" 
+  "json-c" 
+  "libgcc" 
+  "libstdc++" 
+  "make" 
+  "nspr" 
+  "nss" 
+  "python3" 
+  "readline" 
+  "rpm-libs" 
+  "sqlite-libs" 
+]
+extra-source "systemtap-devel-5.1~pre17062192g5fd8daba-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/systemtap-devel-5.1~pre17062192g5fd8daba-1.fc40.x86_64.rpm"
+}

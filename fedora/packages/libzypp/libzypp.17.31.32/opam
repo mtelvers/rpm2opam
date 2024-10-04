@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libzypp-17.31.32-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libzypp-17.31.32-1.fc40.x86_64.rpm"]
+depends: [
+  "boost-thread" 
+  "glib2" 
+  "glibc" 
+  "gnupg2" 
+  "gpgme" 
+  "libcurl" 
+  "libgcc" 
+  "libproxy" 
+  "libsigc++20" 
+  "libsolv" 
+  "libsolv-tools" 
+  "libstdc++" 
+  "libxml2" 
+  "openssl-libs" 
+  "protobuf-lite" 
+  "rpm-libs" 
+  "systemd-libs" 
+  "yaml-cpp" 
+  "zchunk-libs" 
+  "zlib-ng-compat" 
+  "zypp-common" {= "17.31.32"}
+  "zypp-plugins" {= "17.31.32"}
+  "zypp-tools" {= "17.31.32"}
+]
+extra-source "libzypp-17.31.32-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libzypp-17.31.32-1.fc40.x86_64.rpm"
+}

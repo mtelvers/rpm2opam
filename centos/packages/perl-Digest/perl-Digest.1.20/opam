@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Digest-1.20-510.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Digest-1.20-510.el10.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Digest" 
+  "perl-Exporter" 
+  "perl-MIME-Base64" 
+]
+extra-source "perl-Digest-1.20-510.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/perl-Digest-1.20-510.el10.noarch.rpm"
+}

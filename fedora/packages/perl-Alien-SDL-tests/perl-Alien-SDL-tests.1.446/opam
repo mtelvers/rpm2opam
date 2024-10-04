@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Alien-SDL-tests-1.446-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Alien-SDL-tests-1.446-29.fc40.noarch.rpm"]
+depends: [
+  "SDL_Pango-devel" 
+  "SDL_gfx-devel" 
+  "SDL_image-devel" 
+  "SDL_mixer-devel" 
+  "SDL_ttf-devel" 
+  "bash" 
+  "perl-Alien-SDL" {= "1.446"}
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+]
+extra-source "perl-Alien-SDL-tests-1.446-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Alien-SDL-tests-1.446-29.fc40.noarch.rpm"
+}

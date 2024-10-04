@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kwooty-1.1.0-26.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kwooty-1.1.0-26.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kde-runtime" {>= "4.14.38"}
+  "kdelibs" 
+  "kwooty-libs" {= "1.1.0"}
+  "libstdc++" 
+  "par2cmdline" 
+  "qt" 
+  "qt-x11" 
+]
+extra-source "kwooty-1.1.0-26.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kwooty-1.1.0-26.fc40.x86_64.rpm"
+}

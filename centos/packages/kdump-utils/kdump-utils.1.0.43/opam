@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kdump-utils-1.0.43-1.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kdump-utils-1.0.43-1.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "dracut" {>= "58"}
+  "dracut-network" {>= "58"}
+  "dracut-squash" {>= "58"}
+  "ethtool" 
+  "kexec-tools" {>= "2.0.28"}
+  "makedumpfile" 
+  "sed" 
+  "systemd-udev" 
+  "util-linux" 
+]
+extra-source "kdump-utils-1.0.43-1.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/kdump-utils-1.0.43-1.el10.x86_64.rpm"
+}

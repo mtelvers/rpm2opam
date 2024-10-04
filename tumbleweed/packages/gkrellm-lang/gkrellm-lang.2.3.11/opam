@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gkrellm-lang-2.3.11-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gkrellm-lang-2.3.11-3.2.noarch.rpm"]
+depends: [
+  "gkrellm" {= "2.3.11"}
+]
+extra-source "gkrellm-lang-2.3.11-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gkrellm-lang-2.3.11-3.2.noarch.rpm"
+}

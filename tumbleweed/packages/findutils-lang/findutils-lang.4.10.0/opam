@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "findutils-lang-4.10.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "findutils-lang-4.10.0-1.1.noarch.rpm"]
+depends: [
+  "findutils" {= "4.10.0"}
+]
+extra-source "findutils-lang-4.10.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/findutils-lang-4.10.0-1.1.noarch.rpm"
+}

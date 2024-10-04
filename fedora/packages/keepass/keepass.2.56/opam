@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "keepass-2.56-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "keepass-2.56-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "hicolor-icon-theme" 
+  "mono-core" {= "4.0.0.0"}
+  "mono-winforms" {= "4.0.0.0"}
+  "xdotool" 
+  "xsel" 
+]
+extra-source "keepass-2.56-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/keepass-2.56-1.fc40.x86_64.rpm"
+}

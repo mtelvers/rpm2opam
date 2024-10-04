@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "icinga-php-library-0.13.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "icinga-php-library-0.13.0-1.3.noarch.rpm"]
+depends: [
+  "php8" 
+  "php8-gettext" 
+  "php8-intl" 
+  "php8-openssl" 
+  "php8-pdo" 
+]
+extra-source "icinga-php-library-0.13.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/icinga-php-library-0.13.0-1.3.noarch.rpm"
+}

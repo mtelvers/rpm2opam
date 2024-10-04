@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-crypto-random-prof-0.0.9-36.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-crypto-random-prof-0.0.9-36.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-crypto-random-devel" {= "0.0.9"}
+  "ghc-securemem-prof" 
+  "ghc-unix-prof" 
+  "ghc-vector-prof" 
+]
+extra-source "ghc-crypto-random-prof-0.0.9-36.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-crypto-random-prof-0.0.9-36.fc40.x86_64.rpm"
+}

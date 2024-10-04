@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pip-run-8.8.2-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pip-run-8.8.2-4.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-autocommand" 
+  "python310-base" {= "3.10"}
+  "python310-packaging" 
+  "python310-path" {>= "15.1"}
+  "python310-pip" {>= "19.3"}
+  "update-alternatives" 
+]
+extra-source "python310-pip-run-8.8.2-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-pip-run-8.8.2-4.1.noarch.rpm"
+}

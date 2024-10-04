@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Template-GD-2.66-1.27.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Template-GD-2.66-1.27.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-GD" {>= "1.14"}
+  "perl-Template-Toolkit" {>= "2.14"}
+]
+extra-source "perl-Template-GD-2.66-1.27.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Template-GD-2.66-1.27.noarch.rpm"
+}

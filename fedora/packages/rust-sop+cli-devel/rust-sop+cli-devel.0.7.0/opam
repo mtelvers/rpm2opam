@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-sop+cli-devel-0.7.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-sop+cli-devel-0.7.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-sop+anyhow-devel" {= "0.7.0"}
+  "rust-sop+chrono-devel" {= "0.7.0"}
+  "rust-sop+clap-devel" {= "0.7.0"}
+  "rust-sop+clap_complete-devel" {= "0.7.0"}
+  "rust-sop-devel" {= "0.7.0"}
+]
+extra-source "rust-sop+cli-devel-0.7.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-sop+cli-devel-0.7.0-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libosmogb14-1.9.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libosmogb14-1.9.3-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libosmocore21" 
+  "libosmogsm20" 
+  "libosmovty13" 
+  "libtalloc2" 
+]
+extra-source "libosmogb14-1.9.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libosmogb14-1.9.3-1.1.x86_64.rpm"
+}

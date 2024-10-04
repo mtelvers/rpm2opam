@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-service_identity-24.1.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-service_identity-24.1.0-1.3.noarch.rpm"]
+depends: [
+  "python312-attrs" {>= "19.1.0"}
+  "python312-base" {= "3.12"}
+  "python312-cryptography" 
+  "python312-pyasn1" 
+  "python312-pyasn1-modules" 
+]
+extra-source "python312-service_identity-24.1.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-service_identity-24.1.0-1.3.noarch.rpm"
+}

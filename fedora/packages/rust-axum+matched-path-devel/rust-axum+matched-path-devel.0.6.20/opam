@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-axum+matched-path-devel-0.6.20-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-axum+matched-path-devel-0.6.20-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-axum-devel" {= "0.6.20"}
+]
+extra-source "rust-axum+matched-path-devel-0.6.20-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-axum+matched-path-devel-0.6.20-2.fc40.noarch.rpm"
+}

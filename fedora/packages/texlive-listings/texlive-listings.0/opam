@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-listings-svn66222-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-listings-svn66222-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-algorithms" 
+  "texlive-base" 
+  "texlive-fancyvrb" 
+  "texlive-graphics" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" 
+  "texlive-url" 
+]
+extra-source "texlive-listings-svn66222-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-listings-svn66222-71.fc40.noarch.rpm"
+}

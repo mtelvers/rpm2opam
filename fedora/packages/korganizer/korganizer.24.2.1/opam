@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "korganizer-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "korganizer-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "akonadi-server" 
+  "glibc" 
+  "kdepim-runtime" 
+  "kf6-kcalendarcore" 
+  "kf6-kconfig" 
+  "kf6-kconfigwidgets" 
+  "kf6-kcoreaddons" 
+  "kf6-kcrash" 
+  "kf6-ki18n" 
+  "kf6-kparts" 
+  "kf6-kuserfeedback" 
+  "kf6-kwidgetsaddons" 
+  "kf6-kxmlgui" 
+  "kontactinterface" 
+  "korganizer-libs" {= "24.2.1"}
+  "libgcc" 
+  "libkdepim" 
+  "libstdc++" 
+  "pimcommon" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+]
+extra-source "korganizer-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/korganizer-24.02.1-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-applets-3.50.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-applets-3.50.0-6.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "cairo-gobject" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gnome-panel" {>= "3.41.1"}
+  "gnome-panel-libs" 
+  "gtk3" 
+  "gucharmap-libs" 
+  "harfbuzz" 
+  "hicolor-icon-theme" 
+  "kernel-tools-libs" 
+  "libICE" 
+  "libSM" 
+  "libX11" 
+  "libgtop2" 
+  "libgweather" 
+  "libnotify" 
+  "libtracker-sparql" 
+  "libwnck3" 
+  "libxml2" 
+  "pango" 
+  "pcre2" 
+  "polkit-libs" 
+  "upower-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "gnome-applets-3.50.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-applets-3.50.0-6.fc40.x86_64.rpm"
+}

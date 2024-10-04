@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-python-keycloak-3.7.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-python-keycloak-3.7.0-1.2.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-deprecation" 
+  "python311-python-jose" {>= "1.4.0"}
+  "python311-requests" {>= "2.20.0"}
+  "python311-requests-toolbelt" 
+]
+extra-source "python311-python-keycloak-3.7.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-python-keycloak-3.7.0-1.2.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "opusfile-0.12-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opusfile-0.12-12.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libogg" 
+  "openssl-libs" 
+  "opus" 
+]
+extra-source "opusfile-0.12-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/opusfile-0.12-12.fc40.x86_64.rpm"
+}

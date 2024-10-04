@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "curl-8.6.0-8.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "curl-8.6.0-8.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcurl" {>= "8.9.1"}
+]
+extra-source "curl-8.6.0-8.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/curl-8.6.0-8.el10.x86_64.rpm"
+}

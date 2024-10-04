@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tkdiff-5.7-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tkdiff-5.7-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "diffutils" 
+  "tcl" 
+  "tk" 
+]
+extra-source "tkdiff-5.7-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tkdiff-5.7-1.1.noarch.rpm"
+}

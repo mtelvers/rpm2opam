@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libbytesize-lang-2.10-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libbytesize-lang-2.10-2.1.noarch.rpm"]
+depends: [
+  "libbytesize1" {= "2.10"}
+]
+extra-source "libbytesize-lang-2.10-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libbytesize-lang-2.10-2.1.noarch.rpm"
+}

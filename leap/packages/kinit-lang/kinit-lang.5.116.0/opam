@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kinit-lang-5.116.0-lp160.1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kinit-lang-5.116.0-lp160.1.2.noarch.rpm"]
+depends: [
+  "kinit" {= "5.116.0"}
+]
+extra-source "kinit-lang-5.116.0-lp160.1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/kinit-lang-5.116.0-lp160.1.2.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libopenvdb10_1-10.1.0-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libopenvdb10_1-10.1.0-1.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libblosc1" 
+  "libboost_iostreams1_86_0" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libtbb12" 
+  "libz-ng-compat1" 
+]
+extra-source "libopenvdb10_1-10.1.0-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libopenvdb10_1-10.1.0-1.4.x86_64.rpm"
+}

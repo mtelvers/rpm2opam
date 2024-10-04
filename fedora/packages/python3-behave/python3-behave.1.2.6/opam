@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-behave-1.2.6-26.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-behave-1.2.6-26.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-parse" {>= "1.8.2"}
+  "python3-parse_type" {>= "0.4.2"}
+  "python3-six" {>= "1.11"}
+]
+extra-source "python3-behave-1.2.6-26.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-behave-1.2.6-26.fc40.noarch.rpm"
+}

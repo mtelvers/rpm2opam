@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libdwarf-devel-static-0.11.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdwarf-devel-static-0.11.0-1.1.x86_64.rpm"]
+depends: [
+  "libdwarf-devel" {= "0.11.0"}
+]
+extra-source "libdwarf-devel-static-0.11.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libdwarf-devel-static-0.11.0-1.1.x86_64.rpm"
+}

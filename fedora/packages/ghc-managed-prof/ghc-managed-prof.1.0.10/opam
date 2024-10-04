@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-managed-prof-1.0.10-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-managed-prof-1.0.10-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-managed-devel" {= "1.0.10"}
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-managed-prof-1.0.10-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-managed-prof-1.0.10-3.fc40.x86_64.rpm"
+}

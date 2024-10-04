@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libspice-server-devel-0.15.1-slfo.1.1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libspice-server-devel-0.15.1-slfo.1.1.6.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.38"}
+  "libcacard-devel" {>= "2.5.1"}
+  "libopenssl-3-devel" 
+  "libpixman-1-0-devel" {>= "0.17.7"}
+  "libspice-server1" {= "0.15.1"}
+  "pkgconf-pkg-config" 
+  "spice-protocol-devel" {>= "0.14.3"}
+]
+extra-source "libspice-server-devel-0.15.1-slfo.1.1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libspice-server-devel-0.15.1-slfo.1.1.6.x86_64.rpm"
+}

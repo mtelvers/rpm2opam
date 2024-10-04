@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-pretty-hex-prof-1.1-4.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-pretty-hex-prof-1.1-4.9.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-pretty-hex-devel" {= "1.1"}
+]
+extra-source "ghc-pretty-hex-prof-1.1-4.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-pretty-hex-prof-1.1-4.9.x86_64.rpm"
+}

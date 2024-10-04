@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "compat-tolua++-devel-1.0.93-20.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "compat-tolua++-devel-1.0.93-20.fc39.x86_64.rpm"]
+depends: [
+  "compat-lua-devel" {>= "5.1"}
+  "compat-lua-libs" 
+  "compat-tolua++" {= "1.0.93"}
+  "glibc" 
+]
+extra-source "compat-tolua++-devel-1.0.93-20.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/compat-tolua++-devel-1.0.93-20.fc39.x86_64.rpm"
+}

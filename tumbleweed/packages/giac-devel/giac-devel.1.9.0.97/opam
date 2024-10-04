@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "giac-devel-1.9.0.97-5.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "giac-devel-1.9.0.97-5.3.x86_64.rpm"]
+depends: [
+  "fltk-devel" 
+  "gsl-devel" 
+  "libgiac0" {= "1.9.0.97"}
+  "mpfi-devel" 
+  "mpfr-devel" 
+  "ntl-devel" 
+]
+extra-source "giac-devel-1.9.0.97-5.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/giac-devel-1.9.0.97-5.3.x86_64.rpm"
+}

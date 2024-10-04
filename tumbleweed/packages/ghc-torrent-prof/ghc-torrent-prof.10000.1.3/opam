@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-torrent-prof-10000.1.3-1.17.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-torrent-prof-10000.1.3-1.17.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bencode-prof" 
+  "ghc-binary-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-filepath-prof" 
+  "ghc-syb-prof" 
+  "ghc-torrent-devel" {= "10000.1.3"}
+]
+extra-source "ghc-torrent-prof-10000.1.3-1.17.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-torrent-prof-10000.1.3-1.17.x86_64.rpm"
+}

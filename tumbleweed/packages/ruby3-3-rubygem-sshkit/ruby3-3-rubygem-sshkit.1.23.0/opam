@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ruby3.3-rubygem-sshkit-1.23.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ruby3.3-rubygem-sshkit-1.23.0-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "ruby3-3" {= "3.3.0"}
+  "ruby3-3-rubygem-net-scp" {>= "1.1.2"}
+  "ruby3-3-rubygem-net-sftp" {>= "2.1.2"}
+  "ruby3-3-rubygem-net-ssh" {>= "2.8.0"}
+]
+extra-source "ruby3.3-rubygem-sshkit-1.23.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ruby3.3-rubygem-sshkit-1.23.0-1.1.x86_64.rpm"
+}

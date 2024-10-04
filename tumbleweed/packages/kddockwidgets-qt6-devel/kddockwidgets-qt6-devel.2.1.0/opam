@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kddockwidgets-qt6-devel-2.1.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kddockwidgets-qt6-devel-2.1.0-2.1.x86_64.rpm"]
+depends: [
+  "libkddockwidgets-qt6-2_1" {= "2.1.0"}
+  "qt6-quick-devel" 
+  "qt6-quickcontrols2-devel" 
+  "qt6-widgets-devel" 
+]
+extra-source "kddockwidgets-qt6-devel-2.1.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kddockwidgets-qt6-devel-2.1.0-2.1.x86_64.rpm"
+}

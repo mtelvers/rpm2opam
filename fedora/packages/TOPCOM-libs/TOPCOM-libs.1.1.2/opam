@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "TOPCOM-libs-1.1.2-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "TOPCOM-libs-1.1.2-2.fc40.x86_64.rpm"]
+depends: [
+  "cddlib" 
+  "glibc" 
+  "gmp" 
+  "gmp-c++" 
+  "libgcc" 
+  "libsoplex" 
+  "libstdc++" 
+  "lusol" 
+  "mpfr" 
+  "qsopt-ex-libs" 
+  "tbb" 
+]
+extra-source "TOPCOM-libs-1.1.2-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/TOPCOM-libs-1.1.2-2.fc40.x86_64.rpm"
+}

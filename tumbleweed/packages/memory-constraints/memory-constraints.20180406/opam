@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "memory-constraints-20180406-4.13.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "memory-constraints-20180406-4.13.noarch.rpm"]
+depends: [
+  "busybox-gawk" 
+  "coreutils" 
+]
+extra-source "memory-constraints-20180406-4.13.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/memory-constraints-20180406-4.13.noarch.rpm"
+}

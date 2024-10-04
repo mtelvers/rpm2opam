@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xml-commons-resolver-1.2-44.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xml-commons-resolver-1.2-44.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+]
+extra-source "xml-commons-resolver-1.2-44.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xml-commons-resolver-1.2-44.fc40.noarch.rpm"
+}

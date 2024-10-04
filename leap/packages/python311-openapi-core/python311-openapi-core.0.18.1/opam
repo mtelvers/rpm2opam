@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-openapi-core-0.18.1-slfo.1.2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-openapi-core-0.18.1-slfo.1.2.1.noarch.rpm"]
+depends: [
+  "python311-Werkzeug" 
+  "python311-asgiref" {>= "3.6.0"}
+  "python311-base" {= "3.11"}
+  "python311-isodate" 
+  "python311-jsonschema" 
+  "python311-jsonschema-spec" 
+  "python311-more-itertools" 
+  "python311-openapi-schema-validator" 
+  "python311-openapi-spec-validator" 
+  "python311-parse" 
+]
+extra-source "python311-openapi-core-0.18.1-slfo.1.2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/python311-openapi-core-0.18.1-slfo.1.2.1.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MooX-Roles-Pluggable-0.003-28.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooX-Roles-Pluggable-0.003-28.fc40.noarch.rpm"]
+depends: [
+  "perl-Module-Pluggable" {>= "4.8"}
+  "perl-Moo" {>= "1.3000"}
+  "perl-libs" {>= "5.8.3"}
+]
+extra-source "perl-MooX-Roles-Pluggable-0.003-28.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MooX-Roles-Pluggable-0.003-28.fc40.noarch.rpm"
+}

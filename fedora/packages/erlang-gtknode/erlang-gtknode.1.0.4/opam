@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "erlang-gtknode-1.0.4-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "erlang-gtknode-1.0.4-19.fc40.x86_64.rpm"]
+depends: [
+  "erlang-erts" 
+  "erlang-inets" 
+  "erlang-kernel" 
+  "erlang-stdlib" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "libglade2" 
+  "pango" 
+]
+extra-source "erlang-gtknode-1.0.4-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/erlang-gtknode-1.0.4-19.fc40.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "os-prober-1.81-2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "os-prober-1.81-2.5.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-grep" 
+  "busybox-kmod" 
+  "busybox-sed" 
+  "coreutils" 
+  "glibc" 
+  "udev" 
+  "util-linux" 
+  "util-linux-systemd" 
+]
+extra-source "os-prober-1.81-2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/os-prober-1.81-2.5.x86_64.rpm"
+}

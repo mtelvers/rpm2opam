@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-SOAP-WSDL-3.004-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-SOAP-WSDL-3.004-16.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Class-Load" 
+  "perl-Class-Std-Fast" 
+  "perl-Data-Dumper" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long" 
+  "perl-PathTools" 
+  "perl-Pod-Usage" 
+  "perl-SOAP-Lite" 
+  "perl-Scalar-List-Utils" 
+  "perl-Template-Toolkit" {>= "2.18"}
+  "perl-TermReadKey" 
+  "perl-TimeDate" 
+  "perl-URI" 
+  "perl-XML-Parser" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-libwww-perl" 
+  "perl-vars" 
+]
+extra-source "perl-SOAP-WSDL-3.004-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-SOAP-WSDL-3.004-16.fc40.noarch.rpm"
+}

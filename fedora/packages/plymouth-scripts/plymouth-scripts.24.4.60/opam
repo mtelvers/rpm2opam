@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "plymouth-scripts-24.004.60-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plymouth-scripts-24.004.60-4.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "cpio" 
+  "dracut" 
+  "findutils" 
+  "gzip" 
+  "xkeyboard-config" 
+]
+extra-source "plymouth-scripts-24.004.60-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/plymouth-scripts-24.004.60-4.fc40.x86_64.rpm"
+}

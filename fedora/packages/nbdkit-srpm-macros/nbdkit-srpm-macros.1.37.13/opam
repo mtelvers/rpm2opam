@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nbdkit-srpm-macros-1.37.13-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nbdkit-srpm-macros-1.37.13-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+]
+extra-source "nbdkit-srpm-macros-1.37.13-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nbdkit-srpm-macros-1.37.13-1.fc40.noarch.rpm"
+}

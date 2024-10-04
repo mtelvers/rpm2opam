@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-saharaclient-4.2.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-saharaclient-4.2.0-3.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-keystoneauth1" {>= "3.4"}
+  "python3-openstackclient" {>= "5.2"}
+  "python3-osc-lib" {>= "2"}
+  "python3-oslo-i18n" {>= "3.20"}
+  "python3-oslo-log" {>= "5"}
+  "python3-oslo-serialization" {>= "2.25"}
+  "python3-oslo-utils" {>= "3.33"}
+  "python3-pbr" {>= "3.1.1"}
+  "python3-requests" {>= "2.14.2"}
+]
+extra-source "python3-saharaclient-4.2.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-saharaclient-4.2.0-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libOpenSceneGraph161-3.6.5-9.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libOpenSceneGraph161-3.6.5-9.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libOpenThreads21" 
+  "libX11-6" 
+  "libXrandr2" 
+  "libfontconfig1" 
+  "libgcc_s1" 
+  "libglvnd" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+]
+extra-source "libOpenSceneGraph161-3.6.5-9.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libOpenSceneGraph161-3.6.5-9.3.x86_64.rpm"
+}

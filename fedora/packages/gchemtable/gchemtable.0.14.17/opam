@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gchemtable-0.14.17-46.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gchemtable-0.14.17-46.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "glib2" 
+  "glibc" 
+  "gnome-chemistry-utils-libs" {= "0.14.17"}
+  "goffice" 
+  "gtk3" 
+  "hicolor-icon-theme" 
+  "libgcc" 
+  "libgsf" 
+  "libstdc++" 
+]
+extra-source "gchemtable-0.14.17-46.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gchemtable-0.14.17-46.fc40.x86_64.rpm"
+}

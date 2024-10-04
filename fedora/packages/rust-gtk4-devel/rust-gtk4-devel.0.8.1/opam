@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gtk4-devel-0.8.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gtk4-devel-0.8.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.70"}
+  "rust-cairo-rs+default-devel" 
+  "rust-cairo-rs+use_glib-devel" 
+  "rust-field-offset+default-devel" 
+  "rust-futures-channel+default-devel" 
+  "rust-gdk-pixbuf+default-devel" 
+  "rust-gdk4+default-devel" 
+  "rust-gio+default-devel" 
+  "rust-gio+v2_66-devel" 
+  "rust-glib+default-devel" 
+  "rust-glib+v2_66-devel" 
+  "rust-graphene-rs+default-devel" 
+  "rust-gsk4+default-devel" 
+  "rust-gtk4-macros+default-devel" 
+  "rust-gtk4-sys+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-pango+default-devel" 
+  "rust-pango+v1_46-devel" 
+]
+extra-source "rust-gtk4-devel-0.8.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gtk4-devel-0.8.1-1.fc40.noarch.rpm"
+}

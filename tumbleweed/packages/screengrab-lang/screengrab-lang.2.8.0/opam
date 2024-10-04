@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "screengrab-lang-2.8.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "screengrab-lang-2.8.0-1.1.noarch.rpm"]
+depends: [
+  "screengrab" {= "2.8.0"}
+]
+extra-source "screengrab-lang-2.8.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/screengrab-lang-2.8.0-1.1.noarch.rpm"
+}

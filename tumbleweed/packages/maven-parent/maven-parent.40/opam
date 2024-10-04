@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-parent-40-2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-parent-40-2.3.noarch.rpm"]
+depends: [
+  "apache-parent" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "maven-parent-40-2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-parent-40-2.3.noarch.rpm"
+}

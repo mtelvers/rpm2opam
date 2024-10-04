@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vlc-jack-3.0.21-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vlc-jack-3.0.21-3.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libjack0" 
+  "libvlccore9" 
+  "vlc-noX" {= "3.0.21"}
+]
+extra-source "vlc-jack-3.0.21-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vlc-jack-3.0.21-3.2.x86_64.rpm"
+}

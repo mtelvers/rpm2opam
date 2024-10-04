@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-dateparser-1.2.0-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-dateparser-1.2.0-1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-python-dateutil" 
+  "python312-pytz" 
+  "python312-regex" 
+  "python312-tzlocal" 
+  "update-alternatives" 
+]
+extra-source "python312-dateparser-1.2.0-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-dateparser-1.2.0-1.4.noarch.rpm"
+}

@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "eric-24.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eric-24.3-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "black" 
+  "python3" {= "3.12"}
+  "python3-asttokens" 
+  "python3-chardet" 
+  "python3-coverage" 
+  "python3-docutils" 
+  "python3-editorconfig" 
+  "python3-isort" 
+  "python3-jedi" 
+  "python3-markdown" 
+  "python3-packaging" 
+  "python3-parso" 
+  "python3-pip" 
+  "python3-pygments" 
+  "python3-pyqt6" 
+  "python3-pyqt6-charts" 
+  "python3-pyqt6-webengine" 
+  "python3-pyyaml" 
+  "python3-qscintilla-qt6" 
+  "python3-semver" 
+  "python3-tomlkit" 
+  "python3-trove-classifiers" 
+  "python3-wheel" 
+]
+extra-source "eric-24.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/eric-24.3-1.fc40.noarch.rpm"
+}

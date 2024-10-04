@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-curb-1.0.5-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-curb-1.0.5-4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcurl" 
+  "ruby-libs" 
+  "rubygems" 
+]
+extra-source "rubygem-curb-1.0.5-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-curb-1.0.5-4.fc40.x86_64.rpm"
+}

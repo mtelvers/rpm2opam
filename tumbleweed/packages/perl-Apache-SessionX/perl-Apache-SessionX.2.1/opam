@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Apache-SessionX-2.01-244.32.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Apache-SessionX-2.01-244.32.x86_64.rpm"]
+depends: [
+  "apache2-mod_perl" 
+  "perl" 
+  "perl-DBI" 
+  "perl-URI" 
+]
+extra-source "perl-Apache-SessionX-2.01-244.32.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-Apache-SessionX-2.01-244.32.x86_64.rpm"
+}

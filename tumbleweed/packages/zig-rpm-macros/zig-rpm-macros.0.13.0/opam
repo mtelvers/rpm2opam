@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zig-rpm-macros-0.13.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zig-rpm-macros-0.13.0-1.1.noarch.rpm"]
+depends: [
+  "rpm" 
+]
+extra-source "zig-rpm-macros-0.13.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/zig-rpm-macros-0.13.0-1.1.noarch.rpm"
+}

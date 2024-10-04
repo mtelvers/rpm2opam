@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "clang17-analyzer-17.0.6-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clang17-analyzer-17.0.6-7.fc40.x86_64.rpm"]
+depends: [
+  "clang17" {= "17.0.6"}
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-FindBin" 
+  "perl-Hash-Util" 
+  "perl-PathTools" 
+  "perl-Sys-Hostname" 
+  "perl-Term-ANSIColor" 
+  "perl-Text-ParseWords" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "python3" 
+]
+extra-source "clang17-analyzer-17.0.6-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/clang17-analyzer-17.0.6-7.fc40.x86_64.rpm"
+}

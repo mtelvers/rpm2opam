@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-ps2eps-svn62856-81.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-ps2eps-svn62856-81.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-Getopt-Long" 
+  "perl-POSIX" 
+  "perl-interpreter" 
+  "texlive-base" 
+  "texlive-kpathsea" 
+]
+extra-source "texlive-ps2eps-svn62856-81.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-ps2eps-svn62856-81.fc40.x86_64.rpm"
+}

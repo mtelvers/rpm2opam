@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-File-Find-Rule-VCS-1.09-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-Find-Rule-VCS-1.09-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-File-Find-Rule" {>= "0.20"}
+  "perl-Text-Glob" {>= "0.8"}
+  "perl-constant" 
+  "perl-libs" {>= "5.5.30"}
+]
+extra-source "perl-File-Find-Rule-VCS-1.09-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-File-Find-Rule-VCS-1.09-4.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libldb-2.9.1-5.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libldb-2.9.1-5.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libtalloc" {>= "2.4.2"}
+  "libtdb" {>= "1.4.10"}
+  "libtevent" {>= "0.16.1"}
+  "lmdb-libs" 
+  "openldap" 
+]
+extra-source "libldb-2.9.1-5.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/libldb-2.9.1-5.el10.x86_64.rpm"
+}

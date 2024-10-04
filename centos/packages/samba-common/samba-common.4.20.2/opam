@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "samba-common-4.20.2-104.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "samba-common-4.20.2-104.el10.noarch.rpm"]
+depends: [
+  "bash" 
+]
+extra-source "samba-common-4.20.2-104.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/samba-common-4.20.2-104.el10.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libframecpp6-10-3.0.4-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libframecpp6-10-3.0.4-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libframecpp3-8" 
+  "libframecpp4-10" 
+  "libframecppcmn12" 
+  "libgcc_s1" 
+  "libldastoolsal7" 
+  "libstdc++6" 
+]
+extra-source "libframecpp6-10-3.0.4-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libframecpp6-10-3.0.4-1.2.x86_64.rpm"
+}

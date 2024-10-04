@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw64-nbdkit-1.37.13-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-nbdkit-1.37.13-1.fc40.noarch.rpm"]
+depends: [
+  "mingw64-crt" 
+  "mingw64-dlfcn" 
+  "mingw64-filesystem" 
+  "mingw64-gnutls" 
+  "mingw64-libgcc" 
+  "mingw64-libstdc++" 
+  "mingw64-winpthreads" 
+  "mingw64-xz-libs" 
+  "mingw64-zlib" 
+  "pkgconf-pkg-config" 
+]
+extra-source "mingw64-nbdkit-1.37.13-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw64-nbdkit-1.37.13-1.fc40.noarch.rpm"
+}

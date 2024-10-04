@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "opencryptoki-libs-3.23.0-5.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opencryptoki-libs-3.23.0-5.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libgcc" 
+  "openssl-libs" 
+  "shadow-utils" 
+]
+extra-source "opencryptoki-libs-3.23.0-5.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/opencryptoki-libs-3.23.0-5.el10.x86_64.rpm"
+}

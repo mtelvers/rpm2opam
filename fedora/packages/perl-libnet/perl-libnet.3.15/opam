@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-libnet-3.15-503.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-libnet-3.15-503.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Digest-MD5" 
+  "perl-Errno" 
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-FileHandle" 
+  "perl-IO" {>= "1.5"}
+  "perl-IO-Socket-IP" {>= "0.25"}
+  "perl-POSIX" 
+  "perl-Socket" {>= "2.16"}
+  "perl-Symbol" 
+  "perl-Time-Local" 
+  "perl-constant" 
+  "perl-libnet" 
+]
+extra-source "perl-libnet-3.15-503.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-libnet-3.15-503.fc40.noarch.rpm"
+}

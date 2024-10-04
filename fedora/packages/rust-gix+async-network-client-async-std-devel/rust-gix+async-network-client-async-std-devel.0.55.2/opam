@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gix+async-network-client-async-std-devel-0.55.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gix+async-network-client-async-std-devel-0.55.2-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-gix+async-network-client-devel" {= "0.55.2"}
+  "rust-gix+async-std-devel" {= "0.55.2"}
+  "rust-gix-devel" {= "0.55.2"}
+  "rust-gix-transport+async-std-devel" 
+  "rust-gix-transport+default-devel" 
+]
+extra-source "rust-gix+async-network-client-async-std-devel-0.55.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gix+async-network-client-async-std-devel-0.55.2-3.fc40.noarch.rpm"
+}

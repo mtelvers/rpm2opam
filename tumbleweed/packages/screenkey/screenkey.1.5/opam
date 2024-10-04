@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "screenkey-1.5-1.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "screenkey-1.5-1.10.noarch.rpm"]
+depends: [
+  "python311" 
+  "python311-base" 
+  "python311-dbus-python" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-pycairo" 
+  "slop" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+]
+extra-source "screenkey-1.5-1.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/screenkey-1.5-1.10.noarch.rpm"
+}

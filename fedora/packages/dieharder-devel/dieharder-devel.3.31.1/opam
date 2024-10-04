@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dieharder-devel-3.31.1-38.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dieharder-devel-3.31.1-38.fc40.x86_64.rpm"]
+depends: [
+  "dieharder" {= "3.31.1"}
+  "dieharder-libs" 
+]
+extra-source "dieharder-devel-3.31.1-38.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dieharder-devel-3.31.1-38.fc40.x86_64.rpm"
+}

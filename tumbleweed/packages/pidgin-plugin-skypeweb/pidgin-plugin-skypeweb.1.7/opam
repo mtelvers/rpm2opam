@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pidgin-plugin-skypeweb-1.7-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pidgin-plugin-skypeweb-1.7-1.5.x86_64.rpm"]
+depends: [
+  "libpurple-plugin-skypeweb" {= "1.7"}
+  "pidgin" {>= "2.14.12"}
+]
+extra-source "pidgin-plugin-skypeweb-1.7-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pidgin-plugin-skypeweb-1.7-1.5.x86_64.rpm"
+}

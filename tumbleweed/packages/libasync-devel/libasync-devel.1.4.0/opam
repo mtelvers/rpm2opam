@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libasync-devel-1.4.0-6.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libasync-devel-1.4.0-6.2.x86_64.rpm"]
+depends: [
+  "libasync1_6" {= "1.4.0"}
+]
+extra-source "libasync-devel-1.4.0-6.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libasync-devel-1.4.0-6.2.x86_64.rpm"
+}

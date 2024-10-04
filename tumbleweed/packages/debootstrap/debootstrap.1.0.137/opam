@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "debootstrap-1.0.137-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "debootstrap-1.0.137-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "binutils" 
+  "wget" 
+]
+extra-source "debootstrap-1.0.137-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/debootstrap-1.0.137-1.1.noarch.rpm"
+}

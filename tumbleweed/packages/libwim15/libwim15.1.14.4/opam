@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libwim15-1.14.4-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libwim15-1.14.4-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libfuse3-3" 
+  "libntfs-3g89" 
+]
+extra-source "libwim15-1.14.4-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libwim15-1.14.4-1.2.x86_64.rpm"
+}

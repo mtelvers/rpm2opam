@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ipuz-convertor-0.3.12-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ipuz-convertor-0.3.12-4.fc40.noarch.rpm"]
+depends: [
+  "crosswords" 
+  "python3" 
+  "python3-dateparser" 
+  "python3-lxml" 
+  "python3-puzpy" 
+  "python3-regex" 
+]
+extra-source "ipuz-convertor-0.3.12-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/ipuz-convertor-0.3.12-4.fc40.noarch.rpm"
+}

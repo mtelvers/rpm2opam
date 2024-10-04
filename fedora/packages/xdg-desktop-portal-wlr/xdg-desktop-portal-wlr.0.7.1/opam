@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xdg-desktop-portal-wlr-0.7.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xdg-desktop-portal-wlr-0.7.1-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dbus" 
+  "glibc" 
+  "grim" 
+  "inih" 
+  "libdrm" 
+  "libwayland-client" 
+  "mesa-libgbm" 
+  "pipewire-libs" 
+  "systemd-libs" 
+  "xdg-desktop-portal" 
+]
+extra-source "xdg-desktop-portal-wlr-0.7.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xdg-desktop-portal-wlr-0.7.1-1.fc40.x86_64.rpm"
+}

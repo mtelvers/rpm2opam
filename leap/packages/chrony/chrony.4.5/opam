@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "chrony-4.5-slfo.1.1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "chrony-4.5-slfo.1.1.6.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "chrony-pool-empty" 
+  "fillup" 
+  "glibc" 
+  "libcap2" 
+  "libedit0" 
+  "libgnutls30" 
+  "libnettle8" 
+  "libseccomp2" 
+  "sysuser-shadow" {>= "3.1"}
+]
+extra-source "chrony-4.5-slfo.1.1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/chrony-4.5-slfo.1.1.6.x86_64.rpm"
+}

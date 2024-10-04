@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-postgresql-libpq-prof-0.10.1.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-postgresql-libpq-prof-0.10.1.0-2.1.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-postgresql-libpq-devel" {= "0.10.1.0"}
+  "ghc-unix-prof" 
+]
+extra-source "ghc-postgresql-libpq-prof-0.10.1.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-postgresql-libpq-prof-0.10.1.0-2.1.x86_64.rpm"
+}

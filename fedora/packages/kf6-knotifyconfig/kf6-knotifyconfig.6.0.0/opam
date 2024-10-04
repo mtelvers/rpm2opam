@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kf6-knotifyconfig-6.0.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kf6-knotifyconfig-6.0.0-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf6-filesystem" 
+  "kf6-kconfig" 
+  "kf6-ki18n" 
+  "kf6-kio-widgets-libs" 
+  "libcanberra" 
+  "libstdc++" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+]
+extra-source "kf6-knotifyconfig-6.0.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kf6-knotifyconfig-6.0.0-1.fc40.x86_64.rpm"
+}

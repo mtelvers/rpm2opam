@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lib389-3.1.1~git13.a9c7ff9-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lib389-3.1.1~git13.a9c7ff9-1.1.x86_64.rpm"]
+depends: [
+  "iproute2" 
+  "krb5-client" 
+  "libressl" 
+  "mozilla-nss-tools" 
+  "python311-argcomplete" 
+  "python311-argparse-manpage" 
+  "python311-base" 
+  "python311-cryptography" 
+  "python311-distro" 
+  "python311-ldap" {>= "3.0"}
+  "python311-pyasn1" 
+  "python311-pyasn1-modules" 
+  "python311-python-dateutil" 
+  "python311-python-slugify" 
+]
+extra-source "lib389-3.1.1~git13.a9c7ff9-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lib389-3.1.1~git13.a9c7ff9-1.1.x86_64.rpm"
+}

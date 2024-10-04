@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-devel-2024.212-62.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-devel-2024.212-62.2.noarch.rpm"]
+depends: [
+  "texlive-bin-devel" {>= "2024"}
+  "texlive-cweb" {>= "2024"}
+  "texlive-kpathsea-devel" {= "6.4.0"}
+  "texlive-ptexenc-devel" {= "1.4.6"}
+  "texlive-synctex-devel" {= "1.21"}
+  "texlive-texlua-devel" {= "5.3.6"}
+  "texlive-web" {>= "2024"}
+]
+extra-source "texlive-devel-2024.212-62.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-devel-2024.212-62.2.noarch.rpm"
+}

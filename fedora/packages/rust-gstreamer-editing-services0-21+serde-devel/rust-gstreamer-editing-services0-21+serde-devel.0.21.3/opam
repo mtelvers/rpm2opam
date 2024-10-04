@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gstreamer-editing-services0.21+serde-devel-0.21.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gstreamer-editing-services0.21+serde-devel-0.21.3-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-gstreamer+serde-devel" 
+  "rust-gstreamer-editing-services0-21-devel" {= "0.21.3"}
+  "rust-gstreamer-pbutils+serde-devel" 
+  "rust-serde+default-devel" 
+]
+extra-source "rust-gstreamer-editing-services0.21+serde-devel-0.21.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gstreamer-editing-services0.21+serde-devel-0.21.3-1.fc40.noarch.rpm"
+}

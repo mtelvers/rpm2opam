@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pyjwkest-1.4.2-3.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pyjwkest-1.4.2-3.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-pycryptodomex" 
+  "python311-requests" 
+  "python311-six" 
+  "update-alternatives" 
+]
+extra-source "python311-pyjwkest-1.4.2-3.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pyjwkest-1.4.2-3.3.noarch.rpm"
+}

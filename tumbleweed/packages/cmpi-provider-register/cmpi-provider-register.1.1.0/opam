@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cmpi-provider-register-1.1.0-2.16.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cmpi-provider-register-1.1.0-2.16.noarch.rpm"]
+depends: [
+  "cim-schema" 
+  "python311-base" 
+  "python311-pywbem" 
+]
+extra-source "cmpi-provider-register-1.1.0-2.16.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cmpi-provider-register-1.1.0-2.16.noarch.rpm"
+}

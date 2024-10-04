@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-fritzconnection-1.13.2-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-fritzconnection-1.13.2-1.3.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-lxml" 
+  "python311-requests" 
+  "python311-setuptools" 
+]
+extra-source "python3-fritzconnection-1.13.2-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-fritzconnection-1.13.2-1.3.noarch.rpm"
+}

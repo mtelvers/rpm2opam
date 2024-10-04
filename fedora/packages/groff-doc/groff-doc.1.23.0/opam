@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "groff-doc-1.23.0-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "groff-doc-1.23.0-6.fc40.noarch.rpm"]
+depends: [
+  "groff" {= "1.23.0"}
+]
+extra-source "groff-doc-1.23.0-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/groff-doc-1.23.0-6.fc40.noarch.rpm"
+}

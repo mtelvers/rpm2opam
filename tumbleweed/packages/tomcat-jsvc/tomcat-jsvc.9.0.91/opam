@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tomcat-jsvc-9.0.91-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tomcat-jsvc-9.0.91-2.1.noarch.rpm"]
+depends: [
+  "apache-commons-daemon-jsvc" 
+  "bash-sh" 
+  "tomcat" {= "9.0.91"}
+]
+extra-source "tomcat-jsvc-9.0.91-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tomcat-jsvc-9.0.91-2.1.noarch.rpm"
+}

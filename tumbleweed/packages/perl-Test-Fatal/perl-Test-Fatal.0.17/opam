@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-Fatal-0.017-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Fatal-0.017-1.7.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Try-Tiny" {>= "0.7"}
+]
+extra-source "perl-Test-Fatal-0.017-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-Fatal-0.017-1.7.noarch.rpm"
+}

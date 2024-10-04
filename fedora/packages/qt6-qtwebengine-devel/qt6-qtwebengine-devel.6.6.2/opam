@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qt6-qtwebengine-devel-6.6.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qt6-qtwebengine-devel-6.6.2-1.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "pkgconf-pkg-config" 
+  "qt6-qtbase-devel" 
+  "qt6-qtdeclarative-devel" 
+  "qt6-qtpdf-devel" {= "6.6.2"}
+  "qt6-qtpositioning-devel" 
+  "qt6-qtwebchannel-devel" 
+  "qt6-qtwebengine" 
+  "qt6-qtwebengine-devtools" {= "6.6.2"}
+]
+extra-source "qt6-qtwebengine-devel-6.6.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qt6-qtwebengine-devel-6.6.2-1.fc40.x86_64.rpm"
+}

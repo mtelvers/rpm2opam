@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "iproute-6.7.0-4.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "iproute-6.7.0-4.el10.x86_64.rpm"]
+depends: [
+  "elfutils-libelf" 
+  "glibc" 
+  "libbpf" 
+  "libcap" 
+  "libmnl" 
+  "libselinux" 
+  "psmisc" 
+]
+extra-source "iproute-6.7.0-4.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/iproute-6.7.0-4.el10.x86_64.rpm"
+}

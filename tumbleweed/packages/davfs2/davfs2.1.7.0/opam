@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "davfs2-1.7.0-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "davfs2-1.7.0-4.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "fuse" {>= "2.2"}
+  "glibc" 
+  "libneon27" 
+  "shadow" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "davfs2-1.7.0-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/davfs2-1.7.0-4.1.x86_64.rpm"
+}

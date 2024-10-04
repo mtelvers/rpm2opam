@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-gstreamer-devel-4.2.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-gstreamer-devel-4.2.1-1.fc40.x86_64.rpm"]
+depends: [
+  "pkgconf-pkg-config" 
+  "rubygem-gstreamer" {= "4.2.1"}
+]
+extra-source "rubygem-gstreamer-devel-4.2.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-gstreamer-devel-4.2.1-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "longhornctl-bash-completion-1.7.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "longhornctl-bash-completion-1.7.1-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "longhornctl" {= "1.7.1"}
+]
+extra-source "longhornctl-bash-completion-1.7.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/longhornctl-bash-completion-1.7.1-1.1.noarch.rpm"
+}

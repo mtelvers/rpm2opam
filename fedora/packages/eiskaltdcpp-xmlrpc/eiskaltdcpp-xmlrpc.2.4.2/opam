@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "eiskaltdcpp-xmlrpc-2.4.2-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eiskaltdcpp-xmlrpc-2.4.2-11.fc40.x86_64.rpm"]
+depends: [
+  "eiskaltdcpp" {= "2.4.2"}
+  "perl-Env" 
+  "perl-Getopt-Long" 
+  "perl-PathTools" 
+  "perl-RPC-XML" 
+  "perl-Term-ShellUI" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "eiskaltdcpp-xmlrpc-2.4.2-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/eiskaltdcpp-xmlrpc-2.4.2-11.fc40.x86_64.rpm"
+}

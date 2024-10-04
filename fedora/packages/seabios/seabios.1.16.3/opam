@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "seabios-1.16.3-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "seabios-1.16.3-2.fc40.noarch.rpm"]
+depends: [
+  "seabios-bin" {= "1.16.3"}
+  "seavgabios-bin" {= "1.16.3"}
+]
+extra-source "seabios-1.16.3-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/seabios-1.16.3-2.fc40.noarch.rpm"
+}

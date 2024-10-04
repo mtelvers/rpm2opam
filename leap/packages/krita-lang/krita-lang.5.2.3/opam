@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "krita-lang-5.2.3-lp160.1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "krita-lang-5.2.3-lp160.1.5.noarch.rpm"]
+depends: [
+  "krita" {= "5.2.3"}
+]
+extra-source "krita-lang-5.2.3-lp160.1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/krita-lang-5.2.3-lp160.1.5.noarch.rpm"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dpkg-1.22.11-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dpkg-1.22.11-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "cpio" 
+  "glibc" 
+  "libbz2-1" 
+  "liblzma5" 
+  "libncurses6" 
+  "libopenssl3" 
+  "libselinux1" 
+  "libz-ng-compat1" 
+  "make" 
+  "patch" 
+  "perl" 
+  "perl-TimeDate" 
+  "perl-base" 
+  "update-alternatives" 
+]
+extra-source "dpkg-1.22.11-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/dpkg-1.22.11-1.1.x86_64.rpm"
+}

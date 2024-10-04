@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sundials-mvapich2-devel-7.1.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sundials-mvapich2-devel-7.1.1-1.1.x86_64.rpm"]
+depends: [
+  "libsundials_arkode6-mvapich2" {= "7.1.1"}
+  "libsundials_core7-mvapich2" {= "7.1.1"}
+  "libsundials_cvode7-mvapich2" {= "7.1.1"}
+  "libsundials_cvodes7-mvapich2" {= "7.1.1"}
+  "libsundials_ida7-mvapich2" {= "7.1.1"}
+  "libsundials_idas6-mvapich2" {= "7.1.1"}
+  "libsundials_kinsol7-mvapich2" {= "7.1.1"}
+  "libsundials_nvec7-mvapich2" {= "7.1.1"}
+  "libsundials_sunlinsol5-mvapich2" {= "7.1.1"}
+  "libsundials_sunmatrix5-mvapich2" {= "7.1.1"}
+  "libsundials_sunnonlin4-mvapich2" {= "7.1.1"}
+]
+extra-source "sundials-mvapich2-devel-7.1.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sundials-mvapich2-devel-7.1.1-1.1.x86_64.rpm"
+}

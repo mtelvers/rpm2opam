@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "element-desktop-1.11.77-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "element-desktop-1.11.77-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "element-web" {= "1.11.77"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libsecret-1-0" 
+  "libstdc++6" 
+  "nodejs-electron" 
+]
+extra-source "element-desktop-1.11.77-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/element-desktop-1.11.77-1.1.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-django-q-1.3.9-7.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-django-q-1.3.9-7.1.noarch.rpm"]
+depends: [
+  "python311-Django" 
+  "python311-arrow" 
+  "python311-base" {= "3.11"}
+  "python311-blessed" 
+  "python311-django-picklefield" 
+  "python311-redis" 
+]
+extra-source "python311-django-q-1.3.9-7.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-django-q-1.3.9-7.1.noarch.rpm"
+}

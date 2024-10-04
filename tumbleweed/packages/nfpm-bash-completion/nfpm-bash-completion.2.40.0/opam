@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nfpm-bash-completion-2.40.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nfpm-bash-completion-2.40.0-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "nfpm" {= "2.40.0"}
+]
+extra-source "nfpm-bash-completion-2.40.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nfpm-bash-completion-2.40.0-1.1.noarch.rpm"
+}

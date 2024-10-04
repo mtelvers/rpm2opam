@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-semigroupoids-prof-5.3.7-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-semigroupoids-prof-5.3.7-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-orphans-prof" 
+  "ghc-base-prof" 
+  "ghc-bifunctors-prof" 
+  "ghc-comonad-prof" 
+  "ghc-containers-prof" 
+  "ghc-contravariant-prof" 
+  "ghc-distributive-prof" 
+  "ghc-hashable-prof" 
+  "ghc-semigroupoids-devel" {= "5.3.7"}
+  "ghc-tagged-prof" 
+  "ghc-template-haskell-prof" 
+  "ghc-transformers-compat-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unordered-containers-prof" 
+]
+extra-source "ghc-semigroupoids-prof-5.3.7-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-semigroupoids-prof-5.3.7-8.fc40.x86_64.rpm"
+}

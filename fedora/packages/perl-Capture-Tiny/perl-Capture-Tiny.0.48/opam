@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Capture-Tiny-0.48-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Capture-Tiny-0.48-20.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-File-Temp" 
+  "perl-IO" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "perl-Capture-Tiny-0.48-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Capture-Tiny-0.48-20.fc40.noarch.rpm"
+}

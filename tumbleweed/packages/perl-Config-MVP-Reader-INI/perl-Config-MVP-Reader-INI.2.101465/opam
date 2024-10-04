@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Config-MVP-Reader-INI-2.101465-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Config-MVP-Reader-INI-2.101465-1.7.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Config-INI" 
+  "perl-Config-MVP" {>= "2"}
+  "perl-Moose" 
+  "perl-base" 
+]
+extra-source "perl-Config-MVP-Reader-INI-2.101465-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Config-MVP-Reader-INI-2.101465-1.7.noarch.rpm"
+}

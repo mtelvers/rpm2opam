@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kpcli-4.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kpcli-4.0-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Capture-Tiny" 
+  "perl-Carp" 
+  "perl-Clone" 
+  "perl-Crypt-Rijndael" 
+  "perl-Data-Dumper" 
+  "perl-Digest" 
+  "perl-Digest-MD5" 
+  "perl-Digest-SHA" 
+  "perl-English" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-KeePass" {>= "0.3"}
+  "perl-FileHandle" 
+  "perl-Getopt-Long" 
+  "perl-Module-Loaded" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Sort-Naturally" 
+  "perl-Term-ANSIColor" 
+  "perl-Term-ReadLine" 
+  "perl-Term-ReadLine-Gnu" 
+  "perl-Term-ShellUI" 
+  "perl-TermReadKey" 
+  "perl-Time-HiRes" 
+  "perl-Time-Local" 
+  "perl-Time-Piece" 
+  "perl-XML-Parser" 
+  "perl-constant" 
+  "perl-diagnostics" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.9.4"}
+  "perl-subs" 
+  "perl-version" 
+]
+extra-source "kpcli-4.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kpcli-4.0-3.fc40.noarch.rpm"
+}

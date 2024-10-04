@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rand_xoshiro+serde1-devel-0.6.0-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rand_xoshiro+serde1-devel-0.6.0-7.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-rand_xoshiro+serde-devel" {= "0.6.0"}
+  "rust-rand_xoshiro-devel" {= "0.6.0"}
+]
+extra-source "rust-rand_xoshiro+serde1-devel-0.6.0-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rand_xoshiro+serde1-devel-0.6.0-7.fc40.noarch.rpm"
+}

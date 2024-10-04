@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "stk-devel-4.6.1-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "stk-devel-4.6.1-8.fc40.x86_64.rpm"]
+depends: [
+  "stk" {= "4.6.1"}
+]
+extra-source "stk-devel-4.6.1-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/stk-devel-4.6.1-8.fc40.x86_64.rpm"
+}

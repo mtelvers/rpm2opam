@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-symfony4-dependency-injection-4.4.50-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-symfony4-dependency-injection-4.4.50-7.fc40.noarch.rpm"]
+depends: [
+  "php-common" 
+  "php-psr-container" 
+  "php-symfony-contracts" 
+  "php-symfony4-common" {= "4.4.50"}
+  "php-xml" 
+]
+extra-source "php-symfony4-dependency-injection-4.4.50-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-symfony4-dependency-injection-4.4.50-7.fc40.noarch.rpm"
+}

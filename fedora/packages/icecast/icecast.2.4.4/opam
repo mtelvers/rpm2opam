@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "icecast-2.4.4-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "icecast-2.4.4-16.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libcurl" 
+  "libogg" 
+  "libtheora" 
+  "libvorbis" 
+  "libxml2" 
+  "libxslt" 
+  "mailcap" 
+  "openssl-libs" 
+  "shadow-utils" 
+  "speex" 
+  "systemd" 
+]
+extra-source "icecast-2.4.4-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/icecast-2.4.4-16.fc40.x86_64.rpm"
+}

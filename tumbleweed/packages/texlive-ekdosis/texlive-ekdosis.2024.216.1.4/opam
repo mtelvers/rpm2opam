@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-ekdosis-2024.216.1.4svn69568-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-ekdosis-2024.216.1.4svn69568-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-etoolbox" 
+  "texlive-expkv-bundle" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-ifoddpage" 
+  "texlive-iftex" 
+  "texlive-keyfloat" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-lineno" 
+  "texlive-ltxcmds" 
+  "texlive-luacode" 
+  "texlive-paracol" 
+  "texlive-parnotes" 
+  "texlive-pdftexcmds" 
+  "texlive-refcount" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tcolorbox" 
+  "texlive-trivfloat" 
+  "texlive-verse" 
+  "texlive-zref" 
+]
+extra-source "texlive-ekdosis-2024.216.1.4svn69568-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-ekdosis-2024.216.1.4svn69568-57.1.noarch.rpm"
+}

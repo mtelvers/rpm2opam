@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gmime-devel-3.2.14-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gmime-devel-3.2.14-2.2.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libgmime-3_0-0" {= "3.2.14"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gmime-devel-3.2.14-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gmime-devel-3.2.14-2.2.x86_64.rpm"
+}

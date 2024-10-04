@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glycin-loaders-devel-1.1.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glycin-loaders-devel-1.1.1-2.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.60"}
+  "gtk4-devel" {>= "4.12.0"}
+  "libglycin-1-0" {= "1.1.1"}
+  "libglycin-gtk4-1-0" {= "1.1.1"}
+  "liblcms2-devel" {>= "2.14"}
+  "libseccomp-devel" {>= "2.5.0"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-GlyGtk4_1" {= "1.1.1"}
+  "typelib-1_0-Gly_1" {= "1.1.1"}
+]
+extra-source "glycin-loaders-devel-1.1.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/glycin-loaders-devel-1.1.1-2.1.x86_64.rpm"
+}

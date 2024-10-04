@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libngtcp2-devel-1.6.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libngtcp2-devel-1.6.0-2.1.x86_64.rpm"]
+depends: [
+  "libngtcp2-16" {= "1.6.0"}
+  "libngtcp2_crypto_gnutls8" {= "1.6.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libngtcp2-devel-1.6.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libngtcp2-devel-1.6.0-2.1.x86_64.rpm"
+}

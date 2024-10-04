@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "boost-graph-mpich-1.83.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "boost-graph-mpich-1.83.0-3.fc40.x86_64.rpm"]
+depends: [
+  "boost-mpich" {= "1.83.0"}
+  "boost-serialization" {= "1.83.0"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "mpich" 
+]
+extra-source "boost-graph-mpich-1.83.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/boost-graph-mpich-1.83.0-3.fc40.x86_64.rpm"
+}

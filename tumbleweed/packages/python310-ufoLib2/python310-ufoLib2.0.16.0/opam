@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-ufoLib2-0.16.0-2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-ufoLib2-0.16.0-2.3.noarch.rpm"]
+depends: [
+  "python310-FontTools" {>= "4.0.0"}
+  "python310-attrs" {>= "19.2.0"}
+  "python310-base" {= "3.10"}
+  "python310-fs" {>= "2.2.0"}
+]
+extra-source "python310-ufoLib2-0.16.0-2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-ufoLib2-0.16.0-2.3.noarch.rpm"
+}

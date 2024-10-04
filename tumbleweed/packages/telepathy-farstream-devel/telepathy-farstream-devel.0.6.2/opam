@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "telepathy-farstream-devel-0.6.2-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "telepathy-farstream-devel-0.6.2-4.2.x86_64.rpm"]
+depends: [
+  "dbus-1-glib-devel" {>= "0.73"}
+  "farstream-devel" 
+  "glib2-devel" {>= "2.10"}
+  "gstreamer-devel" 
+  "libtelepathy-farstream3" {= "0.6.2"}
+  "pkgconf-pkg-config" 
+  "telepathy-glib-devel" {>= "0.7.23"}
+  "typelib-1_0-TelepathyFarstream-0_6" {= "0.6.2"}
+]
+extra-source "telepathy-farstream-devel-0.6.2-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/telepathy-farstream-devel-0.6.2-4.2.x86_64.rpm"
+}

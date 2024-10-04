@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gcin-anthy-2.9.0-11.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcin-anthy-2.9.0-11.fc39.x86_64.rpm"]
+depends: [
+  "anthy" 
+  "gcin" {= "2.9.0"}
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+]
+extra-source "gcin-anthy-2.9.0-11.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gcin-anthy-2.9.0-11.fc39.x86_64.rpm"
+}

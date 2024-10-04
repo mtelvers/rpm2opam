@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tali-lang-40.9-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tali-lang-40.9-2.1.noarch.rpm"]
+depends: [
+  "tali" {= "40.9"}
+]
+extra-source "tali-lang-40.9-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tali-lang-40.9-2.1.noarch.rpm"
+}

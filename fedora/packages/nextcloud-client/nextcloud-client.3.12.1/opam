@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nextcloud-client-3.12.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nextcloud-client-3.12.1-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "kf5-karchive" 
+  "libcloudproviders" 
+  "libgcc" 
+  "libstdc++" 
+  "nextcloud-client-libs" 
+  "openssl-libs" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtdeclarative" 
+  "qt5-qtquickcontrols" 
+  "qt5-qtquickcontrols2" 
+  "qt5-qtsvg" 
+  "qt5-qtwebengine" 
+  "qtkeychain-qt5" 
+]
+extra-source "nextcloud-client-3.12.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nextcloud-client-3.12.1-1.fc40.x86_64.rpm"
+}

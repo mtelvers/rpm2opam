@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-doctools-2023.201.0.0.1svn34474-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-doctools-2023.201.0.0.1svn34474-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-bookmark" 
+  "texlive-cmap" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-kvoptions" 
+  "texlive-kvsetkeys" 
+  "texlive-latex" 
+  "texlive-listings" 
+  "texlive-pdftexcmds" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-tools" 
+  "texlive-url" 
+  "texlive-xcolor" 
+  "texlive-xstring" 
+]
+extra-source "texlive-doctools-2023.201.0.0.1svn34474-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-doctools-2023.201.0.0.1svn34474-slfo.1.1.4.noarch.rpm"
+}

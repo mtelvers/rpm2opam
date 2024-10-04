@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sssd-2.10.0~beta2-3.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sssd-2.10.0~beta2-3.el10.x86_64.rpm"]
+depends: [
+  "shadow-utils" 
+  "sssd-ad" {= "2.10.0"}
+  "sssd-common" {= "2.10.0"}
+  "sssd-ipa" {= "2.10.0"}
+  "sssd-krb5" {= "2.10.0"}
+  "sssd-ldap" {= "2.10.0"}
+  "sssd-proxy" {= "2.10.0"}
+]
+extra-source "sssd-2.10.0~beta2-3.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/sssd-2.10.0~beta2-3.el10.x86_64.rpm"
+}

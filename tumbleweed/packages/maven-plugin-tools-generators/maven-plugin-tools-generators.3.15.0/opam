@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-plugin-tools-generators-3.15.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-plugin-tools-generators-3.15.0-1.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "jsoup" 
+  "maven-lib" 
+  "maven-plugin-tools-api" {= "3.15.0"}
+  "plexus-utils" 
+  "plexus-velocity" 
+  "plexus-xml" 
+  "sisu-plexus" 
+  "slf4j" 
+  "velocity-engine-core" 
+]
+extra-source "maven-plugin-tools-generators-3.15.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-plugin-tools-generators-3.15.0-1.1.noarch.rpm"
+}

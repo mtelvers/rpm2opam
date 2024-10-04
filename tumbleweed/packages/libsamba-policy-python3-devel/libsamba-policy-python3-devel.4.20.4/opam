@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsamba-policy-python3-devel-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsamba-policy-python3-devel-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm"]
+depends: [
+  "libldb-devel" 
+  "libsamba-policy0-python3" {= "4.20.4"}
+  "libtalloc-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libsamba-policy-python3-devel-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libsamba-policy-python3-devel-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsndfile-devel-1.2.2-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsndfile-devel-1.2.2-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "flac-devel" 
+  "glibc-devel" 
+  "libogg-devel" 
+  "libopus-devel" 
+  "libsndfile1" {= "1.2.2"}
+  "libstdc++-build-devel" 
+  "libvorbis-devel" 
+  "pkgconf-pkg-config" 
+  "speex-devel" 
+]
+extra-source "libsndfile-devel-1.2.2-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libsndfile-devel-1.2.2-slfo.1.1.7.x86_64.rpm"
+}

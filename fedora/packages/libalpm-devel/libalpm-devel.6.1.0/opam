@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libalpm-devel-6.1.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libalpm-devel-6.1.0-1.fc40.x86_64.rpm"]
+depends: [
+  "gpgme-devel" {>= "1.12.0"}
+  "libalpm" 
+  "libarchive-devel" {>= "3.0.0"}
+  "libcurl-devel" {>= "7.55.0"}
+  "openssl-devel" 
+]
+extra-source "libalpm-devel-6.1.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libalpm-devel-6.1.0-1.fc40.x86_64.rpm"
+}

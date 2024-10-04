@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "buildah-tests-1.35.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "buildah-tests-1.35.1-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bats" 
+  "buildah" {= "1.35.1"}
+  "bzip2" 
+  "git-daemon" 
+  "glibc" 
+  "golang" 
+  "gpgme" 
+  "httpd-tools" 
+  "jq" 
+  "libseccomp" 
+  "nmap-ncat" 
+  "openssl" 
+  "podman" 
+  "shadow-utils-subid" 
+]
+extra-source "buildah-tests-1.35.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/buildah-tests-1.35.1-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lmdb-devel-0.9.32-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lmdb-devel-0.9.32-1.fc40.x86_64.rpm"]
+depends: [
+  "lmdb" {= "0.9.32"}
+  "lmdb-libs" 
+  "pkgconf-pkg-config" 
+]
+extra-source "lmdb-devel-0.9.32-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lmdb-devel-0.9.32-1.fc40.x86_64.rpm"
+}

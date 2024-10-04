@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mutter-devel-46.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mutter-devel-46.5-1.1.x86_64.rpm"]
+depends: [
+  "Mesa-libEGL-devel" 
+  "Mesa-libGL-devel" 
+  "Mesa-libGLESv2-devel" 
+  "at-spi2-core-devel" {>= "2.5.3"}
+  "cairo-devel" {>= "1.10.0"}
+  "glib2-devel" {>= "2.75.1"}
+  "gsettings-desktop-schemas-devel" {>= "40.0"}
+  "harfbuzz-devel" {>= "2.6"}
+  "libX11-devel" {>= "1.7.0"}
+  "libXfixes-devel" {>= "6"}
+  "libXi-devel" {>= "1.7.4"}
+  "libgraphene-devel" {>= "1.10.2"}
+  "libpixman-1-0-devel" {>= "0.42"}
+  "mutter" {= "46.5"}
+  "pango-devel" {>= "1.46.0"}
+  "pkgconf-pkg-config" 
+  "wayland-devel" {>= "1.22"}
+]
+extra-source "mutter-devel-46.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mutter-devel-46.5-1.1.x86_64.rpm"
+}

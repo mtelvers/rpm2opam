@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libksane-qt6-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libksane-qt6-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf6-ki18n" 
+  "kf6-ktextwidgets" 
+  "kf6-kwallet-libs" 
+  "kf6-kwidgetsaddons" 
+  "ksanecore-qt6" 
+  "libksane-common" {= "24.2.1"}
+  "libstdc++" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+]
+extra-source "libksane-qt6-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libksane-qt6-24.02.1-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-interrogate-1.7.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-interrogate-1.7.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-attrs" 
+  "python312-base" {= "3.12"}
+  "python312-click" 
+  "python312-colorama" 
+  "python312-py" 
+  "python312-tabulate" 
+  "update-alternatives" 
+]
+extra-source "python312-interrogate-1.7.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-interrogate-1.7.0-1.1.noarch.rpm"
+}

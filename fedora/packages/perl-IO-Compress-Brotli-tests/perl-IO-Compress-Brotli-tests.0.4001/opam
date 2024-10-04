@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-IO-Compress-Brotli-tests-0.004001-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-IO-Compress-Brotli-tests-0.004001-12.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-File-Slurper" 
+  "perl-IO-Compress-Brotli" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-libs" {>= "5.14.0"}
+]
+extra-source "perl-IO-Compress-Brotli-tests-0.004001-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-IO-Compress-Brotli-tests-0.004001-12.fc40.noarch.rpm"
+}

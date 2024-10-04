@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ntsysv-1.26-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ntsysv-1.26-3.fc40.x86_64.rpm"]
+depends: [
+  "chkconfig" {= "1.26"}
+  "glibc" 
+  "libselinux" 
+  "newt" 
+  "popt" 
+]
+extra-source "ntsysv-1.26-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/ntsysv-1.26-3.fc40.x86_64.rpm"
+}

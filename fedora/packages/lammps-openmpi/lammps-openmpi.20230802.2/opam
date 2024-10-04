@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lammps-openmpi-20230802.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lammps-openmpi-20230802.2-1.fc40.x86_64.rpm"]
+depends: [
+  "fftw-libs-double" 
+  "flexiblas-netlib" 
+  "glibc" 
+  "hdf5" 
+  "kim-api" 
+  "lammps-data" 
+  "libgcc" 
+  "libgomp" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libstdc++" 
+  "openmpi" 
+  "python3-libs" 
+  "voro++" 
+]
+extra-source "lammps-openmpi-20230802.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lammps-openmpi-20230802.2-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nordugrid-arc-community-rtes-6.18.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nordugrid-arc-community-rtes-6.18.0-6.fc40.x86_64.rpm"]
+depends: [
+  "gnupg2" 
+  "nordugrid-arc-arcctl" {= "6.18.0"}
+  "nordugrid-arc-arex" {= "6.18.0"}
+  "python3" {= "3.12"}
+  "python3-dns" 
+]
+extra-source "nordugrid-arc-community-rtes-6.18.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nordugrid-arc-community-rtes-6.18.0-6.fc40.x86_64.rpm"
+}

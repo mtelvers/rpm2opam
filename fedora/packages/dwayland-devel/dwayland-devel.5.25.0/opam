@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dwayland-devel-5.25.0-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dwayland-devel-5.25.0-5.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "dwayland" {= "5.25.0"}
+  "qt5-qtbase-devel" 
+]
+extra-source "dwayland-devel-5.25.0-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dwayland-devel-5.25.0-5.fc40.x86_64.rpm"
+}

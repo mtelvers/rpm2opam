@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-apipie-rails-0.8.1-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-apipie-rails-0.8.1-6.fc40.noarch.rpm"]
+depends: [
+  "rubygem-actionpack" {>= "5.0"}
+  "rubygem-activesupport" {>= "5.0"}
+  "rubygems" 
+]
+extra-source "rubygem-apipie-rails-0.8.1-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-apipie-rails-0.8.1-6.fc40.noarch.rpm"
+}

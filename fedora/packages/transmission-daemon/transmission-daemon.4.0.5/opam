@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "transmission-daemon-4.0.5-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "transmission-daemon-4.0.5-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libcurl" 
+  "libevent" 
+  "libgcc" 
+  "libnatpmp" 
+  "libstdc++" 
+  "openssl-libs" 
+  "shadow-utils" 
+  "systemd-libs" 
+  "transmission-common" 
+]
+extra-source "transmission-daemon-4.0.5-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/transmission-daemon-4.0.5-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-opentelemetry-exporter-otlp-proto-http-1.27.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-opentelemetry-exporter-otlp-proto-http-1.27.0-1.1.noarch.rpm"]
+depends: [
+  "python310-Deprecated" {>= "1.2.6"}
+  "python310-base" {= "3.10"}
+  "python310-googleapis-common-protos" {>= "1.52"}
+  "python310-opentelemetry-api" {>= "1.15"}
+  "python310-opentelemetry-exporter-otlp-proto-common" {= "1.27.0"}
+  "python310-opentelemetry-proto" {= "1.27.0"}
+  "python310-opentelemetry-sdk" {>= "1.23.0"}
+  "python310-requests" {>= "2.7"}
+]
+extra-source "python310-opentelemetry-exporter-otlp-proto-http-1.27.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-opentelemetry-exporter-otlp-proto-http-1.27.0-1.1.noarch.rpm"
+}

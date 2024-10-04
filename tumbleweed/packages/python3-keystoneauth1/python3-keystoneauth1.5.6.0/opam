@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-keystoneauth1-5.6.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-keystoneauth1-5.6.0-1.1.noarch.rpm"]
+depends: [
+  "python3-os-service-types" {>= "1.2.0"}
+  "python311-PyYAML" 
+  "python311-base" {= "3.11"}
+  "python311-iso8601" {>= "0.1.11"}
+  "python311-lxml" 
+  "python311-oauthlib" 
+  "python311-requests" {>= "2.14.2"}
+  "python311-requests-kerberos" 
+  "python311-stevedore" {>= "1.20.0"}
+]
+extra-source "python3-keystoneauth1-5.6.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-keystoneauth1-5.6.0-1.1.noarch.rpm"
+}

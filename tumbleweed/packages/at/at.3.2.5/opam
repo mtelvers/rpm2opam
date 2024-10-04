@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "at-3.2.5-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "at-3.2.5-2.6.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "libHX32" 
+  "libselinux1" 
+  "pam" 
+  "permissions" 
+  "system-user-root" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "at-3.2.5-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/at-3.2.5-2.6.x86_64.rpm"
+}

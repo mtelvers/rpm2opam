@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-DateTime-Format-Mail-0.403-1.24.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DateTime-Format-Mail-0.403-1.24.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-DateTime" {>= "1.4"}
+  "perl-Params-Validate" 
+]
+extra-source "perl-DateTime-Format-Mail-0.403-1.24.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-DateTime-Format-Mail-0.403-1.24.noarch.rpm"
+}

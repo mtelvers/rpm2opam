@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xboard-4.9.1-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xboard-4.9.1-20.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "dreamchess-engine" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "librsvg2" 
+  "pango" 
+  "perl-interpreter" 
+  "xorg-x11-fonts-100dpi" 
+]
+extra-source "xboard-4.9.1-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xboard-4.9.1-20.fc40.x86_64.rpm"
+}

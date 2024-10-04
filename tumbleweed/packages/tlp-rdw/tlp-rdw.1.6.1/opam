@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tlp-rdw-1.6.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tlp-rdw-1.6.1-2.1.noarch.rpm"]
+depends: [
+  "NetworkManager" {>= "1.20"}
+  "bash-sh" 
+  "systemd" 
+  "tlp" {= "1.6.1"}
+]
+extra-source "tlp-rdw-1.6.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tlp-rdw-1.6.1-2.1.noarch.rpm"
+}

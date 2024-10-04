@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "logwatch-7.9-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "logwatch-7.9-3.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "grep" 
+  "mailx" 
+  "perl" 
+  "perl-Date-Manip" 
+  "perl-HTML-Parser" 
+  "perl-base" 
+  "systemd" 
+]
+extra-source "logwatch-7.9-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/logwatch-7.9-3.2.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-GSSAPI-0.28-45.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-GSSAPI-0.28-45.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "krb5-libs" 
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-overload" 
+]
+extra-source "perl-GSSAPI-0.28-45.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-GSSAPI-0.28-45.fc40.x86_64.rpm"
+}

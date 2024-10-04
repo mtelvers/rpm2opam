@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "agama-integration-tests-9+953-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "agama-integration-tests-9+953-2.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "busybox-coreutils" 
+  "nodejs-default" {>= "18"}
+]
+extra-source "agama-integration-tests-9+953-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/agama-integration-tests-9+953-2.1.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pkginfo-1.11.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pkginfo-1.11.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-setuptools" 
+  "update-alternatives" 
+]
+extra-source "python312-pkginfo-1.11.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pkginfo-1.11.1-1.1.noarch.rpm"
+}

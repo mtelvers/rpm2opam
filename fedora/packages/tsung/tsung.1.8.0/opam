@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tsung-1.8.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tsung-1.8.0-4.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "erlang" 
+  "gnuplot" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-Getopt-Long" 
+  "perl-JSON" 
+  "perl-PathTools" 
+  "perl-Template-Toolkit" 
+  "perl-Time-Local" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-vars" 
+  "python3" 
+  "rrdtool-perl" 
+]
+extra-source "tsung-1.8.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tsung-1.8.0-4.fc40.x86_64.rpm"
+}

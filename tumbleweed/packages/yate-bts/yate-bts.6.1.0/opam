@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yate-bts-6.1.0-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yate-bts-6.1.0-3.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libyate6_4_0" 
+  "php8-cli" 
+  "yate-scripts" {>= "6.0.0"}
+]
+extra-source "yate-bts-6.1.0-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/yate-bts-6.1.0-3.2.x86_64.rpm"
+}

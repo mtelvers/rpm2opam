@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "telepathy-mission-control-devel-5.16.6-1.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "telepathy-mission-control-devel-5.16.6-1.13.x86_64.rpm"]
+depends: [
+  "libmission-control-plugins0" {= "5.16.6"}
+  "pkgconf-pkg-config" 
+  "telepathy-glib-devel" 
+  "telepathy-mission-control" {= "5.16.6"}
+]
+extra-source "telepathy-mission-control-devel-5.16.6-1.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/telepathy-mission-control-devel-5.16.6-1.13.x86_64.rpm"
+}

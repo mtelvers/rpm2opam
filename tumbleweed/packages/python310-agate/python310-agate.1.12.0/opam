@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-agate-1.12.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-agate-1.12.0-1.1.noarch.rpm"]
+depends: [
+  "python310-Babel" {>= "2.0"}
+  "python310-base" {= "3.10"}
+  "python310-isodate" {>= "0.5.4"}
+  "python310-leather" {>= "0.3.2"}
+  "python310-parsedatetime" {>= "2.1"}
+  "python310-python-slugify" {>= "1.2.1"}
+  "python310-pytimeparse" {>= "1.1.5"}
+]
+extra-source "python310-agate-1.12.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-agate-1.12.0-1.1.noarch.rpm"
+}

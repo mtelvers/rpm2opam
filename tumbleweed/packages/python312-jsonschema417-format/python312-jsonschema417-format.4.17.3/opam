@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-jsonschema417-format-4.17.3-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-jsonschema417-format-4.17.3-1.6.noarch.rpm"]
+depends: [
+  "python312-fqdn" 
+  "python312-idna" 
+  "python312-isoduration" 
+  "python312-jsonpointer" {> "1.13"}
+  "python312-jsonschema417" {= "4.17.3"}
+  "python312-rfc3339-validator" 
+  "python312-rfc3987" 
+  "python312-uri-template" 
+  "python312-webcolors" {>= "1.11"}
+]
+extra-source "python312-jsonschema417-format-4.17.3-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-jsonschema417-format-4.17.3-1.6.noarch.rpm"
+}

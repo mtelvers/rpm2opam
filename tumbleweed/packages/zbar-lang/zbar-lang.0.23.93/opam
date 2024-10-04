@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zbar-lang-0.23.93-2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zbar-lang-0.23.93-2.3.noarch.rpm"]
+depends: [
+  "zbar" {= "0.23.93"}
+]
+extra-source "zbar-lang-0.23.93-2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/zbar-lang-0.23.93-2.3.noarch.rpm"
+}

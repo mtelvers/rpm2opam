@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-jupyterlab-server-test-2.27.3-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-jupyterlab-server-test-2.27.3-2.1.noarch.rpm"]
+depends: [
+  "python310-Werkzeug" 
+  "python310-ipykernel" 
+  "python310-jupyterlab-server" {= "2.27.3"}
+  "python310-openapi-spec-validator" 
+  "python310-pytest" {>= "7"}
+  "python310-pytest-console-scripts" 
+  "python310-pytest-jupyter-server" {>= "0.6.2"}
+  "python310-pytest-timeout" 
+  "python310-requests-mock" 
+  "python310-ruamel-yaml" 
+  "python310-strict-rfc3339" 
+]
+extra-source "python310-jupyterlab-server-test-2.27.3-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-jupyterlab-server-test-2.27.3-2.1.noarch.rpm"
+}

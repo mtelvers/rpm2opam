@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "keepalived-2.2.8-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "keepalived-2.2.8-5.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "file-libs" 
+  "glibc" 
+  "libmnl" 
+  "libnftnl" 
+  "libnl3" 
+  "net-snmp-agent-libs" 
+  "net-snmp-libs" 
+  "openssl-libs" 
+  "systemd" 
+  "systemd-libs" 
+]
+extra-source "keepalived-2.2.8-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/keepalived-2.2.8-5.fc40.x86_64.rpm"
+}

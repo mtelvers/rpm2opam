@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-pyproject-toml-devel-0.8.2-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-pyproject-toml-devel-0.8.2-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.64"}
+  "rust-indexmap+default-devel" 
+  "rust-indexmap+serde-devel" 
+  "rust-pep440_rs+default-devel" 
+  "rust-pep440_rs+serde-devel" 
+  "rust-pep508_rs+default-devel" 
+  "rust-pep508_rs+serde-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-toml+parse-devel" 
+  "rust-toml-devel" 
+]
+extra-source "rust-pyproject-toml-devel-0.8.2-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-pyproject-toml-devel-0.8.2-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-mycv-2024.216.1.5.6svn26807-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-mycv-2024.216.1.5.6svn26807-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "perl-File-Path" 
+  "perl-base" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-amsfonts" 
+  "texlive-babel" 
+  "texlive-etextools" 
+  "texlive-fancyhdr" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-fundus-calligra" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-kvoptions" 
+  "texlive-l3packages" 
+  "texlive-latex" 
+  "texlive-marvosym" 
+  "texlive-pgf" 
+  "texlive-psnfss" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-svn-prov" 
+  "texlive-titlesec" 
+  "texlive-xcolor" 
+  "texlive-xstring" 
+]
+extra-source "texlive-mycv-2024.216.1.5.6svn26807-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-mycv-2024.216.1.5.6svn26807-57.1.noarch.rpm"
+}

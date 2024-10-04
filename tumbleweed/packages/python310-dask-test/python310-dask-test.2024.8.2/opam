@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-dask-test-2024.8.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-dask-test-2024.8.2-1.1.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-dask-complete" {= "2024.8.2"}
+  "python310-pandas-test" 
+  "python310-pytest" 
+  "python310-pytest-rerunfailures" 
+  "python310-pytest-timeout" 
+  "python310-pytest-xdist" 
+]
+extra-source "python310-dask-test-2024.8.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-dask-test-2024.8.2-1.1.noarch.rpm"
+}

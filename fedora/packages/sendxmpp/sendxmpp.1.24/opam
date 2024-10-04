@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sendxmpp-1.24-19.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sendxmpp-1.24-19.fc40.noarch.rpm"]
+depends: [
+  "perl-Authen-SASL" 
+  "perl-Getopt-Long" 
+  "perl-Net-XMPP" 
+  "perl-interpreter" 
+  "perl-libnet" 
+  "perl-libs" 
+  "perl-open" 
+]
+extra-source "sendxmpp-1.24-19.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sendxmpp-1.24-19.fc40.noarch.rpm"
+}

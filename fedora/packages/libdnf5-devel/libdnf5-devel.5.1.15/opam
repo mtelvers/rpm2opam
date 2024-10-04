@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libdnf5-devel-5.1.15-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdnf5-devel-5.1.15-1.fc40.x86_64.rpm"]
+depends: [
+  "fmt-devel" 
+  "libdnf5" {= "5.1.15"}
+  "libmodulemd-devel" 
+  "librepo-devel" 
+  "libsolv-devel" {>= "0.7.25"}
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+  "rpm-devel" 
+  "sqlite-devel" 
+]
+extra-source "libdnf5-devel-5.1.15-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libdnf5-devel-5.1.15-1.fc40.x86_64.rpm"
+}

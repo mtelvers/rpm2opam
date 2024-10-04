@@ -1,0 +1,42 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gtk3-3.24.41-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk3-3.24.41-1.fc40.x86_64.rpm"]
+depends: [
+  "adwaita-icon-theme" 
+  "at-spi2-atk" 
+  "atk" {>= "2.35.1"}
+  "bash" 
+  "cairo" {>= "1.14.0"}
+  "cairo-gobject" {>= "1.14.0"}
+  "colord-libs" 
+  "cups-libs" 
+  "fontconfig" 
+  "fribidi" 
+  "gdk-pixbuf2" 
+  "gdk-pixbuf2-modules" 
+  "glib2" {>= "2.57.2"}
+  "glibc" 
+  "gtk-update-icon-cache" 
+  "harfbuzz" 
+  "hicolor-icon-theme" 
+  "libX11" 
+  "libXcomposite" 
+  "libXcursor" 
+  "libXdamage" 
+  "libXext" 
+  "libXfixes" 
+  "libXi" 
+  "libXinerama" 
+  "libXrandr" {>= "1.5.0"}
+  "libcloudproviders" 
+  "libepoxy" {>= "1.4"}
+  "libtracker-sparql" 
+  "libwayland-client" {>= "1.14.91"}
+  "libwayland-cursor" {>= "1.14.91"}
+  "libwayland-egl" 
+  "libxkbcommon" 
+  "pango" 
+]
+extra-source "gtk3-3.24.41-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gtk3-3.24.41-1.fc40.x86_64.rpm"
+}

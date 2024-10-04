@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kf6-purpose-6.0.0-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kf6-purpose-6.0.0-2.fc40.x86_64.rpm"]
+depends: [
+  "accounts-qml-module-qt6" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "kaccounts-integration-qt6" 
+  "kf6-bluez-qt" {>= "6.0.0"}
+  "kf6-kconfig" 
+  "kf6-kcoreaddons" 
+  "kf6-kdeclarative" 
+  "kf6-ki18n" 
+  "kf6-kio-core-libs" 
+  "kf6-kio-gui" 
+  "kf6-kio-widgets-libs" 
+  "kf6-knotifications" 
+  "kf6-kservice" 
+  "kf6-prison" 
+  "libaccounts-qt6" 
+  "libstdc++" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qt6-qtdeclarative" 
+]
+extra-source "kf6-purpose-6.0.0-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kf6-purpose-6.0.0-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qos-1.0.1-9.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qos-1.0.1-9.11.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "iproute2" 
+  "systemd" 
+]
+extra-source "qos-1.0.1-9.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/qos-1.0.1-9.11.noarch.rpm"
+}

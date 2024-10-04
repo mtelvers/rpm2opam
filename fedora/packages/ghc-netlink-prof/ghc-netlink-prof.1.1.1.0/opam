@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-netlink-prof-1.1.1.0-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-netlink-prof-1.1.1.0-29.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-cereal-prof" 
+  "ghc-containers-prof" 
+  "ghc-monad-loops-prof" 
+  "ghc-netlink-devel" {= "1.1.1.0"}
+  "ghc-pretty-hex-prof" 
+  "ghc-unix-prof" 
+]
+extra-source "ghc-netlink-prof-1.1.1.0-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-netlink-prof-1.1.1.0-29.fc40.x86_64.rpm"
+}

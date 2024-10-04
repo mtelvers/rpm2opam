@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pix-lang-3.4.3-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pix-lang-3.4.3-1.2.noarch.rpm"]
+depends: [
+  "pix" {= "3.4.3"}
+]
+extra-source "pix-lang-3.4.3-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pix-lang-3.4.3-1.2.noarch.rpm"
+}

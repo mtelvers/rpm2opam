@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zipios-devel-2.3.2-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zipios-devel-2.3.2-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "libzipios2" 
+  "zlib-devel" 
+]
+extra-source "zipios-devel-2.3.2-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/zipios-devel-2.3.2-1.3.x86_64.rpm"
+}

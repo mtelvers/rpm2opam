@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "elixir115-doc-1.15.7-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "elixir115-doc-1.15.7-1.1.noarch.rpm"]
+depends: [
+  "elixir115" {= "1.15.7"}
+]
+extra-source "elixir115-doc-1.15.7-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/elixir115-doc-1.15.7-1.1.noarch.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ceph-volume-18.2.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ceph-volume-18.2.2-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "ceph-osd" {= "18.2.2"}
+  "cryptsetup" 
+  "e2fsprogs" 
+  "lvm2" 
+  "parted" 
+  "python3" 
+  "python3-ceph-common" {= "18.2.2"}
+  "python3-setuptools" 
+  "util-linux" 
+  "xfsprogs" 
+]
+extra-source "ceph-volume-18.2.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/ceph-volume-18.2.2-1.fc40.noarch.rpm"
+}

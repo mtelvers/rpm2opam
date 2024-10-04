@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-IO-Pager-2.10-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-IO-Pager-2.10-10.fc40.noarch.rpm"]
+depends: [
+  "perl-Data-Dumper" 
+  "perl-Env" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-PathTools" 
+  "perl-SelectSaver" 
+  "perl-Symbol" 
+  "perl-Term-Cap" 
+  "perl-TermReadKey" 
+  "perl-Tie" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-IO-Pager-2.10-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-IO-Pager-2.10-10.fc40.noarch.rpm"
+}

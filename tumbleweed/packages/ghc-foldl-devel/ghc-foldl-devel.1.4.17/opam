@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-foldl-devel-1.4.17-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-foldl-devel-1.4.17-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-comonad-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-contravariant-devel" 
+  "ghc-foldl" {= "1.4.17"}
+  "ghc-hashable-devel" 
+  "ghc-primitive-devel" 
+  "ghc-profunctors-devel" 
+  "ghc-random-devel" 
+  "ghc-semigroupoids-devel" 
+  "ghc-text-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-foldl-devel-1.4.17-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-foldl-devel-1.4.17-1.1.x86_64.rpm"
+}

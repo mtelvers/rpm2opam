@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jupyter-jupyterlab-pyviz-3.0.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jupyter-jupyterlab-pyviz-3.0.3-1.1.noarch.rpm"]
+depends: [
+  "jupyter-jupyterlab" 
+  "python310-pyviz-comms" {= "3.0.3"}
+]
+extra-source "jupyter-jupyterlab-pyviz-3.0.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jupyter-jupyterlab-pyviz-3.0.3-1.1.noarch.rpm"
+}

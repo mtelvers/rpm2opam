@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-logs-lang-45.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-logs-lang-45.0-1.1.noarch.rpm"]
+depends: [
+  "gnome-logs" {= "45.0"}
+]
+extra-source "gnome-logs-lang-45.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-logs-lang-45.0-1.1.noarch.rpm"
+}

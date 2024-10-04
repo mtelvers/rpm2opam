@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-jlreq-deluxe-2023.201.0.0.4.1svn66115-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-jlreq-deluxe-2023.201.0.0.4.1svn66115-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-filesystem" {>= "2023"}
+  "texlive-japanese-otf" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-l3kernel" 
+  "texlive-l3packages" 
+  "texlive-pxjodel" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+]
+extra-source "texlive-jlreq-deluxe-2023.201.0.0.4.1svn66115-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-jlreq-deluxe-2023.201.0.0.4.1svn66115-slfo.1.1.4.noarch.rpm"
+}

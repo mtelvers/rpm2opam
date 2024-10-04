@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "clover2-libs-11.0.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clover2-libs-11.0.0-6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "ncurses-libs" 
+  "pcre" 
+  "readline" 
+]
+extra-source "clover2-libs-11.0.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/clover2-libs-11.0.0-6.fc40.x86_64.rpm"
+}

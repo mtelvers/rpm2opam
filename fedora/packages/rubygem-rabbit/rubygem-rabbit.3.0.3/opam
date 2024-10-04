@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-rabbit-3.0.3-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-rabbit-3.0.3-4.fc40.noarch.rpm"]
+depends: [
+  "ruby-libs" 
+  "rubygem-coderay" {>= "1.0.0"}
+  "rubygem-gdk_pixbuf2" 
+  "rubygem-gettext" 
+  "rubygem-gtk3" 
+  "rubygem-hikidoc" 
+  "rubygem-kramdown" 
+  "rubygem-kramdown-parser-gfm" 
+  "rubygem-net-irc" 
+  "rubygem-nokogiri" 
+  "rubygem-poppler" {>= "3.2.5"}
+  "rubygem-rdtool" 
+  "rubygem-rexml" 
+  "rubygem-rouge" 
+  "rubygem-rsvg2" 
+  "rubygem-rttool" 
+  "rubygems" 
+  "rubypick" 
+]
+extra-source "rubygem-rabbit-3.0.3-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-rabbit-3.0.3-4.fc40.noarch.rpm"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw64-opencv-4.7.0-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-opencv-4.7.0-7.fc40.noarch.rpm"]
+depends: [
+  "mingw64-crt" 
+  "mingw64-filesystem" {>= "95"}
+  "mingw64-freetype" 
+  "mingw64-gdal" 
+  "mingw64-glib2" 
+  "mingw64-gstreamer1" 
+  "mingw64-gstreamer1-plugins-base" 
+  "mingw64-harfbuzz" 
+  "mingw64-libgcc" 
+  "mingw64-libjpeg-turbo" 
+  "mingw64-libpng" 
+  "mingw64-libstdc++" 
+  "mingw64-libtiff" 
+  "mingw64-libwebp" 
+  "mingw64-openexr" 
+  "mingw64-openjpeg2" 
+  "mingw64-protobuf" 
+  "mingw64-qt5-qtbase" 
+  "mingw64-win-iconv" 
+  "mingw64-winpthreads" 
+  "mingw64-zlib" 
+]
+extra-source "mingw64-opencv-4.7.0-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw64-opencv-4.7.0-7.fc40.noarch.rpm"
+}

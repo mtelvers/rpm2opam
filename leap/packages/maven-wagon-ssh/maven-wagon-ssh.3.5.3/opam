@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-wagon-ssh-3.5.3-slfo.1.2.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-wagon-ssh-3.5.3-slfo.1.2.9.noarch.rpm"]
+depends: [
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "jsch" 
+  "jsch-agent-proxy-connector-factory" 
+  "jsch-agent-proxy-jsch" 
+  "maven-wagon-provider-api" {= "3.5.3"}
+  "maven-wagon-ssh-common" {= "3.5.3"}
+  "plexus-interactivity-api" 
+  "plexus-utils" 
+]
+extra-source "maven-wagon-ssh-3.5.3-slfo.1.2.9.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/maven-wagon-ssh-3.5.3-slfo.1.2.9.noarch.rpm"
+}

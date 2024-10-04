@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw64-python3-owslib-0.29.3-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-python3-owslib-0.29.3-3.fc40.noarch.rpm"]
+depends: [
+  "mingw64-python3" {= "3.11"}
+  "mingw64-python3-dateutil" {>= "1.5"}
+  "mingw64-python3-lxml" 
+  "mingw64-python3-pytz" 
+  "mingw64-python3-pyyaml" 
+  "mingw64-python3-requests" {>= "1"}
+]
+extra-source "mingw64-python3-owslib-0.29.3-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw64-python3-owslib-0.29.3-3.fc40.noarch.rpm"
+}

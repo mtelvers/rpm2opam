@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-hs-bibutils-prof-6.10.0.0-15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hs-bibutils-prof-6.10.0.0-15.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-hs-bibutils-devel" {= "6.10.0.0"}
+  "ghc-syb-prof" 
+]
+extra-source "ghc-hs-bibutils-prof-6.10.0.0-15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-hs-bibutils-prof-6.10.0.0-15.fc40.x86_64.rpm"
+}

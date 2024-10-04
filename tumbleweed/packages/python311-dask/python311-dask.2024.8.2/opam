@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-dask-2024.8.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-dask-2024.8.2-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-PyYAML" {>= "5.3.1"}
+  "python311-base" 
+  "python311-click" {>= "8.1"}
+  "python311-cloudpickle" {>= "3.0"}
+  "python311-fsspec" {>= "2021.9"}
+  "python311-importlib-metadata" 
+  "python311-packaging" {>= "20.0"}
+  "python311-partd" {>= "1.4.0"}
+  "python311-toolz" {>= "0.10.0"}
+  "update-alternatives" 
+]
+extra-source "python311-dask-2024.8.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-dask-2024.8.2-1.1.noarch.rpm"
+}

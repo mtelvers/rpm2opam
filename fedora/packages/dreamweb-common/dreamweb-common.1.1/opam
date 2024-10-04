@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dreamweb-common-1.1-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dreamweb-common-1.1-20.fc40.noarch.rpm"]
+depends: [
+  "dreamweb-de" {= "1.1"}
+  "filesystem" 
+  "scummvm" 
+]
+extra-source "dreamweb-common-1.1-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dreamweb-common-1.1-20.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mkosi-initrd-24.3-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mkosi-initrd-24.3-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "mkosi" {= "24.3"}
+  "mkosi-initrd-tukit" 
+  "python311-base" 
+]
+extra-source "mkosi-initrd-24.3-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mkosi-initrd-24.3-2.1.noarch.rpm"
+}

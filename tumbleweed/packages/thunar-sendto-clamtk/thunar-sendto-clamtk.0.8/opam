@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "thunar-sendto-clamtk-0.08-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "thunar-sendto-clamtk-0.08-1.3.noarch.rpm"]
+depends: [
+  "clamtk" {>= "5.0"}
+  "thunar" 
+]
+extra-source "thunar-sendto-clamtk-0.08-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/thunar-sendto-clamtk-0.08-1.3.noarch.rpm"
+}

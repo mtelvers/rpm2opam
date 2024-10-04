@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pagure-theme-pagureio-5.14.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pagure-theme-pagureio-5.14.1-2.1.noarch.rpm"]
+depends: [
+  "pagure" {= "5.14.1"}
+]
+extra-source "pagure-theme-pagureio-5.14.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pagure-theme-pagureio-5.14.1-2.1.noarch.rpm"
+}

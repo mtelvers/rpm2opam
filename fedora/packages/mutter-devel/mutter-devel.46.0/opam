@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mutter-devel-46.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mutter-devel-46.0-1.fc40.x86_64.rpm"]
+depends: [
+  "atk-devel" {>= "2.5.3"}
+  "cairo" 
+  "cairo-devel" {>= "1.10.0"}
+  "glib2" 
+  "glib2-devel" {>= "2.75.1"}
+  "glibc" 
+  "graphene-devel" {>= "1.10.2"}
+  "gsettings-desktop-schemas-devel" {>= "40.0"}
+  "harfbuzz-devel" {>= "2.6"}
+  "libX11-devel" {>= "1.7.0"}
+  "libXext" 
+  "libXfixes-devel" {>= "6"}
+  "libXi-devel" {>= "1.7.4"}
+  "libgcc" 
+  "libglvnd-devel" 
+  "libglvnd-gles" 
+  "libwayland-client" 
+  "libxcb" 
+  "mesa-libEGL-devel" 
+  "mutter" 
+  "pango-devel" {>= "1.20"}
+  "pixman-devel" {>= "0.42"}
+  "pkgconf-pkg-config" 
+  "wayland-devel" {>= "1.22"}
+]
+extra-source "mutter-devel-46.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mutter-devel-46.0-1.fc40.x86_64.rpm"
+}

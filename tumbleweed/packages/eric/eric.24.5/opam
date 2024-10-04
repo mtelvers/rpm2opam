@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "eric-24.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eric-24.5-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-EditorConfig" 
+  "python311-PyQt6" 
+  "python311-PyQt6-Charts" 
+  "python311-PyQt6-QScintilla" 
+  "python311-PyQt6-WebEngine" 
+  "python311-Pygments" 
+  "python311-asttokens" 
+  "python311-base" {= "3.11"}
+  "python311-black" 
+  "python311-coverage" 
+  "python311-isort" 
+  "python311-jedi" 
+  "python311-packaging" 
+  "python311-parso" 
+  "python311-semver" 
+  "python311-tomlkit" 
+  "python311-trove-classifiers" 
+  "qt6-sql-sqlite" 
+]
+extra-source "eric-24.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/eric-24.5-1.1.noarch.rpm"
+}

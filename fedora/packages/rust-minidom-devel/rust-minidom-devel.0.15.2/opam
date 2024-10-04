@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-minidom-devel-0.15.2-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-minidom-devel-0.15.2-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-rxml+mt-devel" 
+  "rust-rxml-devel" 
+]
+extra-source "rust-minidom-devel-0.15.2-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-minidom-devel-0.15.2-2.fc40.noarch.rpm"
+}

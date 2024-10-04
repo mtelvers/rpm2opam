@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bcachefs-tools-1.6.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bcachefs-tools-1.6.4-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "keyutils-libs" 
+  "libaio" 
+  "libblkid" 
+  "libgcc" 
+  "libsodium" 
+  "libuuid" 
+  "libzstd" 
+  "lz4-libs" 
+  "python3" 
+  "systemd-libs" 
+  "userspace-rcu" 
+  "zlib-ng-compat" 
+]
+extra-source "bcachefs-tools-1.6.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bcachefs-tools-1.6.4-1.fc40.x86_64.rpm"
+}

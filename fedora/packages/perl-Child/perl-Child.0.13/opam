@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Child-0.013-24.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Child-0.013-24.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" {>= "5.57"}
+  "perl-POSIX" 
+  "perl-base" 
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "perl-Child-0.013-24.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Child-0.013-24.fc40.noarch.rpm"
+}

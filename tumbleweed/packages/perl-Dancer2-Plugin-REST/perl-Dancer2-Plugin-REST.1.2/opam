@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Dancer2-Plugin-REST-1.02-1.18.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Dancer2-Plugin-REST-1.02-1.18.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Dancer2" {>= "0.203000"}
+  "perl-Moo" 
+]
+extra-source "perl-Dancer2-Plugin-REST-1.02-1.18.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Dancer2-Plugin-REST-1.02-1.18.noarch.rpm"
+}

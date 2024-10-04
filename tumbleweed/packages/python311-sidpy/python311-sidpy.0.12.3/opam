@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-sidpy-0.12.3-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-sidpy-0.12.3-3.1.noarch.rpm"]
+depends: [
+  "python311-ase" 
+  "python311-base" {= "3.11"}
+  "python311-cytoolz" 
+  "python311-dask" {>= "0.10"}
+  "python311-dask-array" {>= "0.10"}
+  "python311-distributed" {>= "2"}
+  "python311-h5py" {>= "2.6.0"}
+  "python311-ipykernel" 
+  "python311-ipympl" 
+  "python311-ipython" {>= "6"}
+  "python311-ipywidgets" {>= "5.2.2"}
+  "python311-joblib" {>= "0.11.0"}
+  "python311-matplotlib" {>= "2.0.0"}
+  "python311-numpy" 
+  "python311-psutil" 
+  "python311-scikit-learn" 
+  "python311-scipy" 
+  "python311-toolz" 
+]
+extra-source "python311-sidpy-0.12.3-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-sidpy-0.12.3-3.1.noarch.rpm"
+}

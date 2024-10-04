@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "augeas-libs-1.13.0-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "augeas-libs-1.13.0-7.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libselinux" 
+  "libxml2" 
+]
+extra-source "augeas-libs-1.13.0-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/augeas-libs-1.13.0-7.fc40.x86_64.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "librecad-2.2.0.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "librecad-2.2.0.2-3.fc40.x86_64.rpm"]
+depends: [
+  "freetype" 
+  "glibc" 
+  "libdxfrw" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "librecad-fonts" {= "2.2.0.2"}
+  "librecad-langs" {= "2.2.0.2"}
+  "librecad-parts" {= "2.2.0.2"}
+  "librecad-patterns" {= "2.2.0.2"}
+  "libstdc++" 
+  "muParser" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtsvg" 
+]
+extra-source "librecad-2.2.0.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/librecad-2.2.0.2-3.fc40.x86_64.rpm"
+}

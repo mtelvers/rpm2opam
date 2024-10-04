@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libsigrokdecode-devel-0.5.3-18.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsigrokdecode-devel-0.5.3-18.fc39.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libsigrokdecode" {= "0.5.3"}
+  "pkgconf-pkg-config" 
+  "python3-devel" 
+]
+extra-source "libsigrokdecode-devel-0.5.3-18.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libsigrokdecode-devel-0.5.3-18.fc39.x86_64.rpm"
+}

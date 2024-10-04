@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pgiac-1.9.0.91-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pgiac-1.9.0.91-2.fc40.noarch.rpm"]
+depends: [
+  "giac" {= "1.9.0.91"}
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-Getopt-Std" 
+  "perl-POSIX" 
+  "perl-interpreter" 
+]
+extra-source "pgiac-1.9.0.91-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pgiac-1.9.0.91-2.fc40.noarch.rpm"
+}

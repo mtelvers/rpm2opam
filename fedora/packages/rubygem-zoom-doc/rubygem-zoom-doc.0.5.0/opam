@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-zoom-doc-0.5.0-32.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-zoom-doc-0.5.0-32.fc40.x86_64.rpm"]
+depends: [
+  "rubygem-zoom" {= "0.5.0"}
+  "rubypick" 
+]
+extra-source "rubygem-zoom-doc-0.5.0-32.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-zoom-doc-0.5.0-32.fc40.x86_64.rpm"
+}

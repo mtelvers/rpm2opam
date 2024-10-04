@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rst2pdf-0.101-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rst2pdf-0.101-3.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-docutils" 
+  "python3-importlib-metadata" 
+  "python3-jinja2" 
+  "python3-packaging" 
+  "python3-pygments" 
+  "python3-pyyaml" 
+  "python3-reportlab" 
+  "python3-smartypants" 
+]
+extra-source "rst2pdf-0.101-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rst2pdf-0.101-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "marknote-lang-1.3.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "marknote-lang-1.3.0-1.2.noarch.rpm"]
+depends: [
+  "marknote" {= "1.3.0"}
+]
+extra-source "marknote-lang-1.3.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/marknote-lang-1.3.0-1.2.noarch.rpm"
+}

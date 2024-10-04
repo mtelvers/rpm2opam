@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "profanity-standard-0.14.0-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "profanity-standard-0.14.0-4.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcurl-mini4" 
+  "libgcrypt20" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgpgme11" 
+  "libgtk-2_0-0" 
+  "libncurses6" 
+  "libnotify4" 
+  "libotr5" 
+  "libpython3_11-1_0" 
+  "libreadline8" 
+  "libsignal-protocol-c2" 
+  "libsqlite3-0" 
+  "libstrophe0" 
+  "profanity" {= "0.14.0"}
+  "update-alternatives" 
+]
+extra-source "profanity-standard-0.14.0-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/profanity-standard-0.14.0-4.2.x86_64.rpm"
+}

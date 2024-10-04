@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sgmltool-1.0.9-slfo.1.1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sgmltool-1.0.9-slfo.1.1.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libfl2" 
+  "opensp" 
+  "perl" {= "5.38.2"}
+  "perl-base" 
+]
+extra-source "sgmltool-1.0.9-slfo.1.1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/sgmltool-1.0.9-slfo.1.1.4.x86_64.rpm"
+}

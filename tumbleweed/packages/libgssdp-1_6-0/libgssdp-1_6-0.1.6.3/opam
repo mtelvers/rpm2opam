@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgssdp-1_6-0-1.6.3-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgssdp-1_6-0-1.6.3-1.3.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libsoup-3_0-0" 
+]
+extra-source "libgssdp-1_6-0-1.6.3-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgssdp-1_6-0-1.6.3-1.3.x86_64.rpm"
+}

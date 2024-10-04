@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "flashrom-devel-1.4.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flashrom-devel-1.4.0-1.1.x86_64.rpm"]
+depends: [
+  "libflashrom1" {= "1.4.0"}
+  "libftdi1-devel" 
+  "libjaylink-devel" {>= "0.3.0"}
+  "libusb-1_0-devel" 
+  "pciutils-devel" {>= "2.2.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "flashrom-devel-1.4.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/flashrom-devel-1.4.0-1.1.x86_64.rpm"
+}

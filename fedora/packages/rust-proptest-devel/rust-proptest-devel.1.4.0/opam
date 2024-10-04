@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-proptest-devel-1.4.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-proptest-devel-1.4.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-bitflags+default-devel" 
+  "rust-num-traits+libm-devel" 
+  "rust-num-traits-devel" 
+  "rust-rand+alloc-devel" 
+  "rust-rand-devel" 
+  "rust-rand_chacha-devel" 
+  "rust-rand_xorshift+default-devel" 
+  "rust-unarray+default-devel" 
+]
+extra-source "rust-proptest-devel-1.4.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-proptest-devel-1.4.0-2.fc40.noarch.rpm"
+}

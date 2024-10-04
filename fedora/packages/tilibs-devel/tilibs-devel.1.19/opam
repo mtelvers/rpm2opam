@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tilibs-devel-1.19-8.20220716git8ffa244.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tilibs-devel-1.19-8.20220716git8ffa244.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libarchive-devel" 
+  "libticables" {= "1.19"}
+  "libticalcs" {= "1.19"}
+  "libticonv" {= "1.19"}
+  "libtifiles" {= "1.19"}
+  "libusb1-devel" 
+  "pkgconf-pkg-config" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "tilibs-devel-1.19-8.20220716git8ffa244.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tilibs-devel-1.19-8.20220716git8ffa244.fc40.x86_64.rpm"
+}

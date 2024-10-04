@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cpuinfo-devel-23.2.14-3.giteb4a667.fc40.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cpuinfo-devel-23.2.14-3.giteb4a667.fc40.2.x86_64.rpm"]
+depends: [
+  "cpuinfo" {= "23.2.14"}
+  "pkgconf-pkg-config" 
+]
+extra-source "cpuinfo-devel-23.2.14-3.giteb4a667.fc40.2.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cpuinfo-devel-23.2.14-3.giteb4a667.fc40.2.x86_64.rpm"
+}

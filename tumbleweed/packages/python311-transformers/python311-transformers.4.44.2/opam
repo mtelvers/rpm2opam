@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-transformers-4.44.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-transformers-4.44.2-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-PyYAML" {>= "5.1"}
+  "python311-base" 
+  "python311-filelock" 
+  "python311-huggingface-hub" {>= "0.23.2"}
+  "python311-numpy" {>= "1.17"}
+  "python311-packaging" {>= "20.0"}
+  "python311-regex" 
+  "python311-requests" 
+  "python311-safetensors" {>= "0.4.1"}
+  "python311-tokenizers" {>= "0.19"}
+  "python311-tqdm" {>= "4.27"}
+]
+extra-source "python311-transformers-4.44.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-transformers-4.44.2-1.1.noarch.rpm"
+}

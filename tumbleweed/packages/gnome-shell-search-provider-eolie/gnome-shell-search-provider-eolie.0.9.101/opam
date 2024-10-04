@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-shell-search-provider-eolie-0.9.101-1.13.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-shell-search-provider-eolie-0.9.101-1.13.noarch.rpm"]
+depends: [
+  "eolie" {= "0.9.101"}
+  "gnome-shell" 
+  "python311-base" 
+]
+extra-source "gnome-shell-search-provider-eolie-0.9.101-1.13.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-shell-search-provider-eolie-0.9.101-1.13.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "post-build-checks-84.87+git20240327.7996a0f-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "post-build-checks-84.87+git20240327.7996a0f-1.1.noarch.rpm"]
+depends: [
+  "aaa_base" 
+  "aaa_base-malloccheck" 
+  "bash" 
+  "bash-sh" 
+  "gawk" 
+  "perl-base" 
+  "permissions" 
+  "sed" 
+]
+extra-source "post-build-checks-84.87+git20240327.7996a0f-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/post-build-checks-84.87+git20240327.7996a0f-1.1.noarch.rpm"
+}

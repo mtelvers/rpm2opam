@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-breathe-4.35.0-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-breathe-4.35.0-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-Sphinx" {>= "4.0"}
+  "python311-base" 
+  "python311-docutils" {>= "0.12"}
+  "update-alternatives" 
+]
+extra-source "python311-breathe-4.35.0-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/python311-breathe-4.35.0-slfo.1.1.4.noarch.rpm"
+}

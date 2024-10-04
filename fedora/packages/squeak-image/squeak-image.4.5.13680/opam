@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "squeak-image-4.5.13680-19.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "squeak-image-4.5.13680-19.fc40.noarch.rpm"]
+depends: [
+  "squeak-vm" {>= "4.4.7.2357"}
+]
+extra-source "squeak-image-4.5.13680-19.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/squeak-image-4.5.13680-19.fc40.noarch.rpm"
+}

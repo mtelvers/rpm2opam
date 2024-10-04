@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-aiosmtpd-1.4.6-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-aiosmtpd-1.4.6-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-atpublic" 
+  "python311-attrs" 
+  "python311-base" 
+  "python311-typing_extensions" 
+  "system-user-nobody" 
+  "update-alternatives" 
+]
+extra-source "python311-aiosmtpd-1.4.6-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-aiosmtpd-1.4.6-1.1.noarch.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kata-containers-3.2.0-2.fc40.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kata-containers-3.2.0-2.fc40.3.x86_64.rpm"]
+depends: [
+  "bash" 
+  "busybox" 
+  "dracut" 
+  "glibc" 
+  "kernel" 
+  "libgcc" 
+  "libseccomp" 
+  "qemu-kvm-core" {>= "4.2.0"}
+  "systemd" 
+  "virtiofsd" 
+]
+extra-source "kata-containers-3.2.0-2.fc40.3.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kata-containers-3.2.0-2.fc40.3.x86_64.rpm"
+}

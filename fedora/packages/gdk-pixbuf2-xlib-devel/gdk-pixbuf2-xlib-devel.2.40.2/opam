@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gdk-pixbuf2-xlib-devel-2.40.2-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdk-pixbuf2-xlib-devel-2.40.2-9.fc40.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf2-devel" {>= "2.39.2"}
+  "gdk-pixbuf2-xlib" {= "2.40.2"}
+  "libX11-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "gdk-pixbuf2-xlib-devel-2.40.2-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gdk-pixbuf2-xlib-devel-2.40.2-9.fc40.x86_64.rpm"
+}

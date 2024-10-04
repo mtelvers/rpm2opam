@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rmol-1.00.10-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rmol-1.00.10-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "boost-program-options" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "python3" 
+  "stdair" 
+]
+extra-source "rmol-1.00.10-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rmol-1.00.10-1.fc40.x86_64.rpm"
+}

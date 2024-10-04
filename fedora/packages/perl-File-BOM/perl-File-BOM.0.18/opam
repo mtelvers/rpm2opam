@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-File-BOM-0.18-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-BOM-0.18-13.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Encode" {>= "1.99"}
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-Readonly" {>= "0.6"}
+  "perl-Symbol" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-File-BOM-0.18-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-File-BOM-0.18-13.fc40.noarch.rpm"
+}

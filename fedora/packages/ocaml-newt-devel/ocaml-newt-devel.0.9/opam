@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-newt-devel-0.9-79.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-newt-devel-0.9-79.fc40.x86_64.rpm"]
+depends: [
+  "newt-devel" 
+  "ocaml" {= "2125"}
+  "ocaml-newt" {= "0.9"}
+]
+extra-source "ocaml-newt-devel-0.9-79.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-newt-devel-0.9-79.fc40.x86_64.rpm"
+}

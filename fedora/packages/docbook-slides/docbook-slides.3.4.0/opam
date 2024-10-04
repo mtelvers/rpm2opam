@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "docbook-slides-3.4.0-33.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "docbook-slides-3.4.0-33.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "docbook-dtds" 
+  "docbook-simple" 
+  "docbook-style-xsl" 
+  "libxml2" {>= "2.4.8"}
+  "sed" 
+  "sgml-common" 
+]
+extra-source "docbook-slides-3.4.0-33.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/docbook-slides-3.4.0-33.fc40.noarch.rpm"
+}

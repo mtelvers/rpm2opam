@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qrmumps-3.0.2-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qrmumps-3.0.2-12.fc40.x86_64.rpm"]
+depends: [
+  "flexiblas-netlib" 
+  "gcc-gfortran" 
+  "glibc" 
+  "libgcc" 
+  "libgfortran" 
+  "metis" 
+  "scotch" 
+  "scotch-devel" 
+  "suitesparse" 
+]
+extra-source "qrmumps-3.0.2-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qrmumps-3.0.2-12.fc40.x86_64.rpm"
+}

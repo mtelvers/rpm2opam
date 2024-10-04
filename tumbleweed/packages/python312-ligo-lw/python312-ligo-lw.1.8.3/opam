@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-ligo-lw-1.8.3-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-ligo-lw-1.8.3-4.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "python312-PyYAML" 
+  "python312-base" 
+  "python312-lal" 
+  "python312-ligo-segments" 
+  "python312-lscsoft-glue" 
+  "python312-numpy" 
+  "python312-python-dateutil" 
+  "python312-tqdm" 
+  "update-alternatives" 
+]
+extra-source "python312-ligo-lw-1.8.3-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-ligo-lw-1.8.3-4.1.x86_64.rpm"
+}

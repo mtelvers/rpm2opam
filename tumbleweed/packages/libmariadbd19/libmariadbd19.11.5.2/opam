@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmariadbd19-11.5.2-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmariadbd19-11.5.2-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libaio1" 
+  "libcrypt1" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libpcre2-8-0" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "mariadb-errormessages" {>= "11.5.2"}
+]
+extra-source "libmariadbd19-11.5.2-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmariadbd19-11.5.2-2.1.x86_64.rpm"
+}

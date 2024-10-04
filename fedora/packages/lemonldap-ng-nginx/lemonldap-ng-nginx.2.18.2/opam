@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lemonldap-ng-nginx-2.18.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lemonldap-ng-nginx-2.18.2-1.fc40.noarch.rpm"]
+depends: [
+  "nginx" 
+]
+extra-source "lemonldap-ng-nginx-2.18.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lemonldap-ng-nginx-2.18.2-1.fc40.noarch.rpm"
+}

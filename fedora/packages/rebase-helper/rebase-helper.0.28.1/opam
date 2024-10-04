@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rebase-helper-0.28.1-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rebase-helper-0.28.1-4.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-GitPython" 
+  "python3-ansicolors" 
+  "python3-copr" 
+  "python3-pam" 
+  "python3-pyquery" 
+  "python3-requests" 
+  "python3-rpkg" 
+  "python3-specfile" 
+  "python3-unidiff" 
+]
+extra-source "rebase-helper-0.28.1-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rebase-helper-0.28.1-4.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Module-Install-1.21-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Install-1.21-1.6.noarch.rpm"]
+depends: [
+  "perl" {>= "3.16"}
+  "perl-File-Remove" {>= "1.42"}
+  "perl-Module-Build" {>= "0.290000"}
+  "perl-Module-ScanDeps" {>= "1.9"}
+  "perl-YAML-Tiny" {>= "1.38"}
+  "perl-base" {>= "3.28"}
+]
+extra-source "perl-Module-Install-1.21-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Module-Install-1.21-1.6.noarch.rpm"
+}

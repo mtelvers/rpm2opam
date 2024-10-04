@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-tblr-extras-2024.216.1.0svn69794-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-tblr-extras-2024.216.1.0svn69794-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-babel" 
+  "texlive-caption" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-oberdiek" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tabularray" 
+]
+extra-source "texlive-tblr-extras-2024.216.1.0svn69794-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-tblr-extras-2024.216.1.0svn69794-57.1.noarch.rpm"
+}

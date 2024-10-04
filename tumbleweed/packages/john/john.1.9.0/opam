@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "john-1.9.0-9.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "john-1.9.0-9.7.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libOpenCL1" 
+  "libbz2-1" 
+  "libcrypt1" 
+  "libgmp10" 
+  "libopenssl3" 
+  "libpcap1" 
+  "libusb-1_0-0" 
+  "libz-ng-compat1" 
+  "perl-base" 
+  "python311-base" 
+  "system-user-root" 
+]
+extra-source "john-1.9.0-9.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/john-1.9.0-9.7.x86_64.rpm"
+}

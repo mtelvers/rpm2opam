@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pqiv-wand-2.13.1-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pqiv-wand-2.13.1-1.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libMagickWand-7_Q16HDRI10" 
+  "libcairo2" 
+  "libgtk-3-0" 
+  "pqiv" {= "2.13.1"}
+]
+extra-source "pqiv-wand-2.13.1-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pqiv-wand-2.13.1-1.2.x86_64.rpm"
+}

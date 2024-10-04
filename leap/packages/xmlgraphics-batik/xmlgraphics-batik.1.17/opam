@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xmlgraphics-batik-1.17-slfo.1.1.22.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xmlgraphics-batik-1.17-slfo.1.1.22.noarch.rpm"]
+depends: [
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "xml-commons-apis" 
+  "xmlgraphics-batik-css" {= "1.17"}
+  "xmlgraphics-commons" 
+]
+extra-source "xmlgraphics-batik-1.17-slfo.1.1.22.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/xmlgraphics-batik-1.17-slfo.1.1.22.noarch.rpm"
+}

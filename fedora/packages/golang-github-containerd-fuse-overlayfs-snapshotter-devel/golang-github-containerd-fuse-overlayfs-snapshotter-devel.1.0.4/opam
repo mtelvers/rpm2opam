@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-containerd-fuse-overlayfs-snapshotter-devel-1.0.4-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-containerd-fuse-overlayfs-snapshotter-devel-1.0.4-5.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-coreos-systemd-22-devel" 
+  "containerd-devel" 
+  "go-filesystem" 
+  "golang-github-containerd-continuity-devel" 
+  "golang-github-sirupsen-logrus-devel" 
+]
+extra-source "golang-github-containerd-fuse-overlayfs-snapshotter-devel-1.0.4-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-containerd-fuse-overlayfs-snapshotter-devel-1.0.4-5.fc40.noarch.rpm"
+}

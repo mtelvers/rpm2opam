@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-cjk-2023.201.4.8.5svn60865-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-cjk-2023.201.4.8.5svn60865-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-arphic" {>= "2023"}
+  "texlive-cns" {>= "2023"}
+  "texlive-filesystem" {>= "2023"}
+  "texlive-garuda-c90" {>= "2023"}
+  "texlive-graphics" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-norasi-c90" {>= "2023"}
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-uhc" {>= "2023"}
+  "texlive-ulem" 
+  "texlive-wadalab" {>= "2023"}
+]
+extra-source "texlive-cjk-2023.201.4.8.5svn60865-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-cjk-2023.201.4.8.5svn60865-slfo.1.1.4.noarch.rpm"
+}

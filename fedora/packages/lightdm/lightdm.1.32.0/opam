@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lightdm-1.32.0-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lightdm-1.32.0-9.fc40.x86_64.rpm"]
+depends: [
+  "accountsservice" 
+  "audit-libs" 
+  "bash" 
+  "dbus" 
+  "dbus-daemon" 
+  "deepin-session-shell" 
+  "glib2" 
+  "glibc" 
+  "libXdmcp" 
+  "libgcc" 
+  "libgcrypt" 
+  "libxcb" 
+  "lightdm-gobject" {= "1.32.0"}
+  "pam-libs" 
+  "polkit" 
+  "psmisc" 
+  "shadow-utils" 
+  "systemd" 
+  "util-linux" 
+  "xorg-x11-xinit" 
+]
+extra-source "lightdm-1.32.0-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lightdm-1.32.0-9.fc40.x86_64.rpm"
+}

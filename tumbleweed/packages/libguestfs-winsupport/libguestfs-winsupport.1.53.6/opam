@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libguestfs-winsupport-1.53.6-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libguestfs-winsupport-1.53.6-1.1.x86_64.rpm"]
+depends: [
+  "libguestfs" {>= "1.32"}
+  "ntfs-3g" 
+  "ntfsprogs" 
+]
+extra-source "libguestfs-winsupport-1.53.6-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libguestfs-winsupport-1.53.6-1.1.x86_64.rpm"
+}

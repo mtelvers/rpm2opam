@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dirsplit-1.1.11-54.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dirsplit-1.1.11-54.fc40.x86_64.rpm"]
+depends: [
+  "genisoimage" {= "1.1.11"}
+  "perl-File-Basename" 
+  "perl-File-Path" 
+  "perl-Getopt-Long" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "dirsplit-1.1.11-54.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dirsplit-1.1.11-54.fc40.x86_64.rpm"
+}

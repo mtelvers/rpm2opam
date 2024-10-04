@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fontconfig-lang-2.15.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fontconfig-lang-2.15.0-2.1.noarch.rpm"]
+depends: [
+  "fontconfig" {= "2.15.0"}
+]
+extra-source "fontconfig-lang-2.15.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/fontconfig-lang-2.15.0-2.1.noarch.rpm"
+}

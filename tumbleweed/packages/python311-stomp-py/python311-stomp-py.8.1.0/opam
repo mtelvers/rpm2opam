@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-stomp.py-8.1.0-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-stomp.py-8.1.0-1.7.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-docopt" {>= "0.6.2"}
+  "python311-websocket-client" {>= "1.2.3"}
+  "update-alternatives" 
+]
+extra-source "python311-stomp.py-8.1.0-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-stomp.py-8.1.0-1.7.noarch.rpm"
+}

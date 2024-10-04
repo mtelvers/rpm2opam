@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mathml-dtd-20031021-225.20.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mathml-dtd-20031021-225.20.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gawk" 
+  "grep" 
+  "libxml2-tools" 
+  "sed" 
+  "sgml-skel" 
+]
+extra-source "mathml-dtd-20031021-225.20.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mathml-dtd-20031021-225.20.noarch.rpm"
+}

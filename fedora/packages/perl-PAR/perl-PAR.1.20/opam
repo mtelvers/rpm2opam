@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-PAR-1.020-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-PAR-1.020-1.fc40.noarch.rpm"]
+depends: [
+  "perl-Archive-Zip" {>= "1"}
+  "perl-Carp" 
+  "perl-Digest-SHA" {>= "5.45"}
+  "perl-Fcntl" 
+  "perl-File-Temp" {>= "0.5"}
+  "perl-PathTools" 
+  "perl-libs" {>= "5.8.9"}
+  "perl-libwww-perl" 
+  "perl-vars" 
+]
+extra-source "perl-PAR-1.020-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-PAR-1.020-1.fc40.noarch.rpm"
+}

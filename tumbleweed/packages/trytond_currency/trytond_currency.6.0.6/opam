@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "trytond_currency-6.0.6-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trytond_currency-6.0.6-1.1.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "trytond" 
+]
+extra-source "trytond_currency-6.0.6-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/trytond_currency-6.0.6-1.1.noarch.rpm"
+}

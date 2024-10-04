@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mir-devel-2.16.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mir-devel-2.16.3-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "glibmm2-4" 
+  "libgcc" 
+  "libstdc++" 
+  "libuuid-devel" 
+  "libxml++" 
+  "mir-common-libs" 
+  "mir-lomiri-libs" 
+  "mir-server-libs" 
+  "mir-test-libs-static" {= "2.16.3"}
+  "pkgconf-pkg-config" 
+  "wayland-devel" 
+]
+extra-source "mir-devel-2.16.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mir-devel-2.16.3-1.fc40.x86_64.rpm"
+}

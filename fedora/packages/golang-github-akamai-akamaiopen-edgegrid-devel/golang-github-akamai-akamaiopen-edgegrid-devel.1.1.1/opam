@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-akamai-akamaiopen-edgegrid-devel-1.1.1-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-akamai-akamaiopen-edgegrid-devel-1.1.1-9.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-google-querystring-devel" 
+  "golang-github-google-uuid-devel" 
+  "golang-github-mitchellh-homedir-devel" 
+  "golang-github-patrickmn-cache-devel" 
+  "golang-github-sirupsen-logrus-devel" 
+  "golang-github-xeipuuv-gojsonschema-devel" 
+  "golang-gopkg-ini-1-devel" 
+]
+extra-source "golang-github-akamai-akamaiopen-edgegrid-devel-1.1.1-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-akamai-akamaiopen-edgegrid-devel-1.1.1-9.fc40.noarch.rpm"
+}

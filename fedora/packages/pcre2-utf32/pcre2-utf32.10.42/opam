@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pcre2-utf32-10.42-2.fc40.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcre2-utf32-10.42-2.fc40.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "pcre2-syntax" {= "10.42"}
+]
+extra-source "pcre2-utf32-10.42-2.fc40.2.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pcre2-utf32-10.42-2.fc40.2.x86_64.rpm"
+}

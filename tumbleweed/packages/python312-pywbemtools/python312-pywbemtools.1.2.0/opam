@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pywbemtools-1.2.0-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pywbemtools-1.2.0-1.5.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-PyYAML" {>= "5.3.1"}
+  "python312-asciitree" {>= "0.3.3"}
+  "python312-base" {= "3.12"}
+  "python312-click" {>= "8.0.2"}
+  "python312-click-repl" {>= "0.2"}
+  "python312-click-spinner" {>= "0.1.8"}
+  "python312-nocasedict" {>= "1.0.1"}
+  "python312-nocaselist" {>= "1.0.3"}
+  "python312-packaging" {>= "21.0"}
+  "python312-prompt_toolkit" 
+  "python312-psutil" {>= "5.8.0"}
+  "python312-pyparsing" {>= "2.3.1"}
+  "python312-pywbem" {>= "1.6.0"}
+  "python312-six" {>= "1.16.0"}
+  "python312-tabulate" {>= "0.8.8"}
+  "python312-toposort" {>= "1.6"}
+  "python312-yamlloader" {>= "0.5.5"}
+  "update-alternatives" 
+]
+extra-source "python312-pywbemtools-1.2.0-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pywbemtools-1.2.0-1.5.noarch.rpm"
+}

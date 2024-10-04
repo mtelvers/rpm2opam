@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-DateTime-Format-DateParse-0.05-35.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DateTime-Format-DateParse-0.05-35.fc40.noarch.rpm"]
+depends: [
+  "perl-DateTime" {>= "0.29"}
+  "perl-DateTime-TimeZone" {>= "0.27"}
+  "perl-TimeDate" {>= "2.27"}
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-DateTime-Format-DateParse-0.05-35.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-DateTime-Format-DateParse-0.05-35.fc40.noarch.rpm"
+}

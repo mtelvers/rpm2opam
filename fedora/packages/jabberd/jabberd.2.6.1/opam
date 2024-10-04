@@ -1,0 +1,39 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jabberd-2.6.1-27.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jabberd-2.6.1-27.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "expat" 
+  "glibc" 
+  "http-parser" 
+  "libdb" 
+  "libgsasl" 
+  "libidn" 
+  "libpq" 
+  "libxcrypt" 
+  "mariadb-connector-c" 
+  "openldap" 
+  "openssl" 
+  "openssl-libs" 
+  "pam-libs" 
+  "perl-Authen-PAM" 
+  "perl-BerkeleyDB" 
+  "perl-DBI" 
+  "perl-Data-Dumper" 
+  "perl-Digest-SHA1" 
+  "perl-Getopt-Long" 
+  "perl-MIME-Base64" 
+  "perl-Net-Jabber" {>= "1.29"}
+  "perl-XML-Simple" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "rubypick" 
+  "shadow-utils" 
+  "sqlite-libs" 
+  "systemd" 
+  "udns" 
+  "zlib-ng-compat" 
+]
+extra-source "jabberd-2.6.1-27.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jabberd-2.6.1-27.fc40.x86_64.rpm"
+}

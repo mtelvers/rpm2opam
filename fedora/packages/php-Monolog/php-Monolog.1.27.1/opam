@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-Monolog-1.27.1-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-Monolog-1.27.1-6.fc40.noarch.rpm"]
+depends: [
+  "php-PsrLog" {>= "1.0.1"}
+  "php-common" {>= "5.3.0"}
+  "php-fedora-autoloader" 
+  "php-mbstring" 
+  "php-xml" 
+]
+extra-source "php-Monolog-1.27.1-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-Monolog-1.27.1-6.fc40.noarch.rpm"
+}

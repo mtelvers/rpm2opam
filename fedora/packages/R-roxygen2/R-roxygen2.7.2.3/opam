@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-roxygen2-7.2.3-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-roxygen2-7.2.3-6.fc40.x86_64.rpm"]
+depends: [
+  "R-R6" {>= "2.1.2"}
+  "R-brew" 
+  "R-cli" {>= "3.3.0"}
+  "R-commonmark" 
+  "R-core" {= "4.3"}
+  "R-desc" {>= "1.2.0"}
+  "R-knitr" 
+  "R-pkgload" {>= "1.0.2"}
+  "R-purrr" {>= "0.3.3"}
+  "R-rlang" {>= "1.0.6"}
+  "R-stringi" 
+  "R-stringr" {>= "1.0.0"}
+  "R-withr" 
+  "R-xml2" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "R-roxygen2-7.2.3-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-roxygen2-7.2.3-6.fc40.x86_64.rpm"
+}

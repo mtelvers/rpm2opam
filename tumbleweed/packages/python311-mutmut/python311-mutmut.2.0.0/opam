@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-mutmut-2.0.0-5.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-mutmut-2.0.0-5.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-click" 
+  "python311-glob2" 
+  "python311-hammett" 
+  "python311-junit-xml" {>= "1.8"}
+  "python311-parso" 
+  "python311-pony" 
+  "python311-setuptools" 
+  "python311-tri-declarative" {>= "3.0.0"}
+  "update-alternatives" 
+]
+extra-source "python311-mutmut-2.0.0-5.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-mutmut-2.0.0-5.2.noarch.rpm"
+}

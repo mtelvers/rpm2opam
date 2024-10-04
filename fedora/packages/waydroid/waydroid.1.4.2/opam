@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "waydroid-1.4.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "waydroid-1.4.2-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "dnsmasq" 
+  "gtk3" 
+  "iproute" 
+  "lxc" 
+  "nftables" 
+  "python3" 
+  "python3-dbus" 
+  "python3-gbinder" {>= "1.1.0"}
+  "python3-gobject" 
+  "waydroid-selinux" 
+]
+extra-source "waydroid-1.4.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/waydroid-1.4.2-3.fc40.noarch.rpm"
+}

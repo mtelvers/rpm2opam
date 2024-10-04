@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pytest-doctestplus-1.2.1-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pytest-doctestplus-1.2.1-1.2.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-packaging" {>= "17.0"}
+  "python311-pytest" {>= "4.6"}
+  "python311-setuptools" {>= "30.3.0"}
+]
+extra-source "python311-pytest-doctestplus-1.2.1-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pytest-doctestplus-1.2.1-1.2.noarch.rpm"
+}

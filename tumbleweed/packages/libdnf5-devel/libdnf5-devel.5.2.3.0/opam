@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libdnf5-devel-5.2.3.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdnf5-devel-5.2.3.0-1.1.x86_64.rpm"]
+depends: [
+  "fmt-10-devel" 
+  "libbz2-devel" 
+  "libdnf5_2" {= "5.2.3.0"}
+  "libmodulemd-devel" 
+  "librepo-devel" 
+  "libsolv-devel" {>= "0.7.25"}
+  "libxml2-devel" 
+  "libzstd-devel" 
+  "pkgconf-pkg-config" 
+  "rpm-devel" 
+  "sqlite3-devel" 
+  "xz-devel" 
+  "zlib-devel" 
+]
+extra-source "libdnf5-devel-5.2.3.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libdnf5-devel-5.2.3.0-1.1.x86_64.rpm"
+}

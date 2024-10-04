@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lutris-0.5.17-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lutris-0.5.17-2.1.noarch.rpm"]
+depends: [
+  "7zip" 
+  "cabextract" 
+  "curl" 
+  "fluid-soundfont-gm" 
+  "psmisc" 
+  "python311-Pillow" 
+  "python311-PyYAML" 
+  "python311-base" 
+  "python311-certifi" 
+  "python311-dbus-python" 
+  "python311-distro" 
+  "python311-evdev" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-lxml" 
+  "python311-protobuf" 
+  "python311-requests" 
+  "typelib-1_0-AppIndicator3-0_1" {= "0.1"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-GnomeDesktop-3_0" {= "3.0"}
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" 
+  "typelib-1_0-WebKit2-4_0" {= "4.0"}
+  "typelib-1_0-WebKit2-4_1" {= "4.1"}
+  "xrandr" 
+]
+extra-source "lutris-0.5.17-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/lutris-0.5.17-2.1.noarch.rpm"
+}

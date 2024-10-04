@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vtk-testing-9.2.6-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vtk-testing-9.2.6-12.fc40.x86_64.rpm"]
+depends: [
+  "boost-serialization" 
+  "glibc" 
+  "libarchive" 
+  "libgcc" 
+  "libglvnd-opengl" 
+  "libstdc++" 
+  "proj" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtdeclarative" 
+  "vtk" 
+  "vtk-data" {= "9.2.6"}
+  "vtk-qt" 
+]
+extra-source "vtk-testing-9.2.6-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vtk-testing-9.2.6-12.fc40.x86_64.rpm"
+}

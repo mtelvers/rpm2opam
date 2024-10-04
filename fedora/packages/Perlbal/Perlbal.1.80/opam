@@ -1,0 +1,42 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "Perlbal-1.80-56.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Perlbal-1.80-56.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-BSD-Resource" 
+  "perl-Carp" 
+  "perl-Danga-Socket" {>= "1.44"}
+  "perl-Digest-MD5" 
+  "perl-Errno" 
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-HTTP-Date" 
+  "perl-HTTP-Message" 
+  "perl-IO" 
+  "perl-IO-AIO" {>= "1.6"}
+  "perl-IO-Socket-SSL" {>= "0.98"}
+  "perl-Net-CIDR-Lite" 
+  "perl-POSIX" 
+  "perl-Perlbal-XS-HTTPHeaders" {>= "0.20"}
+  "perl-Scalar-List-Utils" 
+  "perl-Socket" 
+  "perl-Symbol" 
+  "perl-Sys-Syscall" 
+  "perl-Time-HiRes" 
+  "perl-URI" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-fields" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+  "perl-vars" 
+  "systemd" 
+]
+extra-source "Perlbal-1.80-56.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/Perlbal-1.80-56.fc40.noarch.rpm"
+}

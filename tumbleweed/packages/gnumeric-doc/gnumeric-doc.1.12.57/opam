@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnumeric-doc-1.12.57-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnumeric-doc-1.12.57-2.1.noarch.rpm"]
+depends: [
+  "gnumeric" {= "1.12.57"}
+]
+extra-source "gnumeric-doc-1.12.57-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnumeric-doc-1.12.57-2.1.noarch.rpm"
+}

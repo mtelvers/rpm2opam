@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-WWW-Twilio-API-0.21-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-WWW-Twilio-API-0.21-23.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-LWP-Protocol-https" 
+  "perl-Scalar-List-Utils" 
+  "perl-URI" {>= "3.28"}
+  "perl-libs" {>= "5.10.1"}
+  "perl-libwww-perl" {>= "2.3"}
+]
+extra-source "perl-WWW-Twilio-API-0.21-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-WWW-Twilio-API-0.21-23.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "khmer-os-muol-fonts-all-5.0-42.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "khmer-os-muol-fonts-all-5.0-42.fc40.noarch.rpm"]
+depends: [
+  "khmer-os-muol-fonts" {= "5.0"}
+  "khmer-os-muol-pali-fonts" {= "5.0"}
+]
+extra-source "khmer-os-muol-fonts-all-5.0-42.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/khmer-os-muol-fonts-all-5.0-42.fc40.noarch.rpm"
+}

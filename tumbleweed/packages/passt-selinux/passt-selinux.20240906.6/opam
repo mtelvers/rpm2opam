@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "passt-selinux-20240906.6b38f07-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "passt-selinux-20240906.6b38f07-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "policycoreutils" 
+  "selinux-policy" 
+]
+extra-source "passt-selinux-20240906.6b38f07-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/passt-selinux-20240906.6b38f07-2.1.noarch.rpm"
+}

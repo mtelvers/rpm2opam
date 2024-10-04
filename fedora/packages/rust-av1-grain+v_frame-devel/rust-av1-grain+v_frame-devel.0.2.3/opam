@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-av1-grain+v_frame-devel-0.2.3-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-av1-grain+v_frame-devel-0.2.3-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-av1-grain-devel" {= "0.2.3"}
+  "rust-v_frame+default-devel" 
+]
+extra-source "rust-av1-grain+v_frame-devel-0.2.3-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-av1-grain+v_frame-devel-0.2.3-2.fc40.noarch.rpm"
+}

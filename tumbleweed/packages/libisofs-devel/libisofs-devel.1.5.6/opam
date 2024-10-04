@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libisofs-devel-1.5.6-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libisofs-devel-1.5.6-2.3.x86_64.rpm"]
+depends: [
+  "libisofs6" {= "1.5.6"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libisofs-devel-1.5.6-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libisofs-devel-1.5.6-2.3.x86_64.rpm"
+}

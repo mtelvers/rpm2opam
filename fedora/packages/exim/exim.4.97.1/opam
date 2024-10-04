@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "exim-4.97.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "exim-4.97.1-5.fc40.x86_64.rpm"]
+depends: [
+  "alternatives" 
+  "bash" 
+  "ca-certificates" 
+  "cyrus-sasl-lib" 
+  "glibc" 
+  "libdb" 
+  "libgsasl" 
+  "libnsl2" 
+  "libopendmarc" 
+  "libspf2" 
+  "libxcrypt" 
+  "openldap" 
+  "openssl-libs" 
+  "pam-libs" 
+  "pcre2" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long" 
+  "perl-Getopt-Std" 
+  "perl-IO" 
+  "perl-POSIX" 
+  "perl-Pod-Usage" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-vars" 
+  "policycoreutils" 
+  "setup" 
+  "shadow-utils" 
+  "sqlite-libs" 
+  "systemd" 
+]
+extra-source "exim-4.97.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/exim-4.97.1-5.fc40.x86_64.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "minigalaxy-1.3.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "minigalaxy-1.3.0-1.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-gobject" {>= "3.30"}
+  "python311-gobject-Gdk" 
+  "python311-requests" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Notify-0_7" {= "0.7"}
+  "typelib-1_0-WebKit2-4_0" {= "4.0"}
+  "typelib-1_0-WebKit2-4_1" {= "4.1"}
+]
+extra-source "minigalaxy-1.3.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/minigalaxy-1.3.0-1.1.noarch.rpm"
+}

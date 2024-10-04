@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcaes-devel-20240413-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcaes-devel-20240413-1.1.x86_64.rpm"]
+depends: [
+  "libcaes1" {= "20240413"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libcaes-devel-20240413-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcaes-devel-20240413-1.1.x86_64.rpm"
+}

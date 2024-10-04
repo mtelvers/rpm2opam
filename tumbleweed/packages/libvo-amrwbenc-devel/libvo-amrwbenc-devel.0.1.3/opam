@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvo-amrwbenc-devel-0.1.3+5-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvo-amrwbenc-devel-0.1.3+5-1.4.x86_64.rpm"]
+depends: [
+  "libvo-amrwbenc0" {= "0.1.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libvo-amrwbenc-devel-0.1.3+5-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libvo-amrwbenc-devel-0.1.3+5-1.4.x86_64.rpm"
+}

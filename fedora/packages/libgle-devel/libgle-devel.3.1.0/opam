@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libgle-devel-3.1.0-29.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgle-devel-3.1.0-29.fc39.x86_64.rpm"]
+depends: [
+  "freeglut-devel" 
+  "libX11-devel" 
+  "libXext-devel" 
+  "libXi-devel" 
+  "libXmu-devel" 
+  "libXt-devel" 
+  "libgle" 
+  "mesa-libGL-devel" 
+  "mesa-libGLU-devel" 
+]
+extra-source "libgle-devel-3.1.0-29.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libgle-devel-3.1.0-29.fc39.x86_64.rpm"
+}

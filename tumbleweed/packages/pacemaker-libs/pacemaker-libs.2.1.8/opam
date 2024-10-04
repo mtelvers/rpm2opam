@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pacemaker-libs-2.1.8+20240808.3980678f03-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pacemaker-libs-2.1.8+20240808.3980678f03-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "cluster-glue-libs" 
+  "corosync-libs" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libbz2-1" 
+  "libdbus-1-3" 
+  "libgnutls30" 
+  "libqb100" 
+  "libuuid1" 
+  "libxml2-2" 
+  "libxslt1" 
+  "pacemaker-schemas" {= "2.1.8"}
+  "shadow" 
+]
+extra-source "pacemaker-libs-2.1.8+20240808.3980678f03-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pacemaker-libs-2.1.8+20240808.3980678f03-1.1.x86_64.rpm"
+}

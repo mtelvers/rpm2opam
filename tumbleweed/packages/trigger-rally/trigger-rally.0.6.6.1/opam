@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "trigger-rally-0.6.6.1-3.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trigger-rally-0.6.6.1-3.11.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libGLEW2_2" 
+  "libGLU1" 
+  "libSDL2-2_0-0" 
+  "libSDL2_image-2_0-0" 
+  "libalut0" 
+  "libgcc_s1" 
+  "libglvnd" 
+  "libopenal1" 
+  "libphysfs1" 
+  "libstdc++6" 
+  "libtinyxml2-10" 
+  "trigger-rally-data" {= "0.6.6.1"}
+]
+extra-source "trigger-rally-0.6.6.1-3.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/trigger-rally-0.6.6.1-3.11.x86_64.rpm"
+}

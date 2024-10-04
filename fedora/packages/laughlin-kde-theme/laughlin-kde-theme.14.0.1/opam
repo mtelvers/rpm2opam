@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "laughlin-kde-theme-14.0.1-18.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "laughlin-kde-theme-14.0.1-18.fc39.noarch.rpm"]
+depends: [
+  "fedora-logos" 
+  "kde-filesystem" 
+  "laughlin-backgrounds-kde" {>= "14.0.0"}
+]
+extra-source "laughlin-kde-theme-14.0.1-18.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/laughlin-kde-theme-14.0.1-18.fc39.noarch.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "swtpm-tools-0.8.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "swtpm-tools-0.8.1-5.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "gnutls" 
+  "gnutls-utils" 
+  "json-glib" 
+  "libgcc" 
+  "libtasn1" 
+  "openssl-libs" 
+  "swtpm" {= "0.8.1"}
+  "tpm2-tss" 
+]
+extra-source "swtpm-tools-0.8.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/swtpm-tools-0.8.1-5.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mednafen-lang-1.32.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mednafen-lang-1.32.1-1.1.noarch.rpm"]
+depends: [
+  "mednafen" {= "1.32.1"}
+]
+extra-source "mednafen-lang-1.32.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mednafen-lang-1.32.1-1.1.noarch.rpm"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xfce4-sensors-plugin-1.4.4-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xfce4-sensors-plugin-1.4.4-3.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "cairo-gobject" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "harfbuzz" 
+  "hddtemp" 
+  "libgcc" 
+  "libnotify" 
+  "libstdc++" 
+  "libxfce4ui" 
+  "libxfce4util" 
+  "lm_sensors" {>= "2.8"}
+  "lm_sensors-libs" 
+  "pango" 
+  "xfce4-panel" 
+  "zlib-ng-compat" 
+]
+extra-source "xfce4-sensors-plugin-1.4.4-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xfce4-sensors-plugin-1.4.4-3.fc40.x86_64.rpm"
+}

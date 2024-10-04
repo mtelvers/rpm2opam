@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-conduit-extra-devel-1.3.6-2.34.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-conduit-extra-devel-1.3.6-2.34.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-async-devel" 
+  "ghc-attoparsec-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-conduit-devel" 
+  "ghc-conduit-extra" {= "1.3.6"}
+  "ghc-directory-devel" 
+  "ghc-filepath-devel" 
+  "ghc-network-devel" 
+  "ghc-primitive-devel" 
+  "ghc-process-devel" 
+  "ghc-resourcet-devel" 
+  "ghc-stm-devel" 
+  "ghc-streaming-commons-devel" 
+  "ghc-text-devel" 
+  "ghc-transformers-devel" 
+  "ghc-typed-process-devel" 
+  "ghc-unliftio-core-devel" 
+]
+extra-source "ghc-conduit-extra-devel-1.3.6-2.34.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-conduit-extra-devel-1.3.6-2.34.x86_64.rpm"
+}

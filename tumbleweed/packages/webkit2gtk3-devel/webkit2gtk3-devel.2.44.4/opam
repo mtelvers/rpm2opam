@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "webkit2gtk3-devel-2.44.4-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "webkit2gtk3-devel-2.44.4-1.2.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "gtk3-devel" 
+  "libjavascriptcoregtk-4_1-0" {= "2.44.4"}
+  "libsoup-devel" 
+  "libwebkit2gtk-4_1-0" {= "2.44.4"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-JavaScriptCore-4_1" 
+  "typelib-1_0-WebKit2-4_1" 
+  "typelib-1_0-WebKit2WebExtension-4_1" 
+]
+extra-source "webkit2gtk3-devel-2.44.4-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/webkit2gtk3-devel-2.44.4-1.2.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cffconvert-2.0.0-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cffconvert-2.0.0-10.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-click" 
+  "python3-jsonschema" 
+  "python3-pykwalify" {>= "1.6"}
+  "python3-requests" 
+  "python3-ruamel-yaml" {>= "0.16"}
+]
+extra-source "cffconvert-2.0.0-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cffconvert-2.0.0-10.fc40.noarch.rpm"
+}

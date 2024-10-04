@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mod_perl-devel-2.0.13-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mod_perl-devel-2.0.13-4.fc40.x86_64.rpm"]
+depends: [
+  "httpd-devel" 
+  "mod_perl" {= "2.0.13"}
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-DirHandle" 
+  "perl-Exporter" 
+  "perl-ExtUtils-Embed" 
+  "perl-ExtUtils-Install" 
+  "perl-ExtUtils-MakeMaker" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-Module-Build" {>= "0.18"}
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Socket" 
+  "perl-Symbol" 
+  "perl-Test" 
+  "perl-Test-Harness" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-lib" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-subs" 
+  "perl-vars" 
+]
+extra-source "mod_perl-devel-2.0.13-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mod_perl-devel-2.0.13-4.fc40.x86_64.rpm"
+}

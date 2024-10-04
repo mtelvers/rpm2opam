@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "trash-cli-0.22.10.20-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trash-cli-0.22.10.20-5.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-psutil" 
+  "python3-six" 
+]
+extra-source "trash-cli-0.22.10.20-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/trash-cli-0.22.10.20-5.fc40.noarch.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libextractor-plugins-1.13-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libextractor-plugins-1.13-4.fc40.noarch.rpm"]
+depends: [
+  "libextractor" {= "1.13"}
+  "libextractor-plugins-base" 
+  "libextractor-plugins-exiv2" 
+  "libextractor-plugins-flac" 
+  "libextractor-plugins-gif" 
+  "libextractor-plugins-mime" 
+  "libextractor-plugins-ogg" 
+  "libextractor-plugins-ole2" 
+  "libextractor-plugins-rpm" 
+  "libextractor-plugins-thumbnailgtk" 
+  "libextractor-plugins-tiff" 
+]
+extra-source "libextractor-plugins-1.13-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libextractor-plugins-1.13-4.fc40.noarch.rpm"
+}

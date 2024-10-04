@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libperf-devel-6.8.5-301.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libperf-devel-6.8.5-301.fc40.x86_64.rpm"]
+depends: [
+  "libperf" {= "6.8.5"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libperf-devel-6.8.5-301.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libperf-devel-6.8.5-301.fc40.x86_64.rpm"
+}

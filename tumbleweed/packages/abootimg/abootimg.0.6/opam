@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "abootimg-0.6-9.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "abootimg-0.6-9.13.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libblkid1" 
+]
+extra-source "abootimg-0.6-9.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/abootimg-0.6-9.13.x86_64.rpm"
+}

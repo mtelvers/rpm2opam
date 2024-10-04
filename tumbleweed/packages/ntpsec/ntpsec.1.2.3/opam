@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ntpsec-1.2.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ntpsec-1.2.3-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libbsd0" 
+  "libcap2" 
+  "libdns_sd" 
+  "libnss_usrfiles2" 
+  "libopenssl3" 
+  "libseccomp2" 
+  "netcfg" 
+  "ntpsec-utils" 
+  "system-user-ntp" 
+]
+extra-source "ntpsec-1.2.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ntpsec-1.2.3-1.1.x86_64.rpm"
+}

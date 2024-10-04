@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-sacloud-iaas-api-devel-1.11.1-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-sacloud-iaas-api-devel-1.11.1-5.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-fatih-structs-devel" 
+  "golang-github-fsnotify-devel" 
+  "golang-github-hashicorp-multierror-devel" 
+  "golang-github-huandu-xstrings-devel" 
+  "golang-github-mitchellh-homedir-devel" 
+  "golang-github-mitchellh-mapstructure-devel" 
+  "golang-github-sacloud-api-client-devel" 
+  "golang-github-sacloud-http-devel" 
+  "golang-github-sacloud-packages-devel" 
+  "golang-github-stretchr-testify-devel" 
+  "golang-opentelemetry-contrib-devel" 
+  "golang-opentelemetry-otel-devel" 
+  "golang-x-crypto-devel" 
+]
+extra-source "golang-github-sacloud-iaas-api-devel-1.11.1-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-sacloud-iaas-api-devel-1.11.1-5.fc40.noarch.rpm"
+}

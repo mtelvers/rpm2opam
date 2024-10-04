@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-minted-2024.216.2.9svn69163-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-minted-2024.216.2.9svn69163-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-catchfile" 
+  "texlive-etoolbox" 
+  "texlive-fancyvrb" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-float" 
+  "texlive-framed" 
+  "texlive-fvextra" 
+  "texlive-graphics" 
+  "texlive-ifplatform" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-kvoptions" 
+  "texlive-latex" 
+  "texlive-lineno" 
+  "texlive-newfloat" 
+  "texlive-pdftexcmds" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tools" 
+  "texlive-xcolor" 
+  "texlive-xstring" 
+]
+extra-source "texlive-minted-2024.216.2.9svn69163-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-minted-2024.216.2.9svn69163-57.1.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-openat-devel-0.1.21-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-openat-devel-0.1.21-9.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-libc+default-devel" 
+]
+extra-source "rust-openat-devel-0.1.21-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-openat-devel-0.1.21-9.fc40.noarch.rpm"
+}

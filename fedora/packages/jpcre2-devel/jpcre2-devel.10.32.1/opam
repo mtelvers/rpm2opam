@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jpcre2-devel-10.32.01-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jpcre2-devel-10.32.01-9.fc40.noarch.rpm"]
+depends: [
+  "pcre2-devel" 
+]
+extra-source "jpcre2-devel-10.32.01-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jpcre2-devel-10.32.01-9.fc40.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-AnyEvent-WebSocket-Client-0.55-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-AnyEvent-WebSocket-Client-0.55-1.6.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-AnyEvent" {>= "7.13"}
+  "perl-AnyEvent-Connector" {>= "0.3"}
+  "perl-Moo" {>= "2.0"}
+  "perl-PerlX-Maybe" {>= "0.3"}
+  "perl-Protocol-WebSocket" {>= "0.20"}
+  "perl-URI" {>= "1.53"}
+  "perl-URI-ws" 
+]
+extra-source "perl-AnyEvent-WebSocket-Client-0.55-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-AnyEvent-WebSocket-Client-0.55-1.6.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kf5-libkdcraw-23.08.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kf5-libkdcraw-23.08.5-1.fc40.x86_64.rpm"]
+depends: [
+  "LibRaw" 
+  "glibc" 
+  "kf5-filesystem" 
+  "libgcc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "kf5-libkdcraw-23.08.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kf5-libkdcraw-23.08.5-1.fc40.x86_64.rpm"
+}

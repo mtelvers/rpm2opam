@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "javacc-maven-plugin-3.1.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "javacc-maven-plugin-3.1.0-1.fc40.noarch.rpm"]
+depends: [
+  "java-21-openjdk-headless" 
+  "javacc" 
+  "javapackages-filesystem" 
+  "maven-doxia-sink-api" 
+  "maven-doxia-sitetools" 
+  "maven-reporting-api" 
+  "maven-reporting-impl" 
+  "plexus-utils" 
+  "plexus-xml" 
+]
+extra-source "javacc-maven-plugin-3.1.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/javacc-maven-plugin-3.1.0-1.fc40.noarch.rpm"
+}

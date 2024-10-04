@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-software-devel-46.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-software-devel-46.0-1.fc40.x86_64.rpm"]
+depends: [
+  "appstream-devel" {>= "0.16.4"}
+  "glib2-devel" {>= "2.56.0"}
+  "gnome-software" {= "46.0"}
+  "gtk4-devel" {>= "4.12.0"}
+  "json-glib-devel" {>= "1.6.0"}
+  "libsoup3-devel" {>= "3.0"}
+  "libxmlb-devel" {>= "0.1.7"}
+  "pkgconf-pkg-config" 
+  "polkit-devel" 
+  "sysprof-capture-devel" 
+]
+extra-source "gnome-software-devel-46.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-software-devel-46.0-1.fc40.x86_64.rpm"
+}

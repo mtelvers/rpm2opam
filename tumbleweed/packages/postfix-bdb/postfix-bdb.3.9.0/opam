@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postfix-bdb-3.9.0-8.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postfix-bdb-3.9.0-8.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "busybox-diffutils" 
+  "ed" 
+  "fillup" 
+  "glibc" 
+  "iproute2" 
+  "libdb-4_8" 
+  "libicu75" 
+  "libopenssl3" 
+  "libpcre2-8-0" 
+  "libsasl2-3" 
+  "perl" 
+  "perl-base" 
+  "permissions" 
+  "system-user-mail" 
+  "system-user-nobody" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "postfix-bdb-3.9.0-8.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/postfix-bdb-3.9.0-8.1.x86_64.rpm"
+}

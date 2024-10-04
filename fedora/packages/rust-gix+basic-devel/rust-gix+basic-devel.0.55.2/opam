@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gix+basic-devel-0.55.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gix+basic-devel-0.55.2-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-gix+blob-diff-devel" {= "0.55.2"}
+  "rust-gix+index-devel" {= "0.55.2"}
+  "rust-gix+revision-devel" {= "0.55.2"}
+  "rust-gix-devel" {= "0.55.2"}
+]
+extra-source "rust-gix+basic-devel-0.55.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gix+basic-devel-0.55.2-3.fc40.noarch.rpm"
+}

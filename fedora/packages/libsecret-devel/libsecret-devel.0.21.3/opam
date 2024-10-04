@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libsecret-devel-0.21.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsecret-devel-0.21.3-1.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.44"}
+  "gnutls-devel" {>= "3.8.2"}
+  "libsecret" {= "0.21.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libsecret-devel-0.21.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libsecret-devel-0.21.3-1.fc40.x86_64.rpm"
+}

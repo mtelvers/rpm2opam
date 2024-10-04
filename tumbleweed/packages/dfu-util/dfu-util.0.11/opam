@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dfu-util-0.11-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dfu-util-0.11-2.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libusb-1_0-0" 
+  "python311-base" 
+]
+extra-source "dfu-util-0.11-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/dfu-util-0.11-2.6.x86_64.rpm"
+}

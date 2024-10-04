@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "R-recommended-packages-4.4.1-50.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-recommended-packages-4.4.1-50.1.x86_64.rpm"]
+depends: [
+  "R-MASS" 
+  "R-Matrix" 
+  "R-base" 
+  "R-boot" 
+  "R-class" 
+  "R-cluster" 
+  "R-codetools" 
+  "R-foreign" 
+  "R-lattice" 
+  "R-mgcv" 
+  "R-nlme" 
+  "R-nnet" 
+  "R-rpart" 
+  "R-spatial" 
+  "R-survival" 
+]
+extra-source "R-recommended-packages-4.4.1-50.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/R-recommended-packages-4.4.1-50.1.x86_64.rpm"
+}

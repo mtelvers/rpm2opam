@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libasn1-8-7.8.0-slfo.1.1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libasn1-8-7.8.0-slfo.1.1.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcom_err2" 
+  "libroken18" 
+]
+extra-source "libasn1-8-7.8.0-slfo.1.1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libasn1-8-7.8.0-slfo.1.1.6.x86_64.rpm"
+}

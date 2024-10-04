@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "canlock-3.3.0-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "canlock-3.3.0-1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcanlock3" 
+]
+extra-source "canlock-3.3.0-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/canlock-3.3.0-1.7.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kservice-devel-5.116.0-lp160.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kservice-devel-5.116.0-lp160.1.2.x86_64.rpm"]
+depends: [
+  "kconfig-devel" {>= "5.116.0"}
+  "kcoreaddons-devel" {>= "5.116.0"}
+  "kservice" {= "5.116.0"}
+]
+extra-source "kservice-devel-5.116.0-lp160.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/kservice-devel-5.116.0-lp160.1.2.x86_64.rpm"
+}

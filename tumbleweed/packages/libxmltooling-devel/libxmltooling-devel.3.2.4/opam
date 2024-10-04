@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libxmltooling-devel-3.2.4-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxmltooling-devel-3.2.4-1.5.x86_64.rpm"]
+depends: [
+  "libboost_headers-devel" 
+  "libcurl-devel" {>= "7.10.6"}
+  "liblog4shib-devel" {>= "1.0.4"}
+  "libopenssl-1_0_0-devel" 
+  "libopenssl-devel" 
+  "libxerces-c-devel" {>= "3.2"}
+  "libxml-security-c-devel" {>= "2.0.0"}
+  "libxmltooling-lite10" {= "3.2.4"}
+  "libxmltooling10" {= "3.2.4"}
+  "pkgconf-pkg-config" 
+  "zlib-devel" 
+]
+extra-source "libxmltooling-devel-3.2.4-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libxmltooling-devel-3.2.4-1.5.x86_64.rpm"
+}

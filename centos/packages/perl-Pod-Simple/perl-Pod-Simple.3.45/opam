@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Pod-Simple-3.45-510.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Pod-Simple-3.45-510.el10.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Encode" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long" 
+  "perl-PathTools" 
+  "perl-Pod-Escapes" {>= "1.4"}
+  "perl-Pod-Simple" 
+  "perl-Symbol" 
+  "perl-Text-Tabs+Wrap" {>= "98.112902"}
+  "perl-if" 
+  "perl-overload" 
+]
+extra-source "perl-Pod-Simple-3.45-510.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/perl-Pod-Simple-3.45-510.el10.noarch.rpm"
+}

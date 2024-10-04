@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rspamd-3.9.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rspamd-3.9.1-2.1.x86_64.rpm"]
+depends: [
+  "apparmor-abstractions" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libarchive13" 
+  "libgcc_s1" 
+  "libhs5-vectorscan5" 
+  "libicu75" 
+  "liblua5_4-5" 
+  "libopenblas_openmp0" 
+  "libopenssl3" 
+  "libpcre2-8-0" 
+  "libsodium26" 
+  "libsqlite3-0" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+  "lua54-lpeg" 
+  "shadow" 
+]
+extra-source "rspamd-3.9.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rspamd-3.9.1-2.1.x86_64.rpm"
+}

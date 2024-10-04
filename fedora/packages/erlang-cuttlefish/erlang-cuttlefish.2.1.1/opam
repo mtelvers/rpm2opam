@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "erlang-cuttlefish-2.1.1-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "erlang-cuttlefish-2.1.1-6.fc40.noarch.rpm"]
+depends: [
+  "erlang-bbmustache" 
+  "erlang-erts" 
+  "erlang-getopt" 
+  "erlang-kernel" 
+  "erlang-lager" 
+  "erlang-sasl" 
+  "erlang-stdlib" 
+  "erlang-syntax_tools" 
+]
+extra-source "erlang-cuttlefish-2.1.1-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/erlang-cuttlefish-2.1.1-6.fc40.noarch.rpm"
+}

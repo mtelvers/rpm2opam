@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-hxt-prof-9.3.1.22-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hxt-prof-9.3.1.22-9.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-binary-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+  "ghc-hxt-charproperties-prof" 
+  "ghc-hxt-devel" {= "9.3.1.22"}
+  "ghc-hxt-regex-xmlschema-prof" 
+  "ghc-hxt-unicode-prof" 
+  "ghc-mtl-prof" 
+  "ghc-network-uri-prof" 
+  "ghc-parsec-prof" 
+]
+extra-source "ghc-hxt-prof-9.3.1.22-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-hxt-prof-9.3.1.22-9.fc40.x86_64.rpm"
+}

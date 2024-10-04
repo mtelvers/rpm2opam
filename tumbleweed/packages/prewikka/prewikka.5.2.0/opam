@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "prewikka-5.2.0-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "prewikka-5.2.0-3.1.noarch.rpm"]
+depends: [
+  "prewikka-lang" {>= "5.2.0"}
+  "python3-libprelude" 
+  "python3-libpreludedb" 
+  "python311-Babel" 
+  "python311-Mako" 
+  "python311-PyYAML" 
+  "python311-Werkzeug" 
+  "python311-base" 
+  "python311-croniter" 
+  "python311-gevent" 
+  "python311-lark" 
+  "python311-python-dateutil" 
+  "python311-pytz" 
+  "python311-voluptuous" 
+  "xorg-x11-fonts" 
+]
+extra-source "prewikka-5.2.0-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/prewikka-5.2.0-3.1.noarch.rpm"
+}

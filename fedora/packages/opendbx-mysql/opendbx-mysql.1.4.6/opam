@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "opendbx-mysql-1.4.6-34.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opendbx-mysql-1.4.6-34.fc39.x86_64.rpm"]
+depends: [
+  "opendbx" {= "1.4.6"}
+]
+extra-source "opendbx-mysql-1.4.6-34.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/opendbx-mysql-1.4.6-34.fc39.x86_64.rpm"
+}

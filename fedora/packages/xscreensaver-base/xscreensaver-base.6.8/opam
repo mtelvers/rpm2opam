@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xscreensaver-base-6.08-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xscreensaver-base-6.08-2.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "authselect-libs" 
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libX11" 
+  "libXext" 
+  "libXft" 
+  "libXi" 
+  "libXinerama" 
+  "libXrandr" 
+  "libXt" 
+  "libXxf86vm" 
+  "libxcrypt" 
+  "libxml2" 
+  "pam" {> "0.80"}
+  "pam-libs" 
+  "procps-ng" 
+  "systemd-libs" 
+  "xdg-utils" 
+  "xscreensaver-gl-base" {= "6.8"}
+]
+extra-source "xscreensaver-base-6.08-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xscreensaver-base-6.08-2.fc40.x86_64.rpm"
+}

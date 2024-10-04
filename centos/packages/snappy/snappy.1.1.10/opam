@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "snappy-1.1.10-6.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "snappy-1.1.10-6.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libstdc++" 
+]
+extra-source "snappy-1.1.10-6.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/snappy-1.1.10-6.el10.x86_64.rpm"
+}

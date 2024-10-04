@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "PackageKit-gstreamer-plugin-1.2.8-lp160.1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "PackageKit-gstreamer-plugin-1.2.8-lp160.1.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libgio-2_0-0" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libgstreamer-1_0-0" 
+  "libpackagekit-glib2-18" 
+  "update-alternatives" 
+]
+extra-source "PackageKit-gstreamer-plugin-1.2.8-lp160.1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/PackageKit-gstreamer-plugin-1.2.8-lp160.1.4.x86_64.rpm"
+}

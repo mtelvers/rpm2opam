@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dvdauthor-0.7.2-23.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dvdauthor-0.7.2-23.fc40.x86_64.rpm"]
+depends: [
+  "ImageMagick-libs" 
+  "bash" 
+  "fontconfig" 
+  "freetype" 
+  "fribidi" 
+  "glibc" 
+  "libdvdread" 
+  "libpng" 
+  "libxml2" 
+]
+extra-source "dvdauthor-0.7.2-23.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dvdauthor-0.7.2-23.fc40.x86_64.rpm"
+}

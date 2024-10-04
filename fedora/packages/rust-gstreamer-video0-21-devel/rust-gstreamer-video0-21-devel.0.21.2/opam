@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gstreamer-video0.21-devel-0.21.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gstreamer-video0.21-devel-0.21.2-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.70"}
+  "rust-cfg-if+default-devel" 
+  "rust-futures-channel+default-devel" 
+  "rust-glib+default-devel" 
+  "rust-gstreamer+default-devel" 
+  "rust-gstreamer-base+default-devel" 
+  "rust-gstreamer-video-sys+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-gstreamer-video0.21-devel-0.21.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gstreamer-video0.21-devel-0.21.2-1.fc40.noarch.rpm"
+}

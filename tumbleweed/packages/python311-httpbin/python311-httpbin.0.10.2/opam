@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-httpbin-0.10.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-httpbin-0.10.2-1.1.noarch.rpm"]
+depends: [
+  "python311-Brotli" 
+  "python311-Flask" {>= "2.2.4"}
+  "python311-Werkzeug" {>= "2.2.2"}
+  "python311-base" {= "3.11"}
+  "python311-decorator" 
+  "python311-flasgger" 
+  "python311-gevent" 
+  "python311-six" 
+]
+extra-source "python311-httpbin-0.10.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-httpbin-0.10.2-1.1.noarch.rpm"
+}

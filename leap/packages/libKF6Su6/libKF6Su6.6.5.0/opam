@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libKF6Su6-6.5.0-lp160.1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libKF6Su6-6.5.0-lp160.1.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf6-kdesu" {>= "6.5.0"}
+  "libKF6ConfigCore6" 
+  "libKF6CoreAddons6" 
+  "libKF6Pty6" 
+  "libQt6Core6" 
+  "libstdc++6" 
+]
+extra-source "libKF6Su6-6.5.0-lp160.1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libKF6Su6-6.5.0-lp160.1.4.x86_64.rpm"
+}

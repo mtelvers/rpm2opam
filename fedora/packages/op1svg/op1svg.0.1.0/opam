@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "op1svg-0.1.0-12.20210430git50a3b01.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "op1svg-0.1.0-12.20210430git50a3b01.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-svg-path" 
+]
+extra-source "op1svg-0.1.0-12.20210430git50a3b01.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/op1svg-0.1.0-12.20210430git50a3b01.fc40.noarch.rpm"
+}

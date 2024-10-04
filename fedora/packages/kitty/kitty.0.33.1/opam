@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kitty-0.33.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kitty-0.33.1-1.fc40.x86_64.rpm"]
+depends: [
+  "dbus-libs" 
+  "glibc" 
+  "harfbuzz" 
+  "hicolor-icon-theme" 
+  "kitty-kitten" {= "0.33.1"}
+  "kitty-shell-integration" {= "0.33.1"}
+  "kitty-terminfo" {= "0.33.1"}
+  "lcms2" 
+  "libX11" 
+  "libX11-xcb" 
+  "libXcursor" 
+  "libgcc" 
+  "libpng" 
+  "libwayland-client" 
+  "libxkbcommon" 
+  "libxkbcommon-x11" 
+  "openssl-libs" 
+  "python3" 
+  "python3-libs" 
+  "xxhash-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "kitty-0.33.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kitty-0.33.1-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-cloud-google-firestore-devel-1.14.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-cloud-google-firestore-devel-1.14.0-4.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-cloud-google-devel" 
+  "golang-cloud-google-longrunning-devel" 
+  "golang-github-googleapis-gax-devel" 
+  "golang-github-protobuf-devel" 
+  "golang-google-api-devel" 
+  "golang-google-genproto-devel" 
+  "golang-google-grpc-devel" 
+  "golang-google-protobuf-devel" 
+  "golang-x-time-devel" 
+]
+extra-source "golang-cloud-google-firestore-devel-1.14.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-cloud-google-firestore-devel-1.14.0-4.fc40.noarch.rpm"
+}

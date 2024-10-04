@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libvirt-dbus-1.4.1-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvirt-dbus-1.4.1-4.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dbus" 
+  "glib2" {>= "2.44.0"}
+  "glibc" 
+  "libgcc" 
+  "libvirt-glib" {>= "0.0.7"}
+  "libvirt-libs" {>= "3.1.0"}
+  "polkit" 
+  "shadow-utils" 
+]
+extra-source "libvirt-dbus-1.4.1-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libvirt-dbus-1.4.1-4.fc40.x86_64.rpm"
+}

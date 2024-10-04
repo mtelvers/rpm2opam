@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-plist-devel-1.6.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-plist-devel-1.6.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.68"}
+  "rust-base64+default-devel" 
+  "rust-indexmap+default-devel" 
+  "rust-line-wrap+default-devel" 
+  "rust-quick-xml+default-devel" 
+  "rust-time+default-devel" 
+  "rust-time+formatting-devel" 
+  "rust-time+parsing-devel" 
+]
+extra-source "rust-plist-devel-1.6.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-plist-devel-1.6.0-2.fc40.noarch.rpm"
+}

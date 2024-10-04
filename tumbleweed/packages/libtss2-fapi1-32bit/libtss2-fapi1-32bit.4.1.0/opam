@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libtss2-fapi1-32bit-4.1.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libtss2-fapi1-32bit-4.1.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libcurl4-32bit" 
+  "libjson-c5-32bit" 
+  "libopenssl3-32bit" 
+  "libtss2-esys0-32bit" 
+  "libtss2-mu0-32bit" 
+  "libtss2-tctildr0-32bit" 
+  "libuuid1-32bit" 
+]
+extra-source "libtss2-fapi1-32bit-4.1.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libtss2-fapi1-32bit-4.1.0-1.1.x86_64.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "crossword-editor-0.3.12-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "crossword-editor-0.3.12-4.fc40.x86_64.rpm"]
+depends: [
+  "crosswords" {= "0.3.12"}
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "graphene" 
+  "gtk4" 
+  "json-glib" 
+  "libadwaita" 
+  "libgcc" 
+  "libipuz" 
+  "librsvg2" 
+  "pango" 
+]
+extra-source "crossword-editor-0.3.12-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/crossword-editor-0.3.12-4.fc40.x86_64.rpm"
+}

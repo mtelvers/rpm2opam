@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "java-21-openj9-javadoc-21.0.4.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "java-21-openj9-javadoc-21.0.4.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "javapackages-tools" 
+  "update-alternatives" 
+]
+extra-source "java-21-openj9-javadoc-21.0.4.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/java-21-openj9-javadoc-21.0.4.0-1.1.noarch.rpm"
+}

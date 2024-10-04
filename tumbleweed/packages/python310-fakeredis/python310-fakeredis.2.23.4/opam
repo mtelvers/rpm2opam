@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-fakeredis-2.23.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-fakeredis-2.23.4-1.1.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-redis" {>= "4"}
+  "python310-sortedcontainers" {>= "2.4.0"}
+  "python310-typing_extensions" {>= "4.7"}
+]
+extra-source "python310-fakeredis-2.23.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-fakeredis-2.23.4-1.1.noarch.rpm"
+}

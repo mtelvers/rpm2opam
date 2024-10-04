@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Web-Scraper-0.38-30.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Web-Scraper-0.38-30.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-HTML-Parser" 
+  "perl-HTML-Selector-XPath" 
+  "perl-HTML-Tagset" 
+  "perl-HTML-TreeBuilder-LibXML" 
+  "perl-HTML-TreeBuilder-XPath" 
+  "perl-Scalar-List-Utils" 
+  "perl-Term-ReadLine" 
+  "perl-UNIVERSAL-require" 
+  "perl-URI" 
+  "perl-YAML" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.8.1"}
+  "perl-libwww-perl" 
+]
+extra-source "perl-Web-Scraper-0.38-30.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Web-Scraper-0.38-30.fc40.noarch.rpm"
+}

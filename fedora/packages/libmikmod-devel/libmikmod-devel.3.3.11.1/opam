@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libmikmod-devel-3.3.11.1-18.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmikmod-devel-3.3.11.1-18.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "libmikmod" 
+  "pkgconf-pkg-config" 
+  "pulseaudio-libs-devel" 
+]
+extra-source "libmikmod-devel-3.3.11.1-18.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libmikmod-devel-3.3.11.1-18.fc40.x86_64.rpm"
+}

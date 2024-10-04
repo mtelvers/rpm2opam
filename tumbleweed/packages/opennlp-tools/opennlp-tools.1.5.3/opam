@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "opennlp-tools-1.5.3-4.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opennlp-tools-1.5.3-4.6.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "jwnl" 
+  "opennlp-maxent" {= "3.0.3"}
+]
+extra-source "opennlp-tools-1.5.3-4.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/opennlp-tools-1.5.3-4.6.noarch.rpm"
+}

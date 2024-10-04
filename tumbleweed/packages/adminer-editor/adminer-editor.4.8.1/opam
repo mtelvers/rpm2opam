@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "adminer-editor-4.8.1-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "adminer-editor-4.8.1-1.9.noarch.rpm"]
+depends: [
+  "adminer" {= "4.8.1"}
+]
+extra-source "adminer-editor-4.8.1-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/adminer-editor-4.8.1-1.9.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "containerd-devel-1.7.22-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "containerd-devel-1.7.22-1.1.noarch.rpm"]
+depends: [
+  "containerd" {= "1.7.22"}
+]
+extra-source "containerd-devel-1.7.22-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/containerd-devel-1.7.22-1.1.noarch.rpm"
+}

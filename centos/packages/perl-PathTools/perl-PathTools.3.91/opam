@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-PathTools-3.91-510.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-PathTools-3.91-510.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-Carp" 
+  "perl-Errno" 
+  "perl-Exporter" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-constant" 
+]
+extra-source "perl-PathTools-3.91-510.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/perl-PathTools-3.91-510.el10.x86_64.rpm"
+}

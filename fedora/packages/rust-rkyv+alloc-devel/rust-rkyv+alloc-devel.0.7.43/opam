@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rkyv+alloc-devel-0.7.43-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rkyv+alloc-devel-0.7.43-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bitvec+alloc-devel" 
+  "rust-bitvec-devel" 
+  "rust-rkyv+hashbrown-devel" {= "0.7.43"}
+  "rust-rkyv-devel" {= "0.7.43"}
+  "rust-tinyvec+alloc-devel" 
+  "rust-tinyvec-devel" 
+]
+extra-source "rust-rkyv+alloc-devel-0.7.43-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rkyv+alloc-devel-0.7.43-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jack-audio-connection-kit-devel-1.9.22-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jack-audio-connection-kit-devel-1.9.22-5.fc40.x86_64.rpm"]
+depends: [
+  "jack-audio-connection-kit" {= "1.9.22"}
+  "pkgconf-pkg-config" 
+]
+extra-source "jack-audio-connection-kit-devel-1.9.22-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jack-audio-connection-kit-devel-1.9.22-5.fc40.x86_64.rpm"
+}

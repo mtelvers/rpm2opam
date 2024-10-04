@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-random-1.2.1.2-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-random-1.2.1.2-1.5.x86_64.rpm"]
+depends: [
+  "ghc-array" 
+  "ghc-base" 
+  "ghc-bytestring" 
+  "ghc-deepseq" 
+  "ghc-ghc-bignum" 
+  "ghc-ghc-boot-th" 
+  "ghc-mtl" 
+  "ghc-pretty" 
+  "ghc-splitmix" 
+  "ghc-template-haskell" 
+  "ghc-transformers" 
+  "glibc" 
+  "libgmp10" 
+]
+extra-source "ghc-random-1.2.1.2-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-random-1.2.1.2-1.5.x86_64.rpm"
+}

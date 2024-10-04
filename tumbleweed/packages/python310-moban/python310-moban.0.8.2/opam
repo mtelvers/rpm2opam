@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-moban-0.8.2-2.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-moban-0.8.2-2.12.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "git-core" 
+  "python310-Jinja2" {>= "2.7.1"}
+  "python310-appdirs" {>= "1.4.3"}
+  "python310-base" 
+  "python310-crayons" {>= "0.1.0"}
+  "python310-fs" {>= "2.4.11"}
+  "python310-jinja2-fsloader" {>= "0.2.0"}
+  "python310-lml" {>= "0.0.9"}
+  "python310-ruamel-yaml" {>= "0.15.98"}
+  "update-alternatives" 
+]
+extra-source "python310-moban-0.8.2-2.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-moban-0.8.2-2.12.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "minimodem-0.24-1.26.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "minimodem-0.24-1.26.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libasound2" 
+  "libfftw3-3" 
+  "libpulse0" 
+  "libsndfile1" 
+]
+extra-source "minimodem-0.24-1.26.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/minimodem-0.24-1.26.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-charmbracelet-lipgloss-devel-0.7.1-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-charmbracelet-lipgloss-devel-0.7.1-4.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-mattn-runewidth-devel" 
+  "golang-github-muesli-reflow-devel" 
+  "golang-github-muesli-termenv-devel" 
+]
+extra-source "golang-github-charmbracelet-lipgloss-devel-0.7.1-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-charmbracelet-lipgloss-devel-0.7.1-4.fc40.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "encfs-1.9.5-2.23.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "encfs-1.9.5-2.23.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "fuse" 
+  "glibc" 
+  "libfuse2" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libstdc++6" 
+  "libtinyxml2-10" 
+]
+extra-source "encfs-1.9.5-2.23.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/encfs-1.9.5-2.23.x86_64.rpm"
+}

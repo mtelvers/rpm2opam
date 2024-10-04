@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-mines-40.1-1.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-mines-40.1-1.10.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgnome-games-support-1-3" 
+  "libgtk-3-0" 
+]
+extra-source "gnome-mines-40.1-1.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnome-mines-40.1-1.10.x86_64.rpm"
+}

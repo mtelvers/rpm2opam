@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "buildbot-worker-3.11.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "buildbot-worker-3.11.1-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "python3" 
+  "python3-autobahn" {>= "0.16"}
+  "python3-msgpack" {>= "0.6"}
+  "python3-six" 
+  "python3-twisted" {>= "18.7"}
+  "shadow-utils" 
+]
+extra-source "buildbot-worker-3.11.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/buildbot-worker-3.11.1-1.fc40.noarch.rpm"
+}

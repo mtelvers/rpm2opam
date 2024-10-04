@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "switch_sles_sle-hpc-0.2-4.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "switch_sles_sle-hpc-0.2-4.3.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "rpm" 
+  "sed" 
+  "suseconnect-ng" 
+  "zypper" 
+]
+extra-source "switch_sles_sle-hpc-0.2-4.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/switch_sles_sle-hpc-0.2-4.3.noarch.rpm"
+}

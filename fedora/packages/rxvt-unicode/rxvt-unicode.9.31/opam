@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rxvt-unicode-9.31-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rxvt-unicode-9.31-6.fc40.x86_64.rpm"]
+depends: [
+  "fontconfig" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "libX11" 
+  "libXext" 
+  "libXft" 
+  "libXrender" 
+  "libgcc" 
+  "libptytty" 
+  "libstdc++" 
+  "perl-Carp" 
+  "perl-Scalar-List-Utils" 
+  "perl-libs" 
+  "startup-notification" 
+]
+extra-source "rxvt-unicode-9.31-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rxvt-unicode-9.31-6.fc40.x86_64.rpm"
+}

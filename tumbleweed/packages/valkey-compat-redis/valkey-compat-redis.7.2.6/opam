@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "valkey-compat-redis-7.2.6-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "valkey-compat-redis-7.2.6-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "valkey" {= "7.2.6"}
+]
+extra-source "valkey-compat-redis-7.2.6-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/valkey-compat-redis-7.2.6-1.1.noarch.rpm"
+}

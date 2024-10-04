@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-dbplyr-2.3.1-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-dbplyr-2.3.1-5.fc40.noarch.rpm"]
+depends: [
+  "R-DBI" {>= "1.0.0"}
+  "R-R6" {>= "2.2.2"}
+  "R-blob" {>= "1.2.0"}
+  "R-cli" {>= "3.4.1"}
+  "R-core" {= "4.3"}
+  "R-dplyr" {>= "1.1.0"}
+  "R-glue" {>= "1.2.0"}
+  "R-lifecycle" {>= "1.0.3"}
+  "R-magrittr" 
+  "R-pillar" {>= "1.5.0"}
+  "R-purrr" {>= "1.0.1"}
+  "R-rlang" {>= "1.0.6"}
+  "R-tibble" {>= "1.4.2"}
+  "R-tidyr" {>= "1.3.0"}
+  "R-tidyselect" {>= "1.2.0"}
+  "R-vctrs" {>= "0.5.0"}
+  "R-withr" 
+]
+extra-source "R-dbplyr-2.3.1-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-dbplyr-2.3.1-5.fc40.noarch.rpm"
+}

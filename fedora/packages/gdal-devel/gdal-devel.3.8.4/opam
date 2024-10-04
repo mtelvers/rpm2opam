@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gdal-devel-3.8.4-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdal-devel-3.8.4-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cmake-filesystem" 
+  "gdal-libs" {= "3.8.4"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gdal-devel-3.8.4-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gdal-devel-3.8.4-2.fc40.x86_64.rpm"
+}

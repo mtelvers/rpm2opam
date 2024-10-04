@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libchipcard-devel-5.1.6-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libchipcard-devel-5.1.6-2.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "gwenhywfar-devel" 
+  "libchipcard" {= "5.1.6"}
+  "libchipcard6" {= "5.1.6"}
+  "libusb-compat-devel" 
+  "pcsc-lite-devel" 
+  "pkgconf-pkg-config" 
+  "sysfsutils" 
+]
+extra-source "libchipcard-devel-5.1.6-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libchipcard-devel-5.1.6-2.2.x86_64.rpm"
+}

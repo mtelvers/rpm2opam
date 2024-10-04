@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nunit-2.6.4-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nunit-2.6.4-5.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "mono-core" {>= "1.0.3300.0"}
+  "mono-data" {>= "1.0.3300.0"}
+  "mono-web" {>= "1.0.3300.0"}
+  "mono-winforms" {= "4.0.0.0"}
+]
+extra-source "nunit-2.6.4-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/nunit-2.6.4-5.2.x86_64.rpm"
+}

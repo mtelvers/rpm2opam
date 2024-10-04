@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "evolution-data-server-lang-3.52.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "evolution-data-server-lang-3.52.4-1.1.noarch.rpm"]
+depends: [
+  "evolution-data-server" {= "3.52.4"}
+]
+extra-source "evolution-data-server-lang-3.52.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/evolution-data-server-lang-3.52.4-1.1.noarch.rpm"
+}

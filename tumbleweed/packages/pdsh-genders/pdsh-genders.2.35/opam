@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pdsh-genders-2.35-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pdsh-genders-2.35-1.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgenders0" 
+  "pdsh" {= "2.35"}
+]
+extra-source "pdsh-genders-2.35-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pdsh-genders-2.35-1.4.x86_64.rpm"
+}

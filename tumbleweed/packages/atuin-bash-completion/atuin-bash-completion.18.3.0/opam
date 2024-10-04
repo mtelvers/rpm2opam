@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "atuin-bash-completion-18.3.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "atuin-bash-completion-18.3.0-1.1.noarch.rpm"]
+depends: [
+  "atuin" {= "18.3.0"}
+]
+extra-source "atuin-bash-completion-18.3.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/atuin-bash-completion-18.3.0-1.1.noarch.rpm"
+}

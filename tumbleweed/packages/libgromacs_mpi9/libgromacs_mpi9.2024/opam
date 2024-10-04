@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgromacs_mpi9-2024-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgromacs_mpi9-2024-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libOpenCL1" 
+  "libblas3" 
+  "libfftw3-3" 
+  "libgcc_s1" 
+  "libgomp1" 
+  "liblapack3" 
+  "libmuparser2_3_4" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "openmpi4-libs" 
+]
+extra-source "libgromacs_mpi9-2024-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgromacs_mpi9-2024-2.2.x86_64.rpm"
+}

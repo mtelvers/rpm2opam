@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lfortran-devel-static-0.32.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lfortran-devel-static-0.32.0-1.1.x86_64.rpm"]
+depends: [
+  "lfortran-devel" {= "0.32.0"}
+]
+extra-source "lfortran-devel-static-0.32.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lfortran-devel-static-0.32.0-1.1.x86_64.rpm"
+}

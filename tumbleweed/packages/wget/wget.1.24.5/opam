@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wget-1.24.5-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wget-1.24.5-3.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcares2" 
+  "libgpgme11" 
+  "libidn2-0" 
+  "libmetalink3" 
+  "libopenssl3" 
+  "libpcre2-8-0" 
+  "libproxy1" 
+  "libpsl5" 
+  "libuuid1" 
+  "libz-ng-compat1" 
+]
+extra-source "wget-1.24.5-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/wget-1.24.5-3.1.x86_64.rpm"
+}

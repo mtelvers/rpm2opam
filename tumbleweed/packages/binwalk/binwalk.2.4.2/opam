@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "binwalk-2.4.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "binwalk-2.4.2-1.1.noarch.rpm"]
+depends: [
+  "file" 
+  "python311" {>= "3.8"}
+  "python311-base" 
+  "python311-curses" 
+  "ssdeep" 
+]
+extra-source "binwalk-2.4.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/binwalk-2.4.2-1.1.noarch.rpm"
+}

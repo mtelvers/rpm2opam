@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vendored_licenses_packager-0.1.0-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vendored_licenses_packager-0.1.0-1.7.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "findutils" 
+]
+extra-source "vendored_licenses_packager-0.1.0-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/vendored_licenses_packager-0.1.0-1.7.noarch.rpm"
+}

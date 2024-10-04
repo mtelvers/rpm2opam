@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "b4-0.14.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "b4-0.14.2-1.1.noarch.rpm"]
+depends: [
+  "git-core" 
+  "git-filter-repo" {>= "2.30"}
+  "python311-base" 
+  "python311-dkimpy" 
+  "python311-patatt" 
+  "python311-requests" 
+]
+extra-source "b4-0.14.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/b4-0.14.2-1.1.noarch.rpm"
+}

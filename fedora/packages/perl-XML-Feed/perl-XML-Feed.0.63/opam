@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-XML-Feed-0.63-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XML-Feed-0.63-9.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Class-ErrorHandler" 
+  "perl-DateTime-Format-Flexible" 
+  "perl-DateTime-Format-ISO8601" 
+  "perl-DateTime-Format-Mail" 
+  "perl-DateTime-Format-Natural" 
+  "perl-DateTime-Format-W3CDTF" 
+  "perl-Exporter" 
+  "perl-Feed-Find" 
+  "perl-HTML-Parser" 
+  "perl-Module-Pluggable" 
+  "perl-Scalar-List-Utils" 
+  "perl-URI-Fetch" 
+  "perl-XML-Atom" 
+  "perl-XML-RSS" {>= "1.47"}
+  "perl-base" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-libwww-perl" 
+]
+extra-source "perl-XML-Feed-0.63-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-XML-Feed-0.63-9.fc40.noarch.rpm"
+}

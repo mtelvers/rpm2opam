@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-gopkg-rethinkdb-6-devel-6.2.1-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-gopkg-rethinkdb-6-devel-6.2.1-9.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-cenkalti-backoff-4-devel" 
+  "go-filesystem" 
+  "golang-github-hailocab-hostpool-devel" 
+  "golang-github-opentracing-devel" 
+  "golang-github-protobuf-devel" 
+  "golang-github-sirupsen-logrus-devel" 
+  "golang-github-stretchr-testify-devel" 
+  "golang-gopkg-check-1-devel" 
+  "golang-x-crypto-devel" 
+  "golang-x-net-devel" 
+]
+extra-source "golang-gopkg-rethinkdb-6-devel-6.2.1-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-gopkg-rethinkdb-6-devel-6.2.1-9.fc40.noarch.rpm"
+}

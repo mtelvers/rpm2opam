@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "boomaga-lang-3.0.0-3.21.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "boomaga-lang-3.0.0-3.21.noarch.rpm"]
+depends: [
+  "boomaga" {= "3.0.0"}
+]
+extra-source "boomaga-lang-3.0.0-3.21.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/boomaga-lang-3.0.0-3.21.noarch.rpm"
+}

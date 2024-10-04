@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-skylighting-format-blaze-html-prof-0.1.1.2-1.19.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-skylighting-format-blaze-html-prof-0.1.1.2-1.19.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-blaze-html-prof" 
+  "ghc-containers-prof" 
+  "ghc-skylighting-core-prof" 
+  "ghc-skylighting-format-blaze-html-devel" {= "0.1.1.2"}
+  "ghc-text-prof" 
+]
+extra-source "ghc-skylighting-format-blaze-html-prof-0.1.1.2-1.19.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-skylighting-format-blaze-html-prof-0.1.1.2-1.19.x86_64.rpm"
+}

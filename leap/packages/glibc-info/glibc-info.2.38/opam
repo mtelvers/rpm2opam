@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glibc-info-2.38-slfo.1.3.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glibc-info-2.38-slfo.1.3.5.noarch.rpm"]
+depends: [
+  "bash-sh" 
+]
+extra-source "glibc-info-2.38-slfo.1.3.5.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/glibc-info-2.38-slfo.1.3.5.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "backintime-plugins-1.4.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "backintime-plugins-1.4.3-1.fc40.noarch.rpm"]
+depends: [
+  "backintime-common" {= "1.4.3"}
+]
+extra-source "backintime-plugins-1.4.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/backintime-plugins-1.4.3-1.fc40.noarch.rpm"
+}

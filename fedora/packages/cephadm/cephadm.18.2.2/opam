@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cephadm-18.2.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cephadm-18.2.2-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "lvm2" 
+  "openssh-server" 
+  "python3" 
+  "which" 
+]
+extra-source "cephadm-18.2.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cephadm-18.2.2-1.fc40.noarch.rpm"
+}

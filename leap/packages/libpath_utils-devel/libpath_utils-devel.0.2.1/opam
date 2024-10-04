@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpath_utils-devel-0.2.1-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpath_utils-devel-0.2.1-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "libpath_utils1" {= "0.2.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libpath_utils-devel-0.2.1-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libpath_utils-devel-0.2.1-slfo.1.1.7.x86_64.rpm"
+}

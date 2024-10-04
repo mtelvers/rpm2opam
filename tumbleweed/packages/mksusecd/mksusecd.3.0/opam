@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mksusecd-3.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mksusecd-3.0-1.1.x86_64.rpm"]
+depends: [
+  "checkmedia" {>= "6.0"}
+  "createrepo_c" 
+  "dosfstools" 
+  "glibc" 
+  "gpg2" 
+  "libuuid1" 
+  "mkisofs" 
+  "mtools" 
+  "perl-base" 
+  "squashfs" 
+  "xz" 
+]
+extra-source "mksusecd-3.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mksusecd-3.0-1.1.x86_64.rpm"
+}

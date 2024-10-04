@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-async-lock+std-devel-3.3.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-async-lock+std-devel-3.3.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-async-lock-devel" {= "3.3.0"}
+  "rust-event-listener+std-devel" 
+  "rust-event-listener-strategy+std-devel" 
+]
+extra-source "rust-async-lock+std-devel-3.3.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-async-lock+std-devel-3.3.0-1.fc40.noarch.rpm"
+}

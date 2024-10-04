@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vim-common-9.1.158-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vim-common-9.1.158-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "vim-data" {= "9.1.158"}
+  "vim-filesystem" 
+  "xxd" 
+]
+extra-source "vim-common-9.1.158-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vim-common-9.1.158-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pidgin-plugin-libsteam-1.6.1-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pidgin-plugin-libsteam-1.6.1-3.1.noarch.rpm"]
+depends: [
+  "libpurple-plugin-libsteam" {= "1.6.1"}
+]
+extra-source "pidgin-plugin-libsteam-1.6.1-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pidgin-plugin-libsteam-1.6.1-3.1.noarch.rpm"
+}

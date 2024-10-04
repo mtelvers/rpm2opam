@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "globus-gsi-sysconfig-devel-9.6-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "globus-gsi-sysconfig-devel-9.6-1.fc40.x86_64.rpm"]
+depends: [
+  "globus-common-devel" {>= "15"}
+  "globus-gsi-openssl-error-devel" {>= "2"}
+  "globus-gsi-sysconfig" {= "9.6"}
+  "globus-openssl-module-devel" {>= "3"}
+  "openssl-devel" {>= "1.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "globus-gsi-sysconfig-devel-9.6-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/globus-gsi-sysconfig-devel-9.6-1.fc40.x86_64.rpm"
+}

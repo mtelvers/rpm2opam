@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libabigail-tools-2.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libabigail-tools-2.5-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libabigail4" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "libabigail-tools-2.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libabigail-tools-2.5-1.1.x86_64.rpm"
+}

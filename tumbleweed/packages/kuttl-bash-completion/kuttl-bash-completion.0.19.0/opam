@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kuttl-bash-completion-0.19.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kuttl-bash-completion-0.19.0-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "kuttl" {= "0.19.0"}
+]
+extra-source "kuttl-bash-completion-0.19.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kuttl-bash-completion-0.19.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ldapfuse-1.0-11.40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ldapfuse-1.0-11.40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libHX32" 
+  "libfuse2" 
+  "libldap2" 
+]
+extra-source "ldapfuse-1.0-11.40.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ldapfuse-1.0-11.40.x86_64.rpm"
+}

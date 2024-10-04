@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-pgfplots-svn61719-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-pgfplots-svn61719-71.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "texlive-base" 
+  "texlive-graphics" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" 
+  "texlive-listings" 
+  "texlive-luatex" 
+  "texlive-luatexbase" 
+  "texlive-pgf" 
+  "texlive-tools" 
+]
+extra-source "texlive-pgfplots-svn61719-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-pgfplots-svn61719-71.fc40.noarch.rpm"
+}

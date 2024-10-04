@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libzypp-devel-17.31.32-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libzypp-devel-17.31.32-1.fc40.x86_64.rpm"]
+depends: [
+  "boost-devel" 
+  "glibc" 
+  "libgcc" 
+  "libsolv-devel" {>= "0.7.24"}
+  "libstdc++" 
+  "libzypp" {= "17.31.32"}
+  "pkgconf-pkg-config" 
+  "readline" 
+]
+extra-source "libzypp-devel-17.31.32-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libzypp-devel-17.31.32-1.fc40.x86_64.rpm"
+}

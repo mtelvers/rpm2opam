@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ibus-kkc-1.5.22-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibus-kkc-1.5.22-2.3.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgee-0_8-2" 
+  "libgtk-3-0" 
+  "libibus-1_0-5" 
+  "libjson-glib-1_0-0" 
+  "libkkc2" 
+]
+extra-source "ibus-kkc-1.5.22-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ibus-kkc-1.5.22-2.3.x86_64.rpm"
+}

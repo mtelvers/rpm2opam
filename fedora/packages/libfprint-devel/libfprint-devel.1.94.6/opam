@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libfprint-devel-1.94.6-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfprint-devel-1.94.6-1.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.56"}
+  "libfprint" {= "1.94.6"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libfprint-devel-1.94.6-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libfprint-devel-1.94.6-1.fc40.x86_64.rpm"
+}

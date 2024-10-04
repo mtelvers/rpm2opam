@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-scrypt-devel-0.11.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-scrypt-devel-0.11.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.60"}
+  "rust-pbkdf2+default-devel" 
+  "rust-salsa20-devel" 
+  "rust-sha2-devel" 
+]
+extra-source "rust-scrypt-devel-0.11.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-scrypt-devel-0.11.0-3.fc40.noarch.rpm"
+}

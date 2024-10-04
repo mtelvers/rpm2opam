@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qcas-qt4-0.5.3-23.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qcas-qt4-0.5.3-23.fc40.x86_64.rpm"]
+depends: [
+  "giac" 
+  "glibc" 
+  "gmp" 
+  "libgcc" 
+  "libstdc++" 
+  "qcas-data" {= "0.5.3"}
+  "qt" 
+  "qt-x11" 
+]
+extra-source "qcas-qt4-0.5.3-23.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qcas-qt4-0.5.3-23.fc40.x86_64.rpm"
+}

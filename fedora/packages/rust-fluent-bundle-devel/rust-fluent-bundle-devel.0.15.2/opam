@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-fluent-bundle-devel-0.15.2-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-fluent-bundle-devel-0.15.2-10.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-fluent-langneg+default-devel" 
+  "rust-fluent-syntax+default-devel" 
+  "rust-intl-memoizer+default-devel" 
+  "rust-intl_pluralrules+default-devel" 
+  "rust-rustc-hash+default-devel" 
+  "rust-self_cell+default-devel" 
+  "rust-smallvec+default-devel" 
+  "rust-unic-langid+default-devel" 
+]
+extra-source "rust-fluent-bundle-devel-0.15.2-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-fluent-bundle-devel-0.15.2-10.fc40.noarch.rpm"
+}

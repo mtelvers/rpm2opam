@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jtidy-1.0.4-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jtidy-1.0.4-3.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "xerces-j2" 
+  "xml-commons-apis" 
+]
+extra-source "jtidy-1.0.4-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jtidy-1.0.4-3.1.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "obs-service-obs_scm-0.10.46-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "obs-service-obs_scm-0.10.46-1.1.noarch.rpm"]
+depends: [
+  "git-core" 
+  "obs-service-obs_scm-common" {= "0.10.46"}
+]
+extra-source "obs-service-obs_scm-0.10.46-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/obs-service-obs_scm-0.10.46-1.1.noarch.rpm"
+}

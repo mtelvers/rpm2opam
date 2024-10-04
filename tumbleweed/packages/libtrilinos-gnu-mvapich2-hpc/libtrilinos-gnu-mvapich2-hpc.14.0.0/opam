@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libtrilinos-gnu-mvapich2-hpc-14.0.0-5.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libtrilinos-gnu-mvapich2-hpc-14.0.0-5.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "libtrilinos_14_0_0-gnu-mvapich2-hpc" {= "14.0.0"}
+]
+extra-source "libtrilinos-gnu-mvapich2-hpc-14.0.0-5.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libtrilinos-gnu-mvapich2-hpc-14.0.0-5.4.x86_64.rpm"
+}

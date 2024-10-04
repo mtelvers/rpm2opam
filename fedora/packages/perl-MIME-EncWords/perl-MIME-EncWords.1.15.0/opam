@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MIME-EncWords-1.015.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MIME-EncWords-1.015.0-1.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Encode" {>= "1.98"}
+  "perl-Exporter" 
+  "perl-MIME-Base64" {>= "2.13"}
+  "perl-MIME-Charset" {>= "1.10.1"}
+  "perl-base" 
+  "perl-libs" {>= "5.7.3"}
+  "perl-vars" 
+]
+extra-source "perl-MIME-EncWords-1.015.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MIME-EncWords-1.015.0-1.fc40.noarch.rpm"
+}

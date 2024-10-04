@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openfst-1.8.3-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openfst-1.8.3-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libfst26" 
+  "libstdc++6" 
+]
+extra-source "openfst-1.8.3-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openfst-1.8.3-1.2.x86_64.rpm"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qt-mobility-devel-1.2.2-0.47.20140317git169da60c.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qt-mobility-devel-1.2.2-0.47.20140317git169da60c.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "pkgconf-pkg-config" 
+  "qt" 
+  "qt-devel" 
+  "qt-mobility" {= "1.2.2"}
+  "qt-mobility-bearer" 
+  "qt-mobility-connectivity" 
+  "qt-mobility-feedback" 
+  "qt-mobility-gallery" 
+  "qt-mobility-location" 
+  "qt-mobility-multimediakit" 
+  "qt-mobility-pim" 
+  "qt-mobility-publishsubscribe" 
+  "qt-mobility-sensors" 
+  "qt-mobility-serviceframework" 
+  "qt-mobility-systeminfo" 
+  "qt-x11" 
+]
+extra-source "qt-mobility-devel-1.2.2-0.47.20140317git169da60c.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qt-mobility-devel-1.2.2-0.47.20140317git169da60c.fc40.x86_64.rpm"
+}

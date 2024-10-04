@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "busybox-psmisc-1.36.1-slfo.1.1.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "busybox-psmisc-1.36.1-slfo.1.1.17.noarch.rpm"]
+depends: [
+  "busybox" {= "1.36.1"}
+]
+extra-source "busybox-psmisc-1.36.1-slfo.1.1.17.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/busybox-psmisc-1.36.1-slfo.1.1.17.noarch.rpm"
+}

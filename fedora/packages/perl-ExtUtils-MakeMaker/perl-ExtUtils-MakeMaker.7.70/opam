@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-ExtUtils-MakeMaker-7.70-503.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-ExtUtils-MakeMaker-7.70-503.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-DynaLoader" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-ExtUtils-Command" {>= "1.19"}
+  "perl-ExtUtils-Install" {>= "1.54"}
+  "perl-ExtUtils-Manifest" {>= "1.70"}
+  "perl-ExtUtils-ParseXS" 
+  "perl-File-Basename" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Test-Harness" 
+  "perl-Text-ParseWords" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-podlators" 
+  "perl-vars" 
+  "perl-version" 
+]
+extra-source "perl-ExtUtils-MakeMaker-7.70-503.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-ExtUtils-MakeMaker-7.70-503.fc40.noarch.rpm"
+}

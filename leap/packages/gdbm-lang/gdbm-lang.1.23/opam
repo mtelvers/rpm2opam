@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gdbm-lang-1.23-slfo.1.1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdbm-lang-1.23-slfo.1.1.8.noarch.rpm"]
+depends: [
+  "libgdbm6" {= "1.23"}
+]
+extra-source "gdbm-lang-1.23-slfo.1.1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/gdbm-lang-1.23-slfo.1.1.8.noarch.rpm"
+}

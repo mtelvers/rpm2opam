@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Catalyst-Plugin-Session-Store-File-0.18-42.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Catalyst-Plugin-Session-Store-File-0.18-42.fc40.noarch.rpm"]
+depends: [
+  "perl-Cache-Cache" 
+  "perl-Catalyst-Plugin-Session" 
+  "perl-Catalyst-Runtime" {>= "5.7000"}
+  "perl-Class-Data-Inheritable" 
+  "perl-MRO-Compat" 
+  "perl-Path-Class" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-Catalyst-Plugin-Session-Store-File-0.18-42.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Catalyst-Plugin-Session-Store-File-0.18-42.fc40.noarch.rpm"
+}

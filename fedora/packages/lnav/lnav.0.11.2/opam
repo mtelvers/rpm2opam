@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lnav-0.11.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lnav-0.11.2-3.fc40.x86_64.rpm"]
+depends: [
+  "bzip2-libs" 
+  "glibc" 
+  "libarchive" 
+  "libcurl" 
+  "libgcc" 
+  "libstdc++" 
+  "ncurses-libs" 
+  "pcre2" 
+  "readline" 
+  "sqlite-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "lnav-0.11.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lnav-0.11.2-3.fc40.x86_64.rpm"
+}

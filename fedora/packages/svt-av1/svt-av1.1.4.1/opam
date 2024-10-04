@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "svt-av1-1.4.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "svt-av1-1.4.1-5.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "svt-av1-libs" 
+]
+extra-source "svt-av1-1.4.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/svt-av1-1.4.1-5.fc40.x86_64.rpm"
+}

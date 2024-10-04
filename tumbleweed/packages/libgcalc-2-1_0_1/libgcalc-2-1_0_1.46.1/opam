@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgcalc-2-1_0_1-46.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgcalc-2-1_0_1-46.1-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgee-0_8-2" 
+  "libmpc3" 
+  "libmpfr6" 
+]
+extra-source "libgcalc-2-1_0_1-46.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgcalc-2-1_0_1-46.1-1.1.x86_64.rpm"
+}

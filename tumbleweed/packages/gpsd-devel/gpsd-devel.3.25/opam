@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gpsd-devel-3.25-5.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gpsd-devel-3.25-5.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "gpsd" {= "3.25"}
+  "libbluetooth3" 
+  "libdbus-1-3" 
+  "libgps30" 
+  "libusb-1_0-0" 
+  "pkgconf-pkg-config" 
+  "python3-gpsd" {= "3.25"}
+  "python311-base" 
+  "python311-curses" 
+]
+extra-source "gpsd-devel-3.25-5.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gpsd-devel-3.25-5.1.x86_64.rpm"
+}

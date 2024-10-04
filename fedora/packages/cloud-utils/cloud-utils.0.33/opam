@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cloud-utils-0.33-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cloud-utils-0.33-7.fc40.noarch.rpm"]
+depends: [
+  "cloud-utils-cloud-localds" 
+  "cloud-utils-ec2metadata" 
+  "cloud-utils-growpart" 
+  "cloud-utils-mount-image-callback" 
+  "cloud-utils-resize-part-image" 
+  "cloud-utils-vcs-run" 
+  "cloud-utils-write-mime-multipart" 
+]
+extra-source "cloud-utils-0.33-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cloud-utils-0.33-7.fc40.noarch.rpm"
+}

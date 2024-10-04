@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libzrtpcpp-devel-4.7.0-1.15.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libzrtpcpp-devel-4.7.0-1.15.x86_64.rpm"]
+depends: [
+  "ccrtp-devel" {>= "2.0.0"}
+  "libopenssl-1_0_0-devel" {>= "0.9.8"}
+  "libzrtpcpp4" {= "4.7.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libzrtpcpp-devel-4.7.0-1.15.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libzrtpcpp-devel-4.7.0-1.15.x86_64.rpm"
+}

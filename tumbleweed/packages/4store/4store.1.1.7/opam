@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "4store-1.1.7-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "4store-1.1.7-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libavahi-client3" 
+  "libavahi-common3" 
+  "libavahi-glib1" 
+  "libpcre1" 
+  "libraptor2-0" 
+  "librasqal3" 
+  "libreadline8" 
+  "libuuid1" 
+  "libz-ng-compat1" 
+  "perl-base" 
+]
+extra-source "4store-1.1.7-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/4store-1.1.7-1.1.x86_64.rpm"
+}

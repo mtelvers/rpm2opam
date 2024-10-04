@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw32-gtk2-2.24.33-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw32-gtk2-2.24.33-11.fc40.noarch.rpm"]
+depends: [
+  "mingw32-atk" 
+  "mingw32-cairo" 
+  "mingw32-crt" 
+  "mingw32-filesystem" {>= "95"}
+  "mingw32-gdk-pixbuf" 
+  "mingw32-gettext" 
+  "mingw32-glib2" 
+  "mingw32-gtk-update-icon-cache" 
+  "mingw32-libgcc" 
+  "mingw32-pango" 
+  "python3" 
+]
+extra-source "mingw32-gtk2-2.24.33-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw32-gtk2-2.24.33-11.fc40.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "awesome-branding-openSUSE-4.0-2.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "awesome-branding-openSUSE-4.0-2.10.noarch.rpm"]
+depends: [
+  "adwaita-icon-theme" 
+  "awesome-freedesktop" 
+  "awesome-vicious" 
+  "light-locker" 
+  "lua54-lgi" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "wallpaper-branding-openSUSE" 
+]
+extra-source "awesome-branding-openSUSE-4.0-2.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/awesome-branding-openSUSE-4.0-2.10.noarch.rpm"
+}

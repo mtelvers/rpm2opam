@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kmscon-9.0.0-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kmscon-9.0.0-1.6.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libdrm2" 
+  "libgbm1" 
+  "libglvnd" 
+  "libpango-1_0-0" 
+  "libpixman-1-0" 
+  "libsystemd0" 
+  "libtsm4" 
+  "libudev-mini1" 
+  "libxkbcommon0" 
+]
+extra-source "kmscon-9.0.0-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kmscon-9.0.0-1.6.x86_64.rpm"
+}

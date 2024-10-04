@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libxml++-doc-2.42.3-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxml++-doc-2.42.3-3.fc40.noarch.rpm"]
+depends: [
+  "glibmm2-4-doc" 
+  "libxml++" {= "2.42.3"}
+]
+extra-source "libxml++-doc-2.42.3-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libxml++-doc-2.42.3-3.fc40.noarch.rpm"
+}

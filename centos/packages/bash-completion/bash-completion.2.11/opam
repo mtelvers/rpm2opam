@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bash-completion-2.11-15.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bash-completion-2.11-15.el10.noarch.rpm"]
+depends: [
+  "bash" {>= "4.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "bash-completion-2.11-15.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/bash-completion-2.11-15.el10.noarch.rpm"
+}

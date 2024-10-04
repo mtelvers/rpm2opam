@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-wasmparser-devel-0.201.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-wasmparser-devel-0.201.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bitflags+default-devel" 
+  "rust-indexmap+default-devel" 
+  "rust-semver+default-devel" 
+]
+extra-source "rust-wasmparser-devel-0.201.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-wasmparser-devel-0.201.0-1.fc40.noarch.rpm"
+}

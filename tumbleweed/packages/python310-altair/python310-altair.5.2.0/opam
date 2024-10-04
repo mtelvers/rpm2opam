@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-altair-5.2.0-2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-altair-5.2.0-2.3.noarch.rpm"]
+depends: [
+  "python310-Jinja2" 
+  "python310-base" {= "3.10"}
+  "python310-jsonschema" {>= "3"}
+  "python310-numpy" 
+  "python310-packaging" 
+  "python310-pandas" {>= "0.25"}
+  "python310-toolz" 
+  "python310-typing_extensions" 
+]
+extra-source "python310-altair-5.2.0-2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-altair-5.2.0-2.3.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "system-config-rootpassword-1.99.6-30.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "system-config-rootpassword-1.99.6-30.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "python3-libuser" {>= "0.49"}
+  "python3-newt" 
+  "python3-pwquality" 
+  "usermode" {>= "1.36"}
+  "usermode-gtk" 
+]
+extra-source "system-config-rootpassword-1.99.6-30.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/system-config-rootpassword-1.99.6-30.fc40.noarch.rpm"
+}

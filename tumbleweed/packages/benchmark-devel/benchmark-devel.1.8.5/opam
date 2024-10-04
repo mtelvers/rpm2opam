@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "benchmark-devel-1.8.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "benchmark-devel-1.8.5-1.1.x86_64.rpm"]
+depends: [
+  "libbenchmark1" {= "1.8.5"}
+  "pkgconf-pkg-config" 
+]
+extra-source "benchmark-devel-1.8.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/benchmark-devel-1.8.5-1.1.x86_64.rpm"
+}

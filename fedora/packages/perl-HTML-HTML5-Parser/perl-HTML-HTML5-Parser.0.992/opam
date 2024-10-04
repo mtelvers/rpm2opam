@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-HTML-HTML5-Parser-0.992-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTML-HTML5-Parser-0.992-8.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-Getopt-Long" 
+  "perl-HTML-HTML5-Entities" {>= "0.2"}
+  "perl-HTTP-Tiny" 
+  "perl-IO" 
+  "perl-IO-HTML" 
+  "perl-Scalar-List-Utils" 
+  "perl-Try-Tiny" 
+  "perl-URI" 
+  "perl-XML-LibXML" {>= "1.94"}
+  "perl-interpreter" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-overload" 
+]
+extra-source "perl-HTML-HTML5-Parser-0.992-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-HTML-HTML5-Parser-0.992-8.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lucene++-devel-3.0.8-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lucene++-devel-3.0.8-5.2.x86_64.rpm"]
+depends: [
+  "liblucene++0" {= "3.0.8"}
+  "pkgconf-pkg-config" 
+]
+extra-source "lucene++-devel-3.0.8-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lucene++-devel-3.0.8-5.2.x86_64.rpm"
+}

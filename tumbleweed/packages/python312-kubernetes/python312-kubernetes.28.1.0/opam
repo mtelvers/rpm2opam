@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-kubernetes-28.1.0-4.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-kubernetes-28.1.0-4.3.noarch.rpm"]
+depends: [
+  "python312-PyYAML" {>= "5.4.1"}
+  "python312-base" {= "3.12"}
+  "python312-certifi" {>= "14.5.14"}
+  "python312-google-auth" {>= "1.0.1"}
+  "python312-oauthlib" {>= "3.2.2"}
+  "python312-python-dateutil" {>= "2.5.3"}
+  "python312-requests" 
+  "python312-requests-oauthlib" 
+  "python312-six" {>= "1.9.0"}
+  "python312-urllib3" {>= "1.24.2"}
+  "python312-websocket-client" {>= "0.32.0"}
+]
+extra-source "python312-kubernetes-28.1.0-4.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-kubernetes-28.1.0-4.3.noarch.rpm"
+}

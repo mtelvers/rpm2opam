@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vala-panel-plugin-appmenu-0.7.6-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vala-panel-plugin-appmenu-0.7.6-3.3.x86_64.rpm"]
+depends: [
+  "appmenu-gtk2-module" {= "0.7.6"}
+  "appmenu-gtk3-module" {= "0.7.6"}
+  "appmenu-registrar" 
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgtk-3-0" 
+  "libwnck-3-0" 
+  "vala-panel" 
+]
+extra-source "vala-panel-plugin-appmenu-0.7.6-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vala-panel-plugin-appmenu-0.7.6-3.3.x86_64.rpm"
+}

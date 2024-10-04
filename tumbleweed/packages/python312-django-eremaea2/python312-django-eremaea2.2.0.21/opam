@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-django-eremaea2-2.0.21-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-django-eremaea2-2.0.21-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "eremaea" {= "2.0.21"}
+  "python312-base" 
+  "python312-cmdln" 
+  "python312-djangorestframework" {>= "3.7.0"}
+  "python312-python-magic" 
+  "python312-requests" 
+  "python312-requests-toolbelt" 
+  "update-alternatives" 
+]
+extra-source "python312-django-eremaea2-2.0.21-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-django-eremaea2-2.0.21-1.1.noarch.rpm"
+}

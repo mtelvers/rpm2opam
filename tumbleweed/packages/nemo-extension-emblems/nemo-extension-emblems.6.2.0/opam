@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nemo-extension-emblems-6.2.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nemo-extension-emblems-6.2.0-1.1.noarch.rpm"]
+depends: [
+  "nemo" {>= "6.0.0"}
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Nemo-3_0" 
+]
+extra-source "nemo-extension-emblems-6.2.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nemo-extension-emblems-6.2.0-1.1.noarch.rpm"
+}

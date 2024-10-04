@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pesign-obs-integration-10.2+git20240723.d344d91-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pesign-obs-integration-10.2+git20240723.d344d91-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "fipscheck" 
+  "mozilla-nss-tools" 
+  "openssl" 
+  "perl-base" 
+  "pesign" 
+  "suse-module-tools" {>= "15.0.10"}
+]
+extra-source "pesign-obs-integration-10.2+git20240723.d344d91-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pesign-obs-integration-10.2+git20240723.d344d91-1.1.x86_64.rpm"
+}

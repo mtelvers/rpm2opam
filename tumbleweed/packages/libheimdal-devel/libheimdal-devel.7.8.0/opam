@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libheimdal-devel-7.8.0-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libheimdal-devel-7.8.0-4.1.x86_64.rpm"]
+depends: [
+  "glibc-devel" 
+  "libasn1-8" {= "7.8.0"}
+  "libcom_err-devel" 
+  "libdb-4_8-devel" {>= "4.8"}
+  "libgssapi3" {= "7.8.0"}
+  "libhcrypto4" {= "7.8.0"}
+  "libhdb9" {= "7.8.0"}
+  "libheimbase1" {= "7.8.0"}
+  "libheimedit0" {= "7.8.0"}
+  "libheimntlm0" {= "7.8.0"}
+  "libhx509-5" {= "7.8.0"}
+  "libkadm5clnt7" {= "7.8.0"}
+  "libkadm5srv8" {= "7.8.0"}
+  "libkafs0" {= "7.8.0"}
+  "libkdc2" {= "7.8.0"}
+  "libkrb5-26" {= "7.8.0"}
+  "libotp0" {= "7.8.0"}
+  "libroken18" {= "7.8.0"}
+  "libsl0" {= "7.8.0"}
+  "libwind0" {= "7.8.0"}
+  "ncurses-devel" {>= "5.3"}
+  "sqlite3-devel" 
+]
+extra-source "libheimdal-devel-7.8.0-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libheimdal-devel-7.8.0-4.1.x86_64.rpm"
+}

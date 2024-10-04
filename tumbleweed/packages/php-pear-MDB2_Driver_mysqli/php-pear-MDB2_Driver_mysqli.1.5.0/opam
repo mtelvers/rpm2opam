@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "php-pear-MDB2_Driver_mysqli-1.5.0b4-1.13.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-pear-MDB2_Driver_mysqli-1.5.0b4-1.13.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "php-pear-MDB2" {>= "2.5.0"}
+  "php8-mysql" 
+  "php8-pear" 
+]
+extra-source "php-pear-MDB2_Driver_mysqli-1.5.0b4-1.13.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/php-pear-MDB2_Driver_mysqli-1.5.0b4-1.13.noarch.rpm"
+}

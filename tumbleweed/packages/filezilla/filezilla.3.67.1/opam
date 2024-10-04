@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "filezilla-3.67.1-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "filezilla-3.67.1-1.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libdbus-1-3" 
+  "libfilezilla45" 
+  "libgcc_s1" 
+  "libgtk-2_0-0" 
+  "libnettle8" 
+  "libpugixml1" 
+  "libsqlite3-0" 
+  "libstdc++6" 
+  "libwx_baseu-suse12_0_0" 
+  "libwx_gtk2u_aui-suse12_0_0" 
+  "libwx_gtk2u_core-suse12_0_0" 
+  "libwx_gtk2u_xrc-suse12_0_0" 
+]
+extra-source "filezilla-3.67.1-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/filezilla-3.67.1-1.2.x86_64.rpm"
+}

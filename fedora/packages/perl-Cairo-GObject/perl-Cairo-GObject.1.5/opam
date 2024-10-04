@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Cairo-GObject-1.005-15.fc40.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Cairo-GObject-1.005-15.fc40.1.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "cairo-gobject" 
+  "glib2" 
+  "glibc" 
+  "perl-Cairo" {>= "1.80"}
+  "perl-Glib" {>= "1.224"}
+  "perl-libs" 
+]
+extra-source "perl-Cairo-GObject-1.005-15.fc40.1.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Cairo-GObject-1.005-15.fc40.1.x86_64.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mate-user-admin-1.7.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mate-user-admin-1.7.0-3.fc40.x86_64.rpm"]
+depends: [
+  "accountsservice-libs" 
+  "cairo" 
+  "fontconfig" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "group-service" 
+  "gtk3" 
+  "libgcc" 
+  "libpwquality" 
+  "mate-desktop-libs" 
+  "polkit-libs" 
+]
+extra-source "mate-user-admin-1.7.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mate-user-admin-1.7.0-3.fc40.x86_64.rpm"
+}

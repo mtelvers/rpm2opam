@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rpld-1.8-0.42.beta1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rpld-1.8-0.42.beta1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "systemd" 
+]
+extra-source "rpld-1.8-0.42.beta1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rpld-1.8-0.42.beta1.fc40.x86_64.rpm"
+}

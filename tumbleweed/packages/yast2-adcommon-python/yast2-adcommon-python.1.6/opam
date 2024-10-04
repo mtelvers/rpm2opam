@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-adcommon-python-1.6-1.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-adcommon-python-1.6-1.12.noarch.rpm"]
+depends: [
+  "krb5-client" 
+  "python3-ldb" 
+  "python311-base" {= "3.11"}
+  "python311-keyring" 
+  "python311-ldap" 
+  "samba-client" 
+  "samba-dsdb-modules" 
+  "samba-python3" 
+  "yast2" 
+  "yast2-python3-bindings" {>= "4.0.0"}
+]
+extra-source "yast2-adcommon-python-1.6-1.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/yast2-adcommon-python-1.6-1.12.noarch.rpm"
+}

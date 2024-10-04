@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sendmail-8.18.1-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sendmail-8.18.1-2.3.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "busybox-psmisc" 
+  "ca-certificates" 
+  "coreutils" 
+  "filesystem" 
+  "fillup" 
+  "findutils" 
+  "glibc" 
+  "libdb-4_8" 
+  "libicu75" 
+  "libldap2" 
+  "libnss_usrfiles2" 
+  "libopenssl3" 
+  "libressl" 
+  "libsasl2-3" 
+  "libwrap0" 
+  "m4" 
+  "make" 
+  "netcfg" 
+  "perl-base" 
+  "permissions" 
+  "permissions-config" 
+  "procmail" 
+  "sed" 
+  "system-user-daemon" 
+  "system-user-mail" 
+]
+extra-source "sendmail-8.18.1-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sendmail-8.18.1-2.3.x86_64.rpm"
+}

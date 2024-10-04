@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "moodle-4.3.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "moodle-4.3.3-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cronie-anacron" 
+  "crontabs" 
+  "gnu-free-sans-fonts" 
+  "hunspell" 
+  "mimetex" 
+  "perl-CGI" 
+  "perl-Encode" 
+  "perl-HTML-Parser" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "php" 
+  "php-adodb" 
+  "php-cli" 
+  "php-gd" 
+  "php-markdown" 
+  "php-mysqlnd" 
+  "php-pear-OLE" 
+  "php-pecl-xmlrpc" 
+  "php-simplepie" 
+  "php-soap" 
+  "systemd" 
+]
+extra-source "moodle-4.3.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/moodle-4.3.3-1.fc40.noarch.rpm"
+}

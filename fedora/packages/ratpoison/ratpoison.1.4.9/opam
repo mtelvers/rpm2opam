@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ratpoison-1.4.9-25.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ratpoison-1.4.9-25.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "emacs-filesystem" {>= "29.2"}
+  "glibc" 
+  "libX11" 
+  "libXft" 
+  "libXrandr" 
+  "libXtst" 
+  "perl-Fcntl" 
+  "perl-Getopt-Std" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "ratpoison-1.4.9-25.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/ratpoison-1.4.9-25.fc40.x86_64.rpm"
+}

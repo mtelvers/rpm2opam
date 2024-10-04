@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-netlink-packet-route-devel-0.19.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-netlink-packet-route-devel-0.19.0-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cargo" 
+  "rust-anyhow+default-devel" 
+  "rust-byteorder+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-log+default-devel" 
+  "rust-log+std-devel" 
+  "rust-netlink-packet-core+default-devel" 
+  "rust-netlink-packet-utils+default-devel" 
+]
+extra-source "rust-netlink-packet-route-devel-0.19.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-netlink-packet-route-devel-0.19.0-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glassfish-fastinfoset-1.2.15-8.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glassfish-fastinfoset-1.2.15-8.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "xmlstreambuffer" 
+  "xsom" 
+]
+extra-source "glassfish-fastinfoset-1.2.15-8.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/glassfish-fastinfoset-1.2.15-8.1.noarch.rpm"
+}

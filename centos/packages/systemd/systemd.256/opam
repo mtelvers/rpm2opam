@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "systemd-256-14.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "systemd-256-14.el10.x86_64.rpm"]
+depends: [
+  "audit-libs" 
+  "bash" 
+  "bzip2-libs" 
+  "coreutils" 
+  "dbus" {>= "1.9.18"}
+  "glibc" 
+  "grep" 
+  "libacl" 
+  "libblkid" 
+  "libcap" 
+  "libfdisk" 
+  "libgcc" 
+  "libmount" 
+  "libseccomp" 
+  "libselinux" 
+  "libxcrypt" 
+  "openssl-libs" 
+  "pam-libs" 
+  "systemd-libs" {= "256"}
+  "systemd-pam" {= "256"}
+  "systemd-rpm-macros" 
+  "util-linux-core" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "systemd-256-14.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/systemd-256-14.el10.x86_64.rpm"
+}

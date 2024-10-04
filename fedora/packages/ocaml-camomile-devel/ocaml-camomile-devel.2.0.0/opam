@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-camomile-devel-2.0.0-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-camomile-devel-2.0.0-10.fc40.x86_64.rpm"]
+depends: [
+  "ocaml" {= "24528204"}
+  "ocaml-camlp-streams" {= "0"}
+  "ocaml-camlp-streams-devel" 
+  "ocaml-camomile" {= "2.0.0"}
+  "ocaml-dune-private-libs" {= "1"}
+  "ocaml-dune-site" {= "0"}
+  "ocaml-dune-site-devel" 
+]
+extra-source "ocaml-camomile-devel-2.0.0-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-camomile-devel-2.0.0-10.fc40.x86_64.rpm"
+}

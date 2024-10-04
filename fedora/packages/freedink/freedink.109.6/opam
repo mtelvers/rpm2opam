@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "freedink-109.6-15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freedink-109.6-15.fc40.x86_64.rpm"]
+depends: [
+  "freedink-dfarc" 
+  "freedink-engine" {= "109.6"}
+]
+extra-source "freedink-109.6-15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/freedink-109.6-15.fc40.x86_64.rpm"
+}

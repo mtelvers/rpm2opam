@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libjcat1-0.2.1-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libjcat1-0.2.1-1.3.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgnutls30" 
+  "libgpg-error0" 
+  "libgpgme11" 
+  "libhogweed6" 
+  "libjson-glib-1_0-0" 
+]
+extra-source "libjcat1-0.2.1-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libjcat1-0.2.1-1.3.x86_64.rpm"
+}

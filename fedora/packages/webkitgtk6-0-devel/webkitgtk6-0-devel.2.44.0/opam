@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "webkitgtk6.0-devel-2.44.0-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "webkitgtk6.0-devel-2.44.0-2.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glib2-devel" 
+  "glibc" 
+  "gstreamer1" 
+  "gtk4" 
+  "gtk4-devel" 
+  "javascriptcoregtk6-0" {= "2.44.0"}
+  "javascriptcoregtk6-0-devel" {= "2.44.0"}
+  "libsoup3-devel" 
+  "pkgconf-pkg-config" 
+  "webkitgtk6-0" 
+]
+extra-source "webkitgtk6.0-devel-2.44.0-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/webkitgtk6.0-devel-2.44.0-2.fc40.x86_64.rpm"
+}

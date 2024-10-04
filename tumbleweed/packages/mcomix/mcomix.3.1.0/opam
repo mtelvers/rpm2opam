@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mcomix-3.1.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mcomix-3.1.0-1.1.noarch.rpm"]
+depends: [
+  "7zip" 
+  "python310-chardet" 
+  "python311-Pillow" 
+  "python311-PyMuPDF" 
+  "python311-base" 
+  "python311-gobject-Gdk" 
+  "python311-pycairo" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" 
+  "typelib-1_0-Pango-1_0" 
+]
+extra-source "mcomix-3.1.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mcomix-3.1.0-1.1.noarch.rpm"
+}

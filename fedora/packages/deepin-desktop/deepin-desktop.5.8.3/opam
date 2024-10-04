@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "deepin-desktop-5.8.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deepin-desktop-5.8.3-1.fc40.x86_64.rpm"]
+depends: [
+  "deepin-control-center" 
+  "deepin-dock" 
+  "deepin-file-manager" {= "5.8.3"}
+  "deepin-file-manager-lib" 
+  "deepin-launcher" 
+  "deepin-qt-dbus-factory" 
+  "deepin-session-ui" 
+  "dtkcore" 
+  "dtkgui" 
+  "dtkwidget" 
+  "gio-qt" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "libxcb" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "deepin-desktop-5.8.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/deepin-desktop-5.8.3-1.fc40.x86_64.rpm"
+}

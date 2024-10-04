@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "metacity-theme-matcha-20230403-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "metacity-theme-matcha-20230403-1.3.noarch.rpm"]
+depends: [
+  "metacity" 
+  "metatheme-matcha-common" {= "20230403"}
+]
+extra-source "metacity-theme-matcha-20230403-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/metacity-theme-matcha-20230403-1.3.noarch.rpm"
+}

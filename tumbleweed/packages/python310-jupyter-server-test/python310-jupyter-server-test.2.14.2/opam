@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-jupyter-server-test-2.14.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-jupyter-server-test-2.14.2-1.1.noarch.rpm"]
+depends: [
+  "python310-flaky" 
+  "python310-ipykernel" 
+  "python310-jupyter-server" {= "2.14.2"}
+  "python310-pytest" {>= "7"}
+  "python310-pytest-console-scripts" 
+  "python310-pytest-jupyter-server" {>= "0.7"}
+  "python310-pytest-timeout" 
+  "python310-requests" 
+]
+extra-source "python310-jupyter-server-test-2.14.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-jupyter-server-test-2.14.2-1.1.noarch.rpm"
+}

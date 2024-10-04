@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-uniplate-prof-1.6.13-4.25.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-uniplate-prof-1.6.13-4.25.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-hashable-prof" 
+  "ghc-syb-prof" 
+  "ghc-uniplate-devel" {= "1.6.13"}
+  "ghc-unordered-containers-prof" 
+]
+extra-source "ghc-uniplate-prof-1.6.13-4.25.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-uniplate-prof-1.6.13-4.25.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-askama+serde-yaml-devel-0.12.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-askama+serde-yaml-devel-0.12.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-askama+serde-devel" {= "0.12.1"}
+  "rust-askama+serde_yaml-devel" {= "0.12.1"}
+  "rust-askama-devel" {= "0.12.1"}
+  "rust-askama_derive+serde-yaml-devel" 
+]
+extra-source "rust-askama+serde-yaml-devel-0.12.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-askama+serde-yaml-devel-0.12.1-2.fc40.noarch.rpm"
+}

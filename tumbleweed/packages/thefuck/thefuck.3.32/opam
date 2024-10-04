@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "thefuck-3.32-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "thefuck-3.32-1.2.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-colorama" 
+  "python311-dbm" 
+  "python311-decorator" 
+  "python311-psutil" 
+  "python311-pyte" 
+]
+extra-source "thefuck-3.32-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/thefuck-3.32-1.2.noarch.rpm"
+}

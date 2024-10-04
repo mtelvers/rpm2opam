@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tcl-iaxclient-0.2-0.48.beta3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tcl-iaxclient-0.2-0.48.beta3.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "glibc" 
+  "iaxclient" {= "2.1"}
+  "portaudio" 
+  "speex" 
+  "speexdsp" 
+  "tcl" {= "8.6"}
+]
+extra-source "tcl-iaxclient-0.2-0.48.beta3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tcl-iaxclient-0.2-0.48.beta3.fc40.x86_64.rpm"
+}

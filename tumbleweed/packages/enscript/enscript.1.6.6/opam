@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "enscript-1.6.6-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "enscript-1.6.6-3.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-sed" 
+  "file" 
+  "ghostscript-fonts-std" 
+  "glibc" 
+  "glibc-locale" 
+  "perl-base" 
+]
+extra-source "enscript-1.6.6-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/enscript-1.6.6-3.2.x86_64.rpm"
+}

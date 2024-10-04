@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xmlsec1-nss-devel-1.2.37-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xmlsec1-nss-devel-1.2.37-7.fc40.x86_64.rpm"]
+depends: [
+  "libxml2-devel" {>= "2.8.0"}
+  "libxslt-devel" {>= "1.0.20"}
+  "nspr-devel" {>= "1.4"}
+  "nss-devel" {>= "1.4"}
+  "pkgconf-pkg-config" 
+  "xmlsec1-devel" {= "1.2.37"}
+  "xmlsec1-nss" {= "1.2.37"}
+]
+extra-source "xmlsec1-nss-devel-1.2.37-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xmlsec1-nss-devel-1.2.37-7.fc40.x86_64.rpm"
+}

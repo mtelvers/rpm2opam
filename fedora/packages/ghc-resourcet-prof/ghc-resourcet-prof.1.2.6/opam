@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-resourcet-prof-1.2.6-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-resourcet-prof-1.2.6-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-exceptions-prof" 
+  "ghc-mtl-prof" 
+  "ghc-primitive-prof" 
+  "ghc-resourcet-devel" {= "1.2.6"}
+  "ghc-transformers-prof" 
+  "ghc-unliftio-core-prof" 
+]
+extra-source "ghc-resourcet-prof-1.2.6-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-resourcet-prof-1.2.6-6.fc40.x86_64.rpm"
+}

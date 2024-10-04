@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "budgie-rotation-lock-applet-1.7.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "budgie-rotation-lock-applet-1.7.1-2.1.x86_64.rpm"]
+depends: [
+  "python311-gobject-Gdk" 
+  "typelib-1_0-Budgie-1_0" {= "1.0"}
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+]
+extra-source "budgie-rotation-lock-applet-1.7.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/budgie-rotation-lock-applet-1.7.1-2.1.x86_64.rpm"
+}

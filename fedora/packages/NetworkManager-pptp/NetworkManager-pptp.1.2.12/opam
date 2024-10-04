@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "NetworkManager-pptp-1.2.12-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "NetworkManager-pptp-1.2.12-6.fc40.x86_64.rpm"]
+depends: [
+  "NetworkManager" {>= "1.2.0"}
+  "NetworkManager-libnm" 
+  "dbus-common" 
+  "glib2" 
+  "glibc" 
+  "libgcc" 
+  "ppp" {= "2.5.0"}
+  "pptp" 
+]
+extra-source "NetworkManager-pptp-1.2.12-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/NetworkManager-pptp-1.2.12-6.fc40.x86_64.rpm"
+}

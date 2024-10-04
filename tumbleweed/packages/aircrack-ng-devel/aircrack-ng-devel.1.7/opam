@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "aircrack-ng-devel-1.7-3.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "aircrack-ng-devel-1.7-3.3.noarch.rpm"]
+depends: [
+  "aircrack-ng" {= "1.7"}
+]
+extra-source "aircrack-ng-devel-1.7-3.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/aircrack-ng-devel-1.7-3.3.noarch.rpm"
+}

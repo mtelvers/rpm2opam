@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-curve25519-dalek+alloc-devel-3.2.1-6.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-curve25519-dalek+alloc-devel-3.2.1-6.fc39.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-curve25519-dalek-devel" {= "3.2.1"}
+  "rust-zeroize+alloc-devel" 
+]
+extra-source "rust-curve25519-dalek+alloc-devel-3.2.1-6.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-curve25519-dalek+alloc-devel-3.2.1-6.fc39.noarch.rpm"
+}

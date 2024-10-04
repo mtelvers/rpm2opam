@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "OpenPrintingPPDs-ghostscript-4.0.0.2-6.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "OpenPrintingPPDs-ghostscript-4.0.0.2-6.12.noarch.rpm"]
+depends: [
+  "cups-filters" {>= "4.0.0"}
+  "ghostscript" 
+]
+extra-source "OpenPrintingPPDs-ghostscript-4.0.0.2-6.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/OpenPrintingPPDs-ghostscript-4.0.0.2-6.12.noarch.rpm"
+}

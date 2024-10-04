@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "signing-party-2.11-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "signing-party-2.11-2.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-sendmail" 
+  "glibc" 
+  "gpg2" 
+  "libmd0" 
+  "perl" 
+  "perl-GnuPG-Interface" 
+  "perl-MIME-tools" 
+  "perl-MailTools" 
+  "perl-Net-IDN-Encode" 
+  "perl-Text-Template" 
+  "perl-base" 
+  "python311-base" 
+  "qprint" 
+]
+extra-source "signing-party-2.11-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/signing-party-2.11-2.2.x86_64.rpm"
+}

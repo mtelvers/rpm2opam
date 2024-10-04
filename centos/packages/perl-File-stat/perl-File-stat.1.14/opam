@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-File-stat-1.14-510.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-stat-1.14-510.el10.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Class-Struct" 
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-Symbol" 
+  "perl-constant" 
+  "perl-overload" 
+]
+extra-source "perl-File-stat-1.14-510.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/perl-File-stat-1.14-510.el10.noarch.rpm"
+}

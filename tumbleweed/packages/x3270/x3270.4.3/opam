@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "x3270-4.3-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "x3270-4.3-4.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "libX11-6" 
+  "libXaw7" 
+  "libXmu6" 
+  "libXpm4" 
+  "libXt6" 
+  "libexpat1" 
+  "libncurses6" 
+  "libopenssl3" 
+  "libreadline8" 
+  "tcl" 
+]
+extra-source "x3270-4.3-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/x3270-4.3-4.1.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cgal-demo-examples-devel-5.6.1-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cgal-demo-examples-devel-5.6.1-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "cgal-devel" {= "5.6.1"}
+]
+extra-source "cgal-demo-examples-devel-5.6.1-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cgal-demo-examples-devel-5.6.1-1.2.noarch.rpm"
+}

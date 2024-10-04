@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gtk3-devel-3.24.41-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk3-devel-3.24.41-1.fc40.x86_64.rpm"]
+depends: [
+  "at-spi2-atk-devel" 
+  "atk" 
+  "atk-devel" {>= "2.35.1"}
+  "cairo" 
+  "cairo-devel" {>= "1.14.0"}
+  "cairo-gobject-devel" {>= "1.14.0"}
+  "fontconfig-devel" 
+  "fribidi-devel" {>= "0.19.7"}
+  "gdk-pixbuf2" 
+  "gdk-pixbuf2-devel" {>= "2.30.0"}
+  "glib2" 
+  "glib2-devel" {>= "2.57.2"}
+  "glibc" 
+  "gtk3" {= "3.24.41"}
+  "harfbuzz" 
+  "libX11-devel" 
+  "libXcomposite-devel" 
+  "libXcursor-devel" 
+  "libXdamage-devel" 
+  "libXext-devel" 
+  "libXfixes-devel" 
+  "libXi-devel" 
+  "libXinerama-devel" 
+  "libXrandr-devel" 
+  "libcloudproviders-devel" {>= "0.2.5"}
+  "libepoxy" 
+  "libepoxy-devel" {>= "1.4"}
+  "libxkbcommon-devel" {>= "0.2.0"}
+  "pango" 
+  "pango-devel" {>= "1.41.0"}
+  "pkgconf-pkg-config" 
+  "wayland-devel" {>= "1.14.91"}
+]
+extra-source "gtk3-devel-3.24.41-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gtk3-devel-3.24.41-1.fc40.x86_64.rpm"
+}

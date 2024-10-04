@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-syntax-0.004-5.32.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-syntax-0.004-5.32.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Data-OptList" {>= "0.104"}
+  "perl-namespace-clean" 
+]
+extra-source "perl-syntax-0.004-5.32.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-syntax-0.004-5.32.noarch.rpm"
+}

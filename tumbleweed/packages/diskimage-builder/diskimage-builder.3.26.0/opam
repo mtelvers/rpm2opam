@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "diskimage-builder-3.26.0-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "diskimage-builder-3.26.0-1.6.noarch.rpm"]
+depends: [
+  "bash" 
+  "kpartx" 
+  "python311-Babel" {>= "2.3.4"}
+  "python311-PyYAML" {>= "3.12"}
+  "python311-base" 
+  "python311-networkx" {>= "1.10"}
+  "python311-six" {>= "1.10.0"}
+  "python311-stevedore" {>= "1.20.0"}
+  "qemu-tools" 
+  "sudo" 
+]
+extra-source "diskimage-builder-3.26.0-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/diskimage-builder-3.26.0-1.6.noarch.rpm"
+}

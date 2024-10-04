@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CPANPLUS-Dist-Fedora-0.4.4-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CPANPLUS-Dist-Fedora-0.4.4-8.fc40.noarch.rpm"]
+depends: [
+  "gcc" 
+  "perl-CPANPLUS" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-IPC-Cmd" 
+  "perl-POSIX" 
+  "perl-Path-Tiny" 
+  "perl-PathTools" 
+  "perl-Pod-POM" 
+  "perl-Scalar-List-Utils" 
+  "perl-Template-Toolkit" 
+  "perl-libs" 
+  "perl-parent" 
+  "rpm" 
+  "rpm-build" 
+]
+extra-source "perl-CPANPLUS-Dist-Fedora-0.4.4-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CPANPLUS-Dist-Fedora-0.4.4-8.fc40.noarch.rpm"
+}

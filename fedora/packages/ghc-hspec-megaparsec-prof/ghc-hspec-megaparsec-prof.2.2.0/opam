@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-hspec-megaparsec-prof-2.2.0-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hspec-megaparsec-prof-2.2.0-10.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-hspec-expectations-prof" 
+  "ghc-hspec-megaparsec-devel" {= "2.2.0"}
+  "ghc-megaparsec-prof" 
+]
+extra-source "ghc-hspec-megaparsec-prof-2.2.0-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-hspec-megaparsec-prof-2.2.0-10.fc40.x86_64.rpm"
+}

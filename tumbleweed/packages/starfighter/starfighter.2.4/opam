@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "starfighter-2.4-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "starfighter-2.4-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libSDL2-2_0-0" 
+  "libSDL2_image-2_0-0" 
+  "libSDL2_mixer-2_0-0" 
+  "libSDL2_ttf-2_0-0" 
+  "libpango-1_0-0" 
+]
+extra-source "starfighter-2.4-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/starfighter-2.4-2.2.x86_64.rpm"
+}

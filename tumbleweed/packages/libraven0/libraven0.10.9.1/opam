@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libraven0-10.9.1+9-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libraven0-10.9.1+9-1.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libbudgie-private0" 
+  "libbudgie-raven-plugin0" 
+  "libcairo2" 
+  "libgirepository-1_0-1" 
+  "libgtk-3-0" 
+  "libpeas-1_0-0" 
+  "libuuid1" 
+]
+extra-source "libraven0-10.9.1+9-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libraven0-10.9.1+9-1.2.x86_64.rpm"
+}

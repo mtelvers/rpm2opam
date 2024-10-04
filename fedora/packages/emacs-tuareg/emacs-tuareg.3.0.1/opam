@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "emacs-tuareg-3.0.1-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "emacs-tuareg-3.0.1-7.fc40.noarch.rpm"]
+depends: [
+  "emacs" {>= "29.2"}
+  "emacs-common-tuareg" {= "3.0.1"}
+]
+extra-source "emacs-tuareg-3.0.1-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/emacs-tuareg-3.0.1-7.fc40.noarch.rpm"
+}

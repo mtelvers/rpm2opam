@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-matplotlib-latex-3.6.3-slfo.1.1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-matplotlib-latex-3.6.3-slfo.1.1.8.noarch.rpm"]
+depends: [
+  "python311-matplotlib" {= "3.6.3"}
+  "texlive-cm-super" 
+  "texlive-dvipng" 
+  "texlive-dvips" 
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-helvetic" 
+  "texlive-latex" 
+  "texlive-ncntrsbk" 
+  "texlive-pgf" 
+  "texlive-psfrag" 
+  "texlive-psnfss" 
+  "texlive-sfmath" 
+  "texlive-tex" 
+  "texlive-txfonts" 
+  "texlive-type1cm" 
+  "texlive-ucs" 
+  "texlive-underscore" 
+  "texlive-xcolor" 
+]
+extra-source "python311-matplotlib-latex-3.6.3-slfo.1.1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/python311-matplotlib-latex-3.6.3-slfo.1.1.8.noarch.rpm"
+}

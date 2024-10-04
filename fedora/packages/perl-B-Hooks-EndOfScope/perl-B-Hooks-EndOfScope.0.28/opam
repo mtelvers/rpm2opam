@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-B-Hooks-EndOfScope-0.28-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-B-Hooks-EndOfScope-0.28-1.fc40.noarch.rpm"]
+depends: [
+  "perl-Hash-Util-FieldHash" 
+  "perl-Module-Implementation" {>= "0.5"}
+  "perl-Scalar-List-Utils" 
+  "perl-Sub-Exporter-Progressive" {>= "0.1006"}
+  "perl-Variable-Magic" {>= "0.48"}
+  "perl-constant" 
+  "perl-libs" {>= "5.8.4"}
+]
+extra-source "perl-B-Hooks-EndOfScope-0.28-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-B-Hooks-EndOfScope-0.28-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mcrouter-0.41.0.20240122-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mcrouter-0.41.0.20240122-2.fc40.x86_64.rpm"]
+depends: [
+  "boost-context" 
+  "boost-filesystem" 
+  "boost-program-options" 
+  "double-conversion" 
+  "fbthrift" 
+  "fizz" 
+  "fmt" 
+  "folly" 
+  "gflags" 
+  "glibc" 
+  "glog" 
+  "libatomic" 
+  "libgcc" 
+  "libstdc++" 
+  "openssl-libs" 
+  "wangle" 
+]
+extra-source "mcrouter-0.41.0.20240122-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mcrouter-0.41.0.20240122-2.fc40.x86_64.rpm"
+}

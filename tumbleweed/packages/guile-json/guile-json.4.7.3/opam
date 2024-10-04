@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "guile-json-4.7.3-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "guile-json-4.7.3-1.3.x86_64.rpm"]
+depends: [
+  "guile" {>= "2.0.10"}
+]
+extra-source "guile-json-4.7.3-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/guile-json-4.7.3-1.3.x86_64.rpm"
+}

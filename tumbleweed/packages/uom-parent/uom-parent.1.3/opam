@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "uom-parent-1.3-1.24.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "uom-parent-1.3-1.24.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "uom-parent-1.3-1.24.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/uom-parent-1.3-1.24.noarch.rpm"
+}

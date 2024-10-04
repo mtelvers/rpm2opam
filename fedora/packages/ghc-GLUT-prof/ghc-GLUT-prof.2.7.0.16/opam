@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-GLUT-prof-2.7.0.16-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-GLUT-prof-2.7.0.16-5.fc40.x86_64.rpm"]
+depends: [
+  "ghc-GLUT-devel" {= "2.7.0.16"}
+  "ghc-OpenGL-prof" 
+  "ghc-StateVar-prof" 
+  "ghc-array-prof" 
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-GLUT-prof-2.7.0.16-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-GLUT-prof-2.7.0.16-5.fc40.x86_64.rpm"
+}

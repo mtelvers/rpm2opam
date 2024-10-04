@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libxdo-3.20211022.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxdo-3.20211022.1-5.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11" 
+  "libXinerama" 
+  "libXtst" 
+  "libxkbcommon" 
+]
+extra-source "libxdo-3.20211022.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libxdo-3.20211022.1-5.fc40.x86_64.rpm"
+}

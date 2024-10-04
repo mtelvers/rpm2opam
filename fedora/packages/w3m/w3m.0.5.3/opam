@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "w3m-0.5.3-63.git20230121.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "w3m-0.5.3-63.git20230121.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gc" 
+  "glibc" 
+  "gpm-libs" 
+  "ncurses-libs" 
+  "openssl-libs" 
+  "perl-NKF" 
+  "perl-interpreter" 
+  "zlib-ng-compat" 
+]
+extra-source "w3m-0.5.3-63.git20230121.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/w3m-0.5.3-63.git20230121.fc40.x86_64.rpm"
+}

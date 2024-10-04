@@ -1,0 +1,48 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gscan2pdf-tests-2.13.2-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gscan2pdf-tests-2.13.2-6.fc40.noarch.rpm"]
+depends: [
+  "ImageMagick-djvu" 
+  "bash" 
+  "coreutils" 
+  "dejavu-sans-fonts" 
+  "file" 
+  "fontconfig" 
+  "ghostscript" 
+  "gscan2pdf" {= "2.13.2"}
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Date-Calc" 
+  "perl-Encode" 
+  "perl-Exception-Class" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-File-stat" 
+  "perl-Glib" {>= "1.220"}
+  "perl-Gtk3" 
+  "perl-IPC-Cmd" 
+  "perl-IPC-System-Simple" 
+  "perl-Image-Sane" 
+  "perl-Log-Log4perl" 
+  "perl-MIME-Base64" 
+  "perl-PDF-Builder" {>= "3.22"}
+  "perl-POSIX" 
+  "perl-Scalar-List-Utils" 
+  "perl-Storable" 
+  "perl-Sub-Override" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-Try-Tiny" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-version" 
+  "poppler-utils" 
+  "sane-backends-drivers-scanners" 
+  "sane-frontends" 
+  "xorg-x11-server-Xvfb" 
+]
+extra-source "gscan2pdf-tests-2.13.2-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gscan2pdf-tests-2.13.2-6.fc40.noarch.rpm"
+}

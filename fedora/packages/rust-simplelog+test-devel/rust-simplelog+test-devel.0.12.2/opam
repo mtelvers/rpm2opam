@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-simplelog+test-devel-0.12.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-simplelog+test-devel-0.12.2-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-simplelog-devel" {= "0.12.2"}
+]
+extra-source "rust-simplelog+test-devel-0.12.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-simplelog+test-devel-0.12.2-1.fc40.noarch.rpm"
+}

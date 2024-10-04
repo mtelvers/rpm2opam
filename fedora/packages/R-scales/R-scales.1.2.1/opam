@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-scales-1.2.1-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-scales-1.2.1-6.fc40.noarch.rpm"]
+depends: [
+  "R-R6" 
+  "R-RColorBrewer" 
+  "R-core" {= "4.3"}
+  "R-farver" {>= "2.0.3"}
+  "R-labeling" 
+  "R-lifecycle" 
+  "R-munsell" {>= "0.5"}
+  "R-rlang" {>= "1.0.0"}
+  "R-viridisLite" 
+]
+extra-source "R-scales-1.2.1-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-scales-1.2.1-6.fc40.noarch.rpm"
+}

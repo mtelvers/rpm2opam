@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-py-moneyed-3.0-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-py-moneyed-3.0-1.7.noarch.rpm"]
+depends: [
+  "python312-Babel" {>= "2.8.0"}
+  "python312-base" {= "3.12"}
+  "python312-typing_extensions" {>= "3.7.4.3"}
+]
+extra-source "python312-py-moneyed-3.0-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-py-moneyed-3.0-1.7.noarch.rpm"
+}

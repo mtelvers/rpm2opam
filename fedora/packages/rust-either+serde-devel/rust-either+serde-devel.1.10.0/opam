@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-either+serde-devel-1.10.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-either+serde-devel-1.10.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-either-devel" {= "1.10.0"}
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+]
+extra-source "rust-either+serde-devel-1.10.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-either+serde-devel-1.10.0-1.fc40.noarch.rpm"
+}

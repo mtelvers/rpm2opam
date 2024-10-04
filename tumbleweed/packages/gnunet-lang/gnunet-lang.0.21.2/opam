@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnunet-lang-0.21.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnunet-lang-0.21.2-1.1.noarch.rpm"]
+depends: [
+  "gnunet" {= "0.21.2"}
+]
+extra-source "gnunet-lang-0.21.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnunet-lang-0.21.2-1.1.noarch.rpm"
+}

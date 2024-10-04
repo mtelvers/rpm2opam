@@ -1,0 +1,43 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "Komikku-1.58.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Komikku-1.58.0-1.1.noarch.rpm"]
+depends: [
+  "python311-Brotli" 
+  "python311-Pillow" 
+  "python311-Unidecode" 
+  "python311-base" 
+  "python311-beautifulsoup4" 
+  "python311-cffi" 
+  "python311-cloudscraper" 
+  "python311-dateparser" 
+  "python311-emoji" 
+  "python311-keyring" 
+  "python311-lxml" 
+  "python311-modern-colorthief" {>= "0.1.3"}
+  "python311-natsort" 
+  "python311-piexif" 
+  "python311-pillow-heif" 
+  "python311-pure-protobuf" {>= "3.0.0"}
+  "python311-pycairo" 
+  "python311-python-magic" 
+  "python311-rarfile" 
+  "python311-requests" 
+  "python311-setuptools-gettext" 
+  "python311-typing_extensions" 
+  "python311-wheel" 
+  "typelib-1_0-Adw-1" {= "1"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" {= "2.0"}
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Graphene-1_0" {= "1.0"}
+  "typelib-1_0-Gtk-4_0" {= "4.0"}
+  "typelib-1_0-Notify-0_7" {= "0.7"}
+  "typelib-1_0-Pango-1_0" 
+  "typelib-1_0-Soup-3_0" {= "3.0"}
+  "typelib-1_0-WebKit-6_0" {= "6.0"}
+  "unrar_wrapper" 
+]
+extra-source "Komikku-1.58.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/Komikku-1.58.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qFlipper-cli-1.3.3+git0.1699609231.bfce851-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qFlipper-cli-1.3.3+git0.1699609231.bfce851-3.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt6Core5Compat6" 
+  "libQt6Core6" 
+  "libQt6Network6" 
+  "libQt6SerialPort6" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libusb-1_0-0" 
+  "libz-ng-compat1" 
+  "qFlipper-base" {= "1.3.3"}
+  "qFlipper-libflipperproto" {= "1.3.3"}
+]
+extra-source "qFlipper-cli-1.3.3+git0.1699609231.bfce851-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/qFlipper-cli-1.3.3+git0.1699609231.bfce851-3.1.x86_64.rpm"
+}

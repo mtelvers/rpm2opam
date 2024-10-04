@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sca-appliance-broker-1.3.2-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sca-appliance-broker-1.3.2-1.5.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "sca-appliance-common" 
+  "system-user-wwwrun" 
+]
+extra-source "sca-appliance-broker-1.3.2-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sca-appliance-broker-1.3.2-1.5.noarch.rpm"
+}

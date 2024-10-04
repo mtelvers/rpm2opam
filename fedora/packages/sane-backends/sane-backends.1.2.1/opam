@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sane-backends-1.2.1-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sane-backends-1.2.1-8.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libieee1284" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libusb1" 
+  "libxml2" 
+  "sane-airscan" 
+  "sane-backends-libs" 
+  "systemd" {>= "196"}
+  "systemd-udev" {>= "196"}
+]
+extra-source "sane-backends-1.2.1-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sane-backends-1.2.1-8.fc40.x86_64.rpm"
+}

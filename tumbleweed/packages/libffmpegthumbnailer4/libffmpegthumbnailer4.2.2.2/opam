@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libffmpegthumbnailer4-2.2.2-2.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libffmpegthumbnailer4-2.2.2-2.11.x86_64.rpm"]
+depends: [
+  "ffmpeg-7-mini-libs" 
+  "glibc" 
+  "libgcc_s1" 
+  "libjpeg8" 
+  "libpng16-16" 
+  "libstdc++6" 
+]
+extra-source "libffmpegthumbnailer4-2.2.2-2.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libffmpegthumbnailer4-2.2.2-2.11.x86_64.rpm"
+}

@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "copr-builder-0.72-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "copr-builder-0.72-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "ca-certificates" 
+  "copr-distgit-client" {= "0.72"}
+  "copr-rpmbuild" {= "0.72"}
+  "distribution-gpg-keys" 
+  "dnf-plugins-core" 
+  "dnf-utils" 
+  "dnf5" 
+  "dnf5-plugins" 
+  "fedora-review" {>= "0.8"}
+  "fedora-review-plugin-java" 
+  "libdnf" 
+  "librepo" 
+  "libsolv" 
+  "mock" 
+  "mock-core-configs" 
+  "openssh-clients" 
+  "podman" 
+  "pyp2rpm" 
+  "pyp2spec" 
+  "python-srpm-macros" {>= "3"}
+  "python3" 
+  "python3-dnf" 
+  "python3-libselinux" 
+  "python3-libsemanage" 
+  "redhat-rpm-config" 
+  "rpkg" 
+  "rpm" 
+  "rsync" 
+  "rubygem-gem2rpm" 
+  "scl-utils-build" 
+  "tito" 
+  "yum" 
+]
+extra-source "copr-builder-0.72-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/copr-builder-0.72-1.fc40.x86_64.rpm"
+}

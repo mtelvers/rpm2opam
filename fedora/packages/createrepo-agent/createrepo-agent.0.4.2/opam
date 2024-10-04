@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "createrepo-agent-0.4.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "createrepo-agent-0.4.2-3.fc40.x86_64.rpm"]
+depends: [
+  "createrepo_c-libs" 
+  "glib2" 
+  "glibc" 
+  "gpgme" 
+  "libassuan" 
+  "libgpg-error" 
+]
+extra-source "createrepo-agent-0.4.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/createrepo-agent-0.4.2-3.fc40.x86_64.rpm"
+}

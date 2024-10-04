@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-lopdf-devel-0.31.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-lopdf-devel-0.31.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-encoding_rs+default-devel" 
+  "rust-flate2+default-devel" 
+  "rust-itoa+default-devel" 
+  "rust-linked-hash-map+default-devel" 
+  "rust-log+default-devel" 
+  "rust-md5+default-devel" 
+  "rust-time+default-devel" 
+  "rust-time+formatting-devel" 
+  "rust-time+parsing-devel" 
+  "rust-weezl+default-devel" 
+]
+extra-source "rust-lopdf-devel-0.31.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-lopdf-devel-0.31.0-2.fc40.noarch.rpm"
+}

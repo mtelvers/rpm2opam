@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rsync-3.3.0-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rsync-3.3.0-4.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "glibc" 
+  "grep" 
+  "libacl1" 
+  "liblz4-1" 
+  "libopenssl3" 
+  "libpopt0" 
+  "libxxhash0" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+  "sed" 
+]
+extra-source "rsync-3.3.0-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rsync-3.3.0-4.1.x86_64.rpm"
+}

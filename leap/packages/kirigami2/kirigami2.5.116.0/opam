@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kirigami2-5.116.0-lp160.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kirigami2-5.116.0-lp160.1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libKF5Kirigami2-5" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Network5" 
+  "libQt5QuickControls2-5" 
+  "libQtQuick5" 
+  "libgomp1" 
+  "libqt5-qtgraphicaleffects" 
+  "libqt5-qtquickcontrols2" 
+  "libstdc++6" 
+  "qtdeclarative-imports-provides-qt5" {>= "14"}
+]
+extra-source "kirigami2-5.116.0-lp160.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/kirigami2-5.116.0-lp160.1.2.x86_64.rpm"
+}

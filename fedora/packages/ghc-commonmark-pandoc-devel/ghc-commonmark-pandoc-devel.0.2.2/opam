@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-commonmark-pandoc-devel-0.2.2-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-commonmark-pandoc-devel-0.2.2-29.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-commonmark-devel" 
+  "ghc-commonmark-extensions-devel" 
+  "ghc-commonmark-pandoc" {= "0.2.2"}
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-pandoc-types-devel" 
+  "ghc-text-devel" 
+]
+extra-source "ghc-commonmark-pandoc-devel-0.2.2-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-commonmark-pandoc-devel-0.2.2-29.fc40.x86_64.rpm"
+}

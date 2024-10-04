@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "eog-plugin-map-44.0-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eog-plugin-map-44.0-1.4.x86_64.rpm"]
+depends: [
+  "eog" 
+  "eog-plugins-data" {= "44.0"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libchamplain-0_12-0" 
+  "libclutter-1_0-0" 
+  "libclutter-gtk-1_0-0" 
+  "libexif12" 
+  "libgtk-3-0" 
+  "libpeas-1_0-0" 
+]
+extra-source "eog-plugin-map-44.0-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/eog-plugin-map-44.0-1.4.x86_64.rpm"
+}

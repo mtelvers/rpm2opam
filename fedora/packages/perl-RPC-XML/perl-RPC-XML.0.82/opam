@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-RPC-XML-0.82-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-RPC-XML-0.82-11.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-DateTime" {>= "1.54"}
+  "perl-DateTime-Format-ISO8601" {>= "0.15"}
+  "perl-Exporter" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-HTTP-Daemon" {>= "6.12"}
+  "perl-HTTP-Message" 
+  "perl-IO" 
+  "perl-MIME-Base64" 
+  "perl-Module-Load" {>= "0.36"}
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" {>= "1.55"}
+  "perl-URI" 
+  "perl-XML-LibXML" {>= "1.85"}
+  "perl-XML-Parser" {>= "2.46"}
+  "perl-base" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.6.1"}
+  "perl-libwww-perl" 
+  "perl-subs" 
+  "perl-vars" 
+]
+extra-source "perl-RPC-XML-0.82-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-RPC-XML-0.82-11.fc40.noarch.rpm"
+}

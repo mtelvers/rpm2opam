@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "freerdp-wayland-3.8.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freerdp-wayland-3.8.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libfreerdp3-3" 
+  "libuwac0-0" 
+  "libwinpr3-3" 
+]
+extra-source "freerdp-wayland-3.8.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/freerdp-wayland-3.8.0-1.1.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-typeoutfileinfo-svn29349-81.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-typeoutfileinfo-svn29349-81.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "texlive-base" 
+  "texlive-fileinfo" 
+  "texlive-kpathsea" 
+]
+extra-source "texlive-typeoutfileinfo-svn29349-81.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-typeoutfileinfo-svn29349-81.fc40.noarch.rpm"
+}

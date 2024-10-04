@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-oxipng-devel-9.0.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-oxipng-devel-9.0.0-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.66.0"}
+  "rust-bitvec+default-devel" 
+  "rust-indexmap+default-devel" 
+  "rust-libdeflater+default-devel" 
+  "rust-log+default-devel" 
+  "rust-rgb+default-devel" 
+  "rust-rustc-hash+default-devel" 
+  "rust-rustc_version+default-devel" 
+]
+extra-source "rust-oxipng-devel-9.0.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-oxipng-devel-9.0.0-4.fc40.noarch.rpm"
+}

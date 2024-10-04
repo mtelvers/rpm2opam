@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libNX_X11-devel-3.5.99.27-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libNX_X11-devel-3.5.99.27-1.fc40.x86_64.rpm"]
+depends: [
+  "libNX_X11" {= "3.5.99.27"}
+  "nx-proto-devel" {= "3.5.99.27"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libNX_X11-devel-3.5.99.27-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libNX_X11-devel-3.5.99.27-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "systemd-ui-3-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "systemd-ui-3-2.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgee-0_8-2" 
+  "libgtk-3-0" 
+  "libnotify4" 
+  "systemd" 
+]
+extra-source "systemd-ui-3-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/systemd-ui-3-2.2.x86_64.rpm"
+}

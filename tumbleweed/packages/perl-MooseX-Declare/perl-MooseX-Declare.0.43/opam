@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-Declare-0.43-1.31.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Declare-0.43-1.31.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Devel-Declare" {>= "0.5011"}
+  "perl-Module-Runtime" 
+  "perl-Moose" {>= "0.90"}
+  "perl-MooseX-Method-Signatures" {>= "0.36"}
+  "perl-MooseX-Role-Parameterized" {>= "0.12"}
+  "perl-MooseX-Types" {>= "0.20"}
+  "perl-Parse-Method-Signatures" 
+  "perl-Sub-Exporter" 
+  "perl-Sub-Install" 
+  "perl-aliased" 
+  "perl-namespace-autoclean" {>= "0.16"}
+  "perl-namespace-clean" {>= "0.19"}
+]
+extra-source "perl-MooseX-Declare-0.43-1.31.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-Declare-0.43-1.31.noarch.rpm"
+}

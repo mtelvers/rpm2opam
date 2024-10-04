@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvcdinfo0-2.0.1-3.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvcdinfo0-2.0.1-3.16.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcdio19" 
+  "libiso9660-11" 
+]
+extra-source "libvcdinfo0-2.0.1-3.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libvcdinfo0-2.0.1-3.16.x86_64.rpm"
+}

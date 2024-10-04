@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CatalystX-SimpleLogin-0.21-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CatalystX-SimpleLogin-0.21-11.fc40.noarch.rpm"]
+depends: [
+  "perl-Catalyst-Action-REST" {>= "0.74"}
+  "perl-Catalyst-Plugin-Authentication" 
+  "perl-Catalyst-Plugin-Session" {>= "0.27"}
+  "perl-Catalyst-Runtime" {>= "5.80013"}
+  "perl-Catalyst-View-TT" 
+  "perl-CatalystX-Component-Traits" {>= "0.13"}
+  "perl-CatalystX-InjectComponent" 
+  "perl-HTML-FormHandler" {>= "0.28001"}
+  "perl-Moose" 
+  "perl-MooseX-MethodAttributes" 
+  "perl-MooseX-RelatedClassRoles" {>= "0.4"}
+  "perl-MooseX-Types" 
+  "perl-MooseX-Types-Common" 
+  "perl-Try-Tiny" 
+  "perl-libs" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-CatalystX-SimpleLogin-0.21-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CatalystX-SimpleLogin-0.21-11.fc40.noarch.rpm"
+}

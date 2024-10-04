@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-jsonschema-spec-0.2.3-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-jsonschema-spec-0.2.3-3.2.noarch.rpm"]
+depends: [
+  "python310-PyYAML" {>= "5.1"}
+  "python310-base" {= "3.10"}
+  "python310-pathable" {>= "0.4.1"}
+  "python310-referencing" {>= "0.28.0"}
+]
+extra-source "python310-jsonschema-spec-0.2.3-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-jsonschema-spec-0.2.3-3.2.noarch.rpm"
+}

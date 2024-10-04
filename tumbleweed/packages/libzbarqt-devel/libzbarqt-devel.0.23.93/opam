@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libzbarqt-devel-0.23.93-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libzbarqt-devel-0.23.93-2.3.x86_64.rpm"]
+depends: [
+  "libQt5Core-devel" {>= "5"}
+  "libQt5Gui-devel" {>= "5"}
+  "libzbar-devel" {= "0.23.93"}
+  "libzbarqt0" {= "0.23.93"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libzbarqt-devel-0.23.93-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libzbarqt-devel-0.23.93-2.3.x86_64.rpm"
+}

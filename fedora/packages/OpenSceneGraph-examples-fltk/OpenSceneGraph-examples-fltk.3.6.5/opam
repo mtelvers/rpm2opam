@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "OpenSceneGraph-examples-fltk-3.6.5-24.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "OpenSceneGraph-examples-fltk-3.6.5-24.fc40.x86_64.rpm"]
+depends: [
+  "OpenSceneGraph-libs" 
+  "OpenThreads" 
+  "fltk" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "OpenSceneGraph-examples-fltk-3.6.5-24.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/OpenSceneGraph-examples-fltk-3.6.5-24.fc40.x86_64.rpm"
+}

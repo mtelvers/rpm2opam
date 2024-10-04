@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "irssi-1.4.5-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "irssi-1.4.5-3.3.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcrypt20" 
+  "libncurses6" 
+  "libopenssl3" 
+  "libotr5" 
+  "libutf8proc3" 
+  "perl" 
+]
+extra-source "irssi-1.4.5-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/irssi-1.4.5-3.3.x86_64.rpm"
+}

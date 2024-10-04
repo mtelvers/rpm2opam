@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-dune-configurator-3.14.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-dune-configurator-3.14.2-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "ocaml" {= "2125"}
+  "ocaml-csexp" {= "1"}
+  "ocaml-dune" {= "3.14.2"}
+  "ocaml-stdune" {= "3.14.2"}
+]
+extra-source "ocaml-dune-configurator-3.14.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-dune-configurator-3.14.2-1.fc40.x86_64.rpm"
+}

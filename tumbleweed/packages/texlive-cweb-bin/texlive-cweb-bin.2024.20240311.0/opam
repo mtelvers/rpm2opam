@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-cweb-bin-2024.20240311.svn70571-100.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-cweb-bin-2024.20240311.svn70571-100.1.x86_64.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "glibc" 
+  "libkpathsea6" 
+  "texlive-cweb" {>= "2024"}
+]
+extra-source "texlive-cweb-bin-2024.20240311.svn70571-100.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/texlive-cweb-bin-2024.20240311.svn70571-100.1.x86_64.rpm"
+}

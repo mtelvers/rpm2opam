@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gtksourceviewmm-devel-2.10.3-27.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtksourceviewmm-devel-2.10.3-27.fc40.x86_64.rpm"]
+depends: [
+  "gtkmm2-4-devel" 
+  "gtksourceview2-devel" 
+  "gtksourceviewmm" {= "2.10.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gtksourceviewmm-devel-2.10.3-27.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gtksourceviewmm-devel-2.10.3-27.fc40.x86_64.rpm"
+}

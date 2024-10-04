@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-LDAP-tests-0.68-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-LDAP-tests-0.68-13.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "openldap-servers" 
+  "perl-Convert-ASN1" {>= "0.2"}
+  "perl-File-Basename" 
+  "perl-File-Compare" 
+  "perl-File-Path" 
+  "perl-IO" 
+  "perl-IO-Socket-SSL" {>= "1.26"}
+  "perl-LDAP" 
+  "perl-Net-LDAP-DSML" 
+  "perl-PathTools" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-Text-Soundex" 
+  "perl-XML-SAX-Base" 
+  "perl-XML-SAX-Writer" 
+  "perl-interpreter" 
+  "perl-libwww-perl" 
+]
+extra-source "perl-LDAP-tests-0.68-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-LDAP-tests-0.68-13.fc40.noarch.rpm"
+}

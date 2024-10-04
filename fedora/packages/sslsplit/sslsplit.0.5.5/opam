@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sslsplit-0.5.5-13.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sslsplit-0.5.5-13.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "iproute" 
+  "iptables-legacy" 
+  "libevent" 
+  "libnet" 
+  "libpcap" 
+  "openssl-libs" 
+]
+extra-source "sslsplit-0.5.5-13.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sslsplit-0.5.5-13.fc40.x86_64.rpm"
+}

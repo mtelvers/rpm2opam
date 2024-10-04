@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "MUMPS-mpich-5.6.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "MUMPS-mpich-5.6.2-3.fc40.x86_64.rpm"]
+depends: [
+  "MUMPS-common" {= "5.6.2"}
+  "flexiblas-netlib" 
+  "glibc" 
+  "libgcc" 
+  "libgfortran" 
+  "metis" 
+  "mpich" 
+  "ptscotch-mpich" 
+  "ptscotch-mpich-devel" 
+  "scalapack-mpich" 
+]
+extra-source "MUMPS-mpich-5.6.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/MUMPS-mpich-5.6.2-3.fc40.x86_64.rpm"
+}

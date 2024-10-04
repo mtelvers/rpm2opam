@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-crypto-auditing-devel-0.2.1-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-crypto-auditing-devel-0.2.1-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bindgen+default-devel" 
+  "rust-futures+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde_cbor+default-devel" 
+  "rust-serde_with+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-tokio+default-devel" 
+  "rust-tokio+net-devel" 
+  "rust-tokio+rt-devel" 
+  "rust-tokio-serde+cbor-devel" 
+  "rust-tokio-serde+default-devel" 
+  "rust-tokio-stream+default-devel" 
+  "rust-tokio-util+codec-devel" 
+  "rust-tokio-util+default-devel" 
+  "rust-tracing+default-devel" 
+]
+extra-source "rust-crypto-auditing-devel-0.2.1-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-crypto-auditing-devel-0.2.1-3.fc40.noarch.rpm"
+}

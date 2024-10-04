@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-media9-svn64047-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-media9-svn64047-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-atbegshi" 
+  "texlive-atenddvi" 
+  "texlive-base" 
+  "texlive-iftex" 
+  "texlive-kpathsea" 
+  "texlive-l3kernel" 
+  "texlive-l3packages" 
+  "texlive-ocgx2" 
+  "texlive-pdftexcmds" 
+  "texlive-pgf" 
+]
+extra-source "texlive-media9-svn64047-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-media9-svn64047-71.fc40.noarch.rpm"
+}

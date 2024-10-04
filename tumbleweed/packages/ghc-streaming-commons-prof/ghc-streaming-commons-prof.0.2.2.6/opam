@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-streaming-commons-prof-0.2.2.6-2.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-streaming-commons-prof-0.2.2.6-2.13.x86_64.rpm"]
+depends: [
+  "ghc-array-prof" 
+  "ghc-async-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-directory-prof" 
+  "ghc-network-prof" 
+  "ghc-process-prof" 
+  "ghc-random-prof" 
+  "ghc-stm-prof" 
+  "ghc-streaming-commons-devel" {= "0.2.2.6"}
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unix-prof" 
+  "ghc-zlib-prof" 
+]
+extra-source "ghc-streaming-commons-prof-0.2.2.6-2.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-streaming-commons-prof-0.2.2.6-2.13.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "chrpath-0.16-24.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "chrpath-0.16-24.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+]
+extra-source "chrpath-0.16-24.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/chrpath-0.16-24.el10.x86_64.rpm"
+}

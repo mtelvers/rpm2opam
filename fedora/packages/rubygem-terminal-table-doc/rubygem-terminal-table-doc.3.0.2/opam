@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-terminal-table-doc-3.0.2-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-terminal-table-doc-3.0.2-5.fc40.noarch.rpm"]
+depends: [
+  "rubygem-terminal-table" {= "3.0.2"}
+  "rubypick" 
+]
+extra-source "rubygem-terminal-table-doc-3.0.2-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-terminal-table-doc-3.0.2-5.fc40.noarch.rpm"
+}

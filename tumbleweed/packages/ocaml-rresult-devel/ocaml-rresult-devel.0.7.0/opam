@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ocaml-rresult-devel-0.7.0-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-rresult-devel-0.7.0-1.6.x86_64.rpm"]
+depends: [
+  "ocaml" {= "5365"}
+  "ocaml-compiler-libs" {= "0"}
+  "ocaml-compiler-libs-devel" 
+  "ocaml-result-devel" 
+  "ocaml-rresult" {= "0.7.0"}
+]
+extra-source "ocaml-rresult-devel-0.7.0-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ocaml-rresult-devel-0.7.0-1.6.x86_64.rpm"
+}

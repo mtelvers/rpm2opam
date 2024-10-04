@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "borgbackup-1.4.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "borgbackup-1.4.0-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libacl1" 
+  "liblz4-1" 
+  "libopenssl3" 
+  "libxxhash0" 
+  "libzstd1" 
+  "python311-base" 
+  "python311-msgpack" 
+  "python311-packaging" 
+  "python311-pyfuse3" {>= "3.1.1"}
+]
+extra-source "borgbackup-1.4.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/borgbackup-1.4.0-1.2.x86_64.rpm"
+}

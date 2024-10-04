@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rd-util-devel-2.1.2-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rd-util-devel-2.1.2-10.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-anyhow+default-devel" 
+  "rust-chrono+default-devel" 
+  "rust-clap+default-devel" 
+  "rust-console+default-devel" 
+  "rust-crossbeam+default-devel" 
+  "rust-ctrlc+default-devel" 
+  "rust-ctrlc+termination-devel" 
+  "rust-env_logger+default-devel" 
+  "rust-glob+default-devel" 
+  "rust-json+default-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-log+default-devel" 
+  "rust-num+default-devel" 
+  "rust-num_cpus+default-devel" 
+  "rust-page_size+default-devel" 
+  "rust-proc-mounts+default-devel" 
+  "rust-rand+default-devel" 
+  "rust-rand+small_rng-devel" 
+  "rust-rustbus+default-devel" 
+  "rust-scan_fmt+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde_json+default-devel" 
+  "rust-simplelog+default-devel" 
+  "rust-sysinfo+default-devel" 
+  "rust-vergen+default-devel" 
+]
+extra-source "rust-rd-util-devel-2.1.2-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rd-util-devel-2.1.2-10.fc40.noarch.rpm"
+}

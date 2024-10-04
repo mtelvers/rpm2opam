@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-azure-eventhub-checkpointstoreblob-1.1.4-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-azure-eventhub-checkpointstoreblob-1.1.4-3.1.noarch.rpm"]
+depends: [
+  "python312-azure-core" 
+  "python312-azure-eventhub" 
+  "python312-azure-nspkg" {>= "3.0.0"}
+  "python312-base" {= "3.12"}
+  "python312-cryptography" {>= "2.1.4"}
+  "python312-msrest" {>= "0.6.18"}
+]
+extra-source "python312-azure-eventhub-checkpointstoreblob-1.1.4-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-azure-eventhub-checkpointstoreblob-1.1.4-3.1.noarch.rpm"
+}

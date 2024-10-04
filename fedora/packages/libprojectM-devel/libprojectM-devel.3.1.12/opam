@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libprojectM-devel-3.1.12-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libprojectM-devel-3.1.12-9.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "glibc" 
+  "libprojectM" 
+  "libstdc++" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libprojectM-devel-3.1.12-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libprojectM-devel-3.1.12-9.fc40.x86_64.rpm"
+}

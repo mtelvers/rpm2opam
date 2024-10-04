@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dosbox-staging-0.81.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dosbox-staging-0.81.0-1.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "SDL2_net" 
+  "alsa-lib" 
+  "fluid-soundfont-gm" 
+  "fluidsynth-libs" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "iir1" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libpng" 
+  "libslirp" 
+  "libstdc++" 
+  "mesa-dri-drivers" 
+  "mesa-libEGL" 
+  "mt32emu" 
+  "opusfile" 
+  "speexdsp" 
+  "zlib-ng-compat" 
+]
+extra-source "dosbox-staging-0.81.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dosbox-staging-0.81.0-1.fc40.x86_64.rpm"
+}

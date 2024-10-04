@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jackson-dataformat-xml-2.17.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jackson-dataformat-xml-2.17.2-1.1.noarch.rpm"]
+depends: [
+  "jackson-annotations" 
+  "jackson-core" 
+  "jackson-databind" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "stax2-api" 
+  "woodstox-core" 
+]
+extra-source "jackson-dataformat-xml-2.17.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jackson-dataformat-xml-2.17.2-1.1.noarch.rpm"
+}

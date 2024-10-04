@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zopfli-1.0.3-slfo.1.1.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zopfli-1.0.3-slfo.1.1.9.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libzopfli1" 
+  "libzopflipng1" 
+]
+extra-source "zopfli-1.0.3-slfo.1.1.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/zopfli-1.0.3-slfo.1.1.9.x86_64.rpm"
+}

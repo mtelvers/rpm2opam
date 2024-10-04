@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "povray-3.7.0.10-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "povray-3.7.0.10-14.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "boost-thread" 
+  "glibc" 
+  "imath" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libstdc++" 
+  "libtiff" 
+  "openexr-libs" 
+  "sdl12-compat" 
+  "zlib-ng-compat" 
+]
+extra-source "povray-3.7.0.10-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/povray-3.7.0.10-14.fc40.x86_64.rpm"
+}

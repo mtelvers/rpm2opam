@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-docker-libkv-devel-0.2.1-20.20220823gitdfacc56.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-docker-libkv-devel-0.2.1-20.20220823gitdfacc56.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-etcd-bbolt-devel" 
+  "golang-etcd-devel" 
+  "golang-github-hashicorp-consul-devel" 
+  "golang-github-stretchr-testify-devel" 
+  "golang-github-zookeeper-zk-devel" 
+]
+extra-source "golang-github-docker-libkv-devel-0.2.1-20.20220823gitdfacc56.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-docker-libkv-devel-0.2.1-20.20220823gitdfacc56.fc40.noarch.rpm"
+}

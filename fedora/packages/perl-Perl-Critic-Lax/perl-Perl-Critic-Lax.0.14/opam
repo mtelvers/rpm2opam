@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Perl-Critic-Lax-0.014-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Perl-Critic-Lax-0.014-5.fc40.noarch.rpm"]
+depends: [
+  "perl-Perl-Critic" {>= "1.88"}
+  "perl-Readonly" 
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-Perl-Critic-Lax-0.014-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Perl-Critic-Lax-0.014-5.fc40.noarch.rpm"
+}

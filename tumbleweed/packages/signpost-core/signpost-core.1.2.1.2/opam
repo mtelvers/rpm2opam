@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "signpost-core-1.2.1.2-3.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "signpost-core-1.2.1.2-3.14.noarch.rpm"]
+depends: [
+  "apache-commons-codec" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "signpost-core-1.2.1.2-3.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/signpost-core-1.2.1.2-3.14.noarch.rpm"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "maven-doxia-module-markdown-1.12.0-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-doxia-module-markdown-1.12.0-7.fc40.noarch.rpm"]
+depends: [
+  "apache-commons-io" 
+  "flexmark-java" 
+  "flexmark-java-ext-abbreviation" 
+  "flexmark-java-ext-autolink" 
+  "flexmark-java-ext-definition" 
+  "flexmark-java-ext-escaped-character" 
+  "flexmark-java-ext-gfm-strikethrough" 
+  "flexmark-java-ext-tables" 
+  "flexmark-java-ext-typographic" 
+  "flexmark-java-ext-wikilink" 
+  "flexmark-java-util" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "maven-doxia-core" {= "1.12.0"}
+  "maven-doxia-module-xhtml" {= "1.12.0"}
+  "maven-doxia-sink-api" {= "1.12.0"}
+  "plexus-containers-component-annotations" 
+  "plexus-utils" 
+]
+extra-source "maven-doxia-module-markdown-1.12.0-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/maven-doxia-module-markdown-1.12.0-7.fc40.noarch.rpm"
+}

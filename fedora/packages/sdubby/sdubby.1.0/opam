@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sdubby-1.0-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sdubby-1.0-8.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "findutils" 
+  "gawk" 
+  "systemd-boot-unsigned" 
+  "util-linux" 
+]
+extra-source "sdubby-1.0-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sdubby-1.0-8.fc40.noarch.rpm"
+}

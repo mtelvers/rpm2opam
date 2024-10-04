@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libaws-c-s3-0unstable-0.6.6-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libaws-c-s3-0unstable-0.6.6-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libaws-c-auth1_0_0" 
+  "libaws-c-cal0unstable" 
+  "libaws-c-common1" 
+  "libaws-c-http1_0_0" 
+  "libaws-c-io0unstable" 
+  "libaws-checksums1" 
+]
+extra-source "libaws-c-s3-0unstable-0.6.6-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libaws-c-s3-0unstable-0.6.6-1.1.x86_64.rpm"
+}

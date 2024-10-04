@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lxappearance-0.6.3-1.20.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lxappearance-0.6.3-1.20.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libdbus-1-3" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-2_0-0" 
+]
+extra-source "lxappearance-0.6.3-1.20.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lxappearance-0.6.3-1.20.x86_64.rpm"
+}

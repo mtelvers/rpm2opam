@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bluez-deprecated-5.73-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bluez-deprecated-5.73-3.fc40.x86_64.rpm"]
+depends: [
+  "bluez" {= "5.73"}
+  "dbus-libs" 
+  "glib2" 
+  "glibc" 
+  "json-c" 
+  "readline" 
+  "systemd-libs" 
+]
+extra-source "bluez-deprecated-5.73-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bluez-deprecated-5.73-3.fc40.x86_64.rpm"
+}

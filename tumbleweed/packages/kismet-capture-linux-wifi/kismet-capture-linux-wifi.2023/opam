@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kismet-capture-linux-wifi-2023_07_R1-3.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kismet-capture-linux-wifi-2023_07_R1-3.6.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "kismet-common" {= "2023"}
+  "libcap2" 
+  "libnl3-200" 
+  "libnm0" 
+  "libpcap1" 
+  "libprotobuf-c1" 
+  "libwebsockets19" 
+  "permissions" 
+]
+extra-source "kismet-capture-linux-wifi-2023_07_R1-3.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kismet-capture-linux-wifi-2023_07_R1-3.6.x86_64.rpm"
+}

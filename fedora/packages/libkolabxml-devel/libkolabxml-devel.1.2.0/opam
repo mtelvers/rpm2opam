@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libkolabxml-devel-1.2.0-22.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libkolabxml-devel-1.2.0-22.fc40.x86_64.rpm"]
+depends: [
+  "boost-devel" 
+  "cmake" 
+  "cmake-filesystem" 
+  "libcurl-devel" 
+  "libkolabxml" {= "1.2.0"}
+  "xerces-c-devel" 
+]
+extra-source "libkolabxml-devel-1.2.0-22.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libkolabxml-devel-1.2.0-22.fc40.x86_64.rpm"
+}

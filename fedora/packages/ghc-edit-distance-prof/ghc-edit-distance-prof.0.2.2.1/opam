@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-edit-distance-prof-0.2.2.1-38.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-edit-distance-prof-0.2.2.1-38.fc40.x86_64.rpm"]
+depends: [
+  "ghc-array-prof" 
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-edit-distance-devel" {= "0.2.2.1"}
+  "ghc-random-prof" 
+]
+extra-source "ghc-edit-distance-prof-0.2.2.1-38.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-edit-distance-prof-0.2.2.1-38.fc40.x86_64.rpm"
+}

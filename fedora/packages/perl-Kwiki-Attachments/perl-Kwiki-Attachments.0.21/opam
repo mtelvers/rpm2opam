@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Kwiki-Attachments-0.21-40.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Kwiki-Attachments-0.21-40.fc40.noarch.rpm"]
+depends: [
+  "perl-File-Basename" 
+  "perl-Kwiki" {>= "0.37"}
+  "perl-POSIX" 
+  "perl-Spiffy" 
+  "perl-Spoon" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-Kwiki-Attachments-0.21-40.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Kwiki-Attachments-0.21-40.fc40.noarch.rpm"
+}

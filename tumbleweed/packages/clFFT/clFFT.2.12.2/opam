@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "clFFT-2.12.2-7.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clFFT-2.12.2-7.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libOpenCL1" 
+  "libboost_program_options1_86_0" 
+  "libclFFT2" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "clFFT-2.12.2-7.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/clFFT-2.12.2-7.6.x86_64.rpm"
+}

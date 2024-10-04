@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gajim-lang-1.9.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gajim-lang-1.9.5-1.1.noarch.rpm"]
+depends: [
+  "gajim" {= "1.9.5"}
+]
+extra-source "gajim-lang-1.9.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gajim-lang-1.9.5-1.1.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsigrokcxx4-0.5.2-4.18.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsigrokcxx4-0.5.2-4.18.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcc_s1" 
+  "libglibmm-2_4-1" 
+  "libsigrok-data" {>= "0.5.2"}
+  "libsigrok4" 
+  "libstdc++6" 
+]
+extra-source "libsigrokcxx4-0.5.2-4.18.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libsigrokcxx4-0.5.2-4.18.x86_64.rpm"
+}

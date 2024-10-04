@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cmus-2.11.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cmus-2.11.0-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libasound2" 
+  "libdiscid0" 
+  "libncurses6" 
+  "libsystemd0" 
+]
+extra-source "cmus-2.11.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cmus-2.11.0-1.2.x86_64.rpm"
+}

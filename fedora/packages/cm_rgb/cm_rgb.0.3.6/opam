@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cm_rgb-0.3.6-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cm_rgb-0.3.6-6.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-click" 
+  "python3-gobject-base" 
+  "python3-hidapi" 
+  "python3-psutil" 
+]
+extra-source "cm_rgb-0.3.6-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cm_rgb-0.3.6-6.fc40.noarch.rpm"
+}

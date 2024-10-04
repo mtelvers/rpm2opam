@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmng-devel-2.0.3-3.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmng-devel-2.0.3-3.8.x86_64.rpm"]
+depends: [
+  "libjpeg62-devel" 
+  "liblcms2-devel" 
+  "libmng2" {= "2.0.3"}
+  "pkgconf-pkg-config" 
+  "zlib-devel" 
+]
+extra-source "libmng-devel-2.0.3-3.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmng-devel-2.0.3-3.8.x86_64.rpm"
+}

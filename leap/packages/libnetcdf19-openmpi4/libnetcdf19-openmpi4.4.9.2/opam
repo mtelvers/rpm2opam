@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["/usr/bin/zypper" "-n" "install" "libnetcdf19-openmpi4-4.9.2-slfo.1.1.8.x86_64.rpm"]
+]
+remove: [
+  ["/usr/bin/zypper" "-n" "remove" "libnetcdf19-openmpi4"]
+]
+depends: [
+  "glibc" 
+  "libcurl4" 
+  "libhdf5-200" 
+  "libhdf5-200-openmpi4" {= "1.12.2"}
+  "libhdf5_hl200" 
+  "libhdf5_hl200-openmpi4" {= "1.12.2"}
+  "libxml2-2" 
+  "openmpi4-libs" 
+]
+extra-source "libnetcdf19-openmpi4-4.9.2-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libnetcdf19-openmpi4-4.9.2-slfo.1.1.8.x86_64.rpm"
+}

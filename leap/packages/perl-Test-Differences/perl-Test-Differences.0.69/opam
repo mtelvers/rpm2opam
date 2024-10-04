@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-Differences-0.69-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Differences-0.69-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Capture-Tiny" {>= "0.24"}
+  "perl-Text-Diff" {>= "1.43"}
+  "perl-base" {>= "2.126"}
+]
+extra-source "perl-Test-Differences-0.69-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/perl-Test-Differences-0.69-slfo.1.1.3.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "menulibre-2.3.2-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "menulibre-2.3.2-4.fc40.noarch.rpm"]
+depends: [
+  "gnome-menus" 
+  "gtk3" 
+  "hicolor-icon-theme" 
+  "python3" 
+  "python3-gobject" 
+  "python3-psutil" 
+  "xdg-utils" 
+]
+extra-source "menulibre-2.3.2-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/menulibre-2.3.2-4.fc40.noarch.rpm"
+}

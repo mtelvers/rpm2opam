@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-taquin-3.38.1-2.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-taquin-3.38.1-2.16.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgsound0" 
+  "libgtk-3-0" 
+]
+extra-source "gnome-taquin-3.38.1-2.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnome-taquin-3.38.1-2.16.x86_64.rpm"
+}

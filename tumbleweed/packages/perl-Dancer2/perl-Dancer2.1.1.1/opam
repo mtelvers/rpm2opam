@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Dancer2-1.1.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Dancer2-1.1.1-1.1.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "perl" 
+  "perl-CLI-Osprey" 
+  "perl-Clone" 
+  "perl-Config-Any" 
+  "perl-Exporter-Tiny" 
+  "perl-File-Share" 
+  "perl-File-Which" 
+  "perl-HTTP-Date" 
+  "perl-HTTP-Headers-Fast" {>= "0.21"}
+  "perl-Hash-Merge-Simple" 
+  "perl-Hash-MultiValue" 
+  "perl-Import-Into" 
+  "perl-JSON-MaybeXS" 
+  "perl-Module-Runtime" 
+  "perl-Moo" {>= "2.0"}
+  "perl-Path-Tiny" 
+  "perl-Plack" {>= "1.40"}
+  "perl-Plack-Middleware-FixMissingBodyInRedirect" 
+  "perl-Plack-Middleware-RemoveRedundantBody" 
+  "perl-Ref-Util" 
+  "perl-Safe-Isa" 
+  "perl-Scalar-List-Utils" {>= "1.29"}
+  "perl-Sub-Quote" 
+  "perl-Template-Tiny" 
+  "perl-Template-Toolkit" 
+  "perl-Type-Tiny" {>= "1.6"}
+  "perl-URI" 
+  "perl-YAML" {>= "0.86"}
+  "perl-base" 
+]
+extra-source "perl-Dancer2-1.1.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Dancer2-1.1.1-1.1.noarch.rpm"
+}

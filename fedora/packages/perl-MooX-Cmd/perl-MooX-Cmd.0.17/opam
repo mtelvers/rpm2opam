@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MooX-Cmd-0.017-25.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooX-Cmd-0.017-25.fc40.noarch.rpm"]
+depends: [
+  "perl-Capture-Tiny" 
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-List-MoreUtils" {>= "0.406"}
+  "perl-Module-Pluggable" {>= "4.8"}
+  "perl-Module-Runtime" 
+  "perl-Moo" {>= "0.9013"}
+  "perl-Package-Stash" {>= "0.33"}
+  "perl-Params-Util" {>= "0.37"}
+  "perl-Regexp-Common" {>= "2011121001"}
+  "perl-Scalar-List-Utils" 
+  "perl-Test-Simple" {>= "0.98"}
+  "perl-Text-Abbrev" 
+  "perl-Text-ParseWords" 
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-MooX-Cmd-0.017-25.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MooX-Cmd-0.017-25.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-domain+validate-devel-0.9.3-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-domain+validate-devel-0.9.3-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-domain+ring-devel" {= "0.9.3"}
+  "rust-domain+std-devel" {= "0.9.3"}
+  "rust-domain-devel" {= "0.9.3"}
+]
+extra-source "rust-domain+validate-devel-0.9.3-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-domain+validate-devel-0.9.3-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-crossrefware-2024.216.svn69700-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-crossrefware-2024.216.svn69700-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "perl-URI" 
+  "perl-base" 
+  "perl-libwww-perl" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-bibtexperllibs" 
+  "texlive-crossrefware-bin" {>= "2024"}
+  "texlive-filesystem" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+]
+extra-source "texlive-crossrefware-2024.216.svn69700-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-crossrefware-2024.216.svn69700-57.1.noarch.rpm"
+}

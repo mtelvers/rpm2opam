@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-TxSNI-0.2.0-3.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-TxSNI-0.2.0-3.8.noarch.rpm"]
+depends: [
+  "python310-Twisted-tls" {>= "14.0.0"}
+  "python310-base" {= "3.10"}
+  "python310-pyOpenSSL" {>= "0.14"}
+]
+extra-source "python310-TxSNI-0.2.0-3.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-TxSNI-0.2.0-3.8.noarch.rpm"
+}

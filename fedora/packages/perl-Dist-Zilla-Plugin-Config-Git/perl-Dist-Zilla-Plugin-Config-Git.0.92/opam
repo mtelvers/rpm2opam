@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Dist-Zilla-Plugin-Config-Git-0.92-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Dist-Zilla-Plugin-Config-Git-0.92-22.fc40.noarch.rpm"]
+depends: [
+  "perl-Dist-Zilla" {>= "1.0"}
+  "perl-Moose" {>= "0.34"}
+  "perl-MooseX-Types" {>= "0.6"}
+  "perl-Scalar-List-Utils" 
+  "perl-String-Errf" {>= "0.1"}
+  "perl-libs" 
+  "perl-namespace-clean" {>= "0.6"}
+]
+extra-source "perl-Dist-Zilla-Plugin-Config-Git-0.92-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Dist-Zilla-Plugin-Config-Git-0.92-22.fc40.noarch.rpm"
+}

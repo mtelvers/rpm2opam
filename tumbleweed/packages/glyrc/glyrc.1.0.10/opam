@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glyrc-1.0.10-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glyrc-1.0.10-4.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libglyr1" 
+]
+extra-source "glyrc-1.0.10-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/glyrc-1.0.10-4.2.x86_64.rpm"
+}

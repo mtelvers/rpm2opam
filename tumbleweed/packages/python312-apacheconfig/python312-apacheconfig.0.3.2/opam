@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-apacheconfig-0.3.2-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-apacheconfig-0.3.2-1.7.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-ply" {>= "3.4"}
+  "python312-six" 
+  "update-alternatives" 
+]
+extra-source "python312-apacheconfig-0.3.2-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-apacheconfig-0.3.2-1.7.noarch.rpm"
+}

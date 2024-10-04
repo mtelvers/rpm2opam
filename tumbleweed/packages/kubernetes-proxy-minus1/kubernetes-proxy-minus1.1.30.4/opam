@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kubernetes-proxy-minus1-1.30.4-45.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kubernetes-proxy-minus1-1.30.4-45.1.x86_64.rpm"]
+depends: [
+  "kubernetes1-30-proxy" 
+]
+extra-source "kubernetes-proxy-minus1-1.30.4-45.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kubernetes-proxy-minus1-1.30.4-45.1.x86_64.rpm"
+}

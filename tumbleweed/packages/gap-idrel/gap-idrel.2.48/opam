@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-idrel-2.48-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-idrel-2.48-1.1.noarch.rpm"]
+depends: [
+  "gap" {>= "4.11.1"}
+]
+extra-source "gap-idrel-2.48-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-idrel-2.48-1.1.noarch.rpm"
+}

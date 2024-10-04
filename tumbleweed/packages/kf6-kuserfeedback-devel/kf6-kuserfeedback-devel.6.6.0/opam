@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kf6-kuserfeedback-devel-6.6.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kf6-kuserfeedback-devel-6.6.0-1.1.x86_64.rpm"]
+depends: [
+  "kf6-kuserfeedback" {>= "6.6.0"}
+  "libKF6UserFeedbackCore6" {= "6.6.0"}
+  "libKF6UserFeedbackWidgets6" {= "6.6.0"}
+]
+extra-source "kf6-kuserfeedback-devel-6.6.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kf6-kuserfeedback-devel-6.6.0-1.1.x86_64.rpm"
+}

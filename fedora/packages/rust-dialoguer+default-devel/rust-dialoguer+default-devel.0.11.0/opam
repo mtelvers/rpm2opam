@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-dialoguer+default-devel-0.11.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-dialoguer+default-devel-0.11.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-dialoguer+editor-devel" {= "0.11.0"}
+  "rust-dialoguer+password-devel" {= "0.11.0"}
+  "rust-dialoguer-devel" {= "0.11.0"}
+]
+extra-source "rust-dialoguer+default-devel-0.11.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-dialoguer+default-devel-0.11.0-2.fc40.noarch.rpm"
+}

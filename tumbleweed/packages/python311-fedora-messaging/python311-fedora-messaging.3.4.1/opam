@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-fedora-messaging-3.4.1-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-fedora-messaging-3.4.1-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-Twisted" 
+  "python311-base" 
+  "python311-blinker" 
+  "python311-click" 
+  "python311-crochet" 
+  "python311-jsonschema" 
+  "python311-pika" {>= "1.0.1"}
+  "python311-pyOpenSSL" 
+  "python311-pytz" 
+  "python311-service_identity" 
+  "python311-setuptools" 
+  "python311-tomli" 
+  "update-alternatives" 
+]
+extra-source "python311-fedora-messaging-3.4.1-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-fedora-messaging-3.4.1-1.2.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xfd-1.1.4-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xfd-1.1.4-1.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXaw7" 
+  "libXft2" 
+  "libXmu6" 
+  "libXrender1" 
+  "libXt6" 
+  "libfontconfig1" 
+  "libxkbfile1" 
+]
+extra-source "xfd-1.1.4-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xfd-1.1.4-1.6.x86_64.rpm"
+}

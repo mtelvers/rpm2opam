@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openmpt123-0.7.10-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openmpt123-0.7.10-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libFLAC12" 
+  "libSDL2-2_0-0" 
+  "libgcc_s1" 
+  "libopenmpt0" 
+  "libportaudio2" 
+  "libpulse0" 
+  "libsndfile1" 
+  "libstdc++6" 
+]
+extra-source "openmpt123-0.7.10-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openmpt123-0.7.10-1.1.x86_64.rpm"
+}

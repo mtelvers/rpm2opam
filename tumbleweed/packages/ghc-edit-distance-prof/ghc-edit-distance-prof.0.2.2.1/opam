@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-edit-distance-prof-0.2.2.1-13.18.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-edit-distance-prof-0.2.2.1-13.18.x86_64.rpm"]
+depends: [
+  "ghc-array-prof" 
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-edit-distance-devel" {= "0.2.2.1"}
+  "ghc-random-prof" 
+]
+extra-source "ghc-edit-distance-prof-0.2.2.1-13.18.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-edit-distance-prof-0.2.2.1-13.18.x86_64.rpm"
+}

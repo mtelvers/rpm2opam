@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfolks-telepathy26-0.15.9-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfolks-telepathy26-0.15.9-2.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgee-0_8-2" 
+  "libtelepathy-glib0" 
+]
+extra-source "libfolks-telepathy26-0.15.9-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfolks-telepathy26-0.15.9-2.1.x86_64.rpm"
+}

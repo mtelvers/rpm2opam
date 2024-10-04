@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "snakeyaml-2.2-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "snakeyaml-2.2-3.1.noarch.rpm"]
+depends: [
+  "apache-commons-codec" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "snakeyaml-2.2-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/snakeyaml-2.2-3.1.noarch.rpm"
+}

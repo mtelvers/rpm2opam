@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Params-Util-1.102-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Params-Util-1.102-14.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-Exporter" 
+  "perl-Scalar-List-Utils" {>= "1.18"}
+  "perl-libs" 
+  "perl-overload" 
+  "perl-parent" 
+]
+extra-source "perl-Params-Util-1.102-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Params-Util-1.102-14.fc40.x86_64.rpm"
+}

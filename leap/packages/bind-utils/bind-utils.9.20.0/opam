@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bind-utils-9.20.0-slfo.1.1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bind-utils-9.20.0-slfo.1.1.5.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "krb5" 
+  "libfstrm0" 
+  "libidn2-0" 
+  "libjemalloc2" 
+  "libjson-c5" 
+  "libmaxminddb0" 
+  "libnghttp2-14" 
+  "libopenssl3" 
+  "libprotobuf-c1" 
+  "liburcu8" 
+  "libuv1" 
+  "libxml2-2" 
+  "libz-ng-compat1" 
+]
+extra-source "bind-utils-9.20.0-slfo.1.1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/bind-utils-9.20.0-slfo.1.1.5.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-groupoids-1.76-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-groupoids-1.76-1.1.noarch.rpm"]
+depends: [
+  "gap" {>= "4.10.1"}
+  "gap-autodoc" {>= "2019.2.22"}
+  "gap-fga" {>= "1.4.0"}
+  "gap-utils" {>= "0.76"}
+]
+extra-source "gap-groupoids-1.76-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-groupoids-1.76-1.1.noarch.rpm"
+}

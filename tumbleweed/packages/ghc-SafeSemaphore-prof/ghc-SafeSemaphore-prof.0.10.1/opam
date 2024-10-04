@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-SafeSemaphore-prof-0.10.1-5.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-SafeSemaphore-prof-0.10.1-5.16.x86_64.rpm"]
+depends: [
+  "ghc-SafeSemaphore-devel" {= "0.10.1"}
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-stm-prof" 
+]
+extra-source "ghc-SafeSemaphore-prof-0.10.1-5.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-SafeSemaphore-prof-0.10.1-5.16.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-open-browser-devel-0.2.1.0-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-open-browser-devel-0.2.1.0-29.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-open-browser" {= "0.2.1.0"}
+  "ghc-process-devel" 
+]
+extra-source "ghc-open-browser-devel-0.2.1.0-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-open-browser-devel-0.2.1.0-29.fc40.x86_64.rpm"
+}

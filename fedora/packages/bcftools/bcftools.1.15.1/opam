@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bcftools-1.15.1-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bcftools-1.15.1-8.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gsl" 
+  "htslib" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "python3" 
+  "zlib-ng-compat" 
+]
+extra-source "bcftools-1.15.1-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bcftools-1.15.1-8.fc40.x86_64.rpm"
+}

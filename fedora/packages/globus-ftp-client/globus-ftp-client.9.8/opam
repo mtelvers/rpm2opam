@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "globus-ftp-client-9.8-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "globus-ftp-client-9.8-6.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "globus-common" 
+  "globus-ftp-control" 
+  "globus-gsi-callback" 
+  "globus-gsi-credential" 
+  "globus-gsi-sysconfig" 
+  "globus-gssapi-gsi" 
+  "globus-xio" 
+  "globus-xio-popen-driver" {>= "2"}
+  "openssl-libs" 
+]
+extra-source "globus-ftp-client-9.8-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/globus-ftp-client-9.8-6.fc40.x86_64.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-netmiko-4.4.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-netmiko-4.4.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "python310-PyYAML" {>= "5.3"}
+  "python310-base" 
+  "python310-cffi" {>= "1.17.0"}
+  "python310-ntc-templates" {>= "3.1.0"}
+  "python310-paramiko" {>= "2.9.5"}
+  "python310-pyserial" {>= "3.3"}
+  "python310-scp" {>= "0.13.6"}
+  "python310-setuptools" 
+  "python310-tenacity" 
+  "python310-textfsm" {>= "1.1.3"}
+  "update-alternatives" 
+]
+extra-source "python310-netmiko-4.4.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-netmiko-4.4.0-1.1.noarch.rpm"
+}

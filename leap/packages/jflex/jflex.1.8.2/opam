@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jflex-1.8.2-slfo.1.2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jflex-1.8.2-slfo.1.2.2.noarch.rpm"]
+depends: [
+  "ant" 
+  "bash" 
+  "java-11-openjdk-headless" {>= "1.8"}
+  "java-cup" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+]
+extra-source "jflex-1.8.2-slfo.1.2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/jflex-1.8.2-slfo.1.2.2.noarch.rpm"
+}

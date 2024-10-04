@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lasi-devel-1.1.3-13.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lasi-devel-1.1.3-13.fc40.x86_64.rpm"]
+depends: [
+  "freetype-devel" 
+  "lasi" {= "1.1.3"}
+  "pango-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "lasi-devel-1.1.3-13.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lasi-devel-1.1.3-13.fc40.x86_64.rpm"
+}

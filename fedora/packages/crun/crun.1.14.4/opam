@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "crun-1.14.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "crun-1.14.4-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcap" 
+  "libgcc" 
+  "libseccomp" 
+  "systemd-libs" 
+  "yajl" 
+]
+extra-source "crun-1.14.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/crun-1.14.4-1.fc40.x86_64.rpm"
+}

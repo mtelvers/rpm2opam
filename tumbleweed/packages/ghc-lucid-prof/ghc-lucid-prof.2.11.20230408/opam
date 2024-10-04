@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-lucid-prof-2.11.20230408-2.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-lucid-prof-2.11.20230408-2.12.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-blaze-builder-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-hashable-prof" 
+  "ghc-lucid-devel" {= "2.11.20230408"}
+  "ghc-mmorph-prof" 
+  "ghc-mtl-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-lucid-prof-2.11.20230408-2.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-lucid-prof-2.11.20230408-2.12.x86_64.rpm"
+}

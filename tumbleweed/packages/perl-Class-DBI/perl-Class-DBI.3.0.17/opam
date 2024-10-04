@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Class-DBI-3.0.17-5.34.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Class-DBI-3.0.17-5.34.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Accessor" {>= "0.18"}
+  "perl-Class-Data-Inheritable" {>= "0.2"}
+  "perl-Class-Trigger" {>= "0.7"}
+  "perl-Clone" 
+  "perl-Ima-DBI" {>= "0.33"}
+  "perl-UNIVERSAL-moniker" {>= "0.6"}
+  "perl-base" 
+]
+extra-source "perl-Class-DBI-3.0.17-5.34.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Class-DBI-3.0.17-5.34.noarch.rpm"
+}

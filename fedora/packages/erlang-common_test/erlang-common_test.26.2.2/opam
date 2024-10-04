@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "erlang-common_test-26.2.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "erlang-common_test-26.2.2-1.fc40.x86_64.rpm"]
+depends: [
+  "erlang-compiler" {= "26.2.2"}
+  "erlang-crypto" {= "26.2.2"}
+  "erlang-debugger" {= "26.2.2"}
+  "erlang-erts" {= "26.2.2"}
+  "erlang-inets" {= "26.2.2"}
+  "erlang-kernel" {= "26.2.2"}
+  "erlang-observer" {= "26.2.2"}
+  "erlang-runtime_tools" {= "26.2.2"}
+  "erlang-sasl" {= "26.2.2"}
+  "erlang-snmp" {= "26.2.2"}
+  "erlang-ssh" {= "26.2.2"}
+  "erlang-stdlib" {= "26.2.2"}
+  "erlang-syntax_tools" {= "26.2.2"}
+  "erlang-tools" {= "26.2.2"}
+  "erlang-xmerl" {= "26.2.2"}
+  "glibc" 
+]
+extra-source "erlang-common_test-26.2.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/erlang-common_test-26.2.2-1.fc40.x86_64.rpm"
+}

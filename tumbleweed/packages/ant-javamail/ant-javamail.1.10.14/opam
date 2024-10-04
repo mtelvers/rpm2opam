@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ant-javamail-1.10.14-10.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ant-javamail-1.10.14-10.1.noarch.rpm"]
+depends: [
+  "ant" {= "1.10.14"}
+  "java-11-openj9-headless" 
+  "javamail" {>= "1.2"}
+  "javapackages-filesystem" 
+]
+extra-source "ant-javamail-1.10.14-10.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ant-javamail-1.10.14-10.1.noarch.rpm"
+}

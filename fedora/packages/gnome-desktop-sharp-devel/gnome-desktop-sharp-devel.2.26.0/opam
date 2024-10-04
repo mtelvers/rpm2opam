@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-desktop-sharp-devel-2.26.0-49.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-desktop-sharp-devel-2.26.0-49.fc40.x86_64.rpm"]
+depends: [
+  "gnome-desktop-sharp" {= "2.26.0"}
+  "gnome-sharp-devel" 
+  "gtk-sharp2-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "gnome-desktop-sharp-devel-2.26.0-49.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-desktop-sharp-devel-2.26.0-49.fc40.x86_64.rpm"
+}

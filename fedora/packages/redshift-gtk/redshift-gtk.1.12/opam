@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "redshift-gtk-1.12-21.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "redshift-gtk-1.12-21.fc40.x86_64.rpm"]
+depends: [
+  "python3" 
+  "python3-gobject" 
+  "python3-pyxdg" 
+  "redshift" {= "1.12"}
+]
+extra-source "redshift-gtk-1.12-21.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/redshift-gtk-1.12-21.fc40.x86_64.rpm"
+}

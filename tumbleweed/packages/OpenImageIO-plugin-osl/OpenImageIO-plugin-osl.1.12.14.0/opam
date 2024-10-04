@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "OpenImageIO-plugin-osl-1.12.14.0-2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "OpenImageIO-plugin-osl-1.12.14.0-2.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libOpenImageIO2_5" 
+  "libOpenImageIO_Util2_5" 
+  "libgcc_s1" 
+  "liboslexec1_12" 
+  "libstdc++6" 
+]
+extra-source "OpenImageIO-plugin-osl-1.12.14.0-2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/OpenImageIO-plugin-osl-1.12.14.0-2.5.x86_64.rpm"
+}

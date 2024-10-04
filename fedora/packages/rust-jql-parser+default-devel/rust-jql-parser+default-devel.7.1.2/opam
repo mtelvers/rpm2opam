@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-jql-parser+default-devel-7.1.2-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-jql-parser+default-devel-7.1.2-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-jql-parser-devel" {= "7.1.2"}
+]
+extra-source "rust-jql-parser+default-devel-7.1.2-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-jql-parser+default-devel-7.1.2-2.fc40.noarch.rpm"
+}

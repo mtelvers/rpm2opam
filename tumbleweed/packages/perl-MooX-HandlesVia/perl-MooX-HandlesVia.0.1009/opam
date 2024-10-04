@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooX-HandlesVia-0.001009-1.19.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooX-HandlesVia-0.001009-1.19.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Method-Modifiers" 
+  "perl-Data-Perl" {>= "0.2006"}
+  "perl-Module-Runtime" 
+  "perl-Moo" {>= "1.3000"}
+  "perl-Role-Tiny" 
+]
+extra-source "perl-MooX-HandlesVia-0.001009-1.19.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooX-HandlesVia-0.001009-1.19.noarch.rpm"
+}

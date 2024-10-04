@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libjaylink-devel-0.3.1-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libjaylink-devel-0.3.1-1.5.x86_64.rpm"]
+depends: [
+  "libjaylink0" {= "0.3.1"}
+  "libusb-1_0-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libjaylink-devel-0.3.1-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libjaylink-devel-0.3.1-1.5.x86_64.rpm"
+}

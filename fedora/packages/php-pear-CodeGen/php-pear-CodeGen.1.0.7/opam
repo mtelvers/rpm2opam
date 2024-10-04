@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-pear-CodeGen-1.0.7-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-pear-CodeGen-1.0.7-29.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "php-pear" 
+  "php-xml" {>= "5.4.0"}
+]
+extra-source "php-pear-CodeGen-1.0.7-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-pear-CodeGen-1.0.7-29.fc40.noarch.rpm"
+}

@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-do-0.95.3-27.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-do-0.95.3-27.fc40.x86_64.rpm"]
+depends: [
+  "GConf2" 
+  "atk" 
+  "bash" 
+  "cairo" 
+  "dbus-sharp" {= "2.0.0.0"}
+  "dbus-sharp-glib" {= "2.0.0.0"}
+  "findutils" 
+  "fontconfig" 
+  "freetype" 
+  "gdk-pixbuf2" 
+  "gio-sharp" 
+  "gkeyfile-sharp" 
+  "glib2" 
+  "glibc" 
+  "gnome-desktop-sharp" 
+  "gnome-desktop3" 
+  "gnome-keyring-sharp" 
+  "gnome-sharp" {= "2.24.0.0"}
+  "gtk-sharp2" {= "2.12.0.0"}
+  "gtk2" 
+  "harfbuzz" 
+  "libX11" 
+  "mono-addins" {= "1.0.0.0"}
+  "mono-core" {= "4.0.0.0"}
+  "ndesk-dbus-glib" {= "1.0.0.0"}
+  "notify-sharp" {= "0.4.0.0"}
+  "pango" 
+  "pkgconf-pkg-config" 
+]
+extra-source "gnome-do-0.95.3-27.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-do-0.95.3-27.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-Traits-0.13-1.30.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Traits-0.13-1.30.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Load" 
+  "perl-Moose" 
+  "perl-Sub-Exporter" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-MooseX-Traits-0.13-1.30.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-Traits-0.13-1.30.noarch.rpm"
+}

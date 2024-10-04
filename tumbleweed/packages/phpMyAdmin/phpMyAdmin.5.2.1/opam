@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "phpMyAdmin-5.2.1-4.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "phpMyAdmin-5.2.1-4.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "php8" 
+  "php8-bz2" 
+  "php8-ctype" 
+  "php8-gd" 
+  "php8-gettext" 
+  "php8-iconv" 
+  "php8-mbstring" 
+  "php8-mysql" 
+  "php8-openssl" 
+  "system-user-wwwrun" 
+]
+extra-source "phpMyAdmin-5.2.1-4.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/phpMyAdmin-5.2.1-4.2.noarch.rpm"
+}

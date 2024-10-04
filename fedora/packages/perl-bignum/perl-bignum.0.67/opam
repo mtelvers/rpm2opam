@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-bignum-0.67-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-bignum-0.67-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" {>= "1.22"}
+  "perl-Exporter" 
+  "perl-Math-BigInt" {>= "1.999830"}
+  "perl-constant" 
+  "perl-libs" 
+  "perl-overload" 
+]
+extra-source "perl-bignum-0.67-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-bignum-0.67-3.fc40.noarch.rpm"
+}

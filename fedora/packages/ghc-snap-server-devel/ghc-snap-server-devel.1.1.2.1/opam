@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-snap-server-devel-1.1.2.1-25.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-snap-server-devel-1.1.2.1-25.fc40.x86_64.rpm"]
+depends: [
+  "ghc-attoparsec-devel" 
+  "ghc-base-devel" 
+  "ghc-blaze-builder-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-case-insensitive-devel" 
+  "ghc-clock-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-filepath-devel" 
+  "ghc-io-streams-devel" 
+  "ghc-io-streams-haproxy-devel" 
+  "ghc-lifted-base-devel" 
+  "ghc-mtl-devel" 
+  "ghc-network-devel" 
+  "ghc-old-locale-devel" 
+  "ghc-snap-core-devel" 
+  "ghc-snap-server" {= "1.1.2.1"}
+  "ghc-text-devel" 
+  "ghc-time-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unix-compat-devel" 
+  "ghc-unix-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-snap-server-devel-1.1.2.1-25.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-snap-server-devel-1.1.2.1-25.fc40.x86_64.rpm"
+}

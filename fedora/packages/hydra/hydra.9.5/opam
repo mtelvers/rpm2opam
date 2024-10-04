@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hydra-9.5-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hydra-9.5-6.fc40.x86_64.rpm"]
+depends: [
+  "afpfs-ng" 
+  "apr" 
+  "bash" 
+  "freerdp2-libs" 
+  "glibc" 
+  "libbson" 
+  "libfbclient2" 
+  "libgcrypt" 
+  "libidn" 
+  "libmemcached-awesome" 
+  "libpq" 
+  "libsmbclient" 
+  "libssh" 
+  "libwinpr2" 
+  "mariadb-connector-c" 
+  "mongo-c-driver-libs" 
+  "ncurses-libs" 
+  "openssl-libs" 
+  "pcre2" 
+  "subversion-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "hydra-9.5-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hydra-9.5-6.fc40.x86_64.rpm"
+}

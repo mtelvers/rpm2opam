@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnetfilter_queue-devel-1.0.5-slfo.1.1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnetfilter_queue-devel-1.0.5-slfo.1.1.6.x86_64.rpm"]
+depends: [
+  "libnetfilter_queue1" {= "1.0.5"}
+  "libnfnetlink-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libnetfilter_queue-devel-1.0.5-slfo.1.1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libnetfilter_queue-devel-1.0.5-slfo.1.1.6.x86_64.rpm"
+}

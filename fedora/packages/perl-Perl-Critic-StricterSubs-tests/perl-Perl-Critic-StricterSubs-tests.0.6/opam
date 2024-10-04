@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Perl-Critic-StricterSubs-tests-0.06-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Perl-Critic-StricterSubs-tests-0.06-8.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-English" 
+  "perl-Exporter" 
+  "perl-Perl-Critic" {>= "1.82"}
+  "perl-Perl-Critic-StricterSubs" {= "0.6"}
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Perl-Critic-StricterSubs-tests-0.06-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Perl-Critic-StricterSubs-tests-0.06-8.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libboost_mpi1_86_0-devel-1.86.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libboost_mpi1_86_0-devel-1.86.0-1.1.x86_64.rpm"]
+depends: [
+  "libboost_graph1_86_0-devel" 
+  "libboost_headers1_86_0-devel" {= "1.86.0"}
+  "libboost_mpi1_86_0" {= "1.86.0"}
+  "libboost_python-py3-1_86_0-devel" 
+  "libboost_serialization1_86_0-devel" 
+  "openmpi4-devel" 
+]
+extra-source "libboost_mpi1_86_0-devel-1.86.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libboost_mpi1_86_0-devel-1.86.0-1.1.x86_64.rpm"
+}

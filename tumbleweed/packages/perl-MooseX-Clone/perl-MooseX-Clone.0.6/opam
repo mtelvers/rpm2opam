@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-Clone-0.06-1.32.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Clone-0.06-1.32.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Data-Visitor" {>= "0.24"}
+  "perl-Hash-Util-FieldHash-Compat" 
+  "perl-Moose" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-MooseX-Clone-0.06-1.32.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-Clone-0.06-1.32.noarch.rpm"
+}

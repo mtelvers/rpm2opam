@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-bindrcpp-0.2.2-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-bindrcpp-0.2.2-20.fc40.x86_64.rpm"]
+depends: [
+  "R-Rcpp" {>= "0.12.16"}
+  "R-bindr" {>= "0.1.1"}
+  "R-core" {= "4.3"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "R-bindrcpp-0.2.2-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-bindrcpp-0.2.2-20.fc40.x86_64.rpm"
+}

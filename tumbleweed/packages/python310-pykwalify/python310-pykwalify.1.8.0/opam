@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pykwalify-1.8.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pykwalify-1.8.0-2.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-PyYAML" {>= "3.11"}
+  "python310-base" 
+  "python310-docopt" {>= "0.6.2"}
+  "python310-python-dateutil" {>= "2.4.2"}
+  "python310-ruamel-yaml" {>= "0.16.0"}
+  "update-alternatives" 
+]
+extra-source "python310-pykwalify-1.8.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-pykwalify-1.8.0-2.2.noarch.rpm"
+}

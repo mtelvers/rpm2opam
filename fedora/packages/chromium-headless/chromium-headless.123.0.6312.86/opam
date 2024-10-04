@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "chromium-headless-123.0.6312.86-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "chromium-headless-123.0.6312.86-1.fc40.x86_64.rpm"]
+depends: [
+  "chromium-common" {= "123.0.6312.86"}
+  "double-conversion" 
+  "expat" 
+  "flac-libs" 
+  "fontconfig" 
+  "freetype" 
+  "glibc" 
+  "google-crc32c" 
+  "harfbuzz" 
+  "libbrotli" 
+  "libevent" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libwebp" 
+  "libxml2" 
+  "libxslt" 
+  "nspr" 
+  "nss" 
+  "nss-util" 
+  "opus" 
+]
+extra-source "chromium-headless-123.0.6312.86-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/chromium-headless-123.0.6312.86-1.fc40.x86_64.rpm"
+}

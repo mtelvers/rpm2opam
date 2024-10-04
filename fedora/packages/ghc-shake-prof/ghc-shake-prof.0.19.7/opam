@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-shake-prof-0.19.7-28.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-shake-prof-0.19.7-28.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-binary-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-directory-prof" 
+  "ghc-extra-prof" 
+  "ghc-filepath-prof" 
+  "ghc-filepattern-prof" 
+  "ghc-hashable-prof" 
+  "ghc-heaps-prof" 
+  "ghc-js-dgtable-prof" 
+  "ghc-js-flot-prof" 
+  "ghc-js-jquery-prof" 
+  "ghc-primitive-prof" 
+  "ghc-process-prof" 
+  "ghc-random-prof" 
+  "ghc-shake-devel" {= "0.19.7"}
+  "ghc-time-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unix-prof" 
+  "ghc-unordered-containers-prof" 
+  "ghc-utf8-string-prof" 
+]
+extra-source "ghc-shake-prof-0.19.7-28.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-shake-prof-0.19.7-28.fc40.x86_64.rpm"
+}

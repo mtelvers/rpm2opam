@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libxcb-render-util0-32bit-0.3.10-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxcb-render-util0-32bit-0.3.10-1.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libxcb-render0-32bit" 
+  "libxcb1-32bit" 
+]
+extra-source "libxcb-render-util0-32bit-0.3.10-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libxcb-render-util0-32bit-0.3.10-1.4.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgtkpod1-2.1.5-8.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgtkpod1-2.1.5-8.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgpod4" 
+  "libgtk-3-0" 
+  "libwayland-server0" 
+  "libxml2-2" 
+]
+extra-source "libgtkpod1-2.1.5-8.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgtkpod1-2.1.5-8.1.x86_64.rpm"
+}

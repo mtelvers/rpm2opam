@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "TOPCOM-devel-1.1.2-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "TOPCOM-devel-1.1.2-2.fc40.x86_64.rpm"]
+depends: [
+  "TOPCOM-libs" {= "1.1.2"}
+  "cddlib-devel" 
+  "gmp-devel" 
+  "qsopt-ex-devel" 
+]
+extra-source "TOPCOM-devel-1.1.2-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/TOPCOM-devel-1.1.2-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rcssserver3d-devel-0.7.6-2.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rcssserver3d-devel-0.7.6-2.fc39.noarch.rpm"]
+depends: [
+  "DevIL-devel" 
+  "boost-devel" 
+  "mesa-libGL-devel" 
+  "mesa-libGLU-devel" 
+  "ode-devel" 
+  "rcssserver3d" {= "0.7.6"}
+  "simspark-devel" 
+]
+extra-source "rcssserver3d-devel-0.7.6-2.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rcssserver3d-devel-0.7.6-2.fc39.noarch.rpm"
+}

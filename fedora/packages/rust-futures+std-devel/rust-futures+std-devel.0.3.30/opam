@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-futures+std-devel-0.3.30-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-futures+std-devel-0.3.30-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-futures+alloc-devel" {= "0.3.30"}
+  "rust-futures-core+std-devel" 
+  "rust-futures-devel" {= "0.3.30"}
+  "rust-futures-io+std-devel" 
+  "rust-futures-sink+std-devel" 
+  "rust-futures-task+std-devel" 
+  "rust-futures-util+channel-devel" 
+  "rust-futures-util+io-devel" 
+  "rust-futures-util+std-devel" 
+]
+extra-source "rust-futures+std-devel-0.3.30-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-futures+std-devel-0.3.30-2.fc40.noarch.rpm"
+}

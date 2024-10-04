@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cudd-devel-3.0.0-3.18.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cudd-devel-3.0.0-3.18.x86_64.rpm"]
+depends: [
+  "libcudd-3_0_0-0" {= "3.0.0"}
+]
+extra-source "cudd-devel-3.0.0-3.18.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cudd-devel-3.0.0-3.18.x86_64.rpm"
+}

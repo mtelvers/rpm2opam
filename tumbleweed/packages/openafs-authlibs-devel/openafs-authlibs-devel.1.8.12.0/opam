@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openafs-authlibs-devel-1.8.12.g20240711-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openafs-authlibs-devel-1.8.12.g20240711-1.4.x86_64.rpm"]
+depends: [
+  "openafs-authlibs" {= "1.8.12.0"}
+  "openafs-devel" {= "1.8.12.0"}
+]
+extra-source "openafs-authlibs-devel-1.8.12.g20240711-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openafs-authlibs-devel-1.8.12.g20240711-1.4.x86_64.rpm"
+}

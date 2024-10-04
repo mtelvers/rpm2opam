@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jopt-simple-5.0.4-19.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jopt-simple-5.0.4-19.fc40.noarch.rpm"]
+depends: [
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "jopt-simple-5.0.4-19.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jopt-simple-5.0.4-19.fc40.noarch.rpm"
+}

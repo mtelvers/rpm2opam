@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sssd-proxy-2.9.5-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sssd-proxy-2.9.5-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libdhash1" 
+  "libldb2" 
+  "libpopt0" 
+  "libsss_certmap0" 
+  "libtalloc2" 
+  "libtevent0" 
+  "pam" 
+  "sssd" 
+]
+extra-source "sssd-proxy-2.9.5-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sssd-proxy-2.9.5-2.1.x86_64.rpm"
+}

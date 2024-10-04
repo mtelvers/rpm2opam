@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-cairocffi-1.6.1-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-cairocffi-1.6.1-5.fc40.noarch.rpm"]
+depends: [
+  "cairo" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "gtk3" 
+  "python3" {= "3.12"}
+  "python3-cffi" {>= "1.1"}
+]
+extra-source "python3-cairocffi-1.6.1-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-cairocffi-1.6.1-5.fc40.noarch.rpm"
+}

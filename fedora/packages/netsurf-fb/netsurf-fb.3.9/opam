@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "netsurf-fb-3.9-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netsurf-fb-3.9-14.fc40.x86_64.rpm"]
+depends: [
+  "dejavu-sans-fonts" {>= "2.37"}
+  "dejavu-sans-mono-fonts" {>= "2.37"}
+  "dejavu-serif-fonts" {>= "2.37"}
+  "expat" 
+  "freetype" 
+  "glibc" 
+  "libcurl" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libvncserver" 
+  "libwayland-client" 
+  "libwebp" 
+  "libxcb" 
+  "openssl-libs" 
+  "sdl12-compat" 
+  "xcb-util" 
+  "xcb-util-image" 
+  "xcb-util-keysyms" 
+  "xcb-util-wm" 
+  "zlib-ng-compat" 
+]
+extra-source "netsurf-fb-3.9-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/netsurf-fb-3.9-14.fc40.x86_64.rpm"
+}

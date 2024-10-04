@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libaubio5-0.4.9-13.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libaubio5-0.4.9-13.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libavcodec58_134" 
+  "libavformat58_76" 
+  "libavutil56_70" 
+  "libfftw3-3" 
+  "libsamplerate0" 
+  "libsndfile1" 
+  "libswresample3_9" 
+]
+extra-source "libaubio5-0.4.9-13.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libaubio5-0.4.9-13.1.x86_64.rpm"
+}

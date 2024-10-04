@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "v4l-tools-3.107-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "v4l-tools-3.107-3.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXv1" 
+  "libaa1" 
+  "libasound2" 
+  "libjpeg8" 
+  "liblirc_client0" 
+  "libncurses6" 
+  "libzvbi0" 
+  "tv-common" 
+  "v4l-conf" 
+]
+extra-source "v4l-tools-3.107-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/v4l-tools-3.107-3.2.x86_64.rpm"
+}

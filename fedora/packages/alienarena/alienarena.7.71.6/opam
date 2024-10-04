@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "alienarena-7.71.6-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "alienarena-7.71.6-1.fc40.x86_64.rpm"]
+depends: [
+  "alienarena-data" {= "7.71.6"}
+  "desktop-file-utils" {>= "0.9"}
+  "freetype" 
+  "glibc" 
+  "libX11" 
+  "libXxf86vm" 
+  "libcurl" 
+  "libjpeg-turbo" 
+  "libvorbis" 
+  "ode-double" 
+  "openal-soft" 
+  "opengl-games-utils" 
+  "zlib-ng-compat" 
+]
+extra-source "alienarena-7.71.6-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/alienarena-7.71.6-1.fc40.x86_64.rpm"
+}

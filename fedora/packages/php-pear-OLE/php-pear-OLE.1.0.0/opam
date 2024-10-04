@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-pear-OLE-1.0.0-0.29.RC2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-pear-OLE-1.0.0-0.29.RC2.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "php-common" 
+  "php-pear" 
+]
+extra-source "php-pear-OLE-1.0.0-0.29.RC2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-pear-OLE-1.0.0-0.29.RC2.fc40.noarch.rpm"
+}

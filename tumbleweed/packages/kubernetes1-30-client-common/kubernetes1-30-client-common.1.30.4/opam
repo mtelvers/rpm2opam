@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kubernetes1.30-client-common-1.30.4-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kubernetes1.30-client-common-1.30.4-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+]
+extra-source "kubernetes1.30-client-common-1.30.4-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kubernetes1.30-client-common-1.30.4-1.2.x86_64.rpm"
+}

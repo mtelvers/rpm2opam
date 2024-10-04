@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ocfs2-kmp-default-6.4.0-slfo.1.6.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocfs2-kmp-default-6.4.0-slfo.1.6.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "dlm-kmp-default" {= "6.4.0"}
+  "kernel-default" {= "6.4.0"}
+  "suse-module-tools" {>= "12.4"}
+]
+extra-source "ocfs2-kmp-default-6.4.0-slfo.1.6.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/ocfs2-kmp-default-6.4.0-slfo.1.6.4.x86_64.rpm"
+}

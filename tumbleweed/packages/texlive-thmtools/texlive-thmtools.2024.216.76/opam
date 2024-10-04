@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-thmtools-2024.216.76svn67018-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-thmtools-2024.216.76svn67018-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-carlisle" 
+  "texlive-etex-pkg" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-graphics" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-kvsetkeys" 
+  "texlive-mdframed" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-shadethm" 
+  "texlive-thmbox" 
+]
+extra-source "texlive-thmtools-2024.216.76svn67018-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-thmtools-2024.216.76svn67018-57.1.noarch.rpm"
+}

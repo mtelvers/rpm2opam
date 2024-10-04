@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libgepub-devel-0.7.1-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgepub-devel-0.7.1-4.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libarchive-devel" 
+  "libgepub" {= "0.7.1"}
+  "libsoup3-devel" 
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+  "webkit2gtk4-1-devel" 
+]
+extra-source "libgepub-devel-0.7.1-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libgepub-devel-0.7.1-4.fc40.x86_64.rpm"
+}

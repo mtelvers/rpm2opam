@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-hanzibox-2024.217.2.3.0svn63062-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-hanzibox-2024.217.2.3.0svn63062-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-filesystem" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-l3experimental" 
+  "texlive-l3kernel" 
+  "texlive-l3packages" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-xpinyin" 
+]
+extra-source "texlive-hanzibox-2024.217.2.3.0svn63062-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-hanzibox-2024.217.2.3.0svn63062-56.1.noarch.rpm"
+}

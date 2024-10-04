@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-k8s-sample-apiserver-devel-1.22.0-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-k8s-sample-apiserver-devel-1.22.0-12.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-k8s-klog-2-devel" 
+  "go-filesystem" 
+  "golang-github-google-gofuzz-devel" 
+  "golang-github-spf13-cobra-devel" 
+  "golang-k8s-apimachinery-devel" 
+  "golang-k8s-apiserver-devel" 
+  "golang-k8s-client-devel" 
+  "golang-k8s-component-base-devel" 
+  "golang-k8s-kube-openapi-devel" 
+]
+extra-source "golang-k8s-sample-apiserver-devel-1.22.0-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-k8s-sample-apiserver-devel-1.22.0-12.fc40.noarch.rpm"
+}

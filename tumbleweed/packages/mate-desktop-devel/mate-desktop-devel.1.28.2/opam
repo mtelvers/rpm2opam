@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mate-desktop-devel-1.28.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mate-desktop-devel-1.28.2-1.2.x86_64.rpm"]
+depends: [
+  "dconf-devel" {>= "0.13.4"}
+  "gdk-pixbuf-devel" 
+  "glib2-devel" {>= "2.26.0"}
+  "gtk3-devel" {>= "3.22.0"}
+  "iso-codes-devel" 
+  "libX11-devel" 
+  "libXrandr-devel" {>= "1.3"}
+  "libmate-desktop-2-17" {= "1.28.2"}
+  "pkgconf-pkg-config" 
+  "startup-notification-devel" {>= "0.5"}
+]
+extra-source "mate-desktop-devel-1.28.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mate-desktop-devel-1.28.2-1.2.x86_64.rpm"
+}

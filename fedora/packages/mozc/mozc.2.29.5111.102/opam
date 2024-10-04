@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mozc-2.29.5111.102-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mozc-2.29.5111.102-8.fc40.x86_64.rpm"]
+depends: [
+  "abseil-cpp" 
+  "emacs-filesystem" {>= "29.2"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "protobuf" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "mozc-2.29.5111.102-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mozc-2.29.5111.102-8.fc40.x86_64.rpm"
+}

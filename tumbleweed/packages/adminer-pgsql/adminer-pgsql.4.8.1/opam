@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "adminer-pgsql-4.8.1-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "adminer-pgsql-4.8.1-1.9.noarch.rpm"]
+depends: [
+  "adminer" {= "4.8.1"}
+  "php8-pgsql" 
+]
+extra-source "adminer-pgsql-4.8.1-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/adminer-pgsql-4.8.1-1.9.noarch.rpm"
+}

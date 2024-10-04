@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgslcblas_2_8_0-gnu-hpc-2.8-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgslcblas_2_8_0-gnu-hpc-2.8-2.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "gnu-compilers-hpc" 
+  "gsl_2_8_0-gnu-hpc-module" {= "2.8"}
+  "lua-lmod" 
+]
+extra-source "libgslcblas_2_8_0-gnu-hpc-2.8-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgslcblas_2_8_0-gnu-hpc-2.8-2.2.x86_64.rpm"
+}

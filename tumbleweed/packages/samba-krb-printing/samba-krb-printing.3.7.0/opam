@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "samba-krb-printing-3.7.0-1.33.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "samba-krb-printing-3.7.0-1.33.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "cups" 
+  "glibc" 
+  "samba-client" 
+  "system-user-lp" 
+]
+extra-source "samba-krb-printing-3.7.0-1.33.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/samba-krb-printing-3.7.0-1.33.x86_64.rpm"
+}

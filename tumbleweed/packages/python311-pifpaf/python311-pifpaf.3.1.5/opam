@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pifpaf-3.1.5-2.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pifpaf-3.1.5-2.10.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-Jinja2" 
+  "python311-base" 
+  "python311-click" 
+  "python311-daiquiri" 
+  "python311-fixtures" 
+  "python311-psutil" 
+  "python311-requests" 
+  "python311-testrepository" 
+  "python311-testtools" 
+  "python311-xattr" 
+  "update-alternatives" 
+]
+extra-source "python311-pifpaf-3.1.5-2.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pifpaf-3.1.5-2.10.noarch.rpm"
+}

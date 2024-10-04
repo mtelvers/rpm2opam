@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtkdatabox-devel-1.0.0-1.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtkdatabox-devel-1.0.0-1.16.x86_64.rpm"]
+depends: [
+  "cairo-devel" {>= "1.10.0"}
+  "gtk3-devel" {>= "3.4.0"}
+  "libgtkdatabox1" {= "1.0.0"}
+  "pango-devel" {>= "1.29.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gtkdatabox-devel-1.0.0-1.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gtkdatabox-devel-1.0.0-1.16.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cepces-0.3.9-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cepces-0.3.9-2.1.noarch.rpm"]
+depends: [
+  "cepces-certmonger" {= "0.3.9"}
+  "cepces-selinux" 
+  "python3-cepces" {= "0.3.9"}
+]
+extra-source "cepces-0.3.9-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cepces-0.3.9-2.1.noarch.rpm"
+}

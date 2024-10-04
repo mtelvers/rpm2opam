@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "eog-45.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eog-45.3-1.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "exempi" 
+  "gdk-pixbuf2" 
+  "glib2" {>= "2.73.2"}
+  "glibc" 
+  "gnome-desktop3" 
+  "gobject-introspection" 
+  "gsettings-desktop-schemas" 
+  "gtk3" {>= "3.24.15"}
+  "lcms2" 
+  "libX11" 
+  "libexif" 
+  "libgcc" 
+  "libhandy" {>= "1.5.0"}
+  "libjpeg-turbo" 
+  "libpeas1" 
+  "libpeas1-gtk" 
+  "librsvg2" 
+  "zlib-ng-compat" 
+]
+extra-source "eog-45.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/eog-45.3-1.fc40.x86_64.rpm"
+}

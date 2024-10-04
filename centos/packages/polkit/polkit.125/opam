@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "polkit-125-2.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "polkit-125-2.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dbus" 
+  "duktape" 
+  "expat" 
+  "glib2" 
+  "glibc" 
+  "pam-libs" 
+  "polkit-libs" 
+  "shadow-utils" 
+  "systemd" 
+  "systemd-libs" 
+]
+extra-source "polkit-125-2.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/polkit-125-2.el10.x86_64.rpm"
+}

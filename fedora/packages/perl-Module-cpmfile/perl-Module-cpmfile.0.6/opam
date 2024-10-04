@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Module-cpmfile-0.006-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-cpmfile-0.006-7.fc40.noarch.rpm"]
+depends: [
+  "perl-CPAN-Meta" 
+  "perl-CPAN-Meta-Requirements" {>= "2.130"}
+  "perl-Exporter" {>= "5.57"}
+  "perl-Scalar-List-Utils" 
+  "perl-YAML-PP" {>= "0.27"}
+  "perl-libs" {>= "5.8.1"}
+]
+extra-source "perl-Module-cpmfile-0.006-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Module-cpmfile-0.006-7.fc40.noarch.rpm"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mapserver-libs-8.0.1-13.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mapserver-libs-8.0.1-13.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "freetype" 
+  "fribidi" 
+  "gdal-libs" 
+  "geos" 
+  "giflib" 
+  "glibc" 
+  "harfbuzz" 
+  "libcurl" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libpq" 
+  "libstdc++" 
+  "libxml2" 
+  "libxslt" 
+  "mariadb-connector-c" 
+  "proj" 
+  "protobuf-c" 
+]
+extra-source "mapserver-libs-8.0.1-13.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mapserver-libs-8.0.1-13.fc40.x86_64.rpm"
+}

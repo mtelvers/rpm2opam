@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-cairo-gobject-4.2.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-cairo-gobject-4.2.1-1.fc40.x86_64.rpm"]
+depends: [
+  "cairo-gobject" 
+  "glibc" 
+  "ruby" 
+  "ruby-libs" 
+  "rubygem-cairo" 
+  "rubygem-glib2" {>= "4.2.1"}
+  "rubygems" 
+]
+extra-source "rubygem-cairo-gobject-4.2.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-cairo-gobject-4.2.1-1.fc40.x86_64.rpm"
+}

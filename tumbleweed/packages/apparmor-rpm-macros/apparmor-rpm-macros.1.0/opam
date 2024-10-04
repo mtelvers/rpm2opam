@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "apparmor-rpm-macros-1.0-8.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apparmor-rpm-macros-1.0-8.2.noarch.rpm"]
+depends: [
+  "coreutils" 
+]
+extra-source "apparmor-rpm-macros-1.0-8.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/apparmor-rpm-macros-1.0-8.2.noarch.rpm"
+}

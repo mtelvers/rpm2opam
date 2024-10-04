@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cargo-c-0.9.28-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cargo-c-0.9.28-4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcurl" 
+  "libgcc" 
+  "libssh2" 
+  "openssl-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "cargo-c-0.9.28-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cargo-c-0.9.28-4.fc40.x86_64.rpm"
+}

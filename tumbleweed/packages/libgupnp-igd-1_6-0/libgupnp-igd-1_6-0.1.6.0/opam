@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgupnp-igd-1_6-0-1.6.0-2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgupnp-igd-1_6-0-1.6.0-2.5.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgssdp-1_6-0" 
+  "libgupnp-1_6-0" 
+]
+extra-source "libgupnp-igd-1_6-0-1.6.0-2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgupnp-igd-1_6-0-1.6.0-2.5.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fcitx5-zhuyin-data-5.1.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fcitx5-zhuyin-data-5.1.0-4.fc40.noarch.rpm"]
+depends: [
+  "fcitx5-data" 
+  "fcitx5-lua" 
+  "hicolor-icon-theme" 
+]
+extra-source "fcitx5-zhuyin-data-5.1.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fcitx5-zhuyin-data-5.1.0-4.fc40.noarch.rpm"
+}

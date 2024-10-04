@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcolord2-1.4.6-7.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcolord2-1.4.6-7.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "liblcms2-2" 
+  "libudev-mini1" 
+]
+extra-source "libcolord2-1.4.6-7.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcolord2-1.4.6-7.1.x86_64.rpm"
+}

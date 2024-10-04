@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libcrystalhd-devel-3.10.0-32.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcrystalhd-devel-3.10.0-32.fc40.x86_64.rpm"]
+depends: [
+  "libcrystalhd" {= "3.10.0"}
+]
+extra-source "libcrystalhd-devel-3.10.0-32.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libcrystalhd-devel-3.10.0-32.fc40.x86_64.rpm"
+}

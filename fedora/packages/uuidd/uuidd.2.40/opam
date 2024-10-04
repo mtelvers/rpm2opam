@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "uuidd-2.40-0.9.rc1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "uuidd-2.40-0.9.rc1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libuuid" {= "2.40"}
+  "shadow-utils" 
+  "systemd-libs" 
+]
+extra-source "uuidd-2.40-0.9.rc1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/uuidd-2.40-0.9.rc1.fc40.x86_64.rpm"
+}

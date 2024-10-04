@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ccgfs-0.81.g3-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ccgfs-0.81.g3-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libHX32" 
+  "libfuse2" 
+  "libopenssl3" 
+  "libxml2-2" 
+]
+extra-source "ccgfs-0.81.g3-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ccgfs-0.81.g3-2.1.x86_64.rpm"
+}

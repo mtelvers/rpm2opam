@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hunspell-1.7.2-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hunspell-1.7.2-1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libhunspell-1_7-0" 
+  "libncurses6" 
+  "libreadline8" 
+  "libstdc++6" 
+  "myspell-en_US" 
+]
+extra-source "hunspell-1.7.2-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/hunspell-1.7.2-1.7.x86_64.rpm"
+}

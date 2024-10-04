@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-fluent-syntax+json-devel-0.11.0-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-fluent-syntax+json-devel-0.11.0-10.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-fluent-syntax+serde-devel" {= "0.11.0"}
+  "rust-fluent-syntax+serde_json-devel" {= "0.11.0"}
+  "rust-fluent-syntax-devel" {= "0.11.0"}
+]
+extra-source "rust-fluent-syntax+json-devel-0.11.0-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-fluent-syntax+json-devel-0.11.0-10.fc40.noarch.rpm"
+}

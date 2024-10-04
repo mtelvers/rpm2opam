@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libnma-devel-1.10.6-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnma-devel-1.10.6-7.fc40.x86_64.rpm"]
+depends: [
+  "NetworkManager-libnm-devel" {>= "1.8.0"}
+  "gtk3-devel" 
+  "libnma" {= "1.10.6"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libnma-devel-1.10.6-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libnma-devel-1.10.6-7.fc40.x86_64.rpm"
+}

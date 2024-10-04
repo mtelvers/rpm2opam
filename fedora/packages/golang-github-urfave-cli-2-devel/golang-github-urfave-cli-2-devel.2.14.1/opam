@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-urfave-cli-2-devel-2.14.1-6.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-urfave-cli-2-devel-2.14.1-6.fc39.noarch.rpm"]
+depends: [
+  "compat-golang-github-cpuguy83-md2man-2-devel" 
+  "go-filesystem" 
+  "golang-github-burntsushi-toml-devel" 
+  "golang-github-xrash-smetrics-devel" 
+  "golang-gopkg-yaml-3-devel" 
+  "golang-x-text-devel" 
+]
+extra-source "golang-github-urfave-cli-2-devel-2.14.1-6.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-urfave-cli-2-devel-2.14.1-6.fc39.noarch.rpm"
+}

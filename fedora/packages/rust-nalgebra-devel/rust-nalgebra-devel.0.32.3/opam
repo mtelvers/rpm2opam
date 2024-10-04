@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-nalgebra-devel-0.32.3-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-nalgebra-devel-0.32.3-5.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-approx-devel" 
+  "rust-num-complex-devel" 
+  "rust-num-rational-devel" 
+  "rust-num-traits-devel" 
+  "rust-simba-devel" 
+  "rust-typenum+default-devel" 
+]
+extra-source "rust-nalgebra-devel-0.32.3-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-nalgebra-devel-0.32.3-5.fc40.noarch.rpm"
+}

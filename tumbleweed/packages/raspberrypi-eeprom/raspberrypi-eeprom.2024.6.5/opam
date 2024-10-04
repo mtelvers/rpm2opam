@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "raspberrypi-eeprom-2024.06.05-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "raspberrypi-eeprom-2024.06.05-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "pciutils" 
+  "python311-base" 
+  "raspberrypi-eeprom-firmware" 
+  "raspberrypi-firmware" {>= "2021.3.3"}
+  "raspberrypi-firmware-dt" {>= "2021.3.3"}
+]
+extra-source "raspberrypi-eeprom-2024.06.05-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/raspberrypi-eeprom-2024.06.05-2.1.noarch.rpm"
+}

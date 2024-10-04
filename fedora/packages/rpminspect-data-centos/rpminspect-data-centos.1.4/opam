@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rpminspect-data-centos-1.4-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rpminspect-data-centos-1.4-4.fc40.noarch.rpm"]
+depends: [
+  "annobin-annocheck" 
+  "bash" 
+  "dash" 
+  "fedora-license-data" 
+  "html401-dtds" 
+  "ksh" 
+  "libabigail" 
+  "rc" 
+  "rpminspect" {>= "1.11"}
+  "tcsh" 
+  "xhtml1-dtds" 
+  "zsh" 
+]
+extra-source "rpminspect-data-centos-1.4-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rpminspect-data-centos-1.4-4.fc40.noarch.rpm"
+}

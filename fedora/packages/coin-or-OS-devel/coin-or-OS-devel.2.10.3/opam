@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "coin-or-OS-devel-2.10.3-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coin-or-OS-devel-2.10.3-11.fc40.x86_64.rpm"]
+depends: [
+  "coin-or-Bcp-devel" 
+  "coin-or-Bonmin-devel" 
+  "coin-or-Cbc-devel" 
+  "coin-or-Clp-devel" 
+  "coin-or-CoinUtils-devel" 
+  "coin-or-Couenne-devel" 
+  "coin-or-DyLP-devel" 
+  "coin-or-Ipopt-devel" 
+  "coin-or-OS" {= "2.10.3"}
+  "coin-or-Osi-devel" 
+  "coin-or-SYMPHONY-devel" 
+  "coin-or-Vol-devel" 
+  "cppad-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "coin-or-OS-devel-2.10.3-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/coin-or-OS-devel-2.10.3-11.fc40.x86_64.rpm"
+}

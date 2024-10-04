@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgpaste-gtk4-0-45.1+14-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgpaste-gtk4-0-45.1+14-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libadwaita-1-0" 
+  "libcairo2" 
+  "libgpaste2-0" 
+  "libgtk-4-1" 
+]
+extra-source "libgpaste-gtk4-0-45.1+14-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgpaste-gtk4-0-45.1+14-1.1.x86_64.rpm"
+}

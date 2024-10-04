@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jacktrip-2.2.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jacktrip-2.2.4-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "hicolor-icon-theme" 
+  "jack-audio-connection-kit" 
+  "libgcc" 
+  "libstdc++" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qt6-qtdeclarative" 
+  "qt6-qtsvg" 
+  "qt6-qtwebchannel" 
+  "qt6-qtwebengine" 
+  "qt6-qtwebsockets" 
+  "rtaudio" 
+]
+extra-source "jacktrip-2.2.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jacktrip-2.2.4-1.fc40.x86_64.rpm"
+}

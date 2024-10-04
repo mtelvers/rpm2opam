@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-sysinfo0.29+c-interface-devel-0.29.11-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-sysinfo0.29+c-interface-devel-0.29.11-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-sysinfo0-29-devel" {= "0.29.11"}
+]
+extra-source "rust-sysinfo0.29+c-interface-devel-0.29.11-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-sysinfo0.29+c-interface-devel-0.29.11-1.fc40.noarch.rpm"
+}

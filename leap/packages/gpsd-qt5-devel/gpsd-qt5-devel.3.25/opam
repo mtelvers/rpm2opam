@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gpsd-qt5-devel-3.25-lp160.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gpsd-qt5-devel-3.25-lp160.1.2.x86_64.rpm"]
+depends: [
+  "gpsd-devel" {= "3.25"}
+  "libQgpsmm30" 
+  "libQt5Network-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "gpsd-qt5-devel-3.25-lp160.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/gpsd-qt5-devel-3.25-lp160.1.2.x86_64.rpm"
+}

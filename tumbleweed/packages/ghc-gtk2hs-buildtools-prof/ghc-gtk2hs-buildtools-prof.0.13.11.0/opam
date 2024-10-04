@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-gtk2hs-buildtools-prof-0.13.11.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-gtk2hs-buildtools-prof-0.13.11.0-1.1.x86_64.rpm"]
+depends: [
+  "ghc-Cabal-prof" 
+  "ghc-array-prof" 
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+  "ghc-gtk2hs-buildtools-devel" {= "0.13.11.0"}
+  "ghc-hashtables-prof" 
+  "ghc-pretty-prof" 
+  "ghc-process-prof" 
+  "ghc-random-prof" 
+]
+extra-source "ghc-gtk2hs-buildtools-prof-0.13.11.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-gtk2hs-buildtools-prof-0.13.11.0-1.1.x86_64.rpm"
+}

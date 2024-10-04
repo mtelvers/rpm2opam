@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nfs-utils-2.6.4-0.rc5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nfs-utils-2.6.4-0.rc5.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "device-mapper-libs" 
+  "gawk" 
+  "glibc" 
+  "grep" 
+  "gssproxy" {>= "0.7.0"}
+  "keyutils" 
+  "keyutils-libs" 
+  "kmod" 
+  "krb5-libs" 
+  "libblkid" 
+  "libcap" 
+  "libcom_err" 
+  "libevent" 
+  "libgcc" 
+  "libmount" 
+  "libnfsidmap" 
+  "libtirpc" {>= "0.2.3"}
+  "libuuid" 
+  "libxml2" 
+  "python3" 
+  "quota" 
+  "rpcbind" 
+  "sed" 
+  "shadow-utils" {>= "4.0.3"}
+  "sqlite-libs" 
+  "systemd" 
+  "util-linux" 
+]
+extra-source "nfs-utils-2.6.4-0.rc5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nfs-utils-2.6.4-0.rc5.fc40.x86_64.rpm"
+}

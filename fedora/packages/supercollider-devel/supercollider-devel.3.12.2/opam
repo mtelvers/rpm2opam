@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "supercollider-devel-3.12.2-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "supercollider-devel-3.12.2-12.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib-devel" 
+  "avahi-devel" 
+  "boost-devel" 
+  "jack-audio-connection-kit-devel" 
+  "libsndfile-devel" 
+  "pkgconf-pkg-config" 
+  "supercollider" {= "3.12.2"}
+]
+extra-source "supercollider-devel-3.12.2-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/supercollider-devel-3.12.2-12.fc40.x86_64.rpm"
+}

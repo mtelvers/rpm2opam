@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-pem-prof-0.2.4-8.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-pem-prof-0.2.4-8.16.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-basement-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-memory-prof" 
+  "ghc-pem-devel" {= "0.2.4"}
+]
+extra-source "ghc-pem-prof-0.2.4-8.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-pem-prof-0.2.4-8.16.x86_64.rpm"
+}

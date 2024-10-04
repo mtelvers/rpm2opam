@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-hvfloat-2024.216.2.48svn70394-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-hvfloat-2024.216.2.48svn70394-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-adjustbox" 
+  "texlive-atbegshi" 
+  "texlive-caption" 
+  "texlive-etoolbox" 
+  "texlive-fbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-graphics" 
+  "texlive-hyperref" 
+  "texlive-ifoddpage" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-l3kernel" 
+  "texlive-marginnote" 
+  "texlive-multido" 
+  "texlive-picture" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-sttools" 
+  "texlive-tools" 
+  "texlive-varwidth" 
+  "texlive-xkeyval" 
+  "texlive-zref" 
+]
+extra-source "texlive-hvfloat-2024.216.2.48svn70394-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-hvfloat-2024.216.2.48svn70394-56.1.noarch.rpm"
+}

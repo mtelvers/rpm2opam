@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "plasma-bigscreen-5.27.80~20240204.214319.046d404-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plasma-bigscreen-5.27.80~20240204.214319.046d404-2.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf6-kcmutils" 
+  "kf6-kcolorscheme" 
+  "kf6-kconfig" 
+  "kf6-kcoreaddons" 
+  "kf6-kio-gui" 
+  "kf6-kjobwidgets" 
+  "kf6-kservice" 
+  "kf6-ksvg" 
+  "libgcc" 
+  "libkworkspace6" 
+  "libplasma" 
+  "libstdc++" 
+  "plasma-activities" 
+  "plasma-bigscreen-wayland" {= "5.27.80"}
+  "python3" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qt6-qtdeclarative" 
+]
+extra-source "plasma-bigscreen-5.27.80~20240204.214319.046d404-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/plasma-bigscreen-5.27.80~20240204.214319.046d404-2.fc40.x86_64.rpm"
+}

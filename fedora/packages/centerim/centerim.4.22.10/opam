@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "centerim-4.22.10-44.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "centerim-4.22.10-44.fc40.x86_64.rpm"]
+depends: [
+  "gawk" 
+  "glibc" 
+  "gpgme" 
+  "libcurl" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libstdc++" 
+  "ncurses-libs" 
+  "openssl-libs" 
+  "perl-Data-Dumper" 
+  "perl-Getopt-Std" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Time-Local" 
+  "perl-Time-ParseDate" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "xdg-utils" 
+]
+extra-source "centerim-4.22.10-44.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/centerim-4.22.10-44.fc40.x86_64.rpm"
+}

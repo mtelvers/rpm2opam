@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bcc-examples-0.30.0-slfo.1.1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bcc-examples-0.30.0-slfo.1.1.8.noarch.rpm"]
+depends: [
+  "bash" 
+  "bcc-lua" 
+  "python3-bcc" {= "0.30.0"}
+  "python311-base" 
+]
+extra-source "bcc-examples-0.30.0-slfo.1.1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/bcc-examples-0.30.0-slfo.1.1.8.noarch.rpm"
+}

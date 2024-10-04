@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-POE-Component-Client-SMTP-0.22-41.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-POE-Component-Client-SMTP-0.22-41.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-POE" {>= "0.31"}
+  "perl-POE-Filter-Transparent-SMTP" {>= "0.2"}
+  "perl-Socket" 
+  "perl-Symbol" 
+  "perl-libs" 
+]
+extra-source "perl-POE-Component-Client-SMTP-0.22-41.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-POE-Component-Client-SMTP-0.22-41.fc40.noarch.rpm"
+}

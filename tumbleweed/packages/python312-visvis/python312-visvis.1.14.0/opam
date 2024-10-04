@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-visvis-1.14.0-5.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-visvis-1.14.0-5.1.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-numpy" 
+  "python312-opengl" 
+  "python312-qt5" 
+]
+extra-source "python312-visvis-1.14.0-5.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-visvis-1.14.0-5.1.noarch.rpm"
+}

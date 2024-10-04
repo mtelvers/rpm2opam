@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "leptonica-tools-1.84.1-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "leptonica-tools-1.84.1-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "leptonica" {= "1.84.1"}
+]
+extra-source "leptonica-tools-1.84.1-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/leptonica-tools-1.84.1-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-image+default-devel-0.24.9-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-image+default-devel-0.24.9-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-image+bmp-devel" {= "0.24.9"}
+  "rust-image+dds-devel" {= "0.24.9"}
+  "rust-image+dxt-devel" {= "0.24.9"}
+  "rust-image+farbfeld-devel" {= "0.24.9"}
+  "rust-image+gif-devel" {= "0.24.9"}
+  "rust-image+hdr-devel" {= "0.24.9"}
+  "rust-image+ico-devel" {= "0.24.9"}
+  "rust-image+jpeg-devel" {= "0.24.9"}
+  "rust-image+jpeg_rayon-devel" {= "0.24.9"}
+  "rust-image+png-devel" {= "0.24.9"}
+  "rust-image+pnm-devel" {= "0.24.9"}
+  "rust-image+qoi-devel" {= "0.24.9"}
+  "rust-image+tga-devel" {= "0.24.9"}
+  "rust-image+tiff-devel" {= "0.24.9"}
+  "rust-image+webp-devel" {= "0.24.9"}
+  "rust-image-devel" {= "0.24.9"}
+]
+extra-source "rust-image+default-devel-0.24.9-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-image+default-devel-0.24.9-1.fc40.noarch.rpm"
+}

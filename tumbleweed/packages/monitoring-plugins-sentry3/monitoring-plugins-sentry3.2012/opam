@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "monitoring-plugins-sentry3-2012-102.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "monitoring-plugins-sentry3-2012-102.2.noarch.rpm"]
+depends: [
+  "perl-Nagios-Plugin" {>= "0.36"}
+  "perl-Net-SNMP" 
+  "perl-base" 
+]
+extra-source "monitoring-plugins-sentry3-2012-102.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/monitoring-plugins-sentry3-2012-102.2.noarch.rpm"
+}

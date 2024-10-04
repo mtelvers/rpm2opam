@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "petsc-3.20.4-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "petsc-3.20.4-4.fc40.x86_64.rpm"]
+depends: [
+  "SuperLU" 
+  "flexiblas-netlib" 
+  "glibc" 
+  "hdf5" 
+  "libX11" 
+  "libgcc" 
+  "libquadmath" 
+  "libstdc++" 
+  "metis" 
+]
+extra-source "petsc-3.20.4-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/petsc-3.20.4-4.fc40.x86_64.rpm"
+}

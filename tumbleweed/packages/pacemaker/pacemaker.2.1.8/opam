@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pacemaker-2.1.8+20240808.3980678f03-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pacemaker-2.1.8+20240808.3980678f03-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "cluster-glue" 
+  "corosync" {>= "2.0.0"}
+  "corosync-libs" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgnutls30" 
+  "libqb100" 
+  "libxml2-2" 
+  "pacemaker-cli" {= "2.1.8"}
+  "pacemaker-libs" 
+  "pam" 
+  "python3-pacemaker" {= "2.1.8"}
+  "python311" 
+  "python311-base" 
+  "resource-agents" 
+  "systemd" 
+]
+extra-source "pacemaker-2.1.8+20240808.3980678f03-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pacemaker-2.1.8+20240808.3980678f03-1.1.x86_64.rpm"
+}

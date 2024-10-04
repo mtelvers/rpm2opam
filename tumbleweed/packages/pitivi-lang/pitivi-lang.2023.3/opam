@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pitivi-lang-2023.03-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pitivi-lang-2023.03-1.5.noarch.rpm"]
+depends: [
+  "pitivi" {= "2023.3"}
+]
+extra-source "pitivi-lang-2023.03-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pitivi-lang-2023.03-1.5.noarch.rpm"
+}

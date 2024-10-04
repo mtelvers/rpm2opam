@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "liblxqt-devel-1.4.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "liblxqt-devel-1.4.0-3.fc40.x86_64.rpm"]
+depends: [
+  "cmake" {>= "3.3"}
+  "cmake-filesystem" 
+  "liblxqt" {= "1.4.0"}
+  "libqtxdg-devel" {>= "3.12.0"}
+  "lxqt-build-tools" {>= "0.13.0"}
+  "pkgconf-pkg-config" 
+  "qt5-qtbase-devel" {>= "5.15.0"}
+  "qt5-qtx11extras-devel" {>= "5.15.0"}
+]
+extra-source "liblxqt-devel-1.4.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/liblxqt-devel-1.4.0-3.fc40.x86_64.rpm"
+}

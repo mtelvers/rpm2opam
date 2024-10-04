@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "usbguard-1.1.3-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "usbguard-1.1.3-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libaudit1" 
+  "libcap-ng0" 
+  "libgcc_s1" 
+  "libpolkit-gobject-1-0" 
+  "libseccomp2" 
+  "libstdc++6" 
+  "libusbguard1" 
+  "systemd" 
+]
+extra-source "usbguard-1.1.3-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/usbguard-1.1.3-1.2.x86_64.rpm"
+}

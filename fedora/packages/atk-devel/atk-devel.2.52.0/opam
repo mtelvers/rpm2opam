@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "atk-devel-2.52.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "atk-devel-2.52.0-1.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "glib2-devel" {>= "2.67.4"}
+  "pkgconf-pkg-config" 
+]
+extra-source "atk-devel-2.52.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/atk-devel-2.52.0-1.fc40.x86_64.rpm"
+}

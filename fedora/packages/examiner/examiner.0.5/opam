@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "examiner-0.5-34.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "examiner-0.5-34.fc40.noarch.rpm"]
+depends: [
+  "perl-Env" 
+  "perl-File-Basename" 
+  "perl-Getopt-Std" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "examiner-0.5-34.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/examiner-0.5-34.fc40.noarch.rpm"
+}

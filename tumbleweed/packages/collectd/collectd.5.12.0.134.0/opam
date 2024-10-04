@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "collectd-5.12.0.134.g4cebbfc-1.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "collectd-5.12.0.134.g4cebbfc-1.12.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "libcollectdclient1" 
+  "libcurl-mini4" 
+  "libesmtp6_2_0" 
+  "libgcrypt20" 
+  "libip4tc2" 
+  "libip6tc2" 
+  "libjansson4" 
+  "libmicrohttpd12" 
+  "libmnl0" 
+  "liboping0" 
+  "libpcap1" 
+  "libpqos5" 
+  "libprotobuf-c1" 
+  "librrd8" 
+  "libsensors4" 
+  "libudev-mini1" 
+  "libxml2-2" 
+  "libyajl2" 
+  "perl" 
+  "perl-base" 
+  "rrdtool" 
+  "sensors" 
+  "systemd" 
+]
+extra-source "collectd-5.12.0.134.g4cebbfc-1.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/collectd-5.12.0.134.g4cebbfc-1.12.x86_64.rpm"
+}

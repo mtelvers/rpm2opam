@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "docbook-xml-website-2.6.0-82.21.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "docbook-xml-website-2.6.0-82.21.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "docbook-xsl-stylesheets" 
+  "docbook_4" 
+  "gawk" 
+  "grep" 
+  "libxml2-tools" 
+  "sed" 
+  "sgml-skel" 
+  "xmlcharent" 
+]
+extra-source "docbook-xml-website-2.6.0-82.21.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/docbook-xml-website-2.6.0-82.21.noarch.rpm"
+}

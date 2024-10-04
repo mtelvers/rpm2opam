@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ikiwiki-w3m-3.20200202.3-2.19.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ikiwiki-w3m-3.20200202.3-2.19.noarch.rpm"]
+depends: [
+  "ikiwiki" {= "3.20200202.3"}
+  "perl-base" 
+  "w3m" 
+]
+extra-source "ikiwiki-w3m-3.20200202.3-2.19.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ikiwiki-w3m-3.20200202.3-2.19.noarch.rpm"
+}

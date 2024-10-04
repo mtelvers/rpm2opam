@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mlterm-ibus-3.9.3-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mlterm-ibus-3.9.3-5.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libibus-1_0-5" 
+  "mlterm-common" 
+]
+extra-source "mlterm-ibus-3.9.3-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mlterm-ibus-3.9.3-5.2.x86_64.rpm"
+}

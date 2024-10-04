@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtk2-immodule-xim-2.24.33-slfo.1.2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk2-immodule-xim-2.24.33-slfo.1.2.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "gtk2-tools" {>= "2.24.20"}
+  "libX11-6" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libgtk-2_0-0" {= "2.24.33"}
+  "libpango-1_0-0" 
+]
+extra-source "gtk2-immodule-xim-2.24.33-slfo.1.2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/gtk2-immodule-xim-2.24.33-slfo.1.2.2.x86_64.rpm"
+}

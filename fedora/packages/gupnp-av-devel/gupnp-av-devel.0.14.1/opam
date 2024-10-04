@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gupnp-av-devel-0.14.1-4.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gupnp-av-devel-0.14.1-4.fc39.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.58"}
+  "gupnp-av" {= "0.14.1"}
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "gupnp-av-devel-0.14.1-4.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gupnp-av-devel-0.14.1-4.fc39.x86_64.rpm"
+}

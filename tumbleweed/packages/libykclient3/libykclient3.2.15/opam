@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libykclient3-2.15-1.31.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libykclient3-2.15-1.31.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcurl-mini4" 
+]
+extra-source "libykclient3-2.15-1.31.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libykclient3-2.15-1.31.x86_64.rpm"
+}

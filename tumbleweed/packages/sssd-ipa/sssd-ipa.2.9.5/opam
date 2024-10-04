@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sssd-ipa-2.9.5-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sssd-ipa-2.9.5-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libdhash1" 
+  "libipa_hbac0" 
+  "libldap2" 
+  "libldb2" 
+  "libsss_idmap0" 
+  "libtalloc2" 
+  "libtevent0" 
+  "samba-client-libs" 
+  "sssd" 
+  "sssd-ad" {= "2.9.5"}
+  "sssd-krb5-common" 
+  "sssd-ldap" 
+]
+extra-source "sssd-ipa-2.9.5-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sssd-ipa-2.9.5-2.1.x86_64.rpm"
+}

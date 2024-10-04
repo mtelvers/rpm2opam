@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "scirenderer-1.1.0-7.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scirenderer-1.1.0-7.2.noarch.rpm"]
+depends: [
+  "java-11-openj9" {>= "1.8"}
+  "javapackages-tools" 
+]
+extra-source "scirenderer-1.1.0-7.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/scirenderer-1.1.0-7.2.noarch.rpm"
+}

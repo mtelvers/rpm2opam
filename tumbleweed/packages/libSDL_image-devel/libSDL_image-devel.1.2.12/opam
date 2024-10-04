@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libSDL_image-devel-1.2.12+hg695-1.26.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libSDL_image-devel-1.2.12+hg695-1.26.x86_64.rpm"]
+depends: [
+  "libSDL_image-1_2-0" {= "1.2.12"}
+  "pkgconf-pkg-config" 
+  "sdl12_compat-devel" {>= "1.2.10"}
+]
+extra-source "libSDL_image-devel-1.2.12+hg695-1.26.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libSDL_image-devel-1.2.12+hg695-1.26.x86_64.rpm"
+}

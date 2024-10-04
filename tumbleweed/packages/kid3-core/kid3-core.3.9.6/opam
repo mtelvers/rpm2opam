@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kid3-core-3.9.6-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kid3-core-3.9.6-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libFLAC++10" 
+  "libFLAC12" 
+  "libQt5Core5" 
+  "libQt5DBus5" 
+  "libQt5Gui5" 
+  "libQt5Multimedia5" 
+  "libQt5Network5" 
+  "libQt5Widgets5" 
+  "libQt5Xml5" 
+  "libQtQuick5" 
+  "libavcodec58_134" 
+  "libavformat58_76" 
+  "libavutil56_70" 
+  "libchromaprint1" 
+  "libgcc_s1" 
+  "libid3-3_8-3" 
+  "libogg0" 
+  "libstdc++6" 
+  "libswresample3_9" 
+  "libtag2" 
+  "libvorbis0" 
+  "libvorbisfile3" 
+  "qtdeclarative-imports-provides-qt5" {>= "2"}
+]
+extra-source "kid3-core-3.9.6-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kid3-core-3.9.6-1.1.x86_64.rpm"
+}

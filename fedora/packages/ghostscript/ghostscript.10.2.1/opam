@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghostscript-10.02.1-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghostscript-10.02.1-8.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "ghostscript-tools-fonts" {= "10.2.1"}
+  "ghostscript-tools-printing" {= "10.2.1"}
+  "glibc" 
+  "jbig2dec-libs" {= "0.20"}
+  "libgs" {= "10.2.1"}
+]
+extra-source "ghostscript-10.02.1-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghostscript-10.02.1-8.fc40.x86_64.rpm"
+}

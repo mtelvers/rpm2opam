@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sysuser-tools-3.1-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sysuser-tools-3.1-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "bash" 
+  "sysuser-shadow" 
+]
+extra-source "sysuser-tools-3.1-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/sysuser-tools-3.1-slfo.1.1.3.noarch.rpm"
+}

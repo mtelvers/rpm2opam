@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-tls-prof-1.6.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-tls-prof-1.6.0-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-asn1-encoding-prof" 
+  "ghc-asn1-types-prof" 
+  "ghc-async-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-cereal-prof" 
+  "ghc-cryptonite-prof" 
+  "ghc-data-default-class-prof" 
+  "ghc-hourglass-prof" 
+  "ghc-memory-prof" 
+  "ghc-mtl-prof" 
+  "ghc-network-prof" 
+  "ghc-tls-devel" {= "1.6.0"}
+  "ghc-transformers-prof" 
+  "ghc-x509-prof" 
+  "ghc-x509-store-prof" 
+  "ghc-x509-validation-prof" 
+]
+extra-source "ghc-tls-prof-1.6.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-tls-prof-1.6.0-3.fc40.x86_64.rpm"
+}

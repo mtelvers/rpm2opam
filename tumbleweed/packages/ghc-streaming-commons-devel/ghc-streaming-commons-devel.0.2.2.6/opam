@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-streaming-commons-devel-0.2.2.6-2.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-streaming-commons-devel-0.2.2.6-2.13.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-array-devel" 
+  "ghc-async-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-directory-devel" 
+  "ghc-network-devel" 
+  "ghc-process-devel" 
+  "ghc-random-devel" 
+  "ghc-stm-devel" 
+  "ghc-streaming-commons" {= "0.2.2.6"}
+  "ghc-text-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unix-devel" 
+  "ghc-zlib-devel" 
+]
+extra-source "ghc-streaming-commons-devel-0.2.2.6-2.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-streaming-commons-devel-0.2.2.6-2.13.x86_64.rpm"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cmus-plugins-all-2.11.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cmus-plugins-all-2.11.0-1.2.noarch.rpm"]
+depends: [
+  "cmus" {= "2.11.0"}
+  "cmus-plugin-cdio" {= "2.11.0"}
+  "cmus-plugin-cue" {= "2.11.0"}
+  "cmus-plugin-ffmpeg" {= "2.11.0"}
+  "cmus-plugin-flac" {= "2.11.0"}
+  "cmus-plugin-jack" {= "2.11.0"}
+  "cmus-plugin-libao" {= "2.11.0"}
+  "cmus-plugin-mikmod" {= "2.11.0"}
+  "cmus-plugin-modplug" {= "2.11.0"}
+  "cmus-plugin-mpc" {= "2.11.0"}
+  "cmus-plugin-opus" {= "2.11.0"}
+  "cmus-plugin-pulse" {= "2.11.0"}
+  "cmus-plugin-sndio" {= "2.11.0"}
+  "cmus-plugin-vorbis" {= "2.11.0"}
+  "cmus-plugin-wavpack" {= "2.11.0"}
+]
+extra-source "cmus-plugins-all-2.11.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cmus-plugins-all-2.11.0-1.2.noarch.rpm"
+}

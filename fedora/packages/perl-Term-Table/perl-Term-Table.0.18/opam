@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Term-Table-0.018-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Term-Table-0.018-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-Object-HashBase" {>= "0.8"}
+  "perl-Scalar-List-Utils" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-Term-Table-0.018-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Term-Table-0.018-3.fc40.noarch.rpm"
+}

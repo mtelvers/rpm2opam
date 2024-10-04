@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pipewire-pulseaudio-1.0.3-slfo.1.1.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pipewire-pulseaudio-1.0.3-slfo.1.1.9.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libavahi-client3" 
+  "libavahi-common3" 
+  "libdbus-1-3" 
+  "libgio-2_0-0" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libpipewire-0_3-0" {>= "1.0.3"}
+  "libsystemd0" 
+  "pipewire" {>= "1.0.3"}
+  "pulseaudio-setup" 
+]
+extra-source "pipewire-pulseaudio-1.0.3-slfo.1.1.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/pipewire-pulseaudio-1.0.3-slfo.1.1.9.x86_64.rpm"
+}

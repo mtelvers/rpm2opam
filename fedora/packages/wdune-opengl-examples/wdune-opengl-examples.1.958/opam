@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "wdune-opengl-examples-1.958-12.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wdune-opengl-examples-1.958-12.fc39.x86_64.rpm"]
+depends: [
+  "freeglut" 
+  "glibc" {>= "2.37.9000"}
+  "libglvnd-glx" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libstdc++" 
+  "mesa-libGLU" 
+  "wdune" {= "1.958"}
+]
+extra-source "wdune-opengl-examples-1.958-12.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/wdune-opengl-examples-1.958-12.fc39.x86_64.rpm"
+}

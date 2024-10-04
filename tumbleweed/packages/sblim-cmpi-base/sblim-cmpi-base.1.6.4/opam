@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sblim-cmpi-base-1.6.4-8.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sblim-cmpi-base-1.6.4-8.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "cim-schema" 
+  "glibc" 
+  "sblim-indication_helper" 
+  "sblim-sfcb" 
+]
+extra-source "sblim-cmpi-base-1.6.4-8.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sblim-cmpi-base-1.6.4-8.2.x86_64.rpm"
+}

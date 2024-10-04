@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-Fabric-3.2.2-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-Fabric-3.2.2-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-Deprecated" 
+  "python312-base" {= "3.12"}
+  "python312-decorator" 
+  "python312-invoke" {>= "2.0"}
+  "python312-paramiko" {>= "3.2"}
+  "update-alternatives" 
+]
+extra-source "python312-Fabric-3.2.2-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-Fabric-3.2.2-2.1.noarch.rpm"
+}

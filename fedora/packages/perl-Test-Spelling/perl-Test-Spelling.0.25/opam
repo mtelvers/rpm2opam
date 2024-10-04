@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-Spelling-0.25-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Spelling-0.25-16.fc40.noarch.rpm"]
+depends: [
+  "hunspell" 
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-IPC-Run3" 
+  "perl-PathTools" 
+  "perl-Pod-Spell" 
+  "perl-Symbol" 
+  "perl-Test-Simple" 
+  "perl-Text-Tabs+Wrap" 
+  "perl-libs" 
+]
+extra-source "perl-Test-Spelling-0.25-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-Spelling-0.25-16.fc40.noarch.rpm"
+}

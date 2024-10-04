@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgdk_pixbuf-2_0-0-32bit-2.42.12-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgdk_pixbuf-2_0-0-32bit-2.42.12-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "gdk-pixbuf-query-loaders-32bit" 
+  "glibc-32bit" 
+  "libgio-2_0-0-32bit" 
+  "libglib-2_0-0-32bit" 
+  "libgmodule-2_0-0-32bit" 
+  "libgobject-2_0-0-32bit" 
+  "libjpeg8-32bit" 
+  "libpng16-16-32bit" 
+  "libtiff6-32bit" 
+]
+extra-source "libgdk_pixbuf-2_0-0-32bit-2.42.12-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgdk_pixbuf-2_0-0-32bit-2.42.12-2.1.x86_64.rpm"
+}

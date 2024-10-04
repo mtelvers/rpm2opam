@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "arm-trusted-firmware-tools-2.10.0-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "arm-trusted-firmware-tools-2.10.0-4.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcryptopp8_9_0" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libstdc++6" 
+]
+extra-source "arm-trusted-firmware-tools-2.10.0-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/arm-trusted-firmware-tools-2.10.0-4.1.x86_64.rpm"
+}

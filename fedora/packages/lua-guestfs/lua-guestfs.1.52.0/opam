@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lua-guestfs-1.52.0-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lua-guestfs-1.52.0-7.fc40.x86_64.rpm"]
+depends: [
+  "compat-lua" 
+  "glibc" 
+  "libguestfs" {= "1.52.0"}
+  "libvirt-libs" 
+  "libxml2" 
+  "lua-libs" {= "5.4"}
+]
+extra-source "lua-guestfs-1.52.0-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lua-guestfs-1.52.0-7.fc40.x86_64.rpm"
+}

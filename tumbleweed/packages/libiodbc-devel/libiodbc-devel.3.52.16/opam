@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libiodbc-devel-3.52.16-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libiodbc-devel-3.52.16-1.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "gtk2-devel" 
+  "iodbc" {= "3.52.16"}
+  "libdrvproxy2" {= "3.52.16"}
+  "libiodbc2" {= "3.52.16"}
+  "libiodbcadm2" {= "3.52.16"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libiodbc-devel-3.52.16-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libiodbc-devel-3.52.16-1.3.x86_64.rpm"
+}

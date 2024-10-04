@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jakarta-taglibs-standard-1.1.2-slfo.1.2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jakarta-taglibs-standard-1.1.2-slfo.1.2.3.noarch.rpm"]
+depends: [
+  "servletapi5" {>= "5.0.16"}
+  "xalan-j2" 
+]
+extra-source "jakarta-taglibs-standard-1.1.2-slfo.1.2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/jakarta-taglibs-standard-1.1.2-slfo.1.2.3.noarch.rpm"
+}

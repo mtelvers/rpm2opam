@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pylama-8.4.1-3.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pylama-8.4.1-3.5.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-mccabe" {>= "0.7.0"}
+  "python312-pycodestyle" {>= "2.9.1"}
+  "python312-pydocstyle" {>= "6.1.1"}
+  "python312-pyflakes" {>= "2.5.0"}
+  "update-alternatives" 
+]
+extra-source "python312-pylama-8.4.1-3.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pylama-8.4.1-3.5.noarch.rpm"
+}

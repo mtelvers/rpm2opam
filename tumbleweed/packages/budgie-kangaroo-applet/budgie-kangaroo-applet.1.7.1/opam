@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "budgie-kangaroo-applet-1.7.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "budgie-kangaroo-applet-1.7.1-2.1.x86_64.rpm"]
+depends: [
+  "python311-base" 
+  "python311-gobject-Gdk" 
+  "python311-psutil" 
+  "typelib-1_0-Budgie-1_0" {= "1.0"}
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "xdg-utils" 
+  "zenity" 
+]
+extra-source "budgie-kangaroo-applet-1.7.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/budgie-kangaroo-applet-1.7.1-2.1.x86_64.rpm"
+}

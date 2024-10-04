@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-cheapskate-prof-0.1.1.2-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-cheapskate-prof-0.1.1.2-20.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-blaze-html-prof" 
+  "ghc-cheapskate-devel" {= "0.1.1.2"}
+  "ghc-containers-prof" 
+  "ghc-data-default-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-mtl-prof" 
+  "ghc-syb-prof" 
+  "ghc-text-prof" 
+  "ghc-uniplate-prof" 
+  "ghc-xss-sanitize-prof" 
+]
+extra-source "ghc-cheapskate-prof-0.1.1.2-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-cheapskate-prof-0.1.1.2-20.fc40.x86_64.rpm"
+}

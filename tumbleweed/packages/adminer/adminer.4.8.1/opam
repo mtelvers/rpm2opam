@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "adminer-4.8.1-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "adminer-4.8.1-1.9.noarch.rpm"]
+depends: [
+  "adminer-mysql" {= "4.8.1"}
+  "apache2-mod_php8" 
+  "bash-sh" 
+  "php8" 
+  "php8-iconv" 
+  "php8-mbstring" 
+  "php8-zlib" 
+]
+extra-source "adminer-4.8.1-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/adminer-4.8.1-1.9.noarch.rpm"
+}

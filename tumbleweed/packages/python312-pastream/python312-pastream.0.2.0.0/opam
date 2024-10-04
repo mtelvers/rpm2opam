@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pastream-0.2.0.post2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pastream-0.2.0.post2-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libportaudio2" 
+  "libsndfile1" 
+  "python312-SoundFile" {>= "0.9.0"}
+  "python312-base" 
+  "python312-cffi" {>= "1.0.0"}
+  "python312-pa-ringbuffer" {>= "0.1.2"}
+  "python312-sounddevice" {>= "0.3.9"}
+  "update-alternatives" 
+]
+extra-source "python312-pastream-0.2.0.post2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-pastream-0.2.0.post2-1.2.x86_64.rpm"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "weston-demo-13.0.0-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "weston-demo-13.0.0-5.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "fontconfig" 
+  "glib2" 
+  "glibc" 
+  "libdrm" 
+  "libglvnd-egl" 
+  "libglvnd-gles" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libwayland-client" 
+  "libwayland-cursor" 
+  "libwayland-egl" 
+  "libwebp" 
+  "libxkbcommon" 
+  "mesa-libgbm" 
+  "pango" 
+  "pixman" 
+  "systemd-libs" 
+]
+extra-source "weston-demo-13.0.0-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/weston-demo-13.0.0-5.fc40.x86_64.rpm"
+}

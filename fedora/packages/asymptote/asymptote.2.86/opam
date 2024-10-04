@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "asymptote-2.86-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "asymptote-2.86-4.fc40.x86_64.rpm"]
+depends: [
+  "boost-filesystem" 
+  "emacs-filesystem" {>= "29.1"}
+  "fftw-libs-double" 
+  "flexiblas-netlib" 
+  "freeglut" 
+  "gc" 
+  "glibc" 
+  "gsl" 
+  "hicolor-icon-theme" 
+  "libcurl" 
+  "libgcc" 
+  "librsvg2-tools" 
+  "libsigsegv" 
+  "libstdc++" 
+  "libtirpc" 
+  "mesa-libOSMesa" 
+  "ncurses-libs" 
+  "python3" 
+  "python3-cson" 
+  "python3-numpy" 
+  "python3-qt5" 
+  "readline" 
+  "texlive-collection-latexrecommended" 
+  "texlive-dvisvgm" 
+  "zlib-ng-compat" 
+]
+extra-source "asymptote-2.86-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/asymptote-2.86-4.fc40.x86_64.rpm"
+}

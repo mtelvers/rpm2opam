@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gphotofs-0.5-7.34.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gphotofs-0.5-7.34.x86_64.rpm"]
+depends: [
+  "fuse" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libfuse2" 
+  "libgphoto2-6" 
+  "libgphoto2_port12" 
+]
+extra-source "gphotofs-0.5-7.34.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gphotofs-0.5-7.34.x86_64.rpm"
+}

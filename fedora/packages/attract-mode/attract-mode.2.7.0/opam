@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "attract-mode-2.7.0-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "attract-mode-2.7.0-8.fc40.x86_64.rpm"]
+depends: [
+  "SFML" 
+  "attract-mode-data" {= "2.7.0"}
+  "expat" 
+  "fontconfig" 
+  "freetype" 
+  "glibc" 
+  "libX11" 
+  "libXinerama" 
+  "libXrandr" 
+  "libarchive" 
+  "libavcodec-free" 
+  "libavformat-free" 
+  "libavutil-free" 
+  "libcurl" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libjpeg-turbo" 
+  "libstdc++" 
+  "libswresample-free" 
+  "libswscale-free" 
+  "openal-soft" 
+  "zlib-ng-compat" 
+]
+extra-source "attract-mode-2.7.0-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/attract-mode-2.7.0-8.fc40.x86_64.rpm"
+}

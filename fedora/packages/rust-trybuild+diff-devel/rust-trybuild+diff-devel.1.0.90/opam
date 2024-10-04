@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-trybuild+diff-devel-1.0.90-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-trybuild+diff-devel-1.0.90-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-trybuild+dissimilar-devel" {= "1.0.90"}
+  "rust-trybuild-devel" {= "1.0.90"}
+]
+extra-source "rust-trybuild+diff-devel-1.0.90-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-trybuild+diff-devel-1.0.90-1.fc40.noarch.rpm"
+}

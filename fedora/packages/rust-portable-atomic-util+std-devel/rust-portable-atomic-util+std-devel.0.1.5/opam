@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-portable-atomic-util+std-devel-0.1.5-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-portable-atomic-util+std-devel-0.1.5-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-portable-atomic-util+alloc-devel" {= "0.1.5"}
+  "rust-portable-atomic-util-devel" {= "0.1.5"}
+]
+extra-source "rust-portable-atomic-util+std-devel-0.1.5-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-portable-atomic-util+std-devel-0.1.5-2.fc40.noarch.rpm"
+}

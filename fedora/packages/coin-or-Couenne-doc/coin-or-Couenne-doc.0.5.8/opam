@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "coin-or-Couenne-doc-0.5.8-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coin-or-Couenne-doc-0.5.8-16.fc40.x86_64.rpm"]
+depends: [
+  "coin-or-Bonmin-doc" 
+  "coin-or-Cbc-doc" 
+  "coin-or-Couenne" {= "0.5.8"}
+]
+extra-source "coin-or-Couenne-doc-0.5.8-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/coin-or-Couenne-doc-0.5.8-16.fc40.x86_64.rpm"
+}

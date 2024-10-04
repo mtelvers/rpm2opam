@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libkdegames-devel-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libkdegames-devel-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "kf6-kcompletion-devel" 
+  "kf6-kconfig-devel" 
+  "kf6-kconfigwidgets-devel" 
+  "kf6-ki18n-devel" 
+  "kf6-kwidgetsaddons-devel" 
+  "libkdegames" 
+  "qt6-qtbase-devel" 
+  "qt6-qtdeclarative-devel" 
+]
+extra-source "libkdegames-devel-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libkdegames-devel-24.02.1-1.fc40.x86_64.rpm"
+}

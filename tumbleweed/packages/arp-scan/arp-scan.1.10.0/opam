@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "arp-scan-1.10.0-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "arp-scan-1.10.0-1.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcap2" 
+  "libpcap1" 
+  "perl" 
+  "perl-base" 
+  "perl-libwww-perl" 
+]
+extra-source "arp-scan-1.10.0-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/arp-scan-1.10.0-1.8.x86_64.rpm"
+}

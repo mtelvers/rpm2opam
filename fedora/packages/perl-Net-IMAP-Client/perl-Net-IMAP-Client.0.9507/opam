@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Net-IMAP-Client-0.9507-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-IMAP-Client-0.9507-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Encode" 
+  "perl-IO" 
+  "perl-IO-Socket-SSL" 
+  "perl-List-MoreUtils" 
+  "perl-Scalar-List-Utils" 
+  "perl-Socket" 
+  "perl-libs" 
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-Net-IMAP-Client-0.9507-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Net-IMAP-Client-0.9507-4.fc40.noarch.rpm"
+}

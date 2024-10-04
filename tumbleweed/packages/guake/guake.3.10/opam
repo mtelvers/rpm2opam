@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "guake-3.10-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "guake-3.10-3.1.noarch.rpm"]
+depends: [
+  "libutempter0" 
+  "python311-base" 
+  "python311-dbus-python" 
+  "python311-gobject-Gdk" 
+  "python311-pyaml" 
+  "python311-pycairo" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Keybinder-3_0" {= "3.0"}
+  "typelib-1_0-Notify-0_7" {= "0.7"}
+  "typelib-1_0-Pango-1_0" 
+  "typelib-1_0-Vte-2_91" {= "2.91"}
+  "typelib-1_0-Wnck-3_0" {= "3.0"}
+]
+extra-source "guake-3.10-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/guake-3.10-3.1.noarch.rpm"
+}

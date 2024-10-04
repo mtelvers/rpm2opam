@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "unittest-cpp-devel-2.0.0-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "unittest-cpp-devel-2.0.0-2.6.x86_64.rpm"]
+depends: [
+  "libUnitTest++-2_0_0" {= "2.0.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "unittest-cpp-devel-2.0.0-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/unittest-cpp-devel-2.0.0-2.6.x86_64.rpm"
+}

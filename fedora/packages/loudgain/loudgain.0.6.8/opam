@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "loudgain-0.6.8-15.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "loudgain-0.6.8-15.fc39.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" {>= "2.37.9000"}
+  "libavcodec-free" 
+  "libavformat-free" 
+  "libavutil-free" 
+  "libebur128" 
+  "libgcc" 
+  "libstdc++" 
+  "libswresample-free" 
+  "taglib" 
+]
+extra-source "loudgain-0.6.8-15.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/loudgain-0.6.8-15.fc39.x86_64.rpm"
+}

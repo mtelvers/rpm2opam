@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "telepathy-farstream-devel-0.6.1-26.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "telepathy-farstream-devel-0.6.1-26.fc40.x86_64.rpm"]
+depends: [
+  "dbus-devel" 
+  "dbus-glib-devel" 
+  "farstream02-devel" {>= "0.2.7"}
+  "glib2-devel" {>= "2.10"}
+  "gstreamer1-devel" 
+  "pkgconf-pkg-config" 
+  "telepathy-farstream" 
+  "telepathy-glib-devel" {>= "0.7.23"}
+]
+extra-source "telepathy-farstream-devel-0.6.1-26.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/telepathy-farstream-devel-0.6.1-26.fc40.x86_64.rpm"
+}

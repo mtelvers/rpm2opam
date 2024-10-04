@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-python-lsp-server-all-1.12.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-python-lsp-server-all-1.12.0-2.2.noarch.rpm"]
+depends: [
+  "python310-autopep8" 
+  "python310-flake8" 
+  "python310-mccabe" 
+  "python310-pycodestyle" 
+  "python310-pydocstyle" 
+  "python310-pyflakes" 
+  "python310-pylint" 
+  "python310-rope" {>= "1.2.0"}
+  "python310-whatthepatch" 
+  "python310-yapf" {>= "0.33"}
+]
+extra-source "python310-python-lsp-server-all-1.12.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-python-lsp-server-all-1.12.0-2.2.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sparse-0.6.4+20240203-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sparse-0.6.4+20240203-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libsqlite3-0" 
+  "libxml2-2" 
+  "perl-base" 
+]
+extra-source "sparse-0.6.4+20240203-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sparse-0.6.4+20240203-1.2.x86_64.rpm"
+}

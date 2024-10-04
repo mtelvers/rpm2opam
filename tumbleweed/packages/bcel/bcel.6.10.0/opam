@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bcel-6.10.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bcel-6.10.0-1.1.noarch.rpm"]
+depends: [
+  "apache-commons-lang3" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "bcel-6.10.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/bcel-6.10.0-1.1.noarch.rpm"
+}

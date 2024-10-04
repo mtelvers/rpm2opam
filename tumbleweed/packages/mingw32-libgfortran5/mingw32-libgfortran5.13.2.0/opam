@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mingw32-libgfortran5-13.2.0-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw32-libgfortran5-13.2.0-3.1.noarch.rpm"]
+depends: [
+  "mingw32-libgcc_s_sjlj1" 
+  "mingw32-libquadmath0" 
+  "mingw32-libwinpthread1" 
+]
+extra-source "mingw32-libgfortran5-13.2.0-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mingw32-libgfortran5-13.2.0-3.1.noarch.rpm"
+}

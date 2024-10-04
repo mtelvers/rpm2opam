@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-vultr-cli-devel-3.0.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-vultr-cli-devel-3.0.3-1.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-spf13-cobra-devel" 
+  "golang-github-spf13-viper-devel" 
+  "golang-github-vultr-govultr-3-devel" 
+  "golang-gopkg-yaml-3-devel" 
+  "golang-x-oauth2-devel" 
+]
+extra-source "golang-github-vultr-cli-devel-3.0.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-vultr-cli-devel-3.0.3-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pandas-excel-2.2.2-7.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pandas-excel-2.2.2-7.1.noarch.rpm"]
+depends: [
+  "python311-XlsxWriter" {>= "3.0.5"}
+  "python311-odfpy" {>= "1.4.1"}
+  "python311-openpyxl" {>= "3.1.0"}
+  "python311-pandas" {= "2.2.2"}
+  "python311-xlrd" {>= "2.0.1"}
+]
+extra-source "python311-pandas-excel-2.2.2-7.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pandas-excel-2.2.2-7.1.noarch.rpm"
+}

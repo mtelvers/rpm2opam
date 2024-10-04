@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "obs-service-go_modules-0.6.4-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "obs-service-go_modules-0.6.4-2.1.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "go" {>= "1.22"}
+  "python311-libarchive-c" 
+]
+extra-source "obs-service-go_modules-0.6.4-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/obs-service-go_modules-0.6.4-2.1.noarch.rpm"
+}

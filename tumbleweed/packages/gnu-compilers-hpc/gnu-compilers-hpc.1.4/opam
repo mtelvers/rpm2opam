@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnu-compilers-hpc-1.4-16.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnu-compilers-hpc-1.4-16.1.noarch.rpm"]
+depends: [
+  "lua-lmod" 
+]
+extra-source "gnu-compilers-hpc-1.4-16.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnu-compilers-hpc-1.4-16.1.noarch.rpm"
+}

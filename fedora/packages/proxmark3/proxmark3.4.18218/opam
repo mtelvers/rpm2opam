@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "proxmark3-4.18218-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "proxmark3-4.18218-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bluez" 
+  "bluez-libs" 
+  "bzip2-libs" 
+  "gd" 
+  "glibc" 
+  "jansson" 
+  "libgcc" 
+  "libstdc++" 
+  "lz4-libs" 
+  "openssl-libs" 
+  "perl-interpreter" 
+  "python3" 
+  "python3-libs" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "readline" 
+]
+extra-source "proxmark3-4.18218-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/proxmark3-4.18218-1.fc40.x86_64.rpm"
+}

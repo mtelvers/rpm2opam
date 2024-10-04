@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-rmarkdown-2.24-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-rmarkdown-2.24-3.fc40.noarch.rpm"]
+depends: [
+  "R-bslib" {>= "0.2.5.1"}
+  "R-core" {= "4.3"}
+  "R-evaluate" {>= "0.13"}
+  "R-fontawesome" {>= "0.5.0"}
+  "R-htmltools" {>= "0.5.1"}
+  "R-jquerylib" 
+  "R-jsonlite" 
+  "R-knitr" {>= "1.22"}
+  "R-stringr" {>= "1.2.0"}
+  "R-tinytex" {>= "0.31"}
+  "R-xfun" {>= "0.36"}
+  "R-yaml" {>= "2.1.19"}
+  "adobe-source-code-pro-fonts" 
+  "adobe-source-sans-pro-fonts" 
+  "glyphicons-halflings-fonts" 
+  "glyphography-newscycle-fonts" 
+  "google-roboto-fonts" 
+  "impallari-raleway-fonts" 
+  "lato-fonts" 
+  "open-sans-fonts" 
+  "pandoc" {>= "1.14"}
+]
+extra-source "R-rmarkdown-2.24-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-rmarkdown-2.24-3.fc40.noarch.rpm"
+}

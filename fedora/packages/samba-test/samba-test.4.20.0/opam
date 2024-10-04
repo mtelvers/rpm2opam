@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "samba-test-4.20.0-0.5.rc4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "samba-test-4.20.0-0.5.rc4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gnutls" 
+  "krb5-libs" 
+  "libcom_err" 
+  "libldb" 
+  "libnetapi" {= "4.20.0"}
+  "libsmbclient" {= "4.20.0"}
+  "libtalloc" 
+  "libtdb" 
+  "libtevent" 
+  "libwbclient" {= "4.20.0"}
+  "perl-Archive-Tar" 
+  "popt" 
+  "python3-samba" 
+  "readline" 
+  "samba" {= "4.20.0"}
+  "samba-client-libs" 
+  "samba-common" {= "4.20.0"}
+  "samba-common-libs" 
+  "samba-dc-libs" 
+  "samba-libs" 
+  "samba-test-libs" 
+  "samba-winbind" 
+]
+extra-source "samba-test-4.20.0-0.5.rc4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/samba-test-4.20.0-0.5.rc4.fc40.x86_64.rpm"
+}

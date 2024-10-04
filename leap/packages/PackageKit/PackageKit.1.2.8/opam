@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "PackageKit-1.2.8-lp160.1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "PackageKit-1.2.8-lp160.1.4.x86_64.rpm"]
+depends: [
+  "PackageKit-backend-dnf" 
+  "PackageKit-branding-upstream" {= "1.2.8"}
+  "bash-sh" 
+  "glibc" 
+  "libgio-2_0-0" 
+  "libglib-2_0-0" 
+  "libgmodule-2_0-0" 
+  "libgobject-2_0-0" 
+  "libpackagekit-glib2-18" 
+  "libpolkit-gobject-1-0" 
+  "libsqlite3-0" 
+  "libsystemd0" 
+]
+extra-source "PackageKit-1.2.8-lp160.1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/PackageKit-1.2.8-lp160.1.4.x86_64.rpm"
+}

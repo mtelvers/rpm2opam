@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CPAN-Uploader-0.103018-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CPAN-Uploader-0.103018-5.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Digest-MD5" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long-Descriptive" {>= "0.84"}
+  "perl-HTTP-Message" 
+  "perl-LWP-Protocol-https" {>= "1"}
+  "perl-PathTools" 
+  "perl-TermReadKey" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+]
+extra-source "perl-CPAN-Uploader-0.103018-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CPAN-Uploader-0.103018-5.fc40.noarch.rpm"
+}

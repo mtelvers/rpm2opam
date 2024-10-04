@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-beamerswitch-2024.216.1.9svn64182-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-beamerswitch-2024.216.1.9svn64182-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-beamer" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-l3kernel" 
+  "texlive-l3packages" 
+  "texlive-pgf" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tools" 
+  "texlive-xkeyval" 
+  "texlive-xstring" 
+]
+extra-source "texlive-beamerswitch-2024.216.1.9svn64182-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-beamerswitch-2024.216.1.9svn64182-57.1.noarch.rpm"
+}

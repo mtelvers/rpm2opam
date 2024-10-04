@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libtss2-fapi1-4.1.0-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libtss2-fapi1-4.1.0-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcurl-mini4" 
+  "libjson-c5" 
+  "libopenssl3" 
+  "libtss2-esys0" 
+  "libtss2-fapi-common" 
+  "libtss2-mu0" 
+  "libtss2-tctildr0" 
+  "libuuid1" 
+]
+extra-source "libtss2-fapi1-4.1.0-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libtss2-fapi1-4.1.0-slfo.1.1.7.x86_64.rpm"
+}

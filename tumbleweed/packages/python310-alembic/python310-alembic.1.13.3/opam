@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-alembic-1.13.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-alembic-1.13.3-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-Mako" 
+  "python310-SQLAlchemy" {>= "2.0.0"}
+  "python310-base" 
+  "python310-typing_extensions" {>= "4"}
+  "update-alternatives" 
+]
+extra-source "python310-alembic-1.13.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-alembic-1.13.3-1.1.noarch.rpm"
+}

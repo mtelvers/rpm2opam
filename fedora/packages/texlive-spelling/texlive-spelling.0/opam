@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-spelling-svn30715.0.41-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-spelling-svn30715.0.41-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-atbegshi" 
+  "texlive-base" 
+  "texlive-iftex" 
+  "texlive-kpathsea" 
+  "texlive-luatexbase" 
+]
+extra-source "texlive-spelling-svn30715.0.41-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-spelling-svn30715.0.41-71.fc40.noarch.rpm"
+}

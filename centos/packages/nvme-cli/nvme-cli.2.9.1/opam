@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nvme-cli-2.9.1-4.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nvme-cli-2.9.1-4.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "json-c" 
+  "libgcc" 
+  "libnvme" 
+  "util-linux" 
+]
+extra-source "nvme-cli-2.9.1-4.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/nvme-cli-2.9.1-4.el10.x86_64.rpm"
+}

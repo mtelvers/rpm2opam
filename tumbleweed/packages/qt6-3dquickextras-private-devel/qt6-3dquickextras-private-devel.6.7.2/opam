@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qt6-3dquickextras-private-devel-6.7.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qt6-3dquickextras-private-devel-6.7.2-1.1.x86_64.rpm"]
+depends: [
+  "qt6-3dextras-private-devel" {= "6.7.2"}
+  "qt6-3dquick-private-devel" {= "6.7.2"}
+  "qt6-3dquickextras-devel" {= "6.7.2"}
+  "qt6-3drender-private-devel" {= "6.7.2"}
+  "qt6-core-private-devel" {= "6.7.2"}
+  "qt6-qml-private-devel" {= "6.7.2"}
+]
+extra-source "qt6-3dquickextras-private-devel-6.7.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/qt6-3dquickextras-private-devel-6.7.2-1.1.x86_64.rpm"
+}

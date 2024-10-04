@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-grpconst-2.6.5-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-grpconst-2.6.5-1.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "gap" {>= "4.7"}
+  "gap-autpgrp" {>= "1.6"}
+  "gap-irredsol" {>= "1.2"}
+  "gap-smallgrp" {>= "1.4"}
+]
+extra-source "gap-grpconst-2.6.5-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gap-grpconst-2.6.5-1.3.x86_64.rpm"
+}

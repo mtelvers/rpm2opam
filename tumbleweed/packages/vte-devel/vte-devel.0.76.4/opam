@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vte-devel-0.76.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vte-devel-0.76.4-1.1.x86_64.rpm"]
+depends: [
+  "cairo-devel" {>= "1.0"}
+  "glib2-devel" {>= "2.72.0"}
+  "gtk3-devel" {>= "3.24.0"}
+  "gtk4-devel" {>= "4.14.0"}
+  "libvte-2_91-0" {= "0.76.4"}
+  "pango-devel" {>= "1.22.0"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Vte-2_91" {= "0.76.4"}
+  "typelib-1_0-Vte-3_91" {= "0.76.4"}
+]
+extra-source "vte-devel-0.76.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vte-devel-0.76.4-1.1.x86_64.rpm"
+}

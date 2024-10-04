@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MaxMind-DB-Reader-XS-1.000009-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MaxMind-DB-Reader-XS-1.000009-8.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libmaxminddb" 
+  "perl-Math-Int128" 
+  "perl-Math-Int64" 
+  "perl-MaxMind-DB-Common" {>= "0.40001"}
+  "perl-MaxMind-DB-Reader" 
+  "perl-Moo" 
+  "perl-libs" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-MaxMind-DB-Reader-XS-1.000009-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MaxMind-DB-Reader-XS-1.000009-8.fc40.x86_64.rpm"
+}

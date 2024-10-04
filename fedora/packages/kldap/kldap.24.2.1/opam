@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kldap-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kldap-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "cyrus-sasl-lib" 
+  "glibc" 
+  "kf6-kconfig" 
+  "kf6-kcoreaddons" 
+  "kf6-ki18n" 
+  "kf6-kio-core-libs" 
+  "kf6-kwidgetsaddons" 
+  "libstdc++" 
+  "openldap" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qtkeychain-qt6" 
+]
+extra-source "kldap-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kldap-24.02.1-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rbd-nbd-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rbd-nbd-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libgcc_s1" 
+  "libnl3-200" 
+  "librados2" 
+  "librbd1" 
+  "libstdc++6" 
+]
+extra-source "rbd-nbd-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rbd-nbd-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm"
+}

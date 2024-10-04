@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gvfs-devel-1.54.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gvfs-devel-1.54.3-1.1.noarch.rpm"]
+depends: [
+  "gvfs" {= "1.54.3"}
+]
+extra-source "gvfs-devel-1.54.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gvfs-devel-1.54.3-1.1.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "epson-inkjet-printer-escpr-1.7.22-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "epson-inkjet-printer-escpr-1.7.22-2.2.x86_64.rpm"]
+depends: [
+  "cups" 
+  "glibc" 
+  "libcups2" 
+  "libcupsimage2" 
+]
+extra-source "epson-inkjet-printer-escpr-1.7.22-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/epson-inkjet-printer-escpr-1.7.22-2.2.x86_64.rpm"
+}

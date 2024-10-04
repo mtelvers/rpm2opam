@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "icingaweb2-2.12.1-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "icingaweb2-2.12.1-2.2.noarch.rpm"]
+depends: [
+  "apache2" 
+  "apache2-mod_php8" 
+  "bash-sh" 
+  "icinga-l10n" {>= "1.1.0"}
+  "icingacli" {= "2.12.1"}
+  "icingaweb2-common" {= "2.12.1"}
+  "php-icinga" {= "2.12.1"}
+]
+extra-source "icingaweb2-2.12.1-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/icingaweb2-2.12.1-2.2.noarch.rpm"
+}

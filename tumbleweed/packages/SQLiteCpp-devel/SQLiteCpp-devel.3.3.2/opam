@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "SQLiteCpp-devel-3.3.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "SQLiteCpp-devel-3.3.2-1.1.x86_64.rpm"]
+depends: [
+  "libsqlitecpp0" {= "3.3.2"}
+  "pkgconf-pkg-config" 
+  "sqlite3-devel" 
+]
+extra-source "SQLiteCpp-devel-3.3.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/SQLiteCpp-devel-3.3.2-1.1.x86_64.rpm"
+}

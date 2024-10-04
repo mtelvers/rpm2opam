@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "intel-cm-compiler-1.0.144-7.20240131gitcc4f5b6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "intel-cm-compiler-1.0.144-7.20240131gitcc4f5b6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "intel-cm-compiler-devel" {= "1.0.144"}
+  "intel-cm-compiler-libs" {= "1.0.144"}
+  "libstdc++" 
+  "llvm11-libs" 
+]
+extra-source "intel-cm-compiler-1.0.144-7.20240131gitcc4f5b6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/intel-cm-compiler-1.0.144-7.20240131gitcc4f5b6.fc40.x86_64.rpm"
+}

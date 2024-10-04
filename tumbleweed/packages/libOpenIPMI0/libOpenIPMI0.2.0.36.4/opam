@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libOpenIPMI0-2.0.36.4+git.c114912-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libOpenIPMI0-2.0.36.4+git.c114912-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgdbm6" 
+  "libopenssl3" 
+]
+extra-source "libOpenIPMI0-2.0.36.4+git.c114912-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libOpenIPMI0-2.0.36.4+git.c114912-1.1.x86_64.rpm"
+}

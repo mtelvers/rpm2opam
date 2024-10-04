@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MouseX-Types-0.06-11.27.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MouseX-Types-0.06-11.27.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Any-Moose" {>= "0.15"}
+  "perl-Mouse" {>= "0.77"}
+]
+extra-source "perl-MouseX-Types-0.06-11.27.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MouseX-Types-0.06-11.27.noarch.rpm"
+}

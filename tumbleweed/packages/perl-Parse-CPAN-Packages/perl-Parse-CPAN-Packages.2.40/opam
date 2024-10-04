@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Parse-CPAN-Packages-2.40-1.31.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Parse-CPAN-Packages-2.40-1.31.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Archive-Peek" 
+  "perl-CPAN-DistnameInfo" 
+  "perl-File-Slurp" 
+  "perl-Moo" 
+  "perl-PPI" 
+  "perl-Path-Class" 
+  "perl-Test-InDistDir" 
+  "perl-Type-Tiny" 
+  "perl-base" 
+]
+extra-source "perl-Parse-CPAN-Packages-2.40-1.31.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Parse-CPAN-Packages-2.40-1.31.noarch.rpm"
+}

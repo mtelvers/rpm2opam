@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gdmd-20210818T144245-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdmd-20210818T144245-1.6.noarch.rpm"]
+depends: [
+  "gcc-d" 
+  "perl-base" 
+]
+extra-source "gdmd-20210818T144245-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gdmd-20210818T144245-1.6.noarch.rpm"
+}

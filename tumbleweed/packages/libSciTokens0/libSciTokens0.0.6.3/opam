@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libSciTokens0-0.6.3-2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libSciTokens0-0.6.3-2.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcurl-mini4" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libsqlite3-0" 
+  "libstdc++6" 
+  "libuuid1" 
+]
+extra-source "libSciTokens0-0.6.3-2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libSciTokens0-0.6.3-2.5.x86_64.rpm"
+}

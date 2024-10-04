@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-verifica-2023.201.1.3svn56625-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-verifica-2023.201.1.3svn56625-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-amsfonts" 
+  "texlive-cmbright" 
+  "texlive-enumitem" 
+  "texlive-eurosym" 
+  "texlive-extsizes" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-gensymb" 
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-lineno" 
+  "texlive-mathtools" 
+  "texlive-multido" 
+  "texlive-ncctools" 
+  "texlive-newunicodechar" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-setspace" 
+  "texlive-tabto-ltx" 
+  "texlive-tools" 
+]
+extra-source "texlive-verifica-2023.201.1.3svn56625-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-verifica-2023.201.1.3svn56625-slfo.1.1.4.noarch.rpm"
+}

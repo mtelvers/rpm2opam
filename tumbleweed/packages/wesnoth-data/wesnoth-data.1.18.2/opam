@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wesnoth-data-1.18.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wesnoth-data-1.18.2-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "python311-base" 
+  "wesnoth-fslayout" 
+]
+extra-source "wesnoth-data-1.18.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/wesnoth-data-1.18.2-1.1.noarch.rpm"
+}

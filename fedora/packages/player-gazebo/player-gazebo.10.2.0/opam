@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "player-gazebo-10.2.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "player-gazebo-10.2.0-4.fc40.x86_64.rpm"]
+depends: [
+  "gazebo-common" {= "10.2.0"}
+  "gazebo-libs" {= "10.2.0"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "player" 
+  "protobuf" 
+]
+extra-source "player-gazebo-10.2.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/player-gazebo-10.2.0-4.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-vega-4.0.0-4.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-vega-4.0.0-4.3.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-ipytablewidgets" {>= "0.3.0"}
+  "python310-jupyter" {>= "1.0.0"}
+  "python310-pandas" {>= "1.5.0"}
+]
+extra-source "python310-vega-4.0.0-4.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-vega-4.0.0-4.3.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "389-ds-devel-3.1.1~git13.a9c7ff9-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "389-ds-devel-3.1.1~git13.a9c7ff9-1.1.x86_64.rpm"]
+depends: [
+  "389-ds" {= "3.1.1"}
+  "libevent-devel" 
+  "libsvrcore0" {= "3.1.1"}
+  "mozilla-nspr-devel" 
+  "mozilla-nss-devel" 
+  "openldap2-devel" 
+  "pkgconf-pkg-config" 
+  "systemd" 
+]
+extra-source "389-ds-devel-3.1.1~git13.a9c7ff9-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/389-ds-devel-3.1.1~git13.a9c7ff9-1.1.x86_64.rpm"
+}

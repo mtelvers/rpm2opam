@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "notmuch-mutt-0.38.2-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "notmuch-mutt-0.38.2-5.fc40.noarch.rpm"]
+depends: [
+  "notmuch" {= "0.38.2"}
+  "perl-Digest-SHA" 
+  "perl-File-Basename" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-Getopt-Long" 
+  "perl-Mail-Box" 
+  "perl-MailTools" 
+  "perl-Pod-Usage" 
+  "perl-Term-ReadLine" 
+  "perl-Term-ReadLine-Gnu" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "notmuch-mutt-0.38.2-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/notmuch-mutt-0.38.2-5.fc40.noarch.rpm"
+}

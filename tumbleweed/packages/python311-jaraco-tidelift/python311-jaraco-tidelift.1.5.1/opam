@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-jaraco.tidelift-1.5.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-jaraco.tidelift-1.5.1-2.1.noarch.rpm"]
+depends: [
+  "python311-autocommand" 
+  "python311-base" {= "3.11"}
+  "python311-importlib-resources" {>= "1.6"}
+  "python311-keyring" 
+  "python311-requests-toolbelt" 
+]
+extra-source "python311-jaraco.tidelift-1.5.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-jaraco.tidelift-1.5.1-2.1.noarch.rpm"
+}

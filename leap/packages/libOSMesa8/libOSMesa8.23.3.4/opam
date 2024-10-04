@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libOSMesa8-23.3.4-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libOSMesa8-23.3.4-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "Mesa-libglapi0" 
+  "glibc" 
+  "libdrm2" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+]
+extra-source "libOSMesa8-23.3.4-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libOSMesa8-23.3.4-slfo.1.1.7.x86_64.rpm"
+}

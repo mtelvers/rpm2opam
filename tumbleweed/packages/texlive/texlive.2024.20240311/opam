@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-2024.20240311-100.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-2024.20240311-100.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-ncurses-utils" 
+  "coreutils" 
+  "dialog" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "perl-base" 
+  "sed" 
+  "system-user-mktex" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+]
+extra-source "texlive-2024.20240311-100.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/texlive-2024.20240311-100.1.x86_64.rpm"
+}

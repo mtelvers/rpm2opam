@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpulse-devel-17.0-4.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpulse-devel-17.0-4.4.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libpulse-mainloop-glib0" {= "17.0"}
+  "libpulse0" {= "17.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libpulse-devel-17.0-4.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpulse-devel-17.0-4.4.x86_64.rpm"
+}

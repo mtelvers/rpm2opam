@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ctor0.1-devel-0.1.26-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ctor0.1-devel-0.1.26-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-quote+default-devel" 
+  "rust-syn+full-devel" 
+  "rust-syn+parsing-devel" 
+  "rust-syn+printing-devel" 
+  "rust-syn+proc-macro-devel" 
+  "rust-syn-devel" 
+]
+extra-source "rust-ctor0.1-devel-0.1.26-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ctor0.1-devel-0.1.26-3.fc40.noarch.rpm"
+}

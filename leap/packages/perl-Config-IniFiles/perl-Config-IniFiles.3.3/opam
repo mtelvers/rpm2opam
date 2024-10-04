@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Config-IniFiles-3.000003-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Config-IniFiles-3.000003-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-IO-stringy" 
+  "perl-base" {>= "1.33"}
+]
+extra-source "perl-Config-IniFiles-3.000003-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/perl-Config-IniFiles-3.000003-slfo.1.1.3.noarch.rpm"
+}

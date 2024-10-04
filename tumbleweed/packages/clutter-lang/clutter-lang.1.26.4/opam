@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "clutter-lang-1.26.4-4.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clutter-lang-1.26.4-4.12.noarch.rpm"]
+depends: [
+  "libclutter-1_0-0" {= "1.26.4"}
+]
+extra-source "clutter-lang-1.26.4-4.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/clutter-lang-1.26.4-4.12.noarch.rpm"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "globus-gridftp-server-devel-13.25-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "globus-gridftp-server-devel-13.25-1.fc40.x86_64.rpm"]
+depends: [
+  "globus-authz-devel" {>= "2"}
+  "globus-common-devel" {>= "17"}
+  "globus-ftp-control-devel" {>= "7"}
+  "globus-gfork-devel" {>= "3"}
+  "globus-gridftp-server" {= "13.25"}
+  "globus-gridftp-server-control-devel" {>= "9"}
+  "globus-gsi-credential-devel" {>= "6"}
+  "globus-gsi-sysconfig-devel" {>= "5"}
+  "globus-gss-assist-devel" {>= "9"}
+  "globus-gssapi-gsi-devel" {>= "10"}
+  "globus-io-devel" {>= "9"}
+  "globus-xio-devel" {>= "5"}
+  "globus-xio-gsi-driver-devel" {>= "2"}
+  "openssl-devel" {>= "1.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "globus-gridftp-server-devel-13.25-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/globus-gridftp-server-devel-13.25-1.fc40.x86_64.rpm"
+}

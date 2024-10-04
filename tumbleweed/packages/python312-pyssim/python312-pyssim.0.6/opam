@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pyssim-0.6-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pyssim-0.6-1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-Pillow" 
+  "python312-base" 
+  "python312-numpy" 
+  "python312-scipy" 
+  "update-alternatives" 
+]
+extra-source "python312-pyssim-0.6-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pyssim-0.6-1.4.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "metacity-theme-dracula-3.0+git94.9840b6b-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "metacity-theme-dracula-3.0+git94.9840b6b-1.4.noarch.rpm"]
+depends: [
+  "metacity" 
+  "metatheme-dracula-common" {= "3.0"}
+]
+extra-source "metacity-theme-dracula-3.0+git94.9840b6b-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/metacity-theme-dracula-3.0+git94.9840b6b-1.4.noarch.rpm"
+}

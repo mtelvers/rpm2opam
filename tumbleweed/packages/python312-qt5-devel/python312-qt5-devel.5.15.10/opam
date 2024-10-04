@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-qt5-devel-5.15.10-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-qt5-devel-5.15.10-1.7.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libQt5Core5" 
+  "libgcc_s1" 
+  "libpython3_12-1_0" 
+  "libqt5-qtbase-devel" 
+  "libqt5-qtconnectivity-devel" 
+  "libqt5-qtdeclarative-devel" 
+  "libqt5-qtlocation-devel" 
+  "libqt5-qtmultimedia-devel" 
+  "libqt5-qtserialport-devel" 
+  "libqt5-qtspeech-devel" 
+  "libqt5-qtsvg-devel" 
+  "libqt5-qttools-devel" 
+  "libqt5-qtwebchannel-devel" 
+  "libqt5-qtwebsockets-devel" 
+  "libqt5-qtx11extras-devel" 
+  "libqt5-qtxmlpatterns-devel" 
+  "libstdc++6" 
+  "python312-base" {= "3.12"}
+  "python312-dbus-python-devel" 
+  "python312-devel" 
+  "python312-qt5" {= "5.15.10"}
+  "update-alternatives" 
+]
+extra-source "python312-qt5-devel-5.15.10-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-qt5-devel-5.15.10-1.7.x86_64.rpm"
+}

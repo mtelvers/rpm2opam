@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-imageio-2.35.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-imageio-2.35.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-Pillow" {>= "8.3.2"}
+  "python310-base" 
+  "python310-numpy" {>= "1.20.0"}
+  "update-alternatives" 
+]
+extra-source "python310-imageio-2.35.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-imageio-2.35.1-1.1.noarch.rpm"
+}

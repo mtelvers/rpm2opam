@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kmymoney-lang-5.1.3-lp160.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kmymoney-lang-5.1.3-lp160.1.3.noarch.rpm"]
+depends: [
+  "kmymoney" {= "5.1.3"}
+]
+extra-source "kmymoney-lang-5.1.3-lp160.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/kmymoney-lang-5.1.3-lp160.1.3.noarch.rpm"
+}

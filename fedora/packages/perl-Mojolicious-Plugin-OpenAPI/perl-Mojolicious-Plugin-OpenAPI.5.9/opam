@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Mojolicious-Plugin-OpenAPI-5.09-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mojolicious-Plugin-OpenAPI-5.09-4.fc40.noarch.rpm"]
+depends: [
+  "perl-JSON-Validator" {>= "5.0"}
+  "perl-Mojolicious" 
+  "perl-Scalar-List-Utils" 
+  "perl-constant" 
+  "perl-libs" 
+]
+extra-source "perl-Mojolicious-Plugin-OpenAPI-5.09-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Mojolicious-Plugin-OpenAPI-5.09-4.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-parallel-prof-3.2.2.0-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-parallel-prof-3.2.2.0-29.fc40.x86_64.rpm"]
+depends: [
+  "ghc-array-prof" 
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-parallel-devel" {= "3.2.2.0"}
+]
+extra-source "ghc-parallel-prof-3.2.2.0-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-parallel-prof-3.2.2.0-29.fc40.x86_64.rpm"
+}

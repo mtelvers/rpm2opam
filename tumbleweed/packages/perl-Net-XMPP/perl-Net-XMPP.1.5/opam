@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Net-XMPP-1.05-1.30.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-XMPP-1.05-1.30.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Authen-SASL" {>= "2.12"}
+  "perl-XML-Stream" {>= "1.24"}
+  "perl-base" 
+]
+extra-source "perl-Net-XMPP-1.05-1.30.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Net-XMPP-1.05-1.30.noarch.rpm"
+}

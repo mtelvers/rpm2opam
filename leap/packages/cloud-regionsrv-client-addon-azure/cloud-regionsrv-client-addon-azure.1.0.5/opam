@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cloud-regionsrv-client-addon-azure-1.0.5-slfo.1.2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cloud-regionsrv-client-addon-azure-1.0.5-slfo.1.2.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "cloud-regionsrv-client" {>= "9.0.0"}
+  "cloud-regionsrv-client-plugin-azure" 
+  "python311-base" 
+]
+extra-source "cloud-regionsrv-client-addon-azure-1.0.5-slfo.1.2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/cloud-regionsrv-client-addon-azure-1.0.5-slfo.1.2.2.noarch.rpm"
+}

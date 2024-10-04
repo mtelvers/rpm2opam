@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libcurl-minimal-8.6.0-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcurl-minimal-8.6.0-7.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "krb5-libs" 
+  "libidn2" 
+  "libnghttp2" {>= "1.59.0"}
+  "openssl-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "libcurl-minimal-8.6.0-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libcurl-minimal-8.6.0-7.fc40.x86_64.rpm"
+}

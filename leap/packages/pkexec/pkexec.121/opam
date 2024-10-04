@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pkexec-121-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pkexec-121-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libpolkit-agent-1-0" 
+  "libpolkit-gobject-1-0" 
+  "pam" 
+  "permissions" 
+  "polkit" {= "121"}
+]
+extra-source "pkexec-121-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/pkexec-121-slfo.1.1.7.x86_64.rpm"
+}

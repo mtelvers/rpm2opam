@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-ansible-lint-24.2.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-ansible-lint-24.2.0-1.fc40.noarch.rpm"]
+depends: [
+  "ansible-core" 
+  "black" {>= "22.8"}
+  "python3" 
+  "python3-ansible-compat" {>= "4.1.11"}
+  "python3-filelock" {>= "3.3"}
+  "python3-jsonschema" {>= "4.10"}
+  "python3-packaging" {>= "21.3"}
+  "python3-pathspec" {>= "0.10.3"}
+  "python3-pyyaml" {>= "5.4.1"}
+  "python3-rich" {>= "12"}
+  "python3-ruamel-yaml" {>= "0.18.5"}
+  "python3-subprocess-tee" {>= "0.4.1"}
+  "python3-wcmatch" {>= "8.1.2"}
+  "yamllint" {>= "1.30"}
+]
+extra-source "python3-ansible-lint-24.2.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-ansible-lint-24.2.0-1.fc40.noarch.rpm"
+}

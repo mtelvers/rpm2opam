@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "upmpdcli-1.8.16-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "upmpdcli-1.8.16-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "glibc" 
+  "libcurl-mini4" 
+  "libgcc_s1" 
+  "libjsoncpp25" 
+  "libmicrohttpd12" 
+  "libmpdclient2" 
+  "libstdc++6" 
+  "libupnpp16" 
+  "python311-base" 
+  "python311-requests" 
+  "shadow" 
+  "system-group-hardware" 
+]
+extra-source "upmpdcli-1.8.16-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/upmpdcli-1.8.16-1.1.x86_64.rpm"
+}

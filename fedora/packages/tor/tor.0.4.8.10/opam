@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tor-0.4.8.10-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tor-0.4.8.10-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libcap" 
+  "libevent" 
+  "libgcc" 
+  "libseccomp" 
+  "libzstd" 
+  "openssl-libs" 
+  "shadow-utils" 
+  "systemd-libs" 
+  "torsocks" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "tor-0.4.8.10-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tor-0.4.8.10-2.fc40.x86_64.rpm"
+}

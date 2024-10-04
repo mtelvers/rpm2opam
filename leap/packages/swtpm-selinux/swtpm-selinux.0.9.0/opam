@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "swtpm-selinux-0.9.0-slfo.1.2.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "swtpm-selinux-0.9.0-slfo.1.2.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "policycoreutils" 
+  "policycoreutils-python-utils" 
+  "selinux-policy" {>= "20240604"}
+  "selinux-policy-minimum" {>= "20240604"}
+  "selinux-tools" 
+]
+extra-source "swtpm-selinux-0.9.0-slfo.1.2.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/swtpm-selinux-0.9.0-slfo.1.2.4.noarch.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "collectl-4.3.5-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "collectl-4.3.5-5.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-English" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-IO-Compress" 
+  "perl-Net-Ping" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Sys-Syslog" 
+  "perl-Time-HiRes" 
+  "perl-Time-Local" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-threads" 
+  "perl-threads-shared" 
+  "systemd" 
+]
+extra-source "collectl-4.3.5-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/collectl-4.3.5-5.fc40.noarch.rpm"
+}

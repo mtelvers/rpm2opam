@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "timoni-bash-completion-0.22.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "timoni-bash-completion-0.22.0-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "timoni" {= "0.22.0"}
+]
+extra-source "timoni-bash-completion-0.22.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/timoni-bash-completion-0.22.0-1.1.noarch.rpm"
+}

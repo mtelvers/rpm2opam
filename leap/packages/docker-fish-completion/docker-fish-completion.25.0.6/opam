@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "docker-fish-completion-25.0.6_ce-slfo.1.1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "docker-fish-completion-25.0.6_ce-slfo.1.1.1.noarch.rpm"]
+depends: [
+  "docker" {= "25.0.6"}
+  "fish" 
+]
+extra-source "docker-fish-completion-25.0.6_ce-slfo.1.1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/docker-fish-completion-25.0.6_ce-slfo.1.1.1.noarch.rpm"
+}

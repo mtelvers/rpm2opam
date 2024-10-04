@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pkgtreediff-0.6.0-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pkgtreediff-0.6.0-7.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gmp" 
+  "libffi" 
+  "openssl-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "pkgtreediff-0.6.0-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pkgtreediff-0.6.0-7.fc40.x86_64.rpm"
+}

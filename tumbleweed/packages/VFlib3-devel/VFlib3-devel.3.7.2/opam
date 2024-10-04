@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "VFlib3-devel-3.7.2-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "VFlib3-devel-3.7.2-3.1.x86_64.rpm"]
+depends: [
+  "freetype2-devel" 
+  "libVFlib3-10" {= "3.7.2"}
+  "texlive-kpathsea-devel" 
+]
+extra-source "VFlib3-devel-3.7.2-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/VFlib3-devel-3.7.2-3.1.x86_64.rpm"
+}

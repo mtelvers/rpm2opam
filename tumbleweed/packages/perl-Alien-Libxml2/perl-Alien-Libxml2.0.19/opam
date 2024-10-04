@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Alien-Libxml2-0.19-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Alien-Libxml2-0.19-1.8.x86_64.rpm"]
+depends: [
+  "perl" 
+  "perl-Alien-Build" {>= "2.37"}
+]
+extra-source "perl-Alien-Libxml2-0.19-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-Alien-Libxml2-0.19-1.8.x86_64.rpm"
+}

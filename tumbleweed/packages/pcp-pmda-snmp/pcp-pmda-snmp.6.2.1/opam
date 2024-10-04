@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pcp-pmda-snmp-6.2.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcp-pmda-snmp-6.2.1-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "perl-Net-SNMP" 
+  "perl-PCP-PMDA" {= "6.2.1"}
+]
+extra-source "pcp-pmda-snmp-6.2.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pcp-pmda-snmp-6.2.1-2.1.noarch.rpm"
+}

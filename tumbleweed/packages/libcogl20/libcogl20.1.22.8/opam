@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcogl20-1.22.8-2.15.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcogl20-1.22.8-2.15.x86_64.rpm"]
+depends: [
+  "Mesa" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libXdamage1" 
+  "libXext6" 
+  "libXfixes3" 
+  "libXrandr2" 
+  "libcairo2" 
+  "libdrm2" 
+  "libgbm1" 
+  "libgdk_pixbuf-2_0-0" 
+  "libglvnd" 
+  "libwayland-client0" 
+  "libwayland-egl1" 
+  "libwayland-server0" 
+]
+extra-source "libcogl20-1.22.8-2.15.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcogl20-1.22.8-2.15.x86_64.rpm"
+}

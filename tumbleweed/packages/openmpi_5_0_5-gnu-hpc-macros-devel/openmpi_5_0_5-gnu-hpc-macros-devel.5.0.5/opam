@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openmpi_5_0_5-gnu-hpc-macros-devel-5.0.5-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openmpi_5_0_5-gnu-hpc-macros-devel-5.0.5-1.2.x86_64.rpm"]
+depends: [
+  "openmpi_5_0_5-gnu-hpc-devel" {= "5.0.5"}
+]
+extra-source "openmpi_5_0_5-gnu-hpc-macros-devel-5.0.5-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openmpi_5_0_5-gnu-hpc-macros-devel-5.0.5-1.2.x86_64.rpm"
+}

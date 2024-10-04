@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-parsec-client-devel-0.16.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-parsec-client-devel-0.16.0-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cargo" 
+  "rust-derivative+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-log+default-devel" 
+  "rust-num+default-devel" 
+  "rust-parsec-interface+default-devel" 
+  "rust-url+default-devel" 
+  "rust-zeroize+default-devel" 
+]
+extra-source "rust-parsec-client-devel-0.16.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-parsec-client-devel-0.16.0-1.fc40.noarch.rpm"
+}

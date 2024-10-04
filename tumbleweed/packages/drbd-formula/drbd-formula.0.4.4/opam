@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "drbd-formula-0.4.4+git.1625210904.93ea1f9-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "drbd-formula-0.4.4+git.1625210904.93ea1f9-1.9.noarch.rpm"]
+depends: [
+  "bash" 
+  "drbd-utils" 
+  "salt" 
+  "salt-shaptools" {>= "0.2.9"}
+  "salt-standalone-formulas-configuration" 
+]
+extra-source "drbd-formula-0.4.4+git.1625210904.93ea1f9-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/drbd-formula-0.4.4+git.1625210904.93ea1f9-1.9.noarch.rpm"
+}

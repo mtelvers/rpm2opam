@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgfapi0-11.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgfapi0-11.1-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libacl1" 
+  "libgfrpc0" 
+  "libgfxdr0" 
+  "libglusterfs0" 
+  "libtirpc3" 
+  "libuuid1" 
+]
+extra-source "libgfapi0-11.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgfapi0-11.1-2.1.x86_64.rpm"
+}

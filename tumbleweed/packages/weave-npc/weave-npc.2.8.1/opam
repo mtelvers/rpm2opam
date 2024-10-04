@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "weave-npc-2.8.1-3.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "weave-npc-2.8.1-3.12.x86_64.rpm"]
+depends: [
+  "ipset" 
+  "iptables" 
+  "ulogd" 
+  "ulogd-pcap" 
+]
+extra-source "weave-npc-2.8.1-3.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/weave-npc-2.8.1-3.12.x86_64.rpm"
+}

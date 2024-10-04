@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tito-0.6.26-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tito-0.6.26-1.fc40.noarch.rpm"]
+depends: [
+  "fedora-packager" 
+  "fedpkg" 
+  "perl-interpreter" 
+  "python3" 
+  "python3-blessed" 
+  "python3-bugzilla" 
+  "python3-cheetah" 
+  "python3-rpm" 
+  "python3-setuptools" 
+  "rpm-build" 
+  "rpmdevtools" 
+  "rpmlint" 
+]
+extra-source "tito-0.6.26-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tito-0.6.26-1.fc40.noarch.rpm"
+}

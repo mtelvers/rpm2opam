@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fwupd-devel-1.9.15-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fwupd-devel-1.9.15-1.fc40.x86_64.rpm"]
+depends: [
+  "fwupd" {= "1.9.15"}
+  "glib2-devel" 
+  "json-glib-devel" {>= "1.6.0"}
+  "libcurl-devel" {>= "7.62.0"}
+  "libjcat-devel" {>= "0.1.4"}
+  "pkgconf-pkg-config" 
+]
+extra-source "fwupd-devel-1.9.15-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fwupd-devel-1.9.15-1.fc40.x86_64.rpm"
+}

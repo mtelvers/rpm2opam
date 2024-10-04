@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "emacs-auctex-13.3-5.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "emacs-auctex-13.3-5.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "emacs" 
+  "texlive-latex" 
+  "texlive-tools" 
+]
+extra-source "emacs-auctex-13.3-5.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/emacs-auctex-13.3-5.1.noarch.rpm"
+}

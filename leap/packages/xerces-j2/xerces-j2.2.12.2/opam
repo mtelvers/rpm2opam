@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xerces-j2-2.12.2-slfo.1.2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xerces-j2-2.12.2-slfo.1.2.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+  "xalan-j2" 
+  "xml-commons-apis" 
+  "xml-commons-resolver" 
+]
+extra-source "xerces-j2-2.12.2-slfo.1.2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/xerces-j2-2.12.2-slfo.1.2.3.noarch.rpm"
+}

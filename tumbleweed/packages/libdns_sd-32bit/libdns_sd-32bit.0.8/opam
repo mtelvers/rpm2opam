@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libdns_sd-32bit-0.8-35.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdns_sd-32bit-0.8-35.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libavahi-client3-32bit" 
+  "libavahi-common3-32bit" 
+]
+extra-source "libdns_sd-32bit-0.8-35.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libdns_sd-32bit-0.8-35.1.x86_64.rpm"
+}

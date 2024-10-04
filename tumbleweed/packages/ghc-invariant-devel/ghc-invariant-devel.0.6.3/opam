@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-invariant-devel-0.6.3-1.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-invariant-devel-0.6.3-1.12.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-StateVar-devel" 
+  "ghc-array-devel" 
+  "ghc-base-devel" 
+  "ghc-bifunctors-devel" 
+  "ghc-comonad-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-contravariant-devel" 
+  "ghc-invariant" {= "0.6.3"}
+  "ghc-profunctors-devel" 
+  "ghc-stm-devel" 
+  "ghc-tagged-devel" 
+  "ghc-template-haskell-devel" 
+  "ghc-th-abstraction-devel" 
+  "ghc-transformers-compat-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unordered-containers-devel" 
+]
+extra-source "ghc-invariant-devel-0.6.3-1.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-invariant-devel-0.6.3-1.12.x86_64.rpm"
+}

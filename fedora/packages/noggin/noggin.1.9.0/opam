@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "noggin-1.9.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "noggin-1.9.0-1.fc40.noarch.rpm"]
+depends: [
+  "nginx-filesystem" 
+  "python3" 
+  "python3-backoff" 
+  "python3-click" 
+  "python3-cryptography" {>= "3.4.7"}
+  "python3-fedora-messaging" 
+  "python3-flask" 
+  "python3-flask-babel" 
+  "python3-flask-healthz" 
+  "python3-flask-mail" 
+  "python3-flask-talisman" 
+  "python3-flask-wtf" 
+  "python3-freeipa" 
+  "python3-gunicorn" 
+  "python3-jwt" 
+  "python3-markupsafe" 
+  "python3-noggin-messages" 
+  "python3-pyotp" 
+  "python3-requests" 
+  "python3-requests+security" 
+  "python3-translitcodec" {= "0.7"}
+  "python3-unidecode" 
+  "python3-whitenoise" 
+  "python3-wtforms" 
+  "python3-wtforms+email" 
+]
+extra-source "noggin-1.9.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/noggin-1.9.0-1.fc40.noarch.rpm"
+}

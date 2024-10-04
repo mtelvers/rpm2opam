@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "appres-1.0.7-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "appres-1.0.7-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXt6" 
+]
+extra-source "appres-1.0.7-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/appres-1.0.7-1.1.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "imageburner-1.0.2-1.23.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "imageburner-1.0.2-1.23.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgranite6" 
+  "libgtk-3-0" 
+]
+extra-source "imageburner-1.0.2-1.23.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/imageburner-1.0.2-1.23.x86_64.rpm"
+}

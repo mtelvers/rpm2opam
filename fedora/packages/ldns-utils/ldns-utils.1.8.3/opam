@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ldns-utils-1.8.3-13.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ldns-utils-1.8.3-13.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "ldns" {= "1.8.3"}
+  "libpcap" 
+  "openssl-libs" 
+]
+extra-source "ldns-utils-1.8.3-13.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/ldns-utils-1.8.3-13.fc40.x86_64.rpm"
+}

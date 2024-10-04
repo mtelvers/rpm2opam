@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-pkgdown-2.0.6-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-pkgdown-2.0.6-6.fc40.noarch.rpm"]
+depends: [
+  "R-bslib" {>= "0.3.1"}
+  "R-callr" {>= "2.0.2"}
+  "R-cli" 
+  "R-core" {= "4.3"}
+  "R-desc" 
+  "R-digest" 
+  "R-downlit" {>= "0.4.0"}
+  "R-fs" {>= "1.4.0"}
+  "R-httr" {>= "1.4.2"}
+  "R-jsonlite" 
+  "R-magrittr" 
+  "R-memoise" 
+  "R-purrr" 
+  "R-ragg" 
+  "R-rlang" {>= "1.0.0"}
+  "R-rmarkdown" {>= "1.1.9007"}
+  "R-tibble" 
+  "R-whisker" 
+  "R-withr" {>= "2.4.3"}
+  "R-xml2" {>= "1.3.1"}
+  "R-yaml" 
+]
+extra-source "R-pkgdown-2.0.6-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-pkgdown-2.0.6-6.fc40.noarch.rpm"
+}

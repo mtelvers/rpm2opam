@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-presagemate-0.9.1-15.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-presagemate-0.9.1-15.3.noarch.rpm"]
+depends: [
+  "python3-presage" 
+  "python311-atspi" 
+  "python311-base" 
+  "python311-gobject" 
+  "python311-python-xlib" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" 
+]
+extra-source "python3-presagemate-0.9.1-15.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-presagemate-0.9.1-15.3.noarch.rpm"
+}

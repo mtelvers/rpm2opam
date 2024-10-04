@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-procfs0.15+serde1-devel-0.15.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-procfs0.15+serde1-devel-0.15.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-procfs0-15+serde-devel" {= "0.15.1"}
+  "rust-procfs0-15-devel" {= "0.15.1"}
+]
+extra-source "rust-procfs0.15+serde1-devel-0.15.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-procfs0.15+serde1-devel-0.15.1-2.fc40.noarch.rpm"
+}

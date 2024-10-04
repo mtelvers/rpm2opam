@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dotnet-apphost-pack-8.0-8.0.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dotnet-apphost-pack-8.0-8.0.2-1.fc40.x86_64.rpm"]
+depends: [
+  "dotnet-host" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "openssl-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "dotnet-apphost-pack-8.0-8.0.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dotnet-apphost-pack-8.0-8.0.2-1.fc40.x86_64.rpm"
+}

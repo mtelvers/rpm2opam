@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "boringssl-source-20200921-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "boringssl-source-20200921-3.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "perl-base" 
+  "python311-base" 
+]
+extra-source "boringssl-source-20200921-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/boringssl-source-20200921-3.2.noarch.rpm"
+}

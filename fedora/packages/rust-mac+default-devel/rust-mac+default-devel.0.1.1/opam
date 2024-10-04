@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-mac+default-devel-0.1.1-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-mac+default-devel-0.1.1-16.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-mac-devel" {= "0.1.1"}
+]
+extra-source "rust-mac+default-devel-0.1.1-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-mac+default-devel-0.1.1-16.fc40.noarch.rpm"
+}

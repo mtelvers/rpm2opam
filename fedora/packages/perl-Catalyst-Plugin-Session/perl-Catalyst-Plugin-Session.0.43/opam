@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Catalyst-Plugin-Session-0.43-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Catalyst-Plugin-Session-0.43-7.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Catalyst-Runtime" 
+  "perl-Digest" 
+  "perl-File-Temp" 
+  "perl-HTML-Parser" 
+  "perl-MRO-Compat" 
+  "perl-Moose" 
+  "perl-MooseX-Emulate-Class-Accessor-Fast" {>= "0.801"}
+  "perl-Object-Signature" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-Test-Simple" 
+  "perl-base" 
+  "perl-libs" 
+  "perl-namespace-clean" 
+  "perl-overload" 
+]
+extra-source "perl-Catalyst-Plugin-Session-0.43-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Catalyst-Plugin-Session-0.43-7.fc40.noarch.rpm"
+}

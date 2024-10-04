@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-tidyres-2023.201.1.0.0svn65789-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-tidyres-2023.201.1.0.0svn65789-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-amsfonts" 
+  "texlive-amsmath" 
+  "texlive-enumitem" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-fontawesome" 
+  "texlive-hologo" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-paracol" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-setspace" 
+  "texlive-tabularray" 
+  "texlive-xcolor" 
+]
+extra-source "texlive-tidyres-2023.201.1.0.0svn65789-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-tidyres-2023.201.1.0.0svn65789-slfo.1.1.4.noarch.rpm"
+}

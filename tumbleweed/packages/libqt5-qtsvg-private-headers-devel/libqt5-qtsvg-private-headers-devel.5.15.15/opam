@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqt5-qtsvg-private-headers-devel-5.15.15+kde5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqt5-qtsvg-private-headers-devel-5.15.15+kde5-1.1.noarch.rpm"]
+depends: [
+  "libqt5-qtsvg-devel" {= "5.15.15"}
+]
+extra-source "libqt5-qtsvg-private-headers-devel-5.15.15+kde5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libqt5-qtsvg-private-headers-devel-5.15.15+kde5-1.1.noarch.rpm"
+}

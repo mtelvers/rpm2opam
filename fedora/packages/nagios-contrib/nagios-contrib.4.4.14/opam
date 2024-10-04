@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nagios-contrib-4.4.14-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nagios-contrib-4.4.14-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "nagios" {= "4.4.14"}
+  "perl-File-Basename" 
+  "perl-POSIX" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "nagios-contrib-4.4.14-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nagios-contrib-4.4.14-3.fc40.x86_64.rpm"
+}

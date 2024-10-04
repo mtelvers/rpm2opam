@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "koffice-kivio-1.6.3-67.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "koffice-kivio-1.6.3-67.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "hicolor-icon-theme" 
+  "kdelibs3" 
+  "koffice-kivio-libs" {= "1.6.3"}
+  "libstdc++" 
+  "qt3" 
+]
+extra-source "koffice-kivio-1.6.3-67.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/koffice-kivio-1.6.3-67.fc40.x86_64.rpm"
+}

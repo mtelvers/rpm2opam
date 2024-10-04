@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-winit-devel-0.29.15-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-winit-devel-0.29.15-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65.0"}
+  "rust-bitflags+default-devel" 
+  "rust-calloop+default-devel" 
+  "rust-cfg_aliases+default-devel" 
+  "rust-cursor-icon+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-log+default-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-rustix+process-devel" 
+  "rust-rustix+std-devel" 
+  "rust-rustix+system-devel" 
+  "rust-rustix+thread-devel" 
+  "rust-rustix-devel" 
+  "rust-smol_str+default-devel" 
+  "rust-xkbcommon-dl+default-devel" 
+]
+extra-source "rust-winit-devel-0.29.15-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-winit-devel-0.29.15-1.fc40.noarch.rpm"
+}

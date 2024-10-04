@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "elfutils-0.191-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "elfutils-0.191-4.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "elfutils-debuginfod-client" 
+  "elfutils-libelf" {= "0.191"}
+  "elfutils-libs" {= "0.191"}
+  "glibc" 
+  "libarchive" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "elfutils-0.191-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/elfutils-0.191-4.fc40.x86_64.rpm"
+}

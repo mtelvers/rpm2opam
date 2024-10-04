@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Package-Variant-1.003002-1.31.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Package-Variant-1.003002-1.31.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Import-Into" {>= "1.0"}
+  "perl-Module-Runtime" {>= "0.13"}
+  "perl-strictures" {>= "2.0"}
+]
+extra-source "perl-Package-Variant-1.003002-1.31.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Package-Variant-1.003002-1.31.noarch.rpm"
+}

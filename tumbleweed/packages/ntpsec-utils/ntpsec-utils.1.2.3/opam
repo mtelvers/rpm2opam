@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ntpsec-utils-1.2.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ntpsec-utils-1.2.3-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python3-gpsd" 
+  "python3-ntp" 
+  "python311-base" 
+  "python311-curses" 
+]
+extra-source "ntpsec-utils-1.2.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ntpsec-utils-1.2.3-1.1.noarch.rpm"
+}

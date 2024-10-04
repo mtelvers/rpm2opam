@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "circuslinux-1.0.3-1286.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "circuslinux-1.0.3-1286.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libSDL-1_2-0" 
+  "libSDL_image-1_2-0" 
+  "libSDL_mixer-1_2-0" 
+]
+extra-source "circuslinux-1.0.3-1286.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/circuslinux-1.0.3-1286.2.x86_64.rpm"
+}

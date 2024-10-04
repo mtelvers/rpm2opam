@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Data-FormValidator-Constraints-DateTime-1.11-39.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Data-FormValidator-Constraints-DateTime-1.11-39.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-DateTime" {>= "0.23"}
+  "perl-DateTime-Format-MySQL" 
+  "perl-DateTime-Format-Pg" 
+  "perl-DateTime-Format-Strptime" {>= "1.0"}
+  "perl-Exporter" 
+  "perl-Scalar-List-Utils" 
+  "perl-libs" 
+]
+extra-source "perl-Data-FormValidator-Constraints-DateTime-1.11-39.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Data-FormValidator-Constraints-DateTime-1.11-39.fc40.noarch.rpm"
+}

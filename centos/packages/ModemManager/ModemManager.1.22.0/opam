@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ModemManager-1.22.0-5.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ModemManager-1.22.0-5.el10.x86_64.rpm"]
+depends: [
+  "ModemManager-glib" {= "1.22.0"}
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "libgcc" 
+  "libgudev" 
+  "libmbim" 
+  "libmbim-utils" 
+  "libqmi" 
+  "libqmi-utils" 
+  "libqrtr-glib" 
+  "polkit" 
+  "polkit-libs" 
+  "systemd" 
+  "systemd-libs" 
+]
+extra-source "ModemManager-1.22.0-5.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/ModemManager-1.22.0-5.el10.x86_64.rpm"
+}

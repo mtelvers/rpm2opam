@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kwin-6.0.3.1-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kwin-6.0.3.1-2.fc40.x86_64.rpm"]
+depends: [
+  "kf6-kdeclarative" 
+  "kf6-kirigami" 
+  "kscreenlocker" 
+  "kwin-common" {= "6.0.3.1"}
+  "kwin-libs" {= "6.0.3.1"}
+  "kwin-wayland" {= "6.0.3.1"}
+  "libplasma" {>= "6.0.3"}
+  "qt6-qtdeclarative" 
+  "qt6-qtmultimedia" 
+]
+extra-source "kwin-6.0.3.1-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kwin-6.0.3.1-2.fc40.x86_64.rpm"
+}

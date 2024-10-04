@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-arviz-0.18.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-arviz-0.18.0-1.1.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-dm-tree" 
+  "python312-h5netcdf" 
+  "python312-matplotlib" {>= "3.5"}
+  "python312-numpy" 
+  "python312-packaging" 
+  "python312-pandas" {>= "1.4.0"}
+  "python312-scipy" {>= "1.8.0"}
+  "python312-setuptools" {>= "60.0.0"}
+  "python312-typing_extensions" 
+  "python312-xarray" {>= "0.21.0"}
+  "python312-xarray-einstats" 
+]
+extra-source "python312-arviz-0.18.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-arviz-0.18.0-1.1.noarch.rpm"
+}

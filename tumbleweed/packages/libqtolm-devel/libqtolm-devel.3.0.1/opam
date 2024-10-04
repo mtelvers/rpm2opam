@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqtolm-devel-3.0.1-1.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqtolm-devel-3.0.1-1.16.x86_64.rpm"]
+depends: [
+  "libQtOlm3_0" {= "3.0.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libqtolm-devel-3.0.1-1.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libqtolm-devel-3.0.1-1.16.x86_64.rpm"
+}

@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-App-cpanminus-1.7047-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-App-cpanminus-1.7047-3.fc40.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-CPAN-DistnameInfo" 
+  "perl-CPAN-Meta" 
+  "perl-CPAN-Meta-Check" {>= "0.18"}
+  "perl-CPAN-Meta-Requirements" 
+  "perl-CPAN-Meta-YAML" 
+  "perl-Digest-SHA" 
+  "perl-ExtUtils-Install" {>= "1.46"}
+  "perl-ExtUtils-MakeMaker" {>= "6.58"}
+  "perl-ExtUtils-Manifest" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-File-pushd" 
+  "perl-Getopt-Long" 
+  "perl-HTTP-Tiny" 
+  "perl-Module-Build" {>= "0.38"}
+  "perl-Module-CPANfile" 
+  "perl-Module-CoreList" 
+  "perl-Module-Metadata" 
+  "perl-Parse-PMFile" 
+  "perl-PathTools" 
+  "perl-Safe" 
+  "perl-String-ShellQuote" 
+  "perl-Symbol" 
+  "perl-YAML" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-local-lib" 
+  "perl-version" 
+]
+extra-source "perl-App-cpanminus-1.7047-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-App-cpanminus-1.7047-3.fc40.noarch.rpm"
+}

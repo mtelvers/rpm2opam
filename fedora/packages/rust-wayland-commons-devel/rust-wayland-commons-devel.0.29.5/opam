@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-wayland-commons-devel-0.29.5-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-wayland-commons-devel-0.29.5-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-nix+fs-devel" 
+  "rust-nix+socket-devel" 
+  "rust-nix+uio-devel" 
+  "rust-nix-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-smallvec+default-devel" 
+  "rust-wayland-sys+default-devel" 
+]
+extra-source "rust-wayland-commons-devel-0.29.5-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-wayland-commons-devel-0.29.5-4.fc40.noarch.rpm"
+}

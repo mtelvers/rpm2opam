@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postgresql13-devel-13.16-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql13-devel-13.16-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libecpg6" {>= "13.16"}
+  "libpq5" {>= "13.16"}
+  "pkgconf-pkg-config" 
+  "postgresql-devel" 
+]
+extra-source "postgresql13-devel-13.16-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/postgresql13-devel-13.16-1.1.x86_64.rpm"
+}

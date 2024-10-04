@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-pep440_rs0.3-devel-0.3.12-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-pep440_rs0.3-devel-0.3.12-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-lazy_static+default-devel" 
+  "rust-regex+perf-devel" 
+  "rust-regex+std-devel" 
+  "rust-regex+unicode-case-devel" 
+  "rust-regex+unicode-perl-devel" 
+  "rust-regex-devel" 
+  "rust-unicode-width+default-devel" 
+]
+extra-source "rust-pep440_rs0.3-devel-0.3.12-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-pep440_rs0.3-devel-0.3.12-2.fc40.noarch.rpm"
+}

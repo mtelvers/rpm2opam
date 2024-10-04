@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Mojolicious-Plugin-Webpack-1.02-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mojolicious-Plugin-Webpack-1.02-1.7.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-File-chdir" {>= "0.10"}
+  "perl-Mojolicious" {>= "8.0"}
+]
+extra-source "perl-Mojolicious-Plugin-Webpack-1.02-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Mojolicious-Plugin-Webpack-1.02-1.7.noarch.rpm"
+}

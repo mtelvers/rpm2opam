@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vigra-1.11.1-50.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vigra-1.11.1-50.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "hdf5" 
+  "imath" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libstdc++" 
+  "libtiff" 
+  "openexr-libs" 
+  "python3" 
+  "zlib-ng-compat" 
+]
+extra-source "vigra-1.11.1-50.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vigra-1.11.1-50.fc40.x86_64.rpm"
+}

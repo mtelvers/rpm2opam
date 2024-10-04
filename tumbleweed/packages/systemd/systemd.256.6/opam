@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "systemd-256.6-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "systemd-256.6-1.2.x86_64.rpm"]
+depends: [
+  "aaa_base" {>= "13.2"}
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "coreutils" 
+  "dbus-1" {>= "1.4.0"}
+  "findutils" 
+  "glibc" 
+  "kbd" 
+  "libacl1" 
+  "libapparmor1" 
+  "libaudit1" 
+  "libblkid1" 
+  "libcap2" 
+  "libcrypt1" 
+  "libmount1" 
+  "libnss_usrfiles2" 
+  "libopenssl3" 
+  "libseccomp2" 
+  "libselinux1" 
+  "netcfg" {>= "11.5"}
+  "pam" 
+  "pam-config" {>= "0.79"}
+  "pkgconf-pkg-config" 
+  "systemd-default-settings-branding-SLE" 
+  "systemd-presets-branding-Aeon" 
+  "util-linux" {>= "2.27.1"}
+]
+extra-source "systemd-256.6-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/systemd-256.6-1.2.x86_64.rpm"
+}

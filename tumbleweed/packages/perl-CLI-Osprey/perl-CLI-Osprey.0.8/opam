@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-CLI-Osprey-0.08-1.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CLI-Osprey-0.08-1.15.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Getopt-Long-Descriptive" {>= "0.100"}
+  "perl-Module-Runtime" 
+  "perl-Moo" 
+  "perl-Path-Tiny" 
+]
+extra-source "perl-CLI-Osprey-0.08-1.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-CLI-Osprey-0.08-1.15.noarch.rpm"
+}

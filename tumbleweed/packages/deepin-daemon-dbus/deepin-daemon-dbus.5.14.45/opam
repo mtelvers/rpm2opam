@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "deepin-daemon-dbus-5.14.45-2.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deepin-daemon-dbus-5.14.45-2.8.noarch.rpm"]
+depends: [
+  "deepin-daemon" {= "5.14.45"}
+]
+extra-source "deepin-daemon-dbus-5.14.45-2.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/deepin-daemon-dbus-5.14.45-2.8.noarch.rpm"
+}

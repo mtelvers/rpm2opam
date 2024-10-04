@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-kiwi-keg-2.1.1-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-kiwi-keg-2.1.1-1.3.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "python3-kiwi" {>= "9.21.21"}
+  "python311-Jinja2" 
+  "python311-PyYAML" 
+  "python311-base" 
+  "python311-docopt" 
+  "python311-schema" 
+]
+extra-source "python311-kiwi-keg-2.1.1-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-kiwi-keg-2.1.1-1.3.noarch.rpm"
+}

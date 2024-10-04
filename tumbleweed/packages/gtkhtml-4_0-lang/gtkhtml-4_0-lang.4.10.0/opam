@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtkhtml-4_0-lang-4.10.0-8.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtkhtml-4_0-lang-4.10.0-8.1.noarch.rpm"]
+depends: [
+  "libgtkhtml-4_0-0" {= "4.10.0"}
+]
+extra-source "gtkhtml-4_0-lang-4.10.0-8.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gtkhtml-4_0-lang-4.10.0-8.1.noarch.rpm"
+}

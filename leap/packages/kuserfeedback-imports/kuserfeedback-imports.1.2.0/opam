@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kuserfeedback-imports-1.2.0-lp160.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kuserfeedback-imports-1.2.0-lp160.1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libKUserFeedbackCore1" {= "1.2.0"}
+  "libKUserFeedbackWidgets1" {= "1.2.0"}
+  "libQt5Core5" 
+  "libQtQuick5" 
+  "libstdc++6" 
+]
+extra-source "kuserfeedback-imports-1.2.0-lp160.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/kuserfeedback-imports-1.2.0-lp160.1.2.x86_64.rpm"
+}

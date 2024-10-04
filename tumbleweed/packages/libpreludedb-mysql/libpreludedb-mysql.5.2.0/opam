@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpreludedb-mysql-5.2.0-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpreludedb-mysql-5.2.0-3.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libmariadb3" 
+  "libprelude28" 
+  "libpreludedb-plugins" {= "5.2.0"}
+  "libpreludedb7" 
+  "mariadb" 
+]
+extra-source "libpreludedb-mysql-5.2.0-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpreludedb-mysql-5.2.0-3.2.x86_64.rpm"
+}

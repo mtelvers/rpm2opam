@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-rvest-1.0.3-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-rvest-1.0.3-6.fc40.noarch.rpm"]
+depends: [
+  "R-cli" 
+  "R-core" {= "4.3"}
+  "R-glue" 
+  "R-httr" {>= "0.5"}
+  "R-lifecycle" {>= "1.0.0"}
+  "R-magrittr" 
+  "R-rlang" {>= "1.0.0"}
+  "R-selectr" 
+  "R-tibble" 
+  "R-withr" 
+  "R-xml2" {>= "1.3"}
+]
+extra-source "R-rvest-1.0.3-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-rvest-1.0.3-6.fc40.noarch.rpm"
+}

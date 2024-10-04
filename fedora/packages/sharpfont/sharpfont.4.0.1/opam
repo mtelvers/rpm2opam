@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sharpfont-4.0.1-17.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sharpfont-4.0.1-17.fc40.x86_64.rpm"]
+depends: [
+  "mono-core" {= "4.0.0.0"}
+]
+extra-source "sharpfont-4.0.1-17.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sharpfont-4.0.1-17.fc40.x86_64.rpm"
+}

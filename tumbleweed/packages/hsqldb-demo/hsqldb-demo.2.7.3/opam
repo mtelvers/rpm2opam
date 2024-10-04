@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hsqldb-demo-2.7.3-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hsqldb-demo-2.7.3-2.1.noarch.rpm"]
+depends: [
+  "hsqldb" {= "2.7.3"}
+]
+extra-source "hsqldb-demo-2.7.3-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/hsqldb-demo-2.7.3-2.1.noarch.rpm"
+}

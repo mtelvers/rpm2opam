@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Workflow-1.62-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Workflow-1.62-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Class-Accessor" 
+  "perl-Class-Factory" 
+  "perl-Data-Dumper" 
+  "perl-DateTime" 
+  "perl-DateTime-Format-Strptime" 
+  "perl-English" 
+  "perl-Exception-Class" 
+  "perl-File-Slurp" 
+  "perl-Log-Log4perl" 
+  "perl-Readonly" 
+  "perl-Safe" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" {>= "5.14.0"}
+]
+extra-source "perl-Workflow-1.62-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Workflow-1.62-4.fc40.noarch.rpm"
+}

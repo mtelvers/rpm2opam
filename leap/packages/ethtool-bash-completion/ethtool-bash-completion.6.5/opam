@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["/usr/bin/zypper" "-n" "install" "ethtool-bash-completion-6.5-slfo.1.1.7.noarch.rpm"]
+]
+remove: [
+  ["/usr/bin/zypper" "-n" "remove" "ethtool-bash-completion-6.5-slfo.1.1.7.noarch.rpm"]
+]
+depends: [
+  "bash-completion" 
+  "ethtool" 
+]
+extra-source "ethtool-bash-completion-6.5-slfo.1.1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/ethtool-bash-completion-6.5-slfo.1.1.7.noarch.rpm"
+}

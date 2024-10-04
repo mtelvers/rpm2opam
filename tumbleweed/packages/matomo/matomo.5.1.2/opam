@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "matomo-5.1.2-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "matomo-5.1.2-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "logrotate" 
+  "nodejs-default" 
+  "php8" 
+  "php8-cli" 
+  "php8-ctype" 
+  "php8-curl" 
+  "php8-dom" 
+  "php8-gd" 
+  "php8-iconv" 
+  "php8-mbstring" 
+  "php8-mysql" 
+  "php8-pdo" 
+  "php8-tokenizer" 
+  "php8-xmlreader" 
+  "php8-xmlwriter" 
+  "php8-zlib" 
+  "python311" 
+  "python311-base" 
+  "system-user-wwwrun" 
+  "systemd" 
+]
+extra-source "matomo-5.1.2-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/matomo-5.1.2-2.1.noarch.rpm"
+}

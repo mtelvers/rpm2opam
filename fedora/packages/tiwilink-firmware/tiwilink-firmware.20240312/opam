@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tiwilink-firmware-20240312-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tiwilink-firmware-20240312-1.fc40.noarch.rpm"]
+depends: [
+  "linux-firmware-whence" 
+]
+extra-source "tiwilink-firmware-20240312-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tiwilink-firmware-20240312-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "container-selinux-2.232.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "container-selinux-2.232.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-sed" 
+  "policycoreutils" 
+  "selinux-policy" {>= "20240710"}
+  "selinux-policy-minimum" {>= "20240710"}
+  "selinux-policy-targeted" {>= "20240710"}
+  "selinux-tools" 
+]
+extra-source "container-selinux-2.232.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/container-selinux-2.232.1-1.1.noarch.rpm"
+}

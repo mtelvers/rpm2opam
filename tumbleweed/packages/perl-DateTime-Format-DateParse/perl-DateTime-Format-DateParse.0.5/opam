@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-DateTime-Format-DateParse-0.05-22.33.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DateTime-Format-DateParse-0.05-22.33.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-DateTime" {>= "0.29"}
+  "perl-DateTime-Locale" 
+  "perl-DateTime-TimeZone" {>= "0.27"}
+  "perl-TimeDate" {>= "2.27"}
+]
+extra-source "perl-DateTime-Format-DateParse-0.05-22.33.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-DateTime-Format-DateParse-0.05-22.33.noarch.rpm"
+}

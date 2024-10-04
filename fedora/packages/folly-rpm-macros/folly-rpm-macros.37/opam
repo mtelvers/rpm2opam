@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "folly-rpm-macros-37-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "folly-rpm-macros-37-7.fc40.noarch.rpm"]
+depends: [
+  "rpm" 
+]
+extra-source "folly-rpm-macros-37-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/folly-rpm-macros-37-7.fc40.noarch.rpm"
+}

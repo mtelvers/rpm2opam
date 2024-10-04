@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsvm-java-3.30-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsvm-java-3.30-4.1.noarch.rpm"]
+depends: [
+  "java-11-openj9" {>= "1.6.0"}
+  "javapackages-tools" 
+  "libsvm3" {= "3.30"}
+]
+extra-source "libsvm-java-3.30-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libsvm-java-3.30-4.1.noarch.rpm"
+}

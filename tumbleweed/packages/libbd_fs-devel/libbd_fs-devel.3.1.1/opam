@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libbd_fs-devel-3.1.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libbd_fs-devel-3.1.1-1.1.x86_64.rpm"]
+depends: [
+  "dosfstools" 
+  "glib2-devel" 
+  "libbd_fs3" {>= "3.1.1"}
+  "libbd_utils-devel" 
+  "xfsprogs" 
+]
+extra-source "libbd_fs-devel-3.1.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libbd_fs-devel-3.1.1-1.1.x86_64.rpm"
+}

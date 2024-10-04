@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-pdfcomment-2023.201.2.4asvn49047-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-pdfcomment-2023.201.2.4asvn49047-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-datetime2" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-hyperref" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-luatex85" 
+  "texlive-marginnote" 
+  "texlive-refcount" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-soulpos" 
+  "texlive-tools" 
+  "texlive-xkeyval" 
+  "texlive-zref" 
+]
+extra-source "texlive-pdfcomment-2023.201.2.4asvn49047-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-pdfcomment-2023.201.2.4asvn49047-slfo.1.1.4.noarch.rpm"
+}

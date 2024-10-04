@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kanku-dispatcher-0.17.1-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kanku-dispatcher-0.17.1-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "kanku-common" {= "0.17.1"}
+  "kanku-common-server" {= "0.17.1"}
+  "perl-Net-AMQP-RabbitMQ" 
+  "sudo" 
+]
+extra-source "kanku-dispatcher-0.17.1-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kanku-dispatcher-0.17.1-1.2.noarch.rpm"
+}

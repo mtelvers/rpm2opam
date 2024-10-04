@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-libSBML-5.20.2-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-libSBML-5.20.2-7.fc40.x86_64.rpm"]
+depends: [
+  "R-core" {= "4.3"}
+  "bzip2-libs" 
+  "glibc" 
+  "libgcc" 
+  "libsbml" {= "5.20.2"}
+  "libstdc++" 
+  "libxml2" 
+  "minizip-ng-compat" 
+  "zlib-ng-compat" 
+]
+extra-source "R-libSBML-5.20.2-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-libSBML-5.20.2-7.fc40.x86_64.rpm"
+}

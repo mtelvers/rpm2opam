@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libkdecorations2-5-5.27.11-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libkdecorations2-5-5.27.11-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libKF5I18n5" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libkdecorations2private10" 
+  "libstdc++6" 
+]
+extra-source "libkdecorations2-5-5.27.11-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libkdecorations2-5-5.27.11-1.2.x86_64.rpm"
+}

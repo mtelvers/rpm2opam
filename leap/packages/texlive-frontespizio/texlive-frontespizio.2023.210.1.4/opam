@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-frontespizio-2023.210.1.4asvn24054-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-frontespizio-2023.210.1.4asvn24054-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-atbegshi" 
+  "texlive-environ" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-graphics" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-tools" 
+  "texlive-xcolor" 
+]
+extra-source "texlive-frontespizio-2023.210.1.4asvn24054-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-frontespizio-2023.210.1.4asvn24054-slfo.1.1.4.noarch.rpm"
+}

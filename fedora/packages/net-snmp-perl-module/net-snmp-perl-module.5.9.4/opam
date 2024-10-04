@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "net-snmp-perl-module-5.9.4-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "net-snmp-perl-module-5.9.4-5.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "net-snmp-agent-libs" 
+  "net-snmp-libs" 
+  "perl-AutoLoader" 
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-DynaLoader" 
+  "perl-Exporter" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "net-snmp-perl-module-5.9.4-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/net-snmp-perl-module-5.9.4-5.fc40.x86_64.rpm"
+}

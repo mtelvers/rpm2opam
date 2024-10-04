@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libumockdev0-0.17.18-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libumockdev0-0.17.18-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgio-2_0-0" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libpcap1" 
+  "libudev1" 
+]
+extra-source "libumockdev0-0.17.18-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libumockdev0-0.17.18-slfo.1.1.8.x86_64.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pango-devel-32bit-1.54.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pango-devel-32bit-1.54.0-1.1.x86_64.rpm"]
+depends: [
+  "cairo-devel" {>= "1.12.10"}
+  "fontconfig-devel" {>= "2.13.0"}
+  "freetype2-devel" 
+  "fribidi-devel" {>= "1.0.6"}
+  "glib2-devel" {>= "2.62"}
+  "harfbuzz-devel" {>= "2.6.0"}
+  "libXft-devel" {>= "2.0.0"}
+  "libXrender-devel" 
+  "libpango-1_0-0-32bit" {= "1.54.0"}
+  "libthai-devel" {>= "0.1.9"}
+  "pango-devel" {= "1.54.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "pango-devel-32bit-1.54.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pango-devel-32bit-1.54.0-1.1.x86_64.rpm"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tigervnc-server-minimal-1.13.1-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tigervnc-server-minimal-1.13.1-12.fc40.x86_64.rpm"]
+depends: [
+  "dbus-x11" 
+  "glibc" 
+  "gmp" 
+  "gnutls" 
+  "libX11" 
+  "libXau" 
+  "libXdmcp" 
+  "libXfont2" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libjpeg-turbo" 
+  "libstdc++" 
+  "mesa-dri-drivers" 
+  "nettle" 
+  "pam-libs" 
+  "pixman" 
+  "systemd" 
+  "tigervnc-license" 
+  "xkbcomp" 
+  "xkeyboard-config" 
+  "zlib-ng-compat" 
+]
+extra-source "tigervnc-server-minimal-1.13.1-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tigervnc-server-minimal-1.13.1-12.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libpeas1-gtk-1.36.0-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpeas1-gtk-1.36.0-5.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "gobject-introspection" 
+  "gtk3" 
+  "libpeas1" 
+]
+extra-source "libpeas1-gtk-1.36.0-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libpeas1-gtk-1.36.0-5.fc40.x86_64.rpm"
+}

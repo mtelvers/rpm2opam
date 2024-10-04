@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "deepin-movie-devel-6.0.10-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deepin-movie-devel-6.0.10-1.1.x86_64.rpm"]
+depends: [
+  "Mesa-libGL-devel" 
+  "dtkcore-devel" 
+  "dtkwidget-devel" 
+  "libQt5Concurrent-devel" 
+  "libQt5Network-devel" 
+  "libQt5Widgets-devel" 
+  "libdmr0_1" {= "6.0.10"}
+  "libqt5-qtx11extras-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "deepin-movie-devel-6.0.10-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/deepin-movie-devel-6.0.10-1.1.x86_64.rpm"
+}

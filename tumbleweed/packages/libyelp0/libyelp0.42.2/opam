@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libyelp0-42.2-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libyelp0-42.2-3.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libbz2-1" 
+  "libexslt0" 
+  "libgtk-3-0" 
+  "liblzma5" 
+  "libsqlite3-0" 
+  "libwebkit2gtk-4_1-0" 
+  "libxml2-2" 
+  "libxslt1" 
+]
+extra-source "libyelp0-42.2-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libyelp0-42.2-3.2.x86_64.rpm"
+}

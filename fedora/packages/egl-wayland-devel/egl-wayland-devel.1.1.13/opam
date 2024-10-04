@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "egl-wayland-devel-1.1.13-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "egl-wayland-devel-1.1.13-3.fc40.x86_64.rpm"]
+depends: [
+  "egl-wayland" {= "1.1.13"}
+  "eglexternalplatform-devel" {>= "1.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "egl-wayland-devel-1.1.13-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/egl-wayland-devel-1.1.13-3.fc40.x86_64.rpm"
+}

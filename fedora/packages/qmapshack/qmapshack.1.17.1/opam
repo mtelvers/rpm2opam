@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qmapshack-1.17.1-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qmapshack-1.17.1-4.fc40.x86_64.rpm"]
+depends: [
+  "alglib" 
+  "gdal-libs" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "proj" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtdeclarative" 
+  "qt5-qttools-libs-help" 
+  "qt5-qtwebengine" 
+  "quazip-qt5" 
+  "routino-libs" 
+]
+extra-source "qmapshack-1.17.1-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qmapshack-1.17.1-4.fc40.x86_64.rpm"
+}

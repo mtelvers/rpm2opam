@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "azure-storage-cpp-devel-7.5.0-1.23.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "azure-storage-cpp-devel-7.5.0-1.23.x86_64.rpm"]
+depends: [
+  "cpprest-devel" 
+  "libazurestorage7" {= "7.5.0"}
+  "libboost_chrono-devel" 
+  "libboost_date_time-devel" 
+  "libboost_filesystem-devel" 
+  "libboost_locale-devel" 
+  "libboost_log-devel" 
+  "libboost_random-devel" 
+  "libboost_regex-devel" 
+  "libboost_thread-devel" 
+  "libopenssl-1_0_0-devel" {>= "1.0"}
+  "libuuid-devel" 
+  "libxml2-devel" 
+]
+extra-source "azure-storage-cpp-devel-7.5.0-1.23.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/azure-storage-cpp-devel-7.5.0-1.23.x86_64.rpm"
+}

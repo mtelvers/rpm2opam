@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nextcloud-desktop-3.14.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nextcloud-desktop-3.14.1-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libKF6Archive6" 
+  "libKF6GuiAddons6" 
+  "libQt6Core6" 
+  "libQt6DBus6" 
+  "libQt6Gui6" 
+  "libQt6Network6" 
+  "libQt6Qml6" 
+  "libQt6Quick6" 
+  "libQt6QuickControls2-6" 
+  "libQt6Svg6" 
+  "libQt6WebEngineCore6" 
+  "libQt6WebEngineWidgets6" 
+  "libQt6Widgets6" 
+  "libQt6Xml6" 
+  "libcloudproviders0" 
+  "libgcc_s1" 
+  "libnextcloudsync0" 
+  "libopenssl3" 
+  "libqt6keychain1" 
+  "libstdc++6" 
+  "nextcloud-cli" {= "3.14.1"}
+]
+extra-source "nextcloud-desktop-3.14.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/nextcloud-desktop-3.14.1-1.1.x86_64.rpm"
+}

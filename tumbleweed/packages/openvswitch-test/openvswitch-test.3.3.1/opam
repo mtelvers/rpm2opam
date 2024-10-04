@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openvswitch-test-3.3.1-23.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openvswitch-test-3.3.1-23.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libopenvswitch-3_3-0" 
+  "openvswitch" {= "3.3.1"}
+  "python3-ovs" {= "3.3.1"}
+  "python311" 
+  "python311-Twisted" 
+  "python311-base" 
+]
+extra-source "openvswitch-test-3.3.1-23.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openvswitch-test-3.3.1-23.1.x86_64.rpm"
+}

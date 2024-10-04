@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-control-center-devel-46.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-control-center-devel-46.4-1.1.noarch.rpm"]
+depends: [
+  "gnome-control-center" {= "46.4"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gnome-control-center-devel-46.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-control-center-devel-46.4-1.1.noarch.rpm"
+}

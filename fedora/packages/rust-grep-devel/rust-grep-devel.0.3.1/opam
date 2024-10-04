@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-grep-devel-0.3.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-grep-devel-0.3.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-grep-cli+default-devel" 
+  "rust-grep-matcher+default-devel" 
+  "rust-grep-printer+default-devel" 
+  "rust-grep-regex+default-devel" 
+  "rust-grep-searcher+default-devel" 
+]
+extra-source "rust-grep-devel-0.3.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-grep-devel-0.3.1-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-DBIx-Class-Migration-0.075-1.19.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DBIx-Class-Migration-0.075-1.19.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Load" {>= "0.22"}
+  "perl-Config-MySQL" {>= "0.2"}
+  "perl-DBD-SQLite" {>= "1.46"}
+  "perl-DBIx-Class-DeploymentHandler" {>= "0.2223"}
+  "perl-DBIx-Class-Fixtures" {>= "1.1039"}
+  "perl-DBIx-Class-Schema-Loader" {>= "0.7042"}
+  "perl-Devel-PartialDump" {>= "0.17"}
+  "perl-File-ShareDir-ProjectDistDir" {>= "1.4"}
+  "perl-JSON-MaybeXS" 
+  "perl-Log-Any" {>= "1.707"}
+  "perl-Module-Find" {>= "0.13"}
+  "perl-Moo" {>= "2"}
+  "perl-MooX-Attribute-ENV" {>= "0.2"}
+  "perl-MooX-Options" {>= "4.103"}
+  "perl-MooX-Traits" {>= "0.5"}
+  "perl-Pod-Parser" {>= "1.63"}
+  "perl-SQL-Translator" {>= "0.11021"}
+  "perl-Text-Brew" {>= "0.2"}
+  "perl-Type-Tiny" {>= "1.4004"}
+  "perl-base" 
+]
+extra-source "perl-DBIx-Class-Migration-0.075-1.19.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-DBIx-Class-Migration-0.075-1.19.noarch.rpm"
+}

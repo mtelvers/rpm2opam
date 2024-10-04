@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "astrometry-0.94-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "astrometry-0.94-6.fc40.x86_64.rpm"]
+depends: [
+  "astrometry-data" {= "0.94"}
+  "astrometry-libs" {= "0.94"}
+  "cairo" 
+  "cfitsio" 
+  "glibc" 
+  "gsl" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "netpbm" 
+  "netpbm-progs" 
+  "python3-astrometry" {= "0.94"}
+  "wcslib" 
+]
+extra-source "astrometry-0.94-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/astrometry-0.94-6.fc40.x86_64.rpm"
+}

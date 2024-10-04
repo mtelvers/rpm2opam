@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-siunitx-svn66627-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-siunitx-svn66627-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-amsmath" 
+  "texlive-base" 
+  "texlive-kpathsea" 
+  "texlive-l3kernel" 
+  "texlive-l3packages" 
+  "texlive-tools" 
+  "texlive-translator" 
+]
+extra-source "texlive-siunitx-svn66627-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-siunitx-svn66627-71.fc40.noarch.rpm"
+}

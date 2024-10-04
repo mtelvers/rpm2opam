@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lua51-busted-2.0.0-6.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lua51-busted-2.0.0-6.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "curl" 
+  "lua51" 
+  "lua51-cliargs" 
+  "lua51-dkjson" {>= "2.1.0"}
+  "lua51-lua-ev" 
+  "lua51-luafilesystem" 
+  "lua51-luassert" {>= "1.7.8"}
+  "lua51-luasystem" {>= "0.2.0"}
+  "lua51-luaterm" {>= "0.1"}
+  "lua51-mediator_lua" {>= "1.1"}
+  "lua51-penlight" 
+  "lua51-say" {>= "1.3"}
+  "openssl" 
+  "unzip" 
+  "update-alternatives" 
+]
+extra-source "lua51-busted-2.0.0-6.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/lua51-busted-2.0.0-6.3.noarch.rpm"
+}

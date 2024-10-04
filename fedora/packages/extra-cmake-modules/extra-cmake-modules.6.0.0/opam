@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "extra-cmake-modules-6.0.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "extra-cmake-modules-6.0.0-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "kf5-rpm-macros" 
+  "kf6-rpm-macros" 
+  "python3" 
+  "qt6-qttools-devel" 
+]
+extra-source "extra-cmake-modules-6.0.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/extra-cmake-modules-6.0.0-1.fc40.noarch.rpm"
+}

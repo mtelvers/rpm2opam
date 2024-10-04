@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "msv-msv-2013.6.1-6.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "msv-msv-2013.6.1-6.3.noarch.rpm"]
+depends: [
+  "bash" 
+  "isorelax" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+  "msv-xsdlib" {= "2013.6.1"}
+  "xml-commons-resolver" 
+]
+extra-source "msv-msv-2013.6.1-6.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/msv-msv-2013.6.1-6.3.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libratbag-ratbagd-0.17-2.fc38.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libratbag-ratbagd-0.17-2.fc38.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "libevdev" 
+  "libgcc" 
+  "libunistring1-0" 
+  "python3" 
+  "python3-evdev" 
+  "python3-gobject" 
+  "systemd-libs" 
+]
+extra-source "libratbag-ratbagd-0.17-2.fc38.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libratbag-ratbagd-0.17-2.fc38.x86_64.rpm"
+}

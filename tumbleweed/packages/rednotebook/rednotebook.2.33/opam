@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rednotebook-2.33-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rednotebook-2.33-1.1.noarch.rpm"]
+depends: [
+  "girepository-1_0" {= "2.0"}
+  "python311-PyYAML" 
+  "python311-base" {= "3.11"}
+  "python311-gobject-Gdk" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-GtkSource-3_0" {= "3.0"}
+  "typelib-1_0-GtkSource-4" {= "4"}
+  "typelib-1_0-Pango-1_0" {= "1.0"}
+  "typelib-1_0-WebKit2-4_1" {= "4.1"}
+]
+extra-source "rednotebook-2.33-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/rednotebook-2.33-1.1.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "patterns-gnome-gnome_x11-20201210-21.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "patterns-gnome-gnome_x11-20201210-21.3.x86_64.rpm"]
+depends: [
+  "gnome-user-share" 
+  "patterns-aeon-base" {= "0"}
+  "seahorse" 
+  "totem" 
+  "xdg-user-dirs-gtk" 
+]
+extra-source "patterns-gnome-gnome_x11-20201210-21.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/patterns-gnome-gnome_x11-20201210-21.3.x86_64.rpm"
+}

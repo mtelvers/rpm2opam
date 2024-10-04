@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-http-message-factory-1.1.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-http-message-factory-1.1.0-4.fc40.noarch.rpm"]
+depends: [
+  "php-common" {>= "5.4"}
+  "php-fedora-autoloader" 
+  "php-psr-http-message" 
+]
+extra-source "php-http-message-factory-1.1.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-http-message-factory-1.1.0-4.fc40.noarch.rpm"
+}

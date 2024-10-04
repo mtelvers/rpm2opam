@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-scscp-2.4.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-scscp-2.4.3-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gap" {>= "4.10"}
+  "gap-gapdoc" {>= "1.5"}
+  "gap-io" {>= "4.4"}
+  "gap-openmath" {>= "11.4.1"}
+]
+extra-source "gap-scscp-2.4.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-scscp-2.4.3-1.1.noarch.rpm"
+}

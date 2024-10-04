@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-vfs2-monikers-2.15.3-37.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-vfs2-monikers-2.15.3-37.fc40.x86_64.rpm"]
+depends: [
+  "GConf2" 
+  "ORBit2" 
+  "glib2" 
+  "glibc" 
+  "gnome-vfs2" {>= "2.15.3"}
+  "libbonobo" 
+]
+extra-source "gnome-vfs2-monikers-2.15.3-37.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-vfs2-monikers-2.15.3-37.fc40.x86_64.rpm"
+}

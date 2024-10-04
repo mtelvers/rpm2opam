@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-pangocairo0.17+dox-devel-0.17.10-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-pangocairo0.17+dox-devel-0.17.10-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-cairo-rs0-15+dox-devel" 
+  "rust-glib0-15+dox-devel" 
+  "rust-pango0-15+dox-devel" 
+  "rust-pangocairo-sys0-17+dox-devel" 
+  "rust-pangocairo0-17-devel" {= "0.17.10"}
+]
+extra-source "rust-pangocairo0.17+dox-devel-0.17.10-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-pangocairo0.17+dox-devel-0.17.10-2.fc40.noarch.rpm"
+}

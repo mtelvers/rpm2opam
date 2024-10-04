@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xfce4-notifyd-theme-adapta-3.95.0.11-4.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xfce4-notifyd-theme-adapta-3.95.0.11-4.3.noarch.rpm"]
+depends: [
+  "metatheme-adapta-common" {= "3.95.0.11"}
+  "xfce4-notifyd" 
+]
+extra-source "xfce4-notifyd-theme-adapta-3.95.0.11-4.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xfce4-notifyd-theme-adapta-3.95.0.11-4.3.noarch.rpm"
+}

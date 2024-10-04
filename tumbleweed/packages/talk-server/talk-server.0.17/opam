@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "talk-server-0.17-723.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "talk-server-0.17-723.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libnss_usrfiles2" 
+  "net-tools" 
+  "netcfg" 
+  "systemd" 
+]
+extra-source "talk-server-0.17-723.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/talk-server-0.17-723.1.x86_64.rpm"
+}

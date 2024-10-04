@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-grpc-google-iam-v1-0.13.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-grpc-google-iam-v1-0.13.1-1.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-googleapis-common-protos" {>= "1.56.0"}
+  "python311-grpcio" {>= "1.44.0"}
+  "python311-protobuf" {>= "3.20.2"}
+]
+extra-source "python311-grpc-google-iam-v1-0.13.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-grpc-google-iam-v1-0.13.1-1.1.noarch.rpm"
+}

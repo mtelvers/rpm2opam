@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "folks-devel-0.15.7-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "folks-devel-0.15.7-3.fc40.x86_64.rpm"]
+depends: [
+  "evolution-data-server-devel" {>= "3.38"}
+  "folks" {= "0.15.7"}
+  "folks-telepathy" 
+  "folks-tools" {= "0.15.7"}
+  "glib2-devel" {>= "2.58"}
+  "libgee-devel" 
+  "pkgconf-pkg-config" 
+  "telepathy-glib-devel" {>= "0.19.9"}
+]
+extra-source "folks-devel-0.15.7-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/folks-devel-0.15.7-3.fc40.x86_64.rpm"
+}

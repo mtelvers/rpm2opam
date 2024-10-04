@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kpartx-0.10.0+103+suse.0fc97cd-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kpartx-0.10.0+103+suse.0fc97cd-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "device-mapper" 
+  "glibc" 
+  "libdevmapper1_03" 
+]
+extra-source "kpartx-0.10.0+103+suse.0fc97cd-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kpartx-0.10.0+103+suse.0fc97cd-1.1.x86_64.rpm"
+}

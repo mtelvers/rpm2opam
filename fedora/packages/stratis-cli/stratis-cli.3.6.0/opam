@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "stratis-cli-3.6.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "stratis-cli-3.6.0-3.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-dateutil" 
+  "python3-dbus-client-gen" {>= "0.4"}
+  "python3-dbus-python-client-gen" {>= "0.7"}
+  "python3-justbytes" {>= "0.14"}
+  "python3-packaging" 
+  "python3-psutil" 
+  "python3-wcwidth" 
+  "stratisd" 
+]
+extra-source "stratis-cli-3.6.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/stratis-cli-3.6.0-3.fc40.noarch.rpm"
+}

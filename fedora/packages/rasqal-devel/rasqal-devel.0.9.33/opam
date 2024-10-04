@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rasqal-devel-0.9.33-28.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rasqal-devel-0.9.33-28.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "pkgconf-pkg-config" 
+  "raptor2-devel" {>= "2.0.7"}
+  "rasqal" 
+]
+extra-source "rasqal-devel-0.9.33-28.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rasqal-devel-0.9.33-28.fc40.x86_64.rpm"
+}

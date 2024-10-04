@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-AuthorizedMethods-0.006-11.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-AuthorizedMethods-0.006-11.6.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Moose" {>= "1.21"}
+  "perl-aliased" 
+]
+extra-source "perl-MooseX-AuthorizedMethods-0.006-11.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-AuthorizedMethods-0.006-11.6.noarch.rpm"
+}

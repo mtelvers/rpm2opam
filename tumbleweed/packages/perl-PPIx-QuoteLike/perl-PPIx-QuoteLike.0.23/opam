@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-PPIx-QuoteLike-0.023-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-PPIx-QuoteLike-0.023-1.7.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-PPI" {>= "1.238"}
+  "perl-Readonly" 
+]
+extra-source "perl-PPIx-QuoteLike-0.023-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-PPIx-QuoteLike-0.023-1.7.noarch.rpm"
+}

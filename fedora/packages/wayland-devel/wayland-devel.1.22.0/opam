@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "wayland-devel-1.22.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wayland-devel-1.22.0-3.fc40.x86_64.rpm"]
+depends: [
+  "expat" 
+  "glibc" 
+  "libffi-devel" 
+  "libwayland-client" {= "1.22.0"}
+  "libwayland-cursor" {= "1.22.0"}
+  "libwayland-egl" 
+  "libwayland-server" {= "1.22.0"}
+  "libxml2" 
+  "pkgconf-pkg-config" 
+]
+extra-source "wayland-devel-1.22.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/wayland-devel-1.22.0-3.fc40.x86_64.rpm"
+}

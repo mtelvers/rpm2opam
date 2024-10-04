@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "moditect-1.2.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "moditect-1.2.2-1.1.noarch.rpm"]
+depends: [
+  "beust-jcommander" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "javaparser" 
+  "maven-resolver-util" 
+  "objectweb-asm" 
+]
+extra-source "moditect-1.2.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/moditect-1.2.2-1.1.noarch.rpm"
+}

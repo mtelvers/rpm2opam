@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "krdc-libs-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "krdc-libs-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "freerdp2-libs" 
+  "glibc" 
+  "kf6-kcmutils" 
+  "kf6-kcompletion" 
+  "kf6-kconfig" 
+  "kf6-kcoreaddons" 
+  "kf6-ki18n" 
+  "kf6-kio-widgets-libs" 
+  "kf6-kwallet-libs" 
+  "kf6-kwidgetsaddons" 
+  "kf6-kxmlgui" 
+  "libssh" 
+  "libstdc++" 
+  "libvncserver" 
+  "libwinpr2" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+]
+extra-source "krdc-libs-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/krdc-libs-24.02.1-1.fc40.x86_64.rpm"
+}

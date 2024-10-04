@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "postgrey-1.37-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgrey-1.37-22.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-BerkeleyDB" 
+  "perl-Fcntl" 
+  "perl-Getopt-Long" {>= "2.25"}
+  "perl-Net-DNS" 
+  "perl-Net-Server" 
+  "perl-NetAddr-IP" 
+  "perl-POSIX" 
+  "perl-Pod-Usage" 
+  "perl-Sys-Hostname" 
+  "perl-Sys-Syslog" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-vars" 
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "postgrey-1.37-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/postgrey-1.37-22.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sleuth-1.4.4-62.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sleuth-1.4.4-62.2.noarch.rpm"]
+depends: [
+  "perl-Net-DNS" 
+  "perl-base" 
+]
+extra-source "sleuth-1.4.4-62.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sleuth-1.4.4-62.2.noarch.rpm"
+}

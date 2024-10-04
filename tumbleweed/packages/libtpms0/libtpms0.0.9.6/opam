@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libtpms0-0.9.6-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libtpms0-0.9.6-2.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libopenssl3" 
+]
+extra-source "libtpms0-0.9.6-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libtpms0-0.9.6-2.3.x86_64.rpm"
+}

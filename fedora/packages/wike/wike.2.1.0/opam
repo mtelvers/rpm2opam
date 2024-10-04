@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "wike-2.1.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wike-2.1.0-1.fc40.noarch.rpm"]
+depends: [
+  "gtk4" 
+  "hicolor-icon-theme" 
+  "libadwaita" 
+  "python3" 
+  "python3-gobject" 
+  "python3-requests" 
+  "webkitgtk6-0" 
+]
+extra-source "wike-2.1.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/wike-2.1.0-1.fc40.noarch.rpm"
+}

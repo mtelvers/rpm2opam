@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "scim-unikey-0.3.2-1.30.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scim-unikey-0.3.2-1.30.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcc_s1" 
+  "libgtk-3-0" 
+  "libstdc++6" 
+  "scim" 
+]
+extra-source "scim-unikey-0.3.2-1.30.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/scim-unikey-0.3.2-1.30.x86_64.rpm"
+}

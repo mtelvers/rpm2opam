@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dogtag-ldapjdk-5.5.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dogtag-ldapjdk-5.5.0-2.fc40.noarch.rpm"]
+depends: [
+  "dogtag-jss" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "slf4j" 
+  "slf4j-jdk14" 
+]
+extra-source "dogtag-ldapjdk-5.5.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dogtag-ldapjdk-5.5.0-2.fc40.noarch.rpm"
+}

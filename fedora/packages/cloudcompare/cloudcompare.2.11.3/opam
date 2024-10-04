@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cloudcompare-2.11.3-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cloudcompare-2.11.3-12.fc40.x86_64.rpm"]
+depends: [
+  "gdal-libs" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libgomp" 
+  "libstdc++" 
+  "mesa-libGLU" 
+  "pcl" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "shapelib" 
+  "zlib-ng-compat" 
+]
+extra-source "cloudcompare-2.11.3-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cloudcompare-2.11.3-12.fc40.x86_64.rpm"
+}

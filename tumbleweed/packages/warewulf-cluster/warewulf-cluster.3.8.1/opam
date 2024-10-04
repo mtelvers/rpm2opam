@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "warewulf-cluster-3.8.1-13.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "warewulf-cluster-3.8.1-13.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "dhcp-server" 
+  "perl" 
+  "warewulf-common" 
+  "warewulf-provision" 
+]
+extra-source "warewulf-cluster-3.8.1-13.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/warewulf-cluster-3.8.1-13.3.noarch.rpm"
+}

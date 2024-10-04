@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-sequoia-openpgp-devel-1.19.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-sequoia-openpgp-devel-1.19.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.67"}
+  "rust-anyhow+default-devel" 
+  "rust-base64+default-devel" 
+  "rust-buffered-reader-devel" 
+  "rust-dyn-clone+default-devel" 
+  "rust-idna+default-devel" 
+  "rust-lalrpop-devel" 
+  "rust-lalrpop-util+default-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-memsec-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-regex+default-devel" 
+  "rust-regex-syntax+default-devel" 
+  "rust-sha1collisiondetection+std-devel" 
+  "rust-sha1collisiondetection-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-xxhash-rust+default-devel" 
+  "rust-xxhash-rust+xxh3-devel" 
+]
+extra-source "rust-sequoia-openpgp-devel-1.19.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-sequoia-openpgp-devel-1.19.0-1.fc40.noarch.rpm"
+}

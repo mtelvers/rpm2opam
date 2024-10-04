@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-napalm-4.1.0-2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-napalm-4.1.0-2.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-Jinja2" 
+  "python311-PyYAML" 
+  "python311-base" {= "3.11"}
+  "python311-cffi" {>= "1.11.3"}
+  "python311-junos-eznc" {>= "2.6.3"}
+  "python311-lxml" {>= "4.3.0"}
+  "python311-ncclient" 
+  "python311-netaddr" 
+  "python311-netmiko" {>= "4.0.0"}
+  "python311-netutils" {>= "1.0.0"}
+  "python311-paramiko" {>= "2.6.0"}
+  "python311-pyeapi" {>= "0.8.2"}
+  "python311-requests" {>= "2.7.0"}
+  "python311-scp" 
+  "python311-setuptools" {>= "38.4.0"}
+  "python311-textfsm" 
+  "python311-ttp" 
+  "python311-ttp-templates" 
+  "python311-typing_extensions" 
+  "update-alternatives" 
+]
+extra-source "python311-napalm-4.1.0-2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-napalm-4.1.0-2.3.noarch.rpm"
+}

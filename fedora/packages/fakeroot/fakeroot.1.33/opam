@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fakeroot-1.33-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fakeroot-1.33-1.fc40.x86_64.rpm"]
+depends: [
+  "alternatives" 
+  "bash" 
+  "coreutils" 
+  "fakeroot-libs" {= "1.33"}
+  "glibc" 
+  "util-linux" 
+]
+extra-source "fakeroot-1.33-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fakeroot-1.33-1.fc40.x86_64.rpm"
+}

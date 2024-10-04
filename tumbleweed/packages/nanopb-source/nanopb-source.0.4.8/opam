@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nanopb-source-0.4.8-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nanopb-source-0.4.8-2.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "python311-base" 
+]
+extra-source "nanopb-source-0.4.8-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nanopb-source-0.4.8-2.2.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "selinux-policy-minimum-20240604+git382.24f674cf-slfo.1.1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "selinux-policy-minimum-20240604+git382.24f674cf-slfo.1.1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-gawk" 
+  "coreutils" 
+  "policycoreutils" {>= "3.5"}
+  "policycoreutils-python-utils" {>= "3.5"}
+  "selinux-policy" {= "20240604"}
+]
+extra-source "selinux-policy-minimum-20240604+git382.24f674cf-slfo.1.1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/selinux-policy-minimum-20240604+git382.24f674cf-slfo.1.1.2.noarch.rpm"
+}

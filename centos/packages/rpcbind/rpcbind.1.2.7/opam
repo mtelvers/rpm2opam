@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rpcbind-1.2.7-2.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rpcbind-1.2.7-2.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "glibc" 
+  "glibc-common" 
+  "libtirpc" 
+  "setup" 
+  "shadow-utils" 
+  "systemd" 
+  "systemd-libs" 
+]
+extra-source "rpcbind-1.2.7-2.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/rpcbind-1.2.7-2.el10.x86_64.rpm"
+}

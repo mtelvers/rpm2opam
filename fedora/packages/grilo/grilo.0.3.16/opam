@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "grilo-0.3.16-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grilo-0.3.16-4.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libgcc" 
+  "liboauth" 
+  "libsoup3" 
+  "totem-pl-parser" 
+]
+extra-source "grilo-0.3.16-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/grilo-0.3.16-4.fc40.x86_64.rpm"
+}

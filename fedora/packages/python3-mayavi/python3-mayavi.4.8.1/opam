@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-mayavi-4.8.1-5.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-mayavi-4.8.1-5.fc39.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "python3" 
+  "python3-Traits" {>= "6"}
+  "python3-apptools" 
+  "python3-envisage" 
+  "python3-numpy" 
+  "python3-packaging" 
+  "python3-pyface" {>= "6.1.1"}
+  "python3-pyface-qt" 
+  "python3-pygments" 
+  "python3-traitsui" 
+  "python3-vtk" 
+]
+extra-source "python3-mayavi-4.8.1-5.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-mayavi-4.8.1-5.fc39.x86_64.rpm"
+}

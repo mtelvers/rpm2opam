@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sca-server-report-1.6.2-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sca-server-report-1.6.2-1.3.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "sca-patterns-base" 
+]
+extra-source "sca-server-report-1.6.2-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sca-server-report-1.6.2-1.3.noarch.rpm"
+}

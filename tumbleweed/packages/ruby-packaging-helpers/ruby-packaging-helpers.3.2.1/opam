@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ruby-packaging-helpers-3.2.1-5.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ruby-packaging-helpers-3.2.1-5.1.noarch.rpm"]
+depends: [
+  "ruby-common" {= "3.2.1"}
+  "ruby3-3" 
+]
+extra-source "ruby-packaging-helpers-3.2.1-5.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ruby-packaging-helpers-3.2.1-5.1.noarch.rpm"
+}

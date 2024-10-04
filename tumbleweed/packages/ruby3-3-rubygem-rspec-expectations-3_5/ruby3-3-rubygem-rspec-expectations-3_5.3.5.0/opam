@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ruby3.3-rubygem-rspec-expectations-3_5-3.5.0-1.30.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ruby3.3-rubygem-rspec-expectations-3_5-3.5.0-1.30.x86_64.rpm"]
+depends: [
+  "ruby3-3" {= "3.3.0"}
+  "ruby3-3-rubygem-diff-lcs" {>= "1.2.0"}
+  "ruby3-3-rubygem-rspec-support-3_5" {>= "3.5"}
+]
+extra-source "ruby3.3-rubygem-rspec-expectations-3_5-3.5.0-1.30.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ruby3.3-rubygem-rspec-expectations-3_5-3.5.0-1.30.x86_64.rpm"
+}

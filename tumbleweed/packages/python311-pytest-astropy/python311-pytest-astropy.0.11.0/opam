@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pytest-astropy-0.11.0-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pytest-astropy-0.11.0-1.5.noarch.rpm"]
+depends: [
+  "python311-attrs" {>= "19.2.0"}
+  "python311-base" {= "3.11"}
+  "python311-hypothesis" {>= "5.1"}
+  "python311-pytest" {>= "4.6"}
+  "python311-pytest-arraydiff" {>= "0.5"}
+  "python311-pytest-astropy-header" {>= "0.2.2"}
+  "python311-pytest-cov" {>= "2.3.1"}
+  "python311-pytest-doctestplus" {>= "1.0.0"}
+  "python311-pytest-filter-subpackage" {>= "0.1.2"}
+  "python311-pytest-mock" {>= "2.0"}
+  "python311-pytest-remotedata" {>= "0.4.1"}
+]
+extra-source "python311-pytest-astropy-0.11.0-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pytest-astropy-0.11.0-1.5.noarch.rpm"
+}

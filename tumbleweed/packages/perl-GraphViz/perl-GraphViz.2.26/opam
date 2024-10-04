@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-GraphViz-2.26-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-GraphViz-2.26-1.6.noarch.rpm"]
+depends: [
+  "graphviz" 
+  "graphviz-gnome" 
+  "libcairo2" 
+  "libpango-1_0-0" 
+  "perl" 
+  "perl-File-Which" {>= "1.9"}
+  "perl-IPC-Run" {>= "0.6"}
+  "perl-Parse-RecDescent" {>= "1.965001"}
+  "perl-XML-Twig" {>= "3.52"}
+  "perl-XML-XPath" {>= "1.13"}
+  "perl-libwww-perl" {>= "6"}
+]
+extra-source "perl-GraphViz-2.26-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-GraphViz-2.26-1.6.noarch.rpm"
+}

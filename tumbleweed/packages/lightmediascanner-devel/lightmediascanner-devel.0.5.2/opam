@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lightmediascanner-devel-0.5.2-2.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lightmediascanner-devel-0.5.2-2.7.x86_64.rpm"]
+depends: [
+  "liblightmediascanner0" {= "0.5.2"}
+  "pkgconf-pkg-config" 
+  "sqlite3-devel" 
+]
+extra-source "lightmediascanner-devel-0.5.2-2.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lightmediascanner-devel-0.5.2-2.7.x86_64.rpm"
+}

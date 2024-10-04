@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-apache-beam-2-devel-2.33.0~RC1-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-apache-beam-2-devel-2.33.0~RC1-14.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-cloud-google-bigquery-devel" 
+  "golang-cloud-google-datastore-devel" 
+  "golang-cloud-google-pubsub-devel" 
+  "golang-cloud-google-storage-devel" 
+  "golang-github-google-cmp-devel" 
+  "golang-github-google-uuid-devel" 
+  "golang-github-linkedin-goavro-devel" 
+  "golang-github-protobuf-devel" 
+  "golang-github-spf13-cobra-devel" 
+  "golang-google-api-devel" 
+  "golang-google-genproto-devel" 
+  "golang-google-protobuf-devel" 
+  "golang-gopkg-yaml-2-devel" 
+  "golang-x-net-devel" 
+  "golang-x-oauth2-devel" 
+  "golang-x-text-devel" 
+]
+extra-source "golang-github-apache-beam-2-devel-2.33.0~RC1-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-apache-beam-2-devel-2.33.0~RC1-14.fc40.noarch.rpm"
+}

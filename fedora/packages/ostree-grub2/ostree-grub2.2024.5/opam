@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ostree-grub2-2024.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ostree-grub2-2024.5-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "grub2-pc" 
+  "ostree" 
+]
+extra-source "ostree-grub2-2024.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ostree-grub2-2024.5-1.fc40.x86_64.rpm"
+}

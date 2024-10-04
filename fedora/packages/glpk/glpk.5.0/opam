@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "glpk-5.0-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glpk-5.0-11.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gmp" 
+  "suitesparse" 
+  "zlib-ng-compat" 
+]
+extra-source "glpk-5.0-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/glpk-5.0-11.fc40.x86_64.rpm"
+}

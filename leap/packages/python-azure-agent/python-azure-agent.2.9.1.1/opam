@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python-azure-agent-2.9.1.1-slfo.1.2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python-azure-agent-2.9.1.1-slfo.1.2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "grep" 
+  "iptables" 
+  "logrotate" 
+  "openssh" 
+  "openssl" 
+  "python311-base" 
+  "python311-distro" 
+  "python311-pyasn1" 
+  "shadow" 
+  "sudo" 
+  "systemd" 
+  "sysvinit-tools" 
+  "util-linux" 
+]
+extra-source "python-azure-agent-2.9.1.1-slfo.1.2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/python-azure-agent-2.9.1.1-slfo.1.2.1.noarch.rpm"
+}

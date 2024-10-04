@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcheese8-44.1-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcheese8-44.1-3.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gstreamer-plugins-bad" 
+  "gstreamer-plugins-good" 
+  "libcheese-common" {>= "44.1"}
+  "libclutter-1_0-0" 
+  "libclutter-gst-3_0-0" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgstpbutils-1_0-0" 
+  "libgstreamer-1_0-0" 
+]
+extra-source "libcheese8-44.1-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcheese8-44.1-3.1.x86_64.rpm"
+}

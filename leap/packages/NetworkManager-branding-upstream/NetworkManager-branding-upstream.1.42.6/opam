@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "NetworkManager-branding-upstream-1.42.6-slfo.1.1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "NetworkManager-branding-upstream-1.42.6-slfo.1.1.8.noarch.rpm"]
+depends: [
+  "NetworkManager" {= "1.42.6"}
+]
+extra-source "NetworkManager-branding-upstream-1.42.6-slfo.1.1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/NetworkManager-branding-upstream-1.42.6-slfo.1.1.8.noarch.rpm"
+}

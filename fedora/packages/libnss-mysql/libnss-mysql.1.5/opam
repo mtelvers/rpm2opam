@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libnss-mysql-1.5-49.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnss-mysql-1.5-49.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "mariadb-connector-c" 
+  "zlib-ng-compat" 
+]
+extra-source "libnss-mysql-1.5-49.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libnss-mysql-1.5-49.fc40.x86_64.rpm"
+}

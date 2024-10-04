@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "devscripts-2.22.2-slfo.1.1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "devscripts-2.22.2-slfo.1.1.4.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "checkbashisms" {>= "2.22.2"}
+  "dpkg" 
+  "glibc" 
+  "perl" 
+  "perl-File-HomeDir" 
+  "perl-Moo" 
+  "perl-base" 
+  "python311-base" 
+]
+extra-source "devscripts-2.22.2-slfo.1.1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/devscripts-2.22.2-slfo.1.1.4.x86_64.rpm"
+}

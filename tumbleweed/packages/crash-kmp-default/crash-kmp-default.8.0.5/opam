@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "crash-kmp-default-8.0.5_k6.11.0_1-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "crash-kmp-default-8.0.5_k6.11.0_1-1.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "grep" 
+  "kernel-default" 
+  "suse-module-tools-scriptlets" 
+]
+extra-source "crash-kmp-default-8.0.5_k6.11.0_1-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/crash-kmp-default-8.0.5_k6.11.0_1-1.4.x86_64.rpm"
+}

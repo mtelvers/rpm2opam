@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "arprec-tools-2.2.19-21.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "arprec-tools-2.2.19-21.fc40.x86_64.rpm"]
+depends: [
+  "arprec" {= "2.2.19"}
+  "arprec-data" {= "2.2.19"}
+  "glibc" 
+  "libgcc" 
+  "libgfortran" 
+]
+extra-source "arprec-tools-2.2.19-21.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/arprec-tools-2.2.19-21.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "f40-backgrounds-40.0.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "f40-backgrounds-40.0.0-1.fc40.noarch.rpm"]
+depends: [
+  "f40-backgrounds-budgie" {= "40.0.0"}
+  "f40-backgrounds-gnome" {= "40.0.0"}
+  "f40-backgrounds-kde" {= "40.0.0"}
+  "f40-backgrounds-mate" {= "40.0.0"}
+  "f40-backgrounds-xfce" {= "40.0.0"}
+]
+extra-source "f40-backgrounds-40.0.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/f40-backgrounds-40.0.0-1.fc40.noarch.rpm"
+}

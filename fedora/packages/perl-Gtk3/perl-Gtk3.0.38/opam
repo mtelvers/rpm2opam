@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Gtk3-0.038-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Gtk3-0.038-11.fc40.noarch.rpm"]
+depends: [
+  "gtk3" 
+  "perl-Cairo-GObject" {>= "1.0"}
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-Glib-Object-Introspection" {>= "0.43"}
+  "perl-POSIX" 
+  "perl-Scalar-List-Utils" 
+  "perl-libs" 
+  "perl-overload" 
+]
+extra-source "perl-Gtk3-0.038-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Gtk3-0.038-11.fc40.noarch.rpm"
+}

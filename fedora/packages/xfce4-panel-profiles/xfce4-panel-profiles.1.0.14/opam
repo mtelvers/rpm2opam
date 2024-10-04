@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xfce4-panel-profiles-1.0.14-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xfce4-panel-profiles-1.0.14-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "python3" 
+  "python3-psutil" 
+  "xfce4-panel" 
+]
+extra-source "xfce4-panel-profiles-1.0.14-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xfce4-panel-profiles-1.0.14-4.fc40.noarch.rpm"
+}

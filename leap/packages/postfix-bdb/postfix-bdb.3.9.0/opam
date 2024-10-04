@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postfix-bdb-3.9.0-slfo.1.2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postfix-bdb-3.9.0-slfo.1.2.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "ed" 
+  "fillup" 
+  "glibc" 
+  "iproute2" 
+  "libdb-4_8" 
+  "libicu73" 
+  "libopenssl3" 
+  "libpcre2-8-0" 
+  "libsasl2-3" 
+  "perl" 
+  "perl-base" 
+  "permissions" 
+  "system-user-mail" 
+  "system-user-nobody" 
+  "sysuser-shadow" {>= "3.1"}
+]
+extra-source "postfix-bdb-3.9.0-slfo.1.2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/postfix-bdb-3.9.0-slfo.1.2.1.x86_64.rpm"
+}

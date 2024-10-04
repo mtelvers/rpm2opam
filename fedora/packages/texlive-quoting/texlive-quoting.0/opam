@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-quoting-svn32818.v0.1c-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-quoting-svn32818.v0.1c-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-etoolbox" 
+  "texlive-kpathsea" 
+  "texlive-kvoptions" 
+]
+extra-source "texlive-quoting-svn32818.v0.1c-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-quoting-svn32818.v0.1c-71.fc40.noarch.rpm"
+}

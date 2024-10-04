@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-logs-45.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-logs-45.0-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gsettings-desktop-schemas" 
+  "libadwaita-1-0" 
+  "libgtk-4-1" 
+  "libpango-1_0-0" 
+  "libsystemd0" 
+]
+extra-source "gnome-logs-45.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnome-logs-45.0-1.1.x86_64.rpm"
+}

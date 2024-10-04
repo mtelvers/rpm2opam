@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "wingpanel-devel-3.0.5-3.20231206.git0fb4a14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wingpanel-devel-3.0.5-3.20231206.git0fb4a14.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "gtk3-devel" {>= "3.10"}
+  "libgee-devel" 
+  "pkgconf-pkg-config" 
+  "wingpanel" 
+]
+extra-source "wingpanel-devel-3.0.5-3.20231206.git0fb4a14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/wingpanel-devel-3.0.5-3.20231206.git0fb4a14.fc40.x86_64.rpm"
+}

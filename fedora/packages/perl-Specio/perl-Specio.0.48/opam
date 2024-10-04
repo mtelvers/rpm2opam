@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Specio-0.48-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Specio-0.48-6.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Devel-StackTrace" 
+  "perl-Eval-Closure" 
+  "perl-Exporter" 
+  "perl-MRO-Compat" 
+  "perl-Module-Runtime" 
+  "perl-Ref-Util" {>= "0.112"}
+  "perl-Role-Tiny" 
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-Storable" 
+  "perl-XString" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-overload" 
+  "perl-parent" 
+  "perl-version" {>= "0.83"}
+]
+extra-source "perl-Specio-0.48-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Specio-0.48-6.fc40.noarch.rpm"
+}

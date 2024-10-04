@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "quarter-1.2.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "quarter-1.2.0-1.fc40.x86_64.rpm"]
+depends: [
+  "Coin4" 
+  "glibc" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "quarter-1.2.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/quarter-1.2.0-1.fc40.x86_64.rpm"
+}

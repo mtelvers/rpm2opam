@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-vector-devel-0.13.1.0-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-vector-devel-0.13.1.0-2.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-deepseq-devel" 
+  "ghc-primitive-devel" 
+  "ghc-vector" {= "0.13.1.0"}
+  "ghc-vector-stream-devel" 
+]
+extra-source "ghc-vector-devel-0.13.1.0-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-vector-devel-0.13.1.0-2.3.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "maven-local-openjdk21-6.2.0-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-local-openjdk21-6.2.0-9.fc40.noarch.rpm"]
+depends: [
+  "java-21-openjdk-devel" 
+  "maven-local" 
+]
+extra-source "maven-local-openjdk21-6.2.0-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/maven-local-openjdk21-6.2.0-9.fc40.noarch.rpm"
+}

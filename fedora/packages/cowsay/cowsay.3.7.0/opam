@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cowsay-3.7.0-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cowsay-3.7.0-12.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "filesystem" {>= "3.6"}
+  "perl-Encode" 
+  "perl-File-Basename" 
+  "perl-File-Find" 
+  "perl-Getopt-Std" 
+  "perl-PathTools" 
+  "perl-Text-Tabs+Wrap" 
+  "perl-interpreter" 
+]
+extra-source "cowsay-3.7.0-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cowsay-3.7.0-12.fc40.noarch.rpm"
+}

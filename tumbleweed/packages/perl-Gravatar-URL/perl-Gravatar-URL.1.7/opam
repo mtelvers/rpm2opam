@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Gravatar-URL-1.07-1.27.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Gravatar-URL-1.07-1.27.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Net-DNS" {>= "1.1"}
+  "perl-URI" 
+  "perl-base" 
+]
+extra-source "perl-Gravatar-URL-1.07-1.27.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Gravatar-URL-1.07-1.27.noarch.rpm"
+}

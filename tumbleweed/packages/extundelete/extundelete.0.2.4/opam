@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "extundelete-0.2.4-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "extundelete-0.2.4-3.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcom_err2" 
+  "libext2fs2" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "extundelete-0.2.4-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/extundelete-0.2.4-3.2.x86_64.rpm"
+}

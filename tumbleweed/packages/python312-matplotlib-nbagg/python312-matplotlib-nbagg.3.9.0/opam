@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-matplotlib-nbagg-3.9.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-matplotlib-nbagg-3.9.0-1.2.x86_64.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-ipykernel" 
+  "python312-matplotlib" {= "3.9.0"}
+]
+extra-source "python312-matplotlib-nbagg-3.9.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-matplotlib-nbagg-3.9.0-1.2.x86_64.rpm"
+}

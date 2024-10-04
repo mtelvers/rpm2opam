@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "spread-sheet-widget-devel-0.10-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "spread-sheet-widget-devel-0.10-1.3.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.44"}
+  "gtk3-devel" {>= "3.18.0"}
+  "libspread-sheet-widget0" {= "0.10"}
+  "pkgconf-pkg-config" 
+]
+extra-source "spread-sheet-widget-devel-0.10-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/spread-sheet-widget-devel-0.10-1.3.x86_64.rpm"
+}

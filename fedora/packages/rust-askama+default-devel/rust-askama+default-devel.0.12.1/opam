@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-askama+default-devel-0.12.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-askama+default-devel-0.12.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-askama+config-devel" {= "0.12.1"}
+  "rust-askama+humansize-devel" {= "0.12.1"}
+  "rust-askama+num-traits-devel" {= "0.12.1"}
+  "rust-askama+urlencode-devel" {= "0.12.1"}
+  "rust-askama-devel" {= "0.12.1"}
+]
+extra-source "rust-askama+default-devel-0.12.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-askama+default-devel-0.12.1-2.fc40.noarch.rpm"
+}

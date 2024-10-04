@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-HTTP-CookieMonster-0.11-1.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTTP-CookieMonster-0.11-1.17.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-HTTP-Cookies" 
+  "perl-Moo" {>= "1.3"}
+  "perl-Safe-Isa" 
+  "perl-Sub-Exporter" 
+  "perl-URI" 
+]
+extra-source "perl-HTTP-CookieMonster-0.11-1.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-HTTP-CookieMonster-0.11-1.17.noarch.rpm"
+}

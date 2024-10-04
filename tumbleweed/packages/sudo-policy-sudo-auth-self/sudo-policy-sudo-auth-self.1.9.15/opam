@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sudo-policy-sudo-auth-self-1.9.15p5-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sudo-policy-sudo-auth-self-1.9.15p5-2.1.x86_64.rpm"]
+depends: [
+  "sudo" {= "1.9.15"}
+  "system-group-sudo" 
+]
+extra-source "sudo-policy-sudo-auth-self-1.9.15p5-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sudo-policy-sudo-auth-self-1.9.15p5-2.1.x86_64.rpm"
+}

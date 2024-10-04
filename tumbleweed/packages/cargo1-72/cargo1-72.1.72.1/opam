@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cargo1.72-1.72.1-2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cargo1.72-1.72.1-2.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcurl-mini4" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libz-ng-compat1" 
+  "rust1-72" {= "1.72.1"}
+]
+extra-source "cargo1.72-1.72.1-2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cargo1.72-1.72.1-2.5.x86_64.rpm"
+}

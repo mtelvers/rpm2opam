@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mcstrans-3.7-1.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mcstrans-3.7-1.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libcap" 
+  "libselinux" 
+  "pcre2" 
+  "systemd" 
+]
+extra-source "mcstrans-3.7-1.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/mcstrans-3.7-1.el10.x86_64.rpm"
+}

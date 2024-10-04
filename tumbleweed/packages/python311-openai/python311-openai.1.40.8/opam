@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-openai-1.40.8-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-openai-1.40.8-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-anyio" {>= "3.5.0"}
+  "python311-base" 
+  "python311-distro" {>= "1.7.0"}
+  "python311-httpx" {>= "0.23.0"}
+  "python311-jiter" {>= "0.4.0"}
+  "python311-pydantic" {>= "1.9.0"}
+  "python311-sniffio" 
+  "python311-tqdm" {> "4"}
+  "python311-typing_extensions" 
+  "update-alternatives" 
+]
+extra-source "python311-openai-1.40.8-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-openai-1.40.8-2.1.noarch.rpm"
+}

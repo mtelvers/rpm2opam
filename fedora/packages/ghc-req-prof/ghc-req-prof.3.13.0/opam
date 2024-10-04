@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-req-prof-3.13.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-req-prof-3.13.0-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-prof" 
+  "ghc-authenticate-oauth-prof" 
+  "ghc-base-prof" 
+  "ghc-blaze-builder-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-case-insensitive-prof" 
+  "ghc-connection-prof" 
+  "ghc-containers-prof" 
+  "ghc-exceptions-prof" 
+  "ghc-http-api-data-prof" 
+  "ghc-http-client-prof" 
+  "ghc-http-client-tls-prof" 
+  "ghc-http-types-prof" 
+  "ghc-modern-uri-prof" 
+  "ghc-monad-control-prof" 
+  "ghc-mtl-prof" 
+  "ghc-req-devel" {= "3.13.0"}
+  "ghc-retry-prof" 
+  "ghc-template-haskell-prof" 
+  "ghc-text-prof" 
+  "ghc-time-prof" 
+  "ghc-transformers-base-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unliftio-core-prof" 
+]
+extra-source "ghc-req-prof-3.13.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-req-prof-3.13.0-6.fc40.x86_64.rpm"
+}

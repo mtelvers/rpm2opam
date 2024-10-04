@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-zbus_names-devel-3.0.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-zbus_names-devel-3.0.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.75"}
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-static_assertions+default-devel" 
+  "rust-zvariant+enumflags2-devel" 
+  "rust-zvariant-devel" 
+]
+extra-source "rust-zbus_names-devel-3.0.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-zbus_names-devel-3.0.0-1.fc40.noarch.rpm"
+}

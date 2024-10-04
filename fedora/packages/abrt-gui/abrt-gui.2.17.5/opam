@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "abrt-gui-2.17.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "abrt-gui-2.17.5-1.fc40.x86_64.rpm"]
+depends: [
+  "abrt" {= "2.17.5"}
+  "abrt-dbus" {= "2.17.5"}
+  "abrt-gui-libs" {= "2.17.5"}
+  "abrt-libs" {= "2.17.5"}
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "gnome-abrt" 
+  "gsettings-desktop-schemas" {>= "3.15"}
+  "gtk3" 
+  "libgcc" 
+  "libreport" 
+  "libreport-gtk" 
+  "polkit-libs" 
+]
+extra-source "abrt-gui-2.17.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/abrt-gui-2.17.5-1.fc40.x86_64.rpm"
+}

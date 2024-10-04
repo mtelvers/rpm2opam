@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-crunchy+default-devel-0.2.2-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-crunchy+default-devel-0.2.2-10.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-crunchy+limit_128-devel" {= "0.2.2"}
+  "rust-crunchy-devel" {= "0.2.2"}
+]
+extra-source "rust-crunchy+default-devel-0.2.2-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-crunchy+default-devel-0.2.2-10.fc40.noarch.rpm"
+}

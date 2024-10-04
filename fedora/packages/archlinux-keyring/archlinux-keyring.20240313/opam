@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "archlinux-keyring-20240313-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "archlinux-keyring-20240313-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "keyrings-filesystem" 
+  "pacman-filesystem" 
+]
+extra-source "archlinux-keyring-20240313-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/archlinux-keyring-20240313-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Wiki-Toolkit-0.87-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Wiki-Toolkit-0.87-11.fc40.noarch.rpm"]
+depends: [
+  "perl-CGI" 
+  "perl-Carp" 
+  "perl-DBI" 
+  "perl-Digest-MD5" 
+  "perl-Digest-SHA" 
+  "perl-Getopt-Long" 
+  "perl-HTML-Parser" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Text-WikiFormat" 
+  "perl-Time-Piece" 
+  "perl-URI" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-vars" 
+]
+extra-source "perl-Wiki-Toolkit-0.87-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Wiki-Toolkit-0.87-11.fc40.noarch.rpm"
+}

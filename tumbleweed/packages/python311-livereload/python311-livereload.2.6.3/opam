@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-livereload-2.6.3-6.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-livereload-2.6.3-6.7.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-six" 
+  "python311-tornado" 
+  "update-alternatives" 
+]
+extra-source "python311-livereload-2.6.3-6.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-livereload-2.6.3-6.7.noarch.rpm"
+}

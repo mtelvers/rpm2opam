@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jitterentropy-devel-32bit-3.4.1-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jitterentropy-devel-32bit-3.4.1-4.2.x86_64.rpm"]
+depends: [
+  "jitterentropy-devel" {= "3.4.1"}
+  "libjitterentropy3-32bit" {= "3.4.1"}
+]
+extra-source "jitterentropy-devel-32bit-3.4.1-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/jitterentropy-devel-32bit-3.4.1-4.2.x86_64.rpm"
+}

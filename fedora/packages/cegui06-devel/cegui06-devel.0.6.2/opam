@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cegui06-devel-0.6.2-45.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cegui06-devel-0.6.2-45.fc40.x86_64.rpm"]
+depends: [
+  "cegui06" {= "0.6.2"}
+  "mesa-libGLU-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "cegui06-devel-0.6.2-45.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cegui06-devel-0.6.2-45.fc40.x86_64.rpm"
+}

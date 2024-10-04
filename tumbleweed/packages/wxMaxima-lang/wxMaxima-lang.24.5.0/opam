@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wxMaxima-lang-24.05.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wxMaxima-lang-24.05.0-2.2.noarch.rpm"]
+depends: [
+  "wxMaxima" {= "24.5.0"}
+]
+extra-source "wxMaxima-lang-24.05.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/wxMaxima-lang-24.05.0-2.2.noarch.rpm"
+}

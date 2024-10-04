@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-jupyter-client-8.6.2-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-jupyter-client-8.6.2-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-base" 
+  "python310-importlib-metadata" 
+  "python310-jupyter-core" 
+  "python310-python-dateutil" {>= "2.8.2"}
+  "python310-pyzmq" {>= "23.0"}
+  "python310-tornado" {>= "6.2"}
+  "python310-traitlets" {>= "5.3"}
+  "update-alternatives" 
+]
+extra-source "python310-jupyter-client-8.6.2-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-jupyter-client-8.6.2-2.1.noarch.rpm"
+}

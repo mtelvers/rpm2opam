@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libhibr-devel-20210421-3.18.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libhibr-devel-20210421-3.18.x86_64.rpm"]
+depends: [
+  "libbfio-devel" 
+  "libhibr1" {= "20210421"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libhibr-devel-20210421-3.18.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libhibr-devel-20210421-3.18.x86_64.rpm"
+}

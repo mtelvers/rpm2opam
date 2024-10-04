@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "transmission-gtk-4.0.5-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "transmission-gtk-4.0.5-3.fc40.x86_64.rpm"]
+depends: [
+  "cairomm1-16" 
+  "glib2" 
+  "glibc" 
+  "glibmm2-68" 
+  "gtk4" 
+  "gtkmm4-0" 
+  "libcurl" 
+  "libevent" 
+  "libgcc" 
+  "libnatpmp" 
+  "libsigc++30" 
+  "libstdc++" 
+  "openssl-libs" 
+  "pangomm2-48" 
+  "transmission-common" 
+]
+extra-source "transmission-gtk-4.0.5-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/transmission-gtk-4.0.5-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcomps-devel-0.1.20-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcomps-devel-0.1.20-3.1.x86_64.rpm"]
+depends: [
+  "libcomps0" {= "0.1.20"}
+  "libexpat-devel" 
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libcomps-devel-0.1.20-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcomps-devel-0.1.20-3.1.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pytest-mockito-0.0.4-2.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pytest-mockito-0.0.4-2.11.noarch.rpm"]
+depends: [
+  "ca-certificates" 
+  "python312" 
+  "python312-base" {= "3.12"}
+  "python312-mockito" 
+  "python312-pytest" 
+]
+extra-source "python312-pytest-mockito-0.0.4-2.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pytest-mockito-0.0.4-2.11.noarch.rpm"
+}

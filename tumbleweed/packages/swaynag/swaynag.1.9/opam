@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "swaynag-1.9-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "swaynag-1.9-3.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libpango-1_0-0" 
+  "libwayland-client0" 
+  "libwayland-cursor0" 
+  "sway" 
+]
+extra-source "swaynag-1.9-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/swaynag-1.9-3.1.x86_64.rpm"
+}

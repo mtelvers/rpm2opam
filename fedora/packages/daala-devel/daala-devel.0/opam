@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "daala-devel-0-27.20200724git694d4ce.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "daala-devel-0-27.20200724git694d4ce.fc40.x86_64.rpm"]
+depends: [
+  "daala-libs" {= "0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "daala-devel-0-27.20200724git694d4ce.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/daala-devel-0-27.20200724git694d4ce.fc40.x86_64.rpm"
+}

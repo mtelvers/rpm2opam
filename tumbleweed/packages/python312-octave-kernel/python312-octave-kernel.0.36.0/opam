@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-octave-kernel-0.36.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-octave-kernel-0.36.0-1.1.noarch.rpm"]
+depends: [
+  "jupyter-octave-kernel" {= "0.36.0"}
+  "octave" 
+  "python312-base" {= "3.12"}
+  "python312-ipykernel" 
+  "python312-jupyter-client" {>= "4.3.0"}
+  "python312-metakernel" {>= "0.24.0"}
+]
+extra-source "python312-octave-kernel-0.36.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-octave-kernel-0.36.0-1.1.noarch.rpm"
+}

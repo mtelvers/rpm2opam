@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "erlang-lager-3.9.2-6.fc38.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "erlang-lager-3.9.2-6.fc38.noarch.rpm"]
+depends: [
+  "erlang-common_test" 
+  "erlang-erts" 
+  "erlang-goldrush" 
+  "erlang-kernel" 
+  "erlang-sasl" 
+  "erlang-stdlib" 
+]
+extra-source "erlang-lager-3.9.2-6.fc38.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/erlang-lager-3.9.2-6.fc38.noarch.rpm"
+}

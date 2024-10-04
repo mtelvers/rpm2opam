@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pyzmq-devel-25.1.2-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pyzmq-devel-25.1.2-2.2.x86_64.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-devel" 
+  "python311-pyzmq" {= "25.1.2"}
+  "zeromq-devel" 
+]
+extra-source "python311-pyzmq-devel-25.1.2-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-pyzmq-devel-25.1.2-2.2.x86_64.rpm"
+}

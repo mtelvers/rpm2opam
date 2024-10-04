@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-regex-compat-prof-0.95.2.1-4.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-regex-compat-prof-0.95.2.1-4.9.x86_64.rpm"]
+depends: [
+  "ghc-array-prof" 
+  "ghc-base-prof" 
+  "ghc-regex-base-prof" 
+  "ghc-regex-compat-devel" {= "0.95.2.1"}
+  "ghc-regex-posix-prof" 
+]
+extra-source "ghc-regex-compat-prof-0.95.2.1-4.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-regex-compat-prof-0.95.2.1-4.9.x86_64.rpm"
+}

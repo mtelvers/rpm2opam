@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "udisks2-2.10.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "udisks2-2.10.1-5.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dbus" {>= "1.4.0"}
+  "glib2" 
+  "glibc" 
+  "libacl" 
+  "libatasmart" 
+  "libblkid" 
+  "libblockdev" {>= "3.0"}
+  "libblockdev-crypto" {>= "3.0"}
+  "libblockdev-fs" {>= "3.0"}
+  "libblockdev-loop" {>= "3.0"}
+  "libblockdev-mdraid" {>= "3.0"}
+  "libblockdev-nvme" {>= "3.0"}
+  "libblockdev-part" {>= "3.0"}
+  "libblockdev-swap" {>= "3.0"}
+  "libblockdev-utils" 
+  "libgcc" 
+  "libgudev" 
+  "libmount" 
+  "libudisks2" 
+  "libuuid" 
+  "polkit" {>= "0.102"}
+  "polkit-libs" 
+  "systemd-libs" 
+  "systemd-udev" {>= "208"}
+  "util-linux" 
+]
+extra-source "udisks2-2.10.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/udisks2-2.10.1-5.fc40.x86_64.rpm"
+}

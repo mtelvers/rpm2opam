@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ladvd-1.1.2-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ladvd-1.1.2-20.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libcap-ng" 
+  "libevent" 
+  "libpcap" 
+  "libteam" 
+  "systemd" 
+]
+extra-source "ladvd-1.1.2-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/ladvd-1.1.2-20.fc40.x86_64.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-podlators-5.01-510.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-podlators-5.01-510.el10.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long" 
+  "perl-POSIX" 
+  "perl-PathTools" {>= "0.8"}
+  "perl-Pod-Simple" {>= "3.26"}
+  "perl-Pod-Usage" 
+  "perl-Term-ANSIColor" 
+  "perl-Term-Cap" 
+  "perl-interpreter" 
+]
+extra-source "perl-podlators-5.01-510.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/perl-podlators-5.01-510.el10.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "intel-hybrid-driver-1.0.2-5.17.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "intel-hybrid-driver-1.0.2-5.17.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcmrt1" 
+  "libdrm2" 
+  "libdrm_intel1" 
+]
+extra-source "intel-hybrid-driver-1.0.2-5.17.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/intel-hybrid-driver-1.0.2-5.17.x86_64.rpm"
+}

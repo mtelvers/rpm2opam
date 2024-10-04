@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-tasty-rerun-prof-1.1.19-4.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-tasty-rerun-prof-1.1.19-4.5.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-mtl-prof" 
+  "ghc-optparse-applicative-prof" 
+  "ghc-split-prof" 
+  "ghc-stm-prof" 
+  "ghc-tagged-prof" 
+  "ghc-tasty-prof" 
+  "ghc-tasty-rerun-devel" {= "1.1.19"}
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-tasty-rerun-prof-1.1.19-4.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-tasty-rerun-prof-1.1.19-4.5.x86_64.rpm"
+}

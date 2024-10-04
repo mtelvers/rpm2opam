@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvirt-cim-0.6.3-16.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvirt-cim-0.6.3-16.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "cim-schema" {>= "2.17"}
+  "glibc" 
+  "libcmpiutil0" 
+  "libuuid1" 
+  "libvirt-libs" 
+  "libxml2-tools" {>= "2.6.0"}
+  "sblim-sfcb" 
+  "systemd" 
+  "unzip" 
+]
+extra-source "libvirt-cim-0.6.3-16.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libvirt-cim-0.6.3-16.2.x86_64.rpm"
+}

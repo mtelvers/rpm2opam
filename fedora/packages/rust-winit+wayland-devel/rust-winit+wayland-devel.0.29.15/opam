@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-winit+wayland-devel-0.29.15-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-winit+wayland-devel-0.29.15-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-winit+ahash-devel" {= "0.29.15"}
+  "rust-winit+memmap2-devel" {= "0.29.15"}
+  "rust-winit+sctk-devel" {= "0.29.15"}
+  "rust-winit+wayland-backend-devel" {= "0.29.15"}
+  "rust-winit+wayland-client-devel" {= "0.29.15"}
+  "rust-winit+wayland-protocols-devel" {= "0.29.15"}
+  "rust-winit+wayland-protocols-plasma-devel" {= "0.29.15"}
+  "rust-winit-devel" {= "0.29.15"}
+]
+extra-source "rust-winit+wayland-devel-0.29.15-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-winit+wayland-devel-0.29.15-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-Fabric-3.2.2-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-Fabric-3.2.2-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-Deprecated" 
+  "python310-base" {= "3.10"}
+  "python310-decorator" 
+  "python310-invoke" {>= "2.0"}
+  "python310-paramiko" {>= "3.2"}
+  "update-alternatives" 
+]
+extra-source "python310-Fabric-3.2.2-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-Fabric-3.2.2-2.1.noarch.rpm"
+}

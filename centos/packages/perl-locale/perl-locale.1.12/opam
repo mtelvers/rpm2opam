@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-locale-1.12-510.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-locale-1.12-510.el10.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-POSIX" 
+]
+extra-source "perl-locale-1.12-510.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/perl-locale-1.12-510.el10.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "menulibre-2.2.3-lp160.3.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "menulibre-2.2.3-lp160.3.12.noarch.rpm"]
+depends: [
+  "girepository-1_0" 
+  "gnome-menus" 
+  "hicolor-icon-theme" 
+  "python311-base" 
+  "python311-gobject" 
+  "python311-psutil" 
+  "typelib-1_0-GMenu-3_0" {= "3.0"}
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" 
+  "xdg-utils" 
+]
+extra-source "menulibre-2.2.3-lp160.3.12.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/menulibre-2.2.3-lp160.3.12.noarch.rpm"
+}

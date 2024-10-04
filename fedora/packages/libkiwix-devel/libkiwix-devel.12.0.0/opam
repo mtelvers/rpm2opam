@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libkiwix-devel-12.0.0-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libkiwix-devel-12.0.0-11.fc40.x86_64.rpm"]
+depends: [
+  "libcurl-devel" 
+  "libicu-devel" 
+  "libkiwix" {= "12.0.0"}
+  "libmicrohttpd-devel" 
+  "libzim-devel" 
+  "pkgconf-pkg-config" 
+  "pugixml-devel" 
+  "xapian-core-devel" 
+]
+extra-source "libkiwix-devel-12.0.0-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libkiwix-devel-12.0.0-11.fc40.x86_64.rpm"
+}

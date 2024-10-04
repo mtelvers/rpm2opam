@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "normalize-0.7.7-31.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "normalize-0.7.7-31.fc40.x86_64.rpm"]
+depends: [
+  "audiofile" 
+  "flac" 
+  "glibc" 
+  "lame" 
+  "libmad" 
+  "mpg123" 
+  "perl-Fcntl" 
+  "perl-interpreter" 
+  "vorbis-tools" 
+]
+extra-source "normalize-0.7.7-31.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/normalize-0.7.7-31.fc40.x86_64.rpm"
+}

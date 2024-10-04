@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qt6-platformsupport-devel-static-6.7.2-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qt6-platformsupport-devel-static-6.7.2-3.1.x86_64.rpm"]
+depends: [
+  "Mesa-libEGL-devel" 
+  "Mesa-libGL-devel" 
+  "at-spi2-core-devel" 
+  "fontconfig-devel" 
+  "freetype2-devel" 
+  "glib2-devel" 
+  "libX11-devel" 
+  "libXext-devel" 
+  "libXrender-devel" 
+  "libinput-devel" 
+  "libxkbcommon-devel" {>= "0.4.1"}
+  "libxkbcommon-x11-devel" {>= "0.4.1"}
+  "mtdev-devel" 
+  "qt6-core-private-devel" {= "6.7.2"}
+  "qt6-gui-private-devel" {= "6.7.2"}
+  "systemd-devel" 
+  "tslib-devel" 
+]
+extra-source "qt6-platformsupport-devel-static-6.7.2-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/qt6-platformsupport-devel-static-6.7.2-3.1.x86_64.rpm"
+}

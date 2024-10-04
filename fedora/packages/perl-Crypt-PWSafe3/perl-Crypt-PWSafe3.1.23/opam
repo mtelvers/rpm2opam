@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Crypt-PWSafe3-1.23~20220227git002b0f0-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Crypt-PWSafe3-1.23~20220227git002b0f0-7.fc40.noarch.rpm"]
+depends: [
+  "perl-Bytes-Random-Secure" 
+  "perl-Carp" 
+  "perl-Crypt-CBC" {>= "2.3"}
+  "perl-Crypt-ECB" {>= "1.45"}
+  "perl-Crypt-Twofish" {>= "2.14"}
+  "perl-Data-Dumper" 
+  "perl-Data-UUID" {>= "1.22"}
+  "perl-Digest-HMAC" {>= "1"}
+  "perl-Digest-SHA" {>= "1"}
+  "perl-Exporter" 
+  "perl-File-Copy" 
+  "perl-File-Temp" 
+  "perl-FileHandle" 
+  "perl-PathTools" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-vars" 
+]
+extra-source "perl-Crypt-PWSafe3-1.23~20220227git002b0f0-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Crypt-PWSafe3-1.23~20220227git002b0f0-7.fc40.noarch.rpm"
+}

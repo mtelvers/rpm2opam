@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Moose-2.2207-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Moose-2.2207-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl" 
+  "perl-Class-Load" {>= "0.9"}
+  "perl-Class-Load-XS" {>= "0.1"}
+  "perl-Data-OptList" {>= "0.107"}
+  "perl-Devel-GlobalDestruction" 
+  "perl-Devel-OverloadInfo" {>= "0.5"}
+  "perl-Devel-StackTrace" {>= "2.3"}
+  "perl-Dist-CheckConflicts" {>= "0.2"}
+  "perl-Eval-Closure" {>= "0.4"}
+  "perl-MRO-Compat" {>= "0.5"}
+  "perl-Module-Runtime" {>= "0.14"}
+  "perl-Module-Runtime-Conflicts" {>= "0.2"}
+  "perl-Package-DeprecationManager" {>= "0.11"}
+  "perl-Package-Stash" {>= "0.32"}
+  "perl-Package-Stash-XS" {>= "0.24"}
+  "perl-Params-Util" {>= "1.0"}
+  "perl-Scalar-List-Utils" {>= "1.56"}
+  "perl-Sub-Exporter" {>= "0.980"}
+  "perl-Try-Tiny" {>= "0.17"}
+  "perl-base" 
+]
+extra-source "perl-Moose-2.2207-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-Moose-2.2207-1.2.x86_64.rpm"
+}

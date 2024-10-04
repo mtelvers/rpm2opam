@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "speech-dispatcher-espeak-ng-0.11.5-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "speech-dispatcher-espeak-ng-0.11.5-3.fc40.x86_64.rpm"]
+depends: [
+  "dotconf" 
+  "espeak-ng" 
+  "glib2" 
+  "glibc" 
+  "libtool-ltdl" 
+]
+extra-source "speech-dispatcher-espeak-ng-0.11.5-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/speech-dispatcher-espeak-ng-0.11.5-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtksourceview4-devel-4.8.4-lp160.4.21.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtksourceview4-devel-4.8.4-lp160.4.21.x86_64.rpm"]
+depends: [
+  "fribidi-devel" {>= "0.19.7"}
+  "glib2-devel" {>= "2.48"}
+  "gtk3-devel" {>= "3.24"}
+  "libgtksourceview-4-0" {= "4.8.4"}
+  "libxml2-devel" {>= "2.6"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-GtkSource-4" {= "4.8.4"}
+]
+extra-source "gtksourceview4-devel-4.8.4-lp160.4.21.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/gtksourceview4-devel-4.8.4-lp160.4.21.x86_64.rpm"
+}

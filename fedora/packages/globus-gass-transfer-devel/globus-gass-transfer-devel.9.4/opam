@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "globus-gass-transfer-devel-9.4-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "globus-gass-transfer-devel-9.4-6.fc40.x86_64.rpm"]
+depends: [
+  "globus-common-devel" {>= "14"}
+  "globus-gass-transfer" {= "9.4"}
+  "globus-gss-assist-devel" {>= "8"}
+  "globus-gssapi-gsi-devel" {>= "10"}
+  "globus-io-devel" {>= "8"}
+  "pkgconf-pkg-config" 
+]
+extra-source "globus-gass-transfer-devel-9.4-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/globus-gass-transfer-devel-9.4-6.fc40.x86_64.rpm"
+}

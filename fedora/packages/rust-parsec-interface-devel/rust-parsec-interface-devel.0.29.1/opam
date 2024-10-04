@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-parsec-interface-devel-0.29.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-parsec-interface-devel-0.29.1-2.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cargo" 
+  "rust" {>= "1.66.0"}
+  "rust-bincode+default-devel" 
+  "rust-derivative+default-devel" 
+  "rust-log+default-devel" 
+  "rust-num+default-devel" 
+  "rust-num-derive+default-devel" 
+  "rust-num-traits+default-devel" 
+  "rust-prost+default-devel" 
+  "rust-psa-crypto-devel" 
+  "rust-secrecy+default-devel" 
+  "rust-secrecy+serde-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-uuid+default-devel" 
+  "rust-zeroize+default-devel" 
+  "rust-zeroize+zeroize_derive-devel" 
+]
+extra-source "rust-parsec-interface-devel-0.29.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-parsec-interface-devel-0.29.1-2.fc40.noarch.rpm"
+}

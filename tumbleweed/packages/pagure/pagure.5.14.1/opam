@@ -1,0 +1,45 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pagure-5.14.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pagure-5.14.1-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "git-core" 
+  "gitolite" {>= "3.0"}
+  "openssh" {>= "7.4"}
+  "pagure-theme-default-openSUSE" 
+  "python311-Flask" 
+  "python311-Flask-WTF" 
+  "python311-Markdown" 
+  "python311-Pillow" 
+  "python311-SQLAlchemy" {> "0.8"}
+  "python311-WTForms" 
+  "python311-alembic" 
+  "python311-arrow" 
+  "python311-base" 
+  "python311-bcrypt" 
+  "python311-binaryornot" 
+  "python311-bleach" 
+  "python311-blinker" 
+  "python311-celery" 
+  "python311-chardet" 
+  "python311-cryptography" 
+  "python311-dbm" 
+  "python311-docutils" 
+  "python311-email-validator" 
+  "python311-kitchen" 
+  "python311-munch" 
+  "python311-psutil" 
+  "python311-pygit2" {>= "0.26.0"}
+  "python311-python-openid-cla" 
+  "python311-python-openid-teams" 
+  "python311-python3-openid" 
+  "python311-pytz" 
+  "python311-redis" 
+  "python311-requests" 
+  "python311-straight-plugin" 
+  "python311-whitenoise" 
+  "system-user-wwwrun" 
+]
+extra-source "pagure-5.14.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pagure-5.14.1-2.1.noarch.rpm"
+}

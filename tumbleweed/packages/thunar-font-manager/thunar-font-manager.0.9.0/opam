@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "thunar-font-manager-0.9.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "thunar-font-manager-0.9.0-1.1.x86_64.rpm"]
+depends: [
+  "font-manager-common" {>= "0.9.0"}
+  "font-viewer" {>= "0.9.0"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libjson-glib-1_0-0" 
+  "libthunarx-3-0" 
+]
+extra-source "thunar-font-manager-0.9.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/thunar-font-manager-0.9.0-1.1.x86_64.rpm"
+}

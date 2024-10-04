@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "coreutils-single-9.5-2.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coreutils-single-9.5-2.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libacl" 
+  "libattr" 
+  "libcap" 
+  "libselinux" 
+]
+extra-source "coreutils-single-9.5-2.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/coreutils-single-9.5-2.el10.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-dua-cli+tui-crossplatform-devel-2.28.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-dua-cli+tui-crossplatform-devel-2.28.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-crosstermion+tui-react-crossterm-devel" 
+  "rust-crosstermion-devel" 
+  "rust-dua-cli+open-devel" {= "2.28.0"}
+  "rust-dua-cli+tui-devel" {= "2.28.0"}
+  "rust-dua-cli+tui-react-devel" {= "2.28.0"}
+  "rust-dua-cli+unicode-segmentation-devel" {= "2.28.0"}
+  "rust-dua-cli+unicode-width-devel" {= "2.28.0"}
+  "rust-dua-cli-devel" {= "2.28.0"}
+]
+extra-source "rust-dua-cli+tui-crossplatform-devel-2.28.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-dua-cli+tui-crossplatform-devel-2.28.0-1.fc40.noarch.rpm"
+}

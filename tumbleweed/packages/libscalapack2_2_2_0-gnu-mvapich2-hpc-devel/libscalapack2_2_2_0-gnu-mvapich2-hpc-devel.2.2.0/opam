@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libscalapack2_2_2_0-gnu-mvapich2-hpc-devel-2.2.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libscalapack2_2_2_0-gnu-mvapich2-hpc-devel-2.2.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gnu-compilers-hpc-devel" 
+  "libgcc_s1" 
+  "libgfortran5" 
+  "libopenblas-gnu-hpc-devel" {= "0.3.27"}
+  "libscalapack2_2_2_0-gnu-mvapich2-hpc" {= "2.2.0"}
+  "mvapich2-gnu-hpc-devel" 
+]
+extra-source "libscalapack2_2_2_0-gnu-mvapich2-hpc-devel-2.2.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libscalapack2_2_2_0-gnu-mvapich2-hpc-devel-2.2.0-1.1.x86_64.rpm"
+}

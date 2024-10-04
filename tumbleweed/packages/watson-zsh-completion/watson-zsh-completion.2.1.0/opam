@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "watson-zsh-completion-2.1.0-1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "watson-zsh-completion-2.1.0-1.8.noarch.rpm"]
+depends: [
+  "watson" {= "2.1.0"}
+]
+extra-source "watson-zsh-completion-2.1.0-1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/watson-zsh-completion-2.1.0-1.8.noarch.rpm"
+}

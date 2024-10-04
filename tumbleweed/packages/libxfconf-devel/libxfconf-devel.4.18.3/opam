@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libxfconf-devel-4.18.3-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxfconf-devel-4.18.3-1.3.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libxfconf-0-3" {= "4.18.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libxfconf-devel-4.18.3-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libxfconf-devel-4.18.3-1.3.x86_64.rpm"
+}

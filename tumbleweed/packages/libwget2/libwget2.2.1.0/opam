@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libwget2-2.1.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libwget2-2.1.0-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbrotlidec1" 
+  "libgnutls30" 
+  "libidn2-0" 
+  "libnghttp2-14" 
+  "libpsl5" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+]
+extra-source "libwget2-2.1.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libwget2-2.1.0-1.3.x86_64.rpm"
+}

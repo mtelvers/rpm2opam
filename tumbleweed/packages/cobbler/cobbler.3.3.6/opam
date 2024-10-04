@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cobbler-3.3.6-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cobbler-3.3.6-1.1.noarch.rpm"]
+depends: [
+  "aaa_base" 
+  "apache2" 
+  "apache2-mod_wsgi" 
+  "bash" 
+  "bash-sh" 
+  "createrepo_c" 
+  "dosfstools" 
+  "fence-agents-all" 
+  "python311-Cheetah3" 
+  "python311-PyYAML" 
+  "python311-base" 
+  "python311-distro" 
+  "python311-dnspython" 
+  "python311-magic" 
+  "python311-netaddr" 
+  "python311-requests" 
+  "python311-schema" 
+  "rsync" 
+  "system-user-wwwrun" 
+  "systemd" 
+  "tftp" 
+  "xorriso" 
+]
+extra-source "cobbler-3.3.6-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cobbler-3.3.6-1.1.noarch.rpm"
+}

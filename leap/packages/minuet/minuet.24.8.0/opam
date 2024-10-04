@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "minuet-24.08.0-lp160.1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "minuet-24.08.0-lp160.1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libKF6CoreAddons6" 
+  "libKF6Crash6" 
+  "libKF6I18n6" 
+  "libQt6Core6" 
+  "libQt6Gui6" 
+  "libQt6Qml6" 
+  "libfluidsynth3" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "qt6-declarative-imports" {>= "6.6.0"}
+]
+extra-source "minuet-24.08.0-lp160.1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/minuet-24.08.0-lp160.1.3.x86_64.rpm"
+}

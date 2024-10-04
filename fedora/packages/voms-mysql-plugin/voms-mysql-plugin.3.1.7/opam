@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "voms-mysql-plugin-3.1.7-21.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "voms-mysql-plugin-3.1.7-21.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "mariadb-connector-c" 
+  "openssl-libs" 
+  "voms-server" 
+]
+extra-source "voms-mysql-plugin-3.1.7-21.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/voms-mysql-plugin-3.1.7-21.fc40.x86_64.rpm"
+}

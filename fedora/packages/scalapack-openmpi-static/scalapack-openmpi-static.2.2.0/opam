@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "scalapack-openmpi-static-2.2.0-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scalapack-openmpi-static-2.2.0-8.fc40.x86_64.rpm"]
+depends: [
+  "scalapack-openmpi-devel" {= "2.2.0"}
+]
+extra-source "scalapack-openmpi-static-2.2.0-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/scalapack-openmpi-static-2.2.0-8.fc40.x86_64.rpm"
+}

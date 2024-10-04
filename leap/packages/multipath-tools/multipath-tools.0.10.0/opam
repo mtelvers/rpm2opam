@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "multipath-tools-0.10.0+103+suse.0fc97cd-slfo.1.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "multipath-tools-0.10.0+103+suse.0fc97cd-slfo.1.1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "device-mapper" {>= "1.2.78"}
+  "glibc" 
+  "grep" 
+  "kpartx" 
+  "libdevmapper1_03" 
+  "libgcc_s1" 
+  "libmpath0" 
+  "libsystemd0" 
+  "libudev1" 
+  "liburcu8" 
+  "sg3_utils" 
+  "suse-module-tools" 
+  "systemd" 
+]
+extra-source "multipath-tools-0.10.0+103+suse.0fc97cd-slfo.1.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/multipath-tools-0.10.0+103+suse.0fc97cd-slfo.1.1.2.x86_64.rpm"
+}

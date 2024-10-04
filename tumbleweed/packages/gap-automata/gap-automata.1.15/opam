@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-automata-1.15-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-automata-1.15-1.3.noarch.rpm"]
+depends: [
+  "gap" {>= "4.8"}
+  "graphviz" 
+]
+extra-source "gap-automata-1.15-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-automata-1.15-1.3.noarch.rpm"
+}

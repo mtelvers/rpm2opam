@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "shorewall6-lite-5.2.8-6.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "shorewall6-lite-5.2.8-6.3.noarch.rpm"]
+depends: [
+  "aaa_base" 
+  "bash-sh" 
+  "bc" 
+  "busybox-coreutils" 
+  "fillup" 
+  "iproute2" 
+  "iptables" 
+  "logrotate" 
+  "shorewall-core" {= "5.2.8"}
+  "systemd" 
+]
+extra-source "shorewall6-lite-5.2.8-6.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/shorewall6-lite-5.2.8-6.3.noarch.rpm"
+}

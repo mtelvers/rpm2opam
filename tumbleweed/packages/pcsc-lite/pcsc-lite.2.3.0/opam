@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pcsc-lite-2.3.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcsc-lite-2.3.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libpcsclite1" {= "2.3.0"}
+  "libpolkit-gobject-1-0" 
+  "libsystemd0" 
+  "libudev-mini1" 
+  "systemd" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "pcsc-lite-2.3.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pcsc-lite-2.3.0-1.1.x86_64.rpm"
+}

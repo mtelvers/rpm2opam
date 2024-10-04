@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Template-Toolkit-Simple-0.31-36.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Template-Toolkit-Simple-0.31-36.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-Getopt-Long" 
+  "perl-JSON-XS" 
+  "perl-Template-Toolkit" {>= "2.22"}
+  "perl-XML-Simple" 
+  "perl-YAML-LibYAML" {>= "0.37"}
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Template-Toolkit-Simple-0.31-36.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Template-Toolkit-Simple-0.31-36.fc40.noarch.rpm"
+}

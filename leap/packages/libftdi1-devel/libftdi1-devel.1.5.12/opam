@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libftdi1-devel-1.5.12+git.0684c1b-slfo.1.1.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libftdi1-devel-1.5.12+git.0684c1b-slfo.1.1.10.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libconfuse2" 
+  "libftdi1-2" {= "1.5.12"}
+  "libusb-1_0-0" 
+  "libusb-1_0-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libftdi1-devel-1.5.12+git.0684c1b-slfo.1.1.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libftdi1-devel-1.5.12+git.0684c1b-slfo.1.1.10.x86_64.rpm"
+}

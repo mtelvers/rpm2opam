@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "caja-extension-sendto-blueman-2.4.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "caja-extension-sendto-blueman-2.4.2-1.1.noarch.rpm"]
+depends: [
+  "blueman" {= "2.4.2"}
+  "typelib-1_0-Caja-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-Gio-2_0" 
+]
+extra-source "caja-extension-sendto-blueman-2.4.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/caja-extension-sendto-blueman-2.4.2-1.1.noarch.rpm"
+}

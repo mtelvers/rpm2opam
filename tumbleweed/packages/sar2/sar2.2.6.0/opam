@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sar2-2.6.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sar2-2.6.0-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libGLU1" 
+  "libICE6" 
+  "libSDL2-2_0-0" 
+  "libSM6" 
+  "libX11-6" 
+  "libXext6" 
+  "libXmu6" 
+  "libXpm4" 
+  "libXxf86vm1" 
+  "libalut0" 
+  "libgcc_s1" 
+  "libglvnd" 
+  "libopenal1" 
+  "libstdc++6" 
+  "libvorbisfile3" 
+  "sar2-data" {= "2.6.0"}
+]
+extra-source "sar2-2.6.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sar2-2.6.0-1.3.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rustfft-devel-6.2.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rustfft-devel-6.2.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-num-complex+default-devel" 
+  "rust-num-integer+default-devel" 
+  "rust-num-traits+default-devel" 
+  "rust-primal-check+default-devel" 
+  "rust-strength_reduce+default-devel" 
+  "rust-transpose+default-devel" 
+  "rust-version_check+default-devel" 
+]
+extra-source "rust-rustfft-devel-6.2.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rustfft-devel-6.2.0-1.fc40.noarch.rpm"
+}

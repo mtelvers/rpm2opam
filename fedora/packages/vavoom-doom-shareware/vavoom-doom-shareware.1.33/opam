@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vavoom-doom-shareware-1.33-43.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vavoom-doom-shareware-1.33-43.fc40.noarch.rpm"]
+depends: [
+  "autodownloader" 
+  "unzip" 
+  "vavoom-engine" {= "1.33"}
+]
+extra-source "vavoom-doom-shareware-1.33-43.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vavoom-doom-shareware-1.33-43.fc40.noarch.rpm"
+}

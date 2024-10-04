@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "default-fonts-core-4.0-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "default-fonts-core-4.0-12.fc40.noarch.rpm"]
+depends: [
+  "default-fonts-core-emoji" {= "4.0"}
+  "default-fonts-core-math" {= "4.0"}
+  "default-fonts-core-mono" {= "4.0"}
+  "default-fonts-core-sans" {= "4.0"}
+  "default-fonts-core-serif" {= "4.0"}
+]
+extra-source "default-fonts-core-4.0-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/default-fonts-core-4.0-12.fc40.noarch.rpm"
+}

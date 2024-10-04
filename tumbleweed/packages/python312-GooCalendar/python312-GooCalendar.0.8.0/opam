@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-GooCalendar-0.8.0-2.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-GooCalendar-0.8.0-2.5.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GooCanvas-2_0" {= "2.0"}
+  "typelib-1_0-GooCanvas-3_0" {= "3.0"}
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" 
+]
+extra-source "python312-GooCalendar-0.8.0-2.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-GooCalendar-0.8.0-2.5.noarch.rpm"
+}

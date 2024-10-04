@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-HTTP-Daemon-tests-6.16-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTTP-Daemon-tests-6.16-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-File-Temp" 
+  "perl-HTTP-Daemon" 
+  "perl-IO" 
+  "perl-MIME-Base64" 
+  "perl-Module-Metadata" 
+  "perl-PathTools" 
+  "perl-Socket" 
+  "perl-Test-Harness" 
+  "perl-Test-Needs" 
+  "perl-Test-Simple" {>= "0.98"}
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "perl-libwww-perl" {>= "6.37"}
+]
+extra-source "perl-HTTP-Daemon-tests-6.16-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-HTTP-Daemon-tests-6.16-4.fc40.noarch.rpm"
+}

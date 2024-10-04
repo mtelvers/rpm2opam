@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-graphicscache-2024.217.0.0.4svn65318-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-graphicscache-2024.217.0.0.4svn65318-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-adjustbox" 
+  "texlive-filemod" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-graphics" 
+  "texlive-ifplatform" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-letltxmacro" 
+  "texlive-ltxcmds" 
+  "texlive-pdftexcmds" 
+  "texlive-pgf" 
+  "texlive-pgfopts" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-xstring" 
+]
+extra-source "texlive-graphicscache-2024.217.0.0.4svn65318-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-graphicscache-2024.217.0.0.4svn65318-56.1.noarch.rpm"
+}

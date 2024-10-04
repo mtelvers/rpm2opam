@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-libusb1-3.1.0-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-libusb1-3.1.0-1.5.noarch.rpm"]
+depends: [
+  "libusb-1_0-0" {>= "1.0.21"}
+  "python310-base" {= "3.10"}
+]
+extra-source "python310-libusb1-3.1.0-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-libusb1-3.1.0-1.5.noarch.rpm"
+}

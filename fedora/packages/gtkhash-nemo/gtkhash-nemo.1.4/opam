@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gtkhash-nemo-1.4-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtkhash-nemo-1.4-9.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "cairo-gobject" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "gtkhash" {= "1.4"}
+  "harfbuzz" 
+  "libb2" 
+  "libgcrypt" 
+  "libgpg-error" 
+  "nemo" 
+  "nemo-extensions" 
+  "pango" 
+  "zlib-ng-compat" 
+]
+extra-source "gtkhash-nemo-1.4-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gtkhash-nemo-1.4-9.fc40.x86_64.rpm"
+}

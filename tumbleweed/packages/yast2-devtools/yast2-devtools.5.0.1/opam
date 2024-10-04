@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-devtools-5.0.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-devtools-5.0.1-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "perl-base" 
+  "which" 
+  "yast2-buildtools" 
+]
+extra-source "yast2-devtools-5.0.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/yast2-devtools-5.0.1-1.1.noarch.rpm"
+}

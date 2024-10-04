@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glassfish-jaxb-xjc-2.3.1-9.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glassfish-jaxb-xjc-2.3.1-9.1.noarch.rpm"]
+depends: [
+  "glassfish-dtd-parser" 
+  "glassfish-jaxb-codemodel" {= "2.3.1"}
+  "glassfish-jaxb-relaxng-datatype" {= "2.3.1"}
+  "glassfish-jaxb-rngom" {= "2.3.1"}
+  "glassfish-jaxb-runtime" {= "2.3.1"}
+  "glassfish-jaxb-xsom" {= "2.3.1"}
+  "istack-commons-runtime" 
+  "istack-commons-tools" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "glassfish-jaxb-xjc-2.3.1-9.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/glassfish-jaxb-xjc-2.3.1-9.1.noarch.rpm"
+}

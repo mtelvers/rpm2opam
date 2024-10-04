@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Module-Install-XSUtil-0.45-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Install-XSUtil-0.45-29.fc40.noarch.rpm"]
+depends: [
+  "perl-Devel-CheckLib" {>= "0.4"}
+  "perl-ExtUtils-ParseXS" {>= "3.18"}
+  "perl-File-Basename" 
+  "perl-File-Find" 
+  "perl-File-Temp" 
+  "perl-Module-Install" {>= "0.91"}
+  "perl-PathTools" 
+  "perl-constant" 
+  "perl-libs" 
+]
+extra-source "perl-Module-Install-XSUtil-0.45-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Module-Install-XSUtil-0.45-29.fc40.noarch.rpm"
+}

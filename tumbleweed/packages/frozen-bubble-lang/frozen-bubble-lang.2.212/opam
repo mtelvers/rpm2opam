@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "frozen-bubble-lang-2.212-17.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "frozen-bubble-lang-2.212-17.1.noarch.rpm"]
+depends: [
+  "frozen-bubble" {= "2.212"}
+]
+extra-source "frozen-bubble-lang-2.212-17.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/frozen-bubble-lang-2.212-17.1.noarch.rpm"
+}

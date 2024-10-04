@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-diesel+32-column-tables-devel-2.1.4-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-diesel+32-column-tables-devel-2.1.4-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-diesel-devel" {= "2.1.4"}
+  "rust-diesel_derives+32-column-tables-devel" 
+]
+extra-source "rust-diesel+32-column-tables-devel-2.1.4-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-diesel+32-column-tables-devel-2.1.4-2.fc40.noarch.rpm"
+}

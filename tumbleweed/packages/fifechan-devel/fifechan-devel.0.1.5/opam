@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fifechan-devel-0.1.5-1.22.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fifechan-devel-0.1.5-1.22.x86_64.rpm"]
+depends: [
+  "libfifechan0_1_5" {= "0.1.5"}
+  "libfifechan_opengl0_1_5" {= "0.1.5"}
+  "libfifechan_sdl0_1_5" {= "0.1.5"}
+]
+extra-source "fifechan-devel-0.1.5-1.22.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/fifechan-devel-0.1.5-1.22.x86_64.rpm"
+}

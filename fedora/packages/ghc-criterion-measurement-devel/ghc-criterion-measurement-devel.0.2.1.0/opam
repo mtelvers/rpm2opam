@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-criterion-measurement-devel-0.2.1.0-18.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-criterion-measurement-devel-0.2.1.0-18.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-devel" 
+  "ghc-base-compat-devel" 
+  "ghc-base-devel" 
+  "ghc-binary-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-criterion-measurement" {= "0.2.1.0"}
+  "ghc-deepseq-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-criterion-measurement-devel-0.2.1.0-18.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-criterion-measurement-devel-0.2.1.0-18.fc40.x86_64.rpm"
+}

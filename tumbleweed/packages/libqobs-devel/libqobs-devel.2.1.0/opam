@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqobs-devel-2.1.0-2.15.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqobs-devel-2.1.0-2.15.x86_64.rpm"]
+depends: [
+  "libQt5Core-devel" 
+  "libQt5Gui-devel" 
+  "libQt5Network-devel" 
+  "libqobs2" {= "2.1.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libqobs-devel-2.1.0-2.15.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libqobs-devel-2.1.0-2.15.x86_64.rpm"
+}

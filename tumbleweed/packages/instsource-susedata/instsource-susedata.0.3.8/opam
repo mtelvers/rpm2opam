@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "instsource-susedata-0.3.8-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "instsource-susedata-0.3.8-1.3.noarch.rpm"]
+depends: [
+  "inst-source-utils" 
+  "openSUSE-EULAs" 
+  "perl-URI" 
+  "perl-XML-Structured" 
+  "perl-base" 
+  "perl-gettext" 
+]
+extra-source "instsource-susedata-0.3.8-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/instsource-susedata-0.3.8-1.3.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-actionview-7.0.8-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-actionview-7.0.8-4.fc40.noarch.rpm"]
+depends: [
+  "rubygem-activesupport" {= "7.0.8"}
+  "rubygem-builder" 
+  "rubygem-erubi" 
+  "rubygem-rails-dom-testing" 
+  "rubygem-rails-html-sanitizer" 
+  "rubygems" 
+]
+extra-source "rubygem-actionview-7.0.8-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-actionview-7.0.8-4.fc40.noarch.rpm"
+}

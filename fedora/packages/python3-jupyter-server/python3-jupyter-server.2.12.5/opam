@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-jupyter-server-2.12.5-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-jupyter-server-2.12.5-3.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-anyio" {>= "3.1"}
+  "python3-argon2-cffi" 
+  "python3-jinja2" 
+  "python3-jupyter-client" {>= "7.4.4"}
+  "python3-jupyter-events" {>= "0.9"}
+  "python3-jupyter-server-terminals" 
+  "python3-nbconvert" {>= "6.4.4"}
+  "python3-nbformat" {>= "5.3"}
+  "python3-packaging" 
+  "python3-prometheus_client" 
+  "python3-send2trash" {>= "1.8.2"}
+  "python3-terminado" {>= "0.8.3"}
+  "python3-tornado" {>= "6.2"}
+  "python3-traitlets" {>= "5.6"}
+  "python3-websocket-client" 
+  "python3-zmq" {>= "24"}
+]
+extra-source "python3-jupyter-server-2.12.5-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-jupyter-server-2.12.5-3.fc40.noarch.rpm"
+}

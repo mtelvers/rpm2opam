@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bugzilla-contrib-5.0.6-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bugzilla-contrib-5.0.6-21.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "bugzilla" 
+  "perl-Data-Dumper" 
+  "perl-Digest-MD5" 
+  "perl-Env" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-Getopt-Long" 
+  "perl-PathTools" 
+  "perl-Pod-Usage" 
+  "perl-Term-ReadLine" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" {>= "5.10.1"}
+  "python3" 
+]
+extra-source "bugzilla-contrib-5.0.6-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bugzilla-contrib-5.0.6-21.fc40.noarch.rpm"
+}

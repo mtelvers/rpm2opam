@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ceph-iscsi-3.5+1679292226.g8769429-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ceph-iscsi-3.5+1679292226.g8769429-1.6.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ceph-common" {>= "10.2.2"}
+  "python3-rados" {>= "10.2.2"}
+  "python3-rbd" {>= "10.2.2"}
+  "python311-Flask" {>= "0.10.1"}
+  "python311-base" 
+  "python311-configshell-fb" 
+  "python311-cryptography" 
+  "python311-netifaces" {>= "0.10.4"}
+  "python311-pyOpenSSL" 
+  "python311-requests" 
+  "python311-rtslib-fb" {>= "2.1.0"}
+  "systemd" 
+  "tcmu-runner" {>= "1.4.0"}
+]
+extra-source "ceph-iscsi-3.5+1679292226.g8769429-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ceph-iscsi-3.5+1679292226.g8769429-1.6.x86_64.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tik-1.2.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tik-1.2.3-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "dbus-1-tools" 
+  "efibootmgr" 
+  "grep" 
+  "pkexec" 
+  "pv" 
+  "tik-config-Aeon" 
+  "util-linux" 
+  "util-linux-systemd" 
+  "xz" 
+  "zenity" 
+]
+extra-source "tik-1.2.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tik-1.2.3-1.1.noarch.rpm"
+}

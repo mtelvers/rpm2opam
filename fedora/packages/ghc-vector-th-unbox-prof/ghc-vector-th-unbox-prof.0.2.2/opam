@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-vector-th-unbox-prof-0.2.2-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-vector-th-unbox-prof-0.2.2-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-template-haskell-prof" 
+  "ghc-vector-prof" 
+  "ghc-vector-th-unbox-devel" {= "0.2.2"}
+]
+extra-source "ghc-vector-th-unbox-prof-0.2.2-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-vector-th-unbox-prof-0.2.2-8.fc40.x86_64.rpm"
+}

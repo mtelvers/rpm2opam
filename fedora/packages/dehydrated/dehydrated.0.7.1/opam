@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dehydrated-0.7.1-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dehydrated-0.7.1-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "curl" 
+  "grep" 
+  "openssl" 
+  "s-nail" 
+  "sed" 
+  "systemd" 
+]
+extra-source "dehydrated-0.7.1-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dehydrated-0.7.1-4.fc40.noarch.rpm"
+}

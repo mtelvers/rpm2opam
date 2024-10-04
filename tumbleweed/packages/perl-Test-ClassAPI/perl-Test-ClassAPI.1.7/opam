@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-ClassAPI-1.07-1.26.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-ClassAPI-1.07-1.26.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Inspector" {>= "1.12"}
+  "perl-Config-Tiny" {>= "2.0"}
+  "perl-Params-Util" {>= "1.0"}
+]
+extra-source "perl-Test-ClassAPI-1.07-1.26.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-ClassAPI-1.07-1.26.noarch.rpm"
+}

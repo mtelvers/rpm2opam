@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mayavi-jupyter-4.8.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mayavi-jupyter-4.8.2-1.1.noarch.rpm"]
+depends: [
+  "jupyter-ipyevents" 
+  "jupyter-notebook" 
+  "mayavi" {= "4.8.2"}
+  "python311-ipywidgets" 
+]
+extra-source "mayavi-jupyter-4.8.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mayavi-jupyter-4.8.2-1.1.noarch.rpm"
+}

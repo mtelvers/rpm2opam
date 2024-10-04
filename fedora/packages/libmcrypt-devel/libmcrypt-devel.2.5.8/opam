@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libmcrypt-devel-2.5.8-38.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmcrypt-devel-2.5.8-38.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "libmcrypt" {= "2.5.8"}
+]
+extra-source "libmcrypt-devel-2.5.8-38.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libmcrypt-devel-2.5.8-38.fc40.x86_64.rpm"
+}

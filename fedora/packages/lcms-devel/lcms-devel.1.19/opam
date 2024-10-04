@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lcms-devel-1.19-39.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lcms-devel-1.19-39.fc40.x86_64.rpm"]
+depends: [
+  "lcms-libs" {= "1.19"}
+  "pkgconf-pkg-config" 
+]
+extra-source "lcms-devel-1.19-39.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lcms-devel-1.19-39.fc40.x86_64.rpm"
+}

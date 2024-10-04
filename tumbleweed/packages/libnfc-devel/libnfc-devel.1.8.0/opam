@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnfc-devel-1.8.0-1.17.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnfc-devel-1.8.0-1.17.x86_64.rpm"]
+depends: [
+  "libnfc6" {= "1.8.0"}
+  "libusb-compat-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libnfc-devel-1.8.0-1.17.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libnfc-devel-1.8.0-1.17.x86_64.rpm"
+}

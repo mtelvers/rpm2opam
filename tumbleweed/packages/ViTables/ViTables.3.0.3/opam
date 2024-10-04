@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ViTables-3.0.3-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ViTables-3.0.3-2.1.noarch.rpm"]
+depends: [
+  "hdf5" 
+  "hicolor-icon-theme" 
+  "python311-QtPy" 
+  "python311-base" 
+  "python311-numpy" 
+  "python311-qt5" 
+  "python311-tables" 
+]
+extra-source "ViTables-3.0.3-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ViTables-3.0.3-2.1.noarch.rpm"
+}

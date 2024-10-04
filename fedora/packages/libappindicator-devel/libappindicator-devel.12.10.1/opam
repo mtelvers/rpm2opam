@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libappindicator-devel-12.10.1-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libappindicator-devel-12.10.1-4.fc40.x86_64.rpm"]
+depends: [
+  "dbus-glib-devel" 
+  "gtk2-devel" 
+  "libappindicator" {= "12.10.1"}
+  "libdbusmenu-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libappindicator-devel-12.10.1-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libappindicator-devel-12.10.1-4.fc40.x86_64.rpm"
+}

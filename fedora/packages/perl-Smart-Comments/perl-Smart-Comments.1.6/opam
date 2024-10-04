@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Smart-Comments-1.06-25.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Smart-Comments-1.06-25.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Filter-Simple" 
+  "perl-Scalar-List-Utils" 
+  "perl-Text-Balanced" 
+  "perl-libs" {>= "5.8.0"}
+]
+extra-source "perl-Smart-Comments-1.06-25.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Smart-Comments-1.06-25.fc40.noarch.rpm"
+}

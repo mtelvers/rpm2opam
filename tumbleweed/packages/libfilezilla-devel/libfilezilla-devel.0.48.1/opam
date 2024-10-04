@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfilezilla-devel-0.48.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfilezilla-devel-0.48.1-1.1.x86_64.rpm"]
+depends: [
+  "libfilezilla45" {= "0.48.1"}
+  "libgnutls-devel" {>= "3.7.0"}
+  "libnettle-devel" {>= "3.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libfilezilla-devel-0.48.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfilezilla-devel-0.48.1-1.1.x86_64.rpm"
+}

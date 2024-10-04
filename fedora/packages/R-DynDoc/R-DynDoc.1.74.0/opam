@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-DynDoc-1.74.0-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-DynDoc-1.74.0-6.fc40.noarch.rpm"]
+depends: [
+  "R-core" {= "4.3"}
+]
+extra-source "R-DynDoc-1.74.0-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-DynDoc-1.74.0-6.fc40.noarch.rpm"
+}

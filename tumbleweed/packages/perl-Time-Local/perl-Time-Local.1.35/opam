@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Time-Local-1.35-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Time-Local-1.35-1.6.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-base" 
+]
+extra-source "perl-Time-Local-1.35-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Time-Local-1.35-1.6.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-litecli-1.9.0-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-litecli-1.9.0-6.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-cli-helpers" {>= "2.2.1"}
+  "python3-cli-helpers+styles" {>= "2.2.1"}
+  "python3-click" {>= "4.1"}
+  "python3-configobj" {>= "5.0.5"}
+  "python3-prompt-toolkit" 
+  "python3-pygments" {>= "1.6"}
+  "python3-sqlparse" 
+]
+extra-source "python3-litecli-1.9.0-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-litecli-1.9.0-6.fc40.noarch.rpm"
+}

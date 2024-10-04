@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgdbm_compat4-1.24-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgdbm_compat4-1.24-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgdbm6" 
+]
+extra-source "libgdbm_compat4-1.24-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgdbm_compat4-1.24-1.1.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-dns-lexicon-3.17.0-2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-dns-lexicon-3.17.0-2.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-PyYAML" {>= "3"}
+  "python312-base" 
+  "python312-beautifulsoup4" {>= "4"}
+  "python312-cryptography" {>= "2"}
+  "python312-dnspython" {>= "2"}
+  "python312-importlib-metadata" {>= "4.6"}
+  "python312-pyotp" 
+  "python312-requests" {>= "2"}
+  "python312-tldextract" {>= "2"}
+  "update-alternatives" 
+]
+extra-source "python312-dns-lexicon-3.17.0-2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-dns-lexicon-3.17.0-2.3.noarch.rpm"
+}

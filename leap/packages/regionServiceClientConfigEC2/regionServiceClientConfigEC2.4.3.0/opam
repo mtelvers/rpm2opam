@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "regionServiceClientConfigEC2-4.3.0-slfo.1.1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "regionServiceClientConfigEC2-4.3.0-slfo.1.1.2.noarch.rpm"]
+depends: [
+  "cloud-regionsrv-client" {>= "9.3.0"}
+  "python3-ec2metadata" {>= "1.5.0"}
+]
+extra-source "regionServiceClientConfigEC2-4.3.0-slfo.1.1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/regionServiceClientConfigEC2-4.3.0-slfo.1.1.2.noarch.rpm"
+}

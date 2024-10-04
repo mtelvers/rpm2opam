@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmate-panel-applet-4-1-1.28.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmate-panel-applet-4-1-1.28.1-2.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libcairo-gobject2" 
+  "libcairo2" 
+  "libgtk-3-0" 
+]
+extra-source "libmate-panel-applet-4-1-1.28.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmate-panel-applet-4-1-1.28.1-2.1.x86_64.rpm"
+}

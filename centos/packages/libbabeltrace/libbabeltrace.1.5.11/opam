@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libbabeltrace-1.5.11-8.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libbabeltrace-1.5.11-8.el10.x86_64.rpm"]
+depends: [
+  "elfutils-libelf" 
+  "elfutils-libs" 
+  "glib2" 
+  "glibc" 
+  "libuuid" 
+  "popt" 
+]
+extra-source "libbabeltrace-1.5.11-8.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/libbabeltrace-1.5.11-8.el10.x86_64.rpm"
+}

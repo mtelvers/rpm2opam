@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "asterisk-dahdi-18.12.1-1.fc40.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "asterisk-dahdi-18.12.1-1.fc40.7.x86_64.rpm"]
+depends: [
+  "asterisk" {= "18.12.1"}
+  "bash" 
+  "dahdi-tools" {>= "2.0.0"}
+  "dahdi-tools-libs" 
+  "glibc" 
+  "libgcc" 
+  "libpri" 
+  "libss7" 
+  "shadow-utils" 
+]
+extra-source "asterisk-dahdi-18.12.1-1.fc40.7.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/asterisk-dahdi-18.12.1-1.fc40.7.x86_64.rpm"
+}

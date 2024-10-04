@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kea-devel-2.4.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kea-devel-2.4.1-5.fc40.x86_64.rpm"]
+depends: [
+  "boost-devel" 
+  "kea-libs" {= "2.4.1"}
+  "openssl-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "kea-devel-2.4.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kea-devel-2.4.1-5.fc40.x86_64.rpm"
+}

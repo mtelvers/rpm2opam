@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-WriteVariants-0.014-1.26.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-WriteVariants-0.014-1.26.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Data-Tumbler" {>= "0.2"}
+  "perl-Module-Pluggable" {>= "4.9"}
+  "perl-Module-Runtime" 
+]
+extra-source "perl-Test-WriteVariants-0.014-1.26.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-WriteVariants-0.014-1.26.noarch.rpm"
+}

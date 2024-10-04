@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nagios-plugins-ssl_validity-2.4.8-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nagios-plugins-ssl_validity-2.4.8-1.fc40.x86_64.rpm"]
+depends: [
+  "nagios-plugins" {= "2.4.8"}
+  "openssl" 
+  "perl-Crypt-X509" 
+  "perl-Digest-MD5" 
+  "perl-File-Basename" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-Getopt-Std" 
+  "perl-POSIX" 
+  "perl-Text-Glob" 
+  "perl-TimeDate" 
+  "perl-interpreter" 
+  "perl-libwww-perl" 
+]
+extra-source "nagios-plugins-ssl_validity-2.4.8-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nagios-plugins-ssl_validity-2.4.8-1.fc40.x86_64.rpm"
+}

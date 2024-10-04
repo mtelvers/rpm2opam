@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-mlgmpidl-devel-1.3.0-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-mlgmpidl-devel-1.3.0-8.fc40.x86_64.rpm"]
+depends: [
+  "ocaml" {= "2125"}
+  "ocaml-bigarray-compat-devel" 
+  "ocaml-camlidl-devel" 
+  "ocaml-mlgmpidl" {= "1.3.0"}
+]
+extra-source "ocaml-mlgmpidl-devel-1.3.0-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-mlgmpidl-devel-1.3.0-8.fc40.x86_64.rpm"
+}

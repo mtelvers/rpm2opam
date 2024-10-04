@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-pykeepass-4.0.6-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-pykeepass-4.0.6-5.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-argon2-cffi" 
+  "python3-construct" 
+  "python3-dateutil" 
+  "python3-lxml" 
+  "python3-pycryptodomex" {>= "3.6.2"}
+]
+extra-source "python3-pykeepass-4.0.6-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-pykeepass-4.0.6-5.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-monad-loops-prof-0.4.3-11.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-monad-loops-prof-0.4.3-11.9.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-monad-loops-devel" {= "0.4.3"}
+]
+extra-source "ghc-monad-loops-prof-0.4.3-11.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-monad-loops-prof-0.4.3-11.9.x86_64.rpm"
+}

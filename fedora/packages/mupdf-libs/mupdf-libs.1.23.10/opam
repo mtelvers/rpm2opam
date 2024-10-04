@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mupdf-libs-1.23.10-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mupdf-libs-1.23.10-5.fc40.x86_64.rpm"]
+depends: [
+  "freetype" 
+  "glibc" 
+  "gumbo-parser" 
+  "harfbuzz" 
+  "jbig2dec-libs" 
+  "leptonica" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libstdc++" 
+  "openjpeg2" 
+  "tesseract" 
+  "zlib-ng-compat" 
+]
+extra-source "mupdf-libs-1.23.10-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mupdf-libs-1.23.10-5.fc40.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "borgbackup-bash-completion-1.4.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "borgbackup-bash-completion-1.4.0-1.2.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "borgbackup" {= "1.4.0"}
+]
+extra-source "borgbackup-bash-completion-1.4.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/borgbackup-bash-completion-1.4.0-1.2.noarch.rpm"
+}

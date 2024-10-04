@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "below-0.7.1-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "below-0.7.1-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "elfutils-libelf" 
+  "glibc" 
+  "libgcc" 
+  "libzstd" 
+  "zlib-ng-compat" 
+]
+extra-source "below-0.7.1-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/below-0.7.1-2.fc40.x86_64.rpm"
+}

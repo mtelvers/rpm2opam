@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "flaw-1.3.2a-31.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flaw-1.3.2a-31.fc40.x86_64.rpm"]
+depends: [
+  "SDL_gfx" 
+  "SDL_image" 
+  "SDL_mixer" 
+  "SDL_ttf" 
+  "glibc" 
+  "gnu-free-sans-fonts" 
+  "gnu-free-serif-fonts" 
+  "libgcc" 
+  "libstdc++" 
+  "sdl12-compat" 
+]
+extra-source "flaw-1.3.2a-31.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/flaw-1.3.2a-31.fc40.x86_64.rpm"
+}

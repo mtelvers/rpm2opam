@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "silan-0.4.0-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "silan-0.4.0-2.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libavcodec58_134" 
+  "libavformat58_76" 
+  "libavutil56_70" 
+  "libsndfile1" 
+]
+extra-source "silan-0.4.0-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/silan-0.4.0-2.6.x86_64.rpm"
+}

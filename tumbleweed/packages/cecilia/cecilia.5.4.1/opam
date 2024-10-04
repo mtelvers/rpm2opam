@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cecilia-5.4.1-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cecilia-5.4.1-2.2.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-numpy" 
+  "python311-pyo" {>= "1.0.0"}
+  "python311-wxPython" {>= "4.1.0"}
+]
+extra-source "cecilia-5.4.1-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cecilia-5.4.1-2.2.noarch.rpm"
+}

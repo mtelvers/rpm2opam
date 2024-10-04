@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-sebastian-comparator4-4.0.8-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-sebastian-comparator4-4.0.8-6.fc40.noarch.rpm"]
+depends: [
+  "php-common" {>= "7.3"}
+  "php-fedora-autoloader" 
+  "php-sebastian-diff3" 
+  "php-sebastian-exporter3" 
+  "php-xml" 
+]
+extra-source "php-sebastian-comparator4-4.0.8-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-sebastian-comparator4-4.0.8-6.fc40.noarch.rpm"
+}

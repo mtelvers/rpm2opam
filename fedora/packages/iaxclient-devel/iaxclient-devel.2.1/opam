@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "iaxclient-devel-2.1-0.48.beta3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "iaxclient-devel-2.1-0.48.beta3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "iaxclient" {= "2.1"}
+  "libogg" 
+  "libogg-devel" 
+  "liboggz" 
+  "libtheora" 
+  "libtheora-devel" 
+  "libvidcap-devel" 
+  "pkgconf-pkg-config" 
+  "portaudio-devel" 
+  "sdl12-compat" 
+  "speex-devel" 
+]
+extra-source "iaxclient-devel-2.1-0.48.beta3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/iaxclient-devel-2.1-0.48.beta3.fc40.x86_64.rpm"
+}

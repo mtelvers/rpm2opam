@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "x11vnc-frontend-0.9.16-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "x11vnc-frontend-0.9.16-3.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "tcl" 
+  "tigervnc-x11vnc" {= "0.9.16"}
+  "tk" 
+]
+extra-source "x11vnc-frontend-0.9.16-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/x11vnc-frontend-0.9.16-3.2.x86_64.rpm"
+}

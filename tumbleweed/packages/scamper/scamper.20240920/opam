@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "scamper-20240920-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scamper-20240920-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libopenssl3" 
+  "libpython3_11-1_0" 
+  "libscamperctrl2" 
+  "libscamperfile9" 
+  "libsqlite3-0" 
+  "libz-ng-compat1" 
+  "python311-base" {= "3.11"}
+]
+extra-source "scamper-20240920-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/scamper-20240920-1.1.x86_64.rpm"
+}

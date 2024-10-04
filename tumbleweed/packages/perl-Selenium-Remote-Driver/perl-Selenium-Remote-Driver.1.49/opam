@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Selenium-Remote-Driver-1.49-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Selenium-Remote-Driver-1.49-1.6.x86_64.rpm"]
+depends: [
+  "lsof" 
+  "perl" 
+  "perl-Archive-Zip" 
+  "perl-Clone" 
+  "perl-File-Which" 
+  "perl-HTTP-Message" 
+  "perl-IO-String" 
+  "perl-JSON" 
+  "perl-Moo" {>= "1.5"}
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-Sub-Install" 
+  "perl-Test-LongString" 
+  "perl-Try-Tiny" 
+  "perl-XML-Simple" 
+  "perl-libwww-perl" 
+  "perl-namespace-clean" 
+]
+extra-source "perl-Selenium-Remote-Driver-1.49-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-Selenium-Remote-Driver-1.49-1.6.x86_64.rpm"
+}

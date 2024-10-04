@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xinetd-2.3.15.4-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xinetd-2.3.15.4-2.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "libselinux1" 
+  "libtirpc3" 
+  "libwrap0" 
+  "perl-base" 
+  "systemd" 
+]
+extra-source "xinetd-2.3.15.4-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xinetd-2.3.15.4-2.2.x86_64.rpm"
+}

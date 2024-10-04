@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-python-afl-0.7.3-3.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-python-afl-0.7.3-3.16.x86_64.rpm"]
+depends: [
+  "afl" {>= "2"}
+  "bash-sh" 
+  "glibc" 
+  "python311-base" {= "3.11"}
+  "update-alternatives" 
+]
+extra-source "python311-python-afl-0.7.3-3.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-python-afl-0.7.3-3.16.x86_64.rpm"
+}

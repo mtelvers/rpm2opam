@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mrtg-2.17.10-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mrtg-2.17.10-8.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gd" 
+  "glibc" 
+  "mrtg-selinux" 
+  "perl-CGI" 
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-IO-Socket-INET6" 
+  "perl-Math-BigInt" 
+  "perl-POSIX" 
+  "perl-Pod-Usage" 
+  "perl-SNMP_Session" 
+  "perl-Socket" 
+  "perl-Socket6" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" {>= "5.2.0"}
+  "perl-locale" 
+  "perl-vars" 
+  "systemd" 
+]
+extra-source "mrtg-2.17.10-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mrtg-2.17.10-8.fc40.x86_64.rpm"
+}

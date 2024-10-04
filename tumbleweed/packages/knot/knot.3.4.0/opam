@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "knot-3.4.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "knot-3.4.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libcap-ng0" 
+  "libdnssec9" 
+  "libedit0" 
+  "libfstrm0" 
+  "libgnutls30" 
+  "libknot15" 
+  "liblmdb-0_9_30" 
+  "libmaxminddb0" 
+  "libprotobuf-c1" 
+  "libsystemd0" 
+  "liburcu8" 
+  "libzscanner4" 
+  "systemd" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "knot-3.4.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/knot-3.4.0-1.1.x86_64.rpm"
+}

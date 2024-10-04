@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Proc-Guard-0.07-27.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Proc-Guard-0.07-27.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Class-Accessor-Lite" {>= "0.5"}
+  "perl-Errno" 
+  "perl-Exporter" {>= "5.63"}
+  "perl-POSIX" 
+  "perl-libs" {>= "5.8.0"}
+]
+extra-source "perl-Proc-Guard-0.07-27.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Proc-Guard-0.07-27.fc40.noarch.rpm"
+}

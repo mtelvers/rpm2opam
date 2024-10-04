@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-DateTime-Format-Flexible-0.34-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DateTime-Format-Flexible-0.34-10.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-DateTime" 
+  "perl-DateTime-Format-Builder" {>= "0.74"}
+  "perl-DateTime-TimeZone" 
+  "perl-List-MoreUtils" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-DateTime-Format-Flexible-0.34-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-DateTime-Format-Flexible-0.34-10.fc40.noarch.rpm"
+}

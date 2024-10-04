@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "crypto-policies-scripts-20240807-1.git7ea320f.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "crypto-policies-scripts-20240807-1.git7ea320f.el10.noarch.rpm"]
+depends: [
+  "bash" 
+  "crypto-policies" {= "20240822"}
+  "python3" 
+]
+extra-source "crypto-policies-scripts-20240807-1.git7ea320f.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/crypto-policies-scripts-20240807-1.git7ea320f.el10.noarch.rpm"
+}

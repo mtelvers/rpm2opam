@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kubeaudit-fish-completion-0.22.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kubeaudit-fish-completion-0.22.2-1.1.noarch.rpm"]
+depends: [
+  "kubeaudit" {= "0.22.2"}
+]
+extra-source "kubeaudit-fish-completion-0.22.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kubeaudit-fish-completion-0.22.2-1.1.noarch.rpm"
+}

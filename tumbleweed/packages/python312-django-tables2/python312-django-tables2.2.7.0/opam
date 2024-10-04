@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-django-tables2-2.7.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-django-tables2-2.7.0-1.3.noarch.rpm"]
+depends: [
+  "python312-Django" {>= "4.2"}
+  "python312-base" {= "3.12"}
+]
+extra-source "python312-django-tables2-2.7.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-django-tables2-2.7.0-1.3.noarch.rpm"
+}

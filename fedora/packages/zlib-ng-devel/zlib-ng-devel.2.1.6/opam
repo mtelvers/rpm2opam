@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "zlib-ng-devel-2.1.6-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zlib-ng-devel-2.1.6-2.fc40.x86_64.rpm"]
+depends: [
+  "pkgconf-pkg-config" 
+  "zlib-ng" 
+]
+extra-source "zlib-ng-devel-2.1.6-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/z/zlib-ng-devel-2.1.6-2.fc40.x86_64.rpm"
+}

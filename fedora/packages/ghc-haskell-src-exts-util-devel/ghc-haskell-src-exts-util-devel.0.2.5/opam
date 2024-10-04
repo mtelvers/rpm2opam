@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-haskell-src-exts-util-devel-0.2.5-21.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-haskell-src-exts-util-devel-0.2.5-21.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-data-default-devel" 
+  "ghc-haskell-src-exts-devel" 
+  "ghc-haskell-src-exts-util" {= "0.2.5"}
+  "ghc-semigroups-devel" 
+  "ghc-transformers-devel" 
+  "ghc-uniplate-devel" 
+]
+extra-source "ghc-haskell-src-exts-util-devel-0.2.5-21.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-haskell-src-exts-util-devel-0.2.5-21.fc40.x86_64.rpm"
+}

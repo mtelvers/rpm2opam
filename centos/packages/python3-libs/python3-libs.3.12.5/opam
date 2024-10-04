@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-libs-3.12.5-2.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-libs-3.12.5-2.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bzip2-libs" 
+  "expat" {>= "2.6"}
+  "gdbm-libs" 
+  "glibc" 
+  "libffi" 
+  "libuuid" 
+  "libxcrypt" 
+  "mpdecimal" 
+  "ncurses-libs" 
+  "openssl-libs" 
+  "python3-pip-wheel" {>= "23.1.2"}
+  "readline" 
+  "sqlite-libs" 
+  "tzdata" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "python3-libs-3.12.5-2.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/python3-libs-3.12.5-2.el10.x86_64.rpm"
+}

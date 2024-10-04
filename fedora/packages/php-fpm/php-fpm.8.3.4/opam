@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-fpm-8.3.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-fpm-8.3.4-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "httpd-filesystem" 
+  "libacl" 
+  "libselinux" 
+  "libxcrypt" 
+  "libxml2" 
+  "nginx-filesystem" 
+  "openssl-libs" 
+  "pcre2" 
+  "php-common" {= "8.3.4"}
+  "systemd" 
+  "systemd-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "php-fpm-8.3.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-fpm-8.3.4-1.fc40.x86_64.rpm"
+}

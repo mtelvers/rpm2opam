@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libindi-2.0.6-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libindi-2.0.6-1.fc40.x86_64.rpm"]
+depends: [
+  "cfitsio" 
+  "glibc" 
+  "libcurl" 
+  "libev" 
+  "libgcc" 
+  "libindi-libs" {= "2.0.6"}
+  "libnova" 
+  "libstdc++" 
+  "libusb1" 
+  "zlib-ng-compat" 
+]
+extra-source "libindi-2.0.6-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libindi-2.0.6-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-facebookincubator-nvdtools-devel-0.1.4-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-facebookincubator-nvdtools-devel-0.1.4-13.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-burntsushi-toml-devel" 
+  "golang-github-dgrijalva-jwt-devel" 
+  "golang-github-facebookincubator-flog-devel" 
+  "golang-github-pkg-errors-devel" 
+  "golang-github-spf13-cobra-devel" 
+  "golang-github-spf13-pflag-devel" 
+  "golang-github-sql-driver-mysql-devel" 
+  "golang-x-oauth2-devel" 
+  "golang-x-sync-devel" 
+]
+extra-source "golang-github-facebookincubator-nvdtools-devel-0.1.4-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-facebookincubator-nvdtools-devel-0.1.4-13.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Devel-Declare-0.006022-1.23.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Devel-Declare-0.006022-1.23.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl" 
+  "perl-B-Hooks-EndOfScope" {>= "0.5"}
+  "perl-B-Hooks-OP-Check" {>= "0.19"}
+  "perl-Sub-Name" 
+]
+extra-source "perl-Devel-Declare-0.006022-1.23.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-Devel-Declare-0.006022-1.23.x86_64.rpm"
+}

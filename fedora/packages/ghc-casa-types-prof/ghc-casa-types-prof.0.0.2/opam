@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-casa-types-prof-0.0.2-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-casa-types-prof-0.0.2-29.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-prof" 
+  "ghc-attoparsec-prof" 
+  "ghc-base-prof" 
+  "ghc-base16-bytestring-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-casa-types-devel" {= "0.0.2"}
+  "ghc-hashable-prof" 
+  "ghc-path-pieces-prof" 
+  "ghc-persistent-prof" 
+  "ghc-text-prof" 
+]
+extra-source "ghc-casa-types-prof-0.0.2-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-casa-types-prof-0.0.2-29.fc40.x86_64.rpm"
+}

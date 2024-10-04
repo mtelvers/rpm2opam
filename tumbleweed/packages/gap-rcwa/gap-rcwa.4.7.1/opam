@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-rcwa-4.7.1-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-rcwa-4.7.1-1.3.noarch.rpm"]
+depends: [
+  "gap" {>= "4.9.1"}
+  "gap-fr" {>= "2.2.1"}
+  "gap-gapdoc" {>= "1.5.1"}
+  "gap-grape" {>= "4.7"}
+  "gap-polycyclic" {>= "2.11"}
+  "gap-resclasses" {>= "4.7.2"}
+  "gap-utils" {>= "0.40"}
+]
+extra-source "gap-rcwa-4.7.1-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-rcwa-4.7.1-1.3.noarch.rpm"
+}

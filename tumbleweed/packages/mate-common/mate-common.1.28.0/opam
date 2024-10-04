@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mate-common-1.28.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mate-common-1.28.0-1.1.noarch.rpm"]
+depends: [
+  "autoconf" 
+  "autoconf-archive" 
+  "automake" 
+  "bash-sh" 
+  "gettext-runtime" 
+  "glib2-devel" 
+  "gtk-doc" 
+  "libtool" 
+  "pkgconf-pkg-config" 
+]
+extra-source "mate-common-1.28.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mate-common-1.28.0-1.1.noarch.rpm"
+}

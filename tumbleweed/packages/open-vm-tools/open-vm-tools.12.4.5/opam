@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "open-vm-tools-12.4.5-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "open-vm-tools-12.4.5-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "kernel-debug" 
+  "libdrm2" 
+  "libfuse3-3" 
+  "libopenssl3" 
+  "libtirpc3" 
+  "libudev-mini1" 
+  "libvmtools0" 
+  "libxml2-2" 
+  "libxmlsec1-1" 
+  "libxmlsec1-openssl1" {>= "1.2.37"}
+  "net-tools" 
+  "tar" 
+  "which" 
+]
+extra-source "open-vm-tools-12.4.5-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/open-vm-tools-12.4.5-1.2.x86_64.rpm"
+}

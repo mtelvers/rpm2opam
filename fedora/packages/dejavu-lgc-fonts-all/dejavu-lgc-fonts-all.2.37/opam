@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dejavu-lgc-fonts-all-2.37-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dejavu-lgc-fonts-all-2.37-23.fc40.noarch.rpm"]
+depends: [
+  "dejavu-lgc-sans-fonts" {= "2.37"}
+  "dejavu-lgc-sans-mono-fonts" {= "2.37"}
+  "dejavu-lgc-serif-fonts" {= "2.37"}
+]
+extra-source "dejavu-lgc-fonts-all-2.37-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dejavu-lgc-fonts-all-2.37-23.fc40.noarch.rpm"
+}

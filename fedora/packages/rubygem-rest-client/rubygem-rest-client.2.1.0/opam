@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-rest-client-2.1.0-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-rest-client-2.1.0-13.fc40.noarch.rpm"]
+depends: [
+  "rubygem-http-accept" {< "3.0"}
+  "rubygem-http-cookie" 
+  "rubygem-mime-types" 
+  "rubygem-netrc" 
+  "rubygems" 
+  "rubypick" 
+]
+extra-source "rubygem-rest-client-2.1.0-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-rest-client-2.1.0-13.fc40.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "replacer-1.6-5.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "replacer-1.6-5.3.noarch.rpm"]
+depends: [
+  "ant" 
+  "apache-commons-io" 
+  "apache-commons-lang3" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-lib" 
+  "xerces-j2" 
+]
+extra-source "replacer-1.6-5.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/replacer-1.6-5.3.noarch.rpm"
+}

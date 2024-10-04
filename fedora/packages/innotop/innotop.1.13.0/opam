@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "innotop-1.13.0-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "innotop-1.13.0-10.fc40.noarch.rpm"]
+depends: [
+  "perl-DBD-MySQL" 
+  "perl-DBI" 
+  "perl-Data-Dumper" 
+  "perl-English" 
+  "perl-File-Basename" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-POSIX" 
+  "perl-Scalar-List-Utils" 
+  "perl-Term-ANSIColor" 
+  "perl-Term-ReadLine" 
+  "perl-TermReadKey" 
+  "perl-Time-HiRes" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-sigtrap" 
+]
+extra-source "innotop-1.13.0-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/innotop-1.13.0-10.fc40.noarch.rpm"
+}

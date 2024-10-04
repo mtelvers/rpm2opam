@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "usbmuxd-1.1.1^20230720git61b99ab-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "usbmuxd-1.1.1^20230720git61b99ab-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libimobiledevice" 
+  "libimobiledevice-glue" 
+  "libplist" 
+  "libusb1" 
+  "shadow-utils" 
+]
+extra-source "usbmuxd-1.1.1^20230720git61b99ab-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/usbmuxd-1.1.1^20230720git61b99ab-2.fc40.x86_64.rpm"
+}

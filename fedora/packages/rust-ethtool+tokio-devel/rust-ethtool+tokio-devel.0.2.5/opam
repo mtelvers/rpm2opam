@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ethtool+tokio-devel-0.2.5-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ethtool+tokio-devel-0.2.5-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-ethtool-devel" {= "0.2.5"}
+  "rust-tokio+default-devel" 
+  "rust-tokio+rt-devel" 
+]
+extra-source "rust-ethtool+tokio-devel-0.2.5-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ethtool+tokio-devel-0.2.5-3.fc40.noarch.rpm"
+}

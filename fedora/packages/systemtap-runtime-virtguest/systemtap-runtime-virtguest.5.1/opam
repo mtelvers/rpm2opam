@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "systemtap-runtime-virtguest-5.1~pre17062192g5fd8daba-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "systemtap-runtime-virtguest-5.1~pre17062192g5fd8daba-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "findutils" 
+  "grep" 
+  "systemtap-runtime" {= "5.1"}
+]
+extra-source "systemtap-runtime-virtguest-5.1~pre17062192g5fd8daba-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/systemtap-runtime-virtguest-5.1~pre17062192g5fd8daba-1.fc40.x86_64.rpm"
+}

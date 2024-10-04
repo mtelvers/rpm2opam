@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tokio0.1+rt-full-devel-0.1.22-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tokio0.1+rt-full-devel-0.1.22-13.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-tokio0-1+num_cpus-devel" {= "0.1.22"}
+  "rust-tokio0-1+reactor-devel" {= "0.1.22"}
+  "rust-tokio0-1+timer-devel" {= "0.1.22"}
+  "rust-tokio0-1+tokio-current-thread-devel" {= "0.1.22"}
+  "rust-tokio0-1+tokio-executor-devel" {= "0.1.22"}
+  "rust-tokio0-1+tokio-threadpool-devel" {= "0.1.22"}
+  "rust-tokio0-1-devel" {= "0.1.22"}
+]
+extra-source "rust-tokio0.1+rt-full-devel-0.1.22-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tokio0.1+rt-full-devel-0.1.22-13.fc40.noarch.rpm"
+}

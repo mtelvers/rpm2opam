@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "Bottles-51.13-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Bottles-51.13-1.1.noarch.rpm"]
+depends: [
+  "7zip" 
+  "ImageMagick" 
+  "cabextract" 
+  "dconf" 
+  "libadwaita-1-0" {>= "1.2"}
+  "libgtk-4-1" 
+  "patool" 
+  "python311-Markdown" 
+  "python311-PyYAML" 
+  "python311-base" 
+  "python311-chardet" 
+  "python311-fvs" 
+  "python311-gobject" 
+  "python311-icoextract" 
+  "python311-pathvalidate" 
+  "python311-pefile" 
+  "python311-pycurl" 
+  "python311-requests" 
+  "typelib-1_0-Adw-1" {>= "1.2"}
+  "typelib-1_0-GtkSource-4" 
+  "typelib-1_0-GtkSource-5" 
+  "typelib-1_0-Handy-1_0" 
+  "typelib-1_0-WebKit2-4_0" 
+  "vkbasalt-cli" 
+  "xdpyinfo" 
+]
+extra-source "Bottles-51.13-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/Bottles-51.13-1.1.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Mozilla-CA-20231213-4.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mozilla-CA-20231213-4.el10.noarch.rpm"]
+depends: [
+  "ca-certificates" 
+  "perl-PathTools" 
+]
+extra-source "perl-Mozilla-CA-20231213-4.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/perl-Mozilla-CA-20231213-4.el10.noarch.rpm"
+}

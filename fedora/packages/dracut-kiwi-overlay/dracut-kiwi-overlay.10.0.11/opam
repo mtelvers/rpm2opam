@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dracut-kiwi-overlay-10.0.11-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dracut-kiwi-overlay-10.0.11-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "dracut" 
+  "dracut-kiwi-lib" {= "10.0.11"}
+  "util-linux" 
+]
+extra-source "dracut-kiwi-overlay-10.0.11-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dracut-kiwi-overlay-10.0.11-1.fc40.noarch.rpm"
+}

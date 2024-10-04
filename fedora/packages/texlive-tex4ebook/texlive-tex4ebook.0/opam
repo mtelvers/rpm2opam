@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-tex4ebook-svn66332-81.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-tex4ebook-svn66332-81.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-etoolbox" 
+  "texlive-graphics" 
+  "texlive-kpathsea" 
+  "texlive-kvoptions" 
+  "texlive-make4ht" 
+  "texlive-tex4ht" 
+]
+extra-source "texlive-tex4ebook-svn66332-81.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-tex4ebook-svn66332-81.fc40.noarch.rpm"
+}

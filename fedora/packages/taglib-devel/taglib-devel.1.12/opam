@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "taglib-devel-1.12-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "taglib-devel-1.12-10.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "pkgconf-pkg-config" 
+  "taglib" 
+]
+extra-source "taglib-devel-1.12-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/taglib-devel-1.12-10.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maxima-lang-5.47.0-2.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maxima-lang-5.47.0-2.10.noarch.rpm"]
+depends: [
+  "maxima" {= "5.47.0"}
+]
+extra-source "maxima-lang-5.47.0-2.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maxima-lang-5.47.0-2.10.noarch.rpm"
+}

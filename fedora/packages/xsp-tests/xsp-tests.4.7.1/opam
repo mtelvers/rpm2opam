@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xsp-tests-4.7.1-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xsp-tests-4.7.1-10.fc40.x86_64.rpm"]
+depends: [
+  "mono-core" {= "4.0.0.0"}
+  "mono-data-sqlite" {= "4.0.0.0"}
+  "mono-web" {= "4.0.0.0"}
+  "xsp" {= "4.7.1"}
+]
+extra-source "xsp-tests-4.7.1-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xsp-tests-4.7.1-10.fc40.x86_64.rpm"
+}

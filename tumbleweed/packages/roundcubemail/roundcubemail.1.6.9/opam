@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "roundcubemail-1.6.9-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "roundcubemail-1.6.9-1.1.noarch.rpm"]
+depends: [
+  "apache2-mod_php8" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "php-pear-Auth_SASL" {>= "1.0.6"}
+  "php-pear-MDB2_Driver_mysqli" 
+  "php-pear-Mail_Mime" {>= "1.10.0"}
+  "php-pear-Net_IDNA2" {>= "0.1.1"}
+  "php-pear-Net_LDAP2" 
+  "php-pear-Net_SMTP" {>= "1.8.1"}
+  "php-pear-Net_Sieve" {>= "1.4.3"}
+  "php-pear-Net_Socket" {>= "1.0.12"}
+  "php8" 
+  "php8-cli" 
+  "php8-dom" 
+  "php8-exif" 
+  "php8-gettext" 
+  "php8-iconv" 
+  "php8-intl" 
+  "php8-mbstring" 
+  "php8-mysql" 
+  "php8-openssl" 
+  "php8-sockets" 
+  "system-user-wwwrun" 
+]
+extra-source "roundcubemail-1.6.9-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/roundcubemail-1.6.9-1.1.noarch.rpm"
+}

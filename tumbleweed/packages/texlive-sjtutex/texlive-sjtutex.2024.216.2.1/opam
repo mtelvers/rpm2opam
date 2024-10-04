@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-sjtutex-2024.216.2.1svn69966-60.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-sjtutex-2024.216.2.1svn69966-60.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-amsfonts" 
+  "texlive-cmupint" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-l3packages" 
+  "texlive-libertinust1math" 
+  "texlive-newpx" 
+  "texlive-newtx" 
+  "texlive-pdfpages" 
+  "texlive-psnfss" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-stix2-type1" 
+  "texlive-tools" 
+  "texlive-translations" 
+  "texlive-unicode-math" 
+  "texlive-was" 
+]
+extra-source "texlive-sjtutex-2024.216.2.1svn69966-60.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-sjtutex-2024.216.2.1svn69966-60.1.noarch.rpm"
+}

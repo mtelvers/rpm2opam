@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnice10-32bit-0.1.21-3.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnice10-32bit-0.1.21-3.6.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libgio-2_0-0-32bit" 
+  "libglib-2_0-0-32bit" 
+  "libgnutls30-32bit" 
+  "libgobject-2_0-0-32bit" 
+  "libgupnp-igd-1_6-0-32bit" 
+]
+extra-source "libnice10-32bit-0.1.21-3.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libnice10-32bit-0.1.21-3.6.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "uima-pear-maven-plugin-3.5.0-4.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "uima-pear-maven-plugin-3.5.0-4.2.noarch.rpm"]
+depends: [
+  "apache-commons-io" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "uimaj" {= "3.5.0"}
+]
+extra-source "uima-pear-maven-plugin-3.5.0-4.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/uima-pear-maven-plugin-3.5.0-4.2.noarch.rpm"
+}

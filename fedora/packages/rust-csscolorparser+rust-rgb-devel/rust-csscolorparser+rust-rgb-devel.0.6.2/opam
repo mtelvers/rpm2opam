@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-csscolorparser+rust-rgb-devel-0.6.2-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-csscolorparser+rust-rgb-devel-0.6.2-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-csscolorparser+rgb-devel" {= "0.6.2"}
+  "rust-csscolorparser-devel" {= "0.6.2"}
+]
+extra-source "rust-csscolorparser+rust-rgb-devel-0.6.2-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-csscolorparser+rust-rgb-devel-0.6.2-6.fc40.noarch.rpm"
+}

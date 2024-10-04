@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qlipper-lang-5.1.2-1.19.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qlipper-lang-5.1.2-1.19.noarch.rpm"]
+depends: [
+  "qlipper" {= "5.1.2"}
+]
+extra-source "qlipper-lang-5.1.2-1.19.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/qlipper-lang-5.1.2-1.19.noarch.rpm"
+}

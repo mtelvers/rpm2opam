@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "compat-golang-gopkg-stretchr-testify-1-devel-1.8.4-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "compat-golang-gopkg-stretchr-testify-1-devel-1.8.4-4.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-stretchr-testify-devel" {= "1.8.4"}
+]
+extra-source "compat-golang-gopkg-stretchr-testify-1-devel-1.8.4-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/compat-golang-gopkg-stretchr-testify-1-devel-1.8.4-4.fc40.noarch.rpm"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-hexgame-2024.217.1.0svn15878-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-hexgame-2024.217.1.0svn15878-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-filesystem" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-pst-poly" 
+  "texlive-pstricks" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tools" 
+]
+extra-source "texlive-hexgame-2024.217.1.0svn15878-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-hexgame-2024.217.1.0svn15878-56.1.noarch.rpm"
+}

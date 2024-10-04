@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "grass-8.3.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grass-8.3.2-1.fc40.x86_64.rpm"]
+depends: [
+  "PDAL" 
+  "PDAL-libs" 
+  "bzip2-libs" 
+  "cairo" 
+  "freetype" 
+  "gdal-libs" 
+  "geos" 
+  "glibc" 
+  "grass-libs" {= "8.3.2"}
+  "libX11" 
+  "libgcc" 
+  "libgomp" 
+  "libpng" 
+  "libpq" 
+  "libstdc++" 
+  "libzstd" 
+  "netcdf" 
+  "proj" 
+  "python3" 
+  "python3-dateutil" 
+  "python3-numpy" 
+  "python3-wxpython4" 
+  "readline" 
+]
+extra-source "grass-8.3.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/grass-8.3.2-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "generic-release-40-0.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "generic-release-40-0.1.noarch.rpm"]
+depends: [
+  "generic-release-common" {= "40"}
+]
+extra-source "generic-release-40-0.1.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/generic-release-40-0.1.noarch.rpm"
+}

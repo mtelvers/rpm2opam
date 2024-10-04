@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "stratagus-3.3.2-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "stratagus-3.3.2-4.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "SDL2_image" 
+  "SDL2_mixer" 
+  "bzip2-libs" 
+  "compat-lua-libs" 
+  "compat-tolua++" 
+  "glibc" 
+  "libgcc" 
+  "libgomp" 
+  "libmng" 
+  "libogg" 
+  "libpng" 
+  "libstdc++" 
+  "libtheora" 
+  "libvorbis" 
+  "zlib-ng-compat" 
+]
+extra-source "stratagus-3.3.2-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/stratagus-3.3.2-4.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "php8-fpm-apache-8.3.12-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php8-fpm-apache-8.3.12-1.1.noarch.rpm"]
+depends: [
+  "apache2" 
+  "bash-sh" 
+  "php8-fpm" {= "8.3.12"}
+]
+extra-source "php8-fpm-apache-8.3.12-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/php8-fpm-apache-8.3.12-1.1.noarch.rpm"
+}

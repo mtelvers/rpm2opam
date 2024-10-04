@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Catalyst-Controller-ActionRole-0.17-27.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Catalyst-Controller-ActionRole-0.17-27.fc40.noarch.rpm"]
+depends: [
+  "perl-Catalyst-Runtime" {>= "5.80025"}
+  "perl-Class-Load" 
+  "perl-Moose" {>= "0.80"}
+  "perl-MooseX-Types" 
+  "perl-Scalar-List-Utils" 
+  "perl-String-RewritePrefix" {>= "0.4"}
+  "perl-libs" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-Catalyst-Controller-ActionRole-0.17-27.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Catalyst-Controller-ActionRole-0.17-27.fc40.noarch.rpm"
+}

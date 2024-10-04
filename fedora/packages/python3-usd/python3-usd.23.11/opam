@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-usd-23.11-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-usd-23.11-7.fc40.x86_64.rpm"]
+depends: [
+  "boost-python3" 
+  "glibc" 
+  "google-roboto-fonts" 
+  "google-roboto-mono-fonts" 
+  "libgcc" 
+  "libstdc++" 
+  "python3" {= "3.12"}
+  "python3-jinja2" 
+  "python3-libs" 
+  "python3-pyopengl" 
+  "tbb2020-3" 
+  "usd-libs" 
+]
+extra-source "python3-usd-23.11-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-usd-23.11-7.fc40.x86_64.rpm"
+}

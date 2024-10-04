@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dasher-lang-5.0.0-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dasher-lang-5.0.0-3.1.noarch.rpm"]
+depends: [
+  "dasher" {= "5.0.0"}
+]
+extra-source "dasher-lang-5.0.0-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dasher-lang-5.0.0-3.1.noarch.rpm"
+}

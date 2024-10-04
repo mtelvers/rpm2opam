@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-term0.6-devel-0.6.1-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-term0.6-devel-0.6.1-7.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-dirs+default-devel" 
+]
+extra-source "rust-term0.6-devel-0.6.1-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-term0.6-devel-0.6.1-7.fc40.noarch.rpm"
+}

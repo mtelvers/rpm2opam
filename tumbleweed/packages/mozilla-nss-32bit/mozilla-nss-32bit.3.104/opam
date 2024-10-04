@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mozilla-nss-32bit-3.104-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mozilla-nss-32bit-3.104-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libfreebl3-32bit" 
+  "libsoftokn3-32bit" 
+  "mozilla-nspr-32bit" 
+  "mozilla-nss-certs-32bit" 
+]
+extra-source "mozilla-nss-32bit-3.104-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mozilla-nss-32bit-3.104-1.1.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "warewulf-provision-x86_64-initramfs-3.8.1-13.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "warewulf-provision-x86_64-initramfs-3.8.1-13.3.noarch.rpm"]
+depends: [
+  "warewulf-provision" 
+]
+extra-source "warewulf-provision-x86_64-initramfs-3.8.1-13.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/warewulf-provision-x86_64-initramfs-3.8.1-13.3.noarch.rpm"
+}

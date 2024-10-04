@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Convert-UUlib-1.8-1.20.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Convert-UUlib-1.8-1.20.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl" 
+  "perl-common-sense" {>= "3.74"}
+]
+extra-source "perl-Convert-UUlib-1.8-1.20.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-Convert-UUlib-1.8-1.20.x86_64.rpm"
+}

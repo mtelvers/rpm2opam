@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libdvbpsi-devel-1.3.3-1.17.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdvbpsi-devel-1.3.3-1.17.x86_64.rpm"]
+depends: [
+  "libdvbpsi10" {= "1.3.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libdvbpsi-devel-1.3.3-1.17.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libdvbpsi-devel-1.3.3-1.17.x86_64.rpm"
+}

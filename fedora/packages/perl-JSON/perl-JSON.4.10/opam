@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-JSON-4.10-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-JSON-4.10-5.fc40.noarch.rpm"]
+depends: [
+  "perl-B" 
+  "perl-Carp" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-Math-BigInt" 
+  "perl-constant" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-overload" 
+]
+extra-source "perl-JSON-4.10-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-JSON-4.10-5.fc40.noarch.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xmlgraphics-fop-2.8-slfo.1.2.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xmlgraphics-fop-2.8-slfo.1.2.7.noarch.rpm"]
+depends: [
+  "apache-commons-io" 
+  "apache-commons-logging" 
+  "apache-pdfbox" 
+  "glassfish-servlet-api" 
+  "java-11-openjdk" {>= "1.8"}
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "qdox" 
+  "xml-commons-apis" 
+  "xmlgraphics-batik" 
+  "xmlgraphics-commons" 
+]
+extra-source "xmlgraphics-fop-2.8-slfo.1.2.7.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/xmlgraphics-fop-2.8-slfo.1.2.7.noarch.rpm"
+}

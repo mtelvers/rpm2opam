@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libraw1394-devel-32bit-2.1.2-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libraw1394-devel-32bit-2.1.2-2.2.x86_64.rpm"]
+depends: [
+  "libraw1394-11-32bit" {= "2.1.2"}
+  "libraw1394-devel" {= "2.1.2"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libraw1394-devel-32bit-2.1.2-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libraw1394-devel-32bit-2.1.2-2.2.x86_64.rpm"
+}

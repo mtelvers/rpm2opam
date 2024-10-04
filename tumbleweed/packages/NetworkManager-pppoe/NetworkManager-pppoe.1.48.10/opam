@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "NetworkManager-pppoe-1.48.10-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "NetworkManager-pppoe-1.48.10-1.1.x86_64.rpm"]
+depends: [
+  "NetworkManager" {= "1.48.10"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "ppp" {= "2.5.0"}
+  "rp-pppoe" 
+]
+extra-source "NetworkManager-pppoe-1.48.10-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/NetworkManager-pppoe-1.48.10-1.1.x86_64.rpm"
+}

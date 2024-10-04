@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-hotdoc-0.16-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-hotdoc-0.16-1.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "clang-devel" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libjson-glib-1_0-0" 
+  "libxml2-2" 
+  "llvm-devel" 
+  "python312-PyYAML" {>= "5.4.1"}
+  "python312-appdirs" 
+  "python312-base" 
+  "python312-cchardet" 
+  "python312-dbus-deviation" {>= "0.6.1"}
+  "python312-feedgen" 
+  "python312-lxml" {>= "4.9.1"}
+  "python312-networkx" {>= "2.8.8"}
+  "python312-pkgconfig" {>= "1.5.1"}
+  "python312-schema" 
+  "python312-toposort" {>= "1.6"}
+  "python312-wheezy-template" {>= "0.1.195"}
+  "update-alternatives" 
+]
+extra-source "python312-hotdoc-0.16-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-hotdoc-0.16-1.4.x86_64.rpm"
+}

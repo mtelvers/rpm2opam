@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pkgconf-2.1.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pkgconf-2.1.0-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libpkgconf" {= "2.1.0"}
+]
+extra-source "pkgconf-2.1.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pkgconf-2.1.0-1.fc40.x86_64.rpm"
+}

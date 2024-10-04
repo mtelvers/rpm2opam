@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kubefirst-fish-completion-2.6.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kubefirst-fish-completion-2.6.1-1.1.noarch.rpm"]
+depends: [
+  "kubefirst" {= "2.6.1"}
+]
+extra-source "kubefirst-fish-completion-2.6.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kubefirst-fish-completion-2.6.1-1.1.noarch.rpm"
+}

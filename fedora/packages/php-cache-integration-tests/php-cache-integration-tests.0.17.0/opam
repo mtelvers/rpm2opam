@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-cache-integration-tests-0.17.0-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-cache-integration-tests-0.17.0-9.fc40.noarch.rpm"]
+depends: [
+  "php-cache-tag-interop" 
+  "php-common" {>= "5.4"}
+  "php-fedora-autoloader" 
+  "php-psr-cache" 
+]
+extra-source "php-cache-integration-tests-0.17.0-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-cache-integration-tests-0.17.0-9.fc40.noarch.rpm"
+}

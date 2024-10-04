@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-gorm-devel-1.20.11-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-gorm-devel-1.20.11-9.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-jinzhu-inflection-devel" 
+  "golang-github-jinzhu-now-devel" 
+]
+extra-source "golang-gorm-devel-1.20.11-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-gorm-devel-1.20.11-9.fc40.noarch.rpm"
+}

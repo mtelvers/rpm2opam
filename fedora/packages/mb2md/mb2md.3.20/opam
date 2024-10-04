@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mb2md-3.20-30.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mb2md-3.20-30.fc40.noarch.rpm"]
+depends: [
+  "perl-Fcntl" 
+  "perl-Getopt-Std" 
+  "perl-IO" 
+  "perl-TimeDate" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "mb2md-3.20-30.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mb2md-3.20-30.fc40.noarch.rpm"
+}

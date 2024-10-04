@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-xetex-bin-2024.20240311.svn70276-100.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-xetex-bin-2024.20240311.svn70276-100.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libfontconfig1" 
+  "libfreetype6" 
+  "libgcc_s1" 
+  "libgraphite2-3" 
+  "libharfbuzz0" 
+  "libicu75" 
+  "libkpathsea6" 
+  "libpng16-16" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "texlive-xetex" {>= "2024"}
+]
+extra-source "texlive-xetex-bin-2024.20240311.svn70276-100.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/texlive-xetex-bin-2024.20240311.svn70276-100.1.x86_64.rpm"
+}

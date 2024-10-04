@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-deepseq-generics-devel-0.2.0.0-36.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-deepseq-generics-devel-0.2.0.0-36.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-deepseq-devel" 
+  "ghc-deepseq-generics" {= "0.2.0.0"}
+]
+extra-source "ghc-deepseq-generics-devel-0.2.0.0-36.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-deepseq-generics-devel-0.2.0.0-36.fc40.x86_64.rpm"
+}

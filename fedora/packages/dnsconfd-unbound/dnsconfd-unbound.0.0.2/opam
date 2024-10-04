@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dnsconfd-unbound-0.0.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dnsconfd-unbound-0.0.2-1.fc40.noarch.rpm"]
+depends: [
+  "unbound" 
+]
+extra-source "dnsconfd-unbound-0.0.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dnsconfd-unbound-0.0.2-1.fc40.noarch.rpm"
+}

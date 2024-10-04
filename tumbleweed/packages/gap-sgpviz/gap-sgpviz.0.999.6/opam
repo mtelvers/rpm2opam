@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-sgpviz-0.999.6-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-sgpviz-0.999.6-1.1.noarch.rpm"]
+depends: [
+  "gap" {>= "4.4"}
+  "gap-automata" {>= "1.14"}
+]
+extra-source "gap-sgpviz-0.999.6-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-sgpviz-0.999.6-1.1.noarch.rpm"
+}

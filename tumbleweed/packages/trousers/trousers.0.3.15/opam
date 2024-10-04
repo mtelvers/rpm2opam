@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "trousers-0.3.15-8.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trousers-0.3.15-8.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "glibc" 
+  "libopenssl3" 
+  "system-user-parsec" 
+  "system-user-tss" 
+  "udev" 
+]
+extra-source "trousers-0.3.15-8.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/trousers-0.3.15-8.2.x86_64.rpm"
+}

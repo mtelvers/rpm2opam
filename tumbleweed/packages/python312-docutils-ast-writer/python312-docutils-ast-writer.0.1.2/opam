@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-docutils-ast-writer-0.1.2-4.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-docutils-ast-writer-0.1.2-4.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-docutils" {>= "0.12"}
+  "update-alternatives" 
+]
+extra-source "python312-docutils-ast-writer-0.1.2-4.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-docutils-ast-writer-0.1.2-4.2.noarch.rpm"
+}

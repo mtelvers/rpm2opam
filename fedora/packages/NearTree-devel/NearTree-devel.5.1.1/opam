@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "NearTree-devel-5.1.1-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "NearTree-devel-5.1.1-14.fc40.x86_64.rpm"]
+depends: [
+  "CVector-devel" 
+  "NearTree" {= "5.1.1"}
+]
+extra-source "NearTree-devel-5.1.1-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/NearTree-devel-5.1.1-14.fc40.x86_64.rpm"
+}

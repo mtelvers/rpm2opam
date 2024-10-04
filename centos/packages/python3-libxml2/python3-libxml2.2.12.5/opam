@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-libxml2-2.12.5-2.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-libxml2-2.12.5-2.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libxml2" {= "2.12.5"}
+  "python3" {= "3.12"}
+]
+extra-source "python3-libxml2-2.12.5-2.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/python3-libxml2-2.12.5-2.el10.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postfix-devel-3.9.0-slfo.1.2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postfix-devel-3.9.0-slfo.1.2.1.noarch.rpm"]
+depends: [
+  "postfix" {= "3.9.0"}
+]
+extra-source "postfix-devel-3.9.0-slfo.1.2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/postfix-devel-3.9.0-slfo.1.2.1.noarch.rpm"
+}

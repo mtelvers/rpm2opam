@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qpid-proton-devel-0.38.0-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qpid-proton-devel-0.38.0-2.2.x86_64.rpm"]
+depends: [
+  "libqpid-proton-core10" {= "0.38.0"}
+  "libqpid-proton-cpp12" {= "0.38.0"}
+  "libqpid-proton11" {= "0.38.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "qpid-proton-devel-0.38.0-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/qpid-proton-devel-0.38.0-2.2.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qterminal-lang-2.0.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qterminal-lang-2.0.1-1.1.noarch.rpm"]
+depends: [
+  "qterminal" {= "2.0.1"}
+]
+extra-source "qterminal-lang-2.0.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/qterminal-lang-2.0.1-1.1.noarch.rpm"
+}

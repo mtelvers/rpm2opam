@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bind-9.20.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bind-9.20.2-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "bind-utils" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "libcap2" 
+  "libfstrm0" 
+  "libjemalloc2" 
+  "libjson-c5" 
+  "libmaxminddb0" 
+  "libnghttp2-14" 
+  "libopenssl3" 
+  "libprotobuf-c1" 
+  "libsystemd0" 
+  "libuv1" 
+  "libxml2-2" 
+  "libz-ng-compat1" 
+  "perl-base" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "bind-9.20.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/bind-9.20.2-1.1.x86_64.rpm"
+}

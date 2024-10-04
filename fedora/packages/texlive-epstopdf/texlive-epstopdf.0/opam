@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-epstopdf-svn66461-81.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-epstopdf-svn66461-81.fc40.noarch.rpm"]
+depends: [
+  "perl-File-Basename" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-interpreter" 
+  "texlive-base" 
+]
+extra-source "texlive-epstopdf-svn66461-81.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-epstopdf-svn66461-81.fc40.noarch.rpm"
+}

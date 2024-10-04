@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "subunit-filters-1.4.2-3.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "subunit-filters-1.4.2-3.7.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-junitxml" 
+  "python311-python-subunit" {= "1.4.2"}
+  "typelib-1_0-Gtk-3_0" 
+]
+extra-source "subunit-filters-1.4.2-3.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/subunit-filters-1.4.2-3.7.noarch.rpm"
+}

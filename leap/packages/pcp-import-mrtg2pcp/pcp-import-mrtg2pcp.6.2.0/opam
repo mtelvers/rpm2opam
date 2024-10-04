@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pcp-import-mrtg2pcp-6.2.0-slfo.1.1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcp-import-mrtg2pcp-6.2.0-slfo.1.1.6.noarch.rpm"]
+depends: [
+  "perl-PCP-LogImport" {= "6.2.0"}
+  "perl-base" 
+]
+extra-source "pcp-import-mrtg2pcp-6.2.0-slfo.1.1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/pcp-import-mrtg2pcp-6.2.0-slfo.1.1.6.noarch.rpm"
+}

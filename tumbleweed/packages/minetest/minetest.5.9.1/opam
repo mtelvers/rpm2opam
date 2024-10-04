@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "minetest-5.9.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "minetest-5.9.1-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libX11-6" 
+  "libXi6" 
+  "libcurl-mini4" 
+  "libfreetype6" 
+  "libgcc_s1" 
+  "libglvnd" 
+  "libgmp10" 
+  "libhiredis1_1_0" 
+  "libjpeg8" 
+  "libjsoncpp25" 
+  "libleveldb1" 
+  "libluajit-5_1-2" 
+  "libncurses6" 
+  "libopenal1" 
+  "libpng16-16" 
+  "libpq5" 
+  "libspatialindex6" 
+  "libsqlite3-0" 
+  "libstdc++6" 
+  "libvorbisfile3" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+  "minetest-data" {= "5.9.1"}
+  "opengl-games-utils" 
+]
+extra-source "minetest-5.9.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/minetest-5.9.1-1.1.x86_64.rpm"
+}

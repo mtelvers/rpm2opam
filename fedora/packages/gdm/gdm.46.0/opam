@@ -1,0 +1,46 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gdm-46.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdm-46.0-1.fc40.x86_64.rpm"]
+depends: [
+  "accountsservice" 
+  "accountsservice-libs" 
+  "audit-libs" 
+  "bash" 
+  "dbus-daemon" 
+  "dconf" 
+  "fedora-logos" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gnome-keyring-pam" 
+  "gnome-session" 
+  "gnome-session-wayland-session" 
+  "gnome-settings-daemon" {>= "3.27.90"}
+  "gtk3" 
+  "iso-codes" 
+  "json-glib" 
+  "keyutils-libs" 
+  "libX11" 
+  "libXau" {>= "1.0.4"}
+  "libXdmcp" 
+  "libcanberra" 
+  "libcanberra-gtk3" 
+  "libgcc" 
+  "libgudev" 
+  "libselinux" 
+  "libxcb" 
+  "pam" 
+  "pam-libs" 
+  "setxkbmap" 
+  "shadow-utils" 
+  "systemd" {>= "186"}
+  "systemd-libs" 
+  "util-linux" 
+  "xhost" 
+  "xmodmap" 
+  "xorg-x11-xinit" 
+  "xrdb" 
+]
+extra-source "gdm-46.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gdm-46.0-1.fc40.x86_64.rpm"
+}

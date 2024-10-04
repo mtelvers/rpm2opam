@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-mandi-2024.216.3.2.2svn70231-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-mandi-2024.216.3.2.2svn70231-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-amsmath" 
+  "texlive-enumitem" 
+  "texlive-eso-pic" 
+  "texlive-esvect" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-hyperref" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-l3packages" 
+  "texlive-makebox" 
+  "texlive-mathtools" 
+  "texlive-nicematrix" 
+  "texlive-pgf" 
+  "texlive-pgfopts" 
+  "texlive-qrcode" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tcolorbox" 
+  "texlive-tensor" 
+  "texlive-tools" 
+  "texlive-unicode-math" 
+]
+extra-source "texlive-mandi-2024.216.3.2.2svn70231-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-mandi-2024.216.3.2.2svn70231-55.1.noarch.rpm"
+}

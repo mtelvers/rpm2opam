@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnetcdf-fortran-gnu-openmpi4-hpc-4.5.3-5.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnetcdf-fortran-gnu-openmpi4-hpc-4.5.3-5.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "libnetcdf-fortran_4_5_3-gnu-openmpi4-hpc" {= "4.5.3"}
+]
+extra-source "libnetcdf-fortran-gnu-openmpi4-hpc-4.5.3-5.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libnetcdf-fortran-gnu-openmpi4-hpc-4.5.3-5.4.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gio-sharp-2.22.3-24.24.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gio-sharp-2.22.3-24.24.x86_64.rpm"]
+depends: [
+  "glib-sharp2" {>= "2.12"}
+  "libglib-2_0-0" {>= "2.22"}
+  "mono-core" {= "4.0.0.0"}
+]
+extra-source "gio-sharp-2.22.3-24.24.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gio-sharp-2.22.3-24.24.x86_64.rpm"
+}

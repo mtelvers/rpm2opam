@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-shell-search-provider-lollypop-1.4.40-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-shell-search-provider-lollypop-1.4.40-1.1.noarch.rpm"]
+depends: [
+  "gnome-shell" 
+  "lollypop" {= "1.4.40"}
+  "python311-base" 
+]
+extra-source "gnome-shell-search-provider-lollypop-1.4.40-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-shell-search-provider-lollypop-1.4.40-1.1.noarch.rpm"
+}

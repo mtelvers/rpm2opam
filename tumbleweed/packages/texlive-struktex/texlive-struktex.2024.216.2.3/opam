@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-struktex-2024.216.2.3c_0_g7d3fc5bsvn47931-60.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-struktex-2024.216.2.3c_0_g7d3fc5bsvn47931-60.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-curves" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-graphics" 
+  "texlive-hyperref" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-pict2e" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-url" 
+]
+extra-source "texlive-struktex-2024.216.2.3c_0_g7d3fc5bsvn47931-60.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-struktex-2024.216.2.3c_0_g7d3fc5bsvn47931-60.1.noarch.rpm"
+}

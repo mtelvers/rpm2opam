@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "icc-profiles-1.2-16.27.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "icc-profiles-1.2-16.27.noarch.rpm"]
+depends: [
+  "icc-profiles-basiccolor-printing2009-coat2" 
+  "icc-profiles-mini" 
+]
+extra-source "icc-profiles-1.2-16.27.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/icc-profiles-1.2-16.27.noarch.rpm"
+}

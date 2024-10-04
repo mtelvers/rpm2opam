@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-DateTime-Format-Strptime-1.79-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DateTime-Format-Strptime-1.79-10.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-DateTime" {>= "1.0"}
+  "perl-DateTime-Locale" {>= "1.30"}
+  "perl-DateTime-TimeZone" {>= "2.9"}
+  "perl-Exporter" 
+  "perl-Params-ValidationCompiler" 
+  "perl-Specio" {>= "0.33"}
+  "perl-Try-Tiny" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-DateTime-Format-Strptime-1.79-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-DateTime-Format-Strptime-1.79-10.fc40.noarch.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vagrant-libvirt-0.11.2-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vagrant-libvirt-0.11.2-3.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "libvirt" 
+  "qemu-x86" 
+  "ruby3-3" 
+  "ruby3-3-rubygem-diffy" 
+  "ruby3-3-rubygem-fog-core" 
+  "ruby3-3-rubygem-fog-libvirt" {>= "0.6.0"}
+  "ruby3-3-rubygem-nokogiri" {>= "1.6"}
+  "ruby3-3-rubygem-xml-simple" 
+  "vagrant" 
+]
+extra-source "vagrant-libvirt-0.11.2-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vagrant-libvirt-0.11.2-3.2.x86_64.rpm"
+}

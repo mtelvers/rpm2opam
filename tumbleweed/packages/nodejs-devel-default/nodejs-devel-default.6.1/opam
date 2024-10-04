@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nodejs-devel-default-6.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nodejs-devel-default-6.1-2.1.x86_64.rpm"]
+depends: [
+  "nodejs22-devel" 
+  "npm-default" 
+]
+extra-source "nodejs-devel-default-6.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/nodejs-devel-default-6.1-2.1.x86_64.rpm"
+}

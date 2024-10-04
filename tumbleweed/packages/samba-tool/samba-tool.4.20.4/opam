@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "samba-tool-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "samba-tool-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm"]
+depends: [
+  "python311-Markdown" 
+  "python311-base" 
+  "samba" {= "4.20.4"}
+  "samba-ldb-ldap" {= "4.20.4"}
+  "samba-python3" {= "4.20.4"}
+]
+extra-source "samba-tool-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/samba-tool-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm"
+}

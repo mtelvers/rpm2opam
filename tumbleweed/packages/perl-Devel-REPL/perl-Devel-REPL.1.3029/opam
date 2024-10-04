@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Devel-REPL-1.003029-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Devel-REPL-1.003029-1.9.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-B-Keywords" 
+  "perl-Data-Dump-Streamer" {>= "2.39"}
+  "perl-Data-Dumper-Concise" 
+  "perl-File-Next" 
+  "perl-Lexical-Persistence" 
+  "perl-Module-Runtime" 
+  "perl-Moose" {>= "0.93"}
+  "perl-MooseX-Getopt" {>= "0.18"}
+  "perl-MooseX-Object-Pluggable" {>= "0.9"}
+  "perl-PPI" 
+  "perl-Task-Weaken" 
+  "perl-base" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-Devel-REPL-1.003029-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Devel-REPL-1.003029-1.9.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qt4-theme-quarticurve-0.0-0.43.beta8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qt4-theme-quarticurve-0.0-0.43.beta8.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kde-filesystem" {>= "4"}
+  "libgcc" 
+  "libstdc++" 
+  "qt" 
+  "qt-x11" 
+]
+extra-source "qt4-theme-quarticurve-0.0-0.43.beta8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qt4-theme-quarticurve-0.0-0.43.beta8.fc40.x86_64.rpm"
+}

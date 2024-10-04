@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dropbox-cli-2020.03.04-6.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dropbox-cli-2020.03.04-6.1.x86_64.rpm"]
+depends: [
+  "libgthread-2_0-0" 
+  "python311-base" 
+  "python311-gobject-Gdk" 
+  "python311-gpg" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" {= "2.0"}
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" 
+]
+extra-source "dropbox-cli-2020.03.04-6.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/dropbox-cli-2020.03.04-6.1.x86_64.rpm"
+}

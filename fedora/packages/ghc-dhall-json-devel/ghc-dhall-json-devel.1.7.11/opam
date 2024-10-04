@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-dhall-json-devel-1.7.11-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-dhall-json-devel-1.7.11-7.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-devel" 
+  "ghc-aeson-pretty-devel" 
+  "ghc-aeson-yaml-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-dhall-devel" 
+  "ghc-dhall-json" {= "1.7.11"}
+  "ghc-exceptions-devel" 
+  "ghc-filepath-devel" 
+  "ghc-lens-family-core-devel" 
+  "ghc-optparse-applicative-devel" 
+  "ghc-prettyprinter-devel" 
+  "ghc-scientific-devel" 
+  "ghc-text-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-dhall-json-devel-1.7.11-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-dhall-json-devel-1.7.11-7.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "myquerytutor-2.1.1+git20201224.0172df6-1.13.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "myquerytutor-2.1.1+git20201224.0172df6-1.13.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-beautifulsoup4" 
+  "python311-qt5" 
+  "python311-qtwebengine-qt5" 
+  "python311-requests" 
+]
+extra-source "myquerytutor-2.1.1+git20201224.0172df6-1.13.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/myquerytutor-2.1.1+git20201224.0172df6-1.13.noarch.rpm"
+}

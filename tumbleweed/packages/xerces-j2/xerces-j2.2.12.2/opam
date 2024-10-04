@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xerces-j2-2.12.2-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xerces-j2-2.12.2-4.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+  "xalan-j2" 
+  "xml-commons-apis" 
+  "xml-commons-resolver" 
+]
+extra-source "xerces-j2-2.12.2-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xerces-j2-2.12.2-4.1.noarch.rpm"
+}

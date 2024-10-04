@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pytest-jupyter-server-0.10.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pytest-jupyter-server-0.10.1-1.1.noarch.rpm"]
+depends: [
+  "python311-ipykernel" {>= "6.14"}
+  "python311-jupyter-client" {>= "7.4"}
+  "python311-jupyter-server" {>= "1.21"}
+  "python311-nbformat" {>= "5.3"}
+  "python311-pytest-jupyter" {= "0.10.1"}
+]
+extra-source "python311-pytest-jupyter-server-0.10.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pytest-jupyter-server-0.10.1-1.1.noarch.rpm"
+}

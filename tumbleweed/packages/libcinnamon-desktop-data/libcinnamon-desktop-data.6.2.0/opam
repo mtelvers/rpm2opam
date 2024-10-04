@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcinnamon-desktop-data-6.2.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcinnamon-desktop-data-6.2.0-1.1.noarch.rpm"]
+depends: [
+  "libcinnamon-desktop-data-branding-openSUSE" {= "6.2.0"}
+  "pam" 
+  "python311-gobject" 
+]
+extra-source "libcinnamon-desktop-data-6.2.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libcinnamon-desktop-data-6.2.0-1.1.noarch.rpm"
+}

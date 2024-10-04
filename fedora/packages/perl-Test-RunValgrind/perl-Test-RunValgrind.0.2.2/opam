@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-RunValgrind-0.2.2-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-RunValgrind-0.2.2-11.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Path-Tiny" 
+  "perl-Test-Simple" 
+  "perl-Test-Trap" 
+  "perl-libs" {>= "5.14.0"}
+]
+extra-source "perl-Test-RunValgrind-0.2.2-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-RunValgrind-0.2.2-11.fc40.noarch.rpm"
+}

@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-5.0.10-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-5.0.10-1.1.x86_64.rpm"]
+depends: [
+  "augeas-lenses" 
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "coreutils" 
+  "cpio" 
+  "fillup" 
+  "gpg2" 
+  "hostname" 
+  "libyui-ncurses16" 
+  "perl-base" 
+  "rpm" 
+  "ruby3-3-rubygem-abstract_method" 
+  "ruby3-3-rubygem-cfa" 
+  "ruby3-3-rubygem-cheetah" 
+  "ruby3-3-rubygem-nokogiri" 
+  "ruby3-3-rubygem-simpleidn" 
+  "sysconfig" {>= "0.80.0"}
+  "yast2-core" {>= "2.23.0"}
+  "yast2-hardware-detection" 
+  "yast2-logs" 
+  "yast2-perl-bindings" 
+  "yast2-pkg-bindings" {>= "4.3.7"}
+  "yast2-ruby-bindings" {>= "4.5.4"}
+  "yast2-ycp-ui-bindings" {>= "4.3.3"}
+]
+extra-source "yast2-5.0.10-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/yast2-5.0.10-1.1.x86_64.rpm"
+}

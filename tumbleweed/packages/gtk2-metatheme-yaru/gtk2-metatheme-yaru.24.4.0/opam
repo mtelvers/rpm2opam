@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtk2-metatheme-yaru-24.04.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk2-metatheme-yaru-24.04.0-1.1.noarch.rpm"]
+depends: [
+  "gtk2-engine-murrine" 
+  "gtk2-theming-engine-adwaita" 
+  "metatheme-yaru-common" {= "24.4.0"}
+]
+extra-source "gtk2-metatheme-yaru-24.04.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gtk2-metatheme-yaru-24.04.0-1.1.noarch.rpm"
+}

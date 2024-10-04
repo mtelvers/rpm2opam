@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "audaspace-devel-1.5.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "audaspace-devel-1.5.0-1.3.x86_64.rpm"]
+depends: [
+  "libaudaspace-c1_5" {= "1.5.0"}
+  "libaudaspace-py1_5" {= "1.5.0"}
+  "libaudaspace1_5" {= "1.5.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "audaspace-devel-1.5.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/audaspace-devel-1.5.0-1.3.x86_64.rpm"
+}

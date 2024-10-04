@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sshuttle-1.1.1-5.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sshuttle-1.1.1-5.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "python311-base" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "sshuttle-1.1.1-5.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sshuttle-1.1.1-5.2.noarch.rpm"
+}

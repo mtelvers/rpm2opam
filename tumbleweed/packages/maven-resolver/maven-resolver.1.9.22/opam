@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-resolver-1.9.22-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-resolver-1.9.22-1.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "maven-resolver-1.9.22-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-resolver-1.9.22-1.1.noarch.rpm"
+}

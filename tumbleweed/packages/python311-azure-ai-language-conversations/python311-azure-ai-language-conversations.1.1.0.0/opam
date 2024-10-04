@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-azure-ai-language-conversations-1.1.0.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-azure-ai-language-conversations-1.1.0.0-1.1.noarch.rpm"]
+depends: [
+  "python311-azure-ai-language-nspkg" {>= "1.0.0"}
+  "python311-azure-ai-nspkg" {>= "1.0.0"}
+  "python311-azure-common" 
+  "python311-azure-core" 
+  "python311-base" {= "3.11"}
+  "python311-isodate" 
+  "python311-six" {>= "1.11.0"}
+  "python311-typing_extensions" 
+]
+extra-source "python311-azure-ai-language-conversations-1.1.0.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-azure-ai-language-conversations-1.1.0.0-1.1.noarch.rpm"
+}

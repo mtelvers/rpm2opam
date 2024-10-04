@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "peek-1.5.1-2.28.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "peek-1.5.1-2.28.x86_64.rpm"]
+depends: [
+  "ImageMagick" 
+  "ffmpeg-4" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libgtk-3-0" 
+  "libkeybinder-3_0-0" 
+  "libpango-1_0-0" 
+]
+extra-source "peek-1.5.1-2.28.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/peek-1.5.1-2.28.x86_64.rpm"
+}

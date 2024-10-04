@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libopenssl-devel-3.1.4-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libopenssl-devel-3.1.4-3.2.noarch.rpm"]
+depends: [
+  "libopenssl-3-devel" {= "3.1.4"}
+  "libopenssl3" {= "3.1.4"}
+  "openssl" {= "3.1.4"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libopenssl-devel-3.1.4-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libopenssl-devel-3.1.4-3.2.noarch.rpm"
+}

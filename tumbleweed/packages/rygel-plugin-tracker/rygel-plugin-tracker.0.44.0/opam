@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rygel-plugin-tracker-0.44.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rygel-plugin-tracker-0.44.0-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgee-0_8-2" 
+  "librygel-core-2_8-0" 
+  "librygel-server-2_8-0" 
+  "libtracker-sparql-3_0-0" 
+  "rygel" {= "0.44.0"}
+  "tracker" 
+]
+extra-source "rygel-plugin-tracker-0.44.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rygel-plugin-tracker-0.44.0-1.1.x86_64.rpm"
+}

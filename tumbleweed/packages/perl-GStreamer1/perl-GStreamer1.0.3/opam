@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-GStreamer1-0.003-1.31.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-GStreamer1-0.003-1.31.x86_64.rpm"]
+depends: [
+  "perl" 
+  "perl-Glib-Object-Introspection" {>= "0.9"}
+  "typelib-1_0-Gst-1_0" 
+  "typelib-1_0-GstApp-1_0" 
+]
+extra-source "perl-GStreamer1-0.003-1.31.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-GStreamer1-0.003-1.31.x86_64.rpm"
+}

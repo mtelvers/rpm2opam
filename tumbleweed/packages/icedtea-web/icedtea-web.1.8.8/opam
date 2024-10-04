@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "icedtea-web-1.8.8-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "icedtea-web-1.8.8-4.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "java-11-openj9" {>= "1.8"}
+  "rhino" 
+  "tagsoup" 
+  "update-alternatives" 
+]
+extra-source "icedtea-web-1.8.8-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/icedtea-web-1.8.8-4.2.x86_64.rpm"
+}

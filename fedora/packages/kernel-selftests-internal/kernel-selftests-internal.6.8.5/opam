@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kernel-selftests-internal-6.8.5-301.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kernel-selftests-internal-6.8.5-301.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "binutils" 
+  "bpftool" 
+  "elfutils-libelf" 
+  "fuse-libs" 
+  "glibc" 
+  "iproute-tc" 
+  "keyutils" 
+  "libcap" 
+  "libmnl" 
+  "nmap-ncat" 
+  "perl-IO" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "python3" 
+  "zlib-ng-compat" 
+]
+extra-source "kernel-selftests-internal-6.8.5-301.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kernel-selftests-internal-6.8.5-301.fc40.x86_64.rpm"
+}

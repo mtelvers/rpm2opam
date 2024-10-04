@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Perl-Version-tests-1.017-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Perl-Version-tests-1.017-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Data-Dumper" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-PathTools" 
+  "perl-Perl-Version" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-version" {>= "0.77"}
+]
+extra-source "perl-Perl-Version-tests-1.017-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Perl-Version-tests-1.017-1.fc40.noarch.rpm"
+}

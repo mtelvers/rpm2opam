@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libkioarchive-devel-24.02.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libkioarchive-devel-24.02.2-1.1.x86_64.rpm"]
+depends: [
+  "libkioarchive5" {= "24.2.2"}
+]
+extra-source "libkioarchive-devel-24.02.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libkioarchive-devel-24.02.2-1.1.x86_64.rpm"
+}

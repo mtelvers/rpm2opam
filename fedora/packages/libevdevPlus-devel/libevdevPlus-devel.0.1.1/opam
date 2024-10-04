@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libevdevPlus-devel-0.1.1-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libevdevPlus-devel-0.1.1-16.fc40.x86_64.rpm"]
+depends: [
+  "libevdevPlus" {= "0.1.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libevdevPlus-devel-0.1.1-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libevdevPlus-devel-0.1.1-16.fc40.x86_64.rpm"
+}

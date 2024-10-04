@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-fwtree-1.3-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-fwtree-1.3-1.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "gap" {>= "4.4"}
+  "gap-anupq" {>= "1.0"}
+  "gap-autpgrp" {>= "1.0"}
+  "gap-polycyclic" {>= "1.0"}
+]
+extra-source "gap-fwtree-1.3-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gap-fwtree-1.3-1.3.x86_64.rpm"
+}

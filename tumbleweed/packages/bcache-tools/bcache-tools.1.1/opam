@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bcache-tools-1.1+git37.a5e3753-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bcache-tools-1.1+git37.a5e3753-1.3.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "libblkid1" 
+  "libuuid1" 
+  "python311-base" 
+]
+extra-source "bcache-tools-1.1+git37.a5e3753-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/bcache-tools-1.1+git37.a5e3753-1.3.x86_64.rpm"
+}

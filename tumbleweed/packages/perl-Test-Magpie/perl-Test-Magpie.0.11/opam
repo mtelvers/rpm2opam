@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-Magpie-0.11-1.18.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Magpie-0.11-1.18.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Devel-PartialDump" 
+  "perl-Moose" 
+  "perl-MooseX-Types" 
+  "perl-MooseX-Types-Structured" 
+  "perl-Set-Object" 
+  "perl-UNIVERSAL-ref" 
+  "perl-aliased" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-Test-Magpie-0.11-1.18.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-Magpie-0.11-1.18.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-libgit2-git2go-devel-35.0.0-1.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-libgit2-git2go-devel-35.0.0-1.fc39.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-x-crypto-devel" 
+  "libgit2-devel" 
+]
+extra-source "golang-github-libgit2-git2go-devel-35.0.0-1.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-libgit2-git2go-devel-35.0.0-1.fc39.noarch.rpm"
+}

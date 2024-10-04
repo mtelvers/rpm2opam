@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-esqueleto-prof-3.5.10.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-esqueleto-prof-3.5.10.0-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-prof" 
+  "ghc-attoparsec-prof" 
+  "ghc-base-prof" 
+  "ghc-blaze-html-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-conduit-prof" 
+  "ghc-containers-prof" 
+  "ghc-esqueleto-devel" {= "3.5.10.0"}
+  "ghc-monad-logger-prof" 
+  "ghc-persistent-prof" 
+  "ghc-resourcet-prof" 
+  "ghc-tagged-prof" 
+  "ghc-template-haskell-prof" 
+  "ghc-text-prof" 
+  "ghc-time-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unliftio-prof" 
+  "ghc-unordered-containers-prof" 
+]
+extra-source "ghc-esqueleto-prof-3.5.10.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-esqueleto-prof-3.5.10.0-3.fc40.x86_64.rpm"
+}

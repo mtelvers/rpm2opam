@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nautilus-devel-46.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nautilus-devel-46.2-1.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libnautilus-extension4" {= "46.2"}
+  "nautilus" {= "46.2"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Nautilus-4_0" {= "46.2"}
+]
+extra-source "nautilus-devel-46.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/nautilus-devel-46.2-1.1.x86_64.rpm"
+}

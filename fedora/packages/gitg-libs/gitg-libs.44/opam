@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gitg-libs-44-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gitg-libs-44-3.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "gdk-pixbuf2" 
+  "glib2" {>= "2.68.0"}
+  "glibc" 
+  "gpgme" 
+  "gtk3" 
+  "gtksourceview4" 
+  "libdazzle" 
+  "libgcc" 
+  "libgee" 
+  "libgit2-glib" {>= "1.2.0"}
+  "libpeas1" 
+  "libsecret" 
+  "libxml2" 
+  "pango" 
+  "python3" {= "3.12"}
+]
+extra-source "gitg-libs-44-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gitg-libs-44-3.fc40.x86_64.rpm"
+}

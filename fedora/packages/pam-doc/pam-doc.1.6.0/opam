@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pam-doc-1.6.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pam-doc-1.6.0-2.fc40.noarch.rpm"]
+depends: [
+  "pam" {= "1.6.0"}
+]
+extra-source "pam-doc-1.6.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pam-doc-1.6.0-2.fc40.noarch.rpm"
+}

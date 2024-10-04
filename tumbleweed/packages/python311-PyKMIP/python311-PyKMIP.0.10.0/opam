@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-PyKMIP-0.10.0-9.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-PyKMIP-0.10.0-9.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-SQLAlchemy" 
+  "python311-base" {= "3.11"}
+  "python311-cryptography" 
+  "python311-requests" 
+  "python311-six" 
+  "update-alternatives" 
+]
+extra-source "python311-PyKMIP-0.10.0-9.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-PyKMIP-0.10.0-9.2.noarch.rpm"
+}

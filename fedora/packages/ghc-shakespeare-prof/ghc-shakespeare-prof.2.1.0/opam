@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-shakespeare-prof-2.1.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-shakespeare-prof-2.1.0-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-prof" 
+  "ghc-base-prof" 
+  "ghc-blaze-html-prof" 
+  "ghc-blaze-markup-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-directory-prof" 
+  "ghc-exceptions-prof" 
+  "ghc-file-embed-prof" 
+  "ghc-parsec-prof" 
+  "ghc-process-prof" 
+  "ghc-scientific-prof" 
+  "ghc-shakespeare-devel" {= "2.1.0"}
+  "ghc-template-haskell-prof" 
+  "ghc-text-prof" 
+  "ghc-th-lift-prof" 
+  "ghc-time-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unordered-containers-prof" 
+  "ghc-vector-prof" 
+]
+extra-source "ghc-shakespeare-prof-2.1.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-shakespeare-prof-2.1.0-3.fc40.x86_64.rpm"
+}

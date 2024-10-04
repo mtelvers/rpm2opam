@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-console+default-devel-0.15.8-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-console+default-devel-0.15.8-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-console+ansi-parsing-devel" {= "0.15.8"}
+  "rust-console+unicode-width-devel" {= "0.15.8"}
+  "rust-console-devel" {= "0.15.8"}
+]
+extra-source "rust-console+default-devel-0.15.8-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-console+default-devel-0.15.8-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-rootless-containers-rootlesskit-devel-1.0.1-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-rootless-containers-rootlesskit-devel-1.0.1-6.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-gofrs-flock-devel" 
+  "golang-github-gorilla-mux-devel" 
+  "golang-github-insomniacslk-dhcp-devel" 
+  "golang-github-moby-sys-devel" 
+  "golang-github-sirupsen-logrus-devel" 
+  "golang-github-urfave-cli-2-devel" 
+  "golang-x-sys-devel" 
+]
+extra-source "golang-github-rootless-containers-rootlesskit-devel-1.0.1-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-rootless-containers-rootlesskit-devel-1.0.1-6.fc40.noarch.rpm"
+}

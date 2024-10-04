@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "biblesync-devel-2.1.0-1.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "biblesync-devel-2.1.0-1.13.x86_64.rpm"]
+depends: [
+  "libbiblesync2_0" {= "2.1.0"}
+  "libuuid-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "biblesync-devel-2.1.0-1.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/biblesync-devel-2.1.0-1.13.x86_64.rpm"
+}

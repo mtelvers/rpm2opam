@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "beep-1.4.12-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "beep-1.4.12-11.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "kmod" 
+  "shadow-utils" 
+  "systemd-udev" 
+]
+extra-source "beep-1.4.12-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/beep-1.4.12-11.fc40.x86_64.rpm"
+}

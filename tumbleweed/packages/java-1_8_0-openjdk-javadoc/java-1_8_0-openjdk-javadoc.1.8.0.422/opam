@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "java-1_8_0-openjdk-javadoc-1.8.0.422-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "java-1_8_0-openjdk-javadoc-1.8.0.422-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "javapackages-tools" 
+  "update-alternatives" 
+]
+extra-source "java-1_8_0-openjdk-javadoc-1.8.0.422-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/java-1_8_0-openjdk-javadoc-1.8.0.422-1.1.noarch.rpm"
+}

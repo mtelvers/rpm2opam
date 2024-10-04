@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "deepin-wayland-1.0.0-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deepin-wayland-1.0.0-10.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtwayland" 
+]
+extra-source "deepin-wayland-1.0.0-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/deepin-wayland-1.0.0-10.fc40.x86_64.rpm"
+}

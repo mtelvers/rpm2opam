@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fwknop-gui-1.3.1-23.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fwknop-gui-1.3.1-23.fc40.x86_64.rpm"]
+depends: [
+  "fwknop" 
+  "glibc" 
+  "gpgme" 
+  "libcurl" 
+  "libgcc" 
+  "libstdc++" 
+  "qrencode-libs" 
+  "wxBase" 
+  "wxGTK" 
+]
+extra-source "fwknop-gui-1.3.1-23.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fwknop-gui-1.3.1-23.fc40.x86_64.rpm"
+}

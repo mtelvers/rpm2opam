@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "redhat-lsb-supplemental-5.0-0.9.20231006git8d00acdc.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "redhat-lsb-supplemental-5.0-0.9.20231006git8d00acdc.fc40.x86_64.rpm"]
+depends: [
+  "abattis-cantarell-fonts" 
+  "net-tools" 
+  "sil-abyssinica-fonts" 
+  "xorg-x11-fonts-ISO8859-1-100dpi" 
+  "xorg-x11-fonts-ISO8859-1-75dpi" 
+  "xorg-x11-server-Xvfb" 
+]
+extra-source "redhat-lsb-supplemental-5.0-0.9.20231006git8d00acdc.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/redhat-lsb-supplemental-5.0-0.9.20231006git8d00acdc.fc40.x86_64.rpm"
+}

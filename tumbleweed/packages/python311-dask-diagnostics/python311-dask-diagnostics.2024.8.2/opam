@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-dask-diagnostics-2024.8.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-dask-diagnostics-2024.8.2-1.1.noarch.rpm"]
+depends: [
+  "python311-Jinja2" {>= "2.10.3"}
+  "python311-base" {= "3.11"}
+  "python311-bokeh" {>= "3.1"}
+  "python311-dask" {= "2024.8.2"}
+]
+extra-source "python311-dask-diagnostics-2024.8.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-dask-diagnostics-2024.8.2-1.1.noarch.rpm"
+}

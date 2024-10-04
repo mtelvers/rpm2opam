@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kweather-plasma-applet-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kweather-plasma-applet-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf6-kconfig" 
+  "kf6-kcoreaddons" 
+  "kf6-kirigami" 
+  "kf6-kirigami-addons" 
+  "kweather" {= "24.2.1"}
+  "kweathercore" 
+  "libplasma" 
+  "libstdc++" 
+  "qt6-qtbase" 
+  "qt6-qtdeclarative" 
+]
+extra-source "kweather-plasma-applet-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kweather-plasma-applet-24.02.1-1.fc40.x86_64.rpm"
+}

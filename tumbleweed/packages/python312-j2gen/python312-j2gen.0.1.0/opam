@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-j2gen-0.1.0-3.13.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-j2gen-0.1.0-3.13.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-Jinja2" 
+  "python312-PyYAML" 
+  "python312-base" 
+  "update-alternatives" 
+]
+extra-source "python312-j2gen-0.1.0-3.13.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-j2gen-0.1.0-3.13.noarch.rpm"
+}

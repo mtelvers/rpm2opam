@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libwsutil15-4.2.7-slfo.1.1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libwsutil15-4.2.7-slfo.1.1.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcrypt20" 
+  "libglib-2_0-0" 
+  "libgmodule-2_0-0" 
+  "libgnutls30" 
+  "libpcre2-8-0" 
+  "libz-ng-compat1" 
+]
+extra-source "libwsutil15-4.2.7-slfo.1.1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libwsutil15-4.2.7-slfo.1.1.5.x86_64.rpm"
+}

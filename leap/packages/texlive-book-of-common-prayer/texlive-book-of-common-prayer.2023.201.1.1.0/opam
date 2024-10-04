@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-book-of-common-prayer-2023.201.1.1.0svn62240-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-book-of-common-prayer-2023.201.1.1.0svn62240-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-bilingualpages" 
+  "texlive-changepage" 
+  "texlive-enumitem" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-fontspec" 
+  "texlive-framed" 
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-makecell" 
+  "texlive-paracol" 
+  "texlive-pgf" 
+  "texlive-pgfopts" 
+  "texlive-pgfornament" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-titlesec" 
+  "texlive-titling" 
+  "texlive-tocloft" 
+  "texlive-xcolor" 
+  "texlive-xtab" 
+]
+extra-source "texlive-book-of-common-prayer-2023.201.1.1.0svn62240-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-book-of-common-prayer-2023.201.1.1.0svn62240-slfo.1.1.4.noarch.rpm"
+}

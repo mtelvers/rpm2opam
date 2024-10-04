@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libXcompshad-3.5.99.27-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libXcompshad-3.5.99.27-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libNX_X11" 
+  "libX11" 
+  "libXcomp" 
+  "libXdamage" 
+  "libXdmcp" 
+  "libXext" 
+  "libXfixes" 
+  "libXrandr" 
+  "libXtst" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libstdc++" 
+  "nx-libs" {= "3.5.99.27"}
+  "zlib-ng-compat" 
+]
+extra-source "libXcompshad-3.5.99.27-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libXcompshad-3.5.99.27-1.fc40.x86_64.rpm"
+}

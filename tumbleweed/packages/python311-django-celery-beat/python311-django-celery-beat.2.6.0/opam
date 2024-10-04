@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-django-celery-beat-2.6.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-django-celery-beat-2.6.0-1.1.noarch.rpm"]
+depends: [
+  "python311-Django" {>= "3.2"}
+  "python311-base" {= "3.11"}
+  "python311-celery" {>= "5.2.3"}
+  "python311-cron-descriptor" {>= "1.2.32"}
+  "python311-django-timezone-field" {>= "5.0"}
+  "python311-python-crontab" {>= "2.3.4"}
+  "python311-tzdata" 
+]
+extra-source "python311-django-celery-beat-2.6.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-django-celery-beat-2.6.0-1.1.noarch.rpm"
+}

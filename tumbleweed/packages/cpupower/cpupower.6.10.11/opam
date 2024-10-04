@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cpupower-6.10.11-8.19.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cpupower-6.10.11-8.19.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcap2" 
+  "libcpupower1" 
+  "libnl3-200" 
+  "libpci3" 
+]
+extra-source "cpupower-6.10.11-8.19.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cpupower-6.10.11-8.19.x86_64.rpm"
+}

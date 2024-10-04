@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libXaw3d6-1.6.6-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libXaw3d6-1.6.6-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXext6" 
+  "libXmu6" 
+  "libXpm4" 
+  "libXt6" 
+]
+extra-source "libXaw3d6-1.6.6-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libXaw3d6-1.6.6-1.2.x86_64.rpm"
+}

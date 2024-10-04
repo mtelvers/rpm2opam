@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pam_mount-2.19-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pam_mount-2.19-5.fc40.x86_64.rpm"]
+depends: [
+  "cryptsetup-libs" 
+  "glibc" 
+  "hxtools" 
+  "libHX" {>= "3.12.1"}
+  "libcryptmount" {= "2.19"}
+  "libmount" 
+  "libxml2" 
+  "openssl-libs" 
+  "pam" 
+  "pam-libs" 
+  "pcre2" 
+]
+extra-source "pam_mount-2.19-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pam_mount-2.19-5.fc40.x86_64.rpm"
+}

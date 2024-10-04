@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vtk-openmpi4-java-9.3.0-2.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vtk-openmpi4-java-9.3.0-2.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "java-11-openj9" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libvtk1" 
+  "libvtk1-openmpi4" {= "9.3.0"}
+  "vtk-openmpi4-qt" 
+]
+extra-source "vtk-openmpi4-java-9.3.0-2.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vtk-openmpi4-java-9.3.0-2.4.x86_64.rpm"
+}

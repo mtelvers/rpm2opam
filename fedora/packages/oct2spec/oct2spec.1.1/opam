@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "oct2spec-1.1-17.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "oct2spec-1.1-17.fc40.noarch.rpm"]
+depends: [
+  "fedora-packager" 
+  "python3" 
+  "python3-jinja2" 
+  "wget2-wget" 
+]
+extra-source "oct2spec-1.1-17.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/oct2spec-1.1-17.fc40.noarch.rpm"
+}

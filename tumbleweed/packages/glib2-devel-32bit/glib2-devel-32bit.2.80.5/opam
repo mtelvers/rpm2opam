@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glib2-devel-32bit-2.80.5-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glib2-devel-32bit-2.80.5-2.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" {= "2.80.5"}
+  "glib2-tools-32bit" {= "2.80.5"}
+  "libffi-devel" {>= "3.0.0"}
+  "libgio-2_0-0-32bit" {= "2.80.5"}
+  "libgmodule-2_0-0-32bit" {= "2.80.5"}
+  "libgobject-2_0-0-32bit" {= "2.80.5"}
+  "libgthread-2_0-0-32bit" {= "2.80.5"}
+  "libmount-devel" {>= "2.23"}
+  "libselinux-devel" {>= "2.2"}
+  "pcre2-devel" {>= "10.32"}
+  "pkgconf-pkg-config" 
+  "zlib-devel" 
+]
+extra-source "glib2-devel-32bit-2.80.5-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/glib2-devel-32bit-2.80.5-2.1.x86_64.rpm"
+}

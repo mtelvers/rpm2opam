@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libquvi-scripts-0.9.20131130-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libquvi-scripts-0.9.20131130-22.fc40.noarch.rpm"]
+depends: [
+  "lua-expat" 
+  "lua-json" 
+  "lua-socket" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libquvi-scripts-0.9.20131130-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libquvi-scripts-0.9.20131130-22.fc40.noarch.rpm"
+}

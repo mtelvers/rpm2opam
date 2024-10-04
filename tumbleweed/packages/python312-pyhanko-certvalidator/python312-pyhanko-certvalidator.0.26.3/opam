@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pyhanko-certvalidator-0.26.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pyhanko-certvalidator-0.26.3-1.1.noarch.rpm"]
+depends: [
+  "python312-asn1crypto" {>= "1.5.1"}
+  "python312-base" {= "3.12"}
+  "python312-cryptography" {>= "41.0.5"}
+  "python312-oscrypto" {>= "1.1.0"}
+  "python312-requests" {>= "2.31.0"}
+  "python312-uritools" {>= "3.0.1"}
+]
+extra-source "python312-pyhanko-certvalidator-0.26.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pyhanko-certvalidator-0.26.3-1.1.noarch.rpm"
+}

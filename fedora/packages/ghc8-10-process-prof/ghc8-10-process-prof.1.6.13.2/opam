@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc8.10-process-prof-1.6.13.2-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc8.10-process-prof-1.6.13.2-14.fc40.x86_64.rpm"]
+depends: [
+  "ghc8-10-base-prof" 
+  "ghc8-10-deepseq-prof" 
+  "ghc8-10-directory-prof" 
+  "ghc8-10-filepath-prof" 
+  "ghc8-10-process-devel" {= "1.6.13.2"}
+  "ghc8-10-unix-prof" 
+]
+extra-source "ghc8.10-process-prof-1.6.13.2-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc8.10-process-prof-1.6.13.2-14.fc40.x86_64.rpm"
+}

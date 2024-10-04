@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kf6-kio-devel-6.0.0-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kf6-kio-devel-6.0.0-5.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "glibc" 
+  "kf6-kbookmarks-devel" 
+  "kf6-kcompletion-devel" 
+  "kf6-kconfig-devel" 
+  "kf6-kcoreaddons-devel" 
+  "kf6-kio" {= "6.0.0"}
+  "kf6-kio-core-libs" 
+  "kf6-kio-file-widgets" 
+  "kf6-kio-gui" 
+  "kf6-kio-widgets" 
+  "kf6-kio-widgets-libs" 
+  "kf6-kitemviews-devel" 
+  "kf6-kjobwidgets-devel" 
+  "kf6-kservice-devel" 
+  "kf6-kwindowsystem-devel" 
+  "kf6-kxmlgui-devel" 
+  "kf6-solid-devel" 
+  "libstdc++" 
+  "qt6-qtbase" 
+  "qt6-qtbase-devel" 
+  "qt6-qtbase-gui" 
+]
+extra-source "kf6-kio-devel-6.0.0-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kf6-kio-devel-6.0.0-5.fc40.x86_64.rpm"
+}

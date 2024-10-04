@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rustix+mm-devel-0.38.31-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rustix+mm-devel-0.38.31-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-rustix-devel" {= "0.38.31"}
+]
+extra-source "rust-rustix+mm-devel-0.38.31-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rustix+mm-devel-0.38.31-1.fc40.noarch.rpm"
+}

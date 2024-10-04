@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "deepin-launcher-5.6.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deepin-launcher-5.6.1-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dbus-1" 
+  "deepin-daemon" 
+  "deepin-desktop-schemas" {>= "5.9.3"}
+  "deepin-start" 
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5DBus5" 
+  "libQt5Gui5" 
+  "libQt5Svg5" 
+  "libQt5Widgets5" 
+  "libQt5X11Extras5" 
+  "libdframeworkdbus2" 
+  "libdtkcore5" 
+  "libdtkgui5" 
+  "libdtkwidget5" 
+  "libgcc_s1" 
+  "libgsettings-qt1" 
+  "libstdc++6" 
+  "libxcb-ewmh2" 
+  "libxcb1" 
+]
+extra-source "deepin-launcher-5.6.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/deepin-launcher-5.6.1-1.1.x86_64.rpm"
+}

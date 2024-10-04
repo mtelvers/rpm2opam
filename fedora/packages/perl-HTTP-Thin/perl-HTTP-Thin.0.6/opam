@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-HTTP-Thin-0.006-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTTP-Thin-0.006-23.fc40.noarch.rpm"]
+depends: [
+  "perl-Class-Method-Modifiers" 
+  "perl-HTTP-Message" 
+  "perl-HTTP-Tiny" 
+  "perl-Hash-MultiValue" 
+  "perl-Safe-Isa" 
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-HTTP-Thin-0.006-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-HTTP-Thin-0.006-23.fc40.noarch.rpm"
+}

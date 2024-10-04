@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "idzebra-devel-2.2.7-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "idzebra-devel-2.2.7-1.5.x86_64.rpm"]
+depends: [
+  "glibc-devel" 
+  "idzebra" {= "2.2.7"}
+  "libyaz-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "idzebra-devel-2.2.7-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/idzebra-devel-2.2.7-1.5.x86_64.rpm"
+}

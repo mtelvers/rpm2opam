@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-os-client-config-2.1.0-3.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-os-client-config-2.1.0-3.6.noarch.rpm"]
+depends: [
+  "python3-keystoneauth1" 
+  "python311-PyYAML" 
+  "python311-appdirs" 
+  "python311-base" {= "3.11"}
+  "python311-requestsexceptions" 
+]
+extra-source "python3-os-client-config-2.1.0-3.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-os-client-config-2.1.0-3.6.noarch.rpm"
+}

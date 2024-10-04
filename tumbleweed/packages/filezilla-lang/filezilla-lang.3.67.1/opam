@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "filezilla-lang-3.67.1-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "filezilla-lang-3.67.1-1.2.noarch.rpm"]
+depends: [
+  "filezilla" {= "3.67.1"}
+]
+extra-source "filezilla-lang-3.67.1-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/filezilla-lang-3.67.1-1.2.noarch.rpm"
+}

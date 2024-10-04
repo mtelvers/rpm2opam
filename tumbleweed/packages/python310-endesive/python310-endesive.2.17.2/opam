@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-endesive-2.17.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-endesive-2.17.2-1.1.noarch.rpm"]
+depends: [
+  "python310-Pillow" 
+  "python310-PyKCS11" 
+  "python310-asn1crypto" 
+  "python310-attrs" 
+  "python310-base" {= "3.10"}
+  "python310-certvalidator" 
+  "python310-cryptography" 
+  "python310-lxml" 
+  "python310-oscrypto" 
+  "python310-paramiko" 
+  "python310-pytz" 
+  "python310-requests" 
+]
+extra-source "python310-endesive-2.17.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-endesive-2.17.2-1.1.noarch.rpm"
+}

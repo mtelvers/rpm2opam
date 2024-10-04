@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rust_decimal+std-devel-1.34.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rust_decimal+std-devel-1.34.3-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-arrayvec+std-devel" 
+  "rust-bytes+std-devel" 
+  "rust-bytes-devel" 
+  "rust-rand+std-devel" 
+  "rust-rand-devel" 
+  "rust-rkyv+size_32-devel" 
+  "rust-rkyv+std-devel" 
+  "rust-rkyv-devel" 
+  "rust-rust_decimal-devel" {= "1.34.3"}
+  "rust-serde+std-devel" 
+  "rust-serde-devel" 
+  "rust-serde_json+std-devel" 
+  "rust-serde_json-devel" 
+]
+extra-source "rust-rust_decimal+std-devel-1.34.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rust_decimal+std-devel-1.34.3-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libavrdude1-7.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libavrdude1-7.3-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libelf1" 
+  "libftdi1-2" 
+  "libhidapi-libusb0" 
+  "libreadline8" 
+  "libusb-0_1-4" 
+  "libusb-1_0-0" 
+]
+extra-source "libavrdude1-7.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libavrdude1-7.3-1.1.x86_64.rpm"
+}

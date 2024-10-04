@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Getopt-Long-Descriptive-0.114.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Getopt-Long-Descriptive-0.114.0-1.1.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Params-Validate" {>= "0.97"}
+  "perl-Sub-Exporter" {>= "0.972"}
+  "perl-base" {>= "2.550.0"}
+]
+extra-source "perl-Getopt-Long-Descriptive-0.114.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Getopt-Long-Descriptive-0.114.0-1.1.noarch.rpm"
+}

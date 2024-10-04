@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-azure-ai-ml-1.13.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-azure-ai-ml-1.13.0-2.1.noarch.rpm"]
+depends: [
+  "python310-PyJWT" {< "3.0.0"}
+  "python310-PyYAML" {>= "5.1.0"}
+  "python310-applicationinsights" {<= "0.11.10"}
+  "python310-azure-ai-nspkg" {>= "1.0.0"}
+  "python310-azure-common" {>= "1.1"}
+  "python310-azure-core" {>= "1.23.0"}
+  "python310-azure-identity" 
+  "python310-azure-mgmt-core" {>= "1.3.0"}
+  "python310-azure-storage-blob" {>= "12.10.0"}
+  "python310-azure-storage-file-datalake" 
+  "python310-azure-storage-file-share" 
+  "python310-base" {= "3.10"}
+  "python310-colorama" 
+  "python310-docker" 
+  "python310-isodate" 
+  "python310-jsonschema" {>= "4.0.0"}
+  "python310-marshmallow" {>= "3.5"}
+  "python310-msrest" {>= "0.6.18"}
+  "python310-pathspec" {>= "0.9.0"}
+  "python310-pydash" 
+  "python310-strictyaml" 
+  "python310-tqdm" 
+  "python310-typing_extensions" {>= "4.0.1"}
+]
+extra-source "python310-azure-ai-ml-1.13.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-azure-ai-ml-1.13.0-2.1.noarch.rpm"
+}

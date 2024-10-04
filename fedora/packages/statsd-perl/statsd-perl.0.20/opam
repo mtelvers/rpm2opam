@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "statsd-perl-0.20-24.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "statsd-perl-0.20-24.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-FindBin" 
+  "perl-Net-Statsd-Server" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" {>= "5.8.0"}
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "statsd-perl-0.20-24.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/statsd-perl-0.20-24.fc40.noarch.rpm"
+}

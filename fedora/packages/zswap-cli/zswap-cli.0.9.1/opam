@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "zswap-cli-0.9.1-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zswap-cli-0.9.1-7.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "boost-program-options" 
+  "fmt" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "systemd" 
+]
+extra-source "zswap-cli-0.9.1-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/z/zswap-cli-0.9.1-7.fc40.x86_64.rpm"
+}

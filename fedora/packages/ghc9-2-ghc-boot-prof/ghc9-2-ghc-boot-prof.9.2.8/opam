@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc9.2-ghc-boot-prof-9.2.8-24.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc9.2-ghc-boot-prof-9.2.8-24.fc40.x86_64.rpm"]
+depends: [
+  "ghc9-2-base-prof" 
+  "ghc9-2-binary-prof" 
+  "ghc9-2-bytestring-prof" 
+  "ghc9-2-containers-prof" 
+  "ghc9-2-deepseq-prof" 
+  "ghc9-2-directory-prof" 
+  "ghc9-2-filepath-prof" 
+  "ghc9-2-ghc-boot-devel" {= "9.2.8"}
+  "ghc9-2-ghc-boot-th-prof" 
+  "ghc9-2-unix-prof" 
+]
+extra-source "ghc9.2-ghc-boot-prof-9.2.8-24.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc9.2-ghc-boot-prof-9.2.8-24.fc40.x86_64.rpm"
+}

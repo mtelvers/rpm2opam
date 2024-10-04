@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gvfs-backends-1.54.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gvfs-backends-1.54.3-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gvfs" {= "1.54.3"}
+  "libarchive13" 
+  "libavahi-client3" 
+  "libavahi-common3" 
+  "libavahi-glib1" 
+  "libbluray2" 
+  "libcdio19" 
+  "libcdio_cdda2" 
+  "libcdio_paranoia2" 
+  "libgcrypt20" 
+  "libgphoto2-6" 
+  "libgphoto2_port12" 
+  "libgudev-1_0-0" 
+  "libmtp9" 
+  "libnfs14" 
+  "libpolkit-gobject-1-0" 
+  "libsecret-1-0" 
+  "libsoup-3_0-0" 
+  "libsystemd0" 
+  "libudisks2-0" 
+  "libusb-1_0-0" 
+  "libxml2-2" 
+  "permissions" 
+]
+extra-source "gvfs-backends-1.54.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gvfs-backends-1.54.3-1.1.x86_64.rpm"
+}

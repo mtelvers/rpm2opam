@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "freerdp2-libs-2.11.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freerdp2-libs-2.11.5-1.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "cairo" 
+  "cups-libs" 
+  "glibc" 
+  "gsm" 
+  "lame-libs" 
+  "libX11" 
+  "libXdamage" 
+  "libXext" 
+  "libXfixes" 
+  "libXinerama" 
+  "libXtst" 
+  "libjpeg-turbo" 
+  "libusb1" 
+  "libwayland-client" 
+  "libwayland-cursor" 
+  "libwinpr2" {= "2.11.5"}
+  "libxkbcommon" 
+  "libxkbfile" 
+  "openssl-libs" 
+  "pam-libs" 
+  "pulseaudio-libs" 
+  "soxr" 
+]
+extra-source "freerdp2-libs-2.11.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/freerdp2-libs-2.11.5-1.fc40.x86_64.rpm"
+}

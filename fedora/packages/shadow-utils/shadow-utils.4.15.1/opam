@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "shadow-utils-4.15.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "shadow-utils-4.15.1-1.fc40.x86_64.rpm"]
+depends: [
+  "audit-libs" {>= "1.6.5"}
+  "glibc" 
+  "libacl" 
+  "libattr" 
+  "libeconf" 
+  "libselinux" 
+  "libsemanage" 
+  "libxcrypt" 
+  "pam-libs" 
+  "setup" 
+]
+extra-source "shadow-utils-4.15.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/shadow-utils-4.15.1-1.fc40.x86_64.rpm"
+}

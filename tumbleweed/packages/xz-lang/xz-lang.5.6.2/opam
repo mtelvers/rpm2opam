@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xz-lang-5.6.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xz-lang-5.6.2-1.1.noarch.rpm"]
+depends: [
+  "xz" {= "5.6.2"}
+]
+extra-source "xz-lang-5.6.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xz-lang-5.6.2-1.1.noarch.rpm"
+}

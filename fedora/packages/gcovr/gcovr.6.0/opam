@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gcovr-6.0-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcovr-6.0-5.fc40.noarch.rpm"]
+depends: [
+  "gcc" 
+  "python3" 
+  "python3-jinja2" 
+  "python3-lxml" 
+  "python3-pygments" 
+]
+extra-source "gcovr-6.0-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gcovr-6.0-5.fc40.noarch.rpm"
+}

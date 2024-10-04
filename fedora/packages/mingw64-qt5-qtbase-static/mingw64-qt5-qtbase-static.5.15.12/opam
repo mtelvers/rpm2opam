@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw64-qt5-qtbase-static-5.15.12-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-qt5-qtbase-static-5.15.12-2.fc40.noarch.rpm"]
+depends: [
+  "mingw64-angleproject-static" 
+  "mingw64-harfbuzz-static" 
+  "mingw64-libjpeg-turbo-static" 
+  "mingw64-libpng-static" 
+  "mingw64-pcre2-static" 
+  "mingw64-qt5-qtbase" {= "5.15.12"}
+  "mingw64-win-iconv-static" 
+  "mingw64-winpthreads-static" 
+  "mingw64-zlib-static" 
+]
+extra-source "mingw64-qt5-qtbase-static-5.15.12-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw64-qt5-qtbase-static-5.15.12-2.fc40.noarch.rpm"
+}

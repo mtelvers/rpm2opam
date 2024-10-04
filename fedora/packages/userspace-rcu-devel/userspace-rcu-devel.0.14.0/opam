@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "userspace-rcu-devel-0.14.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "userspace-rcu-devel-0.14.0-4.fc40.x86_64.rpm"]
+depends: [
+  "pkgconf-pkg-config" 
+  "userspace-rcu" 
+]
+extra-source "userspace-rcu-devel-0.14.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/userspace-rcu-devel-0.14.0-4.fc40.x86_64.rpm"
+}

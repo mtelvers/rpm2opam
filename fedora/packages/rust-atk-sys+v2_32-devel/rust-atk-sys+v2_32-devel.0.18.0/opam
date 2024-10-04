@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-atk-sys+v2_32-devel-0.18.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-atk-sys+v2_32-devel-0.18.0-2.fc40.noarch.rpm"]
+depends: [
+  "atk-devel" {>= "2.32"}
+  "cargo" 
+  "rust-atk-sys+v2_30-devel" {= "0.18.0"}
+  "rust-atk-sys-devel" {= "0.18.0"}
+]
+extra-source "rust-atk-sys+v2_32-devel-0.18.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-atk-sys+v2_32-devel-0.18.0-2.fc40.noarch.rpm"
+}

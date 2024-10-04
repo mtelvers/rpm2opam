@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "armnn-opencl-devel-24.08-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "armnn-opencl-devel-24.08-2.1.x86_64.rpm"]
+depends: [
+  "armnn-opencl" {= "24.8"}
+  "libarmnn33-opencl" {= "24.8"}
+  "libarmnnBasePipeServer33-opencl" {= "24.8"}
+  "libarmnnSerializer33-opencl" {= "24.8"}
+  "libarmnnTestUtils3-opencl" 
+  "libarmnnTfLiteParser24-opencl" {= "24.8"}
+  "libtimelineDecoder33-opencl" {= "24.8"}
+  "libtimelineDecoderJson33-opencl" {= "24.8"}
+]
+extra-source "armnn-opencl-devel-24.08-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/armnn-opencl-devel-24.08-2.1.x86_64.rpm"
+}

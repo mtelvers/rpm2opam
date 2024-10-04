@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pywbemtools-1.2.0-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pywbemtools-1.2.0-1.5.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-PyYAML" {>= "5.3.1"}
+  "python310-asciitree" {>= "0.3.3"}
+  "python310-base" {= "3.10"}
+  "python310-click" {>= "8.0.2"}
+  "python310-click-repl" {>= "0.2"}
+  "python310-click-spinner" {>= "0.1.8"}
+  "python310-nocasedict" {>= "1.0.1"}
+  "python310-nocaselist" {>= "1.0.3"}
+  "python310-packaging" {>= "21.0"}
+  "python310-prompt_toolkit" 
+  "python310-psutil" {>= "5.8.0"}
+  "python310-pyparsing" {>= "2.3.1"}
+  "python310-pywbem" {>= "1.6.0"}
+  "python310-six" {>= "1.16.0"}
+  "python310-tabulate" {>= "0.8.8"}
+  "python310-toposort" {>= "1.6"}
+  "python310-yamlloader" {>= "0.5.5"}
+  "update-alternatives" 
+]
+extra-source "python310-pywbemtools-1.2.0-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-pywbemtools-1.2.0-1.5.noarch.rpm"
+}

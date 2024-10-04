@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openshadinglanguage-example-shaders-source-1.12.14.0-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openshadinglanguage-example-shaders-source-1.12.14.0-13.fc40.noarch.rpm"]
+depends: [
+  "openshadinglanguage" {= "1.12.14.0"}
+  "openshadinglanguage-common-headers" 
+]
+extra-source "openshadinglanguage-example-shaders-source-1.12.14.0-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openshadinglanguage-example-shaders-source-1.12.14.0-13.fc40.noarch.rpm"
+}

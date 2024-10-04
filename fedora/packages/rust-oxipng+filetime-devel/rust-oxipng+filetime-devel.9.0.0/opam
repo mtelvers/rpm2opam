@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-oxipng+filetime-devel-9.0.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-oxipng+filetime-devel-9.0.0-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-filetime+default-devel" 
+  "rust-oxipng-devel" {= "9.0.0"}
+]
+extra-source "rust-oxipng+filetime-devel-9.0.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-oxipng+filetime-devel-9.0.0-4.fc40.noarch.rpm"
+}

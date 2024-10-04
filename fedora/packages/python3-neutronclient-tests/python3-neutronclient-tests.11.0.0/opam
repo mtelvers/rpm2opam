@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-neutronclient-tests-11.0.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-neutronclient-tests-11.0.0-3.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-neutronclient" {= "11.0.0"}
+  "python3-osc-lib-tests" 
+  "python3-oslotest" 
+  "python3-stestr" 
+  "python3-testscenarios" 
+  "python3-testtools" 
+]
+extra-source "python3-neutronclient-tests-11.0.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-neutronclient-tests-11.0.0-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-AnnotationDbi-1.58.0-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-AnnotationDbi-1.58.0-6.fc40.noarch.rpm"]
+depends: [
+  "R-Biobase" {>= "1.17.0"}
+  "R-BiocGenerics" {>= "0.29.2"}
+  "R-DBI" 
+  "R-IRanges" 
+  "R-KEGGREST" 
+  "R-RSQLite" 
+  "R-S4Vectors" {>= "0.9.25"}
+  "R-core" {= "4.3"}
+]
+extra-source "R-AnnotationDbi-1.58.0-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-AnnotationDbi-1.58.0-6.fc40.noarch.rpm"
+}

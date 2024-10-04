@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "flatpak-xdg-utils-1.0.5-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flatpak-xdg-utils-1.0.5-3.3.x86_64.rpm"]
+depends: [
+  "flatpak-spawn" 
+  "glib2-stage1-devel" 
+  "glibc" 
+]
+extra-source "flatpak-xdg-utils-1.0.5-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/flatpak-xdg-utils-1.0.5-3.3.x86_64.rpm"
+}

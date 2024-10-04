@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jetty-parent-25-1.24.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jetty-parent-25-1.24.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "jetty-parent-25-1.24.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jetty-parent-25-1.24.noarch.rpm"
+}

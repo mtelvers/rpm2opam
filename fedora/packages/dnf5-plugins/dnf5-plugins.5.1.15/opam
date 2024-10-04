@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dnf5-plugins-5.1.15-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dnf5-plugins-5.1.15-1.fc40.x86_64.rpm"]
+depends: [
+  "dnf5" {= "5.1.15"}
+  "fmt" 
+  "glibc" 
+  "json-c" 
+  "libcurl" {>= "7.62.0"}
+  "libdnf5" 
+  "libdnf5-cli" {= "5.1.15"}
+  "libgcc" 
+  "libstdc++" 
+  "rpm-build-libs" 
+  "rpm-libs" 
+  "sdbus-cpp" 
+]
+extra-source "dnf5-plugins-5.1.15-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dnf5-plugins-5.1.15-1.fc40.x86_64.rpm"
+}

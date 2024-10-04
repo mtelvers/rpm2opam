@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-ExtUtils-Install-2.22-502.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-ExtUtils-Install-2.22-502.fc40.noarch.rpm"]
+depends: [
+  "perl-AutoSplit" 
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Exporter" 
+  "perl-ExtUtils-Install" 
+  "perl-File-Basename" 
+  "perl-File-Compare" 
+  "perl-File-Copy" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-PathTools" 
+  "perl-libs" 
+]
+extra-source "perl-ExtUtils-Install-2.22-502.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-ExtUtils-Install-2.22-502.fc40.noarch.rpm"
+}

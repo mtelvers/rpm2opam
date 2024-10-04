@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-google-cloud-storage-2.14.0-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-google-cloud-storage-2.14.0-3.2.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-google-api-core" {>= "1.31.5"}
+  "python312-google-auth" {>= "2.23.3"}
+  "python312-google-cloud-core" {>= "2.3.0"}
+  "python312-google-crc32c" {>= "1.0"}
+  "python312-google-resumable-media" {>= "2.6.0"}
+  "python312-googleapis-common-protos" 
+  "python312-requests" {>= "2.18.0"}
+]
+extra-source "python312-google-cloud-storage-2.14.0-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-google-cloud-storage-2.14.0-3.2.noarch.rpm"
+}

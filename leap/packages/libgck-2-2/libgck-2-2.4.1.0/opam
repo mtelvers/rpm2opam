@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgck-2-2-4.1.0-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgck-2-2-4.1.0-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgio-2_0-0" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libp11-kit0" 
+]
+extra-source "libgck-2-2-4.1.0-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libgck-2-2-4.1.0-slfo.1.1.7.x86_64.rpm"
+}

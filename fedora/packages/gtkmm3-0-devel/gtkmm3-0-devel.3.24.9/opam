@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gtkmm3.0-devel-3.24.9-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtkmm3.0-devel-3.24.9-1.fc40.x86_64.rpm"]
+depends: [
+  "atkmm-devel" {>= "2.24.2"}
+  "cairomm-devel" {>= "1.12.0"}
+  "gdk-pixbuf2-devel" {>= "2.35.5"}
+  "glibmm2-4-devel" {>= "2.54.0"}
+  "gtk3-devel" 
+  "gtkmm3-0" {= "3.24.9"}
+  "pangomm-devel" {>= "1.12.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gtkmm3.0-devel-3.24.9-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gtkmm3.0-devel-3.24.9-1.fc40.x86_64.rpm"
+}

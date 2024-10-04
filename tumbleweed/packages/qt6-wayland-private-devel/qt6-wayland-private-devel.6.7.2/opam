@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qt6-wayland-private-devel-6.7.2-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qt6-wayland-private-devel-6.7.2-4.1.noarch.rpm"]
+depends: [
+  "qt6-waylandclient-private-devel" {= "6.7.2"}
+  "qt6-waylandcompositor-private-devel" {= "6.7.2"}
+  "qt6-waylandeglclienthwintegration-private-devel" {= "6.7.2"}
+  "qt6-waylandeglcompositorhwintegration-private-devel" {= "6.7.2"}
+  "qt6-wlshellintegration-private-devel" {= "6.7.2"}
+]
+extra-source "qt6-wayland-private-devel-6.7.2-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/qt6-wayland-private-devel-6.7.2-4.1.noarch.rpm"
+}

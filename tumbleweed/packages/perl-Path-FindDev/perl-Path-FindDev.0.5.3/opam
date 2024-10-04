@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Path-FindDev-0.5.3-1.28.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Path-FindDev-0.5.3-1.28.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Tiny" {>= "0.10"}
+  "perl-Path-IsDev" {>= "0.2.2"}
+  "perl-Path-Tiny" {>= "0.54"}
+  "perl-Sub-Exporter" 
+]
+extra-source "perl-Path-FindDev-0.5.3-1.28.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Path-FindDev-0.5.3-1.28.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libglademm24-devel-2.6.7-46.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libglademm24-devel-2.6.7-46.fc40.x86_64.rpm"]
+depends: [
+  "gtkmm2-4-devel" {>= "2.6.0"}
+  "libglade2-devel" {>= "2.6.1"}
+  "libglademm24" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libglademm24-devel-2.6.7-46.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libglademm24-devel-2.6.7-46.fc40.x86_64.rpm"
+}

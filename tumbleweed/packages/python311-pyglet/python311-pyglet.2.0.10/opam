@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pyglet-2.0.10-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pyglet-2.0.10-1.3.noarch.rpm"]
+depends: [
+  "Mesa-dri" 
+  "libxcb-glx0" 
+  "python311-Pillow" 
+  "python311-base" {= "3.11"}
+  "python311-pypng" 
+]
+extra-source "python311-pyglet-2.0.10-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pyglet-2.0.10-1.3.noarch.rpm"
+}

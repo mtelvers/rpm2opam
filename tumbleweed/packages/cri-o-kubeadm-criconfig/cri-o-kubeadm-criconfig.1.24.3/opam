@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cri-o-kubeadm-criconfig-1.24.3-2.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cri-o-kubeadm-criconfig-1.24.3-2.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "kubernetes1-28-kubeadm" 
+]
+extra-source "cri-o-kubeadm-criconfig-1.24.3-2.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cri-o-kubeadm-criconfig-1.24.3-2.4.x86_64.rpm"
+}

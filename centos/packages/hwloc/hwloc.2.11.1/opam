@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hwloc-2.11.1-2.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hwloc-2.11.1-2.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "hwloc-libs" 
+  "ncurses-libs" 
+  "systemd" 
+]
+extra-source "hwloc-2.11.1-2.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/hwloc-2.11.1-2.el10.x86_64.rpm"
+}

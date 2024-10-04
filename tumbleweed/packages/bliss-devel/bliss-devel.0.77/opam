@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bliss-devel-0.77-1.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bliss-devel-0.77-1.12.x86_64.rpm"]
+depends: [
+  "libbliss0_77" {= "0.77"}
+]
+extra-source "bliss-devel-0.77-1.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/bliss-devel-0.77-1.12.x86_64.rpm"
+}

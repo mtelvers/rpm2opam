@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmateweather-devel-1.28.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmateweather-devel-1.28.0-1.2.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf-devel" 
+  "glib2-devel" 
+  "gtk3-devel" 
+  "libmateweather1" {= "1.28.0"}
+  "libsoup2-devel" 
+  "libxml2-devel" 
+  "mateweather-common" {= "1.28.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libmateweather-devel-1.28.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmateweather-devel-1.28.0-1.2.x86_64.rpm"
+}

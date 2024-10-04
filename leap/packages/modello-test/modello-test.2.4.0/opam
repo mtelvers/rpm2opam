@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "modello-test-2.4.0-slfo.1.3.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "modello-test-2.4.0-slfo.1.3.3.noarch.rpm"]
+depends: [
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "modello" {= "2.4.0"}
+  "plexus-compiler" 
+  "plexus-utils" 
+  "plexus-xml" 
+  "sisu-plexus" 
+]
+extra-source "modello-test-2.4.0-slfo.1.3.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/modello-test-2.4.0-slfo.1.3.3.noarch.rpm"
+}

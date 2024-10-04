@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-opencv-4.10.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-opencv-4.10.0-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libopencv410" 
+  "libopencv_aruco410" 
+  "libopencv_face410" 
+  "libopencv_gapi410" 
+  "libopencv_highgui410" 
+  "libopencv_imgcodecs410" 
+  "libopencv_objdetect410" 
+  "libopencv_optflow410" 
+  "libopencv_videoio410" 
+  "libopencv_ximgproc410" 
+  "libstdc++6" 
+  "python311-base" {= "3.11"}
+]
+extra-source "python311-opencv-4.10.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-opencv-4.10.0-1.3.x86_64.rpm"
+}

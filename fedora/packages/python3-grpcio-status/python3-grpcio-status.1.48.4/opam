@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-grpcio-status-1.48.4-34.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-grpcio-status-1.48.4-34.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-googleapis-common-protos" {>= "1.5.5"}
+  "python3-grpcio" {>= "1.48.4"}
+  "python3-protobuf" {>= "3.12"}
+]
+extra-source "python3-grpcio-status-1.48.4-34.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-grpcio-status-1.48.4-34.fc40.noarch.rpm"
+}

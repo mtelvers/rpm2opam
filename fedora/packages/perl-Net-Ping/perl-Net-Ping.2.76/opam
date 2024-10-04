@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Net-Ping-2.76-502.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-Ping-2.76-502.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-FileHandle" 
+  "perl-IO" 
+  "perl-POSIX" 
+  "perl-Socket" {>= "2.7"}
+  "perl-Time-HiRes" 
+  "perl-constant" 
+  "perl-libs" {>= "5.2.0"}
+  "perl-vars" 
+]
+extra-source "perl-Net-Ping-2.76-502.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Net-Ping-2.76-502.fc40.noarch.rpm"
+}

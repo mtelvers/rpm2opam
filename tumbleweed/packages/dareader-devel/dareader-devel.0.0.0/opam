@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dareader-devel-0.0.0+git20220726.2d7d79c-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dareader-devel-0.0.0+git20220726.2d7d79c-3.2.x86_64.rpm"]
+depends: [
+  "libdareader1" {= "0.0.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "dareader-devel-0.0.0+git20220726.2d7d79c-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/dareader-devel-0.0.0+git20220726.2d7d79c-3.2.x86_64.rpm"
+}

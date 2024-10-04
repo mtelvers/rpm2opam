@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xdg-desktop-portal-gtk-1.15.1-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xdg-desktop-portal-gtk-1.15.1-1.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gsettings-desktop-schemas" 
+  "libfontconfig1" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "xdg-desktop-portal" 
+]
+extra-source "xdg-desktop-portal-gtk-1.15.1-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xdg-desktop-portal-gtk-1.15.1-1.3.x86_64.rpm"
+}

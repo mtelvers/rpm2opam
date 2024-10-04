@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vtk-examples-9.2.6-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vtk-examples-9.2.6-12.fc40.x86_64.rpm"]
+depends: [
+  "vtk" {= "9.2.6"}
+  "vtk-data" {= "9.2.6"}
+]
+extra-source "vtk-examples-9.2.6-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vtk-examples-9.2.6-12.fc40.x86_64.rpm"
+}

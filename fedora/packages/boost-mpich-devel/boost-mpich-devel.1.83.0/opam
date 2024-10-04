@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "boost-mpich-devel-1.83.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "boost-mpich-devel-1.83.0-3.fc40.x86_64.rpm"]
+depends: [
+  "boost-devel" {= "1.83.0"}
+  "boost-graph-mpich" {= "1.83.0"}
+  "boost-mpich" {= "1.83.0"}
+]
+extra-source "boost-mpich-devel-1.83.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/boost-mpich-devel-1.83.0-3.fc40.x86_64.rpm"
+}

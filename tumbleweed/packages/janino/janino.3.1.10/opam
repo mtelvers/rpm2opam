@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "janino-3.1.10-2.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "janino-3.1.10-2.6.noarch.rpm"]
+depends: [
+  "bash" 
+  "commons-compiler" {= "3.1.10"}
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+]
+extra-source "janino-3.1.10-2.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/janino-3.1.10-2.6.noarch.rpm"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-algxpar-2024.216.0.0.99svn67495-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-algxpar-2024.216.0.0.99svn67495-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-algorithmicx" 
+  "texlive-amsfonts" 
+  "texlive-fancyvrb" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-pgf" 
+  "texlive-pgfopts" 
+  "texlive-ragged2e" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-varwidth" 
+  "texlive-xcolor" 
+]
+extra-source "texlive-algxpar-2024.216.0.0.99svn67495-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-algxpar-2024.216.0.0.99svn67495-57.1.noarch.rpm"
+}

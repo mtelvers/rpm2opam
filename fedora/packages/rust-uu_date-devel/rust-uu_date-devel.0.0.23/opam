@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-uu_date-devel-0.0.23-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-uu_date-devel-0.0.23-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-chrono+alloc-devel" 
+  "rust-chrono+clock-devel" 
+  "rust-chrono+std-devel" 
+  "rust-chrono-devel" 
+  "rust-clap+cargo-devel" 
+  "rust-clap+default-devel" 
+  "rust-clap+wrap_help-devel" 
+  "rust-libc+default-devel" 
+  "rust-parse_datetime+default-devel" 
+  "rust-uucore+default-devel" {>= "0.0.19"}
+]
+extra-source "rust-uu_date-devel-0.0.23-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-uu_date-devel-0.0.23-2.fc40.noarch.rpm"
+}

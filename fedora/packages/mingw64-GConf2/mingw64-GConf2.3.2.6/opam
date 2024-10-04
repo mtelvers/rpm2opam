@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw64-GConf2-3.2.6-26.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-GConf2-3.2.6-26.fc40.noarch.rpm"]
+depends: [
+  "mingw64-crt" 
+  "mingw64-dbus" 
+  "mingw64-dbus-glib" 
+  "mingw64-filesystem" {>= "95"}
+  "mingw64-gettext" 
+  "mingw64-glib2" 
+  "mingw64-libxml2" 
+  "python3" 
+]
+extra-source "mingw64-GConf2-3.2.6-26.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw64-GConf2-3.2.6-26.fc40.noarch.rpm"
+}

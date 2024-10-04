@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-dask-complete-2024.8.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-dask-complete-2024.8.2-1.1.noarch.rpm"]
+depends: [
+  "python311-dask" {= "2024.8.2"}
+  "python311-dask-array" {= "2024.8.2"}
+  "python311-dask-dataframe" {= "2024.8.2"}
+  "python311-dask-diagnostics" {= "2024.8.2"}
+  "python311-dask-distributed" {= "2024.8.2"}
+  "python311-lz4" {>= "4.3.2"}
+  "python311-pyarrow" {>= "7"}
+]
+extra-source "python311-dask-complete-2024.8.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-dask-complete-2024.8.2-1.1.noarch.rpm"
+}

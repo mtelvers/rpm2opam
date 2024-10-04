@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-websockets-devel-0.12.7.3-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-websockets-devel-0.12.7.3-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-SHA-devel" 
+  "ghc-async-devel" 
+  "ghc-attoparsec-devel" 
+  "ghc-base-devel" 
+  "ghc-base64-bytestring-devel" 
+  "ghc-binary-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-case-insensitive-devel" 
+  "ghc-clock-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-entropy-devel" 
+  "ghc-network-devel" 
+  "ghc-random-devel" 
+  "ghc-streaming-commons-devel" 
+  "ghc-text-devel" 
+  "ghc-websockets" {= "0.12.7.3"}
+]
+extra-source "ghc-websockets-devel-0.12.7.3-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-websockets-devel-0.12.7.3-8.fc40.x86_64.rpm"
+}

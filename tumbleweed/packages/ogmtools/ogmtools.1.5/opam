@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ogmtools-1.5-169.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ogmtools-1.5-169.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libdvdread8" 
+  "libgcc_s1" 
+  "libogg0" 
+  "libstdc++6" 
+  "libvorbis0" 
+  "libvorbisenc2" 
+]
+extra-source "ogmtools-1.5-169.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ogmtools-1.5-169.2.x86_64.rpm"
+}

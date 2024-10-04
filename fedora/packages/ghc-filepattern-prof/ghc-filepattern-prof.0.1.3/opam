@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-filepattern-prof-0.1.3-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-filepattern-prof-0.1.3-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-directory-prof" 
+  "ghc-extra-prof" 
+  "ghc-filepath-prof" 
+  "ghc-filepattern-devel" {= "0.1.3"}
+]
+extra-source "ghc-filepattern-prof-0.1.3-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-filepattern-prof-0.1.3-6.fc40.x86_64.rpm"
+}

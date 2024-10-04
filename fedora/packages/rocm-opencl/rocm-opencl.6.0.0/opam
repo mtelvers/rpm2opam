@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rocm-opencl-6.0.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rocm-opencl-6.0.0-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "numactl-libs" 
+  "ocl-icd" 
+  "opencl-filesystem" 
+  "rocm-comgr" {= "2"}
+  "rocm-runtime" 
+]
+extra-source "rocm-opencl-6.0.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rocm-opencl-6.0.0-3.fc40.x86_64.rpm"
+}

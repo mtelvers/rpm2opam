@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-image+ico-devel-0.24.9-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-image+ico-devel-0.24.9-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-image+bmp-devel" {= "0.24.9"}
+  "rust-image+png-devel" {= "0.24.9"}
+  "rust-image-devel" {= "0.24.9"}
+]
+extra-source "rust-image+ico-devel-0.24.9-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-image+ico-devel-0.24.9-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xrootd-client-devel-5.7.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xrootd-client-devel-5.7.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "xrootd-client-libs" {= "5.7.0"}
+  "xrootd-libs" 
+  "xrootd-libs-devel" {= "5.7.0"}
+]
+extra-source "xrootd-client-devel-5.7.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xrootd-client-devel-5.7.0-1.1.x86_64.rpm"
+}

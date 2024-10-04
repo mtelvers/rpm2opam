@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnucash-devel-5.8-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnucash-devel-5.8-1.2.x86_64.rpm"]
+depends: [
+  "gnucash" {= "5.8"}
+]
+extra-source "gnucash-devel-5.8-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnucash-devel-5.8-1.2.x86_64.rpm"
+}

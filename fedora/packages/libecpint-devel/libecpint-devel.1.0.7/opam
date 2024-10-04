@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libecpint-devel-1.0.7-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libecpint-devel-1.0.7-10.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "libcerf-devel" {>= "1.17"}
+  "libecpint" {= "1.0.7"}
+]
+extra-source "libecpint-devel-1.0.7-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libecpint-devel-1.0.7-10.fc40.x86_64.rpm"
+}

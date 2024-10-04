@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "obs-service-download_assets-0.2-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "obs-service-download_assets-0.2-2.1.noarch.rpm"]
+depends: [
+  "build" {>= "20220221"}
+  "busybox-coreutils" 
+  "perl-libwww-perl" 
+]
+extra-source "obs-service-download_assets-0.2-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/obs-service-download_assets-0.2-2.1.noarch.rpm"
+}

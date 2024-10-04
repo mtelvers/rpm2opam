@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "orca-46.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "orca-46.2-1.1.noarch.rpm"]
+depends: [
+  "glib2-tools" 
+  "python3-brlapi" 
+  "python3-louis" 
+  "python311-base" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-speechd" 
+  "typelib-1_0-Atk-1_0" {= "1.0"}
+  "typelib-1_0-Atspi-2_0" {= "2.0"}
+  "typelib-1_0-GLib-2_0" {= "2.0"}
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gst-1_0" {= "1.0"}
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" 
+  "typelib-1_0-Spiel-1_0" {= "1.0"}
+  "typelib-1_0-Wnck-3_0" {= "3.0"}
+]
+extra-source "orca-46.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/orca-46.2-1.1.noarch.rpm"
+}

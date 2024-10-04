@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "clapper-devel-0.6.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clapper-devel-0.6.1-2.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.76.0"}
+  "gstreamer-devel" {>= "1.20.0"}
+  "gstreamer-plugins-base-devel" {>= "1.20.0"}
+  "gtk4-devel" {>= "4.10.0"}
+  "libclapper-0_0-0" {= "0.6.1"}
+  "libclapper-gtk-0_0-0" {= "0.6.1"}
+  "libmicrodns-devel" {>= "0.2.0"}
+  "libsoup-devel" 
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Clapper-0_0" {= "0.6.1"}
+  "typelib-1_0-ClapperGtk-0_0" {= "0.6.1"}
+]
+extra-source "clapper-devel-0.6.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/clapper-devel-0.6.1-2.1.x86_64.rpm"
+}

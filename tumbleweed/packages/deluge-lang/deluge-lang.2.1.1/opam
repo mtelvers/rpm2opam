@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "deluge-lang-2.1.1-4.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deluge-lang-2.1.1-4.3.noarch.rpm"]
+depends: [
+  "deluge" {= "2.1.1"}
+]
+extra-source "deluge-lang-2.1.1-4.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/deluge-lang-2.1.1-4.3.noarch.rpm"
+}

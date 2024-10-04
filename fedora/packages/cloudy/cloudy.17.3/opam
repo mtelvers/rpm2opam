@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cloudy-17.03-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cloudy-17.03-6.fc40.x86_64.rpm"]
+depends: [
+  "cloudy-data" {= "17.3"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "cloudy-17.03-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cloudy-17.03-6.fc40.x86_64.rpm"
+}

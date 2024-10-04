@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gala-wayland-7.1.3-4.20240113.git1550761.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gala-wayland-7.1.3-4.20240113.git1550761.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "gala" {= "7.1.3"}
+  "gnome-session" 
+  "xorg-x11-server-Xwayland" 
+]
+extra-source "gala-wayland-7.1.3-4.20240113.git1550761.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gala-wayland-7.1.3-4.20240113.git1550761.fc40.noarch.rpm"
+}

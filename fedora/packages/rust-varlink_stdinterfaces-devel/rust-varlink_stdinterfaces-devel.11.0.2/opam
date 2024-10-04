@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-varlink_stdinterfaces-devel-11.0.2-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-varlink_stdinterfaces-devel-11.0.2-9.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-serde+default-devel" 
+  "rust-serde_derive+default-devel" 
+  "rust-serde_json+default-devel" 
+  "rust-varlink+default-devel" 
+  "rust-varlink_generator+default-devel" 
+]
+extra-source "rust-varlink_stdinterfaces-devel-11.0.2-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-varlink_stdinterfaces-devel-11.0.2-9.fc40.noarch.rpm"
+}

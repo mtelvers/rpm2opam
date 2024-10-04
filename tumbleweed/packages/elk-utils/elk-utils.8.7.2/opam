@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "elk-utils-8.7.2-2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "elk-utils-8.7.2-2.3.noarch.rpm"]
+depends: [
+  "bash" 
+  "elk-data" {= "8.7.2"}
+  "gawk" 
+  "gnuplot" 
+  "perl-base" 
+  "python311-base" 
+]
+extra-source "elk-utils-8.7.2-2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/elk-utils-8.7.2-2.3.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-DBICx-TestDatabase-0.05-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DBICx-TestDatabase-0.05-29.fc40.noarch.rpm"]
+depends: [
+  "perl-DBD-SQLite" {>= "1.29"}
+  "perl-File-Temp" 
+  "perl-SQL-Translator" 
+  "perl-libs" 
+]
+extra-source "perl-DBICx-TestDatabase-0.05-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-DBICx-TestDatabase-0.05-29.fc40.noarch.rpm"
+}

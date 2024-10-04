@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libxfce4windowing-devel-4.19.3-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxfce4windowing-devel-4.19.3-1.2.x86_64.rpm"]
+depends: [
+  "gtk3-devel" 
+  "libxfce4windowing-0-0" {= "4.19.3"}
+  "libxfce4windowingui-0-0" {= "4.19.3"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Libxfce4windowing-0_0" {= "4.19.3"}
+  "typelib-1_0-Libxfce4windowingui-0_0" {= "4.19.3"}
+]
+extra-source "libxfce4windowing-devel-4.19.3-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libxfce4windowing-devel-4.19.3-1.2.x86_64.rpm"
+}

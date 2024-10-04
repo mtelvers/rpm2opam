@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-parver-0.5-2.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-parver-0.5-2.5.noarch.rpm"]
+depends: [
+  "python310-Arpeggio" {>= "1.7"}
+  "python310-attrs" {>= "19.2"}
+  "python310-base" {= "3.10"}
+  "python310-typing_extensions" 
+]
+extra-source "python310-parver-0.5-2.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-parver-0.5-2.5.noarch.rpm"
+}

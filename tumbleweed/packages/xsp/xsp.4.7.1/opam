@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xsp-4.7.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xsp-4.7.1-2.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "libfpm_helper0" {= "4.7.1"}
+  "mono-core" {= "4.0.0.0"}
+  "mono-data" {= "4.0.0.0"}
+  "mono-data-sqlite" {= "4.0.0.0"}
+  "mono-web" {= "4.0.0.0"}
+  "pkgconf-pkg-config" 
+  "system-user-wwwrun" 
+]
+extra-source "xsp-4.7.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xsp-4.7.1-2.1.x86_64.rpm"
+}

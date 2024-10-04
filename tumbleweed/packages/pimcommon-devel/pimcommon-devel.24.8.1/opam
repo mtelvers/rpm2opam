@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pimcommon-devel-24.08.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pimcommon-devel-24.08.1-1.1.x86_64.rpm"]
+depends: [
+  "akonadi-contacts-devel" {>= "6.2.1"}
+  "akonadi-devel" {>= "6.2.1"}
+  "glibc" 
+  "kf6-kconfig-devel" {>= "6.3.0"}
+  "kf6-kcontacts-devel" {>= "6.3.0"}
+  "kf6-kio-devel" {>= "6.3.0"}
+  "kimap-devel" {>= "6.2.1"}
+  "ktextaddons-devel" 
+  "libKPim6PimCommon6" 
+  "libKPim6PimCommonAkonadi6" {= "24.8.1"}
+  "libQt6Core6" 
+  "libQt6Gui6" 
+  "libgcc_s1" 
+  "libkdepim-devel" {>= "6.2.1"}
+  "libstdc++6" 
+  "qt6-dbus-devel" {>= "6.6.0"}
+  "qt6-gui-devel" {>= "6.6.0"}
+  "qt6-widgets-devel" {>= "6.6.0"}
+]
+extra-source "pimcommon-devel-24.08.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pimcommon-devel-24.08.1-1.1.x86_64.rpm"
+}

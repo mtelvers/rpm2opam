@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pqmarble-devel-2.0.0~^1.f240b2e-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pqmarble-devel-2.0.0~^1.f240b2e-3.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.50"}
+  "gtk4-devel" {>= "4.6"}
+  "pkgconf-pkg-config" 
+  "pqmarble" 
+]
+extra-source "pqmarble-devel-2.0.0~^1.f240b2e-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pqmarble-devel-2.0.0~^1.f240b2e-3.fc40.x86_64.rpm"
+}

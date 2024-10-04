@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-gauss-2023.02.04-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-gauss-2023.02.04-1.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "gap" {>= "4.11.1"}
+]
+extra-source "gap-gauss-2023.02.04-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gap-gauss-2023.02.04-1.3.x86_64.rpm"
+}

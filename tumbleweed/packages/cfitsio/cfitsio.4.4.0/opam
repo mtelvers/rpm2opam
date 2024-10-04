@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cfitsio-4.4.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cfitsio-4.4.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcfitsio10" 
+]
+extra-source "cfitsio-4.4.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cfitsio-4.4.0-1.1.x86_64.rpm"
+}

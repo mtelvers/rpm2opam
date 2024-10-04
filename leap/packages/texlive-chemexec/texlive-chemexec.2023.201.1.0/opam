@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-chemexec-2023.201.1.0svn21632-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-chemexec-2023.201.1.0svn21632-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-accents" 
+  "texlive-amsmath" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-framed" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-mhchem" 
+  "texlive-pgf" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-tools" 
+  "texlive-ulem" 
+  "texlive-xcolor" 
+  "texlive-xkeyval" 
+]
+extra-source "texlive-chemexec-2023.201.1.0svn21632-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-chemexec-2023.201.1.0svn21632-slfo.1.1.4.noarch.rpm"
+}

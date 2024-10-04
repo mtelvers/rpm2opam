@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-tkz-doc-2024.216.1.45csvn68665-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-tkz-doc-2024.216.1.45csvn68665-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-booktabs" 
+  "texlive-cellspace" 
+  "texlive-datetime" 
+  "texlive-eso-pic" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-footmisc" 
+  "texlive-framed" 
+  "texlive-koma-script" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-pgf" 
+  "texlive-ragged2e" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tools" 
+]
+extra-source "texlive-tkz-doc-2024.216.1.45csvn68665-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-tkz-doc-2024.216.1.45csvn68665-55.1.noarch.rpm"
+}

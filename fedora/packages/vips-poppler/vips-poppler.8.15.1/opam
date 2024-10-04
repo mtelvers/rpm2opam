@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vips-poppler-8.15.1-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vips-poppler-8.15.1-2.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "glib2" 
+  "glibc" 
+  "poppler-glib" 
+  "vips" 
+]
+extra-source "vips-poppler-8.15.1-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vips-poppler-8.15.1-2.fc40.x86_64.rpm"
+}

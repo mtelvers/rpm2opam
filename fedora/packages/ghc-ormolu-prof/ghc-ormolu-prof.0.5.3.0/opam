@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-ormolu-prof-0.5.3.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-ormolu-prof-0.5.3.0-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-Cabal-syntax-prof" 
+  "ghc-Diff-prof" 
+  "ghc-MemoTrie-prof" 
+  "ghc-ansi-terminal-prof" 
+  "ghc-array-prof" 
+  "ghc-base-prof" 
+  "ghc-binary-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-directory-prof" 
+  "ghc-dlist-prof" 
+  "ghc-file-embed-prof" 
+  "ghc-filepath-prof" 
+  "ghc-ghc-lib-parser-prof" 
+  "ghc-megaparsec-prof" 
+  "ghc-mtl-prof" 
+  "ghc-ormolu-devel" {= "0.5.3.0"}
+  "ghc-syb-prof" 
+  "ghc-text-prof" 
+]
+extra-source "ghc-ormolu-prof-0.5.3.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-ormolu-prof-0.5.3.0-3.fc40.x86_64.rpm"
+}

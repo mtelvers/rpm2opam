@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "exec-maven-plugin-3.0.0-5.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "exec-maven-plugin-3.0.0-5.4.noarch.rpm"]
+depends: [
+  "apache-commons-exec" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-artifact-transfer" 
+  "maven-lib" 
+  "plexus-utils" 
+]
+extra-source "exec-maven-plugin-3.0.0-5.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/exec-maven-plugin-3.0.0-5.4.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "drawing-1.0.2-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "drawing-1.0.2-1.4.noarch.rpm"]
+depends: [
+  "python311" 
+  "python311-base" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-gobject-cairo" 
+  "python311-pycairo" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" 
+]
+extra-source "drawing-1.0.2-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/drawing-1.0.2-1.4.noarch.rpm"
+}

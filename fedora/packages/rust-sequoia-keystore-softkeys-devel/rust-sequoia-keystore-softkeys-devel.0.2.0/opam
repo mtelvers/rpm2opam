@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-sequoia-keystore-softkeys-devel-0.2.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-sequoia-keystore-softkeys-devel-0.2.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.70"}
+  "rust-anyhow+default-devel" 
+  "rust-dirs+default-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-log+default-devel" 
+  "rust-sequoia-keystore-backend+default-devel" 
+  "rust-sequoia-openpgp+compression-devel" 
+  "rust-sequoia-openpgp-devel" 
+]
+extra-source "rust-sequoia-keystore-softkeys-devel-0.2.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-sequoia-keystore-softkeys-devel-0.2.0-1.fc40.noarch.rpm"
+}

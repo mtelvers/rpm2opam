@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-Werkzeug-3.0.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-Werkzeug-3.0.4-1.1.noarch.rpm"]
+depends: [
+  "python312-MarkupSafe" {>= "2.1.2"}
+  "python312-base" {= "3.12"}
+]
+extra-source "python312-Werkzeug-3.0.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-Werkzeug-3.0.4-1.1.noarch.rpm"
+}

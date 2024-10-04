@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgnuastro20-0.22-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgnuastro20-0.22-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcfitsio10" 
+  "libgit2-1_8" 
+  "libgsl28" 
+  "libgslcblas0" 
+  "libjpeg8" 
+  "libtiff6" 
+  "libwcs8" 
+]
+extra-source "libgnuastro20-0.22-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgnuastro20-0.22-1.3.x86_64.rpm"
+}

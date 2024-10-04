@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vips-devel-8.15.1-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vips-devel-8.15.1-2.fc40.x86_64.rpm"]
+depends: [
+  "cairo-devel" {>= "1.2"}
+  "cfitsio-devel" 
+  "expat-devel" 
+  "fftw-devel" 
+  "fontconfig-devel" 
+  "glib2-devel" 
+  "highway-devel" {>= "1.0.5"}
+  "lcms2-devel" 
+  "libarchive-devel" {>= "3.0.0"}
+  "libcgif-devel" {>= "0.2.0"}
+  "libexif-devel" {>= "0.6"}
+  "libimagequant-devel" 
+  "libjpeg-turbo-devel" 
+  "librsvg2-devel" {>= "2.40.3"}
+  "libspng-devel" {>= "0.7"}
+  "libtiff-devel" 
+  "libwebp-devel" {>= "0.6"}
+  "matio-devel" 
+  "openexr-devel" {>= "1.2.2"}
+  "openjpeg2-devel" {>= "2.4"}
+  "pango-devel" {>= "1.32.6"}
+  "pkgconf-pkg-config" 
+  "vips" 
+  "zlib-ng-compat-devel" {>= "0.4"}
+]
+extra-source "vips-devel-8.15.1-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vips-devel-8.15.1-2.fc40.x86_64.rpm"
+}

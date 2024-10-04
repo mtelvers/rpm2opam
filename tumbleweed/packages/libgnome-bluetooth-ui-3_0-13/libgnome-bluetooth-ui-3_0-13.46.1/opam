@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgnome-bluetooth-ui-3_0-13-46.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgnome-bluetooth-ui-3_0-13-46.1-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libadwaita-1-0" 
+  "libgsound0" 
+  "libgtk-4-1" 
+  "libnotify4" 
+  "libudev-mini1" 
+  "libupower-glib3" 
+]
+extra-source "libgnome-bluetooth-ui-3_0-13-46.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgnome-bluetooth-ui-3_0-13-46.1-1.1.x86_64.rpm"
+}

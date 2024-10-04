@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kiwi-systemdeps-bootloaders-10.0.11-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kiwi-systemdeps-bootloaders-10.0.11-1.fc40.x86_64.rpm"]
+depends: [
+  "grub2-efi-ia32" 
+  "grub2-efi-ia32-modules" 
+  "grub2-efi-x64" 
+  "grub2-efi-x64-modules" 
+  "grub2-pc" 
+  "grub2-pc-modules" 
+  "grub2-tools" 
+  "grub2-tools-efi" 
+  "grub2-tools-extra" 
+  "grub2-tools-minimal" 
+  "kiwi-systemdeps-core" {= "10.0.11"}
+]
+extra-source "kiwi-systemdeps-bootloaders-10.0.11-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kiwi-systemdeps-bootloaders-10.0.11-1.fc40.x86_64.rpm"
+}

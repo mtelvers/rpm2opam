@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "patterns-base-update_test-20200505-lp160.3.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "patterns-base-update_test-20200505-lp160.3.7.x86_64.rpm"]
+depends: [
+  "update-test-affects-package-manager" 
+  "update-test-interactive" 
+  "update-test-optional" 
+  "update-test-reboot-needed" 
+  "update-test-security" 
+  "update-test-trivial" 
+]
+extra-source "patterns-base-update_test-20200505-lp160.3.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/patterns-base-update_test-20200505-lp160.3.7.x86_64.rpm"
+}

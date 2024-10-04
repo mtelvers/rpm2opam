@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqt5-qtbase-devel-5.15.15+kde127-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqt5-qtbase-devel-5.15.15+kde127-1.2.x86_64.rpm"]
+depends: [
+  "libQt5Concurrent-devel" {= "5.15.15"}
+  "libQt5Core-devel" {= "5.15.15"}
+  "libQt5DBus-devel" {= "5.15.15"}
+  "libQt5Gui-devel" {= "5.15.15"}
+  "libQt5Network-devel" {= "5.15.15"}
+  "libQt5OpenGL-devel" {= "5.15.15"}
+  "libQt5PlatformHeaders-devel" {= "5.15.15"}
+  "libQt5PrintSupport-devel" {= "5.15.15"}
+  "libQt5Sql-devel" {= "5.15.15"}
+  "libQt5Test-devel" {= "5.15.15"}
+  "libQt5Widgets-devel" {= "5.15.15"}
+  "libQt5Xml-devel" {= "5.15.15"}
+  "libqt5-qtbase-common-devel" 
+]
+extra-source "libqt5-qtbase-devel-5.15.15+kde127-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libqt5-qtbase-devel-5.15.15+kde127-1.2.x86_64.rpm"
+}

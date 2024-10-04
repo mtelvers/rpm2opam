@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Sub-Exporter-0.991.0-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Sub-Exporter-0.991.0-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Data-OptList" {>= "0.100"}
+  "perl-Params-Util" {>= "0.14"}
+  "perl-Sub-Install" {>= "0.92"}
+]
+extra-source "perl-Sub-Exporter-0.991.0-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/perl-Sub-Exporter-0.991.0-slfo.1.1.3.noarch.rpm"
+}

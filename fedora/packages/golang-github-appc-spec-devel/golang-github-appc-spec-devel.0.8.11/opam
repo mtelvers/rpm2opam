@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-appc-spec-devel-0.8.11-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-appc-spec-devel-0.8.11-21.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-coreos-semver-devel" 
+  "golang-github-spf13-pflag-devel" 
+  "golang-go4-devel" 
+  "golang-gopkg-inf-0-devel" 
+  "golang-x-net-devel" 
+]
+extra-source "golang-github-appc-spec-devel-0.8.11-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-appc-spec-devel-0.8.11-21.fc40.noarch.rpm"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-http-client-tls-devel-0.3.6.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-http-client-tls-devel-0.3.6.1-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-case-insensitive-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-connection-devel" 
+  "ghc-containers-devel" 
+  "ghc-cryptonite-devel" 
+  "ghc-data-default-class-devel" 
+  "ghc-exceptions-devel" 
+  "ghc-http-client-devel" 
+  "ghc-http-client-tls" {= "0.3.6.1"}
+  "ghc-http-types-devel" 
+  "ghc-memory-devel" 
+  "ghc-network-devel" 
+  "ghc-network-uri-devel" 
+  "ghc-text-devel" 
+  "ghc-tls-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-http-client-tls-devel-0.3.6.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-http-client-tls-devel-0.3.6.1-6.fc40.x86_64.rpm"
+}

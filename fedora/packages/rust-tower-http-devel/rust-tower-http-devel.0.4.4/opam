@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tower-http-devel-0.4.4-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tower-http-devel-0.4.4-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.60"}
+  "rust-bitflags+default-devel" 
+  "rust-bytes+default-devel" 
+  "rust-futures-core+default-devel" 
+  "rust-futures-util-devel" 
+  "rust-http+default-devel" 
+  "rust-http-body+default-devel" 
+  "rust-http-range-header+default-devel" 
+  "rust-pin-project-lite+default-devel" 
+  "rust-tower-layer+default-devel" 
+  "rust-tower-service+default-devel" 
+]
+extra-source "rust-tower-http-devel-0.4.4-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tower-http-devel-0.4.4-2.fc40.noarch.rpm"
+}

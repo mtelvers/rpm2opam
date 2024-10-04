@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libedit-3.1-50.20230828cvs.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libedit-3.1-50.20230828cvs.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "ncurses-libs" 
+]
+extra-source "libedit-3.1-50.20230828cvs.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libedit-3.1-50.20230828cvs.fc40.x86_64.rpm"
+}

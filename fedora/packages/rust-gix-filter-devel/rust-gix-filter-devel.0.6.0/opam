@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gix-filter-devel-0.6.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gix-filter-devel-0.6.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-bstr+std-devel" 
+  "rust-bstr-devel" 
+  "rust-encoding_rs+default-devel" 
+  "rust-gix-attributes+default-devel" 
+  "rust-gix-command+default-devel" 
+  "rust-gix-hash+default-devel" 
+  "rust-gix-object+default-devel" 
+  "rust-gix-packetline-blocking+default-devel" 
+  "rust-gix-path+default-devel" 
+  "rust-gix-quote+default-devel" 
+  "rust-gix-trace+default-devel" 
+  "rust-smallvec+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-gix-filter-devel-0.6.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gix-filter-devel-0.6.0-2.fc40.noarch.rpm"
+}

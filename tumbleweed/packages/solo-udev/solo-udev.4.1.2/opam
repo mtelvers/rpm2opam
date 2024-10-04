@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "solo-udev-4.1.2-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "solo-udev-4.1.2-1.9.noarch.rpm"]
+depends: [
+  "udev" 
+]
+extra-source "solo-udev-4.1.2-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/solo-udev-4.1.2-1.9.noarch.rpm"
+}

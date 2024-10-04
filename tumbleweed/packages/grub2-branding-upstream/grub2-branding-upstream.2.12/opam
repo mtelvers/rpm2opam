@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "grub2-branding-upstream-2.12-24.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grub2-branding-upstream-2.12-24.1.noarch.rpm"]
+depends: [
+  "grub2-common" {= "2.12"}
+]
+extra-source "grub2-branding-upstream-2.12-24.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/grub2-branding-upstream-2.12-24.1.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-Twisted-conch-24.7.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-Twisted-conch-24.7.0-1.1.noarch.rpm"]
+depends: [
+  "python311-Twisted" {= "24.7.0"}
+  "python311-appdirs" {>= "1.4.0"}
+  "python311-bcrypt" {>= "3.0.0"}
+  "python311-cryptography" {>= "2.6"}
+]
+extra-source "python311-Twisted-conch-24.7.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-Twisted-conch-24.7.0-1.1.noarch.rpm"
+}

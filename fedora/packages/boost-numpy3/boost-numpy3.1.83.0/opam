@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "boost-numpy3-1.83.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "boost-numpy3-1.83.0-3.fc40.x86_64.rpm"]
+depends: [
+  "boost-python3" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "python3-numpy" 
+]
+extra-source "boost-numpy3-1.83.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/boost-numpy3-1.83.0-3.fc40.x86_64.rpm"
+}

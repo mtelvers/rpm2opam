@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-Valgrind-1.19-25.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Valgrind-1.19-25.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Digest-MD5" 
+  "perl-DynaLoader" 
+  "perl-Env-Sanctify" 
+  "perl-ExtUtils-MakeMaker" 
+  "perl-Fcntl" 
+  "perl-File-HomeDir" {>= "0.86"}
+  "perl-File-Path" 
+  "perl-File-Temp" {>= "0.14"}
+  "perl-Filter" 
+  "perl-IO" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Perl-Destruct-Level" 
+  "perl-Scalar-List-Utils" 
+  "perl-Test-Simple" 
+  "perl-XML-Twig" 
+  "perl-base" 
+  "perl-libs" 
+  "perl-overload" 
+  "valgrind" {>= "3.1.0"}
+]
+extra-source "perl-Test-Valgrind-1.19-25.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-Valgrind-1.19-25.fc40.noarch.rpm"
+}

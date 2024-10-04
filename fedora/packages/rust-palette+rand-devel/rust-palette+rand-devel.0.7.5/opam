@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-palette+rand-devel-0.7.5-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-palette+rand-devel-0.7.5-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-palette-devel" {= "0.7.5"}
+  "rust-rand-devel" 
+]
+extra-source "rust-palette+rand-devel-0.7.5-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-palette+rand-devel-0.7.5-1.fc40.noarch.rpm"
+}

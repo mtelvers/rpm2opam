@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cantor-R-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cantor-R-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "R-core" 
+  "cantor-libs" {= "24.2.1"}
+  "glibc" 
+  "kf5-kcompletion" 
+  "kf5-kconfig-core" 
+  "kf5-kconfig-gui" 
+  "kf5-kcoreaddons" 
+  "kf5-ki18n" 
+  "kf5-kiconthemes" 
+  "kf5-kio-core-libs" 
+  "kf5-kio-widgets-libs" 
+  "kf5-knewstuff" 
+  "kf5-kwidgetsaddons" 
+  "kf5-kxmlgui" 
+  "kf5-syntax-highlighting" 
+  "libgcc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qttools-libs-help" 
+]
+extra-source "cantor-R-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cantor-R-24.02.1-1.fc40.x86_64.rpm"
+}

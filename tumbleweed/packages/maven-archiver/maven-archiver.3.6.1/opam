@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-archiver-3.6.1-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-archiver-3.6.1-1.4.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "plexus-archiver" 
+  "plexus-interpolation" 
+]
+extra-source "maven-archiver-3.6.1-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-archiver-3.6.1-1.4.noarch.rpm"
+}

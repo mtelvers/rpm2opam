@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libuser-devel-0.64-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libuser-devel-0.64-8.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libuser" {= "0.64"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libuser-devel-0.64-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libuser-devel-0.64-8.fc40.x86_64.rpm"
+}

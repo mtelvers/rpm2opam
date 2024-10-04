@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "flatpak-remote-flathub-1.15.10-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flatpak-remote-flathub-1.15.10-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "flatpak" 
+  "sed" 
+]
+extra-source "flatpak-remote-flathub-1.15.10-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/flatpak-remote-flathub-1.15.10-2.1.noarch.rpm"
+}

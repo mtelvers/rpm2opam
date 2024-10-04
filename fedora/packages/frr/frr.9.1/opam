@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "frr-9.1-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "frr-9.1-2.fc40.x86_64.rpm"]
+depends: [
+  "abseil-cpp" 
+  "bash" 
+  "c-ares" 
+  "frr-selinux" 
+  "glibc" 
+  "grpc" 
+  "grpc-cpp" 
+  "hostname" 
+  "json-c" 
+  "libcap" 
+  "libgcc" 
+  "libstdc++" 
+  "libxcrypt" 
+  "libyang" 
+  "ncurses" 
+  "net-snmp" 
+  "net-snmp-agent-libs" 
+  "net-snmp-libs" 
+  "openssl-libs" 
+  "protobuf" 
+  "protobuf-c" 
+  "python3" 
+  "re2" 
+  "readline" 
+  "rpm-libs" 
+  "shadow-utils" 
+  "systemd" 
+  "zlib-ng-compat" 
+]
+extra-source "frr-9.1-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/frr-9.1-2.fc40.x86_64.rpm"
+}

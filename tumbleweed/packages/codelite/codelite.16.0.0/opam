@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "codelite-16.0.0-2.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "codelite-16.0.0-2.12.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ctags" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libgcc_s1" 
+  "libgtk-3-0" 
+  "libhunspell-1_7-0" 
+  "liblldb18" 
+  "libsqlite3-0" 
+  "libssh4" 
+  "libstdc++6" 
+  "nodejs-common" 
+  "python311-base" 
+  "xterm-bin" 
+]
+extra-source "codelite-16.0.0-2.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/codelite-16.0.0-2.12.x86_64.rpm"
+}

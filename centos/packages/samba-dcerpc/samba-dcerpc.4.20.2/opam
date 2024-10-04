@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "samba-dcerpc-4.20.2-104.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "samba-dcerpc-4.20.2-104.el10.x86_64.rpm"]
+depends: [
+  "cups-libs" 
+  "glibc" 
+  "gnutls" 
+  "jansson" 
+  "libnetapi" 
+  "libtalloc" 
+  "libtdb" 
+  "libtevent" 
+  "libwbclient" 
+  "openldap" 
+  "popt" 
+  "samba-client-libs" 
+  "samba-common-libs" 
+  "samba-libs" 
+]
+extra-source "samba-dcerpc-4.20.2-104.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/samba-dcerpc-4.20.2-104.el10.x86_64.rpm"
+}

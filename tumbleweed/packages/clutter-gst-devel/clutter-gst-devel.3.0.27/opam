@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "clutter-gst-devel-3.0.27-2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clutter-gst-devel-3.0.27-2.5.x86_64.rpm"]
+depends: [
+  "clutter-devel" {>= "1.10.0"}
+  "cogl-devel" 
+  "glib2-devel" 
+  "gstreamer-devel" 
+  "gstreamer-plugin-cluttergst3" {= "3.0.27"}
+  "gstreamer-plugins-base-devel" 
+  "libclutter-gst-3_0-0" {= "3.0.27"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-ClutterGst-3_0" {= "3.0.27"}
+]
+extra-source "clutter-gst-devel-3.0.27-2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/clutter-gst-devel-3.0.27-2.5.x86_64.rpm"
+}

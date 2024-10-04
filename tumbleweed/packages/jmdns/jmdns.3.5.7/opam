@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jmdns-3.5.7-4.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jmdns-3.5.7-4.5.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "slf4j" 
+]
+extra-source "jmdns-3.5.7-4.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jmdns-3.5.7-4.5.noarch.rpm"
+}

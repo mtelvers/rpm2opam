@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pcre-tools-8.45-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcre-tools-8.45-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libpcre1" 
+  "libpcre16-0" 
+  "libpcreposix0" 
+]
+extra-source "pcre-tools-8.45-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/pcre-tools-8.45-slfo.1.1.8.x86_64.rpm"
+}

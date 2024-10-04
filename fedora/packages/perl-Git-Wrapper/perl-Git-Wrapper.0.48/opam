@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Git-Wrapper-0.048-19.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Git-Wrapper-0.048-19.fc40.noarch.rpm"]
+depends: [
+  "git-core" 
+  "perl-File-Temp" 
+  "perl-File-chdir" 
+  "perl-IPC-Cmd" 
+  "perl-IPC-Open3" 
+  "perl-Scalar-List-Utils" 
+  "perl-Sort-Versions" 
+  "perl-Symbol" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-overload" 
+]
+extra-source "perl-Git-Wrapper-0.048-19.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Git-Wrapper-0.048-19.fc40.noarch.rpm"
+}

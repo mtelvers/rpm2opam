@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "autotrace-0.31.1-647.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "autotrace-0.31.1-647.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libautotrace3" 
+  "libpng16-16" 
+]
+extra-source "autotrace-0.31.1-647.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/autotrace-0.31.1-647.2.x86_64.rpm"
+}

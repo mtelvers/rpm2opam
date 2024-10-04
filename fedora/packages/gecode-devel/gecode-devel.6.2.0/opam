@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gecode-devel-6.2.0-12.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gecode-devel-6.2.0-12.fc39.x86_64.rpm"]
+depends: [
+  "bash" 
+  "boost-devel" 
+  "gecode" {= "6.2.0"}
+  "glibc" 
+  "gmp" 
+  "libgcc" 
+  "libstdc++" 
+  "mpfr" 
+]
+extra-source "gecode-devel-6.2.0-12.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gecode-devel-6.2.0-12.fc39.x86_64.rpm"
+}

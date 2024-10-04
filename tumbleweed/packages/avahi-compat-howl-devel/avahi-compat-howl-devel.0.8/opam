@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "avahi-compat-howl-devel-0.8-35.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "avahi-compat-howl-devel-0.8-35.1.x86_64.rpm"]
+depends: [
+  "libavahi-devel" {= "0.8"}
+  "libhowl0" {= "0.8"}
+  "pkgconf-pkg-config" 
+]
+extra-source "avahi-compat-howl-devel-0.8-35.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/avahi-compat-howl-devel-0.8-35.1.x86_64.rpm"
+}

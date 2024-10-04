@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Email-MIME-ContentType-1.028-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Email-MIME-ContentType-1.028-1.6.noarch.rpm"]
+depends: [
+  "perl" {>= "2.87"}
+  "perl-Text-Unidecode" 
+]
+extra-source "perl-Email-MIME-ContentType-1.028-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Email-MIME-ContentType-1.028-1.6.noarch.rpm"
+}

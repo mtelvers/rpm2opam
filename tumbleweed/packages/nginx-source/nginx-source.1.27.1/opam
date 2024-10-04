@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nginx-source-1.27.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nginx-source-1.27.1-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gcc-c++" 
+  "gd-devel" 
+  "libatomic_ops-devel" 
+  "libopenssl-1_0_0-devel" 
+  "libxslt-devel" 
+  "nginx" {= "1.27.1"}
+  "nginx-macros" {>= "0.0.1"}
+  "pcre2-devel" 
+  "perl-base" 
+  "pkgconf-pkg-config" 
+  "vim" 
+  "zlib-devel" 
+]
+extra-source "nginx-source-1.27.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nginx-source-1.27.1-2.1.noarch.rpm"
+}

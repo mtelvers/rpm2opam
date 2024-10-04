@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-ordered-containers-prof-0.2.3-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-ordered-containers-prof-0.2.3-29.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-ordered-containers-devel" {= "0.2.3"}
+]
+extra-source "ghc-ordered-containers-prof-0.2.3-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-ordered-containers-prof-0.2.3-29.fc40.x86_64.rpm"
+}

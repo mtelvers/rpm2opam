@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "quaternion-0.0.96-0.5.rc1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "quaternion-0.0.96-0.5.rc1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libgcc" 
+  "libquotient-qt6" 
+  "libstdc++" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qt6-qtdeclarative" 
+  "qtkeychain-qt6" 
+]
+extra-source "quaternion-0.0.96-0.5.rc1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/quaternion-0.0.96-0.5.rc1.fc40.x86_64.rpm"
+}

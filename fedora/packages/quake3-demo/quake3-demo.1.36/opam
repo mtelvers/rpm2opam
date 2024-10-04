@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "quake3-demo-1.36-46.svn2102.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "quake3-demo-1.36-46.svn2102.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "hicolor-icon-theme" 
+  "opengl-games-utils" 
+  "quake3" {= "1.36"}
+  "unzip" 
+]
+extra-source "quake3-demo-1.36-46.svn2102.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/quake3-demo-1.36-46.svn2102.fc40.x86_64.rpm"
+}

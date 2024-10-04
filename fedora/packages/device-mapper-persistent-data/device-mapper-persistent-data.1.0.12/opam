@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "device-mapper-persistent-data-1.0.12-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "device-mapper-persistent-data-1.0.12-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+]
+extra-source "device-mapper-persistent-data-1.0.12-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/device-mapper-persistent-data-1.0.12-1.fc40.x86_64.rpm"
+}

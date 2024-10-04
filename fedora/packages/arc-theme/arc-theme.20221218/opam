@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "arc-theme-20221218-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "arc-theme-20221218-6.fc40.noarch.rpm"]
+depends: [
+  "filesystem" 
+  "gnome-themes-extra" 
+  "gtk-murrine-engine" 
+]
+extra-source "arc-theme-20221218-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/arc-theme-20221218-6.fc40.noarch.rpm"
+}

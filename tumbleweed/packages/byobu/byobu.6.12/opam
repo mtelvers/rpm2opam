@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "byobu-6.12-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "byobu-6.12-1.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "coreutils" 
+  "gawk" 
+  "gettext-runtime" 
+  "net-tools" 
+  "perl" 
+  "perl-base" 
+  "python3-newt" 
+  "python311-base" 
+  "snack" 
+]
+extra-source "byobu-6.12-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/byobu-6.12-1.2.noarch.rpm"
+}

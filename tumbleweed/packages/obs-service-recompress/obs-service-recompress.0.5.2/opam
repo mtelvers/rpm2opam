@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "obs-service-recompress-0.5.2-2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "obs-service-recompress-0.5.2-2.3.noarch.rpm"]
+depends: [
+  "bash" 
+  "busybox-gzip" 
+  "bzip2" 
+  "xz" 
+  "zstd" 
+]
+extra-source "obs-service-recompress-0.5.2-2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/obs-service-recompress-0.5.2-2.3.noarch.rpm"
+}

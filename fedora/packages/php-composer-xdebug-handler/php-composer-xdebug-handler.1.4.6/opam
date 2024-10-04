@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-composer-xdebug-handler-1.4.6-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-composer-xdebug-handler-1.4.6-8.fc40.noarch.rpm"]
+depends: [
+  "php-PsrLog" 
+  "php-common" {>= "5.3.2"}
+  "php-fedora-autoloader" 
+  "php-process" 
+]
+extra-source "php-composer-xdebug-handler-1.4.6-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-composer-xdebug-handler-1.4.6-8.fc40.noarch.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-schollz-croc-devel-9.6.4-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-schollz-croc-devel-9.6.4-5.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-chzyer-readline-devel" 
+  "go-filesystem" 
+  "golang-github-cespare-xxhash-devel" 
+  "golang-github-denisbrodbeck-machineid-devel" 
+  "golang-github-kalafut-imohash-devel" 
+  "golang-github-schollz-cli-2-devel" 
+  "golang-github-schollz-logger-devel" 
+  "golang-github-schollz-mnemonicode-devel" 
+  "golang-github-schollz-pake-3-devel" 
+  "golang-github-schollz-peerdiscovery-devel" 
+  "golang-github-schollz-progressbar-3-devel" 
+  "golang-x-crypto-devel" 
+  "golang-x-net-devel" 
+  "golang-x-time-devel" 
+]
+extra-source "golang-github-schollz-croc-devel-9.6.4-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-schollz-croc-devel-9.6.4-5.fc40.noarch.rpm"
+}

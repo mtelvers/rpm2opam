@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsmartcols-devel-32bit-2.40.1-5.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsmartcols-devel-32bit-2.40.1-5.1.x86_64.rpm"]
+depends: [
+  "libsmartcols-devel" {= "2.40.1"}
+  "libsmartcols1-32bit" {= "2.40.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libsmartcols-devel-32bit-2.40.1-5.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libsmartcols-devel-32bit-2.40.1-5.1.x86_64.rpm"
+}

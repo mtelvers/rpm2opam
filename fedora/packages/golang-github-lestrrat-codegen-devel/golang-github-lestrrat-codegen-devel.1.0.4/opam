@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-lestrrat-codegen-devel-1.0.4-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-lestrrat-codegen-devel-1.0.4-3.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-lestrrat-option-devel" 
+  "golang-github-lestrrat-xstrings-devel" 
+  "golang-x-tools-devel" 
+]
+extra-source "golang-github-lestrrat-codegen-devel-1.0.4-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-lestrrat-codegen-devel-1.0.4-3.fc40.noarch.rpm"
+}

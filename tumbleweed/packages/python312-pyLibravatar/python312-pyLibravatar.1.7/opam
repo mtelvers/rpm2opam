@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pyLibravatar-1.7-3.19.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pyLibravatar-1.7-3.19.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-py3dns" 
+]
+extra-source "python312-pyLibravatar-1.7-3.19.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pyLibravatar-1.7-3.19.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "liblognorm-devel-2.0.6-2.22.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "liblognorm-devel-2.0.6-2.22.x86_64.rpm"]
+depends: [
+  "libfastjson-devel" 
+  "liblognorm5" {= "2.0.6"}
+  "pkgconf-pkg-config" 
+]
+extra-source "liblognorm-devel-2.0.6-2.22.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/liblognorm-devel-2.0.6-2.22.x86_64.rpm"
+}

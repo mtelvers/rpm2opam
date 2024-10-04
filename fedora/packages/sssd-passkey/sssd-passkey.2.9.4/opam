@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sssd-passkey-2.9.4-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sssd-passkey-2.9.4-4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "jansson" 
+  "krb5-libs" 
+  "libcom_err" 
+  "libfido2" 
+  "libtalloc" 
+  "openssl-libs" 
+  "popt" 
+  "sssd-common" 
+]
+extra-source "sssd-passkey-2.9.4-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sssd-passkey-2.9.4-4.fc40.x86_64.rpm"
+}

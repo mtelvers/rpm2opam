@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gromacs-openmpi-2024-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gromacs-openmpi-2024-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gromacs-data" {= "2024"}
+  "libgcc_s1" 
+  "libgromacs_mpi9" 
+  "libstdc++6" 
+  "openmpi4-libs" 
+]
+extra-source "gromacs-openmpi-2024-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gromacs-openmpi-2024-2.2.x86_64.rpm"
+}

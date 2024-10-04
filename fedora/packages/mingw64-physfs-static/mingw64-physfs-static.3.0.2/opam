@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw64-physfs-static-3.0.2-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-physfs-static-3.0.2-4.fc40.noarch.rpm"]
+depends: [
+  "mingw64-physfs" {= "3.0.2"}
+]
+extra-source "mingw64-physfs-static-3.0.2-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw64-physfs-static-3.0.2-4.fc40.noarch.rpm"
+}

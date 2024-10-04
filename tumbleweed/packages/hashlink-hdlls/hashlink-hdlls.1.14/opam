@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hashlink-hdlls-1.14-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hashlink-hdlls-1.14-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libSDL2-2_0-0" 
+  "libglvnd" 
+  "libhl1" 
+  "libmbedcrypto7" 
+  "libmbedtls14" 
+  "libmbedx509-1" 
+  "libopenal1" 
+  "libpng16-16" 
+  "libturbojpeg0" 
+  "libuv1" 
+  "libvorbisfile3" 
+  "libz-ng-compat1" 
+]
+extra-source "hashlink-hdlls-1.14-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/hashlink-hdlls-1.14-2.1.x86_64.rpm"
+}

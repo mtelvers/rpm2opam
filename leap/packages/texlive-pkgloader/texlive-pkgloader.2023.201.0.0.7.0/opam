@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-pkgloader-2023.201.0.0.7.0svn47486-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-pkgloader-2023.201.0.0.7.0svn47486-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-etoolbox" 
+  "texlive-filecontents" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-l3kernel" 
+  "texlive-l3packages" 
+  "texlive-lt3graph" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-withargs" 
+]
+extra-source "texlive-pkgloader-2023.201.0.0.7.0svn47486-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-pkgloader-2023.201.0.0.7.0svn47486-slfo.1.1.4.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqt5-qtwayland-devel-5.15.14+kde57-lp160.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqt5-qtwayland-devel-5.15.14+kde57-lp160.1.2.x86_64.rpm"]
+depends: [
+  "libQt5Core-devel" 
+  "libQt5Gui-devel" 
+  "libQt5WaylandClient5" {= "5.15.14"}
+  "libQt5WaylandCompositor5" {= "5.15.14"}
+  "libqt5-qtdeclarative-devel" 
+  "libqt5-qtwayland" {= "5.15.14"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libqt5-qtwayland-devel-5.15.14+kde57-lp160.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libqt5-qtwayland-devel-5.15.14+kde57-lp160.1.2.x86_64.rpm"
+}

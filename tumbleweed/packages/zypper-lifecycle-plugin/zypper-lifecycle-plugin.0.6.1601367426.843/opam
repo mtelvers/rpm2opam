@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zypper-lifecycle-plugin-0.6.1601367426.843fe7a-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zypper-lifecycle-plugin-0.6.1601367426.843fe7a-4.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "ruby3-3" 
+  "systemd" 
+  "zypper" {>= "1.13.10"}
+]
+extra-source "zypper-lifecycle-plugin-0.6.1601367426.843fe7a-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/zypper-lifecycle-plugin-0.6.1601367426.843fe7a-4.1.noarch.rpm"
+}

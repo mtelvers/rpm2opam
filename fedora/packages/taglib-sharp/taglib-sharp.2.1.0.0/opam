@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "taglib-sharp-2.1.0.0-22.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "taglib-sharp-2.1.0.0-22.fc40.x86_64.rpm"]
+depends: [
+  "mono-core" {= "4.84.0.0"}
+]
+extra-source "taglib-sharp-2.1.0.0-22.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/taglib-sharp-2.1.0.0-22.fc40.x86_64.rpm"
+}

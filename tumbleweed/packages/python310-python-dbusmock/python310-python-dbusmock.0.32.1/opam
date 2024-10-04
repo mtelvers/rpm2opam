@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-python-dbusmock-0.32.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-python-dbusmock-0.32.1-1.1.noarch.rpm"]
+depends: [
+  "dbus-1-x11" 
+  "python310-base" {= "3.10"}
+  "python310-dbus-python" 
+  "python310-gobject" 
+  "typelib-1_0-GLib-2_0" 
+]
+extra-source "python310-python-dbusmock-0.32.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-python-dbusmock-0.32.1-1.1.noarch.rpm"
+}

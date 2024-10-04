@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-homalgtocas-2023.11.01-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-homalgtocas-2023.11.01-1.2.noarch.rpm"]
+depends: [
+  "gap" {>= "4.12.1"}
+  "gap-gapdoc" {>= "1.0"}
+  "gap-matricesforhomalg" {>= "2023.8.1"}
+  "gap-toolsforhomalg" {>= "2023.11.1"}
+]
+extra-source "gap-homalgtocas-2023.11.01-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-homalgtocas-2023.11.01-1.2.noarch.rpm"
+}

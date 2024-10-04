@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libghemical-3.0.0-24.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libghemical-3.0.0-24.fc40.x86_64.rpm"]
+depends: [
+  "flexiblas-netlib" 
+  "glibc" 
+  "libderiv" 
+  "libgcc" 
+  "libgfortran" 
+  "libint" {= "0"}
+  "libquadmath" 
+  "libr12" 
+  "libstdc++" 
+  "mopac7-libs" 
+  "mpqc-libs" 
+]
+extra-source "libghemical-3.0.0-24.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libghemical-3.0.0-24.fc40.x86_64.rpm"
+}

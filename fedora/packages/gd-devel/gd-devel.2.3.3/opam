@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gd-devel-2.3.3-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gd-devel-2.3.3-16.fc40.x86_64.rpm"]
+depends: [
+  "fontconfig-devel" 
+  "freetype-devel" 
+  "gd" {= "2.3.3"}
+  "libX11-devel" 
+  "libXpm-devel" 
+  "libavif-devel" 
+  "libimagequant-devel" 
+  "libjpeg-turbo-devel" 
+  "libpng-devel" 
+  "libtiff-devel" 
+  "libwebp-devel" 
+  "pkgconf-pkg-config" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "gd-devel-2.3.3-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gd-devel-2.3.3-16.fc40.x86_64.rpm"
+}

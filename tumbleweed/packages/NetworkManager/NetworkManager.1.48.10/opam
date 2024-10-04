@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "NetworkManager-1.48.10-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "NetworkManager-1.48.10-1.1.x86_64.rpm"]
+depends: [
+  "NetworkManager-branding-openSUSE" 
+  "bash" 
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libaudit1" 
+  "libcurl-mini4" 
+  "libndp0" 
+  "libnm0" 
+  "libpsl5" 
+  "libreadline8" 
+  "libselinux1" 
+  "libsystemd0" 
+  "libudev-mini1" 
+  "mozilla-nspr" 
+  "mozilla-nss" 
+  "wpa_supplicant" {>= "0.6.4"}
+]
+extra-source "NetworkManager-1.48.10-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/NetworkManager-1.48.10-1.1.x86_64.rpm"
+}

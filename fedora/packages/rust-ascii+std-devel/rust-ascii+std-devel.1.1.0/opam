@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ascii+std-devel-1.1.0-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ascii+std-devel-1.1.0-5.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-ascii+alloc-devel" {= "1.1.0"}
+  "rust-ascii-devel" {= "1.1.0"}
+]
+extra-source "rust-ascii+std-devel-1.1.0-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ascii+std-devel-1.1.0-5.fc40.noarch.rpm"
+}

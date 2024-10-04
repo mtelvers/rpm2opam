@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "librelp0-1.11.0-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "librelp0-1.11.0-1.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgnutls30" 
+  "libopenssl3" 
+]
+extra-source "librelp0-1.11.0-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/librelp0-1.11.0-1.6.x86_64.rpm"
+}

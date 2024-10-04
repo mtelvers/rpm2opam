@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libhandy-lang-1.8.3-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libhandy-lang-1.8.3-1.2.noarch.rpm"]
+depends: [
+  "libhandy-1-0" {= "1.8.3"}
+]
+extra-source "libhandy-lang-1.8.3-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libhandy-lang-1.8.3-1.2.noarch.rpm"
+}

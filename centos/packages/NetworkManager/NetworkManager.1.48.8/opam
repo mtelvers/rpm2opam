@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "NetworkManager-1.48.8-1.el10.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "NetworkManager-1.48.8-1.el10.1.x86_64.rpm"]
+depends: [
+  "NetworkManager-libnm" {= "1.48.8"}
+  "alternatives" 
+  "audit-libs" 
+  "bash" 
+  "dbus" {>= "1.9.18"}
+  "glib2" {>= "2.80.4"}
+  "glibc" 
+  "gnutls" 
+  "libcurl" 
+  "libgcc" 
+  "libndp" 
+  "libselinux" 
+  "readline" 
+  "systemd" 
+  "systemd-libs" 
+  "systemd-udev" 
+]
+extra-source "NetworkManager-1.48.8-1.el10.1.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/NetworkManager-1.48.8-1.el10.1.x86_64.rpm"
+}

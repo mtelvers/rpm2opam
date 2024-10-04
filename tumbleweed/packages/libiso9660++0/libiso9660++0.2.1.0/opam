@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libiso9660++0-2.1.0-9.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libiso9660++0-2.1.0-9.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcdio19" 
+  "libgcc_s1" 
+  "libiso9660-11" 
+  "libstdc++6" 
+]
+extra-source "libiso9660++0-2.1.0-9.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libiso9660++0-2.1.0-9.1.x86_64.rpm"
+}

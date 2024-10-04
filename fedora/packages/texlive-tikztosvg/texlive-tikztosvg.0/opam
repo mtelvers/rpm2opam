@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-tikztosvg-svn60289-81.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-tikztosvg-svn60289-81.fc40.x86_64.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-kpathsea" 
+]
+extra-source "texlive-tikztosvg-svn60289-81.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-tikztosvg-svn60289-81.fc40.x86_64.rpm"
+}

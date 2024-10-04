@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hashcat-doc-6.2.6-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hashcat-doc-6.2.6-6.fc40.noarch.rpm"]
+depends: [
+  "hashcat" {= "6.2.6"}
+]
+extra-source "hashcat-doc-6.2.6-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hashcat-doc-6.2.6-6.fc40.noarch.rpm"
+}

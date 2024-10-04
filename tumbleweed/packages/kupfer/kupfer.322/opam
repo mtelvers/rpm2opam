@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kupfer-322-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kupfer-322-2.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "desktop-file-utils" 
+  "gvfs" 
+  "hicolor-icon-theme" 
+  "python311-dbus-python" 
+  "python311-docutils" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-libxml2" 
+  "python311-pycairo" 
+  "python311-pyxdg" 
+  "shared-mime-info" 
+  "typelib-1_0-AppIndicator3-0_1" {= "0.1"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Keybinder-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" 
+  "typelib-1_0-Wnck-3_0" {= "3.0"}
+  "update-desktop-files" 
+]
+extra-source "kupfer-322-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kupfer-322-2.2.noarch.rpm"
+}

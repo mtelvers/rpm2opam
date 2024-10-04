@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-colcon-ros-bundle-0.1.0-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-colcon-ros-bundle-0.1.0-13.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-colcon-bundle" {>= "0.0.18"}
+  "python3-colcon-ros" {>= "0.3.5"}
+  "python3-rosdep" {>= "0.14"}
+  "python3-setuptools" {>= "30.3"}
+]
+extra-source "python3-colcon-ros-bundle-0.1.0-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-colcon-ros-bundle-0.1.0-13.fc40.noarch.rpm"
+}

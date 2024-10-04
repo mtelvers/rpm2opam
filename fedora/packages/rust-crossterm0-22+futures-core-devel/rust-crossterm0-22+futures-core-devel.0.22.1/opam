@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-crossterm0.22+futures-core-devel-0.22.1-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-crossterm0.22+futures-core-devel-0.22.1-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-crossterm0-22-devel" {= "0.22.1"}
+  "rust-futures-core-devel" 
+]
+extra-source "rust-crossterm0.22+futures-core-devel-0.22.1-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-crossterm0.22+futures-core-devel-0.22.1-4.fc40.noarch.rpm"
+}

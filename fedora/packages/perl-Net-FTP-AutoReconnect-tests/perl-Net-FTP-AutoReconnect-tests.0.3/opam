@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Net-FTP-AutoReconnect-tests-0.3-42.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-FTP-AutoReconnect-tests-0.3-42.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Net-FTP-AutoReconnect" {= "0.3"}
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Net-FTP-AutoReconnect-tests-0.3-42.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Net-FTP-AutoReconnect-tests-0.3-42.fc40.noarch.rpm"
+}

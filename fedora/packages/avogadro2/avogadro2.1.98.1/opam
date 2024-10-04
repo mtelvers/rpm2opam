@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "avogadro2-1.98.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "avogadro2-1.98.1-5.fc40.x86_64.rpm"]
+depends: [
+  "avogadro2-libs" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "molequeue-libs" 
+  "openbabel" {>= "3.1.1"}
+  "python3" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "xtb" 
+]
+extra-source "avogadro2-1.98.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/avogadro2-1.98.1-5.fc40.x86_64.rpm"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-mkdocs-1.6.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-mkdocs-1.6.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "fontawesome-fonts" 
+  "fontawesome-fonts-web" 
+  "python310-Jinja2" {>= "2.11.1"}
+  "python310-Markdown" {>= "3.3.6"}
+  "python310-MarkupSafe" 
+  "python310-PyYAML" {>= "5.1"}
+  "python310-base" 
+  "python310-click" {>= "7.0"}
+  "python310-ghp-import" {>= "1.0"}
+  "python310-importlib-metadata" 
+  "python310-mergedeep" {>= "1.3.4"}
+  "python310-mkdocs-get-deps" {>= "0.2.0"}
+  "python310-packaging" {>= "20.5"}
+  "python310-pathspec" {>= "0.11.1"}
+  "python310-pyyaml_env_tag" {>= "0.1"}
+  "python310-watchdog" {>= "2.0"}
+  "update-alternatives" 
+]
+extra-source "python310-mkdocs-1.6.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-mkdocs-1.6.1-1.1.noarch.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "scorep-mpich-8.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scorep-mpich-8.1-5.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cube-devel" {>= "4.5"}
+  "cube-libs" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "otf2-devel" {>= "2.3"}
+  "papi-devel" 
+  "scorep-mpich-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "scorep-mpich-8.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/scorep-mpich-8.1-5.fc40.x86_64.rpm"
+}

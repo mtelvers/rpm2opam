@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-POE-Component-SimpleDBI-1.31-28.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-POE-Component-SimpleDBI-1.31-28.fc40.noarch.rpm"]
+depends: [
+  "perl-DBI" {>= "1.30"}
+  "perl-Data-Dumper" 
+  "perl-Error" {>= "0.15"}
+  "perl-POE" 
+  "perl-libs" 
+]
+extra-source "perl-POE-Component-SimpleDBI-1.31-28.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-POE-Component-SimpleDBI-1.31-28.fc40.noarch.rpm"
+}

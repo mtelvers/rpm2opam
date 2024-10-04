@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-phpdocumentor-reflection1-1.0.7-17.fc38.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-phpdocumentor-reflection1-1.0.7-17.fc38.noarch.rpm"]
+depends: [
+  "php-PsrLog" {>= "1.0.1"}
+  "php-common" {>= "5.3.3"}
+  "php-fedora-autoloader" 
+  "php-phpdocumentor-reflection-docblock" {>= "2.0"}
+  "php-phpdocumentor-reflection-docblock2" {< "3"}
+]
+extra-source "php-phpdocumentor-reflection1-1.0.7-17.fc38.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-phpdocumentor-reflection1-1.0.7-17.fc38.noarch.rpm"
+}

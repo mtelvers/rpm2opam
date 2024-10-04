@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "octave-forge-fits-1.0.7-2.26.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "octave-forge-fits-1.0.7-2.26.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libcfitsio10" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "octave-cli" {>= "3.0.0"}
+]
+extra-source "octave-forge-fits-1.0.7-2.26.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/octave-forge-fits-1.0.7-2.26.x86_64.rpm"
+}

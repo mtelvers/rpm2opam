@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "alure-devel-1.2-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "alure-devel-1.2-5.2.x86_64.rpm"]
+depends: [
+  "libalure1" {= "1.2"}
+  "openal-soft-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "alure-devel-1.2-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/alure-devel-1.2-5.2.x86_64.rpm"
+}

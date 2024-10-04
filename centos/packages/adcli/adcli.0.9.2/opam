@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "adcli-0.9.2-7.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "adcli-0.9.2-7.el10.x86_64.rpm"]
+depends: [
+  "cyrus-sasl-gssapi" 
+  "glibc" 
+  "krb5-libs" 
+  "openldap" 
+]
+extra-source "adcli-0.9.2-7.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/adcli-0.9.2-7.el10.x86_64.rpm"
+}

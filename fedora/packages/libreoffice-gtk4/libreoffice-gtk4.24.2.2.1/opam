@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libreoffice-gtk4-24.2.2.1-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libreoffice-gtk4-24.2.2.1-3.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "cairo-gobject" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk4" 
+  "libX11" 
+  "libepoxy" 
+  "libgcc" 
+  "libreoffice-core" 
+  "libreoffice-ure" 
+  "libstdc++" 
+  "pango" 
+]
+extra-source "libreoffice-gtk4-24.2.2.1-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libreoffice-gtk4-24.2.2.1-3.fc40.x86_64.rpm"
+}

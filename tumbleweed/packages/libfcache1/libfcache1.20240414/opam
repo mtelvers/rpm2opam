@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfcache1-20240414-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfcache1-20240414-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcdata1" 
+  "libcerror1" 
+]
+extra-source "libfcache1-20240414-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfcache1-20240414-1.1.x86_64.rpm"
+}

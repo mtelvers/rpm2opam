@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Exception-Class-1.45-1.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Exception-Class-1.45-1.15.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Data-Inheritable" {>= "0.2"}
+  "perl-Devel-StackTrace" {>= "2.0"}
+]
+extra-source "perl-Exception-Class-1.45-1.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Exception-Class-1.45-1.15.noarch.rpm"
+}

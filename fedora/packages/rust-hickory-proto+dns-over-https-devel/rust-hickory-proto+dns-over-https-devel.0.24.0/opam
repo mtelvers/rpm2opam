@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-hickory-proto+dns-over-https-devel-0.24.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-hickory-proto+dns-over-https-devel-0.24.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-hickory-proto+bytes-devel" {= "0.24.0"}
+  "rust-hickory-proto+dns-over-rustls-devel" {= "0.24.0"}
+  "rust-hickory-proto+h2-devel" {= "0.24.0"}
+  "rust-hickory-proto+http-devel" {= "0.24.0"}
+  "rust-hickory-proto+tokio-runtime-devel" {= "0.24.0"}
+  "rust-hickory-proto-devel" {= "0.24.0"}
+]
+extra-source "rust-hickory-proto+dns-over-https-devel-0.24.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-hickory-proto+dns-over-https-devel-0.24.0-2.fc40.noarch.rpm"
+}

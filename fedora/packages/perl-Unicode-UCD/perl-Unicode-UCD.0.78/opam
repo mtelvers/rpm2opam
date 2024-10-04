@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Unicode-UCD-0.78-506.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Unicode-UCD-0.78-506.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-PathTools" 
+  "perl-Storable" 
+  "perl-Unicode-Normalize" 
+  "perl-if" 
+  "perl-libs" 
+]
+extra-source "perl-Unicode-UCD-0.78-506.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Unicode-UCD-0.78-506.fc40.noarch.rpm"
+}

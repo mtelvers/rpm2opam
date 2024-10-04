@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xorg-x11-drivers-2022-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xorg-x11-drivers-2022-6.fc40.x86_64.rpm"]
+depends: [
+  "xorg-x11-drv-ati" 
+  "xorg-x11-drv-dummy" 
+  "xorg-x11-drv-evdev" 
+  "xorg-x11-drv-intel" 
+  "xorg-x11-drv-libinput" 
+  "xorg-x11-drv-nouveau" 
+  "xorg-x11-drv-openchrome" 
+  "xorg-x11-drv-qxl" 
+  "xorg-x11-drv-vmware" 
+  "xorg-x11-drv-wacom" 
+  "xorg-x11-server-Xorg" 
+]
+extra-source "xorg-x11-drivers-2022-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xorg-x11-drivers-2022-6.fc40.x86_64.rpm"
+}

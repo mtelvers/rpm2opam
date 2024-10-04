@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "quodlibet-4.6.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "quodlibet-4.6.0-3.fc40.noarch.rpm"]
+depends: [
+  "exfalso" {= "4.6.0"}
+  "gstreamer1" 
+  "gstreamer1-plugins-base" 
+  "gstreamer1-plugins-good" 
+  "python3" 
+  "python3-dbus" 
+]
+extra-source "quodlibet-4.6.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/quodlibet-4.6.0-3.fc40.noarch.rpm"
+}

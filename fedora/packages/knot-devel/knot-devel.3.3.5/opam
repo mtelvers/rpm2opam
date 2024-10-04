@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "knot-devel-3.3.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "knot-devel-3.3.5-1.fc40.x86_64.rpm"]
+depends: [
+  "gnutls-devel" {>= "3.3"}
+  "knot-libs" {= "3.3.5"}
+  "pkgconf-pkg-config" 
+]
+extra-source "knot-devel-3.3.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/knot-devel-3.3.5-1.fc40.x86_64.rpm"
+}

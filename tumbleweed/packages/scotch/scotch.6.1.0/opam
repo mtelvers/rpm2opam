@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "scotch-6.1.0-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scotch-6.1.0-3.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbz2-1" 
+  "libz-ng-compat1" 
+]
+extra-source "scotch-6.1.0-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/scotch-6.1.0-3.3.x86_64.rpm"
+}

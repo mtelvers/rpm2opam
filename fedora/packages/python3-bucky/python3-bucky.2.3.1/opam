@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-bucky-2.3.1-0.6.20230409gitcda5072.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-bucky-2.3.1-0.6.20230409gitcda5072.fc40.noarch.rpm"]
+depends: [
+  "collectd" 
+  "python3" 
+  "python3-cryptography" 
+  "python3-setproctitle" 
+  "python3-setuptools" 
+  "python3-six" 
+  "python3-watchdog" 
+]
+extra-source "python3-bucky-2.3.1-0.6.20230409gitcda5072.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-bucky-2.3.1-0.6.20230409gitcda5072.fc40.noarch.rpm"
+}

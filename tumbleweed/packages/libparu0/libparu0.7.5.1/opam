@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libparu0-7.5.1-50.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libparu0-7.5.1-50.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libgomp1" 
+  "libopenblas_openmp0" 
+  "libstdc++6" 
+  "libsuitesparseconfig7" 
+  "libumfpack6" 
+]
+extra-source "libparu0-7.5.1-50.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libparu0-7.5.1-50.2.x86_64.rpm"
+}

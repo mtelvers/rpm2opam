@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-heuristica-2024.217.1.093svn69649-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-heuristica-2024.217.1.093svn69649-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-fontaxes" 
+  "texlive-heuristica-fonts" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-mweights" 
+  "texlive-scripts" 
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-xkeyval" 
+]
+extra-source "texlive-heuristica-2024.217.1.093svn69649-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-heuristica-2024.217.1.093svn69649-56.1.noarch.rpm"
+}

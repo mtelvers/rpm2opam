@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "abi-compliance-checker-2.3-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "abi-compliance-checker-2.3-16.fc40.noarch.rpm"]
+depends: [
+  "abi-dumper" {>= "0.99.15"}
+  "binutils" 
+  "ctags" {>= "5.8"}
+  "findutils" 
+  "gcc" {>= "4.5"}
+  "gcc-c++" {>= "4.5"}
+  "perl-Data-Dumper" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-PathTools" 
+  "perl-Storable" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "abi-compliance-checker-2.3-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/abi-compliance-checker-2.3-16.fc40.noarch.rpm"
+}

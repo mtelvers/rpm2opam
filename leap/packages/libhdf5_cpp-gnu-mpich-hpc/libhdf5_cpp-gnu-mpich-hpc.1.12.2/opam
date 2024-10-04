@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["/usr/bin/zypper" "-n" "install" "libhdf5_cpp-gnu-mpich-hpc-1.12.2-slfo.1.1.20.x86_64.rpm"]
+]
+remove: [
+  ["/usr/bin/zypper" "-n" "remove" "libhdf5_cpp-gnu-mpich-hpc-1.12.2-slfo.1.1.20.x86_64.rpm"]
+]
+depends: [
+  "libhdf5_cpp_1_12_2-gnu-mpich-hpc" {= "1.12.2"}
+]
+extra-source "libhdf5_cpp-gnu-mpich-hpc-1.12.2-slfo.1.1.20.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libhdf5_cpp-gnu-mpich-hpc-1.12.2-slfo.1.1.20.x86_64.rpm"
+}

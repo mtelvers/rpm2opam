@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xfdesktop-4.18.1-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xfdesktop-4.18.1-4.fc40.x86_64.rpm"]
+depends: [
+  "Thunar" 
+  "cairo" 
+  "cairo-gobject" 
+  "desktop-backgrounds-compat" 
+  "exo" 
+  "garcon" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libX11" 
+  "libnotify" 
+  "libwnck3" 
+  "libxfce4ui" 
+  "libxfce4util" 
+  "pango" 
+  "redhat-menus" 
+  "webp-pixbuf-loader" 
+  "xfce4-panel" {>= "4.18"}
+  "xfconf" 
+  "xfwm4" {>= "4.18"}
+]
+extra-source "xfdesktop-4.18.1-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xfdesktop-4.18.1-4.fc40.x86_64.rpm"
+}

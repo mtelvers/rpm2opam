@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hpx-devel-1.10.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hpx-devel-1.10.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libhwloc15" 
+  "libstdc++6" 
+  "libtcmalloc_minimal4" 
+  "openmpi4-devel" 
+  "pkgconf-pkg-config" 
+  "python311-base" 
+]
+extra-source "hpx-devel-1.10.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/hpx-devel-1.10.0-1.1.x86_64.rpm"
+}

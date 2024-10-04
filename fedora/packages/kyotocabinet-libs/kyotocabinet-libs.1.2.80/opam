@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kyotocabinet-libs-1.2.80-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kyotocabinet-libs-1.2.80-5.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "lzo" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "kyotocabinet-libs-1.2.80-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kyotocabinet-libs-1.2.80-5.fc40.x86_64.rpm"
+}

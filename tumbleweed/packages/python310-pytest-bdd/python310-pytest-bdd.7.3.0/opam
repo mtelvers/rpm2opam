@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pytest-bdd-7.3.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pytest-bdd-7.3.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-Mako" 
+  "python310-base" 
+  "python310-packaging" 
+  "python310-parse" 
+  "python310-parse_type" 
+  "python310-pytest" {>= "6.2.0"}
+  "python310-typing_extensions" 
+  "update-alternatives" 
+]
+extra-source "python310-pytest-bdd-7.3.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-pytest-bdd-7.3.0-1.1.noarch.rpm"
+}

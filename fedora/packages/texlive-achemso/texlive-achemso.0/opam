@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-achemso-svn65103-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-achemso-svn65103-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-caption" 
+  "texlive-float" 
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-kpathsea" 
+  "texlive-mciteplus" 
+  "texlive-natbib" 
+  "texlive-setspace" 
+  "texlive-url" 
+  "texlive-xkeyval" 
+]
+extra-source "texlive-achemso-svn65103-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-achemso-svn65103-71.fc40.noarch.rpm"
+}

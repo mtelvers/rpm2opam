@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-ircmaxell-random-lib-1.2.0-15.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-ircmaxell-random-lib-1.2.0-15.fc39.noarch.rpm"]
+depends: [
+  "php-common" {>= "5.3.2"}
+  "php-ircmaxell-security-lib" {>= "1.1"}
+  "php-process" 
+]
+extra-source "php-ircmaxell-random-lib-1.2.0-15.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-ircmaxell-random-lib-1.2.0-15.fc39.noarch.rpm"
+}

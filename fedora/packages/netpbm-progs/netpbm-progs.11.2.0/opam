@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "netpbm-progs-11.02.00-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netpbm-progs-11.02.00-6.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "ghostscript" 
+  "glibc" 
+  "jasper-libs" 
+  "jbigkit-libs" 
+  "libX11" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libtiff" 
+  "libxml2" 
+  "netpbm" 
+  "perl-English" 
+  "perl-Errno" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-PathTools" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.0.0"}
+  "zlib-ng-compat" 
+]
+extra-source "netpbm-progs-11.02.00-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/netpbm-progs-11.02.00-6.fc40.x86_64.rpm"
+}

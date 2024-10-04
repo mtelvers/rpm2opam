@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libisofs-1.5.6-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libisofs-1.5.6-4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libacl" 
+  "zlib-ng-compat" 
+]
+extra-source "libisofs-1.5.6-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libisofs-1.5.6-4.fc40.x86_64.rpm"
+}

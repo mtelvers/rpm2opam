@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libguac-client-kubernetes-1.5.4-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libguac-client-kubernetes-1.5.4-3.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "glib2" 
+  "glibc" 
+  "harfbuzz" 
+  "libguac" {= "1.5.4"}
+  "libjpeg-turbo" 
+  "libogg" 
+  "libpng" 
+  "libvorbis" 
+  "libwebp" 
+  "libwebsockets" 
+  "openssl-libs" 
+  "pango" 
+  "uuid" 
+]
+extra-source "libguac-client-kubernetes-1.5.4-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libguac-client-kubernetes-1.5.4-3.fc40.x86_64.rpm"
+}

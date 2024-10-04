@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xaw3dd-1.6.6-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xaw3dd-1.6.6-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXaw3d6" {= "1.6.6"}
+  "libXaw3d7" {= "1.6.6"}
+  "libXaw3d8" {= "1.6.6"}
+  "libXext6" 
+  "libXmu6" 
+  "libXpm4" 
+  "libXt6" 
+]
+extra-source "xaw3dd-1.6.6-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xaw3dd-1.6.6-1.2.x86_64.rpm"
+}

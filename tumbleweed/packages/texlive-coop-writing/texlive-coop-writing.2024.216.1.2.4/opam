@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-coop-writing-2024.216.1.2.4svn61607-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-coop-writing-2024.216.1.2.4svn61607-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-csquotes" 
+  "texlive-environ" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-mdframed" 
+  "texlive-oberdiek" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-soul" 
+  "texlive-tocloft" 
+  "texlive-tools" 
+  "texlive-ulem" 
+  "texlive-xcolor" 
+  "texlive-xstring" 
+]
+extra-source "texlive-coop-writing-2024.216.1.2.4svn61607-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-coop-writing-2024.216.1.2.4svn61607-57.1.noarch.rpm"
+}

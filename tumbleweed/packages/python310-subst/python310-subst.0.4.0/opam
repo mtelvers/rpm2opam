@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-subst-0.4.0-4.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-subst-0.4.0-4.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-base" 
+  "update-alternatives" 
+]
+extra-source "python310-subst-0.4.0-4.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-subst-0.4.0-4.2.noarch.rpm"
+}

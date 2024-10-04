@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lincity-ng-2.9-0.33.20210424gitd35c3be.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lincity-ng-2.9-0.33.20210424gitd35c3be.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "SDL2_gfx" 
+  "SDL2_image" 
+  "SDL2_mixer" 
+  "SDL2_ttf" 
+  "glibc" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libstdc++" 
+  "libxml2" 
+  "lincity-ng-data" {= "2.9"}
+  "physfs" 
+  "zlib-ng-compat" 
+]
+extra-source "lincity-ng-2.9-0.33.20210424gitd35c3be.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lincity-ng-2.9-0.33.20210424gitd35c3be.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tar-doc-1.35-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tar-doc-1.35-3.1.noarch.rpm"]
+depends: [
+  "tar" {= "1.35"}
+]
+extra-source "tar-doc-1.35-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tar-doc-1.35-3.1.noarch.rpm"
+}

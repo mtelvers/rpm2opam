@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-bower-json-devel-1.1.0.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-bower-json-devel-1.1.0.0-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-better-errors-devel" 
+  "ghc-aeson-devel" 
+  "ghc-base-devel" 
+  "ghc-bower-json" {= "1.1.0.0"}
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-deepseq-devel" 
+  "ghc-mtl-devel" 
+  "ghc-scientific-devel" 
+  "ghc-text-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-bower-json-devel-1.1.0.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-bower-json-devel-1.1.0.0-6.fc40.x86_64.rpm"
+}

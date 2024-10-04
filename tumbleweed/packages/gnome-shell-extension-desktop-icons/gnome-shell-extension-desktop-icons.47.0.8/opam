@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-shell-extension-desktop-icons-47.0.8+10-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-shell-extension-desktop-icons-47.0.8+10-2.1.x86_64.rpm"]
+depends: [
+  "cinnamon" 
+  "girepository-1_0" 
+  "gnome-shell" 
+  "magpie" 
+  "nautilus" {>= "45"}
+  "typelib-1_0-Adw-1" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-GnomeAutoar-0_1" 
+  "typelib-1_0-GnomeDesktop-3_0" {= "3.0"}
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" 
+]
+extra-source "gnome-shell-extension-desktop-icons-47.0.8+10-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnome-shell-extension-desktop-icons-47.0.8+10-2.1.x86_64.rpm"
+}

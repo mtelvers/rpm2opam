@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-cookiecutter-2.6.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-cookiecutter-2.6.0-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "git-core" 
+  "python311-Jinja2" 
+  "python311-PyYAML" 
+  "python311-arrow" 
+  "python311-base" 
+  "python311-binaryornot" {>= "0.2.0"}
+  "python311-click" 
+  "python311-python-slugify" 
+  "python311-requests" {>= "2.18.0"}
+  "python311-rich" 
+  "update-alternatives" 
+]
+extra-source "python311-cookiecutter-2.6.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-cookiecutter-2.6.0-1.2.noarch.rpm"
+}

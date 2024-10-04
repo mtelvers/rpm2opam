@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dracut-kiwi-oem-dump-10.1.10-slfo.1.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dracut-kiwi-oem-dump-10.1.10-slfo.1.1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dracut-kiwi-lib" {= "10.1.10"}
+  "gawk" 
+  "kexec-tools" 
+  "kpartx" 
+]
+extra-source "dracut-kiwi-oem-dump-10.1.10-slfo.1.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/dracut-kiwi-oem-dump-10.1.10-slfo.1.1.1.x86_64.rpm"
+}

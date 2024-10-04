@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-IfElse-devel-0.85-4.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-IfElse-devel-0.85-4.9.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-IfElse" {= "0.85"}
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-mtl-devel" 
+]
+extra-source "ghc-IfElse-devel-0.85-4.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-IfElse-devel-0.85-4.9.x86_64.rpm"
+}

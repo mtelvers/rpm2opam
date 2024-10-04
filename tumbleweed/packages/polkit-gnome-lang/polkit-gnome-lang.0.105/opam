@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "polkit-gnome-lang-0.105-15.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "polkit-gnome-lang-0.105-15.3.noarch.rpm"]
+depends: [
+  "polkit-gnome" {= "0.105"}
+]
+extra-source "polkit-gnome-lang-0.105-15.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/polkit-gnome-lang-0.105-15.3.noarch.rpm"
+}

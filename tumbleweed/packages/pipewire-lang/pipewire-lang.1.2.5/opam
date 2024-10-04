@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pipewire-lang-1.2.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pipewire-lang-1.2.5-1.1.noarch.rpm"]
+depends: [
+  "pipewire" {= "1.2.5"}
+]
+extra-source "pipewire-lang-1.2.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pipewire-lang-1.2.5-1.1.noarch.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "geoclue2-2.7.1-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "geoclue2-2.7.1-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libavahi-client3" 
+  "libavahi-common3" 
+  "libavahi-glib1" 
+  "libgio-2_0-0" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libjson-glib-1_0-0" 
+  "libmm-glib0" 
+  "libnotify4" 
+  "libsoup-3_0-0" 
+  "system-user-srvGeoClue" 
+  "systemd" 
+]
+extra-source "geoclue2-2.7.1-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/geoclue2-2.7.1-slfo.1.1.7.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-primal-sieve-devel-0.3.6-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-primal-sieve-devel-0.3.6-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-primal-bit+default-devel" 
+  "rust-primal-estimate+default-devel" 
+  "rust-smallvec+default-devel" 
+]
+extra-source "rust-primal-sieve-devel-0.3.6-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-primal-sieve-devel-0.3.6-4.fc40.noarch.rpm"
+}

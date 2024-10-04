@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-ConfigFromFile-0.14-1.30.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-ConfigFromFile-0.14-1.30.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Moose" 
+  "perl-MooseX-Types" 
+  "perl-MooseX-Types-Path-Tiny" {>= "0.5"}
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-MooseX-ConfigFromFile-0.14-1.30.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-ConfigFromFile-0.14-1.30.noarch.rpm"
+}

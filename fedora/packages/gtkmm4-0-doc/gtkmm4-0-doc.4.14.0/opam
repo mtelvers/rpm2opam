@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gtkmm4.0-doc-4.14.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtkmm4.0-doc-4.14.0-1.fc40.noarch.rpm"]
+depends: [
+  "glibmm2-68-doc" 
+  "gtkmm4-0" {= "4.14.0"}
+]
+extra-source "gtkmm4.0-doc-4.14.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gtkmm4.0-doc-4.14.0-1.fc40.noarch.rpm"
+}

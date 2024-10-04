@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Barcode-Code128-2.21-26.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Barcode-Code128-2.21-26.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-GD" {>= "2.18"}
+  "perl-constant" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-vars" 
+]
+extra-source "perl-Barcode-Code128-2.21-26.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Barcode-Code128-2.21-26.fc40.noarch.rpm"
+}

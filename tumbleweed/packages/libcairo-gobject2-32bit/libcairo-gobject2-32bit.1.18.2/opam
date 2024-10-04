@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcairo-gobject2-32bit-1.18.2-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcairo-gobject2-32bit-1.18.2-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "libcairo2-32bit" 
+  "libglib-2_0-0-32bit" 
+  "libgobject-2_0-0-32bit" 
+]
+extra-source "libcairo-gobject2-32bit-1.18.2-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcairo-gobject2-32bit-1.18.2-2.1.x86_64.rpm"
+}

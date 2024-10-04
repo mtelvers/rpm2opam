@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-latex-3.46.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-latex-3.46.0-2.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gsettings-desktop-schemas" 
+  "libdconf1" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgedit-amtk-5-0" 
+  "libgedit-gtksourceview-300-0" 
+  "libgee-0_8-2" 
+  "libgspell-1-2" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+  "libtepl-6-4" 
+  "texlive-latexmk-bin" 
+]
+extra-source "gnome-latex-3.46.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnome-latex-3.46.0-2.1.x86_64.rpm"
+}

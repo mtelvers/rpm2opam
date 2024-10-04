@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Moo-2.005005-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Moo-2.005005-1.6.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Method-Modifiers" {>= "1.10"}
+  "perl-Role-Tiny" {>= "2.2003"}
+  "perl-Sub-Quote" {>= "2.6006"}
+]
+extra-source "perl-Moo-2.005005-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Moo-2.005005-1.6.noarch.rpm"
+}

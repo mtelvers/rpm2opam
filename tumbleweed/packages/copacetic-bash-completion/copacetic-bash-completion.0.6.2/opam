@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "copacetic-bash-completion-0.6.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "copacetic-bash-completion-0.6.2-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "copacetic" {= "0.6.2"}
+]
+extra-source "copacetic-bash-completion-0.6.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/copacetic-bash-completion-0.6.2-1.1.noarch.rpm"
+}

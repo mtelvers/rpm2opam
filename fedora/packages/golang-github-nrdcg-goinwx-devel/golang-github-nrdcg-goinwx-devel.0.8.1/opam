@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-nrdcg-goinwx-devel-0.8.1-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-nrdcg-goinwx-devel-0.8.1-9.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-fatih-structs-devel" 
+  "golang-github-kolo-xmlrpc-devel" 
+  "golang-github-mitchellh-mapstructure-devel" 
+]
+extra-source "golang-github-nrdcg-goinwx-devel-0.8.1-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-nrdcg-goinwx-devel-0.8.1-9.fc40.noarch.rpm"
+}

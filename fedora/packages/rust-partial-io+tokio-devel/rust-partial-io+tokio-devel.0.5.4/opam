@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-partial-io+tokio-devel-0.5.4-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-partial-io+tokio-devel-0.5.4-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-partial-io-devel" {= "0.5.4"}
+  "rust-tokio+default-devel" 
+]
+extra-source "rust-partial-io+tokio-devel-0.5.4-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-partial-io+tokio-devel-0.5.4-4.fc40.noarch.rpm"
+}

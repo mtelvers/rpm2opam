@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-dogpile.cache-1.3.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-dogpile.cache-1.3.3-1.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-decorator" {>= "4.0.0"}
+  "python311-stevedore" {>= "3.0.0"}
+]
+extra-source "python311-dogpile.cache-1.3.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-dogpile.cache-1.3.3-1.1.noarch.rpm"
+}

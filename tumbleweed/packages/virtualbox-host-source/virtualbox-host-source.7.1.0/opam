@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "virtualbox-host-source-7.1.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "virtualbox-host-source-7.1.0-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gcc" 
+  "kernel-devel" 
+  "libelf-devel" 
+  "make" 
+  "virtualbox" {= "7.1.0"}
+]
+extra-source "virtualbox-host-source-7.1.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/virtualbox-host-source-7.1.0-2.1.noarch.rpm"
+}

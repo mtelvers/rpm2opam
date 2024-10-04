@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-autopep8-2.0.4-3.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-autopep8-2.0.4-3.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-pycodestyle" {>= "2.10.0"}
+  "update-alternatives" 
+]
+extra-source "python311-autopep8-2.0.4-3.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-autopep8-2.0.4-3.3.noarch.rpm"
+}

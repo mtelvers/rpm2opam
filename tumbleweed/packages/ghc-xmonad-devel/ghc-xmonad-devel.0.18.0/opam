@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-xmonad-devel-0.18.0-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-xmonad-devel-0.18.0-1.5.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-X11-devel" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-data-default-class-devel" 
+  "ghc-directory-devel" 
+  "ghc-filepath-devel" 
+  "ghc-mtl-devel" 
+  "ghc-process-devel" 
+  "ghc-setlocale-devel" 
+  "ghc-time-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unix-devel" 
+  "ghc-xmonad" {= "0.18.0"}
+]
+extra-source "ghc-xmonad-devel-0.18.0-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-xmonad-devel-0.18.0-1.5.x86_64.rpm"
+}

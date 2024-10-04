@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "weave-kube-2.8.1-3.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "weave-kube-2.8.1-3.12.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "bind-utils" 
+  "busybox-kmod" 
+  "ca-certificates-mozilla" 
+  "conntrack-tools" 
+  "curl" 
+  "glibc" 
+  "iproute2" 
+  "ipset" 
+  "iptables" 
+  "libpcap1" 
+]
+extra-source "weave-kube-2.8.1-3.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/weave-kube-2.8.1-3.12.x86_64.rpm"
+}

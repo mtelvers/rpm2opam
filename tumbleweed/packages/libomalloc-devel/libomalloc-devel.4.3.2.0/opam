@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libomalloc-devel-4.3.2.p16-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libomalloc-devel-4.3.2.p16-1.2.x86_64.rpm"]
+depends: [
+  "libomalloc-4_3_2" {= "4.3.2.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libomalloc-devel-4.3.2.p16-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libomalloc-devel-4.3.2.p16-1.2.x86_64.rpm"
+}

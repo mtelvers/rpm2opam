@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "w3mir-1.0.10-683.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "w3mir-1.0.10-683.3.noarch.rpm"]
+depends: [
+  "perl" {= "5.40.0"}
+  "perl-HTML-Parser" 
+  "perl-URI" 
+  "perl-base" 
+  "perl-libwww-perl" 
+]
+extra-source "w3mir-1.0.10-683.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/w3mir-1.0.10-683.3.noarch.rpm"
+}

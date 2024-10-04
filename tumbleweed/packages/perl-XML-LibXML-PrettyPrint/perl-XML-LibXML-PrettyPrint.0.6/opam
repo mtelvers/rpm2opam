@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-XML-LibXML-PrettyPrint-0.006-1.22.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XML-LibXML-PrettyPrint-0.006-1.22.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Exporter-Tiny" 
+  "perl-XML-LibXML" {>= "1.62"}
+  "perl-XML-Simple" 
+  "perl-base" 
+]
+extra-source "perl-XML-LibXML-PrettyPrint-0.006-1.22.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-XML-LibXML-PrettyPrint-0.006-1.22.noarch.rpm"
+}

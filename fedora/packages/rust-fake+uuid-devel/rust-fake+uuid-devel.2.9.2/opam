@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-fake+uuid-devel-2.9.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-fake+uuid-devel-2.9.2-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-fake-devel" {= "2.9.2"}
+  "rust-uuid+default-devel" 
+  "rust-uuid+v1-devel" 
+  "rust-uuid+v3-devel" 
+  "rust-uuid+v4-devel" 
+  "rust-uuid+v5-devel" 
+]
+extra-source "rust-fake+uuid-devel-2.9.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-fake+uuid-devel-2.9.2-3.fc40.noarch.rpm"
+}

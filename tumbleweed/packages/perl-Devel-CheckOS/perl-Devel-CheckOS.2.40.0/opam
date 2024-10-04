@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Devel-CheckOS-2.40.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Devel-CheckOS-2.40.0-1.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-File-Find-Rule" {>= "0.28"}
+  "perl-File-Temp" {>= "0.19"}
+  "perl-Test-Warnings" 
+  "perl-base" 
+]
+extra-source "perl-Devel-CheckOS-2.40.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Devel-CheckOS-2.40.0-1.2.noarch.rpm"
+}

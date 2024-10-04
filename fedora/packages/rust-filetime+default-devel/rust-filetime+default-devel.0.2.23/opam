@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-filetime+default-devel-0.2.23-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-filetime+default-devel-0.2.23-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-filetime-devel" {= "0.2.23"}
+]
+extra-source "rust-filetime+default-devel-0.2.23-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-filetime+default-devel-0.2.23-2.fc40.noarch.rpm"
+}

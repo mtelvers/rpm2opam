@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtksourceview4-lang-4.8.4-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtksourceview4-lang-4.8.4-1.7.noarch.rpm"]
+depends: [
+  "libgtksourceview-4-0" {= "4.8.4"}
+]
+extra-source "gtksourceview4-lang-4.8.4-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gtksourceview4-lang-4.8.4-1.7.noarch.rpm"
+}

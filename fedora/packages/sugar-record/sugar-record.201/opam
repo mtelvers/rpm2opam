@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sugar-record-201-8.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sugar-record-201-8.fc39.noarch.rpm"]
+depends: [
+  "gstreamer1-plugins-base" 
+  "gstreamer1-plugins-good" 
+  "python3" 
+  "sugar" 
+  "sugar-toolkit-gtk3" 
+]
+extra-source "sugar-record-201-8.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sugar-record-201-8.fc39.noarch.rpm"
+}

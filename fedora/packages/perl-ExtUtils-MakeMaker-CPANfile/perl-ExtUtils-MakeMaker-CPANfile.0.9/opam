@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-ExtUtils-MakeMaker-CPANfile-0.09-18.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-ExtUtils-MakeMaker-CPANfile-0.09-18.fc40.noarch.rpm"]
+depends: [
+  "perl-CPAN-Meta" {>= "2.141170"}
+  "perl-ExtUtils-MakeMaker" {>= "6.17"}
+  "perl-Module-CPANfile" 
+  "perl-PathTools" 
+  "perl-libs" 
+  "perl-version" {>= "0.76"}
+]
+extra-source "perl-ExtUtils-MakeMaker-CPANfile-0.09-18.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-ExtUtils-MakeMaker-CPANfile-0.09-18.fc40.noarch.rpm"
+}

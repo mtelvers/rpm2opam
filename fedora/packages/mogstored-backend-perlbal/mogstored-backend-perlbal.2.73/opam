@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mogstored-backend-perlbal-2.73-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mogstored-backend-perlbal-2.73-22.fc40.noarch.rpm"]
+depends: [
+  "Perlbal" {>= "1.79"}
+  "mogstored" 
+  "perl-Fcntl" 
+  "perl-IO-AIO" {>= "1.6"}
+  "perl-POSIX" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "mogstored-backend-perlbal-2.73-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mogstored-backend-perlbal-2.73-22.fc40.noarch.rpm"
+}

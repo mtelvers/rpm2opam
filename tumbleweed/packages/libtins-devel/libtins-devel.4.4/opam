@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libtins-devel-4.4-2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libtins-devel-4.4-2.5.x86_64.rpm"]
+depends: [
+  "libpcap-devel" 
+  "libtins4_4" {= "4.4"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libtins-devel-4.4-2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libtins-devel-4.4-2.5.x86_64.rpm"
+}

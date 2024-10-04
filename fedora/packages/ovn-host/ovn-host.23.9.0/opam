@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ovn-host-23.09.0-139.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ovn-host-23.09.0-139.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "firewalld-filesystem" 
+  "glibc" 
+  "libcap-ng" 
+  "openssl-libs" 
+  "ovn" {= "23.9.0"}
+  "unbound-libs" 
+]
+extra-source "ovn-host-23.09.0-139.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ovn-host-23.09.0-139.fc40.x86_64.rpm"
+}

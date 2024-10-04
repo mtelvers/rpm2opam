@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-hyperlocal-devel-0.8.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-hyperlocal-devel-0.8.0-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-futures-util+default-devel" 
+  "rust-hex+default-devel" 
+  "rust-hyper+client-devel" 
+  "rust-hyper+default-devel" 
+  "rust-hyper+http1-devel" 
+  "rust-hyper+runtime-devel" 
+  "rust-hyper+server-devel" 
+  "rust-pin-project+default-devel" 
+  "rust-tokio+default-devel" 
+  "rust-tokio+net-devel" 
+  "rust-tokio+rt-multi-thread-devel" 
+]
+extra-source "rust-hyperlocal-devel-0.8.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-hyperlocal-devel-0.8.0-4.fc40.noarch.rpm"
+}

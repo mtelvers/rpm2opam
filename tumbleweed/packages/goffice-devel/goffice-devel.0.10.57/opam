@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "goffice-devel-0.10.57-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "goffice-devel-0.10.57-1.3.x86_64.rpm"]
+depends: [
+  "cairo-devel" 
+  "glib2-devel" 
+  "gtk3-devel" 
+  "lasem-devel" 
+  "libgoffice-0_10-10" {= "0.10.57"}
+  "libgsf-devel" 
+  "librsvg-devel" 
+  "libspectre-devel" 
+  "libxml2-devel" 
+  "libxslt-devel" 
+  "pango-devel" 
+  "pkgconf-pkg-config" 
+  "typelib-1_0-GOffice-0_10" {= "0.10.57"}
+]
+extra-source "goffice-devel-0.10.57-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/goffice-devel-0.10.57-1.3.x86_64.rpm"
+}

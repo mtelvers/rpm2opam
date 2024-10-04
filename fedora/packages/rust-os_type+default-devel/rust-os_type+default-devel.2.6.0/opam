@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-os_type+default-devel-2.6.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-os_type+default-devel-2.6.0-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-os_type-devel" {= "2.6.0"}
+]
+extra-source "rust-os_type+default-devel-2.6.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-os_type+default-devel-2.6.0-4.fc40.noarch.rpm"
+}

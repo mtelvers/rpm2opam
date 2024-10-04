@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcxx-gtk-utils-3-2_2-0-2.2.20-1.15.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcxx-gtk-utils-3-2_2-0-2.2.20-1.15.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libgcc_s1" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+  "libstdc++6" 
+]
+extra-source "libcxx-gtk-utils-3-2_2-0-2.2.20-1.15.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcxx-gtk-utils-3-2_2-0-2.2.20-1.15.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ansible-packaging-1-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ansible-packaging-1-14.fc40.noarch.rpm"]
+depends: [
+  "ansible-core" 
+  "ansible-srpm-macros" {= "1"}
+  "python3" 
+  "python3-pyyaml" 
+]
+extra-source "ansible-packaging-1-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/ansible-packaging-1-14.fc40.noarch.rpm"
+}

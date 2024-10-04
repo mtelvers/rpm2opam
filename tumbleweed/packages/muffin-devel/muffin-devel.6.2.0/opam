@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "muffin-devel-6.2.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "muffin-devel-6.2.0-1.1.x86_64.rpm"]
+depends: [
+  "Mesa-libEGL-devel" 
+  "Mesa-libGL-devel" 
+  "Mesa-libGLESv2-devel" 
+  "at-spi2-core-devel" {>= "2.5.3"}
+  "cairo-devel" {>= "1.10.0"}
+  "glib2-devel" {>= "2.61.1"}
+  "gtk3-devel" {>= "3.19.8"}
+  "json-glib-devel" {>= "0.12.0"}
+  "libX11-devel" 
+  "libXfixes-devel" {>= "3"}
+  "libXi-devel" {>= "1.7.4"}
+  "libcinnamon-desktop-devel" {>= "5.3"}
+  "libgraphene-devel" {>= "1.9.3"}
+  "libmuffin0" {= "6.2.0"}
+  "pango-devel" {>= "1.2.0"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Muffin-0_0" {= "6.2.0"}
+  "wayland-devel" {>= "1.13.0"}
+]
+extra-source "muffin-devel-6.2.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/muffin-devel-6.2.0-1.1.x86_64.rpm"
+}

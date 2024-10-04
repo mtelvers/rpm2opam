@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vim-syntastic-asciidoc-3.10.0-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vim-syntastic-asciidoc-3.10.0-22.fc40.noarch.rpm"]
+depends: [
+  "asciidoc" 
+  "vim-syntastic" {= "3.10.0"}
+  "vim-syntastic-text" 
+]
+extra-source "vim-syntastic-asciidoc-3.10.0-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vim-syntastic-asciidoc-3.10.0-22.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "acct-6.6.4-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "acct-6.6.4-5.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "logrotate" 
+]
+extra-source "acct-6.6.4-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/acct-6.6.4-5.2.x86_64.rpm"
+}

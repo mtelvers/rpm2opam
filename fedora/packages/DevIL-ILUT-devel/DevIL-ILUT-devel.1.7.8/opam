@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "DevIL-ILUT-devel-1.7.8-43.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "DevIL-ILUT-devel-1.7.8-43.fc40.x86_64.rpm"]
+depends: [
+  "DevIL-ILUT" {= "1.7.8"}
+  "DevIL-devel" {= "1.7.8"}
+  "allegro-devel" 
+  "mesa-libGLU-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "DevIL-ILUT-devel-1.7.8-43.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/DevIL-ILUT-devel-1.7.8-43.fc40.x86_64.rpm"
+}

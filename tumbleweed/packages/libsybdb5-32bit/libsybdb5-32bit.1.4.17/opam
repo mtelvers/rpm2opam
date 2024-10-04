@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsybdb5-32bit-1.4.17-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsybdb5-32bit-1.4.17-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "krb5-32bit" 
+  "libgmp10-32bit" 
+  "libgnutls30-32bit" 
+  "libhogweed6-32bit" 
+  "libnettle8-32bit" 
+]
+extra-source "libsybdb5-32bit-1.4.17-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libsybdb5-32bit-1.4.17-1.1.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-awesomebox-svn57349-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-awesomebox-svn57349-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-fontawesome5" 
+  "texlive-kpathsea" 
+  "texlive-l3packages" 
+  "texlive-tools" 
+  "texlive-xcolor" 
+]
+extra-source "texlive-awesomebox-svn57349-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-awesomebox-svn57349-71.fc40.noarch.rpm"
+}

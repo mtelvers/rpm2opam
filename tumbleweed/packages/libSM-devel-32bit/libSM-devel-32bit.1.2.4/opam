@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libSM-devel-32bit-1.2.4-2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libSM-devel-32bit-1.2.4-2.5.x86_64.rpm"]
+depends: [
+  "libICE-devel" 
+  "libSM-devel" {= "1.2.4"}
+  "libSM6-32bit" {= "1.2.4"}
+  "libuuid-devel" 
+  "pkgconf-pkg-config" 
+  "xorgproto-devel" 
+]
+extra-source "libSM-devel-32bit-1.2.4-2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libSM-devel-32bit-1.2.4-2.5.x86_64.rpm"
+}

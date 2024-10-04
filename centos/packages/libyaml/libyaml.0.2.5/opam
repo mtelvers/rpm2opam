@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libyaml-0.2.5-15.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libyaml-0.2.5-15.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+]
+extra-source "libyaml-0.2.5-15.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/libyaml-0.2.5-15.el10.x86_64.rpm"
+}

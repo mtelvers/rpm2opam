@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "opendkim-2.11.0-10.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opendkim-2.11.0-10.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libdb-4_8" 
+  "libldap2" 
+  "liblua5_1-5" 
+  "libmemcached11" 
+  "libmilter1_0" 
+  "libopendkim11" 
+  "libopenssl3" 
+  "librbl1" 
+  "librepute1" 
+  "libressl" 
+  "libunbound-devel-mini" 
+  "libvbr2" 
+  "perl-base" 
+  "shadow" 
+]
+extra-source "opendkim-2.11.0-10.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/opendkim-2.11.0-10.2.x86_64.rpm"
+}

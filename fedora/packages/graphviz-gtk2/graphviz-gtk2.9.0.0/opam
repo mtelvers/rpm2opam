@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "graphviz-gtk2-9.0.0-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "graphviz-gtk2-9.0.0-11.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "expat" 
+  "fontconfig" 
+  "freetype" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "graphviz" {= "9.0.0"}
+  "gtk2" 
+  "harfbuzz" 
+  "libtool-ltdl" 
+  "pango" 
+  "zlib-ng-compat" 
+]
+extra-source "graphviz-gtk2-9.0.0-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/graphviz-gtk2-9.0.0-11.fc40.x86_64.rpm"
+}

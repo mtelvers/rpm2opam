@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw64-python3-qt5-5.15.10-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-python3-qt5-5.15.10-4.fc40.noarch.rpm"]
+depends: [
+  "mingw64-crt" 
+  "mingw64-filesystem" {>= "95"}
+  "mingw64-libgcc" 
+  "mingw64-libstdc++" 
+  "mingw64-python3" 
+  "mingw64-python3-pyqt5-sip" 
+  "mingw64-qt5-qtbase" 
+  "mingw64-qt5-qtdeclarative" 
+  "mingw64-qt5-qtlocation" 
+  "mingw64-qt5-qtmultimedia" 
+  "mingw64-qt5-qtsensors" 
+  "mingw64-qt5-qtserialport" 
+  "mingw64-qt5-qtsvg" 
+  "mingw64-qt5-qttools" 
+  "mingw64-qt5-qtwebchannel" 
+  "mingw64-qt5-qtwebkit" 
+  "mingw64-qt5-qtxmlpatterns" 
+]
+extra-source "mingw64-python3-qt5-5.15.10-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw64-python3-qt5-5.15.10-4.fc40.noarch.rpm"
+}

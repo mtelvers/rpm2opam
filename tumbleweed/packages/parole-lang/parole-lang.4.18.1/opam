@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "parole-lang-4.18.1-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "parole-lang-4.18.1-1.4.noarch.rpm"]
+depends: [
+  "parole" {= "4.18.1"}
+]
+extra-source "parole-lang-4.18.1-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/parole-lang-4.18.1-1.4.noarch.rpm"
+}

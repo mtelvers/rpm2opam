@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpcreposix0-8.45-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpcreposix0-8.45-3.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libpcre1" 
+]
+extra-source "libpcreposix0-8.45-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpcreposix0-8.45-3.1.x86_64.rpm"
+}

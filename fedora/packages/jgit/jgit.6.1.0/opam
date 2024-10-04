@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jgit-6.1.0-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jgit-6.1.0-9.fc40.noarch.rpm"]
+depends: [
+  "ant-lib" 
+  "apache-commons-compress" 
+  "apache-commons-logging" 
+  "apache-sshd" {>= "2.8.0"}
+  "args4j" 
+  "bash" 
+  "bouncycastle" {>= "1.70"}
+  "ed25519-java" 
+  "google-gson" 
+  "httpcomponents-client" 
+  "httpcomponents-core" 
+  "java-21-openjdk-headless" 
+  "javaewah" 
+  "javapackages-filesystem" 
+  "jetty-servlet" 
+  "jna" 
+  "jna-contrib" 
+  "jsch" 
+  "jzlib" 
+  "slf4j" 
+]
+extra-source "jgit-6.1.0-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jgit-6.1.0-9.fc40.noarch.rpm"
+}

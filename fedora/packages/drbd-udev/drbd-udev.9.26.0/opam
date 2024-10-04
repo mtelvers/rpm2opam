@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "drbd-udev-9.26.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "drbd-udev-9.26.0-3.fc40.x86_64.rpm"]
+depends: [
+  "drbd-utils" {= "9.26.0"}
+  "systemd-udev" 
+]
+extra-source "drbd-udev-9.26.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/drbd-udev-9.26.0-3.fc40.x86_64.rpm"
+}

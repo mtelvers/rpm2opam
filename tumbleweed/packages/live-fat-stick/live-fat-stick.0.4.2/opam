@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "live-fat-stick-0.4.2-4.16.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "live-fat-stick-0.4.2-4.16.noarch.rpm"]
+depends: [
+  "bash" 
+  "dd_rescue" 
+  "parted" 
+  "qemu-tools" 
+  "syslinux" 
+  "util-linux" 
+]
+extra-source "live-fat-stick-0.4.2-4.16.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/live-fat-stick-0.4.2-4.16.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-local-lib-2.000029-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-local-lib-2.000029-1.4.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Module-Build" {>= "0.360000"}
+]
+extra-source "perl-local-lib-2.000029-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-local-lib-2.000029-1.4.noarch.rpm"
+}

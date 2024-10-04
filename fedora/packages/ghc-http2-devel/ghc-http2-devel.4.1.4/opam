@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-http2-devel-4.1.4-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-http2-devel-4.1.4-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-array-devel" 
+  "ghc-async-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-case-insensitive-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-http-types-devel" 
+  "ghc-http2" {= "4.1.4"}
+  "ghc-network-byte-order-devel" 
+  "ghc-network-devel" 
+  "ghc-psqueues-devel" 
+  "ghc-stm-devel" 
+  "ghc-time-manager-devel" 
+  "ghc-unix-time-devel" 
+  "ghc-unliftio-devel" 
+]
+extra-source "ghc-http2-devel-4.1.4-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-http2-devel-4.1.4-3.fc40.x86_64.rpm"
+}

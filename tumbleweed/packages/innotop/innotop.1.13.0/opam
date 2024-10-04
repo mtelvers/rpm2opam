@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "innotop-1.13.0-1.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "innotop-1.13.0-1.14.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "perl" 
+  "perl-DBD-mysql" 
+  "perl-DBI" 
+  "perl-File-Temp" 
+  "perl-Scalar-List-Utils" 
+  "perl-Term-ReadKey" 
+  "perl-base" 
+]
+extra-source "innotop-1.13.0-1.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/innotop-1.13.0-1.14.noarch.rpm"
+}

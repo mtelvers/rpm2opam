@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Term-ProgressBar-2.23-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Term-ProgressBar-2.23-1.7.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-MethodMaker" {>= "1.2"}
+  "perl-Term-ReadKey" {>= "2.14"}
+]
+extra-source "perl-Term-ProgressBar-2.23-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Term-ProgressBar-2.23-1.7.noarch.rpm"
+}

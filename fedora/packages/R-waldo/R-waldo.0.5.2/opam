@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-waldo-0.5.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-waldo-0.5.2-3.fc40.noarch.rpm"]
+depends: [
+  "R-cli" 
+  "R-core" {= "4.3"}
+  "R-diffobj" {>= "0.3.4"}
+  "R-fansi" 
+  "R-glue" 
+  "R-rematch2" 
+  "R-rlang" {>= "1.0.0"}
+  "R-tibble" 
+]
+extra-source "R-waldo-0.5.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-waldo-0.5.2-3.fc40.noarch.rpm"
+}

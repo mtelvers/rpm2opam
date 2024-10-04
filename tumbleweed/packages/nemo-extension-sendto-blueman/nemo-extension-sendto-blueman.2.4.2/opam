@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nemo-extension-sendto-blueman-2.4.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nemo-extension-sendto-blueman-2.4.2-1.1.noarch.rpm"]
+depends: [
+  "blueman" {= "2.4.2"}
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Nemo-3_0" 
+]
+extra-source "nemo-extension-sendto-blueman-2.4.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nemo-extension-sendto-blueman-2.4.2-1.1.noarch.rpm"
+}

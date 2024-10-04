@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MongoDB-2.2.2-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MongoDB-2.2.2-11.fc40.noarch.rpm"]
+depends: [
+  "perl-Authen-SASL-SASLprep" 
+  "perl-Authen-SCRAM" {>= "0.11"}
+  "perl-BSON" {>= "1.12.0"}
+  "perl-Carp" 
+  "perl-Digest-MD5" 
+  "perl-Encode" 
+  "perl-Errno" 
+  "perl-Exporter" {>= "5.57"}
+  "perl-IO" 
+  "perl-IO-Compress" 
+  "perl-IO-Socket-IP" {>= "0.32"}
+  "perl-IO-Socket-SSL" {>= "1.42"}
+  "perl-MIME-Base64" 
+  "perl-Math-BigInt" 
+  "perl-Moo" {>= "2"}
+  "perl-Mozilla-CA" 
+  "perl-Net-DNS" 
+  "perl-Net-SSLeay" {>= "1.49"}
+  "perl-Safe-Isa" {>= "1.7"}
+  "perl-Scalar-List-Utils" 
+  "perl-Socket" 
+  "perl-Sub-Quote" 
+  "perl-Tie-IxHash" 
+  "perl-Time-HiRes" 
+  "perl-Type-Tiny" 
+  "perl-UUID-URandom" 
+  "perl-boolean" {>= "0.25"}
+  "perl-constant" 
+  "perl-if" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-namespace-clean" 
+  "perl-overload" 
+  "perl-version" 
+]
+extra-source "perl-MongoDB-2.2.2-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MongoDB-2.2.2-11.fc40.noarch.rpm"
+}

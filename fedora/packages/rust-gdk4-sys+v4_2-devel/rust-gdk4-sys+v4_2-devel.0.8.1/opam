@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gdk4-sys+v4_2-devel-0.8.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gdk4-sys+v4_2-devel-0.8.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "gtk4-devel" {>= "4.2"}
+  "rust-gdk4-sys-devel" {= "0.8.1"}
+]
+extra-source "rust-gdk4-sys+v4_2-devel-0.8.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gdk4-sys+v4_2-devel-0.8.1-1.fc40.noarch.rpm"
+}

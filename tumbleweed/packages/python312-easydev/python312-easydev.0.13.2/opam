@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-easydev-0.13.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-easydev-0.13.2-1.1.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-colorama" 
+  "python312-colorlog" 
+  "python312-line_profiler" 
+  "python312-pexpect" 
+  "python312-platformdirs" 
+  "update-alternatives" 
+]
+extra-source "python312-easydev-0.13.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-easydev-0.13.2-1.1.noarch.rpm"
+}

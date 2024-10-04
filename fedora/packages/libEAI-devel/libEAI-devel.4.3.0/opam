@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libEAI-devel-4.3.0-21.20200221gite99ab4a.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libEAI-devel-4.3.0-21.20200221gite99ab4a.fc40.x86_64.rpm"]
+depends: [
+  "libEAI" {= "4.3.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libEAI-devel-4.3.0-21.20200221gite99ab4a.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libEAI-devel-4.3.0-21.20200221gite99ab4a.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sisu-0.3.5-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sisu-0.3.5-13.fc40.noarch.rpm"]
+depends: [
+  "cdi-api" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "plexus-classworlds" 
+  "plexus-containers-component-annotations" 
+  "plexus-utils" 
+]
+extra-source "sisu-0.3.5-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sisu-0.3.5-13.fc40.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-JuicyPixels-devel-3.3.8-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-JuicyPixels-devel-3.3.8-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-JuicyPixels" {= "3.3.8"}
+  "ghc-base-devel" 
+  "ghc-binary-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-deepseq-devel" 
+  "ghc-mtl-devel" 
+  "ghc-primitive-devel" 
+  "ghc-transformers-devel" 
+  "ghc-vector-devel" 
+  "ghc-zlib-devel" 
+]
+extra-source "ghc-JuicyPixels-devel-3.3.8-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-JuicyPixels-devel-3.3.8-3.fc40.x86_64.rpm"
+}

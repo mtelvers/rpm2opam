@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "flatpak-tests-1.15.6-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flatpak-tests-1.15.6-3.fc40.x86_64.rpm"]
+depends: [
+  "appstream" 
+  "bash" 
+  "bubblewrap" {>= "0.8.0"}
+  "dconf" 
+  "flatpak" {= "1.15.6"}
+  "flatpak-libs" {= "1.15.6"}
+  "flatpak-session-helper" {= "1.15.6"}
+  "fuse3-libs" 
+  "glib2" 
+  "glibc" 
+  "json-glib" 
+  "libXau" 
+  "libarchive" 
+  "libcurl" 
+  "libgcc" 
+  "libseccomp" 
+  "libwayland-client" 
+  "malcontent-libs" 
+  "ostree" {>= "2020.8"}
+  "ostree-libs" 
+  "polkit-libs" 
+  "python3" 
+]
+extra-source "flatpak-tests-1.15.6-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/flatpak-tests-1.15.6-3.fc40.x86_64.rpm"
+}

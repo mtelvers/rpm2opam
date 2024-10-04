@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-glib-prof-0.13.10.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-glib-prof-0.13.10.0-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-glib-devel" {= "0.13.10.0"}
+  "ghc-text-prof" 
+  "ghc-utf8-string-prof" 
+]
+extra-source "ghc-glib-prof-0.13.10.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-glib-prof-0.13.10.0-3.fc40.x86_64.rpm"
+}

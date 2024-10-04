@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "netplan-default-backend-networkd-0.105-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netplan-default-backend-networkd-0.105-7.fc40.noarch.rpm"]
+depends: [
+  "netplan" {= "0.105"}
+  "systemd-networkd" 
+]
+extra-source "netplan-default-backend-networkd-0.105-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/netplan-default-backend-networkd-0.105-7.fc40.noarch.rpm"
+}

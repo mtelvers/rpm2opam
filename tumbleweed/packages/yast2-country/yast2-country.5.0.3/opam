@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-country-5.0.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-country-5.0.3-1.1.x86_64.rpm"]
+depends: [
+  "ruby3-3-rubygem-ruby-dbus" 
+  "timezone" 
+  "yast2" {>= "4.2.57"}
+  "yast2-core" {>= "2.16.28"}
+  "yast2-country-data" 
+  "yast2-hardware-detection" {>= "3.1.6"}
+  "yast2-packager" {>= "2.23.3"}
+  "yast2-perl-bindings" 
+  "yast2-pkg-bindings" {>= "2.15.3"}
+  "yast2-ruby-bindings" {>= "1.0.0"}
+  "yast2-trans-stats" 
+]
+extra-source "yast2-country-5.0.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/yast2-country-5.0.3-1.1.x86_64.rpm"
+}

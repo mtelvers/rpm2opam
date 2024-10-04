@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-Modern-0.013-1.18.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Modern-0.013-1.18.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Exporter-Tiny" {>= "0.30"}
+  "perl-Import-Into" {>= "1.2000"}
+  "perl-Module-Runtime" {>= "0.12"}
+  "perl-Test-API" {>= "0.4"}
+  "perl-Test-Deep" {>= "0.111"}
+  "perl-Test-Fatal" {>= "0.7"}
+  "perl-Test-Warnings" {>= "0.9"}
+  "perl-Try-Tiny" {>= "0.15"}
+]
+extra-source "perl-Test-Modern-0.013-1.18.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-Modern-0.013-1.18.noarch.rpm"
+}

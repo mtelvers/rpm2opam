@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kubernetes-kubeadm-1.29.3-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kubernetes-kubeadm-1.29.3-7.fc40.x86_64.rpm"]
+depends: [
+  "containernetworking-plugins" 
+  "cri-tools" 
+  "glibc" 
+  "kubernetes" {= "1.29.3"}
+]
+extra-source "kubernetes-kubeadm-1.29.3-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kubernetes-kubeadm-1.29.3-7.fc40.x86_64.rpm"
+}

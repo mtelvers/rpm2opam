@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "latex2html-2024-slfo.1.1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "latex2html-2024-slfo.1.1.1.noarch.rpm"]
+depends: [
+  "ghostscript" 
+  "latex2html-pngicons" 
+  "netpbm" 
+  "perl" 
+  "perl-base" 
+  "texlive-dvips" 
+  "texlive-latex" 
+  "texlive-preview" 
+]
+extra-source "latex2html-2024-slfo.1.1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/latex2html-2024-slfo.1.1.1.noarch.rpm"
+}

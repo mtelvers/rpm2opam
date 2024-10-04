@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gl2ps-1.4.2-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gl2ps-1.4.2-10.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libglvnd-glx" 
+  "libpng" 
+  "zlib-ng-compat" 
+]
+extra-source "gl2ps-1.4.2-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gl2ps-1.4.2-10.fc40.x86_64.rpm"
+}

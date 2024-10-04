@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "unetbootin-702-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "unetbootin-702-7.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libstdc++" 
+  "p7zip-plugins" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "syslinux" 
+  "syslinux-extlinux" 
+]
+extra-source "unetbootin-702-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/unetbootin-702-7.fc40.x86_64.rpm"
+}

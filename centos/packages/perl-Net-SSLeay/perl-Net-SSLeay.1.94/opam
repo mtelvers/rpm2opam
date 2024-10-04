@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Net-SSLeay-1.94-6.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-SSLeay-1.94-6.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "openssl-libs" 
+  "perl-AutoLoader" 
+  "perl-Carp" 
+  "perl-Errno" 
+  "perl-Exporter" 
+  "perl-MIME-Base64" 
+  "perl-Net-SSLeay" 
+  "perl-Socket" 
+  "perl-vars" 
+]
+extra-source "perl-Net-SSLeay-1.94-6.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/perl-Net-SSLeay-1.94-6.el10.x86_64.rpm"
+}

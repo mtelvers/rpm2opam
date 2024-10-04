@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "octave-iso2mesh-1.9.6-15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "octave-iso2mesh-1.9.6-15.fc40.x86_64.rpm"]
+depends: [
+  "SuperLU" 
+  "bash" 
+  "boost-devel" 
+  "flexiblas-netlib" 
+  "glibc" 
+  "gmp" 
+  "gmp-c++" 
+  "libgcc" 
+  "libstdc++" 
+  "mpfr" 
+  "mpfr-devel" 
+  "octave" 
+  "octave-jnifti" 
+  "octave-jsonlab" 
+  "octave-zmat" 
+  "zlib-ng-compat" 
+]
+extra-source "octave-iso2mesh-1.9.6-15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/octave-iso2mesh-1.9.6-15.fc40.x86_64.rpm"
+}

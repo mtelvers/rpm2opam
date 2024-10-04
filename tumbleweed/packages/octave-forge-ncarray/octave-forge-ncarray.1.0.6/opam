@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "octave-forge-ncarray-1.0.6-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "octave-forge-ncarray-1.0.6-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "octave-cli" {>= "3.4.0"}
+  "octave-forge-netcdf" {>= "1.0.2"}
+  "octave-forge-statistics" {>= "1.0.6"}
+]
+extra-source "octave-forge-ncarray-1.0.6-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/octave-forge-ncarray-1.0.6-1.1.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-resource-pool-prof-0.4.0.0-2.23.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-resource-pool-prof-0.4.0.0-2.23.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-hashable-prof" 
+  "ghc-primitive-prof" 
+  "ghc-resource-pool-devel" {= "0.4.0.0"}
+  "ghc-time-prof" 
+]
+extra-source "ghc-resource-pool-prof-0.4.0.0-2.23.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-resource-pool-prof-0.4.0.0-2.23.x86_64.rpm"
+}

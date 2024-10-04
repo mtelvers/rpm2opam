@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dcmtk-3.6.7-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dcmtk-3.6.7-6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libpng" 
+  "libstdc++" 
+  "libtiff" 
+  "libxml2" 
+  "openssl-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "dcmtk-3.6.7-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dcmtk-3.6.7-6.fc40.x86_64.rpm"
+}

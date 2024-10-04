@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "polkit-124-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "polkit-124-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dbus" 
+  "duktape" 
+  "expat" 
+  "glib2" 
+  "glibc" 
+  "pam-libs" 
+  "polkit-libs" 
+  "polkit-pkla-compat" 
+  "shadow-utils" 
+  "systemd" 
+  "systemd-libs" 
+]
+extra-source "polkit-124-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/polkit-124-2.fc40.x86_64.rpm"
+}

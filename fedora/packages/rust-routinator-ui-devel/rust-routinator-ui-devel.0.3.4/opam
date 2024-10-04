@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-routinator-ui-devel-0.3.4-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-routinator-ui-devel-0.3.4-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-flate2+default-devel" 
+  "rust-reqwest+blocking-devel" 
+  "rust-reqwest+rustls-tls-devel" 
+  "rust-reqwest-devel" 
+  "rust-tar+default-devel" 
+]
+extra-source "rust-routinator-ui-devel-0.3.4-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-routinator-ui-devel-0.3.4-1.fc40.noarch.rpm"
+}

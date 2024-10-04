@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mailcommon-devel-24.08.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mailcommon-devel-24.08.1-1.1.x86_64.rpm"]
+depends: [
+  "akonadi-devel" {>= "6.2.1"}
+  "akonadi-mime-devel" {>= "6.2.1"}
+  "glibc" 
+  "kf6-kcompletion-devel" {>= "6.3.0"}
+  "libKPim6MailCommon6" 
+  "libQt6Core6" 
+  "libQt6Gui6" 
+  "libgcc_s1" 
+  "libkdepim-devel" {>= "6.2.1"}
+  "libstdc++6" 
+  "messagelib-devel" {>= "6.2.1"}
+  "pimcommon-devel" {>= "6.2.1"}
+]
+extra-source "mailcommon-devel-24.08.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mailcommon-devel-24.08.1-1.1.x86_64.rpm"
+}

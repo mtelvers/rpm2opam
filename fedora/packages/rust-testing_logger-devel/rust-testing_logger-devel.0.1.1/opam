@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-testing_logger-devel-0.1.1-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-testing_logger-devel-0.1.1-12.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-log+default-devel" 
+]
+extra-source "rust-testing_logger-devel-0.1.1-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-testing_logger-devel-0.1.1-12.fc40.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "graphviz-doc-2.49.3-slfo.1.2.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "graphviz-doc-2.49.3-slfo.1.2.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "lua51" 
+  "perl-base" 
+  "php8-cli" 
+  "ruby3-2" 
+  "tcl" 
+]
+extra-source "graphviz-doc-2.49.3-slfo.1.2.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/graphviz-doc-2.49.3-slfo.1.2.8.x86_64.rpm"
+}

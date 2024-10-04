@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-hslua-prof-2.3.1-1.22.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hslua-prof-2.3.1-1.22.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-exceptions-prof" 
+  "ghc-hslua-aeson-prof" 
+  "ghc-hslua-classes-prof" 
+  "ghc-hslua-core-prof" 
+  "ghc-hslua-devel" {= "2.3.1"}
+  "ghc-hslua-marshalling-prof" 
+  "ghc-hslua-objectorientation-prof" 
+  "ghc-hslua-packaging-prof" 
+  "ghc-hslua-typing-prof" 
+  "ghc-mtl-prof" 
+  "ghc-text-prof" 
+]
+extra-source "ghc-hslua-prof-2.3.1-1.22.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-hslua-prof-2.3.1-1.22.x86_64.rpm"
+}

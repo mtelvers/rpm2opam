@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-indicatif0.15+improved_unicode-devel-0.15.0-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-indicatif0.15+improved_unicode-devel-0.15.0-7.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-console+unicode-width-devel" 
+  "rust-indicatif0-15+unicode-segmentation-devel" {= "0.15.0"}
+  "rust-indicatif0-15+unicode-width-devel" {= "0.15.0"}
+  "rust-indicatif0-15-devel" {= "0.15.0"}
+]
+extra-source "rust-indicatif0.15+improved_unicode-devel-0.15.0-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-indicatif0.15+improved_unicode-devel-0.15.0-7.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "audiofile-0.3.6-38.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "audiofile-0.3.6-38.fc40.x86_64.rpm"]
+depends: [
+  "flac-libs" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "audiofile-0.3.6-38.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/audiofile-0.3.6-38.fc40.x86_64.rpm"
+}

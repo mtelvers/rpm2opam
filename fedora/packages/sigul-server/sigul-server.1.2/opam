@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sigul-server-1.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sigul-server-1.2-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "gnupg2" 
+  "libgcc" 
+  "ostree" 
+  "ostree-libs" 
+  "python3-cryptography" 
+  "python3-gpg" 
+  "python3-pexpect" 
+  "python3-sqlalchemy" 
+  "rpm-sign" 
+  "sigul" {= "1.2"}
+  "systemd" 
+]
+extra-source "sigul-server-1.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sigul-server-1.2-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fdo-client-1.1.4+git20221209.c8ef757-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fdo-client-1.1.4+git20221209.c8ef757-4.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libcurl-mini4" 
+  "libopenssl3" 
+  "openssl" 
+]
+extra-source "fdo-client-1.1.4+git20221209.c8ef757-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/fdo-client-1.1.4+git20221209.c8ef757-4.2.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Domain-PublicSuffix-0.200.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Domain-PublicSuffix-0.200.0-2.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Accessor" 
+  "perl-Net-IDN-Encode" {>= "2.401"}
+  "perl-base" 
+]
+extra-source "perl-Domain-PublicSuffix-0.200.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Domain-PublicSuffix-0.200.0-2.2.noarch.rpm"
+}

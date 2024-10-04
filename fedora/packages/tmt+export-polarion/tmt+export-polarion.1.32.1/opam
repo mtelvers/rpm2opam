@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tmt+export-polarion-1.32.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tmt+export-polarion-1.32.1-1.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-pylero" {>= "0.0.8"}
+  "tmt" {= "1.32.1"}
+]
+extra-source "tmt+export-polarion-1.32.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tmt+export-polarion-1.32.1-1.fc40.noarch.rpm"
+}

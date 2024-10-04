@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Path-Router-0.15-1.29.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Path-Router-0.15-1.29.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Clone-PP" {>= "1.4"}
+  "perl-Eval-Closure" {>= "0.13"}
+  "perl-Moo" {>= "2.1"}
+  "perl-Sub-Exporter" {>= "0.981"}
+  "perl-Test-Deep" {>= "0.113"}
+  "perl-Try-Tiny" {>= "0.19"}
+  "perl-Type-Tiny" {>= "1.5"}
+  "perl-base" {>= "1.32"}
+  "perl-namespace-clean" {>= "0.23"}
+]
+extra-source "perl-Path-Router-0.15-1.29.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Path-Router-0.15-1.29.noarch.rpm"
+}

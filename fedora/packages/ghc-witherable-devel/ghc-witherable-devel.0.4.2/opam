@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-witherable-devel-0.4.2-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-witherable-devel-0.4.2-5.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-base-orphans-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-hashable-devel" 
+  "ghc-indexed-traversable-devel" 
+  "ghc-indexed-traversable-instances-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-vector-devel" 
+  "ghc-witherable" {= "0.4.2"}
+]
+extra-source "ghc-witherable-devel-0.4.2-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-witherable-devel-0.4.2-5.fc40.x86_64.rpm"
+}

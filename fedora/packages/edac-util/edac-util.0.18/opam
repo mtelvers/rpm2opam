@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "edac-util-0.18-35.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "edac-util-0.18-35.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libedac" {= "0.18"}
+]
+extra-source "edac-util-0.18-35.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/edac-util-0.18-35.fc40.x86_64.rpm"
+}

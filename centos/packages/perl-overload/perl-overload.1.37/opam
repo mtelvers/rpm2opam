@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-overload-1.37-510.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-overload-1.37-510.el10.noarch.rpm"]
+depends: [
+  "perl-Scalar-List-Utils" 
+  "perl-mro" 
+  "perl-overloading" 
+]
+extra-source "perl-overload-1.37-510.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/perl-overload-1.37-510.el10.noarch.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xpdf-4.04-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xpdf-4.04-11.fc40.x86_64.rpm"]
+depends: [
+  "cups-libs" 
+  "fontconfig" 
+  "freetype" 
+  "glibc" 
+  "libgcc" 
+  "libpaper" 
+  "libpng" 
+  "libstdc++" 
+  "poppler-utils" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtsvg" 
+  "urw-base35-fonts" 
+  "xdg-utils" 
+  "xorg-x11-fonts-ISO8859-1-100dpi" 
+  "xorg-x11-fonts-ISO8859-1-75dpi" 
+  "xpdf-libs" {= "4.4"}
+]
+extra-source "xpdf-4.04-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xpdf-4.04-11.fc40.x86_64.rpm"
+}

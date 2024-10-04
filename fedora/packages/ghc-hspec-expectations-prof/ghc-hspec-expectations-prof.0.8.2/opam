@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-hspec-expectations-prof-0.8.2-30.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hspec-expectations-prof-0.8.2-30.fc40.x86_64.rpm"]
+depends: [
+  "ghc-HUnit-prof" 
+  "ghc-base-prof" 
+  "ghc-call-stack-prof" 
+  "ghc-hspec-expectations-devel" {= "0.8.2"}
+]
+extra-source "ghc-hspec-expectations-prof-0.8.2-30.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-hspec-expectations-prof-0.8.2-30.fc40.x86_64.rpm"
+}

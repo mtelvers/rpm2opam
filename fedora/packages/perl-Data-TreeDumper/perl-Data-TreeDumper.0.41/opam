@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Data-TreeDumper-0.41-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Data-TreeDumper-0.41-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Check-ISA" 
+  "perl-Class-ISA" 
+  "perl-Exporter" 
+  "perl-Sort-Naturally" 
+  "perl-Term-Size" {>= "0.2"}
+  "perl-Text-Tabs+Wrap" 
+  "perl-constant" 
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "perl-Data-TreeDumper-0.41-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Data-TreeDumper-0.41-3.fc40.noarch.rpm"
+}

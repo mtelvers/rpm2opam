@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-clikit-0.6.2-3.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-clikit-0.6.2-3.5.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-crashtest" 
+  "python311-pastel" {>= "0.2.0"}
+  "python311-pylev" {>= "1.3"}
+]
+extra-source "python311-clikit-0.6.2-3.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-clikit-0.6.2-3.5.noarch.rpm"
+}

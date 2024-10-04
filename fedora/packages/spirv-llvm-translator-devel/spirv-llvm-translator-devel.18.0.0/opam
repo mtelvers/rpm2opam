@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "spirv-llvm-translator-devel-18.0.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "spirv-llvm-translator-devel-18.0.0-1.fc40.x86_64.rpm"]
+depends: [
+  "pkgconf-pkg-config" 
+  "spirv-llvm-translator" 
+]
+extra-source "spirv-llvm-translator-devel-18.0.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/spirv-llvm-translator-devel-18.0.0-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-simple_asn1-devel-0.5.4-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-simple_asn1-devel-0.5.4-7.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-chrono+alloc-devel" 
+  "rust-chrono-devel" 
+  "rust-num-bigint-devel" 
+  "rust-num-traits-devel" 
+  "rust-thiserror-devel" 
+]
+extra-source "rust-simple_asn1-devel-0.5.4-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-simple_asn1-devel-0.5.4-7.fc40.noarch.rpm"
+}

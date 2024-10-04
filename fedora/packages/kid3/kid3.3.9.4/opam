@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kid3-3.9.4-2.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kid3-3.9.4-2.fc39.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf5-kconfig-core" 
+  "kf5-kconfig-gui" 
+  "kf5-kconfigwidgets" 
+  "kf5-kcoreaddons" 
+  "kf5-kio-core-libs" 
+  "kf5-kwidgetsaddons" 
+  "kf5-kxmlgui" 
+  "kid3-common" {= "3.9.4"}
+  "libgcc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "kid3-3.9.4-2.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kid3-3.9.4-2.fc39.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "binutils-m32r-linux-gnu-2.40-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "binutils-m32r-linux-gnu-2.40-5.fc40.x86_64.rpm"]
+depends: [
+  "cross-binutils-common" {= "2.40"}
+  "glibc" 
+]
+extra-source "binutils-m32r-linux-gnu-2.40-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/binutils-m32r-linux-gnu-2.40-5.fc40.x86_64.rpm"
+}

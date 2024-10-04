@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-axum+tower-http-devel-0.6.20-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-axum+tower-http-devel-0.6.20-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-axum-devel" {= "0.6.20"}
+  "rust-tower-http+add-extension-devel" 
+  "rust-tower-http+auth-devel" 
+  "rust-tower-http+catch-panic-devel" 
+  "rust-tower-http+compression-br-devel" 
+  "rust-tower-http+compression-deflate-devel" 
+  "rust-tower-http+compression-gzip-devel" 
+  "rust-tower-http+cors-devel" 
+  "rust-tower-http+decompression-br-devel" 
+  "rust-tower-http+decompression-deflate-devel" 
+  "rust-tower-http+decompression-gzip-devel" 
+  "rust-tower-http+default-devel" 
+  "rust-tower-http+follow-redirect-devel" 
+  "rust-tower-http+fs-devel" 
+  "rust-tower-http+limit-devel" 
+  "rust-tower-http+map-request-body-devel" 
+  "rust-tower-http+map-response-body-devel" 
+  "rust-tower-http+metrics-devel" 
+  "rust-tower-http+normalize-path-devel" 
+  "rust-tower-http+propagate-header-devel" 
+  "rust-tower-http+redirect-devel" 
+  "rust-tower-http+request-id-devel" 
+  "rust-tower-http+sensitive-headers-devel" 
+  "rust-tower-http+set-header-devel" 
+  "rust-tower-http+set-status-devel" 
+  "rust-tower-http+timeout-devel" 
+  "rust-tower-http+trace-devel" 
+  "rust-tower-http+util-devel" 
+  "rust-tower-http+validate-request-devel" 
+]
+extra-source "rust-axum+tower-http-devel-0.6.20-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-axum+tower-http-devel-0.6.20-2.fc40.noarch.rpm"
+}

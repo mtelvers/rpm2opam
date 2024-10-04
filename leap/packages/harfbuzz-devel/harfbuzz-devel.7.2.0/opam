@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "harfbuzz-devel-7.2.0-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "harfbuzz-devel-7.2.0-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "cairo-devel" 
+  "freetype2-devel" {>= "12.0.6"}
+  "glib2-devel" 
+  "graphite2-devel" 
+  "libharfbuzz-gobject0" {= "7.2.0"}
+  "libharfbuzz-icu0" {= "7.2.0"}
+  "libharfbuzz-subset0" {= "7.2.0"}
+  "libharfbuzz0" {= "7.2.0"}
+  "libicu-devel" 
+  "pkgconf-pkg-config" 
+  "typelib-1_0-HarfBuzz-0_0" {= "7.2.0"}
+]
+extra-source "harfbuzz-devel-7.2.0-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/harfbuzz-devel-7.2.0-slfo.1.1.8.x86_64.rpm"
+}

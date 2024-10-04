@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-HTML-WikiConverter-0.68-43.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTML-WikiConverter-0.68-43.fc40.noarch.rpm"]
+depends: [
+  "perl-CGI-Application" 
+  "perl-CSS" {>= "1.7"}
+  "perl-Carp" 
+  "perl-DirHandle" 
+  "perl-Encode" 
+  "perl-HTML-Parser" {>= "1.27"}
+  "perl-HTML-Tagset" {>= "3.4"}
+  "perl-HTML-Tree" {>= "3.18"}
+  "perl-Params-Validate" {>= "0.77"}
+  "perl-PathTools" 
+  "perl-Tie-IxHash" 
+  "perl-URI" {>= "1.35"}
+  "perl-XML-Writer" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-HTML-WikiConverter-0.68-43.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-HTML-WikiConverter-0.68-43.fc40.noarch.rpm"
+}

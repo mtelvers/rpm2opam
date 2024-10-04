@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-poly1305-devel-0.8.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-poly1305-devel-0.8.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.56"}
+  "rust-cpufeatures+default-devel" 
+  "rust-opaque-debug+default-devel" 
+  "rust-universal-hash-devel" 
+]
+extra-source "rust-poly1305-devel-0.8.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-poly1305-devel-0.8.0-2.fc40.noarch.rpm"
+}

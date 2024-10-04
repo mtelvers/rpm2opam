@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xmvn-mojo-4.2.0-slfo.1.2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xmvn-mojo-4.2.0-slfo.1.2.3.noarch.rpm"]
+depends: [
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "maven-resolver-util" 
+  "objectweb-asm" 
+  "xmvn-api" 
+  "xmvn-core" 
+]
+extra-source "xmvn-mojo-4.2.0-slfo.1.2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/xmvn-mojo-4.2.0-slfo.1.2.3.noarch.rpm"
+}

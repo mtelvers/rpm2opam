@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-ctbllib-1.3.9-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-ctbllib-1.3.9-1.2.noarch.rpm"]
+depends: [
+  "gap" {>= "4.11"}
+  "gap-atlasrep" {>= "2.1"}
+  "gap-gapdoc" {>= "1.6.2"}
+]
+extra-source "gap-ctbllib-1.3.9-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-ctbllib-1.3.9-1.2.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "audit-4.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "audit-4.0-1.1.x86_64.rpm"]
+depends: [
+  "audit-rules" {= "4.0"}
+  "bash-sh" 
+  "coreutils" 
+  "glibc" 
+  "libaudit1" {= "4.0"}
+  "libauparse0" 
+  "libcap-ng0" 
+  "libwrap0" 
+  "system-group-audit" 
+]
+extra-source "audit-4.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/audit-4.0-1.1.x86_64.rpm"
+}

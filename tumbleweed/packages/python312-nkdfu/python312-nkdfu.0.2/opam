@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-nkdfu-0.2-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-nkdfu-0.2-1.6.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "intelhex" 
+  "python312-base" 
+  "python312-fire" 
+  "python312-libusb1" 
+  "python312-tqdm" 
+  "update-alternatives" 
+]
+extra-source "python312-nkdfu-0.2-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-nkdfu-0.2-1.6.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gcin-gtk2-2.9.0-11.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcin-gtk2-2.9.0-11.fc39.x86_64.rpm"]
+depends: [
+  "gcin" {= "2.9.0"}
+  "gcin-im-client" {= "2.9.0"}
+  "gcin-libs" {= "2.9.0"}
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "pango" 
+]
+extra-source "gcin-gtk2-2.9.0-11.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gcin-gtk2-2.9.0-11.fc39.x86_64.rpm"
+}

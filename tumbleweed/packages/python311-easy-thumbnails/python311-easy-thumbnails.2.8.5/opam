@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-easy-thumbnails-2.8.5-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-easy-thumbnails-2.8.5-1.7.noarch.rpm"]
+depends: [
+  "python311-Django" {>= "2.2"}
+  "python311-Pillow" 
+  "python311-base" {= "3.11"}
+  "python311-lxml" 
+  "python311-reportlab" 
+  "python311-svglib" 
+]
+extra-source "python311-easy-thumbnails-2.8.5-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-easy-thumbnails-2.8.5-1.7.noarch.rpm"
+}

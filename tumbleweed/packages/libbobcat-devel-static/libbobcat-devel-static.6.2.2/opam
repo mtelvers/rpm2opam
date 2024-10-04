@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libbobcat-devel-static-6.02.02-2.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libbobcat-devel-static-6.02.02-2.7.x86_64.rpm"]
+depends: [
+  "libbobcat-devel" {= "6.2.2"}
+]
+extra-source "libbobcat-devel-static-6.02.02-2.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libbobcat-devel-static-6.02.02-2.7.x86_64.rpm"
+}

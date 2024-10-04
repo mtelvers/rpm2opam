@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-papermill-2.6.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-papermill-2.6.0-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-PyYAML" 
+  "python311-ansicolors" 
+  "python311-base" 
+  "python311-click" 
+  "python311-entrypoints" 
+  "python311-nbclient" {>= "0.2.0"}
+  "python311-nbformat" {>= "5.2.0"}
+  "python311-requests" {>= "2.21.0"}
+  "python311-tenacity" {>= "5.0.2"}
+  "python311-tqdm" {>= "4.32.2"}
+  "update-alternatives" 
+]
+extra-source "python311-papermill-2.6.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-papermill-2.6.0-1.2.noarch.rpm"
+}

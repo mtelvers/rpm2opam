@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-fastapi-0.114.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-fastapi-0.114.2-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-pydantic" {>= "1.8.2"}
+  "python312-starlette" 
+  "python312-typing_extensions" {>= "4.8.0"}
+  "update-alternatives" 
+]
+extra-source "python312-fastapi-0.114.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-fastapi-0.114.2-1.1.noarch.rpm"
+}

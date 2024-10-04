@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-POE-Component-Resolver-0.921-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-POE-Component-Resolver-0.921-29.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-POE" {>= "1.311"}
+  "perl-Socket" {>= "2.1"}
+  "perl-Storable" {>= "2.18"}
+  "perl-Time-HiRes" {>= "1.9711"}
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-POE-Component-Resolver-0.921-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-POE-Component-Resolver-0.921-29.fc40.noarch.rpm"
+}

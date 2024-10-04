@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "merkuro-plasmoid-24.08.0-lp160.1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "merkuro-plasmoid-24.08.0-lp160.1.4.x86_64.rpm"]
+depends: [
+  "kf6-kdeclarative-imports" 
+  "kf6-kirigami-imports" 
+  "kf6-kitemmodels-imports" 
+  "kf6-ksvg-imports" 
+  "kf6-prison-imports" 
+  "libPlasma6" 
+  "libplasma6-components" 
+  "merkuro" {= "24.8.0"}
+  "qt6-qt5compat-imports" 
+  "qtdeclarative-imports-provides-qt6" {>= "15"}
+]
+extra-source "merkuro-plasmoid-24.08.0-lp160.1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/merkuro-plasmoid-24.08.0-lp160.1.4.x86_64.rpm"
+}

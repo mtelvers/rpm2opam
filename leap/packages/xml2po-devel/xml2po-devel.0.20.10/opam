@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xml2po-devel-0.20.10-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xml2po-devel-0.20.10-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "pkgconf-pkg-config" 
+  "xml2po" {= "0.20.10"}
+]
+extra-source "xml2po-devel-0.20.10-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/xml2po-devel-0.20.10-slfo.1.1.3.noarch.rpm"
+}

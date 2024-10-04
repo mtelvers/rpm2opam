@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "votca-2024.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "votca-2024.2-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libboost_program_options1_86_0" 
+  "libgcc_s1" 
+  "libgomp1" 
+  "libstdc++6" 
+  "libvotca2024" 
+  "python311-base" 
+]
+extra-source "votca-2024.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/votca-2024.2-1.1.x86_64.rpm"
+}

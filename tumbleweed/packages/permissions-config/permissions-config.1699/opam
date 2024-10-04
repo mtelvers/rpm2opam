@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "permissions-config-1699_20240522-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "permissions-config-1699_20240522-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "permctl" 
+  "system-user-root" 
+]
+extra-source "permissions-config-1699_20240522-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/permissions-config-1699_20240522-1.1.noarch.rpm"
+}

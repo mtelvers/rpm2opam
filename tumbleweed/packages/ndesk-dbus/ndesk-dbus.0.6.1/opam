@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ndesk-dbus-0.6.1a-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ndesk-dbus-0.6.1a-1.9.noarch.rpm"]
+depends: [
+  "mono-core" {= "4.0.0.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "ndesk-dbus-0.6.1a-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ndesk-dbus-0.6.1a-1.9.noarch.rpm"
+}

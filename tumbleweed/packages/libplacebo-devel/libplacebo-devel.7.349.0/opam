@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libplacebo-devel-7.349.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libplacebo-devel-7.349.0-1.3.x86_64.rpm"]
+depends: [
+  "libdovi-devel" {>= "1.6.7"}
+  "liblcms2-devel" {>= "2.9"}
+  "libplacebo349" {= "7.349.0"}
+  "libunwind-devel" 
+  "pkgconf-pkg-config" 
+  "shaderc-devel" {>= "2019.1"}
+  "vulkan-devel" 
+]
+extra-source "libplacebo-devel-7.349.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libplacebo-devel-7.349.0-1.3.x86_64.rpm"
+}

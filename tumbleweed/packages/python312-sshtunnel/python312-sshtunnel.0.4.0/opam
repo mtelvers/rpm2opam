@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-sshtunnel-0.4.0-5.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-sshtunnel-0.4.0-5.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "openssh" 
+  "python312-base" 
+  "python312-paramiko" {>= "2.7.2"}
+  "update-alternatives" 
+]
+extra-source "python312-sshtunnel-0.4.0-5.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-sshtunnel-0.4.0-5.2.noarch.rpm"
+}

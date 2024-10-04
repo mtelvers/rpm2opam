@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-File-MimeInfo-0.350.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-MimeInfo-0.350.0-1.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Encode-Locale" 
+  "perl-File-BaseDir" {>= "0.3"}
+  "perl-File-DesktopEntry" {>= "0.4"}
+  "perl-base" 
+  "shared-mime-info" 
+]
+extra-source "perl-File-MimeInfo-0.350.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-File-MimeInfo-0.350.0-1.2.noarch.rpm"
+}

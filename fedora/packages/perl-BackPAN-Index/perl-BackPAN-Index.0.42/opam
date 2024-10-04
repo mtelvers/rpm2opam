@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-BackPAN-Index-0.42-31.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-BackPAN-Index-0.42-31.fc40.noarch.rpm"]
+depends: [
+  "perl-CLASS" {>= "1.0"}
+  "perl-CPAN-DistnameInfo" {>= "0.9"}
+  "perl-DBD-SQLite" {>= "1.25"}
+  "perl-DBIx-Class" {>= "0.8109"}
+  "perl-File-Basename" 
+  "perl-Mouse" 
+  "perl-Path-Class" 
+  "perl-URI" 
+  "perl-autodie" 
+  "perl-base" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+  "perl-overload" 
+]
+extra-source "perl-BackPAN-Index-0.42-31.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-BackPAN-Index-0.42-31.fc40.noarch.rpm"
+}

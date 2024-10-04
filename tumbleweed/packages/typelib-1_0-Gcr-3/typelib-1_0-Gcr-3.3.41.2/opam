@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "typelib-1_0-Gcr-3-3.41.2-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "typelib-1_0-Gcr-3-3.41.2-2.1.x86_64.rpm"]
+depends: [
+  "libgcr-3-1" 
+  "typelib-1_0-GLib-2_0" {= "2.0"}
+  "typelib-1_0-GModule-2_0" {= "2.0"}
+  "typelib-1_0-GObject-2_0" {= "2.0"}
+  "typelib-1_0-Gck-1" {= "1"}
+  "typelib-1_0-Gio-2_0" {= "2.0"}
+]
+extra-source "typelib-1_0-Gcr-3-3.41.2-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/typelib-1_0-Gcr-3-3.41.2-2.1.x86_64.rpm"
+}

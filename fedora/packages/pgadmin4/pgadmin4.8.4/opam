@@ -1,0 +1,54 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pgadmin4-8.4-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pgadmin4-8.4-2.fc40.x86_64.rpm"]
+depends: [
+  "python-flask-gravatar" 
+  "python3" 
+  "python3-authlib" {>= "1.2"}
+  "python3-azure-identity" {>= "1.10"}
+  "python3-azure-mgmt-rdbms" {>= "10.1"}
+  "python3-azure-mgmt-resource" {>= "23.0.1"}
+  "python3-azure-mgmt-subscription" {>= "3"}
+  "python3-bcrypt" {>= "4"}
+  "python3-boto3" {>= "1.33"}
+  "python3-cryptography" {>= "41"}
+  "python3-dateutil" 
+  "python3-eventlet" {>= "0.33.3"}
+  "python3-flask" {>= "2.3"}
+  "python3-flask-babel" {>= "3.1"}
+  "python3-flask-compress" 
+  "python3-flask-login" 
+  "python3-flask-mail" 
+  "python3-flask-migrate" 
+  "python3-flask-paranoid" 
+  "python3-flask-security-too" {>= "5.2"}
+  "python3-flask-socketio" 
+  "python3-flask-sqlalchemy" {>= "3"}
+  "python3-flask-wtf" 
+  "python3-google-api-client" 
+  "python3-google-auth-oauthlib" {>= "0.8"}
+  "python3-gssapi" {>= "1.7"}
+  "python3-httpagentparser" 
+  "python3-jsonformatter" 
+  "python3-keyring" {>= "24"}
+  "python3-ldap3" 
+  "python3-passlib" 
+  "python3-psutil" 
+  "python3-psycopg3" {>= "3.1.12"}
+  "python3-pyotp" 
+  "python3-pytz" {>= "2023"}
+  "python3-qrcode" 
+  "python3-rich" 
+  "python3-setuptools" {>= "68"}
+  "python3-sqlalchemy" {>= "1.4"}
+  "python3-sqlparse" 
+  "python3-sshtunnel" 
+  "python3-typer" 
+  "python3-urllib3" 
+  "python3-user-agents" {= "2.2"}
+  "python3-werkzeug" {>= "2.3"}
+  "python3-wtforms" {>= "3"}
+]
+extra-source "pgadmin4-8.4-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pgadmin4-8.4-2.fc40.x86_64.rpm"
+}

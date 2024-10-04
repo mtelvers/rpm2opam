@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw64-spice-glib-0.42-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-spice-glib-0.42-4.fc40.noarch.rpm"]
+depends: [
+  "mingw64-crt" 
+  "mingw64-filesystem" {>= "95"}
+  "mingw64-gettext" 
+  "mingw64-glib2" 
+  "mingw64-gstreamer1" 
+  "mingw64-gstreamer1-plugins-base" 
+  "mingw64-json-glib" 
+  "mingw64-libjpeg-turbo" 
+  "mingw64-libusbx" 
+  "mingw64-openssl" 
+  "mingw64-opus" 
+  "mingw64-pixman" 
+  "mingw64-spice-protocol" 
+  "mingw64-usbredir" 
+  "mingw64-zlib" 
+  "pkgconf-pkg-config" 
+]
+extra-source "mingw64-spice-glib-0.42-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw64-spice-glib-0.42-4.fc40.noarch.rpm"
+}

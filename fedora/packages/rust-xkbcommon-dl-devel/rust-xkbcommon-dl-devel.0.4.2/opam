@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-xkbcommon-dl-devel-0.4.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-xkbcommon-dl-devel-0.4.2-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.64"}
+  "rust-bitflags+default-devel" 
+  "rust-dlib+default-devel" 
+  "rust-log+default-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-xkeysym+default-devel" 
+]
+extra-source "rust-xkbcommon-dl-devel-0.4.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-xkbcommon-dl-devel-0.4.2-1.fc40.noarch.rpm"
+}

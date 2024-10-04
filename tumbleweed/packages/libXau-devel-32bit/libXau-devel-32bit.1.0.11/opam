@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libXau-devel-32bit-1.0.11-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libXau-devel-32bit-1.0.11-1.5.x86_64.rpm"]
+depends: [
+  "libXau-devel" {= "1.0.11"}
+  "libXau6-32bit" {= "1.0.11"}
+  "pkgconf-pkg-config" 
+  "xorgproto-devel" 
+]
+extra-source "libXau-devel-32bit-1.0.11-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libXau-devel-32bit-1.0.11-1.5.x86_64.rpm"
+}

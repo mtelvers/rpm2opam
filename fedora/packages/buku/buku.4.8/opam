@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "buku-4.8-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "buku-4.8-4.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-beautifulsoup4" 
+  "python3-certifi" 
+  "python3-cryptography" 
+  "python3-html5lib" 
+  "python3-urllib3" 
+]
+extra-source "buku-4.8-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/buku-4.8-4.fc40.noarch.rpm"
+}

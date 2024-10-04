@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-POE-Component-SSLify-tests-1.012-32.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-POE-Component-SSLify-tests-1.012-32.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-ExtUtils-MakeMaker" 
+  "perl-File-Temp" 
+  "perl-IO" {>= "1.28"}
+  "perl-IPC-Open3" 
+  "perl-Net-SSLeay" {>= "1.36"}
+  "perl-POE" {>= "1.267"}
+  "perl-POE-Component-SSLify" 
+  "perl-PathTools" 
+  "perl-Socket" 
+  "perl-Test-FailWarnings" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" {>= "1.1002"}
+  "perl-blib" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "perl-POE-Component-SSLify-tests-1.012-32.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-POE-Component-SSLify-tests-1.012-32.fc40.noarch.rpm"
+}

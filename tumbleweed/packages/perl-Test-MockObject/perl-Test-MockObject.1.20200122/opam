@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-MockObject-1.20200122-1.20.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-MockObject-1.20200122-1.20.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-UNIVERSAL-can" {>= "1.20110617"}
+  "perl-UNIVERSAL-isa" {>= "1.20110614"}
+]
+extra-source "perl-Test-MockObject-1.20200122-1.20.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-MockObject-1.20200122-1.20.noarch.rpm"
+}

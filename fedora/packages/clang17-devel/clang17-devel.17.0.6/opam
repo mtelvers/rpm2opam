@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "clang17-devel-17.0.6-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clang17-devel-17.0.6-7.fc40.x86_64.rpm"]
+depends: [
+  "clang17" {= "17.0.6"}
+  "clang17-libs" {= "17.0.6"}
+  "clang17-tools-extra" {= "17.0.6"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "ncurses-libs" 
+]
+extra-source "clang17-devel-17.0.6-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/clang17-devel-17.0.6-7.fc40.x86_64.rpm"
+}

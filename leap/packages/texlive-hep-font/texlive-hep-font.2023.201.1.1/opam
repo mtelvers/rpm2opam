@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-hep-font-2023.201.1.1svn64900-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-hep-font-2023.201.1.1svn64900-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-cfr-lm" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-fontspec" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-kvoptions" 
+  "texlive-l3packages" 
+  "texlive-latex" 
+  "texlive-lm" 
+  "texlive-microtype" 
+  "texlive-nfssext-cfr" 
+  "texlive-pdftexcmds" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-slantsc" 
+  "texlive-units" 
+  "texlive-xpatch" 
+]
+extra-source "texlive-hep-font-2023.201.1.1svn64900-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-hep-font-2023.201.1.1svn64900-slfo.1.1.4.noarch.rpm"
+}

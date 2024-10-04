@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ripgrep-zsh-completion-14.1.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ripgrep-zsh-completion-14.1.1-1.1.noarch.rpm"]
+depends: [
+  "ripgrep" {= "14.1.1"}
+]
+extra-source "ripgrep-zsh-completion-14.1.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ripgrep-zsh-completion-14.1.1-1.1.noarch.rpm"
+}

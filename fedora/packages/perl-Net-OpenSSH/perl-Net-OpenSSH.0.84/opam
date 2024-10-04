@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Net-OpenSSH-0.84-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-OpenSSH-0.84-3.fc40.noarch.rpm"]
+depends: [
+  "openssh-clients" 
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Digest-MD5" 
+  "perl-Errno" 
+  "perl-Exporter" 
+  "perl-Moo" 
+  "perl-Object-Remote" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-Socket" 
+  "perl-libs" 
+]
+extra-source "perl-Net-OpenSSH-0.84-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Net-OpenSSH-0.84-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zathura-lang-0.5.8-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zathura-lang-0.5.8-1.1.noarch.rpm"]
+depends: [
+  "zathura" {= "0.5.8"}
+]
+extra-source "zathura-lang-0.5.8-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/zathura-lang-0.5.8-1.1.noarch.rpm"
+}

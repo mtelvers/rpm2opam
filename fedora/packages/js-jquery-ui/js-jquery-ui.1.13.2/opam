@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "js-jquery-ui-1.13.2-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "js-jquery-ui-1.13.2-5.fc40.noarch.rpm"]
+depends: [
+  "js-jquery" {>= "1.8.0"}
+  "web-assets-filesystem" 
+]
+extra-source "js-jquery-ui-1.13.2-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/js-jquery-ui-1.13.2-5.fc40.noarch.rpm"
+}

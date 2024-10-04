@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "platformio-6.1.14-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "platformio-6.1.14-1.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-platformio" {= "6.1.14"}
+  "systemd-udev" 
+]
+extra-source "platformio-6.1.14-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/platformio-6.1.14-1.fc40.noarch.rpm"
+}

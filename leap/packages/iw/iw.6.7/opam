@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "iw-6.7-lp160.1.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "iw-6.7-lp160.1.9.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libnl3-200" 
+]
+extra-source "iw-6.7-lp160.1.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/iw-6.7-lp160.1.9.x86_64.rpm"
+}

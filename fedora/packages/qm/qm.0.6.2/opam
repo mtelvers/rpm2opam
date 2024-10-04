@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qm-0.6.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qm-0.6.2-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "bluechi-agent" 
+  "libselinux-utils" 
+  "podman" {>= "4.5"}
+  "policycoreutils" 
+  "selinux-policy" {>= "40.10"}
+  "selinux-policy-targeted" {>= "40.10"}
+]
+extra-source "qm-0.6.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qm-0.6.2-1.fc40.noarch.rpm"
+}

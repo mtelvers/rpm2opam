@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-attoparsec-aeson-devel-2.2.2.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-attoparsec-aeson-devel-2.2.2.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-aeson-devel" 
+  "ghc-attoparsec-aeson" {= "2.2.2.0"}
+  "ghc-attoparsec-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-character-ps-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-integer-conversion-devel" 
+  "ghc-primitive-devel" 
+  "ghc-scientific-devel" 
+  "ghc-text-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-attoparsec-aeson-devel-2.2.2.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-attoparsec-aeson-devel-2.2.2.0-1.1.x86_64.rpm"
+}

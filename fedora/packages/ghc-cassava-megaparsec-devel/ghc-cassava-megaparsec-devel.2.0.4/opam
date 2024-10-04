@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-cassava-megaparsec-devel-2.0.4-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-cassava-megaparsec-devel-2.0.4-16.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-cassava-devel" 
+  "ghc-cassava-megaparsec" {= "2.0.4"}
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-megaparsec-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-cassava-megaparsec-devel-2.0.4-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-cassava-megaparsec-devel-2.0.4-16.fc40.x86_64.rpm"
+}

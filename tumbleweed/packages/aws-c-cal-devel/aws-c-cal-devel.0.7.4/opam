@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "aws-c-cal-devel-0.7.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "aws-c-cal-devel-0.7.4-1.1.x86_64.rpm"]
+depends: [
+  "libaws-c-cal0unstable" {= "0.7.4"}
+]
+extra-source "aws-c-cal-devel-0.7.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/aws-c-cal-devel-0.7.4-1.1.x86_64.rpm"
+}

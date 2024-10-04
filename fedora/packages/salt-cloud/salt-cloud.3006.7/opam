@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "salt-cloud-3006.7-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "salt-cloud-3006.7-1.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-libcloud" 
+  "salt-master" {= "3006.7"}
+]
+extra-source "salt-cloud-3006.7-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/salt-cloud-3006.7-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "shibboleth-sp-devel-3.4.1-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "shibboleth-sp-devel-3.4.1-2.2.x86_64.rpm"]
+depends: [
+  "krb5-devel" 
+  "liblog4shib-devel" {>= "2"}
+  "libsaml-devel" {>= "3.1.0"}
+  "libshibsp-lite11" {= "3.4.1"}
+  "libshibsp11" {= "3.4.1"}
+  "libxerces-c-devel" {>= "3.2"}
+  "libxml-security-c-devel" {>= "2.0.0"}
+  "libxmltooling-devel" {>= "3.1.0"}
+  "pkgconf-pkg-config" 
+  "shibboleth-sp" {= "3.4.1"}
+]
+extra-source "shibboleth-sp-devel-3.4.1-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/shibboleth-sp-devel-3.4.1-2.2.x86_64.rpm"
+}

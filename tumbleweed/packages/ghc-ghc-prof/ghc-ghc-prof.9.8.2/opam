@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-ghc-prof-9.8.2-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-ghc-prof-9.8.2-2.1.x86_64.rpm"]
+depends: [
+  "ghc-array-prof" 
+  "ghc-base-prof" 
+  "ghc-binary-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-directory-prof" 
+  "ghc-exceptions-prof" 
+  "ghc-filepath-prof" 
+  "ghc-ghc-boot-prof" 
+  "ghc-ghc-devel" {= "9.8.2"}
+  "ghc-ghc-heap-prof" 
+  "ghc-ghci-prof" 
+  "ghc-hpc-prof" 
+  "ghc-process-prof" 
+  "ghc-semaphore-compat-prof" 
+  "ghc-stm-prof" 
+  "ghc-template-haskell-prof" 
+  "ghc-time-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unix-prof" 
+]
+extra-source "ghc-ghc-prof-9.8.2-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-ghc-prof-9.8.2-2.1.x86_64.rpm"
+}

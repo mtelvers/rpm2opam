@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-lib-relative-tests-1.002-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-lib-relative-tests-1.002-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-ExtUtils-MakeMaker" 
+  "perl-File-Basename" 
+  "perl-File-Temp" 
+  "perl-PathTools" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-interpreter" 
+  "perl-lib-relative" 
+  "perl-libs" 
+]
+extra-source "perl-lib-relative-tests-1.002-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-lib-relative-tests-1.002-3.fc40.noarch.rpm"
+}

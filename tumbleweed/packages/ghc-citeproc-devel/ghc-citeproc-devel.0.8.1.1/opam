@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-citeproc-devel-0.8.1.1-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-citeproc-devel-0.8.1.1-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-aeson-devel" 
+  "ghc-attoparsec-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-case-insensitive-devel" 
+  "ghc-citeproc" {= "0.8.1.1"}
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-data-default-devel" 
+  "ghc-file-embed-devel" 
+  "ghc-filepath-devel" 
+  "ghc-pandoc-types-devel" 
+  "ghc-safe-devel" 
+  "ghc-scientific-devel" 
+  "ghc-text-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unicode-collation-devel" 
+  "ghc-uniplate-devel" 
+  "ghc-vector-devel" 
+  "ghc-xml-conduit-devel" 
+]
+extra-source "ghc-citeproc-devel-0.8.1.1-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-citeproc-devel-0.8.1.1-1.2.x86_64.rpm"
+}

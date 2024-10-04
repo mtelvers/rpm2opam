@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libspelling1-1-0.2.1-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libspelling1-1-0.2.1-1.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libenchant-2-2" 
+  "libgtk-4-1" 
+  "libgtksourceview-5-0" 
+  "libicu75" 
+  "libpango-1_0-0" 
+]
+extra-source "libspelling1-1-0.2.1-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libspelling1-1-0.2.1-1.2.x86_64.rpm"
+}

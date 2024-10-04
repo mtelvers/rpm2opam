@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-jupyter_console-6.6.3-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-jupyter_console-6.6.3-2.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-jupyter_console" {= "6.6.3"}
+  "python312-Pygments" 
+  "python312-base" 
+  "python312-ipykernel" {>= "6.14"}
+  "python312-ipython" 
+  "python312-jupyter-client" {>= "7"}
+  "python312-prompt_toolkit" {>= "3.0.30"}
+  "python312-pyzmq" {>= "17"}
+  "python312-traitlets" {>= "5.4"}
+  "update-alternatives" 
+]
+extra-source "python312-jupyter_console-6.6.3-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-jupyter_console-6.6.3-2.2.noarch.rpm"
+}

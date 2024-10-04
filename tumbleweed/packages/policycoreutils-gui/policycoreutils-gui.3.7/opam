@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "policycoreutils-gui-3.7-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "policycoreutils-gui-3.7-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "policycoreutils-dbus" {= "3.7"}
+  "python-gtk" 
+  "python311" 
+  "python311-base" 
+  "python311-gobject" 
+  "python311-policycoreutils" {= "3.7"}
+  "selinux-policy" 
+  "setools-console" 
+]
+extra-source "policycoreutils-gui-3.7-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/policycoreutils-gui-3.7-1.1.noarch.rpm"
+}

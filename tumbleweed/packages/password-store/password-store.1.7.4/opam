@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "password-store-1.7.4-5.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "password-store-1.7.4-5.5.noarch.rpm"]
+depends: [
+  "bash" 
+  "gpg2" 
+  "qrencode" 
+  "tree" {>= "1.7.0"}
+]
+extra-source "password-store-1.7.4-5.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/password-store-1.7.4-5.5.noarch.rpm"
+}

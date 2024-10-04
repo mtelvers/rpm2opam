@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Net-Works-0.22-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-Works-0.22-12.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-List-AllUtils" 
+  "perl-Math-Int128" {>= "0.6"}
+  "perl-Moo" 
+  "perl-Scalar-List-Utils" 
+  "perl-Socket" {>= "1.99"}
+  "perl-Sub-Quote" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-namespace-autoclean" {>= "0.16"}
+  "perl-overload" 
+]
+extra-source "perl-Net-Works-0.22-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Net-Works-0.22-12.fc40.noarch.rpm"
+}

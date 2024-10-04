@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-Twisted-24.7.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-Twisted-24.7.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-Automat" {>= "0.8.0"}
+  "python312-Twisted-tls" {= "24.7.0"}
+  "python312-attrs" {>= "19.2.0"}
+  "python312-base" 
+  "python312-constantly" {>= "15.1"}
+  "python312-hyperlink" {>= "17.1.1"}
+  "python312-incremental" {>= "24.7.0"}
+  "python312-typing_extensions" {>= "3.6.5"}
+  "python312-zope-interface" {>= "4.4.2"}
+  "update-alternatives" 
+]
+extra-source "python312-Twisted-24.7.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-Twisted-24.7.0-1.1.noarch.rpm"
+}

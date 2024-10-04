@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cockpit-podman-91-slfo.1.1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cockpit-podman-91-slfo.1.1.1.noarch.rpm"]
+depends: [
+  "cockpit-bridge" {>= "138"}
+  "cockpit-system" {>= "138"}
+  "podman" {>= "2.0.4"}
+]
+extra-source "cockpit-podman-91-slfo.1.1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/cockpit-podman-91-slfo.1.1.1.noarch.rpm"
+}

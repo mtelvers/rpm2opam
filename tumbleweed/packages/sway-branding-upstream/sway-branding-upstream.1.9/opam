@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sway-branding-upstream-1.9-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sway-branding-upstream-1.9-3.1.noarch.rpm"]
+depends: [
+  "sway" {= "1.9"}
+]
+extra-source "sway-branding-upstream-1.9-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sway-branding-upstream-1.9-3.1.noarch.rpm"
+}

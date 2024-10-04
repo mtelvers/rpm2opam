@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dpdk-22.11.1-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dpdk-22.11.1-4.fc40.x86_64.rpm"]
+depends: [
+  "elfutils-libelf" 
+  "glibc" 
+  "libarchive" 
+  "libatomic" 
+  "libfdt" 
+  "libibverbs" 
+  "libpcap" 
+  "numactl-libs" 
+  "openssl-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "dpdk-22.11.1-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dpdk-22.11.1-4.fc40.x86_64.rpm"
+}

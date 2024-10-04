@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-old-locale-1.0.0.7-13.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-old-locale-1.0.0.7-13.9.x86_64.rpm"]
+depends: [
+  "ghc-base" 
+  "ghc-ghc-bignum" 
+  "glibc" 
+  "libgmp10" 
+]
+extra-source "ghc-old-locale-1.0.0.7-13.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-old-locale-1.0.0.7-13.9.x86_64.rpm"
+}

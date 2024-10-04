@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-Log-Log4perl-0.47-2.26.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Log-Log4perl-0.47-2.26.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Log-Log4perl" {>= "1.13"}
+  "perl-Moo" {>= "1.7"}
+]
+extra-source "perl-MooseX-Log-Log4perl-0.47-2.26.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-Log-Log4perl-0.47-2.26.noarch.rpm"
+}

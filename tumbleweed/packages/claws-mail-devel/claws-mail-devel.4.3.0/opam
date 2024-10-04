@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "claws-mail-devel-4.3.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "claws-mail-devel-4.3.0-1.2.x86_64.rpm"]
+depends: [
+  "claws-mail" {= "4.3.0"}
+  "enchant-devel" 
+  "glib2-devel" {>= "2.50"}
+  "gtk3-devel" 
+  "libcanberra-gtk3-devel" 
+  "libetpan-devel" 
+  "libgnutls-devel" 
+  "libgpgme-devel" 
+  "openldap2-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "claws-mail-devel-4.3.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/claws-mail-devel-4.3.0-1.2.x86_64.rpm"
+}

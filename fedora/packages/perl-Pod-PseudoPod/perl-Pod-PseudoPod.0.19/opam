@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Pod-PseudoPod-0.19-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Pod-PseudoPod-0.19-14.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-File-Basename" 
+  "perl-Getopt-Std" 
+  "perl-HTML-Parser" 
+  "perl-Pod-Simple" {>= "3.2"}
+  "perl-Text-Tabs+Wrap" {>= "98.112902"}
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" {>= "5.0.0"}
+  "perl-vars" 
+]
+extra-source "perl-Pod-PseudoPod-0.19-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Pod-PseudoPod-0.19-14.fc40.noarch.rpm"
+}

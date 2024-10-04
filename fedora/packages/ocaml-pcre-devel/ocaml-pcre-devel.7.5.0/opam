@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-pcre-devel-7.5.0-18.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-pcre-devel-7.5.0-18.fc40.x86_64.rpm"]
+depends: [
+  "ocaml" {= "2125"}
+  "ocaml-pcre" {= "7.5.0"}
+  "pcre-devel" 
+]
+extra-source "ocaml-pcre-devel-7.5.0-18.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-pcre-devel-7.5.0-18.fc40.x86_64.rpm"
+}

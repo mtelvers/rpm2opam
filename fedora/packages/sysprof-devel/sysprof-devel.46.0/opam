@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sysprof-devel-46.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sysprof-devel-46.0-1.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.76.0"}
+  "json-glib-devel" 
+  "libdex-devel" {>= "0.3"}
+  "libsysprof" {= "46.0"}
+  "pkgconf-pkg-config" 
+  "polkit-devel" {>= "0.105"}
+  "sysprof-capture-devel" {= "46.0"}
+  "systemd-devel" 
+]
+extra-source "sysprof-devel-46.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sysprof-devel-46.0-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "guestfs-tools-1.52.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "guestfs-tools-1.52.0-3.fc40.x86_64.rpm"]
+depends: [
+  "curl" 
+  "glib2" 
+  "glibc" 
+  "gnupg2" 
+  "jansson" 
+  "libgcc" 
+  "libguestfs" {>= "1.49.6"}
+  "libosinfo" 
+  "libvirt-libs" 
+  "libxcrypt" 
+  "libxml2" 
+  "ncurses-libs" 
+  "pcre2" 
+  "qemu-img" 
+  "xz" 
+  "xz-libs" 
+]
+extra-source "guestfs-tools-1.52.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/guestfs-tools-1.52.0-3.fc40.x86_64.rpm"
+}

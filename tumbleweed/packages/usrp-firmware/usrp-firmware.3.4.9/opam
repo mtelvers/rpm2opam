@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "usrp-firmware-3.4.9-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "usrp-firmware-3.4.9-1.2.noarch.rpm"]
+depends: [
+  "usrp-tools" {= "3.4.9"}
+]
+extra-source "usrp-firmware-3.4.9-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/usrp-firmware-3.4.9-1.2.noarch.rpm"
+}

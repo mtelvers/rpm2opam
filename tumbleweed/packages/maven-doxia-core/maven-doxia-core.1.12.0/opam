@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-doxia-core-1.12.0-6.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-doxia-core-1.12.0-6.1.noarch.rpm"]
+depends: [
+  "apache-commons-lang3" 
+  "apache-commons-text" 
+  "httpcomponents-client" 
+  "httpcomponents-core" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "maven-doxia-logging-api" {= "1.12.0"}
+  "maven-doxia-sink-api" {= "1.12.0"}
+  "plexus-containers-component-annotations" 
+  "plexus-utils" 
+  "plexus-xml" 
+  "sisu-plexus" 
+]
+extra-source "maven-doxia-core-1.12.0-6.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-doxia-core-1.12.0-6.1.noarch.rpm"
+}

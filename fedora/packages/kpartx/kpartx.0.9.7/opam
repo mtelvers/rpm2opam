@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kpartx-0.9.7-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kpartx-0.9.7-7.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "device-mapper-libs" 
+  "glibc" 
+]
+extra-source "kpartx-0.9.7-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kpartx-0.9.7-7.fc40.x86_64.rpm"
+}

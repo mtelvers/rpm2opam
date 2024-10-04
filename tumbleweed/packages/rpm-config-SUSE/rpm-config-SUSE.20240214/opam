@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rpm-config-SUSE-20240214-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rpm-config-SUSE-20240214-2.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+]
+extra-source "rpm-config-SUSE-20240214-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/rpm-config-SUSE-20240214-2.1.noarch.rpm"
+}

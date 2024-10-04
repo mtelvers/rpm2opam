@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jaaa-0.9.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jaaa-0.9.2-3.fc40.x86_64.rpm"]
+depends: [
+  "clthreads" 
+  "clxclient" 
+  "fftw-libs-single" 
+  "glibc" 
+  "jack-audio-connection-kit" 
+  "libX11" 
+  "libgcc" 
+  "libstdc++" 
+  "zita-alsa-pcmi" 
+]
+extra-source "jaaa-0.9.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jaaa-0.9.2-3.fc40.x86_64.rpm"
+}

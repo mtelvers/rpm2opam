@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pcb-4.3.0-1.14.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcb-4.3.0-1.14.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libGLU1" 
+  "libcairo2" 
+  "libdbus-1-3" 
+  "libgd3" 
+  "libgdk_pixbuf-2_0-0" 
+  "libglvnd" 
+  "libgtk-2_0-0" 
+  "libgtkglext-x11-1_0-0" 
+  "m4" 
+  "perl-base" 
+  "tcl" 
+  "tk" 
+]
+extra-source "pcb-4.3.0-1.14.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pcb-4.3.0-1.14.x86_64.rpm"
+}

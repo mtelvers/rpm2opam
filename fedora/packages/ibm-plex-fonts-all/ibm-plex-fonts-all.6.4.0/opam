@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ibm-plex-fonts-all-6.4.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibm-plex-fonts-all-6.4.0-1.fc40.noarch.rpm"]
+depends: [
+  "ibm-plex-mono-fonts" {= "6.4.0"}
+  "ibm-plex-sans-arabic-fonts" {= "6.4.0"}
+  "ibm-plex-sans-devanagari-fonts" {= "6.4.0"}
+  "ibm-plex-sans-fonts" {= "6.4.0"}
+  "ibm-plex-sans-hebrew-fonts" {= "6.4.0"}
+  "ibm-plex-sans-thai-fonts" {= "6.4.0"}
+  "ibm-plex-sans-thai-looped-fonts" {= "6.4.0"}
+  "ibm-plex-serif-fonts" {= "6.4.0"}
+]
+extra-source "ibm-plex-fonts-all-6.4.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/ibm-plex-fonts-all-6.4.0-1.fc40.noarch.rpm"
+}

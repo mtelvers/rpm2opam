@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-Specio-0.48-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Specio-0.48-6.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" 
+  "perl-IO" 
+  "perl-Scalar-List-Utils" 
+  "perl-Specio" 
+  "perl-Sub-Quote" 
+  "perl-Test-Fatal" 
+  "perl-Test-Simple" {>= "0.96"}
+  "perl-Try-Tiny" 
+  "perl-libs" 
+  "perl-overload" 
+]
+extra-source "perl-Test-Specio-0.48-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-Specio-0.48-6.fc40.noarch.rpm"
+}

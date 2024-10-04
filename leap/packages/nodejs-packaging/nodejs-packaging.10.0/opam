@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nodejs-packaging-10.beta11-lp160.1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nodejs-packaging-10.beta11-lp160.1.9.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "gcc-build-c++" 
+  "nodejs-devel-default" 
+  "npm-default" 
+  "ruby" 
+  "ruby3-2" 
+]
+extra-source "nodejs-packaging-10.beta11-lp160.1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/nodejs-packaging-10.beta11-lp160.1.9.noarch.rpm"
+}

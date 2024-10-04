@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openbox-devel-3.6.1-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openbox-devel-3.6.1-5.2.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "imlib2-devel" 
+  "libICE-devel" 
+  "libSM-devel" 
+  "libX11-devel" 
+  "libXft-devel" 
+  "libobrender32" {= "3.6.1"}
+  "libobt2" {= "3.6.1"}
+  "librsvg-devel" 
+  "libxml2-devel" 
+  "pango-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "openbox-devel-3.6.1-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openbox-devel-3.6.1-5.2.x86_64.rpm"
+}

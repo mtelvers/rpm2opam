@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-osmium-3.7.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-osmium-3.7.0-3.fc40.x86_64.rpm"]
+depends: [
+  "bzip2-libs" 
+  "expat" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "lz4-libs" 
+  "python3" 
+  "python3-requests" 
+  "zlib-ng-compat" 
+]
+extra-source "python3-osmium-3.7.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-osmium-3.7.0-3.fc40.x86_64.rpm"
+}

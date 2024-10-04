@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gtkd-devel-3.10.0-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtkd-devel-3.10.0-10.fc40.x86_64.rpm"]
+depends: [
+  "atk-devel" 
+  "cairo-devel" 
+  "cairo-gobject-devel" 
+  "glib2-devel" 
+  "gstreamer1-devel" 
+  "gtk3-devel" 
+  "gtkd" {= "3.10.0"}
+  "gtkglext-devel" 
+  "gtksourceview4-devel" 
+  "libpeas1-devel" 
+  "librsvg2-devel" 
+  "pango-devel" 
+  "pkgconf-pkg-config" 
+  "vte291-devel" 
+]
+extra-source "gtkd-devel-3.10.0-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gtkd-devel-3.10.0-10.fc40.x86_64.rpm"
+}

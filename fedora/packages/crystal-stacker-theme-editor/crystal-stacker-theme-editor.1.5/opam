@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "crystal-stacker-theme-editor-1.5-41.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "crystal-stacker-theme-editor-1.5-41.fc40.x86_64.rpm"]
+depends: [
+  "allegro" 
+  "crystal-stacker" {= "1.5"}
+  "glibc" 
+]
+extra-source "crystal-stacker-theme-editor-1.5-41.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/crystal-stacker-theme-editor-1.5-41.fc40.x86_64.rpm"
+}

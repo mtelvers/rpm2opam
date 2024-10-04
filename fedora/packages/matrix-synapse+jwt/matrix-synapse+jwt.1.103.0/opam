@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "matrix-synapse+jwt-1.103.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "matrix-synapse+jwt-1.103.0-1.fc40.x86_64.rpm"]
+depends: [
+  "matrix-synapse" {= "1.103.0"}
+  "python3" {= "3.12"}
+  "python3-authlib" {>= "0.15.1"}
+]
+extra-source "matrix-synapse+jwt-1.103.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/matrix-synapse+jwt-1.103.0-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pfstools-octave-2.2.0-4.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pfstools-octave-2.2.0-4.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libpfs2" 
+  "libstdc++6" 
+  "octave" 
+  "octave-cli" 
+]
+extra-source "pfstools-octave-2.2.0-4.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pfstools-octave-2.2.0-4.6.x86_64.rpm"
+}

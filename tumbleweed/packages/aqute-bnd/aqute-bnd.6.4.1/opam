@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "aqute-bnd-6.4.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "aqute-bnd-6.4.1-2.1.noarch.rpm"]
+depends: [
+  "ant" 
+  "aqute-bndlib" {= "6.4.1"}
+  "bash" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+  "osgi-annotation" 
+  "slf4j" 
+]
+extra-source "aqute-bnd-6.4.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/aqute-bnd-6.4.1-2.1.noarch.rpm"
+}

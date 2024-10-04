@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "whohas-0.29.1-1.27.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "whohas-0.29.1-1.27.noarch.rpm"]
+depends: [
+  "perl" {= "5.40.0"}
+  "perl-base" 
+  "perl-forks" 
+  "perl-libwww-perl" 
+]
+extra-source "whohas-0.29.1-1.27.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/whohas-0.29.1-1.27.noarch.rpm"
+}

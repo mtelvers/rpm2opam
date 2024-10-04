@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcovr-6.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcovr-6.0-1.3.noarch.rpm"]
+depends: [
+  "gcc" 
+  "python311-Jinja2" 
+  "python311-base" 
+  "python311-lxml" 
+]
+extra-source "gcovr-6.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gcovr-6.0-1.3.noarch.rpm"
+}

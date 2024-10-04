@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ca-certificates-mozilla-2.68-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ca-certificates-mozilla-2.68-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "ca-certificates" 
+]
+extra-source "ca-certificates-mozilla-2.68-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ca-certificates-mozilla-2.68-2.1.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "zabbix-server-6.0.27-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zabbix-server-6.0.27-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "fping" 
+  "shadow-utils" 
+  "systemd" 
+  "traceroute" 
+  "zabbix" {= "6.0.27"}
+  "zabbix-server-mysql" {= "6.0.27"}
+]
+extra-source "zabbix-server-6.0.27-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/z/zabbix-server-6.0.27-1.fc40.noarch.rpm"
+}

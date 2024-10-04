@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "live-net-installer-1.0-20.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "live-net-installer-1.0-20.12.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bcache-tools" 
+  "btrfsprogs" 
+  "cryptsetup" 
+  "device-mapper" 
+  "dmraid" 
+  "e2fsprogs" 
+  "exfatprogs" 
+  "fcoe-utils" 
+  "mdadm" 
+  "multipath-tools" 
+  "ntfs-3g" 
+  "ntfsprogs" 
+  "nvme-cli" 
+  "open-iscsi" 
+  "quota" 
+  "snapper" 
+  "util-linux" 
+  "xdg-utils" 
+  "xfsprogs" 
+  "yast2-installation" 
+]
+extra-source "live-net-installer-1.0-20.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/live-net-installer-1.0-20.12.x86_64.rpm"
+}

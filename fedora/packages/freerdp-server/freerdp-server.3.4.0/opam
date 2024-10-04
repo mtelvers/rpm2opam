@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "freerdp-server-3.4.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freerdp-server-3.4.0-1.fc40.x86_64.rpm"]
+depends: [
+  "freerdp-libs" {= "3.4.0"}
+  "glibc" 
+  "libwinpr" {= "3.4.0"}
+]
+extra-source "freerdp-server-3.4.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/freerdp-server-3.4.0-1.fc40.x86_64.rpm"
+}

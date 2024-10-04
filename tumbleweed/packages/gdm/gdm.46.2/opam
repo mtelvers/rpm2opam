@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gdm-46.2-6.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdm-46.2-6.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "dbus-1-daemon" 
+  "dconf" 
+  "gdmflexiserver" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gnome-session-core" 
+  "gnome-settings-daemon" 
+  "gnome-shell" 
+  "libX11-6" 
+  "libXau6" 
+  "libXdmcp6" 
+  "libaccountsservice0" 
+  "libaudit1" 
+  "libcanberra-gtk3-0" 
+  "libcanberra0" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgdm1" 
+  "libgtk-3-0" 
+  "libgudev-1_0-0" 
+  "libjson-glib-1_0-0" 
+  "libkeyutils1" 
+  "libselinux1" 
+  "libsystemd0" 
+  "libxcb1" 
+  "pam" 
+  "system-group-hardware" 
+  "sysuser-shadow" {>= "3.2"}
+  "update-alternatives" 
+  "xdm" 
+]
+extra-source "gdm-46.2-6.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gdm-46.2-6.1.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsmraw-tools-20240506-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsmraw-tools-20240506-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcdata1" 
+  "libcerror1" 
+  "libclocale1" 
+  "libcnotify1" 
+  "libcsplit1" 
+  "libfuse2" 
+  "libhmac1" 
+  "libsmraw1" 
+]
+extra-source "libsmraw-tools-20240506-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libsmraw-tools-20240506-1.1.x86_64.rpm"
+}

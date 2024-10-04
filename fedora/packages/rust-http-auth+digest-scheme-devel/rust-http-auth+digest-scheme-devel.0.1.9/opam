@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-http-auth+digest-scheme-devel-0.1.9-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-http-auth+digest-scheme-devel-0.1.9-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-http-auth+digest-devel" {= "0.1.9"}
+  "rust-http-auth+hex-devel" {= "0.1.9"}
+  "rust-http-auth+md-5-devel" {= "0.1.9"}
+  "rust-http-auth+rand-devel" {= "0.1.9"}
+  "rust-http-auth+sha2-devel" {= "0.1.9"}
+  "rust-http-auth-devel" {= "0.1.9"}
+]
+extra-source "rust-http-auth+digest-scheme-devel-0.1.9-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-http-auth+digest-scheme-devel-0.1.9-1.fc40.noarch.rpm"
+}

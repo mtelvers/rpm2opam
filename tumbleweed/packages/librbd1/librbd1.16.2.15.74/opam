@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "librbd1-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "librbd1-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm"]
+depends: [
+  "coreutils" 
+  "glibc" 
+  "libaio1" 
+  "libcryptsetup12" 
+  "libfmt9" 
+  "libgcc_s1" 
+  "liblttng-ust1" 
+  "libopenssl3" 
+  "librados2" 
+  "libstdc++6" 
+]
+extra-source "librbd1-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/librbd1-16.2.15.74+gc5dd01a91d8-1.2.x86_64.rpm"
+}

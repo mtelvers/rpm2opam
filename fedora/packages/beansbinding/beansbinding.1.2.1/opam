@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "beansbinding-1.2.1-36.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "beansbinding-1.2.1-36.fc40.noarch.rpm"]
+depends: [
+  "java-21-openjdk" {>= "1.6.0"}
+  "javapackages-tools" 
+]
+extra-source "beansbinding-1.2.1-36.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/beansbinding-1.2.1-36.fc40.noarch.rpm"
+}

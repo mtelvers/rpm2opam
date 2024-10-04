@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "parallel-printer-support-1.00-14.19.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "parallel-printer-support-1.00-14.19.noarch.rpm"]
+depends: [
+  "aaa_base" 
+  "bash-sh" 
+  "system-user-lp" 
+  "systemd" 
+  "udev" 
+]
+extra-source "parallel-printer-support-1.00-14.19.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/parallel-printer-support-1.00-14.19.noarch.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kdump-2.0.9-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kdump-2.0.9-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "busybox-sed" 
+  "dracut" {>= "47"}
+  "fillup" 
+  "glibc" 
+  "kexec-tools" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "makedumpfile" 
+]
+extra-source "kdump-2.0.9-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kdump-2.0.9-1.1.x86_64.rpm"
+}

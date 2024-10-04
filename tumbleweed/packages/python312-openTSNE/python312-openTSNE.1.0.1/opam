@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-openTSNE-1.0.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-openTSNE-1.0.1-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libfftw3-3" 
+  "libgcc_s1" 
+  "libgomp1" 
+  "libstdc++6" 
+  "python312-base" {= "3.12"}
+  "python312-numpy" {>= "1.16.6"}
+  "python312-scikit-learn" {>= "0.20"}
+  "python312-scipy" 
+]
+extra-source "python312-openTSNE-1.0.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-openTSNE-1.0.1-2.1.x86_64.rpm"
+}

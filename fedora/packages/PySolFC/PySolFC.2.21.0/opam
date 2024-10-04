@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "PySolFC-2.21.0-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "PySolFC-2.21.0-5.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "python3" 
+  "python3-attrs" {>= "18.2"}
+  "python3-configobj" 
+  "python3-pillow" 
+  "python3-pillow-tk" 
+  "python3-pygame" 
+  "python3-pysol-cards" 
+  "python3-random2" 
+  "python3-six" 
+  "python3-tkinter" 
+  "tcl" 
+  "tix" 
+  "tk" 
+]
+extra-source "PySolFC-2.21.0-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/PySolFC-2.21.0-5.fc40.noarch.rpm"
+}

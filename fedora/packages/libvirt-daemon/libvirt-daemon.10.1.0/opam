@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libvirt-daemon-10.1.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvirt-daemon-10.1.0-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "libgcc" 
+  "libtirpc" 
+  "libvirt-daemon-common" {= "10.1.0"}
+  "libvirt-daemon-lock" {= "10.1.0"}
+  "libvirt-daemon-log" {= "10.1.0"}
+  "libvirt-daemon-plugin-lockd" {= "10.1.0"}
+  "libvirt-daemon-proxy" {= "10.1.0"}
+  "libvirt-libs" {= "10.1.0"}
+]
+extra-source "libvirt-daemon-10.1.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libvirt-daemon-10.1.0-1.fc40.x86_64.rpm"
+}

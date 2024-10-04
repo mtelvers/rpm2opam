@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "skopeo-bash-completion-1.16.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "skopeo-bash-completion-1.16.1-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "skopeo" {= "1.16.1"}
+]
+extra-source "skopeo-bash-completion-1.16.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/skopeo-bash-completion-1.16.1-1.1.noarch.rpm"
+}

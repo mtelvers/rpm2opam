@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dbus-glib-devel-0.112-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dbus-glib-devel-0.112-8.fc40.x86_64.rpm"]
+depends: [
+  "dbus-devel" 
+  "dbus-glib" {= "0.112"}
+  "dbus-libs" 
+  "expat" 
+  "glib2" 
+  "glib2-devel" 
+  "glibc" 
+  "pkgconf-pkg-config" 
+]
+extra-source "dbus-glib-devel-0.112-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dbus-glib-devel-0.112-8.fc40.x86_64.rpm"
+}

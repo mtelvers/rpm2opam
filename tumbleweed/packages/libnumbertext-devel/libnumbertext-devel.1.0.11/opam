@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnumbertext-devel-1.0.11-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnumbertext-devel-1.0.11-1.6.x86_64.rpm"]
+depends: [
+  "libnumbertext-1_0-0" {= "1.0.11"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libnumbertext-devel-1.0.11-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libnumbertext-devel-1.0.11-1.6.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "loupe-46.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "loupe-46.2-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "glycin-loaders" 
+  "libadwaita-1-0" 
+  "libcairo2" 
+  "libgcc_s1" 
+  "libgraphene-1_0-0" 
+  "libgtk-4-1" 
+  "libgweather-4-0" 
+  "liblcms2-2" 
+  "libseccomp2" 
+]
+extra-source "loupe-46.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/loupe-46.2-1.1.x86_64.rpm"
+}

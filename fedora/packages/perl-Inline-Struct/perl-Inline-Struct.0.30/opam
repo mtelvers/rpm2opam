@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Inline-Struct-0.30-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Inline-Struct-0.30-8.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Inline" {>= "0.66"}
+  "perl-Inline-C" {>= "0.62"}
+  "perl-Parse-RecDescent" 
+  "perl-libs" 
+]
+extra-source "perl-Inline-Struct-0.30-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Inline-Struct-0.30-8.fc40.noarch.rpm"
+}

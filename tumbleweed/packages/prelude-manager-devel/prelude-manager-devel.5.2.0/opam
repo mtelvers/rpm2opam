@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "prelude-manager-devel-5.2.0-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "prelude-manager-devel-5.2.0-3.2.x86_64.rpm"]
+depends: [
+  "libpreludedb-devel" 
+  "prelude-manager" {= "5.2.0"}
+]
+extra-source "prelude-manager-devel-5.2.0-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/prelude-manager-devel-5.2.0-3.2.x86_64.rpm"
+}

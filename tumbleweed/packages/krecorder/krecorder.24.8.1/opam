@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "krecorder-24.08.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "krecorder-24.08.1-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf6-kirigami-imports" {>= "6.3.0"}
+  "kirigami-addons6" {>= "0.11"}
+  "libKF6CoreAddons6" 
+  "libKF6I18n6" 
+  "libQt6Core6" 
+  "libQt6Gui6" 
+  "libQt6Multimedia6" 
+  "libQt6Qml6" 
+  "libQt6QuickControls2-6" 
+  "libQt6Widgets6" 
+  "libstdc++6" 
+]
+extra-source "krecorder-24.08.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/krecorder-24.08.1-1.1.x86_64.rpm"
+}

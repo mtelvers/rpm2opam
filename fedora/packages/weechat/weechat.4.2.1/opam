@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "weechat-4.2.1-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "weechat-4.2.1-2.fc40.x86_64.rpm"]
+depends: [
+  "enchant" 
+  "glibc" 
+  "gnutls" 
+  "guile22" 
+  "hicolor-icon-theme" 
+  "libcurl" 
+  "libgcc" 
+  "libgcrypt" 
+  "libzstd" 
+  "lua-libs" 
+  "ncurses-libs" 
+  "perl-libs" 
+  "python3-libs" 
+  "ruby-libs" 
+  "tcl" 
+  "zlib-ng-compat" 
+]
+extra-source "weechat-4.2.1-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/weechat-4.2.1-2.fc40.x86_64.rpm"
+}

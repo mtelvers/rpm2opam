@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcob4-3.1.2-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcob4-3.1.2-2.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libdb-4_8" 
+  "libgmp10" 
+  "libjson-c5" 
+  "libncurses6" 
+  "libxml2-2" 
+]
+extra-source "libcob4-3.1.2-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcob4-3.1.2-2.6.x86_64.rpm"
+}

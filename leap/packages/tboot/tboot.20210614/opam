@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tboot-20210614_1.11.1-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tboot-20210614_1.11.1-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libopenssl3" 
+  "libz-ng-compat1" 
+]
+extra-source "tboot-20210614_1.11.1-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/tboot-20210614_1.11.1-slfo.1.1.8.x86_64.rpm"
+}

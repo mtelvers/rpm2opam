@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "octave-devel-8.4.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "octave-devel-8.4.0-6.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "fftw-devel" 
+  "flexiblas-devel" 
+  "gcc-c++" 
+  "gcc-gfortran" 
+  "hdf5-devel" 
+  "libappstream-glib" 
+  "octave" 
+  "pkgconf-pkg-config" 
+  "readline-devel" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "octave-devel-8.4.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/octave-devel-8.4.0-6.fc40.x86_64.rpm"
+}

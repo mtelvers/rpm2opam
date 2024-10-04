@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libXpresent-devel-1.0.0-21.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libXpresent-devel-1.0.0-21.fc40.x86_64.rpm"]
+depends: [
+  "libX11-devel" 
+  "libXpresent" {= "1.0.0"}
+  "pkgconf-pkg-config" 
+  "xorg-x11-proto-devel" {>= "1.0"}
+]
+extra-source "libXpresent-devel-1.0.0-21.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libXpresent-devel-1.0.0-21.fc40.x86_64.rpm"
+}

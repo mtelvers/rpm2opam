@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgpiod-utils-1.6.3-2.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgpiod-utils-1.6.3-2.7.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bats" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcc_s1" 
+  "libgpiod2" 
+  "libgpiodcxx1" 
+  "libgpiomockup0" 
+  "libstdc++6" 
+  "python311-base" 
+]
+extra-source "libgpiod-utils-1.6.3-2.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgpiod-utils-1.6.3-2.7.x86_64.rpm"
+}

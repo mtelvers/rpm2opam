@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "c-ares-1.25.0-5.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "c-ares-1.25.0-5.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+]
+extra-source "c-ares-1.25.0-5.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/c-ares-1.25.0-5.el10.x86_64.rpm"
+}

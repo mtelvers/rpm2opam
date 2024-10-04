@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "htop-3.3.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "htop-3.3.0-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcap2" 
+  "libhwloc15" 
+  "libncurses6" 
+  "libnl3-200" 
+]
+extra-source "htop-3.3.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/htop-3.3.0-1.3.x86_64.rpm"
+}

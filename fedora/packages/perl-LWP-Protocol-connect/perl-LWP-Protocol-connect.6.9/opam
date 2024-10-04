@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-LWP-Protocol-connect-6.09-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-LWP-Protocol-connect-6.09-29.fc40.noarch.rpm"]
+depends: [
+  "perl-HTTP-Message" 
+  "perl-IO-Socket-SSL" 
+  "perl-LWP-Protocol-https" 
+  "perl-URI" 
+  "perl-base" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+]
+extra-source "perl-LWP-Protocol-connect-6.09-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-LWP-Protocol-connect-6.09-29.fc40.noarch.rpm"
+}

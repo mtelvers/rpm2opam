@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libdnf-plugin-subscription-manager-1.30.2-1.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdnf-plugin-subscription-manager-1.30.2-1.el10.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "json-c" 
+  "libdnf" 
+  "librepo" 
+  "openssl-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "libdnf-plugin-subscription-manager-1.30.2-1.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/libdnf-plugin-subscription-manager-1.30.2-1.el10.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Locale-SubCountry-2.07-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Locale-SubCountry-2.07-8.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" 
+  "perl-JSON" {>= "1"}
+  "perl-libs" 
+  "perl-locale" {>= "1"}
+]
+extra-source "perl-Locale-SubCountry-2.07-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Locale-SubCountry-2.07-8.fc40.noarch.rpm"
+}

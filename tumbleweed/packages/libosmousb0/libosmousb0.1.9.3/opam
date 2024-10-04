@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libosmousb0-1.9.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libosmousb0-1.9.3-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libosmocore21" 
+  "libtalloc2" 
+  "libusb-1_0-0" 
+]
+extra-source "libosmousb0-1.9.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libosmousb0-1.9.3-1.1.x86_64.rpm"
+}

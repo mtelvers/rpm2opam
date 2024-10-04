@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "deepin-terminal-5.4.33-1.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deepin-terminal-5.4.33-1.16.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5DBus5" 
+  "libQt5Gui5" 
+  "libQt5Network5" 
+  "libQt5Widgets5" 
+  "libQt5X11Extras5" 
+  "libdframeworkdbus2" 
+  "libdtkcore5" 
+  "libdtkgui5" 
+  "libdtkwidget5" 
+  "libgcc_s1" 
+  "libsecret-1-0" 
+  "libstdc++6" 
+  "libterminalwidget5-0" 
+  "libxcb1" 
+]
+extra-source "deepin-terminal-5.4.33-1.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/deepin-terminal-5.4.33-1.16.x86_64.rpm"
+}

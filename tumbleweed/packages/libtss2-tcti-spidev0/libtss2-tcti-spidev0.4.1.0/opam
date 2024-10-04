@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libtss2-tcti-spidev0-4.1.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libtss2-tcti-spidev0-4.1.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libtss2-mu0" 
+  "libtss2-tcti-spi-helper0" 
+]
+extra-source "libtss2-tcti-spidev0-4.1.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libtss2-tcti-spidev0-4.1.0-1.1.x86_64.rpm"
+}

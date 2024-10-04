@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libavdevice-free-devel-6.1.1-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libavdevice-free-devel-6.1.1-8.fc40.x86_64.rpm"]
+depends: [
+  "libavcodec-free-devel" {= "6.1.1"}
+  "libavdevice-free" {= "6.1.1"}
+  "libavfilter-free-devel" {= "6.1.1"}
+  "libavformat-free-devel" {= "6.1.1"}
+  "libavutil-free-devel" {= "6.1.1"}
+  "libpostproc-free-devel" {= "6.1.1"}
+  "libswresample-free-devel" {= "6.1.1"}
+  "libswscale-free-devel" {= "6.1.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libavdevice-free-devel-6.1.1-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libavdevice-free-devel-6.1.1-8.fc40.x86_64.rpm"
+}

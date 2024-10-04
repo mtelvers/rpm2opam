@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-NiceDump-1.0.1-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-NiceDump-1.0.1-14.fc40.noarch.rpm"]
+depends: [
+  "perl-Data-Dump" 
+  "perl-Exporter" 
+  "perl-Safe-Isa" {>= "1.10"}
+  "perl-Test-Simple" 
+  "perl-libs" 
+  "perl-overload" 
+]
+extra-source "perl-Test-NiceDump-1.0.1-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-NiceDump-1.0.1-14.fc40.noarch.rpm"
+}

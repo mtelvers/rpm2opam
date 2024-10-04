@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bacula-common-13.0.4-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bacula-common-13.0.4-4.fc40.x86_64.rpm"]
+depends: [
+  "bacula-libs" {= "13.0.4"}
+  "bash" 
+  "shadow-utils" 
+]
+extra-source "bacula-common-13.0.4-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bacula-common-13.0.4-4.fc40.x86_64.rpm"
+}

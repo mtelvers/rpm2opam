@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libarrow-flight-libs-15.0.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libarrow-flight-libs-15.0.2-3.fc40.x86_64.rpm"]
+depends: [
+  "abseil-cpp" 
+  "glib2" 
+  "glibc" 
+  "grpc" 
+  "grpc-cpp" 
+  "libarrow" {= "15.0.2"}
+  "libarrow-doc" {= "15.0.2"}
+  "libarrow-glib-libs" 
+  "libgcc" 
+  "libstdc++" 
+  "openssl" 
+  "protobuf" 
+]
+extra-source "libarrow-flight-libs-15.0.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libarrow-flight-libs-15.0.2-3.fc40.x86_64.rpm"
+}

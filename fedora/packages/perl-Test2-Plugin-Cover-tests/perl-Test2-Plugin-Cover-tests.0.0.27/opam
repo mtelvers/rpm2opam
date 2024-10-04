@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test2-Plugin-Cover-tests-0.0.27-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test2-Plugin-Cover-tests-0.0.27-9.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Fcntl" 
+  "perl-IPC-Cmd" 
+  "perl-Path-Tiny" {>= "0.48"}
+  "perl-PathTools" 
+  "perl-Test-Harness" 
+  "perl-Test2-Plugin-Cover" 
+  "perl-Test2-Suite" {>= "0.130"}
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Test2-Plugin-Cover-tests-0.0.27-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test2-Plugin-Cover-tests-0.0.27-9.fc40.noarch.rpm"
+}

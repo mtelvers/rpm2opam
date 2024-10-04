@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-sequoia-wot-devel-0.11.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-sequoia-wot-devel-0.11.0-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cargo" 
+  "rust" {>= "1.70"}
+  "rust-anyhow+default-devel" 
+  "rust-chrono+default-devel" 
+  "rust-crossbeam+default-devel" 
+  "rust-enumber+default-devel" 
+  "rust-num_cpus+default-devel" 
+  "rust-sequoia-cert-store+default-devel" 
+  "rust-sequoia-openpgp-devel" 
+  "rust-sequoia-policy-config+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-sequoia-wot-devel-0.11.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-sequoia-wot-devel-0.11.0-1.fc40.noarch.rpm"
+}

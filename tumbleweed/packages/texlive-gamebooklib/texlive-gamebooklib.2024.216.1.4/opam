@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-gamebooklib-2024.216.1.4svn67772-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-gamebooklib-2024.216.1.4svn67772-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-environ" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-lcg" 
+  "texlive-macroswap" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-silence" 
+]
+extra-source "texlive-gamebooklib-2024.216.1.4svn67772-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-gamebooklib-2024.216.1.4svn67772-56.1.noarch.rpm"
+}

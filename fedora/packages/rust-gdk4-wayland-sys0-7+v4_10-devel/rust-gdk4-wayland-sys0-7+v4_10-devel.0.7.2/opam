@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gdk4-wayland-sys0.7+v4_10-devel-0.7.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gdk4-wayland-sys0.7+v4_10-devel-0.7.2-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "gtk4-devel" {>= "4.10"}
+  "rust-gdk4-wayland-sys0-7+v4_4-devel" {= "0.7.2"}
+  "rust-gdk4-wayland-sys0-7-devel" {= "0.7.2"}
+]
+extra-source "rust-gdk4-wayland-sys0.7+v4_10-devel-0.7.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gdk4-wayland-sys0.7+v4_10-devel-0.7.2-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tinygo-0.30.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tinygo-0.30.0-4.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "clang" 
+  "clang17-libs" 
+  "glibc" 
+  "golang" 
+  "libgcc" 
+  "libstdc++" 
+  "lld" 
+  "llvm17-libs" 
+  "python3" 
+]
+extra-source "tinygo-0.30.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tinygo-0.30.0-4.fc40.x86_64.rpm"
+}

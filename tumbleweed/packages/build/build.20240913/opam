@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "build-20240913-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "build-20240913-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "binutils" 
+  "build-mkbaselibs" 
+  "findutils" 
+  "perl" 
+  "perl-base" 
+  "psmisc" 
+  "tar" 
+]
+extra-source "build-20240913-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/build-20240913-1.1.noarch.rpm"
+}

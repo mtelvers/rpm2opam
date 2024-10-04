@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rstudio-server-2024.04.0+735-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rstudio-server-2024.04.0+735-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libboost_filesystem1_86_0" 
+  "libboost_iostreams1_86_0" 
+  "libboost_program_options1_86_0" 
+  "libboost_thread1_86_0" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libsoci_core4_0" 
+  "libsoci_sqlite3-4_0" 
+  "libstdc++6" 
+  "libuuid1" 
+  "pam" 
+  "rstudio" {= "2024.4.0"}
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "rstudio-server-2024.04.0+735-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rstudio-server-2024.04.0+735-1.2.x86_64.rpm"
+}

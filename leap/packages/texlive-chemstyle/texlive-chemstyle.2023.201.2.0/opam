@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-chemstyle-2023.201.2.0msvn31096-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-chemstyle-2023.201.2.0msvn31096-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-amsmath" 
+  "texlive-bpchem" 
+  "texlive-caption" 
+  "texlive-chemcompounds" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-float" 
+  "texlive-floatrow" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-kvoptions" 
+  "texlive-psfrag" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-siunits" 
+  "texlive-siunitx" 
+  "texlive-tools" 
+]
+extra-source "texlive-chemstyle-2023.201.2.0msvn31096-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-chemstyle-2023.201.2.0msvn31096-slfo.1.1.4.noarch.rpm"
+}

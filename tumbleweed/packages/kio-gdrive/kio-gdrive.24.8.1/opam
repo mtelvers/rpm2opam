@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kio-gdrive-24.08.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kio-gdrive-24.08.1-1.1.x86_64.rpm"]
+depends: [
+  "accounts-qml-module" {>= "1"}
+  "glibc" 
+  "kf6-kdeclarative-imports" 
+  "kf6-kirigami-imports" {>= "12"}
+  "libKF6CoreAddons6" 
+  "libKF6I18n6" 
+  "libKF6KIO6" 
+  "libKF6Notifications6" 
+  "libKF6Purpose6" 
+  "libKF6WidgetsAddons6" 
+  "libKPim6GAPICore6" 
+  "libKPim6GAPIDrive6" 
+  "libQt6Core6" 
+  "libQt6Gui6" 
+  "libQt6Widgets6" 
+  "libaccounts-qt6-1" 
+  "libkaccounts6-2" 
+  "libstdc++6" 
+  "qtdeclarative-imports-provides-qt6" {>= "2"}
+]
+extra-source "kio-gdrive-24.08.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kio-gdrive-24.08.1-1.1.x86_64.rpm"
+}

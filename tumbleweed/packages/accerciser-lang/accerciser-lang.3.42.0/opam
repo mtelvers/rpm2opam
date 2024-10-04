@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "accerciser-lang-3.42.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "accerciser-lang-3.42.0-1.3.noarch.rpm"]
+depends: [
+  "accerciser" {= "3.42.0"}
+]
+extra-source "accerciser-lang-3.42.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/accerciser-lang-3.42.0-1.3.noarch.rpm"
+}

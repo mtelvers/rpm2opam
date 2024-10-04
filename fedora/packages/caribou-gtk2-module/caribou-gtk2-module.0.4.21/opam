@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "caribou-gtk2-module-0.4.21-38.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "caribou-gtk2-module-0.4.21-38.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "caribou" {= "0.4.21"}
+  "fontconfig" 
+  "freetype" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "harfbuzz" 
+  "pango" 
+]
+extra-source "caribou-gtk2-module-0.4.21-38.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/caribou-gtk2-module-0.4.21-38.fc40.x86_64.rpm"
+}

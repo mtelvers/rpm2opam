@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfolks26-0.15.9-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfolks26-0.15.9-2.1.x86_64.rpm"]
+depends: [
+  "folks-data" {>= "0.15.9"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libebook-contacts-1_2-4" 
+  "libgee-0_8-2" 
+]
+extra-source "libfolks26-0.15.9-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfolks26-0.15.9-2.1.x86_64.rpm"
+}

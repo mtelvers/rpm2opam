@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "freeradius-client-1.1.7-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freeradius-client-1.1.7-3.2.x86_64.rpm"]
+depends: [
+  "freeradius-client-libs" 
+  "glibc" 
+  "libcrypt1" 
+]
+extra-source "freeradius-client-1.1.7-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/freeradius-client-1.1.7-3.2.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "erlang-ssh-26.2.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "erlang-ssh-26.2.2-1.fc40.x86_64.rpm"]
+depends: [
+  "erlang-crypto" {= "26.2.2"}
+  "erlang-erts" {= "26.2.2"}
+  "erlang-kernel" {= "26.2.2"}
+  "erlang-public_key" {= "26.2.2"}
+  "erlang-stdlib" {= "26.2.2"}
+]
+extra-source "erlang-ssh-26.2.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/erlang-ssh-26.2.2-1.fc40.x86_64.rpm"
+}

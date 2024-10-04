@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "shybrid-0.4.3-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "shybrid-0.4.3-10.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-matplotlib" {>= "3.1.2"}
+  "python3-matplotlib-qt5" 
+  "python3-numpy" 
+  "python3-pyyaml" 
+  "python3-qt5-base" {>= "5.13"}
+  "python3-scipy" 
+]
+extra-source "shybrid-0.4.3-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/shybrid-0.4.3-10.fc40.noarch.rpm"
+}

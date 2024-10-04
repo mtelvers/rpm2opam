@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plexus-sec-dispatcher-2.0-slfo.1.2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plexus-sec-dispatcher-2.0-slfo.1.2.3.noarch.rpm"]
+depends: [
+  "atinject" 
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "plexus-cipher" 
+  "plexus-utils" 
+  "plexus-xml" 
+]
+extra-source "plexus-sec-dispatcher-2.0-slfo.1.2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/plexus-sec-dispatcher-2.0-slfo.1.2.3.noarch.rpm"
+}

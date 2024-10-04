@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-software-devel-46.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-software-devel-46.5-1.1.x86_64.rpm"]
+depends: [
+  "AppStream-devel" {>= "0.16.4"}
+  "glib2-devel" {>= "2.56.0"}
+  "gnome-software" {= "46.5"}
+  "gtk4-devel" {>= "4.12.0"}
+  "json-glib-devel" {>= "1.6.0"}
+  "libsoup-devel" {>= "3.0"}
+  "libxmlb-devel" {>= "0.1.7"}
+  "pkgconf-pkg-config" 
+  "polkit-devel" 
+]
+extra-source "gnome-software-devel-46.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnome-software-devel-46.5-1.1.x86_64.rpm"
+}

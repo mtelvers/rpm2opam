@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-adjunctions-devel-4.4.2-3.19.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-adjunctions-devel-4.4.2-3.19.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-adjunctions" {= "4.4.2"}
+  "ghc-array-devel" 
+  "ghc-base-devel" 
+  "ghc-comonad-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-contravariant-devel" 
+  "ghc-distributive-devel" 
+  "ghc-free-devel" 
+  "ghc-mtl-devel" 
+  "ghc-profunctors-devel" 
+  "ghc-semigroupoids-devel" 
+  "ghc-semigroups-devel" 
+  "ghc-tagged-devel" 
+  "ghc-transformers-compat-devel" 
+  "ghc-transformers-devel" 
+  "ghc-void-devel" 
+]
+extra-source "ghc-adjunctions-devel-4.4.2-3.19.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-adjunctions-devel-4.4.2-3.19.x86_64.rpm"
+}

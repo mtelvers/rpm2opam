@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "clustduct-0.0.6-2.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clustduct-0.0.6-2.10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bc" 
+  "dnsmasq" 
+  "dolly" 
+  "genders" 
+  "grub2-x86_64-efi" 
+  "lua-genders" 
+  "lua51" 
+  "shim" 
+  "syslinux" 
+]
+extra-source "clustduct-0.0.6-2.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/clustduct-0.0.6-2.10.x86_64.rpm"
+}

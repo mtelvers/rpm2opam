@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-App-mymeta_requires-0.006-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-App-mymeta_requires-0.006-23.fc40.noarch.rpm"]
+depends: [
+  "perl-CPAN-Meta" 
+  "perl-CPAN-Meta-Requirements" 
+  "perl-Class-Load" 
+  "perl-Class-Tiny" 
+  "perl-File-Basename" 
+  "perl-Getopt-Lucid" 
+  "perl-Pod-Usage" 
+  "perl-Scalar-List-Utils" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.10.0"}
+]
+extra-source "perl-App-mymeta_requires-0.006-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-App-mymeta_requires-0.006-23.fc40.noarch.rpm"
+}

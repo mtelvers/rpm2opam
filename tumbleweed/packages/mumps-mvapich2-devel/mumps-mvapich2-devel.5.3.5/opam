@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mumps-mvapich2-devel-5.3.5-5.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mumps-mvapich2-devel-5.3.5-5.3.x86_64.rpm"]
+depends: [
+  "libmumps5_3_5-mvapich2" {= "5.3.5"}
+  "libscalapack2-mvapich2-devel" 
+  "mumps-devel" {= "5.3.5"}
+  "mvapich2-devel" 
+]
+extra-source "mumps-mvapich2-devel-5.3.5-5.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mumps-mvapich2-devel-5.3.5-5.3.x86_64.rpm"
+}

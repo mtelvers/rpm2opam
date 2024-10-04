@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libevent-devel-2.1.12-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libevent-devel-2.1.12-4.2.x86_64.rpm"]
+depends: [
+  "glibc-devel" 
+  "libevent-2_1-7" {= "2.1.12"}
+  "pkgconf-pkg-config" 
+  "python311-base" 
+]
+extra-source "libevent-devel-2.1.12-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libevent-devel-2.1.12-4.2.x86_64.rpm"
+}

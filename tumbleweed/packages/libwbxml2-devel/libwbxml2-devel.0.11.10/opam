@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libwbxml2-devel-0.11.10-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libwbxml2-devel-0.11.10-1.1.x86_64.rpm"]
+depends: [
+  "glibc-devel" 
+  "libexpat-devel" 
+  "libwbxml2-1" {= "0.11.10"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libwbxml2-devel-0.11.10-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libwbxml2-devel-0.11.10-1.1.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cpuset-1.6.2-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cpuset-1.6.2-1.3.noarch.rpm"]
+depends: [
+  "python311-base" 
+]
+extra-source "cpuset-1.6.2-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cpuset-1.6.2-1.3.noarch.rpm"
+}

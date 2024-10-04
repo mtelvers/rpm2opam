@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "extrema-4.4.5-38.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "extrema-4.4.5-38.fc40.x86_64.rpm"]
+depends: [
+  "extrema-help" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "wxBase" 
+  "wxGTK" 
+]
+extra-source "extrema-4.4.5-38.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/extrema-4.4.5-38.fc40.x86_64.rpm"
+}

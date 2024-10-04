@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-authheaders-0.15.3-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-authheaders-0.15.3-3.fc40.noarch.rpm"]
+depends: [
+  "publicsuffix-list" 
+  "python3" 
+  "python3-authres" {>= "1.2"}
+  "python3-dkimpy" {>= "0.7.1"}
+  "python3-dns" 
+  "python3-publicsuffix2" 
+]
+extra-source "python3-authheaders-0.15.3-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-authheaders-0.15.3-3.fc40.noarch.rpm"
+}

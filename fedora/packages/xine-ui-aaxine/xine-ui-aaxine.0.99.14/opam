@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xine-ui-aaxine-0.99.14-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xine-ui-aaxine-0.99.14-6.fc40.x86_64.rpm"]
+depends: [
+  "aalib-libs" 
+  "glibc" 
+  "libcaca" 
+  "lirc-libs" 
+  "xine-lib" 
+  "xine-lib-extras" 
+  "xine-ui" {= "0.99.14"}
+]
+extra-source "xine-ui-aaxine-0.99.14-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xine-ui-aaxine-0.99.14-6.fc40.x86_64.rpm"
+}

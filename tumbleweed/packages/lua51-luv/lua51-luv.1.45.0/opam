@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lua51-luv-1.45.0~0-4.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lua51-luv-1.45.0~0-4.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "liblua5_1-5" 
+  "libuv1" 
+  "lua51" 
+]
+extra-source "lua51-luv-1.45.0~0-4.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lua51-luv-1.45.0~0-4.3.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lld15-15.0.7-9.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lld15-15.0.7-9.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libLLVM15" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "update-alternatives" 
+]
+extra-source "lld15-15.0.7-9.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lld15-15.0.7-9.1.x86_64.rpm"
+}

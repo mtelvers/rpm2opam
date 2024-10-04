@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Carp-Always-0.16-18.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Carp-Always-0.16-18.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-constant" 
+  "perl-if" 
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "perl-Carp-Always-0.16-18.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Carp-Always-0.16-18.fc40.noarch.rpm"
+}

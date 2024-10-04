@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-nu-json+preserve_order-devel-0.91.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-nu-json+preserve_order-devel-0.91.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-linked-hash-map+default-devel" 
+  "rust-linked-hash-map+serde_impl-devel" 
+  "rust-nu-json+linked-hash-map-devel" {= "0.91.0"}
+  "rust-nu-json-devel" {= "0.91.0"}
+]
+extra-source "rust-nu-json+preserve_order-devel-0.91.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-nu-json+preserve_order-devel-0.91.0-1.fc40.noarch.rpm"
+}

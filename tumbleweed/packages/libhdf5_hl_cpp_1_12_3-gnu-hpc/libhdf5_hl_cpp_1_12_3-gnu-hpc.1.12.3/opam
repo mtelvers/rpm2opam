@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libhdf5_hl_cpp_1_12_3-gnu-hpc-1.12.3-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libhdf5_hl_cpp_1_12_3-gnu-hpc-1.12.3-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "hdf5_1_12_3-gnu-hpc-module" {= "1.12.3"}
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "libhdf5_hl_cpp_1_12_3-gnu-hpc-1.12.3-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libhdf5_hl_cpp_1_12_3-gnu-hpc-1.12.3-1.2.x86_64.rpm"
+}

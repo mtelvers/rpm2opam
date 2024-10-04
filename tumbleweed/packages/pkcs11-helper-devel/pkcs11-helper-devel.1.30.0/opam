@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pkcs11-helper-devel-1.30.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pkcs11-helper-devel-1.30.0-1.2.x86_64.rpm"]
+depends: [
+  "libpkcs11-helper1" {= "1.30.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "pkcs11-helper-devel-1.30.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pkcs11-helper-devel-1.30.0-1.2.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-idn-0.0.2-44.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-idn-0.0.2-44.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libidn" 
+  "ruby-libs" 
+  "rubygems" 
+]
+extra-source "rubygem-idn-0.0.2-44.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-idn-0.0.2-44.fc40.x86_64.rpm"
+}

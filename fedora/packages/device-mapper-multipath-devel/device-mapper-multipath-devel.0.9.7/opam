@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "device-mapper-multipath-devel-0.9.7-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "device-mapper-multipath-devel-0.9.7-7.fc40.x86_64.rpm"]
+depends: [
+  "device-mapper-multipath" {= "0.9.7"}
+  "device-mapper-multipath-libs" {= "0.9.7"}
+]
+extra-source "device-mapper-multipath-devel-0.9.7-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/device-mapper-multipath-devel-0.9.7-7.fc40.x86_64.rpm"
+}

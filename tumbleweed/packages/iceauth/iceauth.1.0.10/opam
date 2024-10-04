@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "iceauth-1.0.10-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "iceauth-1.0.10-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libICE6" 
+]
+extra-source "iceauth-1.0.10-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/iceauth-1.0.10-1.2.x86_64.rpm"
+}

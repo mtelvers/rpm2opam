@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Color-Calc-1.074-28.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Color-Calc-1.074-28.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-Graphics-ColorNames" 
+  "perl-Graphics-ColorNames-HTML" 
+  "perl-Graphics-ColorNames-WWW" 
+  "perl-POSIX" 
+  "perl-Params-Validate" 
+  "perl-Scalar-List-Utils" 
+  "perl-libs" 
+]
+extra-source "perl-Color-Calc-1.074-28.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Color-Calc-1.074-28.fc40.noarch.rpm"
+}

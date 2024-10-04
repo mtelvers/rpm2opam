@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Mail-SPF-3.20240206-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mail-SPF-3.20240206-1.fc40.noarch.rpm"]
+depends: [
+  "alternatives" 
+  "bash" 
+  "perl-Error" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-Net-DNS" {>= "0.62"}
+  "perl-NetAddr-IP" 
+  "perl-Socket" 
+  "perl-Sys-Hostname" 
+  "perl-URI" {>= "1.13"}
+  "perl-base" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-overload" 
+]
+extra-source "perl-Mail-SPF-3.20240206-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Mail-SPF-3.20240206-1.fc40.noarch.rpm"
+}

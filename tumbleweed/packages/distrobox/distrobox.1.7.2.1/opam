@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "distrobox-1.7.2.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "distrobox-1.7.2.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "busybox-findutils" 
+  "busybox-grep" 
+  "busybox-sed" 
+  "distrobox-bash-completion" 
+  "flatpak" 
+  "podman" 
+]
+extra-source "distrobox-1.7.2.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/distrobox-1.7.2.1-1.1.noarch.rpm"
+}

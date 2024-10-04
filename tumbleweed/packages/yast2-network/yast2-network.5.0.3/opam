@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-network-5.0.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-network-5.0.3-1.1.noarch.rpm"]
+depends: [
+  "augeas-lenses" 
+  "busybox-coreutils" 
+  "hostname" 
+  "hwinfo" {>= "21.35"}
+  "perl-base" 
+  "ruby3-3-rubygem-cfa" {>= "0.6.4"}
+  "sysconfig" {>= "0.80.0"}
+  "yast2" {>= "4.5.12"}
+  "yast2-packager" {>= "4.0.18"}
+  "yast2-proxy" 
+  "yast2-ruby-bindings" {>= "1.0.0"}
+  "yast2-storage-ng" 
+  "yast2-xml" 
+]
+extra-source "yast2-network-5.0.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/yast2-network-5.0.3-1.1.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pygame-2.6.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pygame-2.6.0-1.1.x86_64.rpm"]
+depends: [
+  "fontconfig" 
+  "glibc" 
+  "libSDL2-2_0-0" 
+  "libSDL2_image-2_0-0" 
+  "libSDL2_mixer-2_0-0" 
+  "libSDL2_ttf-2_0-0" 
+  "libfreetype6" 
+  "libpng16-16" 
+  "libportmidi2" 
+  "python311-base" 
+  "python312-base" 
+  "python312-numpy" 
+]
+extra-source "python312-pygame-2.6.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-pygame-2.6.0-1.1.x86_64.rpm"
+}

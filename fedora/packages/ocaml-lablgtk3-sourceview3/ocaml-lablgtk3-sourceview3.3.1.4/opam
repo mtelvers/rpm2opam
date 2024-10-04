@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-lablgtk3-sourceview3-3.1.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-lablgtk3-sourceview3-3.1.4-1.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "gtksourceview3" 
+  "ocaml" {= "2125"}
+  "ocaml-cairo" {= "574"}
+  "ocaml-lablgtk" {= "0"}
+  "ocaml-lablgtk3" {= "9"}
+]
+extra-source "ocaml-lablgtk3-sourceview3-3.1.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-lablgtk3-sourceview3-3.1.4-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-umbclegislation-2024.216.2016_6_8svn41348-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-umbclegislation-2024.216.2016_6_8svn41348-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-draftwatermark" 
+  "texlive-enumitem" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-geometry" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-lineno" 
+  "texlive-mdframed" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-xifthen" 
+]
+extra-source "texlive-umbclegislation-2024.216.2016_6_8svn41348-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-umbclegislation-2024.216.2016_6_8svn41348-56.1.noarch.rpm"
+}

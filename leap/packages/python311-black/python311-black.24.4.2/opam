@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-black-24.4.2-slfo.1.1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-black-24.4.2-slfo.1.1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-aiohttp" {>= "3.3.2"}
+  "python311-aiohttp_cors" 
+  "python311-attrs" {>= "18.1.0"}
+  "python311-base" 
+  "python311-click" {>= "8.0.0"}
+  "python311-mypy_extensions" {>= "0.4.3"}
+  "python311-packaging" 
+  "python311-pathspec" {>= "0.9.0"}
+  "python311-platformdirs" {>= "2"}
+  "python311-tomli" {>= "1.1.0"}
+  "update-alternatives" 
+]
+extra-source "python311-black-24.4.2-slfo.1.1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/python311-black-24.4.2-slfo.1.1.1.noarch.rpm"
+}

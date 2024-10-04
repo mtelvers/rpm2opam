@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ucview-0.33-27.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ucview-0.33-27.fc40.x86_64.rpm"]
+depends: [
+  "GConf2" 
+  "bash" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "hicolor-icon-theme" 
+  "libglade2" 
+  "libucil" 
+  "libunicap" 
+  "libunicapgtk" 
+  "rarian-compat" 
+]
+extra-source "ucview-0.33-27.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/ucview-0.33-27.fc40.x86_64.rpm"
+}

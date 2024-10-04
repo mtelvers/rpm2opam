@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openvpn-auth-pam-plugin-2.6.10-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openvpn-auth-pam-plugin-2.6.10-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "openvpn" {= "2.6.10"}
+  "pam" 
+]
+extra-source "openvpn-auth-pam-plugin-2.6.10-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openvpn-auth-pam-plugin-2.6.10-1.2.x86_64.rpm"
+}

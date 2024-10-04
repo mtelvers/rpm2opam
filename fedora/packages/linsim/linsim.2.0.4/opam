@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "linsim-2.0.4-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "linsim-2.0.4-6.fc40.x86_64.rpm"]
+depends: [
+  "fltk" 
+  "glibc" 
+  "libX11" 
+  "libgcc" 
+  "libsamplerate" 
+  "libsndfile" 
+  "libstdc++" 
+]
+extra-source "linsim-2.0.4-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/linsim-2.0.4-6.fc40.x86_64.rpm"
+}

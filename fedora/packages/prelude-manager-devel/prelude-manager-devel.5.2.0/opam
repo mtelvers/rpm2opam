@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "prelude-manager-devel-5.2.0-10.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "prelude-manager-devel-5.2.0-10.fc39.x86_64.rpm"]
+depends: [
+  "prelude-manager" {= "5.2.0"}
+  "prelude-manager-db-plugin" {= "5.2.0"}
+  "prelude-manager-relaying-plugin" {= "5.2.0"}
+  "prelude-manager-script-plugin" {= "5.2.0"}
+  "prelude-manager-snmp-plugin" {= "5.2.0"}
+  "prelude-manager-xml-plugin" {= "5.2.0"}
+]
+extra-source "prelude-manager-devel-5.2.0-10.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/prelude-manager-devel-5.2.0-10.fc39.x86_64.rpm"
+}

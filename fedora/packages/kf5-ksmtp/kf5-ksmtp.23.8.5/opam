@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kf5-ksmtp-23.08.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kf5-ksmtp-23.08.5-1.fc40.x86_64.rpm"]
+depends: [
+  "cyrus-sasl-lib" 
+  "cyrus-sasl-plain" 
+  "glibc" 
+  "kf5-kcoreaddons" 
+  "kf5-ki18n" 
+  "kf5-kio-core-libs" 
+  "libstdc++" 
+  "qt5-qtbase" 
+]
+extra-source "kf5-ksmtp-23.08.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kf5-ksmtp-23.08.5-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-securesystemslib-0.21.0-2.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-securesystemslib-0.21.0-2.5.noarch.rpm"]
+depends: [
+  "python312-PyNaCl" 
+  "python312-asn1crypto" 
+  "python312-base" {= "3.12"}
+  "python312-colorama" 
+  "python312-cryptography" {>= "3.3.2"}
+]
+extra-source "python312-securesystemslib-0.21.0-2.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-securesystemslib-0.21.0-2.5.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-xss-sanitize-prof-0.3.7.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-xss-sanitize-prof-0.3.7.2-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-attoparsec-prof" 
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-css-text-prof" 
+  "ghc-network-uri-prof" 
+  "ghc-tagsoup-prof" 
+  "ghc-text-prof" 
+  "ghc-utf8-string-prof" 
+  "ghc-xss-sanitize-devel" {= "0.3.7.2"}
+]
+extra-source "ghc-xss-sanitize-prof-0.3.7.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-xss-sanitize-prof-0.3.7.2-3.fc40.x86_64.rpm"
+}

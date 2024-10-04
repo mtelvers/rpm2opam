@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pavucontrol-6.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pavucontrol-6.1-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcc_s1" 
+  "libgiomm-2_68-1" 
+  "libglibmm-2_68-1" 
+  "libgtk-4-1" 
+  "libgtkmm-4_0-0" 
+  "libjson-glib-1_0-0" 
+  "libpulse-mainloop-glib0" 
+  "libpulse0" 
+  "libsigc-3_0-0" 
+  "libstdc++6" 
+  "pipewire-pulseaudio" 
+]
+extra-source "pavucontrol-6.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pavucontrol-6.1-1.1.x86_64.rpm"
+}

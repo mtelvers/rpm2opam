@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Log-Contextual-0.009001-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Log-Contextual-0.009001-1.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Data-Dumper-Concise" 
+  "perl-Moo" {>= "1.3000"}
+]
+extra-source "perl-Log-Contextual-0.009001-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Log-Contextual-0.009001-1.2.noarch.rpm"
+}

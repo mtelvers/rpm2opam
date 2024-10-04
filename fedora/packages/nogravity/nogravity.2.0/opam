@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nogravity-2.00-42.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nogravity-2.00-42.fc39.x86_64.rpm"]
+depends: [
+  "SDL_mixer" 
+  "bash" 
+  "glibc" {>= "2.37.9000"}
+  "glx-utils" 
+  "hicolor-icon-theme" 
+  "libglvnd-glx" 
+  "libogg" 
+  "libpng" 
+  "libvorbis" 
+  "nogravity-data" {= "2.0"}
+  "openal-soft" 
+  "sdl12-compat" 
+  "zlib-ng-compat" 
+]
+extra-source "nogravity-2.00-42.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nogravity-2.00-42.fc39.x86_64.rpm"
+}

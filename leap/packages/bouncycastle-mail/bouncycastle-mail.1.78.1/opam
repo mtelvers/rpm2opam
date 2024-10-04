@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bouncycastle-mail-1.78.1-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bouncycastle-mail-1.78.1-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "bouncycastle" {= "1.78.1"}
+  "bouncycastle-pkix" {= "1.78.1"}
+  "bouncycastle-util" {= "1.78.1"}
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "bouncycastle-mail-1.78.1-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/bouncycastle-mail-1.78.1-slfo.1.1.3.noarch.rpm"
+}

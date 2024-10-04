@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Digest-HMAC-1.04-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Digest-HMAC-1.04-10.fc40.noarch.rpm"]
+depends: [
+  "perl-Digest-MD5" {>= "2"}
+  "perl-Digest-SHA" {>= "1"}
+  "perl-Exporter" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-Digest-HMAC-1.04-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Digest-HMAC-1.04-10.fc40.noarch.rpm"
+}

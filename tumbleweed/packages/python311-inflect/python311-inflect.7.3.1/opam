@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-inflect-7.3.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-inflect-7.3.1-1.1.noarch.rpm"]
+depends: [
+  "python310-typeguard" 
+  "python311-base" {= "3.11"}
+  "python311-more-itertools" {>= "8.5.0"}
+  "python311-typeguard" 
+  "python312-typeguard" 
+]
+extra-source "python311-inflect-7.3.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-inflect-7.3.1-1.1.noarch.rpm"
+}

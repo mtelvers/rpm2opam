@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "wlroots0.16-devel-0.16.2-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wlroots0.16-devel-0.16.2-2.fc40.x86_64.rpm"]
+depends: [
+  "libdrm-devel" {>= "2.4.113"}
+  "libglvnd-devel" 
+  "libinput-devel" {>= "1.14.0"}
+  "libseat-devel" {>= "0.2.0"}
+  "libxcb-devel" 
+  "libxkbcommon-devel" 
+  "mesa-libgbm-devel" 
+  "pixman-devel" 
+  "pkgconf-pkg-config" 
+  "systemd-devel" 
+  "vulkan-loader-devel" {>= "1.2.182"}
+  "wayland-devel" 
+  "wlroots0-16" 
+  "xcb-util-errors-devel" 
+  "xcb-util-renderutil-devel" 
+  "xcb-util-wm-devel" 
+]
+extra-source "wlroots0.16-devel-0.16.2-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/wlroots0.16-devel-0.16.2-2.fc40.x86_64.rpm"
+}

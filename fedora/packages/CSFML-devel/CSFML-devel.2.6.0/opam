@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "CSFML-devel-2.6.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "CSFML-devel-2.6.0-1.fc40.x86_64.rpm"]
+depends: [
+  "CSFML" {= "2.6.0"}
+  "SFML-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "CSFML-devel-2.6.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/CSFML-devel-2.6.0-1.fc40.x86_64.rpm"
+}

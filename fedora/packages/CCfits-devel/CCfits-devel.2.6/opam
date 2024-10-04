@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "CCfits-devel-2.6-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "CCfits-devel-2.6-11.fc40.x86_64.rpm"]
+depends: [
+  "CCfits" {= "2.6"}
+  "cfitsio-devel" {>= "3.280"}
+  "pkgconf-pkg-config" 
+]
+extra-source "CCfits-devel-2.6-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/CCfits-devel-2.6-11.fc40.x86_64.rpm"
+}

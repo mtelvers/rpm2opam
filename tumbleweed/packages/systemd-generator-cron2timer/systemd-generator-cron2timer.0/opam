@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "systemd-generator-cron2timer-0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "systemd-generator-cron2timer-0-1.3.noarch.rpm"]
+depends: [
+  "bash" 
+  "systemd" 
+]
+extra-source "systemd-generator-cron2timer-0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/systemd-generator-cron2timer-0-1.3.noarch.rpm"
+}

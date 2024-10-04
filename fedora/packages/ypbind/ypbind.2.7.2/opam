@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ypbind-2.7.2-13.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ypbind-2.7.2-13.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libnsl2" 
+  "libtirpc" 
+  "nss_nis" 
+  "rpcbind" 
+  "systemd" 
+  "systemd-libs" 
+]
+extra-source "ypbind-2.7.2-13.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/y/ypbind-2.7.2-13.fc40.x86_64.rpm"
+}

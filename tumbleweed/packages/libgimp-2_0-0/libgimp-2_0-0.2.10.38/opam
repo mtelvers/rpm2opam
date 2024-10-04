@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgimp-2_0-0-2.10.38-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgimp-2_0-0-2.10.38-2.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libbabl-0_1-0" 
+  "libcairo2" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgegl-0_4-0" {>= "0.4.48"}
+  "libgexiv2-2" 
+  "liblcms2-2" 
+]
+extra-source "libgimp-2_0-0-2.10.38-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgimp-2_0-0-2.10.38-2.2.x86_64.rpm"
+}

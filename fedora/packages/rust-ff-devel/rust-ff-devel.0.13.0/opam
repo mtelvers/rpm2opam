@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ff-devel-0.13.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ff-devel-0.13.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-rand_core-devel" 
+  "rust-subtle+i128-devel" 
+  "rust-subtle-devel" 
+]
+extra-source "rust-ff-devel-0.13.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ff-devel-0.13.0-3.fc40.noarch.rpm"
+}

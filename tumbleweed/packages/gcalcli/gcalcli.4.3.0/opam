@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcalcli-4.3.0+git14.3e616f7-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcalcli-4.3.0+git14.3e616f7-1.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-google-api-python-client" 
+  "python311-google-auth-oauthlib" 
+  "python311-parsedatetime" 
+  "python311-python-dateutil" 
+]
+extra-source "gcalcli-4.3.0+git14.3e616f7-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gcalcli-4.3.0+git14.3e616f7-1.1.noarch.rpm"
+}

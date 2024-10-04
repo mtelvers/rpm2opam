@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fedora-easy-karma-0.53-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fedora-easy-karma-0.53-4.fc40.noarch.rpm"]
+depends: [
+  "bodhi-client" {>= "6"}
+  "python3" 
+  "python3-dnf" 
+  "python3-fedora" 
+]
+extra-source "fedora-easy-karma-0.53-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fedora-easy-karma-0.53-4.fc40.noarch.rpm"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "proton-vpn-4.3.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "proton-vpn-4.3.2-1.1.noarch.rpm"]
+depends: [
+  "libgtk-3-0" 
+  "python311-base" 
+  "python311-dbus-python" 
+  "python311-gobject" 
+  "python311-packaging" 
+  "python311-proton-vpn-api-core" {>= "0.24.0"}
+  "python311-proton-vpn-connection" {>= "0.14.2"}
+  "python311-proton-vpn-killswitch-network-manager" 
+  "python311-proton-vpn-logger" 
+  "python311-proton-vpn-network-manager-openvpn" 
+  "python311-pycairo" 
+  "typelib-1_0-AppIndicator3-0_1" {= "0.1"}
+  "typelib-1_0-Atk-1_0" 
+  "typelib-1_0-AyatanaAppIndicator3-0_1" {= "0.1"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" 
+]
+extra-source "proton-vpn-4.3.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/proton-vpn-4.3.2-1.1.noarch.rpm"
+}

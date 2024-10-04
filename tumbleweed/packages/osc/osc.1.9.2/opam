@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "osc-1.9.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "osc-1.9.2-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "python311-base" 
+  "python311-cryptography" 
+  "python311-rpm" 
+  "python311-urllib3" 
+]
+extra-source "osc-1.9.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/osc-1.9.2-1.1.noarch.rpm"
+}

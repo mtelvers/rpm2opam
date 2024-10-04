@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "velociraptor-client-0.7.0.4.git97.675e45f9-slfo.1.4.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "velociraptor-client-0.7.0.4.git97.675e45f9-slfo.1.4.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+  "system-user-velociraptor" 
+  "sysuser-shadow" {>= "3.1"}
+]
+extra-source "velociraptor-client-0.7.0.4.git97.675e45f9-slfo.1.4.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/velociraptor-client-0.7.0.4.git97.675e45f9-slfo.1.4.3.x86_64.rpm"
+}

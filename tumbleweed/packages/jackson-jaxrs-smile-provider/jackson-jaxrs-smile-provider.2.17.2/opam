@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jackson-jaxrs-smile-provider-2.17.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jackson-jaxrs-smile-provider-2.17.2-1.1.noarch.rpm"]
+depends: [
+  "jackson-dataformat-smile" 
+  "jackson-jaxrs-providers" {= "2.17.2"}
+  "jackson-module-jaxb-annotations" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "jackson-jaxrs-smile-provider-2.17.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jackson-jaxrs-smile-provider-2.17.2-1.1.noarch.rpm"
+}

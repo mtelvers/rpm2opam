@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-maybe-async-devel-0.2.9-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-maybe-async-devel-0.2.9-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-proc-macro2+default-devel" 
+  "rust-quote+default-devel" 
+  "rust-syn+default-devel" 
+  "rust-syn+full-devel" 
+  "rust-syn+visit-mut-devel" 
+]
+extra-source "rust-maybe-async-devel-0.2.9-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-maybe-async-devel-0.2.9-1.fc40.noarch.rpm"
+}

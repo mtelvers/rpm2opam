@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-protobuf+bytes-devel-2.28.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-protobuf+bytes-devel-2.28.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bytes+default-devel" 
+  "rust-protobuf-devel" {= "2.28.0"}
+]
+extra-source "rust-protobuf+bytes-devel-2.28.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-protobuf+bytes-devel-2.28.0-3.fc40.noarch.rpm"
+}

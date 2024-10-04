@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "soundtouch-devel-2.3.2-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "soundtouch-devel-2.3.2-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "glibc-devel" 
+  "libSoundTouch1" {= "2.3.2"}
+  "pkgconf-pkg-config" 
+]
+extra-source "soundtouch-devel-2.3.2-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/soundtouch-devel-2.3.2-slfo.1.1.8.x86_64.rpm"
+}

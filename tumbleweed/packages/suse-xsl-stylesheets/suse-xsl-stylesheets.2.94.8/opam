@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "suse-xsl-stylesheets-2.94.8-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "suse-xsl-stylesheets-2.94.8-1.1.noarch.rpm"]
+depends: [
+  "arabic-amiri-fonts" 
+  "bash-sh" 
+  "dejavu-fonts" 
+  "docbook-xsl-stylesheets" {>= "1.77"}
+  "docbook5-xsl-stylesheets" {>= "1.77"}
+  "docbook_4" 
+  "docbook_5" 
+  "ghostscript-fonts-std" 
+  "gnu-free-fonts" 
+  "google-noto-sans-jp-fonts" 
+  "google-noto-sans-kr-fonts" 
+  "google-noto-sans-sc-fonts" 
+  "google-noto-sans-tc-fonts" 
+  "google-opensans-fonts" 
+  "google-poppins-fonts" 
+  "libxslt-tools" 
+  "sgml-skel" {>= "0.7"}
+  "sil-charis-fonts" 
+]
+extra-source "suse-xsl-stylesheets-2.94.8-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/suse-xsl-stylesheets-2.94.8-1.1.noarch.rpm"
+}

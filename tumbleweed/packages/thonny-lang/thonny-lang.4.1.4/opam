@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "thonny-lang-4.1.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "thonny-lang-4.1.4-1.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "thonny" {= "4.1.4"}
+]
+extra-source "thonny-lang-4.1.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/thonny-lang-4.1.4-1.1.noarch.rpm"
+}

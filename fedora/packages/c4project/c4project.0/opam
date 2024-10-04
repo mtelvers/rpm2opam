@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "c4project-0^20230904git9059c98-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "c4project-0^20230904git9059c98-6.fc40.noarch.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "git-core" 
+]
+extra-source "c4project-0^20230904git9059c98-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/c4project-0^20230904git9059c98-6.fc40.noarch.rpm"
+}

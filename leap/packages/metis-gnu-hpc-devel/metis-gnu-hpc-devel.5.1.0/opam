@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "metis-gnu-hpc-devel-5.1.0-slfo.1.1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "metis-gnu-hpc-devel-5.1.0-slfo.1.1.7.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "metis_5_1_0-gnu-hpc-devel" {= "5.1.0"}
+]
+extra-source "metis-gnu-hpc-devel-5.1.0-slfo.1.1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/metis-gnu-hpc-devel-5.1.0-slfo.1.1.7.noarch.rpm"
+}

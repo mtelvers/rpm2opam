@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libopenvas_wincmd1-1.0.5-2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libopenvas_wincmd1-1.0.5-2.5.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libasn1-8" 
+  "libcom_err2" 
+  "libgnutls30" 
+  "libgssapi3" 
+  "libhdb9" 
+  "libkrb5-26" 
+  "libpopt0" 
+]
+extra-source "libopenvas_wincmd1-1.0.5-2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libopenvas_wincmd1-1.0.5-2.5.x86_64.rpm"
+}

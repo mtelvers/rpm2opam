@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wayvnc-0.8.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wayvnc-0.8.0-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libaml0" 
+  "libdrm2" 
+  "libgbm1" 
+  "libjansson4" 
+  "libneatvnc0" 
+  "libpixman-1-0" 
+  "libwayland-client0" 
+  "libxkbcommon0" 
+  "pam" 
+]
+extra-source "wayvnc-0.8.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/wayvnc-0.8.0-1.2.x86_64.rpm"
+}

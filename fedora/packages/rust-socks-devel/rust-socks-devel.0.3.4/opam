@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-socks-devel-0.3.4-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-socks-devel-0.3.4-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-byteorder+default-devel" 
+  "rust-libc+default-devel" 
+]
+extra-source "rust-socks-devel-0.3.4-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-socks-devel-0.3.4-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ktls-utils-0.11-1.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ktls-utils-0.11-1.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "gnutls" 
+  "keyutils-libs" 
+  "libnl3" 
+]
+extra-source "ktls-utils-0.11-1.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/ktls-utils-0.11-1.el10.x86_64.rpm"
+}

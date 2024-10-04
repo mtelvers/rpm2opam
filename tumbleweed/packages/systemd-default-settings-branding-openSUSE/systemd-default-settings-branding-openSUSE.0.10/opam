@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "systemd-default-settings-branding-openSUSE-0.10-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "systemd-default-settings-branding-openSUSE-0.10-1.1.noarch.rpm"]
+depends: [
+  "systemd-default-settings" {= "0.10"}
+]
+extra-source "systemd-default-settings-branding-openSUSE-0.10-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/systemd-default-settings-branding-openSUSE-0.10-1.1.noarch.rpm"
+}

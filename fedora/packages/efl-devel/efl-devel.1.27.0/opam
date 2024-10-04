@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "efl-devel-1.27.0-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "efl-devel-1.27.0-8.fc40.x86_64.rpm"]
+depends: [
+  "SDL2-devel" 
+  "avahi-devel" 
+  "bullet-devel" 
+  "cmake-filesystem" 
+  "dbus-devel" 
+  "efl" {= "1.27.0"}
+  "fontconfig-devel" 
+  "freetype-devel" 
+  "fribidi-devel" 
+  "glib2-devel" 
+  "glibc" 
+  "harfbuzz-devel" 
+  "libX11-devel" 
+  "libinput-devel" {>= "1.7.0"}
+  "libjpeg-turbo-devel" 
+  "libmount-devel" 
+  "libpng-devel" 
+  "libsndfile-devel" 
+  "libunwind-devel" 
+  "libxcb-devel" 
+  "libxkbcommon-devel" 
+  "libxkbcommon-x11-devel" 
+  "luajit-devel" 
+  "openssl-devel" 
+  "pkgconf-pkg-config" 
+  "pulseaudio-libs-devel" 
+  "systemd" 
+  "systemd-devel" {>= "148"}
+  "wayland-devel" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "efl-devel-1.27.0-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/efl-devel-1.27.0-8.fc40.x86_64.rpm"
+}

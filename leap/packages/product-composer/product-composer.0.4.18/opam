@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "product-composer-0.4.18-slfo.1.1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "product-composer-0.4.18-slfo.1.1.1.noarch.rpm"]
+depends: [
+  "build" 
+  "checkmedia" 
+  "createrepo_c" 
+  "inst-source-utils" 
+  "libsolv-tools" 
+  "mkisofs" 
+  "python311-PyYAML" 
+  "python311-base" 
+  "python311-pydantic" 
+  "python311-rpm" 
+  "python311-zstandard" 
+]
+extra-source "product-composer-0.4.18-slfo.1.1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/product-composer-0.4.18-slfo.1.1.1.noarch.rpm"
+}

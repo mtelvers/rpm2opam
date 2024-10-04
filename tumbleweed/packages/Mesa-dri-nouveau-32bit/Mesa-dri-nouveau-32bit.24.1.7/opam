@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "Mesa-dri-nouveau-32bit-24.1.7-391.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Mesa-dri-nouveau-32bit-24.1.7-391.1.x86_64.rpm"]
+depends: [
+  "Mesa-libglapi0-32bit" 
+  "bash-sh" 
+  "glibc-32bit" 
+  "libLLVM18-32bit" 
+  "libdrm2-32bit" 
+  "libdrm_amdgpu1-32bit" 
+  "libdrm_intel1-32bit" 
+  "libdrm_radeon1-32bit" 
+  "libelf1-32bit" 
+  "libexpat1-32bit" 
+  "libgcc_s1-32bit" 
+  "libstdc++6-32bit" 
+  "libxcb-dri3-0-32bit" 
+  "libz1-32bit" 
+]
+extra-source "Mesa-dri-nouveau-32bit-24.1.7-391.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/Mesa-dri-nouveau-32bit-24.1.7-391.1.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-language-docker-prof-11.0.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-language-docker-prof-11.0.0-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-data-default-class-prof" 
+  "ghc-data-default-prof" 
+  "ghc-language-docker-devel" {= "11.0.0"}
+  "ghc-megaparsec-prof" 
+  "ghc-prettyprinter-prof" 
+  "ghc-split-prof" 
+  "ghc-text-prof" 
+  "ghc-time-prof" 
+]
+extra-source "ghc-language-docker-prof-11.0.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-language-docker-prof-11.0.0-6.fc40.x86_64.rpm"
+}

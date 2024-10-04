@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-onionbalance-0.2.1-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-onionbalance-0.2.1-11.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "logrotate" 
+  "python3" 
+  "python3-cryptography" {>= "2.5"}
+  "python3-future" {>= "0.14.3"}
+  "python3-pycryptodomex" 
+  "python3-pyyaml" {>= "4.2"}
+  "python3-setproctitle" {>= "1.1.9"}
+  "python3-setuptools" 
+  "python3-stem" {>= "1.8"}
+  "shadow-utils" 
+  "systemd" 
+  "tor" 
+]
+extra-source "python3-onionbalance-0.2.1-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-onionbalance-0.2.1-11.fc40.noarch.rpm"
+}

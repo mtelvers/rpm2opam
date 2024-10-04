@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plplot-tcltk-libs-5.15.0-20.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plplot-tcltk-libs-5.15.0-20.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libplplot17" 
+  "tcl" 
+  "tk" 
+]
+extra-source "plplot-tcltk-libs-5.15.0-20.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/plplot-tcltk-libs-5.15.0-20.2.x86_64.rpm"
+}

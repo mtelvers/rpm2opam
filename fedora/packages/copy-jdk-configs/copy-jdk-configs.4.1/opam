@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "copy-jdk-configs-4.1-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "copy-jdk-configs-4.1-5.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "compat-lua" 
+  "findutils" 
+  "lua" 
+  "lua-posix" 
+]
+extra-source "copy-jdk-configs-4.1-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/copy-jdk-configs-4.1-5.fc40.noarch.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jing-20220510-slfo.1.2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jing-20220510-slfo.1.2.3.noarch.rpm"]
+depends: [
+  "bash" 
+  "isorelax" 
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+  "relaxngDatatype" {>= "2011.1"}
+  "saxon10" 
+  "xerces-j2" 
+  "xml-commons-apis" 
+  "xml-commons-resolver" 
+]
+extra-source "jing-20220510-slfo.1.2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/jing-20220510-slfo.1.2.3.noarch.rpm"
+}

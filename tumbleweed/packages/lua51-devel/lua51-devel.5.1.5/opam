@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lua51-devel-5.1.5-15.24.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lua51-devel-5.1.5-15.24.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "liblua5_1-5" {= "5.1.5"}
+  "lua-macros" 
+  "lua51" {= "5.1.5"}
+  "pkgconf-pkg-config" 
+  "update-alternatives" 
+]
+extra-source "lua51-devel-5.1.5-15.24.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lua51-devel-5.1.5-15.24.x86_64.rpm"
+}

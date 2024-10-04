@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-asdf-astropy-0.6.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-asdf-astropy-0.6.1-1.1.noarch.rpm"]
+depends: [
+  "python310-asdf" {>= "2.13"}
+  "python310-asdf-coordinates-schemas" {>= "0.3"}
+  "python310-asdf-standard" {>= "1.1.0"}
+  "python310-asdf-transform-schemas" {>= "0.5"}
+  "python310-astropy" {>= "5.0.4"}
+  "python310-base" {= "3.10"}
+  "python310-numpy" {>= "1.20"}
+  "python310-packaging" {>= "19"}
+]
+extra-source "python310-asdf-astropy-0.6.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-asdf-astropy-0.6.1-1.1.noarch.rpm"
+}

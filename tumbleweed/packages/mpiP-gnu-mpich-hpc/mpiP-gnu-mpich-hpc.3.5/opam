@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mpiP-gnu-mpich-hpc-3.5-7.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mpiP-gnu-mpich-hpc-3.5-7.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "mpiP_3_5-gnu-mpich-hpc" {= "3.5"}
+]
+extra-source "mpiP-gnu-mpich-hpc-3.5-7.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mpiP-gnu-mpich-hpc-3.5-7.1.noarch.rpm"
+}

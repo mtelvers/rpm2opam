@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kde-dev-utils-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kde-dev-utils-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "kpartloader" {= "24.2.1"}
+  "kuiviewer" {= "24.2.1"}
+]
+extra-source "kde-dev-utils-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kde-dev-utils-24.02.1-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nanopb-python3-0.4.8-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nanopb-python3-0.4.8-2.fc40.x86_64.rpm"]
+depends: [
+  "nanopb" {= "0.4.8"}
+  "python3" 
+  "python3-protobuf" {>= "3.19"}
+]
+extra-source "nanopb-python3-0.4.8-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nanopb-python3-0.4.8-2.fc40.x86_64.rpm"
+}

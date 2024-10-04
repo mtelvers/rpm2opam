@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tei_4-2006.8.14-21.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tei_4-2006.8.14-21.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "gawk" 
+  "grep" 
+  "iso_ent" 
+  "libxml2-tools" 
+  "libz1" 
+  "sed" 
+  "sgml-skel" 
+  "xmlcharent" 
+]
+extra-source "tei_4-2006.8.14-21.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tei_4-2006.8.14-21.1.noarch.rpm"
+}

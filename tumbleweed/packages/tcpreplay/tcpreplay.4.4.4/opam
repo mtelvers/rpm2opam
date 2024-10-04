@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tcpreplay-4.4.4-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tcpreplay-4.4.4-1.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libdnet1" 
+  "libpcap1" 
+  "tcpdump" 
+]
+extra-source "tcpreplay-4.4.4-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tcpreplay-4.4.4-1.4.x86_64.rpm"
+}

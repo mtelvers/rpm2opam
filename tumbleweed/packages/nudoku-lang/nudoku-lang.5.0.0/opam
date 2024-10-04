@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nudoku-lang-5.0.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nudoku-lang-5.0.0-1.1.noarch.rpm"]
+depends: [
+  "nudoku" {= "5.0.0"}
+]
+extra-source "nudoku-lang-5.0.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nudoku-lang-5.0.0-1.1.noarch.rpm"
+}

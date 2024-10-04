@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pyface-8.0.0-3.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pyface-8.0.0-3.4.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-importlib-metadata" 
+  "python312-importlib-resources" {>= "1.1.0"}
+  "python312-traits" {>= "6.2"}
+]
+extra-source "python312-pyface-8.0.0-3.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pyface-8.0.0-3.4.noarch.rpm"
+}

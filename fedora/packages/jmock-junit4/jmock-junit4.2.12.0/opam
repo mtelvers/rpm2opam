@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jmock-junit4-2.12.0-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jmock-junit4-2.12.0-16.fc40.noarch.rpm"]
+depends: [
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "jmock" {= "2.12.0"}
+  "jmock-imposters" {= "2.12.0"}
+  "jmock-legacy" {= "2.12.0"}
+  "junit" 
+]
+extra-source "jmock-junit4-2.12.0-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jmock-junit4-2.12.0-16.fc40.noarch.rpm"
+}

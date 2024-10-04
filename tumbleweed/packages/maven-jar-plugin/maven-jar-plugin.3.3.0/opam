@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-jar-plugin-3.3.0-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-jar-plugin-3.3.0-3.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "maven-archiver" 
+  "maven-file-management" 
+  "plexus-utils" 
+]
+extra-source "maven-jar-plugin-3.3.0-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-jar-plugin-3.3.0-3.1.noarch.rpm"
+}

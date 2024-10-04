@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tuned-profiles-nfv-2.22.1.2+git.86ac977-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tuned-profiles-nfv-2.22.1.2+git.86ac977-3.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "tuned" {= "2.22.1.2"}
+]
+extra-source "tuned-profiles-nfv-2.22.1.2+git.86ac977-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tuned-profiles-nfv-2.22.1.2+git.86ac977-3.1.noarch.rpm"
+}

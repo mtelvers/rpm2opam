@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "the_silver_searcher-2.2.0-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "the_silver_searcher-2.2.0-4.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "liblzma5" 
+  "libpcre1" 
+  "libz-ng-compat1" 
+]
+extra-source "the_silver_searcher-2.2.0-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/the_silver_searcher-2.2.0-4.2.x86_64.rpm"
+}

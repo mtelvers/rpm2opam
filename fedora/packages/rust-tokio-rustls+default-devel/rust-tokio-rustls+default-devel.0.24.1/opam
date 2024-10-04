@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tokio-rustls+default-devel-0.24.1-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tokio-rustls+default-devel-0.24.1-5.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-tokio-rustls+logging-devel" {= "0.24.1"}
+  "rust-tokio-rustls+tls12-devel" {= "0.24.1"}
+  "rust-tokio-rustls-devel" {= "0.24.1"}
+]
+extra-source "rust-tokio-rustls+default-devel-0.24.1-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tokio-rustls+default-devel-0.24.1-5.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-sentry-0.22.0-17.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-sentry-0.22.0-17.fc39.noarch.rpm"]
+depends: [
+  "ca-certificates" 
+  "php-Monolog" 
+  "php-cli" 
+  "php-common" {>= "5.2.4"}
+  "php-mbstring" 
+]
+extra-source "php-sentry-0.22.0-17.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-sentry-0.22.0-17.fc39.noarch.rpm"
+}

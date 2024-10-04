@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xfce4-panel-profiles-1.0.14-lp160.2.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xfce4-panel-profiles-1.0.14-lp160.2.10.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "girepository-1_0" 
+  "python311" 
+  "python311-base" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-psutil" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Libxfce4ui-2_0" {= "2.0"}
+  "typelib-1_0-Libxfce4util-1_0" 
+  "xfce4-panel" 
+]
+extra-source "xfce4-panel-profiles-1.0.14-lp160.2.10.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/xfce4-panel-profiles-1.0.14-lp160.2.10.noarch.rpm"
+}

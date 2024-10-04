@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libxslt1-32bit-1.1.39-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxslt1-32bit-1.1.39-3.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libxml2-2-32bit" 
+]
+extra-source "libxslt1-32bit-1.1.39-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libxslt1-32bit-1.1.39-3.1.x86_64.rpm"
+}

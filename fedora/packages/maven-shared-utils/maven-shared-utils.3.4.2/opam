@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "maven-shared-utils-3.4.2-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-shared-utils-3.4.2-7.fc40.noarch.rpm"]
+depends: [
+  "apache-commons-io" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "slf4j" 
+]
+extra-source "maven-shared-utils-3.4.2-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/maven-shared-utils-3.4.2-7.fc40.noarch.rpm"
+}

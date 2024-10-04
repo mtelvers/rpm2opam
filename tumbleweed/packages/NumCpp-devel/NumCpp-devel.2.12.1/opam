@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "NumCpp-devel-2.12.1-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "NumCpp-devel-2.12.1-1.3.noarch.rpm"]
+depends: [
+  "libboost_date_time-devel" 
+  "libboost_headers-devel" 
+  "libboost_log-devel" 
+  "libboost_numpy3-devel" 
+  "libboost_python3-devel" 
+  "libboost_system-devel" 
+  "libboost_thread-devel" 
+  "python311-pybind11-devel" 
+]
+extra-source "NumCpp-devel-2.12.1-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/NumCpp-devel-2.12.1-1.3.noarch.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-http-common-prof-0.8.3.4-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-http-common-prof-0.8.3.4-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-base64-bytestring-prof" 
+  "ghc-blaze-builder-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-case-insensitive-prof" 
+  "ghc-directory-prof" 
+  "ghc-http-common-devel" {= "0.8.3.4"}
+  "ghc-mtl-prof" 
+  "ghc-network-prof" 
+  "ghc-random-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unordered-containers-prof" 
+]
+extra-source "ghc-http-common-prof-0.8.3.4-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-http-common-prof-0.8.3.4-8.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "evemu-devel-2.7.0-28.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "evemu-devel-2.7.0-28.fc40.x86_64.rpm"]
+depends: [
+  "evemu" {= "2.7.0"}
+  "evemu-libs" 
+  "libevdev-devel" 
+  "pkgconf-pkg-config" 
+  "python3" {= "3.12"}
+]
+extra-source "evemu-devel-2.7.0-28.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/evemu-devel-2.7.0-28.fc40.x86_64.rpm"
+}

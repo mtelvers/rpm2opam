@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-String-License-0.0.9-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-String-License-0.0.9-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Array-IntSpan" 
+  "perl-Carp" 
+  "perl-Feature-Compat-Class" {>= "0.4"}
+  "perl-Log-Any" 
+  "perl-Object-Pad" 
+  "perl-Regexp-Pattern" {>= "0.2.12"}
+  "perl-Regexp-Pattern-License" {>= "3.4.0"}
+  "perl-Scalar-List-Utils" 
+  "perl-libs" {>= "5.20.0"}
+  "perl-namespace-clean" 
+]
+extra-source "perl-String-License-0.0.9-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-String-License-0.0.9-4.fc40.noarch.rpm"
+}

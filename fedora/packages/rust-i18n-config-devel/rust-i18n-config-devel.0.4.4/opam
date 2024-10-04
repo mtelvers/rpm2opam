@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-i18n-config-devel-0.4.4-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-i18n-config-devel-0.4.4-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-log+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde_derive+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-toml+default-devel" 
+  "rust-unic-langid+default-devel" 
+  "rust-unic-langid+serde-devel" 
+]
+extra-source "rust-i18n-config-devel-0.4.4-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-i18n-config-devel-0.4.4-3.fc40.noarch.rpm"
+}

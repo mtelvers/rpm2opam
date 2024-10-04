@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Sysadm-Install-0.48-1.29.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Sysadm-Install-0.48-1.29.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-File-Which" {>= "1.9"}
+  "perl-Log-Log4perl" {>= "1.28"}
+  "perl-Term-ReadKey" 
+  "perl-base" 
+  "perl-libwww-perl" 
+]
+extra-source "perl-Sysadm-Install-0.48-1.29.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Sysadm-Install-0.48-1.29.noarch.rpm"
+}

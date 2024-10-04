@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libdigidocpp-3.16.0-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdigidocpp-3.16.0-5.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "opensc" 
+  "openssl-libs" 
+  "xalan-c" 
+  "xerces-c" 
+  "xml-security-c" 
+  "zlib-ng-compat" 
+]
+extra-source "libdigidocpp-3.16.0-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libdigidocpp-3.16.0-5.fc40.x86_64.rpm"
+}

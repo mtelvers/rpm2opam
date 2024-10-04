@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Spreadsheet-WriteExcel-Simple-1.04-45.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Spreadsheet-WriteExcel-Simple-1.04-45.fc40.noarch.rpm"]
+depends: [
+  "perl-IO-stringy" {>= "1.126"}
+  "perl-Spreadsheet-WriteExcel" {>= "0.31"}
+  "perl-libs" 
+]
+extra-source "perl-Spreadsheet-WriteExcel-Simple-1.04-45.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Spreadsheet-WriteExcel-Simple-1.04-45.fc40.noarch.rpm"
+}

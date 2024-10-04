@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-ebsthesis-2024.216.1.0svn15878-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-ebsthesis-2024.216.1.0svn15878-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-acronym" 
+  "texlive-amscls" 
+  "texlive-amsfonts" 
+  "texlive-amsmath" 
+  "texlive-caption" 
+  "texlive-carlisle" 
+  "texlive-comment" 
+  "texlive-doublestroke" 
+  "texlive-extsizes" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-geometry" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-mdwtools" 
+  "texlive-nomencl" 
+  "texlive-onlyamsmath" 
+  "texlive-ragged2e" 
+  "texlive-rotfloat" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-setspace" 
+  "texlive-titlesec" 
+  "texlive-tocbibind" 
+  "texlive-tools" 
+]
+extra-source "texlive-ebsthesis-2024.216.1.0svn15878-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-ebsthesis-2024.216.1.0svn15878-57.1.noarch.rpm"
+}

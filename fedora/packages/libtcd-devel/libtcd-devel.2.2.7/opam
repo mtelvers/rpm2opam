@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libtcd-devel-2.2.7-6.r3.fc40.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libtcd-devel-2.2.7-6.r3.fc40.5.x86_64.rpm"]
+depends: [
+  "libtcd" {= "2.2.7"}
+]
+extra-source "libtcd-devel-2.2.7-6.r3.fc40.5.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libtcd-devel-2.2.7-6.r3.fc40.5.x86_64.rpm"
+}

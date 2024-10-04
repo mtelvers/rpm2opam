@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lcd4linux-0.11-0.32.svn1200.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lcd4linux-0.11-0.32.svn1200.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dbus-libs" 
+  "gd" 
+  "glibc" 
+  "libX11" 
+  "libjpeg-turbo" 
+  "libst2205" 
+  "libusb-compat-0-1" 
+  "libusb1" 
+  "libvncserver" 
+  "ncurses-libs" 
+  "serdisplib" 
+  "sqlite-libs" 
+]
+extra-source "lcd4linux-0.11-0.32.svn1200.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lcd4linux-0.11-0.32.svn1200.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python-xml-2.7.18-49.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python-xml-2.7.18-49.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libexpat1" 
+  "libpython2_7-1_0" 
+  "python-base" {= "2.7.18"}
+]
+extra-source "python-xml-2.7.18-49.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python-xml-2.7.18-49.1.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libimobiledevice-1_0-6-32bit-1.3.0+190git.20230705-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libimobiledevice-1_0-6-32bit-1.3.0+190git.20230705-1.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libimobiledevice-glue-1_0-0-32bit" 
+  "libopenssl3-32bit" 
+  "libplist-2_0-4-32bit" 
+  "libusbmuxd-2_0-6-32bit" 
+]
+extra-source "libimobiledevice-1_0-6-32bit-1.3.0+190git.20230705-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libimobiledevice-1_0-6-32bit-1.3.0+190git.20230705-1.3.x86_64.rpm"
+}

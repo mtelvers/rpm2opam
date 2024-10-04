@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-why3-1.7.1-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-why3-1.7.1-2.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "ocaml" {= "2125"}
+  "ocaml-apron" {= "5"}
+  "ocaml-menhirlib" {= "0"}
+  "ocaml-mlgmpidl" {= "3686"}
+  "ocaml-num" {= "7414145"}
+  "ocaml-parsexp" {= "1764"}
+  "ocaml-re" {= "0"}
+  "ocaml-sexplib" {= "0"}
+  "ocaml-sexplib0" {= "0"}
+  "ocaml-zarith" {= "0"}
+  "ocaml-zip-devel" 
+]
+extra-source "ocaml-why3-1.7.1-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-why3-1.7.1-2.fc40.x86_64.rpm"
+}

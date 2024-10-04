@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pdf2djvu-lang-0.9.19-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pdf2djvu-lang-0.9.19-4.1.noarch.rpm"]
+depends: [
+  "pdf2djvu" {= "0.9.19"}
+]
+extra-source "pdf2djvu-lang-0.9.19-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pdf2djvu-lang-0.9.19-4.1.noarch.rpm"
+}

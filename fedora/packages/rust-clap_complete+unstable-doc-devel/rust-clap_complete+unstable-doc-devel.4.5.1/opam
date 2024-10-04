@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-clap_complete+unstable-doc-devel-4.5.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-clap_complete+unstable-doc-devel-4.5.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-clap_complete+unstable-dynamic-devel" {= "4.5.1"}
+  "rust-clap_complete-devel" {= "4.5.1"}
+]
+extra-source "rust-clap_complete+unstable-doc-devel-4.5.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-clap_complete+unstable-doc-devel-4.5.1-1.fc40.noarch.rpm"
+}

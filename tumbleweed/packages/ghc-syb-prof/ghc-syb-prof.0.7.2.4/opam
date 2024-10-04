@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-syb-prof-0.7.2.4-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-syb-prof-0.7.2.4-1.8.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-syb-devel" {= "0.7.2.4"}
+]
+extra-source "ghc-syb-prof-0.7.2.4-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-syb-prof-0.7.2.4-1.8.x86_64.rpm"
+}

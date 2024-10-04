@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "duckduckgo-0.008-28.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "duckduckgo-0.008-28.fc40.noarch.rpm"]
+depends: [
+  "perl-App-DuckDuckGo" 
+  "perl-interpreter" 
+]
+extra-source "duckduckgo-0.008-28.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/duckduckgo-0.008-28.fc40.noarch.rpm"
+}

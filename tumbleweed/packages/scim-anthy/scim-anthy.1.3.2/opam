@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "scim-anthy-1.3.2-1.29.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scim-anthy-1.3.2-1.29.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libanthy0" 
+  "libcairo2" 
+  "libgcc_s1" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+  "libstdc++6" 
+  "scim" 
+]
+extra-source "scim-anthy-1.3.2-1.29.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/scim-anthy-1.3.2-1.29.x86_64.rpm"
+}

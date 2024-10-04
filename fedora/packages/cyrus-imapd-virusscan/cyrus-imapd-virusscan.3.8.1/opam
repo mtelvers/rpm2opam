@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cyrus-imapd-virusscan-3.8.1-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cyrus-imapd-virusscan-3.8.1-11.fc40.x86_64.rpm"]
+depends: [
+  "clamav-lib" 
+  "cyrus-imapd-libs" {= "3.8.1"}
+  "glibc" 
+  "libcom_err" 
+]
+extra-source "cyrus-imapd-virusscan-3.8.1-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cyrus-imapd-virusscan-3.8.1-11.fc40.x86_64.rpm"
+}

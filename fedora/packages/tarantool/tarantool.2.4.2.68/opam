@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tarantool-2.4.2.68-17.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tarantool-2.4.2.68-17.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "curl" 
+  "glibc" 
+  "libcurl" 
+  "libgcc" 
+  "libgomp" 
+  "libicu" 
+  "libstdc++" 
+  "libzstd" 
+  "logrotate" 
+  "openssl" 
+  "openssl-libs" 
+  "readline" 
+  "setup" 
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "tarantool-2.4.2.68-17.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tarantool-2.4.2.68-17.fc40.x86_64.rpm"
+}

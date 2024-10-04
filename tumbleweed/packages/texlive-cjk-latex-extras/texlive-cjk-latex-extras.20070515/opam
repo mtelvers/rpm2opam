@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-cjk-latex-extras-20070515-195.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-cjk-latex-extras-20070515-195.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "perl-base" 
+  "texlive-cjk" 
+  "texlive-latex" 
+  "texlive-scripts-bin" 
+  "texlive-ttfutils-bin" 
+]
+extra-source "texlive-cjk-latex-extras-20070515-195.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-cjk-latex-extras-20070515-195.2.noarch.rpm"
+}

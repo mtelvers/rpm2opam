@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ceph-csi-3.3.1+git0.a07260f19-1.18.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ceph-csi-3.3.1+git0.a07260f19-1.18.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "librados2" 
+  "librbd1" 
+  "patterns-aeon-base" {= "0"}
+]
+extra-source "ceph-csi-3.3.1+git0.a07260f19-1.18.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ceph-csi-3.3.1+git0.a07260f19-1.18.x86_64.rpm"
+}

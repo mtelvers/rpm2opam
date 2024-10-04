@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-design-1.8-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-design-1.8-1.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gap" {>= "4.10"}
+  "gap-grape" {>= "4.8"}
+]
+extra-source "gap-design-1.8-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-design-1.8-1.3.noarch.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "root-roofit-core-6.30.04-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "root-roofit-core-6.30.04-2.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "root-core" 
+  "root-foam" 
+  "root-graf" 
+  "root-hist" 
+  "root-io" 
+  "root-mathcore" 
+  "root-matrix" 
+  "root-minuit" 
+  "root-minuit2" 
+  "root-roofit-batchcompute" 
+  "root-roofit-multiprocess" 
+  "root-roofit-zmq" 
+  "root-tree" 
+  "zeromq" 
+]
+extra-source "root-roofit-core-6.30.04-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/root-roofit-core-6.30.04-2.fc40.x86_64.rpm"
+}

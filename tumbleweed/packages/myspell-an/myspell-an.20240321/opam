@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "myspell-an-20240321-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "myspell-an-20240321-1.1.noarch.rpm"]
+depends: [
+  "myspell-an_ES" 
+  "myspell-dictionaries" 
+]
+extra-source "myspell-an-20240321-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/myspell-an-20240321-1.1.noarch.rpm"
+}

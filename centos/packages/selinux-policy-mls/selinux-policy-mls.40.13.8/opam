@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "selinux-policy-mls-40.13.8-1.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "selinux-policy-mls-40.13.8-1.el10.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "mcstrans" 
+  "policycoreutils" {>= "3.4"}
+  "policycoreutils-newrole" {>= "3.4"}
+]
+extra-source "selinux-policy-mls-40.13.8-1.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/selinux-policy-mls-40.13.8-1.el10.noarch.rpm"
+}

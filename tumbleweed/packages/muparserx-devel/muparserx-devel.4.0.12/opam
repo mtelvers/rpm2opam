@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "muparserx-devel-4.0.12-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "muparserx-devel-4.0.12-1.6.x86_64.rpm"]
+depends: [
+  "libmuparserx4_0_12" {= "4.0.12"}
+  "pkgconf-pkg-config" 
+]
+extra-source "muparserx-devel-4.0.12-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/muparserx-devel-4.0.12-1.6.x86_64.rpm"
+}

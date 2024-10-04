@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfcache-devel-20240414-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfcache-devel-20240414-1.1.x86_64.rpm"]
+depends: [
+  "libfcache1" {= "20240414"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libfcache-devel-20240414-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfcache-devel-20240414-1.1.x86_64.rpm"
+}

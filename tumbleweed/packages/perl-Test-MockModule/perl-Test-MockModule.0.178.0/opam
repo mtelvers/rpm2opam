@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-MockModule-0.178.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-MockModule-0.178.0-1.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-SUPER" {>= "1.20"}
+]
+extra-source "perl-Test-MockModule-0.178.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-MockModule-0.178.0-1.2.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gtk-sys0.17+v3_24_8-devel-0.17.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gtk-sys0.17+v3_24_8-devel-0.17.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "gtk3-devel" {>= "3.24.8"}
+  "rust-gtk-sys0-17+v3_24_1-devel" {= "0.17.0"}
+  "rust-gtk-sys0-17-devel" {= "0.17.0"}
+]
+extra-source "rust-gtk-sys0.17+v3_24_8-devel-0.17.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gtk-sys0.17+v3_24_8-devel-0.17.0-2.fc40.noarch.rpm"
+}

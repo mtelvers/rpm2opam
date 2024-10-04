@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ca-certificates-2023.2.62_v7.0.401-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ca-certificates-2023.2.62_v7.0.401-6.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "grep" 
+  "p11-kit" {>= "0.23"}
+  "p11-kit-trust" {>= "0.23"}
+  "sed" 
+]
+extra-source "ca-certificates-2023.2.62_v7.0.401-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/ca-certificates-2023.2.62_v7.0.401-6.fc40.noarch.rpm"
+}

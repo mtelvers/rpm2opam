@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-URI-5.27-2.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-URI-5.27-2.el10.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Encode" 
+  "perl-Exporter" {>= "5.57"}
+  "perl-MIME-Base64" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-URI" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libnet" 
+  "perl-overload" 
+  "perl-parent" 
+]
+extra-source "perl-URI-5.27-2.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/perl-URI-5.27-2.el10.noarch.rpm"
+}

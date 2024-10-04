@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libkcddb-devel-24.08.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libkcddb-devel-24.08.1-1.1.x86_64.rpm"]
+depends: [
+  "libKF5Cddb5" {= "24.8.1"}
+]
+extra-source "libkcddb-devel-24.08.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libkcddb-devel-24.08.1-1.1.x86_64.rpm"
+}

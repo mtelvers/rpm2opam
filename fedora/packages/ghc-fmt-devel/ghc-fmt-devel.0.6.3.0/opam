@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-fmt-devel-0.6.3.0-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-fmt-devel-0.6.3.0-5.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-base64-bytestring-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-call-stack-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-fmt" {= "0.6.3.0"}
+  "ghc-formatting-devel" 
+  "ghc-microlens-devel" 
+  "ghc-text-devel" 
+  "ghc-time-devel" 
+  "ghc-time-locale-compat-devel" 
+]
+extra-source "ghc-fmt-devel-0.6.3.0-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-fmt-devel-0.6.3.0-5.fc40.x86_64.rpm"
+}

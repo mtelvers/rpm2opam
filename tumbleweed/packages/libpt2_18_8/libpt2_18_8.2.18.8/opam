@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpt2_18_8-2.18.8-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpt2_18_8-2.18.8-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libasound2" 
+  "libexpat1" 
+  "libgcc_s1" 
+  "libldap2" 
+  "libopenssl3" 
+  "libsasl2-3" 
+  "libstdc++6" 
+]
+extra-source "libpt2_18_8-2.18.8-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpt2_18_8-2.18.8-2.2.x86_64.rpm"
+}

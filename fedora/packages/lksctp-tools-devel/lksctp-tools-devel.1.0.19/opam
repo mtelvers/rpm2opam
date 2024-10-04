@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lksctp-tools-devel-1.0.19-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lksctp-tools-devel-1.0.19-6.fc40.x86_64.rpm"]
+depends: [
+  "lksctp-tools" 
+  "pkgconf-pkg-config" 
+]
+extra-source "lksctp-tools-devel-1.0.19-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lksctp-tools-devel-1.0.19-6.fc40.x86_64.rpm"
+}

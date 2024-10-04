@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-sound-recorder-43~beta-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-sound-recorder-43~beta-5.fc40.noarch.rpm"]
+depends: [
+  "gjs" {>= "1.41.4"}
+  "gstreamer1" 
+  "gstreamer1-plugins-bad-free" 
+  "gstreamer1-plugins-base" 
+  "gstreamer1-plugins-good" 
+  "gtk4" 
+  "libadwaita" 
+]
+extra-source "gnome-sound-recorder-43~beta-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-sound-recorder-43~beta-5.fc40.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texi2html-lang-5.0-6.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texi2html-lang-5.0-6.2.noarch.rpm"]
+depends: [
+  "texi2html" {= "5.0"}
+]
+extra-source "texi2html-lang-5.0-6.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texi2html-lang-5.0-6.2.noarch.rpm"
+}

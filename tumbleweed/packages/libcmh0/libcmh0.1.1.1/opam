@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcmh0-1.1.1-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcmh0-1.1.1-1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libmpc3" 
+  "libmpfr6" 
+]
+extra-source "libcmh0-1.1.1-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcmh0-1.1.1-1.7.x86_64.rpm"
+}

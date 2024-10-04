@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ugrep-bash-completion-6.5.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ugrep-bash-completion-6.5.0-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "ugrep" {= "6.5.0"}
+]
+extra-source "ugrep-bash-completion-6.5.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ugrep-bash-completion-6.5.0-1.1.noarch.rpm"
+}

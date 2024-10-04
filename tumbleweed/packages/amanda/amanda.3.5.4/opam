@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "amanda-3.5.4-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "amanda-3.5.4-4.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "dump" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "grep" 
+  "krb5" 
+  "libcom_err2" 
+  "libcurl-mini4" 
+  "libopenssl3" 
+  "libreadline8" 
+  "libtirpc3" 
+  "perl" {= "5.40.0"}
+  "perl-base" 
+  "permissions" 
+  "samba-client" 
+  "shadow" 
+  "tar" 
+]
+extra-source "amanda-3.5.4-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/amanda-3.5.4-4.1.x86_64.rpm"
+}

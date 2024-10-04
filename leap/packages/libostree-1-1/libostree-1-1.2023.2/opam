@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libostree-1-1-2023.2-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libostree-1-1-2023.2-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libarchive13" 
+  "libcurl-mini4" 
+  "libgio-2_0-0" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libgpgme11" 
+  "liblzma5" 
+  "libselinux1" 
+  "libsodium23" 
+  "libsystemd0" 
+  "libz-ng-compat1" 
+]
+extra-source "libostree-1-1-2023.2-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libostree-1-1-2023.2-slfo.1.1.8.x86_64.rpm"
+}

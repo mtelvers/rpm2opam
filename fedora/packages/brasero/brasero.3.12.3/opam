@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "brasero-3.12.3-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "brasero-3.12.3-8.fc40.x86_64.rpm"]
+depends: [
+  "brasero-libs" {= "3.12.3"}
+  "cairo" 
+  "cdrdao" 
+  "dvd+rw-tools" 
+  "gdk-pixbuf2" 
+  "genisoimage" 
+  "glib2" 
+  "glibc" 
+  "gstreamer1" 
+  "gstreamer1-plugins-base" 
+  "gtk3" 
+  "libburn" 
+  "libisofs" 
+  "libtracker-sparql" 
+  "libxml2" 
+  "pango" 
+  "totem-pl-parser" 
+  "wodim" 
+]
+extra-source "brasero-3.12.3-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/brasero-3.12.3-8.fc40.x86_64.rpm"
+}

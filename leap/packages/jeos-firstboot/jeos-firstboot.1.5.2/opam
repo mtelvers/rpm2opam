@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jeos-firstboot-1.5.2-slfo.1.2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jeos-firstboot-1.5.2-slfo.1.2.1.noarch.rpm"]
+depends: [
+  "NetworkManager-tui" 
+  "bash" 
+  "bash-sh" 
+  "cracklib" 
+  "dialog" 
+  "iproute2" 
+  "live-langset-data" 
+  "ssh-pairing" 
+  "systemd" 
+  "timezone" 
+]
+extra-source "jeos-firstboot-1.5.2-slfo.1.2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/jeos-firstboot-1.5.2-slfo.1.2.1.noarch.rpm"
+}

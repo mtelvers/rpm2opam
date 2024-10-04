@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fonehome-server-1.2.2-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fonehome-server-1.2.2-3.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "openssh" 
+  "sed" 
+  "shadow" 
+  "util-linux" 
+]
+extra-source "fonehome-server-1.2.2-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/fonehome-server-1.2.2-3.2.noarch.rpm"
+}

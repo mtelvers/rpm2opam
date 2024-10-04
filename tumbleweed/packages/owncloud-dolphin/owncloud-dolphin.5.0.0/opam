@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "owncloud-dolphin-5.0.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "owncloud-dolphin-5.0.0-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kio" 
+  "kio-core" 
+  "libKF5CoreAddons5" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Network5" 
+  "libQt5Widgets5" 
+  "libstdc++6" 
+]
+extra-source "owncloud-dolphin-5.0.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/owncloud-dolphin-5.0.0-1.3.x86_64.rpm"
+}

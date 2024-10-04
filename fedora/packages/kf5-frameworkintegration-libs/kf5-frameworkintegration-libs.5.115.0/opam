@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kf5-frameworkintegration-libs-5.115.0-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kf5-frameworkintegration-libs-5.115.0-2.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf5-frameworkintegration" {= "5.115.0"}
+  "kf5-kconfig-core" 
+  "kf5-kconfigwidgets" 
+  "kf5-kiconthemes" 
+  "kf5-knotifications" 
+  "kf5-kwidgetsaddons" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "kf5-frameworkintegration-libs-5.115.0-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kf5-frameworkintegration-libs-5.115.0-2.fc40.x86_64.rpm"
+}

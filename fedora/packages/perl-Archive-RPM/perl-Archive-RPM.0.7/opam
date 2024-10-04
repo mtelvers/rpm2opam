@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Archive-RPM-0.07-36.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Archive-RPM-0.07-36.fc40.noarch.rpm"]
+depends: [
+  "cpio" 
+  "perl-DateTime" 
+  "perl-English" 
+  "perl-File-Temp" 
+  "perl-Moose" 
+  "perl-MooseX-AttributeHelpers" 
+  "perl-MooseX-MarkAsMethods" 
+  "perl-MooseX-Traits" 
+  "perl-MooseX-Types-DateTimeX" 
+  "perl-MooseX-Types-Path-Class" 
+  "perl-Path-Class" 
+  "perl-RPM2" {>= "0.67"}
+  "perl-libs" 
+  "perl-overload" 
+  "rpm" 
+]
+extra-source "perl-Archive-RPM-0.07-36.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Archive-RPM-0.07-36.fc40.noarch.rpm"
+}

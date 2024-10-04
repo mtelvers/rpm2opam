@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "MozillaFirefox-devel-130.0.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "MozillaFirefox-devel-130.0.1-1.1.noarch.rpm"]
+depends: [
+  "MozillaFirefox" {= "130.0.1"}
+  "perl-Archive-Zip" 
+  "perl-XML-Simple" 
+  "perl-base" 
+]
+extra-source "MozillaFirefox-devel-130.0.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/MozillaFirefox-devel-130.0.1-1.1.noarch.rpm"
+}

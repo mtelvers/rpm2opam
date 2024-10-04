@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "purple-sipe-1.25.0-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "purple-sipe-1.25.0-19.fc40.x86_64.rpm"]
+depends: [
+  "dbus-libs" 
+  "farstream02" 
+  "freerdp2-libs" 
+  "glib2" 
+  "glibc" 
+  "gssntlmssp" {>= "0.5.0"}
+  "gstreamer1" 
+  "gstreamer1-plugins-base" 
+  "krb5-libs" 
+  "libcom_err" 
+  "libnice" 
+  "libpurple" 
+  "libwinpr2" 
+  "libxml2" 
+  "nspr" 
+  "nss" 
+  "nss-util" 
+  "openssl-libs" 
+]
+extra-source "purple-sipe-1.25.0-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/purple-sipe-1.25.0-19.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pangomm1_4-devel-2.46.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pangomm1_4-devel-2.46.4-1.1.x86_64.rpm"]
+depends: [
+  "cairomm1_0-devel" {>= "1.2.2"}
+  "glibmm2_4-devel" {>= "2.48.0"}
+  "libpangomm-1_4-1" {= "2.46.4"}
+  "pango-devel" {>= "1.45.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "pangomm1_4-devel-2.46.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pangomm1_4-devel-2.46.4-1.1.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "salt-lint-0.9.2-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "salt-lint-0.9.2-4.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-pathspec" {>= "0.6"}
+  "python3-pyyaml" 
+]
+extra-source "salt-lint-0.9.2-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/salt-lint-0.9.2-4.fc40.noarch.rpm"
+}

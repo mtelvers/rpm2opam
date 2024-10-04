@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libircclient-devel-1.8-26.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libircclient-devel-1.8-26.fc40.x86_64.rpm"]
+depends: [
+  "libircclient" {= "1.8"}
+]
+extra-source "libircclient-devel-1.8-26.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libircclient-devel-1.8-26.fc40.x86_64.rpm"
+}

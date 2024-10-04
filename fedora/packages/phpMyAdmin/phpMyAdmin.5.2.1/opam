@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "phpMyAdmin-5.2.1-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "phpMyAdmin-5.2.1-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "ca-certificates" 
+  "caddy" 
+  "coreutils" 
+  "httpd-filesystem" 
+  "nginx-filesystem" 
+  "php-common" {>= "7.2.5"}
+  "php-fpm" 
+  "php-gd" 
+  "php-intl" 
+  "php-mbstring" 
+  "php-mysqlnd" 
+  "php-pecl-zip" 
+  "php-process" 
+  "php-xml" 
+  "sed" 
+]
+extra-source "phpMyAdmin-5.2.1-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/phpMyAdmin-5.2.1-4.fc40.noarch.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-strict-prof-0.5-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-strict-prof-0.5-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-assoc-prof" 
+  "ghc-base-prof" 
+  "ghc-binary-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-hashable-prof" 
+  "ghc-strict-devel" {= "0.5"}
+  "ghc-text-prof" 
+  "ghc-these-prof" 
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-strict-prof-0.5-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-strict-prof-0.5-3.fc40.x86_64.rpm"
+}

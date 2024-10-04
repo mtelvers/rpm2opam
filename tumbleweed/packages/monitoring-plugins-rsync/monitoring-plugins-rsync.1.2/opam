@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "monitoring-plugins-rsync-1.02-5.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "monitoring-plugins-rsync-1.02-5.2.noarch.rpm"]
+depends: [
+  "perl-base" 
+  "rsync" 
+]
+extra-source "monitoring-plugins-rsync-1.02-5.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/monitoring-plugins-rsync-1.02-5.2.noarch.rpm"
+}

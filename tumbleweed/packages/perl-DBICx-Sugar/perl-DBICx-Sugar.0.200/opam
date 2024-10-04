@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-DBICx-Sugar-0.0200-1.18.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DBICx-Sugar-0.0200-1.18.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-DBIx-Class" 
+  "perl-SQL-Translator" {>= "0.11018"}
+  "perl-YAML" 
+]
+extra-source "perl-DBICx-Sugar-0.0200-1.18.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-DBICx-Sugar-0.0200-1.18.noarch.rpm"
+}

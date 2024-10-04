@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-pyml-devel-20231101-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-pyml-devel-20231101-6.fc40.x86_64.rpm"]
+depends: [
+  "ocaml" {= "24528204"}
+  "ocaml-pyml" {= "20231101"}
+  "ocaml-stdcompat" {= "97"}
+  "ocaml-stdcompat-devel" 
+]
+extra-source "ocaml-pyml-devel-20231101-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-pyml-devel-20231101-6.fc40.x86_64.rpm"
+}

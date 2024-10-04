@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gitg-devel-44-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gitg-devel-44-3.fc40.x86_64.rpm"]
+depends: [
+  "gitg" {= "44"}
+  "gitg-libs" 
+  "glib2-devel" {>= "2.68"}
+  "gpgme-devel" 
+  "gtk3-devel" {>= "3.20.0"}
+  "libdazzle-devel" 
+  "libgee-devel" 
+  "libgit2-glib-devel" {>= "1.1.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gitg-devel-44-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gitg-devel-44-3.fc40.x86_64.rpm"
+}

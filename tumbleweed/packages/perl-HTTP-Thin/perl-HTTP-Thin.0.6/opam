@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-HTTP-Thin-0.006-3.31.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTTP-Thin-0.006-3.31.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Method-Modifiers" 
+  "perl-HTTP-Message" 
+  "perl-Hash-MultiValue" 
+  "perl-Safe-Isa" 
+  "perl-base" 
+]
+extra-source "perl-HTTP-Thin-0.006-3.31.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-HTTP-Thin-0.006-3.31.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gauche-0.9.12-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gauche-0.9.12-5.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gdbm-libs" 
+  "glibc" 
+  "libgauche" {= "0.9.12"}
+  "libgcc" 
+  "mbedtls" 
+  "zlib-ng-compat" 
+]
+extra-source "gauche-0.9.12-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gauche-0.9.12-5.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcreaterepo_c-devel-1.1.0-slfo.1.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcreaterepo_c-devel-1.1.0-slfo.1.1.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libcreaterepo_c1" {= "1.1.0"}
+  "libcurl-devel" 
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+  "rpm-devel" 
+  "sqlite3-devel" 
+  "zlib-devel" 
+]
+extra-source "libcreaterepo_c-devel-1.1.0-slfo.1.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libcreaterepo_c-devel-1.1.0-slfo.1.1.1.x86_64.rpm"
+}

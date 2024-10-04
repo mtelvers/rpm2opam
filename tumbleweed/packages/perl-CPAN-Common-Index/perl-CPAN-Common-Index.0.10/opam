@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-CPAN-Common-Index-0.010-1.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CPAN-Common-Index-0.010-1.17.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-CPAN-DistnameInfo" 
+  "perl-Class-Tiny" 
+  "perl-File-Temp" {>= "0.19"}
+  "perl-Tie-Handle-Offset" 
+  "perl-URI" 
+  "perl-base" 
+]
+extra-source "perl-CPAN-Common-Index-0.010-1.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-CPAN-Common-Index-0.010-1.17.noarch.rpm"
+}

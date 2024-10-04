@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-khard-0.19.1-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-khard-0.19.1-1.5.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-Unidecode" 
+  "python311-atomicwrites" 
+  "python311-base" {= "3.11"}
+  "python311-configobj" 
+  "python311-ruamel-yaml" 
+  "python311-vobject" 
+  "update-alternatives" 
+]
+extra-source "python311-khard-0.19.1-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-khard-0.19.1-1.5.noarch.rpm"
+}

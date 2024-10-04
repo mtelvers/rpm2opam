@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wg-info-20240702.9b5c479-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wg-info-20240702.9b5c479-1.1.noarch.rpm"]
+depends: [
+  "python311" 
+  "python311-base" 
+  "wireguard-tools" 
+]
+extra-source "wg-info-20240702.9b5c479-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/wg-info-20240702.9b5c479-1.1.noarch.rpm"
+}

@@ -1,0 +1,39 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "389-ds-3.1.1~git13.a9c7ff9-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "389-ds-3.1.1~git13.a9c7ff9-1.1.x86_64.rpm"]
+depends: [
+  "aaa_base" 
+  "acl" 
+  "bash-sh" 
+  "cyrus-sasl-plain" 
+  "db48-utils" 
+  "fillup" 
+  "glibc" 
+  "krb5" 
+  "lib389" {= "3.1.1"}
+  "libcom_err2" 
+  "libcrack2" 
+  "libcrypt1" 
+  "libdb-4_8" 
+  "libgcc_s1" 
+  "libicu75" 
+  "libjson-c5" 
+  "libldap2" 
+  "liblmdb-0_9_30" 
+  "libopenssl3" 
+  "libpcre2-8-0" 
+  "libsasl2-3" 
+  "libsvrcore0" 
+  "libsystemd0" 
+  "libz-ng-compat1" 
+  "mozilla-nspr" 
+  "mozilla-nss" 
+  "pam" 
+  "perl-base" 
+  "permissions" 
+  "python311-base" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "389-ds-3.1.1~git13.a9c7ff9-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/389-ds-3.1.1~git13.a9c7ff9-1.1.x86_64.rpm"
+}

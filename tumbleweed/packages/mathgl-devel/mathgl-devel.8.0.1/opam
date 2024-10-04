@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mathgl-devel-8.0.1-8.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mathgl-devel-8.0.1-8.2.x86_64.rpm"]
+depends: [
+  "cmake" 
+  "libmgl-fltk8" {= "8.0.1"}
+  "libmgl-glut8" {= "8.0.1"}
+  "libmgl-mpi8" {= "8.0.1"}
+  "libmgl-qt5-8" {= "8.0.1"}
+  "libmgl-wnd8" {= "8.0.1"}
+  "libmgl-wx8" {= "8.0.1"}
+  "libmgl8" {= "8.0.1"}
+]
+extra-source "mathgl-devel-8.0.1-8.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mathgl-devel-8.0.1-8.2.x86_64.rpm"
+}

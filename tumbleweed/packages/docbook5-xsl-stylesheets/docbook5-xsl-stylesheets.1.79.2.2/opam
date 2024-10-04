@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "docbook5-xsl-stylesheets-1.79.2.2-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "docbook5-xsl-stylesheets-1.79.2.2-2.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "docbook_5" 
+  "sgml-skel" {>= "0.7"}
+  "xmlcharent" 
+]
+extra-source "docbook5-xsl-stylesheets-1.79.2.2-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/docbook5-xsl-stylesheets-1.79.2.2-2.2.noarch.rpm"
+}

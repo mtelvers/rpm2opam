@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-NetPacket-1.7.2-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-NetPacket-1.7.2-16.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-Socket" {>= "1.87"}
+  "perl-constant" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-parent" 
+]
+extra-source "perl-NetPacket-1.7.2-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-NetPacket-1.7.2-16.fc40.noarch.rpm"
+}

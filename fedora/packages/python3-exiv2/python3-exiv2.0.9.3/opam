@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-exiv2-0.9.3-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-exiv2-0.9.3-14.fc40.x86_64.rpm"]
+depends: [
+  "boost-python3" 
+  "exiv2-libs" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "python3" {= "3.12"}
+]
+extra-source "python3-exiv2-0.9.3-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-exiv2-0.9.3-14.fc40.x86_64.rpm"
+}

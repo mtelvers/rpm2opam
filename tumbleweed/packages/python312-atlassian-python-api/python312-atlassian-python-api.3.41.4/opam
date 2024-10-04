@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-atlassian-python-api-3.41.4-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-atlassian-python-api-3.41.4-1.3.noarch.rpm"]
+depends: [
+  "python312-Deprecated" 
+  "python312-base" {= "3.12"}
+  "python312-kerberos" 
+  "python312-oauthlib" 
+  "python312-requests" 
+  "python312-requests-oauthlib" 
+  "python312-six" 
+]
+extra-source "python312-atlassian-python-api-3.41.4-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-atlassian-python-api-3.41.4-1.3.noarch.rpm"
+}

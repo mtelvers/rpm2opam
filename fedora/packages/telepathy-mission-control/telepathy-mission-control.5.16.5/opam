@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "telepathy-mission-control-5.16.5-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "telepathy-mission-control-5.16.5-10.fc40.x86_64.rpm"]
+depends: [
+  "NetworkManager-libnm" 
+  "dbus-glib" 
+  "dbus-libs" 
+  "glib2" 
+  "glibc" 
+  "telepathy-glib" 
+]
+extra-source "telepathy-mission-control-5.16.5-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/telepathy-mission-control-5.16.5-10.fc40.x86_64.rpm"
+}

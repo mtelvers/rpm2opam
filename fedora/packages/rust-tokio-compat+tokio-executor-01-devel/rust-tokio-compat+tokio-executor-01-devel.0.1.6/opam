@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tokio-compat+tokio-executor-01-devel-0.1.6-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tokio-compat+tokio-executor-01-devel-0.1.6-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-tokio-compat-devel" {= "0.1.6"}
+  "rust-tokio-executor+default-devel" 
+]
+extra-source "rust-tokio-compat+tokio-executor-01-devel-0.1.6-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tokio-compat+tokio-executor-01-devel-0.1.6-6.fc40.noarch.rpm"
+}

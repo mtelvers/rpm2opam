@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kreport-lang-3.2.0-5.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kreport-lang-3.2.0-5.2.noarch.rpm"]
+depends: [
+  "kreport" {= "3.2.0"}
+]
+extra-source "kreport-lang-3.2.0-5.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kreport-lang-3.2.0-5.2.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "inchi-devel-1.06-2.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "inchi-devel-1.06-2.7.x86_64.rpm"]
+depends: [
+  "libinchi1" {= "1.6"}
+]
+extra-source "inchi-devel-1.06-2.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/inchi-devel-1.06-2.7.x86_64.rpm"
+}

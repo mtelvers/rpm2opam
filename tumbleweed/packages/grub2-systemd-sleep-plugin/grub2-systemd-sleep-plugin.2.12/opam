@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "grub2-systemd-sleep-plugin-2.12-24.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grub2-systemd-sleep-plugin-2.12-24.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "grub2" 
+  "util-linux" 
+]
+extra-source "grub2-systemd-sleep-plugin-2.12-24.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/grub2-systemd-sleep-plugin-2.12-24.1.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libp11-devel-0.4.12-5.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libp11-devel-0.4.12-5.3.x86_64.rpm"]
+depends: [
+  "libopenssl-devel" 
+  "libp11-3" {= "0.4.12"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libp11-devel-0.4.12-5.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libp11-devel-0.4.12-5.3.x86_64.rpm"
+}

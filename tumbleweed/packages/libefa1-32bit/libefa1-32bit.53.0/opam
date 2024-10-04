@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libefa1-32bit-53.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libefa1-32bit-53.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libibverbs1-32bit" 
+]
+extra-source "libefa1-32bit-53.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libefa1-32bit-53.0-1.1.x86_64.rpm"
+}

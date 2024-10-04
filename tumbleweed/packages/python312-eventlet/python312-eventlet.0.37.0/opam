@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-eventlet-0.37.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-eventlet-0.37.0-1.1.noarch.rpm"]
+depends: [
+  "libnss_usrfiles2" 
+  "netcfg" 
+  "python312-base" {= "3.12"}
+  "python312-dnspython" {>= "1.15.0"}
+  "python312-greenlet" {>= "1.0"}
+]
+extra-source "python312-eventlet-0.37.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-eventlet-0.37.0-1.1.noarch.rpm"
+}

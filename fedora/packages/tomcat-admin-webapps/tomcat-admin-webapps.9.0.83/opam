@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tomcat-admin-webapps-9.0.83-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tomcat-admin-webapps-9.0.83-3.fc40.noarch.rpm"]
+depends: [
+  "tomcat" {= "9.0.83"}
+]
+extra-source "tomcat-admin-webapps-9.0.83-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tomcat-admin-webapps-9.0.83-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qpid-dispatch-router-1.19.0-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qpid-dispatch-router-1.19.0-9.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libnghttp2" {>= "1.33.0"}
+  "libwebsockets" {>= "3.2.0"}
+  "python3" {= "3.12"}
+  "python3-libs" 
+  "python3-qpid-proton" {>= "0.34.0"}
+  "qpid-proton-c" 
+  "systemd" 
+]
+extra-source "qpid-dispatch-router-1.19.0-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qpid-dispatch-router-1.19.0-9.fc40.x86_64.rpm"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-Scrapy-2.11.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-Scrapy-2.11.2-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-Protego" {>= "0.1.15"}
+  "python312-PyDispatcher" {>= "2.0.5"}
+  "python312-Twisted" {>= "18.9.0"}
+  "python312-base" 
+  "python312-cryptography" {>= "36.0.0"}
+  "python312-cssselect" {>= "0.9.1"}
+  "python312-defusedxml" {>= "0.7.1"}
+  "python312-itemadapter" {>= "0.1.0"}
+  "python312-itemloaders" {>= "1.0.1"}
+  "python312-lxml" {>= "4.4.1"}
+  "python312-packaging" 
+  "python312-parsel" {>= "1.5.0"}
+  "python312-pyOpenSSL" {>= "21.0.0"}
+  "python312-queuelib" {>= "1.4.2"}
+  "python312-service_identity" {>= "18.1.0"}
+  "python312-setuptools" 
+  "python312-tldextract" 
+  "python312-w3lib" {>= "1.17.2"}
+  "python312-zope-interface" {>= "5.1.0"}
+  "update-alternatives" 
+]
+extra-source "python312-Scrapy-2.11.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-Scrapy-2.11.2-1.1.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "scala-2.13.12-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scala-2.13.12-7.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "java-21-openjdk-headless" 
+  "java-diff-utils" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+  "jline-builtins" 
+  "jline-reader" 
+  "jline-style" 
+  "jline-terminal-jna" 
+  "jna" 
+  "scala-library" {= "2.13.12"}
+  "scala-reflect" {= "2.13.12"}
+]
+extra-source "scala-2.13.12-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/scala-2.13.12-7.fc40.noarch.rpm"
+}

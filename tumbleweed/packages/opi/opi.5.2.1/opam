@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "opi-5.2.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opi-5.2.1-1.1.noarch.rpm"]
+depends: [
+  "curl" 
+  "python311-base" 
+  "python311-curses" 
+  "python311-lxml" 
+  "python311-requests" 
+  "python311-rpm" 
+  "python311-termcolor" 
+  "rpm-build" 
+  "squashfs" 
+  "sudo" 
+  "zypper" 
+]
+extra-source "opi-5.2.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/opi-5.2.1-1.1.noarch.rpm"
+}

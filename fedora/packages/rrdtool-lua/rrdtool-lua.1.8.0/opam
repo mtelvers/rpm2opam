@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rrdtool-lua-1.8.0-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rrdtool-lua-1.8.0-16.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "glib2" 
+  "glibc" 
+  "harfbuzz" 
+  "libdbi" 
+  "libpng" 
+  "libxml2" 
+  "lua-libs" 
+  "pango" 
+  "rrdtool" 
+]
+extra-source "rrdtool-lua-1.8.0-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rrdtool-lua-1.8.0-16.fc40.x86_64.rpm"
+}

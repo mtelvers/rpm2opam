@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "robinhood-webgui-3.1.7-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "robinhood-webgui-3.1.7-3.2.x86_64.rpm"]
+depends: [
+  "apache2" 
+  "apache2-mod_php8" 
+  "php8" 
+  "php8-mysql" 
+  "php8-pdo" 
+  "system-user-wwwrun" 
+]
+extra-source "robinhood-webgui-3.1.7-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/robinhood-webgui-3.1.7-3.2.x86_64.rpm"
+}

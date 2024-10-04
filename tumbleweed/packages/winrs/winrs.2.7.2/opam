@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "winrs-2.7.2-3.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "winrs-2.7.2-3.3.noarch.rpm"]
+depends: [
+  "openwsman-ruby" {= "2.7.2"}
+  "ruby3-3" 
+]
+extra-source "winrs-2.7.2-3.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/winrs-2.7.2-3.3.noarch.rpm"
+}

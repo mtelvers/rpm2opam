@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gtk2-engines-devel-2.20.2-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk2-engines-devel-2.20.2-29.fc40.x86_64.rpm"]
+depends: [
+  "gtk2-devel" 
+  "gtk2-engines" {= "2.20.2"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gtk2-engines-devel-2.20.2-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gtk2-engines-devel-2.20.2-29.fc40.x86_64.rpm"
+}

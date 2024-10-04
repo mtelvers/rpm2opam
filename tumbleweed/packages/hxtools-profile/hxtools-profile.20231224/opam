@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hxtools-profile-20231224-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hxtools-profile-20231224-1.3.noarch.rpm"]
+depends: [
+  "hxtools" {= "20231224"}
+  "hxtools-data" {= "20231224"}
+  "hxtools-scripts" {= "20231224"}
+]
+extra-source "hxtools-profile-20231224-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/hxtools-profile-20231224-1.3.noarch.rpm"
+}

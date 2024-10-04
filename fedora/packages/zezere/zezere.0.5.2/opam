@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "zezere-0.5.2-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zezere-0.5.2-5.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-django" {>= "3"}
+  "python3-django-ipware" 
+  "python3-django-rest-framework" 
+  "python3-django-rules" 
+  "python3-mod_wsgi" 
+  "python3-mozilla-django-oidc" 
+  "python3-psycopg2" 
+  "python3-requests" 
+]
+extra-source "zezere-0.5.2-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/z/zezere-0.5.2-5.fc40.noarch.rpm"
+}

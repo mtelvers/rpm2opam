@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "brasero-devel-3.12.3-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "brasero-devel-3.12.3-4.1.x86_64.rpm"]
+depends: [
+  "brasero" {= "3.12.3"}
+  "glib2-devel" 
+  "gtk3-devel" 
+  "libbrasero-burn3-1" {= "3.12.3"}
+  "libbrasero-media3-1" {= "3.12.3"}
+  "libbrasero-utils3-1" {= "3.12.3"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-BraseroBurn-3_2_0" {= "3.12.3"}
+  "typelib-1_0-BraseroMedia-3_2_0" {= "3.12.3"}
+]
+extra-source "brasero-devel-3.12.3-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/brasero-devel-3.12.3-4.1.x86_64.rpm"
+}

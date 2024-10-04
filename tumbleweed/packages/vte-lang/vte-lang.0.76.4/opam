@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vte-lang-0.76.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vte-lang-0.76.4-1.1.noarch.rpm"]
+depends: [
+  "libvte-2_91-0" {= "0.76.4"}
+]
+extra-source "vte-lang-0.76.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/vte-lang-0.76.4-1.1.noarch.rpm"
+}

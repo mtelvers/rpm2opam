@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-agate-excel-0.4.1-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-agate-excel-0.4.1-1.4.noarch.rpm"]
+depends: [
+  "python310-agate" {>= "1.5.0"}
+  "python310-base" {= "3.10"}
+  "python310-numpy" 
+  "python310-olefile" 
+  "python310-openpyxl" {>= "2.3.0"}
+  "python310-xlrd" {>= "0.9.4"}
+]
+extra-source "python310-agate-excel-0.4.1-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-agate-excel-0.4.1-1.4.noarch.rpm"
+}

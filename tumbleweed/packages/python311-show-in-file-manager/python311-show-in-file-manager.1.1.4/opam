@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-show-in-file-manager-1.1.4-1.16.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-show-in-file-manager-1.1.4-1.16.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-packaging" 
+  "python311-pyxdg" {>= "0.25"}
+  "update-alternatives" 
+]
+extra-source "python311-show-in-file-manager-1.1.4-1.16.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-show-in-file-manager-1.1.4-1.16.noarch.rpm"
+}

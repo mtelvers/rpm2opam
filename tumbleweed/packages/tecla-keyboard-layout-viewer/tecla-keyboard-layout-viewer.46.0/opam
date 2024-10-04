@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tecla-keyboard-layout-viewer-46.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tecla-keyboard-layout-viewer-46.0-2.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libadwaita-1-0" 
+  "libgtk-4-1" 
+  "libpango-1_0-0" 
+  "libwayland-client0" 
+  "libxkbcommon0" 
+  "pkgconf-pkg-config" 
+]
+extra-source "tecla-keyboard-layout-viewer-46.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tecla-keyboard-layout-viewer-46.0-2.1.x86_64.rpm"
+}

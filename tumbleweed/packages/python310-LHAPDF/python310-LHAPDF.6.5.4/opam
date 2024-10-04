@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-LHAPDF-6.5.4-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-LHAPDF-6.5.4-1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libLHAPDF-6_5_4" 
+  "libgcc_s1" 
+  "libpython3_10-1_0" 
+  "libstdc++6" 
+  "python310-base" {= "3.10"}
+  "update-alternatives" 
+]
+extra-source "python310-LHAPDF-6.5.4-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-LHAPDF-6.5.4-1.7.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kbd-2.6.4-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kbd-2.6.4-4.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "coreutils" 
+  "fillup" 
+  "glibc" 
+  "pam" 
+]
+extra-source "kbd-2.6.4-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kbd-2.6.4-4.1.x86_64.rpm"
+}

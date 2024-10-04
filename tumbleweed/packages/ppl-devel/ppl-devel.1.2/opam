@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ppl-devel-1.2-3.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ppl-devel-1.2-3.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gmp-devel" {>= "4.1.3"}
+  "libgcc_s1" 
+  "libppl14" 
+  "libppl_c4" {= "1.2"}
+  "libstdc++6" 
+]
+extra-source "ppl-devel-1.2-3.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ppl-devel-1.2-3.6.x86_64.rpm"
+}

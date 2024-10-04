@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kdesdk-thumbnailers-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kdesdk-thumbnailers-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "gettext-libs" 
+  "glibc" 
+  "kf6-kconfig" 
+  "kf6-kcoreaddons" 
+  "kf6-kio-gui" 
+  "libstdc++" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+]
+extra-source "kdesdk-thumbnailers-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kdesdk-thumbnailers-24.02.1-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "boxes-2.3.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "boxes-2.3.0-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libunistring" 
+  "ncurses-libs" 
+  "pcre2-utf32" 
+]
+extra-source "boxes-2.3.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/boxes-2.3.0-1.fc40.x86_64.rpm"
+}

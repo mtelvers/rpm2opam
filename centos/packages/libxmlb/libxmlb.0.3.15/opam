@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libxmlb-0.3.15-6.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxmlb-0.3.15-6.el10.x86_64.rpm"]
+depends: [
+  "glib2" {>= "2.45.8"}
+  "glibc" 
+  "libgcc" 
+  "libzstd" 
+  "shared-mime-info" 
+  "xz-libs" 
+]
+extra-source "libxmlb-0.3.15-6.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/libxmlb-0.3.15-6.el10.x86_64.rpm"
+}

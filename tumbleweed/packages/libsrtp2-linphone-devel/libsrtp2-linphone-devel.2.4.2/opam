@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsrtp2-linphone-devel-2.4.2~git.20230516-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsrtp2-linphone-devel-2.4.2~git.20230516-1.2.x86_64.rpm"]
+depends: [
+  "libsrtp2-linphone1" {= "2.4.2"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libsrtp2-linphone-devel-2.4.2~git.20230516-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libsrtp2-linphone-devel-2.4.2~git.20230516-1.2.x86_64.rpm"
+}

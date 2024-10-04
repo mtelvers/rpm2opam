@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-biblatex-svn66403-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-biblatex-svn66403-71.fc40.noarch.rpm"]
+depends: [
+  "biber" {= "3.10"}
+  "texlive-babel" 
+  "texlive-base" 
+  "texlive-biblatex" 
+  "texlive-csquotes" 
+  "texlive-etoolbox" 
+  "texlive-graphics" 
+  "texlive-kpathsea" 
+  "texlive-kvoptions" 
+  "texlive-logreq" 
+  "texlive-pdftexcmds" 
+  "texlive-polyglossia" 
+  "texlive-url" 
+  "texlive-xpatch" 
+  "texlive-xstring" 
+]
+extra-source "texlive-biblatex-svn66403-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-biblatex-svn66403-71.fc40.noarch.rpm"
+}

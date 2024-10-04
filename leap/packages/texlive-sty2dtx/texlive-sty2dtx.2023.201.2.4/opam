@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-sty2dtx-2023.201.2.4svn64967-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-sty2dtx-2023.201.2.4svn64967-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "perl" 
+  "perl-base" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-filesystem" {>= "2023"}
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-sty2dtx-bin" {>= "2023"}
+]
+extra-source "texlive-sty2dtx-2023.201.2.4svn64967-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-sty2dtx-2023.201.2.4svn64967-slfo.1.1.4.noarch.rpm"
+}

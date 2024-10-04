@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cinnamon-theme-adapta-3.95.0.11-4.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cinnamon-theme-adapta-3.95.0.11-4.3.noarch.rpm"]
+depends: [
+  "cinnamon" {>= "3.2.0"}
+  "metatheme-adapta-common" {= "3.95.0.11"}
+]
+extra-source "cinnamon-theme-adapta-3.95.0.11-4.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cinnamon-theme-adapta-3.95.0.11-4.3.noarch.rpm"
+}

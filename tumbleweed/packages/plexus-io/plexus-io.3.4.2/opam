@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plexus-io-3.4.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plexus-io-3.4.2-1.1.noarch.rpm"]
+depends: [
+  "apache-commons-io" 
+  "atinject" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "plexus-utils" 
+]
+extra-source "plexus-io-3.4.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/plexus-io-3.4.2-1.1.noarch.rpm"
+}

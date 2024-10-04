@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "enlightenment-devel-0.26.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "enlightenment-devel-0.26.0-1.fc40.x86_64.rpm"]
+depends: [
+  "efl-devel" 
+  "enlightenment" {= "0.26.0"}
+  "libuuid-devel" 
+  "libxkbcommon-devel" 
+  "pkgconf-pkg-config" 
+  "wayland-devel" {>= "1.11.0"}
+  "wayland-protocols-devel" {>= "1.12"}
+]
+extra-source "enlightenment-devel-0.26.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/enlightenment-devel-0.26.0-1.fc40.x86_64.rpm"
+}

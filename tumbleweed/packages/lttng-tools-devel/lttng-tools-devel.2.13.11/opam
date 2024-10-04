@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lttng-tools-devel-2.13.11-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lttng-tools-devel-2.13.11-1.4.x86_64.rpm"]
+depends: [
+  "liblttng-ctl0" {>= "2.13.0"}
+  "liburcu-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "lttng-tools-devel-2.13.11-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lttng-tools-devel-2.13.11-1.4.x86_64.rpm"
+}

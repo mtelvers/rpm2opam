@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-darling0.13+suggestions-devel-0.13.4-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-darling0.13+suggestions-devel-0.13.4-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-darling0-13-devel" {= "0.13.4"}
+  "rust-darling_core0-13+suggestions-devel" {= "0.13.4"}
+]
+extra-source "rust-darling0.13+suggestions-devel-0.13.4-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-darling0.13+suggestions-devel-0.13.4-4.fc40.noarch.rpm"
+}

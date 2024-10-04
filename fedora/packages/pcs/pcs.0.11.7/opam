@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pcs-0.11.7-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcs-0.11.7-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "corosync" 
+  "libknet1-plugins-all" 
+  "logrotate" 
+  "nss-tools" 
+  "pacemaker" {>= "2.1.0"}
+  "pacemaker-cli" {>= "2.1.0"}
+  "pam" 
+  "psmisc" 
+  "python3" 
+  "python3-cryptography" 
+  "python3-dateutil" {>= "2.7.0"}
+  "python3-lxml" 
+  "python3-pycurl" 
+  "python3-pyparsing" 
+  "python3-setuptools" 
+  "python3-tornado" 
+  "ruby" {>= "2.5.0"}
+  "rubygem-backports" 
+  "rubygem-childprocess" 
+  "rubygem-ethon" 
+  "rubygem-ffi" 
+  "rubygem-json" 
+  "rubygem-mustermann" 
+  "rubygem-puma" 
+  "rubygem-rack" 
+  "rubygem-rack-protection" 
+  "rubygem-rack-test" 
+  "rubygem-rexml" 
+  "rubygem-sinatra" 
+  "rubygem-tilt" 
+  "rubypick" 
+  "systemd" 
+]
+extra-source "pcs-0.11.7-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pcs-0.11.7-3.fc40.noarch.rpm"
+}

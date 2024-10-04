@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mt7xxx-firmware-20240312-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mt7xxx-firmware-20240312-1.fc40.noarch.rpm"]
+depends: [
+  "linux-firmware-whence" 
+]
+extra-source "mt7xxx-firmware-20240312-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mt7xxx-firmware-20240312-1.fc40.noarch.rpm"
+}

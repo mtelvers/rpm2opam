@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-gpmc-1.5.1-1.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-gpmc-1.5.1-1.15.noarch.rpm"]
+depends: [
+  "krb5-client" 
+  "python311-ldap" 
+  "samba-ad-dc" 
+  "samba-client" 
+  "samba-python3" {>= "4.10.0"}
+  "yast2" 
+  "yast2-adcommon-python" {>= "1.0"}
+  "yast2-python3-bindings" {>= "4.0.0"}
+]
+extra-source "yast2-gpmc-1.5.1-1.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/yast2-gpmc-1.5.1-1.15.noarch.rpm"
+}

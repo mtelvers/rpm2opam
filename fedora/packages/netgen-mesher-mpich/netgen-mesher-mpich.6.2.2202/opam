@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "netgen-mesher-mpich-6.2.2202-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netgen-mesher-mpich-6.2.2202-8.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "mpich" 
+  "netgen-mesher-common" {= "6.2.2202"}
+  "netgen-mesher-mpich-devel" 
+  "netgen-mesher-mpich-libs" 
+  "tcl" 
+  "tk" 
+]
+extra-source "netgen-mesher-mpich-6.2.2202-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/netgen-mesher-mpich-6.2.2202-8.fc40.x86_64.rpm"
+}

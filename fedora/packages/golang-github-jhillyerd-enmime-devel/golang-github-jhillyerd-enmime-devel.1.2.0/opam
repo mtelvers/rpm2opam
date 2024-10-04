@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-jhillyerd-enmime-devel-1.2.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-jhillyerd-enmime-devel-1.2.0-1.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-jaytaylor-html2text-devel" 
+  "go-filesystem" 
+  "golang-github-cention-sany-utf7-devel" 
+  "golang-github-gogs-chardet-devel" 
+  "golang-github-pkg-errors-devel" 
+  "golang-x-text-devel" 
+]
+extra-source "golang-github-jhillyerd-enmime-devel-1.2.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-jhillyerd-enmime-devel-1.2.0-1.fc40.noarch.rpm"
+}

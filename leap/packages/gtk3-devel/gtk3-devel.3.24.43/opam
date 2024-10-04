@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtk3-devel-3.24.43-slfo.1.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk3-devel-3.24.43-slfo.1.1.2.x86_64.rpm"]
+depends: [
+  "at-spi2-core-devel" {>= "2.35.1"}
+  "cairo-devel" {>= "1.14.0"}
+  "fontconfig-devel" 
+  "fribidi-devel" {>= "0.19.7"}
+  "gdk-pixbuf-devel" {>= "2.30.0"}
+  "gettext-its-gtk3" {>= "3.24.43"}
+  "glib2-devel" {>= "2.57.2"}
+  "glibc" 
+  "libX11-devel" 
+  "libXcomposite-devel" 
+  "libXcursor-devel" 
+  "libXdamage-devel" 
+  "libXext-devel" 
+  "libXfixes-devel" 
+  "libXi-devel" 
+  "libXinerama-devel" 
+  "libXrandr-devel" 
+  "libatk-1_0-0" 
+  "libcairo2" 
+  "libepoxy-devel" {>= "1.4"}
+  "libepoxy0" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgio-2_0-0" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libgtk-3-0" 
+  "libharfbuzz0" 
+  "libpango-1_0-0" 
+  "libxkbcommon-devel" {>= "0.2.0"}
+  "pango-devel" {>= "1.41.0"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Gtk-3_0" {= "3.24.43"}
+  "wayland-devel" {>= "1.14.91"}
+]
+extra-source "gtk3-devel-3.24.43-slfo.1.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/gtk3-devel-3.24.43-slfo.1.1.2.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-template-haskell-devel-2.21.0.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-template-haskell-devel-2.21.0.0-2.1.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-ghc-boot-th-devel" 
+  "ghc-pretty-devel" 
+  "ghc-template-haskell" {= "2.21.0.0"}
+]
+extra-source "ghc-template-haskell-devel-2.21.0.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-template-haskell-devel-2.21.0.0-2.1.x86_64.rpm"
+}

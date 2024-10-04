@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xmlunit-1.6-3.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xmlunit-1.6-3.3.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "junit" 
+  "xalan-j2" 
+  "xerces-j2" 
+  "xml-commons-apis" {>= "1.3"}
+]
+extra-source "xmlunit-1.6-3.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xmlunit-1.6-3.3.noarch.rpm"
+}

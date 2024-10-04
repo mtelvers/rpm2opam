@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-SpeechRecognition-3.8.1-5.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-SpeechRecognition-3.8.1-5.8.noarch.rpm"]
+depends: [
+  "flac" 
+  "python-SpeechRecognition-common-en-US" 
+  "python311-PyAudio" 
+  "python311-base" {= "3.11"}
+  "python311-google-cloud-speech" 
+]
+extra-source "python311-SpeechRecognition-3.8.1-5.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-SpeechRecognition-3.8.1-5.8.noarch.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-mono-traversable-prof-1.0.15.3-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-mono-traversable-prof-1.0.15.3-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-hashable-prof" 
+  "ghc-mono-traversable-devel" {= "1.0.15.3"}
+  "ghc-split-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unordered-containers-prof" 
+  "ghc-vector-algorithms-prof" 
+  "ghc-vector-prof" 
+]
+extra-source "ghc-mono-traversable-prof-1.0.15.3-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-mono-traversable-prof-1.0.15.3-8.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mysql-errmsg-8.0.36-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mysql-errmsg-8.0.36-3.fc40.noarch.rpm"]
+depends: [
+  "mysql-common" {= "8.0.36"}
+]
+extra-source "mysql-errmsg-8.0.36-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mysql-errmsg-8.0.36-3.fc40.noarch.rpm"
+}

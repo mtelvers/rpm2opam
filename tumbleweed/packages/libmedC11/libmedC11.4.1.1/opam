@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmedC11-4.1.1-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmedC11-4.1.1-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libhdf5-200" 
+  "libstdc++6" 
+]
+extra-source "libmedC11-4.1.1-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmedC11-4.1.1-2.2.x86_64.rpm"
+}

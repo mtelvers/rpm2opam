@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ffmpeg-4-libavdevice-devel-4.4.4-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ffmpeg-4-libavdevice-devel-4.4.4-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "ffmpeg-4-libavcodec-devel" {= "4.4.4"}
+  "ffmpeg-4-libavfilter-devel" {= "4.4.4"}
+  "ffmpeg-4-libavformat-devel" {= "4.4.4"}
+  "ffmpeg-4-libavresample-devel" {= "4.4.4"}
+  "ffmpeg-4-libavutil-devel" {= "4.4.4"}
+  "ffmpeg-4-libpostproc-devel" {= "4.4.4"}
+  "ffmpeg-4-libswresample-devel" {= "4.4.4"}
+  "ffmpeg-4-libswscale-devel" {= "4.4.4"}
+  "libavdevice58_13" {= "4.4.4"}
+  "pkgconf-pkg-config" 
+]
+extra-source "ffmpeg-4-libavdevice-devel-4.4.4-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/ffmpeg-4-libavdevice-devel-4.4.4-slfo.1.1.7.x86_64.rpm"
+}

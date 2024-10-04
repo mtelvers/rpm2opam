@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-remote-desktop-45.1-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-remote-desktop-45.1-4.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cairo" 
+  "fdk-aac-free" 
+  "freerdp2-libs" 
+  "fuse3-libs" 
+  "glib2" 
+  "glibc" 
+  "gnutls" 
+  "libei" {>= "1.0.901"}
+  "libepoxy" 
+  "libgcc" 
+  "libnotify" 
+  "libsecret" 
+  "libvncserver" 
+  "libwinpr2" 
+  "libxkbcommon" 
+  "pipewire" {>= "0.3.49"}
+  "pipewire-libs" 
+  "tpm2-tss" 
+]
+extra-source "gnome-remote-desktop-45.1-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-remote-desktop-45.1-4.fc40.x86_64.rpm"
+}

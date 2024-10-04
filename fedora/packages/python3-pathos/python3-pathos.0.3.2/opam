@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-pathos-0.3.2-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-pathos-0.3.2-2.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-dill" {>= "0.3.8"}
+  "python3-multiprocess" {>= "0.70.16"}
+  "python3-pox" {>= "0.3.4"}
+  "python3-ppft" {>= "1.7.6.8"}
+]
+extra-source "python3-pathos-0.3.2-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-pathos-0.3.2-2.fc40.noarch.rpm"
+}

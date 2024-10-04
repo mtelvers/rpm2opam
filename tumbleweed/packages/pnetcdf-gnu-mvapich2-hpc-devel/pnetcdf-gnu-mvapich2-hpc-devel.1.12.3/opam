@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pnetcdf-gnu-mvapich2-hpc-devel-1.12.3-2.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pnetcdf-gnu-mvapich2-hpc-devel-1.12.3-2.4.noarch.rpm"]
+depends: [
+  "pnetcdf_1_12_3-gnu-mvapich2-hpc-devel" {= "1.12.3"}
+]
+extra-source "pnetcdf-gnu-mvapich2-hpc-devel-1.12.3-2.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pnetcdf-gnu-mvapich2-hpc-devel-1.12.3-2.4.noarch.rpm"
+}

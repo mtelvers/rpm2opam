@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rfc-read-1.0.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rfc-read-1.0.0-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "curl" 
+  "less" 
+]
+extra-source "rfc-read-1.0.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/rfc-read-1.0.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-vpn-5.0.0-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-vpn-5.0.0-1.4.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "fillup" 
+  "yast2" {>= "4.2.67"}
+  "yast2-ruby-bindings" 
+]
+extra-source "yast2-vpn-5.0.0-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/yast2-vpn-5.0.0-1.4.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mono-web-devel-6.12.0-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mono-web-devel-6.12.0-16.fc40.x86_64.rpm"]
+depends: [
+  "mono-core" {= "6.12.0"}
+  "mono-web" {= "6.12.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "mono-web-devel-6.12.0-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mono-web-devel-6.12.0-16.fc40.x86_64.rpm"
+}

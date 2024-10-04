@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libXmu-devel-1.1.4-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libXmu-devel-1.1.4-6.fc40.x86_64.rpm"]
+depends: [
+  "libX11-devel" 
+  "libXext-devel" 
+  "libXmu" {= "1.1.4"}
+  "libXt-devel" 
+  "pkgconf-pkg-config" 
+  "xorg-x11-proto-devel" 
+]
+extra-source "libXmu-devel-1.1.4-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libXmu-devel-1.1.4-6.fc40.x86_64.rpm"
+}

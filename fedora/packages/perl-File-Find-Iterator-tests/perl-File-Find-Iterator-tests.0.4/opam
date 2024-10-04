@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-File-Find-Iterator-tests-0.4-36.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-Find-Iterator-tests-0.4-36.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-File-Find-Iterator" 
+  "perl-File-Temp" {>= "0.19"}
+  "perl-PathTools" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+]
+extra-source "perl-File-Find-Iterator-tests-0.4-36.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-File-Find-Iterator-tests-0.4-36.fc40.noarch.rpm"
+}

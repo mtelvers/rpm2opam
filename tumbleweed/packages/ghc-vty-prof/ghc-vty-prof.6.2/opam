@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-vty-prof-6.2-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-vty-prof-6.2-1.3.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-binary-prof" 
+  "ghc-blaze-builder-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+  "ghc-microlens-mtl-prof" 
+  "ghc-microlens-prof" 
+  "ghc-mtl-prof" 
+  "ghc-parsec-prof" 
+  "ghc-stm-prof" 
+  "ghc-text-prof" 
+  "ghc-utf8-string-prof" 
+  "ghc-vector-prof" 
+  "ghc-vty-devel" {= "6.2"}
+]
+extra-source "ghc-vty-prof-6.2-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-vty-prof-6.2-1.3.x86_64.rpm"
+}

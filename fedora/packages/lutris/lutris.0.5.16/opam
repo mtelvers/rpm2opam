@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lutris-0.5.16-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lutris-0.5.16-3.fc40.x86_64.rpm"]
+depends: [
+  "cabextract" 
+  "glx-utils" 
+  "gnome-desktop3" 
+  "gtk3" 
+  "gvfs" 
+  "hicolor-icon-theme" 
+  "mesa-dri-drivers" 
+  "mesa-libGL" 
+  "mesa-vulkan-drivers" 
+  "psmisc" 
+  "python3" 
+  "python3-certifi" 
+  "python3-dbus" 
+  "python3-distro" 
+  "python3-evdev" 
+  "python3-gobject-base" 
+  "python3-lxml" 
+  "python3-moddb" {>= "0.8.1"}
+  "python3-pillow" 
+  "python3-protobuf" 
+  "python3-pypresence" 
+  "python3-pyyaml" 
+  "python3-requests" 
+  "vulkan-loader" 
+  "webkit2gtk4-1" 
+  "xorg-x11-server-Xephyr" 
+  "xrandr" 
+]
+extra-source "lutris-0.5.16-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lutris-0.5.16-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "virt-top-1.1.1-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "virt-top-1.1.1-3.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libncurses6" 
+  "libvirt-libs" 
+  "libxml2-2" 
+]
+extra-source "virt-top-1.1.1-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/virt-top-1.1.1-3.3.x86_64.rpm"
+}

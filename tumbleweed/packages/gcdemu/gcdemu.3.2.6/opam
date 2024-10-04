@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcdemu-3.2.6-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcdemu-3.2.6-1.5.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "cdemu-daemon" {>= "3.0.0"}
+  "python311-gobject-Gdk" 
+  "typelib-1_0-AyatanaAppIndicator3-0_1" {= "0.1"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" {= "2.0"}
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Notify-0_7" {= "0.7"}
+]
+extra-source "gcdemu-3.2.6-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gcdemu-3.2.6-1.5.noarch.rpm"
+}

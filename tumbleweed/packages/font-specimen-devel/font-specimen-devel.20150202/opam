@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "font-specimen-devel-20150202-3.25.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "font-specimen-devel-20150202-3.25.x86_64.rpm"]
+depends: [
+  "glibc-devel" 
+  "libfont-specimen0" {= "20150202"}
+  "pkgconf-pkg-config" 
+]
+extra-source "font-specimen-devel-20150202-3.25.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/font-specimen-devel-20150202-3.25.x86_64.rpm"
+}

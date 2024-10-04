@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dmlite-apache-httpd-1.15.2-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dmlite-apache-httpd-1.15.2-20.fc40.x86_64.rpm"]
+depends: [
+  "apr" 
+  "apr-util" 
+  "dmlite-libs" {= "1.15.2"}
+  "glibc" 
+  "gridsite" {>= "1.7"}
+  "gridsite-libs" 
+  "gsoap" 
+  "httpd" 
+  "httpd-core" {= "20120211"}
+  "jansson" 
+  "mod_ssl" 
+  "openldap" 
+  "openssl-libs" 
+]
+extra-source "dmlite-apache-httpd-1.15.2-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dmlite-apache-httpd-1.15.2-20.fc40.x86_64.rpm"
+}

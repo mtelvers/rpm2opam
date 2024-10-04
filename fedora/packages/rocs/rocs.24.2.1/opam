@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rocs-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rocs-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "grantlee-qt5" 
+  "kf5-karchive" 
+  "kf5-kcompletion" 
+  "kf5-kconfig-core" 
+  "kf5-kconfig-gui" 
+  "kf5-kconfigwidgets" 
+  "kf5-kcoreaddons" 
+  "kf5-kcrash" 
+  "kf5-ki18n" 
+  "kf5-kitemviews" 
+  "kf5-kparts" 
+  "kf5-ktexteditor" 
+  "kf5-ktextwidgets" 
+  "kf5-kwidgetsaddons" 
+  "kf5-kxmlgui" 
+  "libgcc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtscript" 
+  "qt5-qtxmlpatterns" 
+  "rocs-libs" 
+]
+extra-source "rocs-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rocs-24.02.1-1.fc40.x86_64.rpm"
+}

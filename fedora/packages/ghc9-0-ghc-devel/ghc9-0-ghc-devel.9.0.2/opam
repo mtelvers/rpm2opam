@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc9.0-ghc-devel-9.0.2-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc9.0-ghc-devel-9.0.2-16.fc40.x86_64.rpm"]
+depends: [
+  "ghc9-0-array-devel" 
+  "ghc9-0-base-devel" 
+  "ghc9-0-binary-devel" 
+  "ghc9-0-bytestring-devel" 
+  "ghc9-0-compiler" {= "9.0.2"}
+  "ghc9-0-containers-devel" 
+  "ghc9-0-deepseq-devel" 
+  "ghc9-0-directory-devel" 
+  "ghc9-0-exceptions-devel" 
+  "ghc9-0-filepath-devel" 
+  "ghc9-0-ghc" {= "9.0.2"}
+  "ghc9-0-ghc-boot-devel" 
+  "ghc9-0-ghc-boot-th-devel" 
+  "ghc9-0-ghc-heap-devel" 
+  "ghc9-0-ghci-devel" 
+  "ghc9-0-hpc-devel" 
+  "ghc9-0-process-devel" 
+  "ghc9-0-template-haskell-devel" 
+  "ghc9-0-terminfo-devel" 
+  "ghc9-0-time-devel" 
+  "ghc9-0-transformers-devel" 
+  "ghc9-0-unix-devel" 
+]
+extra-source "ghc9.0-ghc-devel-9.0.2-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc9.0-ghc-devel-9.0.2-16.fc40.x86_64.rpm"
+}

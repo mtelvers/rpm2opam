@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libxslt-devel-1.1.39-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxslt-devel-1.1.39-3.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-devel" 
+  "libexslt0" {= "1.1.39"}
+  "libgcrypt-devel" 
+  "libxml2-devel" 
+  "libxslt-tools" {= "1.1.39"}
+  "libxslt1" {= "1.1.39"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libxslt-devel-1.1.39-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libxslt-devel-1.1.39-3.1.x86_64.rpm"
+}

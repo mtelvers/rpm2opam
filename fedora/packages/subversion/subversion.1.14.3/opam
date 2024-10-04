@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "subversion-1.14.3-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "subversion-1.14.3-5.fc40.x86_64.rpm"]
+depends: [
+  "apr" 
+  "apr-util" 
+  "bash" 
+  "glibc" 
+  "subversion-libs" 
+  "systemd" 
+]
+extra-source "subversion-1.14.3-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/subversion-1.14.3-5.fc40.x86_64.rpm"
+}

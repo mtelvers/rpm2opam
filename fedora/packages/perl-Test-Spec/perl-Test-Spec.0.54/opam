@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-Spec-0.54-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Spec-0.54-20.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-Package-Stash" {>= "0.23"}
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-Test-Deep" {>= "0.103"}
+  "perl-Test-Simple" {>= "0.88"}
+  "perl-Test-Trap" 
+  "perl-Tie-IxHash" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-Test-Spec-0.54-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-Spec-0.54-20.fc40.noarch.rpm"
+}

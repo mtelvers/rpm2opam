@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gobject-introspection-1.79.1-5.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gobject-introspection-1.79.1-5.el10.x86_64.rpm"]
+depends: [
+  "glib2" {>= "2.79.0"}
+  "glibc" 
+  "libffi" 
+]
+extra-source "gobject-introspection-1.79.1-5.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/gobject-introspection-1.79.1-5.el10.x86_64.rpm"
+}

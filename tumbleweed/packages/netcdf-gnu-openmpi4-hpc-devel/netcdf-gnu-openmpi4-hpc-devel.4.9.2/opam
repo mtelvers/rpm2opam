@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "netcdf-gnu-openmpi4-hpc-devel-4.9.2-2.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netcdf-gnu-openmpi4-hpc-devel-4.9.2-2.5.noarch.rpm"]
+depends: [
+  "netcdf_4_9_2-gnu-openmpi4-hpc-devel" {= "4.9.2"}
+]
+extra-source "netcdf-gnu-openmpi4-hpc-devel-4.9.2-2.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/netcdf-gnu-openmpi4-hpc-devel-4.9.2-2.5.noarch.rpm"
+}

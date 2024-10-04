@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Data-ICal-DateTime-0.82-17.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Data-ICal-DateTime-0.82-17.fc40.noarch.rpm"]
+depends: [
+  "perl-Clone" 
+  "perl-Data-ICal" 
+  "perl-DateTime-Format-ICal" 
+  "perl-DateTime-Set" 
+  "perl-libs" 
+]
+extra-source "perl-Data-ICal-DateTime-0.82-17.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Data-ICal-DateTime-0.82-17.fc40.noarch.rpm"
+}

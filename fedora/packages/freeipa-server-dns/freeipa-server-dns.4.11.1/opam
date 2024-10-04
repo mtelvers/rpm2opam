@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "freeipa-server-dns-4.11.1-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freeipa-server-dns-4.11.1-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "bind" {>= "9.18.7"}
+  "bind-dnssec-utils" {>= "9.18.7"}
+  "bind-dyndb-ldap" {>= "11.2"}
+  "bind-utils" {>= "9.18.7"}
+  "freeipa-server" {= "4.11.1"}
+  "opendnssec" {>= "2.1.6"}
+  "openssl-pkcs11" {>= "0.4.10"}
+  "python3" 
+  "softhsm" {>= "2.5.0"}
+  "systemd" 
+]
+extra-source "freeipa-server-dns-4.11.1-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/freeipa-server-dns-4.11.1-4.fc40.noarch.rpm"
+}

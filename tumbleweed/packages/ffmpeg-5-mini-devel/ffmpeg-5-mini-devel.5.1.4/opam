@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ffmpeg-5-mini-devel-5.1.4-13.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ffmpeg-5-mini-devel-5.1.4-13.1.x86_64.rpm"]
+depends: [
+  "ffmpeg-5-libavcodec-devel" {>= "59.37.100"}
+  "ffmpeg-5-libavfilter-devel" {>= "8.44.100"}
+  "ffmpeg-5-libavformat-devel" {>= "59.27.100"}
+  "ffmpeg-5-libavutil-devel" {>= "57.28.100"}
+  "ffmpeg-5-libpostproc-devel" {>= "56.6.100"}
+  "ffmpeg-5-libswresample-devel" {>= "4.7.100"}
+  "ffmpeg-5-libswscale-devel" {>= "6.7.100"}
+  "ffmpeg-5-mini-libs" {= "5.1.4"}
+  "pkgconf-pkg-config" 
+]
+extra-source "ffmpeg-5-mini-devel-5.1.4-13.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ffmpeg-5-mini-devel-5.1.4-13.1.x86_64.rpm"
+}

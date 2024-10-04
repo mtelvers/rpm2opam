@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-yaml-devel-3.2.0-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-yaml-devel-3.2.0-5.fc40.x86_64.rpm"]
+depends: [
+  "libyaml-devel" 
+  "ocaml" {= "2125"}
+  "ocaml-astring" {= "4"}
+  "ocaml-bigarray-compat" {= "96"}
+  "ocaml-bos" {= "31"}
+  "ocaml-bos-devel" 
+  "ocaml-ctypes" {= "0"}
+  "ocaml-ctypes-devel" 
+  "ocaml-fmt" {= "49"}
+  "ocaml-fpath" {= "0"}
+  "ocaml-integers" {= "521169221"}
+  "ocaml-integers-devel" {= "1"}
+  "ocaml-logs" {= "0"}
+  "ocaml-rresult" {= "0"}
+  "ocaml-yaml" {= "3.2.0"}
+]
+extra-source "ocaml-yaml-devel-3.2.0-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-yaml-devel-3.2.0-5.fc40.x86_64.rpm"
+}

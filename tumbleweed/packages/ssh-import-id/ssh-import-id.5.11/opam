@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ssh-import-id-5.11-1.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ssh-import-id-5.11-1.10.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "openssh-common" 
+  "python311-base" 
+  "python311-distro" 
+  "python311-setuptools" 
+]
+extra-source "ssh-import-id-5.11-1.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ssh-import-id-5.11-1.10.noarch.rpm"
+}

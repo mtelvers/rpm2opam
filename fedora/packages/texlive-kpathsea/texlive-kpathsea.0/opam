@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-kpathsea-svn66209-81.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-kpathsea-svn66209-81.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "glibc" 
+  "grep" 
+  "texlive-base" 
+  "texlive-lib" 
+  "texlive-texlive-scripts" {= "20230311"}
+]
+extra-source "texlive-kpathsea-svn66209-81.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-kpathsea-svn66209-81.fc40.x86_64.rpm"
+}

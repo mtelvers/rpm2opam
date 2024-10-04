@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-sphinxcontrib-seqdiag-3.0.0-1.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-sphinxcontrib-seqdiag-3.0.0-1.10.noarch.rpm"]
+depends: [
+  "python312-Sphinx" {>= "0.6"}
+  "python312-base" {= "3.12"}
+  "python312-blockdiag" {>= "1.5.0"}
+  "python312-seqdiag" {>= "0.9.3"}
+]
+extra-source "python312-sphinxcontrib-seqdiag-3.0.0-1.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-sphinxcontrib-seqdiag-3.0.0-1.10.noarch.rpm"
+}

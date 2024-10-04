@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Data-Serializer-0.65-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Data-Serializer-0.65-13.fc40.noarch.rpm"]
+depends: [
+  "perl-Bencode" 
+  "perl-Carp" 
+  "perl-Config-General" 
+  "perl-Convert-Bencode" 
+  "perl-Convert-Bencode_XS" 
+  "perl-Crypt-Blowfish" 
+  "perl-Crypt-CBC" 
+  "perl-Data-Denter" 
+  "perl-Data-Dumper" 
+  "perl-Data-Taxi" 
+  "perl-Digest" 
+  "perl-Digest-SHA" 
+  "perl-FreezeThaw" 
+  "perl-IO" 
+  "perl-IO-Compress" 
+  "perl-JSON" 
+  "perl-PHP-Serialization" 
+  "perl-Storable" 
+  "perl-XML-Dumper" 
+  "perl-XML-Simple" 
+  "perl-YAML" 
+  "perl-YAML-Syck" 
+  "perl-libs" {>= "5.4.0"}
+  "perl-vars" 
+]
+extra-source "perl-Data-Serializer-0.65-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Data-Serializer-0.65-13.fc40.noarch.rpm"
+}

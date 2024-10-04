@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "librest-0_7-0-0.8.1-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "librest-0_7-0-0.8.1-3.3.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libsoup-2_4-1" 
+  "libxml2-2" 
+]
+extra-source "librest-0_7-0-0.8.1-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/librest-0_7-0-0.8.1-3.3.x86_64.rpm"
+}

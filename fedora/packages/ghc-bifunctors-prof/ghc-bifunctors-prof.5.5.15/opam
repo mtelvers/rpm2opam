@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-bifunctors-prof-5.5.15-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-bifunctors-prof-5.5.15-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-orphans-prof" 
+  "ghc-base-prof" 
+  "ghc-bifunctors-devel" {= "5.5.15"}
+  "ghc-comonad-prof" 
+  "ghc-containers-prof" 
+  "ghc-tagged-prof" 
+  "ghc-template-haskell-prof" 
+  "ghc-th-abstraction-prof" 
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-bifunctors-prof-5.5.15-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-bifunctors-prof-5.5.15-3.fc40.x86_64.rpm"
+}

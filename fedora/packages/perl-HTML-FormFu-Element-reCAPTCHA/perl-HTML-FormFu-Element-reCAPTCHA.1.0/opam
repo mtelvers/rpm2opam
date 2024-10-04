@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-HTML-FormFu-Element-reCAPTCHA-1.00-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTML-FormFu-Element-reCAPTCHA-1.00-29.fc40.noarch.rpm"]
+depends: [
+  "perl-Captcha-reCAPTCHA" {>= "0.93"}
+  "perl-Clone" {>= "0.31"}
+  "perl-HTML-FormFu" 
+  "perl-Moose" {>= "1.0"}
+  "perl-MooseX-Attribute-Chained" {>= "1.0.1"}
+  "perl-Scalar-List-Utils" 
+  "perl-libs" 
+]
+extra-source "perl-HTML-FormFu-Element-reCAPTCHA-1.00-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-HTML-FormFu-Element-reCAPTCHA-1.00-29.fc40.noarch.rpm"
+}

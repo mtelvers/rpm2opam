@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-aeson-yaml-prof-1.1.0.1-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-aeson-yaml-prof-1.1.0.1-10.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-prof" 
+  "ghc-aeson-yaml-devel" {= "1.1.0.1"}
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-text-prof" 
+  "ghc-unordered-containers-prof" 
+  "ghc-vector-prof" 
+]
+extra-source "ghc-aeson-yaml-prof-1.1.0.1-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-aeson-yaml-prof-1.1.0.1-10.fc40.x86_64.rpm"
+}

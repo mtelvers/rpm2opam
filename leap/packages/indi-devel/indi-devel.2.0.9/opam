@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "indi-devel-2.0.9-lp160.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "indi-devel-2.0.9-lp160.1.2.x86_64.rpm"]
+depends: [
+  "glibc-devel" 
+  "libindiAlignmentDriver2" {= "2.0.9"}
+  "libindiclient2" {= "2.0.9"}
+  "libindiclientqt2" {= "2.0.9"}
+  "libindidriver2" {= "2.0.9"}
+  "libindilx200-2" {= "2.0.9"}
+  "pkgconf-pkg-config" 
+]
+extra-source "indi-devel-2.0.9-lp160.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/indi-devel-2.0.9-lp160.1.2.x86_64.rpm"
+}

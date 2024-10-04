@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cldr-emoji-annotation-devel-45~alpha3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cldr-emoji-annotation-devel-45~alpha3-1.fc40.noarch.rpm"]
+depends: [
+  "cldr-emoji-annotation" {= "45"}
+  "pkgconf-pkg-config" 
+]
+extra-source "cldr-emoji-annotation-devel-45~alpha3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cldr-emoji-annotation-devel-45~alpha3-1.fc40.noarch.rpm"
+}

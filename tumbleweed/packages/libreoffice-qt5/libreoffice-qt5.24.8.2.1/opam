@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libreoffice-qt5-24.8.2.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libreoffice-qt5-24.8.2.1-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "kio" 
+  "kio-core" 
+  "libKF5ConfigCore5" 
+  "libKF5WindowSystem5" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Widgets5" 
+  "libQt5X11Extras5" 
+  "libX11-6" 
+  "libatk-1_0-0" 
+  "libboost_filesystem1_86_0" 
+  "libcairo2" 
+  "libepoxy0" 
+  "libgcc_s1" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libharfbuzz0" 
+  "libpango-1_0-0" 
+  "libreoffice" 
+  "libstdc++6" 
+  "libxcb1" 
+]
+extra-source "libreoffice-qt5-24.8.2.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libreoffice-qt5-24.8.2.1-1.1.x86_64.rpm"
+}

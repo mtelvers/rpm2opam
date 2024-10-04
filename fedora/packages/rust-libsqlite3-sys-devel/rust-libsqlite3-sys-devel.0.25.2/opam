@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-libsqlite3-sys-devel-0.25.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-libsqlite3-sys-devel-0.25.2-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bindgen+runtime-devel" 
+  "rust-bindgen-devel" 
+  "rust-pkg-config+default-devel" 
+  "sqlite-devel" {>= "3.7.16"}
+]
+extra-source "rust-libsqlite3-sys-devel-0.25.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-libsqlite3-sys-devel-0.25.2-3.fc40.noarch.rpm"
+}

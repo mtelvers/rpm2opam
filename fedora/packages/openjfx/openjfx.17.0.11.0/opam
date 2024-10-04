@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openjfx-17.0.11.0-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openjfx-17.0.11.0-2.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "cairo-gobject" 
+  "fontconfig" 
+  "freetype" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "gtk3" 
+  "java-21-openjdk-headless" 
+  "libX11" 
+  "libXtst" 
+  "libXxf86vm" 
+  "libglvnd-glx" 
+  "pango" 
+]
+extra-source "openjfx-17.0.11.0-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openjfx-17.0.11.0-2.fc40.x86_64.rpm"
+}

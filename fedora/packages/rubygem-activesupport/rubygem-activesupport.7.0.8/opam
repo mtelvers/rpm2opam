@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-activesupport-7.0.8-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-activesupport-7.0.8-5.fc40.noarch.rpm"]
+depends: [
+  "ruby-default-gems" 
+  "rubygem-bigdecimal" 
+  "rubygem-concurrent-ruby" 
+  "rubygem-i18n" 
+  "rubygem-json" 
+  "rubygem-minitest" {>= "5.1"}
+  "rubygem-tzinfo" 
+  "rubygems" 
+  "tzdata" 
+]
+extra-source "rubygem-activesupport-7.0.8-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-activesupport-7.0.8-5.fc40.noarch.rpm"
+}

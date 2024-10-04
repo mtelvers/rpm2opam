@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "klamav-0.46-42.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "klamav-0.46-42.fc39.x86_64.rpm"]
+depends: [
+  "bash" 
+  "clamav" {>= "0.93"}
+  "clamav-freshclam" {>= "0.93"}
+  "clamav-lib" 
+  "glibc" {>= "2.37.9000"}
+  "kdelibs3" 
+  "libX11" 
+  "libstdc++" 
+  "qt3" 
+  "sqlite-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "klamav-0.46-42.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/klamav-0.46-42.fc39.x86_64.rpm"
+}

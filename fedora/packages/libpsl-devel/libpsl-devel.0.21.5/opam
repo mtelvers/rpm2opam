@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libpsl-devel-0.21.5-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpsl-devel-0.21.5-3.fc40.x86_64.rpm"]
+depends: [
+  "libpsl" {= "0.21.5"}
+  "pkgconf-pkg-config" 
+  "publicsuffix-list" 
+]
+extra-source "libpsl-devel-0.21.5-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libpsl-devel-0.21.5-3.fc40.x86_64.rpm"
+}

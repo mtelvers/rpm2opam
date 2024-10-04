@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openssh-clients-9.9p1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openssh-clients-9.9p1-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "crypto-policies" {>= "20220824"}
+  "glibc" 
+  "krb5" 
+  "libedit0" 
+  "libfido2-1" 
+  "libopenssl3" 
+  "libselinux1" 
+  "libz-ng-compat1" 
+  "openssh-common" {= "9.9"}
+]
+extra-source "openssh-clients-9.9p1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openssh-clients-9.9p1-1.1.x86_64.rpm"
+}

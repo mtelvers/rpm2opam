@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fstrcmp-devel-0.7.D001-22.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fstrcmp-devel-0.7.D001-22.fc40.x86_64.rpm"]
+depends: [
+  "fstrcmp" {= "0.7.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "fstrcmp-devel-0.7.D001-22.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fstrcmp-devel-0.7.D001-22.fc40.x86_64.rpm"
+}

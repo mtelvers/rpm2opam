@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "addrwatch-1.0.2-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "addrwatch-1.0.2-9.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libevent" 
+  "libpcap" 
+  "mariadb-connector-c" 
+  "shadow-utils" 
+  "sqlite-libs" 
+  "systemd" 
+]
+extra-source "addrwatch-1.0.2-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/addrwatch-1.0.2-9.fc40.x86_64.rpm"
+}

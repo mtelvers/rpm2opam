@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-twitchtv-twirp-devel-8.1.0-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-twitchtv-twirp-devel-8.1.0-11.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-pkg-errors-devel" 
+  "golang-google-protobuf-devel" 
+]
+extra-source "golang-github-twitchtv-twirp-devel-8.1.0-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-twitchtv-twirp-devel-8.1.0-11.fc40.noarch.rpm"
+}

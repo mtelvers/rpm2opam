@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "antlr4-maven-plugin-4.13.0-5.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "antlr4-maven-plugin-4.13.0-5.3.noarch.rpm"]
+depends: [
+  "antlr4-tool" {= "4.13.0"}
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "plexus-build-api0" 
+  "plexus-compiler" 
+  "slf4j" 
+]
+extra-source "antlr4-maven-plugin-4.13.0-5.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/antlr4-maven-plugin-4.13.0-5.3.noarch.rpm"
+}

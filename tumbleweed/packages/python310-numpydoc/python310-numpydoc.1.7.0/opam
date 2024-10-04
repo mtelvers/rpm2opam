@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-numpydoc-1.7.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-numpydoc-1.7.0-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-Jinja2" {>= "2.10"}
+  "python310-Sphinx" {>= "5"}
+  "python310-base" 
+  "python310-tabulate" {>= "0.8.10"}
+  "python310-tomli" 
+  "update-alternatives" 
+]
+extra-source "python310-numpydoc-1.7.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-numpydoc-1.7.0-1.2.noarch.rpm"
+}

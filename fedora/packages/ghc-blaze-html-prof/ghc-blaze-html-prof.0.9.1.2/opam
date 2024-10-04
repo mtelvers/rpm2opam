@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-blaze-html-prof-0.9.1.2-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-blaze-html-prof-0.9.1.2-20.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-blaze-builder-prof" 
+  "ghc-blaze-html-devel" {= "0.9.1.2"}
+  "ghc-blaze-markup-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-text-prof" 
+]
+extra-source "ghc-blaze-html-prof-0.9.1.2-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-blaze-html-prof-0.9.1.2-20.fc40.x86_64.rpm"
+}

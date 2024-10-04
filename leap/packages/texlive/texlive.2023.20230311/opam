@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-2023.20230311-slfo.1.2.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-2023.20230311-slfo.1.2.7.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-ncurses-utils" 
+  "coreutils" 
+  "dialog" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "perl-base" 
+  "sed" 
+  "system-user-mktex" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+]
+extra-source "texlive-2023.20230311-slfo.1.2.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/texlive-2023.20230311-slfo.1.2.7.x86_64.rpm"
+}

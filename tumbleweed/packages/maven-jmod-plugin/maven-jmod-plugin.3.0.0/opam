@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-jmod-plugin-3.0.0~alpha1-3.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-jmod-plugin-3.0.0~alpha1-3.4.noarch.rpm"]
+depends: [
+  "apache-commons-lang3" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-lib" 
+  "maven-shared-utils" 
+  "plexus-languages" 
+]
+extra-source "maven-jmod-plugin-3.0.0~alpha1-3.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-jmod-plugin-3.0.0~alpha1-3.4.noarch.rpm"
+}

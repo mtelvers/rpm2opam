@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tokio-reactor-devel-0.1.12-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tokio-reactor-devel-0.1.12-14.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-crossbeam-utils+default-devel" 
+  "rust-futures+default-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-log+default-devel" 
+  "rust-mio+default-devel" 
+  "rust-num_cpus+default-devel" 
+  "rust-parking_lot+default-devel" 
+  "rust-slab+default-devel" 
+  "rust-tokio-executor+default-devel" 
+  "rust-tokio-io+default-devel" 
+  "rust-tokio-sync+default-devel" 
+]
+extra-source "rust-tokio-reactor-devel-0.1.12-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tokio-reactor-devel-0.1.12-14.fc40.noarch.rpm"
+}

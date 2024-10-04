@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sbd-1.5.2-1.fc40.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sbd-1.5.2-1.fc40.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "corosynclib" 
+  "glib2" 
+  "glibc" 
+  "libaio" 
+  "libqb" 
+  "libuuid" 
+  "pacemaker-cluster-libs" 
+  "pacemaker-libs" 
+  "pkgconf-pkg-config" 
+  "systemd" 
+]
+extra-source "sbd-1.5.2-1.fc40.2.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sbd-1.5.2-1.fc40.2.x86_64.rpm"
+}

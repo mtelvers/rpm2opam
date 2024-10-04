@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gdlmm-devel-3.7.3-24.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdlmm-devel-3.7.3-24.fc40.x86_64.rpm"]
+depends: [
+  "gdlmm" {= "3.7.3"}
+  "glibmm2-4-devel" {>= "2.16"}
+  "gtkmm3-0-devel" {>= "3.0"}
+  "libgdl-devel" {>= "3.7"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gdlmm-devel-3.7.3-24.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gdlmm-devel-3.7.3-24.fc40.x86_64.rpm"
+}

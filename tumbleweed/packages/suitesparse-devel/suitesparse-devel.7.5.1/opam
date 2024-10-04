@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "suitesparse-devel-7.5.1-50.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "suitesparse-devel-7.5.1-50.2.x86_64.rpm"]
+depends: [
+  "gcc-c++" {>= "4.9"}
+  "libamd3" {= "7.5.1"}
+  "libbtf2" {= "7.5.1"}
+  "libcamd3" {= "7.5.1"}
+  "libccolamd3" {= "7.5.1"}
+  "libcholmod5" {= "7.5.1"}
+  "libcolamd3" {= "7.5.1"}
+  "libcxsparse4" {= "7.5.1"}
+  "libgraphblas9" {= "7.5.1"}
+  "libklu2" {= "7.5.1"}
+  "libklu_cholmod2" {= "7.5.1"}
+  "liblagraph1" {= "7.5.1"}
+  "liblagraphx1" {= "7.5.1"}
+  "libldl3" {= "7.5.1"}
+  "libopenblas_pthreads-devel" 
+  "libparu0" {= "7.5.1"}
+  "librbio4" {= "7.5.1"}
+  "libspex2" {= "7.5.1"}
+  "libspqr4" {= "7.5.1"}
+  "libsuitesparse_mongoose3" {= "7.5.1"}
+  "libsuitesparseconfig7" {= "7.5.1"}
+  "libumfpack6" {= "7.5.1"}
+  "metis-devel" 
+  "pkgconf-pkg-config" 
+  "tbb-devel" 
+]
+extra-source "suitesparse-devel-7.5.1-50.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/suitesparse-devel-7.5.1-50.2.x86_64.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-jaraco.develop-8.6.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-jaraco.develop-8.6.0-1.3.noarch.rpm"]
+depends: [
+  "python310-PyNaCl" 
+  "python310-autocommand" 
+  "python310-base" {= "3.10"}
+  "python310-build" 
+  "python310-jaraco-collections" 
+  "python310-jaraco-context" 
+  "python310-jaraco-ui" 
+  "python310-jaraco-vcs" {>= "1.1"}
+  "python310-keyring" 
+  "python310-packaging" 
+  "python310-path" 
+  "python310-requests-toolbelt" 
+  "python310-setuptools" 
+  "python310-subprocess-tee" 
+]
+extra-source "python310-jaraco.develop-8.6.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-jaraco.develop-8.6.0-1.3.noarch.rpm"
+}

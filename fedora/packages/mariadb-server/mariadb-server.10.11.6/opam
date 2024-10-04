@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mariadb-server-10.11.6-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mariadb-server-10.11.6-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "glibc" 
+  "iproute" 
+  "libaio" 
+  "libstdc++" 
+  "libxcrypt" 
+  "lz4-libs" 
+  "mariadb" {= "10.11.6"}
+  "mariadb-common" {= "10.11.6"}
+  "mariadb-connector-c-config" 
+  "mariadb-errmsg" {= "10.11.6"}
+  "mysql-selinux" 
+  "openssl-libs" 
+  "pcre2" 
+  "shadow-utils" 
+  "systemd" 
+  "systemd-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "mariadb-server-10.11.6-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mariadb-server-10.11.6-3.fc40.x86_64.rpm"
+}

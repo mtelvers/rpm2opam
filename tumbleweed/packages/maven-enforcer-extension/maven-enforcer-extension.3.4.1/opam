@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-enforcer-extension-3.4.1-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-enforcer-extension-3.4.1-1.6.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "maven-enforcer-extension-3.4.1-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-enforcer-extension-3.4.1-1.6.noarch.rpm"
+}

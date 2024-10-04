@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-cool-2023.204.1.35svn15878-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-cool-2023.204.1.35svn15878-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-amsfonts" 
+  "texlive-amsmath" 
+  "texlive-bbm-macros" 
+  "texlive-coollist" 
+  "texlive-coolstr" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-forloop" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+]
+extra-source "texlive-cool-2023.204.1.35svn15878-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-cool-2023.204.1.35svn15878-slfo.1.1.4.noarch.rpm"
+}

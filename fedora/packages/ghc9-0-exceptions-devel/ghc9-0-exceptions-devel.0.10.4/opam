@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc9.0-exceptions-devel-0.10.4-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc9.0-exceptions-devel-0.10.4-16.fc40.x86_64.rpm"]
+depends: [
+  "ghc9-0-base-devel" 
+  "ghc9-0-compiler" {= "9.0.2"}
+  "ghc9-0-exceptions" {= "0.10.4"}
+  "ghc9-0-mtl-devel" 
+  "ghc9-0-stm-devel" 
+  "ghc9-0-template-haskell-devel" 
+  "ghc9-0-transformers-devel" 
+]
+extra-source "ghc9.0-exceptions-devel-0.10.4-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc9.0-exceptions-devel-0.10.4-16.fc40.x86_64.rpm"
+}

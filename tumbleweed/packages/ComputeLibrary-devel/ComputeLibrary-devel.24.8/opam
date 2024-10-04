@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ComputeLibrary-devel-24.08-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ComputeLibrary-devel-24.08-1.1.x86_64.rpm"]
+depends: [
+  "ComputeLibrary" {= "24.8"}
+  "libarm_compute40" {= "24.8"}
+  "libarm_compute_graph40" {= "24.8"}
+  "stb-devel" 
+]
+extra-source "ComputeLibrary-devel-24.08-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ComputeLibrary-devel-24.08-1.1.x86_64.rpm"
+}

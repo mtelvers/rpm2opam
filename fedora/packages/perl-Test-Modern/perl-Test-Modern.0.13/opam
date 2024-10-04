@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-Modern-0.013-28.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Modern-0.013-28.fc40.noarch.rpm"]
+depends: [
+  "perl-B" 
+  "perl-Exporter-Tiny" {>= "0.30"}
+  "perl-IO" {>= "1.8"}
+  "perl-Import-Into" {>= "1.2"}
+  "perl-Module-Runtime" {>= "0.12"}
+  "perl-Moose" 
+  "perl-Mouse" 
+  "perl-PathTools" {>= "0"}
+  "perl-Role-Tiny" 
+  "perl-Scalar-List-Utils" 
+  "perl-Test-API" {>= "0.4"}
+  "perl-Test-Deep" {>= "0.111"}
+  "perl-Test-Fatal" {>= "0.7"}
+  "perl-Test-LongString" {>= "0.15"}
+  "perl-Test-Pod" 
+  "perl-Test-Pod-Coverage" 
+  "perl-Test-Simple" {>= "0.96"}
+  "perl-Test-Version" 
+  "perl-Test-Warnings" {>= "0.9"}
+  "perl-Try-Tiny" {>= "0.15"}
+  "perl-libs" {>= "5.6.1"}
+]
+extra-source "perl-Test-Modern-0.013-28.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-Modern-0.013-28.fc40.noarch.rpm"
+}

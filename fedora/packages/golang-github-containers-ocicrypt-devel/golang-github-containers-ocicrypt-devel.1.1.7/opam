@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-containers-ocicrypt-devel-1.1.7-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-containers-ocicrypt-devel-1.1.7-3.fc40.noarch.rpm"]
+depends: [
+  "gnutls-utils" 
+  "go-filesystem" 
+  "golang-github-miekg-pkcs11-devel" 
+  "golang-github-opencontainers-digest-devel" 
+  "golang-github-opencontainers-image-spec-devel" 
+  "golang-github-protobuf-devel" 
+  "golang-github-sirupsen-logrus-devel" 
+  "golang-github-stefanberger-pkcs11uri-devel" 
+  "golang-gopkg-square-jose-2-devel" 
+  "golang-gopkg-yaml-3-devel" 
+  "golang-mozilla-pkcs7-devel" 
+  "golang-x-crypto-devel" 
+  "golang-x-term-devel" 
+]
+extra-source "golang-github-containers-ocicrypt-devel-1.1.7-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-containers-ocicrypt-devel-1.1.7-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-xepersian-hm-svn56272-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-xepersian-hm-svn56272-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-kpathsea" 
+  "texlive-l3packages" 
+  "texlive-xepersian" 
+]
+extra-source "texlive-xepersian-hm-svn56272-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-xepersian-hm-svn56272-71.fc40.noarch.rpm"
+}

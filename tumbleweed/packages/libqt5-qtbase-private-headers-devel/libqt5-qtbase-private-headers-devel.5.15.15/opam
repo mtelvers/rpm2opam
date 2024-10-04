@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqt5-qtbase-private-headers-devel-5.15.15+kde127-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqt5-qtbase-private-headers-devel-5.15.15+kde127-1.2.noarch.rpm"]
+depends: [
+  "libQt5Core-private-headers-devel" {= "5.15.15"}
+  "libQt5DBus-private-headers-devel" {= "5.15.15"}
+  "libQt5Gui-private-headers-devel" {= "5.15.15"}
+  "libQt5KmsSupport-private-headers-devel" {= "5.15.15"}
+  "libQt5Network-private-headers-devel" {= "5.15.15"}
+  "libQt5OpenGL-private-headers-devel" {= "5.15.15"}
+  "libQt5PlatformSupport-private-headers-devel" {= "5.15.15"}
+  "libQt5PrintSupport-private-headers-devel" {= "5.15.15"}
+  "libQt5Sql-private-headers-devel" {= "5.15.15"}
+  "libQt5Test-private-headers-devel" {= "5.15.15"}
+  "libQt5Widgets-private-headers-devel" {= "5.15.15"}
+  "libqt5-qtbase-devel" {= "5.15.15"}
+]
+extra-source "libqt5-qtbase-private-headers-devel-5.15.15+kde127-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libqt5-qtbase-private-headers-devel-5.15.15+kde127-1.2.noarch.rpm"
+}

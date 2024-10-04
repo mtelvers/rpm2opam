@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "heaptrack-lang-1.5.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "heaptrack-lang-1.5.0-2.2.noarch.rpm"]
+depends: [
+  "heaptrack" {= "1.5.0"}
+]
+extra-source "heaptrack-lang-1.5.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/heaptrack-lang-1.5.0-2.2.noarch.rpm"
+}

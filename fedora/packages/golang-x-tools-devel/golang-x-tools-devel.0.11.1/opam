@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-x-tools-devel-0.11.1-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-x-tools-devel-0.11.1-4.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-google-cmp-devel" 
+  "golang-github-jba-printsrc-devel" 
+  "golang-github-sergi-diff-devel" 
+  "golang-github-yuin-goldmark-devel" 
+  "golang-gopkg-yaml-3-devel" 
+  "golang-honnef-tools-devel" 
+  "golang-mvdan-gofumpt-devel" 
+  "golang-mvdan-xurls-devel" 
+  "golang-x-mod-devel" 
+  "golang-x-net-devel" 
+  "golang-x-sync-devel" 
+  "golang-x-sys-devel" 
+  "golang-x-vuln-devel" 
+]
+extra-source "golang-x-tools-devel-0.11.1-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-x-tools-devel-0.11.1-4.fc40.noarch.rpm"
+}

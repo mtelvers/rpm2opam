@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-standardff-1.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-standardff-1.0-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gap" {>= "4.12"}
+  "gap-gapdoc" {>= "1.6.5"}
+]
+extra-source "gap-standardff-1.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-standardff-1.0-1.2.noarch.rpm"
+}

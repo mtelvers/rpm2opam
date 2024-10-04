@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libOsiCbc3-2.10.11-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libOsiCbc3-2.10.11-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libCbc3" 
+  "libCoinUtils3" 
+  "libOsi1" 
+  "libOsiClp1" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "libOsiCbc3-2.10.11-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libOsiCbc3-2.10.11-1.3.x86_64.rpm"
+}

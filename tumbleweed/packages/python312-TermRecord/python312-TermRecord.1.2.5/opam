@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-TermRecord-1.2.5-4.24.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-TermRecord-1.2.5-4.24.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-Jinja2" {>= "2.6"}
+  "python312-base" 
+  "update-alternatives" 
+]
+extra-source "python312-TermRecord-1.2.5-4.24.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-TermRecord-1.2.5-4.24.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ansi_colours+rgb-devel-1.2.2-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ansi_colours+rgb-devel-1.2.2-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-ansi_colours-devel" {= "1.2.2"}
+  "rust-rgb+default-devel" 
+]
+extra-source "rust-ansi_colours+rgb-devel-1.2.2-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ansi_colours+rgb-devel-1.2.2-4.fc40.noarch.rpm"
+}

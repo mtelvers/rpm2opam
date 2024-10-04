@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-URI-NamespaceMap-1.12-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-URI-NamespaceMap-1.12-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-IRI" {>= "0.3"}
+  "perl-Module-Load-Conditional" 
+  "perl-Moo" {>= "1.6000"}
+  "perl-Scalar-List-Utils" 
+  "perl-Sub-Quote" 
+  "perl-Try-Tiny" 
+  "perl-Type-Tiny" 
+  "perl-Types-URI" 
+  "perl-URI" {>= "1.52"}
+  "perl-XML-CommonNS" 
+  "perl-libs" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-URI-NamespaceMap-1.12-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-URI-NamespaceMap-1.12-3.fc40.noarch.rpm"
+}

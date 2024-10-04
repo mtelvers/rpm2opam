@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-sandi-devel-0.5-5.29.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-sandi-devel-0.5-5.29.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-conduit-devel" 
+  "ghc-exceptions-devel" 
+  "ghc-sandi" {= "0.5"}
+]
+extra-source "ghc-sandi-devel-0.5-5.29.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-sandi-devel-0.5-5.29.x86_64.rpm"
+}

@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-RDF-Trine-tests-1.019-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-RDF-Trine-tests-1.019-23.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-DBI" 
+  "perl-Data-Dumper" 
+  "perl-Error" 
+  "perl-File-Find" 
+  "perl-File-Temp" 
+  "perl-FindBin" 
+  "perl-HTTP-Message" 
+  "perl-IO" 
+  "perl-JSON" {>= "2.0"}
+  "perl-PathTools" 
+  "perl-RDF-Trine" 
+  "perl-RDF-Trine-mysql" {= "1.19"}
+  "perl-RDF-Trine-postgresql" {= "1.19"}
+  "perl-RDF-Trine-redis" {= "1.19"}
+  "perl-RDF-Trine-sqlite" {= "1.19"}
+  "perl-Test-Exception" 
+  "perl-Test-Harness" 
+  "perl-Test-JSON" 
+  "perl-Test-RDF-Trine-Store" 
+  "perl-Time-HiRes" 
+  "perl-URI" 
+  "perl-XML-Namespace" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+]
+extra-source "perl-RDF-Trine-tests-1.019-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-RDF-Trine-tests-1.019-23.fc40.noarch.rpm"
+}

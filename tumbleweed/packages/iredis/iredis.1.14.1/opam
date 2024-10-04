@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "iredis-1.14.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "iredis-1.14.1-1.1.noarch.rpm"]
+depends: [
+  "python311-Pygments" {>= "2"}
+  "python311-base" 
+  "python311-click" {>= "8.0"}
+  "python311-configobj" {>= "5.0"}
+  "python311-mistune" {>= "2.0"}
+  "python311-packaging" {>= "23.0"}
+  "python311-pendulum" {>= "2.1.0"}
+  "python311-prompt_toolkit" {>= "3"}
+  "python311-redis" {>= "3"}
+  "python311-wcwidth" {>= "0.1.9"}
+]
+extra-source "iredis-1.14.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/iredis-1.14.1-1.1.noarch.rpm"
+}

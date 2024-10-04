@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "snakemake-8.9.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "snakemake-8.9.0-1.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-GitPython" 
+  "python3-appdirs" 
+  "python3-conda-inject" 
+  "python3-configargparse" 
+  "python3-connection_pool" {>= "0.0.3"}
+  "python3-datrie" 
+  "python3-docutils" 
+  "python3-dpath" 
+  "python3-humanfriendly" 
+  "python3-immutables" 
+  "python3-jinja2" 
+  "python3-jsonschema" 
+  "python3-nbformat" 
+  "python3-packaging" 
+  "python3-psutil" 
+  "python3-pulp" 
+  "python3-pyyaml" 
+  "python3-requests" 
+  "python3-reretry" 
+  "python3-smart_open" 
+  "python3-snakemake-interface-common" 
+  "python3-snakemake-interface-executor-plugins" 
+  "python3-snakemake-interface-report-plugins" 
+  "python3-snakemake-interface-storage-plugins" 
+  "python3-stopit" 
+  "python3-tabulate" 
+  "python3-throttler" 
+  "python3-toposort" 
+  "python3-wrapt" 
+  "python3-yte" 
+  "vim-filesystem" 
+]
+extra-source "snakemake-8.9.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/snakemake-8.9.0-1.fc40.noarch.rpm"
+}

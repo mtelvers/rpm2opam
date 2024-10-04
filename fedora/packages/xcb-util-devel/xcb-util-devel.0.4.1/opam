@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xcb-util-devel-0.4.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xcb-util-devel-0.4.1-5.fc40.x86_64.rpm"]
+depends: [
+  "libxcb-devel" 
+  "pkgconf-pkg-config" 
+  "xcb-util" 
+]
+extra-source "xcb-util-devel-0.4.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xcb-util-devel-0.4.1-5.fc40.x86_64.rpm"
+}

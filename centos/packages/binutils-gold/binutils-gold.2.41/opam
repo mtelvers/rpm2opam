@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "binutils-gold-2.41-48.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "binutils-gold-2.41-48.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "jansson" 
+  "libgcc" 
+  "libstdc++" 
+  "zlib-ng-compat" 
+]
+extra-source "binutils-gold-2.41-48.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/binutils-gold-2.41-48.el10.x86_64.rpm"
+}

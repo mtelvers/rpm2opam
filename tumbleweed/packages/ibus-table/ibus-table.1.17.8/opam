@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ibus-table-1.17.8-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibus-table-1.17.8-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ibus" {>= "1.4.99"}
+  "python311" 
+  "python311-curses" 
+]
+extra-source "ibus-table-1.17.8-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ibus-table-1.17.8-1.1.x86_64.rpm"
+}

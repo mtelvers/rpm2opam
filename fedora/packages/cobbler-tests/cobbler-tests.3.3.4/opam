@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cobbler-tests-3.3.4-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cobbler-tests-3.3.4-1.fc40.noarch.rpm"]
+depends: [
+  "cobbler" {= "3.3.4"}
+]
+extra-source "cobbler-tests-3.3.4-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cobbler-tests-3.3.4-1.fc40.noarch.rpm"
+}

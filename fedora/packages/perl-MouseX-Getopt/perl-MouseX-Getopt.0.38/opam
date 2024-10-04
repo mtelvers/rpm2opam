@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MouseX-Getopt-0.38-25.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MouseX-Getopt-0.38-25.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Getopt-Long" {>= "2.37"}
+  "perl-Getopt-Long-Descriptive" {>= "0.81"}
+  "perl-Mouse" {>= "0.64"}
+  "perl-libs" 
+]
+extra-source "perl-MouseX-Getopt-0.38-25.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MouseX-Getopt-0.38-25.fc40.noarch.rpm"
+}

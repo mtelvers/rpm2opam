@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "GtkAda-devel-2.24.2-48.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "GtkAda-devel-2.24.2-48.fc40.x86_64.rpm"]
+depends: [
+  "GtkAda" {= "2.24.2"}
+  "GtkAda-gl" {= "2.24.2"}
+  "GtkAda-gnome" {= "2.24.2"}
+  "bash" 
+  "fedora-gnat-project-common" {>= "2"}
+  "gtk2-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "GtkAda-devel-2.24.2-48.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/GtkAda-devel-2.24.2-48.fc40.x86_64.rpm"
+}

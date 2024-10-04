@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-File-ChangeNotify-0.31-17.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-ChangeNotify-0.31-17.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Fcntl" 
+  "perl-File-Find" 
+  "perl-Linux-Inotify2" {>= "1.2"}
+  "perl-Module-Pluggable" 
+  "perl-Module-Runtime" 
+  "perl-Moo" {>= "1.6"}
+  "perl-PathTools" 
+  "perl-Time-HiRes" 
+  "perl-Type-Tiny" 
+  "perl-libs" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-File-ChangeNotify-0.31-17.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-File-ChangeNotify-0.31-17.fc40.noarch.rpm"
+}

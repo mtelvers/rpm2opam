@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "iproute-6.7.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "iproute-6.7.0-1.fc40.x86_64.rpm"]
+depends: [
+  "elfutils-libelf" 
+  "glibc" 
+  "libbpf" 
+  "libcap" 
+  "libmnl" 
+  "libselinux" 
+  "psmisc" 
+]
+extra-source "iproute-6.7.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/iproute-6.7.0-1.fc40.x86_64.rpm"
+}

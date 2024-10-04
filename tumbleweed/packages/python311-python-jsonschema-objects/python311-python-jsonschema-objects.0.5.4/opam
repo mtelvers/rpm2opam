@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-python-jsonschema-objects-0.5.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-python-jsonschema-objects-0.5.4-1.1.noarch.rpm"]
+depends: [
+  "python311-Markdown" {>= "2.4"}
+  "python311-base" {= "3.11"}
+  "python311-inflection" {>= "0.2"}
+  "python311-jsonschema" {>= "4.18"}
+]
+extra-source "python311-python-jsonschema-objects-0.5.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-python-jsonschema-objects-0.5.4-1.1.noarch.rpm"
+}

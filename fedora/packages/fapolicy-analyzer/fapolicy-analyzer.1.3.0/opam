@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fapolicy-analyzer-1.3.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fapolicy-analyzer-1.3.0-1.fc40.x86_64.rpm"]
+depends: [
+  "audit-libs" 
+  "bash" 
+  "dbus-libs" 
+  "glibc" 
+  "gnome-icon-theme" 
+  "gtk3" 
+  "gtksourceview3" 
+  "libgcc" 
+  "lmdb-libs" 
+  "mesa-dri-drivers" 
+  "python3" {= "3.12"}
+  "python3-configargparse" 
+  "python3-events" 
+  "python3-gobject" 
+  "python3-importlib-metadata" 
+  "python3-more-itertools" 
+  "python3-rx" 
+  "python3-toml" 
+  "webkit2gtk4-0" 
+]
+extra-source "fapolicy-analyzer-1.3.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fapolicy-analyzer-1.3.0-1.fc40.x86_64.rpm"
+}

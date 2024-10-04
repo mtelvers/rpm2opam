@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "deluge-common-2.1.1-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deluge-common-2.1.1-6.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-mako" 
+  "python3-pyOpenSSL" 
+  "python3-pyasn1" 
+  "python3-pyxdg" 
+  "python3-rencode" 
+  "python3-service-identity" 
+  "python3-setuptools" 
+  "python3-twisted" {>= "17.1"}
+  "python3-twisted+tls" {>= "17.1"}
+  "python3-zope-interface" 
+  "rb_libtorrent-python3" 
+]
+extra-source "deluge-common-2.1.1-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/deluge-common-2.1.1-6.fc40.noarch.rpm"
+}

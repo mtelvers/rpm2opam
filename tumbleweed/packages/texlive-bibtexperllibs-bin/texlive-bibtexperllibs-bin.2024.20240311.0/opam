@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-bibtexperllibs-bin-2024.20240311.svn68869-100.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-bibtexperllibs-bin-2024.20240311.svn68869-100.1.x86_64.rpm"]
+depends: [
+  "texlive-bibtexperllibs" {>= "2024"}
+]
+extra-source "texlive-bibtexperllibs-bin-2024.20240311.svn68869-100.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/texlive-bibtexperllibs-bin-2024.20240311.svn68869-100.1.x86_64.rpm"
+}

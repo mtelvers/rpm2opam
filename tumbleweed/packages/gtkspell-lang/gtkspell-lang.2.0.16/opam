@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtkspell-lang-2.0.16-24.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtkspell-lang-2.0.16-24.3.noarch.rpm"]
+depends: [
+  "libgtkspell0" {= "2.0.16"}
+]
+extra-source "gtkspell-lang-2.0.16-24.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gtkspell-lang-2.0.16-24.3.noarch.rpm"
+}

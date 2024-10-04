@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Pod-Elemental-0.103006-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Pod-Elemental-0.103006-1.7.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Load" 
+  "perl-Mixin-Linewise" 
+  "perl-Moose" 
+  "perl-MooseX-Types" 
+  "perl-Pod-Eventual" {>= "0.4"}
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-String-RewritePrefix" 
+  "perl-String-Truncate" 
+  "perl-Sub-Exporter" 
+  "perl-Sub-Exporter-ForMethods" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-Pod-Elemental-0.103006-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Pod-Elemental-0.103006-1.7.noarch.rpm"
+}

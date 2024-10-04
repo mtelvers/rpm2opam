@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "imagej-1.53t-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "imagej-1.53t-2.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "java-11-openj9" {>= "1.8"}
+]
+extra-source "imagej-1.53t-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/imagej-1.53t-2.2.noarch.rpm"
+}

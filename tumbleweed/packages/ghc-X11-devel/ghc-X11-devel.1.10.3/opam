@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-X11-devel-1.10.3-2.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-X11-devel-1.10.3-2.16.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-X11" {= "1.10.3"}
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-data-default-class-devel" 
+  "libX11-devel" 
+  "libXext-devel" 
+  "libXinerama-devel" 
+  "libXrandr-devel" 
+  "libXss-devel" 
+]
+extra-source "ghc-X11-devel-1.10.3-2.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-X11-devel-1.10.3-2.16.x86_64.rpm"
+}

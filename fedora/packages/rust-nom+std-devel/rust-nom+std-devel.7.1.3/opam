@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-nom+std-devel-7.1.3-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-nom+std-devel-7.1.3-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-memchr+std-devel" 
+  "rust-minimal-lexical+std-devel" 
+  "rust-nom+alloc-devel" {= "7.1.3"}
+  "rust-nom-devel" {= "7.1.3"}
+]
+extra-source "rust-nom+std-devel-7.1.3-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-nom+std-devel-7.1.3-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "spasm-1.2-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "spasm-1.2-2.fc40.x86_64.rpm"]
+depends: [
+  "Lmod" 
+  "flexiblas-netlib" 
+  "givaro" 
+  "glibc" 
+  "gmp" 
+  "libgcc" 
+  "libgomp" 
+  "libspasm" {= "1.2"}
+  "libstdc++" 
+  "linbox" 
+  "metis" 
+  "ntl" 
+  "ocl-icd" 
+]
+extra-source "spasm-1.2-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/spasm-1.2-2.fc40.x86_64.rpm"
+}

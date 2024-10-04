@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ref-cast+default-devel-1.0.22-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ref-cast+default-devel-1.0.22-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-ref-cast-devel" {= "1.0.22"}
+]
+extra-source "rust-ref-cast+default-devel-1.0.22-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ref-cast+default-devel-1.0.22-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pcp-6.2.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcp-6.2.1-2.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-hostname" 
+  "coreutils" 
+  "cpp" 
+  "cyrus-sasl" 
+  "findutils" 
+  "gawk" 
+  "glibc" 
+  "grep" 
+  "libncurses6" 
+  "libopenssl3" 
+  "libpcp3" 
+  "libpcp_gui2" 
+  "libpcp_import1" 
+  "libpcp_mmv1" 
+  "libpcp_trace2" 
+  "libpcp_web1" 
+  "libreadline8" 
+  "libuv1" 
+  "libz-ng-compat1" 
+  "pcp-selinux" 
+  "perl" 
+  "pkgconf-pkg-config" 
+  "sed" 
+  "systemd" 
+  "which" 
+]
+extra-source "pcp-6.2.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pcp-6.2.1-2.1.x86_64.rpm"
+}

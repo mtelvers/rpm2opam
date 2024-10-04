@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "migemo-emacs-0.40-43.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "migemo-emacs-0.40-43.fc40.noarch.rpm"]
+depends: [
+  "emacs" {>= "21.4"}
+  "emacs-apel" 
+  "migemo" {= "0.40"}
+]
+extra-source "migemo-emacs-0.40-43.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/migemo-emacs-0.40-43.fc40.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-googlecloudplatform-cloudsql-proxy-devel-1.31.2-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-googlecloudplatform-cloudsql-proxy-devel-1.31.2-5.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-coreos-systemd-22-devel" 
+  "go-filesystem" 
+  "golang-cloud-google-compute-metadata-devel" 
+  "golang-github-hanwen-fuse-2-devel" 
+  "golang-github-lib-pq-devel" 
+  "golang-github-sql-driver-mysql-devel" 
+  "golang-google-api-devel" 
+  "golang-uber-zap-devel" 
+  "golang-x-net-devel" 
+  "golang-x-oauth2-devel" 
+  "golang-x-sys-devel" 
+  "golang-x-time-devel" 
+]
+extra-source "golang-github-googlecloudplatform-cloudsql-proxy-devel-1.31.2-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-googlecloudplatform-cloudsql-proxy-devel-1.31.2-5.fc40.noarch.rpm"
+}

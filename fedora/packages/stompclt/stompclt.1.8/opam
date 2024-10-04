@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "stompclt-1.8-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "stompclt-1.8-7.fc40.noarch.rpm"]
+depends: [
+  "perl-Authen-Credential" 
+  "perl-Config-General" 
+  "perl-Config-Validator" 
+  "perl-Data-Dumper" 
+  "perl-Directory-Queue" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-Messaging-Message" 
+  "perl-Net-STOMP-Client" {>= "2.0"}
+  "perl-No-Worries" 
+  "perl-Pod-Usage" 
+  "perl-Scalar-List-Utils" 
+  "perl-Socket" 
+  "perl-Time-HiRes" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-sigtrap" 
+]
+extra-source "stompclt-1.8-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/stompclt-1.8-7.fc40.noarch.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "printrun-common-2.0.0-0.30.rc8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "printrun-common-2.0.0-0.30.rc8.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "python3" 
+  "python3-appdirs" 
+  "python3-cairocffi" 
+  "python3-cairosvg" {>= "1.0.9"}
+  "python3-cffi" 
+  "python3-dbus" {>= "1.2"}
+  "python3-lxml" 
+  "python3-numpy" 
+  "python3-psutil" {>= "2.1"}
+  "python3-pyglet" {>= "1.1"}
+  "python3-pyserial" {>= "3"}
+  "python3-wxpython4" {>= "4"}
+]
+extra-source "printrun-common-2.0.0-0.30.rc8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/printrun-common-2.0.0-0.30.rc8.fc40.x86_64.rpm"
+}

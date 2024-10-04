@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "etckeeper-1.18.20-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "etckeeper-1.18.20-5.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "crontabs" 
+  "etckeeper-dnf" {= "1.18.20"}
+  "findutils" 
+  "git-core" 
+  "hostname" 
+  "perl-interpreter" 
+  "systemd" 
+  "which" 
+]
+extra-source "etckeeper-1.18.20-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/etckeeper-1.18.20-5.fc40.noarch.rpm"
+}

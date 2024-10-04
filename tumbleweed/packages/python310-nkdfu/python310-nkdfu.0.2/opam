@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-nkdfu-0.2-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-nkdfu-0.2-1.6.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "intelhex" 
+  "python310-base" 
+  "python310-fire" 
+  "python310-libusb1" 
+  "python310-tqdm" 
+  "update-alternatives" 
+]
+extra-source "python310-nkdfu-0.2-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-nkdfu-0.2-1.6.noarch.rpm"
+}

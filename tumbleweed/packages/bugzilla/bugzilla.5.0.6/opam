@@ -1,0 +1,64 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bugzilla-5.0.6-7.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bugzilla-5.0.6-7.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "patchutils" 
+  "perl-Authen-SASL" 
+  "perl-CGI" {>= "5.8.1"}
+  "perl-Cache-Memcached" 
+  "perl-Chart" {>= "2.4.1"}
+  "perl-DBD-Pg" {>= "2.7.0"}
+  "perl-DBD-SQLite" {>= "1.29"}
+  "perl-DBD-mysql" {>= "4.1"}
+  "perl-DBI" {>= "1.614"}
+  "perl-Daemon-Generic" 
+  "perl-DateTime" {>= "0.75"}
+  "perl-DateTime-TimeZone" {>= "1.64"}
+  "perl-Digest-SHA1" 
+  "perl-Email-MIME" {>= "1.904"}
+  "perl-Email-Reply" 
+  "perl-Email-Send" {>= "2.2"}
+  "perl-Email-Sender" {>= "0"}
+  "perl-Encode" {>= "2.21"}
+  "perl-Encode-Detect" 
+  "perl-File-Copy-Recursive" 
+  "perl-File-MimeInfo" 
+  "perl-File-Slurp" {>= "9999.13"}
+  "perl-File-Which" 
+  "perl-GD" {>= "1.20"}
+  "perl-GDGraph" 
+  "perl-GDTextUtil" 
+  "perl-HTML-FormatText-WithLinks" {>= "0.13"}
+  "perl-HTML-Parser" {>= "3.67"}
+  "perl-HTML-Scrubber" 
+  "perl-IO-stringy" 
+  "perl-JSON-RPC" 
+  "perl-JSON-XS" {>= "2.1"}
+  "perl-List-MoreUtils" {>= "0.32"}
+  "perl-MIME-tools" {>= "5.406"}
+  "perl-Math-Random-ISAAC" {>= "1.0.1"}
+  "perl-Module-Pluggable" 
+  "perl-Net-SMTP-SSL" {>= "1.1"}
+  "perl-Object-Pluggable" 
+  "perl-PatchReader" {>= "0.9.6"}
+  "perl-SOAP-Lite" {>= "0.712"}
+  "perl-Template-GD" 
+  "perl-Template-Toolkit" {>= "2.24"}
+  "perl-Test-Taint" {>= "1.0.6"}
+  "perl-TheSchwartz" {>= "1.7"}
+  "perl-TimeDate" {>= "2.23"}
+  "perl-URI" {>= "1.55"}
+  "perl-XML-Twig" 
+  "perl-XMLRPC-Lite" {>= "0.712"}
+  "perl-base" 
+  "perl-ldap" 
+  "perl-libwww-perl" 
+  "python311-base" 
+  "system-user-wwwrun" 
+  "systemd" 
+]
+extra-source "bugzilla-5.0.6-7.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/bugzilla-5.0.6-7.1.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "usbmuxd-1.1.1+git48.01c94c7-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "usbmuxd-1.1.1+git48.01c94c7-1.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libimobiledevice-1_0-6" 
+  "libimobiledevice-glue-1_0-0" 
+  "libplist-2_0-4" 
+  "libusb-1_0-0" 
+  "system-user-nobody" 
+  "systemd" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "usbmuxd-1.1.1+git48.01c94c7-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/usbmuxd-1.1.1+git48.01c94c7-1.4.x86_64.rpm"
+}

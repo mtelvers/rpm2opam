@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wike-3.1.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wike-3.1.0-1.1.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-gobject-Gdk" 
+  "typelib-1_0-Adw-1" {= "1"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-4_0" {= "4.0"}
+  "typelib-1_0-Pango-1_0" 
+  "typelib-1_0-Soup-2_4" 
+  "typelib-1_0-WebKit-6_0" {= "6.0"}
+]
+extra-source "wike-3.1.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/wike-3.1.0-1.1.noarch.rpm"
+}

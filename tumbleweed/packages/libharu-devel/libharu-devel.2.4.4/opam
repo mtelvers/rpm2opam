@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libharu-devel-2.4.4-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libharu-devel-2.4.4-1.3.x86_64.rpm"]
+depends: [
+  "libhpdf2_4" {= "2.4.4"}
+  "libpng12-compat-devel" 
+  "zlib-devel" 
+]
+extra-source "libharu-devel-2.4.4-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libharu-devel-2.4.4-1.3.x86_64.rpm"
+}

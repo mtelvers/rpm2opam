@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sylpheed-libs-3.7.0-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sylpheed-libs-3.7.0-16.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "compface" 
+  "enchant" 
+  "fontconfig" 
+  "freetype" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "gtkspell" 
+  "harfbuzz" 
+  "openssl-libs" 
+  "pango" 
+]
+extra-source "sylpheed-libs-3.7.0-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sylpheed-libs-3.7.0-16.fc40.x86_64.rpm"
+}

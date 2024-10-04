@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-girder-client-3.2.1-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-girder-client-3.2.1-1.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" {= "3.12"}
+  "python312-click" {>= "6.7"}
+  "python312-diskcache" 
+  "python312-requests" {>= "2.4.2"}
+  "python312-requests-toolbelt" 
+  "update-alternatives" 
+]
+extra-source "python312-girder-client-3.2.1-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-girder-client-3.2.1-1.3.noarch.rpm"
+}

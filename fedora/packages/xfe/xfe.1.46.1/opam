@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xfe-1.46.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xfe-1.46.1-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "fontconfig" 
+  "fox" 
+  "glibc" 
+  "libX11" 
+  "libXft" 
+  "libXrandr" 
+  "libgcc" 
+  "libstdc++" 
+  "startup-notification" 
+]
+extra-source "xfe-1.46.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xfe-1.46.1-1.fc40.x86_64.rpm"
+}

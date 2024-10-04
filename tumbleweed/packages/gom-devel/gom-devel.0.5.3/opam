@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gom-devel-0.5.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gom-devel-0.5.3-1.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libgom-1_0-0" {= "0.5.3"}
+  "pkgconf-pkg-config" 
+  "python3-gom" {= "0.5.3"}
+  "typelib-1_0-Gom-1_0" {= "0.5.3"}
+]
+extra-source "gom-devel-0.5.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gom-devel-0.5.3-1.1.x86_64.rpm"
+}

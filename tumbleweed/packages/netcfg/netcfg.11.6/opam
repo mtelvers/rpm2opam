@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "netcfg-11.6-13.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netcfg-11.6-13.3.noarch.rpm"]
+depends: [
+  "libnss_usrfiles2" 
+]
+extra-source "netcfg-11.6-13.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/netcfg-11.6-13.3.noarch.rpm"
+}

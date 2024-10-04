@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libopae-c2-2.0.0-7.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libopae-c2-2.0.0-7.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libjson-c5" 
+  "libstdc++6" 
+  "libuuid1" 
+]
+extra-source "libopae-c2-2.0.0-7.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libopae-c2-2.0.0-7.2.x86_64.rpm"
+}

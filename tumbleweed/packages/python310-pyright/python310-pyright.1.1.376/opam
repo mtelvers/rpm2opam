@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pyright-1.1.376-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pyright-1.1.376-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-base" 
+  "python310-nodeenv" {>= "1.6.0"}
+  "update-alternatives" 
+]
+extra-source "python310-pyright-1.1.376-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-pyright-1.1.376-1.1.noarch.rpm"
+}

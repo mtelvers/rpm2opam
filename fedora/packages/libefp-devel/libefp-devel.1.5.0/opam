@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libefp-devel-1.5.0-17.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libefp-devel-1.5.0-17.fc40.x86_64.rpm"]
+depends: [
+  "libefp" {= "1.5.0"}
+]
+extra-source "libefp-devel-1.5.0-17.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libefp-devel-1.5.0-17.fc40.x86_64.rpm"
+}

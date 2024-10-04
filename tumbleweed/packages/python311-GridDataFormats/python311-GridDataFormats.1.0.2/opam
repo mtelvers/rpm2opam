@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-GridDataFormats-1.0.2-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-GridDataFormats-1.0.2-1.4.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-mrcfile" 
+  "python311-numpy" {>= "1.0.3"}
+  "python311-scipy" 
+]
+extra-source "python311-GridDataFormats-1.0.2-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-GridDataFormats-1.0.2-1.4.noarch.rpm"
+}

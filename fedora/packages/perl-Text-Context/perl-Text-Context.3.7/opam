@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Text-Context-3.7-40.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Text-Context-3.7-40.fc40.noarch.rpm"]
+depends: [
+  "perl-HTML-Parser" 
+  "perl-Text-Context-EitherSide" 
+  "perl-UNIVERSAL-require" 
+  "perl-constant" 
+  "perl-libs" 
+]
+extra-source "perl-Text-Context-3.7-40.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Text-Context-3.7-40.fc40.noarch.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "keepassxc-2.7.7-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "keepassxc-2.7.7-3.fc40.x86_64.rpm"]
+depends: [
+  "botan2" 
+  "glibc" 
+  "libX11" 
+  "libXtst" 
+  "libargon2" 
+  "libgcc" 
+  "libstdc++" 
+  "libusb1" 
+  "minizip-ng-compat" 
+  "pcsc-lite-libs" 
+  "qrencode-libs" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtsvg" 
+  "qt5-qtx11extras" 
+  "readline" 
+  "zlib-ng-compat" 
+]
+extra-source "keepassxc-2.7.7-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/keepassxc-2.7.7-3.fc40.x86_64.rpm"
+}

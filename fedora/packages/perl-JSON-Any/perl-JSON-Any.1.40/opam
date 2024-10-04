@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-JSON-Any-1.40-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-JSON-Any-1.40-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-JSON-XS" {>= "1.52"}
+  "perl-constant" 
+  "perl-libs" 
+]
+extra-source "perl-JSON-Any-1.40-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-JSON-Any-1.40-3.fc40.noarch.rpm"
+}

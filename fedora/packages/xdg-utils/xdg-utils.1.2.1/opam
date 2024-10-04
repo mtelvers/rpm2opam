@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xdg-utils-1.2.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xdg-utils-1.2.1-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "desktop-file-utils" 
+  "which" 
+]
+extra-source "xdg-utils-1.2.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xdg-utils-1.2.1-1.fc40.noarch.rpm"
+}

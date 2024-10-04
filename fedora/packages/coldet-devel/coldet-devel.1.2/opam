@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "coldet-devel-1.2-34.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coldet-devel-1.2-34.fc40.x86_64.rpm"]
+depends: [
+  "coldet" {= "1.2"}
+]
+extra-source "coldet-devel-1.2-34.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/coldet-devel-1.2-34.fc40.x86_64.rpm"
+}

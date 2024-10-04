@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "naver-nanum-fonts-all-3.020-37.20140930.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "naver-nanum-fonts-all-3.020-37.20140930.fc40.noarch.rpm"]
+depends: [
+  "naver-nanum-barun-gothic-fonts" {= "3.20"}
+  "naver-nanum-barun-pen-fonts" {= "3.20"}
+  "naver-nanum-brush-fonts" {= "3.20"}
+  "naver-nanum-gothic-fonts" {= "3.20"}
+  "naver-nanum-myeongjo-fonts" {= "3.20"}
+  "naver-nanum-pen-fonts" {= "3.20"}
+]
+extra-source "naver-nanum-fonts-all-3.020-37.20140930.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/naver-nanum-fonts-all-3.020-37.20140930.fc40.noarch.rpm"
+}

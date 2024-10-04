@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Moose-Autobox-0.16-1.29.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Moose-Autobox-0.16-1.29.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-List-MoreUtils" {>= "0.7"}
+  "perl-Moose" {>= "0.42"}
+  "perl-Syntax-Keyword-Junction" 
+  "perl-autobox" {>= "2.23"}
+  "perl-base" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-Moose-Autobox-0.16-1.29.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Moose-Autobox-0.16-1.29.noarch.rpm"
+}

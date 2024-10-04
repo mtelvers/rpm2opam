@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-pandas-2.2.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-pandas-2.2.1-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "python3" {= "3.12"}
+  "python3-Bottleneck" {>= "1.3.6"}
+  "python3-dateutil" {>= "2.8.2"}
+  "python3-numexpr" {>= "2.8.4"}
+  "python3-numpy" 
+  "python3-pytz" {>= "2020.1"}
+]
+extra-source "python3-pandas-2.2.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-pandas-2.2.1-1.fc40.x86_64.rpm"
+}

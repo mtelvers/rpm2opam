@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tcmu-runner-1.6.2-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tcmu-runner-1.6.2-2.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libkmod2" 
+  "libtcmalloc4" 
+  "libtcmu2" 
+  "libz-ng-compat1" 
+  "logrotate" 
+  "systemd" 
+]
+extra-source "tcmu-runner-1.6.2-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tcmu-runner-1.6.2-2.2.x86_64.rpm"
+}

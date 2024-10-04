@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libaravis-0_8-0-0.8.33-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libaravis-0_8-0-0.8.33-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libusb-1_0-0" 
+  "libxml2-2" 
+  "libz-ng-compat1" 
+]
+extra-source "libaravis-0_8-0-0.8.33-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libaravis-0_8-0-0.8.33-1.1.x86_64.rpm"
+}

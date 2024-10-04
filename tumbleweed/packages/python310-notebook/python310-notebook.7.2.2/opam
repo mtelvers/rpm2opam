@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-notebook-7.2.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-notebook-7.2.2-1.1.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "python310-base" 
+  "python310-jupyter-server" 
+  "python310-jupyterlab" 
+  "python310-jupyterlab-server" 
+  "python310-notebook-shim" 
+  "python310-tornado" {>= "6.2"}
+]
+extra-source "python310-notebook-7.2.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-notebook-7.2.2-1.1.noarch.rpm"
+}

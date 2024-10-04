@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "arts-1.5.10-61.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "arts-1.5.10-61.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "audiofile" 
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "libX11" 
+  "libmad" 
+  "libstdc++" 
+  "libvorbis" 
+  "qt3" 
+  "which" 
+]
+extra-source "arts-1.5.10-61.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/arts-1.5.10-61.fc40.x86_64.rpm"
+}

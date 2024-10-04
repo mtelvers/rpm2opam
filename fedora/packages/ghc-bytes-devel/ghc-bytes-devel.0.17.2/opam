@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-bytes-devel-0.17.2-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-bytes-devel-0.17.2-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-binary-devel" 
+  "ghc-binary-orphans-devel" 
+  "ghc-bytes" {= "0.17.2"}
+  "ghc-bytestring-devel" 
+  "ghc-cereal-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-hashable-devel" 
+  "ghc-mtl-devel" 
+  "ghc-scientific-devel" 
+  "ghc-text-devel" 
+  "ghc-time-devel" 
+  "ghc-transformers-compat-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-void-devel" 
+]
+extra-source "ghc-bytes-devel-0.17.2-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-bytes-devel-0.17.2-6.fc40.x86_64.rpm"
+}

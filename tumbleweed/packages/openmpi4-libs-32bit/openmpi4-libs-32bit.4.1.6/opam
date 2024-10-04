@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openmpi4-libs-32bit-4.1.6-6.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openmpi4-libs-32bit-4.1.6-6.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libevent-2_1-7-32bit" 
+  "libfabric1-32bit" 
+  "libgcc_s1-32bit" 
+  "libibverbs1-32bit" 
+  "librdmacm1-32bit" 
+]
+extra-source "openmpi4-libs-32bit-4.1.6-6.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openmpi4-libs-32bit-4.1.6-6.1.x86_64.rpm"
+}

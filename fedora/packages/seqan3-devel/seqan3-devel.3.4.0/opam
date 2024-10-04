@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "seqan3-devel-3.4.0-0.1.rc1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "seqan3-devel-3.4.0-0.1.rc1.fc40.x86_64.rpm"]
+depends: [
+  "bzip2-devel" {>= "1.0"}
+  "cereal-devel" {>= "1.3.2"}
+  "cmake" {>= "3.4"}
+  "cmake-filesystem" 
+  "range-v3-devel" {>= "0.11.0"}
+  "sdsl-lite-devel" {>= "3.0.1"}
+  "zlib-ng-compat-devel" {>= "1.2"}
+]
+extra-source "seqan3-devel-3.4.0-0.1.rc1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/seqan3-devel-3.4.0-0.1.rc1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "flite-2.2-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flite-2.2-1.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libflite1" 
+  "libflite_cmu_grapheme_lang1" 
+  "libflite_cmu_grapheme_lex1" 
+  "libflite_cmu_indic_lang1" 
+  "libflite_cmu_indic_lex1" 
+  "libflite_cmu_time_awb1" 
+  "libflite_cmu_us_awb1" 
+  "libflite_cmu_us_kal1" 
+  "libflite_cmu_us_kal16-1" 
+  "libflite_cmu_us_rms1" 
+  "libflite_cmu_us_slt1" 
+  "libflite_cmulex1" 
+  "libflite_usenglish1" 
+]
+extra-source "flite-2.2-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/flite-2.2-1.4.x86_64.rpm"
+}

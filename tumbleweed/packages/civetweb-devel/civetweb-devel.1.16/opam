@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "civetweb-devel-1.16-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "civetweb-devel-1.16-2.3.x86_64.rpm"]
+depends: [
+  "libcivetweb-cpp1_15_0" {= "1.16"}
+  "libcivetweb1_15_0" {= "1.16"}
+  "pkgconf-pkg-config" 
+]
+extra-source "civetweb-devel-1.16-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/civetweb-devel-1.16-2.3.x86_64.rpm"
+}

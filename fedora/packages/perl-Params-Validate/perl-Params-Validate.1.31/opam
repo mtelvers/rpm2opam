@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Params-Validate-1.31-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Params-Validate-1.31-7.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-Module-Implementation" 
+  "perl-Scalar-List-Utils" {>= "1.10"}
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-Params-Validate-1.31-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Params-Validate-1.31-7.fc40.x86_64.rpm"
+}

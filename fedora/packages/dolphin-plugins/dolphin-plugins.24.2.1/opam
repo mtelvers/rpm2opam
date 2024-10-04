@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dolphin-plugins-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dolphin-plugins-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "dolphin" {>= "24.2"}
+  "dolphin-libs" 
+  "glibc" 
+  "kf6-kcompletion" 
+  "kf6-kconfig" 
+  "kf6-kcoreaddons" 
+  "kf6-ki18n" 
+  "kf6-kio-core-libs" 
+  "kf6-kio-gui" 
+  "kf6-kio-widgets-libs" 
+  "kf6-kjobwidgets" 
+  "kf6-kservice" 
+  "kf6-ktexteditor" 
+  "kf6-ktextwidgets" 
+  "kf6-kwidgetsaddons" 
+  "kf6-kxmlgui" 
+  "kf6-solid" 
+  "libstdc++" 
+  "qt6-qt5compat" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+]
+extra-source "dolphin-plugins-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dolphin-plugins-24.02.1-1.fc40.x86_64.rpm"
+}

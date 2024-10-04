@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dyninst-testsuite-12.3.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dyninst-testsuite-12.3.0-6.fc40.x86_64.rpm"]
+depends: [
+  "dyninst" {= "12.3.0"}
+  "dyninst-devel" {= "12.3.0"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "tbb" 
+]
+extra-source "dyninst-testsuite-12.3.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dyninst-testsuite-12.3.0-6.fc40.x86_64.rpm"
+}

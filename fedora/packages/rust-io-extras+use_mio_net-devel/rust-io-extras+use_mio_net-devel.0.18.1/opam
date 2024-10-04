@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-io-extras+use_mio_net-devel-0.18.1-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-io-extras+use_mio_net-devel-0.18.1-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-io-extras+mio-devel" {= "0.18.1"}
+  "rust-io-extras-devel" {= "0.18.1"}
+  "rust-mio+default-devel" 
+  "rust-mio+net-devel" 
+]
+extra-source "rust-io-extras+use_mio_net-devel-0.18.1-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-io-extras+use_mio_net-devel-0.18.1-4.fc40.noarch.rpm"
+}

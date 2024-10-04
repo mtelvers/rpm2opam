@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-quickcheck_macros+default-devel-1.0.0-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-quickcheck_macros+default-devel-1.0.0-7.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-quickcheck_macros-devel" {= "1.0.0"}
+]
+extra-source "rust-quickcheck_macros+default-devel-1.0.0-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-quickcheck_macros+default-devel-1.0.0-7.fc40.noarch.rpm"
+}

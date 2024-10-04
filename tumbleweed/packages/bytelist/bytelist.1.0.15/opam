@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bytelist-1.0.15-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bytelist-1.0.15-2.1.noarch.rpm"]
+depends: [
+  "java-11-openj9" 
+  "javapackages-tools" 
+  "jcodings" 
+]
+extra-source "bytelist-1.0.15-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/bytelist-1.0.15-2.1.noarch.rpm"
+}

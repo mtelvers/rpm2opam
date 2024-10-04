@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "systemd-portable-256.6-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "systemd-portable-256.6-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libselinux1" 
+  "systemd" 
+]
+extra-source "systemd-portable-256.6-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/systemd-portable-256.6-1.2.x86_64.rpm"
+}

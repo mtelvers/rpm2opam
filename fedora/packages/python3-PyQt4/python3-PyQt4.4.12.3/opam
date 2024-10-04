@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-PyQt4-4.12.3-27.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-PyQt4-4.12.3-27.fc40.x86_64.rpm"]
+depends: [
+  "dbus-libs" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "phonon-qt4" 
+  "python3" {= "3.12"}
+  "python3-dbus" 
+  "python3-libs" 
+  "python3-pyqt4-sip" {>= "12.7"}
+  "qt" 
+  "qt-x11" 
+]
+extra-source "python3-PyQt4-4.12.3-27.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-PyQt4-4.12.3-27.fc40.x86_64.rpm"
+}

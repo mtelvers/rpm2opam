@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ftlint-2.13.2-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ftlint-2.13.2-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libfreetype6" 
+]
+extra-source "ftlint-2.13.2-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ftlint-2.13.2-2.2.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zynaddsubfx-bash-completion-3.0.6-3.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zynaddsubfx-bash-completion-3.0.6-3.6.x86_64.rpm"]
+depends: [
+  "bash" 
+  "zynaddsubfx" {= "3.0.6"}
+]
+extra-source "zynaddsubfx-bash-completion-3.0.6-3.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/zynaddsubfx-bash-completion-3.0.6-3.6.x86_64.rpm"
+}

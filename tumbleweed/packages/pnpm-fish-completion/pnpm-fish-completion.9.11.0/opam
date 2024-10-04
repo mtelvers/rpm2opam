@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pnpm-fish-completion-9.11.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pnpm-fish-completion-9.11.0-1.1.noarch.rpm"]
+depends: [
+  "fish" 
+]
+extra-source "pnpm-fish-completion-9.11.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pnpm-fish-completion-9.11.0-1.1.noarch.rpm"
+}

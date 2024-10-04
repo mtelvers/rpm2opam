@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libspiro-devel-20221101-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libspiro-devel-20221101-6.fc40.x86_64.rpm"]
+depends: [
+  "libspiro" {= "20221101"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libspiro-devel-20221101-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libspiro-devel-20221101-6.fc40.x86_64.rpm"
+}

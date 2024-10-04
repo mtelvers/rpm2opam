@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-tikz-lake-fig-2023.201.1.0svn55288-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-tikz-lake-fig-2023.201.1.0svn55288-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-colortbl" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-multirow" 
+  "texlive-pbox" 
+  "texlive-pgf" 
+  "texlive-relsize" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-subfiles" 
+  "texlive-tools" 
+]
+extra-source "texlive-tikz-lake-fig-2023.201.1.0svn55288-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-tikz-lake-fig-2023.201.1.0svn55288-slfo.1.1.4.noarch.rpm"
+}

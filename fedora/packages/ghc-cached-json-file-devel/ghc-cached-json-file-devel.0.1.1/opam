@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-cached-json-file-devel-0.1.1-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-cached-json-file-devel-0.1.1-16.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-cached-json-file" {= "0.1.1"}
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-directory-devel" 
+  "ghc-filepath-devel" 
+  "ghc-http-query-devel" 
+  "ghc-time-devel" 
+  "ghc-xdg-basedir-devel" 
+]
+extra-source "ghc-cached-json-file-devel-0.1.1-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-cached-json-file-devel-0.1.1-16.fc40.x86_64.rpm"
+}

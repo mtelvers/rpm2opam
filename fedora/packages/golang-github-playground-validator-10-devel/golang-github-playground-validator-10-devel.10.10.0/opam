@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-playground-validator-10-devel-10.10.0-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-playground-validator-10-devel-10.10.0-6.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-leodido-urn-devel" 
+  "golang-github-playground-locales-devel" 
+  "golang-github-playground-universal-translator-devel" 
+  "golang-x-crypto-devel" 
+  "golang-x-text-devel" 
+]
+extra-source "golang-github-playground-validator-10-devel-10.10.0-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-playground-validator-10-devel-10.10.0-6.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-opentelemetry-proto-devel-0.19.0-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-opentelemetry-proto-devel-0.19.0-5.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-grpc-ecosystem-gateway-2-devel" 
+  "golang-google-protobuf-devel" 
+]
+extra-source "golang-opentelemetry-proto-devel-0.19.0-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-opentelemetry-proto-devel-0.19.0-5.fc40.noarch.rpm"
+}

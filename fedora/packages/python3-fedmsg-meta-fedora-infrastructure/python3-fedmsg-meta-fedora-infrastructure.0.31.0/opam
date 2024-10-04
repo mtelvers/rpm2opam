@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-fedmsg-meta-fedora-infrastructure-0.31.0-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-fedmsg-meta-fedora-infrastructure-0.31.0-12.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-dateutil" 
+  "python3-fasjson-client" 
+  "python3-fedmsg" 
+  "python3-fedora" 
+  "python3-pytz" 
+]
+extra-source "python3-fedmsg-meta-fedora-infrastructure-0.31.0-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-fedmsg-meta-fedora-infrastructure-0.31.0-12.fc40.noarch.rpm"
+}

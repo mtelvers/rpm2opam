@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tabled+color-devel-0.14.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tabled+color-devel-0.14.0-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-papergrid+color-devel" 
+  "rust-tabled+ansi-str-devel" {= "0.14.0"}
+  "rust-tabled+ansitok-devel" {= "0.14.0"}
+  "rust-tabled+std-devel" {= "0.14.0"}
+  "rust-tabled-devel" {= "0.14.0"}
+]
+extra-source "rust-tabled+color-devel-0.14.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tabled+color-devel-0.14.0-4.fc40.noarch.rpm"
+}

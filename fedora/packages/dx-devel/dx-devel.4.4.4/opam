@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dx-devel-4.4.4-67.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dx-devel-4.4.4-67.fc40.x86_64.rpm"]
+depends: [
+  "dx-libs" {= "4.4.4"}
+]
+extra-source "dx-devel-4.4.4-67.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dx-devel-4.4.4-67.fc40.x86_64.rpm"
+}

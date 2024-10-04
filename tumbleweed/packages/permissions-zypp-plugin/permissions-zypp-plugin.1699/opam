@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "permissions-zypp-plugin-1699_20240522-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "permissions-zypp-plugin-1699_20240522-1.1.noarch.rpm"]
+depends: [
+  "libzypp" {= "1"}
+  "permissions" {= "1699"}
+  "python311-base" 
+  "python311-zypp-plugin" 
+]
+extra-source "permissions-zypp-plugin-1699_20240522-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/permissions-zypp-plugin-1699_20240522-1.1.noarch.rpm"
+}

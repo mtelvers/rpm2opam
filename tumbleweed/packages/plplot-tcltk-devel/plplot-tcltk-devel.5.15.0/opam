@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plplot-tcltk-devel-5.15.0-20.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plplot-tcltk-devel-5.15.0-20.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "itk" 
+  "libX11-6" 
+  "libplplot17" 
+  "libpython3_11-1_0" 
+  "pkgconf-pkg-config" 
+  "plplot-common" {= "5.15.0"}
+  "plplot-devel" 
+  "plplot-tcltk-libs" 
+  "python311-base" {= "3.11"}
+  "tcl" 
+  "tcl-devel" 
+  "tk" 
+  "tk-devel" 
+]
+extra-source "plplot-tcltk-devel-5.15.0-20.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/plplot-tcltk-devel-5.15.0-20.2.x86_64.rpm"
+}

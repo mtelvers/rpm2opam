@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lemonldap-ng-fastcgi-server-2.18.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lemonldap-ng-fastcgi-server-2.18.2-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "lemonldap-ng-conf" {= "2.18.2"}
+  "mod_fcgid" 
+  "perl-FCGI-ProcManager" 
+  "perl-Getopt-Long" 
+  "perl-Lemonldap-NG-Handler" 
+  "perl-POSIX" 
+  "perl-Plack" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "lemonldap-ng-fastcgi-server-2.18.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lemonldap-ng-fastcgi-server-2.18.2-1.fc40.noarch.rpm"
+}

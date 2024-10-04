@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bitcoin-core-desktop-26.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bitcoin-core-desktop-26.0-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libevent" 
+  "libgcc" 
+  "libnatpmp" 
+  "libstdc++" 
+  "miniupnpc" 
+  "qrencode-libs" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "sqlite-libs" 
+  "zeromq" 
+]
+extra-source "bitcoin-core-desktop-26.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bitcoin-core-desktop-26.0-3.fc40.x86_64.rpm"
+}

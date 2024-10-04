@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "scream-4.0-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scream-4.0-1.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libasound2" 
+  "libpulse0" 
+]
+extra-source "scream-4.0-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/scream-4.0-1.5.x86_64.rpm"
+}

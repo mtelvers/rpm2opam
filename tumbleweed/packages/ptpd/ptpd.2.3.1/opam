@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ptpd-2.3.1-10.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ptpd-2.3.1-10.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libpcap1" 
+  "libsnmp40" 
+  "systemd" 
+]
+extra-source "ptpd-2.3.1-10.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ptpd-2.3.1-10.2.x86_64.rpm"
+}

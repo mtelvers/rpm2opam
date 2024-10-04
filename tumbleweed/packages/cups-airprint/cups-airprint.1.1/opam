@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cups-airprint-1.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cups-airprint-1.1-2.1.noarch.rpm"]
+depends: [
+  "avahi" 
+  "cups" {>= "1.6"}
+  "cups-filters" {>= "1.0.25"}
+  "python311-base" 
+  "python311-pycups" 
+]
+extra-source "cups-airprint-1.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cups-airprint-1.1-2.1.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-JSON-Pointer-0.07-25.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-JSON-Pointer-0.07-25.fc40.noarch.rpm"]
+depends: [
+  "perl-B" 
+  "perl-Carp" {>= "1.20"}
+  "perl-Class-Accessor-Lite" {>= "0.5"}
+  "perl-Clone" {>= "0.36"}
+  "perl-Exporter" 
+  "perl-JSON" {>= "2.53"}
+  "perl-URI" {>= "3.31"}
+  "perl-libs" {>= "5.8.0"}
+  "perl-overload" 
+]
+extra-source "perl-JSON-Pointer-0.07-25.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-JSON-Pointer-0.07-25.fc40.noarch.rpm"
+}

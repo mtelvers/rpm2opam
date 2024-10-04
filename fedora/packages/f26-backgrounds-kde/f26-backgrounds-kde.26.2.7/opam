@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "f26-backgrounds-kde-26.2.7-14.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "f26-backgrounds-kde-26.2.7-14.fc39.noarch.rpm"]
+depends: [
+  "f26-backgrounds-base" {= "26.2.7"}
+  "kde-filesystem" 
+]
+extra-source "f26-backgrounds-kde-26.2.7-14.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/f26-backgrounds-kde-26.2.7-14.fc39.noarch.rpm"
+}

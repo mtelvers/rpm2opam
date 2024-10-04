@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libreoffice-langpack-ga-24.2.2.1-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libreoffice-langpack-ga-24.2.2.1-3.fc40.x86_64.rpm"]
+depends: [
+  "autocorr-ga" 
+  "hunspell-ga" 
+  "hyphen-ga" 
+  "libreoffice-core" {= "24.2.2.1"}
+  "mythes-ga" 
+]
+extra-source "libreoffice-langpack-ga-24.2.2.1-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libreoffice-langpack-ga-24.2.2.1-3.fc40.x86_64.rpm"
+}

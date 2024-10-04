@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CatalystX-Component-Traits-0.19-28.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CatalystX-Component-Traits-0.19-28.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Catalyst-Runtime" {>= "5.80005"}
+  "perl-Class-Load" 
+  "perl-List-MoreUtils" 
+  "perl-Moose" 
+  "perl-MooseX-Traits-Pluggable" {>= "0.8"}
+  "perl-Scalar-List-Utils" 
+  "perl-libs" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-CatalystX-Component-Traits-0.19-28.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CatalystX-Component-Traits-0.19-28.fc40.noarch.rpm"
+}

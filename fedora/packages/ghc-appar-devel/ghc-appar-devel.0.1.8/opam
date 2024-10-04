@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-appar-devel-0.1.8-21.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-appar-devel-0.1.8-21.fc40.x86_64.rpm"]
+depends: [
+  "ghc-appar" {= "0.1.8"}
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+]
+extra-source "ghc-appar-devel-0.1.8-21.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-appar-devel-0.1.8-21.fc40.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mc-4.8.31-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mc-4.8.31-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "e2fsprogs-libs" 
+  "glib2" 
+  "glibc" 
+  "gpm-libs" 
+  "perl-File-Basename" 
+  "perl-File-Temp" 
+  "perl-POSIX" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "slang" 
+]
+extra-source "mc-4.8.31-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mc-4.8.31-1.fc40.x86_64.rpm"
+}

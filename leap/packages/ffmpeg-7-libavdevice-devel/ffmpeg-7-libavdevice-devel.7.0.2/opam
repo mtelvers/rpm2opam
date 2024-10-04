@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ffmpeg-7-libavdevice-devel-7.0.2-lp160.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ffmpeg-7-libavdevice-devel-7.0.2-lp160.1.2.x86_64.rpm"]
+depends: [
+  "ffmpeg-7-libavcodec-devel" {= "7.0.2"}
+  "ffmpeg-7-libavfilter-devel" {= "7.0.2"}
+  "ffmpeg-7-libavformat-devel" {= "7.0.2"}
+  "ffmpeg-7-libavutil-devel" {= "7.0.2"}
+  "ffmpeg-7-libpostproc-devel" {= "7.0.2"}
+  "ffmpeg-7-libswresample-devel" {= "7.0.2"}
+  "ffmpeg-7-libswscale-devel" {= "7.0.2"}
+  "libavdevice61" {= "7.0.2"}
+  "pkgconf-pkg-config" 
+]
+extra-source "ffmpeg-7-libavdevice-devel-7.0.2-lp160.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/ffmpeg-7-libavdevice-devel-7.0.2-lp160.1.2.x86_64.rpm"
+}

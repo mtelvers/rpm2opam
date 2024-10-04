@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sca-patterns-sle15-1.5.8-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sca-patterns-sle15-1.5.8-1.1.noarch.rpm"]
+depends: [
+  "perl-base" 
+  "python311-base" 
+  "sca-patterns-base" {>= "1.5.0"}
+]
+extra-source "sca-patterns-sle15-1.5.8-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sca-patterns-sle15-1.5.8-1.1.noarch.rpm"
+}

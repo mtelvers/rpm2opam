@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mono-zeroconf-0.9.0-23.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mono-zeroconf-0.9.0-23.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "mono-core" {= "4.0.0.0"}
+  "mono-zeroconf-provider-avahi" 
+]
+extra-source "mono-zeroconf-0.9.0-23.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mono-zeroconf-0.9.0-23.1.noarch.rpm"
+}

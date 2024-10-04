@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "magic-wormhole.rs-zsh-completion-0.7.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "magic-wormhole.rs-zsh-completion-0.7.1-1.1.noarch.rpm"]
+depends: [
+  "magic-wormhole-rs" {= "0.7.1"}
+  "zsh" 
+]
+extra-source "magic-wormhole.rs-zsh-completion-0.7.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/magic-wormhole.rs-zsh-completion-0.7.1-1.1.noarch.rpm"
+}

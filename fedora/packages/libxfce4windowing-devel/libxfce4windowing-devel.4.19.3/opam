@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libxfce4windowing-devel-4.19.3^git20240317.0a487d7-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxfce4windowing-devel-4.19.3^git20240317.0a487d7-2.fc40.x86_64.rpm"]
+depends: [
+  "gtk3-devel" 
+  "libxfce4windowing" {= "4.19.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libxfce4windowing-devel-4.19.3^git20240317.0a487d7-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libxfce4windowing-devel-4.19.3^git20240317.0a487d7-2.fc40.x86_64.rpm"
+}

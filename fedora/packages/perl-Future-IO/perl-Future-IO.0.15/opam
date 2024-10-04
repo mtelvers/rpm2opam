@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Future-IO-0.15-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Future-IO-0.15-1.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Errno" 
+  "perl-Future" 
+  "perl-Socket" 
+  "perl-Struct-Dumb" 
+  "perl-Time-HiRes" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" {>= "5.14.0"}
+]
+extra-source "perl-Future-IO-0.15-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Future-IO-0.15-1.fc40.noarch.rpm"
+}

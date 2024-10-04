@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-vim-vint-0.3.21-6.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-vim-vint-0.3.21-6.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-PyYAML" {>= "3.11"}
+  "python311-ansicolor" {>= "0.2.4"}
+  "python311-base" 
+  "python311-chardet" {>= "2.3.0"}
+  "update-alternatives" 
+]
+extra-source "python311-vim-vint-0.3.21-6.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-vim-vint-0.3.21-6.2.noarch.rpm"
+}

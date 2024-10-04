@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-versioningit-3.1.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-versioningit-3.1.1-1.1.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "python312-base" 
+  "python312-packaging" 
+  "python312-tomli" {>= "1.2"}
+]
+extra-source "python312-versioningit-3.1.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-versioningit-3.1.1-1.1.noarch.rpm"
+}

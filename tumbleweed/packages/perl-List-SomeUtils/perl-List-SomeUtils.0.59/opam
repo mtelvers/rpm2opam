@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-List-SomeUtils-0.59-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-List-SomeUtils-0.59-1.7.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-List-SomeUtils-XS" {>= "0.54"}
+  "perl-Module-Implementation" {>= "0.4"}
+]
+extra-source "perl-List-SomeUtils-0.59-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-List-SomeUtils-0.59-1.7.noarch.rpm"
+}

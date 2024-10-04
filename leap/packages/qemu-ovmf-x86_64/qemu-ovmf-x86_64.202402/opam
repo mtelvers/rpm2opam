@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qemu-ovmf-x86_64-202402-slfo.1.1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qemu-ovmf-x86_64-202402-slfo.1.1.1.noarch.rpm"]
+depends: [
+  "qemu" 
+]
+extra-source "qemu-ovmf-x86_64-202402-slfo.1.1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/qemu-ovmf-x86_64-202402-slfo.1.1.1.noarch.rpm"
+}

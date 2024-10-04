@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "homebank-lang-5.8.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "homebank-lang-5.8.3-1.1.noarch.rpm"]
+depends: [
+  "homebank" {= "5.8.3"}
+]
+extra-source "homebank-lang-5.8.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/homebank-lang-5.8.3-1.1.noarch.rpm"
+}

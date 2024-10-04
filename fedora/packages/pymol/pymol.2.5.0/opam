@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pymol-2.5.0-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pymol-2.5.0-10.fc40.x86_64.rpm"]
+depends: [
+  "apbs" 
+  "bash" 
+  "chemical-mime-data" 
+  "freetype" 
+  "glibc" 
+  "libGLEW" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libgomp" 
+  "libpng" 
+  "libstdc++" 
+  "libxml2" 
+  "netcdf" 
+  "python3" {= "3.12"}
+  "python3-PyQt4" 
+  "python3-mmtf" 
+  "python3-numpy" 
+  "python3-pmw" 
+  "python3-tkinter" 
+]
+extra-source "pymol-2.5.0-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pymol-2.5.0-10.fc40.x86_64.rpm"
+}

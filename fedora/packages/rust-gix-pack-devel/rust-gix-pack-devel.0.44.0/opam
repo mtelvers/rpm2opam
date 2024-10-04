@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gix-pack-devel-0.44.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gix-pack-devel-0.44.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-gix-chunk+default-devel" 
+  "rust-gix-features+crc32-devel" 
+  "rust-gix-features+default-devel" 
+  "rust-gix-features+progress-devel" 
+  "rust-gix-features+rustsha1-devel" 
+  "rust-gix-features+zlib-devel" 
+  "rust-gix-hash+default-devel" 
+  "rust-gix-hashtable+default-devel" 
+  "rust-gix-object+default-devel" 
+  "rust-gix-path+default-devel" 
+  "rust-gix-tempfile-devel" 
+  "rust-memmap2+default-devel" 
+  "rust-parking_lot-devel" 
+  "rust-smallvec+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-gix-pack-devel-0.44.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gix-pack-devel-0.44.0-2.fc40.noarch.rpm"
+}

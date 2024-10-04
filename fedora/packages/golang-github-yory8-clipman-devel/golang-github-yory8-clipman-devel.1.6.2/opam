@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-yory8-clipman-devel-1.6.2-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-yory8-clipman-devel-1.6.2-5.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-kballard-shellquote-devel" 
+  "golang-gopkg-alecthomas-kingpin-2-devel" 
+]
+extra-source "golang-github-yory8-clipman-devel-1.6.2-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-yory8-clipman-devel-1.6.2-5.fc40.noarch.rpm"
+}

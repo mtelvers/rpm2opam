@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-desktop3-devel-44.0-15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-desktop3-devel-44.0-15.fc40.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf2-devel" {>= "2.36.5"}
+  "glib2-devel" {>= "2.53.0"}
+  "gnome-desktop3" {= "44.0"}
+  "gsettings-desktop-schemas-devel" {>= "3.27.0"}
+  "gtk3-devel" {>= "3.3.6"}
+  "iso-codes-devel" 
+  "libseccomp-devel" 
+  "libxkbcommon-devel" 
+  "pkgconf-pkg-config" 
+  "systemd-devel" 
+  "xkeyboard-config-devel" 
+]
+extra-source "gnome-desktop3-devel-44.0-15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-desktop3-devel-44.0-15.fc40.x86_64.rpm"
+}

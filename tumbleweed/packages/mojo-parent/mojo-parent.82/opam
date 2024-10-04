@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mojo-parent-82-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mojo-parent-82-1.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "junit5-bom" 
+]
+extra-source "mojo-parent-82-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mojo-parent-82-1.1.noarch.rpm"
+}

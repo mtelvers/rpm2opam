@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "featherpad-lang-1.5.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "featherpad-lang-1.5.1-1.1.noarch.rpm"]
+depends: [
+  "featherpad" {= "1.5.1"}
+]
+extra-source "featherpad-lang-1.5.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/featherpad-lang-1.5.1-1.1.noarch.rpm"
+}

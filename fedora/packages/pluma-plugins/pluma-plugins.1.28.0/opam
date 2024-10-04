@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pluma-plugins-1.28.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pluma-plugins-1.28.0-1.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "gtksourceview4" 
+  "libgcc" 
+  "libpeas1" 
+  "libpeas1-gtk" 
+  "libpeas1-loader-python3" 
+  "pluma" 
+  "pluma-plugins-data" {= "1.28.0"}
+  "python3-dbus" 
+]
+extra-source "pluma-plugins-1.28.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pluma-plugins-1.28.0-1.fc40.x86_64.rpm"
+}

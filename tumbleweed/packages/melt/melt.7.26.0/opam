@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "melt-7.26.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "melt-7.26.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libSDL2-2_0-0" 
+  "libmlt-7-7" 
+  "libmlt7-data" {= "7.26.0"}
+  "libmlt7-modules" {= "7.26.0"}
+]
+extra-source "melt-7.26.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/melt-7.26.0-1.1.x86_64.rpm"
+}

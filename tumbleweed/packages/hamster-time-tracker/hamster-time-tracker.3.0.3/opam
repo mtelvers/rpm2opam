@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hamster-time-tracker-3.0.3-13.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hamster-time-tracker-3.0.3-13.1.noarch.rpm"]
+depends: [
+  "intltool" 
+  "python311-base" 
+  "python311-dbus-python" 
+  "python311-gobject-Gdk" 
+  "python311-pycairo" 
+  "python311-pyxdg" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" 
+]
+extra-source "hamster-time-tracker-3.0.3-13.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/hamster-time-tracker-3.0.3-13.1.noarch.rpm"
+}

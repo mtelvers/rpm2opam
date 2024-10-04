@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-AppConfig-Std-1.10-25.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-AppConfig-Std-1.10-25.fc40.noarch.rpm"]
+depends: [
+  "perl-AppConfig" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-vars" 
+]
+extra-source "perl-AppConfig-Std-1.10-25.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-AppConfig-Std-1.10-25.fc40.noarch.rpm"
+}

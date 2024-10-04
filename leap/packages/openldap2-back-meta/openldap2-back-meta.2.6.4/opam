@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openldap2-back-meta-2.6.4-slfo.1.1.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openldap2-back-meta-2.6.4-slfo.1.1.10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libldap2" 
+  "openldap2" {= "2.6.4"}
+]
+extra-source "openldap2-back-meta-2.6.4-slfo.1.1.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/openldap2-back-meta-2.6.4-slfo.1.1.10.x86_64.rpm"
+}

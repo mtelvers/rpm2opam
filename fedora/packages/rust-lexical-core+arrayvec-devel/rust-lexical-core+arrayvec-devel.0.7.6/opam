@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-lexical-core+arrayvec-devel-0.7.6-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-lexical-core+arrayvec-devel-0.7.6-10.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-arrayvec-devel" 
+  "rust-arrayvec0-5+array-sizes-33-128-devel" 
+  "rust-lexical-core-devel" {= "0.7.6"}
+]
+extra-source "rust-lexical-core+arrayvec-devel-0.7.6-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-lexical-core+arrayvec-devel-0.7.6-10.fc40.noarch.rpm"
+}

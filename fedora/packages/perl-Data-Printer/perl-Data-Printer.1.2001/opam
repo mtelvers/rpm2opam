@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Data-Printer-1.002001-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Data-Printer-1.002001-1.fc40.noarch.rpm"]
+depends: [
+  "perl-B" 
+  "perl-Fcntl" 
+  "perl-File-HomeDir" {>= "0.91"}
+  "perl-Hash-Util-FieldHash" 
+  "perl-Package-Stash" {>= "0.3"}
+  "perl-Scalar-List-Utils" 
+  "perl-Term-ANSIColor" {>= "3"}
+  "perl-constant" 
+  "perl-libs" 
+  "perl-mro" 
+  "perl-version" {>= "0.77"}
+]
+extra-source "perl-Data-Printer-1.002001-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Data-Printer-1.002001-1.fc40.noarch.rpm"
+}

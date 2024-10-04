@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "deepin-draw-6.0.6-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deepin-draw-6.0.6-3.fc40.x86_64.rpm"]
+depends: [
+  "deepin-qt5integration" 
+  "deepin-session-ui" 
+  "dtkcore" 
+  "dtkgui" 
+  "dtkwidget" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtsvg" 
+]
+extra-source "deepin-draw-6.0.6-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/deepin-draw-6.0.6-3.fc40.x86_64.rpm"
+}

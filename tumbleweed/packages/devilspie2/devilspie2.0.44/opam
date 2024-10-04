@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "devilspie2-0.44-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "devilspie2-0.44-1.4.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libXinerama1" 
+  "libgtk-3-0" 
+  "liblua5_3-5" 
+  "libwnck-3-0" 
+]
+extra-source "devilspie2-0.44-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/devilspie2-0.44-1.4.x86_64.rpm"
+}

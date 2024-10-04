@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lua53-5.3.6-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lua53-5.3.6-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "liblua5_3-5" 
+  "libreadline8" 
+  "update-alternatives" 
+]
+extra-source "lua53-5.3.6-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/lua53-5.3.6-slfo.1.1.7.x86_64.rpm"
+}

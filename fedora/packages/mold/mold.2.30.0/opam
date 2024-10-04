@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mold-2.30.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mold-2.30.0-1.fc40.x86_64.rpm"]
+depends: [
+  "alternatives" 
+  "bash" 
+  "blake3" 
+  "glibc" 
+  "libstdc++" 
+  "libzstd" 
+  "mimalloc" 
+  "tbb" 
+  "zlib-ng-compat" 
+]
+extra-source "mold-2.30.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mold-2.30.0-1.fc40.x86_64.rpm"
+}

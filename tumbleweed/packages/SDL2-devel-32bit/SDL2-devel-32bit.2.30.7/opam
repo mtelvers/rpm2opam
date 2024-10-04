@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "SDL2-devel-32bit-2.30.7-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "SDL2-devel-32bit-2.30.7-1.1.x86_64.rpm"]
+depends: [
+  "SDL2-devel" {= "2.30.7"}
+  "bash-sh" 
+  "libSDL2-2_0-0-32bit" {= "2.30.7"}
+  "pkgconf-pkg-config" 
+]
+extra-source "SDL2-devel-32bit-2.30.7-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/SDL2-devel-32bit-2.30.7-1.1.x86_64.rpm"
+}

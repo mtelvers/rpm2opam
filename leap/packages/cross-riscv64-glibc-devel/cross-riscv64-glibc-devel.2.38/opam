@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cross-riscv64-glibc-devel-2.38-slfo.1.3.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cross-riscv64-glibc-devel-2.38-slfo.1.3.3.noarch.rpm"]
+depends: [
+  "cross-riscv64-linux-glibc-devel" 
+]
+extra-source "cross-riscv64-glibc-devel-2.38-slfo.1.3.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/cross-riscv64-glibc-devel-2.38-slfo.1.3.3.noarch.rpm"
+}

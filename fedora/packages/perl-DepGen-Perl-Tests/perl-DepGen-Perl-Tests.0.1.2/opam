@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-DepGen-Perl-Tests-0.1.2-24.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DepGen-Perl-Tests-0.1.2-24.fc40.noarch.rpm"]
+depends: [
+  "findutils" 
+  "gcc" 
+  "make" 
+  "perl-AutoLoader" 
+  "perl-Exporter" 
+  "perl-ExtUtils-MakeMaker" 
+  "perl-File-Path" 
+  "perl-File-ShareDir" 
+  "perl-File-Temp" 
+  "perl-PathTools" 
+  "perl-RPM2" 
+  "perl-Test-Simple" 
+  "perl-devel" 
+  "perl-generators" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-version" {>= "0.77"}
+  "rpm-build" 
+  "tar" 
+]
+extra-source "perl-DepGen-Perl-Tests-0.1.2-24.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-DepGen-Perl-Tests-0.1.2-24.fc40.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gperftools-devel-2.15-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gperftools-devel-2.15-1.3.x86_64.rpm"]
+depends: [
+  "gperftools" {= "2.15"}
+  "libprofiler0" {= "2.15"}
+  "libstdc++-devel" 
+  "libtcmalloc4" {= "2.15"}
+  "libtcmalloc_and_profiler4" {= "2.15"}
+  "libtcmalloc_debug4" {= "2.15"}
+  "libtcmalloc_minimal4" {= "2.15"}
+  "libtcmalloc_minimal_debug4" {= "2.15"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gperftools-devel-2.15-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gperftools-devel-2.15-1.3.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gap-pkg-hap-1.62-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-pkg-hap-1.62-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "gap-pkg-aclib" 
+  "gap-pkg-crystcat" 
+  "gap-pkg-fga" 
+  "gap-pkg-nq" 
+  "gap-pkg-polycyclic" 
+  "perl-interpreter" 
+  "xdg-utils" 
+]
+extra-source "gap-pkg-hap-1.62-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gap-pkg-hap-1.62-3.fc40.noarch.rpm"
+}

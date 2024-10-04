@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libiec61883-devel-1.2.0-slfo.1.1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libiec61883-devel-1.2.0-slfo.1.1.4.x86_64.rpm"]
+depends: [
+  "libiec61883-0" {= "1.2.0"}
+  "libraw1394-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libiec61883-devel-1.2.0-slfo.1.1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libiec61883-devel-1.2.0-slfo.1.1.4.x86_64.rpm"
+}

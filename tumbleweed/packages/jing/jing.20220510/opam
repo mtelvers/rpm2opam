@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jing-20220510-5.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jing-20220510-5.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "isorelax" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+  "relaxngDatatype" {>= "2011.1"}
+  "saxon10" 
+  "xerces-j2" 
+  "xml-commons-apis" 
+  "xml-commons-resolver" 
+]
+extra-source "jing-20220510-5.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jing-20220510-5.2.noarch.rpm"
+}

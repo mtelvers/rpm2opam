@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-sip6-devel-6.8.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-sip6-devel-6.8.3-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gcc-c++" 
+  "python310-base" 
+  "python310-packaging" 
+  "python310-setuptools" 
+  "python310-tomli" 
+  "update-alternatives" 
+]
+extra-source "python310-sip6-devel-6.8.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-sip6-devel-6.8.3-1.1.noarch.rpm"
+}

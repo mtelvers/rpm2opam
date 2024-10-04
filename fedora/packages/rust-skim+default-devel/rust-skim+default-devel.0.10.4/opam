@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-skim+default-devel-0.10.4-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-skim+default-devel-0.10.4-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-skim+cli-devel" {= "0.10.4"}
+  "rust-skim-devel" {= "0.10.4"}
+]
+extra-source "rust-skim+default-devel-0.10.4-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-skim+default-devel-0.10.4-3.fc40.noarch.rpm"
+}

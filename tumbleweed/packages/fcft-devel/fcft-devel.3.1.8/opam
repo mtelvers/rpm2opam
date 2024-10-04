@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fcft-devel-3.1.8-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fcft-devel-3.1.8-1.2.x86_64.rpm"]
+depends: [
+  "fontconfig-devel" 
+  "freetype2-devel" 
+  "harfbuzz-devel" 
+  "libfcft4" {= "3.1.8"}
+  "libpixman-1-0-devel" 
+  "pkgconf-pkg-config" 
+  "tllist-devel" {>= "1.0.1"}
+  "utf8proc-devel" 
+]
+extra-source "fcft-devel-3.1.8-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/fcft-devel-3.1.8-1.2.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "system-user-pulse-17.0-4.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "system-user-pulse-17.0-4.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "system-group-hardware" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "system-user-pulse-17.0-4.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/system-user-pulse-17.0-4.4.noarch.rpm"
+}

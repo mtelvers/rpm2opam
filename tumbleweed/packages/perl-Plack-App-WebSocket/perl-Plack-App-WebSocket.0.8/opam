@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Plack-App-WebSocket-0.08-1.18.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Plack-App-WebSocket-0.08-1.18.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-AnyEvent" 
+  "perl-AnyEvent-WebSocket-Server" {>= "0.6"}
+  "perl-Devel-GlobalDestruction" 
+  "perl-Plack" 
+  "perl-Try-Tiny" 
+  "perl-base" 
+]
+extra-source "perl-Plack-App-WebSocket-0.08-1.18.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Plack-App-WebSocket-0.08-1.18.noarch.rpm"
+}

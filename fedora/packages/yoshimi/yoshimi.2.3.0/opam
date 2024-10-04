@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "yoshimi-2.3.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yoshimi-2.3.0-3.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "cairo" 
+  "fftw-libs-single" 
+  "fltk" 
+  "glibc" 
+  "jack-audio-connection-kit" 
+  "libgcc" 
+  "libstdc++" 
+  "mxml" 
+  "ncurses-libs" 
+  "readline" 
+  "zlib-ng-compat" 
+]
+extra-source "yoshimi-2.3.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/y/yoshimi-2.3.0-3.fc40.x86_64.rpm"
+}

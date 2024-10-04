@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rstudio-2023.12.1+402-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rstudio-2023.12.1+402-2.fc40.x86_64.rpm"]
+depends: [
+  "R-core" 
+  "bash" 
+  "boost-chrono" 
+  "boost-filesystem" 
+  "boost-iostreams" 
+  "boost-program-options" 
+  "boost-thread" 
+  "fmt" 
+  "glibc" 
+  "glyphography-newscycle-fonts" 
+  "hunspell" 
+  "lato-fonts" 
+  "libgcc" 
+  "libstdc++" 
+  "libuuid" 
+  "mathjax" 
+  "nodejs" 
+  "openssl-libs" 
+  "pandoc" 
+  "soci" 
+  "soci-sqlite3" 
+  "yaml-cpp" 
+  "zlib-ng-compat" 
+]
+extra-source "rstudio-2023.12.1+402-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rstudio-2023.12.1+402-2.fc40.x86_64.rpm"
+}

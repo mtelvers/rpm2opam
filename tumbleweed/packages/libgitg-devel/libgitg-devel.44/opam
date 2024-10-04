@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgitg-devel-44-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgitg-devel-44-1.3.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.68"}
+  "gtk3-devel" {>= "3.20.0"}
+  "libdazzle-devel" 
+  "libgee-devel" 
+  "libgit2-glib-devel" {>= "1.1.0"}
+  "libgitg-1_0-0" {= "44"}
+  "libgitg-ext-1_0-0" {= "44"}
+  "libgpgme-devel" 
+  "pkgconf-pkg-config" 
+  "python3-GitgExt" {= "44"}
+  "typelib-1_0-Gitg-1_0" {= "44"}
+  "typelib-1_0-GitgExt-1_0" {= "44"}
+]
+extra-source "libgitg-devel-44-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgitg-devel-44-1.3.x86_64.rpm"
+}

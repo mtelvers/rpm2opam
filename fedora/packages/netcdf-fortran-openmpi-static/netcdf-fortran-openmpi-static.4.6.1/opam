@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "netcdf-fortran-openmpi-static-4.6.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netcdf-fortran-openmpi-static-4.6.1-1.fc40.x86_64.rpm"]
+depends: [
+  "netcdf-fortran-openmpi-devel" {= "4.6.1"}
+]
+extra-source "netcdf-fortran-openmpi-static-4.6.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/netcdf-fortran-openmpi-static-4.6.1-1.fc40.x86_64.rpm"
+}

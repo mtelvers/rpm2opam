@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libplacebo349-7.349.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libplacebo349-7.349.0-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libdovi3" 
+  "libgcc_s1" 
+  "liblcms2-2" 
+  "libshaderc_shared1" 
+  "libstdc++6" 
+  "libunwind8" 
+  "libvulkan1" 
+]
+extra-source "libplacebo349-7.349.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libplacebo349-7.349.0-1.3.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Device-Yeelight-0.13-1.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Device-Yeelight-0.13-1.15.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-IO-Socket-Multicast" {>= "1.12"}
+  "perl-JSON" {>= "2.97"}
+  "perl-base" {>= "1.38"}
+]
+extra-source "perl-Device-Yeelight-0.13-1.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Device-Yeelight-0.13-1.15.noarch.rpm"
+}

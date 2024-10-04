@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc9.4-text-devel-2.0.2-27.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc9.4-text-devel-2.0.2-27.fc40.x86_64.rpm"]
+depends: [
+  "ghc9-4-array-devel" 
+  "ghc9-4-base-devel" 
+  "ghc9-4-binary-devel" 
+  "ghc9-4-bytestring-devel" 
+  "ghc9-4-compiler" {= "9.4.8"}
+  "ghc9-4-deepseq-devel" 
+  "ghc9-4-template-haskell-devel" 
+  "ghc9-4-text" {= "2.0.2"}
+]
+extra-source "ghc9.4-text-devel-2.0.2-27.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc9.4-text-devel-2.0.2-27.fc40.x86_64.rpm"
+}

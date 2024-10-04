@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cairo-gobject-devel-1.18.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cairo-gobject-devel-1.18.0-3.fc40.x86_64.rpm"]
+depends: [
+  "cairo-devel" {= "1.18.0"}
+  "cairo-gobject" {= "1.18.0"}
+  "fontconfig-devel" {>= "2.2.95"}
+  "freetype-devel" {>= "9.7.3"}
+  "glib2-devel" {>= "2.14"}
+  "libX11-devel" 
+  "libXext-devel" 
+  "libXrender-devel" {>= "0.6"}
+  "libpng-devel" 
+  "libxcb-devel" {>= "1.6"}
+  "pixman-devel" {>= "0.36.0"}
+  "pkgconf-pkg-config" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "cairo-gobject-devel-1.18.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cairo-gobject-devel-1.18.0-3.fc40.x86_64.rpm"
+}

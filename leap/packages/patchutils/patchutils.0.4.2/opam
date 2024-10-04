@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "patchutils-0.4.2-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "patchutils-0.4.2-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "diffutils" 
+  "glibc" 
+  "patch" 
+  "perl-base" 
+  "python311-base" 
+]
+extra-source "patchutils-0.4.2-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/patchutils-0.4.2-slfo.1.1.7.x86_64.rpm"
+}

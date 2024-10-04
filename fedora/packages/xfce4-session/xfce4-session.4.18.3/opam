@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xfce4-session-4.18.3-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xfce4-session-4.18.3-3.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "bash" 
+  "cairo" 
+  "cairo-gobject" 
+  "exo" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "iceauth" 
+  "libICE" 
+  "libSM" 
+  "libX11" 
+  "libwnck3" 
+  "libxfce4ui" 
+  "libxfce4util" 
+  "pango" 
+  "polkit-libs" 
+  "systemd" {>= "195"}
+  "xfce-polkit" {>= "0.2"}
+  "xfconf" 
+  "xrdb" 
+  "xset" 
+]
+extra-source "xfce4-session-4.18.3-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xfce4-session-4.18.3-3.fc40.x86_64.rpm"
+}

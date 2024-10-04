@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmodulemd-2.15.0-11.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmodulemd-2.15.0-11.el10.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "libgcc" 
+  "libyaml" 
+  "rpm-libs" 
+]
+extra-source "libmodulemd-2.15.0-11.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/libmodulemd-2.15.0-11.el10.x86_64.rpm"
+}

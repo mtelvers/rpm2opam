@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "avogadrolibs-devel-1.98.1-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "avogadrolibs-devel-1.98.1-2.2.x86_64.rpm"]
+depends: [
+  "Mesa-libGL-devel" 
+  "avogadrolibs-plugins" {= "1.98.1"}
+  "glew-devel" 
+  "libAvogadro1" {= "1.98.1"}
+  "libQt5Network-devel" 
+  "libQt5Widgets-devel" 
+  "molequeue-devel" 
+]
+extra-source "avogadrolibs-devel-1.98.1-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/avogadrolibs-devel-1.98.1-2.2.x86_64.rpm"
+}

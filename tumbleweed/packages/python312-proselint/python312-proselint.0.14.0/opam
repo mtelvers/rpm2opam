@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-proselint-0.14.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-proselint-0.14.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-click" 
+  "python312-dbm" 
+  "update-alternatives" 
+]
+extra-source "python312-proselint-0.14.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-proselint-0.14.0-1.1.noarch.rpm"
+}

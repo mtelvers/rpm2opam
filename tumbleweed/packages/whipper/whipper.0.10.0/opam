@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "whipper-0.10.0-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "whipper-0.10.0-4.1.x86_64.rpm"]
+depends: [
+  "cd-paranoia" {>= "10.2"}
+  "cdrdao" 
+  "flac" 
+  "glibc" 
+  "libsndfile1" 
+  "python311-base" 
+  "python311-discid" 
+  "python311-gobject" 
+  "python311-musicbrainzngs" 
+  "python311-mutagen" 
+  "python311-pycdio" 
+  "python311-ruamel-yaml" 
+  "sox" 
+  "typelib-1_0-GLib-2_0" 
+]
+extra-source "whipper-0.10.0-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/whipper-0.10.0-4.1.x86_64.rpm"
+}

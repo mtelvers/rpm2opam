@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-microsoft-dev-tunnels-devel-0.0.25-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-microsoft-dev-tunnels-devel-0.0.25-3.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-gorilla-websocket-devel" 
+  "golang-github-rodaine-table-devel" 
+  "golang-x-crypto-devel" 
+]
+extra-source "golang-github-microsoft-dev-tunnels-devel-0.0.25-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-microsoft-dev-tunnels-devel-0.0.25-3.fc40.noarch.rpm"
+}

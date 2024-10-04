@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rpm-ostree-2024.4-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rpm-ostree-2024.4-5.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bubblewrap" 
+  "fuse" 
+  "glib2" 
+  "glibc" 
+  "json-c" 
+  "json-glib" 
+  "libarchive" 
+  "libcap" 
+  "libgcc" 
+  "libmodulemd" {>= "2.13.0"}
+  "librepo" {>= "1.13.1"}
+  "libsolv" 
+  "libstdc++" 
+  "openssl-libs" 
+  "ostree" 
+  "ostree-libs" 
+  "polkit-libs" 
+  "rpm-libs" 
+  "rpm-ostree-libs" {= "2024.4"}
+  "skopeo" 
+  "sqlite-libs" 
+  "systemd-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "rpm-ostree-2024.4-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rpm-ostree-2024.4-5.fc40.x86_64.rpm"
+}

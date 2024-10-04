@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-App-Cmd-0.336-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-App-Cmd-0.336-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Capture-Tiny" {>= "0.13"}
+  "perl-Carp" 
+  "perl-Class-Load" {>= "0.6"}
+  "perl-Data-OptList" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long-Descriptive" {>= "0.84"}
+  "perl-IO-TieCombine" {>= "1"}
+  "perl-Module-Pluggable" 
+  "perl-String-RewritePrefix" 
+  "perl-Sub-Exporter" {>= "0.975"}
+  "perl-Sub-Install" 
+  "perl-constant" 
+  "perl-experimental" 
+  "perl-libs" {>= "5.20.0"}
+  "perl-parent" 
+]
+extra-source "perl-App-Cmd-0.336-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-App-Cmd-0.336-3.fc40.noarch.rpm"
+}

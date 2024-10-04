@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qps-lang-2.9.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qps-lang-2.9.0-1.1.noarch.rpm"]
+depends: [
+  "qps" {= "2.9.0"}
+]
+extra-source "qps-lang-2.9.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/qps-lang-2.9.0-1.1.noarch.rpm"
+}

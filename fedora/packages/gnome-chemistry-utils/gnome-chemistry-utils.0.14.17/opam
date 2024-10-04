@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-chemistry-utils-0.14.17-46.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-chemistry-utils-0.14.17-46.fc40.x86_64.rpm"]
+depends: [
+  "gchem3d" {= "0.14.17"}
+  "gchemcalc" {= "0.14.17"}
+  "gchempaint" {= "0.14.17"}
+  "gchemtable" {= "0.14.17"}
+  "gcrystal" {= "0.14.17"}
+  "gspectrum" {= "0.14.17"}
+]
+extra-source "gnome-chemistry-utils-0.14.17-46.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-chemistry-utils-0.14.17-46.fc40.x86_64.rpm"
+}

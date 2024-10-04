@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "owncloud-client-2.10.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "owncloud-client-2.10.1-5.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libstdc++" 
+  "owncloud-client-libs" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qtkeychain-qt5" 
+  "qtsingleapplication-qt5" 
+]
+extra-source "owncloud-client-2.10.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/owncloud-client-2.10.1-5.fc40.x86_64.rpm"
+}

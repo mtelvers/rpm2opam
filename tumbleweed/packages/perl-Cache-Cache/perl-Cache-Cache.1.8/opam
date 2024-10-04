@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Cache-Cache-1.08-1.31.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Cache-Cache-1.08-1.31.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Digest-SHA1" {>= "2.2"}
+  "perl-Error" {>= "0.15"}
+  "perl-IPC-ShareLite" {>= "0.9"}
+]
+extra-source "perl-Cache-Cache-1.08-1.31.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Cache-Cache-1.08-1.31.noarch.rpm"
+}

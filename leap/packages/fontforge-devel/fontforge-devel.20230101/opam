@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fontforge-devel-20230101-slfo.1.2.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fontforge-devel-20230101-slfo.1.2.7.x86_64.rpm"]
+depends: [
+  "fontforge" {= "20230101"}
+  "freetype2-devel" 
+]
+extra-source "fontforge-devel-20230101-slfo.1.2.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/fontforge-devel-20230101-slfo.1.2.7.x86_64.rpm"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MooseX-Declare-0.43-26.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Declare-0.43-26.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Devel-Declare" 
+  "perl-Module-Runtime" 
+  "perl-Moose" {>= "0.90"}
+  "perl-MooseX-Method-Signatures" {>= "0.36"}
+  "perl-MooseX-Role-Parameterized" {>= "0.12"}
+  "perl-MooseX-Types" {>= "0.20"}
+  "perl-Parse-Method-Signatures" 
+  "perl-Sub-Exporter" 
+  "perl-Sub-Install" 
+  "perl-aliased" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-namespace-autoclean" 
+  "perl-namespace-clean" {>= "0.19"}
+  "perl-overload" 
+]
+extra-source "perl-MooseX-Declare-0.43-26.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MooseX-Declare-0.43-26.fc40.noarch.rpm"
+}

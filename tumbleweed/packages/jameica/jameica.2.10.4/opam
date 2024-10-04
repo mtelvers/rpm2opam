@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jameica-2.10.4-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jameica-2.10.4-3.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "java-11-openj9" {>= "11"}
+]
+extra-source "jameica-2.10.4-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jameica-2.10.4-3.2.noarch.rpm"
+}

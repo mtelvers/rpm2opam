@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ypserv-4.2-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ypserv-4.2-10.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gawk" 
+  "glibc" 
+  "hostname" 
+  "libnsl2" 
+  "libselinux" 
+  "libtirpc" 
+  "libxcrypt" 
+  "make" 
+  "rpcbind" 
+  "systemd" 
+  "systemd-libs" 
+  "tokyocabinet" 
+]
+extra-source "ypserv-4.2-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/y/ypserv-4.2-10.fc40.x86_64.rpm"
+}

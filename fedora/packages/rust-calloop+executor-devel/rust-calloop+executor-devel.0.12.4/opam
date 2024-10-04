@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-calloop+executor-devel-0.12.4-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-calloop+executor-devel-0.12.4-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-calloop+async-task-devel" {= "0.12.4"}
+  "rust-calloop-devel" {= "0.12.4"}
+]
+extra-source "rust-calloop+executor-devel-0.12.4-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-calloop+executor-devel-0.12.4-1.fc40.noarch.rpm"
+}

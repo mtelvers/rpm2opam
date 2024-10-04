@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ansible-10.4.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ansible-10.4.0-1.1.noarch.rpm"]
+depends: [
+  "ansible-core" {>= "2.17.4"}
+  "python311-base" 
+]
+extra-source "ansible-10.4.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ansible-10.4.0-1.1.noarch.rpm"
+}

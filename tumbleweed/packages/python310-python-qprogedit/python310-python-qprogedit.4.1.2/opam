@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-python-qprogedit-4.1.2-2.23.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-python-qprogedit-4.1.2-2.23.noarch.rpm"]
+depends: [
+  "python310-QtPy" 
+  "python310-base" {= "3.10"}
+  "python310-qscintilla-qt5" 
+]
+extra-source "python310-python-qprogedit-4.1.2-2.23.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-python-qprogedit-4.1.2-2.23.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pcre-devel-8.45-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcre-devel-8.45-3.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "libpcre1" {= "8.45"}
+  "libpcre16-0" {= "8.45"}
+  "libpcrecpp0" {= "8.45"}
+  "libpcreposix0" {= "8.45"}
+  "libstdc++-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "pcre-devel-8.45-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pcre-devel-8.45-3.1.x86_64.rpm"
+}

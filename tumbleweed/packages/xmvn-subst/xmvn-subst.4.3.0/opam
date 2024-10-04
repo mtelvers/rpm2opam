@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xmvn-subst-4.3.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xmvn-subst-4.3.0-2.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "beust-jcommander" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+  "xmvn-api" {= "4.3.0"}
+  "xmvn-core" {= "4.3.0"}
+]
+extra-source "xmvn-subst-4.3.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xmvn-subst-4.3.0-2.1.noarch.rpm"
+}

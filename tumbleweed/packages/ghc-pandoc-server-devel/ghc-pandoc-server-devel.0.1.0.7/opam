@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-pandoc-server-devel-0.1.0.7-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-pandoc-server-devel-0.1.0.7-1.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-aeson-devel" 
+  "ghc-base-devel" 
+  "ghc-base64-bytestring-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-data-default-devel" 
+  "ghc-doctemplates-devel" 
+  "ghc-pandoc-devel" 
+  "ghc-pandoc-server" {= "0.1.0.7"}
+  "ghc-pandoc-types-devel" 
+  "ghc-servant-server-devel" 
+  "ghc-skylighting-devel" 
+  "ghc-text-devel" 
+  "ghc-unicode-collation-devel" 
+  "ghc-wai-cors-devel" 
+  "ghc-wai-devel" 
+]
+extra-source "ghc-pandoc-server-devel-0.1.0.7-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-pandoc-server-devel-0.1.0.7-1.4.x86_64.rpm"
+}

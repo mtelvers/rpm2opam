@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "devhelp-devel-43.0-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "devhelp-devel-43.0-2.6.x86_64.rpm"]
+depends: [
+  "devhelp" {= "43.0"}
+  "glib2-devel" {>= "2.64"}
+  "gsettings-desktop-schemas-devel" 
+  "gtk3-devel" {>= "3.22"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Devhelp-3_0" {= "43.0"}
+  "webkit2gtk3-devel" 
+]
+extra-source "devhelp-devel-43.0-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/devhelp-devel-43.0-2.6.x86_64.rpm"
+}

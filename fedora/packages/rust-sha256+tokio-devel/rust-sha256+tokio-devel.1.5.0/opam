@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-sha256+tokio-devel-1.5.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-sha256+tokio-devel-1.5.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-sha256-devel" {= "1.5.0"}
+  "rust-tokio+default-devel" 
+  "rust-tokio+fs-devel" 
+  "rust-tokio+io-util-devel" 
+]
+extra-source "rust-sha256+tokio-devel-1.5.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-sha256+tokio-devel-1.5.0-2.fc40.noarch.rpm"
+}

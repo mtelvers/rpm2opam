@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python-rpm-generators-20240618.c146b29-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python-rpm-generators-20240618.c146b29-1.1.noarch.rpm"]
+depends: [
+  "python-rpm-macros" {= "20240618.0"}
+  "python311-setuptools" 
+]
+extra-source "python-rpm-generators-20240618.c146b29-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python-rpm-generators-20240618.c146b29-1.1.noarch.rpm"
+}

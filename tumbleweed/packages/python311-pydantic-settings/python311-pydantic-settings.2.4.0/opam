@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pydantic-settings-2.4.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pydantic-settings-2.4.0-1.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-pydantic" {>= "2.3.0"}
+  "python311-python-dotenv" {>= "0.21.0"}
+]
+extra-source "python311-pydantic-settings-2.4.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pydantic-settings-2.4.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-BZ-Client-4.4004-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-BZ-Client-4.4004-13.fc40.noarch.rpm"]
+depends: [
+  "perl-DateTime-Format-ISO8601" 
+  "perl-DateTime-Format-Strptime" 
+  "perl-DateTime-TimeZone" 
+  "perl-Encode" 
+  "perl-File-Basename" 
+  "perl-HTTP-CookieJar" 
+  "perl-HTTP-Tiny" 
+  "perl-MIME-Base64" 
+  "perl-PathTools" 
+  "perl-URI" 
+  "perl-XML-Parser" 
+  "perl-XML-Writer" 
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-BZ-Client-4.4004-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-BZ-Client-4.4004-13.fc40.noarch.rpm"
+}

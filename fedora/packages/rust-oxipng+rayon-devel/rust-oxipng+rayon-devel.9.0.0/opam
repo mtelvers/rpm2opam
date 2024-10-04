@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-oxipng+rayon-devel-9.0.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-oxipng+rayon-devel-9.0.0-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-oxipng-devel" {= "9.0.0"}
+  "rust-rayon+default-devel" 
+]
+extra-source "rust-oxipng+rayon-devel-9.0.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-oxipng+rayon-devel-9.0.0-4.fc40.noarch.rpm"
+}

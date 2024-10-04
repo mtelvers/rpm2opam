@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ooRexx-devel-4.2.0-19.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ooRexx-devel-4.2.0-19.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-devel" 
+  "ooRexx" 
+  "pkgconf-pkg-config" 
+]
+extra-source "ooRexx-devel-4.2.0-19.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ooRexx-devel-4.2.0-19.2.x86_64.rpm"
+}

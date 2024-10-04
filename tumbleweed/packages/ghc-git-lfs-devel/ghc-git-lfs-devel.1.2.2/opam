@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-git-lfs-devel-1.2.2-1.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-git-lfs-devel-1.2.2-1.16.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-aeson-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-case-insensitive-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-git-lfs" {= "1.2.2"}
+  "ghc-http-client-devel" 
+  "ghc-http-types-devel" 
+  "ghc-network-uri-devel" 
+  "ghc-text-devel" 
+]
+extra-source "ghc-git-lfs-devel-1.2.2-1.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-git-lfs-devel-1.2.2-1.16.x86_64.rpm"
+}

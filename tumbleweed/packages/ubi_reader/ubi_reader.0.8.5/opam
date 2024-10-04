@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ubi_reader-0.8.5-1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ubi_reader-0.8.5-1.8.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-python-lzo" 
+]
+extra-source "ubi_reader-0.8.5-1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ubi_reader-0.8.5-1.8.noarch.rpm"
+}

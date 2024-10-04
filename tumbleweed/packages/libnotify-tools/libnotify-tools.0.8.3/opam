@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnotify-tools-0.8.3-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnotify-tools-0.8.3-2.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libnotify4" 
+]
+extra-source "libnotify-tools-0.8.3-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libnotify-tools-0.8.3-2.2.x86_64.rpm"
+}

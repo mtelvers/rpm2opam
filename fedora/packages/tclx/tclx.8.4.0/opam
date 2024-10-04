@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tclx-8.4.0-44.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tclx-8.4.0-44.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "tcl" {>= "8.4.13"}
+  "tk" {>= "8.4.13"}
+]
+extra-source "tclx-8.4.0-44.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tclx-8.4.0-44.fc40.x86_64.rpm"
+}

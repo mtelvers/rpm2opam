@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-cairocffi-1.5.1-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-cairocffi-1.5.1-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "libcairo2" 
+  "python311-base" {= "3.11"}
+  "python311-cffi" {>= "1.1.0"}
+  "python311-xcffib" {>= "0.3.2"}
+]
+extra-source "python311-cairocffi-1.5.1-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/python311-cairocffi-1.5.1-slfo.1.1.4.noarch.rpm"
+}

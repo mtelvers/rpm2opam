@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "alienblaster-1.1.0-36.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "alienblaster-1.1.0-36.fc40.x86_64.rpm"]
+depends: [
+  "SDL_mixer" 
+  "bash" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libgcc" 
+  "libstdc++" 
+  "sdl12-compat" 
+]
+extra-source "alienblaster-1.1.0-36.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/alienblaster-1.1.0-36.fc40.x86_64.rpm"
+}

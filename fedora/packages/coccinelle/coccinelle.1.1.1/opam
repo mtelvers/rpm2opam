@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "coccinelle-1.1.1-30.20230624git0afff7f.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coccinelle-1.1.1-30.20230624git0afff7f.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "ocaml" {= "24528204"}
+  "ocaml-findlib" 
+  "ocaml-parmap" {= "114"}
+  "ocaml-parmap-devel" {= "911"}
+  "ocaml-stdcompat" {= "97"}
+  "pcre" 
+  "python3" 
+]
+extra-source "coccinelle-1.1.1-30.20230624git0afff7f.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/coccinelle-1.1.1-30.20230624git0afff7f.fc40.x86_64.rpm"
+}

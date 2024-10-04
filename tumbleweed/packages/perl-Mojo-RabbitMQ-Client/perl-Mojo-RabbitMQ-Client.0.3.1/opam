@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Mojo-RabbitMQ-Client-0.3.1-1.22.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mojo-RabbitMQ-Client-0.3.1-1.22.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-File-ShareDir" 
+  "perl-Mojolicious" {>= "7.53"}
+  "perl-Net-AMQP" {>= "0.6"}
+  "perl-Scalar-List-Utils" {>= "1.33"}
+]
+extra-source "perl-Mojo-RabbitMQ-Client-0.3.1-1.22.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Mojo-RabbitMQ-Client-0.3.1-1.22.noarch.rpm"
+}

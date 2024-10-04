@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "alttab-1.7.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "alttab-1.7.1-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXft2" 
+  "libXpm4" 
+  "libXrandr2" 
+  "libXrender1" 
+  "libpng16-16" 
+]
+extra-source "alttab-1.7.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/alttab-1.7.1-2.1.x86_64.rpm"
+}

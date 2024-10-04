@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-XMLRPC-Lite-0.717-1.27.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XMLRPC-Lite-0.717-1.27.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-SOAP-Lite" {>= "0.716"}
+]
+extra-source "perl-XMLRPC-Lite-0.717-1.27.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-XMLRPC-Lite-0.717-1.27.noarch.rpm"
+}

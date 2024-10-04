@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-oslotest-5.0.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-oslotest-5.0.0-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "python3-debtcollector" 
+  "python311-base" 
+  "python311-fixtures" {>= "3.0.0"}
+  "python311-python-subunit" {>= "1.0.0"}
+  "python311-stestr" 
+  "python311-testtools" {>= "2.2.0"}
+]
+extra-source "python3-oslotest-5.0.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-oslotest-5.0.0-1.1.noarch.rpm"
+}

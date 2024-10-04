@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "innoextract-1.9-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "innoextract-1.9-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libboost_filesystem1_86_0" 
+  "libboost_iostreams1_86_0" 
+  "libboost_program_options1_86_0" 
+  "libgcc_s1" 
+  "liblzma5" 
+  "libstdc++6" 
+]
+extra-source "innoextract-1.9-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/innoextract-1.9-2.2.x86_64.rpm"
+}

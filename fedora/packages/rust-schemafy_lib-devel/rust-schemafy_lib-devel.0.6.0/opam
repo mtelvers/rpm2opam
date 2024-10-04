@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-schemafy_lib-devel-0.6.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-schemafy_lib-devel-0.6.0-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-Inflector+default-devel" 
+  "rust-proc-macro2+default-devel" 
+  "rust-quote+default-devel" 
+  "rust-schemafy_core+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde_derive+default-devel" 
+  "rust-serde_json+default-devel" 
+  "rust-syn+default-devel" 
+  "rust-uriparse+default-devel" 
+]
+extra-source "rust-schemafy_lib-devel-0.6.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-schemafy_lib-devel-0.6.0-4.fc40.noarch.rpm"
+}

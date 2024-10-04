@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-sport-activities-features-0.3.18-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-sport-activities-features-0.3.18-1.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-geopy" 
+  "python3-geotiler" 
+  "python3-gpxpy" 
+  "python3-matplotlib" 
+  "python3-niaaml" 
+  "python3-numpy" 
+  "python3-overpy" 
+  "python3-pandas" 
+  "python3-tcx2gpx" 
+  "python3-tcxreader" 
+]
+extra-source "python3-sport-activities-features-0.3.18-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-sport-activities-features-0.3.18-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "octave-nlopt_optimize-2.8.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "octave-nlopt_optimize-2.8.0-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libnlopt0" 
+  "libstdc++6" 
+  "octave-cli" 
+]
+extra-source "octave-nlopt_optimize-2.8.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/octave-nlopt_optimize-2.8.0-1.3.x86_64.rpm"
+}

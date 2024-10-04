@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-magic-wormhole-0.14.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-magic-wormhole-0.14.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-Automat" 
+  "python312-PyNaCl" 
+  "python312-Twisted" 
+  "python312-attrs" {>= "19.2.0"}
+  "python312-autobahn" 
+  "python312-base" 
+  "python312-click" 
+  "python312-cryptography" 
+  "python312-humanize" 
+  "python312-iterable-io" {>= "1.0.0"}
+  "python312-spake2" {>= "0.8"}
+  "python312-tqdm" {>= "4.13.0"}
+  "python312-txtorcon" {>= "18.0.2"}
+  "python312-zipstream-ng" {>= "1.7.1"}
+  "update-alternatives" 
+]
+extra-source "python312-magic-wormhole-0.14.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-magic-wormhole-0.14.0-1.1.noarch.rpm"
+}

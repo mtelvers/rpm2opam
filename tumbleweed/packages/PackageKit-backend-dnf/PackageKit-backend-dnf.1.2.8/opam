@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "PackageKit-backend-dnf-1.2.8-5.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "PackageKit-backend-dnf-1.2.8-5.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libappstream5" 
+  "libdnf2" {>= "0.73.2"}
+  "libpackagekit-glib2-18" 
+  "python311-base" {= "3.11"}
+  "rpm" 
+]
+extra-source "PackageKit-backend-dnf-1.2.8-5.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/PackageKit-backend-dnf-1.2.8-5.1.x86_64.rpm"
+}

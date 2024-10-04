@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "frotz-gui-2.54-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "frotz-gui-2.54-6.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "SDL2_mixer" 
+  "freetype" 
+  "frotz" {= "2.54"}
+  "glibc" 
+  "libX11" 
+  "libXt" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "zlib-ng-compat" 
+]
+extra-source "frotz-gui-2.54-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/frotz-gui-2.54-6.fc40.x86_64.rpm"
+}

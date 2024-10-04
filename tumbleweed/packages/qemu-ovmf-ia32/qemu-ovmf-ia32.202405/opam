@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qemu-ovmf-ia32-202405-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qemu-ovmf-ia32-202405-3.1.noarch.rpm"]
+depends: [
+  "qemu" 
+]
+extra-source "qemu-ovmf-ia32-202405-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/qemu-ovmf-ia32-202405-3.1.noarch.rpm"
+}

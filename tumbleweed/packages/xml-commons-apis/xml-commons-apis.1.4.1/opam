@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xml-commons-apis-1.4.01-6.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xml-commons-apis-1.4.01-6.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "xml-commons-apis-1.4.01-6.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xml-commons-apis-1.4.01-6.1.noarch.rpm"
+}

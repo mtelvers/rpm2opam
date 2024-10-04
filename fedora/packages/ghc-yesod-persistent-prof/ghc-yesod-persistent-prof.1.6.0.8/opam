@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-yesod-persistent-prof-1.6.0.8-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-yesod-persistent-prof-1.6.0.8-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-blaze-builder-prof" 
+  "ghc-conduit-prof" 
+  "ghc-persistent-prof" 
+  "ghc-resource-pool-prof" 
+  "ghc-resourcet-prof" 
+  "ghc-transformers-prof" 
+  "ghc-yesod-core-prof" 
+  "ghc-yesod-persistent-devel" {= "1.6.0.8"}
+]
+extra-source "ghc-yesod-persistent-prof-1.6.0.8-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-yesod-persistent-prof-1.6.0.8-6.fc40.x86_64.rpm"
+}

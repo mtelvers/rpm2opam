@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "librtprocess-devel-0.12.0+20230627-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "librtprocess-devel-0.12.0+20230627-1.1.x86_64.rpm"]
+depends: [
+  "librtprocess0" {= "0.12.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "librtprocess-devel-0.12.0+20230627-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/librtprocess-devel-0.12.0+20230627-1.1.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-File-MimeInfo-0.34-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-MimeInfo-0.34-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Encode" 
+  "perl-Encode-Locale" 
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-File-BaseDir" {>= "0.3"}
+  "perl-File-DesktopEntry" {>= "0.4"}
+  "perl-PathTools" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-File-MimeInfo-0.34-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-File-MimeInfo-0.34-3.fc40.noarch.rpm"
+}

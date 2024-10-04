@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gix-odb-devel-0.54.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gix-odb-devel-0.54.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-arc-swap+default-devel" 
+  "rust-gix-date+default-devel" 
+  "rust-gix-features+crc32-devel" 
+  "rust-gix-features+default-devel" 
+  "rust-gix-features+rustsha1-devel" 
+  "rust-gix-features+walkdir-devel" 
+  "rust-gix-features+zlib-devel" 
+  "rust-gix-hash+default-devel" 
+  "rust-gix-object+default-devel" 
+  "rust-gix-pack-devel" 
+  "rust-gix-path+default-devel" 
+  "rust-gix-quote+default-devel" 
+  "rust-parking_lot+default-devel" 
+  "rust-tempfile+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-gix-odb-devel-0.54.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gix-odb-devel-0.54.0-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-hep-paper-2023.201.2.1svn64917-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-hep-paper-2023.201.2.1svn64917-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-filesystem" {>= "2023"}
+  "texlive-geometry" 
+  "texlive-hep-acronym" 
+  "texlive-hep-bibliography" 
+  "texlive-hep-float" 
+  "texlive-hep-font" 
+  "texlive-hep-math" 
+  "texlive-hep-math-font" 
+  "texlive-hep-reference" 
+  "texlive-hep-text" 
+  "texlive-hep-title" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-kvoptions" 
+  "texlive-parskip" 
+  "texlive-pdftexcmds" 
+  "texlive-ragged2e" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-xpatch" 
+]
+extra-source "texlive-hep-paper-2023.201.2.1svn64917-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-hep-paper-2023.201.2.1svn64917-slfo.1.1.4.noarch.rpm"
+}

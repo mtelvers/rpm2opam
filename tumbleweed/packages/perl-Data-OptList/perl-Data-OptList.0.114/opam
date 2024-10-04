@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Data-OptList-0.114-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Data-OptList-0.114-1.6.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Params-Util" 
+  "perl-Sub-Install" {>= "0.921"}
+]
+extra-source "perl-Data-OptList-0.114-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Data-OptList-0.114-1.6.noarch.rpm"
+}

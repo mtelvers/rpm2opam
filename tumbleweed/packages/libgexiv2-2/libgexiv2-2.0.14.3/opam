@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgexiv2-2-0.14.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgexiv2-2-0.14.3-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libexiv2-28" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "libgexiv2-2-0.14.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgexiv2-2-0.14.3-1.1.x86_64.rpm"
+}

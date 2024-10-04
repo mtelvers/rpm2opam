@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpackagekit-glib2-devel-1.2.8-5.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpackagekit-glib2-devel-1.2.8-5.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libpackagekit-glib2-18" {= "1.2.8"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-PackageKitGlib-1_0" {= "1.2.8"}
+]
+extra-source "libpackagekit-glib2-devel-1.2.8-5.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpackagekit-glib2-devel-1.2.8-5.1.x86_64.rpm"
+}

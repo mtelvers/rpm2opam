@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "clojure-1.12.0.1479-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clojure-1.12.0.1479-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "java-11-openj9" {>= "1.8.0"}
+  "rlwrap" 
+]
+extra-source "clojure-1.12.0.1479-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/clojure-1.12.0.1479-1.1.noarch.rpm"
+}

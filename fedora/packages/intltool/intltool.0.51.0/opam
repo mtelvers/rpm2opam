@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "intltool-0.51.0-26.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "intltool-0.51.0-26.fc40.noarch.rpm"]
+depends: [
+  "automake" 
+  "bash" 
+  "gettext-devel" 
+  "patch" 
+  "perl-Encode" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Find" 
+  "perl-Getopt-Long" 
+  "perl-PathTools" 
+  "perl-Text-Tabs+Wrap" 
+  "perl-XML-Parser" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "intltool-0.51.0-26.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/intltool-0.51.0-26.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ruby-yui-4.2.16-15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ruby-yui-4.2.16-15.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "libyui" 
+  "libyui-mga" 
+  "ruby-libs" 
+]
+extra-source "ruby-yui-4.2.16-15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/ruby-yui-4.2.16-15.fc40.x86_64.rpm"
+}

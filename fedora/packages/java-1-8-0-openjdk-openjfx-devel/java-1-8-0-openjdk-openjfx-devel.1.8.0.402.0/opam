@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "java-1.8.0-openjdk-openjfx-devel-1.8.0.402.b06-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "java-1.8.0-openjdk-openjfx-devel-1.8.0.402.b06-2.fc40.x86_64.rpm"]
+depends: [
+  "java-1-8-0-openjdk-devel" {= "1.8.0.402.0"}
+  "openjfx8-devel" 
+]
+extra-source "java-1.8.0-openjdk-openjfx-devel-1.8.0.402.b06-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/java-1.8.0-openjdk-openjfx-devel-1.8.0.402.b06-2.fc40.x86_64.rpm"
+}

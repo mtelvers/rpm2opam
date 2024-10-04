@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lvm2-lockd-2.03.23-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lvm2-lockd-2.03.23-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dlm-lib" 
+  "glibc" 
+  "libselinux" 
+  "lvm2" {= "2.3.23"}
+  "sanlock-lib" 
+  "systemd" {>= "247"}
+  "systemd-libs" 
+]
+extra-source "lvm2-lockd-2.03.23-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lvm2-lockd-2.03.23-1.fc40.x86_64.rpm"
+}

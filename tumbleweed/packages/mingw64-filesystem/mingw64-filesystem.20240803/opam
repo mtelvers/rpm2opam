@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mingw64-filesystem-20240803-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-filesystem-20240803-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "coreutils" 
+  "findutils" 
+  "gawk" 
+  "grep" 
+  "mingw64-cross-binutils-utils" 
+  "mingw64-cross-pkgconf" 
+  "python311" 
+  "rpm" 
+  "rpmlint-mini" 
+  "sed" 
+]
+extra-source "mingw64-filesystem-20240803-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mingw64-filesystem-20240803-1.1.noarch.rpm"
+}

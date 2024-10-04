@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-lineup-widget-4.0.0-3.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-lineup-widget-4.0.0-3.3.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-ipywidgets" {>= "7.0.0"}
+  "python312-notebook" 
+  "python312-pandas" {>= "0.18.0"}
+]
+extra-source "python312-lineup-widget-4.0.0-3.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-lineup-widget-4.0.0-3.3.noarch.rpm"
+}

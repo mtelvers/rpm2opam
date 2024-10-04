@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pytest-shutil-1.7.0-8.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pytest-shutil-1.7.0-8.5.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-execnet" 
+  "python312-path" 
+  "python312-pytest" 
+  "python312-six" 
+  "python312-termcolor" 
+]
+extra-source "python312-pytest-shutil-1.7.0-8.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pytest-shutil-1.7.0-8.5.noarch.rpm"
+}

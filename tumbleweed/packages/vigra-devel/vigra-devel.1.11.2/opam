@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vigra-devel-1.11.2-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vigra-devel-1.11.2-1.5.x86_64.rpm"]
+depends: [
+  "fftw3-devel" 
+  "hdf5-devel" 
+  "libjpeg62-devel" 
+  "libpng12-compat-devel" 
+  "libstdc++-devel" 
+  "libtiff-devel" 
+  "libvigraimpex11" {= "1.11.2"}
+  "openexr-devel" 
+  "python311-base" 
+  "python311-numpy" 
+  "zlib-devel" 
+]
+extra-source "vigra-devel-1.11.2-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vigra-devel-1.11.2-1.5.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-Only-doc-0.1-6.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-Only-doc-0.1-6.7.noarch.rpm"]
+depends: [
+  "ghc-filesystem" 
+]
+extra-source "ghc-Only-doc-0.1-6.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ghc-Only-doc-0.1-6.7.noarch.rpm"
+}

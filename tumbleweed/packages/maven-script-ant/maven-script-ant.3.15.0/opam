@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-script-ant-3.15.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-script-ant-3.15.0-1.1.noarch.rpm"]
+depends: [
+  "ant" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "maven-lib" 
+  "plexus-ant-factory" 
+  "plexus-archiver" 
+  "plexus-xml" 
+]
+extra-source "maven-script-ant-3.15.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-script-ant-3.15.0-1.1.noarch.rpm"
+}

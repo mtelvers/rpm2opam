@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "remmina-plugins-rdp-1.4.33-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "remmina-plugins-rdp-1.4.33-1.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "cups-libs" 
+  "freerdp2-libs" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libwinpr2" 
+  "remmina" {= "1.4.33"}
+]
+extra-source "remmina-plugins-rdp-1.4.33-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/remmina-plugins-rdp-1.4.33-1.fc40.x86_64.rpm"
+}

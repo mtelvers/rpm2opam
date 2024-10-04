@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-filesystem-2024.212-62.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-filesystem-2024.212-62.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "busybox-ncurses-utils" 
+  "coreutils" 
+  "dialog" 
+  "ed" 
+  "fillup" 
+  "findutils" 
+  "grep" 
+  "perl-base" 
+  "permissions" 
+  "python311" 
+  "sed" 
+  "system-user-mktex" 
+  "systemd-rpm-macros" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "util-linux" 
+]
+extra-source "texlive-filesystem-2024.212-62.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-filesystem-2024.212-62.2.noarch.rpm"
+}

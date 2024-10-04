@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "emacs-nw-29.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "emacs-nw-29.2-3.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "alternatives" 
+  "bash" 
+  "dbus-libs" 
+  "emacs-common" {= "29.2"}
+  "glibc" 
+  "gmp" 
+  "gnutls" 
+  "gpm-libs" 
+  "jansson" 
+  "libacl" 
+  "libgcc" 
+  "libgccjit" 
+  "libselinux" 
+  "libtree-sitter" 
+  "libxml2" 
+  "ncurses-libs" 
+  "sqlite-libs" 
+  "systemd-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "emacs-nw-29.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/emacs-nw-29.2-3.fc40.x86_64.rpm"
+}

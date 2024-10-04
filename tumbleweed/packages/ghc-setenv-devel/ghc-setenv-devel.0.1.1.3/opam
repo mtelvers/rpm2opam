@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-setenv-devel-0.1.1.3-12.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-setenv-devel-0.1.1.3-12.9.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-setenv" {= "0.1.1.3"}
+  "ghc-unix-devel" 
+]
+extra-source "ghc-setenv-devel-0.1.1.3-12.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-setenv-devel-0.1.1.3-12.9.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "monitoring-plugins-clamav-1.2-1.20.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "monitoring-plugins-clamav-1.2-1.20.noarch.rpm"]
+depends: [
+  "clamav" 
+  "monitoring-plugins-common" 
+  "perl-Net-DNS" 
+  "perl-base" 
+]
+extra-source "monitoring-plugins-clamav-1.2-1.20.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/monitoring-plugins-clamav-1.2-1.20.noarch.rpm"
+}

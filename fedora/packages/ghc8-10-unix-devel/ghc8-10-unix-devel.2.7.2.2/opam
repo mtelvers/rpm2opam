@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc8.10-unix-devel-2.7.2.2-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc8.10-unix-devel-2.7.2.2-14.fc40.x86_64.rpm"]
+depends: [
+  "ghc8-10-array" 
+  "ghc8-10-base" 
+  "ghc8-10-base-devel" 
+  "ghc8-10-bytestring" 
+  "ghc8-10-bytestring-devel" 
+  "ghc8-10-compiler" {= "8.10.7"}
+  "ghc8-10-deepseq" 
+  "ghc8-10-time" 
+  "ghc8-10-time-devel" 
+  "ghc8-10-unix" {= "2.7.2.2"}
+  "glibc" 
+  "gmp" 
+]
+extra-source "ghc8.10-unix-devel-2.7.2.2-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc8.10-unix-devel-2.7.2.2-14.fc40.x86_64.rpm"
+}

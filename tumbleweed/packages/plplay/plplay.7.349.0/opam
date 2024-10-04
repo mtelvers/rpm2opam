@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plplay-7.349.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plplay-7.349.0-1.3.x86_64.rpm"]
+depends: [
+  "ffmpeg-7-mini-libs" 
+  "glibc" 
+  "libSDL2-2_0-0" 
+  "libglfw3" 
+  "libplacebo349" 
+]
+extra-source "plplay-7.349.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/plplay-7.349.0-1.3.x86_64.rpm"
+}

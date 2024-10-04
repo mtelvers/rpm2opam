@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-brotli+validation-devel-3.5.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-brotli+validation-devel-3.5.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-brotli+sha2-devel" {= "3.5.0"}
+  "rust-brotli-devel" {= "3.5.0"}
+]
+extra-source "rust-brotli+validation-devel-3.5.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-brotli+validation-devel-3.5.0-1.fc40.noarch.rpm"
+}

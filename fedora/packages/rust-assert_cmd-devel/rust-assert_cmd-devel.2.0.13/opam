@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-assert_cmd-devel-2.0.13-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-assert_cmd-devel-2.0.13-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.70.0"}
+  "rust-anstyle+default-devel" 
+  "rust-bstr+default-devel" 
+  "rust-doc-comment+default-devel" 
+  "rust-predicates+diff-devel" 
+  "rust-predicates-core+default-devel" 
+  "rust-predicates-devel" 
+  "rust-predicates-tree+default-devel" 
+  "rust-wait-timeout+default-devel" 
+]
+extra-source "rust-assert_cmd-devel-2.0.13-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-assert_cmd-devel-2.0.13-2.fc40.noarch.rpm"
+}

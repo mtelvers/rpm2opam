@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-DateTime-Format-Epoch-0.16-27.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DateTime-Format-Epoch-0.16-27.fc40.noarch.rpm"]
+depends: [
+  "perl-DateTime" {>= "0.31"}
+  "perl-Math-BigInt" {>= "1.66"}
+  "perl-Math-BigInt-GMP" 
+  "perl-Params-Validate" 
+  "perl-libs" {>= "5.5.30"}
+  "perl-vars" 
+]
+extra-source "perl-DateTime-Format-Epoch-0.16-27.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-DateTime-Format-Epoch-0.16-27.fc40.noarch.rpm"
+}

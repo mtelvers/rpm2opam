@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qemu-guest-agent-8.2.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qemu-guest-agent-8.2.2-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "libgcc" 
+  "liburing" 
+  "numactl-libs" 
+  "systemd" 
+  "systemd-libs" 
+]
+extra-source "qemu-guest-agent-8.2.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qemu-guest-agent-8.2.2-1.fc40.x86_64.rpm"
+}

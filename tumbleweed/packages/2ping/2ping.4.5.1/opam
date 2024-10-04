@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "2ping-4.5.1-5.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "2ping-4.5.1-5.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311" {>= "3.6"}
+  "python311-base" 
+  "systemd" 
+]
+extra-source "2ping-4.5.1-5.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/2ping-4.5.1-5.4.noarch.rpm"
+}

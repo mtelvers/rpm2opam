@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "clapper-0.6.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clapper-0.6.1-2.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gstreamer" {>= "1.20.0"}
+  "gstreamer-plugins-bad" {>= "1.20.0"}
+  "gstreamer-plugins-base" {>= "1.20.0"}
+  "gstreamer-plugins-good" {>= "1.20.0"}
+  "libadwaita-1-0" 
+  "libclapper-0_0-0" 
+  "libclapper-gtk-0_0-0" 
+  "libgraphene-1_0-0" 
+  "libgstreamer-1_0-0" 
+  "libgtk-4-1" 
+  "libpango-1_0-0" 
+]
+extra-source "clapper-0.6.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/clapper-0.6.1-2.1.x86_64.rpm"
+}

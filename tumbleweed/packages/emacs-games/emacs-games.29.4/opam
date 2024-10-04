@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "emacs-games-29.4-8.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "emacs-games-29.4-8.1.x86_64.rpm"]
+depends: [
+  "emacs" {= "29.4"}
+  "glibc" 
+  "permissions" 
+  "system-user-games" 
+]
+extra-source "emacs-games-29.4-8.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/emacs-games-29.4-8.1.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "abrt-addon-xorg-2.17.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "abrt-addon-xorg-2.17.5-1.fc40.x86_64.rpm"]
+depends: [
+  "abrt" {= "2.17.5"}
+  "abrt-libs" {= "2.17.5"}
+  "bash" 
+  "curl" 
+  "glib2" 
+  "glibc" 
+  "libgcc" 
+  "libreport" 
+  "systemd-libs" 
+]
+extra-source "abrt-addon-xorg-2.17.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/abrt-addon-xorg-2.17.5-1.fc40.x86_64.rpm"
+}

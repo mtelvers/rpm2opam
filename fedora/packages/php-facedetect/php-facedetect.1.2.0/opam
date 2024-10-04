@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-facedetect-1.2.0-0.37.20201021git2a8974b.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-facedetect-1.2.0-0.37.20201021git2a8974b.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "opencv" 
+  "opencv-core" 
+  "opencv-imgcodecs" 
+  "opencv-imgproc" 
+  "opencv-objdetect" 
+  "php-common" {= "20230831"}
+]
+extra-source "php-facedetect-1.2.0-0.37.20201021git2a8974b.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-facedetect-1.2.0-0.37.20201021git2a8974b.fc40.x86_64.rpm"
+}

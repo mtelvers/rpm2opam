@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jupyter-rpm-macros-20221227-13.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jupyter-rpm-macros-20221227-13.2.noarch.rpm"]
+depends: [
+  "jupyter-jupyter_core-filesystem" {= "20221227"}
+  "jupyter-jupyterlab-filesystem" {= "20221227"}
+  "jupyter-notebook-filesystem" {= "20221227"}
+]
+extra-source "jupyter-rpm-macros-20221227-13.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jupyter-rpm-macros-20221227-13.2.noarch.rpm"
+}

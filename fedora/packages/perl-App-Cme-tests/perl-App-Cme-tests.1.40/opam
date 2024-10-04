@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-App-Cme-tests-1.040-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-App-Cme-tests-1.040-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-App-Cmd" 
+  "perl-App-Cme" 
+  "perl-Config-Model" {>= "2.148"}
+  "perl-Encode" 
+  "perl-English" 
+  "perl-Path-Tiny" 
+  "perl-PathTools" 
+  "perl-Term-ANSIColor" {>= "2.1"}
+  "perl-Test-File-Contents" 
+  "perl-Test-Harness" 
+  "perl-Test-Pod" {>= "1.0"}
+  "perl-Test-Simple" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.10.1"}
+  "perl-open" 
+]
+extra-source "perl-App-Cme-tests-1.040-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-App-Cme-tests-1.040-1.fc40.noarch.rpm"
+}

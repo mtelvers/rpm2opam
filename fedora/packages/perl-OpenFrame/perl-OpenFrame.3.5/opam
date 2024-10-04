@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-OpenFrame-3.05-52.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-OpenFrame-3.05-52.fc40.noarch.rpm"]
+depends: [
+  "perl-CGI" {>= "0.1"}
+  "perl-Exporter" 
+  "perl-File-Temp" {>= "0.1"}
+  "perl-File-Type" {>= "0.1"}
+  "perl-FileHandle" 
+  "perl-HTTP-Message" 
+  "perl-IO-Null" {>= "0.1"}
+  "perl-PathTools" 
+  "perl-Pipeline" {>= "2.0"}
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" 
+]
+extra-source "perl-OpenFrame-3.05-52.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-OpenFrame-3.05-52.fc40.noarch.rpm"
+}

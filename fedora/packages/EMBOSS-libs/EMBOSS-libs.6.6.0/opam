@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "EMBOSS-libs-6.6.0-30.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "EMBOSS-libs-6.6.0-30.fc40.x86_64.rpm"]
+depends: [
+  "expat" 
+  "gd" 
+  "glibc" 
+  "libharu" 
+  "libpng" 
+  "libpq" 
+  "mariadb-connector-c" 
+  "pam-libs" 
+  "pcre2" 
+  "zlib-ng-compat" 
+]
+extra-source "EMBOSS-libs-6.6.0-30.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/EMBOSS-libs-6.6.0-30.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "selinux-policy-doc-40.13.8-1.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "selinux-policy-doc-40.13.8-1.el10.noarch.rpm"]
+depends: [
+  "selinux-policy" {= "40.13.9"}
+]
+extra-source "selinux-policy-doc-40.13.8-1.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/selinux-policy-doc-40.13.8-1.el10.noarch.rpm"
+}

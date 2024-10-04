@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgensiocpp6-2.8.2-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgensiocpp6-2.8.2-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libgensio6" 
+  "libgensioosh6" 
+  "libstdc++6" 
+]
+extra-source "libgensiocpp6-2.8.2-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgensiocpp6-2.8.2-1.3.x86_64.rpm"
+}

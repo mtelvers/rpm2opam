@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-sqlite3-to-mysql-2.1.7-2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-sqlite3-to-mysql-2.1.7-2.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-Unidecode" {>= "1.3.6"}
+  "python311-base" 
+  "python311-click" {>= "8.1.3"}
+  "python311-mysql-connector-python" {>= "8.2.0"}
+  "python311-packaging" 
+  "python311-pytimeparse2" 
+  "python311-simplejson" {>= "3.19.1"}
+  "python311-tabulate" 
+  "python311-tqdm" {>= "4.65.0"}
+  "python311-typing_extensions" 
+  "update-alternatives" 
+]
+extra-source "python311-sqlite3-to-mysql-2.1.7-2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-sqlite3-to-mysql-2.1.7-2.3.noarch.rpm"
+}

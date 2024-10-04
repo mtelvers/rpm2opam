@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jboss-modules-1.5.2-1.26.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jboss-modules-1.5.2-1.26.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "jboss-modules-1.5.2-1.26.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jboss-modules-1.5.2-1.26.noarch.rpm"
+}

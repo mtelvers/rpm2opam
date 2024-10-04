@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-xduts-2023.201.6.1.2.0svn66472-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-xduts-2023.201.6.1.2.0svn66472-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-biblatex" 
+  "texlive-caption" 
+  "texlive-enumitem" 
+  "texlive-fancyhdr" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-gbt7714" 
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-l3kernel" 
+  "texlive-l3packages" 
+  "texlive-natbib" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-tabularray" 
+  "texlive-tcolorbox" 
+  "texlive-tocloft" 
+  "texlive-tools" 
+  "texlive-unicode-math" 
+  "texlive-xecjk" 
+]
+extra-source "texlive-xduts-2023.201.6.1.2.0svn66472-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-xduts-2023.201.6.1.2.0svn66472-slfo.1.1.4.noarch.rpm"
+}

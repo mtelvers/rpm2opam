@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-TempDir-0.11-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-TempDir-0.11-11.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-File-NFSLock" 
+  "perl-File-Temp" 
+  "perl-Moose" 
+  "perl-MooseX-Types-Path-Class" 
+  "perl-Path-Class" 
+  "perl-PathTools" 
+  "perl-Sub-Exporter" 
+  "perl-libs" 
+  "perl-namespace-autoclean" {>= "0.8"}
+]
+extra-source "perl-Test-TempDir-0.11-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-TempDir-0.11-11.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ibus-cangjie-2.4-2.19.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibus-cangjie-2.4-2.19.noarch.rpm"]
+depends: [
+  "ibus" 
+  "python311" {>= "3.4"}
+  "python311-base" 
+  "python311-cangjie" {>= "1.2"}
+  "python311-gobject" 
+]
+extra-source "ibus-cangjie-2.4-2.19.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ibus-cangjie-2.4-2.19.noarch.rpm"
+}

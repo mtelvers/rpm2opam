@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-remoteprocess+default-devel-0.4.13-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-remoteprocess+default-devel-0.4.13-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-remoteprocess-devel" {= "0.4.13"}
+]
+extra-source "rust-remoteprocess+default-devel-0.4.13-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-remoteprocess+default-devel-0.4.13-2.fc40.noarch.rpm"
+}

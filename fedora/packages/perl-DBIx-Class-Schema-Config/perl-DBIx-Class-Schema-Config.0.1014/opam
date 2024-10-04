@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-DBIx-Class-Schema-Config-0.001014-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DBIx-Class-Schema-Config-0.001014-9.fc40.noarch.rpm"]
+depends: [
+  "perl-Config-Any" {>= "0.23"}
+  "perl-DBIx-Class" {>= "0.8100"}
+  "perl-File-HomeDir" 
+  "perl-Hash-Merge" 
+  "perl-Storable" 
+  "perl-URI" 
+  "perl-base" 
+  "perl-libs" {>= "5.5.0"}
+  "perl-namespace-clean" 
+]
+extra-source "perl-DBIx-Class-Schema-Config-0.001014-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-DBIx-Class-Schema-Config-0.001014-9.fc40.noarch.rpm"
+}

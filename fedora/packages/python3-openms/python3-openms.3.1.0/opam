@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-openms-3.1.0-0.10.pre1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-openms-3.1.0-0.10.pre1.fc40.x86_64.rpm"]
+depends: [
+  "R-core" 
+  "glibc" 
+  "libgcc" 
+  "libgomp" 
+  "libstdc++" 
+  "openms" {= "3.1.0"}
+  "python3" {= "3.12"}
+  "python3-biopython" 
+  "python3-matplotlib" {>= "3.5"}
+  "python3-numpy" 
+  "python3-pandas" 
+  "qt5-qtbase" 
+  "xerces-c" 
+]
+extra-source "python3-openms-3.1.0-0.10.pre1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-openms-3.1.0-0.10.pre1.fc40.x86_64.rpm"
+}

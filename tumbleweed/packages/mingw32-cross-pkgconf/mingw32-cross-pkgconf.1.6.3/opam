@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mingw32-cross-pkgconf-1.6.3-5.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw32-cross-pkgconf-1.6.3-5.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "pkgconf-pkg-config" 
+]
+extra-source "mingw32-cross-pkgconf-1.6.3-5.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mingw32-cross-pkgconf-1.6.3-5.5.x86_64.rpm"
+}

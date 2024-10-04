@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tachyon-0.99.5-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tachyon-0.99.5-1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libglvnd" 
+  "libtachyon-0_99_5" 
+]
+extra-source "tachyon-0.99.5-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tachyon-0.99.5-1.7.x86_64.rpm"
+}

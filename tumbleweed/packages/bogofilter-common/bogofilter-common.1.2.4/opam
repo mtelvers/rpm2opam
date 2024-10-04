@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bogofilter-common-1.2.4-16.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bogofilter-common-1.2.4-16.3.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "bogofilter-db" {= "1.2.4"}
+  "perl-base" 
+]
+extra-source "bogofilter-common-1.2.4-16.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/bogofilter-common-1.2.4-16.3.noarch.rpm"
+}

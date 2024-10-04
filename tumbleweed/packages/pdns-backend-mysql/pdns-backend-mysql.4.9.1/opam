@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pdns-backend-mysql-4.9.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pdns-backend-mysql-4.9.1-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libmariadb3" 
+  "libstdc++6" 
+  "pdns" {= "4.9.1"}
+]
+extra-source "pdns-backend-mysql-4.9.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pdns-backend-mysql-4.9.1-2.1.x86_64.rpm"
+}

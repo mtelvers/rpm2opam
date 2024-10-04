@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-newpax-svn64415-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-newpax-svn64415-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-auxhook" 
+  "texlive-base" 
+  "texlive-etoolbox" 
+  "texlive-graphics" 
+  "texlive-kpathsea" 
+  "texlive-kvoptions" 
+  "texlive-kvsetkeys" 
+  "texlive-l3packages" 
+  "texlive-ltxcmds" 
+  "texlive-pdfmanagement-testphase" 
+]
+extra-source "texlive-newpax-svn64415-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-newpax-svn64415-71.fc40.noarch.rpm"
+}

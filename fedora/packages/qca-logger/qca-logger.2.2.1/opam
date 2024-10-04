@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qca-logger-2.2.1-23.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qca-logger-2.2.1-23.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "qca" 
+  "qt" 
+]
+extra-source "qca-logger-2.2.1-23.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qca-logger-2.2.1-23.fc40.x86_64.rpm"
+}

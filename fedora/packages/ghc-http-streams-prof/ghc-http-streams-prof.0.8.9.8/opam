@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-http-streams-prof-0.8.9.8-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-http-streams-prof-0.8.9.8-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-HsOpenSSL-prof" 
+  "ghc-aeson-prof" 
+  "ghc-attoparsec-prof" 
+  "ghc-base-prof" 
+  "ghc-base64-bytestring-prof" 
+  "ghc-blaze-builder-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-case-insensitive-prof" 
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+  "ghc-http-common-prof" 
+  "ghc-http-streams-devel" {= "0.8.9.8"}
+  "ghc-io-streams-prof" 
+  "ghc-mtl-prof" 
+  "ghc-network-prof" 
+  "ghc-network-uri-prof" 
+  "ghc-openssl-streams-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unordered-containers-prof" 
+]
+extra-source "ghc-http-streams-prof-0.8.9.8-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-http-streams-prof-0.8.9.8-3.fc40.x86_64.rpm"
+}

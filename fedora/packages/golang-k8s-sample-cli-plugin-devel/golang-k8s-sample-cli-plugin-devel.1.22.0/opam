@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-k8s-sample-cli-plugin-devel-1.22.0-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-k8s-sample-cli-plugin-devel-1.22.0-11.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-spf13-cobra-devel" 
+  "golang-github-spf13-pflag-devel" 
+  "golang-k8s-cli-runtime-devel" 
+  "golang-k8s-client-devel" 
+]
+extra-source "golang-k8s-sample-cli-plugin-devel-1.22.0-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-k8s-sample-cli-plugin-devel-1.22.0-11.fc40.noarch.rpm"
+}

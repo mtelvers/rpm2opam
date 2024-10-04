@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cdlabelgen-4.3.0-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cdlabelgen-4.3.0-20.fc40.noarch.rpm"]
+depends: [
+  "perl-Getopt-Long" 
+  "perl-Socket" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "cdlabelgen-4.3.0-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cdlabelgen-4.3.0-20.fc40.noarch.rpm"
+}

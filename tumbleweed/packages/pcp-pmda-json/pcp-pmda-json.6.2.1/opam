@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pcp-pmda-json-6.2.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcp-pmda-json-6.2.1-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "pcp" 
+  "python3-pcp" 
+  "python311-jsonpointer" 
+  "python311-six" 
+]
+extra-source "pcp-pmda-json-6.2.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pcp-pmda-json-6.2.1-2.1.noarch.rpm"
+}

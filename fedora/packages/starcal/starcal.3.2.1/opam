@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "starcal-3.2.1-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "starcal-3.2.1-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "libappindicator-gtk3" 
+  "python3" 
+  "python3-cachetools" 
+  "python3-cairo" 
+  "python3-dateutil" 
+  "python3-gobject" 
+  "python3-httplib2" 
+  "python3-psutil" 
+  "python3-requests" 
+]
+extra-source "starcal-3.2.1-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/starcal-3.2.1-3.fc40.noarch.rpm"
+}

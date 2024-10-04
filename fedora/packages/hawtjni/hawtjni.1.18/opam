@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hawtjni-1.18-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hawtjni-1.18-12.fc40.noarch.rpm"]
+depends: [
+  "apache-commons-cli" 
+  "apache-commons-lang3" 
+  "autoconf" 
+  "automake" 
+  "hawtjni-runtime" {= "1.18"}
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "libtool" 
+  "make" 
+  "objectweb-asm" 
+  "xbean" 
+]
+extra-source "hawtjni-1.18-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hawtjni-1.18-12.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "emacs-w3m-1.4.632+563+gdc5136d2-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "emacs-w3m-1.4.632+563+gdc5136d2-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "emacs" {>= "28.0"}
+  "emacs-apel" 
+  "emacs-flim" 
+  "w3m" 
+]
+extra-source "emacs-w3m-1.4.632+563+gdc5136d2-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/emacs-w3m-1.4.632+563+gdc5136d2-1.2.noarch.rpm"
+}

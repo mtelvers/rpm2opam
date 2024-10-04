@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-plautopatch-2024.216.0.0.9qsvn64072-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-plautopatch-2024.216.0.0.9qsvn64072-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-arydshln" 
+  "texlive-collcell" 
+  "texlive-colortbl" 
+  "texlive-filehook" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-pgf" 
+  "texlive-platex" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-siunitx" 
+  "texlive-sttools" 
+  "texlive-tools" 
+]
+extra-source "texlive-plautopatch-2024.216.0.0.9qsvn64072-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-plautopatch-2024.216.0.0.9qsvn64072-55.1.noarch.rpm"
+}

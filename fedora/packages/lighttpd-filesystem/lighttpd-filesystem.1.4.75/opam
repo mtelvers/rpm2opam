@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lighttpd-filesystem-1.4.75-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lighttpd-filesystem-1.4.75-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "shadow-utils" 
+]
+extra-source "lighttpd-filesystem-1.4.75-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lighttpd-filesystem-1.4.75-1.fc40.noarch.rpm"
+}

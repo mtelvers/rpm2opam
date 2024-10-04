@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-fluent-langneg+cldr-devel-0.13.0-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-fluent-langneg+cldr-devel-0.13.0-9.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-fluent-langneg-devel" {= "0.13.0"}
+  "rust-unic-langid+likelysubtags-devel" 
+]
+extra-source "rust-fluent-langneg+cldr-devel-0.13.0-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-fluent-langneg+cldr-devel-0.13.0-9.fc40.noarch.rpm"
+}

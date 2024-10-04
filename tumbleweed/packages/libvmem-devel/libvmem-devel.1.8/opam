@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvmem-devel-1.8-2.15.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvmem-devel-1.8-2.15.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libvmem1" {= "1.8"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libvmem-devel-1.8-2.15.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libvmem-devel-1.8-2.15.x86_64.rpm"
+}

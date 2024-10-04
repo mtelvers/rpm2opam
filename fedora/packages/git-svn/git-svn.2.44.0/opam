@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "git-svn-2.44.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "git-svn-2.44.0-1.fc40.noarch.rpm"]
+depends: [
+  "git" {= "2.44.0"}
+  "perl-Carp" 
+  "perl-Digest-MD5" 
+  "perl-File-Basename" 
+  "perl-File-Path" 
+  "perl-Getopt-Long" 
+  "perl-Git" 
+  "perl-Git-SVN" 
+  "perl-Memoize" 
+  "perl-PathTools" 
+  "perl-TermReadKey" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" {>= "5.8.1"}
+  "perl-vars" 
+  "subversion" 
+]
+extra-source "git-svn-2.44.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/git-svn-2.44.0-1.fc40.noarch.rpm"
+}

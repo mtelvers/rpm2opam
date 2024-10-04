@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "squeekboard-1.22.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "squeekboard-1.22.0-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cairo" 
+  "cairo-gobject" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gnome-desktop3" 
+  "gtk3" 
+  "libfeedbackd" 
+  "libgcc" 
+  "libwayland-client" 
+  "libxkbcommon" 
+  "pango" 
+  "python3" 
+]
+extra-source "squeekboard-1.22.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/squeekboard-1.22.0-3.fc40.x86_64.rpm"
+}

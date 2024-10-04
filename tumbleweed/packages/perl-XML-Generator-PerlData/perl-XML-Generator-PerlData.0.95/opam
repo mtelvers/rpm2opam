@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-XML-Generator-PerlData-0.95-1.30.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XML-Generator-PerlData-0.95-1.30.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-XML-SAX-Base" {>= "1.2"}
+]
+extra-source "perl-XML-Generator-PerlData-0.95-1.30.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-XML-Generator-PerlData-0.95-1.30.noarch.rpm"
+}

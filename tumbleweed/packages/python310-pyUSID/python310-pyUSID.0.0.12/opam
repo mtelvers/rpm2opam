@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pyUSID-0.0.12-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pyUSID-0.0.12-3.1.noarch.rpm"]
+depends: [
+  "python310-Pillow" 
+  "python310-base" {= "3.10"}
+  "python310-cytoolz" 
+  "python310-dask" {>= "0.10"}
+  "python310-h5py" {>= "2.6.0"}
+  "python310-numpy" 
+  "python310-psutil" 
+  "python310-sidpy" {>= "0.10"}
+  "python310-toolz" 
+]
+extra-source "python310-pyUSID-0.0.12-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-pyUSID-0.0.12-3.1.noarch.rpm"
+}

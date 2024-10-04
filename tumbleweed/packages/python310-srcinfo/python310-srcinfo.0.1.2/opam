@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-srcinfo-0.1.2-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-srcinfo-0.1.2-1.5.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-base" 
+  "python310-parse" {>= "1.19.0"}
+  "update-alternatives" 
+]
+extra-source "python310-srcinfo-0.1.2-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-srcinfo-0.1.2-1.5.noarch.rpm"
+}

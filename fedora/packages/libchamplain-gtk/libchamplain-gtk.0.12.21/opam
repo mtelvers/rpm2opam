@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libchamplain-gtk-0.12.21-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libchamplain-gtk-0.12.21-4.fc40.x86_64.rpm"]
+depends: [
+  "clutter" 
+  "clutter-gtk" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libchamplain" {= "0.12.21"}
+]
+extra-source "libchamplain-gtk-0.12.21-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libchamplain-gtk-0.12.21-4.fc40.x86_64.rpm"
+}

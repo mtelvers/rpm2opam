@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-opentelemetry-otel-devel-1.10.0-1.fc38.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-opentelemetry-otel-devel-1.10.0-1.fc38.noarch.rpm"]
+depends: [
+  "compat-golang-github-cenkalti-backoff-4-devel" 
+  "compat-golang-github-masterminds-semver-3-devel" 
+  "go-filesystem" 
+  "golang-github-benbjohnson-clock-devel" 
+  "golang-github-logr-devel" 
+  "golang-github-logr-stdr-devel" 
+  "golang-github-opentracing-devel" 
+  "golang-github-openzipkin-zipkin-devel" 
+  "golang-github-prometheus-client-devel" 
+  "golang-github-stretchr-testify-devel" 
+  "golang-google-genproto-devel" 
+  "golang-google-protobuf-devel" 
+  "golang-gopkg-yaml-2-devel" 
+  "golang-opencensus-devel" 
+  "golang-opentelemetry-proto-devel" 
+  "golang-x-mod-devel" 
+  "golang-x-sys-devel" 
+]
+extra-source "golang-opentelemetry-otel-devel-1.10.0-1.fc38.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-opentelemetry-otel-devel-1.10.0-1.fc38.noarch.rpm"
+}

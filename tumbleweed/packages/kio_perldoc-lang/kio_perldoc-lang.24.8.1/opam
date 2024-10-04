@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kio_perldoc-lang-24.08.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kio_perldoc-lang-24.08.1-1.1.noarch.rpm"]
+depends: [
+  "kio_perldoc" {= "24.8.1"}
+]
+extra-source "kio_perldoc-lang-24.08.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kio_perldoc-lang-24.08.1-1.1.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libstroke-devel-0.5.1-236.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libstroke-devel-0.5.1-236.2.x86_64.rpm"]
+depends: [
+  "libX11-devel" 
+  "libstroke0" {= "0.5.1"}
+]
+extra-source "libstroke-devel-0.5.1-236.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libstroke-devel-0.5.1-236.2.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-awc+compress-gzip-devel-3.3.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-awc+compress-gzip-devel-3.3.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-actix-http+compress-gzip-devel" 
+  "rust-awc+__compress-devel" {= "3.3.0"}
+  "rust-awc-devel" {= "3.3.0"}
+]
+extra-source "rust-awc+compress-gzip-devel-3.3.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-awc+compress-gzip-devel-3.3.0-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "git-annex-10.20230626-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "git-annex-10.20230626-4.fc40.x86_64.rpm"]
+depends: [
+  "file-libs" 
+  "git-core" 
+  "glibc" 
+  "gmp" 
+  "libffi" 
+  "libyaml" 
+  "sqlite-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "git-annex-10.20230626-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/git-annex-10.20230626-4.fc40.x86_64.rpm"
+}

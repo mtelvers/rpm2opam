@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-ldap-3.4.4-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-ldap-3.4.4-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "openldap" 
+  "python3" {= "3.12"}
+  "python3-pyasn1" {>= "0.3.7"}
+  "python3-pyasn1-modules" {>= "0.1.5"}
+  "python3-setuptools" 
+]
+extra-source "python3-ldap-3.4.4-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-ldap-3.4.4-3.fc40.x86_64.rpm"
+}

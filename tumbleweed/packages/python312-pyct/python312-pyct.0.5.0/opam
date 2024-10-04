@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pyct-0.5.0-1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pyct-0.5.0-1.8.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-PyYAML" 
+  "python312-base" 
+  "python312-param" {>= "1.7.0"}
+  "python312-requests" 
+  "update-alternatives" 
+]
+extra-source "python312-pyct-0.5.0-1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pyct-0.5.0-1.8.noarch.rpm"
+}

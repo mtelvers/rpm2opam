@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mutter-tests-46.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mutter-tests-46.0-1.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "colord-libs" 
+  "glib2" 
+  "glibc" 
+  "gtk3" {>= "3.19.8"}
+  "libX11" 
+  "libXext" 
+  "libei" 
+  "libgcc" 
+  "libglvnd-gles" 
+  "libwayland-client" 
+  "libwayland-cursor" 
+  "libwayland-server" 
+  "mesa-libgbm" 
+  "mutter" 
+  "mutter-devel" 
+  "pipewire-libs" 
+  "python3" 
+]
+extra-source "mutter-tests-46.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mutter-tests-46.0-1.fc40.x86_64.rpm"
+}

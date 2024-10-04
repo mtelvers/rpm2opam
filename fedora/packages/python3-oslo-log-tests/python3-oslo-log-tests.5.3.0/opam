@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-oslo-log-tests-5.3.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-oslo-log-tests-5.3.0-3.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-mock" 
+  "python3-oslo-config" {>= "5.2.0"}
+  "python3-oslo-log" {= "5.3.0"}
+  "python3-oslotest" 
+  "python3-subunit" 
+  "python3-testscenarios" 
+  "python3-testtools" 
+]
+extra-source "python3-oslo-log-tests-5.3.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-oslo-log-tests-5.3.0-3.fc40.noarch.rpm"
+}

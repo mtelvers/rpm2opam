@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "getdata-devel-0.11.0-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "getdata-devel-0.11.0-9.fc40.x86_64.rpm"]
+depends: [
+  "gcc-gfortran" 
+  "getdata" {= "0.11.0"}
+  "getdata-fortran" 
+  "pkgconf-pkg-config" 
+]
+extra-source "getdata-devel-0.11.0-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/getdata-devel-0.11.0-9.fc40.x86_64.rpm"
+}

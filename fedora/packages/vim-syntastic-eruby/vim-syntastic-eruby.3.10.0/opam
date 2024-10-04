@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vim-syntastic-eruby-3.10.0-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vim-syntastic-eruby-3.10.0-22.fc40.noarch.rpm"]
+depends: [
+  "ruby" 
+  "vim-syntastic" {= "3.10.0"}
+]
+extra-source "vim-syntastic-eruby-3.10.0-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vim-syntastic-eruby-3.10.0-22.fc40.noarch.rpm"
+}

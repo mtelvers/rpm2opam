@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lightdm-1.32.0-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lightdm-1.32.0-4.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "gdmflexiserver" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libXdmcp6" 
+  "libaudit1" 
+  "libgcrypt20" 
+  "libxcb1" 
+  "lightdm-gtk-greeter" 
+  "pam" 
+  "sysuser-shadow" {>= "3.2"}
+  "xdm" 
+]
+extra-source "lightdm-1.32.0-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lightdm-1.32.0-4.1.x86_64.rpm"
+}

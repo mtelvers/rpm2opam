@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "playwright-1.32.1-lp160.4.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "playwright-1.32.1-lp160.4.10.noarch.rpm"]
+depends: [
+  "nodejs-default" {>= "14.0.0"}
+]
+extra-source "playwright-1.32.1-lp160.4.10.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/playwright-1.32.1-lp160.4.10.noarch.rpm"
+}

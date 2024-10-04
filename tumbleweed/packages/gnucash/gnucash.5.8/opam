@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnucash-5.8-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnucash-5.8-1.2.x86_64.rpm"]
+depends: [
+  "aqbanking" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libboost_filesystem1_86_0" 
+  "libboost_locale1_86_0" 
+  "libboost_program_options1_86_0" 
+  "libcairo2" 
+  "libdbi3" 
+  "libgcc_s1" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libguile-3_0-1" 
+  "libgwengui-gtk3-79" 
+  "libgwenhywfar79" 
+  "libicu75" 
+  "libofx7" 
+  "libpango-1_0-0" 
+  "libpython3_11-1_0" 
+  "libsecret-1-0" 
+  "libstdc++6" 
+  "libwebkit2gtk-4_1-0" 
+  "libxml2-2" 
+  "libz-ng-compat1" 
+  "perl-base" 
+]
+extra-source "gnucash-5.8-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnucash-5.8-1.2.x86_64.rpm"
+}

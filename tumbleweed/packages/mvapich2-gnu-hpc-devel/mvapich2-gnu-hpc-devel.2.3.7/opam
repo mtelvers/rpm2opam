@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mvapich2-gnu-hpc-devel-2.3.7-9.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mvapich2-gnu-hpc-devel-2.3.7-9.1.x86_64.rpm"]
+depends: [
+  "mvapich2_2_3_7-gnu-hpc-devel" {= "2.3.7"}
+]
+extra-source "mvapich2-gnu-hpc-devel-2.3.7-9.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mvapich2-gnu-hpc-devel-2.3.7-9.1.x86_64.rpm"
+}

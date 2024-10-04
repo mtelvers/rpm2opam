@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Dist-Zilla-Plugin-PodWeaver-4.010-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Dist-Zilla-Plugin-PodWeaver-4.010-5.fc40.noarch.rpm"]
+depends: [
+  "perl-Dist-Zilla" {>= "6"}
+  "perl-Moose" 
+  "perl-PPI" 
+  "perl-Pod-Elemental-PerlMunger" {>= "0.1"}
+  "perl-Pod-Weaver" 
+  "perl-experimental" 
+  "perl-libs" {>= "5.20.0"}
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-Dist-Zilla-Plugin-PodWeaver-4.010-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Dist-Zilla-Plugin-PodWeaver-4.010-5.fc40.noarch.rpm"
+}

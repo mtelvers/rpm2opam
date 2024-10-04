@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "aml-devel-0.3.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "aml-devel-0.3.0-4.fc40.x86_64.rpm"]
+depends: [
+  "aml" {= "0.3.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "aml-devel-0.3.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/aml-devel-0.3.0-4.fc40.x86_64.rpm"
+}

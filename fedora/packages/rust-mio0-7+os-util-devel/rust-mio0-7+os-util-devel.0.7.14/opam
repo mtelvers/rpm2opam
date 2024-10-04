@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-mio0.7+os-util-devel-0.7.14-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-mio0.7+os-util-devel-0.7.14-7.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-mio0-7+os-ext-devel" {= "0.7.14"}
+  "rust-mio0-7-devel" {= "0.7.14"}
+]
+extra-source "rust-mio0.7+os-util-devel-0.7.14-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-mio0.7+os-util-devel-0.7.14-7.fc40.noarch.rpm"
+}

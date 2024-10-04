@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Perl-Tags-0.32-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Perl-Tags-0.32-29.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-File-Find-Rule" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-Module-Locate" 
+  "perl-PPI" 
+  "perl-Path-Tiny" 
+  "perl-PathTools" 
+  "perl-Pod-Usage" 
+  "perl-Test-Simple" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-overload" 
+  "perl-parent" 
+  "perl-vars" 
+]
+extra-source "perl-Perl-Tags-0.32-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Perl-Tags-0.32-29.fc40.noarch.rpm"
+}

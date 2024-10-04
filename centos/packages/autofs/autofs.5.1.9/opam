@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "autofs-5.1.9-9.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "autofs-5.1.9-9.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "cyrus-sasl-lib" 
+  "gawk" 
+  "glibc" 
+  "grep" 
+  "kmod" 
+  "krb5-libs" 
+  "libcom_err" 
+  "libgcc" 
+  "libtirpc" 
+  "libxml2" 
+  "openldap" 
+  "procps-ng" 
+  "sed" 
+  "systemd" 
+  "systemd-libs" 
+]
+extra-source "autofs-5.1.9-9.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/autofs-5.1.9-9.el10.x86_64.rpm"
+}

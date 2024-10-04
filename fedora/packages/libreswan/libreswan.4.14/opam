@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libreswan-4.14-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libreswan-4.14-1.fc40.x86_64.rpm"]
+depends: [
+  "audit-libs" 
+  "bash" 
+  "coreutils" 
+  "glibc" 
+  "iproute" {>= "2.6.8"}
+  "ldns" 
+  "libcap-ng" 
+  "libcurl" 
+  "libevent" 
+  "libseccomp" 
+  "libselinux" 
+  "libxcrypt" 
+  "logrotate" 
+  "nspr" 
+  "nss" 
+  "nss-softokn" 
+  "nss-tools" 
+  "nss-util" 
+  "openldap" 
+  "pam-libs" 
+  "procps-ng" 
+  "systemd" 
+  "systemd-libs" 
+  "unbound-libs" 
+]
+extra-source "libreswan-4.14-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libreswan-4.14-1.fc40.x86_64.rpm"
+}

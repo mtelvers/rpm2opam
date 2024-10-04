@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "javapackages-local-6.2.0-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "javapackages-local-6.2.0-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "java-11-openjdk-devel" 
+  "javapackages-tools" {= "6.2.0"}
+  "python311-javapackages" {= "6.2.0"}
+]
+extra-source "javapackages-local-6.2.0-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/javapackages-local-6.2.0-slfo.1.1.4.noarch.rpm"
+}

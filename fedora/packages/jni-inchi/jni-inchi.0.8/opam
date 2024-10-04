@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jni-inchi-0.8-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jni-inchi-0.8-11.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "inchi-libs" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "jni-inchi-0.8-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jni-inchi-0.8-11.fc40.x86_64.rpm"
+}

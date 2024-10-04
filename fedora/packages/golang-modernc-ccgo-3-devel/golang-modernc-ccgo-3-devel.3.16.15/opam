@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-modernc-ccgo-3-devel-3.16.15-4.fc40~bootstrap.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-modernc-ccgo-3-devel-3.16.15-4.fc40~bootstrap.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-kballard-shellquote-devel" 
+  "golang-modernc-cc-3-devel" 
+  "golang-modernc-libc-devel" 
+  "golang-modernc-mathutil-devel" 
+  "golang-modernc-opt-devel" 
+  "golang-x-sys-devel" 
+  "golang-x-tools-devel" 
+]
+extra-source "golang-modernc-ccgo-3-devel-3.16.15-4.fc40~bootstrap.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-modernc-ccgo-3-devel-3.16.15-4.fc40~bootstrap.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-pep440_rs0.3+default-devel-0.3.12-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-pep440_rs0.3+default-devel-0.3.12-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-pep440_rs0-3-devel" {= "0.3.12"}
+]
+extra-source "rust-pep440_rs0.3+default-devel-0.3.12-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-pep440_rs0.3+default-devel-0.3.12-2.fc40.noarch.rpm"
+}

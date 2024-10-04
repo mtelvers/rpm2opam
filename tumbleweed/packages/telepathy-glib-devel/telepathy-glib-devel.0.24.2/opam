@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "telepathy-glib-devel-0.24.2-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "telepathy-glib-devel-0.24.2-3.1.x86_64.rpm"]
+depends: [
+  "dbus-1-devel" {>= "0.95"}
+  "dbus-1-glib-devel" {>= "0.90"}
+  "glib2-devel" {>= "2.30"}
+  "glibc-devel" 
+  "libtelepathy-glib0" {= "0.24.2"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-TelepathyGlib-0_12" {= "0.24.2"}
+]
+extra-source "telepathy-glib-devel-0.24.2-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/telepathy-glib-devel-0.24.2-3.1.x86_64.rpm"
+}

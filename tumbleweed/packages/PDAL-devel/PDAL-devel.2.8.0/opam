@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "PDAL-devel-2.8.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "PDAL-devel-2.8.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "cmake" 
+  "gdal-devel" 
+  "laszip-devel" 
+  "libPDAL18" {= "2.8.0"}
+  "libboost_filesystem-devel" 
+  "libboost_headers-devel" 
+  "libboost_program_options-devel" 
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+  "xz-devel" 
+  "zlib-devel" 
+]
+extra-source "PDAL-devel-2.8.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/PDAL-devel-2.8.0-1.1.x86_64.rpm"
+}

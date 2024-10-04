@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-guitarchordschemes-svn54512-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-guitarchordschemes-svn54512-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-cnltx" 
+  "texlive-kpathsea" 
+  "texlive-pgf" 
+]
+extra-source "texlive-guitarchordschemes-svn54512-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-guitarchordschemes-svn54512-71.fc40.noarch.rpm"
+}

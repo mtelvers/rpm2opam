@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mininet-2.3.0-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mininet-2.3.0-1.7.x86_64.rpm"]
+depends: [
+  "ethtool" 
+  "glibc" 
+  "iperf" 
+  "iproute2" 
+  "openvswitch" 
+  "python311-base" 
+  "socat" 
+  "telnet" 
+]
+extra-source "mininet-2.3.0-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mininet-2.3.0-1.7.x86_64.rpm"
+}

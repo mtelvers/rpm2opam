@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libnotify-devel-0.8.3-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnotify-devel-0.8.3-3.fc40.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf2-devel" 
+  "glib2-devel" {>= "2.62.0"}
+  "libnotify" {= "0.8.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libnotify-devel-0.8.3-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libnotify-devel-0.8.3-3.fc40.x86_64.rpm"
+}

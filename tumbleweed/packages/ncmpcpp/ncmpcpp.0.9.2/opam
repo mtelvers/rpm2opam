@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ncmpcpp-0.9.2-3.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ncmpcpp-0.9.2-3.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libboost_filesystem1_86_0" 
+  "libboost_locale1_86_0" 
+  "libboost_program_options1_86_0" 
+  "libboost_thread1_86_0" 
+  "libcurl-mini4" 
+  "libfftw3-3" 
+  "libgcc_s1" 
+  "libmpdclient2" 
+  "libncurses6" 
+  "libreadline8" 
+  "libstdc++6" 
+  "libtag2" 
+  "mpd" {> "0.16"}
+]
+extra-source "ncmpcpp-0.9.2-3.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ncmpcpp-0.9.2-3.5.x86_64.rpm"
+}

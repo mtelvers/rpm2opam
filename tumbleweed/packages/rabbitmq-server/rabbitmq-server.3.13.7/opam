@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rabbitmq-server-3.13.7-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rabbitmq-server-3.13.7-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "erlang" {>= "25.0"}
+  "erlang-epmd" 
+  "fillup" 
+  "logrotate" 
+  "rabbitmq-server-plugins" 
+  "shadow" 
+]
+extra-source "rabbitmq-server-3.13.7-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rabbitmq-server-3.13.7-1.1.x86_64.rpm"
+}

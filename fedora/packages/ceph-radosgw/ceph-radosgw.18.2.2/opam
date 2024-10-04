@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ceph-radosgw-18.2.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ceph-radosgw-18.2.2-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "ceph-base" {= "18.2.2"}
+  "ceph-selinux" {= "18.2.2"}
+  "expat" 
+  "glibc" 
+  "gperftools-libs" 
+  "libarrow" 
+  "libcurl" 
+  "libgcc" 
+  "libicu" 
+  "librabbitmq" 
+  "librados2" 
+  "librdkafka" 
+  "librgw2" {= "18.2.2"}
+  "libstdc++" 
+  "lua-libs" 
+  "mailcap" 
+  "openldap" 
+  "openssl-libs" 
+  "parquet-libs" 
+  "sqlite-libs" 
+]
+extra-source "ceph-radosgw-18.2.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/ceph-radosgw-18.2.2-1.fc40.x86_64.rpm"
+}

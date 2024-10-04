@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqgpgme15-1.23.2-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqgpgme15-1.23.2-4.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gpg2" 
+  "libQt5Core5" 
+  "libgcc_s1" 
+  "libgpg-error0" 
+  "libgpgmepp6" 
+  "libstdc++6" 
+]
+extra-source "libqgpgme15-1.23.2-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libqgpgme15-1.23.2-4.2.x86_64.rpm"
+}

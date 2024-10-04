@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "at-spi2-atk-devel-2.52.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "at-spi2-atk-devel-2.52.0-1.fc40.x86_64.rpm"]
+depends: [
+  "at-spi2-atk" {= "2.52.0"}
+  "at-spi2-core-devel" 
+  "atk-devel" 
+  "dbus-devel" {>= "1.5"}
+  "glib2-devel" {>= "2.0.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "at-spi2-atk-devel-2.52.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/at-spi2-atk-devel-2.52.0-1.fc40.x86_64.rpm"
+}

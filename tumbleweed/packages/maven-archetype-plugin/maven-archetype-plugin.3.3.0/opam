@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-archetype-plugin-3.3.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-archetype-plugin-3.3.0-1.1.noarch.rpm"]
+depends: [
+  "apache-commons-collections" 
+  "apache-commons-lang3" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-archetype-catalog" {= "3.3.0"}
+  "maven-archetype-common" {= "3.3.0"}
+  "maven-archetype-descriptor" {= "3.3.0"}
+  "maven-archiver" 
+  "maven-invoker" 
+  "maven-script-interpreter" 
+  "plexus-archiver" 
+  "plexus-interactivity-api" 
+  "plexus-utils" 
+  "velocity" 
+]
+extra-source "maven-archetype-plugin-3.3.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-archetype-plugin-3.3.0-1.1.noarch.rpm"
+}

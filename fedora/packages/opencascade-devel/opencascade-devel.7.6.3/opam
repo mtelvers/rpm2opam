@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "opencascade-devel-7.6.3-4.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opencascade-devel-7.6.3-4.fc39.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cmake-filesystem" 
+  "freeimage-devel" 
+  "freetype-devel" 
+  "gl2ps-devel" 
+  "libICE-devel" 
+  "libSM-devel" 
+  "libX11-devel" 
+  "libXScrnSaver-devel" 
+  "libXcomposite-devel" 
+  "libXcursor-devel" 
+  "libXdmcp-devel" 
+  "libXext-devel" 
+  "libXi-devel" 
+  "libXinerama-devel" 
+  "libXpm-devel" 
+  "libXrandr-devel" 
+  "libXres-devel" 
+  "libXtst-devel" 
+  "libXv-devel" 
+  "libxkbfile-devel" 
+  "mesa-libGL-devel" 
+  "mesa-libGLU-devel" 
+  "opencascade-draw" {= "7.6.3"}
+  "opencascade-foundation" {= "7.6.3"}
+  "opencascade-modeling" {= "7.6.3"}
+  "opencascade-ocaf" {= "7.6.3"}
+  "opencascade-visualization" {= "7.6.3"}
+  "tbb-devel" 
+  "tcl-devel" 
+  "tk-devel" 
+  "vtk-devel" 
+]
+extra-source "opencascade-devel-7.6.3-4.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/opencascade-devel-7.6.3-4.fc39.x86_64.rpm"
+}

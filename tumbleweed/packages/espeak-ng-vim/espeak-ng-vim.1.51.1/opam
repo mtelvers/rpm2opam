@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "espeak-ng-vim-1.51.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "espeak-ng-vim-1.51.1-2.1.noarch.rpm"]
+depends: [
+  "espeak-ng" {= "1.51.1"}
+]
+extra-source "espeak-ng-vim-1.51.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/espeak-ng-vim-1.51.1-2.1.noarch.rpm"
+}

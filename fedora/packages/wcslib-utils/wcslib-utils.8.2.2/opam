@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "wcslib-utils-8.2.2-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wcslib-utils-8.2.2-2.fc40.x86_64.rpm"]
+depends: [
+  "cfitsio" 
+  "glibc" 
+  "wcslib" {= "8.2.2"}
+]
+extra-source "wcslib-utils-8.2.2-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/wcslib-utils-8.2.2-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "krunvm-0.2.3+git12dac81-2.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "krunvm-0.2.3+git12dac81-2.7.x86_64.rpm"]
+depends: [
+  "buildah" 
+  "glibc" 
+  "libgcc_s1" 
+  "libkrun1" 
+]
+extra-source "krunvm-0.2.3+git12dac81-2.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/krunvm-0.2.3+git12dac81-2.7.x86_64.rpm"
+}

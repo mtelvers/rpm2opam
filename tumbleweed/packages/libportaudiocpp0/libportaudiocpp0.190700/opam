@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libportaudiocpp0-190700_20210406-1.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libportaudiocpp0-190700_20210406-1.11.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libportaudio2" 
+  "libstdc++6" 
+]
+extra-source "libportaudiocpp0-190700_20210406-1.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libportaudiocpp0-190700_20210406-1.11.x86_64.rpm"
+}

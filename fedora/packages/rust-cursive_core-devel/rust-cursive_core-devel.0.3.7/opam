@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-cursive_core-devel-0.3.7-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-cursive_core-devel-0.3.7-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.61"}
+  "rust-ahash+default-devel" 
+  "rust-crossbeam-channel+default-devel" 
+  "rust-enum-map+default-devel" 
+  "rust-enumset+default-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-log+default-devel" 
+  "rust-num-devel" 
+  "rust-owning_ref+default-devel" 
+  "rust-time+default-devel" 
+  "rust-time+formatting-devel" 
+  "rust-time+local-offset-devel" 
+  "rust-unicode-segmentation+default-devel" 
+  "rust-unicode-width+default-devel" 
+  "rust-xi-unicode+default-devel" 
+]
+extra-source "rust-cursive_core-devel-0.3.7-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-cursive_core-devel-0.3.7-3.fc40.noarch.rpm"
+}

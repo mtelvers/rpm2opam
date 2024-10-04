@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sushi-45.0-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sushi-45.0-5.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "evince-libs" 
+  "freetype" 
+  "gdk-pixbuf2" 
+  "gjs" 
+  "glib2" 
+  "glibc" 
+  "gstreamer1" 
+  "gstreamer1-plugins-base" 
+  "gtk3" 
+  "gtksourceview4" 
+  "harfbuzz" 
+  "libepoxy" 
+  "libgcc" 
+  "pango" 
+]
+extra-source "sushi-45.0-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sushi-45.0-5.fc40.x86_64.rpm"
+}

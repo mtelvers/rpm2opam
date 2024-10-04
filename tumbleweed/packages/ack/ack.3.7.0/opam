@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ack-3.7.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ack-3.7.0-2.2.noarch.rpm"]
+depends: [
+  "perl" {>= "5.10.1"}
+  "perl-App-Ack" {= "3.7.0"}
+  "perl-base" 
+]
+extra-source "ack-3.7.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ack-3.7.0-2.2.noarch.rpm"
+}

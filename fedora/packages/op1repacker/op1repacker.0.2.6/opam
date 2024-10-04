@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "op1repacker-0.2.6-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "op1repacker-0.2.6-11.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-svg-path" 
+]
+extra-source "op1repacker-0.2.6-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/op1repacker-0.2.6-11.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-pyghmi-1.5.70-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-pyghmi-1.5.70-1.1.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-cryptography" {>= "2.1"}
+  "python311-python-dateutil" {>= "2.8.1"}
+  "python311-six" {>= "1.10.0"}
+]
+extra-source "python3-pyghmi-1.5.70-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-pyghmi-1.5.70-1.1.noarch.rpm"
+}

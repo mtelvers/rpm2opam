@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-turtle-prof-1.6.1-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-turtle-prof-1.6.1-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-ansi-wl-pprint-prof" 
+  "ghc-async-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-clock-prof" 
+  "ghc-containers-prof" 
+  "ghc-directory-prof" 
+  "ghc-exceptions-prof" 
+  "ghc-filepath-prof" 
+  "ghc-foldl-prof" 
+  "ghc-hostname-prof" 
+  "ghc-managed-prof" 
+  "ghc-optional-args-prof" 
+  "ghc-optparse-applicative-prof" 
+  "ghc-process-prof" 
+  "ghc-stm-prof" 
+  "ghc-streaming-commons-prof" 
+  "ghc-temporary-prof" 
+  "ghc-text-prof" 
+  "ghc-time-prof" 
+  "ghc-transformers-prof" 
+  "ghc-turtle-devel" {= "1.6.1"}
+  "ghc-unix-compat-prof" 
+  "ghc-unix-prof" 
+]
+extra-source "ghc-turtle-prof-1.6.1-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-turtle-prof-1.6.1-3.fc40.x86_64.rpm"
+}

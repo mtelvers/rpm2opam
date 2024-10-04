@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gix+attributes-devel-0.55.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gix+attributes-devel-0.55.2-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-gix+excludes-devel" {= "0.55.2"}
+  "rust-gix-attributes+default-devel" 
+  "rust-gix-devel" {= "0.55.2"}
+  "rust-gix-filter+default-devel" 
+  "rust-gix-pathspec+default-devel" 
+  "rust-gix-submodule+default-devel" 
+  "rust-gix-worktree+attributes-devel" 
+  "rust-gix-worktree-devel" 
+]
+extra-source "rust-gix+attributes-devel-0.55.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gix+attributes-devel-0.55.2-3.fc40.noarch.rpm"
+}

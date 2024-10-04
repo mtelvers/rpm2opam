@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "prometheus-simpleclient-java-jetty-0.8.0-8.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "prometheus-simpleclient-java-jetty-0.8.0-8.6.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "jetty-server" 
+  "jetty-servlet" 
+  "prometheus-simpleclient-java" {= "0.8.0"}
+]
+extra-source "prometheus-simpleclient-java-jetty-0.8.0-8.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/prometheus-simpleclient-java-jetty-0.8.0-8.6.noarch.rpm"
+}

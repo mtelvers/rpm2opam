@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "erlang-rebar-2.6.4-24.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "erlang-rebar-2.6.4-24.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "erlang-asn1" 
+  "erlang-common_test" 
+  "erlang-compiler" 
+  "erlang-crypto" 
+  "erlang-dialyzer" 
+  "erlang-diameter" 
+  "erlang-edoc" 
+  "erlang-eflame" 
+  "erlang-erl_interface" 
+  "erlang-erlydtl" 
+  "erlang-erts" 
+  "erlang-eunit" 
+  "erlang-getopt" 
+  "erlang-kernel" 
+  "erlang-lfe" 
+  "erlang-mustache" 
+  "erlang-neotoma" 
+  "erlang-parsetools" 
+  "erlang-protobuffs" 
+  "erlang-reltool" 
+  "erlang-rpm-macros" {>= "0.2.4"}
+  "erlang-sasl" 
+  "erlang-snmp" 
+  "erlang-stdlib" 
+  "erlang-syntax_tools" 
+  "erlang-tools" 
+  "erlang-triq" 
+]
+extra-source "erlang-rebar-2.6.4-24.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/erlang-rebar-2.6.4-24.fc40.noarch.rpm"
+}

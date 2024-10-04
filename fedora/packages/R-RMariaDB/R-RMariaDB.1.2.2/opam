@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-RMariaDB-1.2.2-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-RMariaDB-1.2.2-6.fc40.x86_64.rpm"]
+depends: [
+  "R-DBI" {>= "1.1.3"}
+  "R-Rcpp" {>= "0.12.4"}
+  "R-bit64" 
+  "R-blob" 
+  "R-core" {= "4.3"}
+  "R-hms" {>= "0.5.0"}
+  "R-lubridate" 
+  "R-rlang" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "mariadb-connector-c" 
+]
+extra-source "R-RMariaDB-1.2.2-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-RMariaDB-1.2.2-6.fc40.x86_64.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openttd-14.1-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openttd-14.1-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libSDL2-2_0-0" 
+  "libfluidsynth3" 
+  "libfontconfig1" 
+  "libfreetype6" 
+  "libgcc_s1" 
+  "libicu75" 
+  "liblzma5" 
+  "liblzo2-2" 
+  "libpng16-16" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "openttd-data" {= "14.1"}
+]
+extra-source "openttd-14.1-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openttd-14.1-1.2.x86_64.rpm"
+}

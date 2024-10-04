@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libclang_rt18-18.1.8-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libclang_rt18-18.1.8-3.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "python311-base" 
+]
+extra-source "libclang_rt18-18.1.8-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libclang_rt18-18.1.8-3.1.x86_64.rpm"
+}

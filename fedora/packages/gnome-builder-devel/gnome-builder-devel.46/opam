@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-builder-devel-46~alpha-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-builder-devel-46~alpha-1.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "gnome-builder" {= "46"}
+  "gtk4-devel" 
+  "gtksourceview5-devel" 
+  "libpeas-devel" 
+  "pkgconf-pkg-config" 
+  "template-glib-devel" 
+  "vte291-gtk4-devel" 
+  "webkitgtk6-0-devel" 
+]
+extra-source "gnome-builder-devel-46~alpha-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-builder-devel-46~alpha-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-debug-3.12.2-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-debug-3.12.2-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bzip2-libs" 
+  "expat" 
+  "gdbm-libs" 
+  "glibc" 
+  "libb2" 
+  "libffi" 
+  "libnsl2" 
+  "libtirpc" 
+  "libuuid" 
+  "libxcrypt" 
+  "mpdecimal" 
+  "ncurses-libs" 
+  "openssl-libs" 
+  "pkgconf-pkg-config" 
+  "python3" {= "3.12.2"}
+  "python3-devel" {= "3.12.2"}
+  "python3-idle" {= "3.12.2"}
+  "python3-libs" {= "3.12.2"}
+  "python3-test" {= "3.12.2"}
+  "python3-tkinter" {= "3.12.2"}
+  "readline" 
+  "sqlite-libs" 
+  "tcl" 
+  "tk" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "python3-debug-3.12.2-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-debug-3.12.2-2.fc40.x86_64.rpm"
+}

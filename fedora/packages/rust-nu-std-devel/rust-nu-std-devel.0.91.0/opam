@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-nu-std-devel-0.91.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-nu-std-devel-0.91.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-miette+default-devel" 
+  "rust-miette+fancy-no-backtrace-devel" 
+  "rust-nu-engine+default-devel" 
+  "rust-nu-parser+default-devel" 
+  "rust-nu-protocol+default-devel" 
+]
+extra-source "rust-nu-std-devel-0.91.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-nu-std-devel-0.91.0-1.fc40.noarch.rpm"
+}

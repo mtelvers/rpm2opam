@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-requests-cache-1.2.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-requests-cache-1.2.1-1.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-itsdangerous" 
+  "python311-requests" {>= "2.0.0"}
+  "python311-url-normalize" {>= "1.4"}
+]
+extra-source "python311-requests-cache-1.2.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-requests-cache-1.2.1-1.1.noarch.rpm"
+}

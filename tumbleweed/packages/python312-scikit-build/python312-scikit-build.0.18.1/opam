@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-scikit-build-0.18.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-scikit-build-0.18.1-1.1.noarch.rpm"]
+depends: [
+  "cmake" {>= "3.5"}
+  "python312-base" {= "3.12"}
+  "python312-distro" 
+  "python312-packaging" 
+  "python312-setuptools" {>= "42.0.0"}
+  "python312-wheel" {>= "0.32.0"}
+]
+extra-source "python312-scikit-build-0.18.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-scikit-build-0.18.1-1.1.noarch.rpm"
+}

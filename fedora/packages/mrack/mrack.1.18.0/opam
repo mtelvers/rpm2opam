@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mrack-1.18.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mrack-1.18.0-3.fc40.noarch.rpm"]
+depends: [
+  "mrack-cli" {= "1.18.0"}
+  "python3-mrack-aws" {= "1.18.0"}
+  "python3-mrack-beaker" {= "1.18.0"}
+  "python3-mrack-openstack" {= "1.18.0"}
+  "python3-mrack-podman" {= "1.18.0"}
+  "python3-mrack-virt" {= "1.18.0"}
+  "python3-mracklib" {= "1.18.0"}
+]
+extra-source "mrack-1.18.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mrack-1.18.0-3.fc40.noarch.rpm"
+}

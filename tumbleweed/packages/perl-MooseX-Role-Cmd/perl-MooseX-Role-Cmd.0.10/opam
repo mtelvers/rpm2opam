@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-Role-Cmd-0.10-12.26.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Role-Cmd-0.10-12.26.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Moose" {>= "0.6"}
+  "perl-base" {>= "0.42"}
+]
+extra-source "perl-MooseX-Role-Cmd-0.10-12.26.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-Role-Cmd-0.10-12.26.noarch.rpm"
+}

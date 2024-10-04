@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "NetworkManager-iodine-lang-1.2.0-10.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "NetworkManager-iodine-lang-1.2.0-10.1.noarch.rpm"]
+depends: [
+  "NetworkManager-iodine" {= "1.2.0"}
+]
+extra-source "NetworkManager-iodine-lang-1.2.0-10.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/NetworkManager-iodine-lang-1.2.0-10.1.noarch.rpm"
+}

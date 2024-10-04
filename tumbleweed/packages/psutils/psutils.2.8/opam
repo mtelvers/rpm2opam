@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "psutils-2.08-2.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "psutils-2.08-2.4.x86_64.rpm"]
+depends: [
+  "libpaper-tools" 
+  "perl" 
+  "perl-IPC-Run3" 
+  "perl-base" 
+]
+extra-source "psutils-2.08-2.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/psutils-2.08-2.4.x86_64.rpm"
+}

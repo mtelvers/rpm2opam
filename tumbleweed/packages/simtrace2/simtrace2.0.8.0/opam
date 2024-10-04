@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "simtrace2-0.8.0-1.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "simtrace2-0.8.0-1.13.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libosmo-simtrace2-1" 
+  "libosmocore21" 
+  "libosmosim2" 
+  "libosmousb0" 
+  "libusb-1_0-0" 
+]
+extra-source "simtrace2-0.8.0-1.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/simtrace2-0.8.0-1.13.x86_64.rpm"
+}

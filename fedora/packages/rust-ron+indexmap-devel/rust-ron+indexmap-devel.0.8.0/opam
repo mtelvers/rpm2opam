@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ron+indexmap-devel-0.8.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ron+indexmap-devel-0.8.0-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-indexmap+default-devel" 
+  "rust-indexmap1+serde-1-devel" 
+  "rust-ron-devel" {= "0.8.0"}
+]
+extra-source "rust-ron+indexmap-devel-0.8.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ron+indexmap-devel-0.8.0-4.fc40.noarch.rpm"
+}

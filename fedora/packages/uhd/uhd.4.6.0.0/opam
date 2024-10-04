@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "uhd-4.6.0.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "uhd-4.6.0.0-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "boost-chrono" 
+  "boost-filesystem" 
+  "boost-program-options" 
+  "boost-serialization" 
+  "boost-thread" 
+  "glibc" 
+  "glibc-common" 
+  "libgcc" 
+  "libstdc++" 
+  "libusb1" 
+  "ncurses-libs" 
+  "python3" 
+  "python3-libs" 
+  "python3-tkinter" 
+  "shadow-utils" 
+]
+extra-source "uhd-4.6.0.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/uhd-4.6.0.0-3.fc40.x86_64.rpm"
+}

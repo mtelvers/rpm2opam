@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-File-Find-Rule-PPI-1.07-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-Find-Rule-PPI-1.07-4.fc40.noarch.rpm"]
+depends: [
+  "perl-File-Find-Rule" {>= "0.20"}
+  "perl-PPI" {>= "1.0"}
+  "perl-Params-Util" {>= "0.10"}
+  "perl-libs" 
+]
+extra-source "perl-File-Find-Rule-PPI-1.07-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-File-Find-Rule-PPI-1.07-4.fc40.noarch.rpm"
+}

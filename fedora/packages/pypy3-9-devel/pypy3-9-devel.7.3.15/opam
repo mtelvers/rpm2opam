@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pypy3.9-devel-7.3.15-2.3.9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pypy3.9-devel-7.3.15-2.3.9.fc40.x86_64.rpm"]
+depends: [
+  "pypy3-9" {= "7.3.15"}
+  "pypy3-9-libs" 
+]
+extra-source "pypy3.9-devel-7.3.15-2.3.9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pypy3.9-devel-7.3.15-2.3.9.fc40.x86_64.rpm"
+}

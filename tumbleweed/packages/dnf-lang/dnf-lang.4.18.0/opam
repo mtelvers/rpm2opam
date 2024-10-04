@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dnf-lang-4.18.0-5.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dnf-lang-4.18.0-5.1.noarch.rpm"]
+depends: [
+  "dnf" {= "4.18.0"}
+]
+extra-source "dnf-lang-4.18.0-5.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dnf-lang-4.18.0-5.1.noarch.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "thonny-4.1.4-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "thonny-4.1.4-2.fc40.noarch.rpm"]
+depends: [
+  "hicolor-icon-theme" 
+  "python3" 
+  "python3-asttokens" {>= "2"}
+  "python3-docutils" {>= "0.16"}
+  "python3-filelock" 
+  "python3-jedi" {>= "0.18.1"}
+  "python3-mypy" {>= "0.761"}
+  "python3-pip" 
+  "python3-pylint" {>= "2.4"}
+  "python3-pyserial" {>= "3.4"}
+  "python3-send2trash" {>= "1.5"}
+  "python3-setuptools" {>= "45.2"}
+  "python3-tkinter" 
+  "python3-wheel" 
+]
+extra-source "thonny-4.1.4-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/thonny-4.1.4-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "zeal-0.7.0-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zeal-0.7.0-7.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libX11" 
+  "libarchive" 
+  "libgcc" 
+  "libstdc++" 
+  "libxcb" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qt6-qtwebchannel" 
+  "qt6-qtwebengine" 
+  "sqlite-libs" 
+  "xcb-util-keysyms" 
+]
+extra-source "zeal-0.7.0-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/z/zeal-0.7.0-7.fc40.x86_64.rpm"
+}

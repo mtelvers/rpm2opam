@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtk2-metatheme-adwaita-3.28-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk2-metatheme-adwaita-3.28-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "gtk2-theming-engine-adwaita" {= "3.28"}
+  "libgtk-2_0-0" 
+  "metatheme-adwaita-common" {= "3.28"}
+]
+extra-source "gtk2-metatheme-adwaita-3.28-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/gtk2-metatheme-adwaita-3.28-slfo.1.1.3.noarch.rpm"
+}

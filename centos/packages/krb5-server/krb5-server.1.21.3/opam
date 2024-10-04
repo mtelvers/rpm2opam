@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "krb5-server-1.21.3-2.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "krb5-server-1.21.3-2.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "keyutils-libs" 
+  "krb5-libs" {= "1.21.3"}
+  "krb5-pkinit" {= "1.21.3"}
+  "libcom_err" 
+  "libkadm5" {= "1.21.3"}
+  "libselinux" 
+  "libss" 
+  "libverto" 
+  "libverto-libev" 
+  "lmdb-libs" 
+  "logrotate" 
+  "openssl-libs" 
+  "systemd" 
+  "words" 
+]
+extra-source "krb5-server-1.21.3-2.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/krb5-server-1.21.3-2.el10.x86_64.rpm"
+}

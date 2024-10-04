@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "git-filter-repo-2.38.0-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "git-filter-repo-2.38.0-1.7.noarch.rpm"]
+depends: [
+  "git-core" 
+  "python311-base" 
+]
+extra-source "git-filter-repo-2.38.0-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/git-filter-repo-2.38.0-1.7.noarch.rpm"
+}

@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-tidyres-2024.216.2.0.0svn67738-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-tidyres-2024.216.2.0.0svn67738-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-amsfonts" 
+  "texlive-amsmath" 
+  "texlive-enumitem" 
+  "texlive-expkv-bundle" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-fontawesome" 
+  "texlive-fontspec" 
+  "texlive-hologo" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-minted" 
+  "texlive-paracol" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-setspace" 
+  "texlive-tabularray" 
+  "texlive-tcolorbox" 
+  "texlive-unicode-math" 
+  "texlive-xcolor" 
+]
+extra-source "texlive-tidyres-2024.216.2.0.0svn67738-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-tidyres-2024.216.2.0.0svn67738-57.1.noarch.rpm"
+}

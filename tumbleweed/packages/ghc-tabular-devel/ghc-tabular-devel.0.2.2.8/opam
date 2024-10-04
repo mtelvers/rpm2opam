@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-tabular-devel-0.2.2.8-4.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-tabular-devel-0.2.2.8-4.16.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-csv-devel" 
+  "ghc-html-devel" 
+  "ghc-mtl-devel" 
+  "ghc-tabular" {= "0.2.2.8"}
+]
+extra-source "ghc-tabular-devel-0.2.2.8-4.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-tabular-devel-0.2.2.8-4.16.x86_64.rpm"
+}

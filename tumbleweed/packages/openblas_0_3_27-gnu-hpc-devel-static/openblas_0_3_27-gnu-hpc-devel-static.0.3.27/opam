@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openblas_0_3_27-gnu-hpc-devel-static-0.3.27-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openblas_0_3_27-gnu-hpc-devel-static-0.3.27-4.2.x86_64.rpm"]
+depends: [
+  "libopenblas_0_3_27-gnu-hpc-devel" {= "0.3.27"}
+]
+extra-source "openblas_0_3_27-gnu-hpc-devel-static-0.3.27-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openblas_0_3_27-gnu-hpc-devel-static-0.3.27-4.2.x86_64.rpm"
+}

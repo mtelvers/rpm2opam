@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pcem-17-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcem-17-11.fc40.x86_64.rpm"]
+depends: [
+  "8088_bios" 
+  "SDL2" 
+  "alsa-lib" 
+  "glibc" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libstdc++" 
+  "openal-soft" 
+  "wxBase" 
+  "wxGTK" 
+  "xtideuniversalbios" 
+]
+extra-source "pcem-17-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pcem-17-11.fc40.x86_64.rpm"
+}

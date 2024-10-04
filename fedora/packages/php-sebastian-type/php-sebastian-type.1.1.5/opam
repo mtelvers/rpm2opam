@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-sebastian-type-1.1.5-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-sebastian-type-1.1.5-1.fc40.noarch.rpm"]
+depends: [
+  "php-common" {>= "7.2"}
+  "php-fedora-autoloader" 
+]
+extra-source "php-sebastian-type-1.1.5-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-sebastian-type-1.1.5-1.fc40.noarch.rpm"
+}

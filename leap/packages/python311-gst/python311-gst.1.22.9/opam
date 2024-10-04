@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["/usr/bin/zypper" "-n" "install" "python311-gst-1.22.9-slfo.1.1.4.x86_64.rpm"]
+]
+remove: [
+  ["/usr/bin/zypper" "-n" "remove" "python311-gst"]
+]
+depends: [
+  "girepository-1_0" 
+  "glibc" 
+  "gstreamer" {>= "1.24.5"}
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libgstreamer-1_0-0" 
+  "libpython3_11-1_0" 
+  "python311-base" {= "3.11.8"}
+  "typelib-1_0-Gst-1_0" {= "1.24.5"}
+  "typelib-1_0-GstAudio-1_0" 
+  "typelib-1_0-GstPbutils-1_0" 
+  "typelib-1_0-GstVideo-1_0" 
+]
+extra-source "python311-gst-1.22.9-slfo.1.1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/python311-gst-1.22.9-slfo.1.1.4.x86_64.rpm"
+}

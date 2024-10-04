@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "atril-1.28.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "atril-1.28.0-1.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "atril-libs" {= "1.28.0"}
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libICE" 
+  "libSM" 
+  "libsecret" 
+  "libxml2" 
+  "mate-desktop-libs" 
+  "mathjax" 
+]
+extra-source "atril-1.28.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/atril-1.28.0-1.fc40.x86_64.rpm"
+}

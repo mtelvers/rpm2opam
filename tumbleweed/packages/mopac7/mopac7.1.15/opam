@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mopac7-1.15-8.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mopac7-1.15-8.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libgfortran5" 
+  "libmopac7-1" 
+]
+extra-source "mopac7-1.15-8.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mopac7-1.15-8.8.x86_64.rpm"
+}

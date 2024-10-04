@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "NaturalDocs-1.52-30.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "NaturalDocs-1.52-30.fc40.noarch.rpm"]
+depends: [
+  "perl-Encode" 
+  "perl-English" 
+  "perl-Exporter" 
+  "perl-File-Copy" 
+  "perl-File-Path" 
+  "perl-PathTools" 
+  "perl-Text-Tabs+Wrap" 
+  "perl-Tie-RefHash" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-vars" 
+]
+extra-source "NaturalDocs-1.52-30.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/NaturalDocs-1.52-30.fc40.noarch.rpm"
+}

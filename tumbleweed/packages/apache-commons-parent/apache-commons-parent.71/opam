@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "apache-commons-parent-71-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apache-commons-parent-71-1.1.noarch.rpm"]
+depends: [
+  "apache-parent" 
+  "build-helper-maven-plugin" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "maven-antrun-plugin" 
+  "maven-assembly-plugin" 
+  "maven-bundle-plugin" 
+  "maven-compiler-plugin" 
+  "maven-jar-plugin" 
+  "maven-surefire-plugin" 
+]
+extra-source "apache-commons-parent-71-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/apache-commons-parent-71-1.1.noarch.rpm"
+}

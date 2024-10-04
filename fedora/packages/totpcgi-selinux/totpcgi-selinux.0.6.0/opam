@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "totpcgi-selinux-0.6.0-0.18.20190713git.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "totpcgi-selinux-0.6.0-0.18.20190713git.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "policycoreutils" 
+  "python3-totpcgi" {= "0.6.0"}
+  "selinux-policy" {>= "40.10"}
+]
+extra-source "totpcgi-selinux-0.6.0-0.18.20190713git.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/totpcgi-selinux-0.6.0-0.18.20190713git.fc40.noarch.rpm"
+}

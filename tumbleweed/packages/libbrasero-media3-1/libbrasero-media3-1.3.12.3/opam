@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libbrasero-media3-1-3.12.3-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libbrasero-media3-1-3.12.3-4.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgtk-3-0" 
+]
+extra-source "libbrasero-media3-1-3.12.3-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libbrasero-media3-1-3.12.3-4.1.x86_64.rpm"
+}

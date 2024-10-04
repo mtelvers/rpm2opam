@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ceph-mgr-dashboard-16.2.15.74+gc5dd01a91d8-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ceph-mgr-dashboard-16.2.15.74+gc5dd01a91d8-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "ceph-grafana-dashboards" {= "16.2.15.74"}
+  "ceph-mgr" {= "16.2.15.74"}
+  "ceph-prometheus-alerts" {= "16.2.15.74"}
+  "python311-CherryPy" 
+  "python311-PyJWT" 
+  "python311-Routes" 
+  "python311-Werkzeug" 
+  "python311-setuptools" 
+]
+extra-source "ceph-mgr-dashboard-16.2.15.74+gc5dd01a91d8-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ceph-mgr-dashboard-16.2.15.74+gc5dd01a91d8-1.2.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-addr2line+default-devel-0.21.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-addr2line+default-devel-0.21.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-addr2line+cpp_demangle-devel" {= "0.21.0"}
+  "rust-addr2line+fallible-iterator-devel" {= "0.21.0"}
+  "rust-addr2line+memmap2-devel" {= "0.21.0"}
+  "rust-addr2line+rustc-demangle-devel" {= "0.21.0"}
+  "rust-addr2line+smallvec-devel" {= "0.21.0"}
+  "rust-addr2line+std-object-devel" {= "0.21.0"}
+  "rust-addr2line-devel" {= "0.21.0"}
+]
+extra-source "rust-addr2line+default-devel-0.21.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-addr2line+default-devel-0.21.0-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "thunar-archive-plugin-0.5.2-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "thunar-archive-plugin-0.5.2-2.fc40.x86_64.rpm"]
+depends: [
+  "Thunar" {>= "1.8.0"}
+  "atk" 
+  "bash" 
+  "cairo" 
+  "cairo-gobject" 
+  "exo" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "harfbuzz" 
+  "libxfce4util" 
+  "pango" 
+  "zlib-ng-compat" 
+]
+extra-source "thunar-archive-plugin-0.5.2-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/thunar-archive-plugin-0.5.2-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "velocity-engine-examples-2.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "velocity-engine-examples-2.4-1.1.noarch.rpm"]
+depends: [
+  "dom4j" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "velocity-engine-core" 
+]
+extra-source "velocity-engine-examples-2.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/velocity-engine-examples-2.4-1.1.noarch.rpm"
+}

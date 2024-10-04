@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "clang-tools-17.0.6-slfo.1.1.21.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clang-tools-17.0.6-slfo.1.1.21.x86_64.rpm"]
+depends: [
+  "clang15" 
+  "glibc" 
+  "libLLVM17" 
+  "libclang-cpp17" 
+  "libstdc++6" 
+  "perl-base" 
+  "python311-base" 
+]
+extra-source "clang-tools-17.0.6-slfo.1.1.21.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/clang-tools-17.0.6-slfo.1.1.21.x86_64.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glib2-devel-2.78.6-slfo.1.1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glib2-devel-2.78.6-slfo.1.1.5.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "dbus-1-daemon" 
+  "glib2-tools" {= "2.78.6"}
+  "glibc" 
+  "glibc-devel" 
+  "libffi-devel" {>= "3.0.0"}
+  "libgio-2_0-0" {= "2.78.6"}
+  "libglib-2_0-0" 
+  "libgmodule-2_0-0" {= "2.78.6"}
+  "libgobject-2_0-0" 
+  "libgthread-2_0-0" {= "2.78.6"}
+  "libmount-devel" {>= "2.23"}
+  "libselinux-devel" {>= "2.2"}
+  "pcre2-devel" {>= "10.32"}
+  "pkgconf-pkg-config" 
+  "python311-base" 
+  "zlib-devel" 
+]
+extra-source "glib2-devel-2.78.6-slfo.1.1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/glib2-devel-2.78.6-slfo.1.1.5.x86_64.rpm"
+}

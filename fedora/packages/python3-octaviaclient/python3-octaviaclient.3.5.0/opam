@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-octaviaclient-3.5.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-octaviaclient-3.5.0-3.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-keystoneauth1" {>= "3.18"}
+  "python3-neutronclient" {>= "6.7"}
+  "python3-openstackclient" {>= "3.12"}
+  "python3-osc-lib" {>= "1.14.1"}
+  "python3-oslo-utils" {>= "3.33"}
+  "python3-requests" {>= "2.14.2"}
+]
+extra-source "python3-octaviaclient-3.5.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-octaviaclient-3.5.0-3.fc40.noarch.rpm"
+}

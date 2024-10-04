@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nwchem-7.2.2-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nwchem-7.2.2-4.fc40.x86_64.rpm"]
+depends: [
+  "flexiblas-openblas-openmp" 
+  "nwchem-common" {= "7.2.2"}
+  "openssh-clients" 
+]
+extra-source "nwchem-7.2.2-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nwchem-7.2.2-4.fc40.x86_64.rpm"
+}

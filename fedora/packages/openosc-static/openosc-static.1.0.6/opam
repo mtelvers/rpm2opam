@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openosc-static-1.0.6-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openosc-static-1.0.6-3.fc40.x86_64.rpm"]
+depends: [
+  "openosc-devel" {= "1.0.6"}
+]
+extra-source "openosc-static-1.0.6-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openosc-static-1.0.6-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ladspa-1.17-1.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ladspa-1.17-1.11.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libsndfile1" 
+  "libstdc++6" 
+]
+extra-source "ladspa-1.17-1.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ladspa-1.17-1.11.x86_64.rpm"
+}

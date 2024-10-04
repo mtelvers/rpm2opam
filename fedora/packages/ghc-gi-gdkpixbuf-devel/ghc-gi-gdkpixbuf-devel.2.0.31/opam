@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-gi-gdkpixbuf-devel-2.0.31-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-gi-gdkpixbuf-devel-2.0.31-3.fc40.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf2-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-gi-gdkpixbuf" {= "2.0.31"}
+  "ghc-gi-gio-devel" 
+  "ghc-gi-glib-devel" 
+  "ghc-gi-gmodule-devel" 
+  "ghc-gi-gobject-devel" 
+  "ghc-haskell-gi-base-devel" 
+  "ghc-haskell-gi-devel" 
+  "ghc-haskell-gi-overloading-devel" 
+  "ghc-text-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-gi-gdkpixbuf-devel-2.0.31-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-gi-gdkpixbuf-devel-2.0.31-3.fc40.x86_64.rpm"
+}

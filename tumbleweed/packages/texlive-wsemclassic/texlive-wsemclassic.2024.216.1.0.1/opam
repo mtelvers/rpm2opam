@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-wsemclassic-2024.216.1.0.1svn31532-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-wsemclassic-2024.216.1.0.1svn31532-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-amscls" 
+  "texlive-amsfonts" 
+  "texlive-amsmath" 
+  "texlive-babel" 
+  "texlive-babelbib" 
+  "texlive-fancyhdr" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-fontspec" 
+  "texlive-geometry" 
+  "texlive-hyperref" 
+  "texlive-iftex" 
+  "texlive-inputenx" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-kvoptions" 
+  "texlive-latex" 
+  "texlive-microtype" 
+  "texlive-natbib" 
+  "texlive-polyglossia" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-setspace" 
+  "texlive-soul" 
+  "texlive-titlesec" 
+  "texlive-tocbibind" 
+]
+extra-source "texlive-wsemclassic-2024.216.1.0.1svn31532-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-wsemclassic-2024.216.1.0.1svn31532-55.1.noarch.rpm"
+}

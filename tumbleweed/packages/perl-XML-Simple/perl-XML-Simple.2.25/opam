@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-XML-Simple-2.25-1.26.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XML-Simple-2.25-1.26.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-XML-NamespaceSupport" {>= "1.4"}
+  "perl-XML-SAX" {>= "0.15"}
+  "perl-XML-SAX-Expat" 
+]
+extra-source "perl-XML-Simple-2.25-1.26.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-XML-Simple-2.25-1.26.noarch.rpm"
+}

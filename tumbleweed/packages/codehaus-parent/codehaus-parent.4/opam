@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "codehaus-parent-4-1.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "codehaus-parent-4-1.17.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "codehaus-parent-4-1.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/codehaus-parent-4-1.17.noarch.rpm"
+}

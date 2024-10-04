@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "blt-devel-2.4-66.z.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "blt-devel-2.4-66.z.fc39.x86_64.rpm"]
+depends: [
+  "blt" {= "2.4"}
+  "tcl-devel" 
+]
+extra-source "blt-devel-2.4-66.z.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/blt-devel-2.4-66.z.fc39.x86_64.rpm"
+}

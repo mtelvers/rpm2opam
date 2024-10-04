@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-PFT-1.4.1-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-PFT-1.4.1-14.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Encode" 
+  "perl-Encode-Locale" 
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-File-Path" 
+  "perl-IO" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-Text-Markdown" 
+  "perl-YAML-Tiny" 
+  "perl-constant" 
+  "perl-libs" {>= "5.16.0"}
+  "perl-overload" 
+  "perl-parent" 
+]
+extra-source "perl-PFT-1.4.1-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-PFT-1.4.1-14.fc40.noarch.rpm"
+}

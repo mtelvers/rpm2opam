@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-css-text-prof-0.1.3.0-25.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-css-text-prof-0.1.3.0-25.fc40.x86_64.rpm"]
+depends: [
+  "ghc-attoparsec-prof" 
+  "ghc-base-prof" 
+  "ghc-css-text-devel" {= "0.1.3.0"}
+  "ghc-text-prof" 
+]
+extra-source "ghc-css-text-prof-0.1.3.0-25.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-css-text-prof-0.1.3.0-25.fc40.x86_64.rpm"
+}

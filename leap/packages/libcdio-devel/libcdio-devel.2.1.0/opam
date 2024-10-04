@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcdio-devel-2.1.0-slfo.1.1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcdio-devel-2.1.0-slfo.1.1.6.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "libcdio++1" {= "2.1.0"}
+  "libcdio19" {= "2.1.0"}
+  "libiso9660++0" {= "2.1.0"}
+  "libiso9660-11" {= "2.1.0"}
+  "libudf0" {= "2.1.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libcdio-devel-2.1.0-slfo.1.1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libcdio-devel-2.1.0-slfo.1.1.6.x86_64.rpm"
+}

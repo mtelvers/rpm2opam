@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpcre2-posix3-32bit-10.42-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpcre2-posix3-32bit-10.42-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libpcre2-8-0-32bit" 
+]
+extra-source "libpcre2-posix3-32bit-10.42-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libpcre2-posix3-32bit-10.42-slfo.1.1.8.x86_64.rpm"
+}

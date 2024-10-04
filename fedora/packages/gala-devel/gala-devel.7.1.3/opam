@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gala-devel-7.1.3-4.20240113.git1550761.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gala-devel-7.1.3-4.20240113.git1550761.fc40.x86_64.rpm"]
+depends: [
+  "gala" {= "7.1.3"}
+  "glib2-devel" {>= "2.44.0"}
+  "mutter-devel" {>= "46"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gala-devel-7.1.3-4.20240113.git1550761.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gala-devel-7.1.3-4.20240113.git1550761.fc40.x86_64.rpm"
+}

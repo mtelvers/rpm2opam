@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "munin-node-2.0.72-8.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "munin-node-2.0.72-8.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "perl-HTML-Template" 
+  "perl-Log-Log4perl" 
+  "perl-Net-SNMP" 
+  "perl-Net-SSLeay" 
+  "perl-Net-Server" 
+  "perl-base" 
+  "perl-libwww-perl" 
+  "procps" 
+  "python311-base" 
+  "ruby" 
+  "ruby3-3" 
+  "shadow" 
+  "sysstat" 
+  "system-user-nobody" 
+  "system-user-wwwrun" 
+]
+extra-source "munin-node-2.0.72-8.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/munin-node-2.0.72-8.2.noarch.rpm"
+}

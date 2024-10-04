@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "systemd-resolved-256-14.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "systemd-resolved-256-14.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "grep" 
+  "libgcc" 
+  "libidn2" 
+  "openssl-libs" 
+  "systemd" 
+]
+extra-source "systemd-resolved-256-14.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/systemd-resolved-256-14.el10.x86_64.rpm"
+}

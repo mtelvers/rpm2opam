@@ -1,0 +1,39 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "clutter-1.26.4-13.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clutter-1.26.4-13.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" {>= "1.14.0"}
+  "cairo-gobject" 
+  "cogl" {>= "1.21.2"}
+  "fontconfig" 
+  "freetype" 
+  "gdk-pixbuf2" 
+  "glib2" {>= "2.53.4"}
+  "glibc" 
+  "gtk3" 
+  "harfbuzz" 
+  "json-glib" {>= "0.12.0"}
+  "libX11" 
+  "libXcomposite" 
+  "libXdamage" 
+  "libXext" 
+  "libXfixes" 
+  "libXi" 
+  "libXrandr" 
+  "libdrm" 
+  "libglvnd-egl" 
+  "libinput" {>= "0.19.0"}
+  "libwayland-client" 
+  "libwayland-cursor" 
+  "libwayland-egl" 
+  "libwayland-server" 
+  "libxkbcommon" 
+  "mesa-libgbm" 
+  "pango" 
+  "systemd-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "clutter-1.26.4-13.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/clutter-1.26.4-13.fc40.x86_64.rpm"
+}

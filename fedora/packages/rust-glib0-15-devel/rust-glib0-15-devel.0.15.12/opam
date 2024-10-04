@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-glib0.15-devel-0.15.12-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-glib0.15-devel-0.15.12-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.56"}
+  "rust-bitflags+default-devel" 
+  "rust-futures-channel+default-devel" 
+  "rust-futures-core-devel" 
+  "rust-futures-executor+default-devel" 
+  "rust-futures-task-devel" 
+  "rust-glib-macros+default-devel" 
+  "rust-glib-sys+default-devel" 
+  "rust-gobject-sys+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-smallvec+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-glib0.15-devel-0.15.12-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-glib0.15-devel-0.15.12-4.fc40.noarch.rpm"
+}

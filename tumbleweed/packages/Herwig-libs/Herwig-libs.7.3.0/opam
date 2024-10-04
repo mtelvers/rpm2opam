@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "Herwig-libs-7.3.0-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Herwig-libs-7.3.0-1.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libThePEG30" 
+  "libfastjet0" 
+  "libgcc_s1" 
+  "libgfortran5" 
+  "libgmp10" 
+  "libgsl28" 
+  "libgslcblas0" 
+  "libstdc++6" 
+]
+extra-source "Herwig-libs-7.3.0-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/Herwig-libs-7.3.0-1.4.x86_64.rpm"
+}

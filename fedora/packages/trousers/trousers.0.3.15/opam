@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "trousers-0.3.15-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trousers-0.3.15-10.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "openssl-libs" 
+  "shadow-utils" 
+  "systemd" 
+  "trousers-lib" {= "0.3.15"}
+]
+extra-source "trousers-0.3.15-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/trousers-0.3.15-10.fc40.x86_64.rpm"
+}

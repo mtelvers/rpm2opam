@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-nbconvert-7.16.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-nbconvert-7.16.4-1.1.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "jupyter-nbconvert" {= "7.16.4"}
+  "python312-Jinja2" {>= "3.0"}
+  "python312-MarkupSafe" {>= "2.0"}
+  "python312-Pygments" {>= "2.4.1"}
+  "python312-base" 
+  "python312-beautifulsoup4" 
+  "python312-bleach" 
+  "python312-defusedxml" 
+  "python312-jupyter-core" {>= "4.7"}
+  "python312-jupyterlab-pygments" 
+  "python312-mistune" 
+  "python312-nbclient" {>= "0.5"}
+  "python312-nbformat" {>= "5.7"}
+  "python312-packaging" 
+  "python312-pandocfilters" {>= "1.4.1"}
+  "python312-tinycss2" 
+  "python312-traitlets" {>= "5.1"}
+]
+extra-source "python312-nbconvert-7.16.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-nbconvert-7.16.4-1.1.noarch.rpm"
+}

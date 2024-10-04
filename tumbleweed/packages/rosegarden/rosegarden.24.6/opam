@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rosegarden-24.06-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rosegarden-24.06-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "dssi" 
+  "glibc" 
+  "ladspa" 
+  "ladspa-swh-plugins" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Network5" 
+  "libQt5Widgets5" 
+  "libasound2" 
+  "libfftw3-3" 
+  "libgcc_s1" 
+  "libjack0" 
+  "liblirc_client0" 
+  "liblo7" 
+  "liblrdf2" 
+  "libsamplerate0" 
+  "libsndfile1" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "lilypond-fonts-common" {>= "2.20"}
+  "perl-base" 
+  "python311-base" 
+  "ruby3-3" 
+  "xsynth-dssi" 
+]
+extra-source "rosegarden-24.06-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rosegarden-24.06-1.1.x86_64.rpm"
+}

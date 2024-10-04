@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gix-pack+pack-cache-lru-dynamic-devel-0.44.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gix-pack+pack-cache-lru-dynamic-devel-0.44.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-clru+default-devel" 
+  "rust-gix-pack-devel" {= "0.44.0"}
+]
+extra-source "rust-gix-pack+pack-cache-lru-dynamic-devel-0.44.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gix-pack+pack-cache-lru-dynamic-devel-0.44.0-2.fc40.noarch.rpm"
+}

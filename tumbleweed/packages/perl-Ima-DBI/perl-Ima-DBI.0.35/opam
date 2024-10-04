@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Ima-DBI-0.35-5.33.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Ima-DBI-0.35-5.33.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Data-Inheritable" {>= "0.2"}
+  "perl-DBI" {>= "1.2"}
+  "perl-DBIx-ContextualFetch" {>= "1"}
+]
+extra-source "perl-Ima-DBI-0.35-5.33.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Ima-DBI-0.35-5.33.noarch.rpm"
+}

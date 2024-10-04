@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvirt-daemon-common-10.0.0-slfo.1.3.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvirt-daemon-common-10.0.0-slfo.1.3.4.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-completion" {>= "2.0"}
+  "bash-sh" 
+  "dbus-1" 
+  "dmidecode" 
+  "gettext-runtime" 
+  "glibc" 
+  "iproute2" 
+  "libacl1" 
+  "libgcc_s1" 
+  "libglib-2_0-0" 
+  "libreadline8" 
+  "libvirt-libs" 
+  "logrotate" 
+  "system-group-libvirt" 
+  "systemd" 
+  "udev" {>= "145"}
+]
+extra-source "libvirt-daemon-common-10.0.0-slfo.1.3.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libvirt-daemon-common-10.0.0-slfo.1.3.4.x86_64.rpm"
+}

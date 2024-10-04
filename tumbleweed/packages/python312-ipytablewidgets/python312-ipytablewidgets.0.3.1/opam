@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-ipytablewidgets-0.3.1-3.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-ipytablewidgets-0.3.1-3.3.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-ipywidgets" {>= "7.5.0"}
+  "python312-lz4" 
+  "python312-numpy" {>= "1.10.4"}
+  "python312-pandas" {>= "1.0.0"}
+  "python312-traitlets" {>= "4.3.0"}
+  "python312-traittypes" {>= "0.0.6"}
+]
+extra-source "python312-ipytablewidgets-0.3.1-3.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-ipytablewidgets-0.3.1-3.3.noarch.rpm"
+}

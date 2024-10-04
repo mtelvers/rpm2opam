@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "watson-fish-completion-2.1.0-1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "watson-fish-completion-2.1.0-1.8.noarch.rpm"]
+depends: [
+  "watson" {= "2.1.0"}
+]
+extra-source "watson-fish-completion-2.1.0-1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/watson-fish-completion-2.1.0-1.8.noarch.rpm"
+}

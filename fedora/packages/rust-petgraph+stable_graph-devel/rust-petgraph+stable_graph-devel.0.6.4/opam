@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-petgraph+stable_graph-devel-0.6.4-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-petgraph+stable_graph-devel-0.6.4-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-petgraph-devel" {= "0.6.4"}
+]
+extra-source "rust-petgraph+stable_graph-devel-0.6.4-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-petgraph+stable_graph-devel-0.6.4-2.fc40.noarch.rpm"
+}

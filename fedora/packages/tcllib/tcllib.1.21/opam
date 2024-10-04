@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tcllib-1.21-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tcllib-1.21-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "tcl" 
+]
+extra-source "tcllib-1.21-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tcllib-1.21-4.fc40.noarch.rpm"
+}

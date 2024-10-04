@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MCE-tools-1.889-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MCE-tools-1.889-3.fc40.noarch.rpm"]
+depends: [
+  "grep" 
+  "gzip" 
+  "perl-Errno" 
+  "perl-Fcntl" 
+  "perl-Getopt-Long" 
+  "perl-MCE" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-MCE-tools-1.889-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MCE-tools-1.889-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libspiel-1_0-1.0.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libspiel-1_0-1.0.1-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgstaudio-1_0-0" 
+  "libgstreamer-1_0-0" 
+  "libspeech-provider-1_0" 
+]
+extra-source "libspiel-1_0-1.0.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libspiel-1_0-1.0.1-1.1.x86_64.rpm"
+}

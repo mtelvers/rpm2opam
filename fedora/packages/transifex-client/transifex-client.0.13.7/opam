@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "transifex-client-0.13.7-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "transifex-client-0.13.7-14.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-requests" 
+  "python3-rpm-macros" 
+  "python3-six" 
+  "python3-slugify" 
+  "python3-urllib3" 
+]
+extra-source "transifex-client-0.13.7-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/transifex-client-0.13.7-14.fc40.noarch.rpm"
+}

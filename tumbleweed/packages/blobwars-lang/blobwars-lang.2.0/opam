@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "blobwars-lang-2.00-4.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "blobwars-lang-2.00-4.2.noarch.rpm"]
+depends: [
+  "blobwars" {= "2.0"}
+]
+extra-source "blobwars-lang-2.00-4.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/blobwars-lang-2.00-4.2.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mvapich2-psm2-2.3.7-9.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mvapich2-psm2-2.3.7-9.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "libgcc_s1" 
+  "libgfortran5" 
+  "libnuma1" 
+  "libpciaccess0" 
+  "libpsm2-2" 
+  "libstdc++6" 
+  "libxml2-2" 
+  "mpi-selector" 
+  "perl-base" 
+]
+extra-source "mvapich2-psm2-2.3.7-9.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mvapich2-psm2-2.3.7-9.1.x86_64.rpm"
+}

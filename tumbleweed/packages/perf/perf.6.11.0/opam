@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perf-6.11.0-86.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perf-6.11.0-86.4.x86_64.rpm"]
+depends: [
+  "babeltrace" 
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "libcap2" 
+  "libdw1" 
+  "libelf1" 
+  "liblzma5" 
+  "libnuma1" 
+  "libopencsd_c_api1" 
+  "libopenssl3" 
+  "libpython3_11-1_0" 
+  "libslang2" 
+  "libstdc++6" 
+  "libtraceevent1" 
+  "libunwind8" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+  "perl" 
+  "perl-base" 
+]
+extra-source "perf-6.11.0-86.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perf-6.11.0-86.4.x86_64.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "PackageKit-1.2.8-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "PackageKit-1.2.8-3.fc40.x86_64.rpm"]
+depends: [
+  "PackageKit-glib" {= "1.2.8"}
+  "appstream" 
+  "bash" 
+  "glib2" {>= "2.54.0"}
+  "glibc" 
+  "libdnf" {>= "0.43.1"}
+  "libgcc" 
+  "polkit-libs" 
+  "python3" {= "3.12"}
+  "rpm-libs" 
+  "shared-mime-info" 
+  "sqlite-libs" 
+  "systemd" 
+  "systemd-libs" 
+]
+extra-source "PackageKit-1.2.8-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/PackageKit-1.2.8-3.fc40.x86_64.rpm"
+}

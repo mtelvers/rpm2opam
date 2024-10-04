@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fcft-3.1.8-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fcft-3.1.8-1.fc40.x86_64.rpm"]
+depends: [
+  "fontconfig" 
+  "freetype" 
+  "glibc" 
+  "harfbuzz" 
+  "pixman" 
+  "utf8proc" 
+]
+extra-source "fcft-3.1.8-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fcft-3.1.8-1.fc40.x86_64.rpm"
+}

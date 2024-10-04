@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "maven-lib-3.9.6-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-lib-3.9.6-6.fc40.noarch.rpm"]
+depends: [
+  "apache-commons-cli" 
+  "apache-commons-lang3" 
+  "atinject" 
+  "google-guice" 
+  "guava" 
+  "jakarta-annotations" 
+  "jansi" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "maven-shared-utils" 
+  "maven-wagon" 
+  "plexus-cipher" 
+  "plexus-classworlds" 
+  "plexus-containers-component-annotations" 
+  "plexus-interpolation" 
+  "plexus-sec-dispatcher" 
+  "plexus-utils" 
+  "sisu" 
+  "slf4j" 
+]
+extra-source "maven-lib-3.9.6-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/maven-lib-3.9.6-6.fc40.noarch.rpm"
+}

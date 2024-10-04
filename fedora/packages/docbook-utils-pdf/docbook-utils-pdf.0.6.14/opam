@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "docbook-utils-pdf-0.6.14-60.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "docbook-utils-pdf-0.6.14-60.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "docbook-utils" {= "0.6.14"}
+  "texlive-collection-fontsrecommended" 
+  "texlive-collection-formatsextra" 
+  "texlive-dvips" 
+  "texlive-jadetex" {>= "7"}
+]
+extra-source "docbook-utils-pdf-0.6.14-60.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/docbook-utils-pdf-0.6.14-60.fc40.noarch.rpm"
+}

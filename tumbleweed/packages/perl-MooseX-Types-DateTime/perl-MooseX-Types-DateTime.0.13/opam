@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-Types-DateTime-0.13-1.30.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Types-DateTime-0.13-1.30.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-DateTime" {>= "0.4302"}
+  "perl-DateTime-Locale" {>= "0.400100"}
+  "perl-DateTime-TimeZone" {>= "0.95"}
+  "perl-Moose" {>= "0.41"}
+  "perl-MooseX-Types" {>= "0.30"}
+  "perl-namespace-clean" {>= "0.19"}
+]
+extra-source "perl-MooseX-Types-DateTime-0.13-1.30.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-Types-DateTime-0.13-1.30.noarch.rpm"
+}

@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-qt5-5.15.10-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-qt5-5.15.10-1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt5Bluetooth5" 
+  "libQt5Core5" 
+  "libQt5DBus5" 
+  "libQt5Designer5" 
+  "libQt5Gui5" 
+  "libQt5Help5" 
+  "libQt5Location5" 
+  "libQt5Multimedia5" 
+  "libQt5Network5" 
+  "libQt5Nfc5" 
+  "libQt5OpenGL5" 
+  "libQt5Positioning5" 
+  "libQt5PrintSupport5" 
+  "libQt5SerialPort5" 
+  "libQt5Sql5" 
+  "libQt5Svg5" 
+  "libQt5Test5" 
+  "libQt5TextToSpeech5" 
+  "libQt5WebChannel5" 
+  "libQt5WebSockets5" 
+  "libQt5Widgets5" 
+  "libQt5X11Extras5" 
+  "libQt5Xml5" 
+  "libQt5XmlPatterns5" 
+  "libQtQuick5" 
+  "libdbus-1-3" 
+  "libgcc_s1" 
+  "libpython3_10-1_0" 
+  "libstdc++6" 
+  "python310-base" {= "3.10"}
+  "python310-dbus-python" {>= "1.3.2"}
+  "python310-qt5-sip" {>= "12.13"}
+]
+extra-source "python310-qt5-5.15.10-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-qt5-5.15.10-1.7.x86_64.rpm"
+}

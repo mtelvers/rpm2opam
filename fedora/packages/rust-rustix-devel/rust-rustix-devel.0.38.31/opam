@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rustix-devel-0.38.31-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rustix-devel-0.38.31-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.63"}
+  "rust-bitflags-devel" 
+  "rust-errno-devel" 
+  "rust-libc+extra_traits-devel" 
+  "rust-libc-devel" 
+  "rust-linux-raw-sys+elf-devel" 
+  "rust-linux-raw-sys+errno-devel" 
+  "rust-linux-raw-sys+general-devel" 
+  "rust-linux-raw-sys+ioctl-devel" 
+  "rust-linux-raw-sys+no_std-devel" 
+  "rust-linux-raw-sys-devel" 
+]
+extra-source "rust-rustix-devel-0.38.31-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rustix-devel-0.38.31-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-disk-utility-46.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-disk-utility-46.1-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libatk-1_0-0" 
+  "libcairo2" 
+  "libcanberra-gtk3-0" 
+  "libdvdread8" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libhandy-1-0" 
+  "liblzma5" 
+  "libnotify4" 
+  "libpango-1_0-0" 
+  "libpwquality1" 
+  "libsecret-1-0" 
+  "libsystemd0" 
+  "libudisks2-0" 
+  "udisks2" 
+]
+extra-source "gnome-disk-utility-46.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnome-disk-utility-46.1-1.1.x86_64.rpm"
+}

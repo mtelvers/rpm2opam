@@ -1,0 +1,48 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Plack-1.0051-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Plack-1.0051-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Apache-LogFormat-Compiler" {>= "0.33"}
+  "perl-CGI-Compile" {>= "0.3"}
+  "perl-CGI-Emulate-PSGI" {>= "0.10"}
+  "perl-Carp" 
+  "perl-Cookie-Baker" {>= "0.7"}
+  "perl-Devel-StackTrace" {>= "1.23"}
+  "perl-Devel-StackTrace-AsHTML" {>= "0.11"}
+  "perl-Digest-MD5" 
+  "perl-DirHandle" 
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-Filesys-Notify-Simple" 
+  "perl-Getopt-Long" 
+  "perl-HTTP-Date" 
+  "perl-HTTP-Entity-Parser" {>= "0.17"}
+  "perl-HTTP-Headers-Fast" {>= "0.18"}
+  "perl-HTTP-Message" {>= "5.814"}
+  "perl-HTTP-Tiny" {>= "0.3"}
+  "perl-Hash-MultiValue" {>= "0.5"}
+  "perl-IO" 
+  "perl-MIME-Base64" 
+  "perl-Module-Refresh" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Pod-Usage" {>= "1.36"}
+  "perl-Scalar-List-Utils" 
+  "perl-Socket" 
+  "perl-Storable" 
+  "perl-Stream-Buffered" {>= "0.2"}
+  "perl-Time-HiRes" 
+  "perl-Try-Tiny" 
+  "perl-URI" {>= "1.59"}
+  "perl-WWW-Form-UrlEncoded" {>= "0.23"}
+  "perl-base" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-overload" 
+  "perl-parent" 
+]
+extra-source "perl-Plack-1.0051-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Plack-1.0051-3.fc40.noarch.rpm"
+}

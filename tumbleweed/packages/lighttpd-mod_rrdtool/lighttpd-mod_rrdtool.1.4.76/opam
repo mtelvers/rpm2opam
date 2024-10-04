@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lighttpd-mod_rrdtool-1.4.76-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lighttpd-mod_rrdtool-1.4.76-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "lighttpd" 
+  "rrdtool" 
+]
+extra-source "lighttpd-mod_rrdtool-1.4.76-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lighttpd-mod_rrdtool-1.4.76-1.1.x86_64.rpm"
+}

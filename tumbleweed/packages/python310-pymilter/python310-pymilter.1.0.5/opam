@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pymilter-1.0.5-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pymilter-1.0.5-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libmilter1_0" 
+  "pymilter-common" {= "1.0.5"}
+  "python310" 
+  "python310-base" {= "3.10"}
+  "python310-bsddb3" 
+  "python310-py3dns" 
+]
+extra-source "python310-pymilter-1.0.5-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-pymilter-1.0.5-2.2.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "coin-or-Alps-1.5.11-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coin-or-Alps-1.5.11-1.fc40.x86_64.rpm"]
+depends: [
+  "coin-or-CoinUtils" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "coin-or-Alps-1.5.11-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/coin-or-Alps-1.5.11-1.fc40.x86_64.rpm"
+}

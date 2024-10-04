@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libavformat-free-6.1.1-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libavformat-free-6.1.1-8.fc40.x86_64.rpm"]
+depends: [
+  "bzip2-libs" 
+  "game-music-emu" 
+  "glibc" 
+  "gnutls" 
+  "libavcodec-free" {= "6.1.1"}
+  "libavutil-free" {= "6.1.1"}
+  "libbluray" 
+  "libchromaprint" 
+  "libgcrypt" 
+  "libmodplug" 
+  "libopenmpt" 
+  "librabbitmq" 
+  "librist" 
+  "libsmbclient" 
+  "libssh" 
+  "libxml2" 
+  "srt-libs" 
+  "vapoursynth-libs" 
+  "zeromq" 
+  "zlib-ng-compat" 
+]
+extra-source "libavformat-free-6.1.1-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libavformat-free-6.1.1-8.fc40.x86_64.rpm"
+}

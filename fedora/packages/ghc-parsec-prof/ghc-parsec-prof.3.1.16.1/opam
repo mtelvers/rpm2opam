@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-parsec-prof-3.1.16.1-140.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-parsec-prof-3.1.16.1-140.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-mtl-prof" 
+  "ghc-parsec-devel" {= "3.1.16.1"}
+  "ghc-text-prof" 
+]
+extra-source "ghc-parsec-prof-3.1.16.1-140.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-parsec-prof-3.1.16.1-140.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcinnamon-desktop-data-branding-upstream-6.2.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcinnamon-desktop-data-branding-upstream-6.2.0-1.1.noarch.rpm"]
+depends: [
+  "gnome-backgrounds" 
+  "libcinnamon-desktop-data" {= "6.2.0"}
+  "metatheme-adwaita-common" 
+]
+extra-source "libcinnamon-desktop-data-branding-upstream-6.2.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libcinnamon-desktop-data-branding-upstream-6.2.0-1.1.noarch.rpm"
+}

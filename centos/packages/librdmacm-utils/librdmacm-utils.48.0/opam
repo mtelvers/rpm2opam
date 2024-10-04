@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "librdmacm-utils-48.0-4.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "librdmacm-utils-48.0-4.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libibverbs" {= "51.0"}
+  "librdmacm" {= "51.0"}
+]
+extra-source "librdmacm-utils-48.0-4.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/librdmacm-utils-48.0-4.el10.x86_64.rpm"
+}

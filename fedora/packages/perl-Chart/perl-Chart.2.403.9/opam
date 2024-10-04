@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Chart-2.403.9-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Chart-2.403.9-5.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" {>= "1.35"}
+  "perl-FileHandle" 
+  "perl-GD" 
+  "perl-Graphics-Toolkit-Color" {>= "1"}
+  "perl-POSIX" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" {>= "5.12.0"}
+]
+extra-source "perl-Chart-2.403.9-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Chart-2.403.9-5.fc40.noarch.rpm"
+}

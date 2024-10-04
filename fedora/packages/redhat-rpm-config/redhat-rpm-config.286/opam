@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "redhat-rpm-config-286-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "redhat-rpm-config-286-1.fc40.noarch.rpm"]
+depends: [
+  "annobin-plugin-gcc" 
+  "ansible-srpm-macros" 
+  "bash" 
+  "coreutils" 
+  "dwz" {>= "0.4"}
+  "efi-srpm-macros" 
+  "file" 
+  "findutils" 
+  "fonts-srpm-macros" 
+  "forge-srpm-macros" 
+  "fpc-srpm-macros" 
+  "gawk" 
+  "gcc-plugin-annobin" 
+  "ghc-srpm-macros" 
+  "gnat-srpm-macros" 
+  "go-srpm-macros" 
+  "grep" 
+  "kernel-srpm-macros" {>= "1.0"}
+  "llvm" 
+  "lua-srpm-macros" 
+  "ocaml-srpm-macros" 
+  "openblas-srpm-macros" 
+  "package-notes-srpm-macros" 
+  "perl-srpm-macros" 
+  "python-srpm-macros" {>= "3.11"}
+  "qt5-srpm-macros" 
+  "qt6-srpm-macros" 
+  "rpm" {>= "4.11.0"}
+  "rust-srpm-macros" 
+  "sed" 
+  "zig-srpm-macros" 
+  "zip" 
+]
+extra-source "redhat-rpm-config-286-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/redhat-rpm-config-286-1.fc40.noarch.rpm"
+}

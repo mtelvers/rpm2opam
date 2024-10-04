@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sphinxbase-devel-0.8-lp160.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sphinxbase-devel-0.8-lp160.1.2.x86_64.rpm"]
+depends: [
+  "alsa-devel" 
+  "lapack-devel" 
+  "libsndfile-devel" 
+  "libsphinxad0" {= "0.8"}
+  "libsphinxbase1" {= "0.8"}
+  "pkgconf-pkg-config" 
+]
+extra-source "sphinxbase-devel-0.8-lp160.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/sphinxbase-devel-0.8-lp160.1.2.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qgis-plugin-grass-3.38.3-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qgis-plugin-grass-3.38.3-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "grass" {> "7.0"}
+  "grass-doc" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Svg5" 
+  "libQt5Widgets5" 
+  "libQt5Xml5" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "qgis" 
+]
+extra-source "qgis-plugin-grass-3.38.3-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/qgis-plugin-grass-3.38.3-2.1.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "onboard-lang-1.4.1-8.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "onboard-lang-1.4.1-8.2.noarch.rpm"]
+depends: [
+  "onboard" {= "1.4.1"}
+]
+extra-source "onboard-lang-1.4.1-8.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/onboard-lang-1.4.1-8.2.noarch.rpm"
+}

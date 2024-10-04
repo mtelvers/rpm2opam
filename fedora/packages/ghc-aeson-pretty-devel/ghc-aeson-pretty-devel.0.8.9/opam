@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-aeson-pretty-devel-0.8.9-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-aeson-pretty-devel-0.8.9-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-devel" 
+  "ghc-aeson-pretty" {= "0.8.9"}
+  "ghc-base-compat-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-scientific-devel" 
+  "ghc-text-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-vector-devel" 
+  "glibc" 
+  "gmp" 
+  "libffi" 
+]
+extra-source "ghc-aeson-pretty-devel-0.8.9-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-aeson-pretty-devel-0.8.9-8.fc40.x86_64.rpm"
+}

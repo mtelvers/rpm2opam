@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-plplot-5.15.0-20.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-plplot-5.15.0-20.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libplplot17" 
+  "libpython3_11-1_0" 
+  "plplot-common" {= "5.15.0"}
+  "python311-base" 
+  "python311-numpy" 
+]
+extra-source "python311-plplot-5.15.0-20.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-plplot-5.15.0-20.2.x86_64.rpm"
+}

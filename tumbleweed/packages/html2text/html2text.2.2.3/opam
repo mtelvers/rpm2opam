@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "html2text-2.2.3-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "html2text-2.2.3-1.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "update-alternatives" 
+]
+extra-source "html2text-2.2.3-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/html2text-2.2.3-1.4.x86_64.rpm"
+}

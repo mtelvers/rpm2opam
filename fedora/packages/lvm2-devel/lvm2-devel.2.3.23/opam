@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lvm2-devel-2.03.23-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lvm2-devel-2.03.23-1.fc40.x86_64.rpm"]
+depends: [
+  "device-mapper-devel" {= "1.2.197"}
+  "device-mapper-event-devel" {= "1.2.197"}
+  "lvm2" {= "2.3.23"}
+  "lvm2-libs" 
+  "pkgconf-pkg-config" 
+]
+extra-source "lvm2-devel-2.03.23-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lvm2-devel-2.03.23-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-slab+serde-devel-0.4.9-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-slab+serde-devel-0.4.9-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-serde+alloc-devel" 
+  "rust-serde-devel" 
+  "rust-slab-devel" {= "0.4.9"}
+]
+extra-source "rust-slab+serde-devel-0.4.9-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-slab+serde-devel-0.4.9-2.fc40.noarch.rpm"
+}

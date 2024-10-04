@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-OWSLib-0.31.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-OWSLib-0.31.0-1.1.noarch.rpm"]
+depends: [
+  "python311-PyYAML" 
+  "python311-base" {= "3.11"}
+  "python311-lxml" 
+  "python311-python-dateutil" {>= "1.5"}
+  "python311-pytz" 
+  "python311-requests" {>= "1.0"}
+]
+extra-source "python311-OWSLib-0.31.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-OWSLib-0.31.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-DBItest-1.7.0-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-DBItest-1.7.0-14.fc40.noarch.rpm"]
+depends: [
+  "R-DBI" {>= "1.1.0"}
+  "R-R6" 
+  "R-blob" {>= "1.2.0"}
+  "R-callr" 
+  "R-core" {= "4.3"}
+  "R-desc" 
+  "R-hms" {>= "0.5.0"}
+  "R-lubridate" 
+  "R-rlang" {>= "0.2.0"}
+  "R-testthat" {>= "2.0.0"}
+  "R-withr" 
+]
+extra-source "R-DBItest-1.7.0-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-DBItest-1.7.0-14.fc40.noarch.rpm"
+}

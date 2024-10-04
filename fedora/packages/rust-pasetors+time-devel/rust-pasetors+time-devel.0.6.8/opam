@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-pasetors+time-devel-0.6.8-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-pasetors+time-devel-0.6.8-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-pasetors-devel" {= "0.6.8"}
+  "rust-time+default-devel" 
+  "rust-time+formatting-devel" 
+  "rust-time+parsing-devel" 
+]
+extra-source "rust-pasetors+time-devel-0.6.8-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-pasetors+time-devel-0.6.8-2.fc40.noarch.rpm"
+}

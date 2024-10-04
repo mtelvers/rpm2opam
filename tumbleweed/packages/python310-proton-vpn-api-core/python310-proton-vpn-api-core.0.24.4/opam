@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-proton-vpn-api-core-0.24.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-proton-vpn-api-core-0.24.4-1.1.noarch.rpm"]
+depends: [
+  "python310-PyNaCl" 
+  "python310-base" {= "3.10"}
+  "python310-cryptography" 
+  "python310-distro" 
+  "python310-proton-core" 
+  "python310-proton-vpn-connection" 
+  "python310-proton-vpn-killswitch" 
+  "python310-proton-vpn-logger" 
+  "python310-sentry-sdk" 
+]
+extra-source "python310-proton-vpn-api-core-0.24.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-proton-vpn-api-core-0.24.4-1.1.noarch.rpm"
+}

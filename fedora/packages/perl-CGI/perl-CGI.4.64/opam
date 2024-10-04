@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CGI-4.64-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CGI-4.64-1.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-File-Temp" {>= "0.17"}
+  "perl-HTML-Parser" {>= "3.69"}
+  "perl-PathTools" {>= "0.82"}
+  "perl-Text-ParseWords" 
+  "perl-URI" {>= "1.76"}
+  "perl-libs" {>= "5.0.0"}
+  "perl-overload" 
+  "perl-parent" 
+]
+extra-source "perl-CGI-4.64-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CGI-4.64-1.fc40.noarch.rpm"
+}

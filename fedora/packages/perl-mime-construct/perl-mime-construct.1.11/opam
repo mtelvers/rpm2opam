@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-mime-construct-1.11-40.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-mime-construct-1.11-40.fc40.noarch.rpm"]
+depends: [
+  "perl-Proc-WaitStat" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-mime-construct-1.11-40.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-mime-construct-1.11-40.fc40.noarch.rpm"
+}

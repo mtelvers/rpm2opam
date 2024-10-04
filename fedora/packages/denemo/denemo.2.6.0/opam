@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "denemo-2.6.0-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "denemo-2.6.0-11.fc40.x86_64.rpm"]
+depends: [
+  "atril-libs" 
+  "aubio-lib" 
+  "bash" 
+  "cairo" 
+  "denemo-emmentaler-fonts" {= "2.6.0"}
+  "denemo-feta-fonts" {= "2.6.0"}
+  "denemo-music-fonts" {= "2.6.0"}
+  "fluidsynth-libs" 
+  "fontconfig" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "gtksourceview3" 
+  "guile22" 
+  "jack-audio-connection-kit" 
+  "librsvg2" 
+  "libsndfile" 
+  "libxml2" 
+  "lilypond" 
+  "pango" 
+  "portaudio" 
+  "portmidi" 
+  "rubberband" 
+]
+extra-source "denemo-2.6.0-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/denemo-2.6.0-11.fc40.x86_64.rpm"
+}

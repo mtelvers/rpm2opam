@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "octave-forge-parallel-4.0.2-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "octave-forge-parallel-4.0.2-1.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libgcc_s1" 
+  "libgnutls30" 
+  "libstdc++6" 
+  "octave-cli" {>= "4.0.0"}
+  "octave-forge-struct" {>= "1.0.12"}
+]
+extra-source "octave-forge-parallel-4.0.2-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/octave-forge-parallel-4.0.2-1.3.x86_64.rpm"
+}

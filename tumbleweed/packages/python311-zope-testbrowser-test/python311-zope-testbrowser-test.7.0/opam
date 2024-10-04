@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-zope.testbrowser-test-7.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-zope.testbrowser-test-7.0-2.1.noarch.rpm"]
+depends: [
+  "python311-WSGIProxy2" 
+  "python311-WebTest" {>= "2.0.30"}
+  "python311-beautifulsoup4" 
+  "python311-pytz" {> "0"}
+  "python311-setuptools" 
+  "python311-soupsieve" {>= "1.9.0"}
+  "python311-zope-cachedescriptors" 
+  "python311-zope-interface" 
+  "python311-zope-schema" 
+]
+extra-source "python311-zope.testbrowser-test-7.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-zope.testbrowser-test-7.0-2.1.noarch.rpm"
+}

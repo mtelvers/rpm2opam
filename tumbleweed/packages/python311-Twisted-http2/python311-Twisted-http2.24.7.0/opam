@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-Twisted-http2-24.7.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-Twisted-http2-24.7.0-1.1.noarch.rpm"]
+depends: [
+  "python311-Twisted" {= "24.7.0"}
+  "python311-h2" {>= "3.0"}
+  "python311-priority" {>= "1.1.0"}
+]
+extra-source "python311-Twisted-http2-24.7.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-Twisted-http2-24.7.0-1.1.noarch.rpm"
+}

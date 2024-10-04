@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-flake8-class-newline-1.6.0-2.13.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-flake8-class-newline-1.6.0-2.13.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-flake8" 
+]
+extra-source "python312-flake8-class-newline-1.6.0-2.13.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-flake8-class-newline-1.6.0-2.13.noarch.rpm"
+}

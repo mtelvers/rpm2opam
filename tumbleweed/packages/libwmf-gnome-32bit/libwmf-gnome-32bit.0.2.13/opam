@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libwmf-gnome-32bit-0.2.13-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libwmf-gnome-32bit-0.2.13-1.6.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libgdk_pixbuf-2_0-0-32bit" 
+  "libglib-2_0-0-32bit" 
+  "libwmf-0_2-7-32bit" 
+]
+extra-source "libwmf-gnome-32bit-0.2.13-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libwmf-gnome-32bit-0.2.13-1.6.x86_64.rpm"
+}

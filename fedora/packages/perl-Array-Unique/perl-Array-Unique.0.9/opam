@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Array-Unique-0.09-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Array-Unique-0.09-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Benchmark" 
+  "perl-Carp" 
+  "perl-Tie" 
+  "perl-Tie-IxHash" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "perl-Array-Unique-0.09-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Array-Unique-0.09-4.fc40.noarch.rpm"
+}

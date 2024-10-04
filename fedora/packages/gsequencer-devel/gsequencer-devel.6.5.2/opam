@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gsequencer-devel-6.5.2-0.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gsequencer-devel-6.5.2-0.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib-devel" {>= "1.0.25"}
+  "cairo-devel" {>= "1.12.0"}
+  "fontconfig-devel" {>= "2.11.0"}
+  "gdk-pixbuf2-devel" {>= "2.26.1"}
+  "glib2-devel" {>= "2.56.0"}
+  "gsequencer" {= "6.5.2"}
+  "gstreamer1-devel" 
+  "gtk4-devel" {>= "4.0.0"}
+  "jack-audio-connection-kit-devel" 
+  "libinstpatch-devel" {>= "1.0"}
+  "libsndfile-devel" {>= "1.0.25"}
+  "libsoup3-devel" {>= "3.0.0"}
+  "libuuid-devel" {>= "1.0.1"}
+  "libxml2-devel" {>= "2.8.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gsequencer-devel-6.5.2-0.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gsequencer-devel-6.5.2-0.fc40.x86_64.rpm"
+}

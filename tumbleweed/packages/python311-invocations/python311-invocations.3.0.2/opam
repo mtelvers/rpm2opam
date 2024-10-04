@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-invocations-3.0.2-2.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-invocations-3.0.2-2.5.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-blessings" {>= "1.6"}
+  "python311-invoke" {>= "1.7.2"}
+  "python311-lexicon" 
+  "python311-releases" {>= "1.6"}
+  "python311-semantic_version" {>= "2.4"}
+  "python311-tabulate" {>= "0.7.5"}
+  "python311-tqdm" {>= "4.8.1"}
+  "python311-twine" {>= "1.15"}
+  "python311-wheel" {>= "0.24.0"}
+]
+extra-source "python311-invocations-3.0.2-2.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-invocations-3.0.2-2.5.noarch.rpm"
+}

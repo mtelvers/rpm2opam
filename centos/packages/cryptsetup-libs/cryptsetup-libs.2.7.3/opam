@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cryptsetup-libs-2.7.3-2.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cryptsetup-libs-2.7.3-2.el10.x86_64.rpm"]
+depends: [
+  "device-mapper-libs" 
+  "glibc" 
+  "json-c" 
+  "libblkid" 
+  "libuuid" 
+  "openssl-libs" 
+]
+extra-source "cryptsetup-libs-2.7.3-2.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/cryptsetup-libs-2.7.3-2.el10.x86_64.rpm"
+}

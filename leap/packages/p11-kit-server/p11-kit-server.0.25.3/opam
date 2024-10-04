@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "p11-kit-server-0.25.3-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "p11-kit-server-0.25.3-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libffi8" 
+  "libp11-kit0" 
+  "libsystemd0" 
+  "p11-kit" {= "0.25.3"}
+]
+extra-source "p11-kit-server-0.25.3-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/p11-kit-server-0.25.3-slfo.1.1.7.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libreoffice-librelogo-24.8.2.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libreoffice-librelogo-24.8.2.1-1.1.x86_64.rpm"]
+depends: [
+  "libreoffice-pyuno" {= "24.8.2.1"}
+  "libreoffice-writer" {= "24.8.2.1"}
+]
+extra-source "libreoffice-librelogo-24.8.2.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libreoffice-librelogo-24.8.2.1-1.1.x86_64.rpm"
+}

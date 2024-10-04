@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mate-control-center-1.28.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mate-control-center-1.28.0-1.fc40.x86_64.rpm"]
+depends: [
+  "accountsservice-libs" 
+  "atk" 
+  "cairo" 
+  "cairo-gobject" 
+  "dconf" 
+  "fontconfig" 
+  "freetype" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gnome-keyring" 
+  "gsettings-desktop-schemas" 
+  "gtk3" 
+  "libX11" 
+  "libXScrnSaver" 
+  "libXcursor" 
+  "libXi" 
+  "libappindicator-gtk3" 
+  "libcanberra" 
+  "libcanberra-gtk3" 
+  "libgcc" 
+  "libgtop2" 
+  "libmatekbd" 
+  "libudisks2" 
+  "libxklavier" 
+  "libxml2" 
+  "marco-libs" 
+  "mate-control-center-filesystem" {= "1.28.0"}
+  "mate-desktop-libs" 
+  "mate-menus-libs" 
+  "mate-settings-daemon" 
+  "pango" 
+  "polkit-libs" 
+]
+extra-source "mate-control-center-1.28.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mate-control-center-1.28.0-1.fc40.x86_64.rpm"
+}

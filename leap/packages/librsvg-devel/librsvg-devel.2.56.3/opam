@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "librsvg-devel-2.56.3-slfo.1.1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "librsvg-devel-2.56.3-slfo.1.1.5.x86_64.rpm"]
+depends: [
+  "cairo-devel" 
+  "gdk-pixbuf-devel" 
+  "glib2-devel" 
+  "librsvg-2-2" {= "2.56.3"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Rsvg-2_0" {= "2.56.3"}
+]
+extra-source "librsvg-devel-2.56.3-slfo.1.1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/librsvg-devel-2.56.3-slfo.1.1.5.x86_64.rpm"
+}

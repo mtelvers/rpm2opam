@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "wsdd-0.7.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wsdd-0.7.1-2.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "python3" 
+  "shadow-utils" 
+]
+extra-source "wsdd-0.7.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/wsdd-0.7.1-2.fc40.noarch.rpm"
+}

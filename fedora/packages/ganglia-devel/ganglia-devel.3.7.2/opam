@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ganglia-devel-3.7.2-48.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ganglia-devel-3.7.2-48.fc40.x86_64.rpm"]
+depends: [
+  "apr-devel" 
+  "bash" 
+  "ganglia" {= "3.7.2"}
+  "libconfuse-devel" 
+]
+extra-source "ganglia-devel-3.7.2-48.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ganglia-devel-3.7.2-48.fc40.x86_64.rpm"
+}

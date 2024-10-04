@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "warpinator-lang-1.8.6-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "warpinator-lang-1.8.6-1.1.noarch.rpm"]
+depends: [
+  "warpinator" {= "1.8.6"}
+]
+extra-source "warpinator-lang-1.8.6-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/warpinator-lang-1.8.6-1.1.noarch.rpm"
+}

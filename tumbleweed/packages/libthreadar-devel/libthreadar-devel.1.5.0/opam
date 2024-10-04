@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libthreadar-devel-1.5.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libthreadar-devel-1.5.0-1.1.x86_64.rpm"]
+depends: [
+  "libthreadar1000" {= "1.5.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libthreadar-devel-1.5.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libthreadar-devel-1.5.0-1.1.x86_64.rpm"
+}

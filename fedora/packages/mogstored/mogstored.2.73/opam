@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mogstored-2.73-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mogstored-2.73-22.fc40.noarch.rpm"]
+depends: [
+  "Perlbal" {>= "1.73"}
+  "bash" 
+  "glibc-common" 
+  "mogstored-backend-none" 
+  "perl-Carp" 
+  "perl-Digest" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-POSIX" 
+  "perl-Pod-Usage" 
+  "perl-Socket" 
+  "perl-base" 
+  "perl-fields" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "shadow-utils" 
+  "sysstat" 
+  "systemd" 
+]
+extra-source "mogstored-2.73-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mogstored-2.73-22.fc40.noarch.rpm"
+}

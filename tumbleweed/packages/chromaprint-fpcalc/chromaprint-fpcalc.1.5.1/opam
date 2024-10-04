@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "chromaprint-fpcalc-1.5.1-7.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "chromaprint-fpcalc-1.5.1-7.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libavcodec58_134" 
+  "libavformat58_76" 
+  "libavutil56_70" 
+  "libchromaprint1" {= "1.5.1"}
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libswresample3_9" 
+]
+extra-source "chromaprint-fpcalc-1.5.1-7.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/chromaprint-fpcalc-1.5.1-7.3.x86_64.rpm"
+}

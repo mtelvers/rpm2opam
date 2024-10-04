@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "caja-extension-terminal-0.10-3.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "caja-extension-terminal-0.10-3.10.noarch.rpm"]
+depends: [
+  "caja" 
+  "python-caja" 
+  "python311-base" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-pyxdg" 
+  "typelib-1_0-Caja-2_0" {= "2.0"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Pango-1_0" 
+  "typelib-1_0-Vte-2_91" 
+]
+extra-source "caja-extension-terminal-0.10-3.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/caja-extension-terminal-0.10-3.10.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "k3s-selinux-1.6.stable.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "k3s-selinux-1.6.stable.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "container-selinux" {>= "2.164.2"}
+  "policycoreutils" 
+  "selinux-policy-minimum" {>= "20210716"}
+  "selinux-tools" 
+]
+extra-source "k3s-selinux-1.6.stable.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/k3s-selinux-1.6.stable.1-1.1.noarch.rpm"
+}

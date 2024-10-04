@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Email-Sender-2.601-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Email-Sender-2.601-1.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Email-Abstract" {>= "3.6"}
+  "perl-Email-Address-XS" 
+  "perl-Email-Simple" {>= "1.998"}
+  "perl-Errno" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Path" {>= "2.6"}
+  "perl-IO" {>= "1.11"}
+  "perl-Module-Runtime" 
+  "perl-Moo" 
+  "perl-MooX-Types-MooseLike" 
+  "perl-Net-SMTP-SSL" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" {>= "1.45"}
+  "perl-Sub-Exporter" 
+  "perl-Sys-Hostname" 
+  "perl-Throwable" {>= "0.200003"}
+  "perl-Try-Tiny" 
+  "perl-libnet" {>= "3.7"}
+  "perl-libs" 
+]
+extra-source "perl-Email-Sender-2.601-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Email-Sender-2.601-1.fc40.noarch.rpm"
+}

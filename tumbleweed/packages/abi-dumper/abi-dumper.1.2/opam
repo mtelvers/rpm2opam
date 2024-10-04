@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "abi-dumper-1.2-1.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "abi-dumper-1.2-1.11.noarch.rpm"]
+depends: [
+  "binutils" 
+  "elfutils" 
+  "gcc-c++" 
+  "perl" 
+  "perl-base" 
+  "vtable-dumper" 
+]
+extra-source "abi-dumper-1.2-1.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/abi-dumper-1.2-1.11.noarch.rpm"
+}

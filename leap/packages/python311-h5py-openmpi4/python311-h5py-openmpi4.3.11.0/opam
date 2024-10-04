@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["/usr/bin/zypper" "-n" "install" "python311-h5py-openmpi4-3.11.0-slfo.1.1.6.x86_64.rpm"]
+]
+remove: [
+  ["/usr/bin/zypper" "-n" "remove" "python311-h5py-openmpi4"]
+]
+depends: [
+  "glibc" 
+  "hdf5-openmpi4" {= "1.12.2"}
+  "libhdf5-200" 
+  "libhdf5_hl200" 
+  "openmpi4-libs" 
+  "python311-mpi4py" {>= "3.1.5"}
+  "python311-numpy" {>= "1.25.2"}
+]
+extra-source "python311-h5py-openmpi4-3.11.0-slfo.1.1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/python311-h5py-openmpi4-3.11.0-slfo.1.1.6.x86_64.rpm"
+}

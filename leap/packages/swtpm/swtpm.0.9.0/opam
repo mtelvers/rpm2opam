@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "swtpm-0.9.0-slfo.1.2.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "swtpm-0.9.0-slfo.1.2.4.x86_64.rpm"]
+depends: [
+  "bash" 
+  "busybox-coreutils" 
+  "glibc" 
+  "gnutls" 
+  "iproute2" 
+  "libfuse2" 
+  "libglib-2_0-0" 
+  "libgmp10" 
+  "libgnutls30" 
+  "libgobject-2_0-0" 
+  "libjson-glib-1_0-0" 
+  "libopenssl3" 
+  "libseccomp2" 
+  "libtasn1-6" 
+  "libtpms0" 
+  "swtpm-selinux" 
+  "system-user-tss" 
+]
+extra-source "swtpm-0.9.0-slfo.1.2.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/swtpm-0.9.0-slfo.1.2.4.x86_64.rpm"
+}

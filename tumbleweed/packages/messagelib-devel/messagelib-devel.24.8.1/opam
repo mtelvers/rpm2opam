@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "messagelib-devel-24.08.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "messagelib-devel-24.08.1-1.1.x86_64.rpm"]
+depends: [
+  "akonadi-devel" {>= "6.2.1"}
+  "akonadi-mime-devel" {>= "6.2.1"}
+  "kf6-kcontacts-devel" {>= "6.3.0"}
+  "kf6-kservice-devel" {>= "6.3.0"}
+  "kidentitymanagement-devel" {>= "6.2.1"}
+  "kmime-devel" {>= "6.2.1"}
+  "ktextaddons-devel" 
+  "libkleo-devel" {>= "6.2.1"}
+  "messagelib" {= "24.8.1"}
+  "pimcommon-devel" {>= "6.2.1"}
+  "qt6-webenginewidgets-devel" {>= "6.6.0"}
+]
+extra-source "messagelib-devel-24.08.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/messagelib-devel-24.08.1-1.1.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-async-signal-devel-0.2.5-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-async-signal-devel-0.2.5-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.63"}
+  "rust-async-io+default-devel" 
+  "rust-cfg-if+default-devel" 
+  "rust-futures-core+default-devel" 
+  "rust-futures-io+default-devel" 
+  "rust-rustix+process-devel" 
+  "rust-rustix+std-devel" 
+  "rust-rustix-devel" 
+  "rust-signal-hook-registry+default-devel" 
+]
+extra-source "rust-async-signal-devel-0.2.5-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-async-signal-devel-0.2.5-2.fc40.noarch.rpm"
+}

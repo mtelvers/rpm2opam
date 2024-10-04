@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "audio-recorder-lang-3.3.4-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "audio-recorder-lang-3.3.4-2.2.noarch.rpm"]
+depends: [
+  "audio-recorder" {= "3.3.4"}
+]
+extra-source "audio-recorder-lang-3.3.4-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/audio-recorder-lang-3.3.4-2.2.noarch.rpm"
+}

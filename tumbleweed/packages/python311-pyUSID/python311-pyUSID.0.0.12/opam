@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pyUSID-0.0.12-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pyUSID-0.0.12-3.1.noarch.rpm"]
+depends: [
+  "python311-Pillow" 
+  "python311-base" {= "3.11"}
+  "python311-cytoolz" 
+  "python311-dask" {>= "0.10"}
+  "python311-h5py" {>= "2.6.0"}
+  "python311-numpy" 
+  "python311-psutil" 
+  "python311-sidpy" {>= "0.10"}
+  "python311-toolz" 
+]
+extra-source "python311-pyUSID-0.0.12-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pyUSID-0.0.12-3.1.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rye-bash-completion-0.40.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rye-bash-completion-0.40.0-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "rye" 
+]
+extra-source "rye-bash-completion-0.40.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/rye-bash-completion-0.40.0-1.1.noarch.rpm"
+}

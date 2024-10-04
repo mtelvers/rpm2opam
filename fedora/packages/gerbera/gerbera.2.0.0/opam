@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gerbera-2.0.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gerbera-2.0.0-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "duktape" 
+  "exiv2-libs" 
+  "file-libs" 
+  "fmt" 
+  "gerbera-data" {= "2.0.0"}
+  "glibc" 
+  "libcurl" 
+  "libebml" 
+  "libexif" 
+  "libgcc" 
+  "libmatroska" 
+  "libstdc++" 
+  "libupnp" 
+  "libuuid" 
+  "mariadb-connector-c" 
+  "pugixml" 
+  "shadow-utils" 
+  "spdlog" 
+  "sqlite-libs" 
+  "taglib" 
+]
+extra-source "gerbera-2.0.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gerbera-2.0.0-3.fc40.x86_64.rpm"
+}

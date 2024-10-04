@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lookup-2.2.3-13.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lookup-2.2.3-13.fc40.x86_64.rpm"]
+depends: [
+  "dnssec-tools-libs" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "qt" 
+  "qt-x11" 
+]
+extra-source "lookup-2.2.3-13.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lookup-2.2.3-13.fc40.x86_64.rpm"
+}

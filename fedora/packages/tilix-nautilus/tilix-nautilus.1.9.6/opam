@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tilix-nautilus-1.9.6-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tilix-nautilus-1.9.6-2.fc40.x86_64.rpm"]
+depends: [
+  "nautilus-python" 
+  "tilix" {= "1.9.6"}
+]
+extra-source "tilix-nautilus-1.9.6-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tilix-nautilus-1.9.6-2.fc40.x86_64.rpm"
+}

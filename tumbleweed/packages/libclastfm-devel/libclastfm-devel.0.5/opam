@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libclastfm-devel-0.5-9.34.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libclastfm-devel-0.5-9.34.x86_64.rpm"]
+depends: [
+  "libclastfm0" {= "0.5"}
+  "libcurl-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libclastfm-devel-0.5-9.34.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libclastfm-devel-0.5-9.34.x86_64.rpm"
+}

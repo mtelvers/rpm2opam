@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sord-devel-0.16.14-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sord-devel-0.16.14-3.fc40.x86_64.rpm"]
+depends: [
+  "pkgconf-pkg-config" 
+  "serd-devel" {>= "0.30.10"}
+  "sord" 
+]
+extra-source "sord-devel-0.16.14-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sord-devel-0.16.14-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bmap-tools-3.7-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bmap-tools-3.7-3.fc40.noarch.rpm"]
+depends: [
+  "bzip2" 
+  "gzip" 
+  "lzop" 
+  "pbzip2" 
+  "pigz" 
+  "python3" 
+  "python3-bmaptools" {= "3.7"}
+  "tar" 
+  "unzip" 
+  "xz" 
+  "zstd" 
+]
+extra-source "bmap-tools-3.7-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bmap-tools-3.7-3.fc40.noarch.rpm"
+}

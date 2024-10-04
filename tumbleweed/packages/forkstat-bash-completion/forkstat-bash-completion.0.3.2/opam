@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "forkstat-bash-completion-0.03.02-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "forkstat-bash-completion-0.03.02-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "forkstat" {= "0.3.2"}
+]
+extra-source "forkstat-bash-completion-0.03.02-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/forkstat-bash-completion-0.03.02-1.1.noarch.rpm"
+}

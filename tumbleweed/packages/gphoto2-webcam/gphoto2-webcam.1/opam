@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gphoto2-webcam-1-1.23.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gphoto2-webcam-1-1.23.x86_64.rpm"]
+depends: [
+  "bash" 
+  "ffmpeg-4" 
+  "gphoto" 
+  "v4l-utils" 
+  "v4l2loopback-kmp-default" 
+]
+extra-source "gphoto2-webcam-1-1.23.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gphoto2-webcam-1-1.23.x86_64.rpm"
+}

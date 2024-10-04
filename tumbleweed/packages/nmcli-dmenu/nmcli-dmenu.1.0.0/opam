@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nmcli-dmenu-1.0.0-1.22.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nmcli-dmenu-1.0.0-1.22.noarch.rpm"]
+depends: [
+  "NetworkManager" 
+  "busybox-coreutils" 
+  "dmenu" 
+]
+extra-source "nmcli-dmenu-1.0.0-1.22.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nmcli-dmenu-1.0.0-1.22.noarch.rpm"
+}

@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "orthanc-1.12.4-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "orthanc-1.12.4-3.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "dcmtk" 
+  "glibc" 
+  "libboost_filesystem1_86_0" 
+  "libboost_iostreams1_86_0" 
+  "libboost_locale1_86_0" 
+  "libboost_regex1_86_0" 
+  "libboost_thread1_86_0" 
+  "libcivetweb1_15_0" 
+  "libcurl-mini4" 
+  "libdcmtk18" 
+  "libgcc_s1" 
+  "libjpeg8" 
+  "libjsoncpp25" 
+  "liblua5_1-5" 
+  "libopenssl3" 
+  "libpng16-16" 
+  "libprotobuf25_4_0" 
+  "libpugixml1" 
+  "libsqlite3-0" 
+  "libstdc++6" 
+  "libuuid1" 
+  "libz-ng-compat1" 
+  "shadow" 
+]
+extra-source "orthanc-1.12.4-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/orthanc-1.12.4-3.1.x86_64.rpm"
+}

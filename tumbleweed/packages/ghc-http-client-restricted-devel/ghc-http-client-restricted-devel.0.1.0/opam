@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-http-client-restricted-devel-0.1.0-1.22.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-http-client-restricted-devel-0.1.0-1.22.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-crypton-connection-devel" 
+  "ghc-data-default-devel" 
+  "ghc-http-client-devel" 
+  "ghc-http-client-restricted" {= "0.1.0"}
+  "ghc-http-client-tls-devel" 
+  "ghc-network-bsd-devel" 
+  "ghc-network-devel" 
+  "ghc-utf8-string-devel" 
+]
+extra-source "ghc-http-client-restricted-devel-0.1.0-1.22.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-http-client-restricted-devel-0.1.0-1.22.x86_64.rpm"
+}

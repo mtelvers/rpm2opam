@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-dist-meta-0.8.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-dist-meta-0.8.1-1.1.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-domdf-python-tools" {>= "3.1.0"}
+  "python310-handy-archives" {>= "0.1.0"}
+  "python310-packaging" {>= "20.9"}
+]
+extra-source "python310-dist-meta-0.8.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-dist-meta-0.8.1-1.1.noarch.rpm"
+}

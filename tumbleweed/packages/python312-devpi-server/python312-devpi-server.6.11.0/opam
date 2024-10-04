@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-devpi-server-6.11.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-devpi-server-6.11.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-aiohttp" 
+  "python312-argon2-cffi" {>= "16.2"}
+  "python312-attrs" 
+  "python312-base" 
+  "python312-defusedxml" 
+  "python312-devpi-common" {>= "3.3.0"}
+  "python312-execnet" {>= "1.2"}
+  "python312-httpx" 
+  "python312-itsdangerous" {>= "0.24"}
+  "python312-lazy" 
+  "python312-passlib" 
+  "python312-platformdirs" 
+  "python312-pluggy" {>= "0.6.0"}
+  "python312-py" {>= "1.4.23"}
+  "python312-pyramid" {>= "2"}
+  "python312-repoze-lru" {>= "0.6"}
+  "python312-ruamel-yaml" {>= "0.15.94"}
+  "python312-strictyaml" 
+  "python312-waitress" {>= "1.0.1"}
+  "update-alternatives" 
+]
+extra-source "python312-devpi-server-6.11.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-devpi-server-6.11.0-1.1.noarch.rpm"
+}

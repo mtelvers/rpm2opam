@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libbgcode-devel-0.2.0+git20240829.b5c57c4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libbgcode-devel-0.2.0+git20240829.b5c57c4-1.1.x86_64.rpm"]
+depends: [
+  "libbgcode" {= "0.2.0"}
+  "libbgcode_binarize0_2_0" {= "0.2.0"}
+  "libbgcode_convert0_2_0" {= "0.2.0"}
+  "libbgcode_core0_2_0" {= "0.2.0"}
+]
+extra-source "libbgcode-devel-0.2.0+git20240829.b5c57c4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libbgcode-devel-0.2.0+git20240829.b5c57c4-1.1.x86_64.rpm"
+}

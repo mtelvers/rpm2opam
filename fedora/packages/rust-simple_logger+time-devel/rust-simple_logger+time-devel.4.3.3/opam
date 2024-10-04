@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-simple_logger+time-devel-4.3.3-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-simple_logger+time-devel-4.3.3-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-simple_logger-devel" {= "4.3.3"}
+  "rust-time+default-devel" 
+  "rust-time+formatting-devel" 
+  "rust-time+local-offset-devel" 
+  "rust-time+macros-devel" 
+]
+extra-source "rust-simple_logger+time-devel-4.3.3-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-simple_logger+time-devel-4.3.3-2.fc40.noarch.rpm"
+}

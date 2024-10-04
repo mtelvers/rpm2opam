@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-vector-algorithms-prof-0.9.0.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-vector-algorithms-prof-0.9.0.2-1.2.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bitvec-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-primitive-prof" 
+  "ghc-vector-algorithms-devel" {= "0.9.0.2"}
+  "ghc-vector-prof" 
+]
+extra-source "ghc-vector-algorithms-prof-0.9.0.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-vector-algorithms-prof-0.9.0.2-1.2.x86_64.rpm"
+}

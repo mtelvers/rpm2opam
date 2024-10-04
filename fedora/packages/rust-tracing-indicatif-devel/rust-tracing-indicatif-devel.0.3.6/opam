@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tracing-indicatif-devel-0.3.6-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tracing-indicatif-devel-0.3.6-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-indicatif+default-devel" 
+  "rust-indicatif+in_memory-devel" 
+  "rust-tracing+default-devel" 
+  "rust-tracing-core+default-devel" 
+  "rust-tracing-subscriber+default-devel" 
+]
+extra-source "rust-tracing-indicatif-devel-0.3.6-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tracing-indicatif-devel-0.3.6-2.fc40.noarch.rpm"
+}

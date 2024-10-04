@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MooseX-AttributeShortcuts-0.037-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-AttributeShortcuts-0.037-20.fc40.noarch.rpm"]
+depends: [
+  "perl-Moose" {>= "1.14"}
+  "perl-MooseX-Meta-TypeConstraint-Mooish" 
+  "perl-MooseX-Role-Parameterized" 
+  "perl-MooseX-Types" 
+  "perl-MooseX-Types-Common" 
+  "perl-MooseX-Util" 
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-aliased" 
+  "perl-libs" 
+  "perl-namespace-autoclean" {>= "0.24"}
+]
+extra-source "perl-MooseX-AttributeShortcuts-0.037-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MooseX-AttributeShortcuts-0.037-20.fc40.noarch.rpm"
+}

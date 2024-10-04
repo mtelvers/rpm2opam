@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "flatpak-builder-1.4.2-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flatpak-builder-1.4.2-2.1.x86_64.rpm"]
+depends: [
+  "AppStream" 
+  "appstream-glib" 
+  "binutils" 
+  "busybox-bzip2" 
+  "busybox-patch" 
+  "busybox-tar" 
+  "busybox-unzip" 
+  "debugedit" 
+  "elfutils" 
+  "flatpak" {>= "1.15.6"}
+  "git-core" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcurl-mini4" 
+  "libelf1" 
+  "libjson-glib-1_0-0" 
+  "libostree-1-1" 
+  "libxml2-2" 
+  "libyaml-0-2" 
+]
+extra-source "flatpak-builder-1.4.2-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/flatpak-builder-1.4.2-2.1.x86_64.rpm"
+}

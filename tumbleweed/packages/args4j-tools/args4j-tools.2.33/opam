@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "args4j-tools-2.33-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "args4j-tools-2.33-3.1.noarch.rpm"]
+depends: [
+  "args4j" {= "2.33"}
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "args4j-tools-2.33-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/args4j-tools-2.33-3.1.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fuse-oscfs-0.9.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fuse-oscfs-0.9.0-1.3.noarch.rpm"]
+depends: [
+  "osc" 
+  "python311-base" 
+  "python311-fusepy" 
+]
+extra-source "fuse-oscfs-0.9.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/fuse-oscfs-0.9.0-1.3.noarch.rpm"
+}

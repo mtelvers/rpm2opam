@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw32-libgomp-14.0.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw32-libgomp-14.0.1-1.fc40.x86_64.rpm"]
+depends: [
+  "mingw32-crt" 
+  "mingw32-filesystem" {>= "95"}
+  "mingw32-gcc" {= "14.0.1"}
+  "mingw32-libgcc" 
+  "mingw32-winpthreads" 
+]
+extra-source "mingw32-libgomp-14.0.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw32-libgomp-14.0.1-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ffmpeg-7-7.0.2-lp160.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ffmpeg-7-7.0.2-lp160.1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libSDL2-2_0-0" 
+  "libavcodec61" 
+  "libavdevice61" 
+  "libavfilter10" 
+  "libavformat61" 
+  "libavutil59" 
+  "libplacebo349" 
+  "libpostproc58" 
+  "libswresample5" 
+  "libswscale8" 
+  "libz-ng-compat1" 
+]
+extra-source "ffmpeg-7-7.0.2-lp160.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/ffmpeg-7-7.0.2-lp160.1.2.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "oclock-1.0.5-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "oclock-1.0.5-1.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXext6" 
+  "libXmu6" 
+  "libXt6" 
+  "libxkbfile1" 
+]
+extra-source "oclock-1.0.5-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/oclock-1.0.5-1.6.x86_64.rpm"
+}

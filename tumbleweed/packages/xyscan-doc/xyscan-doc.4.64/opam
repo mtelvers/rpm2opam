@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xyscan-doc-4.64-1.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xyscan-doc-4.64-1.10.noarch.rpm"]
+depends: [
+  "xyscan" {= "4.64"}
+]
+extra-source "xyscan-doc-4.64-1.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xyscan-doc-4.64-1.10.noarch.rpm"
+}

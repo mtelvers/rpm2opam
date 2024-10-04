@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mate-search-tool-1.28.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mate-search-tool-1.28.0-1.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libICE" 
+  "libSM" 
+  "mate-desktop-libs" 
+  "mate-utils-common" {= "1.28.0"}
+]
+extra-source "mate-search-tool-1.28.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mate-search-tool-1.28.0-1.fc40.x86_64.rpm"
+}

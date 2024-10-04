@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "copr-dist-git-0.69-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "copr-dist-git-0.69-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "copr-selinux" 
+  "coreutils" 
+  "crontabs" 
+  "crudini" 
+  "dist-git" 
+  "findutils" 
+  "httpd" 
+  "policycoreutils-python-utils" 
+  "python3" 
+  "python3-copr-common" {>= "0.20.1.0"}
+  "python3-daemon" 
+  "python3-munch" 
+  "python3-oslo-concurrency" 
+  "python3-redis" 
+  "python3-requests" 
+  "python3-rpkg" {>= "1.66"}
+  "python3-setproctitle" 
+  "redis" 
+  "systemd" 
+]
+extra-source "copr-dist-git-0.69-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/copr-dist-git-0.69-1.fc40.noarch.rpm"
+}

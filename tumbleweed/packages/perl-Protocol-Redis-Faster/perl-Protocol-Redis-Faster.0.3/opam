@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Protocol-Redis-Faster-0.003-1.22.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Protocol-Redis-Faster-0.003-1.22.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Protocol-Redis" {>= "1.0"}
+  "perl-base" 
+]
+extra-source "perl-Protocol-Redis-Faster-0.003-1.22.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Protocol-Redis-Faster-0.003-1.22.noarch.rpm"
+}

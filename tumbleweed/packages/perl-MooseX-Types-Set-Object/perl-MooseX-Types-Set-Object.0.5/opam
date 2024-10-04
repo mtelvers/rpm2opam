@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-Types-Set-Object-0.05-1.30.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Types-Set-Object-0.05-1.30.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Moose" {>= "0.50"}
+  "perl-MooseX-Types" 
+  "perl-Set-Object" 
+]
+extra-source "perl-MooseX-Types-Set-Object-0.05-1.30.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-Types-Set-Object-0.05-1.30.noarch.rpm"
+}

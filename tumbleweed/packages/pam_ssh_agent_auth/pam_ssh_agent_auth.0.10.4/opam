@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pam_ssh_agent_auth-0.10.4-2.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pam_ssh_agent_auth-0.10.4-2.12.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libopenssl3" 
+  "pam" 
+]
+extra-source "pam_ssh_agent_auth-0.10.4-2.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pam_ssh_agent_auth-0.10.4-2.12.x86_64.rpm"
+}

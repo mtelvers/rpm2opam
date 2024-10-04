@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-URI-Find-Simple-tests-1.07-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-URI-Find-Simple-tests-1.07-9.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-URI-Find-Simple" {= "1.7"}
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+]
+extra-source "perl-URI-Find-Simple-tests-1.07-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-URI-Find-Simple-tests-1.07-9.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-sha-1+default-devel-0.10.1-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-sha-1+default-devel-0.10.1-5.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-sha-1+std-devel" {= "0.10.1"}
+  "rust-sha-1-devel" {= "0.10.1"}
+]
+extra-source "rust-sha-1+default-devel-0.10.1-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-sha-1+default-devel-0.10.1-5.fc40.noarch.rpm"
+}

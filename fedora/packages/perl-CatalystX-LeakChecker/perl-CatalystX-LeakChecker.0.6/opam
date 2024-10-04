@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CatalystX-LeakChecker-0.06-41.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CatalystX-LeakChecker-0.06-41.fc40.noarch.rpm"]
+depends: [
+  "perl-B" 
+  "perl-Catalyst-Runtime" {>= "5.8"}
+  "perl-Devel-Cycle" {>= "1.11"}
+  "perl-Moose" 
+  "perl-PadWalker" {>= "1.8"}
+  "perl-Scalar-List-Utils" 
+  "perl-Text-SimpleTable" 
+  "perl-libs" 
+  "perl-namespace-clean" {>= "0.5"}
+]
+extra-source "perl-CatalystX-LeakChecker-0.06-41.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CatalystX-LeakChecker-0.06-41.fc40.noarch.rpm"
+}

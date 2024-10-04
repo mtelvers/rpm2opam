@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "physfs-devel-3.0.2-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "physfs-devel-3.0.2-14.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "physfs" 
+  "pkgconf-pkg-config" 
+  "readline" 
+]
+extra-source "physfs-devel-3.0.2-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/physfs-devel-3.0.2-14.fc40.x86_64.rpm"
+}

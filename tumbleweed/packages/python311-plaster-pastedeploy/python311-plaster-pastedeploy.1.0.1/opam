@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-plaster-pastedeploy-1.0.1-2.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-plaster-pastedeploy-1.0.1-2.7.noarch.rpm"]
+depends: [
+  "python311-PasteDeploy" {>= "2.0"}
+  "python311-base" {= "3.11"}
+  "python311-plaster" {>= "0.5"}
+]
+extra-source "python311-plaster-pastedeploy-1.0.1-2.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-plaster-pastedeploy-1.0.1-2.7.noarch.rpm"
+}

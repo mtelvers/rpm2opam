@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libXinerama-1.1.5-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libXinerama-1.1.5-6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11" {>= "1.5.99.902"}
+  "libXext" 
+]
+extra-source "libXinerama-1.1.5-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libXinerama-1.1.5-6.fc40.x86_64.rpm"
+}

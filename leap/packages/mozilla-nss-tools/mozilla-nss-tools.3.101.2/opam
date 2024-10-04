@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mozilla-nss-tools-3.101.2-slfo.1.1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mozilla-nss-tools-3.101.2-slfo.1.1.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libz-ng-compat1" 
+  "mozilla-nspr" 
+  "mozilla-nss" 
+]
+extra-source "mozilla-nss-tools-3.101.2-slfo.1.1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/mozilla-nss-tools-3.101.2-slfo.1.1.5.x86_64.rpm"
+}

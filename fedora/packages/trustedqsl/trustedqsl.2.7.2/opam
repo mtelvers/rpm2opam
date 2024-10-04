@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "trustedqsl-2.7.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trustedqsl-2.7.2-1.fc40.x86_64.rpm"]
+depends: [
+  "curl" 
+  "expat" 
+  "glibc" 
+  "libcurl" 
+  "libgcc" 
+  "libstdc++" 
+  "tqsllib" 
+  "wxBase" 
+  "wxGTK" 
+  "zlib-ng-compat" 
+]
+extra-source "trustedqsl-2.7.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/trustedqsl-2.7.2-1.fc40.x86_64.rpm"
+}

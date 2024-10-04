@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-Routine-0.031-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Routine-0.031-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Class-Load" 
+  "perl-Moose" 
+  "perl-Params-Util" 
+  "perl-Scalar-List-Utils" 
+  "perl-Sub-Exporter" 
+  "perl-Test-Abortable" {>= "0.2"}
+  "perl-Test-Simple" {>= "1.302045"}
+  "perl-Try-Tiny" 
+  "perl-libs" {>= "5.12.0"}
+  "perl-namespace-autoclean" 
+  "perl-namespace-clean" 
+]
+extra-source "perl-Test-Routine-0.031-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-Routine-0.031-4.fc40.noarch.rpm"
+}

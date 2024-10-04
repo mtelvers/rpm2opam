@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "patool-bash-completion-1.12-2.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "patool-bash-completion-1.12-2.11.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "patool" 
+]
+extra-source "patool-bash-completion-1.12-2.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/patool-bash-completion-1.12-2.11.noarch.rpm"
+}

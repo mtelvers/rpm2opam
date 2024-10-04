@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-hslogger-prof-1.3.1.0-18.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hslogger-prof-1.3.1.0-18.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-hslogger-devel" {= "1.3.1.0"}
+  "ghc-network-bsd-prof" 
+  "ghc-network-prof" 
+  "ghc-old-locale-prof" 
+  "ghc-time-prof" 
+  "ghc-unix-prof" 
+]
+extra-source "ghc-hslogger-prof-1.3.1.0-18.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-hslogger-prof-1.3.1.0-18.fc40.x86_64.rpm"
+}

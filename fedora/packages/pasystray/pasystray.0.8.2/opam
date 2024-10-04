@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pasystray-0.8.2-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pasystray-0.8.2-4.fc40.x86_64.rpm"]
+depends: [
+  "avahi-glib" 
+  "avahi-libs" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libX11" 
+  "libappindicator-gtk3" 
+  "libnotify" 
+  "pulseaudio-libs" 
+  "pulseaudio-libs-glib2" 
+]
+extra-source "pasystray-0.8.2-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pasystray-0.8.2-4.fc40.x86_64.rpm"
+}

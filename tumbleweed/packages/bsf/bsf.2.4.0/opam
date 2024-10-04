@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bsf-2.4.0-18.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bsf-2.4.0-18.2.noarch.rpm"]
+depends: [
+  "apache-commons-logging" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "bsf-2.4.0-18.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/bsf-2.4.0-18.2.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libglycin-1-0-1.1.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libglycin-1-0-1.1.1-2.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libfontconfig1" 
+  "libgcc_s1" 
+  "liblcms2-2" 
+  "libseccomp2" 
+]
+extra-source "libglycin-1-0-1.1.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libglycin-1-0-1.1.1-2.1.x86_64.rpm"
+}

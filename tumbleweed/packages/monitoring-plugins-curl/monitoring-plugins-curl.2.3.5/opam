@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "monitoring-plugins-curl-2.3.5-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "monitoring-plugins-curl-2.3.5-3.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcurl-mini4" 
+  "libopenssl3" 
+  "liburiparser1" 
+]
+extra-source "monitoring-plugins-curl-2.3.5-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/monitoring-plugins-curl-2.3.5-3.1.x86_64.rpm"
+}

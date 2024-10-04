@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libzypp-devel-17.35.11-slfo.1.1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libzypp-devel-17.35.11-slfo.1.1.3.x86_64.rpm"]
+depends: [
+  "bzip2" 
+  "glibc-devel" 
+  "libboost_headers-devel" 
+  "libboost_program_options-devel" 
+  "libboost_test-devel" 
+  "libboost_thread-devel" 
+  "libcurl-devel" {>= "7.19.4"}
+  "libopenssl-3-devel" 
+  "libsolv-devel" {>= "0.7.30"}
+  "libstdc++-build-devel" 
+  "libxml2-devel" 
+  "libzypp" {= "17.35.11"}
+  "pkgconf-pkg-config" 
+  "popt-devel" 
+  "rpm-devel" {> "4.4"}
+  "systemd-devel" 
+  "zlib-devel" 
+]
+extra-source "libzypp-devel-17.35.11-slfo.1.1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libzypp-devel-17.35.11-slfo.1.1.3.x86_64.rpm"
+}

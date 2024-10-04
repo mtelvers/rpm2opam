@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-shell-classic-46.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-shell-classic-46.2-1.1.noarch.rpm"]
+depends: [
+  "cinnamon" 
+  "gnome-shell" 
+  "gnome-shell-extensions-common" 
+  "magpie" 
+  "mutter" 
+  "typelib-1_0-Adw-1" 
+  "typelib-1_0-Atk-1_0" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GMenu-3_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Pango-1_0" 
+]
+extra-source "gnome-shell-classic-46.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-shell-classic-46.2-1.1.noarch.rpm"
+}

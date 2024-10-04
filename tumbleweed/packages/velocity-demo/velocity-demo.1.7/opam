@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "velocity-demo-1.7-15.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "velocity-demo-1.7-15.1.noarch.rpm"]
+depends: [
+  "velocity" {= "1.7"}
+]
+extra-source "velocity-demo-1.7-15.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/velocity-demo-1.7-15.1.noarch.rpm"
+}

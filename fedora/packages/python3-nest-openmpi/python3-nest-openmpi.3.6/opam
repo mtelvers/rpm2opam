@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-nest-openmpi-3.6-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-nest-openmpi-3.6-8.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libneurosim-openmpi" 
+  "libstdc++" 
+  "nest-openmpi" 
+  "nest-openmpi-common" {= "3.6"}
+  "openmpi" 
+  "python3" {= "3.12"}
+  "python3-numpy" 
+  "python3-scipy" 
+]
+extra-source "python3-nest-openmpi-3.6-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-nest-openmpi-3.6-8.fc40.x86_64.rpm"
+}

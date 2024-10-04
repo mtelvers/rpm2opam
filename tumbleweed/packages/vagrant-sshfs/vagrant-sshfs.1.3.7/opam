@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vagrant-sshfs-1.3.7-3.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vagrant-sshfs-1.3.7-3.9.x86_64.rpm"]
+depends: [
+  "bash" 
+  "fuse" 
+  "sshfs" 
+  "vagrant" {>= "1.9.1"}
+]
+extra-source "vagrant-sshfs-1.3.7-3.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vagrant-sshfs-1.3.7-3.9.x86_64.rpm"
+}

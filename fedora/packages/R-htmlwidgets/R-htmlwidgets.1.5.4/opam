@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-htmlwidgets-1.5.4-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-htmlwidgets-1.5.4-6.fc40.noarch.rpm"]
+depends: [
+  "R-core" 
+  "R-htmltools" {>= "0.3"}
+  "R-jsonlite" {>= "0.9.16"}
+  "R-yaml" 
+]
+extra-source "R-htmlwidgets-1.5.4-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-htmlwidgets-1.5.4-6.fc40.noarch.rpm"
+}

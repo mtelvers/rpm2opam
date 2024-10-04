@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "PDAL-2.6.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "PDAL-2.6.3-1.fc40.x86_64.rpm"]
+depends: [
+  "PDAL-libs" {= "2.6.3"}
+  "bash-completion" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "PDAL-2.6.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/PDAL-2.6.3-1.fc40.x86_64.rpm"
+}

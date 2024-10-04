@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tokei+cbor-devel-12.1.2-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tokei+cbor-devel-12.1.2-8.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-tokei+hex-devel" {= "12.1.2"}
+  "rust-tokei+serde_cbor-devel" {= "12.1.2"}
+  "rust-tokei-devel" {= "12.1.2"}
+]
+extra-source "rust-tokei+cbor-devel-12.1.2-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tokei+cbor-devel-12.1.2-8.fc40.noarch.rpm"
+}

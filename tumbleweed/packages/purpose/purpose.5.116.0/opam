@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "purpose-5.116.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "purpose-5.116.0-1.1.x86_64.rpm"]
+depends: [
+  "bluez-qt-imports" 
+  "glibc" 
+  "kdeclarative-components" {>= "5.116.0"}
+  "kf6-purpose-services" {>= "5.116.0"}
+  "kio" 
+  "kio-core" 
+  "kirigami2" {>= "10"}
+  "kservice" 
+  "libKF5CoreAddons5" 
+  "libKF5I18n5" 
+  "libKF5Notifications5" 
+  "libKF5Purpose5" 
+  "libKF5PurposeWidgets5" 
+  "libKF5QuickAddons5" {>= "5.116.0"}
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Network5" 
+  "libQt5Widgets5" 
+  "libQtQuick5" 
+  "libaccounts-qt5-1" 
+  "libkaccounts2" 
+  "libqt5-qtquickcontrols" 
+  "libqt5-qtquickcontrols2" 
+  "libstdc++6" 
+  "prison-qt5-imports" 
+  "qtdeclarative-imports-provides-qt5" {>= "2"}
+]
+extra-source "purpose-5.116.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/purpose-5.116.0-1.1.x86_64.rpm"
+}

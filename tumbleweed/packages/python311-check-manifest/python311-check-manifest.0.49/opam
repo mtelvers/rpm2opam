@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-check-manifest-0.49-7.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-check-manifest-0.49-7.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-build" {>= "0.1"}
+  "python311-setuptools" 
+  "update-alternatives" 
+]
+extra-source "python311-check-manifest-0.49-7.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-check-manifest-0.49-7.2.noarch.rpm"
+}

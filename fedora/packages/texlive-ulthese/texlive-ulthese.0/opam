@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-ulthese-svn60217-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-ulthese-svn60217-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-babel" 
+  "texlive-base" 
+  "texlive-fontspec" 
+  "texlive-graphics" 
+  "texlive-iftex" 
+  "texlive-kpathsea" 
+  "texlive-latex" 
+  "texlive-natbib" 
+  "texlive-numprint" 
+  "texlive-unicode-math" 
+  "texlive-xcolor" 
+]
+extra-source "texlive-ulthese-svn60217-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-ulthese-svn60217-71.fc40.noarch.rpm"
+}

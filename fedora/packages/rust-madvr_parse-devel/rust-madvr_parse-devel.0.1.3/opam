@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-madvr_parse-devel-0.1.3-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-madvr_parse-devel-0.1.3-7.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.51.0"}
+  "rust-anyhow+default-devel" 
+  "rust-byteorder+default-devel" 
+]
+extra-source "rust-madvr_parse-devel-0.1.3-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-madvr_parse-devel-0.1.3-7.fc40.noarch.rpm"
+}

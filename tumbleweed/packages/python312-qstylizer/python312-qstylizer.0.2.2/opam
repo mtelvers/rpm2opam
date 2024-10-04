@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-qstylizer-0.2.2-2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-qstylizer-0.2.2-2.3.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-inflection" {> "0.3.0"}
+  "python312-tinycss2" 
+]
+extra-source "python312-qstylizer-0.2.2-2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-qstylizer-0.2.2-2.3.noarch.rpm"
+}

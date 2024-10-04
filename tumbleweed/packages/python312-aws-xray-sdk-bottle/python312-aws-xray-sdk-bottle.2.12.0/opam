@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-aws-xray-sdk-bottle-2.12.0-2.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-aws-xray-sdk-bottle-2.12.0-2.8.noarch.rpm"]
+depends: [
+  "python312-aws-xray-sdk" {= "2.12.0"}
+  "python312-base" {= "3.12"}
+  "python312-bottle" {>= "0.10"}
+]
+extra-source "python312-aws-xray-sdk-bottle-2.12.0-2.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-aws-xray-sdk-bottle-2.12.0-2.8.noarch.rpm"
+}

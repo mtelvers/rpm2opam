@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "opam-devel-2.1.5-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opam-devel-2.1.5-1.8.x86_64.rpm"]
+depends: [
+  "ocaml" {= "8"}
+  "ocaml-base64-devel" {= "6"}
+  "ocaml-cmdliner-devel" {= "78"}
+  "ocaml-compiler-libs-devel" 
+  "ocaml-cudf-devel" {= "7"}
+  "ocaml-dose-devel" {= "0"}
+  "ocaml-extlib-devel" {= "0"}
+  "ocaml-mccs-devel" {= "1"}
+  "ocaml-ocamlgraph-devel" {= "0"}
+  "ocaml-re-devel" {= "48989507"}
+  "opam" {= "2.1.5"}
+  "opam-file-format-devel" {= "9"}
+]
+extra-source "opam-devel-2.1.5-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/opam-devel-2.1.5-1.8.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtk3-metatheme-arc-20221218-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk3-metatheme-arc-20221218-1.4.noarch.rpm"]
+depends: [
+  "libgtk-3-0" 
+  "metatheme-arc-common" {= "20221218"}
+]
+extra-source "gtk3-metatheme-arc-20221218-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gtk3-metatheme-arc-20221218-1.4.noarch.rpm"
+}

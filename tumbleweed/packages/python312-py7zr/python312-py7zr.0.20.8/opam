@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-py7zr-0.20.8-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-py7zr-0.20.8-2.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-Brotli" {>= "1.1.0"}
+  "python312-base" 
+  "python312-inflate64" 
+  "python312-multivolumefile" {>= "0.2.3"}
+  "python312-psutil" 
+  "python312-pybcj" 
+  "python312-pycryptodomex" {>= "3.16.0"}
+  "python312-pyppmd" 
+  "python312-pyzstd" {>= "0.15.9"}
+  "python312-texttable" 
+  "update-alternatives" 
+]
+extra-source "python312-py7zr-0.20.8-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-py7zr-0.20.8-2.2.noarch.rpm"
+}

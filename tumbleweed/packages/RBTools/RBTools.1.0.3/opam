@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "RBTools-1.0.3-1.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "RBTools-1.0.3-1.11.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-colorama" 
+  "python311-setuptools" 
+  "python311-six" {>= "1.8.0"}
+  "python311-texttable" 
+  "python311-tqdm" 
+]
+extra-source "RBTools-1.0.3-1.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/RBTools-1.0.3-1.11.noarch.rpm"
+}

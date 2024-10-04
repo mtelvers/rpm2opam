@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "trytond_country-6.0.3-5.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trytond_country-6.0.3-5.1.noarch.rpm"]
+depends: [
+  "proteus" 
+  "python311-base" 
+  "python311-pycountry" 
+  "trytond" 
+]
+extra-source "trytond_country-6.0.3-5.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/trytond_country-6.0.3-5.1.noarch.rpm"
+}

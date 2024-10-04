@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tangerine-0.22-24.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tangerine-0.22-24.fc40.noarch.rpm"]
+depends: [
+  "perl-Archive-Extract" 
+  "perl-File-Find-Rule" 
+  "perl-File-Find-Rule-Perl" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-List-Compare" 
+  "perl-MCE" 
+  "perl-PathTools" 
+  "perl-Pod-Usage" 
+  "perl-Tangerine" {>= "0.15"}
+  "perl-interpreter" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-overload" 
+]
+extra-source "tangerine-0.22-24.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tangerine-0.22-24.fc40.noarch.rpm"
+}

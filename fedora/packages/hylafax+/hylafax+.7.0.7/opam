@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hylafax+-7.0.7-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hylafax+-7.0.7-4.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "crontabs" 
+  "gawk" 
+  "ghostscript" 
+  "glibc" 
+  "hylafax+-client" {= "7.0.7"}
+  "jbigkit-libs" 
+  "lcms2" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libstdc++" 
+  "libtiff" 
+  "libtiff-tools" 
+  "libxcrypt" 
+  "mgetty" 
+  "openldap" 
+  "openssl" 
+  "openssl-libs" 
+  "pam-libs" 
+  "s-nail" 
+  "sharutils" 
+  "systemd" 
+  "urw-base35-fonts" 
+  "uucp" 
+  "zlib-ng-compat" 
+]
+extra-source "hylafax+-7.0.7-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hylafax+-7.0.7-4.fc40.x86_64.rpm"
+}

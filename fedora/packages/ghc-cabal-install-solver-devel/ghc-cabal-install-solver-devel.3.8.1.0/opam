@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-cabal-install-solver-devel-3.8.1.0-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-cabal-install-solver-devel-3.8.1.0-7.fc40.x86_64.rpm"]
+depends: [
+  "ghc-Cabal-devel" 
+  "ghc-Cabal-syntax-devel" 
+  "ghc-array-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-cabal-install-solver" {= "3.8.1.0"}
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-edit-distance-devel" 
+  "ghc-filepath-devel" 
+  "ghc-mtl-devel" 
+  "ghc-pretty-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-cabal-install-solver-devel-3.8.1.0-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-cabal-install-solver-devel-3.8.1.0-7.fc40.x86_64.rpm"
+}

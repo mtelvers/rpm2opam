@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lalinference-devel-4.1.7-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lalinference-devel-4.1.7-1.1.x86_64.rpm"]
+depends: [
+  "gsl-devel" 
+  "lal-devel" {>= "7.2.0"}
+  "lalburst-devel" {>= "1.6.0"}
+  "lalframe-devel" {>= "2.0.0"}
+  "lalinference-data" {= "4.1.7"}
+  "lalinspiral-devel" {>= "3.0.0"}
+  "lalmetaio-devel" {>= "3.0.0"}
+  "lalsimulation-devel" {>= "4.0.0"}
+  "liblalinference23" {= "4.1.7"}
+  "pkgconf-pkg-config" 
+]
+extra-source "lalinference-devel-4.1.7-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lalinference-devel-4.1.7-1.1.x86_64.rpm"
+}

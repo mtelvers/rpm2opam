@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "logjam-4.6.2-34.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "logjam-4.6.2-34.fc40.x86_64.rpm"]
+depends: [
+  "curl" {>= "7.9"}
+  "dbus-glib" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "gtkspell" 
+  "libX11" 
+  "librsvg2" 
+  "libsoup" 
+  "libxml2" 
+  "pango" 
+  "sqlite-libs" 
+]
+extra-source "logjam-4.6.2-34.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/logjam-4.6.2-34.fc40.x86_64.rpm"
+}

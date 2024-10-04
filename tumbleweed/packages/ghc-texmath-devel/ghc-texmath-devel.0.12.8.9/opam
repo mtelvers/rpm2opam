@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-texmath-devel-0.12.8.9-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-texmath-devel-0.12.8.9-1.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-mtl-devel" 
+  "ghc-pandoc-types-devel" 
+  "ghc-parsec-devel" 
+  "ghc-split-devel" 
+  "ghc-syb-devel" 
+  "ghc-texmath" {= "0.12.8.9"}
+  "ghc-text-devel" 
+  "ghc-typst-symbols-devel" 
+  "ghc-xml-devel" 
+]
+extra-source "ghc-texmath-devel-0.12.8.9-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-texmath-devel-0.12.8.9-1.8.x86_64.rpm"
+}

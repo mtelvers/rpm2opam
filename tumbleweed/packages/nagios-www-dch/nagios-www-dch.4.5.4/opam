@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nagios-www-dch-4.5.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nagios-www-dch-4.5.4-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "nagios-www" {= "4.5.4"}
+]
+extra-source "nagios-www-dch-4.5.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nagios-www-dch-4.5.4-1.1.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libmspub-tools-0.1.4-32.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmspub-tools-0.1.4-32.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libmspub" {= "0.1.4"}
+  "librevenge" 
+  "libstdc++" 
+]
+extra-source "libmspub-tools-0.1.4-32.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libmspub-tools-0.1.4-32.fc40.x86_64.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "whatsapp-for-linux-1.6.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "whatsapp-for-linux-1.6.5-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libatkmm-1_6-1" 
+  "libayatana-appindicator3-1" 
+  "libcanberra0" 
+  "libgcc_s1" 
+  "libgiomm-2_4-1" 
+  "libglibmm-2_4-1" 
+  "libgtk-3-0" 
+  "libgtkmm-3_0-1" 
+  "libsigc-2_0-0" 
+  "libstdc++6" 
+  "libwebkit2gtk-4_1-0" 
+]
+extra-source "whatsapp-for-linux-1.6.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/whatsapp-for-linux-1.6.5-1.1.x86_64.rpm"
+}

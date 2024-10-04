@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-cloudflare-2.20.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-cloudflare-2.20.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-PyYAML" 
+  "python310-base" {= "3.10"}
+  "python310-beautifulsoup4" 
+  "python310-jsonlines" 
+  "python310-requests" {>= "2.4.2"}
+  "update-alternatives" 
+]
+extra-source "python310-cloudflare-2.20.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-cloudflare-2.20.0-1.1.noarch.rpm"
+}

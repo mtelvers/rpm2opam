@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "git-buildpackage-0.9.23-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "git-buildpackage-0.9.23-1.6.noarch.rpm"]
+depends: [
+  "bash" 
+  "devscripts" 
+  "dpkg" 
+  "git-buildpackage-common" {= "0.9.23"}
+  "python311-base" {= "3.11"}
+]
+extra-source "git-buildpackage-0.9.23-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/git-buildpackage-0.9.23-1.6.noarch.rpm"
+}

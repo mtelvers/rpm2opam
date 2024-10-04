@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rust1.81-1.81.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust1.81-1.81.0-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "gcc14" 
+  "glibc" 
+  "glibc-devel" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+]
+extra-source "rust1.81-1.81.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rust1.81-1.81.0-2.1.x86_64.rpm"
+}

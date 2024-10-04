@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openhantek-3.4~rc3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openhantek-3.4~rc3-1.fc40.x86_64.rpm"]
+depends: [
+  "fftw-libs-double" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libgcc" 
+  "libstdc++" 
+  "libusb1" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "systemd-udev" 
+]
+extra-source "openhantek-3.4~rc3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openhantek-3.4~rc3-1.fc40.x86_64.rpm"
+}

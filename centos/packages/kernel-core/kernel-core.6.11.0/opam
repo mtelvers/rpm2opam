@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kernel-core-6.11.0-25.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kernel-core-6.11.0-25.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "dracut" {>= "27"}
+  "kernel-modules-core" {= "6.11.0"}
+  "systemd" {>= "200"}
+  "systemd-udev" 
+]
+extra-source "kernel-core-6.11.0-25.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/kernel-core-6.11.0-25.el10.x86_64.rpm"
+}

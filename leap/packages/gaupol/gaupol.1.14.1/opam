@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gaupol-1.14.1-lp160.1.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gaupol-1.14.1-lp160.1.12.noarch.rpm"]
+depends: [
+  "girepository-1_0" 
+  "python311" 
+  "python311-aeidon" 
+  "python311-base" {= "3.11"}
+  "python311-gobject" {>= "3.12"}
+  "typelib-1_0-Gspell-1" 
+  "typelib-1_0-Gst-1_0" 
+  "typelib-1_0-GstPbutils-1_0" 
+  "typelib-1_0-GstTag-1_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" 
+]
+extra-source "gaupol-1.14.1-lp160.1.12.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/gaupol-1.14.1-lp160.1.12.noarch.rpm"
+}

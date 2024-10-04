@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-simplevisor-1.3-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-simplevisor-1.3-10.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Getopt-Long" 
+  "perl-No-Worries" 
+  "perl-Pod-Usage" 
+  "perl-Scalar-List-Utils" 
+  "perl-Time-HiRes" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-sigtrap" 
+  "python3" 
+]
+extra-source "python3-simplevisor-1.3-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-simplevisor-1.3-10.fc40.noarch.rpm"
+}

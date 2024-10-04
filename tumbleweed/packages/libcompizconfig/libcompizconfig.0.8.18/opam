@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcompizconfig-0.8.18-2.21.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcompizconfig-0.8.18-2.21.x86_64.rpm"]
+depends: [
+  "compiz" {< "0.9"}
+  "glibc" 
+  "libX11-6" 
+  "libabsl_lite_2401_0_0" 
+  "libgcc_s1" 
+  "libprotobuf25_4_0" 
+  "libstdc++6" 
+  "libxml2-2" 
+]
+extra-source "libcompizconfig-0.8.18-2.21.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcompizconfig-0.8.18-2.21.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ruby-build-dependencies-jruby-20240917-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ruby-build-dependencies-jruby-20240917-1.1.noarch.rpm"]
+depends: [
+  "gcc-c++" 
+]
+extra-source "ruby-build-dependencies-jruby-20240917-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ruby-build-dependencies-jruby-20240917-1.1.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "veusz-3.6.2-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "veusz-3.6.2-1.7.noarch.rpm"]
+depends: [
+  "desktop-file-utils" 
+  "python311-base" 
+  "python311-veusz" {= "3.6.2"}
+  "shared-mime-info" 
+  "veusz-common" 
+]
+extra-source "veusz-3.6.2-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/veusz-3.6.2-1.7.noarch.rpm"
+}

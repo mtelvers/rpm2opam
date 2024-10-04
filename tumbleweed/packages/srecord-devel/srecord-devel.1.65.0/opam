@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "srecord-devel-1.65.0-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "srecord-devel-1.65.0-1.5.x86_64.rpm"]
+depends: [
+  "libsrecord0" {= "1.65.0"}
+]
+extra-source "srecord-devel-1.65.0-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/srecord-devel-1.65.0-1.5.x86_64.rpm"
+}

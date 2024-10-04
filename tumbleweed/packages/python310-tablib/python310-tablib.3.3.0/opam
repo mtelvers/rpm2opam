@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-tablib-3.3.0-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-tablib-3.3.0-1.9.noarch.rpm"]
+depends: [
+  "python310-MarkupPy" 
+  "python310-PyYAML" 
+  "python310-base" {= "3.10"}
+  "python310-odfpy" 
+  "python310-openpyxl" {>= "2.6.0"}
+  "python310-tabulate" 
+  "python310-xlrd" 
+  "python310-xlwt" 
+]
+extra-source "python310-tablib-3.3.0-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-tablib-3.3.0-1.9.noarch.rpm"
+}

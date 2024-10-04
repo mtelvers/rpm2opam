@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "operator-sdk-zsh-completion-1.37.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "operator-sdk-zsh-completion-1.37.0-1.1.noarch.rpm"]
+depends: [
+  "operator-sdk" {= "1.37.0"}
+]
+extra-source "operator-sdk-zsh-completion-1.37.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/operator-sdk-zsh-completion-1.37.0-1.1.noarch.rpm"
+}

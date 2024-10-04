@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xscreensaver-extras-6.08-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xscreensaver-extras-6.08-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "libX11" 
+  "libXext" 
+  "libXft" 
+  "libXt" 
+  "libavcodec-free" 
+  "libavformat-free" 
+  "libavutil-free" 
+  "libjpeg-turbo" 
+  "libswresample-free" 
+  "libswscale-free" 
+  "perl-Fcntl" 
+  "perl-POSIX" 
+  "perl-Time-Local" 
+  "perl-diagnostics" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.0.0"}
+  "perl-libwww-perl" 
+  "xscreensaver-base" {= "6.8"}
+  "xscreensaver-extras-base" {= "6.8"}
+]
+extra-source "xscreensaver-extras-6.08-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xscreensaver-extras-6.08-2.fc40.x86_64.rpm"
+}

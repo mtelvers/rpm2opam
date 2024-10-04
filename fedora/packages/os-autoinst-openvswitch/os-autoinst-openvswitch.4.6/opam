@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "os-autoinst-openvswitch-4.6^20231222gitd525e04-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "os-autoinst-openvswitch-4.6^20231222gitd525e04-6.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "openvswitch" 
+  "os-autoinst" {= "4.6"}
+  "perl-Getopt-Long" 
+  "perl-IPC-Open3" 
+  "perl-IPC-System-Simple" 
+  "perl-Mojolicious" 
+  "perl-Net-DBus" 
+  "perl-Symbol" 
+  "perl-Time-Piece" 
+  "perl-autodie" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "systemd" 
+]
+extra-source "os-autoinst-openvswitch-4.6^20231222gitd525e04-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/os-autoinst-openvswitch-4.6^20231222gitd525e04-6.fc40.x86_64.rpm"
+}

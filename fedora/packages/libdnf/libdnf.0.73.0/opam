@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libdnf-0.73.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdnf-0.73.0-1.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "json-c" 
+  "libgcc" 
+  "libmodulemd" 
+  "librepo" {>= "1.15.0"}
+  "libsmartcols" 
+  "libsolv" 
+  "libstdc++" 
+  "rpm-libs" 
+  "sqlite-libs" 
+]
+extra-source "libdnf-0.73.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libdnf-0.73.0-1.fc40.x86_64.rpm"
+}

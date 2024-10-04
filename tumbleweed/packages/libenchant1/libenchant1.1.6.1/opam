@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libenchant1-1.6.1-8.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libenchant1-1.6.1-8.1.x86_64.rpm"]
+depends: [
+  "enchant-1-backend-voikko" 
+  "glib2-stage1-devel" 
+  "glibc" 
+]
+extra-source "libenchant1-1.6.1-8.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libenchant1-1.6.1-8.1.x86_64.rpm"
+}

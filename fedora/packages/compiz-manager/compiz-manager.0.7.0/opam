@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "compiz-manager-0.7.0-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "compiz-manager-0.7.0-21.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "compiz" 
+  "glx-utils" 
+  "libcompizconfig" 
+  "pciutils" 
+  "xdpyinfo" 
+]
+extra-source "compiz-manager-0.7.0-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/compiz-manager-0.7.0-21.fc40.noarch.rpm"
+}

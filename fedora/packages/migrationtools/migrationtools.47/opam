@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "migrationtools-47-34.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "migrationtools-47-34.fc40.noarch.rpm"]
+depends: [
+  "389-ds-base" 
+  "bash" 
+  "perl-interpreter" 
+]
+extra-source "migrationtools-47-34.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/migrationtools-47-34.fc40.noarch.rpm"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "deepin-editor-6.0.10-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deepin-editor-6.0.10-4.fc40.x86_64.rpm"]
+depends: [
+  "deepin-qt5integration" 
+  "deepin-session-ui" 
+  "dtkcore" 
+  "dtkgui" 
+  "dtkwidget" 
+  "glibc" 
+  "kf5-kcodecs" 
+  "kf5-syntax-highlighting" 
+  "libchardet" 
+  "libgcc" 
+  "libicu" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtsvg" 
+  "uchardet" 
+]
+extra-source "deepin-editor-6.0.10-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/deepin-editor-6.0.10-4.fc40.x86_64.rpm"
+}

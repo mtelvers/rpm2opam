@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-lablgtk-devel-2.18.13-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-lablgtk-devel-2.18.13-11.fc40.x86_64.rpm"]
+depends: [
+  "gtk2-devel" 
+  "ocaml" {= "2125"}
+  "ocaml-lablgtk" {= "2.18.13"}
+  "ocaml-runtime" 
+]
+extra-source "ocaml-lablgtk-devel-2.18.13-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-lablgtk-devel-2.18.13-11.fc40.x86_64.rpm"
+}

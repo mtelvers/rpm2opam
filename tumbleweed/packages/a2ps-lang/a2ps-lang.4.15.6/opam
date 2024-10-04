@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "a2ps-lang-4.15.6-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "a2ps-lang-4.15.6-1.1.noarch.rpm"]
+depends: [
+  "a2ps" {= "4.15.6"}
+]
+extra-source "a2ps-lang-4.15.6-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/a2ps-lang-4.15.6-1.1.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-tidy-0.6-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-tidy-0.6-16.fc40.noarch.rpm"]
+depends: [
+  "libtidy" 
+  "python3" {= "3.12"}
+  "python3-six" 
+]
+extra-source "python3-tidy-0.6-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-tidy-0.6-16.fc40.noarch.rpm"
+}

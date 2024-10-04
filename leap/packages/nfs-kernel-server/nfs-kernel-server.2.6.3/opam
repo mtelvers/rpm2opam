@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nfs-kernel-server-2.6.3-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nfs-kernel-server-2.6.3-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "kernel-debug" 
+  "libblkid1" 
+  "libevent-2_1-7" 
+  "libnss_usrfiles2" 
+  "libsqlite3-0" 
+  "libtirpc3" 
+  "libuuid1" 
+  "netcfg" 
+  "nfs-client" {= "2.6.3"}
+  "permissions" 
+  "rpcbind" 
+]
+extra-source "nfs-kernel-server-2.6.3-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/nfs-kernel-server-2.6.3-slfo.1.1.8.x86_64.rpm"
+}

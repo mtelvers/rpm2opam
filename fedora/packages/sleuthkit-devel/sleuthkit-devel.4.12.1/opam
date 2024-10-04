@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sleuthkit-devel-4.12.1-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sleuthkit-devel-4.12.1-2.fc40.x86_64.rpm"]
+depends: [
+  "libewf-devel" 
+  "pkgconf-pkg-config" 
+  "sleuthkit-libs" 
+  "sqlite-devel" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "sleuthkit-devel-4.12.1-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sleuthkit-devel-4.12.1-2.fc40.x86_64.rpm"
+}

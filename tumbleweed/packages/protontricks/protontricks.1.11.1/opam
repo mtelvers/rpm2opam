@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "protontricks-1.11.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "protontricks-1.11.1-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "python311-Pillow" 
+  "python311-base" 
+  "python311-setuptools" 
+  "python311-vdf" 
+  "winetricks" 
+  "zenity" 
+]
+extra-source "protontricks-1.11.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/protontricks-1.11.1-1.1.noarch.rpm"
+}

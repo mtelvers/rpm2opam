@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libibverbs-53.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libibverbs-53.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libhns1" {= "53.0"}
+  "libibverbs1" 
+  "libmana1" {= "53.0"}
+  "libmlx4-1" {= "53.0"}
+  "libmlx5-1" {= "53.0"}
+  "rdma-core" {= "53.0"}
+]
+extra-source "libibverbs-53.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libibverbs-53.0-1.1.x86_64.rpm"
+}

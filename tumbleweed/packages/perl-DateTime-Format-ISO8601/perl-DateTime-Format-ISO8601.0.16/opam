@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-DateTime-Format-ISO8601-0.16-1.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DateTime-Format-ISO8601-0.16-1.17.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-DateTime" {>= "1.45"}
+  "perl-DateTime-Format-Builder" {>= "0.77"}
+  "perl-Params-ValidationCompiler" {>= "0.26"}
+  "perl-Specio" {>= "0.18"}
+  "perl-base" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-DateTime-Format-ISO8601-0.16-1.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-DateTime-Format-ISO8601-0.16-1.17.noarch.rpm"
+}

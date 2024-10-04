@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Net-HTTP-6.23-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-HTTP-6.23-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Compress-Raw-Zlib" 
+  "perl-IO-Compress" 
+  "perl-IO-Socket-IP" 
+  "perl-IO-Socket-SSL" {>= "2.12"}
+  "perl-Symbol" 
+  "perl-URI" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-Net-HTTP-6.23-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Net-HTTP-6.23-4.fc40.noarch.rpm"
+}

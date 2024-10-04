@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgtkhex-4-1-46.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgtkhex-4-1-46.0-1.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libgtk-4-1" 
+  "libpango-1_0-0" 
+]
+extra-source "libgtkhex-4-1-46.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgtkhex-4-1-46.0-1.2.x86_64.rpm"
+}

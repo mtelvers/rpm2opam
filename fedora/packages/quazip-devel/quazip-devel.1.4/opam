@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "quazip-devel-1.4-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "quazip-devel-1.4-7.fc40.x86_64.rpm"]
+depends: [
+  "bzip2-devel" 
+  "cmake-filesystem" 
+  "pkgconf-pkg-config" 
+  "qt-devel" 
+  "quazip" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "quazip-devel-1.4-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/quazip-devel-1.4-7.fc40.x86_64.rpm"
+}

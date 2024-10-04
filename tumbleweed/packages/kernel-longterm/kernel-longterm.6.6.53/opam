@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kernel-longterm-6.6.53-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kernel-longterm-6.6.53-1.1.x86_64.rpm"]
+depends: [
+  "Aeon-release" 
+  "bash-sh" 
+  "coreutils" 
+  "dracut" 
+  "gawk" 
+  "kmod" 
+  "suse-module-tools" 
+  "suse-module-tools-scriptlets" 
+  "update-bootloader" {>= "0.4.15"}
+]
+extra-source "kernel-longterm-6.6.53-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kernel-longterm-6.6.53-1.1.x86_64.rpm"
+}

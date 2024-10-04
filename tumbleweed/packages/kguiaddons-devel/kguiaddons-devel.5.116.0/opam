@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kguiaddons-devel-5.116.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kguiaddons-devel-5.116.0-1.1.x86_64.rpm"]
+depends: [
+  "libKF5GuiAddons5" {= "5.116.0"}
+  "libQt5Gui-devel" {>= "5.15.2"}
+]
+extra-source "kguiaddons-devel-5.116.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kguiaddons-devel-5.116.0-1.1.x86_64.rpm"
+}

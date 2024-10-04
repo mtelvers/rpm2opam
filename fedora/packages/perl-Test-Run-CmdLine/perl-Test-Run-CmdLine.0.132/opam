@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-Run-CmdLine-0.0132-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Run-CmdLine-0.0132-11.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-Getopt-Long" 
+  "perl-MRO-Compat" 
+  "perl-Moose" 
+  "perl-MooseX-Getopt" {>= "0.26"}
+  "perl-PathTools" 
+  "perl-Pod-Usage" {>= "1.12"}
+  "perl-Test-Run" 
+  "perl-Test-Trap" 
+  "perl-UNIVERSAL-require" 
+  "perl-YAML-LibYAML" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-parent" 
+  "perl-vars" 
+]
+extra-source "perl-Test-Run-CmdLine-0.0132-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-Run-CmdLine-0.0132-11.fc40.noarch.rpm"
+}

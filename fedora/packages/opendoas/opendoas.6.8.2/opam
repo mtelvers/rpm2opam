@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "opendoas-6.8.2-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opendoas-6.8.2-6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "pam-libs" 
+]
+extra-source "opendoas-6.8.2-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/opendoas-6.8.2-6.fc40.x86_64.rpm"
+}

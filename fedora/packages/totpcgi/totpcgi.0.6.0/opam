@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "totpcgi-0.6.0-0.18.20190713git.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "totpcgi-0.6.0-0.18.20190713git.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "httpd" 
+  "mod_ssl" 
+  "python3" 
+  "python3-totpcgi" {= "0.6.0"}
+]
+extra-source "totpcgi-0.6.0-0.18.20190713git.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/totpcgi-0.6.0-0.18.20190713git.fc40.noarch.rpm"
+}

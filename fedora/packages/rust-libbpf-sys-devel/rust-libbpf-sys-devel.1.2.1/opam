@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-libbpf-sys-devel-1.2.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-libbpf-sys-devel-1.2.1-2.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cargo" 
+  "elfutils-libelf-devel" 
+  "kernel-headers" 
+  "rust-cc+default-devel" 
+  "rust-nix+default-devel" 
+  "rust-num_cpus+default-devel" 
+  "rust-pkg-config+default-devel" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "rust-libbpf-sys-devel-1.2.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-libbpf-sys-devel-1.2.1-2.fc40.noarch.rpm"
+}

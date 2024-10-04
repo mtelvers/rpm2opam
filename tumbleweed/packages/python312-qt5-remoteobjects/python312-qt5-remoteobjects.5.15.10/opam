@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-qt5-remoteobjects-5.15.10-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-qt5-remoteobjects-5.15.10-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5RemoteObjects5" 
+  "libstdc++6" 
+  "python312-base" {= "3.12"}
+  "python312-qt5" {= "5.15.10"}
+]
+extra-source "python312-qt5-remoteobjects-5.15.10-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-qt5-remoteobjects-5.15.10-1.3.x86_64.rpm"
+}

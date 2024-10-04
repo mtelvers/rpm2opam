@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-libcramjam-devel-0.3.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-libcramjam-devel-0.3.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-brotli+ffi-api-devel" 
+  "rust-brotli+std-devel" 
+  "rust-brotli-devel" 
+  "rust-bzip2+default-devel" 
+  "rust-cbindgen+default-devel" 
+  "rust-flate2+default-devel" 
+  "rust-libdeflater+default-devel" 
+  "rust-lz4+default-devel" 
+  "rust-snap+default-devel" 
+  "rust-xz2+default-devel" 
+  "rust-zstd+default-devel" 
+]
+extra-source "rust-libcramjam-devel-0.3.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-libcramjam-devel-0.3.0-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "wide-dhcpv6-20080615-23.3.fc40.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wide-dhcpv6-20080615-23.3.fc40.4.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "systemd" 
+]
+extra-source "wide-dhcpv6-20080615-23.3.fc40.4.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/wide-dhcpv6-20080615-23.3.fc40.4.x86_64.rpm"
+}

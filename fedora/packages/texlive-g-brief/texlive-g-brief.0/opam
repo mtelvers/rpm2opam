@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-g-brief-svn50415-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-g-brief-svn50415-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-babel" 
+  "texlive-base" 
+  "texlive-eurosym" 
+  "texlive-kpathsea" 
+  "texlive-latex" 
+  "texlive-marvosym" 
+]
+extra-source "texlive-g-brief-svn50415-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-g-brief-svn50415-71.fc40.noarch.rpm"
+}

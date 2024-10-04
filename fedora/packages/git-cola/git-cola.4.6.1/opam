@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "git-cola-4.6.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "git-cola-4.6.1-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "git" 
+  "hicolor-icon-theme" 
+  "python3" 
+  "python3-QtPy" {>= "1.1"}
+  "python3-polib" {>= "1"}
+  "python3-qt5" 
+  "tcl" 
+]
+extra-source "git-cola-4.6.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/git-cola-4.6.1-1.fc40.noarch.rpm"
+}

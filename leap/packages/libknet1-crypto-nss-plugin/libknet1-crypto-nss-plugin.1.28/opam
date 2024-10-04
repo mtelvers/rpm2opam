@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libknet1-crypto-nss-plugin-1.28-slfo.1.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libknet1-crypto-nss-plugin-1.28-slfo.1.1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libknet1" {= "1.28"}
+  "mozilla-nspr" 
+  "mozilla-nss" 
+]
+extra-source "libknet1-crypto-nss-plugin-1.28-slfo.1.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libknet1-crypto-nss-plugin-1.28-slfo.1.1.1.x86_64.rpm"
+}

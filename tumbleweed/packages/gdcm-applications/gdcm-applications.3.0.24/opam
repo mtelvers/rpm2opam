@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gdcm-applications-3.0.24-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdcm-applications-3.0.24-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libgdcm3_0" 
+  "libpoppler139" 
+  "libstdc++6" 
+  "libxml2-2" 
+  "libz-ng-compat1" 
+]
+extra-source "gdcm-applications-3.0.24-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gdcm-applications-3.0.24-2.1.x86_64.rpm"
+}

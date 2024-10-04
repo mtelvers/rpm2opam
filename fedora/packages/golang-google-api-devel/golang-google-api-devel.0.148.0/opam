@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-google-api-devel-0.148.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-google-api-devel-0.148.0-1.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-cloud-google-compute-metadata-devel" 
+  "golang-github-google-s2a-devel" 
+  "golang-github-google-uuid-devel" 
+  "golang-github-googleapis-enterprise-certificate-proxy-devel" 
+  "golang-github-googleapis-gax-devel" 
+  "golang-google-genproto-devel" 
+  "golang-opencensus-devel" 
+  "golang-x-net-devel" 
+  "golang-x-oauth2-devel" 
+  "golang-x-sync-devel" 
+]
+extra-source "golang-google-api-devel-0.148.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-google-api-devel-0.148.0-1.fc40.noarch.rpm"
+}

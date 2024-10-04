@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lekha-0.2.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lekha-0.2.1-2.1.x86_64.rpm"]
+depends: [
+  "python310-pypdf" 
+  "python311-base" 
+  "python311-efl" 
+  "python311-xdg-base-dirs" 
+]
+extra-source "lekha-0.2.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lekha-0.2.1-2.1.x86_64.rpm"
+}

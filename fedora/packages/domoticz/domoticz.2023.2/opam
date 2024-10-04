@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "domoticz-2023.2-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "domoticz-2023.2-5.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "boost-thread" 
+  "glibc" 
+  "google-droid-sans-fonts" 
+  "jsoncpp" 
+  "libcurl" 
+  "libgcc" 
+  "libopenzwave" 
+  "libstdc++" 
+  "lua-libs" 
+  "minizip-ng-compat" 
+  "mosquitto" 
+  "openssl-libs" 
+  "shadow-utils" 
+  "sqlite-libs" 
+  "systemd" 
+  "tinyxml" 
+  "tinyxpath" 
+  "zlib-ng-compat" 
+]
+extra-source "domoticz-2023.2-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/domoticz-2023.2-5.fc40.x86_64.rpm"
+}

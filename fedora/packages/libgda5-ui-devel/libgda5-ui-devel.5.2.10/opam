@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libgda5-ui-devel-5.2.10-21.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgda5-ui-devel-5.2.10-21.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "gtk3-devel" {>= "3.0.0"}
+  "libgda5" 
+  "libgda5-devel" {= "5.2.10"}
+  "libgda5-ui" 
+  "libxml2" 
+  "pango" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libgda5-ui-devel-5.2.10-21.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libgda5-ui-devel-5.2.10-21.fc40.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "Mesa-devel-24.1.7-391.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Mesa-devel-24.1.7-391.1.x86_64.rpm"]
+depends: [
+  "Mesa" {= "24.1.7"}
+  "Mesa-dri-devel" {= "24.1.7"}
+  "Mesa-libEGL-devel" {= "24.1.7"}
+  "Mesa-libGL-devel" {= "24.1.7"}
+  "Mesa-libGLESv1_CM-devel" {= "24.1.7"}
+  "Mesa-libGLESv2-devel" {= "24.1.7"}
+  "Mesa-libglapi-devel" {= "24.1.7"}
+  "libOSMesa-devel" {= "24.1.7"}
+  "libgbm-devel" {= "24.1.7"}
+  "libglvnd-devel" {>= "1.2.0"}
+]
+extra-source "Mesa-devel-24.1.7-391.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/Mesa-devel-24.1.7-391.1.x86_64.rpm"
+}

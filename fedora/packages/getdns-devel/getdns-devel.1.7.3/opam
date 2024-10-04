@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "getdns-devel-1.7.3-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "getdns-devel-1.7.3-5.fc40.x86_64.rpm"]
+depends: [
+  "getdns" {= "1.7.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "getdns-devel-1.7.3-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/getdns-devel-1.7.3-5.fc40.x86_64.rpm"
+}

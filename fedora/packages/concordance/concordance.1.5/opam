@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "concordance-1.5-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "concordance-1.5-8.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libconcord" {= "1.5"}
+]
+extra-source "concordance-1.5-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/concordance-1.5-8.fc40.x86_64.rpm"
+}

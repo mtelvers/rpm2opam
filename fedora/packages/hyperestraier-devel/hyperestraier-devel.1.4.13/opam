@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hyperestraier-devel-1.4.13-60.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hyperestraier-devel-1.4.13-60.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "hyperestraier" {= "1.4.13"}
+  "pkgconf-pkg-config" 
+  "qdbm-devel" {>= "1.8.75"}
+]
+extra-source "hyperestraier-devel-1.4.13-60.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hyperestraier-devel-1.4.13-60.fc40.x86_64.rpm"
+}

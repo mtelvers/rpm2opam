@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "native-maven-plugin-1.0~M1-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "native-maven-plugin-1.0~M1-2.2.noarch.rpm"]
+depends: [
+  "bcel" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-lib" 
+  "maven-native" {= "1.0.0"}
+  "maven-native-components" {= "1.0.0"}
+  "plexus-archiver" 
+  "plexus-utils" 
+  "plexus-xml" 
+]
+extra-source "native-maven-plugin-1.0~M1-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/native-maven-plugin-1.0~M1-2.2.noarch.rpm"
+}

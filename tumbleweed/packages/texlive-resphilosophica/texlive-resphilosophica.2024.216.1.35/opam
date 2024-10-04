@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-resphilosophica-2024.216.1.35svn50935-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-resphilosophica-2024.216.1.35svn50935-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-amscls" 
+  "texlive-fancyhdr" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-footmisc" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-lastpage" 
+  "texlive-mathdesign" 
+  "texlive-microtype" 
+  "texlive-natbib" 
+  "texlive-sauerj" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-xcolor" 
+  "texlive-xkeyval" 
+]
+extra-source "texlive-resphilosophica-2024.216.1.35svn50935-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-resphilosophica-2024.216.1.35svn50935-56.1.noarch.rpm"
+}

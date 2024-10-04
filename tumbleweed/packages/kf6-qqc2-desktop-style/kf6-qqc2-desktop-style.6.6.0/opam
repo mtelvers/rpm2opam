@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kf6-qqc2-desktop-style-6.6.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kf6-qqc2-desktop-style-6.6.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf6-kirigami-imports" 
+  "kf6-sonnet-imports" {>= "6.6"}
+  "libKF6ColorScheme6" 
+  "libKF6ConfigCore6" 
+  "libKF6IconThemes6" 
+  "libKirigamiPlatform6" 
+  "libQt6Core6" 
+  "libQt6DBus6" 
+  "libQt6Gui6" 
+  "libQt6Qml6" 
+  "libQt6Quick6" 
+  "libQt6Widgets6" 
+  "libstdc++6" 
+  "qt6-declarative-imports" {= "6.7.2"}
+  "qtdeclarative-imports-provides-qt6" 
+]
+extra-source "kf6-qqc2-desktop-style-6.6.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kf6-qqc2-desktop-style-6.6.0-1.1.x86_64.rpm"
+}

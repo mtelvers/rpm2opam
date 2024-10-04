@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-WSME-0.12.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-WSME-0.12.1-2.1.noarch.rpm"]
+depends: [
+  "python311-WebOb" {>= "1.2.3"}
+  "python311-base" {= "3.11"}
+  "python311-importlib-metadata" 
+  "python311-netaddr" {>= "0.7.12"}
+  "python311-pytz" 
+  "python311-simplegeneric" 
+]
+extra-source "python311-WSME-0.12.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-WSME-0.12.1-2.1.noarch.rpm"
+}

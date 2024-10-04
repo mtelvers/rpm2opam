@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "plymouth-devel-24.004.60-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plymouth-devel-24.004.60-4.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libevdev-devel" 
+  "libpng-devel" {>= "1.2.16"}
+  "libxkbcommon-devel" 
+  "pkgconf-pkg-config" 
+  "plymouth" {= "24.4.60"}
+  "plymouth-core-libs" 
+  "plymouth-graphics-libs" 
+  "systemd-devel" 
+  "xkeyboard-config-devel" 
+]
+extra-source "plymouth-devel-24.004.60-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/plymouth-devel-24.004.60-4.fc40.x86_64.rpm"
+}

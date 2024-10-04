@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ibus-mozc-2.29.5268.102-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibus-mozc-2.29.5268.102-1.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "ibus" {>= "1.4.1"}
+  "libgcc_s1" 
+  "libibus-1_0-5" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "mozc" {= "2.29.5268.102"}
+  "mozc-gui-tools" {= "2.29.5268.102"}
+]
+extra-source "ibus-mozc-2.29.5268.102-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ibus-mozc-2.29.5268.102-1.2.x86_64.rpm"
+}

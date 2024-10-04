@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "java-21-openjdk-devel-21.0.4.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "java-21-openjdk-devel-21.0.4.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "java-11-openj9-headless" 
+  "java-21-openjdk" {= "21.0.4.0"}
+  "libgcc_s1" 
+  "libstdc++6" 
+  "update-alternatives" 
+]
+extra-source "java-21-openjdk-devel-21.0.4.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/java-21-openjdk-devel-21.0.4.0-1.1.x86_64.rpm"
+}

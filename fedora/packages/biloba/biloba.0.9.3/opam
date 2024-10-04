@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "biloba-0.9.3-31.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "biloba-0.9.3-31.fc40.x86_64.rpm"]
+depends: [
+  "SDL_image" 
+  "SDL_mixer" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "sdl12-compat" 
+]
+extra-source "biloba-0.9.3-31.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/biloba-0.9.3-31.fc40.x86_64.rpm"
+}

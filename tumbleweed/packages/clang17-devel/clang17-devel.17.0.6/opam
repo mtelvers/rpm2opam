@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "clang17-devel-17.0.6-6.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clang17-devel-17.0.6-6.1.x86_64.rpm"]
+depends: [
+  "clang-tools" {>= "17.0.6"}
+  "clang17" {= "17.0.6"}
+  "glibc" 
+  "libclang-cpp17" {= "17.0.6"}
+  "libclang13" {>= "17.0.6"}
+  "llvm17-devel" {= "17.0.6"}
+]
+extra-source "clang17-devel-17.0.6-6.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/clang17-devel-17.0.6-6.1.x86_64.rpm"
+}

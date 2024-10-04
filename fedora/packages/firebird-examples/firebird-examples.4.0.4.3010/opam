@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "firebird-examples-4.0.4.3010-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "firebird-examples-4.0.4.3010-3.fc40.noarch.rpm"]
+depends: [
+  "firebird-doc" {= "4.0.4.3010"}
+]
+extra-source "firebird-examples-4.0.4.3010-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/firebird-examples-4.0.4.3010-3.fc40.noarch.rpm"
+}

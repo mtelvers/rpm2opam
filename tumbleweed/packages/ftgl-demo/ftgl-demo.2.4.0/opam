@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ftgl-demo-2.4.0-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ftgl-demo-2.4.0-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libGLU1" 
+  "libftgl2" 
+  "libgcc_s1" 
+  "libglut3" 
+  "libglvnd" 
+  "libstdc++6" 
+]
+extra-source "ftgl-demo-2.4.0-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ftgl-demo-2.4.0-2.2.x86_64.rpm"
+}

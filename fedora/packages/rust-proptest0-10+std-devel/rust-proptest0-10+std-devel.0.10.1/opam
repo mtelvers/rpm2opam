@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-proptest0.10+std-devel-0.10.1-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-proptest0.10+std-devel-0.10.1-9.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-byteorder+std-devel" 
+  "rust-num-traits+std-devel" 
+  "rust-proptest0-10+lazy_static-devel" {= "0.10.1"}
+  "rust-proptest0-10+quick-error-devel" {= "0.10.1"}
+  "rust-proptest0-10+regex-syntax-devel" {= "0.10.1"}
+  "rust-proptest0-10-devel" {= "0.10.1"}
+  "rust-rand+std-devel" 
+]
+extra-source "rust-proptest0.10+std-devel-0.10.1-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-proptest0.10+std-devel-0.10.1-9.fc40.noarch.rpm"
+}

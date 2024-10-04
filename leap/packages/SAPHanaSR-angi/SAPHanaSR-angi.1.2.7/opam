@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "SAPHanaSR-angi-1.2.7-slfo.1.1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "SAPHanaSR-angi-1.2.7-slfo.1.1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "crmsh" {>= "4.4.0"}
+  "crmsh-scripts" {>= "4.4.0"}
+  "libxml2-tools" 
+  "pacemaker" {> "2.1.2"}
+  "perl" 
+  "perl-base" 
+  "python311" 
+  "python311-base" 
+  "resource-agents" 
+]
+extra-source "SAPHanaSR-angi-1.2.7-slfo.1.1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/SAPHanaSR-angi-1.2.7-slfo.1.1.1.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-spin+spin_mutex-devel-0.9.8-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-spin+spin_mutex-devel-0.9.8-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-spin+mutex-devel" {= "0.9.8"}
+  "rust-spin-devel" {= "0.9.8"}
+]
+extra-source "rust-spin+spin_mutex-devel-0.9.8-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-spin+spin_mutex-devel-0.9.8-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-Role-Parameterized-1.11-1.22.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Role-Parameterized-1.11-1.22.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Module-Runtime" 
+  "perl-Moose" {>= "2.300"}
+  "perl-namespace-autoclean" 
+  "perl-namespace-clean" {>= "0.19"}
+]
+extra-source "perl-MooseX-Role-Parameterized-1.11-1.22.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-Role-Parameterized-1.11-1.22.noarch.rpm"
+}

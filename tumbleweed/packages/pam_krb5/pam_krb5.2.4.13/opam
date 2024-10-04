@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pam_krb5-2.4.13-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pam_krb5-2.4.13-3.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "krb5" 
+  "libcom_err2" 
+  "libkeyutils1" 
+  "libselinux1" 
+  "pam" 
+]
+extra-source "pam_krb5-2.4.13-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pam_krb5-2.4.13-3.2.x86_64.rpm"
+}

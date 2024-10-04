@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python-play-scraper-0.6.0-17.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python-play-scraper-0.6.0-17.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-beautifulsoup4" {>= "4.6.1"}
+  "python3-lxml" {>= "4.2.4"}
+  "python3-requests" {>= "2.20"}
+  "python3-requests+security" {>= "2.20"}
+  "python3-requests-futures" {>= "0.9.7"}
+]
+extra-source "python-play-scraper-0.6.0-17.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python-play-scraper-0.6.0-17.fc40.noarch.rpm"
+}

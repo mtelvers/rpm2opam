@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "molequeue-0.9.0-21.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "molequeue-0.9.0-21.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "molequeue-libs" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "molequeue-0.9.0-21.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/molequeue-0.9.0-21.fc40.x86_64.rpm"
+}

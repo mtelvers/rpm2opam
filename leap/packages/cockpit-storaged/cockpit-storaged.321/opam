@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cockpit-storaged-321-slfo.1.2.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cockpit-storaged-321-slfo.1.2.10.noarch.rpm"]
+depends: [
+  "cockpit-system" {>= "266"}
+  "libudisks2-0_btrfs" {>= "2.9"}
+  "libudisks2-0_lvm2" {>= "2.9"}
+  "python311-base" 
+  "python311-dbus-python" 
+  "udisks2" {>= "2.9"}
+]
+extra-source "cockpit-storaged-321-slfo.1.2.10.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/cockpit-storaged-321-slfo.1.2.10.noarch.rpm"
+}

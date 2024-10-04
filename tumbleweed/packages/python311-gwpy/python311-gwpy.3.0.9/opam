@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-gwpy-3.0.9-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-gwpy-3.0.9-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-astropy" {>= "4.3.0"}
+  "python311-base" {= "3.11"}
+  "python311-dateparser" 
+  "python311-dqsegdb2" 
+  "python311-gwdatafind" {>= "1.1.0"}
+  "python311-gwosc" {>= "0.5.3"}
+  "python311-h5py" {>= "3"}
+  "python311-ligo-segments" {>= "1.0.0"}
+  "python311-ligotimegps" {>= "1.2.1"}
+  "python311-matplotlib" {>= "3.3.0"}
+  "python311-numpy" {>= "1.17"}
+  "python311-python-dateutil" 
+  "python311-requests" 
+  "python311-scipy" {>= "1.2.0"}
+  "python311-tqdm" {>= "4.10.0"}
+  "update-alternatives" 
+]
+extra-source "python311-gwpy-3.0.9-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-gwpy-3.0.9-1.1.noarch.rpm"
+}

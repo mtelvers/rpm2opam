@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-Inline-2.214-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Inline-2.214-12.fc40.noarch.rpm"]
+depends: [
+  "perl-Algorithm-Dependency" {>= "1.2"}
+  "perl-Config-Tiny" 
+  "perl-File-Find-Rule" 
+  "perl-File-Flat" 
+  "perl-File-Remove" 
+  "perl-File-chmod" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-Params-Util" {>= "0.21"}
+  "perl-Path-Tiny" 
+  "perl-PathTools" {>= "0.80"}
+  "perl-Scalar-List-Utils" {>= "1.19"}
+  "perl-interpreter" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-Test-Inline-2.214-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-Inline-2.214-12.fc40.noarch.rpm"
+}

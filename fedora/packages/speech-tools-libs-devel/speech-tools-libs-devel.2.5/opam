@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "speech-tools-libs-devel-2.5-22.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "speech-tools-libs-devel-2.5-22.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libgcc" 
+  "speech-tools-libs" {= "2.5"}
+]
+extra-source "speech-tools-libs-devel-2.5-22.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/speech-tools-libs-devel-2.5-22.fc40.x86_64.rpm"
+}

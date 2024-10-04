@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-websocket-1.4.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-websocket-1.4.1-6.fc40.x86_64.rpm"]
+depends: [
+  "R-R6" 
+  "R-core" {= "4.3"}
+  "R-later" {>= "1.2.0"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "openssl-libs" 
+]
+extra-source "R-websocket-1.4.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-websocket-1.4.1-6.fc40.x86_64.rpm"
+}

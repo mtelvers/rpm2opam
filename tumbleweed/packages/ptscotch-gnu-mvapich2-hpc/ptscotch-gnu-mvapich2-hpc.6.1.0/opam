@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ptscotch-gnu-mvapich2-hpc-6.1.0-3.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ptscotch-gnu-mvapich2-hpc-6.1.0-3.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "ptscotch_6_1_0-gnu-mvapich2-hpc" {= "6.1.0"}
+]
+extra-source "ptscotch-gnu-mvapich2-hpc-6.1.0-3.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ptscotch-gnu-mvapich2-hpc-6.1.0-3.4.noarch.rpm"
+}

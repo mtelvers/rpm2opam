@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-chrono+default-devel-0.4.35-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-chrono+default-devel-0.4.35-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-chrono+clock-devel" {= "0.4.35"}
+  "rust-chrono+oldtime-devel" {= "0.4.35"}
+  "rust-chrono+std-devel" {= "0.4.35"}
+  "rust-chrono-devel" {= "0.4.35"}
+]
+extra-source "rust-chrono+default-devel-0.4.35-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-chrono+default-devel-0.4.35-1.fc40.noarch.rpm"
+}

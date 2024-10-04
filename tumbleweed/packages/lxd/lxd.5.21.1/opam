@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lxd-5.21.1-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lxd-5.21.1-1.2.x86_64.rpm"]
+depends: [
+  "acl" 
+  "attr" 
+  "bash-sh" 
+  "dnsmasq" 
+  "ebtables" 
+  "glibc" 
+  "kernel-debug" {>= "5.4"}
+  "libacl1" 
+  "libcap2" 
+  "libgcc_s1" 
+  "liblxc1" 
+  "liblz4-1" 
+  "libsqlite3-0" 
+  "libudev-mini1" 
+  "libuv1" 
+  "lxcfs" 
+  "lxcfs-hooks-lxc" 
+  "qemu-ovmf-x86_64" 
+  "qemu-ui-spice-core" 
+  "qemu-x86" {>= "6.0"}
+  "rsync" 
+  "squashfs" 
+  "sysuser-shadow" {>= "3.2"}
+  "tar" 
+  "xz" 
+]
+extra-source "lxd-5.21.1-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lxd-5.21.1-1.2.x86_64.rpm"
+}

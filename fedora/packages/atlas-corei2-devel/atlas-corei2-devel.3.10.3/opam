@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "atlas-corei2-devel-3.10.3-24.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "atlas-corei2-devel-3.10.3-24.fc39.x86_64.rpm"]
+depends: [
+  "alternatives" 
+  "atlas" 
+  "atlas-corei2" {= "3.10.3"}
+  "bash" 
+]
+extra-source "atlas-corei2-devel-3.10.3-24.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/atlas-corei2-devel-3.10.3-24.fc39.x86_64.rpm"
+}

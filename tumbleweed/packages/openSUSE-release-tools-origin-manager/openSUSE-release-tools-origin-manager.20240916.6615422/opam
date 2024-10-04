@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openSUSE-release-tools-origin-manager-20240916.6615422-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openSUSE-release-tools-origin-manager-20240916.6615422-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "osc-plugin-origin" {= "20240916.6615422"}
+  "osclib" {= "20240916.6615422"}
+  "python311-base" 
+  "shadow" 
+]
+extra-source "openSUSE-release-tools-origin-manager-20240916.6615422-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/openSUSE-release-tools-origin-manager-20240916.6615422-1.1.noarch.rpm"
+}

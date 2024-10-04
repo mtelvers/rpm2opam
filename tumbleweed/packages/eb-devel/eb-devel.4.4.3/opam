@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "eb-devel-4.4.3-6.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eb-devel-4.4.3-6.1.x86_64.rpm"]
+depends: [
+  "eb" {= "4.4.3"}
+]
+extra-source "eb-devel-4.4.3-6.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/eb-devel-4.4.3-6.1.x86_64.rpm"
+}

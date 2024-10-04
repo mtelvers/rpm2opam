@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libevtx-devel-20240504-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libevtx-devel-20240504-1.1.x86_64.rpm"]
+depends: [
+  "libbfio-devel" 
+  "libevtx1" {= "20240504"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libevtx-devel-20240504-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libevtx-devel-20240504-1.1.x86_64.rpm"
+}

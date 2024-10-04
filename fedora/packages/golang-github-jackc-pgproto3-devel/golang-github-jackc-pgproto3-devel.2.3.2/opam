@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-jackc-pgproto3-devel-2.3.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-jackc-pgproto3-devel-2.3.2-3.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-jackc-chunkreader-2-devel" 
+  "golang-github-jackc-pgio-devel" 
+]
+extra-source "golang-github-jackc-pgproto3-devel-2.3.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-jackc-pgproto3-devel-2.3.2-3.fc40.noarch.rpm"
+}

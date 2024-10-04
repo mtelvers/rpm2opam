@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "apache-commons-pool-1.6-8.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apache-commons-pool-1.6-8.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "apache-commons-pool-1.6-8.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/apache-commons-pool-1.6-8.1.noarch.rpm"
+}

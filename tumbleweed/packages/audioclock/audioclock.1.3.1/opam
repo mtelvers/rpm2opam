@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "audioclock-1.3.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "audioclock-1.3.1-1.1.noarch.rpm"]
+depends: [
+  "perl-SDL" 
+  "perl-base" 
+]
+extra-source "audioclock-1.3.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/audioclock-1.3.1-1.1.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "eb-devel-4.4.3-22.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eb-devel-4.4.3-22.fc39.x86_64.rpm"]
+depends: [
+  "eb" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "eb-devel-4.4.3-22.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/eb-devel-4.4.3-22.fc39.x86_64.rpm"
+}

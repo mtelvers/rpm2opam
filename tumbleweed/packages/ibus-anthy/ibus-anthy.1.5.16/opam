@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ibus-anthy-1.5.16-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibus-anthy-1.5.16-1.1.x86_64.rpm"]
+depends: [
+  "anthy" 
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libanthy0" 
+  "python311-gobject" {>= "3"}
+  "typelib-1_0-GLib-2_0" {= "2.0"}
+  "typelib-1_0-GObject-2_0" {= "2.0"}
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-IBus-1_0" 
+  "typelib-1_0-Pango-1_0" 
+]
+extra-source "ibus-anthy-1.5.16-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ibus-anthy-1.5.16-1.1.x86_64.rpm"
+}

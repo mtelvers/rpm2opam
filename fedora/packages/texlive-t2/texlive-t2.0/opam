@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-t2-svn47870-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-t2-svn47870-71.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "texlive-amsfonts" 
+  "texlive-base" 
+  "texlive-kpathsea" 
+  "texlive-tools" 
+]
+extra-source "texlive-t2-svn47870-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-t2-svn47870-71.fc40.noarch.rpm"
+}

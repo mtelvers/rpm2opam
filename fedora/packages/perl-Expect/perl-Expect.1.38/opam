@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Expect-1.38-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Expect-1.38-1.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Errno" 
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-IO" 
+  "perl-IO-Tty" {>= "1.11"}
+  "perl-POSIX" 
+  "perl-Scalar-List-Utils" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-vars" 
+]
+extra-source "perl-Expect-1.38-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Expect-1.38-1.fc40.noarch.rpm"
+}

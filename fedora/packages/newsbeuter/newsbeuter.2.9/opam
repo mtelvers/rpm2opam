@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "newsbeuter-2.9-25.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "newsbeuter-2.9-25.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "json-c" 
+  "libcurl" 
+  "libgcc" 
+  "libstdc++" 
+  "libxml2" 
+  "ncurses-libs" 
+  "sqlite-libs" 
+  "stfl" 
+]
+extra-source "newsbeuter-2.9-25.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/newsbeuter-2.9-25.fc40.x86_64.rpm"
+}

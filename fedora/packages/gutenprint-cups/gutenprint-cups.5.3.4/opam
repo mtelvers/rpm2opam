@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gutenprint-cups-5.3.4-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gutenprint-cups-5.3.4-16.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cups" 
+  "cups-libs" 
+  "glibc" 
+  "gutenprint" {= "5.3.4"}
+  "gutenprint-libs" 
+  "libusb1" 
+  "python3" 
+  "python3-charset-normalizer" 
+  "zlib-ng-compat" 
+]
+extra-source "gutenprint-cups-5.3.4-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gutenprint-cups-5.3.4-16.fc40.x86_64.rpm"
+}

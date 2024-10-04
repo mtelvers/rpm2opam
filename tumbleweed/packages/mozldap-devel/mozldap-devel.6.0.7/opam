@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mozldap-devel-6.0.7-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mozldap-devel-6.0.7-5.2.x86_64.rpm"]
+depends: [
+  "mozilla-nspr-devel" 
+  "mozilla-nss-devel" 
+  "mozldap-libs" {= "6.0.7"}
+  "pkgconf-pkg-config" 
+]
+extra-source "mozldap-devel-6.0.7-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mozldap-devel-6.0.7-5.2.x86_64.rpm"
+}

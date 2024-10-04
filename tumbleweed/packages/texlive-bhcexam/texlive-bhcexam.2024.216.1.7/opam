@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-bhcexam-2024.216.1.7svn64093-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-bhcexam-2024.216.1.7svn64093-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-amsfonts" 
+  "texlive-amsmath" 
+  "texlive-bbding" 
+  "texlive-caption" 
+  "texlive-ctex" 
+  "texlive-enumitem" 
+  "texlive-etoolbox" 
+  "texlive-fancyhdr" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-psnfss" 
+  "texlive-romannum" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tools" 
+  "texlive-unicode-math" 
+  "texlive-xcolor" 
+]
+extra-source "texlive-bhcexam-2024.216.1.7svn64093-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-bhcexam-2024.216.1.7svn64093-57.1.noarch.rpm"
+}

@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pympress-1.8.5-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pympress-1.8.5-1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "girepository-1_0" 
+  "gobject-introspection" 
+  "gstreamer" 
+  "gstreamer-plugins-base" 
+  "gstreamer-plugins-good" 
+  "gstreamer-plugins-good-gtk" 
+  "libgtk-3-0" 
+  "permissions" 
+  "python310-base" {>= "3.4"}
+  "python311-base" 
+  "python311-gobject" 
+  "python311-watchdog" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gst-1_0" 
+  "typelib-1_0-GstAllocators-1_0" 
+  "typelib-1_0-GstApp-1_0" 
+  "typelib-1_0-GstAudio-1_0" 
+  "typelib-1_0-GstVideo-1_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Poppler-0_18" 
+]
+extra-source "pympress-1.8.5-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pympress-1.8.5-1.4.noarch.rpm"
+}

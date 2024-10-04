@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-html-conduit-devel-1.3.2.2-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-html-conduit-devel-1.3.2.2-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-attoparsec-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-conduit-devel" 
+  "ghc-conduit-extra-devel" 
+  "ghc-containers-devel" 
+  "ghc-html-conduit" {= "1.3.2.2"}
+  "ghc-resourcet-devel" 
+  "ghc-text-devel" 
+  "ghc-transformers-devel" 
+  "ghc-xml-conduit-devel" 
+  "ghc-xml-types-devel" 
+]
+extra-source "ghc-html-conduit-devel-1.3.2.2-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-html-conduit-devel-1.3.2.2-8.fc40.x86_64.rpm"
+}

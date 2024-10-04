@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgstanalytics-1_0-0-32bit-1.24.8-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgstanalytics-1_0-0-32bit-1.24.8-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libglib-2_0-0-32bit" 
+  "libgstreamer-1_0-0-32bit" 
+  "libgstvideo-1_0-0-32bit" 
+]
+extra-source "libgstanalytics-1_0-0-32bit-1.24.8-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgstanalytics-1_0-0-32bit-1.24.8-1.1.x86_64.rpm"
+}

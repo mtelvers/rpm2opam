@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "istioctl-bash-completion-1.23.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "istioctl-bash-completion-1.23.2-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "istioctl" {= "1.23.2"}
+]
+extra-source "istioctl-bash-completion-1.23.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/istioctl-bash-completion-1.23.2-1.1.noarch.rpm"
+}

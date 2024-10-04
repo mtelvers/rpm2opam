@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dnf-data-4.19.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dnf-data-4.19.0-1.fc40.noarch.rpm"]
+depends: [
+  "libreport-filesystem" 
+]
+extra-source "dnf-data-4.19.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dnf-data-4.19.0-1.fc40.noarch.rpm"
+}

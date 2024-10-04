@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "chordpro-6.050-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "chordpro-6.050-2.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Data-Printer" {>= "1.1001"}
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-File-HomeDir" 
+  "perl-File-LoadLines" 
+  "perl-File-Temp" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" {>= "2.13"}
+  "perl-HarfBuzz-Shaper" 
+  "perl-Hash-Util" 
+  "perl-IO-String" 
+  "perl-Image-Info" {>= "1.41"}
+  "perl-JSON-PP" 
+  "perl-MIME-Base64" 
+  "perl-Math-Complex" 
+  "perl-Object-Pad" 
+  "perl-PDF-API2" {>= "2.43"}
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-Storable" 
+  "perl-String-Interpolate-Named" {>= "1.3"}
+  "perl-Test-Simple" 
+  "perl-Text-Layout" {>= "0.32"}
+  "perl-Text-ParseWords" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" {>= "5.26.0"}
+  "perl-parent" 
+]
+extra-source "chordpro-6.050-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/chordpro-6.050-2.fc40.noarch.rpm"
+}

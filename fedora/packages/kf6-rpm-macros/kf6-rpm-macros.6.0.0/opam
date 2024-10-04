@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kf6-rpm-macros-6.0.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kf6-rpm-macros-6.0.0-1.fc40.noarch.rpm"]
+depends: [
+  "cmake" {>= "3"}
+  "doxygen" 
+  "gcc-c++" 
+  "qt6-doc-devel" 
+  "qt6-rpm-macros" {>= "6"}
+]
+extra-source "kf6-rpm-macros-6.0.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kf6-rpm-macros-6.0.0-1.fc40.noarch.rpm"
+}

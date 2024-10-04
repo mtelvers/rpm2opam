@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "balsa-2.6.4-3.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "balsa-2.6.4-3.fc39.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "cairo-gobject" 
+  "enchant2" 
+  "fribidi" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" {>= "2.37.9000"}
+  "gmime30" 
+  "gnutls" 
+  "gpgme" 
+  "gtk3" 
+  "gtkspell3" 
+  "harfbuzz" 
+  "javascriptcoregtk4-0" 
+  "krb5-libs" 
+  "libcom_err" 
+  "libical" 
+  "libsecret" 
+  "libsoup" 
+  "pango" 
+  "sqlite-libs" 
+  "webkit2gtk4-0" 
+  "zlib-ng-compat" 
+]
+extra-source "balsa-2.6.4-3.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/balsa-2.6.4-3.fc39.x86_64.rpm"
+}

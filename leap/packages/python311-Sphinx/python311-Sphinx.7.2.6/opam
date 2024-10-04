@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-Sphinx-7.2.6-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-Sphinx-7.2.6-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-Babel" {>= "1.3"}
+  "python311-Jinja2" {>= "2.3"}
+  "python311-Pygments" {>= "2.14"}
+  "python311-alabaster" {>= "0.7"}
+  "python311-base" {= "3.11"}
+  "python311-docutils" {>= "0.12"}
+  "python311-imagesize" 
+  "python311-packaging" 
+  "python311-requests" {>= "2.5.0"}
+  "python311-snowballstemmer" {>= "1.1"}
+  "python311-sphinx_rtd_theme" 
+  "python311-sphinxcontrib-applehelp" 
+  "python311-sphinxcontrib-devhelp" 
+  "python311-sphinxcontrib-htmlhelp" {>= "2.0.0"}
+  "python311-sphinxcontrib-jsmath" 
+  "python311-sphinxcontrib-qthelp" {>= "1.0.2"}
+  "python311-sphinxcontrib-serializinghtml" {>= "1.1.9"}
+  "python311-sphinxcontrib-websupport" 
+  "update-alternatives" 
+]
+extra-source "python311-Sphinx-7.2.6-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/python311-Sphinx-7.2.6-slfo.1.1.3.noarch.rpm"
+}

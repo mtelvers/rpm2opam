@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ktextaddons-qt6-1.5.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ktextaddons-qt6-1.5.4-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf6-karchive" 
+  "kf6-kcolorscheme" 
+  "kf6-kconfig" 
+  "kf6-kconfigwidgets" 
+  "kf6-ki18n" 
+  "kf6-kio-widgets-libs" 
+  "kf6-kwidgetsaddons" 
+  "kf6-sonnet" 
+  "kf6-syntax-highlighting" 
+  "ktextaddons-common" {= "1.5.4"}
+  "libstdc++" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qt6-qtspeech" 
+  "qtkeychain-qt6" 
+]
+extra-source "ktextaddons-qt6-1.5.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/ktextaddons-qt6-1.5.4-1.fc40.x86_64.rpm"
+}

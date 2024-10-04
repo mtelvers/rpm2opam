@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libedata-book-1_2-27-3.52.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libedata-book-1_2-27-3.52.4-1.1.x86_64.rpm"]
+depends: [
+  "evolution-data-server" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcamel-1_2-64" 
+  "libebackend-1_2-11" 
+  "libebook-contacts-1_2-4" 
+  "libedataserver-1_2-27" 
+  "libsoup-3_0-0" 
+  "libsqlite3-0" 
+]
+extra-source "libedata-book-1_2-27-3.52.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libedata-book-1_2-27-3.52.4-1.1.x86_64.rpm"
+}

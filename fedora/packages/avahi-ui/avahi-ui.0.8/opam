@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "avahi-ui-0.8-26.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "avahi-ui-0.8-26.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "avahi-glib" {= "0.8"}
+  "avahi-libs" {= "0.8"}
+  "cairo" 
+  "dbus-libs" 
+  "fontconfig" 
+  "freetype" 
+  "gdbm-libs" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "harfbuzz" 
+  "pango" 
+]
+extra-source "avahi-ui-0.8-26.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/avahi-ui-0.8-26.fc40.x86_64.rpm"
+}

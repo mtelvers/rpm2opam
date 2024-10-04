@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Pango-1.227-34.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Pango-1.227-34.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "glib2" 
+  "glibc" 
+  "pango" 
+  "perl-Cairo" {>= "1.0"}
+  "perl-DynaLoader" 
+  "perl-Exporter" 
+  "perl-Glib" 
+  "perl-libs" 
+]
+extra-source "perl-Pango-1.227-34.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Pango-1.227-34.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ndctl-libs-78-4.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ndctl-libs-78-4.el10.x86_64.rpm"]
+depends: [
+  "daxctl-libs" 
+  "glibc" 
+  "kmod-libs" 
+  "libuuid" 
+  "systemd-libs" 
+]
+extra-source "ndctl-libs-78-4.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/ndctl-libs-78-4.el10.x86_64.rpm"
+}

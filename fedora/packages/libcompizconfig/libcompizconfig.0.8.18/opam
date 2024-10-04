@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libcompizconfig-0.8.18-13.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcompizconfig-0.8.18-13.fc40.x86_64.rpm"]
+depends: [
+  "compiz" {>= "0.8.18"}
+  "glibc" 
+  "libX11" 
+  "libgcc" 
+  "libstdc++" 
+  "libxml2" 
+  "protobuf" 
+]
+extra-source "libcompizconfig-0.8.18-13.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libcompizconfig-0.8.18-13.fc40.x86_64.rpm"
+}

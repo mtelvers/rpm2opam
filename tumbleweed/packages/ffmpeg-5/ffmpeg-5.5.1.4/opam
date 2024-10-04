@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ffmpeg-5-5.1.4-13.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ffmpeg-5-5.1.4-13.2.x86_64.rpm"]
+depends: [
+  "ffmpeg-5-mini-libs" 
+  "glibc" 
+  "libSDL2-2_0-0" 
+  "libavcodec59" {= "5.1.4"}
+  "libavdevice59" {= "5.1.4"}
+  "libavfilter8" {= "5.1.4"}
+  "libavformat59" {= "5.1.4"}
+  "libavutil57" {= "5.1.4"}
+  "libpostproc56" {= "5.1.4"}
+  "libswresample4_ff5" {= "5.1.4"}
+  "libswscale6" {= "5.1.4"}
+  "libz-ng-compat1" 
+]
+extra-source "ffmpeg-5-5.1.4-13.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ffmpeg-5-5.1.4-13.2.x86_64.rpm"
+}

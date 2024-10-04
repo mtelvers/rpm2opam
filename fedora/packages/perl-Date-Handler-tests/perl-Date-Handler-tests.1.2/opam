@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Date-Handler-tests-1.2-31.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Date-Handler-tests-1.2-31.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Data-Dumper" 
+  "perl-Date-Handler" 
+  "perl-Date-Handler-Test" 
+  "perl-Test-Harness" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Date-Handler-tests-1.2-31.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Date-Handler-tests-1.2-31.fc40.noarch.rpm"
+}

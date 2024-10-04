@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "upmpdcli-mother-earth-radio-1.8.16-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "upmpdcli-mother-earth-radio-1.8.16-1.1.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-requests" 
+  "upmpdcli" {= "1.8.16"}
+]
+extra-source "upmpdcli-mother-earth-radio-1.8.16-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/upmpdcli-mother-earth-radio-1.8.16-1.1.noarch.rpm"
+}

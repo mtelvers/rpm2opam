@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gammu-devel-1.42.0-4.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gammu-devel-1.42.0-4.9.x86_64.rpm"]
+depends: [
+  "libGammu8" {= "1.42.0"}
+  "libgsmsd8" {= "1.42.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gammu-devel-1.42.0-4.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gammu-devel-1.42.0-4.9.x86_64.rpm"
+}

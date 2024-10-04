@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "inotify-tools-4.23.9.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "inotify-tools-4.23.9.0-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libinotifytools0" 
+]
+extra-source "inotify-tools-4.23.9.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/inotify-tools-4.23.9.0-1.3.x86_64.rpm"
+}

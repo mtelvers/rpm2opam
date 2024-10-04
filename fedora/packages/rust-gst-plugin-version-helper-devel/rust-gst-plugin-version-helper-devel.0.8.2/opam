@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gst-plugin-version-helper-devel-0.8.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gst-plugin-version-helper-devel-0.8.2-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.69"}
+  "rust-chrono+clock-devel" 
+  "rust-chrono+std-devel" 
+  "rust-chrono-devel" 
+  "rust-toml_edit+parse-devel" 
+  "rust-toml_edit-devel" 
+]
+extra-source "rust-gst-plugin-version-helper-devel-0.8.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gst-plugin-version-helper-devel-0.8.2-1.fc40.noarch.rpm"
+}

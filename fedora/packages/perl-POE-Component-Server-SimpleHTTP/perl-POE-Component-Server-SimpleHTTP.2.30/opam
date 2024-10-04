@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-POE-Component-Server-SimpleHTTP-2.30-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-POE-Component-Server-SimpleHTTP-2.30-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-HTTP-Date" 
+  "perl-HTTP-Message" 
+  "perl-Moose" {>= "0.9"}
+  "perl-MooseX-POE" {>= "0.205"}
+  "perl-POE" {>= "1.0"}
+  "perl-Socket" 
+  "perl-Storable" 
+  "perl-Sys-Hostname" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-POE-Component-Server-SimpleHTTP-2.30-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-POE-Component-Server-SimpleHTTP-2.30-4.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-WSGIProxy2-0.5.1-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-WSGIProxy2-0.5.1-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "python311-WebOb" 
+  "python311-base" {= "3.11"}
+  "python311-requests" 
+  "python311-urllib3" 
+]
+extra-source "python311-WSGIProxy2-0.5.1-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/python311-WSGIProxy2-0.5.1-slfo.1.1.3.noarch.rpm"
+}

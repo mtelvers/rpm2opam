@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "syslog-service-2.0-803.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "syslog-service-2.0-803.2.noarch.rpm"]
+depends: [
+  "NetworkManager" 
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "logrotate" 
+]
+extra-source "syslog-service-2.0-803.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/syslog-service-2.0-803.2.noarch.rpm"
+}

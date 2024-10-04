@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-openwrt-luci-rpc-1.1.17-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-openwrt-luci-rpc-1.1.17-1.2.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-click" {>= "6.0"}
+  "python311-packaging" {>= "19.1"}
+  "python311-requests" {>= "2.21"}
+]
+extra-source "python311-openwrt-luci-rpc-1.1.17-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-openwrt-luci-rpc-1.1.17-1.2.noarch.rpm"
+}

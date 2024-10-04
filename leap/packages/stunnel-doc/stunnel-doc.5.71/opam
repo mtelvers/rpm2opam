@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "stunnel-doc-5.71-slfo.1.1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "stunnel-doc-5.71-slfo.1.1.7.noarch.rpm"]
+depends: [
+  "stunnel" {= "5.71"}
+]
+extra-source "stunnel-doc-5.71-slfo.1.1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/stunnel-doc-5.71-slfo.1.1.7.noarch.rpm"
+}

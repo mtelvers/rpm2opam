@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgstrtp-1_0-0-1.24.8-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgstrtp-1_0-0-1.24.8-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gstreamer-plugins-base" 
+  "libgstreamer-1_0-0" 
+]
+extra-source "libgstrtp-1_0-0-1.24.8-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgstrtp-1_0-0-1.24.8-1.1.x86_64.rpm"
+}

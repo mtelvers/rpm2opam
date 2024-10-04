@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-kan-extensions-devel-5.2.6-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-kan-extensions-devel-5.2.6-1.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-adjunctions-devel" 
+  "ghc-array-devel" 
+  "ghc-base-devel" 
+  "ghc-comonad-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-contravariant-devel" 
+  "ghc-distributive-devel" 
+  "ghc-free-devel" 
+  "ghc-invariant-devel" 
+  "ghc-kan-extensions" {= "5.2.6"}
+  "ghc-mtl-devel" 
+  "ghc-profunctors-devel" 
+  "ghc-semigroupoids-devel" 
+  "ghc-tagged-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-kan-extensions-devel-5.2.6-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-kan-extensions-devel-5.2.6-1.8.x86_64.rpm"
+}

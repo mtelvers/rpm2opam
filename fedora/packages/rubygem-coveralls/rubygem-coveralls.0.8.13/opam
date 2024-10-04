@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-coveralls-0.8.13-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-coveralls-0.8.13-21.fc40.noarch.rpm"]
+depends: [
+  "rubygem-json" 
+  "rubygem-simplecov" 
+  "rubygem-term-ansicolor" 
+  "rubygem-thor" 
+  "rubygem-tins" {>= "1.0.0"}
+  "rubygems" 
+  "rubypick" 
+]
+extra-source "rubygem-coveralls-0.8.13-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-coveralls-0.8.13-21.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zig-0.13.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zig-0.13.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libLLVM18" 
+  "libclang-cpp18" 
+  "libstdc++6" 
+  "lld18" 
+  "zig-libs" {= "0.13.0"}
+]
+extra-source "zig-0.13.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/zig-0.13.0-1.1.x86_64.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libstorage-ng1-4.5.219-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libstorage-ng1-4.5.219-1.1.x86_64.rpm"]
+depends: [
+  "coreutils" 
+  "device-mapper" 
+  "glibc" 
+  "libgcc_s1" 
+  "libjson-c5" 
+  "libstdc++6" 
+  "libxml2-2" 
+  "lsscsi" {>= "0.26"}
+  "parted" {>= "3.2"}
+  "pkgconf-pkg-config" 
+  "udev" 
+  "util-linux" {>= "2.16"}
+]
+extra-source "libstorage-ng1-4.5.219-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libstorage-ng1-4.5.219-1.1.x86_64.rpm"
+}

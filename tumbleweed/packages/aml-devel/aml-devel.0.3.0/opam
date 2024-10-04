@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "aml-devel-0.3.0-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "aml-devel-0.3.0-1.4.x86_64.rpm"]
+depends: [
+  "libaml0" {= "0.3.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "aml-devel-0.3.0-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/aml-devel-0.3.0-1.4.x86_64.rpm"
+}

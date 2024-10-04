@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pytest-xvfb-3.0.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pytest-xvfb-3.0.0-1.3.noarch.rpm"]
+depends: [
+  "python310-PyVirtualDisplay" {>= "1.3"}
+  "python310-base" {= "3.10"}
+  "python310-pytest" {>= "2.8.1"}
+  "xdpyinfo" 
+]
+extra-source "python310-pytest-xvfb-3.0.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-pytest-xvfb-3.0.0-1.3.noarch.rpm"
+}

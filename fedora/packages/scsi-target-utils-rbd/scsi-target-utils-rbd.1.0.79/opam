@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "scsi-target-utils-rbd-1.0.79-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scsi-target-utils-rbd-1.0.79-9.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "librados2" 
+  "librbd1" 
+  "scsi-target-utils" {= "1.0.79"}
+]
+extra-source "scsi-target-utils-rbd-1.0.79-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/scsi-target-utils-rbd-1.0.79-9.fc40.x86_64.rpm"
+}

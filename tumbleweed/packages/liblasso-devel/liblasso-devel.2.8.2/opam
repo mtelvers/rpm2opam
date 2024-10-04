@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "liblasso-devel-2.8.2-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "liblasso-devel-2.8.2-1.7.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "liblasso3" {= "2.8.2"}
+  "libxml2-devel" 
+  "libxslt-devel" 
+  "pkgconf-pkg-config" 
+  "xmlsec1-devel" 
+]
+extra-source "liblasso-devel-2.8.2-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/liblasso-devel-2.8.2-1.7.x86_64.rpm"
+}

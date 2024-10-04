@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-bat-devel-0.24.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-bat-devel-0.24.0-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cargo" 
+  "python3" 
+  "rust" {>= "1.70"}
+  "rust-ansi_colours+default-devel" 
+  "rust-bincode+default-devel" 
+  "rust-bytesize+default-devel" 
+  "rust-clircle+default-devel" 
+  "rust-console+default-devel" 
+  "rust-content_inspector+default-devel" 
+  "rust-encoding_rs+default-devel" 
+  "rust-flate2+default-devel" 
+  "rust-globset+default-devel" 
+  "rust-nu-ansi-term+default-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-path-absolutize+default-devel" 
+  "rust-semver+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde_yaml+default-devel" 
+  "rust-syntect+parsing-devel" 
+  "rust-syntect-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-unicode-width+default-devel" 
+]
+extra-source "rust-bat-devel-0.24.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-bat-devel-0.24.0-4.fc40.noarch.rpm"
+}

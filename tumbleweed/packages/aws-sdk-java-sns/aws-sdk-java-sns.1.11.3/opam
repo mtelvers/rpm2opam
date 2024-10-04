@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "aws-sdk-java-sns-1.11.3-11.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "aws-sdk-java-sns-1.11.3-11.3.noarch.rpm"]
+depends: [
+  "aws-sdk-java-core" {= "1.11.3"}
+  "aws-sdk-java-sqs" {= "1.11.3"}
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "aws-sdk-java-sns-1.11.3-11.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/aws-sdk-java-sns-1.11.3-11.3.noarch.rpm"
+}

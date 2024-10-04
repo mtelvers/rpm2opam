@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "docbook-xml-slides-3.3.1-220.20.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "docbook-xml-slides-3.3.1-220.20.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "docbook-xsl-stylesheets" 
+  "docbook_4" 
+  "gawk" 
+  "grep" 
+  "libxml2-tools" 
+  "sed" 
+  "sgml-skel" 
+  "xmlcharent" 
+]
+extra-source "docbook-xml-slides-3.3.1-220.20.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/docbook-xml-slides-3.3.1-220.20.noarch.rpm"
+}

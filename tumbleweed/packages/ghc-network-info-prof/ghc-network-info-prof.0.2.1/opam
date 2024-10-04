@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-network-info-prof-0.2.1-2.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-network-info-prof-0.2.1-2.12.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-network-info-devel" {= "0.2.1"}
+]
+extra-source "ghc-network-info-prof-0.2.1-2.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-network-info-prof-0.2.1-2.12.x86_64.rpm"
+}

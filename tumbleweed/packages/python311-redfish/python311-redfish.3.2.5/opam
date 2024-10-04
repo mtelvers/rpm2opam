@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-redfish-3.2.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-redfish-3.2.5-1.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-jsonpatch" 
+  "python311-jsonpath-rw" 
+  "python311-jsonpointer" 
+  "python311-requests" 
+  "python311-requests-toolbelt" 
+  "python311-requests-unixsocket" 
+]
+extra-source "python311-redfish-3.2.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-redfish-3.2.5-1.1.noarch.rpm"
+}

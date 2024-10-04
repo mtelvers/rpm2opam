@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mousetweaks-3.32.0-3.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mousetweaks-3.32.0-3.11.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libXcursor1" 
+  "libXfixes3" 
+  "libXtst6" 
+  "libcairo2" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+]
+extra-source "mousetweaks-3.32.0-3.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mousetweaks-3.32.0-3.11.x86_64.rpm"
+}

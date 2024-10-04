@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xmrig-6.22.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xmrig-6.22.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libhwloc15" 
+  "libopenssl3" 
+  "libuv1" 
+]
+extra-source "xmrig-6.22.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xmrig-6.22.0-1.1.x86_64.rpm"
+}

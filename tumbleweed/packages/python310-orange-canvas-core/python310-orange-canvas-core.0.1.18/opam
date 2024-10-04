@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-orange-canvas-core-0.1.18-1.19.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-orange-canvas-core-0.1.18-1.19.noarch.rpm"]
+depends: [
+  "python310-AnyQt" 
+  "python310-CacheControl" 
+  "python310-CommonMark" 
+  "python310-base" {= "3.10"}
+  "python310-dictdiffer" 
+  "python310-docutils" 
+  "python310-qt5" 
+  "python310-requests" 
+]
+extra-source "python310-orange-canvas-core-0.1.18-1.19.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-orange-canvas-core-0.1.18-1.19.noarch.rpm"
+}

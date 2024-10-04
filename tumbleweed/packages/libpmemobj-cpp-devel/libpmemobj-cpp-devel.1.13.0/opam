@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpmemobj-cpp-devel-1.13.0-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpmemobj-cpp-devel-1.13.0-1.7.x86_64.rpm"]
+depends: [
+  "libpmemobj-devel" {>= "1.9"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libpmemobj-cpp-devel-1.13.0-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpmemobj-cpp-devel-1.13.0-1.7.x86_64.rpm"
+}

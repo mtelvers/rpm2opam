@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "baresip-pipewire-3.10.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "baresip-pipewire-3.10.1-1.fc40.x86_64.rpm"]
+depends: [
+  "baresip" {= "3.10.1"}
+  "glibc" 
+  "pipewire-libs" 
+]
+extra-source "baresip-pipewire-3.10.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/baresip-pipewire-3.10.1-1.fc40.x86_64.rpm"
+}

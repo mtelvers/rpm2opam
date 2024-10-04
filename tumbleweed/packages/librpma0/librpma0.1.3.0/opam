@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "librpma0-1.3.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "librpma0-1.3.0-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libibverbs1" 
+  "librdmacm1" 
+]
+extra-source "librpma0-1.3.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/librpma0-1.3.0-1.3.x86_64.rpm"
+}

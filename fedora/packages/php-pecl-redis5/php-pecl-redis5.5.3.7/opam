@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-pecl-redis5-5.3.7-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-pecl-redis5-5.3.7-8.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "liblzf" 
+  "libzstd" 
+  "lz4-libs" 
+  "php-common" {= "20230831"}
+  "php-pecl-igbinary" 
+  "php-pecl-msgpack" 
+]
+extra-source "php-pecl-redis5-5.3.7-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-pecl-redis5-5.3.7-8.fc40.x86_64.rpm"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-http-api-data-prof-0.5-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-http-api-data-prof-0.5-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-attoparsec-iso8601-prof" 
+  "ghc-attoparsec-prof" 
+  "ghc-base-compat-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-cookie-prof" 
+  "ghc-hashable-prof" 
+  "ghc-http-api-data-devel" {= "0.5"}
+  "ghc-http-types-prof" 
+  "ghc-tagged-prof" 
+  "ghc-text-prof" 
+  "ghc-time-compat-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unordered-containers-prof" 
+  "ghc-uuid-types-prof" 
+]
+extra-source "ghc-http-api-data-prof-0.5-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-http-api-data-prof-0.5-3.fc40.x86_64.rpm"
+}

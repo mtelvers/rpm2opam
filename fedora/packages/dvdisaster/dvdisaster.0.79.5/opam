@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dvdisaster-0.79.5-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dvdisaster-0.79.5-19.fc40.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "pango" 
+  "xdg-utils" 
+]
+extra-source "dvdisaster-0.79.5-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dvdisaster-0.79.5-19.fc40.x86_64.rpm"
+}

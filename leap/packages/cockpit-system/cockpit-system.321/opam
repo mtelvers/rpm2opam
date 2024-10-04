@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cockpit-system-321-slfo.1.2.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cockpit-system-321-slfo.1.2.10.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "cockpit-bridge" {>= "321"}
+  "grep" 
+  "libpwquality-tools" 
+]
+extra-source "cockpit-system-321-slfo.1.2.10.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/cockpit-system-321-slfo.1.2.10.noarch.rpm"
+}

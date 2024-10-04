@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kate-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kate-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kate-libs" {= "24.2.1"}
+  "kf6-kcoreaddons" 
+  "kf6-kdbusaddons" 
+  "kf6-ki18n" 
+  "kf6-kparts" 
+  "kf6-ktexteditor" 
+  "kf6-kwindowsystem" 
+  "kf6-kxmlgui" 
+  "kf6-syntax-highlighting" 
+  "libstdc++" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+]
+extra-source "kate-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kate-24.02.1-1.fc40.x86_64.rpm"
+}

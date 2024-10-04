@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-App-CSV-0.08-31.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-App-CSV-0.08-31.fc40.noarch.rpm"]
+depends: [
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-Moose" 
+  "perl-MooseX-Getopt" 
+  "perl-Text-CSV" 
+  "perl-libs" 
+]
+extra-source "perl-App-CSV-0.08-31.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-App-CSV-0.08-31.fc40.noarch.rpm"
+}

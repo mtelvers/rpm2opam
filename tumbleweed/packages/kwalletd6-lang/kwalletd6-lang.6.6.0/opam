@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kwalletd6-lang-6.6.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kwalletd6-lang-6.6.0-1.1.noarch.rpm"]
+depends: [
+  "kwalletd6" {= "6.6.0"}
+]
+extra-source "kwalletd6-lang-6.6.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kwalletd6-lang-6.6.0-1.1.noarch.rpm"
+}

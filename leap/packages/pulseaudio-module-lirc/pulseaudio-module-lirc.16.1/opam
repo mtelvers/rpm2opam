@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pulseaudio-module-lirc-16.1-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pulseaudio-module-lirc-16.1-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "liblirc_client0" 
+  "libpulse0" 
+  "pulseaudio" {= "16.1"}
+]
+extra-source "pulseaudio-module-lirc-16.1-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/pulseaudio-module-lirc-16.1-slfo.1.1.7.x86_64.rpm"
+}

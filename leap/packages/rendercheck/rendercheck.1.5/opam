@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rendercheck-1.5-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rendercheck-1.5-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXrender1" 
+]
+extra-source "rendercheck-1.5-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/rendercheck-1.5-slfo.1.1.7.x86_64.rpm"
+}

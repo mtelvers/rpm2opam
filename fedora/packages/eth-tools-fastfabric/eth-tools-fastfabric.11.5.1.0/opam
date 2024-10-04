@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "eth-tools-fastfabric-11.5.1.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eth-tools-fastfabric-11.5.1.0-6.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "eth-tools-basic" {>= "11.5.1.0"}
+  "expat" 
+  "expect" 
+  "glibc" 
+  "net-snmp-libs" 
+  "perl-File-Basename" 
+  "perl-Math-BigInt" 
+  "perl-Term-ANSIColor" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "tcl" 
+]
+extra-source "eth-tools-fastfabric-11.5.1.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/eth-tools-fastfabric-11.5.1.0-6.fc40.x86_64.rpm"
+}

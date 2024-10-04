@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsoci_postgresql4_0-4.0.2-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsoci_postgresql4_0-4.0.2-5.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libpq5" 
+  "libsoci_core4_0" 
+  "libstdc++6" 
+]
+extra-source "libsoci_postgresql4_0-4.0.2-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libsoci_postgresql4_0-4.0.2-5.2.x86_64.rpm"
+}

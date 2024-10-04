@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "scala-2.13.12-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scala-2.13.12-2.1.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "java-11-openj9-headless" 
+  "java-diff-utils" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+  "jline3-builtins" 
+  "jline3-reader" 
+  "jline3-style" 
+  "jline3-terminal-jna" 
+  "jna" 
+]
+extra-source "scala-2.13.12-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/scala-2.13.12-2.1.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Class-Date-1.1.17-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Class-Date-1.1.17-21.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Env-C" 
+  "perl-Exporter" 
+  "perl-POSIX" 
+  "perl-Scalar-List-Utils" 
+  "perl-Time-Local" 
+  "perl-TimeDate" 
+  "perl-constant" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-overload" 
+  "perl-vars" 
+  "tzdata" 
+]
+extra-source "perl-Class-Date-1.1.17-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Class-Date-1.1.17-21.fc40.noarch.rpm"
+}

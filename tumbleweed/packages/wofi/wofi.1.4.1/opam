@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wofi-1.4.1-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wofi-1.4.1-1.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+  "libwayland-client0" 
+]
+extra-source "wofi-1.4.1-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/wofi-1.4.1-1.2.x86_64.rpm"
+}

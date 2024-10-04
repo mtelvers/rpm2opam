@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pydata-sphinx-theme-0.15.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pydata-sphinx-theme-0.15.4-1.1.noarch.rpm"]
+depends: [
+  "python310-Babel" 
+  "python310-Pygments" 
+  "python310-Sphinx" 
+  "python310-accessible-pygments" 
+  "python310-base" {= "3.10"}
+  "python310-beautifulsoup4" 
+  "python310-docutils" 
+  "python310-packaging" 
+  "python310-sphinx-theme-builder" 
+  "python310-typing_extensions" 
+]
+extra-source "python310-pydata-sphinx-theme-0.15.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-pydata-sphinx-theme-0.15.4-1.1.noarch.rpm"
+}

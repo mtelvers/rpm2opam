@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "telepathy-logger-qt-17.09.0-10.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "telepathy-logger-qt-17.09.0-10.fc39.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "telepathy-glib" 
+  "telepathy-logger" 
+]
+extra-source "telepathy-logger-qt-17.09.0-10.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/telepathy-logger-qt-17.09.0-10.fc39.x86_64.rpm"
+}

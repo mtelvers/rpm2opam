@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rdesktop-1.9.0-15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rdesktop-1.9.0-15.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gmp" 
+  "gnutls" 
+  "krb5-libs" 
+  "libX11" 
+  "libXcursor" 
+  "libXrandr" 
+  "libtasn1" 
+  "nettle" 
+  "pcsc-lite-libs" 
+  "pulseaudio-libs" 
+]
+extra-source "rdesktop-1.9.0-15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rdesktop-1.9.0-15.fc40.x86_64.rpm"
+}

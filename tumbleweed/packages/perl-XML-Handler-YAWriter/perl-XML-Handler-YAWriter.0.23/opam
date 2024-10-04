@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-XML-Handler-YAWriter-0.23-5.33.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XML-Handler-YAWriter-0.23-5.33.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-base" 
+  "perl-libxml-perl" {>= "0.6"}
+]
+extra-source "perl-XML-Handler-YAWriter-0.23-5.33.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-XML-Handler-YAWriter-0.23-5.33.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-LWP-Online-1.08-40.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-LWP-Online-1.08-40.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-Test-Simple" {>= "0.42"}
+  "perl-URI" {>= "1.35"}
+  "perl-libs" {>= "5.5.0"}
+  "perl-libwww-perl" {>= "5.805"}
+  "perl-vars" 
+]
+extra-source "perl-LWP-Online-1.08-40.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-LWP-Online-1.08-40.fc40.noarch.rpm"
+}

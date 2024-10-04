@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "s-nail-14.9.24-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "s-nail-14.9.24-9.fc40.x86_64.rpm"]
+depends: [
+  "alternatives" 
+  "bash" 
+  "glibc" 
+  "krb5-libs" 
+  "libidn2" 
+  "ncurses-libs" 
+  "openssl-libs" 
+]
+extra-source "s-nail-14.9.24-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/s-nail-14.9.24-9.fc40.x86_64.rpm"
+}

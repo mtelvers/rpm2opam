@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcamera0_3-32bit-0.3.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcamera0_3-32bit-0.3.1-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libcamera-base0_3-32bit" 
+  "libgcc_s1-32bit" 
+  "libgnutls30-32bit" 
+  "libstdc++6-32bit" 
+  "libudev1-32bit" 
+  "libyaml-0-2-32bit" 
+]
+extra-source "libcamera0_3-32bit-0.3.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcamera0_3-32bit-0.3.1-1.1.x86_64.rpm"
+}

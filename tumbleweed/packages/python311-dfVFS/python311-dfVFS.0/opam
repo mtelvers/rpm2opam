@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-dfVFS-0~20231208-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-dfVFS-0~20231208-1.3.noarch.rpm"]
+depends: [
+  "python311-PyYAML" 
+  "python311-base" {= "3.11"}
+  "python311-cffi" 
+  "python311-construct" 
+  "python311-cryptography" 
+  "python311-dfdatetime" {>= "0"}
+  "python311-dtfabric" {>= "20220219"}
+  "python311-idna" 
+  "python311-libbde" 
+  "python311-libcaes" 
+  "python311-libewf" 
+  "python311-libfsapfs" 
+  "python311-libfsext" 
+  "python311-libfsfat" 
+  "python311-libfshfs" 
+  "python311-libfsntfs" {>= "0"}
+  "python311-libfsxfs" 
+  "python311-libfvde" 
+  "python311-libfwnt" {>= "20210717"}
+  "python311-libluksde" {>= "20220121"}
+  "python311-libmodi" 
+  "python311-libphdi" 
+  "python311-libqcow" 
+  "python311-libsigscan" 
+  "python311-libsmdev" 
+  "python311-libsmraw" 
+  "python311-libvhdi" 
+  "python311-libvmdk" 
+  "python311-libvsapm" 
+  "python311-libvsgpt" 
+  "python311-libvshadow" {>= "0"}
+  "python311-libvslvm" 
+  "python311-tsk" {>= "0"}
+]
+extra-source "python311-dfVFS-0~20231208-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-dfVFS-0~20231208-1.3.noarch.rpm"
+}

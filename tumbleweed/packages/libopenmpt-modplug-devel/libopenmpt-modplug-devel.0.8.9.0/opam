@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libopenmpt-modplug-devel-0.8.9.0-1.15.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libopenmpt-modplug-devel-0.8.9.0-1.15.x86_64.rpm"]
+depends: [
+  "libopenmpt-devel" 
+  "libopenmpt_modplug1" {= "0.8.9.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libopenmpt-modplug-devel-0.8.9.0-1.15.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libopenmpt-modplug-devel-0.8.9.0-1.15.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tokio-macros0.2-devel-0.2.6-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tokio-macros0.2-devel-0.2.6-11.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-proc-macro2+default-devel" 
+  "rust-quote+default-devel" 
+  "rust-syn+default-devel" 
+  "rust-syn+full-devel" 
+]
+extra-source "rust-tokio-macros0.2-devel-0.2.6-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tokio-macros0.2-devel-0.2.6-11.fc40.noarch.rpm"
+}

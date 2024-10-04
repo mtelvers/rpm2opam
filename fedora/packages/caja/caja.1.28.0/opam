@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "caja-1.28.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "caja-1.28.0-1.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "cairo-gobject" 
+  "caja-core-extensions" {= "1.28.0"}
+  "caja-schemas" {= "1.28.0"}
+  "exempi" 
+  "filesystem" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk-layer-shell" 
+  "gtk3" 
+  "gvfs" 
+  "libICE" 
+  "libSM" 
+  "libX11" 
+  "libexif" 
+  "libgcc" 
+  "libnotify" 
+  "libselinux" 
+  "libxml2" 
+  "mate-desktop-libs" 
+  "pango" 
+  "redhat-menus" 
+]
+extra-source "caja-1.28.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/caja-1.28.0-1.fc40.x86_64.rpm"
+}

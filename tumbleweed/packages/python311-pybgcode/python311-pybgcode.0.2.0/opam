@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pybgcode-0.2.0+git20240829.b5c57c4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pybgcode-0.2.0+git20240829.b5c57c4-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbgcode_binarize0_2_0" 
+  "libbgcode_convert0_2_0" 
+  "libbgcode_core0_2_0" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "python311-base" {= "3.11"}
+]
+extra-source "python311-pybgcode-0.2.0+git20240829.b5c57c4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-pybgcode-0.2.0+git20240829.b5c57c4-1.1.x86_64.rpm"
+}

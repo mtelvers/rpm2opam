@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "file-unpack-1.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "file-unpack-1.0-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-Data-Dumper" 
+  "perl-File-Unpack2" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" 
+  "perl-Pod-Usage" 
+  "perl-interpreter" 
+  "perl-lib" 
+]
+extra-source "file-unpack-1.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/file-unpack-1.0-1.fc40.x86_64.rpm"
+}

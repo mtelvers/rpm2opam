@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Danga-Socket-1.62-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Danga-Socket-1.62-14.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Errno" 
+  "perl-Fcntl" 
+  "perl-IO" 
+  "perl-POSIX" 
+  "perl-Socket" 
+  "perl-Sys-Syscall" 
+  "perl-Time-HiRes" 
+  "perl-constant" 
+  "perl-fields" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-Danga-Socket-1.62-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Danga-Socket-1.62-14.fc40.noarch.rpm"
+}

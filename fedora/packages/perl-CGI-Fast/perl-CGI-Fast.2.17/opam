@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CGI-Fast-2.17-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CGI-Fast-2.17-3.fc40.noarch.rpm"]
+depends: [
+  "perl-CGI" {>= "4.0"}
+  "perl-FCGI" {>= "0.67"}
+  "perl-deprecate" 
+  "perl-if" 
+  "perl-libs" 
+]
+extra-source "perl-CGI-Fast-2.17-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CGI-Fast-2.17-3.fc40.noarch.rpm"
+}

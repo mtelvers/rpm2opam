@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "httpie-3.2.2-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "httpie-3.2.2-5.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-charset-normalizer" {>= "2"}
+  "python3-defusedxml" {>= "0.6"}
+  "python3-multidict" {>= "4.7"}
+  "python3-pip" 
+  "python3-pygments" {>= "2.5.2"}
+  "python3-requests" {>= "2.22"}
+  "python3-requests+socks" {>= "2.22"}
+  "python3-requests-toolbelt" {>= "0.9.1"}
+  "python3-rich" {>= "9.10"}
+  "python3-setuptools" 
+]
+extra-source "httpie-3.2.2-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/httpie-3.2.2-5.fc40.noarch.rpm"
+}

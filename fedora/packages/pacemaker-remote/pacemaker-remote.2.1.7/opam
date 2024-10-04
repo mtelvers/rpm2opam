@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pacemaker-remote-2.1.7-4.fc40.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pacemaker-remote-2.1.7-4.fc40.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "gnutls" 
+  "libqb" 
+  "pacemaker-cli" {= "2.1.7"}
+  "pacemaker-libs" 
+  "python3-pacemaker" {= "2.1.7"}
+  "resource-agents" 
+]
+extra-source "pacemaker-remote-2.1.7-4.fc40.2.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pacemaker-remote-2.1.7-4.fc40.2.x86_64.rpm"
+}

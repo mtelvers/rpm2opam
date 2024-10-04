@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "petsc-mpich-devel-3.20.4-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "petsc-mpich-devel-3.20.4-4.fc40.x86_64.rpm"]
+depends: [
+  "hdf5-mpich-devel" 
+  "mpich-devel" {= "4.1.2"}
+  "petsc-mpich" {= "3.20.4"}
+]
+extra-source "petsc-mpich-devel-3.20.4-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/petsc-mpich-devel-3.20.4-4.fc40.x86_64.rpm"
+}

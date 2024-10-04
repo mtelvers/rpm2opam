@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gix-negotiate-devel-0.9.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gix-negotiate-devel-0.9.0-2.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-bitflags+default-devel" 
+  "rust-gix-commitgraph+default-devel" 
+  "rust-gix-date+default-devel" 
+  "rust-gix-hash+default-devel" 
+  "rust-gix-object+default-devel" 
+  "rust-gix-revwalk+default-devel" 
+  "rust-smallvec+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-gix-negotiate-devel-0.9.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gix-negotiate-devel-0.9.0-2.fc40.noarch.rpm"
+}

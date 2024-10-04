@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MIME-Lite-HTML-1.24-37.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MIME-Lite-HTML-1.24-37.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" 
+  "perl-HTML-Parser" 
+  "perl-MIME-Lite" 
+  "perl-URI" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+  "perl-vars" 
+]
+extra-source "perl-MIME-Lite-HTML-1.24-37.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MIME-Lite-HTML-1.24-37.fc40.noarch.rpm"
+}

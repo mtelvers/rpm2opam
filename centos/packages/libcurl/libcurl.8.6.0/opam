@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcurl-8.6.0-8.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcurl-8.6.0-8.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "krb5-libs" 
+  "libbrotli" 
+  "libidn2" 
+  "libnghttp2" {>= "1.62.1"}
+  "libpsl" 
+  "libssh" {>= "0.10.6"}
+  "openldap" 
+  "openssl-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "libcurl-8.6.0-8.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/libcurl-8.6.0-8.el10.x86_64.rpm"
+}

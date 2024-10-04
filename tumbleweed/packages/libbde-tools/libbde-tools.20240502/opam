@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libbde-tools-20240502-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libbde-tools-20240502-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbde1" 
+  "libbfio1" 
+  "libcdata1" 
+  "libcerror1" 
+  "libclocale1" 
+  "libcnotify1" 
+  "libcsplit1" 
+  "libfdatetime1" 
+  "libfguid1" 
+  "libfuse3-3" 
+  "libuna1" 
+]
+extra-source "libbde-tools-20240502-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libbde-tools-20240502-1.1.x86_64.rpm"
+}

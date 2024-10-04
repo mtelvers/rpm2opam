@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-xz2+tokio-devel-0.1.7-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-xz2+tokio-devel-0.1.7-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-xz2+futures-devel" {= "0.1.7"}
+  "rust-xz2+tokio-io-devel" {= "0.1.7"}
+  "rust-xz2-devel" {= "0.1.7"}
+]
+extra-source "rust-xz2+tokio-devel-0.1.7-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-xz2+tokio-devel-0.1.7-6.fc40.noarch.rpm"
+}

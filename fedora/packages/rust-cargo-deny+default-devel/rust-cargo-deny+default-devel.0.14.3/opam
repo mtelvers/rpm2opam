@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-cargo-deny+default-devel-0.14.3-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-cargo-deny+default-devel-0.14.3-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-cargo-deny-devel" {= "0.14.3"}
+  "rust-reqwest+rustls-tls-webpki-roots-devel" 
+  "rust-tame-index+default-devel" 
+]
+extra-source "rust-cargo-deny+default-devel-0.14.3-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-cargo-deny+default-devel-0.14.3-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "anaconda-widgets-devel-40.22.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "anaconda-widgets-devel-40.22.3-1.fc40.x86_64.rpm"]
+depends: [
+  "anaconda-widgets" {= "40.22.3"}
+  "atk" 
+  "cairo" 
+  "cairo-gobject" 
+  "gdk-pixbuf2" 
+  "glade" 
+  "glade-libs" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "harfbuzz" 
+  "libxklavier" 
+  "pango" 
+  "zlib-ng-compat" 
+]
+extra-source "anaconda-widgets-devel-40.22.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/anaconda-widgets-devel-40.22.3-1.fc40.x86_64.rpm"
+}

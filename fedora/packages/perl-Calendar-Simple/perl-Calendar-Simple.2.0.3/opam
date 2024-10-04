@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Calendar-Simple-2.0.3-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Calendar-Simple-2.0.3-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-Time-Local" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "perl-Calendar-Simple-2.0.3-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Calendar-Simple-2.0.3-4.fc40.noarch.rpm"
+}

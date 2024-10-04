@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-dune-glob-devel-3.14.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-dune-glob-devel-3.14.2-1.fc40.x86_64.rpm"]
+depends: [
+  "coq-core" {= "0"}
+  "ocaml" {= "2125"}
+  "ocaml-dune-glob" {= "3.14.2"}
+  "ocaml-dune-private-libs" {= "80"}
+  "ocaml-dune-private-libs-devel" {= "3.14.2"}
+  "ocaml-dyn" {= "86"}
+  "ocaml-dyn-devel" {= "0"}
+  "ocaml-ordering" {= "0"}
+  "ocaml-stdune" {= "0"}
+  "ocaml-stdune-devel" {= "3.14.2"}
+]
+extra-source "ocaml-dune-glob-devel-3.14.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-dune-glob-devel-3.14.2-1.fc40.x86_64.rpm"
+}

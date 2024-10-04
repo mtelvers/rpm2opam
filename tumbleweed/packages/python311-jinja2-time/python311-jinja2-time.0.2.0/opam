@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-jinja2-time-0.2.0-4.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-jinja2-time-0.2.0-4.7.noarch.rpm"]
+depends: [
+  "python311-Jinja2" 
+  "python311-arrow" 
+  "python311-base" {= "3.11"}
+]
+extra-source "python311-jinja2-time-0.2.0-4.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-jinja2-time-0.2.0-4.7.noarch.rpm"
+}

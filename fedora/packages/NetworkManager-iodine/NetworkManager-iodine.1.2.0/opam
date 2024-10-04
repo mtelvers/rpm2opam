@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "NetworkManager-iodine-1.2.0-21.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "NetworkManager-iodine-1.2.0-21.fc40.x86_64.rpm"]
+depends: [
+  "NetworkManager" {>= "1.2.0"}
+  "NetworkManager-libnm" 
+  "dbus-common" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "iodine-client" 
+  "libnma" 
+  "libsecret" 
+  "shared-mime-info" 
+]
+extra-source "NetworkManager-iodine-1.2.0-21.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/NetworkManager-iodine-1.2.0-21.fc40.x86_64.rpm"
+}

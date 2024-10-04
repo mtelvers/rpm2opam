@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-unliftio-core-prof-0.2.1.0-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-unliftio-core-prof-0.2.1.0-3.2.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unliftio-core-devel" {= "0.2.1.0"}
+]
+extra-source "ghc-unliftio-core-prof-0.2.1.0-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-unliftio-core-prof-0.2.1.0-3.2.x86_64.rpm"
+}

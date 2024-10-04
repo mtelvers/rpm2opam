@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-impacket-0.12.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-impacket-0.12.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-Flask" {>= "1.0"}
+  "python312-base" 
+  "python312-charset-normalizer" 
+  "python312-ldap3" {>= "2.5"}
+  "python312-ldapdomaindump" {>= "0.9.0"}
+  "python312-pyOpenSSL" {>= "0.13.1"}
+  "python312-pyasn1" {>= "0.2.3"}
+  "python312-pycryptodomex" 
+  "python312-setuptools" 
+  "python312-six" 
+  "update-alternatives" 
+]
+extra-source "python312-impacket-0.12.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-impacket-0.12.0-1.1.noarch.rpm"
+}

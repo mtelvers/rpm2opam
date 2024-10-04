@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "guvcview-libs-2.0.8-6.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "guvcview-libs-2.0.8-6.fc39.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "alsa-lib" 
+  "glibc" 
+  "gsl" 
+  "libavcodec-free" 
+  "libavutil-free" 
+  "libgcc" 
+  "libpng" 
+  "libstdc++" 
+  "libusb1" 
+  "libv4l" 
+  "portaudio" 
+  "pulseaudio-libs" 
+  "systemd-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "guvcview-libs-2.0.8-6.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/guvcview-libs-2.0.8-6.fc39.x86_64.rpm"
+}

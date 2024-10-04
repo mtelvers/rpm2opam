@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-aduc-2.2-1.16.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-aduc-2.2-1.16.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "krb5-client" 
+  "samba-client" 
+  "samba-python3" 
+  "yast2" 
+  "yast2-adcommon-python" {>= "0.7"}
+  "yast2-python3-bindings" {>= "4.0.0"}
+]
+extra-source "yast2-aduc-2.2-1.16.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/yast2-aduc-2.2-1.16.noarch.rpm"
+}

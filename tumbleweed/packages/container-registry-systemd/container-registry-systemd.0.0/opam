@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "container-registry-systemd-0.0+git20220603.70601f6-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "container-registry-systemd-0.0+git20220603.70601f6-1.6.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "certstrap" 
+]
+extra-source "container-registry-systemd-0.0+git20220603.70601f6-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/container-registry-systemd-0.0+git20220603.70601f6-1.6.noarch.rpm"
+}

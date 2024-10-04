@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-lru-cache+heapsize_impl-devel-0.1.2-15.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-lru-cache+heapsize_impl-devel-0.1.2-15.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-linked-hash-map+heapsize_impl-devel" 
+  "rust-lru-cache+heapsize-devel" {= "0.1.2"}
+  "rust-lru-cache-devel" {= "0.1.2"}
+]
+extra-source "rust-lru-cache+heapsize_impl-devel-0.1.2-15.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-lru-cache+heapsize_impl-devel-0.1.2-15.fc40.noarch.rpm"
+}

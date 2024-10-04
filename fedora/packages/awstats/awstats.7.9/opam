@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "awstats-7.9-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "awstats-7.9-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "crontabs" 
+  "perl-CGI" 
+  "perl-Data-Validate-IP" {>= "0.25"}
+  "perl-Digest-MD5" 
+  "perl-Encode" 
+  "perl-Geo-IP" 
+  "perl-HTML-Parser" 
+  "perl-Net-DNS" 
+  "perl-Net-IP" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Socket" 
+  "perl-Switch" 
+  "perl-Time-Local" 
+  "perl-URI" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.5.0"}
+  "perl-libwww-perl" 
+  "perl-vars" 
+  "systemd" 
+]
+extra-source "awstats-7.9-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/awstats-7.9-4.fc40.noarch.rpm"
+}

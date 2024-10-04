@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "catalan-pos-dict-2.7+git6dc3553-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "catalan-pos-dict-2.7+git6dc3553-3.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "morfologik-stemming" 
+]
+extra-source "catalan-pos-dict-2.7+git6dc3553-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/catalan-pos-dict-2.7+git6dc3553-3.1.noarch.rpm"
+}

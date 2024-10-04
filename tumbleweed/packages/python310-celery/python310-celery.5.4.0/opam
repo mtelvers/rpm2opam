@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-celery-5.4.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-celery-5.4.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-base" 
+  "python310-billiard" {>= "4.1.0"}
+  "python310-click" {>= "8.0.3"}
+  "python310-click-didyoumean" {>= "0.0.3"}
+  "python310-click-plugins" {>= "1.1.1"}
+  "python310-click-repl" {>= "0.2.0"}
+  "python310-kombu" {>= "5.3"}
+  "python310-python-dateutil" 
+  "python310-tzdata" 
+  "python310-vine" {>= "5.0.0"}
+  "update-alternatives" 
+]
+extra-source "python310-celery-5.4.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-celery-5.4.0-1.1.noarch.rpm"
+}

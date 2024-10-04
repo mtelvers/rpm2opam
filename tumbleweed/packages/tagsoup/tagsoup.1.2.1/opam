@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tagsoup-1.2.1-6.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tagsoup-1.2.1-6.2.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+]
+extra-source "tagsoup-1.2.1-6.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tagsoup-1.2.1-6.2.noarch.rpm"
+}

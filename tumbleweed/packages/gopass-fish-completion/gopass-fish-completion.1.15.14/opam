@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gopass-fish-completion-1.15.14-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gopass-fish-completion-1.15.14-1.1.noarch.rpm"]
+depends: [
+  "gopass" {= "1.15.14"}
+]
+extra-source "gopass-fish-completion-1.15.14-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gopass-fish-completion-1.15.14-1.1.noarch.rpm"
+}

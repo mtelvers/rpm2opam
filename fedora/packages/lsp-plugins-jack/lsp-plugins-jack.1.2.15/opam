@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lsp-plugins-jack-1.2.15-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lsp-plugins-jack-1.2.15-1.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "freetype" 
+  "glibc" 
+  "jack-audio-connection-kit" 
+  "libX11" 
+  "libXrandr" 
+  "libgcc" 
+  "libsndfile" 
+  "libstdc++" 
+]
+extra-source "lsp-plugins-jack-1.2.15-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lsp-plugins-jack-1.2.15-1.fc40.x86_64.rpm"
+}

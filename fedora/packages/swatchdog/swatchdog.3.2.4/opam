@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "swatchdog-3.2.4-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "swatchdog-3.2.4-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Date-Calc" 
+  "perl-Date-Manip" 
+  "perl-English" 
+  "perl-Exporter" 
+  "perl-FileHandle" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-POSIX" 
+  "perl-Pod-Usage" 
+  "perl-Term-ANSIColor" 
+  "perl-Time-HiRes" 
+  "perl-TimeDate" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.0.0"}
+  "perl-vars" 
+]
+extra-source "swatchdog-3.2.4-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/swatchdog-3.2.4-3.fc40.noarch.rpm"
+}

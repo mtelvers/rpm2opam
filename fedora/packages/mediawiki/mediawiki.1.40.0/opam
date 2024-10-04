@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mediawiki-1.40.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mediawiki-1.40.0-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "diffutils" 
+  "httpd-filesystem" 
+  "nodejs" 
+  "php-PsrLog" {>= "1.1.4"}
+  "php-cli" 
+  "php-common" {>= "7.4.3"}
+  "php-cssjanus" {>= "2.1.1"}
+  "php-fpm" 
+  "php-gd" 
+  "php-liuggio-statsd-php-client" {>= "1.0.18"}
+  "php-oojs-oojs-ui" {>= "0.46.3"}
+  "php-pear-Mail" {>= "1.5.0"}
+  "php-pear-Mail-Mime" {>= "1.10.11"}
+  "php-pear-Net-SMTP" {>= "1.10.0"}
+  "php-pear-Net-Socket" {>= "1.2.2"}
+  "php-wikimedia-assert" {>= "0.5.1"}
+  "php-wikimedia-avro" {>= "1.9.0"}
+  "php-wikimedia-cdb" {>= "2.0.0"}
+  "php-wikimedia-ip-set" {>= "3.1.0"}
+  "php-wikimedia-utfnormal" {>= "3.0.2"}
+  "php-xml" 
+  "php-zordius-lightncandy" {>= "1.2.6"}
+  "python3" 
+]
+extra-source "mediawiki-1.40.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mediawiki-1.40.0-3.fc40.noarch.rpm"
+}

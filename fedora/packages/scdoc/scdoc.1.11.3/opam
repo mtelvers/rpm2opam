@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "scdoc-1.11.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scdoc-1.11.3-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "pkgconf-pkg-config" 
+]
+extra-source "scdoc-1.11.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/scdoc-1.11.3-1.fc40.x86_64.rpm"
+}

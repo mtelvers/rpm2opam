@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jdeparser-2.0.3-2.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jdeparser-2.0.3-2.4.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "jdeparser-2.0.3-2.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jdeparser-2.0.3-2.4.noarch.rpm"
+}

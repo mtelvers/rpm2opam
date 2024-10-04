@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtkmm2-devel-2.24.5-slfo.1.1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtkmm2-devel-2.24.5-slfo.1.1.6.x86_64.rpm"]
+depends: [
+  "atkmm1_6-devel" {>= "2.22.2"}
+  "glibmm2_4-devel" {>= "2.27.93"}
+  "gtk2-devel" {>= "2.24.0"}
+  "libgtkmm-2_4-1" {= "2.24.5"}
+  "pangomm1_4-devel" {>= "2.27.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gtkmm2-devel-2.24.5-slfo.1.1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/gtkmm2-devel-2.24.5-slfo.1.1.6.x86_64.rpm"
+}

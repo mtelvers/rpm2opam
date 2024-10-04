@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-homalg-2024.01.01-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-homalg-2024.01.01-1.2.noarch.rpm"]
+depends: [
+  "gap" {>= "4.12.1"}
+  "gap-gapdoc" {>= "1.0"}
+  "gap-toolsforhomalg" {>= "2012.10.27"}
+]
+extra-source "gap-homalg-2024.01.01-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-homalg-2024.01.01-1.2.noarch.rpm"
+}

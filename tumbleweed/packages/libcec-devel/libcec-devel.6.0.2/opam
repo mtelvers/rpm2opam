@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcec-devel-6.0.2-3.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcec-devel-6.0.2-3.5.x86_64.rpm"]
+depends: [
+  "libcec6" {= "6.0.2"}
+  "p8-platform-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libcec-devel-6.0.2-3.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcec-devel-6.0.2-3.5.x86_64.rpm"
+}

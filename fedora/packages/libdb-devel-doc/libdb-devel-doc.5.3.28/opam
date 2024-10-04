@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libdb-devel-doc-5.3.28-61.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdb-devel-doc-5.3.28-61.fc40.noarch.rpm"]
+depends: [
+  "libdb" {= "5.3.28"}
+  "libdb-devel" {= "5.3.28"}
+]
+extra-source "libdb-devel-doc-5.3.28-61.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libdb-devel-doc-5.3.28-61.fc40.noarch.rpm"
+}

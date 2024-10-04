@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "api-sanity-checker-1.98.7-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "api-sanity-checker-1.98.7-20.fc40.noarch.rpm"]
+depends: [
+  "abi-compliance-checker" {>= "1.98.7"}
+  "binutils" 
+  "perl-File-Copy" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "api-sanity-checker-1.98.7-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/api-sanity-checker-1.98.7-20.fc40.noarch.rpm"
+}

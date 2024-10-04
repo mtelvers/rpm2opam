@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-PAR-Packer-1.63.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-PAR-Packer-1.63.0-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl" 
+  "perl-Archive-Zip" {>= "1.2"}
+  "perl-Getopt-ArgvFile" {>= "1.7"}
+  "perl-Module-ScanDeps" {>= "1.21"}
+  "perl-PAR" {>= "1.20.0"}
+  "perl-PAR-Dist" {>= "0.22"}
+  "perl-base" 
+]
+extra-source "perl-PAR-Packer-1.63.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-PAR-Packer-1.63.0-1.2.x86_64.rpm"
+}

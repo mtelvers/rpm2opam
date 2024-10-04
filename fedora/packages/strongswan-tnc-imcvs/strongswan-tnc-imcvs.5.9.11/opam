@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "strongswan-tnc-imcvs-5.9.11-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "strongswan-tnc-imcvs-5.9.11-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "json-c" 
+  "libxml2" 
+  "strongswan" 
+  "strongswan-sqlite" {= "5.9.11"}
+]
+extra-source "strongswan-tnc-imcvs-5.9.11-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/strongswan-tnc-imcvs-5.9.11-3.fc40.x86_64.rpm"
+}

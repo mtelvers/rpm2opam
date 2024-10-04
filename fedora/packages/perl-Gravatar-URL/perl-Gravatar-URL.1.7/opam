@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Gravatar-URL-1.07-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Gravatar-URL-1.07-23.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Digest-MD5" 
+  "perl-Digest-SHA" 
+  "perl-Exporter" 
+  "perl-Net-DNS" {>= "1.1"}
+  "perl-URI" 
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-Gravatar-URL-1.07-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Gravatar-URL-1.07-23.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Devel-PatchPerl-2.08-1.17.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Devel-PatchPerl-2.08-1.17.x86_64.rpm"]
+depends: [
+  "perl" 
+  "perl-File-pushd" {>= "1.0"}
+  "perl-Module-Pluggable" 
+  "perl-base" 
+]
+extra-source "perl-Devel-PatchPerl-2.08-1.17.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-Devel-PatchPerl-2.08-1.17.x86_64.rpm"
+}

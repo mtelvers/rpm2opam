@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libnvme-devel-1.8-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnvme-devel-1.8-1.fc40.x86_64.rpm"]
+depends: [
+  "dbus-devel" 
+  "json-c-devel" {>= "0.13"}
+  "keyutils-libs-devel" 
+  "libnvme" {= "1.8"}
+  "openssl-devel" {>= "1.1.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libnvme-devel-1.8-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libnvme-devel-1.8-1.fc40.x86_64.rpm"
+}

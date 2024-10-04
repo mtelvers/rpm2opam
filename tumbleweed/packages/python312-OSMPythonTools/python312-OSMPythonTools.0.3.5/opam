@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-OSMPythonTools-0.3.5-3.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-OSMPythonTools-0.3.5-3.6.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-beautifulsoup4" 
+  "python312-geojson" 
+  "python312-lxml" 
+  "python312-numpy" 
+  "python312-pandas" 
+  "python312-ujson" 
+  "python312-xarray" 
+]
+extra-source "python312-OSMPythonTools-0.3.5-3.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-OSMPythonTools-0.3.5-3.6.noarch.rpm"
+}

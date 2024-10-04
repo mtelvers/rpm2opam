@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pythonwhois-2.4.3-6.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pythonwhois-2.4.3-6.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "update-alternatives" 
+]
+extra-source "python311-pythonwhois-2.4.3-6.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pythonwhois-2.4.3-6.2.noarch.rpm"
+}

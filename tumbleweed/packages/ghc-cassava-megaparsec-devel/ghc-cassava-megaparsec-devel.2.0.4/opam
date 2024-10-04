@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-cassava-megaparsec-devel-2.0.4-5.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-cassava-megaparsec-devel-2.0.4-5.9.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-cassava-devel" 
+  "ghc-cassava-megaparsec" {= "2.0.4"}
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-megaparsec-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-cassava-megaparsec-devel-2.0.4-5.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-cassava-megaparsec-devel-2.0.4-5.9.x86_64.rpm"
+}

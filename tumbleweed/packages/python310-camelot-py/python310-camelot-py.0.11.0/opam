@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-camelot-py-0.11.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-camelot-py-0.11.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-base" 
+  "python310-chardet" {>= "3.0.4"}
+  "python310-click" {>= "6.7"}
+  "python310-numpy" {>= "1.13.3"}
+  "python310-openpyxl" {>= "2.5.8"}
+  "python310-pandas" {>= "0.23.4"}
+  "python310-pdfminer-six" {>= "20200726"}
+  "python310-pypdf" {>= "3.0.0"}
+  "python310-tabulate" {>= "0.8.9"}
+  "update-alternatives" 
+]
+extra-source "python310-camelot-py-0.11.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-camelot-py-0.11.0-1.1.noarch.rpm"
+}

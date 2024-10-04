@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gource-0.54-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gource-0.54-7.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "SDL2_image" 
+  "boost-filesystem" 
+  "freetype" 
+  "glibc" 
+  "gnu-free-sans-fonts" 
+  "libGLEW" 
+  "libgcc" 
+  "libglvnd-opengl" 
+  "libpng" 
+  "libstdc++" 
+  "mesa-libGLU" 
+  "pcre2" 
+  "tinyxml" 
+]
+extra-source "gource-0.54-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gource-0.54-7.fc40.x86_64.rpm"
+}

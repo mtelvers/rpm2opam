@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Plack-1.0051-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Plack-1.0051-1.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Apache-LogFormat-Compiler" {>= "0.33"}
+  "perl-Cookie-Baker" {>= "0.7"}
+  "perl-Devel-StackTrace" {>= "1.23"}
+  "perl-Devel-StackTrace-AsHTML" {>= "0.11"}
+  "perl-File-ShareDir" {>= "1.0"}
+  "perl-Filesys-Notify-Simple" 
+  "perl-HTTP-Entity-Parser" {>= "0.25"}
+  "perl-HTTP-Headers-Fast" {>= "0.18"}
+  "perl-HTTP-Message" {>= "5.814"}
+  "perl-Hash-MultiValue" {>= "0.5"}
+  "perl-Stream-Buffered" {>= "0.2"}
+  "perl-Test-TCP" {>= "2.15"}
+  "perl-Try-Tiny" 
+  "perl-URI" {>= "1.59"}
+  "perl-WWW-Form-UrlEncoded" {>= "0.23"}
+  "perl-base" 
+]
+extra-source "perl-Plack-1.0051-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Plack-1.0051-1.2.noarch.rpm"
+}

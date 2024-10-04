@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cec-client-6.0.2-3.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cec-client-6.0.2-3.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcec6" {= "6.0.2"}
+  "libgcc_s1" 
+  "libp8-platform2" 
+  "libstdc++6" 
+]
+extra-source "cec-client-6.0.2-3.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cec-client-6.0.2-3.5.x86_64.rpm"
+}

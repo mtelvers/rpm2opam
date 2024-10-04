@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rlwrap-0.46.1-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rlwrap-0.46.1-1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libncurses6" 
+  "libreadline8" 
+  "perl-base" 
+  "python311-base" 
+]
+extra-source "rlwrap-0.46.1-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rlwrap-0.46.1-1.7.x86_64.rpm"
+}

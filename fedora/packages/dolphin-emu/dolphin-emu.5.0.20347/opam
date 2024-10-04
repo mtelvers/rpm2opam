@@ -1,0 +1,43 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dolphin-emu-5.0.20347-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dolphin-emu-5.0.20347-8.fc40.x86_64.rpm"]
+depends: [
+  "SFML" 
+  "alsa-lib" 
+  "bluez-libs" 
+  "bzip2-libs" 
+  "dolphin-emu-data" {= "5.0.20347"}
+  "enet" 
+  "fmt" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "hidapi" 
+  "libX11" 
+  "libXi" 
+  "libXrandr" 
+  "libcurl" 
+  "libevdev" 
+  "libgcc" 
+  "libglvnd-egl" 
+  "libglvnd-glx" 
+  "libspng" 
+  "libstdc++" 
+  "libusb1" 
+  "libzstd" 
+  "lz4-libs" 
+  "lzo" 
+  "mbedtls" 
+  "miniupnpc" 
+  "minizip-ng-compat" 
+  "pugixml" 
+  "pulseaudio-libs" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "systemd-libs" 
+  "xxhash-libs" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "dolphin-emu-5.0.20347-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dolphin-emu-5.0.20347-8.fc40.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-storage-ng-5.0.17-lp160.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-storage-ng-5.0.17-lp160.1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "findutils" 
+  "libstorage-ng-ruby" {>= "4.5.144"}
+  "ruby3-2-rubygem-ruby-dbus" 
+  "yast2" {>= "4.4.38"}
+  "yast2-ruby-bindings" {>= "4.0.6"}
+  "yast2-ycp-ui-bindings" {>= "4.3.4"}
+]
+extra-source "yast2-storage-ng-5.0.17-lp160.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/yast2-storage-ng-5.0.17-lp160.1.1.x86_64.rpm"
+}

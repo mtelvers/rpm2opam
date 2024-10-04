@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Tk-GraphViz-1.10-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Tk-GraphViz-1.10-13.fc40.noarch.rpm"]
+depends: [
+  "graphviz" 
+  "perl-Carp" 
+  "perl-Fcntl" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-IPC-Open3" 
+  "perl-POSIX" 
+  "perl-Pod-Usage" 
+  "perl-Text-ParseWords" 
+  "perl-Tk" {>= "800.20"}
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.4.0"}
+  "perl-vars" 
+]
+extra-source "perl-Tk-GraphViz-1.10-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Tk-GraphViz-1.10-13.fc40.noarch.rpm"
+}

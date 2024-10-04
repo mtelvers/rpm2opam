@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Class-Accessor-Grouped-0.10014-1.22.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Class-Accessor-Grouped-0.10014-1.22.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-XSAccessor" {>= "1.19"}
+  "perl-Module-Runtime" {>= "0.12"}
+  "perl-Sub-Name" {>= "0.5"}
+]
+extra-source "perl-Class-Accessor-Grouped-0.10014-1.22.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Class-Accessor-Grouped-0.10014-1.22.noarch.rpm"
+}

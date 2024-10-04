@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-unic-ucd-normal-devel-0.9.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-unic-ucd-normal-devel-0.9.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-unic-char-property+default-devel" 
+  "rust-unic-char-range+default-devel" 
+  "rust-unic-ucd-hangul+default-devel" 
+  "rust-unic-ucd-version+default-devel" 
+]
+extra-source "rust-unic-ucd-normal-devel-0.9.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-unic-ucd-normal-devel-0.9.0-2.fc40.noarch.rpm"
+}

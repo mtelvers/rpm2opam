@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "echomixer-1.0.5-27.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "echomixer-1.0.5-27.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libasound2" 
+  "libgtk-2_0-0" 
+]
+extra-source "echomixer-1.0.5-27.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/echomixer-1.0.5-27.2.x86_64.rpm"
+}

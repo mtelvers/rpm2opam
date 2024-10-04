@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "msmtp-mta-1.8.26-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "msmtp-mta-1.8.26-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libsecret-1-0" 
+  "msmtp" {= "1.8.26"}
+]
+extra-source "msmtp-mta-1.8.26-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/msmtp-mta-1.8.26-1.1.x86_64.rpm"
+}

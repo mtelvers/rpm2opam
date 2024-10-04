@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-behave-1.2.6-5.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-behave-1.2.6-5.12.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-base" 
+  "python310-parse" {>= "1.8.2"}
+  "python310-parse_type" {>= "0.4.2"}
+  "python310-six" {>= "1.11"}
+  "update-alternatives" 
+]
+extra-source "python310-behave-1.2.6-5.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-behave-1.2.6-5.12.noarch.rpm"
+}

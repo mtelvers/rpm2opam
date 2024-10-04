@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libirman-devel-0.5.2-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libirman-devel-0.5.2-20.fc40.x86_64.rpm"]
+depends: [
+  "libirman" {= "0.5.2"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libirman-devel-0.5.2-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libirman-devel-0.5.2-20.fc40.x86_64.rpm"
+}

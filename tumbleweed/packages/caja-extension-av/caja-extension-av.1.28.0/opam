@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "caja-extension-av-1.28.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "caja-extension-av-1.28.0-2.1.x86_64.rpm"]
+depends: [
+  "caja" {>= "1.28"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcaja-extension1" 
+  "libgstpbutils-1_0-0" 
+  "libgstreamer-1_0-0" 
+  "libgtk-3-0" 
+]
+extra-source "caja-extension-av-1.28.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/caja-extension-av-1.28.0-2.1.x86_64.rpm"
+}

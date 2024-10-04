@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "elementary-camera-6.2.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "elementary-camera-6.2.2-3.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "granite" 
+  "gstreamer1" 
+  "gstreamer1-plugins-base" 
+  "gtk3" 
+  "hicolor-icon-theme" 
+  "libcanberra" 
+  "libhandy" 
+]
+extra-source "elementary-camera-6.2.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/elementary-camera-6.2.2-3.fc40.x86_64.rpm"
+}

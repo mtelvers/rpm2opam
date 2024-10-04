@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libhts3-1.20-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libhts3-1.20-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbz2-1" 
+  "libcurl-mini4" 
+  "libhtscodecs2" 
+  "liblzma5" 
+  "libz-ng-compat1" 
+]
+extra-source "libhts3-1.20-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libhts3-1.20-1.1.x86_64.rpm"
+}

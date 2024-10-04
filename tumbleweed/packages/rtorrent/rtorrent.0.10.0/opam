@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rtorrent-0.10.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rtorrent-0.10.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libcurl-mini4" 
+  "libgcc_s1" 
+  "libncurses6" 
+  "libstdc++6" 
+  "libtorrent22" 
+  "libxmlrpc3" 
+  "libxmlrpc_server3" 
+  "libxmlrpc_util4" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "rtorrent-0.10.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rtorrent-0.10.0-1.1.x86_64.rpm"
+}

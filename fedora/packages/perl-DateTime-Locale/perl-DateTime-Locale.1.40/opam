@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-DateTime-Locale-1.40-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DateTime-Locale-1.40-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Dist-CheckConflicts" {>= "0.2"}
+  "perl-Exporter" 
+  "perl-File-ShareDir" 
+  "perl-Params-ValidationCompiler" {>= "0.13"}
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" {>= "1.45"}
+  "perl-Specio" 
+  "perl-Storable" 
+  "perl-libs" {>= "5.8.4"}
+  "perl-namespace-autoclean" {>= "0.19"}
+]
+extra-source "perl-DateTime-Locale-1.40-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-DateTime-Locale-1.40-3.fc40.noarch.rpm"
+}

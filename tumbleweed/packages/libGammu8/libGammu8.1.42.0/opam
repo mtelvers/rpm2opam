@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libGammu8-1.42.0-4.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libGammu8-1.42.0-4.9.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libbluetooth3" 
+  "libusb-1_0-0" 
+]
+extra-source "libGammu8-1.42.0-4.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libGammu8-1.42.0-4.9.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "docbook-utils-0.6.14-241.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "docbook-utils-0.6.14-241.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "docbook-utils-minimal" 
+  "texlive-jadetex" 
+]
+extra-source "docbook-utils-0.6.14-241.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/docbook-utils-0.6.14-241.2.noarch.rpm"
+}

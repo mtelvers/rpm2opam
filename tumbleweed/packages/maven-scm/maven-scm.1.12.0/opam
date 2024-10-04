@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-scm-1.12.0-8.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-scm-1.12.0-8.3.noarch.rpm"]
+depends: [
+  "apache-commons-io" 
+  "apache-commons-lang3" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "jgit" 
+  "maven-file-management" 
+  "maven-lib" 
+  "plexus-sec-dispatcher" 
+  "plexus-utils" 
+  "plexus-xml" 
+  "sisu-plexus" 
+]
+extra-source "maven-scm-1.12.0-8.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-scm-1.12.0-8.3.noarch.rpm"
+}

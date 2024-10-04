@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-arsenal-2024.216.0.0.2svn68191-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-arsenal-2024.216.0.0.2svn68191-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-arsenal-fonts" {>= "2024"}
+  "texlive-filesystem" {>= "2024"}
+  "texlive-fontspec" 
+  "texlive-iwonamath" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-kpfonts-otf" 
+  "texlive-l3packages" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+]
+extra-source "texlive-arsenal-2024.216.0.0.2svn68191-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-arsenal-2024.216.0.0.2svn68191-56.1.noarch.rpm"
+}

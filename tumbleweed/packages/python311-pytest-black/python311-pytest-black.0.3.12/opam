@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pytest-black-0.3.12-2.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pytest-black-0.3.12-2.15.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-black" 
+  "python311-pytest" {>= "3.5.0"}
+  "python311-toml" 
+]
+extra-source "python311-pytest-black-0.3.12-2.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pytest-black-0.3.12-2.15.noarch.rpm"
+}

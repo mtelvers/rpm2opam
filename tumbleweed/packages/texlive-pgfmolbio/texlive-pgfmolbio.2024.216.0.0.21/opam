@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-pgfmolbio-2024.216.0.0.21svn35152-54.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-pgfmolbio-2024.216.0.0.21svn35152-54.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-filesystem" {>= "2024"}
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-luatex-bin" 
+  "texlive-luatexbase" 
+  "texlive-pgf" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-xcolor" 
+]
+extra-source "texlive-pgfmolbio-2024.216.0.0.21svn35152-54.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-pgfmolbio-2024.216.0.0.21svn35152-54.1.noarch.rpm"
+}

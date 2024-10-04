@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "proftpd-lang-1.3.8b-3.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "proftpd-lang-1.3.8b-3.3.noarch.rpm"]
+depends: [
+  "proftpd" {= "1.3.8"}
+]
+extra-source "proftpd-lang-1.3.8b-3.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/proftpd-lang-1.3.8b-3.3.noarch.rpm"
+}

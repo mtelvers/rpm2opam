@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "watson-2.1.0-1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "watson-2.1.0-1.8.noarch.rpm"]
+depends: [
+  "python311-arrow" {>= "1.0.0"}
+  "python311-base" {= "3.11"}
+  "python311-click" 
+  "python311-click-didyoumean" 
+  "python311-requests" 
+]
+extra-source "watson-2.1.0-1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/watson-2.1.0-1.8.noarch.rpm"
+}

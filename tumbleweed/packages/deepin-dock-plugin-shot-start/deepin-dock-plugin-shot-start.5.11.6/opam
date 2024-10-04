@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "deepin-dock-plugin-shot-start-5.11.6-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deepin-dock-plugin-shot-start-5.11.6-2.1.x86_64.rpm"]
+depends: [
+  "deepin-dock" 
+  "deepin-screen-recorder" {= "5.11.6"}
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5DBus5" 
+  "libQt5Gui5" 
+  "libQt5Widgets5" 
+  "libdtkgui5" 
+  "libdtkwidget5" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "deepin-dock-plugin-shot-start-5.11.6-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/deepin-dock-plugin-shot-start-5.11.6-2.1.x86_64.rpm"
+}

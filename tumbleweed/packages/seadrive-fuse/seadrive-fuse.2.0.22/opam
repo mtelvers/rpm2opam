@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "seadrive-fuse-2.0.22-1.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "seadrive-fuse-2.0.22-1.9.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcurl-mini4" 
+  "libevent-2_1-7" 
+  "libfuse2" 
+  "libjansson4" 
+  "libopenssl3" 
+  "libsearpc1" 
+  "libsqlite3-0" 
+  "libuuid1" 
+  "libz-ng-compat1" 
+  "python311-base" {= "3.11"}
+]
+extra-source "seadrive-fuse-2.0.22-1.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/seadrive-fuse-2.0.22-1.9.x86_64.rpm"
+}

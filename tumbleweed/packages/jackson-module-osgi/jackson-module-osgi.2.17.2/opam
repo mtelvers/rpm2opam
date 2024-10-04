@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jackson-module-osgi-2.17.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jackson-module-osgi-2.17.2-1.1.noarch.rpm"]
+depends: [
+  "jackson-databind" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "osgi-core" 
+]
+extra-source "jackson-module-osgi-2.17.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jackson-module-osgi-2.17.2-1.1.noarch.rpm"
+}

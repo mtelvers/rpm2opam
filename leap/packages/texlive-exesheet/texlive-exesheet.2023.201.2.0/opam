@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-exesheet-2023.201.2.0svn65577-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-exesheet-2023.201.2.0svn65577-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-enumitem" 
+  "texlive-fancybox" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-geometry" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-kvoptions" 
+  "texlive-latex" 
+  "texlive-mparhack" 
+  "texlive-ragged2e" 
+  "texlive-schooldocs" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-tasks" 
+  "texlive-translations" 
+  "texlive-versions" 
+  "texlive-xcolor" 
+]
+extra-source "texlive-exesheet-2023.201.2.0svn65577-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-exesheet-2023.201.2.0svn65577-slfo.1.1.4.noarch.rpm"
+}

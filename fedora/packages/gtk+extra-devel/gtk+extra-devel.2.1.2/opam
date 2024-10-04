@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gtk+extra-devel-2.1.2-33.fc38.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk+extra-devel-2.1.2-33.fc38.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "gtk+extra" {= "2.1.2"}
+  "gtk2-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "gtk+extra-devel-2.1.2-33.fc38.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gtk+extra-devel-2.1.2-33.fc38.x86_64.rpm"
+}

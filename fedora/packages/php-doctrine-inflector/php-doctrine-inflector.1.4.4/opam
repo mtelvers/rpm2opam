@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-doctrine-inflector-1.4.4-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-doctrine-inflector-1.4.4-8.fc40.noarch.rpm"]
+depends: [
+  "php-common" {>= "7.1"}
+  "php-fedora-autoloader" 
+  "php-mbstring" 
+]
+extra-source "php-doctrine-inflector-1.4.4-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-doctrine-inflector-1.4.4-8.fc40.noarch.rpm"
+}

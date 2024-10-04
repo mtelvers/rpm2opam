@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tcsh-6.24.13-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tcsh-6.24.13-1.1.x86_64.rpm"]
+depends: [
+  "coreutils" 
+  "gawk" 
+  "glibc" 
+  "libcrypt1" 
+  "libncurses6" 
+]
+extra-source "tcsh-6.24.13-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tcsh-6.24.13-1.1.x86_64.rpm"
+}

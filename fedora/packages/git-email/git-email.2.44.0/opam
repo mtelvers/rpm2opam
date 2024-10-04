@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "git-email-2.44.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "git-email-2.44.0-1.fc40.noarch.rpm"]
+depends: [
+  "git" {= "2.44.0"}
+  "perl-Authen-SASL" 
+  "perl-Email-Valid" 
+  "perl-Error" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-Git" 
+  "perl-IO-Socket-SSL" 
+  "perl-MIME-Base64" 
+  "perl-MailTools" 
+  "perl-Net-SMTP-SSL" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Sys-Hostname" 
+  "perl-Term-ANSIColor" 
+  "perl-Term-ReadLine" 
+  "perl-Text-ParseWords" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libnet" 
+  "perl-libs" {>= "5.8.1"}
+]
+extra-source "git-email-2.44.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/git-email-2.44.0-1.fc40.noarch.rpm"
+}

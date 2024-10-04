@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sfcgal-1.5.1-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sfcgal-1.5.1-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libOpenSceneGraph161" 
+  "libSFCGAL1" 
+  "libboost_chrono1_86_0" 
+  "libboost_filesystem1_86_0" 
+  "libboost_program_options1_86_0" 
+  "libboost_serialization1_86_0" 
+  "libboost_test1_86_0" 
+  "libgcc_s1" 
+  "libgmp10" 
+  "libgmpxx4" 
+  "libmpfr6" 
+  "libstdc++6" 
+]
+extra-source "sfcgal-1.5.1-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sfcgal-1.5.1-2.2.x86_64.rpm"
+}

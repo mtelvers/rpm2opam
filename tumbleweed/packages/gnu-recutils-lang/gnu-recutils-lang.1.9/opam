@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnu-recutils-lang-1.9-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnu-recutils-lang-1.9-1.1.noarch.rpm"]
+depends: [
+  "gnu-recutils" {= "1.9"}
+]
+extra-source "gnu-recutils-lang-1.9-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnu-recutils-lang-1.9-1.1.noarch.rpm"
+}

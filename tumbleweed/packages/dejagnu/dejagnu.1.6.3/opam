@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dejagnu-1.6.3-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dejagnu-1.6.3-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "expect" 
+  "info" 
+  "tcl" 
+]
+extra-source "dejagnu-1.6.3-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dejagnu-1.6.3-2.1.noarch.rpm"
+}

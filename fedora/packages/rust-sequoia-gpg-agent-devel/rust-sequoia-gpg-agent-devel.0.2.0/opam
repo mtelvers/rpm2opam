@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-sequoia-gpg-agent-devel-0.2.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-sequoia-gpg-agent-devel-0.2.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.70"}
+  "rust-anyhow+default-devel" 
+  "rust-chrono+default-devel" 
+  "rust-futures+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-sequoia-cert-store+default-devel" 
+  "rust-sequoia-ipc+default-devel" 
+  "rust-sequoia-openpgp+compression-devel" 
+  "rust-sequoia-openpgp-devel" 
+  "rust-stfu8+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-tokio+default-devel" 
+]
+extra-source "rust-sequoia-gpg-agent-devel-0.2.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-sequoia-gpg-agent-devel-0.2.0-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-ColorThemeBase-Static-0.008-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-ColorThemeBase-Static-0.008-12.fc40.noarch.rpm"]
+depends: [
+  "perl-Color-RGB-Util" {>= "0.600"}
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-ColorThemeBase-Static-0.008-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-ColorThemeBase-Static-0.008-12.fc40.noarch.rpm"
+}

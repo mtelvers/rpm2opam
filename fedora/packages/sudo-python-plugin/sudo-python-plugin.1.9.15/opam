@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sudo-python-plugin-1.9.15-2.p5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sudo-python-plugin-1.9.15-2.p5.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "openssl-libs" 
+  "python3-libs" 
+  "sudo" 
+]
+extra-source "sudo-python-plugin-1.9.15-2.p5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sudo-python-plugin-1.9.15-2.p5.fc40.x86_64.rpm"
+}

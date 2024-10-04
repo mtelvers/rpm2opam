@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-mccs-devel-1.1-49.17.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-mccs-devel-1.1-49.17.fc40.x86_64.rpm"]
+depends: [
+  "glpk-devel" 
+  "ocaml" {= "2125"}
+  "ocaml-cudf" {= "1"}
+  "ocaml-cudf-devel" 
+  "ocaml-mccs" {= "1.1"}
+]
+extra-source "ocaml-mccs-devel-1.1-49.17.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-mccs-devel-1.1-49.17.fc40.x86_64.rpm"
+}

@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-esami-2023.211.2.7svn61596-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-esami-2023.211.2.7svn61596-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-amsfonts" 
+  "texlive-auto-pst-pdf" 
+  "texlive-currfile" 
+  "texlive-environ" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-fp" 
+  "texlive-graphics" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-pstricks" 
+  "texlive-pstricks-add" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-tools" 
+  "texlive-xargs" 
+  "texlive-xcolor" 
+]
+extra-source "texlive-esami-2023.211.2.7svn61596-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-esami-2023.211.2.7svn61596-slfo.1.1.4.noarch.rpm"
+}

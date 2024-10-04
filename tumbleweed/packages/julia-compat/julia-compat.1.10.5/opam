@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "julia-compat-1.10.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "julia-compat-1.10.5-1.1.x86_64.rpm"]
+depends: [
+  "7zip" {>= "16"}
+  "bash" 
+  "bash-sh" 
+  "ca-certificates" 
+  "glibc" 
+  "julia-compat-devel" {= "1.10.5"}
+  "libatomic1" 
+  "libblastrampoline-devel" 
+  "libblastrampoline5" 
+  "libedit0" 
+  "libgcc_s1" 
+  "libgfortran5" 
+  "libgomp1" 
+  "libreadline6" 
+  "libstdc++6" 
+  "libutf8proc3" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+  "openlibm-devel" 
+  "update-alternatives" 
+]
+extra-source "julia-compat-1.10.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/julia-compat-1.10.5-1.1.x86_64.rpm"
+}

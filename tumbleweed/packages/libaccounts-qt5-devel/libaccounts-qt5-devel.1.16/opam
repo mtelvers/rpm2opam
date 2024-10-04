@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libaccounts-qt5-devel-1.16git.20231124T162152~18557f7-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libaccounts-qt5-devel-1.16git.20231124T162152~18557f7-1.2.x86_64.rpm"]
+depends: [
+  "libQt5Core-devel" 
+  "libQt5Xml-devel" 
+  "libaccounts-qt5-1" {= "1.16"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libaccounts-qt5-devel-1.16git.20231124T162152~18557f7-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libaccounts-qt5-devel-1.16git.20231124T162152~18557f7-1.2.x86_64.rpm"
+}

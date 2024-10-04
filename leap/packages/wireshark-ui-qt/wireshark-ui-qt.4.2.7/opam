@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wireshark-ui-qt-4.2.7-slfo.1.1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wireshark-ui-qt-4.2.7-slfo.1.1.5.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Multimedia5" 
+  "libQt5PrintSupport5" 
+  "libQt5Widgets5" 
+  "libgcc_s1" 
+  "libgcrypt20" 
+  "libglib-2_0-0" 
+  "libminizip1" 
+  "libnl3-200" 
+  "libpcap1" 
+  "libspeexdsp1" 
+  "libstdc++6" 
+  "libwireshark17" 
+  "libwiretap14" 
+  "libwsutil15" 
+  "wireshark" {= "4.2.7"}
+  "xdg-utils" 
+]
+extra-source "wireshark-ui-qt-4.2.7-slfo.1.1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/wireshark-ui-qt-4.2.7-slfo.1.1.5.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "desktop-backgrounds-budgie-40.0.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "desktop-backgrounds-budgie-40.0.0-1.fc40.noarch.rpm"]
+depends: [
+  "f40-backgrounds-budgie" 
+  "gsettings-desktop-schemas" {>= "2.91.92"}
+]
+extra-source "desktop-backgrounds-budgie-40.0.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/desktop-backgrounds-budgie-40.0.0-1.fc40.noarch.rpm"
+}

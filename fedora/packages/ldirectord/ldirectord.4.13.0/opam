@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ldirectord-4.13.0-2.fc40.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ldirectord-4.13.0-2.fc40.3.x86_64.rpm"]
+depends: [
+  "bash" 
+  "ipvsadm" 
+  "logrotate" 
+  "perl-IO-Socket-INET6" 
+  "perl-MailTools" 
+  "perl-Net-IMAP-Simple-SSL" 
+  "perl-Net-SSLeay" 
+  "perl-interpreter" 
+  "perl-libwww-perl" 
+  "systemd" 
+]
+extra-source "ldirectord-4.13.0-2.fc40.3.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/ldirectord-4.13.0-2.fc40.3.x86_64.rpm"
+}

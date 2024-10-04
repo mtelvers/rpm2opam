@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-python-keycloak-3.7.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-python-keycloak-3.7.0-1.2.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-deprecation" 
+  "python310-python-jose" {>= "1.4.0"}
+  "python310-requests" {>= "2.20.0"}
+  "python310-requests-toolbelt" 
+]
+extra-source "python310-python-keycloak-3.7.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-python-keycloak-3.7.0-1.2.noarch.rpm"
+}

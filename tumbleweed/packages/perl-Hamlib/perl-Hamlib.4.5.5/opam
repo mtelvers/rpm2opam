@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Hamlib-4.5.5-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Hamlib-4.5.5-3.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libhamlib4" 
+  "perl-base" 
+]
+extra-source "perl-Hamlib-4.5.5-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-Hamlib-4.5.5-3.1.x86_64.rpm"
+}

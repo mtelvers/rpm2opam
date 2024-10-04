@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcsnd6-6_0-6.18.1-5.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcsnd6-6_0-6.18.1-5.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcsound64-6_0" 
+  "libgcc_s1" 
+  "libsndfile1" 
+  "libstdc++6" 
+]
+extra-source "libcsnd6-6_0-6.18.1-5.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcsnd6-6_0-6.18.1-5.1.x86_64.rpm"
+}

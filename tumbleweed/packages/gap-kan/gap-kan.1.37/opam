@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-kan-1.37-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-kan-1.37-1.2.noarch.rpm"]
+depends: [
+  "gap" {>= "4.11"}
+  "gap-automata" {>= "1.14"}
+  "gap-gapdoc" {>= "1.6.2"}
+  "gap-kbmag" {>= "1.5.9"}
+]
+extra-source "gap-kan-1.37-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-kan-1.37-1.2.noarch.rpm"
+}

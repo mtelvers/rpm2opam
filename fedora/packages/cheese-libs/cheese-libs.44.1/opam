@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cheese-libs-44.1-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cheese-libs-44.1-4.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "clutter" 
+  "clutter-gst3" 
+  "clutter-gtk" 
+  "cogl" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gstreamer1" 
+  "gstreamer1-plugins-base" 
+  "gtk3" 
+  "libX11" 
+  "libcanberra-gtk3" 
+]
+extra-source "cheese-libs-44.1-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cheese-libs-44.1-4.fc40.x86_64.rpm"
+}

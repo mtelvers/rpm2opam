@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcinnamon-desktop-devel-6.2.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcinnamon-desktop-devel-6.2.0-1.1.x86_64.rpm"]
+depends: [
+  "gtk3-devel" 
+  "libcinnamon-desktop4" {= "6.2.0"}
+  "libxkbfile-devel" 
+  "pkgconf-pkg-config" 
+  "typelib-1_0-CinnamonDesktop-3_0" {= "6.2.0"}
+]
+extra-source "libcinnamon-desktop-devel-6.2.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcinnamon-desktop-devel-6.2.0-1.1.x86_64.rpm"
+}

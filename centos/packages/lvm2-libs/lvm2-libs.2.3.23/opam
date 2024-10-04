@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lvm2-libs-2.03.23-2.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lvm2-libs-2.03.23-2.el10.x86_64.rpm"]
+depends: [
+  "device-mapper-event" {= "1.2.198"}
+  "device-mapper-event-libs" 
+  "device-mapper-libs" 
+  "glibc" 
+  "libaio" 
+  "libblkid" 
+  "libselinux" 
+  "systemd-libs" 
+]
+extra-source "lvm2-libs-2.03.23-2.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/lvm2-libs-2.03.23-2.el10.x86_64.rpm"
+}

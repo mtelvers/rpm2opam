@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cheese-libs-devel-44.1-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cheese-libs-devel-44.1-4.fc40.x86_64.rpm"]
+depends: [
+  "cheese-libs" {= "44.1"}
+  "clutter-devel" {>= "1.13.2"}
+  "clutter-gst3-devel" {>= "3.0.0"}
+  "clutter-gtk-devel" 
+  "gdk-pixbuf2-devel" 
+  "glib2-devel" 
+  "gstreamer1-devel" 
+  "gstreamer1-plugins-bad-free-devel" {>= "1.4"}
+  "gstreamer1-plugins-base-devel" 
+  "gtk3-devel" {>= "3.13.4"}
+  "libX11-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "cheese-libs-devel-44.1-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cheese-libs-devel-44.1-4.fc40.x86_64.rpm"
+}

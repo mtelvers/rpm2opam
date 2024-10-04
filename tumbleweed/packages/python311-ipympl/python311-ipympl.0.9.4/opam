@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-ipympl-0.9.4-14.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-ipympl-0.9.4-14.2.noarch.rpm"]
+depends: [
+  "jupyter-matplotlib" {= "0.11.4"}
+  "python311-Pillow" 
+  "python311-base" {= "3.11"}
+  "python311-ipython" {< "9"}
+  "python311-ipython_genutils" 
+  "python311-ipywidgets" 
+  "python311-matplotlib" 
+  "python311-matplotlib-web" 
+  "python311-numpy" 
+  "python311-traitlets" {< "6"}
+]
+extra-source "python311-ipympl-0.9.4-14.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-ipympl-0.9.4-14.2.noarch.rpm"
+}

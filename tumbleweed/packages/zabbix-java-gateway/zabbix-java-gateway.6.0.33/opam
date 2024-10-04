@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zabbix-java-gateway-6.0.33-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zabbix-java-gateway-6.0.33-2.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "java-11-openj9" 
+  "shadow" 
+  "system-user-zabbix" 
+]
+extra-source "zabbix-java-gateway-6.0.33-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/zabbix-java-gateway-6.0.33-2.1.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Spreadsheet-Read-scripts-0.900.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Spreadsheet-Read-scripts-0.900.0-2.2.noarch.rpm"]
+depends: [
+  "perl-HTML-Parser" 
+  "perl-Spreadsheet-Read" {= "0.900.0"}
+  "perl-Term-ReadKey" 
+  "perl-Text-CSV_XS" 
+  "perl-Tk" 
+  "perl-Tk-TableMatrix" 
+  "perl-base" 
+]
+extra-source "perl-Spreadsheet-Read-scripts-0.900.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Spreadsheet-Read-scripts-0.900.0-2.2.noarch.rpm"
+}

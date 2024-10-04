@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-myst-parser-3.0.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-myst-parser-3.0.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-Jinja2" 
+  "python312-PyYAML" 
+  "python312-Sphinx" 
+  "python312-base" 
+  "python312-docutils" {>= "0.18"}
+  "python312-markdown-it-py" 
+  "python312-mdit-py-plugins" 
+  "update-alternatives" 
+]
+extra-source "python312-myst-parser-3.0.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-myst-parser-3.0.1-1.1.noarch.rpm"
+}

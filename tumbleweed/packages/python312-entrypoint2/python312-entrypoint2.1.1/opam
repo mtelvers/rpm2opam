@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-entrypoint2-1.1-2.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-entrypoint2-1.1-2.8.noarch.rpm"]
+depends: [
+  "python312-EasyProcess" 
+  "python312-base" {= "3.12"}
+  "python312-decorator" 
+  "python312-path" 
+]
+extra-source "python312-entrypoint2-1.1-2.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-entrypoint2-1.1-2.8.noarch.rpm"
+}

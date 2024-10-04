@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-syntect-devel-5.2.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-syntect-devel-5.2.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bitflags+default-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde_derive+default-devel" 
+  "rust-serde_json+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-walkdir+default-devel" 
+]
+extra-source "rust-syntect-devel-5.2.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-syntect-devel-5.2.0-1.fc40.noarch.rpm"
+}

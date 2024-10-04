@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pithos-1.6.0-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pithos-1.6.0-1.5.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "gstreamer-plugins-bad" 
+  "gstreamer-plugins-good" 
+  "python311-gobject-Gdk" 
+  "python311-pycairo" 
+  "typelib-1_0-Dbusmenu-0_4" 
+  "typelib-1_0-DbusmenuGtk3-0_4" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gst-1_0" {= "1.0"}
+  "typelib-1_0-GstAudio-1_0" {= "1.0"}
+  "typelib-1_0-GstPbutils-1_0" {= "1.0"}
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Keybinder-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" 
+  "typelib-1_0-Secret-1" {= "1"}
+]
+extra-source "pithos-1.6.0-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pithos-1.6.0-1.5.noarch.rpm"
+}

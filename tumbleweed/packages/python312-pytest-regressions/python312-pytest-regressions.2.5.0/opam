@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pytest-regressions-2.5.0-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pytest-regressions-2.5.0-1.4.noarch.rpm"]
+depends: [
+  "python312-PyYAML" 
+  "python312-base" {= "3.12"}
+  "python312-pytest" {>= "6.2.0"}
+  "python312-pytest-datadir" {>= "1.2.0"}
+]
+extra-source "python312-pytest-regressions-2.5.0-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pytest-regressions-2.5.0-1.4.noarch.rpm"
+}

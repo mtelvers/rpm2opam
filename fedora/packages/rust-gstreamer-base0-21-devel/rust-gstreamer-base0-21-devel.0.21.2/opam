@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gstreamer-base0.21-devel-0.21.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gstreamer-base0.21-devel-0.21.2-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.70"}
+  "rust-atomic_refcell+default-devel" 
+  "rust-cfg-if+default-devel" 
+  "rust-glib+default-devel" 
+  "rust-gstreamer+default-devel" 
+  "rust-gstreamer-base-sys+default-devel" 
+  "rust-libc+default-devel" 
+]
+extra-source "rust-gstreamer-base0.21-devel-0.21.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gstreamer-base0.21-devel-0.21.2-1.fc40.noarch.rpm"
+}

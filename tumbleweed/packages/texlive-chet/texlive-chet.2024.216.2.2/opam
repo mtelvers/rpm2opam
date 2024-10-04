@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-chet-2024.216.2.2svn45081-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-chet-2024.216.2.2svn45081-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-amsmath" 
+  "texlive-caption" 
+  "texlive-cite" 
+  "texlive-collref" 
+  "texlive-datetime" 
+  "texlive-filecontents" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-footmisc" 
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-kvoptions" 
+  "texlive-l3packages" 
+  "texlive-microtype" 
+  "texlive-ncctools" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tocloft" 
+  "texlive-tools" 
+]
+extra-source "texlive-chet-2024.216.2.2svn45081-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-chet-2024.216.2.2svn45081-56.1.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mingw64-libmpfr4-3.1.4-2.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-libmpfr4-3.1.4-2.14.noarch.rpm"]
+depends: [
+  "mingw64-libgcc_s_seh1" 
+  "mingw64-libgmp10" 
+]
+extra-source "mingw64-libmpfr4-3.1.4-2.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mingw64-libmpfr4-3.1.4-2.14.noarch.rpm"
+}

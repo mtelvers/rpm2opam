@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "Imath-devel-3.1.11-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Imath-devel-3.1.11-1.1.x86_64.rpm"]
+depends: [
+  "libImath-3_1-29" {= "3.1.11"}
+  "libstdc++-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "Imath-devel-3.1.11-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/Imath-devel-3.1.11-1.1.x86_64.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "myproxy-libs-6.2.16-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "myproxy-libs-6.2.16-1.fc40.x86_64.rpm"]
+depends: [
+  "cyrus-sasl-lib" 
+  "glibc" 
+  "globus-common" 
+  "globus-gsi-callback" 
+  "globus-gsi-cert-utils" 
+  "globus-gsi-credential" 
+  "globus-gsi-proxy-core" 
+  "globus-gsi-sysconfig" 
+  "globus-gss-assist" 
+  "globus-gssapi-gsi" 
+  "globus-proxy-utils" 
+  "openldap" 
+  "openssl-libs" 
+  "pam-libs" 
+]
+extra-source "myproxy-libs-6.2.16-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/myproxy-libs-6.2.16-1.fc40.x86_64.rpm"
+}

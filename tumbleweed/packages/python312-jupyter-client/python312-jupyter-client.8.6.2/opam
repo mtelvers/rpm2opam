@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-jupyter-client-8.6.2-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-jupyter-client-8.6.2-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-importlib-metadata" 
+  "python312-jupyter-core" 
+  "python312-python-dateutil" {>= "2.8.2"}
+  "python312-pyzmq" {>= "23.0"}
+  "python312-tornado" {>= "6.2"}
+  "python312-traitlets" {>= "5.3"}
+  "update-alternatives" 
+]
+extra-source "python312-jupyter-client-8.6.2-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-jupyter-client-8.6.2-2.1.noarch.rpm"
+}

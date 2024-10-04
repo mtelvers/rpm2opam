@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Pod-Perldoc-3.28.01-511.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Pod-Perldoc-3.28.01-511.el10.noarch.rpm"]
+depends: [
+  "groff-base" 
+  "perl-Carp" 
+  "perl-Encode" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Temp" {>= "0.22"}
+  "perl-HTTP-Tiny" 
+  "perl-IO" 
+  "perl-IPC-Open3" 
+  "perl-PathTools" 
+  "perl-Pod-Perldoc" 
+  "perl-Pod-Simple" 
+  "perl-Symbol" 
+  "perl-Text-ParseWords" 
+  "perl-interpreter" 
+  "perl-parent" 
+  "perl-podlators" {>= "2.18"}
+  "perl-vars" 
+]
+extra-source "perl-Pod-Perldoc-3.28.01-511.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/perl-Pod-Perldoc-3.28.01-511.el10.noarch.rpm"
+}

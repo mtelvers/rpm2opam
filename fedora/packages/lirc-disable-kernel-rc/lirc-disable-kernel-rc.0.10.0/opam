@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lirc-disable-kernel-rc-0.10.0-42.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lirc-disable-kernel-rc-0.10.0-42.fc40.noarch.rpm"]
+depends: [
+  "lirc-compat" {= "0.10.0"}
+]
+extra-source "lirc-disable-kernel-rc-0.10.0-42.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lirc-disable-kernel-rc-0.10.0-42.fc40.noarch.rpm"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-devpi-server-6.11.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-devpi-server-6.11.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-aiohttp" 
+  "python310-argon2-cffi" {>= "16.2"}
+  "python310-attrs" 
+  "python310-base" 
+  "python310-defusedxml" 
+  "python310-devpi-common" {>= "3.3.0"}
+  "python310-execnet" {>= "1.2"}
+  "python310-httpx" 
+  "python310-itsdangerous" {>= "0.24"}
+  "python310-lazy" 
+  "python310-passlib" 
+  "python310-platformdirs" 
+  "python310-pluggy" {>= "0.6.0"}
+  "python310-py" {>= "1.4.23"}
+  "python310-pyramid" {>= "2"}
+  "python310-repoze-lru" {>= "0.6"}
+  "python310-ruamel-yaml" {>= "0.15.94"}
+  "python310-strictyaml" 
+  "python310-waitress" {>= "1.0.1"}
+  "update-alternatives" 
+]
+extra-source "python310-devpi-server-6.11.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-devpi-server-6.11.0-1.1.noarch.rpm"
+}

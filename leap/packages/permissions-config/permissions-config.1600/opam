@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "permissions-config-1600_20240206-slfo.1.1.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "permissions-config-1600_20240206-slfo.1.1.14.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "chkstat" 
+  "fillup" 
+  "system-user-root" 
+]
+extra-source "permissions-config-1600_20240206-slfo.1.1.14.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/permissions-config-1600_20240206-slfo.1.1.14.noarch.rpm"
+}

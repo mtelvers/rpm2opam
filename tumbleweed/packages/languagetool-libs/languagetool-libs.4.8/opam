@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "languagetool-libs-4.8-7.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "languagetool-libs-4.8-7.1.noarch.rpm"]
+depends: [
+  "aho-corasick-double-array-trie" 
+  "apache-commons-collections4" 
+  "apache-commons-io" 
+  "catalan-pos-dict" 
+  "german-pos-dict" 
+  "jackson-databind" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "java-jwt" 
+  "javapackages-filesystem" 
+  "jetbrains-annotations" 
+  "junit" 
+  "jwordsplitter" 
+  "languagetool-core" 
+  "languagetool-core-tests" 
+  "languagetool-tools" 
+  "logback" 
+  "mariadb-java-client" 
+  "mybatis" 
+  "opennlp-chunk-models" 
+  "opennlp-postag-models" 
+  "opennlp-tokenize-models" 
+  "opennlp-tools" 
+  "openregex" 
+  "prometheus-simpleclient-java" 
+  "prometheus-simpleclient-java-guava" 
+  "prometheus-simpleclient-java-hotspot" 
+  "prometheus-simpleclient-java-httpserver" 
+  "slf4j" 
+]
+extra-source "languagetool-libs-4.8-7.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/languagetool-libs-4.8-7.1.noarch.rpm"
+}

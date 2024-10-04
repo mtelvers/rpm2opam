@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-papermill+azure-2.5.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-papermill+azure-2.5.0-2.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-azure-datalake-store" {>= "0.0.30"}
+  "python3-azure-identity" {>= "1.3.1"}
+  "python3-azure-storage-blob" {>= "12.1"}
+  "python3-papermill" {= "2.5.0"}
+  "python3-requests" {>= "2.21"}
+]
+extra-source "python3-papermill+azure-2.5.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-papermill+azure-2.5.0-2.fc40.noarch.rpm"
+}

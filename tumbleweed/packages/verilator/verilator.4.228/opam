@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "verilator-4.228-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "verilator-4.228-1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-base" 
+  "python311-base" 
+]
+extra-source "verilator-4.228-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/verilator-4.228-1.7.x86_64.rpm"
+}

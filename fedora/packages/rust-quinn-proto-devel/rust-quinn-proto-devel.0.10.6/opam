@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-quinn-proto-devel-0.10.6-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-quinn-proto-devel-0.10.6-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.63"}
+  "rust-bytes+default-devel" 
+  "rust-rand+default-devel" 
+  "rust-rustc-hash+default-devel" 
+  "rust-slab+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-tinyvec+alloc-devel" 
+  "rust-tinyvec+default-devel" 
+  "rust-tracing+default-devel" 
+]
+extra-source "rust-quinn-proto-devel-0.10.6-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-quinn-proto-devel-0.10.6-2.fc40.noarch.rpm"
+}

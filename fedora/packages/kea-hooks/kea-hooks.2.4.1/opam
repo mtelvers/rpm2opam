@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kea-hooks-2.4.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kea-hooks-2.4.1-5.fc40.x86_64.rpm"]
+depends: [
+  "boost-system" 
+  "glibc" 
+  "kea-libs" {= "2.4.1"}
+  "libgcc" 
+  "log4cplus" 
+  "mariadb-connector-c" 
+  "openssl-libs" 
+  "postgresql-private-libs" 
+]
+extra-source "kea-hooks-2.4.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kea-hooks-2.4.1-5.fc40.x86_64.rpm"
+}

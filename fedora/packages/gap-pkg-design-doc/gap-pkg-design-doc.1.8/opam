@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gap-pkg-design-doc-1.8-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-pkg-design-doc-1.8-6.fc40.noarch.rpm"]
+depends: [
+  "gap-online-help" 
+  "gap-pkg-design" {= "1.8"}
+]
+extra-source "gap-pkg-design-doc-1.8-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gap-pkg-design-doc-1.8-6.fc40.noarch.rpm"
+}

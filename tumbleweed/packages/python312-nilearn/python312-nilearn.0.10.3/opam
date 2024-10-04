@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-nilearn-0.10.3-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-nilearn-0.10.3-1.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "python312-base" {= "3.12"}
+  "python312-joblib" {>= "1.0.0"}
+  "python312-lxml" 
+  "python312-nibabel" {>= "4.0"}
+  "python312-numpy" {>= "1.19"}
+  "python312-packaging" 
+  "python312-pandas" {>= "1.1.5"}
+  "python312-requests" {>= "2.25.0"}
+  "python312-scikit-learn" {>= "1.0.0"}
+  "python312-scipy" {>= "1.8.0"}
+]
+extra-source "python312-nilearn-0.10.3-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-nilearn-0.10.3-1.2.noarch.rpm"
+}

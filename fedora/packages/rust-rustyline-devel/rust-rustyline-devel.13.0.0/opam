@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rustyline-devel-13.0.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rustyline-devel-13.0.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bitflags+default-devel" 
+  "rust-cfg-if+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-log+default-devel" 
+  "rust-memchr+default-devel" 
+  "rust-nix+fs-devel" 
+  "rust-nix+ioctl-devel" 
+  "rust-nix+poll-devel" 
+  "rust-nix+signal-devel" 
+  "rust-nix+term-devel" 
+  "rust-nix-devel" 
+  "rust-unicode-segmentation+default-devel" 
+  "rust-unicode-width+default-devel" 
+  "rust-utf8parse+default-devel" 
+]
+extra-source "rust-rustyline-devel-13.0.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rustyline-devel-13.0.0-2.fc40.noarch.rpm"
+}

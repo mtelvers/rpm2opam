@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "retrace-server-1.24.2-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "retrace-server-1.24.2-6.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "bzip2" 
+  "coreutils" 
+  "crash" {>= "5.1.7"}
+  "createrepo_c" 
+  "cronie" 
+  "distribution-gpg-keys" 
+  "elfutils" 
+  "gzip" 
+  "kexec-tools" 
+  "lsof" 
+  "lzop" 
+  "mock" {>= "1.4.7"}
+  "mod_ssl" 
+  "p7zip" 
+  "procps-ng" 
+  "python3" 
+  "python3-bugzilla" 
+  "python3-createrepo_c" 
+  "python3-dnf" 
+  "python3-file-magic" 
+  "python3-hawkey" 
+  "python3-mod_wsgi" 
+  "python3-requests" 
+  "python3-requests-gssapi" 
+  "python3-webob" 
+  "rsync" 
+  "sqlite" 
+  "systemd" 
+  "tar" 
+  "unzip" 
+  "wget2-wget" 
+  "xz" 
+]
+extra-source "retrace-server-1.24.2-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/retrace-server-1.24.2-6.fc40.noarch.rpm"
+}

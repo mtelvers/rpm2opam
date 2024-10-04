@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ibus-desktop-testing-1.5.30~rc1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibus-desktop-testing-1.5.30~rc1-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "gnome-shell-extension-no-overview" 
+  "ibus" {= "1.5.30"}
+]
+extra-source "ibus-desktop-testing-1.5.30~rc1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/ibus-desktop-testing-1.5.30~rc1-1.fc40.noarch.rpm"
+}

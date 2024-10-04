@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-papertex-2023.201.1.2bsvn19230-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-papertex-2023.201.1.2bsvn19230-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-datetime" 
+  "texlive-fancybox" 
+  "texlive-fancyhdr" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-hyperref" 
+  "texlive-hyphenat" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-lastpage" 
+  "texlive-latex" 
+  "texlive-multido" 
+  "texlive-ragged2e" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-setspace" 
+  "texlive-textpos" 
+  "texlive-tools" 
+  "texlive-wrapfig" 
+]
+extra-source "texlive-papertex-2023.201.1.2bsvn19230-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-papertex-2023.201.1.2bsvn19230-slfo.1.1.4.noarch.rpm"
+}

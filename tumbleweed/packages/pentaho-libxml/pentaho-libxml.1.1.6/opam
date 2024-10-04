@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pentaho-libxml-1.1.6-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pentaho-libxml-1.1.6-2.2.noarch.rpm"]
+depends: [
+  "java-11-openj9" 
+  "javapackages-tools" 
+  "libbase" {>= "1.1.6"}
+  "libloader" {>= "1.1.6"}
+]
+extra-source "pentaho-libxml-1.1.6-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pentaho-libxml-1.1.6-2.2.noarch.rpm"
+}

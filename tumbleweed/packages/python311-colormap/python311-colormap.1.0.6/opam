@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-colormap-1.0.6-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-colormap-1.0.6-1.4.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-easydev" 
+  "python311-matplotlib" 
+]
+extra-source "python311-colormap-1.0.6-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-colormap-1.0.6-1.4.noarch.rpm"
+}

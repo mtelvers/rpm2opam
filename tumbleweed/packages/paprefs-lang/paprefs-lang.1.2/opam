@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "paprefs-lang-1.2-1.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "paprefs-lang-1.2-1.10.noarch.rpm"]
+depends: [
+  "paprefs" {= "1.2"}
+]
+extra-source "paprefs-lang-1.2-1.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/paprefs-lang-1.2-1.10.noarch.rpm"
+}

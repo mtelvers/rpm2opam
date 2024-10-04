@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kio-fuse-5.1.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kio-fuse-5.1.0-1.3.x86_64.rpm"]
+depends: [
+  "fuse3" 
+  "glibc" 
+  "kio-core" 
+  "libKF5CoreAddons5" 
+  "libQt5Core5" 
+  "libQt5DBus5" 
+  "libfuse3-3" 
+  "libstdc++6" 
+]
+extra-source "kio-fuse-5.1.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kio-fuse-5.1.0-1.3.x86_64.rpm"
+}

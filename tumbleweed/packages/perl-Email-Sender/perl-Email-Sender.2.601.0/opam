@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Email-Sender-2.601.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Email-Sender-2.601.0-1.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Email-Abstract" {>= "3.6"}
+  "perl-Email-Address-XS" 
+  "perl-Email-Simple" {>= "1.998"}
+  "perl-File-Path" {>= "2.6"}
+  "perl-Module-Runtime" 
+  "perl-Moo" {>= "2.0"}
+  "perl-MooX-Types-MooseLike" {>= "0.15"}
+  "perl-Scalar-List-Utils" {>= "1.45"}
+  "perl-Sub-Exporter" 
+  "perl-Throwable" {>= "0.200003"}
+  "perl-Try-Tiny" 
+]
+extra-source "perl-Email-Sender-2.601.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Email-Sender-2.601.0-1.2.noarch.rpm"
+}

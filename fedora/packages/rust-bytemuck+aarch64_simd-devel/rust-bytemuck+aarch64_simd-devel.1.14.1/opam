@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-bytemuck+aarch64_simd-devel-1.14.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-bytemuck+aarch64_simd-devel-1.14.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bytemuck-devel" {= "1.14.1"}
+]
+extra-source "rust-bytemuck+aarch64_simd-devel-1.14.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-bytemuck+aarch64_simd-devel-1.14.1-1.fc40.noarch.rpm"
+}

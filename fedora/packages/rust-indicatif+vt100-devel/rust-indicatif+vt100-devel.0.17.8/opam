@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-indicatif+vt100-devel-0.17.8-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-indicatif+vt100-devel-0.17.8-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-indicatif-devel" {= "0.17.8"}
+  "rust-vt100+default-devel" 
+]
+extra-source "rust-indicatif+vt100-devel-0.17.8-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-indicatif+vt100-devel-0.17.8-1.fc40.noarch.rpm"
+}

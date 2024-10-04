@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "calligra-words-3.2.1-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "calligra-words-3.2.1-29.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "calligra-core" {= "3.2.1"}
+  "calligra-libs" 
+  "calligra-words-libs" {= "3.2.1"}
+  "glibc" 
+  "kf5-kcoreaddons" 
+  "kf5-ki18n" 
+  "kf5-kinit" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "calligra-words-3.2.1-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/calligra-words-3.2.1-29.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-safemem+default-devel-0.3.3-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-safemem+default-devel-0.3.3-13.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-safemem+std-devel" {= "0.3.3"}
+  "rust-safemem-devel" {= "0.3.3"}
+]
+extra-source "rust-safemem+default-devel-0.3.3-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-safemem+default-devel-0.3.3-13.fc40.noarch.rpm"
+}

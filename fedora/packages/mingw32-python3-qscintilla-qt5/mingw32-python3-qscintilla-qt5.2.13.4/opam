@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw32-python3-qscintilla-qt5-2.13.4-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw32-python3-qscintilla-qt5-2.13.4-8.fc40.noarch.rpm"]
+depends: [
+  "mingw32-crt" 
+  "mingw32-filesystem" {>= "95"}
+  "mingw32-libgcc" 
+  "mingw32-libstdc++" 
+  "mingw32-python3" 
+  "mingw32-python3-pyqt5-sip" 
+  "mingw32-python3-qt5" {>= "5.15.4"}
+  "mingw32-qscintilla-qt5" 
+  "mingw32-qt5-qtbase" 
+]
+extra-source "mingw32-python3-qscintilla-qt5-2.13.4-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw32-python3-qscintilla-qt5-2.13.4-8.fc40.noarch.rpm"
+}

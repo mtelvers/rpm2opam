@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-pimple-3.5.0-13.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-pimple-3.5.0-13.fc39.noarch.rpm"]
+depends: [
+  "php-common" {>= "7.2.5"}
+  "php-fedora-autoloader" 
+  "php-psr-container" {< "3.0"}
+]
+extra-source "php-pimple-3.5.0-13.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-pimple-3.5.0-13.fc39.noarch.rpm"
+}

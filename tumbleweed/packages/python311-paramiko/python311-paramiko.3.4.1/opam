@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-paramiko-3.4.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-paramiko-3.4.1-1.1.noarch.rpm"]
+depends: [
+  "python311-PyNaCl" {>= "1.5"}
+  "python311-base" {= "3.11"}
+  "python311-bcrypt" {>= "3.2"}
+  "python311-cryptography" {>= "3.3"}
+]
+extra-source "python311-paramiko-3.4.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-paramiko-3.4.1-1.1.noarch.rpm"
+}

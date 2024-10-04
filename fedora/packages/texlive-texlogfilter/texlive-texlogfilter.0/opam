@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-texlogfilter-svn62792-81.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-texlogfilter-svn62792-81.fc40.noarch.rpm"]
+depends: [
+  "perl-Getopt-Long" 
+  "perl-Term-ANSIColor" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "texlive-base" 
+  "texlive-kpathsea" 
+]
+extra-source "texlive-texlogfilter-svn62792-81.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-texlogfilter-svn62792-81.fc40.noarch.rpm"
+}

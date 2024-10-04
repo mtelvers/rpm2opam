@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libbytesize-devel-2.10-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libbytesize-devel-2.10-2.1.x86_64.rpm"]
+depends: [
+  "libbytesize1" {= "2.10"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libbytesize-devel-2.10-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libbytesize-devel-2.10-2.1.x86_64.rpm"
+}

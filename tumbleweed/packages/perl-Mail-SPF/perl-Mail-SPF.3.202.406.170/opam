@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Mail-SPF-3.202.406.170-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mail-SPF-3.202.406.170-1.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Error" 
+  "perl-Net-DNS" 
+  "perl-NetAddr-IP" 
+  "perl-URI" {>= "1.13"}
+  "perl-base" 
+]
+extra-source "perl-Mail-SPF-3.202.406.170-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Mail-SPF-3.202.406.170-1.2.noarch.rpm"
+}

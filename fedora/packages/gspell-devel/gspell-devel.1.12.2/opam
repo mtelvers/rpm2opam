@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gspell-devel-1.12.2-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gspell-devel-1.12.2-4.fc40.x86_64.rpm"]
+depends: [
+  "enchant2-devel" {>= "2.2"}
+  "glib2" 
+  "glib2-devel" {>= "2.44"}
+  "glibc" 
+  "gspell" {= "1.12.2"}
+  "gtk3" 
+  "gtk3-devel" {>= "3.20"}
+  "libicu-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "gspell-devel-1.12.2-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gspell-devel-1.12.2-4.fc40.x86_64.rpm"
+}

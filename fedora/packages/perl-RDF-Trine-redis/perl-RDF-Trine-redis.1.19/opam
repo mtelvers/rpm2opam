@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-RDF-Trine-redis-1.019-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-RDF-Trine-redis-1.019-23.fc40.noarch.rpm"]
+depends: [
+  "perl-Cache-LRU" 
+  "perl-Data-Dumper" 
+  "perl-Digest-MD5" 
+  "perl-HTTP-Message" 
+  "perl-JSON" {>= "2.0"}
+  "perl-List-MoreUtils" 
+  "perl-RDF-Trine" 
+  "perl-Redis" 
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-URI" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-RDF-Trine-redis-1.019-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-RDF-Trine-redis-1.019-23.fc40.noarch.rpm"
+}

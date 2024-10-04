@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "x509watch-0.6.1-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "x509watch-0.6.1-16.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "esmtp" 
+  "openssl" 
+  "perl-Fcntl" 
+  "perl-File-Find" 
+  "perl-Getopt-Long" 
+  "perl-IPC-Open3" 
+  "perl-POSIX" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "systemd" {>= "197"}
+]
+extra-source "x509watch-0.6.1-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/x509watch-0.6.1-16.fc40.noarch.rpm"
+}

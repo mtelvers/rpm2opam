@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nova-agent-2.1.25-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nova-agent-2.1.25-7.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "python3" 
+  "python3-cryptography" 
+  "python3-distro" 
+  "python3-netifaces" 
+  "python3-pyxs" 
+  "python3-pyyaml" 
+  "python3-setuptools" 
+  "systemd" 
+]
+extra-source "nova-agent-2.1.25-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nova-agent-2.1.25-7.fc40.noarch.rpm"
+}

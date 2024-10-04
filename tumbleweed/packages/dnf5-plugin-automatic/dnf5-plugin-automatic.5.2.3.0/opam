@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dnf5-plugin-automatic-5.2.3.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dnf5-plugin-automatic-5.2.3.0-1.1.x86_64.rpm"]
+depends: [
+  "dnf5" {= "5.2.3.0"}
+  "glibc" 
+  "libcurl4" {>= "7.62.0"}
+  "libdnf5-cli2" 
+  "libdnf5_2" 
+  "libfmt10" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "dnf5-plugin-automatic-5.2.3.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/dnf5-plugin-automatic-5.2.3.0-1.1.x86_64.rpm"
+}

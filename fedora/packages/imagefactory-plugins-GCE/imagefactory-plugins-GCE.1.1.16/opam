@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "imagefactory-plugins-GCE-1.1.16-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "imagefactory-plugins-GCE-1.1.16-11.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "python3" {= "3.12"}
+  "qemu-img" 
+  "tar" 
+]
+extra-source "imagefactory-plugins-GCE-1.1.16-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/imagefactory-plugins-GCE-1.1.16-11.fc40.noarch.rpm"
+}

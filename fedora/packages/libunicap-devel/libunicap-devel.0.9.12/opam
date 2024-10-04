@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libunicap-devel-0.9.12-32.fc38.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libunicap-devel-0.9.12-32.fc38.x86_64.rpm"]
+depends: [
+  "libunicap" {= "0.9.12"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libunicap-devel-0.9.12-32.fc38.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libunicap-devel-0.9.12-32.fc38.x86_64.rpm"
+}

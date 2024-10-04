@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-socks-devel-0.6.1-6.17.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-socks-devel-0.6.1-6.17.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-basement-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-cereal-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-network-devel" 
+  "ghc-socks" {= "0.6.1"}
+]
+extra-source "ghc-socks-devel-0.6.1-6.17.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-socks-devel-0.6.1-6.17.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bulk_extractor-2.0.0-4.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bulk_extractor-2.0.0-4.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libewf3" 
+  "libexpat1" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "sleuthkit" {>= "4.1"}
+]
+extra-source "bulk_extractor-2.0.0-4.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/bulk_extractor-2.0.0-4.8.x86_64.rpm"
+}

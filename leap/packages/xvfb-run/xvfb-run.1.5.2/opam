@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xvfb-run-1.5.2-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xvfb-run-1.5.2-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "util-linux" 
+  "which" 
+  "xauth" 
+  "xorg-x11-server" 
+]
+extra-source "xvfb-run-1.5.2-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/xvfb-run-1.5.2-slfo.1.1.3.noarch.rpm"
+}

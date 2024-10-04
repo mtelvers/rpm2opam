@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-music-46.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-music-46.1-1.1.noarch.rpm"]
+depends: [
+  "girepository-1_0" {= "2.0"}
+  "grilo-plugin-tracker" 
+  "python311-base" 
+  "python311-dbus-python" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-pycairo" {>= "1.14"}
+  "python311-requests" 
+  "tracker" {>= "2.99"}
+  "tracker-miner-files" {>= "2.99"}
+  "typelib-1_0-Adw-1" {= "1"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Graphene-1_0" 
+  "typelib-1_0-Grl-0_3" {= "0.3"}
+  "typelib-1_0-Gst-1_0" {= "1.0"}
+  "typelib-1_0-GstPbutils-1_0" {= "1.0"}
+  "typelib-1_0-GstTag-1_0" {= "1.0"}
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-4_0" 
+  "typelib-1_0-MediaArt-2_0" {= "2.0"}
+  "typelib-1_0-Soup-2_4" 
+  "typelib-1_0-Tracker-3_0" 
+]
+extra-source "gnome-music-46.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-music-46.1-1.1.noarch.rpm"
+}

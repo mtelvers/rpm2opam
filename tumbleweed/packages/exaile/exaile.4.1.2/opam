@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "exaile-4.1.2-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "exaile-4.1.2-1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gdk-pixbuf-loader-rsvg" 
+  "girepository-1_0" {= "2.0"}
+  "gstreamer" 
+  "gstreamer-plugins-good" 
+  "python311-bsddb3" 
+  "python311-dbus-python" 
+  "python311-feedparser" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-gobject-cairo" 
+  "python311-mutagen" {>= "1.10"}
+  "python311-pycairo" 
+  "typelib-1_0-Atk-1_0" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gst-1_0" {= "1.0"}
+  "typelib-1_0-GstPbutils-1_0" {= "1.0"}
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Keybinder-3_0" {= "3.0"}
+  "typelib-1_0-Notify-0_7" {= "0.7"}
+  "typelib-1_0-Pango-1_0" 
+  "typelib-1_0-WebKit2-4_0" {= "4.0"}
+]
+extra-source "exaile-4.1.2-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/exaile-4.1.2-1.4.noarch.rpm"
+}

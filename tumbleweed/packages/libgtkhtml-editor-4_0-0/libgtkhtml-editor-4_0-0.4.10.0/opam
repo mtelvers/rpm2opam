@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgtkhtml-editor-4_0-0-4.10.0-8.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgtkhtml-editor-4_0-0-4.10.0-8.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libenchant1" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libgtkhtml-4_0-0" 
+]
+extra-source "libgtkhtml-editor-4_0-0-4.10.0-8.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgtkhtml-editor-4_0-0-4.10.0-8.1.x86_64.rpm"
+}

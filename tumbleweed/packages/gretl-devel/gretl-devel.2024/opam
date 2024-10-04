@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gretl-devel-2024b-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gretl-devel-2024b-1.1.x86_64.rpm"]
+depends: [
+  "fftw3-devel" 
+  "glib2-devel" 
+  "libgretl-1_0-48" {= "2024"}
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "gretl-devel-2024b-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gretl-devel-2024b-1.1.x86_64.rpm"
+}

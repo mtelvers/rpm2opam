@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xml-im-exporter-1.1-31.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xml-im-exporter-1.1-31.2.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "xml-im-exporter-1.1-31.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xml-im-exporter-1.1-31.2.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libepubgen-devel-0.1.1-1.27.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libepubgen-devel-0.1.1-1.27.x86_64.rpm"]
+depends: [
+  "libepubgen-0_1-1" {= "0.1.1"}
+  "librevenge-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libepubgen-devel-0.1.1-1.27.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libepubgen-devel-0.1.1-1.27.x86_64.rpm"
+}

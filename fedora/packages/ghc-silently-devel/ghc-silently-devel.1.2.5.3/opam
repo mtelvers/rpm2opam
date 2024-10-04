@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-silently-devel-1.2.5.3-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-silently-devel-1.2.5.3-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-deepseq-devel" 
+  "ghc-directory-devel" 
+  "ghc-silently" {= "1.2.5.3"}
+]
+extra-source "ghc-silently-devel-1.2.5.3-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-silently-devel-1.2.5.3-6.fc40.x86_64.rpm"
+}

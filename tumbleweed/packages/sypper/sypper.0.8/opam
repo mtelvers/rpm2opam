@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sypper-0.08-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sypper-0.08-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "perl" 
+  "perl-Config-IniFiles" 
+  "perl-IO-Socket-SSL" 
+  "perl-Mojolicious" 
+  "perl-base" 
+  "perl-solv" 
+]
+extra-source "sypper-0.08-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sypper-0.08-1.1.noarch.rpm"
+}

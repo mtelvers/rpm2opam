@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gv-3.7.4-7.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gv-3.7.4-7.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghostscript-x11" 
+  "glibc" 
+  "libX11-6" 
+  "libXaw3d8" 
+  "libXinerama1" 
+  "libXmu6" 
+  "libXt6" 
+  "libzio1" 
+  "perl-base" 
+]
+extra-source "gv-3.7.4-7.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gv-3.7.4-7.2.x86_64.rpm"
+}

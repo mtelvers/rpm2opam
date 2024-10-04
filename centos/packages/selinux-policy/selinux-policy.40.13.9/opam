@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "selinux-policy-40.13.9-1.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "selinux-policy-40.13.9-1.el10.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "gawk" 
+  "policycoreutils" {>= "3.4"}
+  "rpm-plugin-selinux" 
+  "selinux-policy-mls" {= "40.13.9"}
+]
+extra-source "selinux-policy-40.13.9-1.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/selinux-policy-40.13.9-1.el10.noarch.rpm"
+}

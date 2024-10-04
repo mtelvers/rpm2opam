@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fprintd-pam-1.94.2-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fprintd-pam-1.94.2-11.fc40.x86_64.rpm"]
+depends: [
+  "authselect" {>= "0.3"}
+  "bash" 
+  "fprintd" {= "1.94.2"}
+  "glibc" 
+  "libgcc" 
+  "pam-libs" 
+  "systemd-libs" 
+]
+extra-source "fprintd-pam-1.94.2-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fprintd-pam-1.94.2-11.fc40.x86_64.rpm"
+}

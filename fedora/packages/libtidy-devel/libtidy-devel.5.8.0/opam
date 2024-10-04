@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libtidy-devel-5.8.0-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libtidy-devel-5.8.0-8.fc40.x86_64.rpm"]
+depends: [
+  "libtidy" {= "5.8.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libtidy-devel-5.8.0-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libtidy-devel-5.8.0-8.fc40.x86_64.rpm"
+}

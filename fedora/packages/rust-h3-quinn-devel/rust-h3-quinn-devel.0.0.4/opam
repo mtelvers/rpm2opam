@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-h3-quinn-devel-0.0.4-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-h3-quinn-devel-0.0.4-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.63"}
+  "rust-bytes+default-devel" 
+  "rust-futures+default-devel" 
+  "rust-h3+default-devel" {= "0.0.3"}
+  "rust-quinn+futures-io-devel" 
+  "rust-quinn-devel" 
+  "rust-quinn-proto-devel" 
+  "rust-tokio+io-util-devel" 
+  "rust-tokio-devel" 
+  "rust-tokio-util+default-devel" 
+]
+extra-source "rust-h3-quinn-devel-0.0.4-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-h3-quinn-devel-0.0.4-2.fc40.noarch.rpm"
+}

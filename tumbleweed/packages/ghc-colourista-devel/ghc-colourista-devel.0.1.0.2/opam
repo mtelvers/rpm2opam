@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-colourista-devel-0.1.0.2-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-colourista-devel-0.1.0.2-5.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-ansi-terminal-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-colourista" {= "0.1.0.2"}
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-text-devel" 
+]
+extra-source "ghc-colourista-devel-0.1.0.2-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-colourista-devel-0.1.0.2-5.2.x86_64.rpm"
+}

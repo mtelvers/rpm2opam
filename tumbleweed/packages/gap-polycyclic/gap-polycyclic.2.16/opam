@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-polycyclic-2.16-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-polycyclic-2.16-1.3.noarch.rpm"]
+depends: [
+  "gap" {>= "4.9"}
+  "gap-alnuth" {>= "3.0"}
+  "gap-autpgrp" {>= "1.6"}
+]
+extra-source "gap-polycyclic-2.16-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-polycyclic-2.16-1.3.noarch.rpm"
+}

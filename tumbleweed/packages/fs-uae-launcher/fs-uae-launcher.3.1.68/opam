@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fs-uae-launcher-3.1.68-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fs-uae-launcher-3.1.68-1.6.noarch.rpm"]
+depends: [
+  "fs-uae" 
+  "python311-base" 
+  "python311-opengl" 
+  "python311-qt5" 
+  "python311-requests" 
+]
+extra-source "fs-uae-launcher-3.1.68-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/fs-uae-launcher-3.1.68-1.6.noarch.rpm"
+}

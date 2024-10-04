@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-stestr-4.1.0-2.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-stestr-4.1.0-2.5.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-PyYAML" {>= "3.10.0"}
+  "python312-base" 
+  "python312-cliff" {>= "2.8.0"}
+  "python312-dbm" 
+  "python312-fixtures" {>= "3.0.0"}
+  "python312-pbr" {>= "2.0.0"}
+  "python312-python-subunit" {>= "1.4.0"}
+  "python312-testtools" {>= "2.2.0"}
+  "python312-tomlkit" {>= "0.11.6"}
+  "python312-voluptuous" {>= "0.8.9"}
+  "update-alternatives" 
+]
+extra-source "python312-stestr-4.1.0-2.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-stestr-4.1.0-2.5.noarch.rpm"
+}

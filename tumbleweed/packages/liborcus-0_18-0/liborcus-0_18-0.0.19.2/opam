@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "liborcus-0_18-0-0.19.2-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "liborcus-0_18-0-0.19.2-3.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libboost_iostreams1_86_0" 
+  "libgcc_s1" 
+  "libixion-0_18-0" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+]
+extra-source "liborcus-0_18-0-0.19.2-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/liborcus-0_18-0-0.19.2-3.2.x86_64.rpm"
+}

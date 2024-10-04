@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openexr-devel-3.1.10-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openexr-devel-3.1.10-5.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "imath-devel" 
+  "openexr-libs" 
+  "pkgconf-pkg-config" 
+]
+extra-source "openexr-devel-3.1.10-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openexr-devel-3.1.10-5.fc40.x86_64.rpm"
+}

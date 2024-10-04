@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mpich-devel-4.1.2-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mpich-devel-4.1.2-14.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gcc-gfortran" 
+  "mpich" {= "4.1.2"}
+  "pkgconf-pkg-config" 
+  "redhat-rpm-config" 
+  "rpm-mpi-hooks" 
+]
+extra-source "mpich-devel-4.1.2-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mpich-devel-4.1.2-14.fc40.x86_64.rpm"
+}

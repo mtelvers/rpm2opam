@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-http2-prof-5.0.1-1.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-http2-prof-5.0.1-1.13.x86_64.rpm"]
+depends: [
+  "ghc-array-prof" 
+  "ghc-async-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-case-insensitive-prof" 
+  "ghc-containers-prof" 
+  "ghc-http-types-prof" 
+  "ghc-http2-devel" {= "5.0.1"}
+  "ghc-network-byte-order-prof" 
+  "ghc-network-control-prof" 
+  "ghc-network-prof" 
+  "ghc-stm-prof" 
+  "ghc-time-manager-prof" 
+  "ghc-unix-time-prof" 
+  "ghc-unliftio-prof" 
+]
+extra-source "ghc-http2-prof-5.0.1-1.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-http2-prof-5.0.1-1.13.x86_64.rpm"
+}

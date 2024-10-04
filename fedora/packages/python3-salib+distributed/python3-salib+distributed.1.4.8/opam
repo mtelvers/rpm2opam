@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-salib+distributed-1.4.8-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-salib+distributed-1.4.8-3.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-pathos" {>= "0.2.5"}
+  "python3-salib" {= "1.4.8"}
+]
+extra-source "python3-salib+distributed-1.4.8-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-salib+distributed-1.4.8-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-psycopg2-2.9.9-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-psycopg2-2.9.9-2.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libpq5" 
+  "python310-base" {= "3.10"}
+]
+extra-source "python310-psycopg2-2.9.9-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-psycopg2-2.9.9-2.3.x86_64.rpm"
+}

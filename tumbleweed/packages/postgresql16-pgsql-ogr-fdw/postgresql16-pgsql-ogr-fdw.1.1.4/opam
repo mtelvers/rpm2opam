@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postgresql16-pgsql-ogr-fdw-1.1.4-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql16-pgsql-ogr-fdw-1.1.4-4.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libgdal35" 
+  "postgresql16-server" {>= "16.3"}
+]
+extra-source "postgresql16-pgsql-ogr-fdw-1.1.4-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/postgresql16-pgsql-ogr-fdw-1.1.4-4.1.x86_64.rpm"
+}

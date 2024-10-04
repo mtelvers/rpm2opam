@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "IQmol-3.1.2-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "IQmol-3.1.2-7.fc40.x86_64.rpm"]
+depends: [
+  "OpenMesh" 
+  "QMsgBox-qt5" 
+  "boost-serialization" 
+  "gl2ps" 
+  "glibc" 
+  "libQGLViewer" 
+  "libgcc" 
+  "libgfortran" 
+  "libglvnd-opengl" 
+  "libssh2" 
+  "libstdc++" 
+  "mesa-libGLU" 
+  "openbabel-libs" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "yaml-cpp" 
+]
+extra-source "IQmol-3.1.2-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/IQmol-3.1.2-7.fc40.x86_64.rpm"
+}

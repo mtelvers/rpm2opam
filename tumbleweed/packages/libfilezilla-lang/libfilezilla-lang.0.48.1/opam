@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfilezilla-lang-0.48.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfilezilla-lang-0.48.1-1.1.noarch.rpm"]
+depends: [
+  "libfilezilla45" {= "0.48.1"}
+]
+extra-source "libfilezilla-lang-0.48.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libfilezilla-lang-0.48.1-1.1.noarch.rpm"
+}

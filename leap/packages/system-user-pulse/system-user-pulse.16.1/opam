@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "system-user-pulse-16.1-slfo.1.1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "system-user-pulse-16.1-slfo.1.1.7.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "system-group-hardware" 
+  "sysuser-shadow" {>= "3.1"}
+]
+extra-source "system-user-pulse-16.1-slfo.1.1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/system-user-pulse-16.1-slfo.1.1.7.noarch.rpm"
+}

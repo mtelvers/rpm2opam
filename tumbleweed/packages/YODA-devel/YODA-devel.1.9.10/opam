@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "YODA-devel-1.9.10-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "YODA-devel-1.9.10-1.3.x86_64.rpm"]
+depends: [
+  "bash" 
+  "libYODA-1_9_10" {= "1.9.10"}
+  "pkgconf-pkg-config" 
+]
+extra-source "YODA-devel-1.9.10-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/YODA-devel-1.9.10-1.3.x86_64.rpm"
+}

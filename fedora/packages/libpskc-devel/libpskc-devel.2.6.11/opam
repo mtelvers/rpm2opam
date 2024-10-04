@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libpskc-devel-2.6.11-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpskc-devel-2.6.11-3.fc40.x86_64.rpm"]
+depends: [
+  "libpskc" {= "2.6.11"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libpskc-devel-2.6.11-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libpskc-devel-2.6.11-3.fc40.x86_64.rpm"
+}

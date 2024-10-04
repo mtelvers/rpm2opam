@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "javacc-7.0.13-slfo.1.1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "javacc-7.0.13-slfo.1.1.5.noarch.rpm"]
+depends: [
+  "bash" 
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+]
+extra-source "javacc-7.0.13-slfo.1.1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/javacc-7.0.13-slfo.1.1.5.noarch.rpm"
+}

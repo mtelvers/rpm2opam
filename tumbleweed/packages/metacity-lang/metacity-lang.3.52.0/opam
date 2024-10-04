@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "metacity-lang-3.52.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "metacity-lang-3.52.0-1.1.noarch.rpm"]
+depends: [
+  "metacity" {= "3.52.0"}
+]
+extra-source "metacity-lang-3.52.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/metacity-lang-3.52.0-1.1.noarch.rpm"
+}

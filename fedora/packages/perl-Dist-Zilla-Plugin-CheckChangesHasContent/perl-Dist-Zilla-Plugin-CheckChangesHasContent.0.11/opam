@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Dist-Zilla-Plugin-CheckChangesHasContent-0.011-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Dist-Zilla-Plugin-CheckChangesHasContent-0.011-20.fc40.noarch.rpm"]
+depends: [
+  "perl-Data-Section" {>= "0.200002"}
+  "perl-Dist-Zilla" {>= "6"}
+  "perl-Moose" {>= "2"}
+  "perl-Scalar-List-Utils" 
+  "perl-Sub-Exporter-ForMethods" 
+  "perl-autodie" {>= "2.0"}
+  "perl-libs" 
+  "perl-namespace-autoclean" {>= "0.9"}
+]
+extra-source "perl-Dist-Zilla-Plugin-CheckChangesHasContent-0.011-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Dist-Zilla-Plugin-CheckChangesHasContent-0.011-20.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-prettyprinter-ansi-terminal-prof-1.1.3-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-prettyprinter-ansi-terminal-prof-1.1.3-9.fc40.x86_64.rpm"]
+depends: [
+  "ghc-ansi-terminal-prof" 
+  "ghc-base-prof" 
+  "ghc-prettyprinter-ansi-terminal-devel" {= "1.1.3"}
+  "ghc-prettyprinter-prof" 
+  "ghc-text-prof" 
+]
+extra-source "ghc-prettyprinter-ansi-terminal-prof-1.1.3-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-prettyprinter-ansi-terminal-prof-1.1.3-9.fc40.x86_64.rpm"
+}

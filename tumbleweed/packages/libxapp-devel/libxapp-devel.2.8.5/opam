@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libxapp-devel-2.8.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxapp-devel-2.8.5-1.1.x86_64.rpm"]
+depends: [
+  "cairo-devel" 
+  "gdk-pixbuf-devel" {>= "2.22.0"}
+  "glib2-devel" {>= "2.44.0"}
+  "glib2-stage1-devel" 
+  "gtk3-devel" {>= "3.22"}
+  "libX11-devel" 
+  "libgnomekbd-devel" 
+  "libgtk-3-0" 
+  "libxapp1" 
+  "libxkbfile-devel" 
+  "pkgconf-pkg-config" 
+  "typelib-1_0-XApp-1_0" {= "2.8.5"}
+]
+extra-source "libxapp-devel-2.8.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libxapp-devel-2.8.5-1.1.x86_64.rpm"
+}

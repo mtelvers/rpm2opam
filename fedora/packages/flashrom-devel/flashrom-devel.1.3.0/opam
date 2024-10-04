@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "flashrom-devel-1.3.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flashrom-devel-1.3.0-6.fc40.x86_64.rpm"]
+depends: [
+  "flashrom" {= "1.3.0"}
+  "libftdi-devel" 
+  "libusb1-devel" 
+  "pciutils-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "flashrom-devel-1.3.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/flashrom-devel-1.3.0-6.fc40.x86_64.rpm"
+}

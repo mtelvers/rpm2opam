@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libdxflib-devel-3.26.4-15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdxflib-devel-3.26.4-15.fc40.x86_64.rpm"]
+depends: [
+  "libdxflib" {= "3.26.4"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libdxflib-devel-3.26.4-15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libdxflib-devel-3.26.4-15.fc40.x86_64.rpm"
+}

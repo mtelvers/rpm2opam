@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgirara-gtk3-4-0.4.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgirara-gtk3-4-0.4.4-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgtk-3-0" 
+  "libjson-glib-1_0-0" 
+  "libpango-1_0-0" 
+]
+extra-source "libgirara-gtk3-4-0.4.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgirara-gtk3-4-0.4.4-1.1.x86_64.rpm"
+}

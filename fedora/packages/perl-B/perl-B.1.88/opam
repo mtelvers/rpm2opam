@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-B-1.88-506.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-B-1.88-506.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-B" 
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Exporter" 
+  "perl-if" 
+  "perl-overloading" 
+]
+extra-source "perl-B-1.88-506.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-B-1.88-506.fc40.x86_64.rpm"
+}

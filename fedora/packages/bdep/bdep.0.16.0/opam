@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bdep-0.16.0-3.fc40~bootstrap.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bdep-0.16.0-3.fc40~bootstrap.x86_64.rpm"]
+depends: [
+  "bpkg" {= "0.16.0"}
+  "build2" {= "0.16.0"}
+  "coreutils" 
+  "curl" 
+  "git" 
+  "glibc" 
+  "libbpkg" 
+  "libbutl" 
+  "libgcc" 
+  "libstdc++" 
+  "sqlite-libs" 
+]
+extra-source "bdep-0.16.0-3.fc40~bootstrap.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bdep-0.16.0-3.fc40~bootstrap.x86_64.rpm"
+}

@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-ycbook-2024.216.svn46201-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-ycbook-2024.216.svn46201-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-adjustbox" 
+  "texlive-booktabs" 
+  "texlive-changepage" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-fontspec" 
+  "texlive-graphics" 
+  "texlive-hyperref" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-placeins" 
+  "texlive-polyglossia" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-titlesec" 
+  "texlive-tools" 
+]
+extra-source "texlive-ycbook-2024.216.svn46201-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-ycbook-2024.216.svn46201-55.1.noarch.rpm"
+}

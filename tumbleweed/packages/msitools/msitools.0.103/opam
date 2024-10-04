@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "msitools-0.103-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "msitools-0.103-2.3.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcab-1_0-0" 
+  "libmsi-1_0-0" 
+  "libxml2-2" 
+]
+extra-source "msitools-0.103-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/msitools-0.103-2.3.x86_64.rpm"
+}

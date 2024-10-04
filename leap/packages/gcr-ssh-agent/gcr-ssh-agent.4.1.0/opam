@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcr-ssh-agent-4.1.0-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcr-ssh-agent-4.1.0-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libgck-2-2" 
+  "libgcr-4-4" 
+  "libgio-2_0-0" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libsecret-1-0" 
+  "libsystemd0" 
+]
+extra-source "gcr-ssh-agent-4.1.0-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/gcr-ssh-agent-4.1.0-slfo.1.1.7.x86_64.rpm"
+}

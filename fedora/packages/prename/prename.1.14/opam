@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "prename-1.14-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "prename-1.14-5.fc40.noarch.rpm"]
+depends: [
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-Getopt-Long" 
+  "perl-Text-Abbrev" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "prename-1.14-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/prename-1.14-5.fc40.noarch.rpm"
+}

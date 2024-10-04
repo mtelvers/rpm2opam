@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lightdm-slick-greeter-branding-openSUSE-1.0-3.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lightdm-slick-greeter-branding-openSUSE-1.0-3.7.noarch.rpm"]
+depends: [
+  "adwaita-icon-theme" 
+  "cantarell-fonts" 
+  "gtk3-metatheme-adwaita" 
+  "lightdm-slick-greeter" {= "1.6.1"}
+  "wallpaper-branding-openSUSE" 
+]
+extra-source "lightdm-slick-greeter-branding-openSUSE-1.0-3.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/lightdm-slick-greeter-branding-openSUSE-1.0-3.7.noarch.rpm"
+}

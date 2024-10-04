@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zlibrary-devel-0.99.4-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zlibrary-devel-0.99.4-4.2.x86_64.rpm"]
+depends: [
+  "libzlui0_99" {= "0.99.4"}
+  "zlibrary0_99" {= "0.99.4"}
+]
+extra-source "zlibrary-devel-0.99.4-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/zlibrary-devel-0.99.4-4.2.x86_64.rpm"
+}

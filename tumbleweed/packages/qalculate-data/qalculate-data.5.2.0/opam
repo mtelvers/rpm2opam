@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qalculate-data-5.2.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qalculate-data-5.2.0-1.1.noarch.rpm"]
+depends: [
+  "libqalculate23" {= "5.2.0"}
+]
+extra-source "qalculate-data-5.2.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/qalculate-data-5.2.0-1.1.noarch.rpm"
+}

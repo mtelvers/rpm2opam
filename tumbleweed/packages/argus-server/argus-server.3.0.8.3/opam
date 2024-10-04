@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "argus-server-3.0.8.3-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "argus-server-3.0.8.3-4.2.x86_64.rpm"]
+depends: [
+  "argus" 
+  "bash-sh" 
+  "glibc" 
+  "libpcap1" 
+  "libwrap0" 
+]
+extra-source "argus-server-3.0.8.3-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/argus-server-3.0.8.3-4.2.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-Mathics-Scanner-1.3.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-Mathics-Scanner-1.3.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-PyYAML" 
+  "python311-base" 
+  "python311-chardet" 
+  "python311-click" 
+  "update-alternatives" 
+]
+extra-source "python311-Mathics-Scanner-1.3.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-Mathics-Scanner-1.3.1-1.1.noarch.rpm"
+}

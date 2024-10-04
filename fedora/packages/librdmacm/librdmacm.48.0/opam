@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "librdmacm-48.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "librdmacm-48.0-4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libibverbs" 
+  "libnl3" 
+]
+extra-source "librdmacm-48.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/librdmacm-48.0-4.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "p7zip-gui-16.02-28.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "p7zip-gui-16.02-28.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "kde-filesystem" 
+  "libgcc" 
+  "libstdc++" 
+  "p7zip-plugins" 
+  "wxBase" 
+  "wxGTK" 
+]
+extra-source "p7zip-gui-16.02-28.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/p7zip-gui-16.02-28.fc40.x86_64.rpm"
+}

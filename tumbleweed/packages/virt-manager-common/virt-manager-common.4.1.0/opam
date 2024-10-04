@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "virt-manager-common-4.1.0-28.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "virt-manager-common-4.1.0-28.1.noarch.rpm"]
+depends: [
+  "libosinfo" {>= "0.2.10"}
+  "mkisofs" 
+  "python311-gobject" 
+  "python311-ipaddr" 
+  "python311-libvirt-python" {>= "0.7.0"}
+  "python311-libxml2" 
+  "python311-pycurl" 
+  "typelib-1_0-AppIndicator3-0_1" 
+  "typelib-1_0-Libosinfo-1_0" {= "1.0"}
+  "typelib-1_0-LibvirtGLib-1_0" 
+  "xorriso" 
+]
+extra-source "virt-manager-common-4.1.0-28.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/virt-manager-common-4.1.0-28.1.noarch.rpm"
+}

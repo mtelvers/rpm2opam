@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openmpi5-gnu-hpc-devel-5.0.5-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openmpi5-gnu-hpc-devel-5.0.5-1.2.noarch.rpm"]
+depends: [
+  "openmpi_5_0_5-gnu-hpc-devel" {= "5.0.5"}
+]
+extra-source "openmpi5-gnu-hpc-devel-5.0.5-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/openmpi5-gnu-hpc-devel-5.0.5-1.2.noarch.rpm"
+}

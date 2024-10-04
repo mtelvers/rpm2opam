@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kde-l10n-sr-17.08.3-17.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kde-l10n-sr-17.08.3-17.fc40.noarch.rpm"]
+depends: [
+  "kde-l10n" {= "17.8.3"}
+]
+extra-source "kde-l10n-sr-17.08.3-17.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kde-l10n-sr-17.08.3-17.fc40.noarch.rpm"
+}

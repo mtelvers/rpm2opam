@@ -1,0 +1,39 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "onboard-1.4.1-8.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "onboard-1.4.1-8.2.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf-loader-rsvg" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gsettings-desktop-schemas" 
+  "hicolor-icon-theme" 
+  "iso-codes" 
+  "libX11-6" 
+  "libXi6" 
+  "libXtst6" 
+  "libcairo2" 
+  "libcanberra0" 
+  "libdconf1" 
+  "libgcc_s1" 
+  "libgtk-3-0" 
+  "libhunspell-1_7-0" 
+  "libstdc++6" 
+  "libudev-mini1" 
+  "libxkbfile1" 
+  "python311-base" 
+  "python311-dbus-python" 
+  "python311-gobject-Gdk" 
+  "python311-gobject-cairo" 
+  "python311-pycairo" 
+  "typelib-1_0-AppIndicator3-0_1" {= "0.1"}
+  "typelib-1_0-Atspi-2_0" {= "2.0"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" {= "1.0"}
+]
+extra-source "onboard-1.4.1-8.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/onboard-1.4.1-8.2.x86_64.rpm"
+}

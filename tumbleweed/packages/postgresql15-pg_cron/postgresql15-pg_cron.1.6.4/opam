@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postgresql15-pg_cron-1.6.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql15-pg_cron-1.6.4-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libpq5" 
+  "postgresql15-server" {>= "15.7"}
+]
+extra-source "postgresql15-pg_cron-1.6.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/postgresql15-pg_cron-1.6.4-1.1.x86_64.rpm"
+}

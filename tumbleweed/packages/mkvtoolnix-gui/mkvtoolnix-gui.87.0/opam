@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mkvtoolnix-gui-87.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mkvtoolnix-gui-87.0-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libFLAC12" 
+  "libQt6Core6" 
+  "libQt6Gui6" 
+  "libQt6Multimedia6" 
+  "libQt6Network6" 
+  "libQt6Widgets6" 
+  "libboost_filesystem1_86_0" 
+  "libcmark0_31_0" 
+  "libdvdread8" 
+  "libebml5" 
+  "libfmt11" 
+  "libgcc_s1" 
+  "libglvnd" 
+  "libgmp10" 
+  "libmatroska7" 
+  "libpugixml1" 
+  "libstdc++6" 
+  "libvorbis0" 
+  "mkvtoolnix" {= "87.0"}
+  "qt6-multimedia" 
+]
+extra-source "mkvtoolnix-gui-87.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mkvtoolnix-gui-87.0-1.2.x86_64.rpm"
+}

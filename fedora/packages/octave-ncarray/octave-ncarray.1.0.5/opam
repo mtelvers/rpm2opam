@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "octave-ncarray-1.0.5-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "octave-ncarray-1.0.5-6.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "octave" 
+  "octave-netcdf" {>= "1.0.2"}
+  "octave-statistics" {>= "1.0.6"}
+]
+extra-source "octave-ncarray-1.0.5-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/octave-ncarray-1.0.5-6.fc40.noarch.rpm"
+}

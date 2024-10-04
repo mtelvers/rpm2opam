@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mt32emu-qt-2.7.1-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mt32emu-qt-2.7.1-1.3.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Widgets5" 
+  "libasound2" 
+  "libgcc_s1" 
+  "libjack0" 
+  "libmt32emu2" 
+  "libportaudio2" 
+  "libstdc++6" 
+]
+extra-source "mt32emu-qt-2.7.1-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mt32emu-qt-2.7.1-1.3.x86_64.rpm"
+}

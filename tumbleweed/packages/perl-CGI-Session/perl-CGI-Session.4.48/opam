@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-CGI-Session-4.48-15.30.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CGI-Session-4.48-15.30.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-CGI" {>= "3.26"}
+]
+extra-source "perl-CGI-Session-4.48-15.30.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-CGI-Session-4.48-15.30.noarch.rpm"
+}

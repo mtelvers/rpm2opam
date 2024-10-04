@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cinnamon-theme-yaru-24.04.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cinnamon-theme-yaru-24.04.0-1.1.noarch.rpm"]
+depends: [
+  "cinnamon" 
+  "metatheme-yaru-common" {= "24.4.0"}
+]
+extra-source "cinnamon-theme-yaru-24.04.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cinnamon-theme-yaru-24.04.0-1.1.noarch.rpm"
+}

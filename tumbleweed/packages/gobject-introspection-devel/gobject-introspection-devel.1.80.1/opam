@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gobject-introspection-devel-1.80.1-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gobject-introspection-devel-1.80.1-3.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.80.0"}
+  "gobject-introspection" {= "1.80.1"}
+  "libffi-devel" 
+  "libgirepository-1_0-1" {= "1.80.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gobject-introspection-devel-1.80.1-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gobject-introspection-devel-1.80.1-3.1.x86_64.rpm"
+}

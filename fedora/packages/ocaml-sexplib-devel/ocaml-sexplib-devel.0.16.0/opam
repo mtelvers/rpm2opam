@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-sexplib-devel-0.16.0-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-sexplib-devel-0.16.0-11.fc40.x86_64.rpm"]
+depends: [
+  "ocaml" {= "2125"}
+  "ocaml-num" {= "7414145"}
+  "ocaml-num-devel" 
+  "ocaml-parsexp" {= "1764"}
+  "ocaml-parsexp-devel" 
+  "ocaml-sexplib" {= "0.16.0"}
+  "ocaml-sexplib0" {= "8033225"}
+  "ocaml-sexplib0-devel" 
+]
+extra-source "ocaml-sexplib-devel-0.16.0-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-sexplib-devel-0.16.0-11.fc40.x86_64.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-libmpd-prof-0.10.0.0-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-libmpd-prof-0.10.0.0-10.fc40.x86_64.rpm"]
+depends: [
+  "ghc-attoparsec-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-data-default-class-prof" 
+  "ghc-filepath-prof" 
+  "ghc-libmpd-devel" {= "0.10.0.0"}
+  "ghc-mtl-prof" 
+  "ghc-network-prof" 
+  "ghc-safe-exceptions-prof" 
+  "ghc-text-prof" 
+  "ghc-time-prof" 
+  "ghc-utf8-string-prof" 
+]
+extra-source "ghc-libmpd-prof-0.10.0.0-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-libmpd-prof-0.10.0.0-10.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-JSON-Validator-5.14-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-JSON-Validator-5.14-1.6.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Mojolicious" {>= "7.28"}
+  "perl-Scalar-List-Utils" {>= "1.45"}
+  "perl-YAML-LibYAML" {>= "0.67"}
+]
+extra-source "perl-JSON-Validator-5.14-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-JSON-Validator-5.14-1.6.noarch.rpm"
+}

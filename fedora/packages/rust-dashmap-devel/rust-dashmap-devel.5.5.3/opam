@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-dashmap-devel-5.5.3-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-dashmap-devel-5.5.3-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-cfg-if+default-devel" 
+  "rust-hashbrown-devel" 
+  "rust-lock_api+default-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-parking_lot_core+default-devel" 
+]
+extra-source "rust-dashmap-devel-5.5.3-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-dashmap-devel-5.5.3-2.fc40.noarch.rpm"
+}

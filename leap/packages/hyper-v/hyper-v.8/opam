@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hyper-v-8-slfo.1.1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hyper-v-8-slfo.1.1.4.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "python311-base" 
+  "systemd" 
+]
+extra-source "hyper-v-8-slfo.1.1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/hyper-v-8-slfo.1.1.4.x86_64.rpm"
+}

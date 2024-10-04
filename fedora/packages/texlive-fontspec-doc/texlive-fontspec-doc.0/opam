@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-fontspec-doc-svn63386-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-fontspec-doc-svn63386-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-iftex-doc" 
+  "texlive-kastrup-doc" 
+  "texlive-l3kernel-doc" 
+  "texlive-l3packages-doc" 
+  "texlive-lm-doc" 
+]
+extra-source "texlive-fontspec-doc-svn63386-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-fontspec-doc-svn63386-71.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kcoloredit-4.4.0-31.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kcoloredit-4.4.0-31.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kdelibs" {>= "4.14.38"}
+  "libX11" 
+  "libstdc++" 
+  "qt" 
+  "qt-x11" 
+]
+extra-source "kcoloredit-4.4.0-31.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kcoloredit-4.4.0-31.fc40.x86_64.rpm"
+}

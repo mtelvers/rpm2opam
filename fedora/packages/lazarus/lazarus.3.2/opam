@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lazarus-3.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lazarus-3.2-1.fc40.x86_64.rpm"]
+depends: [
+  "lazarus-ide" {= "3.2"}
+  "lazarus-lcl" {= "3.2"}
+  "lazarus-lcl-gtk2" {= "3.2"}
+  "lazarus-lcl-nogui" {= "3.2"}
+  "lazarus-tools" {= "3.2"}
+]
+extra-source "lazarus-3.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lazarus-3.2-1.fc40.x86_64.rpm"
+}

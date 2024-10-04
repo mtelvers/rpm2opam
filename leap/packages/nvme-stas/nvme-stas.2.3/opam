@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nvme-stas-2.3-slfo.1.1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nvme-stas-2.3-slfo.1.1.3.x86_64.rpm"]
+depends: [
+  "avahi" 
+  "bash-sh" 
+  "girepository-1_0" 
+  "python3-libnvme" {>= "1.3"}
+  "python311-base" 
+  "python311-dasbus" 
+  "python311-gobject" 
+  "python311-pyudev" 
+  "python311-systemd" 
+]
+extra-source "nvme-stas-2.3-slfo.1.1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/nvme-stas-2.3-slfo.1.1.3.x86_64.rpm"
+}

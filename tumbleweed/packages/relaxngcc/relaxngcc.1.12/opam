@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "relaxngcc-1.12-3.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "relaxngcc-1.12-3.9.noarch.rpm"]
+depends: [
+  "isorelax" 
+  "msv-msv" 
+  "msv-xsdlib" 
+  "relaxngDatatype" 
+  "xerces-j2" 
+  "xml-commons-apis" 
+]
+extra-source "relaxngcc-1.12-3.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/relaxngcc-1.12-3.9.noarch.rpm"
+}

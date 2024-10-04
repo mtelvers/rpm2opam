@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-clock-devel-0.8.4-1.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-clock-devel-0.8.4-1.10.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-clock" {= "0.8.4"}
+  "ghc-compiler" {= "9.8.2"}
+]
+extra-source "ghc-clock-devel-0.8.4-1.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-clock-devel-0.8.4-1.10.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lldb16-devel-16.0.6-9.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lldb16-devel-16.0.6-9.1.x86_64.rpm"]
+depends: [
+  "clang16-devel" {= "16.0.6"}
+  "libedit-devel" 
+  "liblldb16" {= "16.0.6"}
+  "libxml2-devel" 
+  "llvm16-devel" {= "16.0.6"}
+]
+extra-source "lldb16-devel-16.0.6-9.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lldb16-devel-16.0.6-9.1.x86_64.rpm"
+}

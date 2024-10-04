@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-pam-5.0.0-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-pam-5.0.0-1.4.noarch.rpm"]
+depends: [
+  "augeas-lenses" 
+  "pam-config" {>= "0.8"}
+  "perl-base" 
+  "ruby3-3-rubygem-cfa" {>= "0.6.4"}
+  "yast2" 
+  "yast2-ruby-bindings" {>= "1.0.0"}
+]
+extra-source "yast2-pam-5.0.0-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/yast2-pam-5.0.0-1.4.noarch.rpm"
+}

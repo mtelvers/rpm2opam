@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Package-DeprecationManager-0.18-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Package-DeprecationManager-0.18-1.6.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Package-Stash" 
+  "perl-Params-Util" 
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-Sub-Install" 
+]
+extra-source "perl-Package-DeprecationManager-0.18-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Package-DeprecationManager-0.18-1.6.noarch.rpm"
+}

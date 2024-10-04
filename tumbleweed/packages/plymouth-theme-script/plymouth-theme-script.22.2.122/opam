@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plymouth-theme-script-22.02.122+94.4bd41a3-11.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plymouth-theme-script-22.02.122+94.4bd41a3-11.1.noarch.rpm"]
+depends: [
+  "plymouth-plugin-script" {= "22.2.122"}
+  "plymouth-scripts" 
+]
+extra-source "plymouth-theme-script-22.02.122+94.4bd41a3-11.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/plymouth-theme-script-22.02.122+94.4bd41a3-11.1.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-keyring-lang-46.1-lp160.1.22.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-keyring-lang-46.1-lp160.1.22.noarch.rpm"]
+depends: [
+  "gnome-keyring" {= "46.1"}
+]
+extra-source "gnome-keyring-lang-46.1-lp160.1.22.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/gnome-keyring-lang-46.1-lp160.1.22.noarch.rpm"
+}

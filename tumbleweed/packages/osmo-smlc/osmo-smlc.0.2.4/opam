@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "osmo-smlc-0.2.4-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "osmo-smlc-0.2.4-1.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libosmo-sigtran9" 
+  "libosmocore21" 
+  "libosmoctrl0" 
+  "libosmogsm20" 
+  "libosmovty13" 
+  "libtalloc2" 
+]
+extra-source "osmo-smlc-0.2.4-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/osmo-smlc-0.2.4-1.3.x86_64.rpm"
+}

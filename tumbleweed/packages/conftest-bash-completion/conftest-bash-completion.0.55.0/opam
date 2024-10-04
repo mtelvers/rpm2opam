@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "conftest-bash-completion-0.55.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "conftest-bash-completion-0.55.0-1.1.noarch.rpm"]
+depends: [
+  "conftest" {= "0.55.0"}
+]
+extra-source "conftest-bash-completion-0.55.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/conftest-bash-completion-0.55.0-1.1.noarch.rpm"
+}

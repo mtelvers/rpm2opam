@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "racket-pkgs-7.9-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "racket-pkgs-7.9-1.fc40.noarch.rpm"]
+depends: [
+  "cairo" 
+  "glib2" 
+  "gtk3" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "pango" 
+  "racket-minimal" {= "7.9"}
+]
+extra-source "racket-pkgs-7.9-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/racket-pkgs-7.9-1.fc40.noarch.rpm"
+}

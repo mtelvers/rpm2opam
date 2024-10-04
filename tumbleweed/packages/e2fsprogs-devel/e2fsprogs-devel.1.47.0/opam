@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "e2fsprogs-devel-1.47.0-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "e2fsprogs-devel-1.47.0-4.2.x86_64.rpm"]
+depends: [
+  "libblkid-devel" 
+  "libext2fs-devel" {= "1.47.0"}
+  "libuuid-devel" 
+]
+extra-source "e2fsprogs-devel-1.47.0-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/e2fsprogs-devel-1.47.0-4.2.x86_64.rpm"
+}

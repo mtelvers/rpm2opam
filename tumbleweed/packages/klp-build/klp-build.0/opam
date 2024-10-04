@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "klp-build-0~20240902.c95cc9e-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "klp-build-0~20240902.c95cc9e-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "python311-GitPython" 
+  "python311-Mako" 
+  "python311-MarkupSafe" 
+  "python311-base" 
+  "python311-cached-property" 
+  "python311-lxml" 
+  "python311-natsort" 
+  "python311-osc-tiny" 
+  "python311-requests" 
+]
+extra-source "klp-build-0~20240902.c95cc9e-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/klp-build-0~20240902.c95cc9e-1.1.noarch.rpm"
+}

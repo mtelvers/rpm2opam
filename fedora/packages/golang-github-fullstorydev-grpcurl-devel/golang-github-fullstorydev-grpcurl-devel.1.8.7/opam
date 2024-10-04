@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-fullstorydev-grpcurl-devel-1.8.7-3.fc38.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-fullstorydev-grpcurl-devel-1.8.7-3.fc38.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-jhump-protoreflect-devel" 
+  "golang-github-protobuf-devel" 
+  "golang-google-grpc-devel" 
+  "golang-google-protobuf-devel" 
+]
+extra-source "golang-github-fullstorydev-grpcurl-devel-1.8.7-3.fc38.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-fullstorydev-grpcurl-devel-1.8.7-3.fc38.noarch.rpm"
+}

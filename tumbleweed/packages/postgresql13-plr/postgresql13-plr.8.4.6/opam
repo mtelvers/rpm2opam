@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postgresql13-plr-8.4.6-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql13-plr-8.4.6-2.2.x86_64.rpm"]
+depends: [
+  "R-base" 
+  "R-core-libs" 
+  "glibc" 
+  "postgresql13-server" 
+]
+extra-source "postgresql13-plr-8.4.6-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/postgresql13-plr-8.4.6-2.2.x86_64.rpm"
+}

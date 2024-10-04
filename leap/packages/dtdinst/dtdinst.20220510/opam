@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dtdinst-20220510-slfo.1.2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dtdinst-20220510-slfo.1.2.3.noarch.rpm"]
+depends: [
+  "bash" 
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+]
+extra-source "dtdinst-20220510-slfo.1.2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/dtdinst-20220510-slfo.1.2.3.noarch.rpm"
+}

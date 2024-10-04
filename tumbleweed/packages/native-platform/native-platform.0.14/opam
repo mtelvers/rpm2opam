@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "native-platform-0.14-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "native-platform-0.14-4.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "libncurses6" 
+]
+extra-source "native-platform-0.14-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/native-platform-0.14-4.1.x86_64.rpm"
+}

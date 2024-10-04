@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "syncevolution-2.0.0-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "syncevolution-2.0.0-12.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "libgcc" 
+  "libnotify" 
+  "libstdc++" 
+  "python3" 
+  "python3-dbus" 
+  "python3-twisted" 
+  "syncevolution-libs" 
+]
+extra-source "syncevolution-2.0.0-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/syncevolution-2.0.0-12.fc40.x86_64.rpm"
+}

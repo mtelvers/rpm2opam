@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "komikku-1.36.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "komikku-1.36.0-1.fc40.noarch.rpm"]
+depends: [
+  "gtk4" {>= "4.12.1"}
+  "hicolor-icon-theme" 
+  "libadwaita" {>= "1.4.0"}
+  "libnotify" 
+  "python3" 
+  "python3-beautifulsoup4" 
+  "python3-brotli" 
+  "python3-colorthief" 
+  "python3-dateparser" 
+  "python3-emoji" 
+  "python3-file-magic" 
+  "python3-gobject" 
+  "python3-keyring" {>= "21.6.0"}
+  "python3-lxml" 
+  "python3-natsort" 
+  "python3-piexif" 
+  "python3-pillow" 
+  "python3-pure-protobuf" 
+  "python3-rarfile" 
+  "python3-requests" 
+  "python3-unidecode" 
+  "webkitgtk6-0" 
+]
+extra-source "komikku-1.36.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/komikku-1.36.0-1.fc40.noarch.rpm"
+}

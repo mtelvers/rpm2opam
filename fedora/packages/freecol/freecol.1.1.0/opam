@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "freecol-1.1.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freecol-1.1.0-4.fc40.noarch.rpm"]
+depends: [
+  "apache-commons-cli" {>= "1.5.0"}
+  "bash" 
+  "cortado" 
+  "freecol-shadowedblack-fonts" 
+  "hicolor-icon-theme" 
+  "java-21-openjdk" {>= "17.0.0"}
+  "javapackages-tools" 
+  "jorbis" 
+  "miglayout" {>= "5.0"}
+]
+extra-source "freecol-1.1.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/freecol-1.1.0-4.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libgnomecanvas-devel-2.30.3-28.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgnomecanvas-devel-2.30.3-28.fc40.x86_64.rpm"]
+depends: [
+  "gtk-doc" 
+  "gtk2-devel" 
+  "libart_lgpl-devel" 
+  "libgnomecanvas" {= "2.30.3"}
+  "pango-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libgnomecanvas-devel-2.30.3-28.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libgnomecanvas-devel-2.30.3-28.fc40.x86_64.rpm"
+}

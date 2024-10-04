@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-PyQt6-3D-6.6.0-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-PyQt6-3D-6.6.0-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt63DAnimation6" 
+  "libQt63DCore6" 
+  "libQt63DExtras6" 
+  "libQt63DInput6" 
+  "libQt63DLogic6" 
+  "libQt63DRender6" 
+  "libQt6Core6" 
+  "libQt6Gui6" 
+  "libstdc++6" 
+  "python311-PyQt6" {>= "6.7.0"}
+  "python311-base" {= "3.11"}
+]
+extra-source "python311-PyQt6-3D-6.6.0-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/python311-PyQt6-3D-6.6.0-slfo.1.1.8.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-ini2toml-all-0.15-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-ini2toml-all-0.15-1.1.noarch.rpm"]
+depends: [
+  "python310-ConfigUpdater" 
+  "python310-importlib-metadata" 
+  "python310-ini2toml" {= "0.15"}
+  "python310-tomli" 
+  "python310-tomli-w" 
+  "python310-tomlkit" 
+]
+extra-source "python310-ini2toml-all-0.15-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-ini2toml-all-0.15-1.1.noarch.rpm"
+}

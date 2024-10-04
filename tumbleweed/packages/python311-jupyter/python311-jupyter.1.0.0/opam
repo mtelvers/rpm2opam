@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-jupyter-1.0.0-13.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-jupyter-1.0.0-13.2.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-ipykernel" 
+  "python311-ipywidgets" 
+  "python311-jupyter-core" 
+  "python311-jupyter_console" 
+  "python311-nbconvert" 
+  "python311-notebook" 
+  "python311-qtconsole" 
+]
+extra-source "python311-jupyter-1.0.0-13.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-jupyter-1.0.0-13.2.noarch.rpm"
+}

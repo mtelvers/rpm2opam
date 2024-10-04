@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "enlightenment-0.26.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "enlightenment-0.26.0-1.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "bash" 
+  "bluez-libs" 
+  "efl" 
+  "enlightenment-data" {= "0.26.0"}
+  "glibc" 
+  "libexif" 
+  "libuuid" 
+  "libwayland-client" 
+  "libwayland-server" 
+  "libxkbcommon" 
+  "pam-libs" 
+  "pulseaudio-libs" 
+  "redhat-menus" 
+  "systemd" 
+]
+extra-source "enlightenment-0.26.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/enlightenment-0.26.0-1.fc40.x86_64.rpm"
+}

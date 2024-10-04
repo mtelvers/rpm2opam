@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gegl-0_4-lang-0.4.48-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gegl-0_4-lang-0.4.48-4.1.noarch.rpm"]
+depends: [
+  "gegl-0_4" {= "0.4.48"}
+]
+extra-source "gegl-0_4-lang-0.4.48-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gegl-0_4-lang-0.4.48-4.1.noarch.rpm"
+}

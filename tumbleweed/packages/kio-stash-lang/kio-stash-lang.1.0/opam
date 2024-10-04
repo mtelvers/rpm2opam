@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kio-stash-lang-1.0-1.28.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kio-stash-lang-1.0-1.28.noarch.rpm"]
+depends: [
+  "kio-stash" {= "1.0"}
+]
+extra-source "kio-stash-lang-1.0-1.28.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kio-stash-lang-1.0-1.28.noarch.rpm"
+}

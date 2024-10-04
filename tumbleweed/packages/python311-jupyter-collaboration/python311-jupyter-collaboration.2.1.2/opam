@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-jupyter-collaboration-2.1.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-jupyter-collaboration-2.1.2-1.1.noarch.rpm"]
+depends: [
+  "jupyter-collaboration" {= "2.1.2"}
+  "python311-base" {= "3.11"}
+  "python311-jsonschema" {>= "4.18.0"}
+  "python311-jupyter-events" {>= "0.10.0"}
+  "python311-jupyter-server" 
+  "python311-jupyter-server-fileid" 
+  "python311-jupyter-ydoc" 
+  "python311-pycrdt" 
+  "python311-pycrdt-websocket" 
+]
+extra-source "python311-jupyter-collaboration-2.1.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-jupyter-collaboration-2.1.2-1.1.noarch.rpm"
+}

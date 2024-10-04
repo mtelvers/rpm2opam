@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-logs-devel-0.7.0-18.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-logs-devel-0.7.0-18.fc40.x86_64.rpm"]
+depends: [
+  "ocaml" {= "24528204"}
+  "ocaml-cmdliner" {= "73"}
+  "ocaml-cmdliner-devel" 
+  "ocaml-compiler-libs" {= "32"}
+  "ocaml-fmt" {= "49"}
+  "ocaml-fmt-devel" 
+  "ocaml-logs" {= "0.7.0"}
+  "ocaml-lwt" {= "0"}
+  "ocaml-lwt-devel" 
+]
+extra-source "ocaml-logs-devel-0.7.0-18.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-logs-devel-0.7.0-18.fc40.x86_64.rpm"
+}

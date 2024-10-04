@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-thread-tree+default-devel-0.3.3-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-thread-tree+default-devel-0.3.3-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-thread-tree-devel" {= "0.3.3"}
+]
+extra-source "rust-thread-tree+default-devel-0.3.3-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-thread-tree+default-devel-0.3.3-3.fc40.noarch.rpm"
+}

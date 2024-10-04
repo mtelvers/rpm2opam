@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-dense-linear-algebra-devel-0.1.0.0-3.22.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-dense-linear-algebra-devel-0.1.0.0-3.22.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-deepseq-devel" 
+  "ghc-dense-linear-algebra" {= "0.1.0.0"}
+  "ghc-math-functions-devel" 
+  "ghc-primitive-devel" 
+  "ghc-vector-algorithms-devel" 
+  "ghc-vector-binary-instances-devel" 
+  "ghc-vector-devel" 
+  "ghc-vector-th-unbox-devel" 
+]
+extra-source "ghc-dense-linear-algebra-devel-0.1.0.0-3.22.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-dense-linear-algebra-devel-0.1.0.0-3.22.x86_64.rpm"
+}

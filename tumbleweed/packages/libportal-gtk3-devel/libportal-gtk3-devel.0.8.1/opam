@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libportal-gtk3-devel-0.8.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libportal-gtk3-devel-0.8.1-1.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.58"}
+  "gtk3-devel" 
+  "libportal-devel" 
+  "libportal-gtk3-1" {= "0.8.1"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-XdpGtk3-1_0" {= "0.8.1"}
+]
+extra-source "libportal-gtk3-devel-0.8.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libportal-gtk3-devel-0.8.1-1.1.x86_64.rpm"
+}

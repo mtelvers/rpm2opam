@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cmake-data-3.28.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cmake-data-3.28.2-1.fc40.noarch.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "cmake-rpm-macros" 
+  "emacs-filesystem" {>= "29.2"}
+  "vim-filesystem" 
+]
+extra-source "cmake-data-3.28.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cmake-data-3.28.2-1.fc40.noarch.rpm"
+}

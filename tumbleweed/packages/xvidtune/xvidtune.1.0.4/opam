@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xvidtune-1.0.4-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xvidtune-1.0.4-1.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXaw7" 
+  "libXmu6" 
+  "libXt6" 
+  "libXxf86vm1" 
+]
+extra-source "xvidtune-1.0.4-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xvidtune-1.0.4-1.6.x86_64.rpm"
+}

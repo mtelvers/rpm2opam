@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-zbus1-devel-1.9.3-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-zbus1-devel-1.9.3-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-async-io+default-devel" 
+  "rust-byteorder+default-devel" 
+  "rust-derivative+default-devel" 
+  "rust-enumflags2+default-devel" 
+  "rust-enumflags2+serde-devel" 
+  "rust-fastrand+default-devel" 
+  "rust-futures+default-devel" 
+  "rust-nb-connect+default-devel" 
+  "rust-nix+default-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-polling+default-devel" 
+  "rust-scoped-tls+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde_repr+default-devel" 
+  "rust-zbus_macros1+default-devel" {= "1.9.3"}
+  "rust-zvariant+enumflags2-devel" 
+  "rust-zvariant-devel" 
+]
+extra-source "rust-zbus1-devel-1.9.3-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-zbus1-devel-1.9.3-4.fc40.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "wineglass-1.2.1-6.20191110git7b2558e.9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wineglass-1.2.1-6.20191110git7b2558e.9.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "granite" 
+  "gtk3" 
+  "hicolor-icon-theme" 
+  "wine" 
+  "winetricks" 
+]
+extra-source "wineglass-1.2.1-6.20191110git7b2558e.9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/wineglass-1.2.1-6.20191110git7b2558e.9.fc40.x86_64.rpm"
+}

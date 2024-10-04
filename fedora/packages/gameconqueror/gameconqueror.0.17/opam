@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gameconqueror-0.17-16.fc40.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gameconqueror-0.17-16.fc40.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gtk3" 
+  "polkit" 
+  "python3" 
+  "python3-gobject-base" 
+  "scanmem-libs" {= "0.17"}
+]
+extra-source "gameconqueror-0.17-16.fc40.1.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gameconqueror-0.17-16.fc40.1.x86_64.rpm"
+}

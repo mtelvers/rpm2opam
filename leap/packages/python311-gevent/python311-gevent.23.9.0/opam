@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-gevent-23.9.0-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-gevent-23.9.0-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcares2" 
+  "libev4" 
+  "python311-base" 
+  "python311-cffi" 
+  "python311-dnspython" 
+  "python311-greenlet" {>= "2.0.0"}
+  "python311-importlib-metadata" 
+  "python311-requests" 
+  "python311-zope-event" 
+  "python311-zope-interface" 
+]
+extra-source "python311-gevent-23.9.0-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/python311-gevent-23.9.0-slfo.1.1.8.x86_64.rpm"
+}

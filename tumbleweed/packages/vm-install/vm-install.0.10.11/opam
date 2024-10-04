@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vm-install-0.10.11-1.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vm-install-0.10.11-1.16.x86_64.rpm"]
+depends: [
+  "atftp" 
+  "kdump" 
+  "python311-base" 
+  "python311-dbus-python" 
+  "python311-libvirt-python" 
+  "python311-libxml2" 
+  "python311-netifaces" 
+  "python311-pycurl" 
+  "qemu-tools" 
+  "usbutils" 
+]
+extra-source "vm-install-0.10.11-1.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vm-install-0.10.11-1.16.x86_64.rpm"
+}

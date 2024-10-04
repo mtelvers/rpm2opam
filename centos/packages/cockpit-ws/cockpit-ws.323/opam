@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cockpit-ws-323-1.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cockpit-ws-323-1.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib-networking" 
+  "glib2" {>= "2.50.0"}
+  "glibc" 
+  "gnutls" 
+  "json-glib" 
+  "krb5-libs" 
+  "libgcc" 
+  "libxcrypt" 
+  "openssl" 
+  "pam-libs" 
+  "policycoreutils" 
+  "selinux-policy" 
+  "systemd-libs" 
+]
+extra-source "cockpit-ws-323-1.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/cockpit-ws-323-1.el10.x86_64.rpm"
+}

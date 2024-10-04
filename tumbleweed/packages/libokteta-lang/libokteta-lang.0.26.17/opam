@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libokteta-lang-0.26.17-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libokteta-lang-0.26.17-1.1.noarch.rpm"]
+depends: [
+  "libOkteta3" {= "0.26.17"}
+]
+extra-source "libokteta-lang-0.26.17-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libokteta-lang-0.26.17-1.1.noarch.rpm"
+}

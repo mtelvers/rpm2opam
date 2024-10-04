@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-zstd-safe6+std-devel-6.0.6-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-zstd-safe6+std-devel-6.0.6-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-zstd-safe6-devel" {= "6.0.6"}
+  "rust-zstd-sys+std-devel" 
+]
+extra-source "rust-zstd-safe6+std-devel-6.0.6-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-zstd-safe6+std-devel-6.0.6-2.fc40.noarch.rpm"
+}

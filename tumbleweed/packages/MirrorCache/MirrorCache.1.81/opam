@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "MirrorCache-1.081-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "MirrorCache-1.081-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "perl" 
+  "perl-CSS-Minifier-XS" {>= "0.1"}
+  "perl-Config-IniFiles" 
+  "perl-DBD-Pg" {>= "3.7.4"}
+  "perl-DBI" {>= "1.632"}
+  "perl-DBIx-Class" {>= "0.82801"}
+  "perl-DBIx-Class-DynamicDefault" 
+  "perl-DateTime" 
+  "perl-DateTime-Format-Pg" 
+  "perl-IO-Socket-SSL" 
+  "perl-JavaScript-Minifier-XS" {>= "0.11"}
+  "perl-LWP-Protocol-https" 
+  "perl-Minion" {>= "10.0"}
+  "perl-Mojo-Pg" 
+  "perl-Mojolicious" 
+  "perl-Mojolicious-Plugin-AssetPack" {>= "1.36"}
+  "perl-Mojolicious-Plugin-RenderFile" 
+  "perl-Net-DNS" 
+  "perl-Net-OpenID-Consumer" 
+  "perl-Sort-Versions" 
+  "perl-Time-modules" 
+  "perl-URI" 
+  "perl-XML-Writer" 
+  "perl-base" 
+  "perl-libwww-perl" 
+  "ruby3-3-rubygem-sass" 
+  "shadow" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "MirrorCache-1.081-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/MirrorCache-1.081-1.1.noarch.rpm"
+}

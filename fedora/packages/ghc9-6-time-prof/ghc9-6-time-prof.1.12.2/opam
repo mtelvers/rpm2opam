@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc9.6-time-prof-1.12.2-17.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc9.6-time-prof-1.12.2-17.fc40.x86_64.rpm"]
+depends: [
+  "ghc9-6-base-prof" 
+  "ghc9-6-deepseq-prof" 
+  "ghc9-6-time-devel" {= "1.12.2"}
+]
+extra-source "ghc9.6-time-prof-1.12.2-17.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc9.6-time-prof-1.12.2-17.fc40.x86_64.rpm"
+}

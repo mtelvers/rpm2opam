@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-rubygems-mirror-1.3.0-11.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-rubygems-mirror-1.3.0-11.fc39.noarch.rpm"]
+depends: [
+  "rubygem-net-http-persistent" {>= "2.9"}
+  "rubygems" 
+]
+extra-source "rubygem-rubygems-mirror-1.3.0-11.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-rubygems-mirror-1.3.0-11.fc39.noarch.rpm"
+}

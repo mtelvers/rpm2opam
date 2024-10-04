@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ruby-marisa-0.2.6-1.28.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ruby-marisa-0.2.6-1.28.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libmarisa0" 
+  "libruby3_3-3_3" 
+  "libstdc++6" 
+  "marisa" {= "0.2.6"}
+  "ruby" 
+]
+extra-source "ruby-marisa-0.2.6-1.28.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ruby-marisa-0.2.6-1.28.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-csv-prof-0.1.2-4.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-csv-prof-0.1.2-4.9.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-csv-devel" {= "0.1.2"}
+  "ghc-filepath-prof" 
+  "ghc-parsec-prof" 
+]
+extra-source "ghc-csv-prof-0.1.2-4.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-csv-prof-0.1.2-4.9.x86_64.rpm"
+}

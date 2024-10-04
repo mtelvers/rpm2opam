@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Pod-AsciiDoctor-0.102002-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Pod-AsciiDoctor-0.102002-1.2.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "perl" 
+  "perl-Path-Tiny" 
+  "perl-Pod-Parser" {>= "1.65"}
+  "perl-base" 
+]
+extra-source "perl-Pod-AsciiDoctor-0.102002-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Pod-AsciiDoctor-0.102002-1.2.noarch.rpm"
+}

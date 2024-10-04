@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openttd-docs-13.4-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openttd-docs-13.4-6.fc40.noarch.rpm"]
+depends: [
+  "openttd" {= "13.4"}
+]
+extra-source "openttd-docs-13.4-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openttd-docs-13.4-6.fc40.noarch.rpm"
+}

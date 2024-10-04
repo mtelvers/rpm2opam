@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-python-pkginfo-devel-0.6.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-python-pkginfo-devel-0.6.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-flate2+default-devel" 
+  "rust-fs-err+default-devel" 
+  "rust-mailparse+default-devel" 
+  "rust-rfc2047-decoder+default-devel" 
+  "rust-tar+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-zip+bzip2-devel" 
+  "rust-zip+deflate-devel" 
+  "rust-zip+time-devel" 
+  "rust-zip-devel" 
+]
+extra-source "rust-python-pkginfo-devel-0.6.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-python-pkginfo-devel-0.6.0-2.fc40.noarch.rpm"
+}

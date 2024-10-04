@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "freeradius-server-3.2.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freeradius-server-3.2.5-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "freeradius-server-libs" {= "3.2.5"}
+  "glibc" 
+  "libcrypt1" 
+  "libct4" 
+  "libcurl-mini4" 
+  "libgdbm6" 
+  "libjson-c5" 
+  "libmemcached11" 
+  "libodbc2" 
+  "libopenssl3" 
+  "libtalloc2" 
+  "libunbound-devel-mini" 
+  "openssl" 
+  "pam" 
+  "perl" 
+  "perl-base" 
+  "samba-client-libs" 
+  "shadow" 
+  "systemd" 
+]
+extra-source "freeradius-server-3.2.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/freeradius-server-3.2.5-1.1.x86_64.rpm"
+}

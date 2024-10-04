@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-DelayedArray-0.22.0-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-DelayedArray-0.22.0-9.fc40.x86_64.rpm"]
+depends: [
+  "R-BiocGenerics" {>= "0.37.0"}
+  "R-IRanges" {>= "2.17.3"}
+  "R-MatrixGenerics" {>= "1.1.3"}
+  "R-S4Vectors" {>= "0.27.2"}
+  "R-core" {= "4.3"}
+  "glibc" 
+]
+extra-source "R-DelayedArray-0.22.0-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-DelayedArray-0.22.0-9.fc40.x86_64.rpm"
+}

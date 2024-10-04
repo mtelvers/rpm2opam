@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-wl-clipboard-rs-devel-0.8.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-wl-clipboard-rs-devel-0.8.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-derive-new+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-log+default-devel" 
+  "rust-nix+default-devel" 
+  "rust-os_pipe+default-devel" 
+  "rust-os_pipe+io_safety-devel" 
+  "rust-tempfile+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-tree_magic_mini+default-devel" 
+  "rust-wayland-backend+default-devel" 
+  "rust-wayland-client+default-devel" 
+  "rust-wayland-protocols+client-devel" 
+  "rust-wayland-protocols+default-devel" 
+  "rust-wayland-protocols-wlr+client-devel" 
+  "rust-wayland-protocols-wlr+default-devel" 
+]
+extra-source "rust-wl-clipboard-rs-devel-0.8.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-wl-clipboard-rs-devel-0.8.0-2.fc40.noarch.rpm"
+}

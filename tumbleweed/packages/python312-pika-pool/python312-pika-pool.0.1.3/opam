@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pika-pool-0.1.3-5.18.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pika-pool-0.1.3-5.18.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-pika" {>= "0.9"}
+]
+extra-source "python312-pika-pool-0.1.3-5.18.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pika-pool-0.1.3-5.18.noarch.rpm"
+}

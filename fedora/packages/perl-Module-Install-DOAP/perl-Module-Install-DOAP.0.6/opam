@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Module-Install-DOAP-0.006-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Install-DOAP-0.006-23.fc40.noarch.rpm"]
+depends: [
+  "perl-Module-Install" {>= "1.0"}
+  "perl-Module-Install-RDF" {>= "0.4"}
+  "perl-RDF-Trine" {>= "0.133"}
+  "perl-base" 
+  "perl-libs" {>= "5.8.0"}
+]
+extra-source "perl-Module-Install-DOAP-0.006-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Module-Install-DOAP-0.006-23.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libreoffice-share-linker-1-7.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libreoffice-share-linker-1-7.3.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "python311" 
+]
+extra-source "libreoffice-share-linker-1-7.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libreoffice-share-linker-1-7.3.noarch.rpm"
+}

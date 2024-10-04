@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-cairo-prof-0.13.11.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-cairo-prof-0.13.11.0-1.1.x86_64.rpm"]
+depends: [
+  "ghc-array-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-cairo-devel" {= "0.13.11.0"}
+  "ghc-mtl-prof" 
+  "ghc-text-prof" 
+  "ghc-utf8-string-prof" 
+]
+extra-source "ghc-cairo-prof-0.13.11.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-cairo-prof-0.13.11.0-1.1.x86_64.rpm"
+}

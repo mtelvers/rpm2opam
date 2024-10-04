@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qt6-grpc-devel-6.7.2-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qt6-grpc-devel-6.7.2-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "grpc-devel" 
+  "libQt6Grpc6" {= "6.7.2"}
+  "libabsl_lite_2401_0_0" 
+  "libgcc_s1" 
+  "libprotobuf25_4_0" 
+  "libprotoc25_4_0" 
+  "libstdc++6" 
+  "pkgconf-pkg-config" 
+  "qt6-core-devel" 
+  "qt6-network-devel" {= "6.7.2"}
+  "qt6-protobuf-devel" {= "6.7.2"}
+  "qt6-quick-devel" 
+]
+extra-source "qt6-grpc-devel-6.7.2-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/qt6-grpc-devel-6.7.2-2.2.x86_64.rpm"
+}

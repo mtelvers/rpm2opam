@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fixmath-devel-2022.07.20-6.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fixmath-devel-2022.07.20-6.3.noarch.rpm"]
+depends: [
+  "fixmath" {= "2022.7.20"}
+]
+extra-source "fixmath-devel-2022.07.20-6.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/fixmath-devel-2022.07.20-6.3.noarch.rpm"
+}

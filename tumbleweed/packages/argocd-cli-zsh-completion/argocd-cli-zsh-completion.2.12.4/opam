@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "argocd-cli-zsh-completion-2.12.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "argocd-cli-zsh-completion-2.12.4-1.1.noarch.rpm"]
+depends: [
+  "argocd-cli" {= "2.12.4"}
+]
+extra-source "argocd-cli-zsh-completion-2.12.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/argocd-cli-zsh-completion-2.12.4-1.1.noarch.rpm"
+}

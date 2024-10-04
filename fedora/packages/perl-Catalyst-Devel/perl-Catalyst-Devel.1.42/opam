@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Catalyst-Devel-1.42-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Catalyst-Devel-1.42-11.fc40.noarch.rpm"]
+depends: [
+  "perl-Catalyst-Action-RenderView" {>= "0.10"}
+  "perl-Catalyst-Plugin-ConfigLoader" {>= "0.30"}
+  "perl-Catalyst-Plugin-Static-Simple" {>= "0.28"}
+  "perl-Catalyst-Runtime" {>= "5.90001"}
+  "perl-Catalyst-Runtime-scripts" 
+  "perl-Config-General" {>= "2.42"}
+  "perl-Data-Dumper" 
+  "perl-File-ChangeNotify" {>= "0.7"}
+  "perl-File-Copy-Recursive" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-File-ShareDir" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-Module-Install" 
+  "perl-Moose" 
+  "perl-MooseX-Daemonize" 
+  "perl-MooseX-Emulate-Class-Accessor-Fast" 
+  "perl-POSIX" 
+  "perl-Path-Class" 
+  "perl-PathTools" 
+  "perl-Starman" 
+  "perl-Template-Toolkit" 
+  "perl-YAML-Tiny" 
+  "perl-base" 
+  "perl-libs" {>= "5.8.3"}
+  "perl-namespace-autoclean" 
+  "perl-namespace-clean" 
+]
+extra-source "perl-Catalyst-Devel-1.42-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Catalyst-Devel-1.42-11.fc40.noarch.rpm"
+}

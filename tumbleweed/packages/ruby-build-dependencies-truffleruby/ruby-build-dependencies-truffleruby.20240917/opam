@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ruby-build-dependencies-truffleruby-20240917-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ruby-build-dependencies-truffleruby-20240917-1.1.noarch.rpm"]
+depends: [
+  "gcc" 
+  "libopenssl-devel" 
+]
+extra-source "ruby-build-dependencies-truffleruby-20240917-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ruby-build-dependencies-truffleruby-20240917-1.1.noarch.rpm"
+}

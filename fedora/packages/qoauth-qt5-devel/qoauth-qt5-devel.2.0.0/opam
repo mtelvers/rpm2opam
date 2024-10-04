@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qoauth-qt5-devel-2.0.0-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qoauth-qt5-devel-2.0.0-19.fc40.x86_64.rpm"]
+depends: [
+  "pkgconf-pkg-config" 
+  "qca-qt5-devel" 
+  "qoauth-qt5" 
+  "qt5-qtbase-devel" 
+]
+extra-source "qoauth-qt5-devel-2.0.0-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qoauth-qt5-devel-2.0.0-19.fc40.x86_64.rpm"
+}

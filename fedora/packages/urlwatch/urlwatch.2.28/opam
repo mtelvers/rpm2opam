@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "urlwatch-2.28-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "urlwatch-2.28-1.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-appdirs" 
+  "python3-cssselect" 
+  "python3-keyring" 
+  "python3-lxml" 
+  "python3-minidb" 
+  "python3-pyyaml" 
+  "python3-requests" 
+]
+extra-source "urlwatch-2.28-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/urlwatch-2.28-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xcb-util-renderutil-devel-32bit-0.3.10-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xcb-util-renderutil-devel-32bit-0.3.10-1.4.x86_64.rpm"]
+depends: [
+  "libxcb-devel" 
+  "libxcb-render-util0-32bit" {= "0.3.10"}
+  "pkgconf-pkg-config" 
+  "xcb-util-renderutil-devel" {= "0.3.10"}
+]
+extra-source "xcb-util-renderutil-devel-32bit-0.3.10-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xcb-util-renderutil-devel-32bit-0.3.10-1.4.x86_64.rpm"
+}

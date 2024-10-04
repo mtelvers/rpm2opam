@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openssl-3-3.1.4-14.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openssl-3-3.1.4-14.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "crypto-policies" 
+  "glibc" 
+  "libopenssl3" 
+]
+extra-source "openssl-3-3.1.4-14.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openssl-3-3.1.4-14.1.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "obexfs-0.12-3.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "obexfs-0.12-3.10.x86_64.rpm"]
+depends: [
+  "fuse" 
+  "glibc" 
+  "libfuse2" 
+  "obexftp" 
+]
+extra-source "obexfs-0.12-3.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/obexfs-0.12-3.10.x86_64.rpm"
+}

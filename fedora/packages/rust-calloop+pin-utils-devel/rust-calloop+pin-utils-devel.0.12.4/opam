@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-calloop+pin-utils-devel-0.12.4-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-calloop+pin-utils-devel-0.12.4-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-calloop-devel" {= "0.12.4"}
+  "rust-pin-utils+default-devel" 
+]
+extra-source "rust-calloop+pin-utils-devel-0.12.4-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-calloop+pin-utils-devel-0.12.4-1.fc40.noarch.rpm"
+}

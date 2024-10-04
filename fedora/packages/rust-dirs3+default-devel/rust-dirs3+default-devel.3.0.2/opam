@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-dirs3+default-devel-3.0.2-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-dirs3+default-devel-3.0.2-7.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-dirs3-devel" {= "3.0.2"}
+]
+extra-source "rust-dirs3+default-devel-3.0.2-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-dirs3+default-devel-3.0.2-7.fc40.noarch.rpm"
+}

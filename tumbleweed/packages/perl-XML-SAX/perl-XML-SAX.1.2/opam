@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-XML-SAX-1.02-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XML-SAX-1.02-2.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "perl" 
+  "perl-XML-NamespaceSupport" {>= "0.3"}
+  "perl-XML-SAX-Base" {>= "1.5"}
+]
+extra-source "perl-XML-SAX-1.02-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-XML-SAX-1.02-2.2.noarch.rpm"
+}

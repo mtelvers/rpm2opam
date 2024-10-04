@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgtop-2_0-11-2.41.3+4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgtop-2_0-11-2.41.3+4-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libXau6" 
+]
+extra-source "libgtop-2_0-11-2.41.3+4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgtop-2_0-11-2.41.3+4-1.1.x86_64.rpm"
+}

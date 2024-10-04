@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xrdp-0.9.23.1-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xrdp-0.9.23.1-4.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "glibc" 
+  "libX11-6" 
+  "libXfixes3" 
+  "libXrandr2" 
+  "libfuse2" 
+  "libopenssl3" 
+  "pam" 
+  "xorg-x11-Xvnc" 
+]
+extra-source "xrdp-0.9.23.1-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xrdp-0.9.23.1-4.1.x86_64.rpm"
+}

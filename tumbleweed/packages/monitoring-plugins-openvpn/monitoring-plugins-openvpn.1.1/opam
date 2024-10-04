@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "monitoring-plugins-openvpn-1.1-103.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "monitoring-plugins-openvpn-1.1-103.2.noarch.rpm"]
+depends: [
+  "monitoring-plugins-common" 
+  "perl" 
+  "perl-Net-Telnet" 
+  "perl-base" 
+]
+extra-source "monitoring-plugins-openvpn-1.1-103.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/monitoring-plugins-openvpn-1.1-103.2.noarch.rpm"
+}

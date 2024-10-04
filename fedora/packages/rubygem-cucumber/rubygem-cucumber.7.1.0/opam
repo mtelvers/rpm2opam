@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-cucumber-7.1.0-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-cucumber-7.1.0-8.fc40.noarch.rpm"]
+depends: [
+  "rubygem-builder" 
+  "rubygem-cucumber-core" 
+  "rubygem-cucumber-create-meta" 
+  "rubygem-cucumber-cucumber-expressions" {>= "12.1"}
+  "rubygem-cucumber-gherkin" {>= "20.0"}
+  "rubygem-cucumber-messages" {>= "17.0"}
+  "rubygem-cucumber-wire" 
+  "rubygem-diff-lcs" {>= "1.3"}
+  "rubygem-mime-types" 
+  "rubygem-multi_test" 
+  "rubygem-sys-uname" 
+  "rubygems" 
+  "rubypick" 
+]
+extra-source "rubygem-cucumber-7.1.0-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-cucumber-7.1.0-8.fc40.noarch.rpm"
+}

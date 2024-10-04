@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jeuclid-cli-3.1.9-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jeuclid-cli-3.1.9-3.2.noarch.rpm"]
+depends: [
+  "apache-commons-cli" {>= "1.1"}
+  "apache-commons-io" 
+  "apache-commons-lang3" 
+  "bash" 
+  "jeuclid" {= "3.1.9"}
+]
+extra-source "jeuclid-cli-3.1.9-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jeuclid-cli-3.1.9-3.2.noarch.rpm"
+}

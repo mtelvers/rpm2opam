@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xed-devel-3.4.5-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xed-devel-3.4.5-2.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.40.0"}
+  "gtk3-devel" {>= "3.19.3"}
+  "gtksourceview4-devel" {>= "4.0.3"}
+  "libX11-devel" 
+  "libpeas1-devel" {>= "1.12.0"}
+  "libxml2-devel" {>= "2.5.0"}
+  "pkgconf-pkg-config" 
+  "xapps-devel" {>= "1.9.0"}
+  "xed" {= "3.4.5"}
+]
+extra-source "xed-devel-3.4.5-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xed-devel-3.4.5-2.fc40.x86_64.rpm"
+}

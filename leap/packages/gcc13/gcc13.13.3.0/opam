@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcc13-13.3.0+git8781-slfo.1.1.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcc13-13.3.0+git8781-slfo.1.1.11.x86_64.rpm"]
+depends: [
+  "binutils" 
+  "cpp13" {= "13.3.0"}
+  "glibc" 
+  "glibc-devel" 
+  "libasan8" {>= "13.3.0"}
+  "libatomic1" {>= "13.3.0"}
+  "libgcc_s1" {>= "13.3.0"}
+  "libgmp10" 
+  "libgomp1" {>= "13.3.0"}
+  "libhwasan0" {>= "13.3.0"}
+  "libisl23" 
+  "libitm1" {>= "13.3.0"}
+  "liblsan0" {>= "13.3.0"}
+  "libmpc3" 
+  "libmpfr6" 
+  "libtsan2" {>= "13.3.0"}
+  "libubsan1" {>= "13.3.0"}
+  "libz-ng-compat1" 
+  "libzstd1" 
+]
+extra-source "gcc13-13.3.0+git8781-slfo.1.1.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/gcc13-13.3.0+git8781-slfo.1.1.11.x86_64.rpm"
+}

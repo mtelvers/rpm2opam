@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "auto-value-parent-1.6.1-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "auto-value-parent-1.6.1-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "auto" {= "6"}
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "auto-value-parent-1.6.1-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/auto-value-parent-1.6.1-slfo.1.1.4.noarch.rpm"
+}

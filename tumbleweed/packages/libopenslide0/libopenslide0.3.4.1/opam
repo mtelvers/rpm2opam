@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libopenslide0-3.4.1-2.25.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libopenslide0-3.4.1-2.25.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libgdk_pixbuf-2_0-0" 
+  "libjpeg8" 
+  "libopenjp2-7" 
+  "libpng16-16" 
+  "libsqlite3-0" 
+  "libtiff6" 
+  "libxml2-2" 
+  "libz-ng-compat1" 
+]
+extra-source "libopenslide0-3.4.1-2.25.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libopenslide0-3.4.1-2.25.x86_64.rpm"
+}

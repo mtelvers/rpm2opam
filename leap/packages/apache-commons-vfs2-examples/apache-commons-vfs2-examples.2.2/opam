@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "apache-commons-vfs2-examples-2.2-slfo.1.1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apache-commons-vfs2-examples-2.2-slfo.1.1.5.noarch.rpm"]
+depends: [
+  "apache-commons-vfs2" {= "2.2"}
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "apache-commons-vfs2-examples-2.2-slfo.1.1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/apache-commons-vfs2-examples-2.2-slfo.1.1.5.noarch.rpm"
+}

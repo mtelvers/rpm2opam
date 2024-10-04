@@ -1,0 +1,42 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fwupd-1.9.16-slfo.1.1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fwupd-1.9.16-slfo.1.1.6.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "fwupd-efi" 
+  "girepository-1_0" 
+  "glibc" 
+  "kernel-debug" 
+  "libarchive13" 
+  "libcbor0_10" 
+  "libcurl-mini4" 
+  "libflashrom1" 
+  "libfwupd2" 
+  "libgio-2_0-0" 
+  "libglib-2_0-0" 
+  "libgmodule-2_0-0" 
+  "libgnutls30" 
+  "libgobject-2_0-0" 
+  "libgudev-1_0-0" 
+  "libgusb2" 
+  "libjcat1" 
+  "libjson-glib-1_0-0" 
+  "liblzma5" 
+  "libmbim-glib4" 
+  "libmm-glib0" 
+  "libpolkit-gobject-1-0" 
+  "libprotobuf-c1" 
+  "libqmi-glib5" 
+  "libsqlite3-0" 
+  "libsystemd0" 
+  "libtss2-esys0" 
+  "libxmlb2" 
+  "libz-ng-compat1" 
+  "python311-base" 
+  "shim" {>= "11"}
+  "typelib-1_0-Fwupd-2_0" {= "2.0"}
+  "udisks2" 
+]
+extra-source "fwupd-1.9.16-slfo.1.1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/fwupd-1.9.16-slfo.1.1.6.x86_64.rpm"
+}

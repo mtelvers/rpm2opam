@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "freerdp-devel-3.4.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freerdp-devel-3.4.0-1.fc40.x86_64.rpm"]
+depends: [
+  "cjson-devel" 
+  "cmake" {>= "3.13"}
+  "cmake-filesystem" 
+  "freerdp-libs" {= "3.4.0"}
+  "libwinpr-devel" 
+  "pkgconf-pkg-config" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "freerdp-devel-3.4.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/freerdp-devel-3.4.0-1.fc40.x86_64.rpm"
+}

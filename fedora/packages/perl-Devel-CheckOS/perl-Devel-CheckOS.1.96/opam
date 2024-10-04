@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Devel-CheckOS-1.96-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Devel-CheckOS-1.96-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Data-Dumper" 
+  "perl-Exporter" 
+  "perl-File-Find-Rule" {>= "0.28"}
+  "perl-PathTools" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-Devel-CheckOS-1.96-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Devel-CheckOS-1.96-4.fc40.noarch.rpm"
+}

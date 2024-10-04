@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rand+std-devel-0.8.5-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rand+std-devel-0.8.5-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-rand+alloc-devel" {= "0.8.5"}
+  "rust-rand+getrandom-devel" {= "0.8.5"}
+  "rust-rand+libc-devel" {= "0.8.5"}
+  "rust-rand-devel" {= "0.8.5"}
+  "rust-rand_chacha+std-devel" 
+  "rust-rand_chacha-devel" 
+  "rust-rand_core+std-devel" 
+]
+extra-source "rust-rand+std-devel-0.8.5-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rand+std-devel-0.8.5-6.fc40.noarch.rpm"
+}

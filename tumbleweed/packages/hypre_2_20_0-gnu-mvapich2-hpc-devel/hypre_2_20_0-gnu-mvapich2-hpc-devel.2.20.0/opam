@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hypre_2_20_0-gnu-mvapich2-hpc-devel-2.20.0-3.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hypre_2_20_0-gnu-mvapich2-hpc-devel-2.20.0-3.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gnu-compilers-hpc-devel" 
+  "libHYPRE_2_20_0-gnu-mvapich2-hpc" {= "2.20.0"}
+  "libopenblas-gnu-hpc-devel" {= "0.3.27"}
+  "mvapich2-gnu-hpc-devel" 
+  "pkgconf-pkg-config" 
+  "superlu-gnu-hpc-devel" {= "6.0.1"}
+]
+extra-source "hypre_2_20_0-gnu-mvapich2-hpc-devel-2.20.0-3.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/hypre_2_20_0-gnu-mvapich2-hpc-devel-2.20.0-3.5.x86_64.rpm"
+}

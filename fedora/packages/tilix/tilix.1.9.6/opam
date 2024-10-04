@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tilix-1.9.6-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tilix-1.9.6-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dbus" 
+  "glibc" 
+  "gtkd" {>= "3.8.5"}
+  "hicolor-icon-theme" 
+  "ldc-libs" 
+  "libX11" 
+  "libgcc" 
+]
+extra-source "tilix-1.9.6-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tilix-1.9.6-2.fc40.x86_64.rpm"
+}

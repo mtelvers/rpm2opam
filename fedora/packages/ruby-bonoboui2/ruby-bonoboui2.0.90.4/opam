@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ruby-bonoboui2-0.90.4-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ruby-bonoboui2-0.90.4-19.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "libbonobo" 
+  "libbonoboui" 
+  "libgnome" 
+  "ruby-gnome2" {= "0.90.4"}
+  "ruby-libs" 
+]
+extra-source "ruby-bonoboui2-0.90.4-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/ruby-bonoboui2-0.90.4-19.fc40.x86_64.rpm"
+}

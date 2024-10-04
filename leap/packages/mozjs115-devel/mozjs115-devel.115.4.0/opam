@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mozjs115-devel-115.4.0-slfo.1.1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mozjs115-devel-115.4.0-slfo.1.1.4.x86_64.rpm"]
+depends: [
+  "libmozjs-115-0" {= "115.4.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "mozjs115-devel-115.4.0-slfo.1.1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/mozjs115-devel-115.4.0-slfo.1.1.4.x86_64.rpm"
+}

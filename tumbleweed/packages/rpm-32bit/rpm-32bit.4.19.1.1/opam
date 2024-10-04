@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rpm-32bit-4.19.1.1-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rpm-32bit-4.19.1.1-3.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libacl1-32bit" 
+  "libbz2-1-32bit" 
+  "libcap2-32bit" 
+  "libgcrypt20-32bit" 
+  "liblua5_4-5-32bit" 
+  "liblzma5-32bit" 
+  "libpopt0-32bit" 
+  "libselinux1-32bit" 
+  "libz1-32bit" 
+  "libzstd1-32bit" 
+]
+extra-source "rpm-32bit-4.19.1.1-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rpm-32bit-4.19.1.1-3.2.x86_64.rpm"
+}

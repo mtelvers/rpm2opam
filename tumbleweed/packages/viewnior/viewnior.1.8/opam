@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "viewnior-1.8-2.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "viewnior-1.8-2.4.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libexiv2-28" 
+  "libgcc_s1" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-2_0-0" 
+  "libstdc++6" 
+]
+extra-source "viewnior-1.8-2.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/viewnior-1.8-2.4.x86_64.rpm"
+}

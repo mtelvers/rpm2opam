@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "opae-devel-2.0.0-7.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opae-devel-2.0.0-7.2.x86_64.rpm"]
+depends: [
+  "opae" {= "2.0.0"}
+]
+extra-source "opae-devel-2.0.0-7.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/opae-devel-2.0.0-7.2.x86_64.rpm"
+}

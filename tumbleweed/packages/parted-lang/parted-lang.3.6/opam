@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "parted-lang-3.6-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "parted-lang-3.6-2.1.noarch.rpm"]
+depends: [
+  "parted" {= "3.6"}
+]
+extra-source "parted-lang-3.6-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/parted-lang-3.6-2.1.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kumactl-fish-completion-2.8.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kumactl-fish-completion-2.8.3-1.1.noarch.rpm"]
+depends: [
+  "kumactl" {= "2.8.3"}
+]
+extra-source "kumactl-fish-completion-2.8.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kumactl-fish-completion-2.8.3-1.1.noarch.rpm"
+}

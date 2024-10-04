@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sawfish-1.13.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sawfish-1.13.0-6.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gdk-pixbuf2" 
+  "gdk-pixbuf2-xlib" 
+  "glib2" 
+  "glibc" 
+  "gmp" 
+  "gnome-control-center-filesystem" 
+  "gtk2" 
+  "hicolor-icon-theme" 
+  "kde-filesystem" 
+  "libICE" 
+  "libSM" 
+  "libX11" 
+  "libXext" 
+  "libXft" 
+  "libXinerama" 
+  "libXrandr" 
+  "libXrender" 
+  "libXtst" 
+  "librep" {>= "0.92.3"}
+  "libxcrypt" 
+  "pango" 
+  "rep-gtk" {>= "0.90.7"}
+]
+extra-source "sawfish-1.13.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sawfish-1.13.0-6.fc40.x86_64.rpm"
+}

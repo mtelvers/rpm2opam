@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "avahi-ui-gtk3-0.8-26.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "avahi-ui-gtk3-0.8-26.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "avahi-glib" {= "0.8"}
+  "avahi-libs" {= "0.8"}
+  "cairo" 
+  "cairo-gobject" 
+  "dbus-libs" 
+  "gdbm-libs" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "harfbuzz" 
+  "pango" 
+  "zlib-ng-compat" 
+]
+extra-source "avahi-ui-gtk3-0.8-26.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/avahi-ui-gtk3-0.8-26.fc40.x86_64.rpm"
+}

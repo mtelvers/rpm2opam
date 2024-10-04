@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "weldr-client-tests-35.11-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "weldr-client-tests-35.11-4.fc40.x86_64.rpm"]
+depends: [
+  "createrepo_c" 
+  "glibc" 
+]
+extra-source "weldr-client-tests-35.11-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/weldr-client-tests-35.11-4.fc40.x86_64.rpm"
+}

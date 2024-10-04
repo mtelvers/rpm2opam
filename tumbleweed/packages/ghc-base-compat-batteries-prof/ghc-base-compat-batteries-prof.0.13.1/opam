@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-base-compat-batteries-prof-0.13.1-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-base-compat-batteries-prof-0.13.1-2.6.x86_64.rpm"]
+depends: [
+  "ghc-base-compat-batteries-devel" {= "0.13.1"}
+  "ghc-base-compat-prof" 
+  "ghc-base-prof" 
+]
+extra-source "ghc-base-compat-batteries-prof-0.13.1-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-base-compat-batteries-prof-0.13.1-2.6.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-characters-46.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-characters-46.0-1.fc40.x86_64.rpm"]
+depends: [
+  "gjs" {>= "1.50"}
+  "glib2" 
+  "glibc" 
+  "gnome-desktop4" 
+  "gtk4" {>= "4.6"}
+  "libadwaita" {>= "1.4"}
+]
+extra-source "gnome-characters-46.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-characters-46.0-1.fc40.x86_64.rpm"
+}

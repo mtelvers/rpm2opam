@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "monitoring-plugins-repomd-2.1-2.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "monitoring-plugins-repomd-2.1-2.9.noarch.rpm"]
+depends: [
+  "bash" 
+  "curl" 
+  "grep" 
+  "monitoring-plugins-common" 
+]
+extra-source "monitoring-plugins-repomd-2.1-2.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/monitoring-plugins-repomd-2.1-2.9.noarch.rpm"
+}

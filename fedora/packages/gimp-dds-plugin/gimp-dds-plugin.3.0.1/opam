@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gimp-dds-plugin-3.0.1-23.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gimp-dds-plugin-3.0.1-23.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "babl" 
+  "cairo" 
+  "fontconfig" 
+  "freetype" 
+  "gdk-pixbuf2" 
+  "gegl04" 
+  "gimp" {>= "2.4"}
+  "gimp-libs" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "harfbuzz" 
+  "json-glib" 
+  "libgcc" 
+  "libgomp" 
+  "pango" 
+]
+extra-source "gimp-dds-plugin-3.0.1-23.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gimp-dds-plugin-3.0.1-23.fc40.x86_64.rpm"
+}

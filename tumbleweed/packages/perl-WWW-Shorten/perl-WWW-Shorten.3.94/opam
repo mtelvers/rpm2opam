@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-WWW-Shorten-3.094-1.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-WWW-Shorten-3.094-1.17.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Try-Tiny" {>= "0.24"}
+  "perl-base" 
+  "perl-libwww-perl" {>= "5.835"}
+]
+extra-source "perl-WWW-Shorten-3.094-1.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-WWW-Shorten-3.094-1.17.noarch.rpm"
+}

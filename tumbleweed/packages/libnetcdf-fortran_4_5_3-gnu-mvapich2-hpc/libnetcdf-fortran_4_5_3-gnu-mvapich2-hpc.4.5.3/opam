@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnetcdf-fortran_4_5_3-gnu-mvapich2-hpc-4.5.3-5.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnetcdf-fortran_4_5_3-gnu-mvapich2-hpc-4.5.3-5.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "gnu-compilers-hpc" 
+  "libgcc_s1" 
+  "libgfortran5" 
+  "lua-lmod" 
+  "mvapich2-gnu-hpc" 
+]
+extra-source "libnetcdf-fortran_4_5_3-gnu-mvapich2-hpc-4.5.3-5.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libnetcdf-fortran_4_5_3-gnu-mvapich2-hpc-4.5.3-5.4.x86_64.rpm"
+}

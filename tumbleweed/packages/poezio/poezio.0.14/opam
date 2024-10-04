@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "poezio-0.14-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "poezio-0.14-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "python311-aiodns" 
+  "python311-base" 
+  "python311-curses" 
+  "python311-pyasn1-modules" 
+  "python311-setuptools" 
+  "python311-slixmpp" 
+]
+extra-source "poezio-0.14-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/poezio-0.14-2.2.x86_64.rpm"
+}

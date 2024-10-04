@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "systemd-networkd-defaults-255.4-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "systemd-networkd-defaults-255.4-1.fc40.noarch.rpm"]
+depends: [
+  "systemd-networkd" {= "255.4"}
+]
+extra-source "systemd-networkd-defaults-255.4-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/systemd-networkd-defaults-255.4-1.fc40.noarch.rpm"
+}

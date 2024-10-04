@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libunbound8-1.21.0-slfo.1.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libunbound8-1.21.0-slfo.1.1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libevent-2_1-7" 
+  "libnghttp2-14" 
+  "libopenssl3" 
+  "libprotobuf-c1" 
+  "libpython3_11-1_0" 
+  "libsodium23" 
+  "unbound-anchor" {>= "1.21.0"}
+]
+extra-source "libunbound8-1.21.0-slfo.1.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libunbound8-1.21.0-slfo.1.1.2.x86_64.rpm"
+}

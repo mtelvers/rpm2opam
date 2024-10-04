@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-pst-flags-svn65501-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-pst-flags-svn65501-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-fp" 
+  "texlive-kpathsea" 
+  "texlive-l3kernel" 
+  "texlive-l3packages" 
+  "texlive-pstricks" 
+  "texlive-xcolor" 
+]
+extra-source "texlive-pst-flags-svn65501-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-pst-flags-svn65501-71.fc40.noarch.rpm"
+}

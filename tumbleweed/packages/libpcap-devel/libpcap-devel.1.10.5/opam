@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpcap-devel-1.10.5-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpcap-devel-1.10.5-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "dbus-1-devel" 
+  "glibc-devel" 
+  "libnl3-devel" 
+  "libpcap1" {= "1.10.5"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libpcap-devel-1.10.5-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpcap-devel-1.10.5-2.1.x86_64.rpm"
+}

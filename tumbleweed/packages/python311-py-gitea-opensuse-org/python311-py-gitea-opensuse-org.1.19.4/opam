@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-py-gitea-opensuse-org-1.19.4-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-py-gitea-opensuse-org-1.19.4-1.3.noarch.rpm"]
+depends: [
+  "python311-aenum" {>= "3.1.11"}
+  "python311-aiohttp" {>= "3.8.4"}
+  "python311-base" {= "3.11"}
+  "python311-pydantic" {>= "1.10.5"}
+  "python311-python-dateutil" {>= "2.8.2"}
+  "python311-urllib3" {>= "1.25.3"}
+]
+extra-source "python311-py-gitea-opensuse-org-1.19.4-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-py-gitea-opensuse-org-1.19.4-1.3.noarch.rpm"
+}

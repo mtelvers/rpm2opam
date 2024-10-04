@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libQt5PlatformSupport-devel-static-5.15.15+kde127-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libQt5PlatformSupport-devel-static-5.15.15+kde127-1.2.x86_64.rpm"]
+depends: [
+  "Mesa-libEGL-devel" 
+  "Mesa-libGL-devel" 
+  "fontconfig-devel" 
+  "freetype2-devel" 
+  "glib2-devel" 
+  "libQt5Core-devel" {= "5.15.15"}
+  "libQt5DBus-devel" 
+  "libQt5Gui-devel" {= "5.15.15"}
+  "libQt5PlatformHeaders-devel" {= "5.15.15"}
+  "libX11-devel" 
+  "libXext-devel" 
+  "libXrender-devel" 
+  "libinput-devel" 
+  "libxkbcommon-devel" {>= "0.4.1"}
+  "libxkbcommon-x11-devel" {>= "0.4.1"}
+  "mtdev-devel" 
+  "systemd-devel" 
+  "tslib-devel" 
+]
+extra-source "libQt5PlatformSupport-devel-static-5.15.15+kde127-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libQt5PlatformSupport-devel-static-5.15.15+kde127-1.2.x86_64.rpm"
+}

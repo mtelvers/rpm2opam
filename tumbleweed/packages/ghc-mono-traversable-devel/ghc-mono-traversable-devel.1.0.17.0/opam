@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-mono-traversable-devel-1.0.17.0-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-mono-traversable-devel-1.0.17.0-1.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-hashable-devel" 
+  "ghc-mono-traversable" {= "1.0.17.0"}
+  "ghc-split-devel" 
+  "ghc-text-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-vector-algorithms-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-mono-traversable-devel-1.0.17.0-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-mono-traversable-devel-1.0.17.0-1.8.x86_64.rpm"
+}

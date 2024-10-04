@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-DBIx-DBSchema-0.47-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DBIx-DBSchema-0.47-6.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-DBD-Pg" {>= "1.41"}
+  "perl-DBI" 
+  "perl-Data-Dumper" 
+  "perl-Exporter" 
+  "perl-Storable" 
+  "perl-base" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-DBIx-DBSchema-0.47-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-DBIx-DBSchema-0.47-6.fc40.noarch.rpm"
+}

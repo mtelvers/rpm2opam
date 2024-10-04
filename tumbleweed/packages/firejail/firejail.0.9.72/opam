@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "firejail-0.9.72-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "firejail-0.9.72-2.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "libapparmor1" 
+  "permissions" 
+  "python311-base" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "firejail-0.9.72-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/firejail-0.9.72-2.2.x86_64.rpm"
+}

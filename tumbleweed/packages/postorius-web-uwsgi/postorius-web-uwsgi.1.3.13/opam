@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postorius-web-uwsgi-1.3.13-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postorius-web-uwsgi-1.3.13-1.1.noarch.rpm"]
+depends: [
+  "postorius-web" 
+  "python311-uwsgi-python3" 
+]
+extra-source "postorius-web-uwsgi-1.3.13-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/postorius-web-uwsgi-1.3.13-1.1.noarch.rpm"
+}

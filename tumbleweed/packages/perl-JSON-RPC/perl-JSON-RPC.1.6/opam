@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-JSON-RPC-1.06-2.30.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-JSON-RPC-1.06-2.30.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-CGI" 
+  "perl-Class-Accessor-Lite" 
+  "perl-HTTP-Message" 
+  "perl-JSON" 
+  "perl-Plack" 
+  "perl-Router-Simple" 
+  "perl-base" 
+  "perl-libwww-perl" 
+]
+extra-source "perl-JSON-RPC-1.06-2.30.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-JSON-RPC-1.06-2.30.noarch.rpm"
+}

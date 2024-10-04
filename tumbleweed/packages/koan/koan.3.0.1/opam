@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "koan-3.0.1-2.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "koan-3.0.1-2.7.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-distro" 
+  "python311-libvirt-python" 
+  "python311-netifaces" 
+]
+extra-source "koan-3.0.1-2.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/koan-3.0.1-2.7.noarch.rpm"
+}

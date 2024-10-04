@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dbus-daemon-1.14.10-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dbus-daemon-1.14.10-3.fc40.x86_64.rpm"]
+depends: [
+  "audit-libs" 
+  "bash" 
+  "dbus-common" {= "1.14.10"}
+  "dbus-libs" {= "1.14.10"}
+  "dbus-tools" {= "1.14.10"}
+  "expat" 
+  "glibc" 
+  "libcap-ng" 
+  "libselinux" 
+  "shadow-utils" 
+  "systemd-libs" 
+]
+extra-source "dbus-daemon-1.14.10-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dbus-daemon-1.14.10-3.fc40.x86_64.rpm"
+}

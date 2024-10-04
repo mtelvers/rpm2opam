@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ski-6.14-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ski-6.14-2.2.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "python311" 
+  "python311-curses" 
+  "python311-pygame" 
+]
+extra-source "ski-6.14-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ski-6.14-2.2.noarch.rpm"
+}

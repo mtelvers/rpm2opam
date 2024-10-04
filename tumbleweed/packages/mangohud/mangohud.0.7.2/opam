@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mangohud-0.7.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mangohud-0.7.2-1.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libfmt11" 
+  "libgcc_s1" 
+  "libspdlog1_14" 
+  "libwayland-client0" 
+  "libxkbcommon0" 
+]
+extra-source "mangohud-0.7.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mangohud-0.7.2-1.2.x86_64.rpm"
+}

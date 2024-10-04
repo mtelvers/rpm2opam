@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-surefire-report-plugin-3.2.5-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-surefire-report-plugin-3.2.5-2.2.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-doxia-core" 
+  "maven-doxia-sink-api" 
+  "maven-reporting-api" 
+  "maven-reporting-impl" 
+  "maven-surefire-report-parser" 
+  "plexus-xml" 
+]
+extra-source "maven-surefire-report-plugin-3.2.5-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-surefire-report-plugin-3.2.5-2.2.noarch.rpm"
+}

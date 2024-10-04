@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "google-gson-2.8.9-7.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "google-gson-2.8.9-7.1.noarch.rpm"]
+depends: [
+  "geronimo-annotation-1_0-api" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "google-gson-2.8.9-7.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/google-gson-2.8.9-7.1.noarch.rpm"
+}

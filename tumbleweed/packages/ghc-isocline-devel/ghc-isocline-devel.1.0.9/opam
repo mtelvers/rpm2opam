@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-isocline-devel-1.0.9-1.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-isocline-devel-1.0.9-1.16.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-isocline" {= "1.0.9"}
+  "ghc-text-devel" 
+]
+extra-source "ghc-isocline-devel-1.0.9-1.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-isocline-devel-1.0.9-1.16.x86_64.rpm"
+}

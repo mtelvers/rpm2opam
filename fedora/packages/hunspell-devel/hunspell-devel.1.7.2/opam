@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hunspell-devel-1.7.2-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hunspell-devel-1.7.2-7.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "hunspell" {= "1.7.2"}
+  "libgcc" 
+  "libstdc++" 
+  "perl-Getopt-Long" 
+  "perl-interpreter" 
+  "perl-locale" 
+  "pkgconf-pkg-config" 
+]
+extra-source "hunspell-devel-1.7.2-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hunspell-devel-1.7.2-7.fc40.x86_64.rpm"
+}

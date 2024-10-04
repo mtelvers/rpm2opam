@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-cookie+percent-encoding-devel-0.17.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-cookie+percent-encoding-devel-0.17.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-cookie-devel" {= "0.17.0"}
+  "rust-percent-encoding+default-devel" 
+]
+extra-source "rust-cookie+percent-encoding-devel-0.17.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-cookie+percent-encoding-devel-0.17.0-2.fc40.noarch.rpm"
+}

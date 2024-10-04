@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Alien-Libxml2-0.19-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Alien-Libxml2-0.19-12.fc40.x86_64.rpm"]
+depends: [
+  "libxml2-devel" {= "2.12.5"}
+  "perl-Alien-Base" {>= "2.37"}
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-Alien-Libxml2-0.19-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Alien-Libxml2-0.19-12.fc40.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-num-devel-0.4.1-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-num-devel-0.4.1-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-num-complex-devel" 
+  "rust-num-integer+i128-devel" 
+  "rust-num-integer-devel" 
+  "rust-num-iter+i128-devel" 
+  "rust-num-iter-devel" 
+  "rust-num-rational-devel" 
+  "rust-num-traits+i128-devel" 
+  "rust-num-traits-devel" 
+]
+extra-source "rust-num-devel-0.4.1-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-num-devel-0.4.1-3.fc40.noarch.rpm"
+}

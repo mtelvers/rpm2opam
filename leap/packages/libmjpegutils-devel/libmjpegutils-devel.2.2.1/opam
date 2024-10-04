@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmjpegutils-devel-2.2.1-slfo.1.1.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmjpegutils-devel-2.2.1-slfo.1.1.9.x86_64.rpm"]
+depends: [
+  "liblavfile-2_2-0" {= "2.2.1"}
+  "liblavjpeg-2_2-0" {= "2.2.1"}
+  "liblavplay-2_2-0" {= "2.2.1"}
+  "liblavrec-2_2-0" {= "2.2.1"}
+  "libmjpegutils-2_2-0" {= "2.2.1"}
+  "libmpeg2encpp-2_2-0" {= "2.2.1"}
+  "libmplex2-2_2-0" {= "2.2.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libmjpegutils-devel-2.2.1-slfo.1.1.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libmjpegutils-devel-2.2.1-slfo.1.1.9.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "docker-bash-completion-26.1.5_ce-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "docker-bash-completion-26.1.5_ce-4.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "docker" {= "26.1.5"}
+]
+extra-source "docker-bash-completion-26.1.5_ce-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/docker-bash-completion-26.1.5_ce-4.1.noarch.rpm"
+}

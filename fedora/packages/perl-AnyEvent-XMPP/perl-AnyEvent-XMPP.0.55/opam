@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-AnyEvent-XMPP-0.55-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-AnyEvent-XMPP-0.55-29.fc40.noarch.rpm"]
+depends: [
+  "perl-AnyEvent" 
+  "perl-Authen-SASL" 
+  "perl-Data-Dumper" 
+  "perl-Digest-SHA" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-IO" 
+  "perl-MIME-Base64" 
+  "perl-Net-LibIDN" 
+  "perl-Net-SSLeay" {>= "1.33"}
+  "perl-Object-Event" 
+  "perl-Scalar-List-Utils" 
+  "perl-Test-Simple" 
+  "perl-Time-Local" 
+  "perl-XML-Parser" 
+  "perl-XML-Writer" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-overload" 
+]
+extra-source "perl-AnyEvent-XMPP-0.55-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-AnyEvent-XMPP-0.55-29.fc40.noarch.rpm"
+}

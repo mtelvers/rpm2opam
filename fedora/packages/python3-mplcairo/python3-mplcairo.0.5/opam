@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-mplcairo-0.5-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-mplcairo-0.5-10.fc40.x86_64.rpm"]
+depends: [
+  "cairo" {>= "1.15.4"}
+  "glibc" 
+  "libgcc" 
+  "libraqm" {>= "0.7.0"}
+  "libstdc++" 
+  "python3" {= "3.12"}
+  "python3-cairo" {>= "1.16"}
+  "python3-matplotlib" {>= "2.2"}
+  "python3-pillow" 
+]
+extra-source "python3-mplcairo-0.5-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-mplcairo-0.5-10.fc40.x86_64.rpm"
+}

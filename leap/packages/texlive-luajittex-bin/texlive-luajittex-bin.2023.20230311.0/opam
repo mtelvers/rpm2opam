@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-luajittex-bin-2023.20230311.svn66511-slfo.1.2.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-luajittex-bin-2023.20230311.svn66511-slfo.1.2.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libharfbuzz0" 
+  "libkpathsea6" 
+  "libpng16-16" 
+  "libtexluajit2" 
+  "libz-ng-compat1" 
+  "libzzip-0-13" 
+]
+extra-source "texlive-luajittex-bin-2023.20230311.svn66511-slfo.1.2.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/texlive-luajittex-bin-2023.20230311.svn66511-slfo.1.2.7.x86_64.rpm"
+}

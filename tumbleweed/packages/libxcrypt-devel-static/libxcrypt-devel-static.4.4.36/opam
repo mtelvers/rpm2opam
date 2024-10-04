@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libxcrypt-devel-static-4.4.36-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxcrypt-devel-static-4.4.36-1.6.x86_64.rpm"]
+depends: [
+  "libxcrypt-devel" {= "4.4.36"}
+]
+extra-source "libxcrypt-devel-static-4.4.36-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libxcrypt-devel-static-4.4.36-1.6.x86_64.rpm"
+}

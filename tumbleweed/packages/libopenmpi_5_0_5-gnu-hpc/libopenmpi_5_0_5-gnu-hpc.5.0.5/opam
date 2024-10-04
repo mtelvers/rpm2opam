@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libopenmpi_5_0_5-gnu-hpc-5.0.5-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libopenmpi_5_0_5-gnu-hpc-5.0.5-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gnu-compilers-hpc" 
+  "libevent-2_1-7" 
+  "libfabric1" 
+  "libgcc_s1" 
+  "libhwloc15" 
+  "libpsm2-2" 
+  "libucp0" 
+  "libucs0" 
+  "libuct0" 
+  "libz-ng-compat1" 
+  "lua-lmod" 
+  "openmpi_5_0_5-gnu-hpc" {= "5.0.5"}
+]
+extra-source "libopenmpi_5_0_5-gnu-hpc-5.0.5-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libopenmpi_5_0_5-gnu-hpc-5.0.5-1.2.x86_64.rpm"
+}

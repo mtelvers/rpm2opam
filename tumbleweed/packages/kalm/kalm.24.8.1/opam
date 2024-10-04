@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kalm-24.08.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kalm-24.08.1-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf6-kirigami-imports" {>= "6.3.0"}
+  "kf6-qqc2-desktop-style" {>= "6.3.0"}
+  "kirigami-addons6" 
+  "libKF6ConfigCore6" 
+  "libKF6ConfigGui6" 
+  "libKF6CoreAddons6" 
+  "libKF6Crash6" 
+  "libKF6I18n6" 
+  "libQt6Core6" 
+  "libQt6Gui6" 
+  "libQt6Qml6" 
+  "libQt6QuickControls2-6" 
+  "libQt6Widgets6" 
+  "libstdc++6" 
+]
+extra-source "kalm-24.08.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kalm-24.08.1-1.1.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bitlbee-steam-1.4.2-18.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bitlbee-steam-1.4.2-18.fc40.x86_64.rpm"]
+depends: [
+  "bitlbee" 
+  "glib2" 
+  "glibc" 
+  "libgcrypt" 
+  "libgpg-error" 
+]
+extra-source "bitlbee-steam-1.4.2-18.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bitlbee-steam-1.4.2-18.fc40.x86_64.rpm"
+}

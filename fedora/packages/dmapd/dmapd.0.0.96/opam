@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dmapd-0.0.96-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dmapd-0.0.96-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "check" 
+  "glib2" 
+  "glibc" 
+  "gstreamer1" 
+  "gstreamer1-plugins-base" 
+  "libdmapsharing4" 
+  "libsoup3" 
+  "shadow-utils" 
+  "systemd" 
+  "totem-pl-parser" 
+  "vips" 
+]
+extra-source "dmapd-0.0.96-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dmapd-0.0.96-1.fc40.x86_64.rpm"
+}

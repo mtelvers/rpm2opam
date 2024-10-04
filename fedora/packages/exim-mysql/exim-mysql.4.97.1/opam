@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "exim-mysql-4.97.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "exim-mysql-4.97.1-5.fc40.x86_64.rpm"]
+depends: [
+  "exim" {= "4.97.1"}
+  "glibc" 
+  "mariadb-connector-c" 
+]
+extra-source "exim-mysql-4.97.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/exim-mysql-4.97.1-5.fc40.x86_64.rpm"
+}

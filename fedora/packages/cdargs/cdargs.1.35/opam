@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cdargs-1.35-42.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cdargs-1.35-42.fc40.x86_64.rpm"]
+depends: [
+  "emacs-filesystem" {>= "29.2"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "ncurses-libs" 
+]
+extra-source "cdargs-1.35-42.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cdargs-1.35-42.fc40.x86_64.rpm"
+}

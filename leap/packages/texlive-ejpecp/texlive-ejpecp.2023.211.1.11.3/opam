@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-ejpecp-2023.211.1.11.3svn60950-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-ejpecp-2023.211.1.11.3svn60950-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-amscls" 
+  "texlive-amsfonts" 
+  "texlive-amsmath" 
+  "texlive-auto-pst-pdf" 
+  "texlive-bera" 
+  "texlive-doublestroke" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-mathtools" 
+  "texlive-microtype" 
+  "texlive-ncctools" 
+  "texlive-pstricks" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+]
+extra-source "texlive-ejpecp-2023.211.1.11.3svn60950-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-ejpecp-2023.211.1.11.3svn60950-slfo.1.1.4.noarch.rpm"
+}

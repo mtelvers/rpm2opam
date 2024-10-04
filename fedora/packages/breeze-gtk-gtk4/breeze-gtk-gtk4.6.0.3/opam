@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "breeze-gtk-gtk4-6.0.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "breeze-gtk-gtk4-6.0.3-1.fc40.noarch.rpm"]
+depends: [
+  "breeze-gtk-common" {= "6.0.3"}
+]
+extra-source "breeze-gtk-gtk4-6.0.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/breeze-gtk-gtk4-6.0.3-1.fc40.noarch.rpm"
+}

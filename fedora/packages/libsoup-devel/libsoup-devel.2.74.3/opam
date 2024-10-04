@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libsoup-devel-2.74.3-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsoup-devel-2.74.3-6.fc40.x86_64.rpm"]
+depends: [
+  "brotli-devel" 
+  "glib2-devel" {>= "2.58"}
+  "libpsl-devel" {>= "0.20"}
+  "libsoup" {= "2.74.3"}
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+  "sqlite-devel" 
+  "sysprof-capture-devel" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "libsoup-devel-2.74.3-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libsoup-devel-2.74.3-6.fc40.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-libarchive-c-5.1-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-libarchive-c-5.1-1.2.noarch.rpm"]
+depends: [
+  "libarchive13" 
+  "python312-base" {= "3.12"}
+]
+extra-source "python312-libarchive-c-5.1-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-libarchive-c-5.1-1.2.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qore-xml-module-1.8.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qore-xml-module-1.8.1-2.1.x86_64.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "glibc" 
+  "libgcc_s1" 
+  "libqore12" {= "1.4"}
+  "libstdc++6" 
+  "libxml2-2" 
+]
+extra-source "qore-xml-module-1.8.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/qore-xml-module-1.8.1-2.1.x86_64.rpm"
+}

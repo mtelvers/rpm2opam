@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dnssec-trigger-0.17-34.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dnssec-trigger-0.17-34.fc40.x86_64.rpm"]
+depends: [
+  "NetworkManager" {>= "1.20"}
+  "NetworkManager-libnm" 
+  "bash" 
+  "e2fsprogs" 
+  "glibc" 
+  "ldns" {>= "1.6.10"}
+  "openssl" 
+  "openssl-libs" 
+  "python3" 
+  "unbound" 
+]
+extra-source "dnssec-trigger-0.17-34.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dnssec-trigger-0.17-34.fc40.x86_64.rpm"
+}

@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lcdproc-0.5.9-21.20210209git5c21e8c.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lcdproc-0.5.9-21.20210209git5c21e8c.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "freetype" 
+  "glibc" 
+  "libX11" 
+  "libftdi" 
+  "libg15render" 
+  "libhid" 
+  "libpng" 
+  "libusb-compat-0-1" 
+  "libusb1" 
+  "lirc-libs" 
+  "mx5000tools" 
+  "ncurses-libs" 
+  "perl-Fcntl" 
+  "perl-Geo-METAR" 
+  "perl-Getopt-Std" 
+  "perl-IO" 
+  "perl-LWP-Protocol-https" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.4.0"}
+  "perl-libwww-perl" 
+  "systemd" 
+]
+extra-source "lcdproc-0.5.9-21.20210209git5c21e8c.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lcdproc-0.5.9-21.20210209git5c21e8c.fc40.x86_64.rpm"
+}

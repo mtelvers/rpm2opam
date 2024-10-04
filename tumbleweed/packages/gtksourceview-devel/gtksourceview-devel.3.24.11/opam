@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtksourceview-devel-3.24.11-5.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtksourceview-devel-3.24.11-5.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.48"}
+  "gtk3-devel" {>= "3.20"}
+  "libgtksourceview-3_0-1" {= "3.24.11"}
+  "libxml2-devel" {>= "2.6"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-GtkSource-3_0" {= "3.24.11"}
+]
+extra-source "gtksourceview-devel-3.24.11-5.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gtksourceview-devel-3.24.11-5.1.x86_64.rpm"
+}

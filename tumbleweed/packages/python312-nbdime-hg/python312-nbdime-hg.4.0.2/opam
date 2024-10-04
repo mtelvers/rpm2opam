@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-nbdime-hg-4.0.2-17.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-nbdime-hg-4.0.2-17.1.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "mercurial" 
+  "python312-base" 
+  "python312-nbdime" {= "4.0.2"}
+]
+extra-source "python312-nbdime-hg-4.0.2-17.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-nbdime-hg-4.0.2-17.1.noarch.rpm"
+}

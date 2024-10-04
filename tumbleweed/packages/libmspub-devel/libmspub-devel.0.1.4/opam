@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmspub-devel-0.1.4-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmspub-devel-0.1.4-3.3.x86_64.rpm"]
+depends: [
+  "libicu-devel" 
+  "libmspub-0_1-1" {= "0.1.4"}
+  "librevenge-devel" 
+  "pkgconf-pkg-config" 
+  "zlib-devel" 
+]
+extra-source "libmspub-devel-0.1.4-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmspub-devel-0.1.4-3.3.x86_64.rpm"
+}

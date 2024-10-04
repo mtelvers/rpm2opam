@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gix-packetline+async-io-devel-0.16.7-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gix-packetline+async-io-devel-0.16.7-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-gix-packetline+futures-io-devel" {= "0.16.7"}
+  "rust-gix-packetline+futures-lite-devel" {= "0.16.7"}
+  "rust-gix-packetline+pin-project-lite-devel" {= "0.16.7"}
+  "rust-gix-packetline-devel" {= "0.16.7"}
+]
+extra-source "rust-gix-packetline+async-io-devel-0.16.7-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gix-packetline+async-io-devel-0.16.7-2.fc40.noarch.rpm"
+}

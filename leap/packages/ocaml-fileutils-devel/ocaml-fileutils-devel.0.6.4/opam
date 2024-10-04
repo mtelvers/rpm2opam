@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ocaml-fileutils-devel-0.6.4-slfo.1.1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-fileutils-devel-0.6.4-slfo.1.1.6.x86_64.rpm"]
+depends: [
+  "ocaml" {= "8"}
+  "ocaml-fileutils" {= "0.6.4"}
+  "ocaml-stdlib-shims-devel" 
+]
+extra-source "ocaml-fileutils-devel-0.6.4-slfo.1.1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/ocaml-fileutils-devel-0.6.4-slfo.1.1.6.x86_64.rpm"
+}

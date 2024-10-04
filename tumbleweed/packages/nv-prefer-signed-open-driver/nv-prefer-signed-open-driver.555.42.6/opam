@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nv-prefer-signed-open-driver-555.42.06-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nv-prefer-signed-open-driver-555.42.06-1.2.x86_64.rpm"]
+depends: [
+  "nvidia-open-driver-G06-signed-cuda-kmp-default" {= "555.42.6"}
+]
+extra-source "nv-prefer-signed-open-driver-555.42.06-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/nv-prefer-signed-open-driver-555.42.06-1.2.x86_64.rpm"
+}

@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "knotes-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "knotes-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "akonadi-notes" 
+  "akonadi-search" 
+  "akonadi-server" 
+  "glibc" 
+  "kf6-kcmutils" 
+  "kf6-kcolorscheme" 
+  "kf6-kcompletion" 
+  "kf6-kconfig" 
+  "kf6-kconfigwidgets" 
+  "kf6-kcoreaddons" 
+  "kf6-kcrash" 
+  "kf6-kdnssd" 
+  "kf6-kglobalaccel" 
+  "kf6-ki18n" 
+  "kf6-kiconthemes" 
+  "kf6-kio-file-widgets" 
+  "kf6-knotifications" 
+  "kf6-knotifyconfig" 
+  "kf6-kstatusnotifieritem" 
+  "kf6-kwidgetsaddons" 
+  "kf6-kwindowsystem" 
+  "kf6-kxmlgui" 
+  "kmime" 
+  "knotes-libs" {= "24.2.1"}
+  "kontactinterface" 
+  "ktextaddons-qt6" 
+  "libgcc" 
+  "libstdc++" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+]
+extra-source "knotes-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/knotes-24.02.1-1.fc40.x86_64.rpm"
+}

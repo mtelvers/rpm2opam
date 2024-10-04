@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "aws-efs-utils-2.0.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "aws-efs-utils-2.0.3-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "nfs-kernel-server" 
+  "python311-base" 
+  "stunnel" {>= "4.56"}
+]
+extra-source "aws-efs-utils-2.0.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/aws-efs-utils-2.0.3-1.1.noarch.rpm"
+}

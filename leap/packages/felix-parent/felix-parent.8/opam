@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "felix-parent-8-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "felix-parent-8-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "apache-parent" 
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "felix-parent-8-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/felix-parent-8-slfo.1.1.3.noarch.rpm"
+}

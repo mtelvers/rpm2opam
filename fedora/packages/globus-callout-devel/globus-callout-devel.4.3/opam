@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "globus-callout-devel-4.3-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "globus-callout-devel-4.3-9.fc40.x86_64.rpm"]
+depends: [
+  "globus-callout" {= "4.3"}
+  "globus-common-devel" {>= "15"}
+  "pkgconf-pkg-config" 
+]
+extra-source "globus-callout-devel-4.3-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/globus-callout-devel-4.3-9.fc40.x86_64.rpm"
+}

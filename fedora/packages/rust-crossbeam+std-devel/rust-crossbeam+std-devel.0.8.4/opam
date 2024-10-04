@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-crossbeam+std-devel-0.8.4-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-crossbeam+std-devel-0.8.4-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-crossbeam+alloc-devel" {= "0.8.4"}
+  "rust-crossbeam-channel+std-devel" 
+  "rust-crossbeam-channel-devel" 
+  "rust-crossbeam-deque+std-devel" 
+  "rust-crossbeam-deque-devel" 
+  "rust-crossbeam-devel" {= "0.8.4"}
+  "rust-crossbeam-epoch+std-devel" 
+  "rust-crossbeam-epoch-devel" 
+  "rust-crossbeam-queue+std-devel" 
+  "rust-crossbeam-queue-devel" 
+  "rust-crossbeam-utils+std-devel" 
+]
+extra-source "rust-crossbeam+std-devel-0.8.4-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-crossbeam+std-devel-0.8.4-2.fc40.noarch.rpm"
+}

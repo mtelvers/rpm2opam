@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "amarok-utils-2.9.71^git20231231.387c30d-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "amarok-utils-2.9.71^git20231231.387c30d-3.fc40.x86_64.rpm"]
+depends: [
+  "amarok-libs" {= "2.9.71"}
+  "glibc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+]
+extra-source "amarok-utils-2.9.71^git20231231.387c30d-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/amarok-utils-2.9.71^git20231231.387c30d-3.fc40.x86_64.rpm"
+}

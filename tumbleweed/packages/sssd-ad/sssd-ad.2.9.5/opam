@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sssd-ad-2.9.5-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sssd-ad-2.9.5-2.1.x86_64.rpm"]
+depends: [
+  "adcli" 
+  "glibc" 
+  "libdhash1" 
+  "libini_config5" 
+  "libldap2" 
+  "libldb2" 
+  "libpopt0" 
+  "libsasl2-3" 
+  "libselinux1" 
+  "libsss_idmap0" 
+  "libsystemd0" 
+  "libtalloc2" 
+  "libtdb1" 
+  "libtevent0" 
+  "samba-client-libs" 
+  "sssd" 
+  "sssd-krb5-common" 
+  "sssd-ldap" 
+]
+extra-source "sssd-ad-2.9.5-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sssd-ad-2.9.5-2.1.x86_64.rpm"
+}

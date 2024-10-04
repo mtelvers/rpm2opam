@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-whey-0.1.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-whey-0.1.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-attrs" {>= "22.2.0"}
+  "python311-base" 
+  "python311-click" {>= "7.1.2"}
+  "python311-consolekit" {>= "1.4.1"}
+  "python311-dist-meta" {>= "0.1.0"}
+  "python311-dom-toml" {>= "2.0.0"}
+  "python311-domdf-python-tools" {>= "2.8.0"}
+  "python311-handy-archives" {>= "0.2.0"}
+  "python311-natsort" {>= "7.1.1"}
+  "python311-packaging" {>= "20.9"}
+  "python311-pyproject-parser" {>= "0.11.0"}
+  "python311-shippinglabel" {>= "0.16.0"}
+  "update-alternatives" 
+]
+extra-source "python311-whey-0.1.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-whey-0.1.1-1.1.noarch.rpm"
+}

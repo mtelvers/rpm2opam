@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "initscripts-10.21-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "initscripts-10.21-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "chkconfig" 
+  "coreutils" 
+  "filesystem" {>= "3"}
+  "findutils" 
+  "gawk" 
+  "glibc" 
+  "grep" 
+  "initscripts-rename-device" 
+  "initscripts-service" 
+  "popt" 
+  "procps-ng" 
+  "setup" 
+  "shadow-utils" 
+  "systemd" 
+  "util-linux" 
+]
+extra-source "initscripts-10.21-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/initscripts-10.21-1.fc40.x86_64.rpm"
+}

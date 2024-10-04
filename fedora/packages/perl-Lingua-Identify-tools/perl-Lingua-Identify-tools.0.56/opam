@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Lingua-Identify-tools-0.56-26.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Lingua-Identify-tools-0.56-26.fc40.noarch.rpm"]
+depends: [
+  "perl-Getopt-Std" 
+  "perl-Lingua-Identify" 
+  "perl-POSIX" 
+  "perl-Text-Affixes" {>= "0.7"}
+  "perl-Text-ExtractWords" 
+  "perl-Text-Ngram" {>= "0.13"}
+  "perl-interpreter" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-locale" 
+]
+extra-source "perl-Lingua-Identify-tools-0.56-26.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Lingua-Identify-tools-0.56-26.fc40.noarch.rpm"
+}

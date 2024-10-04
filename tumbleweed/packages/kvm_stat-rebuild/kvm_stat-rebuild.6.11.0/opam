@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kvm_stat-rebuild-6.11.0-23.30.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kvm_stat-rebuild-6.11.0-23.30.noarch.rpm"]
+depends: [
+  "kernel-source" {= "6.11.0"}
+]
+extra-source "kvm_stat-rebuild-6.11.0-23.30.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kvm_stat-rebuild-6.11.0-23.30.noarch.rpm"
+}

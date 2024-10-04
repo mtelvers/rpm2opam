@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "twine-4.0.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "twine-4.0.2-3.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-importlib-metadata" {>= "3.6"}
+  "python3-keyring" {>= "15.1"}
+  "python3-pkginfo" {>= "1.8.1"}
+  "python3-readme-renderer" {>= "35"}
+  "python3-requests" {>= "2.20"}
+  "python3-rfc3986" {>= "1.4"}
+  "python3-rich" {>= "12"}
+  "python3-urllib3" {>= "1.26"}
+]
+extra-source "twine-4.0.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/twine-4.0.2-3.fc40.noarch.rpm"
+}

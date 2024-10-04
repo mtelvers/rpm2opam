@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libantlr4-runtime-devel-4.13.0-5.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libantlr4-runtime-devel-4.13.0-5.3.x86_64.rpm"]
+depends: [
+  "libantlr4-runtime4_13_0" {= "4.13.0"}
+  "utfcpp-devel" 
+]
+extra-source "libantlr4-runtime-devel-4.13.0-5.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libantlr4-runtime-devel-4.13.0-5.3.x86_64.rpm"
+}

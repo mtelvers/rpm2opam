@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cvs-contrib-1.11.23-70.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cvs-contrib-1.11.23-70.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cvs" {= "1.11.23"}
+  "perl-File-Basename" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-PathTools" 
+  "perl-Perl4-CoreLibs" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "tcsh" 
+]
+extra-source "cvs-contrib-1.11.23-70.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cvs-contrib-1.11.23-70.fc40.noarch.rpm"
+}

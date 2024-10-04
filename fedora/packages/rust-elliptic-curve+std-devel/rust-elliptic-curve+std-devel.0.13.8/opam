@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-elliptic-curve+std-devel-0.13.8-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-elliptic-curve+std-devel-0.13.8-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-elliptic-curve+alloc-devel" {= "0.13.8"}
+  "rust-elliptic-curve-devel" {= "0.13.8"}
+  "rust-pkcs8+std-devel" 
+  "rust-pkcs8-devel" 
+  "rust-rand_core+std-devel" 
+  "rust-sec1+default-devel" 
+  "rust-sec1+std-devel" 
+  "rust-sec1+subtle-devel" 
+  "rust-sec1+zeroize-devel" 
+]
+extra-source "rust-elliptic-curve+std-devel-0.13.8-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-elliptic-curve+std-devel-0.13.8-2.fc40.noarch.rpm"
+}

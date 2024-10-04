@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sluice-bash-completion-0.02.13-1.13.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sluice-bash-completion-0.02.13-1.13.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "sluice" {= "0.2.13"}
+]
+extra-source "sluice-bash-completion-0.02.13-1.13.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sluice-bash-completion-0.02.13-1.13.noarch.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "asciidoc-latex-backend-10.2.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "asciidoc-latex-backend-10.2.1-1.1.noarch.rpm"]
+depends: [
+  "asciidoc" {= "10.2.1"}
+  "dblatex" 
+  "texlive-courier" 
+  "texlive-dvips" 
+  "texlive-fancybox" 
+  "texlive-helvetic" 
+  "texlive-jknapltx" 
+  "texlive-metafont-bin" 
+  "texlive-rsfs" 
+  "texlive-times" 
+  "texlive-upquote" 
+]
+extra-source "asciidoc-latex-backend-10.2.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/asciidoc-latex-backend-10.2.1-1.1.noarch.rpm"
+}

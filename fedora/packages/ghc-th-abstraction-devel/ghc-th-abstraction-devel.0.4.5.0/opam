@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-th-abstraction-devel-0.4.5.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-th-abstraction-devel-0.4.5.0-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-template-haskell-devel" 
+  "ghc-th-abstraction" {= "0.4.5.0"}
+]
+extra-source "ghc-th-abstraction-devel-0.4.5.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-th-abstraction-devel-0.4.5.0-6.fc40.x86_64.rpm"
+}

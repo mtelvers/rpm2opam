@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mfgtools-1.4.243.7-2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mfgtools-1.4.243.7-2.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbz2-1" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libstdc++6" 
+  "libusb-1_0-0" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+]
+extra-source "mfgtools-1.4.243.7-2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mfgtools-1.4.243.7-2.5.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-lib3to6-202107.1047-2.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-lib3to6-202107.1047-2.10.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-astor" 
+  "python310-base" 
+  "python310-click" 
+  "python310-wheel" 
+  "update-alternatives" 
+]
+extra-source "python310-lib3to6-202107.1047-2.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-lib3to6-202107.1047-2.10.noarch.rpm"
+}

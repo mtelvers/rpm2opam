@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sparkleshare-3.38-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sparkleshare-3.38-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "curl" 
+  "git" {>= "1.7.12"}
+  "git-lfs" 
+  "gtk-sharp3" {= "3.0.0.0"}
+  "gvfs" 
+  "mono-core" {= "4.0.0.0"}
+  "notify-sharp3" {= "3.0.0.0"}
+  "webkit2-sharp" {= "2.10.9.0"}
+]
+extra-source "sparkleshare-3.38-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sparkleshare-3.38-1.fc40.x86_64.rpm"
+}

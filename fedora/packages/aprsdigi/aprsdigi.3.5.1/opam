@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "aprsdigi-3.5.1-27.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "aprsdigi-3.5.1-27.fc40.x86_64.rpm"]
+depends: [
+  "ax25-tools" 
+  "bash" 
+  "glibc" 
+  "kernel-modules-extra" 
+  "libax25" 
+  "systemd" 
+]
+extra-source "aprsdigi-3.5.1-27.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/aprsdigi-3.5.1-27.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "keylime-config-7.11.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "keylime-config-7.11.0-1.3.noarch.rpm"]
+depends: [
+  "keylime-tpm_cert_store" 
+  "python311-keylime" {= "7.11.0"}
+  "system-user-parsec" 
+]
+extra-source "keylime-config-7.11.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/keylime-config-7.11.0-1.3.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "apulse-32bit-0.1.13-2.17.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apulse-32bit-0.1.13-2.17.x86_64.rpm"]
+depends: [
+  "apulse" 
+  "bash-sh" 
+  "glibc-32bit" 
+  "libasound2-32bit" 
+  "libglib-2_0-0-32bit" 
+]
+extra-source "apulse-32bit-0.1.13-2.17.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/apulse-32bit-0.1.13-2.17.x86_64.rpm"
+}

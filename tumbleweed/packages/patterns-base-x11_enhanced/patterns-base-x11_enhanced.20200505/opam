@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "patterns-base-x11_enhanced-20200505-54.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "patterns-base-x11_enhanced-20200505-54.1.x86_64.rpm"]
+depends: [
+  "glibc-locale" 
+  "glibc-locale-base" 
+  "patterns-aeon-base" {= "0"}
+  "xkeyboard-config" 
+  "xorg-x11-essentials" 
+]
+extra-source "patterns-base-x11_enhanced-20200505-54.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/patterns-base-x11_enhanced-20200505-54.1.x86_64.rpm"
+}

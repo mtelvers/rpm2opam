@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-POE-0.215-9.32.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-POE-0.215-9.32.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Moose" {>= "2.2"}
+  "perl-POE" {>= "1.310"}
+]
+extra-source "perl-MooseX-POE-0.215-9.32.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-POE-0.215-9.32.noarch.rpm"
+}

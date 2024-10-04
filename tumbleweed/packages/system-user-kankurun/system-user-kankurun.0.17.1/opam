@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "system-user-kankurun-0.17.1-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "system-user-kankurun-0.17.1-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "shadow" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "system-user-kankurun-0.17.1-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/system-user-kankurun-0.17.1-1.2.noarch.rpm"
+}

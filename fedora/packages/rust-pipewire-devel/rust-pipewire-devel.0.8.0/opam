@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-pipewire-devel-0.8.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-pipewire-devel-0.8.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-anyhow+default-devel" 
+  "rust-bitflags+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-libspa+default-devel" 
+  "rust-libspa-sys+default-devel" 
+  "rust-nix+default-devel" 
+  "rust-nix+fs-devel" 
+  "rust-nix+signal-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-pipewire-sys+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-pipewire-devel-0.8.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-pipewire-devel-0.8.0-1.fc40.noarch.rpm"
+}

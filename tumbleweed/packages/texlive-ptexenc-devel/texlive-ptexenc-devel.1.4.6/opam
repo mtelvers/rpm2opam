@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-ptexenc-devel-1.4.6-100.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-ptexenc-devel-1.4.6-100.1.x86_64.rpm"]
+depends: [
+  "libptexenc1" {= "1.4.6"}
+  "pkgconf-pkg-config" 
+  "texlive-kpathsea-devel" 
+]
+extra-source "texlive-ptexenc-devel-1.4.6-100.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/texlive-ptexenc-devel-1.4.6-100.1.x86_64.rpm"
+}

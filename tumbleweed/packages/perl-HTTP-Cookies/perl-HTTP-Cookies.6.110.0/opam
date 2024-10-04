@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-HTTP-Cookies-6.110.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTTP-Cookies-6.110.0-2.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-HTTP-Date" {>= "6"}
+  "perl-HTTP-Message" {>= "6"}
+]
+extra-source "perl-HTTP-Cookies-6.110.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-HTTP-Cookies-6.110.0-2.2.noarch.rpm"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "autoyast2-installation-5.0.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "autoyast2-installation-5.0.3-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "libyui-ncurses16" 
+  "yast2" 
+  "yast2-bootloader" 
+  "yast2-core" 
+  "yast2-country" 
+  "yast2-ntp-client" {>= "4.0.1"}
+  "yast2-packager" {>= "4.4.13"}
+  "yast2-pkg-bindings" {>= "4.6.1"}
+  "yast2-ruby-bindings" {>= "1.0.0"}
+  "yast2-services-manager" {>= "3.1.10"}
+  "yast2-slp" 
+  "yast2-transfer" {>= "2.21.0"}
+  "yast2-update" {>= "3.3.0"}
+  "yast2-xml" 
+]
+extra-source "autoyast2-installation-5.0.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/autoyast2-installation-5.0.3-1.1.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dnf-automatic-4.20.0-7.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dnf-automatic-4.20.0-7.el10.noarch.rpm"]
+depends: [
+  "bash" 
+  "python3" 
+  "python3-dnf" {= "4.20.0"}
+  "systemd" 
+]
+extra-source "dnf-automatic-4.20.0-7.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/dnf-automatic-4.20.0-7.el10.noarch.rpm"
+}

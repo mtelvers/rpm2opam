@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bouncycastle-1.78.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bouncycastle-1.78.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+]
+extra-source "bouncycastle-1.78.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/bouncycastle-1.78.1-1.1.noarch.rpm"
+}

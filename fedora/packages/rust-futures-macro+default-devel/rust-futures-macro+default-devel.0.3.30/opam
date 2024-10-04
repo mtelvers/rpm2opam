@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-futures-macro+default-devel-0.3.30-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-futures-macro+default-devel-0.3.30-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-futures-macro-devel" {= "0.3.30"}
+]
+extra-source "rust-futures-macro+default-devel-0.3.30-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-futures-macro+default-devel-0.3.30-2.fc40.noarch.rpm"
+}

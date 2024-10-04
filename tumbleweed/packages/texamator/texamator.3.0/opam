@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texamator-3.0+git.20190226.91432e4-1.24.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texamator-3.0+git.20190226.91432e4-1.24.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-poppler-qt5" 
+  "python311-qt5" 
+  "texlive-latex" 
+]
+extra-source "texamator-3.0+git.20190226.91432e4-1.24.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texamator-3.0+git.20190226.91432e4-1.24.noarch.rpm"
+}

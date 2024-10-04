@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pulseaudio-16.1-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pulseaudio-16.1-7.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "bash" 
+  "dbus-libs" 
+  "fftw-libs-single" 
+  "glib2" 
+  "glibc" 
+  "gstreamer1" 
+  "gstreamer1-plugins-base" 
+  "libX11" 
+  "libX11-xcb" 
+  "libcap" 
+  "libgcc" 
+  "libsndfile" 
+  "libstdc++" 
+  "libtdb" 
+  "libtool-ltdl" 
+  "libxcb" 
+  "orc" 
+  "pulseaudio-libs" 
+  "rtkit" 
+  "shadow-utils" 
+  "soxr" 
+  "speexdsp" 
+  "systemd" 
+  "systemd-libs" 
+  "webrtc-audio-processing0-3" 
+]
+extra-source "pulseaudio-16.1-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pulseaudio-16.1-7.fc40.x86_64.rpm"
+}

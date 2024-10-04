@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "unknown-horizons-2019.1-9.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "unknown-horizons-2019.1-9.1.noarch.rpm"]
+depends: [
+  "hicolor-icon-theme" 
+  "python3-fife" {>= "0.4.2"}
+  "python311-Pillow" 
+  "python311-PyYAML" 
+  "python311-base" 
+]
+extra-source "unknown-horizons-2019.1-9.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/unknown-horizons-2019.1-9.1.noarch.rpm"
+}

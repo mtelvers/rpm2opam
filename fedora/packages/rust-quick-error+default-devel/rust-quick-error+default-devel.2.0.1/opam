@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-quick-error+default-devel-2.0.1-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-quick-error+default-devel-2.0.1-9.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-quick-error-devel" {= "2.0.1"}
+]
+extra-source "rust-quick-error+default-devel-2.0.1-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-quick-error+default-devel-2.0.1-9.fc40.noarch.rpm"
+}

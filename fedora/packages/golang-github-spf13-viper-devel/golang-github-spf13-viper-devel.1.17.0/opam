@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-spf13-viper-devel-1.17.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-spf13-viper-devel-1.17.0-3.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-fsnotify-devel" 
+  "golang-github-hashicorp-hcl-devel" 
+  "golang-github-magiconair-properties-devel" 
+  "golang-github-mitchellh-mapstructure-devel" 
+  "golang-github-pelletier-toml-2-devel" 
+  "golang-github-sagikazarmark-slog-shim-devel" 
+  "golang-github-spf13-afero-devel" 
+  "golang-github-spf13-cast-devel" 
+  "golang-github-spf13-pflag-devel" 
+  "golang-github-subosito-gotenv-devel" 
+  "golang-gopkg-ini-1-devel" 
+  "golang-gopkg-yaml-3-devel" 
+]
+extra-source "golang-github-spf13-viper-devel-1.17.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-spf13-viper-devel-1.17.0-3.fc40.noarch.rpm"
+}

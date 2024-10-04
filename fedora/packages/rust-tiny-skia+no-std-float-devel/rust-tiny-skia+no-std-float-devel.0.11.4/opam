@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tiny-skia+no-std-float-devel-0.11.4-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tiny-skia+no-std-float-devel-0.11.4-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-tiny-skia-devel" {= "0.11.4"}
+  "rust-tiny-skia-path+no-std-float-devel" 
+]
+extra-source "rust-tiny-skia+no-std-float-devel-0.11.4-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tiny-skia+no-std-float-devel-0.11.4-1.fc40.noarch.rpm"
+}

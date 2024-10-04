@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mint-y-icons-1.7.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mint-y-icons-1.7.2-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "filesystem" 
+  "gnome-icon-theme" 
+  "hicolor-icon-theme" 
+  "mint-x-icons" 
+]
+extra-source "mint-y-icons-1.7.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mint-y-icons-1.7.2-3.fc40.noarch.rpm"
+}

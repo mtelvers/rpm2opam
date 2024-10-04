@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "codespell-2.2.6-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "codespell-2.2.6-3.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+]
+extra-source "codespell-2.2.6-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/codespell-2.2.6-3.fc40.noarch.rpm"
+}

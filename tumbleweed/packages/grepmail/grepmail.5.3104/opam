@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "grepmail-5.3104-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grepmail-5.3104-3.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Mail-Mbox-MessageParser" {>= "1.4001"}
+  "perl-TimeDate" 
+  "perl-base" 
+]
+extra-source "grepmail-5.3104-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/grepmail-5.3104-3.2.noarch.rpm"
+}

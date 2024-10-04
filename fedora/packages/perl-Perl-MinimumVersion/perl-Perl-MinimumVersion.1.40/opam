@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Perl-MinimumVersion-1.40-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Perl-MinimumVersion-1.40-12.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-File-Find-Rule" 
+  "perl-File-Find-Rule-Perl" 
+  "perl-Getopt-Long" 
+  "perl-PPI" {>= "1.215"}
+  "perl-PPIx-Regexp" {>= "0.33"}
+  "perl-PPIx-Utils" 
+  "perl-Params-Util" {>= "0.25"}
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" {>= "1.20"}
+  "perl-interpreter" 
+  "perl-libs" {>= "5.5.0"}
+  "perl-vars" 
+  "perl-version" {>= "0.76"}
+]
+extra-source "perl-Perl-MinimumVersion-1.40-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Perl-MinimumVersion-1.40-12.fc40.noarch.rpm"
+}

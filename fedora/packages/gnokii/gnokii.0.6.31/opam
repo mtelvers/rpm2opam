@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnokii-0.6.31-42.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnokii-0.6.31-42.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bluez-libs" 
+  "glib2" 
+  "glibc" 
+  "libX11" 
+  "libXpm" 
+  "libical" 
+  "libusb-compat-0-1" 
+  "pcsc-lite-libs" 
+  "readline" 
+  "shadow-utils" 
+]
+extra-source "gnokii-0.6.31-42.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnokii-0.6.31-42.fc40.x86_64.rpm"
+}

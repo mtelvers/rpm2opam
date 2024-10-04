@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "initscripts-10.26-1.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "initscripts-10.26-1.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "chkconfig" 
+  "coreutils" 
+  "filesystem" {>= "3"}
+  "findutils" 
+  "gawk" 
+  "glibc" 
+  "grep" 
+  "initscripts-rename-device" 
+  "initscripts-service" 
+  "popt" 
+  "procps-ng" 
+  "setup" 
+  "shadow-utils" 
+  "systemd" 
+  "util-linux" 
+]
+extra-source "initscripts-10.26-1.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/initscripts-10.26-1.el10.x86_64.rpm"
+}

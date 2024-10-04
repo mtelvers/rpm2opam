@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lvm2-2.03.24-5.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lvm2-2.03.24-5.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "coreutils" 
+  "device-mapper" {>= "2.3.24"}
+  "glibc" 
+  "kmod" 
+  "libaio1" 
+  "libblkid1" 
+  "libdevmapper-event1_03" 
+  "libdevmapper1_03" 
+  "liblvm2cmd2_03" 
+  "libreadline8" 
+  "libselinux1" 
+  "libsystemd0" 
+  "libudev-mini1" 
+  "multipath-tools" 
+  "systemd" 
+  "udev" 
+]
+extra-source "lvm2-2.03.24-5.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lvm2-2.03.24-5.1.x86_64.rpm"
+}

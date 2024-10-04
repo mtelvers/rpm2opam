@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-slog-async-devel-2.8.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-slog-async-devel-2.8.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-crossbeam-channel+default-devel" 
+  "rust-slog+default-devel" 
+  "rust-take_mut+default-devel" 
+  "rust-thread_local+default-devel" 
+]
+extra-source "rust-slog-async-devel-2.8.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-slog-async-devel-2.8.0-2.fc40.noarch.rpm"
+}

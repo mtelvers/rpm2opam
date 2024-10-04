@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pki-resteasy-core-3.0.26-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pki-resteasy-core-3.0.26-29.fc40.noarch.rpm"]
+depends: [
+  "apache-commons-io" 
+  "httpcomponents-client" 
+  "jakarta-activation" 
+  "jakarta-annotations" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "jaxb-api" 
+  "jboss-jaxrs-2-0-api" 
+  "jboss-logging" 
+  "jboss-logging-tools" 
+  "tomcat-servlet-4-0-api" 
+]
+extra-source "pki-resteasy-core-3.0.26-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pki-resteasy-core-3.0.26-29.fc40.noarch.rpm"
+}

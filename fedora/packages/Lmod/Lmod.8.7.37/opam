@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "Lmod-8.7.37-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Lmod-8.7.37-1.fc40.x86_64.rpm"]
+depends: [
+  "alternatives" 
+  "bash" 
+  "coreutils" 
+  "glibc" 
+  "lua-filesystem" 
+  "lua-json" 
+  "lua-posix" 
+  "lua-term" 
+  "procps-ng" 
+  "tcl" 
+]
+extra-source "Lmod-8.7.37-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/Lmod-8.7.37-1.fc40.x86_64.rpm"
+}

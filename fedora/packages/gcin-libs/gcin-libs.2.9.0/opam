@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gcin-libs-2.9.0-11.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcin-libs-2.9.0-11.fc39.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "gcin-im-client" {= "2.9.0"}
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libX11" 
+]
+extra-source "gcin-libs-2.9.0-11.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gcin-libs-2.9.0-11.fc39.x86_64.rpm"
+}

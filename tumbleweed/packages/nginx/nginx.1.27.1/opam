@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nginx-1.27.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nginx-1.27.1-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libcrypt1" 
+  "libexslt0" 
+  "libgd3" 
+  "libopenssl3" 
+  "libpcre2-8-0" 
+  "libxml2-2" 
+  "libxslt1" 
+  "libz-ng-compat1" 
+  "perl" 
+  "perl-base" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "nginx-1.27.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/nginx-1.27.1-2.1.x86_64.rpm"
+}

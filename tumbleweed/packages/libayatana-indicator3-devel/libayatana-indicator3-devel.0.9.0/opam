@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libayatana-indicator3-devel-0.9.0-1.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libayatana-indicator3-devel-0.9.0-1.16.x86_64.rpm"]
+depends: [
+  "ayatana-ido-devel" 
+  "gtk3-devel" 
+  "libayatana-indicator3-7" {= "0.9.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libayatana-indicator3-devel-0.9.0-1.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libayatana-indicator3-devel-0.9.0-1.16.x86_64.rpm"
+}

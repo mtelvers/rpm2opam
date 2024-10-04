@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-Cabal-syntax-prof-3.8.1.0-140.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-Cabal-syntax-prof-3.8.1.0-140.fc40.x86_64.rpm"]
+depends: [
+  "ghc-Cabal-syntax-devel" {= "3.8.1.0"}
+  "ghc-array-prof" 
+  "ghc-base-prof" 
+  "ghc-binary-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+  "ghc-mtl-prof" 
+  "ghc-parsec-prof" 
+  "ghc-pretty-prof" 
+  "ghc-text-prof" 
+  "ghc-time-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unix-prof" 
+]
+extra-source "ghc-Cabal-syntax-prof-3.8.1.0-140.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-Cabal-syntax-prof-3.8.1.0-140.fc40.x86_64.rpm"
+}

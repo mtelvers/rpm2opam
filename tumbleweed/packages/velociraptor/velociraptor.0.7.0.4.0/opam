@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "velociraptor-0.7.0.4.git97.675e45f9-12.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "velociraptor-0.7.0.4.git97.675e45f9-12.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+  "system-user-velociraptor" 
+]
+extra-source "velociraptor-0.7.0.4.git97.675e45f9-12.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/velociraptor-0.7.0.4.git97.675e45f9-12.1.x86_64.rpm"
+}

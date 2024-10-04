@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gvncpulse-devel-1.3.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gvncpulse-devel-1.3.1-5.fc40.x86_64.rpm"]
+depends: [
+  "cyrus-sasl-devel" {>= "2.1.27"}
+  "gdk-pixbuf2-devel" {>= "2.36.0"}
+  "glib2-devel" {>= "2.56.0"}
+  "gnutls-devel" {>= "3.6.0"}
+  "gvnc-devel" 
+  "gvncpulse" {= "1.3.1"}
+  "libgcrypt-devel" {>= "1.8.0"}
+  "pkgconf-pkg-config" 
+  "pulseaudio-libs-devel" {>= "11.0"}
+  "zlib-ng-compat-devel" {>= "1.2.11"}
+]
+extra-source "gvncpulse-devel-1.3.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gvncpulse-devel-1.3.1-5.fc40.x86_64.rpm"
+}

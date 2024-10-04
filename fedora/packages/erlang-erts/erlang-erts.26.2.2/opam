@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "erlang-erts-26.2.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "erlang-erts-26.2.2-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "erlang-kernel" {= "26.2.2"}
+  "erlang-stdlib" {= "26.2.2"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "lksctp-tools" 
+  "ncurses-libs" 
+  "shadow-utils" 
+  "systemd-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "erlang-erts-26.2.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/erlang-erts-26.2.2-1.fc40.x86_64.rpm"
+}

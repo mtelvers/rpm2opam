@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ledger-3.3.2-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ledger-3.3.2-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libgmp10" 
+  "libmpfr6" 
+  "libstdc++6" 
+]
+extra-source "ledger-3.3.2-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ledger-3.3.2-2.1.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-reticulate-1.20-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-reticulate-1.20-10.fc40.x86_64.rpm"]
+depends: [
+  "R-Rcpp" {>= "0.12.7"}
+  "R-core" 
+  "R-jsonlite" 
+  "R-png" 
+  "R-rappdirs" 
+  "R-withr" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "python3" 
+]
+extra-source "R-reticulate-1.20-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-reticulate-1.20-10.fc40.x86_64.rpm"
+}

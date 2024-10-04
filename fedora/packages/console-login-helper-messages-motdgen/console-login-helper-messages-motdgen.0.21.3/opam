@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "console-login-helper-messages-motdgen-0.21.3-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "console-login-helper-messages-motdgen-0.21.3-8.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "console-login-helper-messages" 
+  "setup" {>= "2.12.7"}
+  "systemd" 
+  "util-linux" {>= "2.36"}
+]
+extra-source "console-login-helper-messages-motdgen-0.21.3-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/console-login-helper-messages-motdgen-0.21.3-8.fc40.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libarmadillo14-14.0.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libarmadillo14-14.0.1-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libarpack2" 
+  "libblas3" 
+  "libgcc_s1" 
+  "liblapack3" 
+  "libstdc++6" 
+  "libsuperlu6" 
+]
+extra-source "libarmadillo14-14.0.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libarmadillo14-14.0.1-1.1.x86_64.rpm"
+}

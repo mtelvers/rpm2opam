@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wizznic-1.1-1.18.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wizznic-1.1-1.18.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libSDL-1_2-0" 
+  "libSDL_image-1_2-0" 
+  "libSDL_mixer-1_2-0" 
+  "libglvnd" 
+]
+extra-source "wizznic-1.1-1.18.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/wizznic-1.1-1.18.x86_64.rpm"
+}

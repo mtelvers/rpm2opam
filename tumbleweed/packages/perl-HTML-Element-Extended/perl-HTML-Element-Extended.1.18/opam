@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-HTML-Element-Extended-1.18-14.31.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTML-Element-Extended-1.18-14.31.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-HTML-Tree" {>= "3.1"}
+  "perl-base" 
+]
+extra-source "perl-HTML-Element-Extended-1.18-14.31.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-HTML-Element-Extended-1.18-14.31.noarch.rpm"
+}

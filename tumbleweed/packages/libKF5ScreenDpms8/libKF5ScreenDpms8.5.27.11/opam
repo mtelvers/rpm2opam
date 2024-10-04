@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libKF5ScreenDpms8-5.27.11-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libKF5ScreenDpms8-5.27.11-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libKF5Screen8" {= "5.27.11"}
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5WaylandClient5" 
+  "libQt5X11Extras5" 
+  "libstdc++6" 
+  "libwayland-client0" 
+  "libxcb-dpms0" 
+  "libxcb1" 
+]
+extra-source "libKF5ScreenDpms8-5.27.11-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libKF5ScreenDpms8-5.27.11-1.2.x86_64.rpm"
+}

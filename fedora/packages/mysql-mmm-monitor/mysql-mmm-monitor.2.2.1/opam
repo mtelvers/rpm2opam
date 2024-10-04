@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mysql-mmm-monitor-2.2.1-33.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mysql-mmm-monitor-2.2.1-33.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "mysql-mmm" {= "2.2.1"}
+  "perl-Algorithm-Diff" 
+  "perl-Class-Singleton" 
+  "perl-Class-Struct" 
+  "perl-DBD-MySQL" 
+  "perl-DBI" 
+  "perl-Data-Dumper" 
+  "perl-English" 
+  "perl-Errno" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Temp" 
+  "perl-IO" 
+  "perl-IPC-Open3" 
+  "perl-Log-Log4perl" 
+  "perl-Net-Ping" 
+  "perl-POSIX" 
+  "perl-Proc-Daemon" 
+  "perl-Scalar-List-Utils" 
+  "perl-Thread-Queue" 
+  "perl-Time-HiRes" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-threads" 
+  "perl-threads-shared" 
+  "systemd" 
+]
+extra-source "mysql-mmm-monitor-2.2.1-33.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mysql-mmm-monitor-2.2.1-33.fc40.noarch.rpm"
+}

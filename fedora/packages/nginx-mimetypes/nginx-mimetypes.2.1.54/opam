@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nginx-mimetypes-2.1.54-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nginx-mimetypes-2.1.54-5.fc40.noarch.rpm"]
+depends: [
+  "nginx-filesystem" 
+]
+extra-source "nginx-mimetypes-2.1.54-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nginx-mimetypes-2.1.54-5.fc40.noarch.rpm"
+}

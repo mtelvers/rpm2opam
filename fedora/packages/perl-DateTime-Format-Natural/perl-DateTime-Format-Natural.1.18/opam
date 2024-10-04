@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-DateTime-Format-Natural-1.18-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DateTime-Format-Natural-1.18-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Clone" 
+  "perl-DateTime" 
+  "perl-DateTime-HiRes" 
+  "perl-DateTime-TimeZone" 
+  "perl-Exporter" 
+  "perl-Getopt-Long" 
+  "perl-List-MoreUtils" 
+  "perl-Params-Validate" {>= "1.15"}
+  "perl-Scalar-List-Utils" 
+  "perl-Storable" 
+  "perl-Term-ReadLine" 
+  "perl-base" 
+  "perl-boolean" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-DateTime-Format-Natural-1.18-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-DateTime-Format-Natural-1.18-3.fc40.noarch.rpm"
+}

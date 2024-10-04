@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CPAN-Releases-Latest-0.08-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CPAN-Releases-Latest-0.08-22.fc40.noarch.rpm"]
+depends: [
+  "perl-CPAN-DistnameInfo" 
+  "perl-Carp" 
+  "perl-File-HomeDir" 
+  "perl-MetaCPAN-Client" {>= "1.1001"}
+  "perl-Module-Runtime" 
+  "perl-Moo" 
+  "perl-PathTools" 
+  "perl-Time-Duration-Parse" 
+  "perl-autodie" 
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "perl-CPAN-Releases-Latest-0.08-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CPAN-Releases-Latest-0.08-22.fc40.noarch.rpm"
+}

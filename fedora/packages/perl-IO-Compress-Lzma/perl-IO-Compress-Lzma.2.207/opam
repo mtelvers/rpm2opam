@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-IO-Compress-Lzma-2.207-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-IO-Compress-Lzma-2.207-1.fc40.noarch.rpm"]
+depends: [
+  "perl-Compress-Raw-Lzma" {>= "2.207"}
+  "perl-Compress-Raw-Zlib" {>= "2.207"}
+  "perl-Exporter" 
+  "perl-IO-Compress" {>= "2.207"}
+  "perl-constant" 
+  "perl-libs" 
+]
+extra-source "perl-IO-Compress-Lzma-2.207-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-IO-Compress-Lzma-2.207-1.fc40.noarch.rpm"
+}

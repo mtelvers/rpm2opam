@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bnd-maven-plugin-6.3.1-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bnd-maven-plugin-6.3.1-10.fc40.noarch.rpm"]
+depends: [
+  "aqute-bndlib" {= "6.3.1"}
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "maven-mapping" 
+  "plexus-build-api0" 
+]
+extra-source "bnd-maven-plugin-6.3.1-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bnd-maven-plugin-6.3.1-10.fc40.noarch.rpm"
+}

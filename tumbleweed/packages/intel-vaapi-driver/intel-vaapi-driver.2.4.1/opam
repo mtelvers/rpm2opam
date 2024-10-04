@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "intel-vaapi-driver-2.4.1-6.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "intel-vaapi-driver-2.4.1-6.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libdrm2" 
+  "libdrm_intel1" 
+]
+extra-source "intel-vaapi-driver-2.4.1-6.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/intel-vaapi-driver-2.4.1-6.1.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CPAN-Meta-2.150010-502.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CPAN-Meta-2.150010-502.fc40.noarch.rpm"]
+depends: [
+  "perl-CPAN-Meta-Requirements" {>= "2.121"}
+  "perl-CPAN-Meta-YAML" {>= "0.11"}
+  "perl-Carp" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-JSON-PP" {>= "2.27300"}
+  "perl-Scalar-List-Utils" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-version" {>= "0.88"}
+]
+extra-source "perl-CPAN-Meta-2.150010-502.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CPAN-Meta-2.150010-502.fc40.noarch.rpm"
+}

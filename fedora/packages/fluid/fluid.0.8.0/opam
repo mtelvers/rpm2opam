@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fluid-0.8.0-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fluid-0.8.0-20.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtdeclarative" 
+  "qt5-qtquickcontrols" 
+  "qt5-qtquickcontrols2" 
+]
+extra-source "fluid-0.8.0-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fluid-0.8.0-20.fc40.x86_64.rpm"
+}

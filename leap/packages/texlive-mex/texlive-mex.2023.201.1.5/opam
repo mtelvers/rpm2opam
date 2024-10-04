@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-mex-2023.201.1.05asvn58661-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-mex-2023.201.1.05asvn58661-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-enctex" {>= "2023"}
+  "texlive-filesystem" {>= "2023"}
+  "texlive-hyph-utf8" {>= "2023"}
+  "texlive-hyphen-base" 
+  "texlive-hyphen-polish" {>= "2023"}
+  "texlive-knuth-lib" {>= "2023"}
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-mex-bin" {>= "2023"}
+  "texlive-pdftex" {>= "2023"}
+  "texlive-pl" {>= "2023"}
+  "texlive-plain" {>= "2023"}
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-tex" {>= "2023"}
+  "texlive-tex-ini-files" {>= "2023"}
+  "texlive-utf8mex" {>= "2023"}
+]
+extra-source "texlive-mex-2023.201.1.05asvn58661-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-mex-2023.201.1.05asvn58661-slfo.1.1.4.noarch.rpm"
+}

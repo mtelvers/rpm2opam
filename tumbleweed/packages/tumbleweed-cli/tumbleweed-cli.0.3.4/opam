@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tumbleweed-cli-0.3.4-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tumbleweed-cli-0.3.4-1.3.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "coreutils" 
+  "curl" 
+  "grep" 
+  "libzypp" {>= "1"}
+  "sudo" 
+  "zypper" 
+]
+extra-source "tumbleweed-cli-0.3.4-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tumbleweed-cli-0.3.4-1.3.noarch.rpm"
+}

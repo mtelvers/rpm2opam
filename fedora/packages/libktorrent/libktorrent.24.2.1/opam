@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libktorrent-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libktorrent-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gmp" 
+  "kf6-karchive" 
+  "kf6-kconfig" 
+  "kf6-kcoreaddons" 
+  "kf6-ki18n" 
+  "kf6-kio-core-libs" 
+  "libgcc" 
+  "libgcrypt" 
+  "libstdc++" 
+  "qt6-qt5compat" 
+  "qt6-qtbase" 
+]
+extra-source "libktorrent-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libktorrent-24.02.1-1.fc40.x86_64.rpm"
+}

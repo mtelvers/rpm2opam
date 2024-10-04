@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-rpm-build-perl-scripts-0.82-45.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-rpm-build-perl-scripts-0.82-45.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-B" 
+  "perl-Getopt-Long" {>= "2.24"}
+  "perl-interpreter" 
+  "perl-libs" {>= "5.7.0"}
+  "perl-rpm-build-perl" 
+]
+extra-source "perl-rpm-build-perl-scripts-0.82-45.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-rpm-build-perl-scripts-0.82-45.fc40.noarch.rpm"
+}

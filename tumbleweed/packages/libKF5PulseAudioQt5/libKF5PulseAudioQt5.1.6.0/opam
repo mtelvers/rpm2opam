@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libKF5PulseAudioQt5-1.6.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libKF5PulseAudioQt5-1.6.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5DBus5" 
+  "libQt5Gui5" 
+  "libpulse-mainloop-glib0" 
+  "libpulse0" 
+  "libstdc++6" 
+]
+extra-source "libKF5PulseAudioQt5-1.6.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libKF5PulseAudioQt5-1.6.0-1.1.x86_64.rpm"
+}

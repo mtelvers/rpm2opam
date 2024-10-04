@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-memoize-2024.216.1.1.2svn70015-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-memoize-2024.216.1.1.2svn70015-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "perl-File-Path" 
+  "perl-base" 
+  "python311-base" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-advice" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-memoize-bin" {>= "2024"}
+  "texlive-pdftexcmds" 
+  "texlive-pgf" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+]
+extra-source "texlive-memoize-2024.216.1.1.2svn70015-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-memoize-2024.216.1.1.2svn70015-55.1.noarch.rpm"
+}

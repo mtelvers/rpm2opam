@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rizin-devel-0.6.3-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rizin-devel-0.6.3-2.fc40.x86_64.rpm"]
+depends: [
+  "capstone-devel" {>= "3.0.4"}
+  "file-devel" 
+  "libmspack-devel" 
+  "libtree-sitter-devel" 
+  "libzip-devel" 
+  "lz4-devel" 
+  "openssl-devel" 
+  "pkgconf-pkg-config" 
+  "rizin" 
+  "xxhash-devel" 
+  "xz-devel" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "rizin-devel-0.6.3-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rizin-devel-0.6.3-2.fc40.x86_64.rpm"
+}

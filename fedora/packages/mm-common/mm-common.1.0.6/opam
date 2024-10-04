@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mm-common-1.0.6-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mm-common-1.0.6-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "doxygen" 
+  "graphviz" 
+  "libxslt" 
+  "pkgconf-pkg-config" 
+  "python3" 
+]
+extra-source "mm-common-1.0.6-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mm-common-1.0.6-3.fc40.noarch.rpm"
+}

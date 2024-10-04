@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-samba-client-5.0.0-lp160.3.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-samba-client-5.0.0-lp160.3.12.noarch.rpm"]
+depends: [
+  "perl-XML-LibXML" 
+  "perl-base" 
+  "yast2" {>= "4.0.39"}
+  "yast2-network" {>= "4.2.0"}
+  "yast2-pam" {>= "2.14.0"}
+  "yast2-python3-bindings" {>= "4.0.8"}
+  "yast2-ruby-bindings" {>= "1.0.0"}
+]
+extra-source "yast2-samba-client-5.0.0-lp160.3.12.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/yast2-samba-client-5.0.0-lp160.3.12.noarch.rpm"
+}

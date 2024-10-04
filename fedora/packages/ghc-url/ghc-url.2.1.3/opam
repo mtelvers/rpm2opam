@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-url-2.1.3-26.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-url-2.1.3-26.fc40.x86_64.rpm"]
+depends: [
+  "ghc-array" 
+  "ghc-base" 
+  "ghc-bytestring" 
+  "ghc-deepseq" 
+  "ghc-ghc-bignum" 
+  "ghc-ghc-boot-th" 
+  "ghc-pretty" 
+  "ghc-template-haskell" 
+  "ghc-utf8-string" 
+  "glibc" 
+  "gmp" 
+]
+extra-source "ghc-url-2.1.3-26.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-url-2.1.3-26.fc40.x86_64.rpm"
+}

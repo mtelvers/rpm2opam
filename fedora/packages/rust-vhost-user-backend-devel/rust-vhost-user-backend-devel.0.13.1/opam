@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-vhost-user-backend-devel-0.13.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-vhost-user-backend-devel-0.13.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-libc+default-devel" 
+  "rust-log+default-devel" 
+  "rust-vhost+default-devel" 
+  "rust-vhost+vhost-user-backend-devel" 
+  "rust-virtio-bindings+default-devel" 
+  "rust-virtio-queue+default-devel" 
+  "rust-vm-memory+backend-atomic-devel" 
+  "rust-vm-memory+backend-mmap-devel" 
+  "rust-vm-memory+default-devel" 
+  "rust-vmm-sys-util+default-devel" 
+]
+extra-source "rust-vhost-user-backend-devel-0.13.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-vhost-user-backend-devel-0.13.1-2.fc40.noarch.rpm"
+}

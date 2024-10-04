@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcc-locale-14-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcc-locale-14-2.1.x86_64.rpm"]
+depends: [
+  "gcc14-locale" 
+]
+extra-source "gcc-locale-14-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gcc-locale-14-2.1.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libftdi-devel-1.5-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libftdi-devel-1.5-12.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cmake-filesystem" 
+  "glibc" 
+  "libconfuse" 
+  "libftdi" {= "1.5"}
+  "libusb1" 
+  "libusb1-devel" 
+  "pkgconf-pkg-config" 
+  "python3-libftdi" {= "1.5"}
+]
+extra-source "libftdi-devel-1.5-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libftdi-devel-1.5-12.fc40.x86_64.rpm"
+}

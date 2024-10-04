@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtksourceviewmm-devel-3.91.1-1.18.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtksourceviewmm-devel-3.91.1-1.18.x86_64.rpm"]
+depends: [
+  "glibmm2_4-devel" {>= "2.46.1"}
+  "gtkmm3-devel" {>= "3.18.0"}
+  "gtksourceview4-devel" {>= "3.99.0"}
+  "libgtksourceviewmm-4_0-0" {= "3.91.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gtksourceviewmm-devel-3.91.1-1.18.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gtksourceviewmm-devel-3.91.1-1.18.x86_64.rpm"
+}

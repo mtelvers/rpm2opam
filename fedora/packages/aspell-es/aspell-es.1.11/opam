@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "aspell-es-1.11-30.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "aspell-es-1.11-30.fc40.x86_64.rpm"]
+depends: [
+  "aspell" {>= "0.60"}
+]
+extra-source "aspell-es-1.11-30.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/aspell-es-1.11-30.fc40.x86_64.rpm"
+}

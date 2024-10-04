@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fetch-crl-3.0.22-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fetch-crl-3.0.22-7.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "openssl" 
+  "perl-File-Basename" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-IPC-Open3" 
+  "perl-LWP-Protocol-https" 
+  "perl-POSIX" 
+  "perl-Sys-Syslog" 
+  "perl-Time-Local" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+  "perl-vars" 
+  "systemd" 
+]
+extra-source "fetch-crl-3.0.22-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fetch-crl-3.0.22-7.fc40.noarch.rpm"
+}

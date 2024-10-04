@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "leonidas-kde-theme-11.0.3-23.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "leonidas-kde-theme-11.0.3-23.fc39.noarch.rpm"]
+depends: [
+  "fedora-logos" 
+  "kde-filesystem" 
+  "leonidas-backgrounds-common" {>= "11.0.0"}
+  "leonidas-backgrounds-kdm" {>= "11.0.0"}
+]
+extra-source "leonidas-kde-theme-11.0.3-23.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/leonidas-kde-theme-11.0.3-23.fc39.noarch.rpm"
+}

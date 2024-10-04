@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pipewire-spa-plugins-0_2-jack-1.2.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pipewire-spa-plugins-0_2-jack-1.2.5-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "jack" 
+  "libdbus-1-3" 
+  "libjack0" 
+  "libpipewire-0_3-0" 
+]
+extra-source "pipewire-spa-plugins-0_2-jack-1.2.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pipewire-spa-plugins-0_2-jack-1.2.5-1.1.x86_64.rpm"
+}

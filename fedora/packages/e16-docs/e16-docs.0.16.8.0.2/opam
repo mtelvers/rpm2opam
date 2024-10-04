@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "e16-docs-0.16.8.0.2-27.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "e16-docs-0.16.8.0.2-27.fc40.noarch.rpm"]
+depends: [
+  "dejavu-sans-fonts" 
+  "e16" {>= "0.16.8"}
+]
+extra-source "e16-docs-0.16.8.0.2-27.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/e16-docs-0.16.8.0.2-27.fc40.noarch.rpm"
+}

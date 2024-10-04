@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "caffe-devel-1.0^git20200212.9b89154-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "caffe-devel-1.0^git20200212.9b89154-10.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "caffe" {= "1.0"}
+  "cmake" 
+  "cmake-filesystem" 
+  "gcc-c++" 
+  "gflags-devel" 
+  "glog-devel" 
+  "gzip" 
+  "opencv-devel" 
+  "protobuf-devel" 
+  "python3" 
+  "tar" 
+  "wget2-wget" 
+]
+extra-source "caffe-devel-1.0^git20200212.9b89154-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/caffe-devel-1.0^git20200212.9b89154-10.fc40.x86_64.rpm"
+}

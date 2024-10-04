@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-reqwest+default-tls-devel-0.11.24-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-reqwest+default-tls-devel-0.11.24-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-reqwest+__tls-devel" {= "0.11.24"}
+  "rust-reqwest+hyper-tls-devel" {= "0.11.24"}
+  "rust-reqwest+native-tls-crate-devel" {= "0.11.24"}
+  "rust-reqwest+tokio-native-tls-devel" {= "0.11.24"}
+  "rust-reqwest-devel" {= "0.11.24"}
+]
+extra-source "rust-reqwest+default-tls-devel-0.11.24-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-reqwest+default-tls-devel-0.11.24-1.fc40.noarch.rpm"
+}

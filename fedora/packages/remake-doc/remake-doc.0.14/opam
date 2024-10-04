@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "remake-doc-0.14-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "remake-doc-0.14-10.fc40.noarch.rpm"]
+depends: [
+  "remake" {= "0.14"}
+]
+extra-source "remake-doc-0.14-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/remake-doc-0.14-10.fc40.noarch.rpm"
+}

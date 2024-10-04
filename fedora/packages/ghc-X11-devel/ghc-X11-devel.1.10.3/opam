@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-X11-devel-1.10.3-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-X11-devel-1.10.3-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-X11" {= "1.10.3"}
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-data-default-class-devel" 
+  "libX11-devel" 
+  "libXScrnSaver-devel" 
+  "libXext-devel" 
+  "libXinerama-devel" 
+  "libXrandr-devel" 
+]
+extra-source "ghc-X11-devel-1.10.3-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-X11-devel-1.10.3-6.fc40.x86_64.rpm"
+}

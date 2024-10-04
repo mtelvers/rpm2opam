@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-executable-path-prof-0.0.3.1-27.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-executable-path-prof-0.0.3.1-27.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-directory-prof" 
+  "ghc-executable-path-devel" {= "0.0.3.1"}
+  "ghc-filepath-prof" 
+  "ghc-unix-prof" 
+]
+extra-source "ghc-executable-path-prof-0.0.3.1-27.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-executable-path-prof-0.0.3.1-27.fc40.x86_64.rpm"
+}

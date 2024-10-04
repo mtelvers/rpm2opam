@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "aqsis-1.8.2-57.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "aqsis-1.8.2-57.fc40.x86_64.rpm"]
+depends: [
+  "aqsis-core" {= "1.8.2"}
+  "aqsis-data" {= "1.8.2"}
+  "aqsis-libs" 
+  "boost-filesystem" 
+  "boost-program-options" 
+  "boost-thread" 
+  "glibc" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libstdc++" 
+  "qt" 
+  "qt-x11" 
+  "zlib-ng-compat" 
+]
+extra-source "aqsis-1.8.2-57.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/aqsis-1.8.2-57.fc40.x86_64.rpm"
+}

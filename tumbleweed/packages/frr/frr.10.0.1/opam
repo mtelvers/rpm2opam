@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "frr-10.0.1-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "frr-10.0.1-4.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "glibc" 
+  "libfrr0" 
+  "libfrr_pb0" 
+  "libfrrcares0" 
+  "libfrrfpm_pb0" 
+  "libjson-c5" 
+  "libmgmt_be_nb0" 
+  "libopenssl3" 
+  "libreadline8" 
+  "librtr0" 
+  "libyang2" 
+  "pam" 
+  "shadow" 
+]
+extra-source "frr-10.0.1-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/frr-10.0.1-4.1.x86_64.rpm"
+}

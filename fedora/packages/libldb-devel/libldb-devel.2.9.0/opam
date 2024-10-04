@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libldb-devel-2.9.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libldb-devel-2.9.0-1.fc40.x86_64.rpm"]
+depends: [
+  "libldb" {= "2.9.0"}
+  "libtalloc-devel" {>= "2.4.2"}
+  "libtdb-devel" {>= "1.4.10"}
+  "libtevent-devel" {>= "0.16.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libldb-devel-2.9.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libldb-devel-2.9.0-1.fc40.x86_64.rpm"
+}

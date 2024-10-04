@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-ppx-base-devel-0.16.0-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-ppx-base-devel-0.16.0-9.fc40.x86_64.rpm"]
+depends: [
+  "ocaml-ppx-base" {= "0.16.0"}
+  "ocaml-ppx-cold-devel" 
+  "ocaml-ppx-compare-devel" 
+  "ocaml-ppx-enumerate-devel" 
+  "ocaml-ppx-globalize-devel" 
+  "ocaml-ppx-hash-devel" 
+  "ocaml-ppx-sexp-conv-devel" 
+  "ocaml-ppxlib-devel" 
+  "ocaml-sexplib0-devel" 
+]
+extra-source "ocaml-ppx-base-devel-0.16.0-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-ppx-base-devel-0.16.0-9.fc40.x86_64.rpm"
+}

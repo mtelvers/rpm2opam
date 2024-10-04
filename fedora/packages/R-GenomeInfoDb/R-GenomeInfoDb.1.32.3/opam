@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-GenomeInfoDb-1.32.3-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-GenomeInfoDb-1.32.3-6.fc40.noarch.rpm"]
+depends: [
+  "R-BiocGenerics" {>= "0.37.0"}
+  "R-GenomeInfoDbData" 
+  "R-IRanges" {>= "2.13.12"}
+  "R-RCurl" 
+  "R-S4Vectors" {>= "0.25.12"}
+  "R-core" {= "4.3"}
+  "texlive-collection-latexrecommended" 
+]
+extra-source "R-GenomeInfoDb-1.32.3-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-GenomeInfoDb-1.32.3-6.fc40.noarch.rpm"
+}

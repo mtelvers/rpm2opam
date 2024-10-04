@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "stage-devel-4.3.0-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "stage-devel-4.3.0-11.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "fltk-devel" 
+  "libjpeg-turbo-devel" 
+  "libpng-devel" 
+  "mesa-libGL-devel" 
+  "mesa-libGLU-devel" 
+  "pkgconf-pkg-config" 
+  "stage" 
+]
+extra-source "stage-devel-4.3.0-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/stage-devel-4.3.0-11.fc40.x86_64.rpm"
+}

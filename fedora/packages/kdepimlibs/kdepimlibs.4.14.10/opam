@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kdepimlibs-4.14.10-45.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kdepimlibs-4.14.10-45.fc40.x86_64.rpm"]
+depends: [
+  "cyrus-sasl-lib" 
+  "cyrus-sasl-plain" 
+  "glibc" 
+  "kdelibs" {>= "4.14.38"}
+  "kdepimlibs-kxmlrpcclient" 
+  "libgcc" 
+  "libical" 
+  "libstdc++" 
+  "libuuid" 
+  "openldap" 
+  "qt" 
+  "qt-x11" 
+]
+extra-source "kdepimlibs-4.14.10-45.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kdepimlibs-4.14.10-45.fc40.x86_64.rpm"
+}

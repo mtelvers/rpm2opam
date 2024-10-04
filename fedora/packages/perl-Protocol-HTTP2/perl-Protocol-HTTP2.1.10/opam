@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Protocol-HTTP2-1.10-15.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Protocol-HTTP2-1.10-15.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-MIME-Base64" {>= "3.11"}
+  "perl-Scalar-List-Utils" 
+  "perl-Time-HiRes" 
+  "perl-constant" 
+  "perl-libs" {>= "5.8.5"}
+]
+extra-source "perl-Protocol-HTTP2-1.10-15.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Protocol-HTTP2-1.10-15.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc9.2-xhtml-prof-3000.2.2.1-24.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc9.2-xhtml-prof-3000.2.2.1-24.fc40.x86_64.rpm"]
+depends: [
+  "ghc9-2-base-prof" 
+  "ghc9-2-xhtml-devel" {= "3000.2.2.1"}
+]
+extra-source "ghc9.2-xhtml-prof-3000.2.2.1-24.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc9.2-xhtml-prof-3000.2.2.1-24.fc40.x86_64.rpm"
+}

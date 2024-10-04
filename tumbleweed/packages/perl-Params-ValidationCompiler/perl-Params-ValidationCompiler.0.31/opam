@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Params-ValidationCompiler-0.31-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Params-ValidationCompiler-0.31-1.6.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Eval-Closure" 
+  "perl-Exception-Class" 
+  "perl-Scalar-List-Utils" {>= "1.29"}
+]
+extra-source "perl-Params-ValidationCompiler-0.31-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Params-ValidationCompiler-0.31-1.6.noarch.rpm"
+}

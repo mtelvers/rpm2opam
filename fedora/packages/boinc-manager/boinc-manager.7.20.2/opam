@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "boinc-manager-7.20.2-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "boinc-manager-7.20.2-9.fc40.x86_64.rpm"]
+depends: [
+  "boinc-client" {= "7.20.2"}
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "hicolor-icon-theme" 
+  "libgcc" 
+  "libnotify" 
+  "libstdc++" 
+  "libxcb" 
+  "wxBase" 
+  "wxGTK" 
+  "wxGTK-webview" 
+]
+extra-source "boinc-manager-7.20.2-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/boinc-manager-7.20.2-9.fc40.x86_64.rpm"
+}

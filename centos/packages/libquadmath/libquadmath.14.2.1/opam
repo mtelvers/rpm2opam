@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libquadmath-14.2.1-2.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libquadmath-14.2.1-2.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+]
+extra-source "libquadmath-14.2.1-2.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/libquadmath-14.2.1-2.el10.x86_64.rpm"
+}

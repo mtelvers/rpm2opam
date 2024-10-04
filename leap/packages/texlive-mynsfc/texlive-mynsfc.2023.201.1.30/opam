@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-mynsfc-2023.201.1.30svn60280-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-mynsfc-2023.201.1.30svn60280-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-amsfonts" 
+  "texlive-amsmath" 
+  "texlive-caption" 
+  "texlive-ctex" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-kvoptions" 
+  "texlive-marvosym" 
+  "texlive-paralist" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-subfig" 
+  "texlive-titlesec" 
+  "texlive-tools" 
+  "texlive-xcolor" 
+  "texlive-xpatch" 
+]
+extra-source "texlive-mynsfc-2023.201.1.30svn60280-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-mynsfc-2023.201.1.30svn60280-slfo.1.1.4.noarch.rpm"
+}

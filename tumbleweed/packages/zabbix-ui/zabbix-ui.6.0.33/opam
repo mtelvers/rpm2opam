@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zabbix-ui-6.0.33-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zabbix-ui-6.0.33-2.1.noarch.rpm"]
+depends: [
+  "apache2" 
+  "bash" 
+  "php8" 
+  "php8-bcmath" 
+  "php8-ctype" 
+  "php8-gd" 
+  "php8-gettext" 
+  "php8-ldap" 
+  "php8-mbstring" 
+  "php8-sockets" 
+  "php8-xmlreader" 
+  "php8-xmlwriter" 
+]
+extra-source "zabbix-ui-6.0.33-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/zabbix-ui-6.0.33-2.1.noarch.rpm"
+}

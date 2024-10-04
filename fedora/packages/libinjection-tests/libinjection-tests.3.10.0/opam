@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libinjection-tests-3.10.0-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libinjection-tests-3.10.0-10.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libinjection" {= "3.10.0"}
+]
+extra-source "libinjection-tests-3.10.0-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libinjection-tests-3.10.0-10.fc40.x86_64.rpm"
+}

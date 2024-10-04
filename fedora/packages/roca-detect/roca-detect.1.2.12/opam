@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "roca-detect-1.2.12-26.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "roca-detect-1.2.12-26.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-cryptography" {>= "1.2.3"}
+  "python3-dateutil" 
+  "python3-future" 
+  "python3-pgpdump" 
+  "python3-six" 
+]
+extra-source "roca-detect-1.2.12-26.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/roca-detect-1.2.12-26.fc40.noarch.rpm"
+}

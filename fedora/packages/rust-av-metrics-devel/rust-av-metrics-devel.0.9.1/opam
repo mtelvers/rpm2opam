@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-av-metrics-devel-0.9.1-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-av-metrics-devel-0.9.1-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-crossbeam+default-devel" 
+  "rust-itertools+default-devel" 
+  "rust-lab+default-devel" 
+  "rust-num-traits+default-devel" 
+  "rust-rayon+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-v_frame+default-devel" 
+]
+extra-source "rust-av-metrics-devel-0.9.1-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-av-metrics-devel-0.9.1-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "git-remote-gcrypt-1.5-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "git-remote-gcrypt-1.5-1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "curl" 
+  "git" 
+  "gpg2" 
+  "rsync" 
+]
+extra-source "git-remote-gcrypt-1.5-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/git-remote-gcrypt-1.5-1.4.noarch.rpm"
+}

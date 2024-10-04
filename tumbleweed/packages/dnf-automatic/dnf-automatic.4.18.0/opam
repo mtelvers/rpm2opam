@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dnf-automatic-4.18.0-5.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dnf-automatic-4.18.0-5.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "dnf" {= "4.18.0"}
+  "python311-base" 
+]
+extra-source "dnf-automatic-4.18.0-5.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dnf-automatic-4.18.0-5.1.noarch.rpm"
+}

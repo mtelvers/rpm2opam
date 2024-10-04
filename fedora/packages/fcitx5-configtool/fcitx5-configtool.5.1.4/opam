@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fcitx5-configtool-5.1.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fcitx5-configtool-5.1.4-1.fc40.x86_64.rpm"]
+depends: [
+  "fcitx5-libs" 
+  "fcitx5-qt-libfcitx5qt6widgets" 
+  "fcitx5-qt-qt6gui" 
+  "fcitx5-qt6" 
+  "glibc" 
+  "kf6-kitemviews" 
+  "kf6-kwidgetsaddons" 
+  "libX11" 
+  "libgcc" 
+  "libstdc++" 
+  "libxkbfile" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qt6-qtsvg" 
+]
+extra-source "fcitx5-configtool-5.1.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fcitx5-configtool-5.1.4-1.fc40.x86_64.rpm"
+}

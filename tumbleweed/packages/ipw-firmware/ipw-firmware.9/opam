@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ipw-firmware-9-23.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ipw-firmware-9-23.10.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "grep" 
+  "kmod" 
+]
+extra-source "ipw-firmware-9-23.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ipw-firmware-9-23.10.noarch.rpm"
+}

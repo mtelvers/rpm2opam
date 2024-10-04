@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-micro-timer+default-devel-0.4.0-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-micro-timer+default-devel-0.4.0-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-micro-timer-devel" {= "0.4.0"}
+]
+extra-source "rust-micro-timer+default-devel-0.4.0-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-micro-timer+default-devel-0.4.0-6.fc40.noarch.rpm"
+}

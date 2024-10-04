@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kubernetes-apiserver-minus2-1.29.8-45.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kubernetes-apiserver-minus2-1.29.8-45.1.x86_64.rpm"]
+depends: [
+  "kubernetes1-29-apiserver" 
+]
+extra-source "kubernetes-apiserver-minus2-1.29.8-45.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kubernetes-apiserver-minus2-1.29.8-45.1.x86_64.rpm"
+}

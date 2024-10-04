@@ -1,0 +1,42 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "clusterssh-4.16-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clusterssh-4.16-11.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-English" 
+  "perl-Exception-Class" {>= "1.31"}
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" {>= "2.48"}
+  "perl-IPC-Open3" 
+  "perl-Locale-Maketext" {>= "1.1"}
+  "perl-Module-Load" 
+  "perl-Net" 
+  "perl-POSIX" 
+  "perl-Pod-Usage" 
+  "perl-Socket" 
+  "perl-Symbol" 
+  "perl-Sys-Hostname" 
+  "perl-Tk" 
+  "perl-Try-Tiny" {>= "0.28"}
+  "perl-X11-Protocol" 
+  "perl-X11-Protocol-Other" {>= "29"}
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libnet" 
+  "perl-libs" {>= "5.8.4"}
+  "perl-overload" 
+  "perl-vars" 
+  "perl-version" 
+  "xorg-x11-fonts-100dpi" 
+  "xorg-x11-fonts-75dpi" 
+  "xterm" 
+]
+extra-source "clusterssh-4.16-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/clusterssh-4.16-11.fc40.noarch.rpm"
+}

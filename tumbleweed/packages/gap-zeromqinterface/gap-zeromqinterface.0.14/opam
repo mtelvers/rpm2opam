@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-zeromqinterface-0.14-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-zeromqinterface-0.14-1.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "gap" {>= "4.9"}
+  "gap-gapdoc" {>= "1.6.1"}
+  "glibc" 
+  "libzmq5" 
+]
+extra-source "gap-zeromqinterface-0.14-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gap-zeromqinterface-0.14-1.4.x86_64.rpm"
+}

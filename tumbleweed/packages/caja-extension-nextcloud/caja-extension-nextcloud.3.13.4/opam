@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "caja-extension-nextcloud-3.13.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "caja-extension-nextcloud-3.13.4-1.1.noarch.rpm"]
+depends: [
+  "caja" 
+  "nextcloud-desktop" {= "3.13.4"}
+  "python-caja" 
+  "typelib-1_0-Caja-2_0" 
+  "typelib-1_0-GObject-2_0" 
+]
+extra-source "caja-extension-nextcloud-3.13.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/caja-extension-nextcloud-3.13.4-1.1.noarch.rpm"
+}

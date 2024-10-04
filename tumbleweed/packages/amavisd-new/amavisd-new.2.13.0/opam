@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "amavisd-new-2.13.0-3.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "amavisd-new-2.13.0-3.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "busybox-sendmail" 
+  "exim" 
+  "file" 
+  "fillup" 
+  "perl" 
+  "perl-Archive-Zip" {>= "1.14"}
+  "perl-Convert-BinHex" 
+  "perl-Digest-MD5" {>= "2.22"}
+  "perl-IO-Socket-SSL" 
+  "perl-IO-stringy" 
+  "perl-MIME-tools" 
+  "perl-Mail-DKIM" {>= "0.31"}
+  "perl-MailTools" {>= "1.58"}
+  "perl-Net-LibIDN2" 
+  "perl-Net-Server" {>= "2.0"}
+  "perl-Unix-Syslog" 
+  "perl-base" 
+  "system-user-vscan" 
+]
+extra-source "amavisd-new-2.13.0-3.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/amavisd-new-2.13.0-3.4.noarch.rpm"
+}

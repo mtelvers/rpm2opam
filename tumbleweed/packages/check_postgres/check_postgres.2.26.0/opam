@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "check_postgres-2.26.0-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "check_postgres-2.26.0-1.7.noarch.rpm"]
+depends: [
+  "perl" {= "5.40.0"}
+  "perl-File-Temp" 
+  "perl-base" 
+  "postgresql" 
+]
+extra-source "check_postgres-2.26.0-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/check_postgres-2.26.0-1.7.noarch.rpm"
+}

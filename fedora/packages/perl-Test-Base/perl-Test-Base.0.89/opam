@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-Base-0.89-19.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Base-0.89-19.fc40.noarch.rpm"]
+depends: [
+  "perl-Algorithm-Diff" {>= "1.15"}
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-File-Path" 
+  "perl-Filter" 
+  "perl-MIME-Base64" 
+  "perl-Scalar-List-Utils" {>= "1.7"}
+  "perl-Spiffy" 
+  "perl-Test-Deep" 
+  "perl-Test-Simple" 
+  "perl-Text-Diff" {>= "0.35"}
+  "perl-YAML" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+]
+extra-source "perl-Test-Base-0.89-19.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-Base-0.89-19.fc40.noarch.rpm"
+}

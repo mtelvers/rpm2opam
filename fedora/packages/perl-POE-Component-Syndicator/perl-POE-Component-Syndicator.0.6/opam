@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-POE-Component-Syndicator-0.06-35.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-POE-Component-Syndicator-0.06-35.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Object-Pluggable" {>= "1.29"}
+  "perl-POE" {>= "1.311"}
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" 
+]
+extra-source "perl-POE-Component-Syndicator-0.06-35.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-POE-Component-Syndicator-0.06-35.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bluez-test-5.77-slfo.1.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bluez-test-5.77-slfo.1.1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "python311-base" 
+  "python311-dbus-python" 
+  "python311-gobject" 
+]
+extra-source "bluez-test-5.77-slfo.1.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/bluez-test-5.77-slfo.1.1.1.x86_64.rpm"
+}

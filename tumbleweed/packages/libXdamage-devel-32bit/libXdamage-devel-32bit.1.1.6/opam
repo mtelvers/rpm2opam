@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libXdamage-devel-32bit-1.1.6-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libXdamage-devel-32bit-1.1.6-1.4.x86_64.rpm"]
+depends: [
+  "libX11-devel" 
+  "libXdamage-devel" {= "1.1.6"}
+  "libXdamage1-32bit" {= "1.1.6"}
+  "libXfixes-devel" 
+  "pkgconf-pkg-config" 
+  "xorgproto-devel" {>= "1.1"}
+]
+extra-source "libXdamage-devel-32bit-1.1.6-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libXdamage-devel-32bit-1.1.6-1.4.x86_64.rpm"
+}

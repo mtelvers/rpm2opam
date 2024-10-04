@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bosh-2024.03.21-49.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bosh-2024.03.21-49.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcrypt1" 
+  "libfind4_0" 
+  "libschily2_0" 
+  "libxtermcap1_0" 
+]
+extra-source "bosh-2024.03.21-49.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/bosh-2024.03.21-49.1.x86_64.rpm"
+}

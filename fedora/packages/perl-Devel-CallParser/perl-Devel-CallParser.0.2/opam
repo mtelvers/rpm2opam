@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Devel-CallParser-0.002-35.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Devel-CallParser-0.002-35.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-Devel-CallChecker" {>= "0.2"}
+  "perl-DynaLoader" 
+  "perl-DynaLoader-Functions" {>= "0.1"}
+  "perl-Exporter" 
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-Devel-CallParser-0.002-35.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Devel-CallParser-0.002-35.fc40.x86_64.rpm"
+}

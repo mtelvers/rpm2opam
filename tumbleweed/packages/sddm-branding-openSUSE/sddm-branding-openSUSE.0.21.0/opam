@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sddm-branding-openSUSE-0.21.0-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sddm-branding-openSUSE-0.21.0-4.1.noarch.rpm"]
+depends: [
+  "kwin6" {>= "5.26.90"}
+  "plasma6-sddm-theme-openSUSE" 
+  "sddm" {= "0.21.0"}
+]
+extra-source "sddm-branding-openSUSE-0.21.0-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sddm-branding-openSUSE-0.21.0-4.1.noarch.rpm"
+}

@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "julia-1.9.2-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "julia-1.9.2-4.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "ca-certificates" 
+  "dSFMT" 
+  "glibc" 
+  "gmp" 
+  "julia-common" {= "1.9.2"}
+  "libatomic" 
+  "libcurl" 
+  "libgcc" 
+  "libgfortran" 
+  "libgit2" 
+  "libgomp" 
+  "libnghttp2" 
+  "libssh2" 
+  "libstdc++" 
+  "mbedtls" 
+  "mpfr" 
+  "openblas-threads64_" 
+  "openlibm" 
+  "p7zip-plugins" 
+  "pcre2" 
+  "suitesparse64_" 
+  "utf8proc" 
+  "zlib-ng-compat" 
+]
+extra-source "julia-1.9.2-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/julia-1.9.2-4.fc40.x86_64.rpm"
+}

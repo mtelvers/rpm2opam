@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-django-rest-knox-5.0.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-django-rest-knox-5.0.1-1.1.noarch.rpm"]
+depends: [
+  "python312-Django" 
+  "python312-base" {= "3.12"}
+  "python312-cryptography" 
+  "python312-djangorestframework" 
+]
+extra-source "python312-django-rest-knox-5.0.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-django-rest-knox-5.0.1-1.1.noarch.rpm"
+}

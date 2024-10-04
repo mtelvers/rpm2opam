@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-fasjson-client-1.0.8-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-fasjson-client-1.0.8-5.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-bravado" 
+  "python3-gssapi" 
+  "python3-requests" 
+  "python3-requests-gssapi" 
+  "python3-toml" 
+]
+extra-source "python3-fasjson-client-1.0.8-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-fasjson-client-1.0.8-5.fc40.noarch.rpm"
+}

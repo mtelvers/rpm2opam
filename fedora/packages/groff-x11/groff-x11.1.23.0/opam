@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "groff-x11-1.23.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "groff-x11-1.23.0-6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "groff-base" {= "1.23.0"}
+  "libX11" 
+  "libXaw" 
+  "libXmu" 
+  "libXt" 
+]
+extra-source "groff-x11-1.23.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/groff-x11-1.23.0-6.fc40.x86_64.rpm"
+}

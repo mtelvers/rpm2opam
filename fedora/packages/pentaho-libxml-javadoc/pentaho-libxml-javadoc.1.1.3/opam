@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pentaho-libxml-javadoc-1.1.3-42.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pentaho-libxml-javadoc-1.1.3-42.fc40.noarch.rpm"]
+depends: [
+  "javapackages-tools" 
+  "pentaho-libxml" {= "1.1.3"}
+]
+extra-source "pentaho-libxml-javadoc-1.1.3-42.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pentaho-libxml-javadoc-1.1.3-42.fc40.noarch.rpm"
+}

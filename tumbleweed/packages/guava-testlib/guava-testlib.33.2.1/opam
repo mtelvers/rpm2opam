@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "guava-testlib-33.2.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "guava-testlib-33.2.1-1.1.noarch.rpm"]
+depends: [
+  "guava" {= "33.2.1.0"}
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "jsr-305" 
+  "junit" 
+]
+extra-source "guava-testlib-33.2.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/guava-testlib-33.2.1-1.1.noarch.rpm"
+}

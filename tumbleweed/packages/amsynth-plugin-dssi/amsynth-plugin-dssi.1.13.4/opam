@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "amsynth-plugin-dssi-1.13.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "amsynth-plugin-dssi-1.13.4-1.1.x86_64.rpm"]
+depends: [
+  "amsynth" {= "1.13.4"}
+  "dssi" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libatk-1_0-0" 
+  "libcairo2" 
+  "libfontconfig1" 
+  "libfreetype6" 
+  "libgcc_s1" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-2_0-0" 
+  "libharfbuzz0" 
+  "liblo7" 
+  "libpango-1_0-0" 
+  "libstdc++6" 
+]
+extra-source "amsynth-plugin-dssi-1.13.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/amsynth-plugin-dssi-1.13.4-1.1.x86_64.rpm"
+}

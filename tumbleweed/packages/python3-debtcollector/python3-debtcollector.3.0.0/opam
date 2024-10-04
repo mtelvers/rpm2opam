@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-debtcollector-3.0.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-debtcollector-3.0.0-1.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-importlib-metadata" 
+  "python311-pbr" 
+  "python311-six" 
+  "python311-wrapt" {>= "1.7.0"}
+]
+extra-source "python3-debtcollector-3.0.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-debtcollector-3.0.0-1.1.noarch.rpm"
+}

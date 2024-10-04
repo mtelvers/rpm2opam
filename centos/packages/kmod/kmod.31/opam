@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kmod-31-8.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kmod-31-8.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libgcc" 
+  "libzstd" 
+  "openssl-libs" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "kmod-31-8.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/kmod-31-8.el10.x86_64.rpm"
+}

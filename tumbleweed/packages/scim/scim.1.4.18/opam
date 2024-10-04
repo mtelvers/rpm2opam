@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "scim-1.4.18-6.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scim-1.4.18-6.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libcairo2" 
+  "libgcc_s1" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libltdl7" 
+  "libpango-1_0-0" 
+  "libstdc++6" 
+  "scim-gtk" {= "1.4.18"}
+  "scim-gtk3" {= "1.4.18"}
+]
+extra-source "scim-1.4.18-6.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/scim-1.4.18-6.3.x86_64.rpm"
+}

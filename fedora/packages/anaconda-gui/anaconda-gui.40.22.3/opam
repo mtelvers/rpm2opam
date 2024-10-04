@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "anaconda-gui-40.22.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "anaconda-gui-40.22.3-1.fc40.x86_64.rpm"]
+depends: [
+  "NetworkManager-wifi" 
+  "adwaita-icon-theme" 
+  "anaconda-core" {= "40.22.3"}
+  "anaconda-widgets" {= "40.22.3"}
+  "blivet-gui-runtime" {>= "2.4.2"}
+  "fedora-logos" 
+  "libxklavier" {>= "5.4"}
+  "nm-connection-editor" 
+  "python3" {= "3.12"}
+  "python3-iso639" 
+  "python3-meh-gui" {>= "0.23"}
+  "python3-xkbregistry" 
+  "tecla" 
+  "tigervnc-server-minimal" 
+]
+extra-source "anaconda-gui-40.22.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/anaconda-gui-40.22.3-1.fc40.x86_64.rpm"
+}

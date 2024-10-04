@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqt5-qtquick3d-private-headers-devel-5.15.15+kde1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqt5-qtquick3d-private-headers-devel-5.15.15+kde1-1.1.x86_64.rpm"]
+depends: [
+  "libqt5-qtquick3d-devel" {= "5.15.15"}
+]
+extra-source "libqt5-qtquick3d-private-headers-devel-5.15.15+kde1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libqt5-qtquick3d-private-headers-devel-5.15.15+kde1-1.1.x86_64.rpm"
+}

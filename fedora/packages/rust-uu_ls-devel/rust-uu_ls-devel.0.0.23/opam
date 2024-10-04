@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-uu_ls-devel-0.0.23-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-uu_ls-devel-0.0.23-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-chrono+alloc-devel" 
+  "rust-chrono+clock-devel" 
+  "rust-chrono+std-devel" 
+  "rust-chrono-devel" 
+  "rust-clap+cargo-devel" 
+  "rust-clap+default-devel" 
+  "rust-clap+env-devel" 
+  "rust-clap+wrap_help-devel" 
+  "rust-glob+default-devel" 
+  "rust-lscolors+nu-ansi-term-devel" 
+  "rust-lscolors-devel" 
+  "rust-number_prefix+default-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-terminal_size+default-devel" 
+  "rust-unicode-width+default-devel" 
+  "rust-uucore+default-devel" {>= "0.0.19"}
+  "rust-uucore+entries-devel" {>= "0.0.19"}
+  "rust-uucore+fs-devel" {>= "0.0.19"}
+  "rust-uucore+quoting-style-devel" {>= "0.0.19"}
+  "rust-uucore+version-cmp-devel" {>= "0.0.19"}
+  "rust-uutils_term_grid+default-devel" 
+]
+extra-source "rust-uu_ls-devel-0.0.23-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-uu_ls-devel-0.0.23-1.fc40.noarch.rpm"
+}

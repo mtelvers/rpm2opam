@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-vector-prof-0.13.1.0-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-vector-prof-0.13.1.0-2.3.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-primitive-prof" 
+  "ghc-vector-devel" {= "0.13.1.0"}
+  "ghc-vector-stream-prof" 
+]
+extra-source "ghc-vector-prof-0.13.1.0-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-vector-prof-0.13.1.0-2.3.x86_64.rpm"
+}

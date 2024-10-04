@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vcdimager-2.0.1-18.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vcdimager-2.0.1-18.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcdio" 
+  "libxml2" 
+  "popt" 
+  "vcdimager-libs" 
+]
+extra-source "vcdimager-2.0.1-18.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vcdimager-2.0.1-18.fc40.x86_64.rpm"
+}

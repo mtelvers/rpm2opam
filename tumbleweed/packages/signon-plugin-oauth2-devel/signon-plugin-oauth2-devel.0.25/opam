@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "signon-plugin-oauth2-devel-0.25git.20231124T142245~fab6988-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "signon-plugin-oauth2-devel-0.25git.20231124T142245~fab6988-1.2.x86_64.rpm"]
+depends: [
+  "pkgconf-pkg-config" 
+  "signon-plugin-oauth2" {= "0.25"}
+  "signon-plugins-devel" 
+]
+extra-source "signon-plugin-oauth2-devel-0.25git.20231124T142245~fab6988-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/signon-plugin-oauth2-devel-0.25git.20231124T142245~fab6988-1.2.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "eclipse-ecf-core-bootstrap-3.14.8-7.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eclipse-ecf-core-bootstrap-3.14.8-7.1.x86_64.rpm"]
+depends: [
+  "eclipse-equinox-osgi" 
+  "eclipse-platform" 
+  "httpcomponents-client" 
+  "httpcomponents-core" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "eclipse-ecf-core-bootstrap-3.14.8-7.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/eclipse-ecf-core-bootstrap-3.14.8-7.1.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnu-cobol-3.1.2-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnu-cobol-3.1.2-2.6.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libcob4" 
+]
+extra-source "gnu-cobol-3.1.2-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnu-cobol-3.1.2-2.6.x86_64.rpm"
+}

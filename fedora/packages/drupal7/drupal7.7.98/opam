@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "drupal7-7.98-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "drupal7-7.98-3.fc40.noarch.rpm"]
+depends: [
+  "crontabs" 
+  "php-bcmath" 
+  "php-common" 
+  "php-fpm" 
+  "php-gd" 
+  "php-gmp" 
+  "php-mbstring" 
+  "php-pdo" 
+  "php-pecl-ssh2" 
+  "php-pecl-zip" 
+  "php-process" 
+  "php-xml" 
+  "wget2-wget" 
+]
+extra-source "drupal7-7.98-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/drupal7-7.98-3.fc40.noarch.rpm"
+}

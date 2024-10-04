@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-RPC-XML-0.82-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-RPC-XML-0.82-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-HTTP-Daemon" {>= "6.12"}
+  "perl-HTTP-Message" {>= "6.26"}
+  "perl-XML-Parser" {>= "2.46"}
+  "perl-base" 
+  "perl-libwww-perl" {>= "6.51"}
+]
+extra-source "perl-RPC-XML-0.82-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/perl-RPC-XML-0.82-slfo.1.1.3.noarch.rpm"
+}

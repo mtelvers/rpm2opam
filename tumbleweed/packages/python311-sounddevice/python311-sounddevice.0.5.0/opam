@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-sounddevice-0.5.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-sounddevice-0.5.0-1.1.noarch.rpm"]
+depends: [
+  "libportaudio2" 
+  "python311-base" {= "3.11"}
+  "python311-cffi" {>= "1.0"}
+]
+extra-source "python311-sounddevice-0.5.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-sounddevice-0.5.0-1.1.noarch.rpm"
+}

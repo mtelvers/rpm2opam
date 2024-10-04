@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-WebService-Dropbox-2.09-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-WebService-Dropbox-2.09-8.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-File-Temp" 
+  "perl-HTTP-Message" {>= "6.11"}
+  "perl-IO-Socket-SSL" {>= "2.48"}
+  "perl-JSON" {>= "2.94"}
+  "perl-LWP-Protocol-https" {>= "6.7"}
+  "perl-Net-OAuth" {>= "0.28"}
+  "perl-Software-License" 
+  "perl-URI" {>= "1.71"}
+  "perl-libs" 
+  "perl-libwww-perl" 
+  "perl-parent" 
+]
+extra-source "perl-WebService-Dropbox-2.09-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-WebService-Dropbox-2.09-8.fc40.noarch.rpm"
+}

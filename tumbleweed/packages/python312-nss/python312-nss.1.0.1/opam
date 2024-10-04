@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-nss-1.0.1-7.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-nss-1.0.1-7.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "mozilla-nspr" 
+  "mozilla-nss" 
+  "python312-base" {= "3.12"}
+]
+extra-source "python312-nss-1.0.1-7.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-nss-1.0.1-7.2.x86_64.rpm"
+}

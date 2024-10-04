@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfm-qt5-devel-1.4.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfm-qt5-devel-1.4.0-1.2.x86_64.rpm"]
+depends: [
+  "libQt5Widgets-devel" {>= "5.15.0"}
+  "libfm-qt5-14" {>= "1.4.0"}
+  "libqt5-qtx11extras-devel" {>= "5.15.0"}
+  "menu-cache-devel" {>= "0.4.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libfm-qt5-devel-1.4.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfm-qt5-devel-1.4.0-1.2.x86_64.rpm"
+}

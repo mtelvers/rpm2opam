@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gazebo-devel-10.2.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gazebo-devel-10.2.0-4.fc40.x86_64.rpm"]
+depends: [
+  "boost-devel" 
+  "bullet-devel" 
+  "cmake-filesystem" 
+  "freeimage-devel" 
+  "gazebo" {= "10.2.0"}
+  "gazebo-libs" {= "10.2.0"}
+  "gazebo-ode" 
+  "gazebo-ode-devel" {= "10.2.0"}
+  "gdal-devel" 
+  "ignition-math-devel" 
+  "ignition-msgs-devel" 
+  "ignition-transport-devel" 
+  "ogre-devel" 
+  "pkgconf-pkg-config" 
+  "protobuf-devel" 
+  "qt5-qtbase-devel" 
+  "sdformat-devel" 
+  "tbb-devel" 
+]
+extra-source "gazebo-devel-10.2.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gazebo-devel-10.2.0-4.fc40.x86_64.rpm"
+}

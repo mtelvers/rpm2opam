@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-pdfcrop-svn55435-81.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-pdfcrop-svn55435-81.fc40.noarch.rpm"]
+depends: [
+  "perl-File-Copy" 
+  "perl-Getopt-Long" 
+  "perl-PathTools" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "texlive-base" 
+  "texlive-kpathsea" 
+  "texlive-pdftex" 
+]
+extra-source "texlive-pdfcrop-svn55435-81.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-pdfcrop-svn55435-81.fc40.noarch.rpm"
+}

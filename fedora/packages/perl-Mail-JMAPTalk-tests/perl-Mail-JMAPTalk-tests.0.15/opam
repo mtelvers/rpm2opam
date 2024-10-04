@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Mail-JMAPTalk-tests-0.15-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mail-JMAPTalk-tests-0.15-14.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Mail-JMAPTalk" {= "0.15"}
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Mail-JMAPTalk-tests-0.15-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Mail-JMAPTalk-tests-0.15-14.fc40.noarch.rpm"
+}

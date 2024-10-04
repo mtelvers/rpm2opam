@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "clutter-gtk-1.8.4-18.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clutter-gtk-1.8.4-18.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "cairo-gobject" 
+  "clutter" {>= "1.23.7"}
+  "cogl" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" {>= "3.21.0"}
+  "harfbuzz" 
+  "json-glib" 
+  "libX11" 
+  "libXcomposite" 
+  "libXdamage" 
+  "libXext" 
+  "libXfixes" 
+  "libXi" 
+  "libXrandr" 
+  "libdrm" 
+  "libglvnd-egl" 
+  "libwayland-client" 
+  "libwayland-cursor" 
+  "libwayland-egl" 
+  "libwayland-server" 
+  "libxkbcommon" 
+  "mesa-libgbm" 
+  "pango" 
+  "zlib-ng-compat" 
+]
+extra-source "clutter-gtk-1.8.4-18.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/clutter-gtk-1.8.4-18.fc40.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw64-rest-static-0.8.0-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-rest-static-0.8.0-21.fc40.noarch.rpm"]
+depends: [
+  "mingw64-rest" {= "0.8.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "mingw64-rest-static-0.8.0-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw64-rest-static-0.8.0-21.fc40.noarch.rpm"
+}

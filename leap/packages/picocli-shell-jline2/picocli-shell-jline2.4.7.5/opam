@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "picocli-shell-jline2-4.7.5-slfo.1.2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "picocli-shell-jline2-4.7.5-slfo.1.2.3.noarch.rpm"]
+depends: [
+  "java-11-openjdk-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "jline" 
+  "picocli" {= "4.7.5"}
+]
+extra-source "picocli-shell-jline2-4.7.5-slfo.1.2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/picocli-shell-jline2-4.7.5-slfo.1.2.3.noarch.rpm"
+}

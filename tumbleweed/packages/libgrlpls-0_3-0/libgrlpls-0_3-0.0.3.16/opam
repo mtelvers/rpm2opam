@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgrlpls-0_3-0-0.3.16-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgrlpls-0_3-0-0.3.16-1.6.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgrilo-0_3-0" 
+  "libtotem-plparser18" 
+]
+extra-source "libgrlpls-0_3-0-0.3.16-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgrlpls-0_3-0-0.3.16-1.6.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-svglite-2.1.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-svglite-2.1.1-6.fc40.x86_64.rpm"]
+depends: [
+  "R-core" {= "4.3"}
+  "R-systemfonts" {>= "1.0.0"}
+  "glibc" 
+  "libgcc" 
+  "libpng" 
+  "libstdc++" 
+]
+extra-source "R-svglite-2.1.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-svglite-2.1.1-6.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vfrnav-selinux-20230429-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vfrnav-selinux-20230429-7.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "policycoreutils" 
+  "selinux-policy" 
+  "vfrnav" {= "20230429"}
+]
+extra-source "vfrnav-selinux-20230429-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vfrnav-selinux-20230429-7.fc40.noarch.rpm"
+}

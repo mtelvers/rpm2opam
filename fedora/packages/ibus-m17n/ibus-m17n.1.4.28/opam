@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ibus-m17n-1.4.28-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibus-m17n-1.4.28-1.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "ibus" {>= "1.4.0"}
+  "ibus-libs" 
+  "m17n-lib" 
+]
+extra-source "ibus-m17n-1.4.28-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/ibus-m17n-1.4.28-1.fc40.x86_64.rpm"
+}

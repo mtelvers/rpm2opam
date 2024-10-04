@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "trivy-0.54.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trivy-0.54.1-1.1.x86_64.rpm"]
+depends: [
+  "ca-certificates" 
+  "git-core" 
+  "glibc" 
+  "rpm" 
+]
+extra-source "trivy-0.54.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/trivy-0.54.1-1.1.x86_64.rpm"
+}

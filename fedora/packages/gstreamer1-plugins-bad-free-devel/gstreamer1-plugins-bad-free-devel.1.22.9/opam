@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gstreamer1-plugins-bad-free-devel-1.22.9-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gstreamer1-plugins-bad-free-devel-1.22.9-3.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "gstreamer1-devel" {>= "1.22.0"}
+  "gstreamer1-plugins-bad-free" {= "1.22.9"}
+  "gstreamer1-plugins-bad-free-libs" 
+  "gstreamer1-plugins-base-devel" 
+  "libdrm-devel" 
+  "libnice-devel" {>= "0.1.20"}
+  "libva-devel" {>= "1.6"}
+  "pkgconf-pkg-config" 
+  "vulkan-loader-devel" 
+  "wayland-devel" {>= "1.4"}
+]
+extra-source "gstreamer1-plugins-bad-free-devel-1.22.9-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gstreamer1-plugins-bad-free-devel-1.22.9-3.fc40.x86_64.rpm"
+}

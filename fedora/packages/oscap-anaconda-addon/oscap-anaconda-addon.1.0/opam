@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "oscap-anaconda-addon-1.0-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "oscap-anaconda-addon-1.0-16.fc40.noarch.rpm"]
+depends: [
+  "anaconda-core" {>= "40"}
+  "openscap" 
+  "openscap-python3" 
+  "openscap-utils" 
+  "python3-cpio" 
+  "python3-kickstart" 
+  "python3-pycurl" 
+  "scap-security-guide" 
+]
+extra-source "oscap-anaconda-addon-1.0-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/oscap-anaconda-addon-1.0-16.fc40.noarch.rpm"
+}

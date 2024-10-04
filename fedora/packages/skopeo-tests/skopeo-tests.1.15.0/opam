@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "skopeo-tests-1.15.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "skopeo-tests-1.15.0-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bats" 
+  "coreutils" 
+  "crun" 
+  "fakeroot" 
+  "gnupg2" 
+  "golang" 
+  "httpd-tools" 
+  "jq" 
+  "openssl" 
+  "podman" 
+  "skopeo" {= "1.15.0"}
+  "squashfs-tools" 
+]
+extra-source "skopeo-tests-1.15.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/skopeo-tests-1.15.0-1.fc40.x86_64.rpm"
+}

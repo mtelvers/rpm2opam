@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ptscotch-mpich-6.1.0-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ptscotch-mpich-6.1.0-3.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbz2-1" 
+  "libz-ng-compat1" 
+  "mpich" 
+]
+extra-source "ptscotch-mpich-6.1.0-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ptscotch-mpich-6.1.0-3.3.x86_64.rpm"
+}

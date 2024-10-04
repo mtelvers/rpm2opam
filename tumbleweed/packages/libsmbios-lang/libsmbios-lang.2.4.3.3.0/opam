@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsmbios-lang-2.4.3.3.gf01a217-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsmbios-lang-2.4.3.3.gf01a217-3.1.noarch.rpm"]
+depends: [
+  "libsmbios_c2" {= "2.4.3.3.0"}
+]
+extra-source "libsmbios-lang-2.4.3.3.gf01a217-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libsmbios-lang-2.4.3.3.gf01a217-3.1.noarch.rpm"
+}

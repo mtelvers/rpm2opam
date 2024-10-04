@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "eegdev-devel-0.2-28.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eegdev-devel-0.2-28.fc40.x86_64.rpm"]
+depends: [
+  "eegdev" {= "0.2"}
+  "libusb1-devel" 
+  "pkgconf-pkg-config" 
+  "xdffileio-devel" 
+]
+extra-source "eegdev-devel-0.2-28.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/eegdev-devel-0.2-28.fc40.x86_64.rpm"
+}

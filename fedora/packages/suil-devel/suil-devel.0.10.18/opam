@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "suil-devel-0.10.18-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "suil-devel-0.10.18-2.fc40.x86_64.rpm"]
+depends: [
+  "lv2-devel" {>= "1.18.3"}
+  "pkgconf-pkg-config" 
+  "suil" {= "0.10.18"}
+]
+extra-source "suil-devel-0.10.18-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/suil-devel-0.10.18-2.fc40.x86_64.rpm"
+}

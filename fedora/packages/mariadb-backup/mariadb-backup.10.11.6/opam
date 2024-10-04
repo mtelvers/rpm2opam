@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mariadb-backup-10.11.6-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mariadb-backup-10.11.6-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libaio" 
+  "libstdc++" 
+  "libxcrypt" 
+  "mariadb-server" {= "10.11.6"}
+  "openssl-libs" 
+  "pcre2" 
+  "systemd-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "mariadb-backup-10.11.6-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mariadb-backup-10.11.6-3.fc40.x86_64.rpm"
+}

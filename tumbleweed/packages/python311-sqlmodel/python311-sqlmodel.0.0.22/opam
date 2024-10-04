@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-sqlmodel-0.0.22-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-sqlmodel-0.0.22-1.1.noarch.rpm"]
+depends: [
+  "python311-SQLAlchemy" {>= "2.0.14"}
+  "python311-base" {= "3.11"}
+  "python311-pydantic" {>= "1.10.13"}
+]
+extra-source "python311-sqlmodel-0.0.22-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-sqlmodel-0.0.22-1.1.noarch.rpm"
+}

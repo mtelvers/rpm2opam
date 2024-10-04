@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-cborg-json-devel-0.2.5.0-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-cborg-json-devel-0.2.5.0-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-devel" 
+  "ghc-aeson-pretty-devel" 
+  "ghc-base-devel" 
+  "ghc-cborg-devel" 
+  "ghc-cborg-json" {= "0.2.5.0"}
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-scientific-devel" 
+  "ghc-text-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-cborg-json-devel-0.2.5.0-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-cborg-json-devel-0.2.5.0-8.fc40.x86_64.rpm"
+}

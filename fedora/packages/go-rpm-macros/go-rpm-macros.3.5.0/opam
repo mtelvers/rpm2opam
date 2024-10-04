@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "go-rpm-macros-3.5.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "go-rpm-macros-3.5.0-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "go-filesystem" {= "3.5.0"}
+  "go-srpm-macros" {= "3.5.0"}
+  "golang" 
+  "golist" 
+  "python3" 
+]
+extra-source "go-rpm-macros-3.5.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/go-rpm-macros-3.5.0-1.fc40.x86_64.rpm"
+}

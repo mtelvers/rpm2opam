@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "twilio-utils-1.2.2-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "twilio-utils-1.2.2-1.5.x86_64.rpm"]
+depends: [
+  "bash" 
+  "curl" {>= "7.18"}
+  "glibc" 
+  "libxslt-tools" 
+  "php8-cli" 
+  "util-linux-systemd" 
+  "xmlstarlet" 
+]
+extra-source "twilio-utils-1.2.2-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/twilio-utils-1.2.2-1.5.x86_64.rpm"
+}

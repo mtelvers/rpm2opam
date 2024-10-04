@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gawk-lmdb-1.1.3-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gawk-lmdb-1.1.3-2.fc40.x86_64.rpm"]
+depends: [
+  "gawk" {>= "4.0"}
+  "gawkextlib" 
+  "glibc" 
+  "lmdb-libs" 
+]
+extra-source "gawk-lmdb-1.1.3-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gawk-lmdb-1.1.3-2.fc40.x86_64.rpm"
+}

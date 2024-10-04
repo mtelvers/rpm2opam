@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-petgraph0.5+serde-devel-0.5.1-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-petgraph0.5+serde-devel-0.5.1-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-petgraph0-5-devel" {= "0.5.1"}
+  "rust-serde+default-devel" 
+]
+extra-source "rust-petgraph0.5+serde-devel-0.5.1-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-petgraph0.5+serde-devel-0.5.1-6.fc40.noarch.rpm"
+}

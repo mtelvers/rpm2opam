@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-devel-docs-lang-40.3-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-devel-docs-lang-40.3-1.9.noarch.rpm"]
+depends: [
+  "gnome-devel-docs" {= "40.3"}
+]
+extra-source "gnome-devel-docs-lang-40.3-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-devel-docs-lang-40.3-1.9.noarch.rpm"
+}

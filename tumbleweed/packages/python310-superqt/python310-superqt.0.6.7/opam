@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-superqt-0.6.7-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-superqt-0.6.7-1.1.noarch.rpm"]
+depends: [
+  "python310-Pygments" {>= "2.4.0"}
+  "python310-QtPy" {>= "1.1.0"}
+  "python310-base" {= "3.10"}
+  "python310-typing_extensions" {>= "3.7.4.3"}
+]
+extra-source "python310-superqt-0.6.7-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-superqt-0.6.7-1.1.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "urdfdom-1.0.4-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "urdfdom-1.0.4-8.fc40.x86_64.rpm"]
+depends: [
+  "console-bridge" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "tinyxml" 
+]
+extra-source "urdfdom-1.0.4-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/urdfdom-1.0.4-8.fc40.x86_64.rpm"
+}

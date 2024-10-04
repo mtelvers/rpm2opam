@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "php8-intl-8.3.11-slfo.1.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php8-intl-8.3.11-slfo.1.1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libicu73" 
+  "libstdc++6" 
+  "php8" {= "8.3.11"}
+]
+extra-source "php8-intl-8.3.11-slfo.1.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/php8-intl-8.3.11-slfo.1.1.1.x86_64.rpm"
+}

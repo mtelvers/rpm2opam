@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kernel-source-longterm-6.6.53-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kernel-source-longterm-6.6.53-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "kernel-devel-longterm" {= "6.6.53"}
+  "sed" 
+]
+extra-source "kernel-source-longterm-6.6.53-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kernel-source-longterm-6.6.53-1.1.noarch.rpm"
+}

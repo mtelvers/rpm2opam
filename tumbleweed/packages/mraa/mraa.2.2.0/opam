@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mraa-2.2.0-2.19.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mraa-2.2.0-2.19.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libjson-c5" 
+  "libmraa2" 
+  "libudev-mini1" 
+]
+extra-source "mraa-2.2.0-2.19.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mraa-2.2.0-2.19.x86_64.rpm"
+}

@@ -1,0 +1,42 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rteval-3.7-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rteval-3.7-3.fc40.noarch.rpm"]
+depends: [
+  "bc" 
+  "binutils" 
+  "bison" 
+  "bzip2" 
+  "dwarves" 
+  "elfutils" 
+  "elfutils-libelf-devel" 
+  "flex" 
+  "gawk" 
+  "gcc" 
+  "gcc-c++" 
+  "gzip" 
+  "kernel-headers" 
+  "libmpc" 
+  "libmpc-devel" 
+  "m4" 
+  "make" 
+  "numactl" 
+  "openssl" 
+  "openssl-devel" 
+  "perl-devel" 
+  "perl-generators" 
+  "perl-interpreter" 
+  "python3" 
+  "python3-dmidecode" {>= "3.10"}
+  "python3-libxml2" 
+  "python3-lxml" 
+  "realtime-tests" 
+  "rteval-loads" {>= "1.6"}
+  "sos" 
+  "stress-ng" 
+  "sysstat" 
+  "tar" 
+  "xz" 
+]
+extra-source "rteval-3.7-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rteval-3.7-3.fc40.noarch.rpm"
+}

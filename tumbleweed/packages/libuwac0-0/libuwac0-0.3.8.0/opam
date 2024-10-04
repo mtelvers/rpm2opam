@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libuwac0-0-3.8.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libuwac0-0-3.8.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libfreerdp3-3" 
+  "libwayland-client0" 
+  "libwayland-cursor0" 
+  "libxkbcommon0" 
+]
+extra-source "libuwac0-0-3.8.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libuwac0-0-3.8.0-1.1.x86_64.rpm"
+}

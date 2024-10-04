@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libluv-devel-1.45.0~0-4.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libluv-devel-1.45.0~0-4.3.x86_64.rpm"]
+depends: [
+  "libluv1" {= "1.45.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libluv-devel-1.45.0~0-4.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libluv-devel-1.45.0~0-4.3.x86_64.rpm"
+}

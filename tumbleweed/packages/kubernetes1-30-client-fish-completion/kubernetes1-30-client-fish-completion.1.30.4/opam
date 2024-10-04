@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kubernetes1.30-client-fish-completion-1.30.4-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kubernetes1.30-client-fish-completion-1.30.4-1.2.noarch.rpm"]
+depends: [
+  "kubernetes1-30-client" {= "1.30.4"}
+]
+extra-source "kubernetes1.30-client-fish-completion-1.30.4-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kubernetes1.30-client-fish-completion-1.30.4-1.2.noarch.rpm"
+}

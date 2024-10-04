@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "coin-or-Couenne-devel-0.5.8-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coin-or-Couenne-devel-0.5.8-16.fc40.x86_64.rpm"]
+depends: [
+  "coin-or-Bonmin-devel" 
+  "coin-or-Couenne" {= "0.5.8"}
+  "coin-or-Osi-devel" 
+  "libnauty-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "coin-or-Couenne-devel-0.5.8-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/coin-or-Couenne-devel-0.5.8-16.fc40.x86_64.rpm"
+}

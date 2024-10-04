@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-mkdocs-material-9.5.39-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-mkdocs-material-9.5.39-1.1.noarch.rpm"]
+depends: [
+  "python312-Babel" {>= "2.10"}
+  "python312-Jinja2" {>= "3.1"}
+  "python312-Markdown" {>= "3.4"}
+  "python312-Pygments" {>= "2.16"}
+  "python312-base" {= "3.12"}
+  "python312-colorama" {>= "0.4"}
+  "python312-mkdocs" 
+  "python312-mkdocs-material-extensions" {>= "1.1"}
+  "python312-paginate" {>= "0.5"}
+  "python312-pymdown-extensions" {>= "10.3"}
+  "python312-regex" {>= "2023.8"}
+  "python312-requests" {>= "2.31"}
+]
+extra-source "python312-mkdocs-material-9.5.39-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-mkdocs-material-9.5.39-1.1.noarch.rpm"
+}

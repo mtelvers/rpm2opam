@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "slurm-slurmd-22.05.11-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "slurm-slurmd-22.05.11-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "hwloc-libs" 
+  "lz4-libs" 
+  "numactl-libs" 
+  "pam-libs" 
+  "slurm" {= "22.5.11"}
+  "slurm-libs" 
+]
+extra-source "slurm-slurmd-22.05.11-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/slurm-slurmd-22.05.11-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xrdb-1.2.2-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xrdb-1.2.2-1.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXmuu1" 
+]
+extra-source "xrdb-1.2.2-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xrdb-1.2.2-1.4.x86_64.rpm"
+}

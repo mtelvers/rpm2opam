@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-sacloud-libsacloud-devel-1.36.2-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-sacloud-libsacloud-devel-1.36.2-9.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-mattn-runewidth-devel" 
+  "golang-github-mattn-tty-devel" 
+  "golang-github-mitchellh-vnc-devel" 
+  "golang-github-skratchdot-open-devel" 
+  "golang-uber-ratelimit-devel" 
+  "golang-x-crypto-devel" 
+]
+extra-source "golang-github-sacloud-libsacloud-devel-1.36.2-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-sacloud-libsacloud-devel-1.36.2-9.fc40.noarch.rpm"
+}

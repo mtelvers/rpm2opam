@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "whatsup-pingd-1.14-44.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "whatsup-pingd-1.14-44.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libgenders" 
+  "libnodeupdown" {= "1.14"}
+  "systemd" 
+]
+extra-source "whatsup-pingd-1.14-44.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/whatsup-pingd-1.14-44.fc40.x86_64.rpm"
+}

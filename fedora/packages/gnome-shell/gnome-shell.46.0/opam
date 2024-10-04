@@ -1,0 +1,63 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-shell-46.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-shell-46.0-1.fc40.x86_64.rpm"]
+depends: [
+  "NetworkManager-libnm" 
+  "accountsservice-libs" 
+  "at-spi2-atk" 
+  "atk" 
+  "bash" 
+  "cairo" 
+  "evolution-data-server" 
+  "gcr" 
+  "gcr-libs" 
+  "gdk-pixbuf2" 
+  "gdm" 
+  "geoclue2-libs" 
+  "gettext" 
+  "gjs" {>= "1.73.1"}
+  "glib2" {>= "2.56.0"}
+  "glibc" 
+  "gnome-autoar" 
+  "gnome-control-center" 
+  "gnome-desktop3" {>= "44.0"}
+  "gnome-desktop4" {>= "44.0"}
+  "gnome-settings-daemon" {>= "3.37.1"}
+  "gobject-introspection" {>= "1.49.1"}
+  "graphene" 
+  "gsettings-desktop-schemas" {>= "46"}
+  "gstreamer1" {>= "1.4.5"}
+  "gstreamer1-plugins-good" 
+  "gtk4" {>= "4.0.0"}
+  "ibus" {>= "1.5.2"}
+  "json-glib" 
+  "libX11" 
+  "libXfixes" 
+  "libadwaita" {>= "1.0.0"}
+  "libgcc" 
+  "libglvnd-gles" 
+  "libgweather" 
+  "libical-glib" 
+  "libnma-gtk4" 
+  "librsvg2" 
+  "libsecret" 
+  "mutter" 
+  "pango" 
+  "pipewire-gstreamer" 
+  "pipewire-libs" 
+  "polkit" {>= "0.100"}
+  "polkit-libs" 
+  "pulseaudio-libs" 
+  "pulseaudio-libs-glib2" 
+  "python3" 
+  "switcheroo-control" 
+  "systemd-libs" 
+  "tecla" 
+  "upower" 
+  "xdg-desktop-portal-gnome" 
+  "xdg-desktop-portal-gtk" {>= "1.8.0"}
+  "xdg-user-dirs-gtk" 
+]
+extra-source "gnome-shell-46.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-shell-46.0-1.fc40.x86_64.rpm"
+}

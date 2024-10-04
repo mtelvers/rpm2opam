@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-repr-1.1.4-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-repr-1.1.4-6.fc40.noarch.rpm"]
+depends: [
+  "R-base64enc" 
+  "R-core" {= "4.3"}
+  "R-htmltools" 
+  "R-jsonlite" 
+  "R-pillar" {>= "1.4.0"}
+]
+extra-source "R-repr-1.1.4-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-repr-1.1.4-6.fc40.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-HTTP-Body-1.22-28.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTTP-Body-1.22-28.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-File-Temp" {>= "0.14"}
+  "perl-HTTP-Message" 
+  "perl-IO" {>= "1.14"}
+  "perl-PathTools" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-HTTP-Body-1.22-28.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-HTTP-Body-1.22-28.fc40.noarch.rpm"
+}

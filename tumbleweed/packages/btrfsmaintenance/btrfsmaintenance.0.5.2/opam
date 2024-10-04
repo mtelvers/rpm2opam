@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "btrfsmaintenance-0.5.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "btrfsmaintenance-0.5.2-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "btrfsprogs" 
+  "libzypp" 
+]
+extra-source "btrfsmaintenance-0.5.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/btrfsmaintenance-0.5.2-1.1.noarch.rpm"
+}

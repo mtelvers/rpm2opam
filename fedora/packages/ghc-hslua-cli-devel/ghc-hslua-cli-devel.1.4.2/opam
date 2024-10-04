@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-hslua-cli-devel-1.4.2-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hslua-cli-devel-1.4.2-29.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-hslua-cli" {= "1.4.2"}
+  "ghc-hslua-core-devel" 
+  "ghc-hslua-marshalling-devel" 
+  "ghc-hslua-repl-devel" 
+  "ghc-lua-devel" 
+  "ghc-text-devel" 
+  "ghc-unix-devel" 
+]
+extra-source "ghc-hslua-cli-devel-1.4.2-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-hslua-cli-devel-1.4.2-29.fc40.x86_64.rpm"
+}

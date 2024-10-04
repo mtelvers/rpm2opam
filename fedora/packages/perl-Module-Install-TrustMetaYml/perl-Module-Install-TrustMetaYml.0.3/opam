@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Module-Install-TrustMetaYml-0.003-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Install-TrustMetaYml-0.003-23.fc40.noarch.rpm"]
+depends: [
+  "perl-Module-Install" 
+  "perl-YAML-Tiny" 
+  "perl-base" 
+  "perl-libs" {>= "5.5.0"}
+]
+extra-source "perl-Module-Install-TrustMetaYml-0.003-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Module-Install-TrustMetaYml-0.003-23.fc40.noarch.rpm"
+}

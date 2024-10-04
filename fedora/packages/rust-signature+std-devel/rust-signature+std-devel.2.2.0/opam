@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-signature+std-devel-2.2.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-signature+std-devel-2.2.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-rand_core+std-devel" 
+  "rust-rand_core-devel" 
+  "rust-signature+alloc-devel" {= "2.2.0"}
+  "rust-signature-devel" {= "2.2.0"}
+]
+extra-source "rust-signature+std-devel-2.2.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-signature+std-devel-2.2.0-2.fc40.noarch.rpm"
+}

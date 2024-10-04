@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fractal-6-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fractal-6-1.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "graphene" 
+  "gstreamer1" 
+  "gstreamer1-plugins-bad-free-libs" 
+  "gstreamer1-plugins-base" 
+  "gtk4" 
+  "gtksourceview5" 
+  "libadwaita" 
+  "libgcc" 
+  "libshumate" 
+  "openssl-libs" 
+  "pango" 
+  "pipewire-libs" 
+  "sqlite-libs" 
+]
+extra-source "fractal-6-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fractal-6-1.fc40.x86_64.rpm"
+}

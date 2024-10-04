@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-rpm-macros-2.6.4-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-rpm-macros-2.6.4-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "chrpath" 
+  "rpm" 
+]
+extra-source "ghc-rpm-macros-2.6.4-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ghc-rpm-macros-2.6.4-1.2.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "clanlib-devel-4.1.0-2.18.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clanlib-devel-4.1.0-2.18.x86_64.rpm"]
+depends: [
+  "Mesa-libGL-devel" 
+  "alsa-devel" 
+  "clanlib" {= "4.1.0"}
+  "fontconfig-devel" 
+  "gcc-c++" 
+  "libX11-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "clanlib-devel-4.1.0-2.18.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/clanlib-devel-4.1.0-2.18.x86_64.rpm"
+}

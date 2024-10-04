@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libopenal0-1.22.2-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libopenal0-1.22.2-1.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libopenal1" 
+]
+extra-source "libopenal0-1.22.2-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libopenal0-1.22.2-1.8.x86_64.rpm"
+}

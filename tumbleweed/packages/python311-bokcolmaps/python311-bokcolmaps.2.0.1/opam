@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-bokcolmaps-2.0.1-2.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-bokcolmaps-2.0.1-2.15.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-bokeh" {>= "2.1"}
+  "python311-numpy" {>= "1.14"}
+]
+extra-source "python311-bokcolmaps-2.0.1-2.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-bokcolmaps-2.0.1-2.15.noarch.rpm"
+}

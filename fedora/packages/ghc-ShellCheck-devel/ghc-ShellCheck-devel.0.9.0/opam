@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-ShellCheck-devel-0.9.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-ShellCheck-devel-0.9.0-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-Diff-devel" 
+  "ghc-QuickCheck-devel" 
+  "ghc-ShellCheck" {= "0.9.0"}
+  "ghc-aeson-devel" 
+  "ghc-array-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-deepseq-devel" 
+  "ghc-directory-devel" 
+  "ghc-fgl-devel" 
+  "ghc-filepath-devel" 
+  "ghc-mtl-devel" 
+  "ghc-parsec-devel" 
+  "ghc-process-devel" 
+  "ghc-regex-tdfa-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-ShellCheck-devel-0.9.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-ShellCheck-devel-0.9.0-6.fc40.x86_64.rpm"
+}

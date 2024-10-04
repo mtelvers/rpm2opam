@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "opendkim-2.11.0-0.38.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opendkim-2.11.0-0.38.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libdb" 
+  "libmemcached-awesome" 
+  "libopendkim" {= "2.11.0"}
+  "lua-libs" 
+  "opendbx" 
+  "openldap" 
+  "openssl-libs" 
+  "sendmail-milter" 
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "opendkim-2.11.0-0.38.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/opendkim-2.11.0-0.38.fc40.x86_64.rpm"
+}

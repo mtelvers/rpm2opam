@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dionaea-0.7.0-28.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dionaea-0.7.0-28.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "libcurl" 
+  "libemu" 
+  "libev" 
+  "libnetfilter_queue" 
+  "libnl3" 
+  "libpcap" 
+  "logrotate" 
+  "openssl-libs" 
+  "python3" 
+  "python3-dionaea" 
+  "shadow-utils" 
+  "systemd" 
+  "udns" 
+]
+extra-source "dionaea-0.7.0-28.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dionaea-0.7.0-28.fc40.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sugar-finance-15-10.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sugar-finance-15-10.fc39.noarch.rpm"]
+depends: [
+  "python3" 
+  "sugar" {>= "0.116"}
+]
+extra-source "sugar-finance-15-10.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sugar-finance-15-10.fc39.noarch.rpm"
+}

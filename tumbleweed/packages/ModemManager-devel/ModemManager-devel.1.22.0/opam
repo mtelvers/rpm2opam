@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ModemManager-devel-1.22.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ModemManager-devel-1.22.0-1.1.x86_64.rpm"]
+depends: [
+  "ModemManager" {= "1.22.0"}
+  "glib2-devel" 
+  "libmm-glib0" {= "1.22.0"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-ModemManager-1_0" {= "1.22.0"}
+]
+extra-source "ModemManager-devel-1.22.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ModemManager-devel-1.22.0-1.1.x86_64.rpm"
+}

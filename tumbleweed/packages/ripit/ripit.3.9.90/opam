@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ripit-3.9.90-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ripit-3.9.90-3.2.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "cdparanoia" 
+  "perl-CDDB_get" 
+  "perl-libwww-perl" 
+  "vorbis-tools" 
+]
+extra-source "ripit-3.9.90-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ripit-3.9.90-3.2.noarch.rpm"
+}

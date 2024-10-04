@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Net-Twitter-4.01043-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-Twitter-4.01043-21.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp-Clan" 
+  "perl-Class-Load" 
+  "perl-Data-Visitor" 
+  "perl-DateTime" 
+  "perl-DateTime-Format-Strptime" 
+  "perl-Devel-StackTrace" 
+  "perl-Digest-SHA" 
+  "perl-Encode" 
+  "perl-HTML-Parser" 
+  "perl-HTTP-Message" 
+  "perl-JSON-MaybeXS" 
+  "perl-LWP-Protocol-https" 
+  "perl-Moose" 
+  "perl-MooseX-Role-Parameterized" 
+  "perl-Net-OAuth" 
+  "perl-Scalar-List-Utils" 
+  "perl-Time-HiRes" 
+  "perl-Try-Tiny" 
+  "perl-URI" 
+  "perl-libnet" 
+  "perl-libs" {>= "5.8.1"}
+  "perl-namespace-autoclean" 
+  "perl-overload" 
+]
+extra-source "perl-Net-Twitter-4.01043-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Net-Twitter-4.01043-21.fc40.noarch.rpm"
+}

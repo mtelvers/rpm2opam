@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "subversion-1.14.3-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "subversion-1.14.3-3.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "libapr-util1-0" 
+  "libapr1-0" 
+  "libdb-4_8" 
+  "libexpat1" 
+  "libgcc_s1" 
+  "liblz4-1" 
+  "libmagic1" 
+  "libsasl2-3" 
+  "libserf-1-1" 
+  "libsqlite3-0" {>= "3.8.2"}
+  "libstdc++6" 
+  "libutf8proc3" 
+  "libz-ng-compat1" 
+  "systemd" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "subversion-1.14.3-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/subversion-1.14.3-3.1.x86_64.rpm"
+}

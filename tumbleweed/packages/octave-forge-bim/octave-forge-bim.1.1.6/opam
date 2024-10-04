@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "octave-forge-bim-1.1.6-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "octave-forge-bim-1.1.6-1.6.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "octave-cli" {>= "3.8.0"}
+  "octave-forge-fpl" 
+  "octave-forge-msh" 
+]
+extra-source "octave-forge-bim-1.1.6-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/octave-forge-bim-1.1.6-1.6.noarch.rpm"
+}

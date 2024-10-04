@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ptlib-devel-2.18.8-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ptlib-devel-2.18.8-2.2.x86_64.rpm"]
+depends: [
+  "libpt2_18_8" {= "2.18.8"}
+  "pkgconf-pkg-config" 
+]
+extra-source "ptlib-devel-2.18.8-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ptlib-devel-2.18.8-2.2.x86_64.rpm"
+}

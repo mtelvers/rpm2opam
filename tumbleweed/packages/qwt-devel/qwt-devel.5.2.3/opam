@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qwt-devel-5.2.3_qt5+git20181129.2819734-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qwt-devel-5.2.3_qt5+git20181129.2819734-4.2.x86_64.rpm"]
+depends: [
+  "freetype2-devel" 
+  "gcc-c++" 
+  "libQt5Gui-devel" 
+  "libQt5PrintSupport-devel" 
+  "libQt5Widgets-devel" 
+  "libpng12-compat-devel" 
+  "libqt5-qtsvg-devel" 
+  "libqwt5-qt5-5" {= "5.2.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "qwt-devel-5.2.3_qt5+git20181129.2819734-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/qwt-devel-5.2.3_qt5+git20181129.2819734-4.2.x86_64.rpm"
+}

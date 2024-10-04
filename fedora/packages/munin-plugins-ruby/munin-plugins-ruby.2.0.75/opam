@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "munin-plugins-ruby-2.0.75-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "munin-plugins-ruby-2.0.75-3.fc40.noarch.rpm"]
+depends: [
+  "munin-node" {= "2.0.75"}
+  "rubypick" 
+]
+extra-source "munin-plugins-ruby-2.0.75-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/munin-plugins-ruby-2.0.75-3.fc40.noarch.rpm"
+}

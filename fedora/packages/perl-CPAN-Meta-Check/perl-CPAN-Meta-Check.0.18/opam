@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CPAN-Meta-Check-0.018-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CPAN-Meta-Check-0.018-3.fc40.noarch.rpm"]
+depends: [
+  "perl-CPAN-Meta" {>= "2.132830"}
+  "perl-CPAN-Meta-Requirements" {>= "2.121"}
+  "perl-Exporter" 
+  "perl-Module-Metadata" {>= "1.23"}
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-CPAN-Meta-Check-0.018-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CPAN-Meta-Check-0.018-3.fc40.noarch.rpm"
+}

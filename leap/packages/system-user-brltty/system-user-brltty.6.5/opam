@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "system-user-brltty-6.5-slfo.1.1.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "system-user-brltty-6.5-slfo.1.1.11.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "system-group-hardware" 
+  "system-user-pulse" 
+  "system-user-root" 
+  "sysuser-shadow" {>= "3.1"}
+]
+extra-source "system-user-brltty-6.5-slfo.1.1.11.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/system-user-brltty-6.5-slfo.1.1.11.noarch.rpm"
+}

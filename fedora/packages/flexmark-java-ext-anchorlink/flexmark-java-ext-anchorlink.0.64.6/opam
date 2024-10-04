@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "flexmark-java-ext-anchorlink-0.64.6-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flexmark-java-ext-anchorlink-0.64.6-3.fc40.noarch.rpm"]
+depends: [
+  "flexmark-java" {= "0.64.6"}
+  "flexmark-java-util" {= "0.64.6"}
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "flexmark-java-ext-anchorlink-0.64.6-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/flexmark-java-ext-anchorlink-0.64.6-3.fc40.noarch.rpm"
+}

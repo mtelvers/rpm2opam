@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libscintilla-devel-5.5.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libscintilla-devel-5.5.1-1.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "gtk3-devel" 
+  "libscintilla5" {= "5.5.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libscintilla-devel-5.5.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libscintilla-devel-5.5.1-1.1.x86_64.rpm"
+}

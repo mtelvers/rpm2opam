@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-alibabacloud-tea-devel-1.1.17-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-alibabacloud-tea-devel-1.1.17-10.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-alibabacloud-debug-devel" 
+  "golang-github-json-iterator-devel" 
+  "golang-github-modern-reflect2-devel" 
+  "golang-x-net-devel" 
+]
+extra-source "golang-github-alibabacloud-tea-devel-1.1.17-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-alibabacloud-tea-devel-1.1.17-10.fc40.noarch.rpm"
+}

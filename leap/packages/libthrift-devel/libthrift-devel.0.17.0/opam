@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libthrift-devel-0.17.0-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libthrift-devel-0.17.0-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libthrift-0_17_0" {= "0.17.0"}
+  "libthrift_c_glib0" {= "0.17.0"}
+  "libthriftnb-0_17_0" {= "0.17.0"}
+  "libthriftz-0_17_0" {= "0.17.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libthrift-devel-0.17.0-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libthrift-devel-0.17.0-slfo.1.1.8.x86_64.rpm"
+}

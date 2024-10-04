@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ron0.7-devel-0.7.1-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ron0.7-devel-0.7.1-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-base64+default-devel" 
+  "rust-bitflags+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+serde_derive-devel" 
+]
+extra-source "rust-ron0.7-devel-0.7.1-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ron0.7-devel-0.7.1-4.fc40.noarch.rpm"
+}

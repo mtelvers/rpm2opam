@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vapoursynth-devel-70-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vapoursynth-devel-70-1.1.x86_64.rpm"]
+depends: [
+  "libvapoursynth-70" {= "70"}
+  "libvapoursynth-script0" {= "70"}
+  "pkgconf-pkg-config" 
+  "python311-devel" 
+  "zimg-devel" 
+]
+extra-source "vapoursynth-devel-70-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vapoursynth-devel-70-1.1.x86_64.rpm"
+}

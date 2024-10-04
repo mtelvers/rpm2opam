@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "minetest-game-5.8.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "minetest-game-5.8.0-1.3.noarch.rpm"]
+depends: [
+  "minetest" {>= "5.8.0"}
+]
+extra-source "minetest-game-5.8.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/minetest-game-5.8.0-1.3.noarch.rpm"
+}

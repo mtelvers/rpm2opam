@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-microlens-ghc-prof-0.4.14.3-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-microlens-ghc-prof-0.4.14.3-1.2.x86_64.rpm"]
+depends: [
+  "ghc-array-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-microlens-ghc-devel" {= "0.4.14.3"}
+  "ghc-microlens-prof" 
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-microlens-ghc-prof-0.4.14.3-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-microlens-ghc-prof-0.4.14.3-1.2.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-nbformat-5.10.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-nbformat-5.10.4-1.1.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "python311-base" 
+  "python311-fastjsonschema" {>= "2.15"}
+  "python311-jsonschema" {> "2.6"}
+  "python311-jupyter-core" 
+  "python311-traitlets" {>= "5.1"}
+]
+extra-source "python311-nbformat-5.10.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-nbformat-5.10.4-1.1.noarch.rpm"
+}

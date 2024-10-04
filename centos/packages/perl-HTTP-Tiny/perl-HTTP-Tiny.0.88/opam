@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-HTTP-Tiny-0.088-511.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTTP-Tiny-0.088-511.el10.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Errno" 
+  "perl-Fcntl" 
+  "perl-IO" 
+  "perl-IO-Socket-SSL" {>= "1.56"}
+  "perl-MIME-Base64" 
+  "perl-Mozilla-CA" 
+  "perl-Net-SSLeay" {>= "1.49"}
+  "perl-Socket" 
+  "perl-Time-Local" 
+]
+extra-source "perl-HTTP-Tiny-0.088-511.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/perl-HTTP-Tiny-0.088-511.el10.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-tinyrpc-1.1.4-5.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-tinyrpc-1.1.4-5.fc39.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-gevent" 
+  "python3-greenlet" 
+  "python3-requests" 
+  "python3-six" 
+  "python3-werkzeug" 
+  "python3-zmq" 
+]
+extra-source "python3-tinyrpc-1.1.4-5.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-tinyrpc-1.1.4-5.fc39.noarch.rpm"
+}

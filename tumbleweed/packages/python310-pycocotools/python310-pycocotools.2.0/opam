@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pycocotools-2.0~post.1582219528.8c9bcc3-2.18.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pycocotools-2.0~post.1582219528.8c9bcc3-2.18.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "python310-Cython" {>= "0.27.3"}
+  "python310-base" {= "3.10"}
+  "python310-matplotlib" {>= "2.1.0"}
+  "python310-setuptools" {>= "18.0"}
+]
+extra-source "python310-pycocotools-2.0~post.1582219528.8c9bcc3-2.18.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-pycocotools-2.0~post.1582219528.8c9bcc3-2.18.x86_64.rpm"
+}

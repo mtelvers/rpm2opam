@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kvantum-1.1.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kvantum-1.1.0-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "hicolor-icon-theme" 
+  "kf6-kwindowsystem" 
+  "kvantum-data" {= "1.1.0"}
+  "libX11" 
+  "libgcc" 
+  "libstdc++" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qt6-qtsvg" 
+]
+extra-source "kvantum-1.1.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kvantum-1.1.0-1.fc40.x86_64.rpm"
+}

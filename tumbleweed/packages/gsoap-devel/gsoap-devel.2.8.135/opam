@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gsoap-devel-2.8.135-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gsoap-devel-2.8.135-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libgsoap-2_8_135" 
+  "libopenssl3" 
+  "libstdc++6" 
+  "pkgconf-pkg-config" 
+]
+extra-source "gsoap-devel-2.8.135-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gsoap-devel-2.8.135-1.1.x86_64.rpm"
+}

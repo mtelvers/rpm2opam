@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-defcon+lxml-0.10.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-defcon+lxml-0.10.2-3.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-defcon" {= "0.10.2"}
+  "python3-fonttools" {>= "4.10"}
+  "python3-fonttools+lxml" {>= "4.10"}
+]
+extra-source "python3-defcon+lxml-0.10.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-defcon+lxml-0.10.2-3.fc40.noarch.rpm"
+}

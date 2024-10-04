@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qemu-user-static-8.2.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qemu-user-static-8.2.2-1.fc40.x86_64.rpm"]
+depends: [
+  "qemu-user-static-aarch64" 
+  "qemu-user-static-alpha" 
+  "qemu-user-static-arm" 
+  "qemu-user-static-cris" 
+  "qemu-user-static-hexagon" 
+  "qemu-user-static-hppa" 
+  "qemu-user-static-loongarch64" 
+  "qemu-user-static-m68k" 
+  "qemu-user-static-microblaze" 
+  "qemu-user-static-mips" 
+  "qemu-user-static-nios2" 
+  "qemu-user-static-or1k" 
+  "qemu-user-static-ppc" 
+  "qemu-user-static-riscv" 
+  "qemu-user-static-s390x" 
+  "qemu-user-static-sh4" 
+  "qemu-user-static-sparc" 
+  "qemu-user-static-x86" 
+  "qemu-user-static-xtensa" 
+  "systemd" 
+]
+extra-source "qemu-user-static-8.2.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qemu-user-static-8.2.2-1.fc40.x86_64.rpm"
+}

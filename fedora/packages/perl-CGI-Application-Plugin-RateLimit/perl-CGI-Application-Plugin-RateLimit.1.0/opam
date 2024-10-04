@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CGI-Application-Plugin-RateLimit-1.0-40.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CGI-Application-Plugin-RateLimit-1.0-40.fc40.noarch.rpm"]
+depends: [
+  "perl-CGI-Application" 
+  "perl-Carp" 
+  "perl-Class-Accessor" 
+  "perl-base" 
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "perl-CGI-Application-Plugin-RateLimit-1.0-40.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CGI-Application-Plugin-RateLimit-1.0-40.fc40.noarch.rpm"
+}

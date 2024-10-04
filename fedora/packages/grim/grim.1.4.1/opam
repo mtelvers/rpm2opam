@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "grim-1.4.1-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grim-1.4.1-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libwayland-client" 
+  "pixman" 
+]
+extra-source "grim-1.4.1-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/grim-1.4.1-3.fc40.x86_64.rpm"
+}

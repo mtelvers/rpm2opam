@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libarrow-python-flight-devel-15.0.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libarrow-python-flight-devel-15.0.2-3.fc40.x86_64.rpm"]
+depends: [
+  "libarrow" {= "15.0.2"}
+  "libarrow-flight-devel" {= "15.0.2"}
+  "libarrow-python-devel" {= "15.0.2"}
+  "libarrow-python-flight-libs" {= "15.0.2"}
+]
+extra-source "libarrow-python-flight-devel-15.0.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libarrow-python-flight-devel-15.0.2-3.fc40.x86_64.rpm"
+}

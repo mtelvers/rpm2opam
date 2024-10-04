@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "snapd-qt-devel-1.64-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "snapd-qt-devel-1.64-1.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "glib2-devel" {>= "2.46"}
+  "pkgconf-pkg-config" 
+  "qt6-qtbase-devel" 
+  "snapd-glib-devel" {= "1.64"}
+  "snapd-qt" 
+]
+extra-source "snapd-qt-devel-1.64-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/snapd-qt-devel-1.64-1.fc40.x86_64.rpm"
+}

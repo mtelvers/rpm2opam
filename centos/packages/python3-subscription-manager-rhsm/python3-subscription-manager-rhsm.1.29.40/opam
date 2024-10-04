@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-subscription-manager-rhsm-1.29.40-3.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-subscription-manager-rhsm-1.29.40-3.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "openssl-libs" 
+  "python3" {= "3.12"}
+  "python3-cloud-what" {= "1.30.2"}
+  "python3-dateutil" 
+  "python3-iniparse" 
+  "python3-rpm" 
+  "subscription-manager-rhsm-certificates" 
+]
+extra-source "python3-subscription-manager-rhsm-1.29.40-3.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/python3-subscription-manager-rhsm-1.29.40-3.el10.x86_64.rpm"
+}

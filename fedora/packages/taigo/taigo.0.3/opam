@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "taigo-0.3-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "taigo-0.3-11.fc40.x86_64.rpm"]
+depends: [
+  "clutter" 
+  "clutter-gtk" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "hicolor-icon-theme" 
+  "json-glib" 
+  "libgee" 
+]
+extra-source "taigo-0.3-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/taigo-0.3-11.fc40.x86_64.rpm"
+}

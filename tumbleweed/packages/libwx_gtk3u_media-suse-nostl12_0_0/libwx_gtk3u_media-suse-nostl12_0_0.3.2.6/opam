@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libwx_gtk3u_media-suse-nostl12_0_0-3.2.6-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libwx_gtk3u_media-suse-nostl12_0_0-3.2.6-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libgcc_s1" 
+  "libgstreamer-1_0-0" 
+  "libgstvideo-1_0-0" 
+  "libgtk-3-0" 
+  "libstdc++6" 
+  "libwx_baseu-suse-nostl12_0_0" 
+  "libwx_gtk3u_core-suse-nostl12_0_0" 
+]
+extra-source "libwx_gtk3u_media-suse-nostl12_0_0-3.2.6-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libwx_gtk3u_media-suse-nostl12_0_0-3.2.6-1.1.x86_64.rpm"
+}

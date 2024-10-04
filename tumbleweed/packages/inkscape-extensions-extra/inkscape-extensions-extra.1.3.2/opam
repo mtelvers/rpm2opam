@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "inkscape-extensions-extra-1.3.2-5.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "inkscape-extensions-extra-1.3.2-5.1.x86_64.rpm"]
+depends: [
+  "ghostscript" 
+  "inkscape" {= "1.3.2"}
+  "python311-base" 
+  "python311-lxml" 
+  "python311-numpy" 
+  "python311-scour" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" 
+]
+extra-source "inkscape-extensions-extra-1.3.2-5.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/inkscape-extensions-extra-1.3.2-5.1.x86_64.rpm"
+}

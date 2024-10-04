@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libgit2_1.5-1.5.2-3.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgit2_1.5-1.5.2-3.fc39.x86_64.rpm"]
+depends: [
+  "glibc" {>= "2.37.9000"}
+  "http-parser" 
+  "libgcc" 
+  "libssh2" 
+  "openssl-libs" 
+  "pcre2" 
+  "zlib-ng-compat" 
+]
+extra-source "libgit2_1.5-1.5.2-3.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libgit2_1.5-1.5.2-3.fc39.x86_64.rpm"
+}

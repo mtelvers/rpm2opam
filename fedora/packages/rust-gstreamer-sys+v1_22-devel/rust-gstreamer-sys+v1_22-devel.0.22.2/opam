@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gstreamer-sys+v1_22-devel-0.22.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gstreamer-sys+v1_22-devel-0.22.2-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "gstreamer1-devel" {>= "1.22"}
+  "rust-gstreamer-sys+v1_20_4-devel" {= "0.22.2"}
+  "rust-gstreamer-sys-devel" {= "0.22.2"}
+]
+extra-source "rust-gstreamer-sys+v1_22-devel-0.22.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gstreamer-sys+v1_22-devel-0.22.2-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-Pweave-0.30.3-7.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-Pweave-0.30.3-7.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-Markdown" 
+  "python310-Pygments" 
+  "python310-base" 
+  "python310-certifi" 
+  "python310-ipykernel" 
+  "python310-ipython" 
+  "python310-jupyter-client" 
+  "python310-nbconvert" 
+  "python310-nbformat" 
+]
+extra-source "python310-Pweave-0.30.3-7.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-Pweave-0.30.3-7.2.noarch.rpm"
+}

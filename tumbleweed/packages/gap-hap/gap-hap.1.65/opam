@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-hap-1.65-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-hap-1.65-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "gap" {>= "4.5.6"}
+  "gap-aclib" {>= "1.1"}
+  "gap-crystcat" {>= "1.1"}
+  "gap-fga" {>= "1.1"}
+  "gap-nq" {>= "1.1"}
+  "gap-polycyclic" {>= "1.1"}
+  "perl-base" 
+]
+extra-source "gap-hap-1.65-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-hap-1.65-1.1.noarch.rpm"
+}

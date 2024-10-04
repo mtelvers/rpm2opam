@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "shibboleth-sp-3.4.1-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "shibboleth-sp-3.4.1-2.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "krb5" 
+  "libapr-util1-0" 
+  "libapr1-0" 
+  "libgcc_s1" 
+  "liblog4shib2" 
+  "libmemcached11" 
+  "libodbc2" 
+  "libsaml12" 
+  "libshibsp-lite11" 
+  "libshibsp11" 
+  "libstdc++6" 
+  "libsystemd0" 
+  "libxerces-c-3_2" 
+  "libxmltooling-lite10" 
+  "libxmltooling10" 
+  "opensaml-schemas" {>= "3.1.0"}
+  "openssl" 
+  "shadow" 
+  "systemd" 
+  "xmltooling-schemas" {>= "3.1.0"}
+]
+extra-source "shibboleth-sp-3.4.1-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/shibboleth-sp-3.4.1-2.2.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-PyMySQL-1.1.1-slfo.1.1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-PyMySQL-1.1.1-slfo.1.1.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-cryptography" 
+]
+extra-source "python311-PyMySQL-1.1.1-slfo.1.1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/python311-PyMySQL-1.1.1-slfo.1.1.1.noarch.rpm"
+}

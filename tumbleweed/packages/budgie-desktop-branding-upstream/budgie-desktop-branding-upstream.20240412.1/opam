@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "budgie-desktop-branding-upstream-20240412.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "budgie-desktop-branding-upstream-20240412.1-1.1.noarch.rpm"]
+depends: [
+  "adwaita-icon-theme" 
+  "budgie-desktop" 
+  "lightdm-slick-greeter" 
+  "materia-gtk-theme" 
+  "papirus-icon-theme" 
+]
+extra-source "budgie-desktop-branding-upstream-20240412.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/budgie-desktop-branding-upstream-20240412.1-1.1.noarch.rpm"
+}

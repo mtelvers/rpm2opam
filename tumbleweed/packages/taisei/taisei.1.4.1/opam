@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "taisei-1.4.1-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "taisei-1.4.1-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libSDL2-2_0-0" 
+  "libfreetype6" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libopusfile0" 
+  "libpng16-16" 
+  "libshaderc_shared1" 
+  "libspirv-cross-c-shared0" 
+  "libstdc++6" 
+  "libwebpdecoder3" 
+  "libz-ng-compat1" 
+  "libzip5" 
+  "libzstd1" 
+  "taisei-data" 
+]
+extra-source "taisei-1.4.1-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/taisei-1.4.1-1.2.x86_64.rpm"
+}

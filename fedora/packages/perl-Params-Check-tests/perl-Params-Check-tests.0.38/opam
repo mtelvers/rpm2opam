@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Params-Check-tests-0.38-502.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Params-Check-tests-0.38-502.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Params-Check" {= "0.38"}
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Params-Check-tests-0.38-502.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Params-Check-tests-0.38-502.fc40.noarch.rpm"
+}

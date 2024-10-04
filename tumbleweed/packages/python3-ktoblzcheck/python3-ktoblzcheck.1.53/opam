@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-ktoblzcheck-1.53-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-ktoblzcheck-1.53-1.7.x86_64.rpm"]
+depends: [
+  "ktoblzcheck" {= "1.53"}
+  "libktoblzcheck1" {= "1.53"}
+  "python311-base" {= "3.11"}
+]
+extra-source "python3-ktoblzcheck-1.53-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python3-ktoblzcheck-1.53-1.7.x86_64.rpm"
+}

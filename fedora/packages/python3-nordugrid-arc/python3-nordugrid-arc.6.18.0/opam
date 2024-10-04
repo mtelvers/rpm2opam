@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-nordugrid-arc-6.18.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-nordugrid-arc-6.18.0-6.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "glibmm2-4" 
+  "libdb-cxx" 
+  "libgcc" 
+  "libsigc++20" 
+  "libstdc++" 
+  "libtool-ltdl" 
+  "libuuid" 
+  "libxml2" 
+  "libxslt" 
+  "nordugrid-arc" 
+  "nspr" 
+  "nss" 
+  "nss-util" 
+  "openssl-libs" 
+  "python3" {= "3.12"}
+  "python3-libs" 
+  "sqlite-libs" 
+  "xmlsec1" 
+  "xmlsec1-openssl" 
+  "zlib-ng-compat" 
+]
+extra-source "python3-nordugrid-arc-6.18.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-nordugrid-arc-6.18.0-6.fc40.x86_64.rpm"
+}

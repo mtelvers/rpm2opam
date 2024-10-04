@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mlpack-python3-4.3.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mlpack-python3-4.3.0-3.fc40.x86_64.rpm"]
+depends: [
+  "armadillo" 
+  "glibc" 
+  "libgcc" 
+  "libgomp" 
+  "libstdc++" 
+  "mlpack-licenses" 
+  "python3" {= "3.12"}
+  "python3-cython" 
+  "python3-numpy" 
+  "python3-pandas" 
+]
+extra-source "mlpack-python3-4.3.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mlpack-python3-4.3.0-3.fc40.x86_64.rpm"
+}

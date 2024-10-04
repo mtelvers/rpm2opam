@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-hspec-core-devel-2.10.10-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hspec-core-devel-2.10.10-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-HUnit-devel" 
+  "ghc-QuickCheck-devel" 
+  "ghc-ansi-terminal-devel" 
+  "ghc-array-devel" 
+  "ghc-base-devel" 
+  "ghc-call-stack-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-deepseq-devel" 
+  "ghc-directory-devel" 
+  "ghc-filepath-devel" 
+  "ghc-haskell-lexer-devel" 
+  "ghc-hspec-core" {= "2.10.10"}
+  "ghc-hspec-expectations-devel" 
+  "ghc-process-devel" 
+  "ghc-quickcheck-io-devel" 
+  "ghc-random-devel" 
+  "ghc-setenv-devel" 
+  "ghc-stm-devel" 
+  "ghc-tf-random-devel" 
+  "ghc-time-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-hspec-core-devel-2.10.10-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-hspec-core-devel-2.10.10-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmount-devel-32bit-2.40.1-5.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmount-devel-32bit-2.40.1-5.1.x86_64.rpm"]
+depends: [
+  "libblkid-devel" 
+  "libmount-devel" {= "2.40.1"}
+  "libmount1-32bit" {= "2.40.1"}
+  "libselinux-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libmount-devel-32bit-2.40.1-5.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmount-devel-32bit-2.40.1-5.1.x86_64.rpm"
+}

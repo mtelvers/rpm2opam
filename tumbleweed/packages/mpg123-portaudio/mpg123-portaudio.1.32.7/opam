@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mpg123-portaudio-1.32.7-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mpg123-portaudio-1.32.7-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libportaudio2" 
+]
+extra-source "mpg123-portaudio-1.32.7-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mpg123-portaudio-1.32.7-1.1.x86_64.rpm"
+}

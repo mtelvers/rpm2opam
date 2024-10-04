@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "log4j-slf4j-2.20.0-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "log4j-slf4j-2.20.0-7.fc40.noarch.rpm"]
+depends: [
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "log4j" {= "2.20.0"}
+  "slf4j" 
+]
+extra-source "log4j-slf4j-2.20.0-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/log4j-slf4j-2.20.0-7.fc40.noarch.rpm"
+}

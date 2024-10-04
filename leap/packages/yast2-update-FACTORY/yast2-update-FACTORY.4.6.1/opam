@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-update-FACTORY-4.6.1-slfo.1.1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-update-FACTORY-4.6.1-slfo.1.1.3.x86_64.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "fillup" 
+  "yast2" 
+  "yast2-ruby-bindings" {>= "1.0.0"}
+  "yast2-update" 
+]
+extra-source "yast2-update-FACTORY-4.6.1-slfo.1.1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/yast2-update-FACTORY-4.6.1-slfo.1.1.3.x86_64.rpm"
+}

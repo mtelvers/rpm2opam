@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-forms-1.2.12-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-forms-1.2.12-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "gap" {>= "4.9"}
+]
+extra-source "gap-forms-1.2.12-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-forms-1.2.12-1.1.noarch.rpm"
+}

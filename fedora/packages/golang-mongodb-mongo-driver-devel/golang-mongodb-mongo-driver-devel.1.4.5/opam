@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-mongodb-mongo-driver-devel-1.4.5-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-mongodb-mongo-driver-devel-1.4.5-12.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-aws-sdk-devel" 
+  "golang-github-gobuffalo-packr-devel" 
+  "golang-github-google-cmp-devel" 
+  "golang-github-klauspost-compress-devel" 
+  "golang-github-montanaflynn-stats-devel" 
+  "golang-github-pelletier-toml-devel" 
+  "golang-github-pkg-errors-devel" 
+  "golang-github-snappy-devel" 
+  "golang-github-stack-devel" 
+  "golang-github-stretchr-testify-devel" 
+  "golang-github-xdg-scram-devel" 
+  "golang-github-xdg-stringprep-devel" 
+  "golang-x-crypto-devel" 
+  "golang-x-sync-devel" 
+  "golang-x-tools-devel" 
+]
+extra-source "golang-mongodb-mongo-driver-devel-1.4.5-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-mongodb-mongo-driver-devel-1.4.5-12.fc40.noarch.rpm"
+}

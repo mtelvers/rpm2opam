@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-bartlett-PHP-CompatInfo-7.1.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-bartlett-PHP-CompatInfo-7.1.3-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "php-cli" 
+  "php-common" {>= "8.1"}
+  "php-pdo" 
+  "php-xml" 
+]
+extra-source "php-bartlett-PHP-CompatInfo-7.1.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-bartlett-PHP-CompatInfo-7.1.3-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-App-Dochazka-REST-0.559-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-App-Dochazka-REST-0.559-2.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "perl" 
+  "perl-App-CELL" {>= "0.215"}
+  "perl-App-Dochazka-Common" {>= "0.207"}
+  "perl-Authen-Passphrase" {>= "0.8"}
+  "perl-DBD-Pg" 
+  "perl-DBI" 
+  "perl-DBIx-Connector" {>= "0.47"}
+  "perl-Date-Calc" 
+  "perl-Date-Holidays-CZ" {>= "0.12"}
+  "perl-File-ShareDir" {>= "1"}
+  "perl-JSON" 
+  "perl-Mason" 
+  "perl-Params-Validate" {>= "1.6"}
+  "perl-Path-Router" {>= "0.12"}
+  "perl-Plack" 
+  "perl-Plack-Middleware-Session" 
+  "perl-Starman" 
+  "perl-Test-Deep" 
+  "perl-Try-Tiny" 
+  "perl-Web-MREST" {>= "0.287"}
+  "perl-Web-MREST-CLI" {>= "0.276"}
+  "perl-Web-Machine" {>= "0.15"}
+  "perl-base" 
+  "shadow" 
+  "systemd" 
+]
+extra-source "perl-App-Dochazka-REST-0.559-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-App-Dochazka-REST-0.559-2.2.noarch.rpm"
+}

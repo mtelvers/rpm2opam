@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libhashcat6_2_6-6.2.6-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libhashcat6_2_6-6.2.6-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libminizip1" 
+  "libstdc++6" 
+  "libxxhash0" 
+  "libz-ng-compat1" 
+]
+extra-source "libhashcat6_2_6-6.2.6-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libhashcat6_2_6-6.2.6-2.2.x86_64.rpm"
+}

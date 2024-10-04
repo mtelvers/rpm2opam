@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-ipyparallel-8.8.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-ipyparallel-8.8.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-decorator" 
+  "python312-entrypoints" 
+  "python312-ipykernel" {>= "4.4"}
+  "python312-ipython" {>= "4"}
+  "python312-jupyter-client" 
+  "python312-psutil" 
+  "python312-python-dateutil" {>= "2.1"}
+  "python312-pyzmq" {>= "18"}
+  "python312-tornado" {>= "5.1"}
+  "python312-tqdm" 
+  "python312-traitlets" {>= "4.3"}
+  "update-alternatives" 
+]
+extra-source "python312-ipyparallel-8.8.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-ipyparallel-8.8.0-1.1.noarch.rpm"
+}

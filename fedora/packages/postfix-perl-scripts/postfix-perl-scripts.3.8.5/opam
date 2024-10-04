@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "postfix-perl-scripts-3.8.5-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postfix-perl-scripts-3.8.5-4.fc40.x86_64.rpm"]
+depends: [
+  "perl-Date-Calc" 
+  "perl-File-Find" 
+  "perl-Getopt-Long" 
+  "perl-Getopt-Std" 
+  "perl-IO" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-locale" 
+  "perl-vars" 
+  "postfix" {= "3.8.5"}
+]
+extra-source "postfix-perl-scripts-3.8.5-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/postfix-perl-scripts-3.8.5-4.fc40.x86_64.rpm"
+}

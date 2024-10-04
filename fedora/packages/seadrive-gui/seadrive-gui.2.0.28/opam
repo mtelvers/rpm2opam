@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "seadrive-gui-2.0.28-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "seadrive-gui-2.0.28-2.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "jansson" 
+  "libgcc" 
+  "libsearpc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtwebengine" 
+  "seadrive-daemon" {= "2.0.28"}
+  "sqlite-libs" 
+]
+extra-source "seadrive-gui-2.0.28-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/seadrive-gui-2.0.28-2.fc40.x86_64.rpm"
+}

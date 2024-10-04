@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "chkconfig-1.26-4.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "chkconfig-1.26-4.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libselinux" 
+  "popt" 
+]
+extra-source "chkconfig-1.26-4.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/chkconfig-1.26-4.el10.x86_64.rpm"
+}

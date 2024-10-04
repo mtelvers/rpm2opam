@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "maven-reporting-impl-3.2.0-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-reporting-impl-3.2.0-6.fc40.noarch.rpm"]
+depends: [
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "maven-doxia-core" 
+  "maven-doxia-sink-api" 
+  "maven-doxia-sitetools" 
+  "maven-lib" 
+  "maven-reporting-api" 
+  "maven-shared-utils" 
+  "plexus-utils" 
+]
+extra-source "maven-reporting-impl-3.2.0-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/maven-reporting-impl-3.2.0-6.fc40.noarch.rpm"
+}

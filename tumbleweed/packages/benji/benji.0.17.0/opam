@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "benji-0.17.0-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "benji-0.17.0-1.6.noarch.rpm"]
+depends: [
+  "python311-Cerberus" {>= "1.2"}
+  "python311-SQLAlchemy" {>= "1.2.6"}
+  "python311-alembic" {>= "1.0.5"}
+  "python311-argcomplete" {>= "1.9.4"}
+  "python311-base" 
+  "python311-colorama" {>= "0.4.1"}
+  "python311-diskcache" {>= "3.0.6"}
+  "python311-prettytable" {>= "0.7.2"}
+  "python311-psutil" 
+  "python311-pycryptodome" {>= "3.6.1"}
+  "python311-pyparsing" {>= "2.3.0"}
+  "python311-python-dateutil" {>= "2.6.0"}
+  "python311-ruamel-yaml" {>= "0.15"}
+  "python311-semantic_version" {>= "2.6.0"}
+  "python311-setproctitle" {>= "1.1.8"}
+  "python311-shortuuid" 
+  "python311-sparse" {>= "0.2.2"}
+  "python311-structlog" {>= "19.1.0"}
+]
+extra-source "benji-0.17.0-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/benji-0.17.0-1.6.noarch.rpm"
+}

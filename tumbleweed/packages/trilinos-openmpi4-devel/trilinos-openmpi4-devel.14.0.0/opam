@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "trilinos-openmpi4-devel-14.0.0-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trilinos-openmpi4-devel-14.0.0-5.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "blacs-devel-headers" 
+  "glpk-devel" 
+  "hdf5-openmpi4-devel" 
+  "hypre-openmpi4-devel" 
+  "libscalapack2-openmpi4-devel" 
+  "libtrilinos14-openmpi4" {= "14.0.0"}
+  "mumps-openmpi4-devel" 
+  "netcdf-openmpi4-devel" 
+  "ptscotch-openmpi4-devel" 
+  "python311-base" 
+  "swig" 
+]
+extra-source "trilinos-openmpi4-devel-14.0.0-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/trilinos-openmpi4-devel-14.0.0-5.2.x86_64.rpm"
+}

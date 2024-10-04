@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "evolution-lang-3.52.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "evolution-lang-3.52.4-1.1.noarch.rpm"]
+depends: [
+  "evolution" {= "3.52.4"}
+]
+extra-source "evolution-lang-3.52.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/evolution-lang-3.52.4-1.1.noarch.rpm"
+}

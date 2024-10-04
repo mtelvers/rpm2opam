@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "deepin-gettext-tools-1.0.10-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deepin-gettext-tools-1.0.10-1.4.noarch.rpm"]
+depends: [
+  "gettext-runtime" 
+  "perl-Config-Tiny" 
+  "perl-Exporter-Tiny" 
+  "perl-XML-LibXML" 
+  "perl-XML-LibXML-PrettyPrint" 
+  "perl-base" 
+  "python311" 
+  "python311-base" 
+]
+extra-source "deepin-gettext-tools-1.0.10-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/deepin-gettext-tools-1.0.10-1.4.noarch.rpm"
+}

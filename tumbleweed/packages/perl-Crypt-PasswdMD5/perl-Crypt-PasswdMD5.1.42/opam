@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Crypt-PasswdMD5-1.42-1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Crypt-PasswdMD5-1.42-1.8.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Digest-MD5" {>= "2.53"}
+]
+extra-source "perl-Crypt-PasswdMD5-1.42-1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Crypt-PasswdMD5-1.42-1.8.noarch.rpm"
+}

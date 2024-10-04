@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mangoplot-0.7.2-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mangoplot-0.7.2-1.2.noarch.rpm"]
+depends: [
+  "mangohud" 
+  "python311-base" 
+]
+extra-source "mangoplot-0.7.2-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mangoplot-0.7.2-1.2.noarch.rpm"
+}

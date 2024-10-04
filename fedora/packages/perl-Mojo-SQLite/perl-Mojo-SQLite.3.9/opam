@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Mojo-SQLite-3.009-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mojo-SQLite-3.009-7.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-DBD-SQLite" 
+  "perl-DBI" 
+  "perl-File-Temp" 
+  "perl-Mojolicious" 
+  "perl-PathTools" 
+  "perl-SQL-Abstract-Pg" 
+  "perl-Scalar-List-Utils" 
+  "perl-URI" 
+  "perl-URI-db" 
+  "perl-constant" 
+  "perl-libs" 
+]
+extra-source "perl-Mojo-SQLite-3.009-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Mojo-SQLite-3.009-7.fc40.noarch.rpm"
+}

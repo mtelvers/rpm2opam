@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Module-Build-SDL-2.548-22.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Build-SDL-2.548-22.fc40.x86_64.rpm"]
+depends: [
+  "perl-Alien-SDL" 
+  "perl-Archive-Zip" 
+  "perl-ExtUtils-CBuilder" 
+  "perl-File-Find" 
+  "perl-Module-Build" 
+  "perl-PathTools" 
+  "perl-SDL" {= "2.548"}
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-Module-Build-SDL-2.548-22.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Module-Build-SDL-2.548-22.fc40.x86_64.rpm"
+}

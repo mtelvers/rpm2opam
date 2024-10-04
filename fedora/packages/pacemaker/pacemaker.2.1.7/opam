@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pacemaker-2.1.7-4.fc40.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pacemaker-2.1.7-4.fc40.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "corosync" {>= "2.0.0"}
+  "corosynclib" 
+  "glib2" 
+  "glibc" 
+  "gnutls" 
+  "libqb" {>= "0.17.0"}
+  "libxml2" 
+  "pacemaker-cli" {= "2.1.7"}
+  "pacemaker-cluster-libs" 
+  "pacemaker-libs" 
+  "pam-libs" 
+  "python3" 
+  "resource-agents" 
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "pacemaker-2.1.7-4.fc40.2.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pacemaker-2.1.7-4.fc40.2.x86_64.rpm"
+}

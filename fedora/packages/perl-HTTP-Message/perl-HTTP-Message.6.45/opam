@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-HTTP-Message-6.45-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTTP-Message-6.45-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Clone" {>= "0.46"}
+  "perl-Compress-Raw-Zlib" {>= "2.62"}
+  "perl-Encode" {>= "3.1"}
+  "perl-Encode-Locale" {>= "1"}
+  "perl-Exporter" {>= "5.57"}
+  "perl-HTTP-Date" {>= "6"}
+  "perl-IO-Compress" 
+  "perl-IO-HTML" 
+  "perl-LWP-MediaTypes" {>= "6"}
+  "perl-MIME-Base64" 
+  "perl-PathTools" 
+  "perl-URI" {>= "1.10"}
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-HTTP-Message-6.45-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-HTTP-Message-6.45-3.fc40.noarch.rpm"
+}

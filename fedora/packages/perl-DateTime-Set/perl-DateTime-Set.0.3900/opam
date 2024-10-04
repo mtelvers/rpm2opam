@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-DateTime-Set-0.3900-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DateTime-Set-0.3900-23.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-DateTime" {>= "0.12"}
+  "perl-Params-Validate" 
+  "perl-Set-Infinite" {>= "0.59"}
+  "perl-constant" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-DateTime-Set-0.3900-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-DateTime-Set-0.3900-23.fc40.noarch.rpm"
+}

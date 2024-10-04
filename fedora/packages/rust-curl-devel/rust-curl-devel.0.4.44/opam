@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-curl-devel-0.4.44-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-curl-devel-0.4.44-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-curl-sys-devel" 
+  "rust-libc+default-devel" 
+  "rust-socket2+default-devel" 
+]
+extra-source "rust-curl-devel-0.4.44-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-curl-devel-0.4.44-6.fc40.noarch.rpm"
+}

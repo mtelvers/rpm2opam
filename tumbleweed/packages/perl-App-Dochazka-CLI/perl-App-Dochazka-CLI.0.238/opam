@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-App-Dochazka-CLI-0.238-1.37.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-App-Dochazka-CLI-0.238-1.37.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-App-CELL" {>= "0.209"}
+  "perl-App-Dochazka-Common" {>= "0.199"}
+  "perl-Date-Calc" 
+  "perl-File-HomeDir" 
+  "perl-File-ShareDir" {>= "1.0"}
+  "perl-File-Slurp" 
+  "perl-HTTP-Cookies" 
+  "perl-HTTP-Message" 
+  "perl-JSON" 
+  "perl-Params-Validate" {>= "1.6"}
+  "perl-Term-ReadKey" 
+  "perl-Term-ReadLine-Gnu" 
+  "perl-Text-Table" 
+  "perl-Web-MREST-CLI" {>= "0.281"}
+  "perl-base" 
+  "perl-libwww-perl" 
+  "xdg-utils" 
+]
+extra-source "perl-App-Dochazka-CLI-0.238-1.37.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-App-Dochazka-CLI-0.238-1.37.noarch.rpm"
+}

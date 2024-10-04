@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-bravado-core-5.17.1-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-bravado-core-5.17.1-5.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-dateutil" 
+  "python3-jsonref" 
+  "python3-jsonschema" {>= "2.5.1"}
+  "python3-jsonschema+format" {>= "2.5.1"}
+  "python3-msgpack" {>= "0.5.2"}
+  "python3-pytz" 
+  "python3-pyyaml" 
+  "python3-requests" 
+  "python3-simplejson" 
+  "python3-six" 
+  "python3-swagger-spec-validator" {>= "2.0.1"}
+]
+extra-source "python3-bravado-core-5.17.1-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-bravado-core-5.17.1-5.fc40.noarch.rpm"
+}

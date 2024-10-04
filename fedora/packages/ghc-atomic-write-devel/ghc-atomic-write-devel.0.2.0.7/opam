@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-atomic-write-devel-0.2.0.7-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-atomic-write-devel-0.2.0.7-14.fc40.x86_64.rpm"]
+depends: [
+  "ghc-atomic-write" {= "0.2.0.7"}
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-directory-devel" 
+  "ghc-filepath-devel" 
+  "ghc-temporary-devel" 
+  "ghc-text-devel" 
+  "ghc-unix-compat-devel" 
+]
+extra-source "ghc-atomic-write-devel-0.2.0.7-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-atomic-write-devel-0.2.0.7-14.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cups-libs-2.4.10-5.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cups-libs-2.4.10-5.el10.x86_64.rpm"]
+depends: [
+  "avahi-libs" 
+  "glibc" 
+  "gnutls" 
+  "krb5-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "cups-libs-2.4.10-5.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/cups-libs-2.4.10-5.el10.x86_64.rpm"
+}

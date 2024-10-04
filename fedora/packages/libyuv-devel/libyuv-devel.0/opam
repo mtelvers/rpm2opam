@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libyuv-devel-0-0.48.20201024git19d71f6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libyuv-devel-0-0.48.20201024git19d71f6.fc40.x86_64.rpm"]
+depends: [
+  "libyuv" {= "0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libyuv-devel-0-0.48.20201024git19d71f6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libyuv-devel-0-0.48.20201024git19d71f6.fc40.x86_64.rpm"
+}

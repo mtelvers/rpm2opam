@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "scdl-2.12.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scdl-2.12.1-2.1.noarch.rpm"]
+depends: [
+  "ffmpeg-4" 
+  "python311-base" 
+  "python311-docopt-ng" 
+  "python311-filelock" {>= "3.0"}
+  "python311-mutagen" {>= "1.45"}
+  "python311-pathvalidate" 
+  "python311-requests" 
+  "python311-soundcloud-v2" {>= "1.5.2"}
+  "python311-termcolor" 
+  "python311-tqdm" 
+]
+extra-source "scdl-2.12.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/scdl-2.12.1-2.1.noarch.rpm"
+}

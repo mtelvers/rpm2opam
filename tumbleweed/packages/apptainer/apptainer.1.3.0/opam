@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "apptainer-1.3.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apptainer-1.3.0-2.1.x86_64.rpm"]
+depends: [
+  "apptainer-leap" 
+  "apptainer-sle15_5" 
+  "apptainer-sle15_6" 
+  "bash-sh" 
+  "glibc" 
+  "libseccomp2" 
+  "permissions" 
+  "squashfs" 
+  "squashfuse" 
+]
+extra-source "apptainer-1.3.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/apptainer-1.3.0-2.1.x86_64.rpm"
+}

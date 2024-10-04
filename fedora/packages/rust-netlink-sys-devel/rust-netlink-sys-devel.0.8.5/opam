@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-netlink-sys-devel-0.8.5-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-netlink-sys-devel-0.8.5-8.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bytes+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-log+default-devel" 
+]
+extra-source "rust-netlink-sys-devel-0.8.5-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-netlink-sys-devel-0.8.5-8.fc40.noarch.rpm"
+}

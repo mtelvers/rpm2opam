@@ -1,0 +1,42 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "evolution-3.52.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "evolution-3.52.0-1.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "cairo-gobject" 
+  "cmark-lib" 
+  "enchant2" 
+  "evolution-data-server" {>= "3.52.0"}
+  "evolution-langpacks" {= "3.52.0"}
+  "gdk-pixbuf2" 
+  "geocode-glib" 
+  "glib2" 
+  "glibc" 
+  "gnome-autoar" 
+  "gnome-desktop3" 
+  "gspell" 
+  "gtk3" 
+  "gvfs" 
+  "highlight" 
+  "javascriptcoregtk4-1" 
+  "libcanberra" 
+  "libgweather" 
+  "libical" 
+  "libical-glib" 
+  "libnotify" 
+  "libsecret" 
+  "libsoup3" 
+  "libxml2" 
+  "libytnef" 
+  "nspr" 
+  "nss" 
+  "openldap" 
+  "pango" 
+  "psmisc" 
+  "sqlite-libs" 
+  "webkit2gtk4-1" 
+]
+extra-source "evolution-3.52.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/evolution-3.52.0-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Menlo-Legacy-1.9022-1.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Menlo-Legacy-1.9022-1.17.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Menlo" {>= "1.9018"}
+  "perl-base" {>= "0.9905"}
+]
+extra-source "perl-Menlo-Legacy-1.9022-1.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Menlo-Legacy-1.9022-1.17.noarch.rpm"
+}

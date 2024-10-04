@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libfishsound-tools-1.0.0-27.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfishsound-tools-1.0.0-27.fc39.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libfishsound" {= "1.0.0"}
+  "liboggz" 
+  "libsndfile" 
+]
+extra-source "libfishsound-tools-1.0.0-27.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libfishsound-tools-1.0.0-27.fc39.x86_64.rpm"
+}

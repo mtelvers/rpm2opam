@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "black+d-24.1.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "black+d-24.1.1-1.fc40.noarch.rpm"]
+depends: [
+  "black" {= "24.1.1"}
+  "python3" 
+  "python3-aiohttp" {>= "3.7.4"}
+]
+extra-source "black+d-24.1.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/black+d-24.1.1-1.fc40.noarch.rpm"
+}

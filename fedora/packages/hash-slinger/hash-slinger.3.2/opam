@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hash-slinger-3.2-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hash-slinger-3.2-4.fc40.noarch.rpm"]
+depends: [
+  "openssh-clients" {>= "4"}
+  "python3" 
+  "python3-dns" 
+  "python3-gnupg" {>= "0.3.7"}
+  "python3-m2crypto" 
+  "python3-unbound" 
+]
+extra-source "hash-slinger-3.2-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hash-slinger-3.2-4.fc40.noarch.rpm"
+}

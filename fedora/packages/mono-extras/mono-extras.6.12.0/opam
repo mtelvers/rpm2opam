@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mono-extras-6.12.0-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mono-extras-6.12.0-16.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "mono-winforms" {= "4.0.0.0"}
+]
+extra-source "mono-extras-6.12.0-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mono-extras-6.12.0-16.fc40.x86_64.rpm"
+}

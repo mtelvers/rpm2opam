@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-wizards-prof-1.0.3-26.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-wizards-prof-1.0.3-26.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-control-monad-free-prof" 
+  "ghc-haskeline-prof" 
+  "ghc-mtl-prof" 
+  "ghc-transformers-prof" 
+  "ghc-wizards-devel" {= "1.0.3"}
+]
+extra-source "ghc-wizards-prof-1.0.3-26.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-wizards-prof-1.0.3-26.fc40.x86_64.rpm"
+}

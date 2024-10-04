@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gap-pkg-fining-doc-1.5.6-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-pkg-fining-doc-1.5.6-6.fc40.noarch.rpm"]
+depends: [
+  "gap-online-help" 
+  "gap-pkg-fining" {= "1.5.6"}
+]
+extra-source "gap-pkg-fining-doc-1.5.6-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gap-pkg-fining-doc-1.5.6-6.fc40.noarch.rpm"
+}

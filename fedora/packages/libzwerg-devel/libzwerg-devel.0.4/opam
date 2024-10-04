@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libzwerg-devel-0.4-15.fc38.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libzwerg-devel-0.4-15.fc38.x86_64.rpm"]
+depends: [
+  "elfutils-devel" 
+  "libzwerg" {= "0.4"}
+]
+extra-source "libzwerg-devel-0.4-15.fc38.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libzwerg-devel-0.4-15.fc38.x86_64.rpm"
+}

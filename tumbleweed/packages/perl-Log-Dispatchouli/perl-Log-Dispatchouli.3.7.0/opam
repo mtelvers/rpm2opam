@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Log-Dispatchouli-3.7.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Log-Dispatchouli-3.7.0-2.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Log-Dispatch" 
+  "perl-Log-Dispatch-Array" 
+  "perl-Params-Util" 
+  "perl-String-Flogger" 
+  "perl-Sub-Exporter" 
+  "perl-Sub-Exporter-GlobExporter" {>= "0.2"}
+  "perl-Try-Tiny" {>= "0.4"}
+]
+extra-source "perl-Log-Dispatchouli-3.7.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Log-Dispatchouli-3.7.0-2.2.noarch.rpm"
+}

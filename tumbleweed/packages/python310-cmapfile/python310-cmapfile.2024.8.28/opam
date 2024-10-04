@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-cmapfile-2024.8.28-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-cmapfile-2024.8.28-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-base" {= "3.10"}
+  "python310-h5py" {>= "3.11"}
+  "python310-numpy" {>= "2.1.0"}
+  "python310-oiffile" {>= "2021.6.6"}
+  "python310-scipy" {>= "1.5"}
+  "python310-tifffile" {>= "2024.5.24"}
+  "update-alternatives" 
+]
+extra-source "python310-cmapfile-2024.8.28-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-cmapfile-2024.8.28-1.1.noarch.rpm"
+}

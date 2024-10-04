@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-nconvex-2022.09.01-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-nconvex-2022.09.01-1.3.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "gap" {>= "4.11.1"}
+  "gap-autodoc" {>= "2018.2.14"}
+  "gap-cddinterface" {>= "2020.6.24"}
+  "gap-modules" {>= "0.5"}
+  "gap-normalizinterface" {>= "1.1.0"}
+  "python311-base" 
+]
+extra-source "gap-nconvex-2022.09.01-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gap-nconvex-2022.09.01-1.3.x86_64.rpm"
+}

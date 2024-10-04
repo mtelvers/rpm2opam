@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-planetscale-tengo-devel-0.10.1~ps.v6~vitess-2.fc40.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-planetscale-tengo-devel-0.10.1~ps.v6~vitess-2.fc40.2.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-jmoiron-sqlx-devel" 
+  "golang-github-nozzle-throttler-devel" 
+  "golang-github-pmezard-difflib-devel" 
+  "golang-github-sql-driver-mysql-devel" 
+  "golang-github-vividcortex-mysqlerr-devel" 
+  "golang-x-sync-devel" 
+]
+extra-source "golang-github-planetscale-tengo-devel-0.10.1~ps.v6~vitess-2.fc40.2.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-planetscale-tengo-devel-0.10.1~ps.v6~vitess-2.fc40.2.noarch.rpm"
+}

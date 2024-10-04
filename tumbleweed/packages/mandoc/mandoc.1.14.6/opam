@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mandoc-1.14.6-6.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mandoc-1.14.6-6.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libz-ng-compat1" 
+  "mandoc-bin" {= "1.14.6"}
+]
+extra-source "mandoc-1.14.6-6.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mandoc-1.14.6-6.1.x86_64.rpm"
+}

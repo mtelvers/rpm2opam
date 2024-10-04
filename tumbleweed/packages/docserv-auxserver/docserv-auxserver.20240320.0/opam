@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "docserv-auxserver-20240320.aa59b30-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "docserv-auxserver-20240320.aa59b30-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "docserv-auxserver-20240320.aa59b30-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/docserv-auxserver-20240320.aa59b30-1.2.x86_64.rpm"
+}

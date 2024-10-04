@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jupyter-sidecar-jupyterlab-0.7.0-8.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jupyter-sidecar-jupyterlab-0.7.0-8.1.noarch.rpm"]
+depends: [
+  "jupyter-jupyterlab" {>= "3.0.0"}
+  "python310-sidecar" {= "0.7"}
+]
+extra-source "jupyter-sidecar-jupyterlab-0.7.0-8.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jupyter-sidecar-jupyterlab-0.7.0-8.1.noarch.rpm"
+}

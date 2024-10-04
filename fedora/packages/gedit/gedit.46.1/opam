@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gedit-46.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gedit-46.1-1.fc40.x86_64.rpm"]
+depends: [
+  "amtk" 
+  "cairo" 
+  "gdk-pixbuf2" 
+  "glib2" {>= "2.70"}
+  "glibc" 
+  "gobject-introspection" 
+  "gsettings-desktop-schemas" 
+  "gspell" {>= "1.0"}
+  "gtk3" {>= "3.22"}
+  "gvfs-client" 
+  "libgcc" 
+  "libgedit-gtksourceview" {>= "299.0.1"}
+  "libpeas1" 
+  "libpeas1-gtk" 
+  "libpeas1-loader-python3" 
+  "pango" 
+  "python3" {= "3.12"}
+  "python3-gobject" {>= "3.0.0"}
+  "tepl" 
+  "zenity" 
+]
+extra-source "gedit-46.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gedit-46.1-1.fc40.x86_64.rpm"
+}

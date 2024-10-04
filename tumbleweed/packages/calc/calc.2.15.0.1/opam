@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "calc-2.15.0.1-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "calc-2.15.0.1-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "less" {>= "358"}
+  "libcalc2_15_0_1" 
+  "libreadline8" 
+]
+extra-source "calc-2.15.0.1-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/calc-2.15.0.1-1.3.x86_64.rpm"
+}

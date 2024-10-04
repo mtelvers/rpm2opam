@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libhandy-devel-1.8.3-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libhandy-devel-1.8.3-1.2.x86_64.rpm"]
+depends: [
+  "gtk3-devel" 
+  "libhandy-1-0" {= "1.8.3"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Handy-1_0" {= "1.8.3"}
+]
+extra-source "libhandy-devel-1.8.3-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libhandy-devel-1.8.3-1.2.x86_64.rpm"
+}

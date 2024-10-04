@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "postgresql15-contrib-15.5-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql15-contrib-15.5-4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libselinux" 
+  "libxml2" 
+  "libxslt" 
+  "lz4-libs" 
+  "openssl-libs" 
+  "perl-libs" 
+  "postgresql15" {= "15.5"}
+  "postgresql15-private-libs" 
+  "python3-libs" 
+  "uuid" 
+  "zlib-ng-compat" 
+]
+extra-source "postgresql15-contrib-15.5-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/postgresql15-contrib-15.5-4.fc40.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qgis-devel-3.34.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qgis-devel-3.34.5-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "python3-qgis" 
+  "qgis" 
+  "qgis-grass" 
+  "qgis-server" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "qgis-devel-3.34.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qgis-devel-3.34.5-1.fc40.x86_64.rpm"
+}

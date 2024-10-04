@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "extension-manager-lang-0.5.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "extension-manager-lang-0.5.1-2.1.noarch.rpm"]
+depends: [
+  "extension-manager" {= "0.5.1"}
+]
+extra-source "extension-manager-lang-0.5.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/extension-manager-lang-0.5.1-2.1.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dselect-1.21.21-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dselect-1.21.21-4.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dpkg" {= "1.21.21"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "ncurses-libs" 
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-File-Path" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "dselect-1.21.21-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dselect-1.21.21-4.fc40.x86_64.rpm"
+}

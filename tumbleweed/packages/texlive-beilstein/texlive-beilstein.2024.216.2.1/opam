@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-beilstein-2024.216.2.1svn56193-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-beilstein-2024.216.2.1svn56193-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-amsfonts" 
+  "texlive-amsmath" 
+  "texlive-babel" 
+  "texlive-cleveref" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-float" 
+  "texlive-graphics" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-lineno" 
+  "texlive-natbib" 
+  "texlive-newtx" 
+  "texlive-newtxtt" 
+  "texlive-ragged2e" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-setspace" 
+  "texlive-tex-gyre" 
+  "texlive-tools" 
+  "texlive-url" 
+  "texlive-xkeyval" 
+]
+extra-source "texlive-beilstein-2024.216.2.1svn56193-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-beilstein-2024.216.2.1svn56193-57.1.noarch.rpm"
+}

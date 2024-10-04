@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tomcat-embed-9.0.91-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tomcat-embed-9.0.91-2.1.noarch.rpm"]
+depends: [
+  "ecj" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "tomcat-lib" {= "9.0.91"}
+]
+extra-source "tomcat-embed-9.0.91-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tomcat-embed-9.0.91-2.1.noarch.rpm"
+}

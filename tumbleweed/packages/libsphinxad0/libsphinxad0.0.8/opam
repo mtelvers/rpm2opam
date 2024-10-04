@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsphinxad0-0.8-7.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsphinxad0-0.8-7.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libasound2" 
+  "libsphinxbase1" 
+]
+extra-source "libsphinxad0-0.8-7.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libsphinxad0-0.8-7.2.x86_64.rpm"
+}

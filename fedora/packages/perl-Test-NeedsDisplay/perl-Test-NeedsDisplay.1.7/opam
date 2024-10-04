@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-NeedsDisplay-1.07-37.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-NeedsDisplay-1.07-37.fc40.noarch.rpm"]
+depends: [
+  "perl-PathTools" {>= "0.80"}
+  "perl-Test-Simple" {>= "0.47"}
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-Test-NeedsDisplay-1.07-37.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-NeedsDisplay-1.07-37.fc40.noarch.rpm"
+}

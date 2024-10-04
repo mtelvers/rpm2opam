@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nordugrid-arc-infosys-ldap-6.18.0-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nordugrid-arc-infosys-ldap-6.18.0-6.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "bdii" 
+  "glue-schema" {>= "2.0.10"}
+  "logrotate" 
+  "nordugrid-arc-arcctl-service" {= "6.18.0"}
+  "openldap-servers" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Path" 
+  "perl-File-stat" 
+  "perl-Getopt-Std" 
+  "perl-IO" 
+  "perl-POSIX" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+  "perl-vars" 
+  "policycoreutils-python-utils" 
+  "systemd" 
+]
+extra-source "nordugrid-arc-infosys-ldap-6.18.0-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nordugrid-arc-infosys-ldap-6.18.0-6.fc40.noarch.rpm"
+}

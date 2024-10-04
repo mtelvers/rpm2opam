@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "httpcomponents-asyncclient-parent-4.1.4-4.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "httpcomponents-asyncclient-parent-4.1.4-4.6.noarch.rpm"]
+depends: [
+  "httpcomponents-project" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "maven-jar-plugin" 
+]
+extra-source "httpcomponents-asyncclient-parent-4.1.4-4.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/httpcomponents-asyncclient-parent-4.1.4-4.6.noarch.rpm"
+}

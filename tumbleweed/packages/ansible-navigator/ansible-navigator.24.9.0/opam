@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ansible-navigator-24.9.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ansible-navigator-24.9.0-1.1.noarch.rpm"]
+depends: [
+  "ansible-builder" {>= "3.0.0"}
+  "ansible-core" {>= "2.14.3"}
+  "ansible-lint" {>= "6.19.0"}
+  "ansible-runner" {>= "2.3.2"}
+  "podman" 
+  "python311-Jinja2" 
+  "python311-PyYAML" 
+  "python311-base" 
+  "python311-curses" 
+  "python311-jsonschema" 
+  "python311-onigurumacffi" {>= "1.1.0"}
+  "python311-pytzdata" 
+  "python311-setuptools" 
+]
+extra-source "ansible-navigator-24.9.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ansible-navigator-24.9.0-1.1.noarch.rpm"
+}

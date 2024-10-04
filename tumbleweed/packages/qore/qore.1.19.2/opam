@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qore-1.19.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qore-1.19.2-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "glibc" 
+  "libgcc_s1" 
+  "libqore12" 
+  "libstdc++6" 
+  "shared-mime-info" 
+]
+extra-source "qore-1.19.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/qore-1.19.2-1.1.x86_64.rpm"
+}

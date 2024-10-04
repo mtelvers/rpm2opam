@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gap-pkg-singular-doc-2023.02.09-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-pkg-singular-doc-2023.02.09-7.fc40.noarch.rpm"]
+depends: [
+  "gap-pkg-guava-doc" 
+  "gap-pkg-singular" {= "2023.2.9"}
+]
+extra-source "gap-pkg-singular-doc-2023.02.09-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gap-pkg-singular-doc-2023.02.09-7.fc40.noarch.rpm"
+}

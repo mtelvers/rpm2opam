@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "velocity-custom-parser-example-2.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "velocity-custom-parser-example-2.4-1.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javacc-maven-plugin" 
+  "javapackages-filesystem" 
+  "maven-bundle-plugin" 
+  "maven-dependency-plugin" 
+  "maven-resources-plugin" 
+  "maven-surefire-plugin" 
+  "velocity-engine-core" 
+  "velocity-engine-parent" {= "2.4"}
+]
+extra-source "velocity-custom-parser-example-2.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/velocity-custom-parser-example-2.4-1.1.noarch.rpm"
+}

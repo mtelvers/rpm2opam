@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ooo2txt-0.0.6-31.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ooo2txt-0.0.6-31.fc40.noarch.rpm"]
+depends: [
+  "perl-Archive-Zip" 
+  "perl-File-Temp" 
+  "perl-Getopt-Std" 
+  "perl-XML-Twig" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "ooo2txt-0.0.6-31.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ooo2txt-0.0.6-31.fc40.noarch.rpm"
+}

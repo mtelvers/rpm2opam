@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "notmuch-0.38.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "notmuch-0.38.3-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgmime-3_0-0" 
+  "libnotmuch5" 
+  "libtalloc2" 
+  "libz-ng-compat1" 
+]
+extra-source "notmuch-0.38.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/notmuch-0.38.3-1.1.x86_64.rpm"
+}

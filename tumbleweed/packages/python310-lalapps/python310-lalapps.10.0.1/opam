@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-lalapps-10.0.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-lalapps-10.0.1-1.1.x86_64.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-h5py" 
+  "python310-lal" {>= "7.3.0"}
+  "python310-lalburst" {>= "2.0.1"}
+  "python310-lalframe" {>= "3.0.1"}
+  "python310-lalinference" {>= "4.1.3"}
+  "python310-lalmetaio" {>= "4.0.1"}
+  "python310-lalpulsar" {>= "6.0.1"}
+  "python310-ligo-lw" 
+  "python310-ligo-segments" 
+  "python310-matplotlib" 
+  "python310-numpy" 
+  "python310-scipy" 
+]
+extra-source "python310-lalapps-10.0.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-lalapps-10.0.1-1.1.x86_64.rpm"
+}

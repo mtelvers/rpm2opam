@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "patterns-microos-sssd_ldap-5.0-92.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "patterns-microos-sssd_ldap-5.0-92.1.x86_64.rpm"]
+depends: [
+  "sssd" 
+  "sssd-ldap" 
+]
+extra-source "patterns-microos-sssd_ldap-5.0-92.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/patterns-microos-sssd_ldap-5.0-92.1.x86_64.rpm"
+}

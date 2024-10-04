@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "live-grub-stick-0.4.2-4.16.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "live-grub-stick-0.4.2-4.16.noarch.rpm"]
+depends: [
+  "bash" 
+  "dd_rescue" 
+  "grub2" 
+  "lsb-release" 
+  "parted" 
+  "qemu-tools" 
+  "util-linux" 
+]
+extra-source "live-grub-stick-0.4.2-4.16.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/live-grub-stick-0.4.2-4.16.noarch.rpm"
+}

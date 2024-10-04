@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mailimporter-devel-24.08.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mailimporter-devel-24.08.1-1.1.x86_64.rpm"]
+depends: [
+  "kf6-karchive-devel" {>= "6.3.0"}
+  "libKPim6MailImporter6" {= "24.8.1"}
+  "libKPim6MailImporterAkonadi6" {= "24.8.1"}
+]
+extra-source "mailimporter-devel-24.08.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mailimporter-devel-24.08.1-1.1.x86_64.rpm"
+}

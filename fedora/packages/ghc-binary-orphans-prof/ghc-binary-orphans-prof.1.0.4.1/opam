@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-binary-orphans-prof-1.0.4.1-18.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-binary-orphans-prof-1.0.4.1-18.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-binary-orphans-devel" {= "1.0.4.1"}
+  "ghc-binary-prof" 
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-binary-orphans-prof-1.0.4.1-18.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-binary-orphans-prof-1.0.4.1-18.fc40.x86_64.rpm"
+}

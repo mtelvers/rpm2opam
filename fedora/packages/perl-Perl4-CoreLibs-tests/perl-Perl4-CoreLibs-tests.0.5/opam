@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Perl4-CoreLibs-tests-0.005-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Perl4-CoreLibs-tests-0.005-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-IO" 
+  "perl-Perl4-CoreLibs" {= "0.5"}
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Perl4-CoreLibs-tests-0.005-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Perl4-CoreLibs-tests-0.005-4.fc40.noarch.rpm"
+}

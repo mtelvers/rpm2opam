@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-policycoreutils-3.5-slfo.1.1.27.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-policycoreutils-3.5-slfo.1.1.27.noarch.rpm"]
+depends: [
+  "checkpolicy" 
+  "policycoreutils" {= "3.5"}
+  "python3-audit" {>= "2.2"}
+  "python3-selinux" 
+  "python311-base" {= "3.11"}
+  "python311-semanage" {>= "3.5"}
+  "python311-setools" {>= "4.1.1"}
+  "python311-setuptools" 
+]
+extra-source "python3-policycoreutils-3.5-slfo.1.1.27.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/python3-policycoreutils-3.5-slfo.1.1.27.noarch.rpm"
+}

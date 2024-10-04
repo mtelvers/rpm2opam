@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-trust-dns-recursor-devel-0.23.2-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-trust-dns-recursor-devel-0.23.2-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.64.0"}
+  "rust-async-recursion+default-devel" 
+  "rust-async-trait+default-devel" 
+  "rust-bytes+default-devel" 
+  "rust-cfg-if+default-devel" 
+  "rust-enum-as-inner+default-devel" 
+  "rust-futures-executor+std-devel" 
+  "rust-futures-executor-devel" 
+  "rust-futures-util+std-devel" 
+  "rust-futures-util-devel" 
+  "rust-lru-cache+default-devel" 
+  "rust-parking_lot+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-tokio+default-devel" 
+  "rust-tokio+net-devel" 
+  "rust-toml+default-devel" 
+  "rust-tracing+default-devel" 
+  "rust-trust-dns-proto-devel" 
+  "rust-trust-dns-resolver+tokio-runtime-devel" 
+  "rust-trust-dns-resolver-devel" 
+]
+extra-source "rust-trust-dns-recursor-devel-0.23.2-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-trust-dns-recursor-devel-0.23.2-2.fc40.noarch.rpm"
+}

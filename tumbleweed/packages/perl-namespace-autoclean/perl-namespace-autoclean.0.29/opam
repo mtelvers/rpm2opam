@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-namespace-autoclean-0.29-1.22.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-namespace-autoclean-0.29-1.22.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-B-Hooks-EndOfScope" {>= "0.12"}
+  "perl-Sub-Identify" 
+  "perl-namespace-clean" {>= "0.20"}
+]
+extra-source "perl-namespace-autoclean-0.29-1.22.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-namespace-autoclean-0.29-1.22.noarch.rpm"
+}

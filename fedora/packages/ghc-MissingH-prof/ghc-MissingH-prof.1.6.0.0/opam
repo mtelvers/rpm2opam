@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-MissingH-prof-1.6.0.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-MissingH-prof-1.6.0.0-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-MissingH-devel" {= "1.6.0.0"}
+  "ghc-array-prof" 
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+  "ghc-hslogger-prof" 
+  "ghc-mtl-prof" 
+  "ghc-network-bsd-prof" 
+  "ghc-network-prof" 
+  "ghc-old-locale-prof" 
+  "ghc-old-time-prof" 
+  "ghc-parsec-prof" 
+  "ghc-process-prof" 
+  "ghc-regex-compat-prof" 
+  "ghc-time-prof" 
+  "ghc-unix-prof" 
+]
+extra-source "ghc-MissingH-prof-1.6.0.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-MissingH-prof-1.6.0.0-3.fc40.x86_64.rpm"
+}

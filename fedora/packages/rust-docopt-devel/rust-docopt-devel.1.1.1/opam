@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-docopt-devel-1.1.1-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-docopt-devel-1.1.1-12.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-lazy_static+default-devel" 
+  "rust-regex+std-devel" 
+  "rust-regex+unicode-devel" 
+  "rust-regex-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-strsim+default-devel" 
+]
+extra-source "rust-docopt-devel-1.1.1-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-docopt-devel-1.1.1-12.fc40.noarch.rpm"
+}

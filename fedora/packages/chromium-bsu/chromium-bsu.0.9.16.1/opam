@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "chromium-bsu-0.9.16.1-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "chromium-bsu-0.9.16.1-20.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "SDL2_image" 
+  "freealut" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libgcc" 
+  "libglpng" 
+  "libglvnd-glx" 
+  "libglvnd-opengl" 
+  "libstdc++" 
+  "mesa-libGLU" 
+  "openal-soft" 
+  "quesoglc" 
+]
+extra-source "chromium-bsu-0.9.16.1-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/chromium-bsu-0.9.16.1-20.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "abrt-server-info-page-1.8-15.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "abrt-server-info-page-1.8-15.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "httpd" 
+  "python3" {= "3.12"}
+  "python3-flask" {>= "0.10"}
+  "python3-mod_wsgi" 
+  "systemd" 
+]
+extra-source "abrt-server-info-page-1.8-15.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/abrt-server-info-page-1.8-15.fc40.noarch.rpm"
+}

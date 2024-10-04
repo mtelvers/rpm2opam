@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "linbox-devel-1.7.0-1.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "linbox-devel-1.7.0-1.9.x86_64.rpm"]
+depends: [
+  "bash" 
+  "fflas-ffpack-devel" {>= "2.5.0"}
+  "liblinbox0" {= "1.7.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "linbox-devel-1.7.0-1.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/linbox-devel-1.7.0-1.9.x86_64.rpm"
+}

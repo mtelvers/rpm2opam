@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "proguard-gui-6.2.0-1.25.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "proguard-gui-6.2.0-1.25.noarch.rpm"]
+depends: [
+  "bash" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+  "proguard" {= "6.2.0"}
+]
+extra-source "proguard-gui-6.2.0-1.25.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/proguard-gui-6.2.0-1.25.noarch.rpm"
+}

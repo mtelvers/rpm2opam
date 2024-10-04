@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dbus-broker-36-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dbus-broker-36-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "dbus-broker-allow-restart" {= "36"}
+  "glibc" 
+  "libaudit1" 
+  "libcap-ng0" 
+  "libexpat1" 
+  "libselinux1" 
+  "libsystemd0" 
+]
+extra-source "dbus-broker-36-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/dbus-broker-36-1.1.x86_64.rpm"
+}

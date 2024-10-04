@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fcitx5-skk-qt6-5.1.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fcitx5-skk-qt6-5.1.3-1.1.x86_64.rpm"]
+depends: [
+  "fcitx5" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libFcitx5Config6" 
+  "libFcitx5Core7" 
+  "libFcitx5Qt6WidgetsAddons2" 
+  "libFcitx5Utils2" 
+  "libQt6Core6" 
+  "libQt6Gui6" 
+  "libQt6Widgets6" 
+  "libgcc_s1" 
+  "libskk0" 
+  "libstdc++6" 
+]
+extra-source "fcitx5-skk-qt6-5.1.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/fcitx5-skk-qt6-5.1.3-1.1.x86_64.rpm"
+}

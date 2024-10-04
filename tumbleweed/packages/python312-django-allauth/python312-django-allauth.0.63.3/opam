@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-django-allauth-0.63.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-django-allauth-0.63.3-1.1.noarch.rpm"]
+depends: [
+  "python312-Django" {>= "3.2"}
+  "python312-PyJWT" {>= "1.7"}
+  "python312-base" {= "3.12"}
+  "python312-python3-openid" {>= "3.0.8"}
+  "python312-requests" {>= "2.0.0"}
+  "python312-requests-oauthlib" {>= "0.3.0"}
+]
+extra-source "python312-django-allauth-0.63.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-django-allauth-0.63.3-1.1.noarch.rpm"
+}

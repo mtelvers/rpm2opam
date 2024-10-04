@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcc12-fortran-32bit-12.3.0+git1204-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcc12-fortran-32bit-12.3.0+git1204-4.2.x86_64.rpm"]
+depends: [
+  "gcc12-32bit" {= "12.3.0"}
+  "gcc12-fortran" {= "12.3.0"}
+  "libgfortran5-32bit" {>= "12.3.0"}
+  "libquadmath0-32bit" {>= "12.3.0"}
+]
+extra-source "gcc12-fortran-32bit-12.3.0+git1204-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gcc12-fortran-32bit-12.3.0+git1204-4.2.x86_64.rpm"
+}

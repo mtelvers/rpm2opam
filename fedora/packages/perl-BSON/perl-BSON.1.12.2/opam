@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-BSON-1.12.2-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-BSON-1.12.2-13.fc40.noarch.rpm"]
+depends: [
+  "perl-B" 
+  "perl-Carp" 
+  "perl-Crypt-URandom" 
+  "perl-DateTime" 
+  "perl-DateTime-Tiny" 
+  "perl-Exporter" 
+  "perl-MIME-Base64" 
+  "perl-Math-BigInt" 
+  "perl-Moo" {>= "2.2004"}
+  "perl-Scalar-List-Utils" 
+  "perl-Sys-Hostname" 
+  "perl-Tie-IxHash" 
+  "perl-Time-HiRes" 
+  "perl-Time-Local" 
+  "perl-Time-Moment" 
+  "perl-base" 
+  "perl-boolean" {>= "0.45"}
+  "perl-constant" 
+  "perl-if" 
+  "perl-libs" {>= "5.10.1"}
+  "perl-mro" 
+  "perl-namespace-clean" 
+  "perl-overload" 
+  "perl-threads-shared" 
+  "perl-version" 
+]
+extra-source "perl-BSON-1.12.2-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-BSON-1.12.2-13.fc40.noarch.rpm"
+}

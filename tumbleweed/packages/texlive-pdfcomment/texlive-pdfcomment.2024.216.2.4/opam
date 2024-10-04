@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-pdfcomment-2024.216.2.4asvn49047-54.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-pdfcomment-2024.216.2.4asvn49047-54.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-datetime2" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-hyperref" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-luatex85" 
+  "texlive-marginnote" 
+  "texlive-refcount" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-soulpos" 
+  "texlive-tools" 
+  "texlive-xkeyval" 
+  "texlive-zref" 
+]
+extra-source "texlive-pdfcomment-2024.216.2.4asvn49047-54.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-pdfcomment-2024.216.2.4asvn49047-54.1.noarch.rpm"
+}

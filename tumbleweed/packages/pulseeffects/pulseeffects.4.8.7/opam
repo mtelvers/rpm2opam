@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pulseeffects-4.8.7-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pulseeffects-4.8.7-2.2.x86_64.rpm"]
+depends: [
+  "dconf" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gstreamer-plugins-bad" {>= "1.12.5"}
+  "gstreamer-plugins-good" {>= "1.12.5"}
+  "ladspa-swh-plugins" 
+  "libatkmm-1_6-1" 
+  "libboost_filesystem1_86_0" 
+  "libcairomm-1_0-1" 
+  "libebur128-1" 
+  "libgcc_s1" 
+  "libgiomm-2_4-1" 
+  "libglibmm-2_4-1" 
+  "libgstaudio-1_0-0" 
+  "libgstfft-1_0-0" 
+  "libgstreamer-1_0-0" 
+  "libgtk-3-0" 
+  "libgtkmm-3_0-1" 
+  "libpangomm-1_4-1" 
+  "libpulse0" 
+  "libsamplerate0" 
+  "libsigc-2_0-0" 
+  "libsndfile1" 
+  "libstdc++6" 
+  "libzita-convolver4" 
+  "pulseaudio" 
+]
+extra-source "pulseeffects-4.8.7-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pulseeffects-4.8.7-2.2.x86_64.rpm"
+}

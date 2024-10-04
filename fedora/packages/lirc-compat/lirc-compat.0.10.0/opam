@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lirc-compat-0.10.0-42.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lirc-compat-0.10.0-42.fc40.x86_64.rpm"]
+depends: [
+  "lirc-config" {= "0.10.0"}
+  "lirc-core" {= "0.10.0"}
+  "lirc-drv-ftdi" {= "0.10.0"}
+  "lirc-drv-portaudio" {= "0.10.0"}
+  "lirc-tools-gui" {= "0.10.0"}
+]
+extra-source "lirc-compat-0.10.0-42.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lirc-compat-0.10.0-42.fc40.x86_64.rpm"
+}

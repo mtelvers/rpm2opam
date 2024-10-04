@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vte-devel-0.74.2-slfo.1.1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vte-devel-0.74.2-slfo.1.1.5.x86_64.rpm"]
+depends: [
+  "cairo-devel" {>= "1.0"}
+  "glib2-devel" {>= "2.52.0"}
+  "gtk3-devel" {>= "3.24.0"}
+  "gtk4-devel" {>= "4.0.1"}
+  "libvte-2_91-0" {= "0.74.2"}
+  "pango-devel" {>= "1.22.0"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Vte-2_91" {= "0.74.2"}
+  "typelib-1_0-Vte-3_91" {= "0.74.2"}
+]
+extra-source "vte-devel-0.74.2-slfo.1.1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/vte-devel-0.74.2-slfo.1.1.5.x86_64.rpm"
+}

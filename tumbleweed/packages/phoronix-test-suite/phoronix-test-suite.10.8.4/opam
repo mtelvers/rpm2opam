@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "phoronix-test-suite-10.8.4-4.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "phoronix-test-suite-10.8.4-4.3.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "php8" 
+  "php8-curl" 
+  "php8-dom" 
+  "php8-gd" 
+  "php8-openssl" 
+  "php8-pcntl" 
+  "php8-posix" 
+  "php8-sockets" 
+  "php8-zip" 
+  "php8-zlib" 
+  "systemd" 
+  "xdg-utils" 
+]
+extra-source "phoronix-test-suite-10.8.4-4.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/phoronix-test-suite-10.8.4-4.3.noarch.rpm"
+}

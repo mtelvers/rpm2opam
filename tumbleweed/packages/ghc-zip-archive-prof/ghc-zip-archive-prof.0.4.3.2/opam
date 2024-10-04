@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-zip-archive-prof-0.4.3.2-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-zip-archive-prof-0.4.3.2-2.2.x86_64.rpm"]
+depends: [
+  "ghc-array-prof" 
+  "ghc-base-prof" 
+  "ghc-binary-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-digest-prof" 
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+  "ghc-mtl-prof" 
+  "ghc-pretty-prof" 
+  "ghc-text-prof" 
+  "ghc-time-prof" 
+  "ghc-unix-prof" 
+  "ghc-zip-archive-devel" {= "0.4.3.2"}
+  "ghc-zlib-prof" 
+]
+extra-source "ghc-zip-archive-prof-0.4.3.2-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-zip-archive-prof-0.4.3.2-2.2.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gdl-lang-3.40.0-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdl-lang-3.40.0-4.1.noarch.rpm"]
+depends: [
+  "libgdl-3-5" {= "3.40.0"}
+]
+extra-source "gdl-lang-3.40.0-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gdl-lang-3.40.0-4.1.noarch.rpm"
+}

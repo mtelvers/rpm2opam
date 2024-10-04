@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gammaray-probe-qt6-devel-3.0.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gammaray-probe-qt6-devel-3.0.0-3.fc40.x86_64.rpm"]
+depends: [
+  "gammaray-probe-qt6" {= "3.0.0"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "libwayland-server" 
+  "qt6-qt3d" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qt6-qtconnectivity" 
+  "qt6-qtdeclarative" 
+  "qt6-qtpositioning" 
+  "qt6-qtsvg" 
+  "qt6-qttools-libs-designer" 
+  "qt6-qtwayland" 
+  "qt6-qtwebengine" 
+]
+extra-source "gammaray-probe-qt6-devel-3.0.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gammaray-probe-qt6-devel-3.0.0-3.fc40.x86_64.rpm"
+}

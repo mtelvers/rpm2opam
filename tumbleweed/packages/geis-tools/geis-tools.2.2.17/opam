@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "geis-tools-2.2.17-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "geis-tools-2.2.17-5.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgeis1" 
+  "libxcb1" 
+  "python3-geis" {= "2.2.17"}
+  "python311-base" 
+]
+extra-source "geis-tools-2.2.17-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/geis-tools-2.2.17-5.2.x86_64.rpm"
+}

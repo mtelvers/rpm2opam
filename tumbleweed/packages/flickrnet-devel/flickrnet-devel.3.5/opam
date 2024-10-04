@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "flickrnet-devel-3.5-8.20.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flickrnet-devel-3.5-8.20.noarch.rpm"]
+depends: [
+  "flickrnet" {= "3.5"}
+  "pkgconf-pkg-config" 
+]
+extra-source "flickrnet-devel-3.5-8.20.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/flickrnet-devel-3.5-8.20.noarch.rpm"
+}

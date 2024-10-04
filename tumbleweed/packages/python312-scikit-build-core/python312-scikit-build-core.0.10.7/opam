@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-scikit-build-core-0.10.7-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-scikit-build-core-0.10.7-2.1.noarch.rpm"]
+depends: [
+  "cmake" {>= "3.15"}
+  "python312-base" {= "3.12"}
+  "python312-exceptiongroup" 
+  "python312-importlib-metadata" 
+  "python312-importlib-resources" 
+  "python312-packaging" {>= "21.3"}
+  "python312-pathspec" {>= "0.10.1"}
+  "python312-tomli" 
+  "python312-typing_extensions" 
+]
+extra-source "python312-scikit-build-core-0.10.7-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-scikit-build-core-0.10.7-2.1.noarch.rpm"
+}

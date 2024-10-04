@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Mail-IMAPClient-3.43-1.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mail-IMAPClient-3.43-1.17.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Parse-RecDescent" {>= "1.94"}
+]
+extra-source "perl-Mail-IMAPClient-3.43-1.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Mail-IMAPClient-3.43-1.17.noarch.rpm"
+}

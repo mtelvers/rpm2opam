@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-http-api-data-devel-0.6.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-http-api-data-devel-0.6.1-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-cookie-devel" 
+  "ghc-hashable-devel" 
+  "ghc-http-api-data" {= "0.6.1"}
+  "ghc-http-types-devel" 
+  "ghc-tagged-devel" 
+  "ghc-text-devel" 
+  "ghc-text-iso8601-devel" 
+  "ghc-time-compat-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-uuid-types-devel" 
+]
+extra-source "ghc-http-api-data-devel-0.6.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-http-api-data-devel-0.6.1-2.1.x86_64.rpm"
+}

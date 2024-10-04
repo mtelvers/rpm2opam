@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-klotski-3.38.2-1.20.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-klotski-3.38.2-1.20.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libgee-0_8-2" 
+  "libgnome-games-support-1-3" 
+  "libgtk-3-0" 
+  "librsvg-2-2" 
+]
+extra-source "gnome-klotski-3.38.2-1.20.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnome-klotski-3.38.2-1.20.x86_64.rpm"
+}

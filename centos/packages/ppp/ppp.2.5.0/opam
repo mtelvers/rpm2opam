@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ppp-2.5.0-12.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ppp-2.5.0-12.el10.x86_64.rpm"]
+depends: [
+  "authselect-libs" 
+  "bash" 
+  "glib2" 
+  "glibc" {>= "2.0.6"}
+  "glibc-common" 
+  "libpcap" {>= "0.8.3"}
+  "libxcrypt" 
+  "openssl-libs" 
+  "pam-libs" 
+  "shadow-utils" 
+  "systemd" 
+  "systemd-libs" 
+]
+extra-source "ppp-2.5.0-12.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/ppp-2.5.0-12.el10.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-resources-plugin-bootstrap-3.3.1-slfo.1.2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-resources-plugin-bootstrap-3.3.1-slfo.1.2.3.noarch.rpm"]
+depends: [
+  "apache-commons-io" 
+  "apache-commons-lang3" 
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "maven-filtering" 
+  "plexus-interpolation" 
+  "plexus-utils" 
+]
+extra-source "maven-resources-plugin-bootstrap-3.3.1-slfo.1.2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/maven-resources-plugin-bootstrap-3.3.1-slfo.1.2.3.noarch.rpm"
+}

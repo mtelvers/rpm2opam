@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tslib-devel-32bit-1.22-1.15.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tslib-devel-32bit-1.22-1.15.x86_64.rpm"]
+depends: [
+  "libts0-32bit" {= "1.22"}
+  "pkgconf-pkg-config" 
+  "tslib-devel" {= "1.22"}
+]
+extra-source "tslib-devel-32bit-1.22-1.15.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tslib-devel-32bit-1.22-1.15.x86_64.rpm"
+}

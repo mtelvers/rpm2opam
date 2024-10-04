@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "connman-plugin-hh2serial-gps-1.42-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "connman-plugin-hh2serial-gps-1.42-2.2.x86_64.rpm"]
+depends: [
+  "connman" {>= "1.42"}
+  "glibc" 
+]
+extra-source "connman-plugin-hh2serial-gps-1.42-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/connman-plugin-hh2serial-gps-1.42-2.2.x86_64.rpm"
+}

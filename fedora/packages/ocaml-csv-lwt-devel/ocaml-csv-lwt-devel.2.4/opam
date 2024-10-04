@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-csv-lwt-devel-2.4-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-csv-lwt-devel-2.4-19.fc40.x86_64.rpm"]
+depends: [
+  "ocaml" {= "2125"}
+  "ocaml-csv" {= "0"}
+  "ocaml-csv-devel" {= "2.4"}
+  "ocaml-csv-lwt" {= "2.4"}
+  "ocaml-lwt" {= "0"}
+  "ocaml-lwt-devel" 
+]
+extra-source "ocaml-csv-lwt-devel-2.4-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-csv-lwt-devel-2.4-19.fc40.x86_64.rpm"
+}

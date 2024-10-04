@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "font-manager-lang-0.9.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "font-manager-lang-0.9.0-1.1.noarch.rpm"]
+depends: [
+  "font-manager" {= "0.9.0"}
+]
+extra-source "font-manager-lang-0.9.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/font-manager-lang-0.9.0-1.1.noarch.rpm"
+}

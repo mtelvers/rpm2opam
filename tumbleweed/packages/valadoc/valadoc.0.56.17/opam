@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "valadoc-0.56.17-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "valadoc-0.56.17-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libvala-0_56-0" 
+  "libvaladoc-0_56-0" 
+  "vala" 
+]
+extra-source "valadoc-0.56.17-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/valadoc-0.56.17-1.1.x86_64.rpm"
+}

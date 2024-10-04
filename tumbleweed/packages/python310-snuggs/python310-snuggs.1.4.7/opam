@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-snuggs-1.4.7-4.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-snuggs-1.4.7-4.4.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-numpy" 
+  "python310-pyparsing" 
+]
+extra-source "python310-snuggs-1.4.7-4.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-snuggs-1.4.7-4.4.noarch.rpm"
+}

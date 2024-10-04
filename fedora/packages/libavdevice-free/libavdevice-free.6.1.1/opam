@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libavdevice-free-6.1.1-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libavdevice-free-6.1.1-8.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "alsa-lib" 
+  "glibc" 
+  "jack-audio-connection-kit" 
+  "libX11" 
+  "libXext" 
+  "libXv" 
+  "libavc1394" 
+  "libavcodec-free" {= "6.1.1"}
+  "libavfilter-free" 
+  "libavformat-free" 
+  "libavutil-free" 
+  "libcaca" 
+  "libcdio-paranoia" 
+  "libdc1394" 
+  "libdrm" 
+  "libglvnd-glx" 
+  "libiec61883" 
+  "libraw1394" 
+  "libv4l" 
+  "libxcb" 
+  "openal-soft" 
+  "pulseaudio-libs" 
+]
+extra-source "libavdevice-free-6.1.1-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libavdevice-free-6.1.1-8.fc40.x86_64.rpm"
+}

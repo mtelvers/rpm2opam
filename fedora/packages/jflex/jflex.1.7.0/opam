@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jflex-1.7.0-18.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jflex-1.7.0-18.fc40.noarch.rpm"]
+depends: [
+  "ant-lib" 
+  "bash" 
+  "java-21-openjdk-headless" 
+  "java_cup" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+]
+extra-source "jflex-1.7.0-18.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jflex-1.7.0-18.fc40.noarch.rpm"
+}

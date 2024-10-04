@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openafs-1.8.12.g20240711-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openafs-1.8.12.g20240711-1.4.x86_64.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "krb5" 
+  "libcrypt1" 
+  "libncurses6" 
+]
+extra-source "openafs-1.8.12.g20240711-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openafs-1.8.12.g20240711-1.4.x86_64.rpm"
+}

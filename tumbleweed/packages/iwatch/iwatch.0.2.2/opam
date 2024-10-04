@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "iwatch-0.2.2-16.21.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "iwatch-0.2.2-16.21.noarch.rpm"]
+depends: [
+  "perl-Event" 
+  "perl-Linux-Inotify2" 
+  "perl-Mail-Sendmail" 
+  "perl-XML-LibXML" 
+  "perl-XML-SimpleObject-LibXML" 
+  "perl-base" 
+]
+extra-source "iwatch-0.2.2-16.21.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/iwatch-0.2.2-16.21.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "password-store-dmenu-1.7.4-5.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "password-store-dmenu-1.7.4-5.5.noarch.rpm"]
+depends: [
+  "bash" 
+  "dmenu" 
+  "password-store" 
+]
+extra-source "password-store-dmenu-1.7.4-5.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/password-store-dmenu-1.7.4-5.5.noarch.rpm"
+}

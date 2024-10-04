@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ppsspp-headless-1.17.1-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ppsspp-headless-1.17.1-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libGLEW2_2" 
+  "libSDL2-2_0-0" 
+  "libavcodec58_134" 
+  "libavformat58_76" 
+  "libavutil56_70" 
+  "libgcc_s1" 
+  "libglvnd" 
+  "libpng16-16" 
+  "libstdc++6" 
+  "libswresample3_9" 
+  "libswscale5_9" 
+  "libz-ng-compat1" 
+  "ppsspp-common" 
+]
+extra-source "ppsspp-headless-1.17.1-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ppsspp-headless-1.17.1-1.2.x86_64.rpm"
+}

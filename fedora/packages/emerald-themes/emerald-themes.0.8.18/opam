@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "emerald-themes-0.8.18-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "emerald-themes-0.8.18-9.fc40.noarch.rpm"]
+depends: [
+  "compiz" {>= "0.8.18"}
+  "emerald" {>= "0.8.18"}
+]
+extra-source "emerald-themes-0.8.18-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/emerald-themes-0.8.18-9.fc40.noarch.rpm"
+}

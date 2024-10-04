@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-khal-0.11.3-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-khal-0.11.3-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-atomicwrites" 
+  "python311-base" 
+  "python311-click" 
+  "python311-click-log" 
+  "python311-configobj" 
+  "python311-icalendar" 
+  "python311-python-dateutil" 
+  "python311-pytz" {>= "2018"}
+  "python311-pyxdg" 
+  "python311-tzlocal" 
+  "python311-urwid" 
+  "update-alternatives" 
+]
+extra-source "python311-khal-0.11.3-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-khal-0.11.3-1.2.noarch.rpm"
+}

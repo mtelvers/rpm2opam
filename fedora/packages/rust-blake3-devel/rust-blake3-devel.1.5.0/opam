@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-blake3-devel-1.5.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-blake3-devel-1.5.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "python3" 
+  "rust-arrayref+default-devel" 
+  "rust-arrayvec-devel" 
+  "rust-cc+default-devel" 
+  "rust-cfg-if+default-devel" 
+  "rust-constant_time_eq+default-devel" 
+]
+extra-source "rust-blake3-devel-1.5.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-blake3-devel-1.5.0-3.fc40.noarch.rpm"
+}

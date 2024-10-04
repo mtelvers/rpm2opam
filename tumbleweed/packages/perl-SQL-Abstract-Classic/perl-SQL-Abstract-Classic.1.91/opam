@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-SQL-Abstract-Classic-1.91-1.20.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-SQL-Abstract-Classic-1.91-1.20.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-MRO-Compat" {>= "0.12"}
+  "perl-SQL-Abstract" {>= "1.79"}
+  "perl-base" {>= "2.0"}
+]
+extra-source "perl-SQL-Abstract-Classic-1.91-1.20.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-SQL-Abstract-Classic-1.91-1.20.noarch.rpm"
+}

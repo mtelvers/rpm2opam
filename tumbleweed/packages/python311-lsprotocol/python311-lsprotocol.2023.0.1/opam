@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-lsprotocol-2023.0.1-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-lsprotocol-2023.0.1-1.3.noarch.rpm"]
+depends: [
+  "python311-attrs" {>= "21.3.0"}
+  "python311-base" {= "3.11"}
+  "python311-cattrs" {>= "23.2.2"}
+]
+extra-source "python311-lsprotocol-2023.0.1-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-lsprotocol-2023.0.1-1.3.noarch.rpm"
+}

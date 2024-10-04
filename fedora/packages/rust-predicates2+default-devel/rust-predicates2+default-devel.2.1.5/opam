@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-predicates2+default-devel-2.1.5-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-predicates2+default-devel-2.1.5-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-predicates2+diff-devel" {= "2.1.5"}
+  "rust-predicates2+float-cmp-devel" {= "2.1.5"}
+  "rust-predicates2+normalize-line-endings-devel" {= "2.1.5"}
+  "rust-predicates2+regex-devel" {= "2.1.5"}
+  "rust-predicates2-devel" {= "2.1.5"}
+]
+extra-source "rust-predicates2+default-devel-2.1.5-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-predicates2+default-devel-2.1.5-3.fc40.noarch.rpm"
+}

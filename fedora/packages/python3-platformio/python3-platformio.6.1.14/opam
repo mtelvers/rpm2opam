@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-platformio-6.1.14-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-platformio-6.1.14-1.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-ajsonrpc" 
+  "python3-bottle" 
+  "python3-click" 
+  "python3-colorama" 
+  "python3-marshmallow" 
+  "python3-pyelftools" 
+  "python3-pyserial" 
+  "python3-requests" 
+  "python3-semantic_version" 
+  "python3-starlette" 
+  "python3-tabulate" 
+  "python3-uvicorn" 
+  "python3-wsproto" 
+]
+extra-source "python3-platformio-6.1.14-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-platformio-6.1.14-1.fc40.noarch.rpm"
+}

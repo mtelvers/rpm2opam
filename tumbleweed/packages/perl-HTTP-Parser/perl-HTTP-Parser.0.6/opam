@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-HTTP-Parser-0.06-1.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTTP-Parser-0.06-1.17.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-HTTP-Message" 
+  "perl-URI" 
+]
+extra-source "perl-HTTP-Parser-0.06-1.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-HTTP-Parser-0.06-1.17.noarch.rpm"
+}

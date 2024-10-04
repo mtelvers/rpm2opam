@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "drumstick-guiplayer-2.9.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "drumstick-guiplayer-2.9.0-4.fc40.x86_64.rpm"]
+depends: [
+  "drumstick" 
+  "drumstick-examples" {= "2.9.0"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "qt6-qt5compat" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+]
+extra-source "drumstick-guiplayer-2.9.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/drumstick-guiplayer-2.9.0-4.fc40.x86_64.rpm"
+}

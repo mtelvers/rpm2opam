@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gtkspellmm30-devel-3.0.5-24.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtkspellmm30-devel-3.0.5-24.fc40.x86_64.rpm"]
+depends: [
+  "glibmm2-4-devel" {>= "2.16"}
+  "gtk3-devel" 
+  "gtkmm3-0-devel" 
+  "gtkspell3-devel" 
+  "gtkspellmm30" {= "3.0.5"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gtkspellmm30-devel-3.0.5-24.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gtkspellmm30-devel-3.0.5-24.fc40.x86_64.rpm"
+}

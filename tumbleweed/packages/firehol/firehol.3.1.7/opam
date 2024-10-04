@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "firehol-3.1.7-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "firehol-3.1.7-3.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "curl" 
+  "iprange" 
+  "iproute2" 
+  "ipset" 
+  "iptables" 
+  "iputils" 
+  "kmod" 
+  "nfacct" 
+  "procps" 
+  "screen" 
+  "tcpdump" 
+  "traceroute" 
+  "util-linux-systemd" 
+]
+extra-source "firehol-3.1.7-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/firehol-3.1.7-3.2.noarch.rpm"
+}

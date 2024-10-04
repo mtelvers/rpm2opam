@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gdm-devel-46.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdm-devel-46.0-1.fc40.x86_64.rpm"]
+depends: [
+  "gdm" {= "46.0"}
+  "gdm-pam-extensions-devel" {= "46.0"}
+  "glib2-devel" {>= "2.68.0"}
+  "libselinux-devel" 
+  "pkgconf-pkg-config" 
+  "systemd-devel" 
+]
+extra-source "gdm-devel-46.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gdm-devel-46.0-1.fc40.x86_64.rpm"
+}

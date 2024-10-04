@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "asterisk-sounds-core-es-sln16-1.6.1-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "asterisk-sounds-core-es-sln16-1.6.1-16.fc40.noarch.rpm"]
+depends: [
+  "asterisk" {>= "1.4.0"}
+  "asterisk-sounds-core-es" {= "1.6.1"}
+]
+extra-source "asterisk-sounds-core-es-sln16-1.6.1-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/asterisk-sounds-core-es-sln16-1.6.1-16.fc40.noarch.rpm"
+}

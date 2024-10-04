@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgranite6-6.2.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgranite6-6.2.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "granite6-common" 
+  "libcairo-gobject2" 
+  "libcairo2" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgee-0_8-2" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+]
+extra-source "libgranite6-6.2.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgranite6-6.2.0-1.1.x86_64.rpm"
+}

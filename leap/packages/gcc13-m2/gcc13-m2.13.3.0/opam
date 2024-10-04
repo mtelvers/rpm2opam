@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcc13-m2-13.3.0+git8781-slfo.1.1.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcc13-m2-13.3.0+git8781-slfo.1.1.11.x86_64.rpm"]
+depends: [
+  "gcc13" {= "13.3.0"}
+  "glibc" 
+  "libgcc_s1" 
+  "libgmp10" 
+  "libisl23" 
+  "libm2cor18-gcc13" {>= "13.3.0"}
+  "libm2iso18-gcc13" {>= "13.3.0"}
+  "libm2log18-gcc13" {>= "13.3.0"}
+  "libm2min18-gcc13" {>= "13.3.0"}
+  "libm2pim18-gcc13" {>= "13.3.0"}
+  "libmpc3" 
+  "libmpfr6" 
+  "libstdc++6" 
+  "libstdc++6-devel-gcc13" {= "13.3.0"}
+  "libz-ng-compat1" 
+  "libzstd1" 
+]
+extra-source "gcc13-m2-13.3.0+git8781-slfo.1.1.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/gcc13-m2-13.3.0+git8781-slfo.1.1.11.x86_64.rpm"
+}

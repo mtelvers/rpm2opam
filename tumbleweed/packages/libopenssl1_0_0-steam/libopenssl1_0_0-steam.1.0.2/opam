@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libopenssl1_0_0-steam-1.0.2u-25.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libopenssl1_0_0-steam-1.0.2u-25.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libopenssl1_0_0" 
+  "libz-ng-compat1" 
+]
+extra-source "libopenssl1_0_0-steam-1.0.2u-25.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libopenssl1_0_0-steam-1.0.2u-25.3.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "forgejo-runner-bash-completion-3.5.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "forgejo-runner-bash-completion-3.5.1-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "forgejo-runner" {= "3.5.1"}
+]
+extra-source "forgejo-runner-bash-completion-3.5.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/forgejo-runner-bash-completion-3.5.1-1.1.noarch.rpm"
+}

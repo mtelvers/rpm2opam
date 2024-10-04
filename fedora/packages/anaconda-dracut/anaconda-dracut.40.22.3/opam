@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "anaconda-dracut-40.22.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "anaconda-dracut-40.22.3-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dracut" {>= "34"}
+  "dracut-live" 
+  "dracut-network" 
+  "glibc" 
+  "libarchive" 
+  "python3" 
+  "python3-kickstart" 
+  "rpm-libs" 
+  "xz" 
+]
+extra-source "anaconda-dracut-40.22.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/anaconda-dracut-40.22.3-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ClanLib-devel-2.3.7-32.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ClanLib-devel-2.3.7-32.fc40.x86_64.rpm"]
+depends: [
+  "ClanLib" {= "2.3.7"}
+  "alsa-lib-devel" 
+  "fontconfig-devel" 
+  "libXrender-devel" 
+  "libXxf86vm-devel" 
+  "libjpeg-turbo-devel" 
+  "libmikmod-devel" 
+  "libpng-devel" 
+  "mesa-libGLU-devel" 
+  "pcre-devel" 
+  "pkgconf-pkg-config" 
+  "sqlite-devel" 
+  "xorg-x11-proto-devel" 
+]
+extra-source "ClanLib-devel-2.3.7-32.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/ClanLib-devel-2.3.7-32.fc40.x86_64.rpm"
+}

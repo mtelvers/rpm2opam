@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-pax-2024.216.svn63509-54.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-pax-2024.216.svn63509-54.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "java-11-openj9" 
+  "perl-File-Which" 
+  "perl-base" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-auxhook" 
+  "texlive-etexcmds" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-graphics" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-kvoptions" 
+  "texlive-kvsetkeys" 
+  "texlive-ltxcmds" 
+  "texlive-pax-bin" {>= "2024"}
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+]
+extra-source "texlive-pax-2024.216.svn63509-54.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-pax-2024.216.svn63509-54.1.noarch.rpm"
+}

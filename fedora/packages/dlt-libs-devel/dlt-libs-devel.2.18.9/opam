@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dlt-libs-devel-2.18.9-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dlt-libs-devel-2.18.9-4.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "dlt-libs" {= "2.18.9"}
+  "pkgconf-pkg-config" 
+]
+extra-source "dlt-libs-devel-2.18.9-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dlt-libs-devel-2.18.9-4.fc40.x86_64.rpm"
+}

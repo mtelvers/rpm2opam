@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-v_frame+default-devel-0.3.7-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-v_frame+default-devel-0.3.7-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-v_frame-devel" {= "0.3.7"}
+]
+extra-source "rust-v_frame+default-devel-0.3.7-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-v_frame+default-devel-0.3.7-1.fc40.noarch.rpm"
+}

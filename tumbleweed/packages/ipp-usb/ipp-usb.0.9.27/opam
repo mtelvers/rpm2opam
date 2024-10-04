@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ipp-usb-0.9.27-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ipp-usb-0.9.27-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libavahi-client3" 
+  "libavahi-common3" 
+  "libusb-1_0-0" 
+]
+extra-source "ipp-usb-0.9.27-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ipp-usb-0.9.27-1.1.x86_64.rpm"
+}

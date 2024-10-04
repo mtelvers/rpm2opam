@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ndctl-79-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ndctl-79-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libiniparser1" 
+  "libjson-c5" 
+  "libkeyutils1" 
+  "libndctl6" 
+  "libtraceevent1" 
+  "libtracefs1" 
+  "libuuid1" 
+  "systemd" 
+]
+extra-source "ndctl-79-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ndctl-79-1.1.x86_64.rpm"
+}

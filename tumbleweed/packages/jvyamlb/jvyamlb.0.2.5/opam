@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jvyamlb-0.2.5-20.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jvyamlb-0.2.5-20.11.noarch.rpm"]
+depends: [
+  "bytelist" 
+  "java-11-openj9" {>= "1.8"}
+  "javapackages-tools" 
+  "jcodings" 
+  "joda-time" 
+]
+extra-source "jvyamlb-0.2.5-20.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jvyamlb-0.2.5-20.11.noarch.rpm"
+}

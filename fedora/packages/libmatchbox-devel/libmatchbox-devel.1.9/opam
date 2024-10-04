@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libmatchbox-devel-1.9-36.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmatchbox-devel-1.9-36.fc40.x86_64.rpm"]
+depends: [
+  "libX11-devel" 
+  "libXext-devel" 
+  "libmatchbox" {= "1.9"}
+  "libpng-devel" 
+  "pango-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libmatchbox-devel-1.9-36.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libmatchbox-devel-1.9-36.fc40.x86_64.rpm"
+}

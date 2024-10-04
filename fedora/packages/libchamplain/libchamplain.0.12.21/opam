@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libchamplain-0.12.21-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libchamplain-0.12.21-4.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "cairo-gobject" 
+  "clutter" 
+  "cogl" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libsoup3" 
+  "pango" 
+  "sqlite-libs" 
+]
+extra-source "libchamplain-0.12.21-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libchamplain-0.12.21-4.fc40.x86_64.rpm"
+}

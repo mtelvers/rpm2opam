@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dialog-examples-1.3-12.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dialog-examples-1.3-12.1.noarch.rpm"]
+depends: [
+  "dialog" {= "1.3"}
+]
+extra-source "dialog-examples-1.3-12.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dialog-examples-1.3-12.1.noarch.rpm"
+}

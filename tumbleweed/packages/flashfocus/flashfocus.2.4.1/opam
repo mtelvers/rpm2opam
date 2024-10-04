@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "flashfocus-2.4.1-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flashfocus-2.4.1-1.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "python311-PyYAML" {>= "5.1"}
+  "python311-base" 
+  "python311-cffi" 
+  "python311-click" 
+  "python311-marshmallow" 
+  "python311-xcffib" 
+  "python311-xpybutil" 
+]
+extra-source "flashfocus-2.4.1-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/flashfocus-2.4.1-1.2.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-signedjson-1.1.4-3.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-signedjson-1.1.4-3.5.noarch.rpm"]
+depends: [
+  "python311-PyNaCl" {>= "0.3.0"}
+  "python311-base" {= "3.11"}
+  "python311-canonicaljson" {>= "1.0.0"}
+  "python311-importlib-metadata" 
+  "python311-typing_extensions" {>= "3.5"}
+  "python311-unpaddedbase64" {>= "1.0.1"}
+]
+extra-source "python311-signedjson-1.1.4-3.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-signedjson-1.1.4-3.5.noarch.rpm"
+}

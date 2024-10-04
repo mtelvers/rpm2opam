@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mate-applet-sensors-1.28.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mate-applet-sensors-1.28.0-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libmate-panel-applet-4-1" 
+  "libmate-sensors-applet-plugin0" 
+  "libnotify4" 
+  "libsensors4" 
+  "mate-panel" {>= "1.28"}
+]
+extra-source "mate-applet-sensors-1.28.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mate-applet-sensors-1.28.0-1.1.x86_64.rpm"
+}

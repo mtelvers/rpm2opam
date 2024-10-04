@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fcgiwrap-nginx-1.1.0+18+g99c942c-3.19.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fcgiwrap-nginx-1.1.0+18+g99c942c-3.19.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "fcgiwrap" 
+  "nginx" 
+]
+extra-source "fcgiwrap-nginx-1.1.0+18+g99c942c-3.19.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/fcgiwrap-nginx-1.1.0+18+g99c942c-3.19.x86_64.rpm"
+}

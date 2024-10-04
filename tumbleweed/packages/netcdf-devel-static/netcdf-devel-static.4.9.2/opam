@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "netcdf-devel-static-4.9.2-2.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netcdf-devel-static-4.9.2-2.4.x86_64.rpm"]
+depends: [
+  "hdf5-devel" {= "1.12.3"}
+  "libcurl-devel" {>= "7.18.0"}
+  "zlib-devel" {>= "1.2.5"}
+]
+extra-source "netcdf-devel-static-4.9.2-2.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/netcdf-devel-static-4.9.2-2.4.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "picard-lang-2.12.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "picard-lang-2.12.3-1.1.noarch.rpm"]
+depends: [
+  "picard" {= "2.12.3"}
+]
+extra-source "picard-lang-2.12.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/picard-lang-2.12.3-1.1.noarch.rpm"
+}

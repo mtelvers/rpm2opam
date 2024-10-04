@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "imlib2-devel-1.11.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "imlib2-devel-1.11.1-5.fc40.x86_64.rpm"]
+depends: [
+  "freetype-devel" {>= "2.1.9"}
+  "imlib2" {= "1.11.1"}
+  "libX11-devel" 
+  "libXext-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "imlib2-devel-1.11.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/imlib2-devel-1.11.1-5.fc40.x86_64.rpm"
+}

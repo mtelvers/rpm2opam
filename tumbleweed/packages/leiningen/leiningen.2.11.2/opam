@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "leiningen-2.11.2-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "leiningen-2.11.2-1.2.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "clojure" {>= "1.10.0"}
+  "java-11-openj9" {>= "1.8.0"}
+]
+extra-source "leiningen-2.11.2-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/leiningen-2.11.2-1.2.noarch.rpm"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "buildstream-2.3.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "buildstream-2.3.0-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bubblewrap" 
+  "glibc" 
+  "python311-Jinja2" 
+  "python311-base" 
+  "python311-click" 
+  "python311-gobject" 
+  "python311-grpcio" {>= "1.34"}
+  "python311-pluginbase" 
+  "python311-protobuf" 
+  "python311-psutil" 
+  "python311-ruamel-yaml" {>= "0.16"}
+  "python311-ruamel-yaml-clib" 
+  "python311-setuptools" 
+  "python311-ujson" 
+  "typelib-1_0-OSTree-1_0" 
+]
+extra-source "buildstream-2.3.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/buildstream-2.3.0-1.1.x86_64.rpm"
+}

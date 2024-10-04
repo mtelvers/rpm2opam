@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "blueprint-compiler-0.14.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "blueprint-compiler-0.14.0-1.1.noarch.rpm"]
+depends: [
+  "girepository-1_0" {= "2.0"}
+  "python311-base" 
+  "python311-gobject" 
+]
+extra-source "blueprint-compiler-0.14.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/blueprint-compiler-0.14.0-1.1.noarch.rpm"
+}

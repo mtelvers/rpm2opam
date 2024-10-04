@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "malcontent-ui-devel-0.11.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "malcontent-ui-devel-0.11.1-5.fc40.x86_64.rpm"]
+depends: [
+  "accountsservice-devel" {>= "0.6.39"}
+  "appstream-devel" {>= "0.12.10"}
+  "flatpak-devel" 
+  "glib2-devel" {>= "2.54.2"}
+  "gtk4-devel" {>= "4.6"}
+  "libadwaita-devel" {>= "1.1"}
+  "malcontent-devel" 
+  "malcontent-ui-libs" 
+  "pkgconf-pkg-config" 
+]
+extra-source "malcontent-ui-devel-0.11.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/malcontent-ui-devel-0.11.1-5.fc40.x86_64.rpm"
+}

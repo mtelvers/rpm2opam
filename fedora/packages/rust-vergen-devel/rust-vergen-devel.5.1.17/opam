@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-vergen-devel-5.1.17-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-vergen-devel-5.1.17-8.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cargo" 
+  "rust-anyhow+default-devel" 
+  "rust-cfg-if+default-devel" 
+  "rust-chrono+default-devel" 
+  "rust-enum-iterator+default-devel" 
+  "rust-getset+default-devel" 
+  "rust-rustversion+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-vergen-devel-5.1.17-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-vergen-devel-5.1.17-8.fc40.noarch.rpm"
+}

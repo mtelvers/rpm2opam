@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-mypy-1.11.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-mypy-1.11.2-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-mypy_extensions" {>= "0.4.3"}
+  "python311-tomli" 
+  "python311-typing_extensions" {>= "3.10"}
+  "update-alternatives" 
+]
+extra-source "python311-mypy-1.11.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-mypy-1.11.2-1.1.noarch.rpm"
+}

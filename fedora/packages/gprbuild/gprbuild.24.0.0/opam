@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gprbuild-24.0.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gprbuild-24.0.0-1.fc40.x86_64.rpm"]
+depends: [
+  "fedora-gnat-project-common" 
+  "glibc" 
+  "gprconfig-kb" {>= "24.0.0"}
+]
+extra-source "gprbuild-24.0.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gprbuild-24.0.0-1.fc40.x86_64.rpm"
+}

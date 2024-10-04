@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-dns-devel-4.1.1-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-dns-devel-4.1.1-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-array-devel" 
+  "ghc-async-devel" 
+  "ghc-attoparsec-devel" 
+  "ghc-auto-update-devel" 
+  "ghc-base-devel" 
+  "ghc-base16-bytestring-devel" 
+  "ghc-base64-bytestring-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-case-insensitive-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-cryptonite-devel" 
+  "ghc-dns" {= "4.1.1"}
+  "ghc-hourglass-devel" 
+  "ghc-iproute-devel" 
+  "ghc-mtl-devel" 
+  "ghc-network-devel" 
+  "ghc-psqueues-devel" 
+]
+extra-source "ghc-dns-devel-4.1.1-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-dns-devel-4.1.1-3.fc40.x86_64.rpm"
+}

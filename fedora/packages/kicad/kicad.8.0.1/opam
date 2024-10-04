@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kicad-8.0.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kicad-8.0.1-1.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "electronics-menu" 
+  "fontconfig" 
+  "freetype" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "harfbuzz" 
+  "libGLEW" 
+  "libcurl" 
+  "libgcc" 
+  "libgit2" 
+  "libglvnd-glx" 
+  "libngspice" 
+  "libsecret" 
+  "libstdc++" 
+  "mesa-libGLU" 
+  "ngspice-codemodel" 
+  "opencascade-foundation" 
+  "opencascade-modeling" 
+  "opencascade-ocaf" 
+  "python3" {= "3.12"}
+  "python3-libs" 
+  "python3-wxpython4" 
+  "unixODBC" 
+  "wxBase" 
+  "wxGTK" 
+  "wxGTK-gl" 
+  "zlib-ng-compat" 
+]
+extra-source "kicad-8.0.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kicad-8.0.1-1.fc40.x86_64.rpm"
+}

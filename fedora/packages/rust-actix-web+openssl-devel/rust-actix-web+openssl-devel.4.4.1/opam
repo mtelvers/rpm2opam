@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-actix-web+openssl-devel-4.4.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-actix-web+openssl-devel-4.4.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-actix-http+openssl-devel" 
+  "rust-actix-tls+accept-devel" 
+  "rust-actix-tls+openssl-devel" 
+  "rust-actix-tls-devel" 
+  "rust-actix-web+http2-devel" {= "4.4.1"}
+  "rust-actix-web-devel" {= "4.4.1"}
+]
+extra-source "rust-actix-web+openssl-devel-4.4.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-actix-web+openssl-devel-4.4.1-2.fc40.noarch.rpm"
+}

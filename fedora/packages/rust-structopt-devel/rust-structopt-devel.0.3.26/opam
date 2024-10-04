@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-structopt-devel-0.3.26-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-structopt-devel-0.3.26-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-clap-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-structopt-derive+default-devel" {= "0.4.18"}
+]
+extra-source "rust-structopt-devel-0.3.26-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-structopt-devel-0.3.26-4.fc40.noarch.rpm"
+}

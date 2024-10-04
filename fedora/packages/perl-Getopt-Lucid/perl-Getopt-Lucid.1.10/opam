@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Getopt-Lucid-1.10-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Getopt-Lucid-1.10-14.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exception-Class" {>= "1.23"}
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-Scalar-List-Utils" 
+  "perl-Storable" {>= "2.16"}
+  "perl-libs" {>= "5.8.1"}
+]
+extra-source "perl-Getopt-Lucid-1.10-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Getopt-Lucid-1.10-14.fc40.noarch.rpm"
+}

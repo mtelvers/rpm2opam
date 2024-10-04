@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-axum-core-devel-0.3.4-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-axum-core-devel-0.3.4-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.56"}
+  "rust-async-trait+default-devel" 
+  "rust-bytes+default-devel" 
+  "rust-futures-util+alloc-devel" 
+  "rust-futures-util-devel" 
+  "rust-http+default-devel" 
+  "rust-http-body+default-devel" 
+  "rust-mime+default-devel" 
+  "rust-rustversion+default-devel" 
+  "rust-tower-layer+default-devel" 
+  "rust-tower-service+default-devel" 
+]
+extra-source "rust-axum-core-devel-0.3.4-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-axum-core-devel-0.3.4-3.fc40.noarch.rpm"
+}

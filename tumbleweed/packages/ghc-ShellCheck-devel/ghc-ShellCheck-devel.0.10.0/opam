@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-ShellCheck-devel-0.10.0-1.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-ShellCheck-devel-0.10.0-1.16.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-Diff-devel" 
+  "ghc-QuickCheck-devel" 
+  "ghc-ShellCheck" {= "0.10.0"}
+  "ghc-aeson-devel" 
+  "ghc-array-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-deepseq-devel" 
+  "ghc-directory-devel" 
+  "ghc-fgl-devel" 
+  "ghc-filepath-devel" 
+  "ghc-mtl-devel" 
+  "ghc-parsec-devel" 
+  "ghc-process-devel" 
+  "ghc-regex-tdfa-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-ShellCheck-devel-0.10.0-1.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-ShellCheck-devel-0.10.0-1.16.x86_64.rpm"
+}

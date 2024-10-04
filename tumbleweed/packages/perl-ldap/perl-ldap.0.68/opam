@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-ldap-0.68-3.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-ldap-0.68-3.4.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Convert-ASN1" {>= "0.2"}
+]
+extra-source "perl-ldap-0.68-3.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-ldap-0.68-3.4.noarch.rpm"
+}

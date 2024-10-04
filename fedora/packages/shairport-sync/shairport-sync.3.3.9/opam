@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "shairport-sync-3.3.9-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "shairport-sync-3.3.9-6.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "avahi" 
+  "avahi-libs" 
+  "bash" 
+  "glibc" 
+  "libconfig" 
+  "libgcc" 
+  "openssl-libs" 
+  "popt" 
+  "pulseaudio-libs" 
+  "soxr" 
+  "systemd" 
+]
+extra-source "shairport-sync-3.3.9-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/shairport-sync-3.3.9-6.fc40.x86_64.rpm"
+}

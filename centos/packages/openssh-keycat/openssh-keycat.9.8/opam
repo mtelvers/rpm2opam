@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openssh-keycat-9.8p1-6.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openssh-keycat-9.8p1-6.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "openssh" {= "9.8"}
+  "pam-libs" 
+]
+extra-source "openssh-keycat-9.8p1-6.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/openssh-keycat-9.8p1-6.el10.x86_64.rpm"
+}

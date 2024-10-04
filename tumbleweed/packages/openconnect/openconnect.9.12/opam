@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openconnect-9.12-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openconnect-9.12-3.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "libgnutls30" 
+  "libopenconnect5" 
+  "libproxy1" 
+  "libxml2-2" 
+  "python311-base" 
+]
+extra-source "openconnect-9.12-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openconnect-9.12-3.1.x86_64.rpm"
+}

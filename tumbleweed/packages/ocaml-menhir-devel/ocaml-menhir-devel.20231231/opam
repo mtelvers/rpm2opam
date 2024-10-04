@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ocaml-menhir-devel-20231231-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-menhir-devel-20231231-1.3.x86_64.rpm"]
+depends: [
+  "ocaml" {= "8"}
+  "ocaml-menhir" {= "20231231"}
+]
+extra-source "ocaml-menhir-devel-20231231-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ocaml-menhir-devel-20231231-1.3.x86_64.rpm"
+}

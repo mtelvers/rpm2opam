@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sca-patterns-hae-1.5.3-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sca-patterns-hae-1.5.3-1.3.noarch.rpm"]
+depends: [
+  "perl-base" 
+  "python311-base" 
+  "sca-patterns-base" {>= "1.5.0"}
+  "sca-server-report" {>= "1.5.1"}
+]
+extra-source "sca-patterns-hae-1.5.3-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sca-patterns-hae-1.5.3-1.3.noarch.rpm"
+}

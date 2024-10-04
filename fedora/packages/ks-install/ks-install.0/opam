@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ks-install-0-0.7.20230507git72db781.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ks-install-0-0.7.20230507git72db781.fc40.noarch.rpm"]
+depends: [
+  "perl-Config-Tiny" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-LWP-Protocol-https" 
+  "perl-Modern-Perl" 
+  "perl-POSIX" 
+  "perl-Pod-Usage" 
+  "perl-Socket" 
+  "perl-Sys-Virt" 
+  "perl-XML-Simple" 
+  "perl-autodie" 
+  "perl-interpreter" 
+  "perl-libwww-perl" 
+  "virt-install" 
+]
+extra-source "ks-install-0-0.7.20230507git72db781.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/ks-install-0-0.7.20230507git72db781.fc40.noarch.rpm"
+}

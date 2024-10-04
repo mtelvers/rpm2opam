@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-gi-glib-devel-2.0.29-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-gi-glib-devel-2.0.29-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-gi-glib" {= "2.0.29"}
+  "ghc-haskell-gi-base-devel" 
+  "ghc-haskell-gi-devel" 
+  "ghc-haskell-gi-overloading-devel" 
+  "ghc-text-devel" 
+  "ghc-transformers-devel" 
+  "glib2-devel" 
+]
+extra-source "ghc-gi-glib-devel-2.0.29-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-gi-glib-devel-2.0.29-6.fc40.x86_64.rpm"
+}

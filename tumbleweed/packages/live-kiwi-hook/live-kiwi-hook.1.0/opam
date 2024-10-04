@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "live-kiwi-hook-1.0-5.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "live-kiwi-hook-1.0-5.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "sed" 
+  "util-linux" 
+]
+extra-source "live-kiwi-hook-1.0-5.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/live-kiwi-hook-1.0-5.2.noarch.rpm"
+}

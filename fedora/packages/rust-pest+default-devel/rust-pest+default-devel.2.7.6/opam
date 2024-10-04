@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-pest+default-devel-2.7.6-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-pest+default-devel-2.7.6-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-pest+memchr-devel" {= "2.7.6"}
+  "rust-pest+std-devel" {= "2.7.6"}
+  "rust-pest-devel" {= "2.7.6"}
+]
+extra-source "rust-pest+default-devel-2.7.6-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-pest+default-devel-2.7.6-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pam-userdb-32bit-1.6.1-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pam-userdb-32bit-1.6.1-4.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libcrypt1-32bit" 
+  "libdb-4_8-32bit" 
+  "pam-32bit" 
+]
+extra-source "pam-userdb-32bit-1.6.1-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pam-userdb-32bit-1.6.1-4.1.x86_64.rpm"
+}

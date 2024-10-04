@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-bat+build-assets-devel-0.24.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-bat+build-assets-devel-0.24.0-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bat+regex-devel" {= "0.24.0"}
+  "rust-bat+walkdir-devel" {= "0.24.0"}
+  "rust-bat-devel" {= "0.24.0"}
+  "rust-syntect+plist-load-devel" 
+  "rust-syntect+yaml-load-devel" 
+]
+extra-source "rust-bat+build-assets-devel-0.24.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-bat+build-assets-devel-0.24.0-4.fc40.noarch.rpm"
+}

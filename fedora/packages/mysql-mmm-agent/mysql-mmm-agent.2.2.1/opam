@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mysql-mmm-agent-2.2.1-33.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mysql-mmm-agent-2.2.1-33.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "iproute" 
+  "mysql-mmm" {= "2.2.1"}
+  "perl-Algorithm-Diff" 
+  "perl-Class-Struct" 
+  "perl-DBD-MySQL" 
+  "perl-DBI" 
+  "perl-English" 
+  "perl-Errno" 
+  "perl-File-Basename" 
+  "perl-Log-Log4perl" 
+  "perl-Net-ARP" 
+  "perl-Proc-Daemon" 
+  "perl-Time-HiRes" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "systemd" 
+]
+extra-source "mysql-mmm-agent-2.2.1-33.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mysql-mmm-agent-2.2.1-33.fc40.noarch.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-globset-devel-0.4.14-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-globset-devel-0.4.14-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-aho-corasick+default-devel" 
+  "rust-bstr+std-devel" 
+  "rust-bstr-devel" 
+  "rust-regex-automata+hybrid-devel" 
+  "rust-regex-automata+meta-devel" 
+  "rust-regex-automata+nfa-devel" 
+  "rust-regex-automata+perf-devel" 
+  "rust-regex-automata+std-devel" 
+  "rust-regex-automata+syntax-devel" 
+  "rust-regex-automata-devel" 
+  "rust-regex-syntax+std-devel" 
+  "rust-regex-syntax-devel" 
+]
+extra-source "rust-globset-devel-0.4.14-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-globset-devel-0.4.14-2.fc40.noarch.rpm"
+}

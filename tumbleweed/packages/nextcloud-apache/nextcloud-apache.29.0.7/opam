@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nextcloud-apache-29.0.7-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nextcloud-apache-29.0.7-1.1.noarch.rpm"]
+depends: [
+  "apache2" 
+  "apache2-mod_php8" {>= "8.1.0"}
+  "nextcloud" {= "29.0.7"}
+]
+extra-source "nextcloud-apache-29.0.7-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nextcloud-apache-29.0.7-1.1.noarch.rpm"
+}

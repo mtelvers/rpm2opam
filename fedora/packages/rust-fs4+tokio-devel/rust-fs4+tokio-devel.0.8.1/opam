@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-fs4+tokio-devel-0.8.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-fs4+tokio-devel-0.8.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-fs4+async-trait-devel" {= "0.8.1"}
+  "rust-fs4-devel" {= "0.8.1"}
+  "rust-tokio+fs-devel" 
+  "rust-tokio-devel" 
+]
+extra-source "rust-fs4+tokio-devel-0.8.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-fs4+tokio-devel-0.8.1-1.fc40.noarch.rpm"
+}

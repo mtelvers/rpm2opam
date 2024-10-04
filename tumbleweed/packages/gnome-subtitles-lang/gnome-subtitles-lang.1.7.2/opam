@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-subtitles-lang-1.7.2-1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-subtitles-lang-1.7.2-1.8.noarch.rpm"]
+depends: [
+  "gnome-subtitles" {= "1.7.2"}
+]
+extra-source "gnome-subtitles-lang-1.7.2-1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-subtitles-lang-1.7.2-1.8.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libTMCG-devel-1.3.18-1.21.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libTMCG-devel-1.3.18-1.21.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "libTMCG18" {= "1.3.18"}
+]
+extra-source "libTMCG-devel-1.3.18-1.21.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libTMCG-devel-1.3.18-1.21.x86_64.rpm"
+}

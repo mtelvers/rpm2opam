@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "phonon-qt5-4.12.0-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "phonon-qt5-4.12.0-5.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libstdc++" 
+  "phonon-common" {= "4.12.0"}
+  "pulseaudio-libs" 
+  "pulseaudio-libs-glib2" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qttools-libs-designer" 
+]
+extra-source "phonon-qt5-4.12.0-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/phonon-qt5-4.12.0-5.fc40.x86_64.rpm"
+}

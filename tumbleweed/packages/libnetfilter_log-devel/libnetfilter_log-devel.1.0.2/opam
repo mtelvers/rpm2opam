@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnetfilter_log-devel-1.0.2-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnetfilter_log-devel-1.0.2-1.8.x86_64.rpm"]
+depends: [
+  "libmnl-devel" {>= "1.0.3"}
+  "libnetfilter_log1" {= "1.0.2"}
+  "libnfnetlink-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libnetfilter_log-devel-1.0.2-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libnetfilter_log-devel-1.0.2-1.8.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "twind-1.1.0-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "twind-1.1.0-4.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libSDL-1_2-0" 
+  "libSDL_image-1_2-0" 
+  "libSDL_mixer-1_2-0" 
+  "system-user-games" 
+]
+extra-source "twind-1.1.0-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/twind-1.1.0-4.2.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pegdown-1.4.2-slfo.1.2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pegdown-1.4.2-slfo.1.2.3.noarch.rpm"]
+depends: [
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "parboiled" 
+]
+extra-source "pegdown-1.4.2-slfo.1.2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/pegdown-1.4.2-slfo.1.2.3.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qemu-skiboot-8.2.6-slfo.1.2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qemu-skiboot-8.2.6-slfo.1.2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "update-alternatives" 
+]
+extra-source "qemu-skiboot-8.2.6-slfo.1.2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/qemu-skiboot-8.2.6-slfo.1.2.1.noarch.rpm"
+}

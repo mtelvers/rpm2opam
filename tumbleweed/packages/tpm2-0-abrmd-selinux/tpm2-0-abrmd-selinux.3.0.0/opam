@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tpm2.0-abrmd-selinux-3.0.0-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tpm2.0-abrmd-selinux-3.0.0-4.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "policycoreutils" 
+  "policycoreutils-python-utils" 
+  "selinux-policy" {>= "20240809"}
+  "selinux-policy-minimum" {>= "20240809"}
+  "selinux-tools" 
+]
+extra-source "tpm2.0-abrmd-selinux-3.0.0-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tpm2.0-abrmd-selinux-3.0.0-4.1.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "liborcus-tools-0.19.2-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "liborcus-tools-0.19.2-4.fc40.x86_64.rpm"]
+depends: [
+  "boost-program-options" 
+  "glibc" 
+  "libgcc" 
+  "liborcus" {= "0.19.2"}
+  "liborcus-model" 
+  "libstdc++" 
+]
+extra-source "liborcus-tools-0.19.2-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/liborcus-tools-0.19.2-4.fc40.x86_64.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "unrealircd-6.1.4-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "unrealircd-6.1.4-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "c-ares" 
+  "glibc" 
+  "jansson" 
+  "libargon2" 
+  "libcurl" 
+  "libsodium" 
+  "libxcrypt" 
+  "openssl" 
+  "openssl-libs" 
+  "pcre2" 
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "unrealircd-6.1.4-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/unrealircd-6.1.4-2.fc40.x86_64.rpm"
+}

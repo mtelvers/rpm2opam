@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-uuid0.7+rand-devel-0.7.4-15.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-uuid0.7+rand-devel-0.7.4-15.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-rand+default-devel" 
+  "rust-uuid0-7-devel" {= "0.7.4"}
+]
+extra-source "rust-uuid0.7+rand-devel-0.7.4-15.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-uuid0.7+rand-devel-0.7.4-15.fc40.noarch.rpm"
+}

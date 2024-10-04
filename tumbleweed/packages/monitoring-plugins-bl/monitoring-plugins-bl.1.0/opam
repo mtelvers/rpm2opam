@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "monitoring-plugins-bl-1.0-101.20.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "monitoring-plugins-bl-1.0-101.20.noarch.rpm"]
+depends: [
+  "perl-Net-DNS" 
+  "perl-base" 
+]
+extra-source "monitoring-plugins-bl-1.0-101.20.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/monitoring-plugins-bl-1.0-101.20.noarch.rpm"
+}

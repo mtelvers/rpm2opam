@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnumeric-plugins-extras-1.12.56-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnumeric-plugins-extras-1.12.56-2.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "cairo-gobject" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gnumeric" {= "1.12.56"}
+  "goffice" 
+  "gtk3" 
+  "harfbuzz" 
+  "libgda" 
+  "libgda-ui" 
+  "libgsf" 
+  "libxcrypt" 
+  "libxml2" 
+  "pango" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "psiconv" 
+  "python3" {= "3.12"}
+  "python3-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "gnumeric-plugins-extras-1.12.56-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnumeric-plugins-extras-1.12.56-2.fc40.x86_64.rpm"
+}

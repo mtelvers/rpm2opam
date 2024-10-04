@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "osc-source_validator-0.19-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "osc-source_validator-0.19-14.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "gnupg2" 
+  "libxml2" 
+  "obs-build" 
+  "osc" 
+  "perl-POSIX" 
+  "perl-Time" 
+  "perl-Time-Local" 
+  "perl-TimeDate" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "rpm-build" 
+]
+extra-source "osc-source_validator-0.19-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/osc-source_validator-0.19-14.fc40.noarch.rpm"
+}

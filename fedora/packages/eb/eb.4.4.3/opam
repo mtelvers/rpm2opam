@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "eb-4.4.3-22.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eb-4.4.3-22.fc39.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-File-Basename" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.5.0"}
+  "zlib-ng-compat" 
+]
+extra-source "eb-4.4.3-22.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/eb-4.4.3-22.fc39.x86_64.rpm"
+}

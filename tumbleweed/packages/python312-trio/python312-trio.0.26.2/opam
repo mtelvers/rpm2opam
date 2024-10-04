@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-trio-0.26.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-trio-0.26.2-1.1.noarch.rpm"]
+depends: [
+  "python312-attrs" {>= "20.1.0"}
+  "python312-base" {= "3.12"}
+  "python312-idna" 
+  "python312-outcome" 
+  "python312-sniffio" {>= "1.3.0"}
+  "python312-sortedcontainers" 
+]
+extra-source "python312-trio-0.26.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-trio-0.26.2-1.1.noarch.rpm"
+}

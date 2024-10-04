@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Locale-Maketext-Gettext-tests-1.32-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Locale-Maketext-Gettext-tests-1.32-11.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "perl-Encode" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-FindBin" 
+  "perl-Locale-Maketext-Gettext" 
+  "perl-PathTools" 
+  "perl-Test" 
+  "perl-Test-Harness" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-vars" 
+]
+extra-source "perl-Locale-Maketext-Gettext-tests-1.32-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Locale-Maketext-Gettext-tests-1.32-11.fc40.noarch.rpm"
+}

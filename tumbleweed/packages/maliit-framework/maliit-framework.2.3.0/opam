@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maliit-framework-2.3.0-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maliit-framework-2.3.0-1.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5DBus5" 
+  "libQt5Gui5" 
+  "libQt5WaylandClient5" 
+  "libQtQuick5" 
+  "libgcc_s1" 
+  "libmaliit-plugins2" 
+  "libstdc++6" 
+  "libwayland-client0" 
+]
+extra-source "maliit-framework-2.3.0-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/maliit-framework-2.3.0-1.5.x86_64.rpm"
+}

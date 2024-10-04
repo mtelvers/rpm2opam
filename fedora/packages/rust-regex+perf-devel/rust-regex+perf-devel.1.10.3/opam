@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-regex+perf-devel-1.10.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-regex+perf-devel-1.10.3-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-regex+perf-backtrack-devel" {= "1.10.3"}
+  "rust-regex+perf-cache-devel" {= "1.10.3"}
+  "rust-regex+perf-dfa-devel" {= "1.10.3"}
+  "rust-regex+perf-inline-devel" {= "1.10.3"}
+  "rust-regex+perf-literal-devel" {= "1.10.3"}
+  "rust-regex+perf-onepass-devel" {= "1.10.3"}
+  "rust-regex-devel" {= "1.10.3"}
+]
+extra-source "rust-regex+perf-devel-1.10.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-regex+perf-devel-1.10.3-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-inlinable_string+no_std-devel-0.1.15-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-inlinable_string+no_std-devel-0.1.15-7.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-inlinable_string-devel" {= "0.1.15"}
+]
+extra-source "rust-inlinable_string+no_std-devel-0.1.15-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-inlinable_string+no_std-devel-0.1.15-7.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cross-epiphany-gcc13-13.3.1+git8964-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cross-epiphany-gcc13-13.3.1+git8964-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "cross-epiphany-binutils" 
+  "cross-epiphany-newlib-devel" 
+  "libstdc++6-devel-gcc13" 
+  "update-alternatives" 
+]
+extra-source "cross-epiphany-gcc13-13.3.1+git8964-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cross-epiphany-gcc13-13.3.1+git8964-1.1.x86_64.rpm"
+}

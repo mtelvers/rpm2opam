@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-http-conduit-prof-2.3.9-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-http-conduit-prof-2.3.9-1.1.x86_64.rpm"]
+depends: [
+  "ghc-aeson-prof" 
+  "ghc-attoparsec-aeson-prof" 
+  "ghc-attoparsec-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-conduit-extra-prof" 
+  "ghc-conduit-prof" 
+  "ghc-http-client-prof" 
+  "ghc-http-client-tls-prof" 
+  "ghc-http-conduit-devel" {= "2.3.9"}
+  "ghc-http-types-prof" 
+  "ghc-mtl-prof" 
+  "ghc-resourcet-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unliftio-core-prof" 
+]
+extra-source "ghc-http-conduit-prof-2.3.9-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-http-conduit-prof-2.3.9-1.1.x86_64.rpm"
+}

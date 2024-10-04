@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "asl-20240106-1.20240201git2f5d9de.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "asl-20240106-1.20240201git2f5d9de.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgomp" 
+]
+extra-source "asl-20240106-1.20240201git2f5d9de.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/asl-20240106-1.20240201git2f5d9de.fc40.x86_64.rpm"
+}

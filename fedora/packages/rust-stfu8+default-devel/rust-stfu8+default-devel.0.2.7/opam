@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-stfu8+default-devel-0.2.7-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-stfu8+default-devel-0.2.7-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-stfu8+testing-devel" {= "0.2.7"}
+  "rust-stfu8-devel" {= "0.2.7"}
+]
+extra-source "rust-stfu8+default-devel-0.2.7-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-stfu8+default-devel-0.2.7-2.fc40.noarch.rpm"
+}

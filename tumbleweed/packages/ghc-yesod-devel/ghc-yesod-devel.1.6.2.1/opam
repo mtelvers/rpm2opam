@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-yesod-devel-1.6.2.1-2.69.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-yesod-devel-1.6.2.1-2.69.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-aeson-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-conduit-devel" 
+  "ghc-data-default-class-devel" 
+  "ghc-directory-devel" 
+  "ghc-fast-logger-devel" 
+  "ghc-file-embed-devel" 
+  "ghc-monad-logger-devel" 
+  "ghc-shakespeare-devel" 
+  "ghc-streaming-commons-devel" 
+  "ghc-template-haskell-devel" 
+  "ghc-text-devel" 
+  "ghc-unix-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-wai-devel" 
+  "ghc-wai-extra-devel" 
+  "ghc-wai-logger-devel" 
+  "ghc-warp-devel" 
+  "ghc-yaml-devel" 
+  "ghc-yesod" {= "1.6.2.1"}
+  "ghc-yesod-core-devel" 
+  "ghc-yesod-form-devel" 
+  "ghc-yesod-persistent-devel" 
+]
+extra-source "ghc-yesod-devel-1.6.2.1-2.69.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-yesod-devel-1.6.2.1-2.69.x86_64.rpm"
+}

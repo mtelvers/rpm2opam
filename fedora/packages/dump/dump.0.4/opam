@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dump-0.4-0.56.b47.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dump-0.4-0.56.b47.fc40.x86_64.rpm"]
+depends: [
+  "bzip2-libs" 
+  "e2fsprogs-libs" 
+  "glibc" 
+  "libcom_err" 
+  "libselinux" 
+  "lzo" 
+  "readline" 
+  "rmt" 
+  "setup" 
+  "zlib-ng-compat" 
+]
+extra-source "dump-0.4-0.56.b47.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dump-0.4-0.56.b47.fc40.x86_64.rpm"
+}

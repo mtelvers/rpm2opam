@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-multcomp-1.4.23-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-multcomp-1.4.23-5.fc40.noarch.rpm"]
+depends: [
+  "R-TH-data" {>= "1.0.2"}
+  "R-core" {= "4.3"}
+  "R-mvtnorm" {>= "1.0.10"}
+  "R-sandwich" {>= "2.3.0"}
+]
+extra-source "R-multcomp-1.4.23-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-multcomp-1.4.23-5.fc40.noarch.rpm"
+}

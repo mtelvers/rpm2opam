@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "exiv2-lang-0.28.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "exiv2-lang-0.28.3-1.1.noarch.rpm"]
+depends: [
+  "exiv2" {= "0.28.3"}
+]
+extra-source "exiv2-lang-0.28.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/exiv2-lang-0.28.3-1.1.noarch.rpm"
+}

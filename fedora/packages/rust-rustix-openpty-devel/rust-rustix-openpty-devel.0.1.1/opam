@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rustix-openpty-devel-0.1.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rustix-openpty-devel-0.1.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.63"}
+  "rust-rustix+alloc-devel" 
+  "rust-rustix+fs-devel" 
+  "rust-rustix+process-devel" 
+  "rust-rustix+pty-devel" 
+  "rust-rustix+stdio-devel" 
+  "rust-rustix+termios-devel" 
+  "rust-rustix-devel" 
+]
+extra-source "rust-rustix-openpty-devel-0.1.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rustix-openpty-devel-0.1.1-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfftw3_mpi3-3.3.10-4.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfftw3_mpi3-3.3.10-4.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libfftw3-3" 
+]
+extra-source "libfftw3_mpi3-3.3.10-4.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfftw3_mpi3-3.3.10-4.3.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-qpa-1.35-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-qpa-1.35-1.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "gap" {>= "4.5"}
+  "gap-gbnp" {>= "0.9.5"}
+]
+extra-source "gap-qpa-1.35-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-qpa-1.35-1.2.noarch.rpm"
+}

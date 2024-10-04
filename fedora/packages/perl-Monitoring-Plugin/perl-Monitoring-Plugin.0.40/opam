@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Monitoring-Plugin-0.40-17.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Monitoring-Plugin-0.40-17.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Class-Accessor" 
+  "perl-Config-Tiny" 
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long" 
+  "perl-Math-Calc-Units" 
+  "perl-Params-Validate" 
+  "perl-PathTools" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-Monitoring-Plugin-0.40-17.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Monitoring-Plugin-0.40-17.fc40.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lcov-2.0+git.20240123.d981242-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lcov-2.0+git.20240123.d981242-3.1.noarch.rpm"]
+depends: [
+  "findutils" 
+  "gcc" 
+  "perl-Capture-Tiny" 
+  "perl-DateTime" 
+  "perl-GD" 
+  "perl-PerlIO-gzip" 
+  "perl-TimeDate" 
+  "perl-base" 
+  "python311-base" 
+]
+extra-source "lcov-2.0+git.20240123.d981242-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/lcov-2.0+git.20240123.d981242-3.1.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-DBIx-RunSQL-0.24-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DBIx-RunSQL-0.24-4.fc40.noarch.rpm"]
+depends: [
+  "perl-DBI" 
+  "perl-Getopt-Long" {>= "2.36"}
+  "perl-Module-Load" 
+  "perl-Pod-Usage" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-DBIx-RunSQL-0.24-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-DBIx-RunSQL-0.24-4.fc40.noarch.rpm"
+}

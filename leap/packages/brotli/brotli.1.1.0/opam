@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "brotli-1.1.0-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "brotli-1.1.0-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbrotlidec1" 
+  "libbrotlienc1" 
+]
+extra-source "brotli-1.1.0-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/brotli-1.1.0-slfo.1.1.7.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "whatsapp-for-linux-lang-1.6.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "whatsapp-for-linux-lang-1.6.5-1.1.noarch.rpm"]
+depends: [
+  "whatsapp-for-linux" {= "1.6.5"}
+]
+extra-source "whatsapp-for-linux-lang-1.6.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/whatsapp-for-linux-lang-1.6.5-1.1.noarch.rpm"
+}

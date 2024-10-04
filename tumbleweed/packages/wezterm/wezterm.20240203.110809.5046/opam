@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wezterm-20240203.110809.5046fc22-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wezterm-20240203.110809.5046fc22-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libX11-xcb1" 
+  "libfontconfig1" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libwayland-client0" 
+  "libwayland-egl1" 
+  "libxcb-image0" 
+  "libxcb-util1" 
+  "libxcb1" 
+  "libxkbcommon-x11-0" 
+  "libxkbcommon0" 
+  "libz-ng-compat1" 
+]
+extra-source "wezterm-20240203.110809.5046fc22-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/wezterm-20240203.110809.5046fc22-2.2.x86_64.rpm"
+}

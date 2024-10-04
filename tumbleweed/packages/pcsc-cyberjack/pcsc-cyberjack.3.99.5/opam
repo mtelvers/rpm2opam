@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pcsc-cyberjack-3.99.5final.SP16-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcsc-cyberjack-3.99.5final.SP16-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libusb-1_0-0" 
+  "pcsc-lite" 
+]
+extra-source "pcsc-cyberjack-3.99.5final.SP16-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pcsc-cyberjack-3.99.5final.SP16-1.1.x86_64.rpm"
+}

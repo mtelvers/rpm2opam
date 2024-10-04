@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "google-guest-agent-20240816.00-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "google-guest-agent-20240816.00-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "google-guest-configs" 
+  "google-guest-oslogin" {>= "20231003"}
+]
+extra-source "google-guest-agent-20240816.00-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/google-guest-agent-20240816.00-1.1.x86_64.rpm"
+}

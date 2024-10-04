@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libykpers-1-1-1.20.0-3.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libykpers-1-1-1.20.0-3.12.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libjson-c5" 
+  "libusb-1_0-0" 
+  "libyubikey0" 
+]
+extra-source "libykpers-1-1-1.20.0-3.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libykpers-1-1-1.20.0-3.12.x86_64.rpm"
+}

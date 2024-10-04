@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gix-config-devel-0.31.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gix-config-devel-0.31.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-bstr+std-devel" 
+  "rust-bstr-devel" 
+  "rust-gix-config-value+default-devel" 
+  "rust-gix-features+default-devel" 
+  "rust-gix-glob+default-devel" 
+  "rust-gix-path+default-devel" 
+  "rust-gix-ref+default-devel" 
+  "rust-gix-sec+default-devel" 
+  "rust-memchr+default-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-smallvec+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-unicode-bom+default-devel" 
+  "rust-winnow+default-devel" 
+  "rust-winnow+simd-devel" 
+]
+extra-source "rust-gix-config-devel-0.31.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gix-config-devel-0.31.0-2.fc40.noarch.rpm"
+}

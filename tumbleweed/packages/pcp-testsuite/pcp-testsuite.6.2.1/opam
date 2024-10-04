@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pcp-testsuite-6.2.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcp-testsuite-6.2.1-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "glibc" 
+  "libQt5Core5" 
+  "libgcc_s1" 
+  "libpcp-devel" {= "6.2.1"}
+  "libpcp3" 
+  "libstdc++6" 
+  "pcp" {= "6.2.1"}
+  "perl-base" 
+]
+extra-source "pcp-testsuite-6.2.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pcp-testsuite-6.2.1-2.1.x86_64.rpm"
+}

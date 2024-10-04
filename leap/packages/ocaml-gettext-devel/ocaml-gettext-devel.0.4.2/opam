@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ocaml-gettext-devel-0.4.2-slfo.1.2.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-gettext-devel-0.4.2-slfo.1.2.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "ocaml" {= "8"}
+  "ocaml-fileutils-devel" {= "3"}
+  "ocaml-gettext" {= "0.4.2"}
+]
+extra-source "ocaml-gettext-devel-0.4.2-slfo.1.2.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/ocaml-gettext-devel-0.4.2-slfo.1.2.7.x86_64.rpm"
+}

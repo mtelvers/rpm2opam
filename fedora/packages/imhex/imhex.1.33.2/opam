@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "imhex-1.33.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "imhex-1.33.2-1.fc40.x86_64.rpm"]
+depends: [
+  "bzip2-libs" 
+  "capstone" 
+  "file-libs" 
+  "fmt" 
+  "freetype" 
+  "glfw" 
+  "glibc" 
+  "libcurl" 
+  "libgcc" 
+  "libglvnd-opengl" 
+  "libstdc++" 
+  "libzstd" 
+  "mbedtls" 
+  "nativefiledialog-extended" 
+  "yara" 
+  "zlib-ng-compat" 
+]
+extra-source "imhex-1.33.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/imhex-1.33.2-1.fc40.x86_64.rpm"
+}

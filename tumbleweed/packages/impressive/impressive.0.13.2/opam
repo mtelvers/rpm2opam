@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "impressive-0.13.2-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "impressive-0.13.2-1.3.noarch.rpm"]
+depends: [
+  "ghostscript" 
+  "python311-Pillow" 
+  "python311-base" 
+  "python311-opengl" 
+  "python311-pygame" 
+]
+extra-source "impressive-0.13.2-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/impressive-0.13.2-1.3.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-ffcode-svn65170-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-ffcode-svn65170-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-environ" 
+  "texlive-kpathsea" 
+  "texlive-microtype" 
+  "texlive-minted" 
+  "texlive-pgf" 
+  "texlive-tcolorbox" 
+  "texlive-xkeyval" 
+]
+extra-source "texlive-ffcode-svn65170-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-ffcode-svn65170-71.fc40.noarch.rpm"
+}

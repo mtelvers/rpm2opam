@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "globus-gram-protocol-13.6-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "globus-gram-protocol-13.6-7.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "globus-common" 
+  "globus-gss-assist" 
+  "globus-gssapi-gsi" 
+  "globus-io" 
+  "perl-libs" 
+]
+extra-source "globus-gram-protocol-13.6-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/globus-gram-protocol-13.6-7.fc40.x86_64.rpm"
+}

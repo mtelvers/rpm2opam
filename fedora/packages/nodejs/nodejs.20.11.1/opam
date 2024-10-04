@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nodejs-20.11.1-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nodejs-20.11.1-2.fc40.x86_64.rpm"]
+depends: [
+  "ca-certificates" 
+  "glibc" 
+  "libuv" {>= "1.46.0"}
+  "nodejs-cjs-module-lexer" 
+  "nodejs-libs" 
+  "nodejs-undici" 
+]
+extra-source "nodejs-20.11.1-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nodejs-20.11.1-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "squid-6.10-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "squid-6.10-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-sed" 
+  "glibc" 
+  "krb5" 
+  "libcap2" 
+  "libcom_err2" 
+  "libcrypt1" 
+  "libexpat1" 
+  "libgcc_s1" 
+  "libldap2" 
+  "libltdl7" 
+  "libnettle8" 
+  "libopenssl3" 
+  "libsasl2-3" 
+  "libstdc++6" 
+  "libtdb1" 
+  "libxml2-2" 
+  "pam" 
+  "perl-base" 
+  "permissions" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "squid-6.10-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/squid-6.10-1.1.x86_64.rpm"
+}

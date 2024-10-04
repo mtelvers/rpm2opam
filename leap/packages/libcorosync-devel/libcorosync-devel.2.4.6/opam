@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["/usr/bin/zypper" "-n" "install" "libcorosync-devel-2.4.6-slfo.1.1.8.x86_64.rpm"]
+]
+remove: [
+  ["/usr/bin/zypper" "-n" "remove" "libcorosync-devel-2.4.6-slfo.1.1.8.x86_64.rpm"]
+]
+depends: [
+  "glibc" 
+  "libcfg6" {= "2.4.6"}
+  "libcmap4" {= "2.4.6"}
+  "libcorosync_common4" {= "2.4.6"}
+  "libcpg4" {= "2.4.6"}
+  "libqb-devel" 
+  "libquorum5" {= "2.4.6"}
+  "libsam4" {= "2.4.6"}
+  "libtotem_pg5" {= "2.4.6"}
+  "libvotequorum8" {= "2.4.6"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libcorosync-devel-2.4.6-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libcorosync-devel-2.4.6-slfo.1.1.8.x86_64.rpm"
+}

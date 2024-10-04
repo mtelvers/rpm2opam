@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-object+pe-devel-0.32.2-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-object+pe-devel-0.32.2-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-object+coff-devel" {= "0.32.2"}
+  "rust-object-devel" {= "0.32.2"}
+]
+extra-source "rust-object+pe-devel-0.32.2-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-object+pe-devel-0.32.2-2.fc40.noarch.rpm"
+}

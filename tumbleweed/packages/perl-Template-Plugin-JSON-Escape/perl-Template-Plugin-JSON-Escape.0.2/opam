@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Template-Plugin-JSON-Escape-0.02-1.18.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Template-Plugin-JSON-Escape-0.02-1.18.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-JSON" {>= "2.12"}
+  "perl-Template-Toolkit" {>= "2.20"}
+]
+extra-source "perl-Template-Plugin-JSON-Escape-0.02-1.18.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Template-Plugin-JSON-Escape-0.02-1.18.noarch.rpm"
+}

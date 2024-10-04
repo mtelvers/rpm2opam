@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "keylime-agent-rust-0.2.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "keylime-agent-rust-0.2.4-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "keylime-base" 
+  "libarchive" 
+  "libgcc" 
+  "openssl-libs" 
+  "tpm2-tss" 
+  "util-linux-core" 
+]
+extra-source "keylime-agent-rust-0.2.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/keylime-agent-rust-0.2.4-1.fc40.x86_64.rpm"
+}

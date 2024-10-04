@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-once_cell+race-devel-1.19.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-once_cell+race-devel-1.19.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-once_cell-devel" {= "1.19.0"}
+]
+extra-source "rust-once_cell+race-devel-1.19.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-once_cell+race-devel-1.19.0-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-App-MFILE-WWW-0.176-1.26.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-App-MFILE-WWW-0.176-1.26.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-App-CELL" {>= "0.222"}
+  "perl-File-ShareDir" 
+  "perl-JSON" 
+  "perl-Log-Any" 
+  "perl-Params-Validate" {>= "1.6"}
+  "perl-Plack" 
+  "perl-Plack-Middleware-Session" 
+  "perl-Try-Tiny" 
+  "perl-Web-Machine" {>= "0.15"}
+  "perl-base" 
+  "perl-libwww-perl" 
+]
+extra-source "perl-App-MFILE-WWW-0.176-1.26.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-App-MFILE-WWW-0.176-1.26.noarch.rpm"
+}

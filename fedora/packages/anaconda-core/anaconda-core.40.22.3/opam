@@ -1,0 +1,47 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "anaconda-core-40.22.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "anaconda-core-40.22.3-1.fc40.x86_64.rpm"]
+depends: [
+  "NetworkManager" {>= "1.0"}
+  "NetworkManager-libnm" {>= "1.0"}
+  "NetworkManager-team" 
+  "anaconda-tui" {= "40.22.3"}
+  "bash" 
+  "chrony" 
+  "coreutils" 
+  "cracklib-dicts" 
+  "crypto-policies" 
+  "crypto-policies-scripts" 
+  "dbus-daemon" 
+  "flatpak-libs" 
+  "glibc-langpack-en" 
+  "kbd" 
+  "libreport-anaconda" {>= "2.0.21"}
+  "python3" 
+  "python3-blivet" {>= "3.9.0"}
+  "python3-blockdev" {>= "2.1"}
+  "python3-dasbus" {>= "1.3"}
+  "python3-dnf" {>= "3.6.0"}
+  "python3-gobject-base" 
+  "python3-kickstart" {>= "3.52"}
+  "python3-langtable" {>= "0.0.60"}
+  "python3-libs" 
+  "python3-libselinux" 
+  "python3-meh" {>= "0.23"}
+  "python3-pid" 
+  "python3-productmd" 
+  "python3-pwquality" 
+  "python3-pyparted" {>= "2.5"}
+  "python3-requests" 
+  "python3-requests-file" 
+  "python3-requests-ftp" 
+  "python3-rpm" {>= "4.15.0"}
+  "python3-systemd" 
+  "systemd" 
+  "systemd-resolved" 
+  "teamd" 
+  "util-linux" {>= "2.15.1"}
+]
+extra-source "anaconda-core-40.22.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/anaconda-core-40.22.3-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-leaflet-svn56878-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-leaflet-svn56878-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-etex-pkg" 
+  "texlive-everyshi" 
+  "texlive-graphics" 
+  "texlive-kpathsea" 
+  "texlive-psnfss" 
+  "texlive-tools" 
+]
+extra-source "texlive-leaflet-svn56878-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-leaflet-svn56878-71.fc40.noarch.rpm"
+}

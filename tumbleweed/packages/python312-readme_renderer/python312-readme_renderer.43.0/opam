@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-readme_renderer-43.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-readme_renderer-43.0-1.2.noarch.rpm"]
+depends: [
+  "python312-Pygments" {>= "2.5.1"}
+  "python312-base" {= "3.12"}
+  "python312-docutils" {>= "0.13.1"}
+  "python312-nh3" {>= "0.2.14"}
+]
+extra-source "python312-readme_renderer-43.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-readme_renderer-43.0-1.2.noarch.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "opensm-3.3.24-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opensm-3.3.24-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "libopensm9" 
+  "libosmcomp5" 
+  "libosmvendor5" 
+  "logrotate" 
+  "systemd" 
+]
+extra-source "opensm-3.3.24-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/opensm-3.3.24-slfo.1.1.7.x86_64.rpm"
+}

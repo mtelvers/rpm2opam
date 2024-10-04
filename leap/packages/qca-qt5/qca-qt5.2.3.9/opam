@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qca-qt5-2.3.9-slfo.1.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qca-qt5-2.3.9-slfo.1.1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gpg2" {>= "2.0.0"}
+  "libQt5Core5" 
+  "libgcc_s1" 
+  "libgcrypt20" 
+  "libopenssl3" 
+  "libstdc++6" 
+]
+extra-source "qca-qt5-2.3.9-slfo.1.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/qca-qt5-2.3.9-slfo.1.1.2.x86_64.rpm"
+}

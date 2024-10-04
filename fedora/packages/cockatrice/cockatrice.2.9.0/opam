@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cockatrice-2.9.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cockatrice-2.9.0-4.fc40.x86_64.rpm"]
+depends: [
+  "cockatrice-utils" {= "2.9.0"}
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libgcc" 
+  "libstdc++" 
+  "protobuf" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtmultimedia" 
+  "qt5-qtwebsockets" 
+  "wget2-wget" 
+  "zlib-ng-compat" 
+]
+extra-source "cockatrice-2.9.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cockatrice-2.9.0-4.fc40.x86_64.rpm"
+}

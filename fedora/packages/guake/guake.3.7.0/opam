@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "guake-3.7.0-17.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "guake-3.7.0-17.fc40.noarch.rpm"]
+depends: [
+  "keybinder3" 
+  "libnotify" 
+  "libwnck3" 
+  "python3" 
+  "python3-cairo" 
+  "python3-dbus" 
+  "python3-gobject" 
+  "python3-pbr" 
+  "python3-pyxdg" 
+  "vte291" {>= "0.42"}
+]
+extra-source "guake-3.7.0-17.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/guake-3.7.0-17.fc40.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-bat+minimal-application-devel-0.24.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-bat+minimal-application-devel-0.24.0-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bat+clap-devel" {= "0.24.0"}
+  "rust-bat+etcetera-devel" {= "0.24.0"}
+  "rust-bat+paging-devel" {= "0.24.0"}
+  "rust-bat+regex-onig-devel" {= "0.24.0"}
+  "rust-bat+wild-devel" {= "0.24.0"}
+  "rust-bat-devel" {= "0.24.0"}
+]
+extra-source "rust-bat+minimal-application-devel-0.24.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-bat+minimal-application-devel-0.24.0-4.fc40.noarch.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-actix-server-devel-2.3.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-actix-server-devel-2.3.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-actix-rt-devel" 
+  "rust-actix-service+default-devel" 
+  "rust-actix-utils+default-devel" 
+  "rust-futures-core+alloc-devel" 
+  "rust-futures-core-devel" 
+  "rust-futures-util+alloc-devel" 
+  "rust-futures-util-devel" 
+  "rust-mio+default-devel" 
+  "rust-mio+net-devel" 
+  "rust-mio+os-poll-devel" 
+  "rust-socket2+default-devel" 
+  "rust-tokio+default-devel" 
+  "rust-tokio+sync-devel" 
+  "rust-tracing+log-devel" 
+  "rust-tracing-devel" 
+]
+extra-source "rust-actix-server-devel-2.3.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-actix-server-devel-2.3.0-2.fc40.noarch.rpm"
+}

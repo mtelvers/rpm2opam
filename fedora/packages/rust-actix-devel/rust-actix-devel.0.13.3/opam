@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-actix-devel-0.13.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-actix-devel-0.13.3-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.68"}
+  "rust-actix-rt-devel" 
+  "rust-bitflags+default-devel" 
+  "rust-bytes+default-devel" 
+  "rust-crossbeam-channel+default-devel" 
+  "rust-futures-core-devel" 
+  "rust-futures-sink-devel" 
+  "rust-futures-task-devel" 
+  "rust-futures-util-devel" 
+  "rust-log+default-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-parking_lot+default-devel" 
+  "rust-pin-project-lite+default-devel" 
+  "rust-smallvec+default-devel" 
+  "rust-tokio+default-devel" 
+  "rust-tokio+io-util-devel" 
+  "rust-tokio+sync-devel" 
+  "rust-tokio-util+codec-devel" 
+  "rust-tokio-util+default-devel" 
+]
+extra-source "rust-actix-devel-0.13.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-actix-devel-0.13.3-1.fc40.noarch.rpm"
+}

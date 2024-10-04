@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "freeradius-server-python3-3.2.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freeradius-server-python3-3.2.5-1.1.x86_64.rpm"]
+depends: [
+  "freeradius-server" {= "3.2.5"}
+  "glibc" 
+  "libpython3_11-1_0" 
+  "python311-base" 
+]
+extra-source "freeradius-server-python3-3.2.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/freeradius-server-python3-3.2.5-1.1.x86_64.rpm"
+}

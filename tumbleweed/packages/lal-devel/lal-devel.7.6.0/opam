@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lal-devel-7.6.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lal-devel-7.6.0-1.1.x86_64.rpm"]
+depends: [
+  "fftw3-devel" 
+  "glibc" 
+  "gsl-devel" 
+  "libfftw3-3" 
+  "liblal20" 
+  "liblalsupport14" 
+  "pkgconf-pkg-config" 
+  "python311-base" 
+  "zlib-devel" 
+]
+extra-source "lal-devel-7.6.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lal-devel-7.6.0-1.1.x86_64.rpm"
+}

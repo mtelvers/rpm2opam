@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libflickcurl-devel-1.26-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libflickcurl-devel-1.26-4.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "libcurl-devel" 
+  "libflickcurl0" {= "1.26"}
+  "libraptor-devel" {>= "1.4.0"}
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libflickcurl-devel-1.26-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libflickcurl-devel-1.26-4.1.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "librasterlite2-tools-1.1.0-0.16.beta1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "librasterlite2-tools-1.1.0-0.16.beta1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgeotiff" 
+  "librasterlite2" {= "1.1.0"}
+  "libspatialite" 
+  "libtiff" 
+  "sqlite-libs" 
+]
+extra-source "librasterlite2-tools-1.1.0-0.16.beta1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/librasterlite2-tools-1.1.0-0.16.beta1.fc40.x86_64.rpm"
+}

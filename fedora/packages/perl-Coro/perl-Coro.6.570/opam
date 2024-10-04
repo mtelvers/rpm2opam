@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Coro-6.570-17.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Coro-6.570-17.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-AnyEvent" {>= "7"}
+  "perl-AnyEvent-AIO" {>= "1"}
+  "perl-AnyEvent-BDB" {>= "1"}
+  "perl-BDB" 
+  "perl-Carp" 
+  "perl-EV" {>= "4"}
+  "perl-Errno" 
+  "perl-Event" {>= "1.8"}
+  "perl-Exporter" 
+  "perl-Guard" {>= "0.5"}
+  "perl-IO" 
+  "perl-IO-AIO" {>= "3.1"}
+  "perl-Net-HTTP" 
+  "perl-Scalar-List-Utils" 
+  "perl-Socket" 
+  "perl-Storable" {>= "2.15"}
+  "perl-base" 
+  "perl-common-sense" 
+  "perl-libnet" 
+  "perl-libs" 
+  "perl-overload" 
+]
+extra-source "perl-Coro-6.570-17.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Coro-6.570-17.fc40.x86_64.rpm"
+}

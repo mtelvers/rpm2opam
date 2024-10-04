@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gcc-go-14.0.1-0.15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcc-go-14.0.1-0.15.fc40.x86_64.rpm"]
+depends: [
+  "alternatives" 
+  "bash" 
+  "gcc" {= "14.0.1"}
+  "glibc" 
+  "gmp" 
+  "libgo" {= "14.0.1"}
+  "libgo-devel" {= "14.0.1"}
+  "libmpc" 
+  "libzstd" 
+  "mpfr" 
+  "zlib-ng-compat" 
+]
+extra-source "gcc-go-14.0.1-0.15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gcc-go-14.0.1-0.15.fc40.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "roc-toolkit-devel-0.3.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "roc-toolkit-devel-0.3.0-1.fc40.x86_64.rpm"]
+depends: [
+  "libunwind-devel" 
+  "libuv-devel" 
+  "openfec-devel" 
+  "openssl-devel" 
+  "pkgconf-pkg-config" 
+  "roc-toolkit" 
+  "speexdsp-devel" 
+]
+extra-source "roc-toolkit-devel-0.3.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/roc-toolkit-devel-0.3.0-1.fc40.x86_64.rpm"
+}

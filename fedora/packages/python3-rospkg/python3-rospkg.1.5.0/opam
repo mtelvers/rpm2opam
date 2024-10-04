@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-rospkg-1.5.0-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-rospkg-1.5.0-5.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-catkin_pkg" 
+  "python3-distro" {>= "1.4"}
+  "python3-pyyaml" 
+]
+extra-source "python3-rospkg-1.5.0-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-rospkg-1.5.0-5.fc40.noarch.rpm"
+}

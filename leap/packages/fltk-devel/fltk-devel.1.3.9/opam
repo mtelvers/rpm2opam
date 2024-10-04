@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fltk-devel-1.3.9-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fltk-devel-1.3.9-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "Mesa-libGL-devel" 
+  "bash-sh" 
+  "glibc" 
+  "libX11-6" 
+  "libX11-devel" 
+  "libfltk1_3" 
+  "libpng16-16" 
+  "libstdc++6" 
+]
+extra-source "fltk-devel-1.3.9-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/fltk-devel-1.3.9-slfo.1.1.8.x86_64.rpm"
+}

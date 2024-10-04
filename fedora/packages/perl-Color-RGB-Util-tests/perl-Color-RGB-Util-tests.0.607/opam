@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Color-RGB-Util-tests-0.607-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Color-RGB-Util-tests-0.607-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Color-RGB-Util" 
+  "perl-IO" 
+  "perl-IPC-Open3" 
+  "perl-PathTools" 
+  "perl-Test-Exception" 
+  "perl-Test-Harness" 
+  "perl-Test-RandomResult" 
+  "perl-Test-Simple" {>= "0.98"}
+  "perl-interpreter" 
+  "perl-libs" {>= "5.10.0"}
+]
+extra-source "perl-Color-RGB-Util-tests-0.607-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Color-RGB-Util-tests-0.607-3.fc40.noarch.rpm"
+}

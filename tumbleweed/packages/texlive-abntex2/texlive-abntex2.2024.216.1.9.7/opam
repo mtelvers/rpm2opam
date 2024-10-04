@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-abntex2-2024.216.1.9.7svn49248-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-abntex2-2024.216.1.9.7svn49248-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-babel" 
+  "texlive-bookmark" 
+  "texlive-breakurl" 
+  "texlive-enumitem" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-hyperref" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-memoir" 
+  "texlive-relsize" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-setspace" 
+  "texlive-textcase" 
+  "texlive-tools" 
+  "texlive-url" 
+]
+extra-source "texlive-abntex2-2024.216.1.9.7svn49248-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-abntex2-2024.216.1.9.7svn49248-57.1.noarch.rpm"
+}

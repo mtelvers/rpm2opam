@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "deepin-kwin-5.4.26-8.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deepin-kwin-5.4.26-8.fc39.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dtkcore" 
+  "glibc" 
+  "gsettings-qt" 
+  "kf5-kconfig-core" 
+  "kf5-kglobalaccel-libs" 
+  "kf5-kwindowsystem" 
+  "kwin-x11" 
+  "libgcc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "deepin-kwin-5.4.26-8.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/deepin-kwin-5.4.26-8.fc39.x86_64.rpm"
+}

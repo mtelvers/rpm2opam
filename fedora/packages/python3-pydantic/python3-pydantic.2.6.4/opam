@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-pydantic-2.6.4-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-pydantic-2.6.4-1.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-annotated-types" {>= "0.4"}
+  "python3-pydantic-core" {= "2.16.3"}
+  "python3-typing-extensions" {>= "4.6.1"}
+]
+extra-source "python3-pydantic-2.6.4-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-pydantic-2.6.4-1.fc40.noarch.rpm"
+}

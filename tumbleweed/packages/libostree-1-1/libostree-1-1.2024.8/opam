@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libostree-1-1-2024.8-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libostree-1-1-2024.8-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libarchive13" 
+  "libcurl-mini4" 
+  "libgpg-error0" 
+  "libgpgme11" 
+  "liblzma5" 
+  "libopenssl3" 
+  "libselinux1" 
+  "libsystemd0" 
+  "libz-ng-compat1" 
+]
+extra-source "libostree-1-1-2024.8-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libostree-1-1-2024.8-1.1.x86_64.rpm"
+}

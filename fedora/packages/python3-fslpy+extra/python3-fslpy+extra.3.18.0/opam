@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-fslpy+extra-3.18.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-fslpy+extra-3.18.0-1.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-fslpy" {= "3.18.0"}
+  "python3-indexed-gzip" {>= "0.7"}
+  "python3-pillow" {>= "3.2"}
+  "python3-rtree" {>= "0.8.3"}
+  "python3-trimesh" {>= "2.37.29"}
+  "python3-wxpython4" {>= "4"}
+]
+extra-source "python3-fslpy+extra-3.18.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-fslpy+extra-3.18.0-1.fc40.noarch.rpm"
+}

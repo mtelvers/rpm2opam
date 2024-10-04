@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "obs-service-snapcraft-0.10.46-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "obs-service-snapcraft-0.10.46-1.1.noarch.rpm"]
+depends: [
+  "git-core" 
+  "obs-service-obs_scm-common" {= "0.10.46"}
+]
+extra-source "obs-service-snapcraft-0.10.46-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/obs-service-snapcraft-0.10.46-1.1.noarch.rpm"
+}

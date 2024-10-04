@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-tasty-hunit-devel-0.10.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-tasty-hunit-devel-0.10.2-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-call-stack-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-tasty-devel" 
+  "ghc-tasty-hunit" {= "0.10.2"}
+]
+extra-source "ghc-tasty-hunit-devel-0.10.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-tasty-hunit-devel-0.10.2-1.2.x86_64.rpm"
+}

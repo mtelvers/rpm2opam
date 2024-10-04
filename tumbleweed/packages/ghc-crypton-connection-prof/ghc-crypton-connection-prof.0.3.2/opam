@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-crypton-connection-prof-0.3.2-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-crypton-connection-prof-0.3.2-2.1.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-basement-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-crypton-connection-devel" {= "0.3.2"}
+  "ghc-crypton-x509-prof" 
+  "ghc-crypton-x509-store-prof" 
+  "ghc-crypton-x509-system-prof" 
+  "ghc-crypton-x509-validation-prof" 
+  "ghc-data-default-class-prof" 
+  "ghc-network-prof" 
+  "ghc-socks-prof" 
+  "ghc-tls-prof" 
+]
+extra-source "ghc-crypton-connection-prof-0.3.2-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-crypton-connection-prof-0.3.2-2.1.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-libspa+v0_3_75-devel-0.8.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-libspa+v0_3_75-devel-0.8.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-libspa+v0_3_65-devel" {= "0.8.0"}
+  "rust-libspa-devel" {= "0.8.0"}
+]
+extra-source "rust-libspa+v0_3_75-devel-0.8.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-libspa+v0_3_75-devel-0.8.0-1.fc40.noarch.rpm"
+}

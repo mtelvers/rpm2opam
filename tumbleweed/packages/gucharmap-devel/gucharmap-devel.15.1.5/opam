@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gucharmap-devel-15.1.5-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gucharmap-devel-15.1.5-2.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.32.0"}
+  "gtk3-devel" {>= "3.4.0"}
+  "libgucharmap_2_90-7" {= "15.1.5"}
+  "pcre2-devel" {>= "10.21"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Gucharmap-2_90" {= "15.1.5"}
+]
+extra-source "gucharmap-devel-15.1.5-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gucharmap-devel-15.1.5-2.1.x86_64.rpm"
+}

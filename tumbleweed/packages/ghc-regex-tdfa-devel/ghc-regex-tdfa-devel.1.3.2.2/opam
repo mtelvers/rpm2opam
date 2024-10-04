@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-regex-tdfa-devel-1.3.2.2-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-regex-tdfa-devel-1.3.2.2-4.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-array-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-mtl-devel" 
+  "ghc-parsec-devel" 
+  "ghc-regex-base-devel" 
+  "ghc-regex-tdfa" {= "1.3.2.2"}
+  "ghc-text-devel" 
+]
+extra-source "ghc-regex-tdfa-devel-1.3.2.2-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-regex-tdfa-devel-1.3.2.2-4.2.x86_64.rpm"
+}

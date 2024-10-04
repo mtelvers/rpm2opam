@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "unity-gtk2-module-0.0.0+17.04.20170403-18.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "unity-gtk2-module-0.0.0+17.04.20170403-18.fc39.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "fontconfig" 
+  "freetype" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "harfbuzz" 
+  "libX11" 
+  "libunity-gtk2-parser" {= "0.0.0"}
+  "pango" 
+  "unity-gtk-module-common" {= "0.0.0"}
+]
+extra-source "unity-gtk2-module-0.0.0+17.04.20170403-18.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/unity-gtk2-module-0.0.0+17.04.20170403-18.fc39.x86_64.rpm"
+}

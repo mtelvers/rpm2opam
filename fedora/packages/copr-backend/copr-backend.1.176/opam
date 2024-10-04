@@ -1,0 +1,47 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "copr-backend-1.176-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "copr-backend-1.176-1.fc40.noarch.rpm"]
+depends: [
+  "ansible" 
+  "bash" 
+  "copr-selinux" 
+  "createrepo_c" {>= "0.16.1"}
+  "crontabs" 
+  "gawk" 
+  "libappstream-glib-builder" 
+  "lighttpd" 
+  "mock" 
+  "modulemd-tools" {>= "0.6"}
+  "obs-signd" 
+  "openssh-clients" 
+  "prunerepo" {>= "1.20"}
+  "python3" 
+  "python3-boto3" 
+  "python3-cachetools" 
+  "python3-copr" 
+  "python3-copr-common" {>= "0.21.1.0"}
+  "python3-daemon" 
+  "python3-dateutil" 
+  "python3-filelock" 
+  "python3-gobject" 
+  "python3-humanize" 
+  "python3-jinja2" 
+  "python3-munch" 
+  "python3-netaddr" 
+  "python3-novaclient" 
+  "python3-packaging" 
+  "python3-pytz" 
+  "python3-requests" 
+  "python3-resalloc" {>= "3.0"}
+  "python3-retask" 
+  "python3-setproctitle" 
+  "python3-tabulate" 
+  "redis" 
+  "rpm-sign" 
+  "rsync" 
+  "systemd" 
+  "zstd" 
+]
+extra-source "copr-backend-1.176-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/copr-backend-1.176-1.fc40.noarch.rpm"
+}

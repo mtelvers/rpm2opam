@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "votca-devel-2024-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "votca-devel-2024-2.fc40.x86_64.rpm"]
+depends: [
+  "boost-devel" 
+  "cmake-filesystem" 
+  "expat-devel" 
+  "fftw-devel" 
+  "hdf5-devel" 
+  "libecpint-devel" 
+  "libint2-devel" 
+  "libxc-devel" 
+  "pkgconf-pkg-config" 
+  "votca" {= "2024"}
+  "votca-libs" {= "2024"}
+]
+extra-source "votca-devel-2024-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/votca-devel-2024-2.fc40.x86_64.rpm"
+}

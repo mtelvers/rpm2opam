@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-wagon-provider-api-3.5.3-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-wagon-provider-api-3.5.3-2.2.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "plexus-utils" 
+]
+extra-source "maven-wagon-provider-api-3.5.3-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-wagon-provider-api-3.5.3-2.2.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mrsh-rsh-server-compat-2.12-14.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mrsh-rsh-server-compat-2.12-14.2.x86_64.rpm"]
+depends: [
+  "mrsh-server" {= "2.12"}
+]
+extra-source "mrsh-rsh-server-compat-2.12-14.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mrsh-rsh-server-compat-2.12-14.2.x86_64.rpm"
+}

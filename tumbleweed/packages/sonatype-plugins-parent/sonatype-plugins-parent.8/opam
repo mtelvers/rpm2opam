@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sonatype-plugins-parent-8-1.27.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sonatype-plugins-parent-8-1.27.noarch.rpm"]
+depends: [
+  "forge-parent" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "sonatype-plugins-parent-8-1.27.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sonatype-plugins-parent-8-1.27.noarch.rpm"
+}

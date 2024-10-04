@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fwupd-tests-1.9.15-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fwupd-tests-1.9.15-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "fwupd" {= "1.9.15"}
+  "glib2" 
+  "glibc" 
+  "gnutls" 
+  "json-glib" 
+  "libcurl" 
+  "libgcc" 
+  "libgudev" 
+  "libgusb" 
+  "libxmlb" 
+]
+extra-source "fwupd-tests-1.9.15-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fwupd-tests-1.9.15-1.fc40.x86_64.rpm"
+}

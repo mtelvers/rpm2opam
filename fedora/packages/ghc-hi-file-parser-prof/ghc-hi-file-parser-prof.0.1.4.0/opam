@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-hi-file-parser-prof-0.1.4.0-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hi-file-parser-prof-0.1.4.0-29.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-binary-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-hi-file-parser-devel" {= "0.1.4.0"}
+  "ghc-mtl-prof" 
+  "ghc-rio-prof" 
+  "ghc-vector-prof" 
+]
+extra-source "ghc-hi-file-parser-prof-0.1.4.0-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-hi-file-parser-prof-0.1.4.0-29.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-Output-1.034-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Output-1.034-1.5.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Capture-Tiny" {>= "0.17"}
+  "perl-File-Temp" {>= "0.17"}
+]
+extra-source "perl-Test-Output-1.034-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-Output-1.034-1.5.noarch.rpm"
+}

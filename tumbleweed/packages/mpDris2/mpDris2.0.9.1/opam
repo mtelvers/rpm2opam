@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mpDris2-0.9.1-3.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mpDris2-0.9.1-3.3.noarch.rpm"]
+depends: [
+  "perl" 
+  "python311-base" 
+  "python311-python-mpd2" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-Notify-0_7" {= "0.7"}
+]
+extra-source "mpDris2-0.9.1-3.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mpDris2-0.9.1-3.3.noarch.rpm"
+}

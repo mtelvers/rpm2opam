@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hwloc-devel-2.10.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hwloc-devel-2.10.0-1.3.x86_64.rpm"]
+depends: [
+  "libhwloc15" {= "2.10.0"}
+  "libpciaccess-devel" 
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "hwloc-devel-2.10.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/hwloc-devel-2.10.0-1.3.x86_64.rpm"
+}

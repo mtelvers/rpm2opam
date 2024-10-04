@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plexus-languages-1.2.0-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plexus-languages-1.2.0-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "java-11-openjdk-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "objectweb-asm" 
+  "qdox" 
+]
+extra-source "plexus-languages-1.2.0-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/plexus-languages-1.2.0-slfo.1.1.4.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-sla-1.6.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-sla-1.6.2-1.1.noarch.rpm"]
+depends: [
+  "gap" {>= "4.12"}
+  "gap-quagroup" {>= "1.8"}
+]
+extra-source "gap-sla-1.6.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-sla-1.6.2-1.1.noarch.rpm"
+}

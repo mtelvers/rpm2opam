@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgtkhotkey-devel-0.2.1-18.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgtkhotkey-devel-0.2.1-18.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "gtk2-devel" 
+  "libgtkhotkey1" {= "0.2.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libgtkhotkey-devel-0.2.1-18.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgtkhotkey-devel-0.2.1-18.1.x86_64.rpm"
+}

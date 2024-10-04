@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsmi2-0.4.8-27.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsmi2-0.4.8-27.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libsmi" {= "0.4.8"}
+]
+extra-source "libsmi2-0.4.8-27.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libsmi2-0.4.8-27.1.x86_64.rpm"
+}

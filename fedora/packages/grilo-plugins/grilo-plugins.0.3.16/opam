@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "grilo-plugins-0.3.16-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grilo-plugins-0.3.16-4.fc40.x86_64.rpm"]
+depends: [
+  "avahi-glib" 
+  "avahi-libs" 
+  "dleyna-server" 
+  "glib2" 
+  "glibc" 
+  "gnome-online-accounts" {>= "3.17.91"}
+  "gom" 
+  "grilo" {>= "0.3.15"}
+  "gstreamer1" 
+  "json-glib" 
+  "libarchive" 
+  "libdmapsharing4" 
+  "libgcc" 
+  "libmediaart" 
+  "liboauth" 
+  "libtracker-sparql" 
+  "libxml2" 
+  "lua-libs" 
+  "pkgconf-pkg-config" 
+  "sqlite-libs" 
+  "totem-pl-parser" 
+]
+extra-source "grilo-plugins-0.3.16-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/grilo-plugins-0.3.16-4.fc40.x86_64.rpm"
+}

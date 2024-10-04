@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-modelr-0.1.11-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-modelr-0.1.11-4.fc40.noarch.rpm"]
+depends: [
+  "R-broom" 
+  "R-core" {= "4.3"}
+  "R-magrittr" 
+  "R-purrr" {>= "0.2.2"}
+  "R-rlang" {>= "1.0.6"}
+  "R-tibble" 
+  "R-tidyr" {>= "0.8.0"}
+  "R-tidyselect" 
+  "R-vctrs" 
+]
+extra-source "R-modelr-0.1.11-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-modelr-0.1.11-4.fc40.noarch.rpm"
+}

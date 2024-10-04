@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "traefik2-2.11.10-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "traefik2-2.11.10-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "systemd" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "traefik2-2.11.10-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/traefik2-2.11.10-1.1.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libbluray-devel-1.3.4-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libbluray-devel-1.3.4-2.3.x86_64.rpm"]
+depends: [
+  "libbluray2" {= "1.3.4"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libbluray-devel-1.3.4-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libbluray-devel-1.3.4-2.3.x86_64.rpm"
+}

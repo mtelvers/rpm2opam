@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wike-lang-3.1.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wike-lang-3.1.0-1.1.noarch.rpm"]
+depends: [
+  "wike" {= "3.1.0"}
+]
+extra-source "wike-lang-3.1.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/wike-lang-3.1.0-1.1.noarch.rpm"
+}

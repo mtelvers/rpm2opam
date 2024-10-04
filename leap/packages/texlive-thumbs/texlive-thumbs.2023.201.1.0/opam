@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-thumbs-2023.201.1.0qsvn33134-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-thumbs-2023.201.1.0qsvn33134-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-alphalph" 
+  "texlive-amsfonts" 
+  "texlive-atbegshi" 
+  "texlive-atveryend" 
+  "texlive-cellspace" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-infwarerr" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-kvoptions" 
+  "texlive-latex" 
+  "texlive-ltxcmds" 
+  "texlive-pagecolor" 
+  "texlive-pageslts" 
+  "texlive-picture" 
+  "texlive-rerunfilecheck" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-xcolor" 
+]
+extra-source "texlive-thumbs-2023.201.1.0qsvn33134-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-thumbs-2023.201.1.0qsvn33134-slfo.1.1.4.noarch.rpm"
+}

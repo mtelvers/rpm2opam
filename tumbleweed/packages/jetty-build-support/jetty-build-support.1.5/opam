@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jetty-build-support-1.5-4.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jetty-build-support-1.5-4.6.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "junit5" 
+  "maven-enforcer-api" 
+  "maven-lib" 
+  "maven-shade-plugin" 
+  "sisu-plexus" 
+]
+extra-source "jetty-build-support-1.5-4.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jetty-build-support-1.5-4.6.noarch.rpm"
+}

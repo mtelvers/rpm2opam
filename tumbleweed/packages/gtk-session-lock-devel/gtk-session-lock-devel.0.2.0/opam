@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtk-session-lock-devel-0.2.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk-session-lock-devel-0.2.0-1.2.x86_64.rpm"]
+depends: [
+  "gtk3-devel" {>= "3.22.0"}
+  "libgtk-session-lock0" {= "0.2.0"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-GtkSessionLock-0_1" {= "0.2.0"}
+  "wayland-devel" {>= "1.10.0"}
+]
+extra-source "gtk-session-lock-devel-0.2.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gtk-session-lock-devel-0.2.0-1.2.x86_64.rpm"
+}

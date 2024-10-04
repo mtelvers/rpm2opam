@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "guvcview-2.1.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "guvcview-2.1.0-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgtk-3-0" 
+  "libgviewaudio-2_2-2" 
+  "libgviewencoder-2_2-2" 
+  "libgviewrender-2_2-2" 
+  "libgviewv4l2core-2_2-2" 
+]
+extra-source "guvcview-2.1.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/guvcview-2.1.0-1.1.x86_64.rpm"
+}

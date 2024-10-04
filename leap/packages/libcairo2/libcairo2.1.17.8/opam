@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcairo2-1.17.8-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcairo2-1.17.8-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXext6" 
+  "libXrender1" 
+  "libfontconfig1" 
+  "libfreetype6" 
+  "libpixman-1-0" 
+  "libpng16-16" 
+  "libxcb-render0" 
+  "libxcb-shm0" 
+  "libxcb1" 
+  "libz-ng-compat1" 
+]
+extra-source "libcairo2-1.17.8-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libcairo2-1.17.8-slfo.1.1.7.x86_64.rpm"
+}

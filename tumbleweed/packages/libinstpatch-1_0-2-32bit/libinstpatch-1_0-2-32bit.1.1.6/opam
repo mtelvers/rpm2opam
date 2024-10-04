@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libinstpatch-1_0-2-32bit-1.1.6-2.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libinstpatch-1_0-2-32bit-1.1.6-2.10.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libglib-2_0-0-32bit" 
+  "libgobject-2_0-0-32bit" 
+  "libsndfile1-32bit" 
+]
+extra-source "libinstpatch-1_0-2-32bit-1.1.6-2.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libinstpatch-1_0-2-32bit-1.1.6-2.10.x86_64.rpm"
+}

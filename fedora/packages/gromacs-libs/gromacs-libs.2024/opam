@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gromacs-libs-2024-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gromacs-libs-2024-1.fc40.x86_64.rpm"]
+depends: [
+  "fftw-libs-double" 
+  "fftw-libs-single" 
+  "flexiblas-netlib" 
+  "glibc" 
+  "libgcc" 
+  "libgomp" 
+  "libstdc++" 
+  "lmfit" 
+  "muParser" 
+  "ocl-icd" 
+  "tng" 
+]
+extra-source "gromacs-libs-2024-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gromacs-libs-2024-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-ogr-0.45.0-2.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-ogr-0.45.0-2.5.noarch.rpm"]
+depends: [
+  "python310-Deprecated" 
+  "python310-GitPython" 
+  "python310-PyGithub" 
+  "python310-PyYAML" 
+  "python310-base" {= "3.10"}
+  "python310-cryptography" 
+  "python310-python-gitlab" 
+  "python310-requests" 
+]
+extra-source "python310-ogr-0.45.0-2.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-ogr-0.45.0-2.5.noarch.rpm"
+}

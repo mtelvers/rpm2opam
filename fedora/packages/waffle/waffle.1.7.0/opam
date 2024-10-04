@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "waffle-1.7.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "waffle-1.7.0-6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11" 
+  "libX11-xcb" 
+  "libxcb" 
+  "systemd-libs" 
+]
+extra-source "waffle-1.7.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/waffle-1.7.0-6.fc40.x86_64.rpm"
+}

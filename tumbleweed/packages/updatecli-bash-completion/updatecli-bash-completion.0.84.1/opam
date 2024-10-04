@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "updatecli-bash-completion-0.84.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "updatecli-bash-completion-0.84.1-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "updatecli" {= "0.84.1"}
+]
+extra-source "updatecli-bash-completion-0.84.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/updatecli-bash-completion-0.84.1-1.1.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sddm-themes-0.21.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sddm-themes-0.21.0-4.fc40.noarch.rpm"]
+depends: [
+  "sddm" {= "0.21.0"}
+]
+extra-source "sddm-themes-0.21.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sddm-themes-0.21.0-4.fc40.noarch.rpm"
+}

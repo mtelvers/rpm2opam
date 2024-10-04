@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "erlang-p1_utils-1.0.25-2.fc38.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "erlang-p1_utils-1.0.25-2.fc38.noarch.rpm"]
+depends: [
+  "erlang-compiler" 
+  "erlang-crypto" 
+  "erlang-erts" 
+  "erlang-inets" 
+  "erlang-kernel" 
+  "erlang-stdlib" 
+  "erlang-tools" 
+]
+extra-source "erlang-p1_utils-1.0.25-2.fc38.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/erlang-p1_utils-1.0.25-2.fc38.noarch.rpm"
+}

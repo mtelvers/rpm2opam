@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "MagicPoint-1.13a-35.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "MagicPoint-1.13a-35.fc39.x86_64.rpm"]
+depends: [
+  "fontconfig" 
+  "giflib" 
+  "glibc" {>= "2.37.9000"}
+  "libICE" 
+  "libSM" 
+  "libX11" 
+  "libXext" 
+  "libXft" 
+  "libXmu" 
+  "libXt" 
+  "libjpeg-turbo" 
+  "libmng" 
+  "libpng" 
+  "m17n-lib" 
+  "m17n-lib-tools" 
+  "perl-Perl4-CoreLibs" 
+  "perl-Socket" 
+  "perl-interpreter" 
+  "sharutils" 
+  "zlib-ng-compat" 
+]
+extra-source "MagicPoint-1.13a-35.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/MagicPoint-1.13a-35.fc39.x86_64.rpm"
+}

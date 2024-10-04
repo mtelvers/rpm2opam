@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rabbitmq-server-3.12.10-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rabbitmq-server-3.12.10-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "erlang-eldap" {>= "25"}
+  "erlang-erts" {>= "25"}
+  "erlang-kernel" {>= "25"}
+  "erlang-mnesia" {>= "25"}
+  "erlang-os_mon" {>= "25"}
+  "erlang-public_key" {>= "25"}
+  "erlang-sasl" {>= "25"}
+  "erlang-ssl" {>= "25"}
+  "erlang-stdlib" {>= "25"}
+  "erlang-syntax_tools" {>= "25"}
+  "erlang-tools" {>= "25"}
+  "erlang-xmerl" {>= "25"}
+  "logrotate" 
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "rabbitmq-server-3.12.10-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rabbitmq-server-3.12.10-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Module-Install-1.21-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Install-1.21-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Archive-Zip" {>= "1.37"}
+  "perl-CPAN" 
+  "perl-CPAN-Meta" {>= "1.4413"}
+  "perl-Carp" 
+  "perl-Devel-PPPort" {>= "3.16"}
+  "perl-ExtUtils-MakeMaker" 
+  "perl-ExtUtils-Manifest" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-File-Remove" {>= "1.42"}
+  "perl-File-Temp" 
+  "perl-FileHandle" 
+  "perl-FindBin" 
+  "perl-Module-Build" {>= "0.29"}
+  "perl-Module-CoreList" {>= "2.17"}
+  "perl-Module-ScanDeps" {>= "1.9"}
+  "perl-PathTools" 
+  "perl-Socket" 
+  "perl-YAML-Tiny" {>= "1.38"}
+  "perl-libs" {>= "5.6.0"}
+  "perl-vars" 
+]
+extra-source "perl-Module-Install-1.21-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Module-Install-1.21-4.fc40.noarch.rpm"
+}

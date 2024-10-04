@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-control-center-color-46.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-control-center-color-46.4-1.1.noarch.rpm"]
+depends: [
+  "colord" 
+  "gnome-color-manager" 
+  "gnome-control-center" {= "46.4"}
+]
+extra-source "gnome-control-center-color-46.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-control-center-color-46.4-1.1.noarch.rpm"
+}

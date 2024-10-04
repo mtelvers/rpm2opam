@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Exporter-5.78-510.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Exporter-5.78-510.el10.noarch.rpm"]
+depends: [
+  "perl-libs" 
+]
+extra-source "perl-Exporter-5.78-510.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/perl-Exporter-5.78-510.el10.noarch.rpm"
+}

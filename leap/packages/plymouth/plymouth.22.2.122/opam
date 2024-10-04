@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plymouth-22.02.122+94.4bd41a3-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plymouth-22.02.122+94.4bd41a3-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "glibc" 
+  "libdrm2" 
+  "libply-splash-core5" 
+  "libply5" 
+  "plymouth-branding-openSUSE" 
+  "plymouth-scripts" {= "22.2.122"}
+  "systemd" {>= "186"}
+]
+extra-source "plymouth-22.02.122+94.4bd41a3-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/plymouth-22.02.122+94.4bd41a3-slfo.1.1.7.x86_64.rpm"
+}

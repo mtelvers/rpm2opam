@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tepl-devel-6.8.0-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tepl-devel-6.8.0-2.fc40.x86_64.rpm"]
+depends: [
+  "amtk-devel" 
+  "glib2-devel" {>= "2.74"}
+  "gsettings-desktop-schemas-devel" 
+  "gtk3-devel" {>= "3.22"}
+  "libgedit-gtksourceview-devel" {>= "299.0.4"}
+  "libicu-devel" 
+  "pkgconf-pkg-config" 
+  "tepl" 
+]
+extra-source "tepl-devel-6.8.0-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tepl-devel-6.8.0-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-towncrier-24.8.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-towncrier-24.8.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "git-core" 
+  "python312-Jinja2" 
+  "python312-base" 
+  "python312-click" 
+  "python312-importlib-resources" 
+  "python312-incremental" 
+  "update-alternatives" 
+]
+extra-source "python312-towncrier-24.8.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-towncrier-24.8.0-1.1.noarch.rpm"
+}

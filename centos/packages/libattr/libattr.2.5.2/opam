@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libattr-2.5.2-4.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libattr-2.5.2-4.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+]
+extra-source "libattr-2.5.2-4.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/libattr-2.5.2-4.el10.x86_64.rpm"
+}

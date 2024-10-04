@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-core-4.3.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-core-4.3.3-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bzip2-libs" 
+  "cairo" 
+  "flexiblas-netlib" 
+  "glib2" 
+  "glibc" 
+  "libRmath" {= "4.3.3"}
+  "libX11" 
+  "libXmu" 
+  "libXt" 
+  "libcurl" 
+  "libgcc" 
+  "libgomp" 
+  "libicu" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libtiff" 
+  "libtirpc" 
+  "pango" 
+  "pcre2" 
+  "readline" 
+  "tcl" 
+  "tk" 
+  "tre" 
+  "unzip" 
+  "xdg-utils" 
+  "xz-libs" 
+  "zip" 
+  "zlib-ng-compat" 
+]
+extra-source "R-core-4.3.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-core-4.3.3-1.fc40.x86_64.rpm"
+}

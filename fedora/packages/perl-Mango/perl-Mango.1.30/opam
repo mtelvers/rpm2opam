@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Mango-1.30-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mango-1.30-21.fc40.noarch.rpm"]
+depends: [
+  "perl-Authen-SCRAM" 
+  "perl-B" 
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-Hash-Util-FieldHash" 
+  "perl-Mojolicious" 
+  "perl-Scalar-List-Utils" 
+  "perl-Sys-Hostname" 
+  "perl-Time-HiRes" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-overload" 
+]
+extra-source "perl-Mango-1.30-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Mango-1.30-21.fc40.noarch.rpm"
+}

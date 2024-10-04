@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "poppler-utils-24.02.0-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "poppler-utils-24.02.0-2.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "freetype" 
+  "glibc" 
+  "lcms2" 
+  "libgcc" 
+  "libstdc++" 
+  "poppler" 
+]
+extra-source "poppler-utils-24.02.0-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/poppler-utils-24.02.0-2.fc40.x86_64.rpm"
+}

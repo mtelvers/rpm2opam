@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "konkretcmpi-devel-0.9.2-15.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "konkretcmpi-devel-0.9.2-15.2.x86_64.rpm"]
+depends: [
+  "cim-schema" {>= "2.17"}
+  "cmake" 
+  "glibc" 
+  "libgcc_s1" 
+  "libkonkretcmpi0" 
+  "libstdc++6" 
+  "sblim-cmpi-devel" 
+]
+extra-source "konkretcmpi-devel-0.9.2-15.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/konkretcmpi-devel-0.9.2-15.2.x86_64.rpm"
+}

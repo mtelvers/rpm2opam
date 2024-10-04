@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-App-Nopaste-1.013-1.22.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-App-Nopaste-1.013-1.22.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Browser-Open" 
+  "perl-Class-Load" 
+  "perl-Getopt-Long-Descriptive" 
+  "perl-JSON-MaybeXS" 
+  "perl-Module-Pluggable" 
+  "perl-Module-Runtime" 
+  "perl-Path-Tiny" 
+  "perl-URI" 
+  "perl-WWW-Mechanize" 
+  "perl-base" 
+  "perl-libwww-perl" 
+  "perl-namespace-clean" {>= "0.19"}
+]
+extra-source "perl-App-Nopaste-1.013-1.22.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-App-Nopaste-1.013-1.22.noarch.rpm"
+}

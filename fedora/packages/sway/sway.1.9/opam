@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sway-1.9-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sway-1.9-1.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "json-c" 
+  "libevdev" 
+  "libinput" 
+  "libwayland-client" 
+  "libwayland-cursor" 
+  "libwayland-server" 
+  "libxcb" 
+  "libxkbcommon" 
+  "pango" 
+  "pcre2" 
+  "pixman" 
+  "sway-config-fedora" 
+  "systemd-libs" 
+  "wlroots" 
+  "xcb-util-wm" 
+]
+extra-source "sway-1.9-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sway-1.9-1.fc40.x86_64.rpm"
+}

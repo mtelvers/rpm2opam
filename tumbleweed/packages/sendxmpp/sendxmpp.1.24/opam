@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sendxmpp-1.24-3.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sendxmpp-1.24-3.7.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-IO-Socket-SSL" {>= "0.81"}
+  "perl-Net-XMPP" 
+  "perl-base" 
+]
+extra-source "sendxmpp-1.24-3.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sendxmpp-1.24-3.7.noarch.rpm"
+}

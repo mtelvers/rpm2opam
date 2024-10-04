@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bluez-5.78-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bluez-5.78-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libasound2" 
+  "libdbus-1-3" 
+  "libell0" 
+  "libjson-c5" 
+  "libreadline8" 
+  "libudev-mini1" 
+  "systemd" 
+]
+extra-source "bluez-5.78-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/bluez-5.78-2.1.x86_64.rpm"
+}

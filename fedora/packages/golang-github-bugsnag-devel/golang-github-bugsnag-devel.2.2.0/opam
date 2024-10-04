@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-bugsnag-devel-2.2.0-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-bugsnag-devel-2.2.0-5.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-bitly-simplejson-devel" 
+  "golang-github-bugsnag-panicwrap-devel" 
+  "golang-github-gin-gonic-devel" 
+  "golang-github-google-uuid-devel" 
+  "golang-github-martini-devel" 
+  "golang-github-pkg-errors-devel" 
+  "golang-github-revel-devel" 
+  "golang-github-urfave-negroni-devel" 
+]
+extra-source "golang-github-bugsnag-devel-2.2.0-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-bugsnag-devel-2.2.0-5.fc40.noarch.rpm"
+}

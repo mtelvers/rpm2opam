@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-async-session-devel-3.0.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-async-session-devel-3.0.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-anyhow+default-devel" 
+  "rust-async-lock+default-devel" 
+  "rust-async-trait+default-devel" 
+  "rust-base64+default-devel" 
+  "rust-bincode+default-devel" 
+  "rust-blake3+default-devel" 
+  "rust-chrono+clock-devel" 
+  "rust-chrono+serde-devel" 
+  "rust-chrono+std-devel" 
+  "rust-chrono-devel" 
+  "rust-hmac+default-devel" 
+  "rust-log+default-devel" 
+  "rust-rand+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde+rc-devel" 
+  "rust-serde_json+default-devel" 
+  "rust-sha2+default-devel" 
+]
+extra-source "rust-async-session-devel-3.0.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-async-session-devel-3.0.0-3.fc40.noarch.rpm"
+}

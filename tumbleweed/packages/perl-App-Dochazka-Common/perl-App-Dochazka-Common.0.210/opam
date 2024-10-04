@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-App-Dochazka-Common-0.210-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-App-Dochazka-Common-0.210-1.7.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Params-Validate" {>= "1.6"}
+  "perl-Test-Deep" 
+]
+extra-source "perl-App-Dochazka-Common-0.210-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-App-Dochazka-Common-0.210-1.7.noarch.rpm"
+}

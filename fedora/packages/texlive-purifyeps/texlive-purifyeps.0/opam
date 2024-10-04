@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-purifyeps-svn29725-81.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-purifyeps-svn29725-81.fc40.noarch.rpm"]
+depends: [
+  "perl-English" 
+  "perl-File-Basename" 
+  "perl-File-Temp" 
+  "perl-File-Which" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Pod-Usage" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-podlators" 
+  "texlive-base" 
+  "texlive-kpathsea" 
+]
+extra-source "texlive-purifyeps-svn29725-81.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-purifyeps-svn29725-81.fc40.noarch.rpm"
+}

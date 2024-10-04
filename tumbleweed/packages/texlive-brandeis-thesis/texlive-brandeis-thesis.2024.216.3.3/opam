@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-brandeis-thesis-2024.216.3.3svn68092-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-brandeis-thesis-2024.216.3.3svn68092-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-babel" 
+  "texlive-csquotes" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-geometry" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-psnfss" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-sectsty" 
+  "texlive-setspace" 
+  "texlive-silence" 
+  "texlive-titlesec" 
+  "texlive-tocloft" 
+]
+extra-source "texlive-brandeis-thesis-2024.216.3.3svn68092-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-brandeis-thesis-2024.216.3.3svn68092-55.1.noarch.rpm"
+}

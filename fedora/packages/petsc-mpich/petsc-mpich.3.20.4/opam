@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "petsc-mpich-3.20.4-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "petsc-mpich-3.20.4-4.fc40.x86_64.rpm"]
+depends: [
+  "MUMPS-mpich" 
+  "flexiblas-netlib" 
+  "glibc" 
+  "hdf5-mpich" 
+  "hypre-mpich" 
+  "libX11" 
+  "libgcc" 
+  "libquadmath" 
+  "libstdc++" 
+  "metis" 
+  "mpich" 
+  "ptscotch-mpich" 
+  "ptscotch-mpich-devel" 
+  "scalapack-mpich" 
+  "superlu_dist-mpich" 
+]
+extra-source "petsc-mpich-3.20.4-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/petsc-mpich-3.20.4-4.fc40.x86_64.rpm"
+}

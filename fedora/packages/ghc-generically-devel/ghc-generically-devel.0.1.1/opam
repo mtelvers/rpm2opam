@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-generically-devel-0.1.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-generically-devel-0.1.1-5.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-base-orphans-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-generically" {= "0.1.1"}
+]
+extra-source "ghc-generically-devel-0.1.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-generically-devel-0.1.1-5.fc40.x86_64.rpm"
+}

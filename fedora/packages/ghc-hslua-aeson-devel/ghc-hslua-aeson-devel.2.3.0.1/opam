@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-hslua-aeson-devel-2.3.0.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hslua-aeson-devel-2.3.0.1-5.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-hashable-devel" 
+  "ghc-hslua-aeson" {= "2.3.0.1"}
+  "ghc-hslua-core-devel" 
+  "ghc-hslua-marshalling-devel" 
+  "ghc-mtl-devel" 
+  "ghc-scientific-devel" 
+  "ghc-text-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-hslua-aeson-devel-2.3.0.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-hslua-aeson-devel-2.3.0.1-5.fc40.x86_64.rpm"
+}

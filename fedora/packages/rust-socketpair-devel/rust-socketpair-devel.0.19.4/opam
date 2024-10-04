@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-socketpair-devel-0.19.4-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-socketpair-devel-0.19.4-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-io-extras+default-devel" 
+  "rust-io-lifetimes-devel" 
+  "rust-rustix+default-devel" 
+  "rust-rustix+net-devel" 
+]
+extra-source "rust-socketpair-devel-0.19.4-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-socketpair-devel-0.19.4-2.fc40.noarch.rpm"
+}

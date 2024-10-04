@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postgresql13-postgis-3.5.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql13-postgis-3.5.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libSFCGAL1" 
+  "libgcc_s1" 
+  "libgdal35" 
+  "libgeos_c1" 
+  "libgtk-2_0-0" 
+  "libjson-c5" 
+  "libpcre2-8-0" 
+  "libpq5" 
+  "libproj25" 
+  "libprotobuf-c1" 
+  "libstdc++6" 
+  "libxml2-2" 
+  "perl-base" 
+  "postgresql13-server" {>= "13.16"}
+  "proj" 
+  "update-alternatives" 
+]
+extra-source "postgresql13-postgis-3.5.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/postgresql13-postgis-3.5.0-1.1.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "emacs-ddskk-17.1-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "emacs-ddskk-17.1-5.fc40.noarch.rpm"]
+depends: [
+  "emacs" {>= "29.2"}
+  "emacs-common-ddskk" {= "17.1"}
+]
+extra-source "emacs-ddskk-17.1-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/emacs-ddskk-17.1-5.fc40.noarch.rpm"
+}

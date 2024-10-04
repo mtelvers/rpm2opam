@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kubefirst-bash-completion-2.6.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kubefirst-bash-completion-2.6.1-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "kubefirst" {= "2.6.1"}
+]
+extra-source "kubefirst-bash-completion-2.6.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kubefirst-bash-completion-2.6.1-1.1.noarch.rpm"
+}

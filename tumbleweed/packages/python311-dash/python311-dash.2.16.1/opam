@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-dash-2.16.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-dash-2.16.1-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "jupyter-dash" {= "2.16.1"}
+  "python311-Flask" {>= "1.0.4"}
+  "python311-Werkzeug" 
+  "python311-base" 
+  "python311-beautifulsoup4" 
+  "python311-dash-core-components" {= "2.0.0"}
+  "python311-dash-html-components" {= "2.0.0"}
+  "python311-dash-table" {= "5.0.0"}
+  "python311-importlib-metadata" 
+  "python311-nest-asyncio" 
+  "python311-percy" 
+  "python311-plotly" {>= "5.0.0"}
+  "python311-requests" 
+  "python311-retrying" 
+  "python311-setuptools" 
+  "python311-typing_extensions" {>= "4.1.1"}
+  "update-alternatives" 
+]
+extra-source "python311-dash-2.16.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-dash-2.16.1-2.1.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libcmis-0.6.2-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcmis-0.6.2-5.fc40.x86_64.rpm"]
+depends: [
+  "boost-date-time" 
+  "glibc" 
+  "libcurl" 
+  "libgcc" 
+  "libstdc++" 
+  "libxml2" 
+]
+extra-source "libcmis-0.6.2-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libcmis-0.6.2-5.fc40.x86_64.rpm"
+}

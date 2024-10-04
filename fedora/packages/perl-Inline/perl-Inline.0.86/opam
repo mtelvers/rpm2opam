@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Inline-0.86-17.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Inline-0.86-17.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Digest-MD5" 
+  "perl-DynaLoader" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-ExtUtils-MakeMaker" 
+  "perl-Fcntl" 
+  "perl-FindBin" 
+  "perl-PathTools" 
+  "perl-Socket" 
+  "perl-base" 
+  "perl-libs" 
+  "perl-version" {>= "0.82"}
+]
+extra-source "perl-Inline-0.86-17.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Inline-0.86-17.fc40.noarch.rpm"
+}

@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-RT-Test-5.0.5-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-RT-Test-5.0.5-6.fc40.noarch.rpm"]
+depends: [
+  "perl-Data-Dumper" 
+  "perl-Email-Abstract" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-File-Copy" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-File-Which" 
+  "perl-HTTP-Message" 
+  "perl-IPC-Run3" 
+  "perl-JSON" 
+  "perl-MIME-Base64" 
+  "perl-Mojolicious" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-Socket" 
+  "perl-Storable" 
+  "perl-Test-Email" 
+  "perl-Test-NoWarnings" 
+  "perl-Test-Simple" 
+  "perl-Test-WWW-Mechanize" 
+  "perl-Test-WWW-Mechanize-PSGI" 
+  "perl-base" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-parent" 
+  "rt" 
+]
+extra-source "perl-RT-Test-5.0.5-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-RT-Test-5.0.5-6.fc40.noarch.rpm"
+}

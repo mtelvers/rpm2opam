@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MooseX-InsideOut-0.106-38.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-InsideOut-0.106-38.fc40.noarch.rpm"]
+depends: [
+  "perl-Hash-Util-FieldHash-Compat" 
+  "perl-Moose" {>= "0.80"}
+  "perl-Scalar-List-Utils" 
+  "perl-libs" 
+  "perl-namespace-clean" 
+]
+extra-source "perl-MooseX-InsideOut-0.106-38.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MooseX-InsideOut-0.106-38.fc40.noarch.rpm"
+}

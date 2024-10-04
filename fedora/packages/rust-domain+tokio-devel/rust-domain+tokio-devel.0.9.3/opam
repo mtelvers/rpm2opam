@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-domain+tokio-devel-0.9.3-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-domain+tokio-devel-0.9.3-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-domain-devel" {= "0.9.3"}
+  "rust-tokio+default-devel" 
+  "rust-tokio+io-util-devel" 
+  "rust-tokio+macros-devel" 
+  "rust-tokio+net-devel" 
+  "rust-tokio+time-devel" 
+]
+extra-source "rust-domain+tokio-devel-0.9.3-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-domain+tokio-devel-0.9.3-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-usbauth-0.9-1.19.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-usbauth-0.9-1.19.noarch.rpm"]
+depends: [
+  "libusbauth-configparser1" 
+  "ruby3-3-rubygem-ffi" 
+  "xdg-utils" 
+  "yast2" 
+  "yast2-ruby-bindings" 
+]
+extra-source "yast2-usbauth-0.9-1.19.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/yast2-usbauth-0.9-1.19.noarch.rpm"
+}

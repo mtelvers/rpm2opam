@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gjs-1.78.1-slfo.1.1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gjs-1.78.1-slfo.1.1.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgio-2_0-0" 
+  "libgjs0" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+]
+extra-source "gjs-1.78.1-slfo.1.1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/gjs-1.78.1-slfo.1.1.4.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ck-devel-0.7.1-3.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ck-devel-0.7.1-3.fc39.x86_64.rpm"]
+depends: [
+  "ck" {= "0.7.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "ck-devel-0.7.1-3.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/ck-devel-0.7.1-3.fc39.x86_64.rpm"
+}

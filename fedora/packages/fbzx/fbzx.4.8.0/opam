@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fbzx-4.8.0-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fbzx-4.8.0-8.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "alsa-lib" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libgcc" 
+  "libstdc++" 
+  "pulseaudio-libs" 
+]
+extra-source "fbzx-4.8.0-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fbzx-4.8.0-8.fc40.x86_64.rpm"
+}

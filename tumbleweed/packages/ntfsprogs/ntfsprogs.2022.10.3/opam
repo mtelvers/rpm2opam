@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ntfsprogs-2022.10.3-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ntfsprogs-2022.10.3-4.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcrypt20" 
+  "libgnutls30" 
+  "libntfs-3g89" 
+  "libuuid1" 
+]
+extra-source "ntfsprogs-2022.10.3-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ntfsprogs-2022.10.3-4.1.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-ansible-compat-24.9.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-ansible-compat-24.9.1-1.1.noarch.rpm"]
+depends: [
+  "ansible-core" {>= "2.14"}
+  "python311-PyYAML" 
+  "python311-base" {= "3.11"}
+  "python311-jsonschema" {>= "4.17.3"}
+  "python311-packaging" 
+  "python311-subprocess-tee" {>= "0.4.1"}
+]
+extra-source "python3-ansible-compat-24.9.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-ansible-compat-24.9.1-1.1.noarch.rpm"
+}

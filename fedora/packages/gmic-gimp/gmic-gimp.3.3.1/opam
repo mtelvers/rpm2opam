@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gmic-gimp-3.3.1-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gmic-gimp-3.3.1-4.fc40.x86_64.rpm"]
+depends: [
+  "babl" 
+  "fftw-libs-double" 
+  "gegl04" 
+  "gimp-libs" 
+  "glib2" 
+  "glibc" 
+  "gmic" {= "3.3.1"}
+  "libX11" 
+  "libcurl" 
+  "libgcc" 
+  "libgomp" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "zlib-ng-compat" 
+]
+extra-source "gmic-gimp-3.3.1-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gmic-gimp-3.3.1-4.fc40.x86_64.rpm"
+}

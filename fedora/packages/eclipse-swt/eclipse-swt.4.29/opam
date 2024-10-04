@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "eclipse-swt-4.29-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eclipse-swt-4.29-4.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "java-11-openjdk" 
+  "java-21-openjdk" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "libglvnd-glx" 
+  "mesa-libGLU" 
+  "webkit2gtk4-1" 
+]
+extra-source "eclipse-swt-4.29-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/eclipse-swt-4.29-4.fc40.x86_64.rpm"
+}

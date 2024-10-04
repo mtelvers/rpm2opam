@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-gi-docgen-2024.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-gi-docgen-2024.1-1.1.noarch.rpm"]
+depends: [
+  "pkgconf-pkg-config" 
+  "python311-Jinja2" 
+  "python311-Markdown" {> "3.2.0"}
+  "python311-MarkupSafe" 
+  "python311-Pygments" 
+  "python311-base" 
+  "python311-packaging" 
+  "python311-tomli" 
+  "python311-typogrify" 
+]
+extra-source "python3-gi-docgen-2024.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-gi-docgen-2024.1-1.1.noarch.rpm"
+}

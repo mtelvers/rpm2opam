@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libwmf-0.2.13-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libwmf-0.2.13-5.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "freetype" 
+  "gdk-pixbuf2" {>= "2.31.5"}
+  "glib2" 
+  "glibc" 
+  "libX11" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libwmf-lite" {= "0.2.13"}
+  "libxml2" 
+  "urw-base35-fonts" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "libwmf-0.2.13-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libwmf-0.2.13-5.fc40.x86_64.rpm"
+}

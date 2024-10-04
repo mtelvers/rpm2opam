@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-File-Touch-tests-0.12-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-Touch-tests-0.12-8.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "perl-File-Touch" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" {>= "0.88"}
+  "perl-libs" 
+]
+extra-source "perl-File-Touch-tests-0.12-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-File-Touch-tests-0.12-8.fc40.noarch.rpm"
+}

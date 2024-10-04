@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-hawkey-0.73.1-lp160.1.29.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-hawkey-0.73.1-lp160.1.29.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libdnf2" 
+  "libgcc_s1" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libpython3_11-1_0" 
+  "libstdc++6" 
+  "python3-libdnf" {= "0.73.1"}
+  "python311-base" {= "3.11"}
+]
+extra-source "python3-hawkey-0.73.1-lp160.1.29.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/python3-hawkey-0.73.1-lp160.1.29.x86_64.rpm"
+}

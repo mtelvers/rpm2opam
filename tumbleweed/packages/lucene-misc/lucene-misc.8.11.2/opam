@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lucene-misc-8.11.2-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lucene-misc-8.11.2-2.2.x86_64.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "lucene-core" {= "8.11.2"}
+]
+extra-source "lucene-misc-8.11.2-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lucene-misc-8.11.2-2.2.x86_64.rpm"
+}

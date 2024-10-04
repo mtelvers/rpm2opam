@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mozldap-libs-6.0.7-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mozldap-libs-6.0.7-5.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libsasl2-3" 
+  "mozilla-nspr" 
+  "mozilla-nss" 
+]
+extra-source "mozldap-libs-6.0.7-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mozldap-libs-6.0.7-5.2.x86_64.rpm"
+}

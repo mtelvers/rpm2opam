@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libabiword-3_0-devel-3.0.5-5.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libabiword-3_0-devel-3.0.5-5.1.x86_64.rpm"]
+depends: [
+  "cairo-devel" 
+  "enchant-1-devel" {>= "1.2.0"}
+  "enchant-devel" 
+  "fribidi-devel" 
+  "glib2-devel" 
+  "goffice-devel" 
+  "gtk3-devel" 
+  "libX11-devel" 
+  "libabiword-3_0" {= "3.0.5"}
+  "libgsf-devel" 
+  "librsvg-devel" 
+  "libxslt-devel" 
+  "pango-devel" 
+  "pkgconf-pkg-config" 
+  "wv-devel" {>= "1.2.0"}
+]
+extra-source "libabiword-3_0-devel-3.0.5-5.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libabiword-3_0-devel-3.0.5-5.1.x86_64.rpm"
+}

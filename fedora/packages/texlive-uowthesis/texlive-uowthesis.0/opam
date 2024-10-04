@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-uowthesis-svn19700.1.0a-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-uowthesis-svn19700.1.0a-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-fancyhdr" 
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" 
+  "texlive-nextpage" 
+  "texlive-setspace" 
+]
+extra-source "texlive-uowthesis-svn19700.1.0a-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-uowthesis-svn19700.1.0a-71.fc40.noarch.rpm"
+}

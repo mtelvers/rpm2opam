@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "radius-engine-devel-1.1-25.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "radius-engine-devel-1.1-25.fc40.x86_64.rpm"]
+depends: [
+  "SDL_sound-devel" 
+  "compat-lua-devel" 
+  "libpng-devel" 
+  "mesa-libGL-devel" 
+  "mesa-libGLU-devel" 
+  "physfs-devel" 
+  "pkgconf-pkg-config" 
+  "radius-engine" 
+  "sdl12-compat-devel" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "radius-engine-devel-1.1-25.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/radius-engine-devel-1.1-25.fc40.x86_64.rpm"
+}

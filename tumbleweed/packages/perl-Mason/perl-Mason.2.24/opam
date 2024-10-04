@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Mason-2.24-1.28.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mason-2.24-1.28.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Capture-Tiny" 
+  "perl-Class-Load" 
+  "perl-Class-Unload" 
+  "perl-Devel-GlobalDestruction" 
+  "perl-Exception-Class" 
+  "perl-Guard" 
+  "perl-IPC-System-Simple" 
+  "perl-JSON" 
+  "perl-Log-Any" {>= "0.8"}
+  "perl-Method-Signatures-Simple" 
+  "perl-Moose" {>= "1.15"}
+  "perl-MooseX-HasDefaults" {>= "0.3"}
+  "perl-MooseX-StrictConstructor" {>= "0.13"}
+  "perl-Try-Tiny" 
+  "perl-base" 
+]
+extra-source "perl-Mason-2.24-1.28.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Mason-2.24-1.28.noarch.rpm"
+}

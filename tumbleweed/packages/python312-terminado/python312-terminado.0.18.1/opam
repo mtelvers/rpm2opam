@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-terminado-0.18.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-terminado-0.18.1-1.1.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-ptyprocess" 
+  "python312-tornado" {>= "4"}
+]
+extra-source "python312-terminado-0.18.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-terminado-0.18.1-1.1.noarch.rpm"
+}

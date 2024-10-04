@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-File-Flock-2014.01-1.27.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-Flock-2014.01-1.27.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-AnyEvent" 
+  "perl-Data-Structure-Util" 
+  "perl-File-Slurp" 
+  "perl-IO-Event" {>= "0.812"}
+  "perl-Test-SharedFork" 
+]
+extra-source "perl-File-Flock-2014.01-1.27.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-File-Flock-2014.01-1.27.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-cddinterface-2022.11.01-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-cddinterface-2022.11.01-1.4.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "gap" {>= "4.9"}
+  "gap-gapdoc" {>= "1.5"}
+  "glibc" 
+  "libcdd0" 
+  "libgmp10" 
+]
+extra-source "gap-cddinterface-2022.11.01-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gap-cddinterface-2022.11.01-1.4.x86_64.rpm"
+}

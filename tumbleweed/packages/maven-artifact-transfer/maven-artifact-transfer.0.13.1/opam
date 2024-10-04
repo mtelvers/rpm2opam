@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-artifact-transfer-0.13.1-5.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-artifact-transfer-0.13.1-5.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "maven-common-artifact-filters" 
+  "maven-lib" 
+  "maven-resolver-util" 
+  "plexus-containers-component-annotations" 
+  "plexus-utils" 
+  "slf4j" 
+]
+extra-source "maven-artifact-transfer-0.13.1-5.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-artifact-transfer-0.13.1-5.1.noarch.rpm"
+}

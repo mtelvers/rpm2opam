@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-MockDateTime-0.02-1.19.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-MockDateTime-0.02-1.19.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-DateTime" {>= "1"}
+  "perl-DateTime-Format-DateParse" {>= "0.5"}
+  "perl-base" {= "5.40.0"}
+]
+extra-source "perl-Test-MockDateTime-0.02-1.19.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-MockDateTime-0.02-1.19.noarch.rpm"
+}

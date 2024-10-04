@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "graphviz-webp-2.49.3-11.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "graphviz-webp-2.49.3-11.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "graphviz" {= "2.49.3"}
+  "graphviz-gnome" {= "2.49.3"}
+  "libcairo2" 
+  "libgvc6" 
+  "libwebp7" 
+]
+extra-source "graphviz-webp-2.49.3-11.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/graphviz-webp-2.49.3-11.1.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-axolotl-0.2.3-2.13.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-axolotl-0.2.3-2.13.noarch.rpm"]
+depends: [
+  "python311-axolotl-curve25519" {>= "0.4.1"}
+  "python311-base" {= "3.11"}
+  "python311-cryptography" 
+  "python311-protobuf" {>= "3.0.0.0"}
+]
+extra-source "python311-axolotl-0.2.3-2.13.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-axolotl-0.2.3-2.13.noarch.rpm"
+}

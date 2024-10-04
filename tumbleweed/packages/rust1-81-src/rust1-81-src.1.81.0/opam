@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rust1.81-src-1.81.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust1.81-src-1.81.0-2.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "python311-base" 
+  "rust1-81" {= "1.81.0"}
+]
+extra-source "rust1.81-src-1.81.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/rust1.81-src-1.81.0-2.1.noarch.rpm"
+}

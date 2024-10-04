@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-ccm-0.8.18-2.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-ccm-0.8.18-2.14.noarch.rpm"]
+depends: [
+  "compiz" {< "0.9"}
+  "compizconfig-settings-manager-common" 
+  "python311-base" {= "3.11"}
+  "python311-compizconfig" {< "0.9"}
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-gobject-cairo" 
+  "python311-pycairo" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Pango-1_0" 
+]
+extra-source "python3-ccm-0.8.18-2.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-ccm-0.8.18-2.14.noarch.rpm"
+}

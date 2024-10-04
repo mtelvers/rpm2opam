@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "zathura-djvu-0.2.9-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zathura-djvu-0.2.9-12.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "djvulibre-libs" 
+  "girara" 
+  "glib2" 
+  "glibc" 
+  "zathura" {>= "0.3.8"}
+]
+extra-source "zathura-djvu-0.2.9-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/z/zathura-djvu-0.2.9-12.fc40.x86_64.rpm"
+}

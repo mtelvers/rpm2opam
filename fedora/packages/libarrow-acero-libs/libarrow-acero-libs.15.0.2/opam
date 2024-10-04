@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libarrow-acero-libs-15.0.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libarrow-acero-libs-15.0.2-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libarrow" {= "15.0.2"}
+  "libarrow-doc" {= "15.0.2"}
+  "libgcc" 
+  "libstdc++" 
+  "openssl" 
+]
+extra-source "libarrow-acero-libs-15.0.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libarrow-acero-libs-15.0.2-3.fc40.x86_64.rpm"
+}

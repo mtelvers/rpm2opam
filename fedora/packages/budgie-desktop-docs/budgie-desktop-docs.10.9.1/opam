@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "budgie-desktop-docs-10.9.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "budgie-desktop-docs-10.9.1-2.fc40.noarch.rpm"]
+depends: [
+  "budgie-desktop" {= "10.9.1"}
+  "gtk-doc" 
+]
+extra-source "budgie-desktop-docs-10.9.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/budgie-desktop-docs-10.9.1-2.fc40.noarch.rpm"
+}

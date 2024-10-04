@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-moksha-hub-1.5.17-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-moksha-hub-1.5.17-23.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-daemon" 
+  "python3-moksha-common" {>= "1.0.6"}
+  "python3-pyasn1" 
+  "python3-six" 
+  "python3-stomper" 
+  "python3-twisted" 
+  "python3-txws" 
+  "python3-txzmq" 
+  "python3-zmq" 
+]
+extra-source "python3-moksha-hub-1.5.17-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-moksha-hub-1.5.17-23.fc40.noarch.rpm"
+}

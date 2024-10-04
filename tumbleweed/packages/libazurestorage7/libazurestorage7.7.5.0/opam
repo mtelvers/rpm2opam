@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libazurestorage7-7.5.0-1.23.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libazurestorage7-7.5.0-1.23.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libboost_log1_86_0" 
+  "libcpprest2_10" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libstdc++6" 
+  "libuuid1" 
+  "libxml2-2" 
+]
+extra-source "libazurestorage7-7.5.0-1.23.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libazurestorage7-7.5.0-1.23.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "media-player-info-23-15.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "media-player-info-23-15.fc40.noarch.rpm"]
+depends: [
+  "systemd-udev" 
+]
+extra-source "media-player-info-23-15.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/media-player-info-23-15.fc40.noarch.rpm"
+}

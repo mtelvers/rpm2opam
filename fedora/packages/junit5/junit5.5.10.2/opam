@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "junit5-5.10.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "junit5-5.10.2-3.fc40.noarch.rpm"]
+depends: [
+  "assertj-core" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "junit" 
+  "opentest4j" 
+  "univocity-parsers" 
+]
+extra-source "junit5-5.10.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/junit5-5.10.2-3.fc40.noarch.rpm"
+}

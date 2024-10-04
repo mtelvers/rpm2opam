@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "WindowMaker-0.96.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "WindowMaker-0.96.0-3.fc40.x86_64.rpm"]
+depends: [
+  "WINGs-libs" {= "0.96.0"}
+  "bash" 
+  "desktop-backgrounds-compat" 
+  "fontconfig" 
+  "glibc" 
+  "libX11" 
+  "libXext" 
+  "libXinerama" 
+  "libXpm" 
+  "libXrandr" 
+  "perl-interpreter" 
+]
+extra-source "WindowMaker-0.96.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/WindowMaker-0.96.0-3.fc40.x86_64.rpm"
+}

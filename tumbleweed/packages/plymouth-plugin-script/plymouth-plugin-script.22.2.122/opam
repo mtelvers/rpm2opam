@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plymouth-plugin-script-22.02.122+94.4bd41a3-11.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plymouth-plugin-script-22.02.122+94.4bd41a3-11.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libply-splash-core5" 
+  "libply-splash-graphics5" 
+  "libply5" {= "22.2.122"}
+]
+extra-source "plymouth-plugin-script-22.02.122+94.4bd41a3-11.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/plymouth-plugin-script-22.02.122+94.4bd41a3-11.1.x86_64.rpm"
+}

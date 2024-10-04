@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libX11-6-1.8.10-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libX11-6-1.8.10-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-data" {>= "1.8.10"}
+  "libxcb1" 
+]
+extra-source "libX11-6-1.8.10-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libX11-6-1.8.10-1.1.x86_64.rpm"
+}

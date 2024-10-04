@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libusbredirhost1-0.13.0-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libusbredirhost1-0.13.0-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libusb-1_0-0" 
+  "libusbredirparser1" 
+]
+extra-source "libusbredirhost1-0.13.0-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libusbredirhost1-0.13.0-slfo.1.1.7.x86_64.rpm"
+}

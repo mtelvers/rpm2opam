@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bridge-utils-devel-1.7.1-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bridge-utils-devel-1.7.1-2.2.x86_64.rpm"]
+depends: [
+  "bridge-utils" {= "1.7.1"}
+]
+extra-source "bridge-utils-devel-1.7.1-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/bridge-utils-devel-1.7.1-2.2.x86_64.rpm"
+}

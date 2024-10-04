@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mate-disk-image-mounter-1.28.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mate-disk-image-mounter-1.28.0-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgtk-3-0" 
+  "libudisks2-0" 
+]
+extra-source "mate-disk-image-mounter-1.28.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mate-disk-image-mounter-1.28.0-1.1.x86_64.rpm"
+}

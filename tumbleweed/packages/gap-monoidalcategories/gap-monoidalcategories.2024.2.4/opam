@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-monoidalcategories-2024.02.04-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-monoidalcategories-2024.02.04-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "gap" {>= "4.12.1"}
+  "gap-cap" {>= "2023.8.16"}
+  "gap-toolsforhomalg" {>= "2018.5.22"}
+]
+extra-source "gap-monoidalcategories-2024.02.04-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gap-monoidalcategories-2024.02.04-1.2.x86_64.rpm"
+}

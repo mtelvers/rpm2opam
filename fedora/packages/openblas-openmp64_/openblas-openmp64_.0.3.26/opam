@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openblas-openmp64_-0.3.26-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openblas-openmp64_-0.3.26-4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libgfortran" 
+  "libgomp" 
+  "openblas" {= "0.3.26"}
+]
+extra-source "openblas-openmp64_-0.3.26-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openblas-openmp64_-0.3.26-4.fc40.x86_64.rpm"
+}

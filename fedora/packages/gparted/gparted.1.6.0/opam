@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gparted-1.6.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gparted-1.6.0-1.fc40.x86_64.rpm"]
+depends: [
+  "atkmm" 
+  "bash" 
+  "cairomm" 
+  "glib2" 
+  "glibc" 
+  "glibmm2-4" 
+  "gnome-shell" 
+  "gtk3" 
+  "gtkmm3-0" 
+  "libgcc" 
+  "libsigc++20" 
+  "libstdc++" 
+  "libuuid" 
+  "pangomm" 
+  "parted" 
+]
+extra-source "gparted-1.6.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gparted-1.6.0-1.fc40.x86_64.rpm"
+}

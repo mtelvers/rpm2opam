@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-toml_edit+default-devel-0.22.8-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-toml_edit+default-devel-0.22.8-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-toml_edit+display-devel" {= "0.22.8"}
+  "rust-toml_edit+parse-devel" {= "0.22.8"}
+  "rust-toml_edit-devel" {= "0.22.8"}
+]
+extra-source "rust-toml_edit+default-devel-0.22.8-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-toml_edit+default-devel-0.22.8-1.fc40.noarch.rpm"
+}

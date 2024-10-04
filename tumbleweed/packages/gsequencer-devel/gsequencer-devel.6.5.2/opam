@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gsequencer-devel-6.5.2-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gsequencer-devel-6.5.2-2.2.x86_64.rpm"]
+depends: [
+  "alsa-devel" {>= "1.0.25"}
+  "cairo-devel" {>= "1.12.0"}
+  "fontconfig-devel" {>= "2.11.0"}
+  "gdk-pixbuf-devel" {>= "2.26.1"}
+  "glib2-devel" {>= "2.56.0"}
+  "gstreamer-devel" 
+  "gtk4-devel" {>= "4.0.0"}
+  "libags6" {= "6.5.2"}
+  "libgsequencer0" {= "6.5.2"}
+  "libinstpatch-devel" {>= "1.0"}
+  "libjack-devel" 
+  "libsndfile-devel" {>= "1.0.25"}
+  "libsoup-devel" {>= "3.0.0"}
+  "libuuid-devel" {>= "1.0.1"}
+  "libxml2-devel" {>= "2.8.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gsequencer-devel-6.5.2-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gsequencer-devel-6.5.2-2.2.x86_64.rpm"
+}

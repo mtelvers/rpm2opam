@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-warewulf-common-3.8.1-13.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-warewulf-common-3.8.1-13.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "perl" 
+  "perl-DBD-mysql" 
+]
+extra-source "perl-warewulf-common-3.8.1-13.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-warewulf-common-3.8.1-13.2.noarch.rpm"
+}

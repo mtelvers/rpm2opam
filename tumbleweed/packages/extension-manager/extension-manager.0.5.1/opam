@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "extension-manager-0.5.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "extension-manager-0.5.1-2.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libadwaita-1-0" 
+  "libbacktrace0" 
+  "libgtk-4-1" 
+  "libjson-glib-1_0-0" 
+  "libsoup-3_0-0" 
+  "libtext-engine-0_1-0" 
+]
+extra-source "extension-manager-0.5.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/extension-manager-0.5.1-2.1.x86_64.rpm"
+}

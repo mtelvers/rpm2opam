@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vsqlite++-devel-0.3.13-4.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vsqlite++-devel-0.3.13-4.13.x86_64.rpm"]
+depends: [
+  "libvsqlitepp3" {= "0.3.13"}
+]
+extra-source "vsqlite++-devel-0.3.13-4.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vsqlite++-devel-0.3.13-4.13.x86_64.rpm"
+}

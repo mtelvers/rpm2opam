@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Git-Repository-1.325-3.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Git-Repository-1.325-3.6.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Git-Version-Compare" {>= "1.1"}
+  "perl-System-Command" {>= "1.118"}
+  "perl-namespace-clean" 
+]
+extra-source "perl-Git-Repository-1.325-3.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Git-Repository-1.325-3.6.noarch.rpm"
+}

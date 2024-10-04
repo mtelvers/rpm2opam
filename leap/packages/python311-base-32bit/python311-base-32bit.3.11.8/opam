@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-base-32bit-3.11.8-slfo.1.3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-base-32bit-3.11.8-slfo.1.3.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libbz2-1-32bit" 
+  "libcrypt1-32bit" 
+  "libexpat1-32bit" 
+  "libffi8-32bit" 
+  "liblzma5-32bit" 
+  "libmpdec3-32bit" 
+  "libopenssl3-32bit" 
+  "libuuid1-32bit" 
+  "libz1-32bit" 
+  "python311-base" {= "3.11"}
+]
+extra-source "python311-base-32bit-3.11.8-slfo.1.3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/python311-base-32bit-3.11.8-slfo.1.3.3.x86_64.rpm"
+}

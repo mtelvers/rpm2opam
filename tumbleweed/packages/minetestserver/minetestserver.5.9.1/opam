@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "minetestserver-5.9.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "minetestserver-5.9.1-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libcurl-mini4" 
+  "libgcc_s1" 
+  "libgmp10" 
+  "libhiredis1_1_0" 
+  "libjsoncpp25" 
+  "libleveldb1" 
+  "libluajit-5_1-2" 
+  "libncurses6" 
+  "libpq5" 
+  "libspatialindex6" 
+  "libsqlite3-0" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+  "minetest-data" {= "5.9.1"}
+  "shadow" 
+  "systemd" 
+]
+extra-source "minetestserver-5.9.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/minetestserver-5.9.1-1.1.x86_64.rpm"
+}

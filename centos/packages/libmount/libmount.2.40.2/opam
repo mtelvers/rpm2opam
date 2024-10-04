@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmount-2.40.2-4.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmount-2.40.2-4.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libblkid" {= "2.40.2"}
+  "libselinux" 
+  "libuuid" {= "2.40.2"}
+]
+extra-source "libmount-2.40.2-4.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/libmount-2.40.2-4.el10.x86_64.rpm"
+}

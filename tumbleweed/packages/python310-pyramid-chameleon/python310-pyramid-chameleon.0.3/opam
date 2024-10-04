@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pyramid-chameleon-0.3-5.13.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pyramid-chameleon-0.3-5.13.noarch.rpm"]
+depends: [
+  "python310-Chameleon" 
+  "python310-base" {= "3.10"}
+  "python310-pyramid" 
+]
+extra-source "python310-pyramid-chameleon-0.3-5.13.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-pyramid-chameleon-0.3-5.13.noarch.rpm"
+}

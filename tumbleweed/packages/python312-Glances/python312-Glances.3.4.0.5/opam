@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-Glances-3.4.0.5-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-Glances-3.4.0.5-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-bottle" 
+  "python312-defusedxml" 
+  "python312-packaging" 
+  "python312-psutil" {>= "5.3.0"}
+  "python312-requests" 
+  "python312-ujson" 
+  "update-alternatives" 
+]
+extra-source "python312-Glances-3.4.0.5-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-Glances-3.4.0.5-1.2.noarch.rpm"
+}

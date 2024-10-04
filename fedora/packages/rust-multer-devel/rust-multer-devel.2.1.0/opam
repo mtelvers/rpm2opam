@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-multer-devel-2.1.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-multer-devel-2.1.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bytes+default-devel" 
+  "rust-encoding_rs+default-devel" 
+  "rust-futures-util-devel" 
+  "rust-http+default-devel" 
+  "rust-httparse+default-devel" 
+  "rust-log+default-devel" 
+  "rust-memchr+default-devel" 
+  "rust-mime+default-devel" 
+  "rust-spin+spin_mutex-devel" 
+  "rust-spin-devel" 
+  "rust-version_check+default-devel" 
+]
+extra-source "rust-multer-devel-2.1.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-multer-devel-2.1.0-3.fc40.noarch.rpm"
+}

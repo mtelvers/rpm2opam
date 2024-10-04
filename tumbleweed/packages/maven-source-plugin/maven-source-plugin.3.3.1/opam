@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-source-plugin-3.3.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-source-plugin-3.3.1-1.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-archiver" 
+  "plexus-archiver" 
+  "plexus-utils" 
+]
+extra-source "maven-source-plugin-3.3.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-source-plugin-3.3.1-1.1.noarch.rpm"
+}

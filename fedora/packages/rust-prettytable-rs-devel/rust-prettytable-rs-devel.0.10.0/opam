@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-prettytable-rs-devel-0.10.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-prettytable-rs-devel-0.10.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-encode_unicode+default-devel" 
+  "rust-is-terminal+default-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-term+default-devel" 
+  "rust-unicode-width+default-devel" 
+]
+extra-source "rust-prettytable-rs-devel-0.10.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-prettytable-rs-devel-0.10.0-2.fc40.noarch.rpm"
+}

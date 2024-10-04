@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tcl-8.6.13-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tcl-8.6.13-2.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "zlib-ng-compat" 
+]
+extra-source "tcl-8.6.13-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tcl-8.6.13-2.fc40.x86_64.rpm"
+}

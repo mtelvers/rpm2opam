@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-phpSmug-2.1-25.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-phpSmug-2.1-25.fc40.noarch.rpm"]
+depends: [
+  "php" 
+  "php-pear-HTTP-Request" 
+  "php-pear-Net-Socket" 
+  "php-pear-Net-URL" 
+]
+extra-source "php-phpSmug-2.1-25.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-phpSmug-2.1-25.fc40.noarch.rpm"
+}

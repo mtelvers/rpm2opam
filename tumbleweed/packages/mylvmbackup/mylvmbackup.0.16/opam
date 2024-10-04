@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mylvmbackup-0.16-2.20.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mylvmbackup-0.16-2.20.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Config-IniFiles" 
+  "perl-DBD-mysql" 
+  "perl-DBI" 
+  "perl-File-Copy-Recursive" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-TimeDate" 
+  "perl-base" 
+]
+extra-source "mylvmbackup-0.16-2.20.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mylvmbackup-0.16-2.20.noarch.rpm"
+}

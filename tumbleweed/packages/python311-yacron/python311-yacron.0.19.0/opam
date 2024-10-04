@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-yacron-0.19.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-yacron-0.19.0-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-Jinja2" 
+  "python311-aiohttp" 
+  "python311-aiosmtplib" 
+  "python311-base" 
+  "python311-crontab" 
+  "python311-pytz" 
+  "python311-ruamel-yaml" 
+  "python311-sentry-sdk" 
+  "python311-strictyaml" {>= "0.7.2"}
+  "update-alternatives" 
+]
+extra-source "python311-yacron-0.19.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-yacron-0.19.0-2.1.noarch.rpm"
+}

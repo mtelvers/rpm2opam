@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-ipykernel-6.29.5-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-ipykernel-6.29.5-2.1.noarch.rpm"]
+depends: [
+  "python310-jupyter-client" {>= "6.1.12"}
+  "python312-base" {= "3.12"}
+  "python312-comm" {>= "0.1.1"}
+  "python312-debugpy" {>= "1.6.5"}
+  "python312-ipython" {>= "7.23.1"}
+  "python312-jupyter-client" {>= "6.1.12"}
+  "python312-jupyter-core" 
+  "python312-matplotlib-inline" {>= "0.1"}
+  "python312-nest-asyncio" 
+  "python312-packaging" 
+  "python312-psutil" 
+  "python312-pyzmq" {>= "24"}
+  "python312-tornado" {>= "6.1"}
+  "python312-traitlets" {>= "5.4.0"}
+]
+extra-source "python312-ipykernel-6.29.5-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-ipykernel-6.29.5-2.1.noarch.rpm"
+}

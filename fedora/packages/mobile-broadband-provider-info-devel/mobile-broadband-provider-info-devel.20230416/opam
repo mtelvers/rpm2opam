@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mobile-broadband-provider-info-devel-20230416-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mobile-broadband-provider-info-devel-20230416-5.fc40.noarch.rpm"]
+depends: [
+  "mobile-broadband-provider-info" {= "20230416"}
+  "pkgconf-pkg-config" 
+]
+extra-source "mobile-broadband-provider-info-devel-20230416-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mobile-broadband-provider-info-devel-20230416-5.fc40.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gedit-plugin-session-saver-46.0+5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gedit-plugin-session-saver-46.0+5-1.1.x86_64.rpm"]
+depends: [
+  "gedit" 
+  "gedit-plugins-data" {= "46.0"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-GtkSource-300" {= "300"}
+  "typelib-1_0-PeasGtk-1_0" {= "1.0"}
+  "typelib-1_0-Tepl-6" {= "6"}
+]
+extra-source "gedit-plugin-session-saver-46.0+5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gedit-plugin-session-saver-46.0+5-1.1.x86_64.rpm"
+}

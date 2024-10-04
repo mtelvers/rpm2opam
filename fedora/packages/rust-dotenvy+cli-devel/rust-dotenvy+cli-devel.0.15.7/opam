@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-dotenvy+cli-devel-0.15.7-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-dotenvy+cli-devel-0.15.7-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-dotenvy+clap-devel" {= "0.15.7"}
+  "rust-dotenvy-devel" {= "0.15.7"}
+]
+extra-source "rust-dotenvy+cli-devel-0.15.7-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-dotenvy+cli-devel-0.15.7-3.fc40.noarch.rpm"
+}

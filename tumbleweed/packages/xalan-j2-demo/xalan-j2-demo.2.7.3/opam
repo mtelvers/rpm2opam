@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xalan-j2-demo-2.7.3-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xalan-j2-demo-2.7.3-3.1.noarch.rpm"]
+depends: [
+  "geronimo-servlet-2_4-api" 
+  "xalan-j2" {= "2.7.3"}
+]
+extra-source "xalan-j2-demo-2.7.3-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xalan-j2-demo-2.7.3-3.1.noarch.rpm"
+}

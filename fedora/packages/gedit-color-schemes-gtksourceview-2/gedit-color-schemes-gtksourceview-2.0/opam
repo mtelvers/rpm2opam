@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gedit-color-schemes-gtksourceview-2-0-14.20191019git4f62aae.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gedit-color-schemes-gtksourceview-2-0-14.20191019git4f62aae.fc40.noarch.rpm"]
+depends: [
+  "gedit-color-schemes" {= "0"}
+  "gtksourceview2" 
+]
+extra-source "gedit-color-schemes-gtksourceview-2-0-14.20191019git4f62aae.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gedit-color-schemes-gtksourceview-2-0-14.20191019git4f62aae.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xbean-4.20-slfo.1.2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xbean-4.20-slfo.1.2.3.noarch.rpm"]
+depends: [
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "slf4j" 
+]
+extra-source "xbean-4.20-slfo.1.2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/xbean-4.20-slfo.1.2.3.noarch.rpm"
+}

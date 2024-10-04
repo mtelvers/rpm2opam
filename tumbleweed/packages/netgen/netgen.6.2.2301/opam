@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "netgen-6.2.2301-1.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netgen-6.2.2301-1.13.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "netgen-gui-libs" 
+  "netgen-libs" 
+  "tcl" 
+  "tk" 
+]
+extra-source "netgen-6.2.2301-1.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/netgen-6.2.2301-1.13.x86_64.rpm"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-algolrevived-2024.216.1.052svn56864-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-algolrevived-2024.216.1.052svn56864-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-algolrevived-fonts" {>= "2024"}
+  "texlive-carlisle" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-fontaxes" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-mweights" 
+  "texlive-scripts" 
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-xkeyval" 
+  "texlive-xstring" 
+]
+extra-source "texlive-algolrevived-2024.216.1.052svn56864-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-algolrevived-2024.216.1.052svn56864-57.1.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-html2text-devel-0.6.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-html2text-devel-0.6.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.56"}
+  "rust-html5ever+default-devel" 
+  "rust-markup5ever+default-devel" 
+  "rust-tendril+default-devel" 
+  "rust-unicode-width+default-devel" 
+  "rust-xml5ever+default-devel" 
+]
+extra-source "rust-html2text-devel-0.6.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-html2text-devel-0.6.0-2.fc40.noarch.rpm"
+}

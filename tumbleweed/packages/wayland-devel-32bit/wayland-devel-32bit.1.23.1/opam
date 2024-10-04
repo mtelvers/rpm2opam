@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wayland-devel-32bit-1.23.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wayland-devel-32bit-1.23.1-1.1.x86_64.rpm"]
+depends: [
+  "libffi-devel" 
+  "libwayland-client0-32bit" {= "1.23.1"}
+  "libwayland-cursor0-32bit" {= "1.23.1"}
+  "libwayland-egl1-32bit" {= "1.23.1"}
+  "libwayland-server0-32bit" {= "1.23.1"}
+  "pkgconf-pkg-config" 
+  "wayland-devel" 
+]
+extra-source "wayland-devel-32bit-1.23.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/wayland-devel-32bit-1.23.1-1.1.x86_64.rpm"
+}

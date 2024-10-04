@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "selinux-policy-minimum-20240930-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "selinux-policy-minimum-20240930-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-gawk" 
+  "coreutils" 
+  "policycoreutils" {>= "3.7"}
+  "policycoreutils-python-utils" {>= "3.7"}
+  "selinux-policy" {= "20240930"}
+]
+extra-source "selinux-policy-minimum-20240930-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/selinux-policy-minimum-20240930-1.1.noarch.rpm"
+}

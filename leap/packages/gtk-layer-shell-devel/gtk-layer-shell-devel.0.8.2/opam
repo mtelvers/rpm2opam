@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtk-layer-shell-devel-0.8.2-lp160.1.19.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk-layer-shell-devel-0.8.2-lp160.1.19.x86_64.rpm"]
+depends: [
+  "gtk3-devel" {>= "3.22.0"}
+  "libgtk-layer-shell0" {= "0.8.2"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-GtkLayerShell-0_1" {= "0.8.2"}
+  "wayland-devel" {>= "1.10.0"}
+]
+extra-source "gtk-layer-shell-devel-0.8.2-lp160.1.19.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/gtk-layer-shell-devel-0.8.2-lp160.1.19.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bmc-snmp-proxy-1.8.19-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bmc-snmp-proxy-1.8.19-7.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "exchange-bmc-os-info" 
+  "net-snmp" 
+]
+extra-source "bmc-snmp-proxy-1.8.19-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bmc-snmp-proxy-1.8.19-7.fc40.noarch.rpm"
+}

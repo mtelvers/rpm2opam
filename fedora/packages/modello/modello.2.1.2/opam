@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "modello-2.1.2-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "modello-2.1.2-6.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "google-guice" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+  "jsoup" 
+  "plexus-build-api0" 
+  "plexus-containers-component-annotations" 
+  "plexus-utils" 
+  "sisu" 
+  "velocity" 
+]
+extra-source "modello-2.1.2-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/modello-2.1.2-6.fc40.noarch.rpm"
+}

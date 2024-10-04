@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "opencl-headers-2024.05.08-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opencl-headers-2024.05.08-1.1.noarch.rpm"]
+depends: [
+  "pkgconf-pkg-config" 
+]
+extra-source "opencl-headers-2024.05.08-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/opencl-headers-2024.05.08-1.1.noarch.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-pep508_rs-devel-0.2.4-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-pep508_rs-devel-0.2.4-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-once_cell+default-devel" 
+  "rust-pep440_rs+default-devel" 
+  "rust-regex+std-devel" 
+  "rust-regex-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-tracing+default-devel" 
+  "rust-tracing+log-devel" 
+  "rust-unicode-width+default-devel" 
+  "rust-url+default-devel" 
+  "rust-url+serde-devel" 
+]
+extra-source "rust-pep508_rs-devel-0.2.4-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-pep508_rs-devel-0.2.4-2.fc40.noarch.rpm"
+}

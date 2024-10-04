@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "exempi-2.6.4-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "exempi-2.6.4-5.fc40.x86_64.rpm"]
+depends: [
+  "expat" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "zlib-ng-compat" 
+]
+extra-source "exempi-2.6.4-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/exempi-2.6.4-5.fc40.x86_64.rpm"
+}

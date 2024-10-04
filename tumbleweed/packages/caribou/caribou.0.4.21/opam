@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "caribou-0.4.21-9.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "caribou-0.4.21-9.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libatspi0" 
+  "libgtk-3-0" 
+  "python311-atspi" 
+  "python311-base" {= "3.11"}
+  "typelib-1_0-Caribou-1_0" {= "1.0"}
+  "typelib-1_0-Clutter-1_0" {= "1.0"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+]
+extra-source "caribou-0.4.21-9.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/caribou-0.4.21-9.1.x86_64.rpm"
+}

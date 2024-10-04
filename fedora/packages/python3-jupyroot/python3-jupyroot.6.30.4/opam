@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-jupyroot-6.30.04-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-jupyroot-6.30.04-2.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "python-jupyter-filesystem" 
+  "python3" {= "3.12"}
+  "python3-ipython" 
+  "python3-jsmva" {= "6.30.4"}
+  "python3-metakernel" 
+  "python3-root" {= "6.30.4"}
+  "root-core" 
+  "root-notebook" {= "6.30.4"}
+]
+extra-source "python3-jupyroot-6.30.04-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-jupyroot-6.30.04-2.fc40.x86_64.rpm"
+}

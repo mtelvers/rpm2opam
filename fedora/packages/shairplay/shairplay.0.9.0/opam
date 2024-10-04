@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "shairplay-0.9.0-24.20180824git096b61a.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "shairplay-0.9.0-24.20180824git096b61a.fc40.x86_64.rpm"]
+depends: [
+  "avahi" 
+  "avahi-compat-libdns_sd" 
+  "bash" 
+  "glibc" 
+  "libao" 
+  "shadow-utils" 
+  "shairplay-libs" 
+  "systemd" 
+]
+extra-source "shairplay-0.9.0-24.20180824git096b61a.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/shairplay-0.9.0-24.20180824git096b61a.fc40.x86_64.rpm"
+}

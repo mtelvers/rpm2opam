@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ColPack-cli-1.0.10-22.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ColPack-cli-1.0.10-22.fc40.x86_64.rpm"]
+depends: [
+  "ColPack" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "ColPack-cli-1.0.10-22.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/ColPack-cli-1.0.10-22.fc40.x86_64.rpm"
+}

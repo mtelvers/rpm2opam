@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tpm2-tss-4.0.1-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tpm2-tss-4.0.1-7.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "json-c" 
+  "libuuid" 
+  "openssl-libs" 
+  "shadow-utils" 
+]
+extra-source "tpm2-tss-4.0.1-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tpm2-tss-4.0.1-7.fc40.x86_64.rpm"
+}

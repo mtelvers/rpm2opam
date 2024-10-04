@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-python-launcher-devel-1.0.0-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-python-launcher-devel-1.0.0-11.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-comfy-table+default-devel" 
+  "rust-exitcode+default-devel" 
+  "rust-human-panic+default-devel" 
+  "rust-log+default-devel" 
+  "rust-nix+default-devel" 
+  "rust-stderrlog+default-devel" 
+]
+extra-source "rust-python-launcher-devel-1.0.0-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-python-launcher-devel-1.0.0-11.fc40.noarch.rpm"
+}

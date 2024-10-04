@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "iw-6.7-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "iw-6.7-2.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libnl3" 
+]
+extra-source "iw-6.7-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/iw-6.7-2.fc40.x86_64.rpm"
+}

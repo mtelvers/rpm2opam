@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "coturn-devel-4.6.2-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coturn-devel-4.6.2-4.1.x86_64.rpm"]
+depends: [
+  "coturn" {= "4.6.2"}
+]
+extra-source "coturn-devel-4.6.2-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/coturn-devel-4.6.2-4.1.x86_64.rpm"
+}

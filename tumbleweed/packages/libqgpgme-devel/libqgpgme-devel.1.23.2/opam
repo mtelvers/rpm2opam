@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqgpgme-devel-1.23.2-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqgpgme-devel-1.23.2-4.2.x86_64.rpm"]
+depends: [
+  "libgpgme-devel" {= "1.23.2"}
+  "libgpgmepp-devel" {= "1.23.2"}
+  "libqgpgme15" {= "1.23.2"}
+]
+extra-source "libqgpgme-devel-1.23.2-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libqgpgme-devel-1.23.2-4.2.x86_64.rpm"
+}

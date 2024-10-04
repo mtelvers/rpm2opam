@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fence-agents-apc-4.15.0+git.1724675137.ca9ae93a-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fence-agents-apc-4.15.0+git.1724675137.ca9ae93a-1.1.noarch.rpm"]
+depends: [
+  "fence-agents-common" {= "4.15.0"}
+  "openssh-clients" 
+  "python311-base" 
+]
+extra-source "fence-agents-apc-4.15.0+git.1724675137.ca9ae93a-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/fence-agents-apc-4.15.0+git.1724675137.ca9ae93a-1.1.noarch.rpm"
+}

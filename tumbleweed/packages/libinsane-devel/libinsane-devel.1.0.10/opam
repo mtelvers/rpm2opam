@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libinsane-devel-1.0.10-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libinsane-devel-1.0.10-1.5.x86_64.rpm"]
+depends: [
+  "libinsane1" {>= "1.0.10"}
+  "pkgconf-pkg-config" 
+  "sane-backends-devel" 
+  "typelib-1_0-Libinsane-1_0" {= "1.0.10"}
+]
+extra-source "libinsane-devel-1.0.10-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libinsane-devel-1.0.10-1.5.x86_64.rpm"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-pango-devel-0.13.11.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-pango-devel-0.13.11.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "cairo-devel" 
+  "ghc-array-devel" 
+  "ghc-base-devel" 
+  "ghc-cairo-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-directory-devel" 
+  "ghc-glib-devel" 
+  "ghc-mtl-devel" 
+  "ghc-pango" {= "0.13.11.0"}
+  "ghc-pretty-devel" 
+  "ghc-process-devel" 
+  "ghc-text-devel" 
+  "pango-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "ghc-pango-devel-0.13.11.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-pango-devel-0.13.11.0-1.1.x86_64.rpm"
+}

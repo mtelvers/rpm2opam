@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kde-cli-tools-6.0.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kde-cli-tools-6.0.3-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "kdesu" {= "6.0.3"}
+  "kf6-kcmutils" 
+  "kf6-kcompletion" 
+  "kf6-kconfig" 
+  "kf6-kcoreaddons" 
+  "kf6-ki18n" 
+  "kf6-kiconthemes" 
+  "kf6-kio-core-libs" 
+  "kf6-kio-gui" 
+  "kf6-kio-widgets-libs" 
+  "kf6-kparts" 
+  "kf6-kservice" 
+  "kf6-kwindowsystem" 
+  "libkworkspace6" {>= "6.0.3"}
+  "libstdc++" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qt6-qtsvg" 
+]
+extra-source "kde-cli-tools-6.0.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kde-cli-tools-6.0.3-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "unpaper-7.0.0-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "unpaper-7.0.0-9.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libavcodec-free" 
+  "libavformat-free" 
+  "libavutil-free" 
+]
+extra-source "unpaper-7.0.0-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/unpaper-7.0.0-9.fc40.x86_64.rpm"
+}

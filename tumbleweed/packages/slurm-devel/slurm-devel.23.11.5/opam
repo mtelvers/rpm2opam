@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "slurm-devel-23.11.5-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "slurm-devel-23.11.5-1.3.x86_64.rpm"]
+depends: [
+  "libpmi0" {= "23.11.5"}
+  "libslurm40" {= "23.11.5"}
+  "pkgconf-pkg-config" 
+  "slurm" {= "23.11.5"}
+]
+extra-source "slurm-devel-23.11.5-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/slurm-devel-23.11.5-1.3.x86_64.rpm"
+}

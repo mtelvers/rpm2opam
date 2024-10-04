@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dapl-debug-2.1.10-7.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dapl-debug-2.1.10-7.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "glibc" 
+  "libibverbs1" 
+  "librdmacm1" 
+  "sed" 
+]
+extra-source "dapl-debug-2.1.10-7.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/dapl-debug-2.1.10-7.1.x86_64.rpm"
+}

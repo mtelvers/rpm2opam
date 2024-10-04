@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-panel-3.50.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-panel-3.50.0-6.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "cairo-gobject" 
+  "dconf" 
+  "evolution-data-server" {>= "3.33.2"}
+  "gdk-pixbuf2" 
+  "gdm" 
+  "geocode-glib" 
+  "glib2" 
+  "glibc" 
+  "gnome-desktop3" 
+  "gnome-menus" {>= "3.7.90"}
+  "gnome-panel-libs" {= "3.50.0"}
+  "gtk3" 
+  "harfbuzz" 
+  "hicolor-icon-theme" 
+  "json-glib" 
+  "libX11" 
+  "libXrandr" 
+  "libgweather" 
+  "libical" 
+  "libical-glib" 
+  "libsoup3" 
+  "libwnck3" 
+  "libxml2" 
+  "pango" 
+  "polkit-libs" 
+  "systemd-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "gnome-panel-3.50.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-panel-3.50.0-6.fc40.x86_64.rpm"
+}

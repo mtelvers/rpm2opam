@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qtdeclarative-imports-provides-qt6-1.0-1.38.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qtdeclarative-imports-provides-qt6-1.0-1.38.x86_64.rpm"]
+depends: [
+  "qt6-declarative-imports" {= "6.7.2"}
+]
+extra-source "qtdeclarative-imports-provides-qt6-1.0-1.38.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/qtdeclarative-imports-provides-qt6-1.0-1.38.x86_64.rpm"
+}

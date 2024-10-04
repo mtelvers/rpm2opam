@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-uu_vdir-devel-0.0.23-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-uu_vdir-devel-0.0.23-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-clap+cargo-devel" 
+  "rust-clap+default-devel" 
+  "rust-clap+env-devel" 
+  "rust-clap+wrap_help-devel" 
+  "rust-uu_ls+default-devel" {>= "0.0.18"}
+  "rust-uucore+default-devel" {>= "0.0.19"}
+  "rust-uucore+entries-devel" {>= "0.0.19"}
+  "rust-uucore+fs-devel" {>= "0.0.19"}
+  "rust-uucore+quoting-style-devel" {>= "0.0.19"}
+]
+extra-source "rust-uu_vdir-devel-0.0.23-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-uu_vdir-devel-0.0.23-1.fc40.noarch.rpm"
+}

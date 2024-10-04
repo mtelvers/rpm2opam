@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libxmlrpc3-1.54.06-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxmlrpc3-1.54.06-1.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libxml2-2" 
+  "libxmlrpc_util4" 
+]
+extra-source "libxmlrpc3-1.54.06-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libxmlrpc3-1.54.06-1.6.x86_64.rpm"
+}

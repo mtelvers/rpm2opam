@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-pdftools-3.3.3-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-pdftools-3.3.3-5.fc40.x86_64.rpm"]
+depends: [
+  "R-Rcpp" {>= "0.12.12"}
+  "R-core" {= "4.3"}
+  "R-qpdf" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "poppler-cpp" 
+]
+extra-source "R-pdftools-3.3.3-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-pdftools-3.3.3-5.fc40.x86_64.rpm"
+}

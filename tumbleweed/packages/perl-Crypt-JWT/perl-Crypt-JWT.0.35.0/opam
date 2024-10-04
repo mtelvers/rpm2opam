@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Crypt-JWT-0.35.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Crypt-JWT-0.35.0-2.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-CryptX" {>= "0.67"}
+  "perl-JSON" 
+]
+extra-source "perl-Crypt-JWT-0.35.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Crypt-JWT-0.35.0-2.2.noarch.rpm"
+}

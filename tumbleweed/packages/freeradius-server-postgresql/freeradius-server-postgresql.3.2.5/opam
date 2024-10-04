@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "freeradius-server-postgresql-3.2.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freeradius-server-postgresql-3.2.5-1.1.x86_64.rpm"]
+depends: [
+  "freeradius-server" {= "3.2.5"}
+  "glibc" 
+  "libpq5" 
+]
+extra-source "freeradius-server-postgresql-3.2.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/freeradius-server-postgresql-3.2.5-1.1.x86_64.rpm"
+}

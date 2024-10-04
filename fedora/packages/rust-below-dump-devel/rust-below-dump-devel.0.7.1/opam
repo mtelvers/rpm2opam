@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-below-dump-devel-0.7.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-below-dump-devel-0.7.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-anyhow+default-devel" 
+  "rust-below-common+default-devel" 
+  "rust-below-model+default-devel" 
+  "rust-below-render+default-devel" 
+  "rust-below-store+default-devel" 
+  "rust-below_derive+default-devel" 
+  "rust-clap+default-devel" 
+  "rust-clap+derive-devel" 
+  "rust-clap+env-devel" 
+  "rust-clap+string-devel" 
+  "rust-clap+unicode-devel" 
+  "rust-clap+wrap_help-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-regex+default-devel" 
+  "rust-serde_json+default-devel" 
+  "rust-serde_json+float_roundtrip-devel" 
+  "rust-serde_json+unbounded_depth-devel" 
+  "rust-slog+default-devel" 
+  "rust-slog+max_level_trace-devel" 
+  "rust-slog+nested-values-devel" 
+  "rust-tar+default-devel" 
+  "rust-tempdir+default-devel" 
+  "rust-toml+default-devel" 
+]
+extra-source "rust-below-dump-devel-0.7.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-below-dump-devel-0.7.1-2.fc40.noarch.rpm"
+}

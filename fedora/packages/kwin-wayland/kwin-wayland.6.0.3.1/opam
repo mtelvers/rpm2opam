@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kwin-wayland-6.0.3.1-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kwin-wayland-6.0.3.1-2.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kdecoration" 
+  "kf6-kconfig" 
+  "kf6-kconfigwidgets" 
+  "kf6-kcoreaddons" 
+  "kf6-kcrash" 
+  "kf6-kdbusaddons" 
+  "kf6-kglobalaccel" 
+  "kf6-ki18n" 
+  "kf6-kidletime" 
+  "kf6-knotifications" 
+  "kf6-kservice" 
+  "kf6-ksvg" 
+  "kf6-kwindowsystem" 
+  "kglobalacceld" 
+  "kwayland-integration" 
+  "kwin-common" {= "6.0.3.1"}
+  "kwin-libs" {= "6.0.3.1"}
+  "libepoxy" 
+  "libstdc++" 
+  "libxcb" 
+  "qaccessibilityclient-qt6" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qt6-qtdeclarative" 
+  "xorg-x11-server-Xwayland" 
+]
+extra-source "kwin-wayland-6.0.3.1-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kwin-wayland-6.0.3.1-2.fc40.x86_64.rpm"
+}

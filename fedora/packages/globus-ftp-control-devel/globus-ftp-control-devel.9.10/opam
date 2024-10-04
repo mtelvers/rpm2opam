@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "globus-ftp-control-devel-9.10-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "globus-ftp-control-devel-9.10-6.fc40.x86_64.rpm"]
+depends: [
+  "globus-common-devel" {>= "14"}
+  "globus-ftp-control" {= "9.10"}
+  "globus-gss-assist-devel" {>= "11"}
+  "globus-gssapi-error-devel" {>= "4"}
+  "globus-gssapi-gsi-devel" {>= "13"}
+  "globus-io-devel" {>= "11"}
+  "globus-xio-devel" {>= "3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "globus-ftp-control-devel-9.10-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/globus-ftp-control-devel-9.10-6.fc40.x86_64.rpm"
+}

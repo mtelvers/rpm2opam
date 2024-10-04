@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-x509-system-prof-1.6.7-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-x509-system-prof-1.6.7-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+  "ghc-mtl-prof" 
+  "ghc-pem-prof" 
+  "ghc-process-prof" 
+  "ghc-x509-prof" 
+  "ghc-x509-store-prof" 
+  "ghc-x509-system-devel" {= "1.6.7"}
+]
+extra-source "ghc-x509-system-prof-1.6.7-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-x509-system-prof-1.6.7-8.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lua51-luasql-2.6.0-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lua51-luasql-2.6.0-1.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libiodbc2" 
+  "libmariadb3" 
+  "libpq5" 
+  "libsqlite3-0" 
+  "lua51" 
+]
+extra-source "lua51-luasql-2.6.0-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lua51-luasql-2.6.0-1.5.x86_64.rpm"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvirt-daemon-driver-storage-core-10.0.0-slfo.1.3.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvirt-daemon-driver-storage-core-10.0.0-slfo.1.3.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libblkid1" 
+  "libgcc_s1" 
+  "libgio-2_0-0" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libparted2" 
+  "libselinux1" 
+  "libtirpc3" 
+  "libvirt-daemon-common" {= "10.0.0"}
+  "libvirt-libs" {= "10.0.0"}
+  "libxml2-2" 
+  "nfs-kernel-server" 
+  "qemu-img" 
+  "util-linux" 
+]
+extra-source "libvirt-daemon-driver-storage-core-10.0.0-slfo.1.3.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libvirt-daemon-driver-storage-core-10.0.0-slfo.1.3.4.x86_64.rpm"
+}

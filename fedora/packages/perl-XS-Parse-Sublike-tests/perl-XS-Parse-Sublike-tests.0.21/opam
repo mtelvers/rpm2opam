@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-XS-Parse-Sublike-tests-0.21-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XS-Parse-Sublike-tests-0.21-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "perl-B" 
+  "perl-Future-AsyncAwait" {>= "0.66"}
+  "perl-Object-Pad" {>= "0.800"}
+  "perl-Scalar-List-Utils" 
+  "perl-Test-Harness" 
+  "perl-Test2-Suite" 
+  "perl-XS-Parse-Sublike" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" {>= "5.14.0"}
+]
+extra-source "perl-XS-Parse-Sublike-tests-0.21-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-XS-Parse-Sublike-tests-0.21-3.fc40.x86_64.rpm"
+}

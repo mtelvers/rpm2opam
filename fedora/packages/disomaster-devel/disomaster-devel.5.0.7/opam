@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "disomaster-devel-5.0.7-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "disomaster-devel-5.0.7-7.fc40.x86_64.rpm"]
+depends: [
+  "disomaster" {= "5.0.7"}
+  "libisoburn-devel" 
+  "pkgconf-pkg-config" 
+  "qt5-qtbase-devel" 
+]
+extra-source "disomaster-devel-5.0.7-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/disomaster-devel-5.0.7-7.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-drbd-5.0.0-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-drbd-5.0.0-1.5.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "drbd" {>= "9.0"}
+  "ruby3-3" 
+  "yast2" {>= "4.0.39"}
+  "yast2-ruby-bindings" {>= "1.0.0"}
+]
+extra-source "yast2-drbd-5.0.0-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/yast2-drbd-5.0.0-1.5.x86_64.rpm"
+}

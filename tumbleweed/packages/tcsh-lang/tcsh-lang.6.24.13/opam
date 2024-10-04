@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tcsh-lang-6.24.13-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tcsh-lang-6.24.13-1.1.noarch.rpm"]
+depends: [
+  "tcsh" {= "6.24.13"}
+]
+extra-source "tcsh-lang-6.24.13-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tcsh-lang-6.24.13-1.1.noarch.rpm"
+}

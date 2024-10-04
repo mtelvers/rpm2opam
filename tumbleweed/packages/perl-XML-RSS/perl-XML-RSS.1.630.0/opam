@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-XML-RSS-1.630.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XML-RSS-1.630.0-2.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-DateTime-Format-Mail" 
+  "perl-DateTime-Format-W3CDTF" 
+  "perl-HTML-Parser" 
+  "perl-XML-Parser" 
+]
+extra-source "perl-XML-RSS-1.630.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-XML-RSS-1.630.0-2.2.noarch.rpm"
+}

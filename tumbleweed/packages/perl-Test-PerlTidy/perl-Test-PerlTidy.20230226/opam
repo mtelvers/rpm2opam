@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-PerlTidy-20230226-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-PerlTidy-20230226-1.6.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Path-Tiny" {>= "0.100"}
+  "perl-Perl-Tidy" {>= "20220613"}
+  "perl-Text-Diff" 
+  "perl-base" 
+]
+extra-source "perl-Test-PerlTidy-20230226-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-PerlTidy-20230226-1.6.noarch.rpm"
+}

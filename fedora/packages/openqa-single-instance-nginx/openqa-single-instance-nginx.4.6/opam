@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openqa-single-instance-nginx-4.6^20240208git46cfab2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openqa-single-instance-nginx-4.6^20240208git46cfab2-1.fc40.noarch.rpm"]
+depends: [
+  "nginx" 
+  "openqa" {= "4.6"}
+  "openqa-local-db" 
+  "openqa-worker" {= "4.6"}
+]
+extra-source "openqa-single-instance-nginx-4.6^20240208git46cfab2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openqa-single-instance-nginx-4.6^20240208git46cfab2-1.fc40.noarch.rpm"
+}

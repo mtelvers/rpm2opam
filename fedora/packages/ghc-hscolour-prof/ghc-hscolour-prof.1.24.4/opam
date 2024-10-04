@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-hscolour-prof-1.24.4-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hscolour-prof-1.24.4-29.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-hscolour-devel" {= "1.24.4"}
+]
+extra-source "ghc-hscolour-prof-1.24.4-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-hscolour-prof-1.24.4-29.fc40.x86_64.rpm"
+}

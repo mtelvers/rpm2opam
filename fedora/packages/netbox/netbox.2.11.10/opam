@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "netbox-2.11.10-5.fc38.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netbox-2.11.10-5.fc38.noarch.rpm"]
+depends: [
+  "bash" 
+  "python3" 
+  "python3-django" {>= "3.1"}
+  "python3-django-cacheops" 
+  "python3-django-cors-headers" 
+  "python3-django-debug-toolbar" 
+  "python3-django-filter" 
+  "python3-django-mptt" 
+  "python3-django-pglocks" 
+  "python3-django-prometheus" 
+  "python3-django-rest-framework" 
+  "python3-django-rq" 
+  "python3-django-tables2" 
+  "python3-django-taggit" 
+  "python3-django-timezone-field" 
+  "python3-gunicorn" 
+  "python3-jinja2" 
+  "python3-markdown" 
+  "python3-netaddr" 
+  "python3-pillow" 
+  "python3-psycopg2" 
+  "python3-pycryptodomex" 
+  "python3-pyyaml" 
+  "python3-redis" 
+  "python3-svgwrite" 
+  "python3-tablib" 
+  "shadow-utils" 
+]
+extra-source "netbox-2.11.10-5.fc38.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/netbox-2.11.10-5.fc38.noarch.rpm"
+}

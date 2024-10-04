@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-Able-Runner-1.002-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Able-Runner-1.002-29.fc40.noarch.rpm"]
+depends: [
+  "perl-Class-Load" {>= "0.20"}
+  "perl-Module-Pluggable" {>= "3.6"}
+  "perl-Moose" {>= "0.94"}
+  "perl-Test-Able" {>= "0.9"}
+  "perl-libs" 
+]
+extra-source "perl-Test-Able-Runner-1.002-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-Able-Runner-1.002-29.fc40.noarch.rpm"
+}

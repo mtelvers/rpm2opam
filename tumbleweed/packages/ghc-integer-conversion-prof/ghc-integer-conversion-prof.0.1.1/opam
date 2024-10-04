@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-integer-conversion-prof-0.1.1-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-integer-conversion-prof-0.1.1-1.2.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-integer-conversion-devel" {= "0.1.1"}
+  "ghc-primitive-prof" 
+  "ghc-text-prof" 
+]
+extra-source "ghc-integer-conversion-prof-0.1.1-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-integer-conversion-prof-0.1.1-1.2.x86_64.rpm"
+}

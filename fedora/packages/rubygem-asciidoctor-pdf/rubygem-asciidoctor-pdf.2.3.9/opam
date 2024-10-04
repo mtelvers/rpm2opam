@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-asciidoctor-pdf-2.3.9-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-asciidoctor-pdf-2.3.9-3.fc40.noarch.rpm"]
+depends: [
+  "ruby-bundled-gems" 
+  "rubygem-asciidoctor" 
+  "rubygem-concurrent-ruby" 
+  "rubygem-prawn" 
+  "rubygem-prawn-icon" {>= "3.0.0"}
+  "rubygem-prawn-svg" 
+  "rubygem-prawn-table" 
+  "rubygem-prawn-templates" 
+  "rubygem-treetop" 
+  "rubygems" 
+  "rubypick" 
+]
+extra-source "rubygem-asciidoctor-pdf-2.3.9-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-asciidoctor-pdf-2.3.9-3.fc40.noarch.rpm"
+}

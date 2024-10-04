@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-sortinghat-1.2.1-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-sortinghat-1.2.1-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "python312-Django" {>= "4.2"}
+  "python312-Jinja2" {>= "3.1"}
+  "python312-PyJWT" 
+  "python312-PyMySQL" {>= "0.7.0"}
+  "python312-PyYAML" {>= "3.12"}
+  "python312-SQLAlchemy" {>= "1.2"}
+  "python312-base" 
+  "python312-click" {>= "7.1"}
+  "python312-django-cors-headers" {>= "3.7"}
+  "python312-django-graphql-jwt" {>= "0.3"}
+  "python312-django-rq" {>= "2.3"}
+  "python312-django-treebeard" {>= "4.5"}
+  "python312-graphene" {>= "2.1.5"}
+  "python312-graphene-django" 
+  "python312-grimoirelab-toolkit" {>= "0.3"}
+  "python312-importlib-resources" 
+  "python312-mysqlclient" {>= "2.0"}
+  "python312-numpy" 
+  "python312-pandas" {>= "1.3"}
+  "python312-python-dateutil" {>= "2.8.0"}
+  "python312-requests" {>= "2.7"}
+  "python312-rq" 
+  "python312-setuptools" 
+  "python312-sgqlc" 
+  "update-alternatives" 
+]
+extra-source "python312-sortinghat-1.2.1-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-sortinghat-1.2.1-1.2.noarch.rpm"
+}

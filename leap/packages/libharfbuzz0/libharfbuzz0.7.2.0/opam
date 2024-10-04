@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libharfbuzz0-7.2.0-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libharfbuzz0-7.2.0-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libfreetype6" 
+  "libglib-2_0-0" 
+  "libgraphite2-3" 
+]
+extra-source "libharfbuzz0-7.2.0-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libharfbuzz0-7.2.0-slfo.1.1.8.x86_64.rpm"
+}

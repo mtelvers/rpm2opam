@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sablot-devel-1.0.3-131.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sablot-devel-1.0.3-131.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-devel" 
+  "sablot" {= "1.0.3"}
+]
+extra-source "sablot-devel-1.0.3-131.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sablot-devel-1.0.3-131.2.x86_64.rpm"
+}

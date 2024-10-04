@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tiger+default-devel-0.2.1-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tiger+default-devel-0.2.1-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-tiger+std-devel" {= "0.2.1"}
+  "rust-tiger-devel" {= "0.2.1"}
+]
+extra-source "rust-tiger+default-devel-0.2.1-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tiger+default-devel-0.2.1-6.fc40.noarch.rpm"
+}

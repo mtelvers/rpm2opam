@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvirt-10.0.0-slfo.1.3.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvirt-10.0.0-slfo.1.3.4.x86_64.rpm"]
+depends: [
+  "libvirt-client" {= "10.0.0"}
+  "libvirt-client-qemu" {= "10.0.0"}
+  "libvirt-daemon" {= "10.0.0"}
+  "libvirt-daemon-config-network" {= "10.0.0"}
+  "libvirt-daemon-config-nwfilter" {= "10.0.0"}
+  "libvirt-daemon-driver-network" {= "10.0.0"}
+  "libvirt-daemon-driver-nodedev" {= "10.0.0"}
+  "libvirt-daemon-driver-nwfilter" {= "10.0.0"}
+  "libvirt-daemon-driver-qemu" {= "10.0.0"}
+  "libvirt-daemon-driver-secret" {= "10.0.0"}
+  "libvirt-daemon-driver-storage" {= "10.0.0"}
+  "libvirt-libs" {= "10.0.0"}
+]
+extra-source "libvirt-10.0.0-slfo.1.3.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libvirt-10.0.0-slfo.1.3.4.x86_64.rpm"
+}

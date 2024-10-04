@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libepc-1_0-3-0.4.6-lp160.1.24.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libepc-1_0-3-0.4.6-lp160.1.24.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libavahi-client3" 
+  "libavahi-common3" 
+  "libavahi-glib1" 
+  "libgio-2_0-0" 
+  "libglib-2_0-0" 
+  "libgnutls30" 
+  "libgobject-2_0-0" 
+  "libgtk-3-0" 
+  "libsoup-2_4-1" 
+  "libuuid1" 
+]
+extra-source "libepc-1_0-3-0.4.6-lp160.1.24.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libepc-1_0-3-0.4.6-lp160.1.24.x86_64.rpm"
+}

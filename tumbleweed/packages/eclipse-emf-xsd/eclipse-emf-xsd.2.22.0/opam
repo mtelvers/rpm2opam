@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "eclipse-emf-xsd-2.22.0-5.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eclipse-emf-xsd-2.22.0-5.4.noarch.rpm"]
+depends: [
+  "eclipse-emf-core" {= "2.22.0.0"}
+  "eclipse-emf-runtime" {= "2.11.0.0"}
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "eclipse-emf-xsd-2.22.0-5.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/eclipse-emf-xsd-2.22.0-5.4.noarch.rpm"
+}

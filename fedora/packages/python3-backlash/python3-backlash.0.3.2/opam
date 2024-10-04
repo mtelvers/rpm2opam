@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-backlash-0.3.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-backlash-0.3.2-1.fc40.noarch.rpm"]
+depends: [
+  "open-sans-fonts" 
+  "python3" {= "3.12"}
+  "python3-webob" 
+]
+extra-source "python3-backlash-0.3.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-backlash-0.3.2-1.fc40.noarch.rpm"
+}

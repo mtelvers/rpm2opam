@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-fga-1.5.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-fga-1.5.0-1.2.noarch.rpm"]
+depends: [
+  "gap" {>= "4.8"}
+]
+extra-source "gap-fga-1.5.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-fga-1.5.0-1.2.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Mixin-ExtraFields-0.140003-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mixin-ExtraFields-0.140003-5.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Scalar-List-Utils" 
+  "perl-String-RewritePrefix" 
+  "perl-Sub-Exporter" {>= "0.972"}
+  "perl-Sub-Install" 
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-Mixin-ExtraFields-0.140003-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Mixin-ExtraFields-0.140003-5.fc40.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fedpkg-1.44-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fedpkg-1.44-8.fc40.noarch.rpm"]
+depends: [
+  "bodhi-client" 
+  "koji" 
+  "python3" 
+  "python3-argcomplete" 
+  "python3-bugzilla" 
+  "python3-distro" 
+  "python3-fedora" 
+  "python3-openidc-client" {>= "0.6.0"}
+  "python3-rpkg" {>= "1.66"}
+  "python3-setuptools" 
+  "python3-six" 
+  "redhat-rpm-config" 
+]
+extra-source "fedpkg-1.44-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fedpkg-1.44-8.fc40.noarch.rpm"
+}

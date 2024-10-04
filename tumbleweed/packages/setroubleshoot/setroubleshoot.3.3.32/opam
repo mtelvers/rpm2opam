@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "setroubleshoot-3.3.32-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "setroubleshoot-3.3.32-2.1.x86_64.rpm"]
+depends: [
+  "dbus-1" 
+  "desktop-file-utils" 
+  "libgtk-3-0" 
+  "libnotify-tools" 
+  "libreport-gtk_1" {>= "2.2.1"}
+  "python3-libreport" 
+  "python311-base" 
+  "python311-dasbus" 
+  "python311-gobject" 
+  "setroubleshoot-server" {= "3.3.32"}
+  "xdg-utils" 
+]
+extra-source "setroubleshoot-3.3.32-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/setroubleshoot-3.3.32-2.1.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "zig-doc-0.11.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zig-doc-0.11.0-2.fc40.noarch.rpm"]
+depends: [
+  "zig" {= "0.11.0"}
+]
+extra-source "zig-doc-0.11.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/z/zig-doc-0.11.0-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libzdb-3.2.3-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libzdb-3.2.3-5.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libpq" 
+  "mariadb-connector-c" 
+  "sqlite-libs" 
+]
+extra-source "libzdb-3.2.3-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libzdb-3.2.3-5.fc40.x86_64.rpm"
+}

@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-AI-Categorizer-0.09-34.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-AI-Categorizer-0.09-34.fc40.noarch.rpm"]
+depends: [
+  "perl-AI-DecisionTree" {>= "0.6"}
+  "perl-Algorithm-NaiveBayes" 
+  "perl-Algorithm-SVM" 
+  "perl-Carp" 
+  "perl-Class-Container" {>= "0.9"}
+  "perl-DBI" 
+  "perl-Exporter" 
+  "perl-File-Copy" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-Lingua-Stem" {>= "0.5"}
+  "perl-Params-Validate" 
+  "perl-PathTools" 
+  "perl-Statistics-Contingency" 
+  "perl-Storable" 
+  "perl-Time-Progress" {>= "1.1"}
+  "perl-XML-SAX" 
+  "perl-XML-SAX-Base" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-AI-Categorizer-0.09-34.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-AI-Categorizer-0.09-34.fc40.noarch.rpm"
+}

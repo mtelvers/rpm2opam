@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-dasbus-1.7-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-dasbus-1.7-1.9.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-gobject" 
+  "typelib-1_0-GLib-2_0" {= "2.0"}
+  "typelib-1_0-Gio-2_0" {= "2.0"}
+]
+extra-source "python311-dasbus-1.7-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-dasbus-1.7-1.9.noarch.rpm"
+}

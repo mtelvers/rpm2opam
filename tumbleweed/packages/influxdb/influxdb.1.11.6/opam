@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "influxdb-1.11.6-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "influxdb-1.11.6-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libflux0_195_2" 
+  "shadow" 
+]
+extra-source "influxdb-1.11.6-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/influxdb-1.11.6-1.2.x86_64.rpm"
+}

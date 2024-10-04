@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-poppler-qt5-devel-21.3.0-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-poppler-qt5-devel-21.3.0-2.3.x86_64.rpm"]
+depends: [
+  "libpoppler-qt5-devel" 
+  "python311-qt5-devel" 
+  "python311-sip-devel" 
+]
+extra-source "python311-poppler-qt5-devel-21.3.0-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-poppler-qt5-devel-21.3.0-2.3.x86_64.rpm"
+}

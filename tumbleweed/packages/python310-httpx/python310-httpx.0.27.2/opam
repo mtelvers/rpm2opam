@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-httpx-0.27.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-httpx-0.27.2-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-anyio" 
+  "python310-base" {= "3.10"}
+  "python310-certifi" 
+  "python310-httpcore" {>= "0.18.0"}
+  "python310-idna" {>= "2.0"}
+  "python310-sniffio" 
+  "update-alternatives" 
+]
+extra-source "python310-httpx-0.27.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-httpx-0.27.2-1.1.noarch.rpm"
+}

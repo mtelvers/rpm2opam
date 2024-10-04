@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dumpzilla-bash-completion-0.0.0+git.20210311-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dumpzilla-bash-completion-0.0.0+git.20210311-1.4.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "dumpzilla" {= "0.0.0"}
+]
+extra-source "dumpzilla-bash-completion-0.0.0+git.20210311-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dumpzilla-bash-completion-0.0.0+git.20210311-1.4.noarch.rpm"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "claws-mail-plugins-fancy-4.2.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "claws-mail-plugins-fancy-4.2.0-3.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "cairo-gobject" 
+  "claws-mail" {= "4.2.0.0"}
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "harfbuzz" 
+  "javascriptcoregtk4-1" 
+  "libcurl" 
+  "libsoup3" 
+  "pango" 
+  "webkit2gtk4-1" 
+  "zlib-ng-compat" 
+]
+extra-source "claws-mail-plugins-fancy-4.2.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/claws-mail-plugins-fancy-4.2.0-3.fc40.x86_64.rpm"
+}

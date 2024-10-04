@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libavahi-glib1-0.8-slfo.1.3.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libavahi-glib1-0.8-slfo.1.3.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libavahi-common3" 
+  "libglib-2_0-0" 
+]
+extra-source "libavahi-glib1-0.8-slfo.1.3.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libavahi-glib1-0.8-slfo.1.3.5.x86_64.rpm"
+}

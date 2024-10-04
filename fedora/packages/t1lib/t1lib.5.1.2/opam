@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "t1lib-5.1.2-36.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "t1lib-5.1.2-36.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "findutils" 
+  "glibc" 
+  "libX11" 
+]
+extra-source "t1lib-5.1.2-36.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/t1lib-5.1.2-36.fc40.x86_64.rpm"
+}

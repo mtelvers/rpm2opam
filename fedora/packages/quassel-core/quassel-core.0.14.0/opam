@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "quassel-core-0.14.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "quassel-core-0.14.0-6.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "openldap" 
+  "qca-qt5" 
+  "qt5-qtbase" 
+  "zlib-ng-compat" 
+]
+extra-source "quassel-core-0.14.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/quassel-core-0.14.0-6.fc40.x86_64.rpm"
+}

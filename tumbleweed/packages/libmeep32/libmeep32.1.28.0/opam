@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmeep32-1.28.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmeep32-1.28.0-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libctl7" 
+  "libfftw3-3" 
+  "libgcc_s1" 
+  "libgomp1" 
+  "libgsl28" 
+  "libgslcblas0" 
+  "libharminv3" 
+  "libhdf5-200" 
+  "liblapack3" 
+  "libstdc++6" 
+]
+extra-source "libmeep32-1.28.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmeep32-1.28.0-1.2.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-arboard+default-devel-3.3.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-arboard+default-devel-3.3.2-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-arboard+image-data-devel" {= "3.3.2"}
+  "rust-arboard-devel" {= "3.3.2"}
+]
+extra-source "rust-arboard+default-devel-3.3.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-arboard+default-devel-3.3.2-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mmg-5.7.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mmg-5.7.2-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "scotch" 
+  "scotch-devel" 
+]
+extra-source "mmg-5.7.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mmg-5.7.2-3.fc40.x86_64.rpm"
+}

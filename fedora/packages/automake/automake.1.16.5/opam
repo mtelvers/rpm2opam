@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "automake-1.16.5-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "automake-1.16.5-16.fc40.noarch.rpm"]
+depends: [
+  "autoconf" {>= "2.65"}
+  "bash" 
+  "perl-Carp" 
+  "perl-Class-Struct" 
+  "perl-Errno" 
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-File-Path" 
+  "perl-File-stat" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-PathTools" 
+  "perl-Thread-Queue" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-threads" 
+]
+extra-source "automake-1.16.5-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/automake-1.16.5-16.fc40.noarch.rpm"
+}

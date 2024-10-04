@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-ldap-0.68-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-ldap-0.68-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Convert-ASN1" {>= "0.2"}
+]
+extra-source "perl-ldap-0.68-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/perl-ldap-0.68-slfo.1.1.3.noarch.rpm"
+}

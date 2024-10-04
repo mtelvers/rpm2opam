@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "neomutt-contrib-20240425-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "neomutt-contrib-20240425-2.1.noarch.rpm"]
+depends: [
+  "neomutt" {= "20240425"}
+  "python311-base" 
+]
+extra-source "neomutt-contrib-20240425-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/neomutt-contrib-20240425-2.1.noarch.rpm"
+}

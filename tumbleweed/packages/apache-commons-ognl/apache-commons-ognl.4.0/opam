@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "apache-commons-ognl-4.0~20191021git51cf8f4-5.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apache-commons-ognl-4.0~20191021git51cf8f4-5.6.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "javassist" 
+]
+extra-source "apache-commons-ognl-4.0~20191021git51cf8f4-5.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/apache-commons-ognl-4.0~20191021git51cf8f4-5.6.noarch.rpm"
+}

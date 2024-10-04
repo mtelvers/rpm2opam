@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-openapi-core-0.19.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-openapi-core-0.19.4-1.1.noarch.rpm"]
+depends: [
+  "python312-Werkzeug" 
+  "python312-asgiref" {>= "3.6.0"}
+  "python312-base" {= "3.12"}
+  "python312-isodate" 
+  "python312-jsonschema" 
+  "python312-jsonschema-path" 
+  "python312-more-itertools" 
+  "python312-openapi-schema-validator" 
+  "python312-openapi-spec-validator" 
+  "python312-parse" 
+]
+extra-source "python312-openapi-core-0.19.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-openapi-core-0.19.4-1.1.noarch.rpm"
+}

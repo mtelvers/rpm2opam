@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "btrbk-0.32.6-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "btrbk-0.32.6-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "btrfs-progs" {>= "4.12"}
+  "perl-Carp" 
+  "perl-Getopt-Long" 
+  "perl-IPC-Open3" 
+  "perl-PathTools" 
+  "perl-Symbol" 
+  "perl-Time-Local" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "python3" 
+]
+extra-source "btrbk-0.32.6-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/btrbk-0.32.6-4.fc40.noarch.rpm"
+}

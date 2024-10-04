@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "coin-or-Osi-devel-0.108.9-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coin-or-Osi-devel-0.108.9-2.fc40.x86_64.rpm"]
+depends: [
+  "coin-or-CoinUtils-devel" 
+  "coin-or-Osi" {= "0.108.9"}
+  "glpk-devel" 
+  "libsoplex-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "coin-or-Osi-devel-0.108.9-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/coin-or-Osi-devel-0.108.9-2.fc40.x86_64.rpm"
+}

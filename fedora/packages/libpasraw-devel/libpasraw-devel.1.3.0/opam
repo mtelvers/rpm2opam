@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libpasraw-devel-1.3.0-15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpasraw-devel-1.3.0-15.fc40.x86_64.rpm"]
+depends: [
+  "libpasraw" {= "1.3.0"}
+]
+extra-source "libpasraw-devel-1.3.0-15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libpasraw-devel-1.3.0-15.fc40.x86_64.rpm"
+}

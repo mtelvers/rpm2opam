@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cgnslib-devel-4.4.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cgnslib-devel-4.4.0-4.fc40.x86_64.rpm"]
+depends: [
+  "cgnslib" {= "4.4.0"}
+  "gcc-gfortran" 
+  "hdf5-devel" 
+]
+extra-source "cgnslib-devel-4.4.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cgnslib-devel-4.4.0-4.fc40.x86_64.rpm"
+}

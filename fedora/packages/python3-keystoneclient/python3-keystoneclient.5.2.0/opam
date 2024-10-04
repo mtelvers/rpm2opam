@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-keystoneclient-5.2.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-keystoneclient-5.2.0-3.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-debtcollector" {>= "1.2"}
+  "python3-keyring" {>= "5.5.1"}
+  "python3-keystoneauth1" {>= "3.4"}
+  "python3-oslo-config" {>= "5.2"}
+  "python3-oslo-i18n" {>= "3.15.3"}
+  "python3-oslo-utils" {>= "3.33"}
+  "python3-packaging" {>= "20.4"}
+  "python3-requests" {>= "2.14.2"}
+  "python3-six" {>= "1.10"}
+  "python3-stevedore" {>= "1.20"}
+]
+extra-source "python3-keystoneclient-5.2.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-keystoneclient-5.2.0-3.fc40.noarch.rpm"
+}

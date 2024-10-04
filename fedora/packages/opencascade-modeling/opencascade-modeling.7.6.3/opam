@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "opencascade-modeling-7.6.3-4.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opencascade-modeling-7.6.3-4.fc39.x86_64.rpm"]
+depends: [
+  "glibc" {>= "2.37.9000"}
+  "libgcc" 
+  "libstdc++" 
+  "opencascade-foundation" 
+  "opencascade-ocaf" 
+  "opencascade-visualization" 
+]
+extra-source "opencascade-modeling-7.6.3-4.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/opencascade-modeling-7.6.3-4.fc39.x86_64.rpm"
+}

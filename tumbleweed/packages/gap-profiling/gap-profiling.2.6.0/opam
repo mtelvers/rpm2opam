@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-profiling-2.6.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-profiling-2.6.0-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "busybox-gawk" 
+  "gap" {>= "4.10"}
+  "gap-gapdoc" {>= "1.5"}
+  "gap-io" {>= "4.4.4"}
+  "perl-base" 
+  "php8-cli" 
+  "python-base" 
+]
+extra-source "gap-profiling-2.6.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gap-profiling-2.6.0-1.1.x86_64.rpm"
+}

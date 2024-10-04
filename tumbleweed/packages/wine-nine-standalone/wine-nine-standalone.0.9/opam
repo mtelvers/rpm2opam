@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wine-nine-standalone-0.9-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wine-nine-standalone-0.9-1.2.x86_64.rpm"]
+depends: [
+  "Mesa-libd3d" 
+  "glibc" 
+  "libX11-6" 
+  "libX11-xcb1" 
+  "libxcb-dri2-0" 
+  "libxcb-dri3-0" 
+  "libxcb-present0" 
+  "libxcb-xfixes0" 
+  "libxcb1" 
+]
+extra-source "wine-nine-standalone-0.9-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/wine-nine-standalone-0.9-1.2.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-ldb-2.9.1-5.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-ldb-2.9.1-5.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libldb" {= "2.9.1"}
+  "libtalloc" 
+  "libtdb" 
+  "libtevent" 
+  "python3" {= "3.12"}
+  "python3-libs" 
+  "python3-tdb" {>= "1.4.10"}
+]
+extra-source "python3-ldb-2.9.1-5.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/python3-ldb-2.9.1-5.el10.x86_64.rpm"
+}

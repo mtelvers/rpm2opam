@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-sphinx-jsonschema-1.19.1-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-sphinx-jsonschema-1.19.1-1.3.noarch.rpm"]
+depends: [
+  "python310-PyYAML" 
+  "python310-base" {= "3.10"}
+  "python310-docutils" 
+  "python310-jsonpointer" 
+  "python310-requests" 
+]
+extra-source "python310-sphinx-jsonschema-1.19.1-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-sphinx-jsonschema-1.19.1-1.3.noarch.rpm"
+}

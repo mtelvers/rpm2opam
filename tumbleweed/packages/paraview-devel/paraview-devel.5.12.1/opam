@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "paraview-devel-5.12.1-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "paraview-devel-5.12.1-1.3.x86_64.rpm"]
+depends: [
+  "cmake" {>= "3.3"}
+  "glibc" 
+  "glibc-devel" 
+  "libboost_thread-devel" 
+  "libgcc_s1" 
+  "libparaview5_12" {= "5.12.1"}
+  "libstdc++6" 
+]
+extra-source "paraview-devel-5.12.1-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/paraview-devel-5.12.1-1.3.x86_64.rpm"
+}

@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ceph-base-18.2.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ceph-base-18.2.2-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "ceph-common" {= "18.2.2"}
+  "ceph-selinux" {= "18.2.2"}
+  "findutils" 
+  "glibc" 
+  "gperftools-libs" 
+  "grep" 
+  "libaio" 
+  "libcap" 
+  "libcephfs2" {= "18.2.2"}
+  "libgcc" 
+  "liboath" 
+  "librados2" 
+  "librbd1" {= "18.2.2"}
+  "librgw2" {= "18.2.2"}
+  "libstdc++" 
+  "liburing" 
+  "libzstd" 
+  "logrotate" 
+  "lttng-ust" 
+  "lua-libs" 
+  "lz4-libs" 
+  "openssl-libs" 
+  "psmisc" 
+  "python3" 
+  "snappy" 
+  "util-linux" 
+  "which" 
+  "zlib-ng-compat" 
+]
+extra-source "ceph-base-18.2.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/ceph-base-18.2.2-1.fc40.x86_64.rpm"
+}

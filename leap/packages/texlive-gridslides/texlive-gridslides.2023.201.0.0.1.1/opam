@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-gridslides-2023.201.0.0.1.1svn54512-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-gridslides-2023.201.0.0.1.1svn54512-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-amscls" 
+  "texlive-amsfonts" 
+  "texlive-amsmath" 
+  "texlive-babel" 
+  "texlive-braket" 
+  "texlive-doublestroke" 
+  "texlive-environ" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-geometry" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-mathtools" 
+  "texlive-microtype" 
+  "texlive-pgf" 
+  "texlive-ragged2e" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-siunitx" 
+  "texlive-tools" 
+  "texlive-xstring" 
+]
+extra-source "texlive-gridslides-2023.201.0.0.1.1svn54512-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-gridslides-2023.201.0.0.1.1svn54512-slfo.1.1.4.noarch.rpm"
+}

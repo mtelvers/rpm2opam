@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ibus-engine-gui-ci-1.0.0.20220118-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibus-engine-gui-ci-1.0.0.20220118-7.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "ibus" 
+  "ibus-libs" 
+  "json-glib" 
+  "libgcc" 
+]
+extra-source "ibus-engine-gui-ci-1.0.0.20220118-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/ibus-engine-gui-ci-1.0.0.20220118-7.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "webdot-2.30-5.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "webdot-2.30-5.1.noarch.rpm"]
+depends: [
+  "apache2" 
+  "coreutils" 
+  "filesystem" 
+  "ghostscript" 
+  "system-user-wwwrun" 
+  "tcl" 
+]
+extra-source "webdot-2.30-5.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/webdot-2.30-5.1.noarch.rpm"
+}

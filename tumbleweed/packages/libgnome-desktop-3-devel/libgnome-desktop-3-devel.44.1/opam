@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgnome-desktop-3-devel-44.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgnome-desktop-3-devel-44.1-1.1.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf-devel" {>= "2.36.5"}
+  "glib2-devel" {>= "2.53.0"}
+  "gsettings-desktop-schemas-devel" {>= "3.27.0"}
+  "gtk3-devel" {>= "3.3.6"}
+  "iso-codes-devel" 
+  "libgnome-desktop-3-20" {= "44.1"}
+  "libseccomp-devel" 
+  "libxkbfile-devel" 
+  "libxkbregistry-devel" 
+  "pkgconf-pkg-config" 
+  "systemd-devel" 
+  "typelib-1_0-GnomeDesktop-3_0" {= "44.1"}
+  "xkeyboard-config" 
+]
+extra-source "libgnome-desktop-3-devel-44.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgnome-desktop-3-devel-44.1-1.1.x86_64.rpm"
+}

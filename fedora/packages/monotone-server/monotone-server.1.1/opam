@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "monotone-server-1.1-48.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "monotone-server-1.1-48.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "monotone" {= "1.1"}
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "monotone-server-1.1-48.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/monotone-server-1.1-48.fc40.x86_64.rpm"
+}

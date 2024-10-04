@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cc-tool-0.27-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cc-tool-0.27-1.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libboost_filesystem1_86_0" 
+  "libboost_program_options1_86_0" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libusb-1_0-0" 
+]
+extra-source "cc-tool-0.27-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cc-tool-0.27-1.5.x86_64.rpm"
+}

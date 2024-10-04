@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["/usr/bin/zypper" "-n" "install" "transactional-update-4.8.2-slfo.1.1.1.x86_64.rpm"]
+]
+remove: [
+  ["/usr/bin/zypper" "-n" "remove" "transactional-update-4.8.2-slfo.1.1.1.x86_64.rpm"]
+]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "bc" 
+  "dracut-transactional-update" {= "4.8.2"}
+  "logrotate" 
+  "lsof" 
+  "psmisc" 
+  "tukit" {= "4.8.2"}
+  "zypper" 
+]
+extra-source "transactional-update-4.8.2-slfo.1.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/transactional-update-4.8.2-slfo.1.1.1.x86_64.rpm"
+}

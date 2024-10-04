@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "asterisk-18.12.1-1.fc40.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "asterisk-18.12.1-1.fc40.7.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "gmime30" 
+  "gsm" 
+  "ilbc" 
+  "jansson" 
+  "libcap" 
+  "libcurl" 
+  "libedit" 
+  "libgcc" 
+  "libogg" 
+  "libsrtp" 
+  "libuuid" 
+  "libvorbis" 
+  "libxcrypt" 
+  "libxml2" 
+  "newt" 
+  "openssl-libs" 
+  "popt" 
+  "python3" 
+  "shadow-utils" 
+  "speex" 
+  "speexdsp" 
+  "sqlite-libs" 
+  "systemd" 
+  "unbound-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "asterisk-18.12.1-1.fc40.7.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/asterisk-18.12.1-1.fc40.7.x86_64.rpm"
+}

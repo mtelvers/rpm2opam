@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "naga-3.0-26.20200930git6f1e95d.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "naga-3.0-26.20200930git6f1e95d.fc40.noarch.rpm"]
+depends: [
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "naga-3.0-26.20200930git6f1e95d.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/naga-3.0-26.20200930git6f1e95d.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kf6-oxygen-icons-scalable-6.0.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kf6-oxygen-icons-scalable-6.0.0-1.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "kf6-oxygen-icons" {= "6.0.0"}
+]
+extra-source "kf6-oxygen-icons-scalable-6.0.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kf6-oxygen-icons-scalable-6.0.0-1.2.noarch.rpm"
+}

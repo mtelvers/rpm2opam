@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "NetworkManager-initscripts-ifcfg-rh-1.46.0-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "NetworkManager-initscripts-ifcfg-rh-1.46.0-2.fc40.x86_64.rpm"]
+depends: [
+  "NetworkManager" {= "1.46.0"}
+  "glibc" 
+  "libgcc" 
+]
+extra-source "NetworkManager-initscripts-ifcfg-rh-1.46.0-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/NetworkManager-initscripts-ifcfg-rh-1.46.0-2.fc40.x86_64.rpm"
+}

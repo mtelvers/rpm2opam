@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ncid-mysql-1.15-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ncid-mysql-1.15-5.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "mysql" 
+  "ncid-client" {= "1.15"}
+]
+extra-source "ncid-mysql-1.15-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/ncid-mysql-1.15-5.fc40.noarch.rpm"
+}

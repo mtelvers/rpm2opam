@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fedora-gnat-project-common-3.18-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fedora-gnat-project-common-3.18-4.fc40.noarch.rpm"]
+depends: [
+  "coreutils" 
+  "setup" 
+]
+extra-source "fedora-gnat-project-common-3.18-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fedora-gnat-project-common-3.18-4.fc40.noarch.rpm"
+}

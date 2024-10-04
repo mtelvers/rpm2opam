@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-indents-devel-0.5.0.1-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-indents-devel-0.5.0.1-19.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-indents" {= "0.5.0.1"}
+  "ghc-mtl-devel" 
+  "ghc-parsec-devel" 
+]
+extra-source "ghc-indents-devel-0.5.0.1-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-indents-devel-0.5.0.1-19.fc40.x86_64.rpm"
+}

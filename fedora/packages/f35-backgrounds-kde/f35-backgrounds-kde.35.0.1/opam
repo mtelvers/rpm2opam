@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "f35-backgrounds-kde-35.0.1-6.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "f35-backgrounds-kde-35.0.1-6.fc39.noarch.rpm"]
+depends: [
+  "f35-backgrounds-base" {= "35.0.1"}
+  "kde-filesystem" 
+]
+extra-source "f35-backgrounds-kde-35.0.1-6.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/f35-backgrounds-kde-35.0.1-6.fc39.noarch.rpm"
+}

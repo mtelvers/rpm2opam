@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-thLib-0.12.2-5.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-thLib-0.12.2-5.15.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-matplotlib" 
+  "python312-numpy" 
+  "python312-pandas" 
+  "python312-scikit-image" 
+  "python312-scipy" 
+  "python312-statsmodels" 
+  "python312-sympy" 
+]
+extra-source "python312-thLib-0.12.2-5.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-thLib-0.12.2-5.15.noarch.rpm"
+}

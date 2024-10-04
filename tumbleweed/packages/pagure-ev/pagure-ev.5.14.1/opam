@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pagure-ev-5.14.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pagure-ev-5.14.1-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "pagure" {= "5.14.1"}
+  "python311-Trololio" 
+  "python311-base" 
+  "systemd" 
+]
+extra-source "pagure-ev-5.14.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pagure-ev-5.14.1-2.1.noarch.rpm"
+}

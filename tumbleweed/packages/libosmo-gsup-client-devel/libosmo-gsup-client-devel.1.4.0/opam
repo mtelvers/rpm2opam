@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libosmo-gsup-client-devel-1.4.0-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libosmo-gsup-client-devel-1.4.0-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libosmo-gsup-client0" 
+  "libosmocore21" 
+  "libosmogsm20" 
+  "libtalloc2" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libosmo-gsup-client-devel-1.4.0-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libosmo-gsup-client-devel-1.4.0-2.2.x86_64.rpm"
+}

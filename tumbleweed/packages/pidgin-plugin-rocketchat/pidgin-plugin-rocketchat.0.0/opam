@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pidgin-plugin-rocketchat-0.0+git20220925-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pidgin-plugin-rocketchat-0.0+git20220925-2.2.noarch.rpm"]
+depends: [
+  "libpurple-plugin-rocketchat" {= "0.0"}
+]
+extra-source "pidgin-plugin-rocketchat-0.0+git20220925-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pidgin-plugin-rocketchat-0.0+git20220925-2.2.noarch.rpm"
+}

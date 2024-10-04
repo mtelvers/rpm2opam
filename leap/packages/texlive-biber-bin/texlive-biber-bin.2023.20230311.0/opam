@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-biber-bin-2023.20230311.svn66402-slfo.1.2.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-biber-bin-2023.20230311.svn66402-slfo.1.2.7.noarch.rpm"]
+depends: [
+  "perl" {= "5.38.2"}
+  "perl-Text-BibTeX" 
+  "perl-Text-Roman" 
+  "perl-base" 
+  "perl-biber" {= "2.19"}
+  "perl-libwww-perl" 
+]
+extra-source "texlive-biber-bin-2023.20230311.svn66402-slfo.1.2.7.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-biber-bin-2023.20230311.svn66402-slfo.1.2.7.noarch.rpm"
+}

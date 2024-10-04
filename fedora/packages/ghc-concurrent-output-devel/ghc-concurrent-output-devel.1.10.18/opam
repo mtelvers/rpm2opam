@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-concurrent-output-devel-1.10.18-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-concurrent-output-devel-1.10.18-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-ansi-terminal-devel" 
+  "ghc-async-devel" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-concurrent-output" {= "1.10.18"}
+  "ghc-directory-devel" 
+  "ghc-exceptions-devel" 
+  "ghc-process-devel" 
+  "ghc-stm-devel" 
+  "ghc-terminal-size-devel" 
+  "ghc-text-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unix-devel" 
+]
+extra-source "ghc-concurrent-output-devel-1.10.18-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-concurrent-output-devel-1.10.18-3.fc40.x86_64.rpm"
+}

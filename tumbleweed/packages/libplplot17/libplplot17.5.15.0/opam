@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libplplot17-5.15.0-20.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libplplot17-5.15.0-20.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcsirocsa0" 
+  "libcsironn0" 
+  "libltdl7" 
+  "libqsastime0" 
+  "libshp4" 
+]
+extra-source "libplplot17-5.15.0-20.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libplplot17-5.15.0-20.2.x86_64.rpm"
+}

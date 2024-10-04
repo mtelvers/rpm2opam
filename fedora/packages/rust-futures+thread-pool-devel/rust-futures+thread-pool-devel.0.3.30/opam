@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-futures+thread-pool-devel-0.3.30-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-futures+thread-pool-devel-0.3.30-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-futures+executor-devel" {= "0.3.30"}
+  "rust-futures-devel" {= "0.3.30"}
+  "rust-futures-executor+thread-pool-devel" 
+  "rust-futures-executor-devel" 
+]
+extra-source "rust-futures+thread-pool-devel-0.3.30-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-futures+thread-pool-devel-0.3.30-2.fc40.noarch.rpm"
+}

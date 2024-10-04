@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-doctest-devel-0.20.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-doctest-devel-0.20.1-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-compat-devel" 
+  "ghc-base-devel" 
+  "ghc-code-page-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-deepseq-devel" 
+  "ghc-directory-devel" 
+  "ghc-doctest" {= "0.20.1"}
+  "ghc-exceptions-devel" 
+  "ghc-filepath-devel" 
+  "ghc-ghc-devel" 
+  "ghc-ghc-paths-devel" 
+  "ghc-process-devel" 
+  "ghc-syb-devel" 
+  "ghc-transformers-devel" 
+  "glibc" 
+  "gmp" 
+  "libffi" 
+  "ncurses-libs" 
+]
+extra-source "ghc-doctest-devel-0.20.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-doctest-devel-0.20.1-6.fc40.x86_64.rpm"
+}

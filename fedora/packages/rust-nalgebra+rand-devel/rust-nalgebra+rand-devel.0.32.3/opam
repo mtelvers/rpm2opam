@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-nalgebra+rand-devel-0.32.3-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-nalgebra+rand-devel-0.32.3-5.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-nalgebra+rand-no-std-devel" {= "0.32.3"}
+  "rust-nalgebra+rand_distr-devel" {= "0.32.3"}
+  "rust-nalgebra-devel" {= "0.32.3"}
+  "rust-rand+std-devel" 
+  "rust-rand+std_rng-devel" 
+  "rust-rand-devel" 
+]
+extra-source "rust-nalgebra+rand-devel-0.32.3-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-nalgebra+rand-devel-0.32.3-5.fc40.noarch.rpm"
+}

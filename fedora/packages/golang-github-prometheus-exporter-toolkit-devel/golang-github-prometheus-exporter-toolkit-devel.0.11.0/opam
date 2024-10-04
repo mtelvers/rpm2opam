@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-prometheus-exporter-toolkit-devel-0.11.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-prometheus-exporter-toolkit-devel-0.11.0-1.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-coreos-systemd-22-devel" 
+  "go-filesystem" 
+  "golang-github-alecthomas-kingpin2-devel" 
+  "golang-github-kit-log-devel" 
+  "golang-github-prometheus-common-devel" 
+  "golang-gopkg-yaml-2-devel" 
+  "golang-x-crypto-devel" 
+  "golang-x-sync-devel" 
+]
+extra-source "golang-github-prometheus-exporter-toolkit-devel-0.11.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-prometheus-exporter-toolkit-devel-0.11.0-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xplsprinters-1.0.1-9.33.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xplsprinters-1.0.1-9.33.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXp6" 
+  "libXprintUtil1" 
+]
+extra-source "xplsprinters-1.0.1-9.33.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xplsprinters-1.0.1-9.33.x86_64.rpm"
+}

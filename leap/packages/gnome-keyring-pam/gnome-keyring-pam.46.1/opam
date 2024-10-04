@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-keyring-pam-46.1-lp160.1.22.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-keyring-pam-46.1-lp160.1.22.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "gnome-keyring" {= "46.1"}
+  "libselinux1" 
+  "pam" 
+  "pam-config" {>= "0.72"}
+  "sed" 
+]
+extra-source "gnome-keyring-pam-46.1-lp160.1.22.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/gnome-keyring-pam-46.1-lp160.1.22.x86_64.rpm"
+}

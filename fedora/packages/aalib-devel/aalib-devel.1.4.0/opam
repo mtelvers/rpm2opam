@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "aalib-devel-1.4.0-0.50.rc5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "aalib-devel-1.4.0-0.50.rc5.fc40.x86_64.rpm"]
+depends: [
+  "aalib-libs" {= "1.4.0"}
+  "bash" 
+]
+extra-source "aalib-devel-1.4.0-0.50.rc5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/aalib-devel-1.4.0-0.50.rc5.fc40.x86_64.rpm"
+}

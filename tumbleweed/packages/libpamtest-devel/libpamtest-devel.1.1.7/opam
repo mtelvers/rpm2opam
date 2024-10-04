@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpamtest-devel-1.1.7-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpamtest-devel-1.1.7-1.1.x86_64.rpm"]
+depends: [
+  "libpamtest0" {= "1.1.7"}
+  "pam_wrapper" {= "1.1.7"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libpamtest-devel-1.1.7-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpamtest-devel-1.1.7-1.1.x86_64.rpm"
+}

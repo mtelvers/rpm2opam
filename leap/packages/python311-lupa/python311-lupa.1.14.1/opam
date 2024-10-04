@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["/usr/bin/zypper" "-n" "install" "python311-lupa-1.14.1-slfo.1.1.6.x86_64.rpm"]
+]
+remove: [
+  ["/usr/bin/zypper" "-n" "remove" "python311-lupa"]
+]
+depends: [
+  "glibc" 
+  "libluajit-5_1-2" 
+  "python311-base" {= "3.11.8"}
+]
+extra-source "python311-lupa-1.14.1-slfo.1.1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/python311-lupa-1.14.1-slfo.1.1.6.x86_64.rpm"
+}

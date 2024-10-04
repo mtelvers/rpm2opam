@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-easy-file-prof-0.2.5-1.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-easy-file-prof-0.2.5-1.13.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-directory-prof" 
+  "ghc-easy-file-devel" {= "0.2.5"}
+  "ghc-filepath-prof" 
+  "ghc-time-prof" 
+  "ghc-unix-prof" 
+]
+extra-source "ghc-easy-file-prof-0.2.5-1.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-easy-file-prof-0.2.5-1.13.x86_64.rpm"
+}

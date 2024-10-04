@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bio2jack-devel-0.9-33.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bio2jack-devel-0.9-33.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bio2jack" {= "0.9"}
+  "jack-audio-connection-kit-devel" 
+]
+extra-source "bio2jack-devel-0.9-33.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bio2jack-devel-0.9-33.fc40.x86_64.rpm"
+}

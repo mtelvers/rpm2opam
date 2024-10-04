@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghex-46.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghex-46.0-1.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libadwaita-1-0" 
+  "libcairo2" 
+  "libgtk-4-1" 
+  "libgtkhex-4-1" 
+  "libpango-1_0-0" 
+]
+extra-source "ghex-46.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghex-46.0-1.2.x86_64.rpm"
+}

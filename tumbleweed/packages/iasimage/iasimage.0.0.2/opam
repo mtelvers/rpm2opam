@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "iasimage-0.0.2+git20190410.7799ac7-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "iasimage-0.0.2+git20190410.7799ac7-2.1.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-cryptography" {>= "2.2.2"}
+]
+extra-source "iasimage-0.0.2+git20190410.7799ac7-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/iasimage-0.0.2+git20190410.7799ac7-2.1.noarch.rpm"
+}

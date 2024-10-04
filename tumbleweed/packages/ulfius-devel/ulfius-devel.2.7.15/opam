@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ulfius-devel-2.7.15-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ulfius-devel-2.7.15-1.3.x86_64.rpm"]
+depends: [
+  "libcurl-devel" 
+  "libgnutls-devel" 
+  "libjansson-devel" 
+  "libmicrohttpd-devel" 
+  "libulfius2_7" {= "2.7.15"}
+  "orcania-devel" 
+  "pkgconf-pkg-config" 
+  "yder-devel" 
+  "zlib-devel" 
+]
+extra-source "ulfius-devel-2.7.15-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ulfius-devel-2.7.15-1.3.x86_64.rpm"
+}

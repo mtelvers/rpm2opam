@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nemo-audio-tab-6.0.1-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nemo-audio-tab-6.0.1-5.fc40.noarch.rpm"]
+depends: [
+  "nemo-python" 
+  "python3" {= "3.12"}
+  "python3-mutagen" 
+]
+extra-source "nemo-audio-tab-6.0.1-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nemo-audio-tab-6.0.1-5.fc40.noarch.rpm"
+}

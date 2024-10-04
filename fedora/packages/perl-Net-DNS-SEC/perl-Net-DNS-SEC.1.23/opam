@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Net-DNS-SEC-1.23-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-DNS-SEC-1.23-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "openssl-libs" 
+  "perl-Carp" 
+  "perl-DynaLoader" 
+  "perl-Exporter" 
+  "perl-IO" 
+  "perl-MIME-Base64" 
+  "perl-Net-DNS" {>= "1.8"}
+  "perl-PathTools" {>= "0.86"}
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" 
+]
+extra-source "perl-Net-DNS-SEC-1.23-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Net-DNS-SEC-1.23-1.fc40.x86_64.rpm"
+}

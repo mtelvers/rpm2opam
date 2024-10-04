@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-tasty-devel-1.5-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-tasty-devel-1.5-4.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-ansi-terminal-devel" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-optparse-applicative-devel" 
+  "ghc-stm-devel" 
+  "ghc-tagged-devel" 
+  "ghc-tasty" {= "1.5"}
+  "ghc-transformers-devel" 
+  "ghc-unix-devel" 
+]
+extra-source "ghc-tasty-devel-1.5-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-tasty-devel-1.5-4.1.x86_64.rpm"
+}

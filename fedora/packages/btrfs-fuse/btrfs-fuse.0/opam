@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "btrfs-fuse-0-14.20230119git812c4b7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "btrfs-fuse-0-14.20230119git812c4b7.fc40.x86_64.rpm"]
+depends: [
+  "fuse3-libs" 
+  "glibc" 
+  "libb2" 
+  "libuuid" 
+  "libzstd" 
+  "lzo" 
+  "openssl-libs" 
+  "xxhash-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "btrfs-fuse-0-14.20230119git812c4b7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/btrfs-fuse-0-14.20230119git812c4b7.fc40.x86_64.rpm"
+}

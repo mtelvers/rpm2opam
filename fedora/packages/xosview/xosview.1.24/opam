@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xosview-1.24-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xosview-1.24-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11" 
+  "libXpm" 
+  "libgcc" 
+  "libstdc++" 
+  "xorg-x11-fonts-misc" 
+]
+extra-source "xosview-1.24-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xosview-1.24-3.fc40.x86_64.rpm"
+}

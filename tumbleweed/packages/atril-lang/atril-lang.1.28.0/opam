@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "atril-lang-1.28.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "atril-lang-1.28.0-1.1.noarch.rpm"]
+depends: [
+  "atril" {= "1.28.0"}
+]
+extra-source "atril-lang-1.28.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/atril-lang-1.28.0-1.1.noarch.rpm"
+}

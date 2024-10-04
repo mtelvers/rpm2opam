@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "compiz-branding-upstream-0.8.18-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "compiz-branding-upstream-0.8.18-3.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "compiz" {= "0.8.18"}
+]
+extra-source "compiz-branding-upstream-0.8.18-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/compiz-branding-upstream-0.8.18-3.1.x86_64.rpm"
+}

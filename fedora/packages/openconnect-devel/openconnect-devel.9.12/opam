@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openconnect-devel-9.12-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openconnect-devel-9.12-5.fc40.x86_64.rpm"]
+depends: [
+  "gnutls-devel" 
+  "libproxy-devel" 
+  "libpskc-devel" 
+  "libxml2-devel" 
+  "lz4-devel" 
+  "openconnect" 
+  "p11-kit-devel" 
+  "pcsc-lite-devel" 
+  "pkgconf-pkg-config" 
+  "stoken-devel" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "openconnect-devel-9.12-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openconnect-devel-9.12-5.fc40.x86_64.rpm"
+}

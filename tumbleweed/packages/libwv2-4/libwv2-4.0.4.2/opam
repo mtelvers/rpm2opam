@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libwv2-4-0.4.2-26.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libwv2-4-0.4.2-26.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcc_s1" 
+  "libgsf-1-114" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+]
+extra-source "libwv2-4-0.4.2-26.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libwv2-4-0.4.2-26.2.x86_64.rpm"
+}

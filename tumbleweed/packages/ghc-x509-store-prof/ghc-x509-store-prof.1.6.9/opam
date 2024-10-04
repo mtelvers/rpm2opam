@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-x509-store-prof-1.6.9-2.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-x509-store-prof-1.6.9-2.16.x86_64.rpm"]
+depends: [
+  "ghc-asn1-encoding-prof" 
+  "ghc-asn1-types-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-cryptonite-prof" 
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+  "ghc-mtl-prof" 
+  "ghc-pem-prof" 
+  "ghc-x509-prof" 
+  "ghc-x509-store-devel" {= "1.6.9"}
+]
+extra-source "ghc-x509-store-prof-1.6.9-2.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-x509-store-prof-1.6.9-2.16.x86_64.rpm"
+}

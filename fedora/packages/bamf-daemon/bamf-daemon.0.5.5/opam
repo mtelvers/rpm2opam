@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bamf-daemon-0.5.5-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bamf-daemon-0.5.5-8.fc40.x86_64.rpm"]
+depends: [
+  "bamf" {= "0.5.5"}
+  "bash" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libX11" 
+  "libgtop2" 
+  "libwnck3" 
+  "startup-notification" 
+  "systemd" 
+]
+extra-source "bamf-daemon-0.5.5-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bamf-daemon-0.5.5-8.fc40.x86_64.rpm"
+}

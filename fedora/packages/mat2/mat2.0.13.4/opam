@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mat2-0.13.4-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mat2-0.13.4-3.fc40.noarch.rpm"]
+depends: [
+  "gdk-pixbuf2-modules" 
+  "librsvg2" 
+  "mailcap" 
+  "perl-Image-ExifTool" 
+  "poppler-glib" 
+  "python3" 
+  "python3-libmat2" {= "0.13.4"}
+]
+extra-source "mat2-0.13.4-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mat2-0.13.4-3.fc40.noarch.rpm"
+}

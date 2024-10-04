@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw32-libmicrohttpd-static-0.9.73-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw32-libmicrohttpd-static-0.9.73-8.fc40.noarch.rpm"]
+depends: [
+  "mingw32-libmicrohttpd" {= "0.9.73"}
+]
+extra-source "mingw32-libmicrohttpd-static-0.9.73-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw32-libmicrohttpd-static-0.9.73-8.fc40.noarch.rpm"
+}

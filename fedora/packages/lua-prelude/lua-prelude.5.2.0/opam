@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lua-prelude-5.2.0-23.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lua-prelude-5.2.0-23.fc40.x86_64.rpm"]
+depends: [
+  "compat-lua" 
+  "glibc" 
+  "libgcc" 
+  "libprelude" {= "5.2.0"}
+  "libstdc++" 
+  "lua-libs" 
+]
+extra-source "lua-prelude-5.2.0-23.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lua-prelude-5.2.0-23.fc40.x86_64.rpm"
+}

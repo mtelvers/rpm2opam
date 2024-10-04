@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zam-plugins-jack-4.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zam-plugins-jack-4.3-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libfftw3-3" 
+  "libgcc_s1" 
+  "libglvnd" 
+  "libsamplerate0" 
+  "libstdc++6" 
+]
+extra-source "zam-plugins-jack-4.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/zam-plugins-jack-4.3-1.1.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-email-validate-prof-2.3.2.20-1.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-email-validate-prof-2.3.2.20-1.9.x86_64.rpm"]
+depends: [
+  "ghc-attoparsec-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-email-validate-devel" {= "2.3.2.20"}
+  "ghc-template-haskell-prof" 
+]
+extra-source "ghc-email-validate-prof-2.3.2.20-1.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-email-validate-prof-2.3.2.20-1.9.x86_64.rpm"
+}

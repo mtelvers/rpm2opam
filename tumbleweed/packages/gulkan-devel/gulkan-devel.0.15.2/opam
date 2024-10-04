@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gulkan-devel-0.15.2-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gulkan-devel-0.15.2-2.2.x86_64.rpm"]
+depends: [
+  "cairo-devel" 
+  "gdk-pixbuf-devel" 
+  "glib2-devel" 
+  "gulkan0_15-0" {= "0.15.2"}
+  "libgraphene-devel" 
+  "pkgconf-pkg-config" 
+  "vulkan-devel" 
+]
+extra-source "gulkan-devel-0.15.2-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gulkan-devel-0.15.2-2.2.x86_64.rpm"
+}

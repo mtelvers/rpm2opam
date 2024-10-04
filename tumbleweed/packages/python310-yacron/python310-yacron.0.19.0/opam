@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-yacron-0.19.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-yacron-0.19.0-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-Jinja2" 
+  "python310-aiohttp" 
+  "python310-aiosmtplib" 
+  "python310-base" 
+  "python310-crontab" 
+  "python310-pytz" 
+  "python310-ruamel-yaml" 
+  "python310-sentry-sdk" 
+  "python310-strictyaml" {>= "0.7.2"}
+  "update-alternatives" 
+]
+extra-source "python310-yacron-0.19.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-yacron-0.19.0-2.1.noarch.rpm"
+}

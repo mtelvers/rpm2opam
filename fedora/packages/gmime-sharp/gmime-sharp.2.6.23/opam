@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gmime-sharp-2.6.23-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gmime-sharp-2.6.23-20.fc40.x86_64.rpm"]
+depends: [
+  "gmime" {= "2.6.23"}
+  "gtk-sharp2" 
+  "gtk-sharp2-devel" 
+  "mono-core" {= "4.0.0.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gmime-sharp-2.6.23-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gmime-sharp-2.6.23-20.fc40.x86_64.rpm"
+}

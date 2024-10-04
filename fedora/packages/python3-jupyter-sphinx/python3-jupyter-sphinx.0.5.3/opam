@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-jupyter-sphinx-0.5.3-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-jupyter-sphinx-0.5.3-3.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-ipykernel" {>= "4.5.1"}
+  "python3-ipython" 
+  "python3-ipywidgets" {>= "7"}
+  "python3-nbconvert" {>= "5.5"}
+  "python3-nbformat" 
+  "python3-sphinx" {>= "7"}
+]
+extra-source "python3-jupyter-sphinx-0.5.3-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-jupyter-sphinx-0.5.3-3.fc40.noarch.rpm"
+}

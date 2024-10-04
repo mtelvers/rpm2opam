@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "treelayout-demo-1.0.3-4.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "treelayout-demo-1.0.3-4.6.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "treelayout" {= "1.0.3"}
+]
+extra-source "treelayout-demo-1.0.3-4.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/treelayout-demo-1.0.3-4.6.noarch.rpm"
+}

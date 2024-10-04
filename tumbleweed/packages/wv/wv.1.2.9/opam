@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wv-1.2.9-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wv-1.2.9-3.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgsf-1-114" 
+  "libwmf-0_2-7" 
+  "libwv-1_2-4" 
+  "w3m" 
+]
+extra-source "wv-1.2.9-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/wv-1.2.9-3.2.x86_64.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ipv6calc-4.2.0-80.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ipv6calc-4.2.0-80.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libdb" 
+  "openssl-libs" 
+  "perl-BerkeleyDB" 
+  "perl-Getopt-Std" 
+  "perl-IPC-Open3" 
+  "perl-Math-BigInt" 
+  "perl-Net-IP" 
+  "perl-POSIX" 
+  "perl-XML-Simple" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "unzip" 
+]
+extra-source "ipv6calc-4.2.0-80.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/ipv6calc-4.2.0-80.fc40.x86_64.rpm"
+}

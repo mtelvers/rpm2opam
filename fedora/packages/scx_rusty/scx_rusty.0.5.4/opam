@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "scx_rusty-0.5.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scx_rusty-0.5.4-1.fc40.x86_64.rpm"]
+depends: [
+  "elfutils-libelf" 
+  "glibc" 
+  "libgcc" 
+  "zlib-ng-compat" 
+]
+extra-source "scx_rusty-0.5.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/scx_rusty-0.5.4-1.fc40.x86_64.rpm"
+}

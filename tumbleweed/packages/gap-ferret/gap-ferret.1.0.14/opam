@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-ferret-1.0.14-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-ferret-1.0.14-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "gap" {>= "4.11"}
+  "gap-gapdoc" {>= "1.5"}
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "gap-ferret-1.0.14-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gap-ferret-1.0.14-1.1.x86_64.rpm"
+}

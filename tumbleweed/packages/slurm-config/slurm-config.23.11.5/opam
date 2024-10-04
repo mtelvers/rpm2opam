@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "slurm-config-23.11.5-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "slurm-config-23.11.5-1.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "logrotate" 
+  "shadow" 
+]
+extra-source "slurm-config-23.11.5-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/slurm-config-23.11.5-1.3.noarch.rpm"
+}

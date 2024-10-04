@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-fastparquet-2024.5.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-fastparquet-2024.5.0-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "python310-base" {= "3.10"}
+  "python310-cramjam" {>= "2.3.0"}
+  "python310-fsspec" 
+  "python310-numpy" 
+  "python310-packaging" 
+  "python310-pandas" {>= "1.5.0"}
+]
+extra-source "python310-fastparquet-2024.5.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-fastparquet-2024.5.0-1.2.x86_64.rpm"
+}

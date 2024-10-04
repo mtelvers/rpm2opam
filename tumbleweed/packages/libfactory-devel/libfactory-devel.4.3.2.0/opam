@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfactory-devel-4.3.2.p16-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfactory-devel-4.3.2.p16-1.2.x86_64.rpm"]
+depends: [
+  "libfactory-4_3_2" {= "4.3.2.0"}
+  "libomalloc-devel" 
+  "libsingular_resources-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libfactory-devel-4.3.2.p16-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfactory-devel-4.3.2.p16-1.2.x86_64.rpm"
+}

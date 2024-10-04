@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-newpx-2023.201.1.505svn61806-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-newpx-2023.201.1.505svn61806-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-amsmath" 
+  "texlive-carlisle" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-fontaxes" 
+  "texlive-fontspec" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-mweights" 
+  "texlive-newpx-fonts" {>= "2023"}
+  "texlive-newtx" 
+  "texlive-oberdiek" 
+  "texlive-pxfonts" 
+  "texlive-realscripts" 
+  "texlive-scripts" 
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-xkeyval" 
+  "texlive-xstring" 
+]
+extra-source "texlive-newpx-2023.201.1.505svn61806-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-newpx-2023.201.1.505svn61806-slfo.1.1.4.noarch.rpm"
+}

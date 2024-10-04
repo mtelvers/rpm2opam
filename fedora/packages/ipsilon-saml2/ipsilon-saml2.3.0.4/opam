@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ipsilon-saml2-3.0.4-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ipsilon-saml2-3.0.4-13.fc40.noarch.rpm"]
+depends: [
+  "ipsilon-base" {= "3.0.4"}
+  "ipsilon-saml2-base" {= "3.0.4"}
+  "python3" {= "3.12"}
+]
+extra-source "ipsilon-saml2-3.0.4-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/ipsilon-saml2-3.0.4-13.fc40.noarch.rpm"
+}

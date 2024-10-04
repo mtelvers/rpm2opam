@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libdazzle-devel-3.44.0-1.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdazzle-devel-3.44.0-1.11.x86_64.rpm"]
+depends: [
+  "dazzle-list-counters" {= "3.44.0"}
+  "gtk3-devel" 
+  "libdazzle-1_0-0" {= "3.44.0"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-libdazzle-1_0" {= "3.44.0"}
+]
+extra-source "libdazzle-devel-3.44.0-1.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libdazzle-devel-3.44.0-1.11.x86_64.rpm"
+}

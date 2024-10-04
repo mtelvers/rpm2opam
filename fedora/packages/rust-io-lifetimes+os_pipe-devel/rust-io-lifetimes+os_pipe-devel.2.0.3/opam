@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-io-lifetimes+os_pipe-devel-2.0.3-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-io-lifetimes+os_pipe-devel-2.0.3-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-io-lifetimes-devel" {= "2.0.3"}
+  "rust-os_pipe+default-devel" 
+  "rust-os_pipe+io_safety-devel" 
+]
+extra-source "rust-io-lifetimes+os_pipe-devel-2.0.3-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-io-lifetimes+os_pipe-devel-2.0.3-2.fc40.noarch.rpm"
+}

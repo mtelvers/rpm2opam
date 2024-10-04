@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kcm_systemd-1.2.1-22.fc38.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kcm_systemd-1.2.1-22.fc38.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf5-kauth" 
+  "kf5-kconfigwidgets" 
+  "kf5-kcoreaddons" 
+  "kf5-ki18n" 
+  "kf5-kio-core-libs" 
+  "kf5-kwidgetsaddons" 
+  "libgcc" 
+  "libstdc++" 
+  "plasma-systemsettings" {>= "5.16.90"}
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "systemd-libs" 
+]
+extra-source "kcm_systemd-1.2.1-22.fc38.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kcm_systemd-1.2.1-22.fc38.x86_64.rpm"
+}

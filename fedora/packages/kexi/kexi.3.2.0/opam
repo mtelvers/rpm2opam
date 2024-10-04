@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kexi-3.2.0-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kexi-3.2.0-10.fc40.x86_64.rpm"]
+depends: [
+  "breeze-icon-theme-rcc" 
+  "glibc" 
+  "kdb" {>= "3.2.0"}
+  "kexi-libs" {= "3.2.0"}
+  "kproperty" {>= "3.2.0"}
+  "kreport" {>= "3.2.0"}
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "kexi-3.2.0-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kexi-3.2.0-10.fc40.x86_64.rpm"
+}

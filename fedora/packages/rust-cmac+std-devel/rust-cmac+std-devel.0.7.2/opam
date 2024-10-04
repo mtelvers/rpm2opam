@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-cmac+std-devel-0.7.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-cmac+std-devel-0.7.2-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-cmac-devel" {= "0.7.2"}
+  "rust-digest+std-devel" 
+]
+extra-source "rust-cmac+std-devel-0.7.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-cmac+std-devel-0.7.2-3.fc40.noarch.rpm"
+}

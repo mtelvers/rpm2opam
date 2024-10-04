@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Authen-WebAuthn-0.002-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Authen-WebAuthn-0.002-3.fc40.noarch.rpm"]
+depends: [
+  "perl-CBOR-XS" 
+  "perl-Carp" 
+  "perl-Crypt-OpenSSL-X509" 
+  "perl-CryptX" 
+  "perl-Digest-SHA" 
+  "perl-Hash-Merge-Simple" 
+  "perl-JSON" 
+  "perl-MIME-Base64" 
+  "perl-Mouse" 
+  "perl-Net-SSLeay" {>= "1.86"}
+  "perl-URI" 
+  "perl-constant" 
+  "perl-libs" 
+]
+extra-source "perl-Authen-WebAuthn-0.002-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Authen-WebAuthn-0.002-3.fc40.noarch.rpm"
+}

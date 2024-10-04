@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libproxy-devel-0.5.3-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libproxy-devel-0.5.3-5.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libproxy" {= "0.5.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libproxy-devel-0.5.3-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libproxy-devel-0.5.3-5.fc40.x86_64.rpm"
+}

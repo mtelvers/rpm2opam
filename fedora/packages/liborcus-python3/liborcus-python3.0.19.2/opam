@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "liborcus-python3-0.19.2-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "liborcus-python3-0.19.2-4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libixion" 
+  "liborcus" {= "0.19.2"}
+  "liborcus-model" 
+  "libstdc++" 
+  "python3" {= "3.12"}
+]
+extra-source "liborcus-python3-0.19.2-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/liborcus-python3-0.19.2-4.fc40.x86_64.rpm"
+}

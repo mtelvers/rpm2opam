@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bs-update-0.18-1.20.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bs-update-0.18-1.20.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "coreutils" 
+  "gzip" 
+  "osc" 
+  "sed" 
+  "tar" 
+  "wget" 
+  "zsh" 
+]
+extra-source "bs-update-0.18-1.20.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/bs-update-0.18-1.20.noarch.rpm"
+}

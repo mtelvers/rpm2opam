@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jaxodraw-latex-2.1.0-7.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jaxodraw-latex-2.1.0-7.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "jaxodraw" {= "2.1.0"}
+  "texlive" 
+  "texlive-collection-latex" 
+  "texlive-pst-tools" 
+]
+extra-source "jaxodraw-latex-2.1.0-7.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jaxodraw-latex-2.1.0-7.2.noarch.rpm"
+}

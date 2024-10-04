@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-DBD-MySQL-5.004-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DBD-MySQL-5.004-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "mysql-libs" 
+  "perl-Carp" 
+  "perl-DBI" 
+  "perl-DynaLoader" 
+  "perl-libs" 
+]
+extra-source "perl-DBD-MySQL-5.004-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-DBD-MySQL-5.004-1.fc40.x86_64.rpm"
+}

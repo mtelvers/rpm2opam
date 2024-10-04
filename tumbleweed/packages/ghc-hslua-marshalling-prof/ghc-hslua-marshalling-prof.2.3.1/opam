@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-hslua-marshalling-prof-2.3.1-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hslua-marshalling-prof-2.3.1-1.8.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-hslua-core-prof" 
+  "ghc-hslua-marshalling-devel" {= "2.3.1"}
+  "ghc-mtl-prof" 
+  "ghc-text-prof" 
+]
+extra-source "ghc-hslua-marshalling-prof-2.3.1-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-hslua-marshalling-prof-2.3.1-1.8.x86_64.rpm"
+}

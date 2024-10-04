@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libreport-plugin-bugzilla-2.17.15-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libreport-plugin-bugzilla-2.17.15-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libreport-web_2" 
+  "libreport_2" 
+  "libxmlrpc3" 
+  "libxmlrpc_client3" 
+  "libxmlrpc_util4" 
+  "python3-libreport" {= "2.17.15"}
+  "python311-base" 
+]
+extra-source "libreport-plugin-bugzilla-2.17.15-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libreport-plugin-bugzilla-2.17.15-1.1.x86_64.rpm"
+}

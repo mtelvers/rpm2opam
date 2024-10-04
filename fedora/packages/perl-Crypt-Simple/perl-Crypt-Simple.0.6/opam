@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Crypt-Simple-0.06-50.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Crypt-Simple-0.06-50.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Crypt-Blowfish" 
+  "perl-Digest-MD5" 
+  "perl-FreezeThaw" 
+  "perl-IO-Compress" 
+  "perl-MIME-Base64" 
+  "perl-libs" 
+]
+extra-source "perl-Crypt-Simple-0.06-50.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Crypt-Simple-0.06-50.fc40.noarch.rpm"
+}

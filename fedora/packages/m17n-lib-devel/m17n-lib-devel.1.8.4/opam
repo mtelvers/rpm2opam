@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "m17n-lib-devel-1.8.4-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "m17n-lib-devel-1.8.4-3.fc40.x86_64.rpm"]
+depends: [
+  "m17n-lib" 
+  "m17n-lib-tools" 
+  "pkgconf-pkg-config" 
+]
+extra-source "m17n-lib-devel-1.8.4-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/m17n-lib-devel-1.8.4-3.fc40.x86_64.rpm"
+}

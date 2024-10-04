@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-dose3-7.0.0-23.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-dose3-7.0.0-23.fc40.x86_64.rpm"]
+depends: [
+  "coq-core" {= "0"}
+  "glibc" 
+  "ocaml" {= "24528204"}
+  "ocaml-base64" {= "9"}
+  "ocaml-camlbz2" {= "5"}
+  "ocaml-cudf" {= "8848827"}
+  "ocaml-extlib" {= "0"}
+  "ocaml-ocamlgraph" {= "9"}
+  "ocaml-re" {= "0"}
+  "ocaml-zip" {= "73607"}
+]
+extra-source "ocaml-dose3-7.0.0-23.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-dose3-7.0.0-23.fc40.x86_64.rpm"
+}

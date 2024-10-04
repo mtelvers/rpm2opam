@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libldb-devel-2.9.1-slfo.1.1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libldb-devel-2.9.1-slfo.1.1.3.x86_64.rpm"]
+depends: [
+  "libldb2" {= "2.9.1"}
+  "libtalloc-devel" 
+  "libtdb-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libldb-devel-2.9.1-slfo.1.1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libldb-devel-2.9.1-slfo.1.1.3.x86_64.rpm"
+}

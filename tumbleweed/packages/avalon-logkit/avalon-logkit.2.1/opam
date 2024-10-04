@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "avalon-logkit-2.1-27.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "avalon-logkit-2.1-27.1.noarch.rpm"]
+depends: [
+  "geronimo-jms-1_1-api" 
+  "glassfish-servlet-api" 
+  "java-11-openj9-headless" 
+  "javamail" 
+  "javapackages-filesystem" 
+  "reload4j" 
+]
+extra-source "avalon-logkit-2.1-27.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/avalon-logkit-2.1-27.1.noarch.rpm"
+}

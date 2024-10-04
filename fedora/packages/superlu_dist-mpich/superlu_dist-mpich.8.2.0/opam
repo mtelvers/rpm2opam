@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "superlu_dist-mpich-8.2.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "superlu_dist-mpich-8.2.0-3.fc40.x86_64.rpm"]
+depends: [
+  "gcc-gfortran" 
+  "glibc" 
+  "libgcc" 
+  "libgfortran" 
+  "libgomp" 
+  "metis" 
+  "mpich" 
+  "ptscotch-mpich" 
+  "ptscotch-mpich-devel" 
+  "suitesparse" 
+  "superlu_dist-mpich-devel" 
+]
+extra-source "superlu_dist-mpich-8.2.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/superlu_dist-mpich-8.2.0-3.fc40.x86_64.rpm"
+}

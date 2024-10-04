@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-askama_derive+markdown-devel-0.12.5-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-askama_derive+markdown-devel-0.12.5-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-askama_derive-devel" {= "0.12.5"}
+]
+extra-source "rust-askama_derive+markdown-devel-0.12.5-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-askama_derive+markdown-devel-0.12.5-1.fc40.noarch.rpm"
+}

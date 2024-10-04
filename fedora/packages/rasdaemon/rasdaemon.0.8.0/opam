@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rasdaemon-0.8.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rasdaemon-0.8.0-4.fc40.x86_64.rpm"]
+depends: [
+  "dmidecode" 
+  "glibc" 
+  "hwdata" 
+  "libtraceevent" 
+  "perl-DBD-SQLite" 
+  "perl-File-Basename" 
+  "perl-File-Find" 
+  "perl-Getopt-Long" 
+  "perl-POSIX" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "sqlite-libs" 
+  "systemd" 
+]
+extra-source "rasdaemon-0.8.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rasdaemon-0.8.0-4.fc40.x86_64.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-nomencl-2024.216.5.6svn61029-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-nomencl-2024.216.5.6svn61029-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-filesystem" {>= "2024"}
+  "texlive-koma-script" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-siunitx" 
+  "texlive-tools" 
+  "texlive-xkeyval" 
+]
+extra-source "texlive-nomencl-2024.216.5.6svn61029-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-nomencl-2024.216.5.6svn61029-57.1.noarch.rpm"
+}

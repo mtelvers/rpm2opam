@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kcm-fcitx5-5.1.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kcm-fcitx5-5.1.4-1.fc40.x86_64.rpm"]
+depends: [
+  "fcitx5-libs" 
+  "fcitx5-qt6" 
+  "glibc" 
+  "kf6-filesystem" 
+  "kf6-kcmutils" 
+  "kf6-kcoreaddons" 
+  "kf6-ki18n" 
+  "kf6-ksvg" 
+  "libgcc" 
+  "libplasma" 
+  "libstdc++" 
+  "libxkbcommon" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qt6-qtdeclarative" 
+]
+extra-source "kcm-fcitx5-5.1.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kcm-fcitx5-5.1.4-1.fc40.x86_64.rpm"
+}

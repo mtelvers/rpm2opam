@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gix-worktree-stream-devel-0.6.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gix-worktree-stream-devel-0.6.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-gix-attributes+default-devel" 
+  "rust-gix-features+default-devel" 
+  "rust-gix-features+io-pipe-devel" 
+  "rust-gix-features+progress-devel" 
+  "rust-gix-filter+default-devel" 
+  "rust-gix-fs+default-devel" 
+  "rust-gix-hash+default-devel" 
+  "rust-gix-object+default-devel" 
+  "rust-gix-path+default-devel" 
+  "rust-gix-traverse+default-devel" 
+  "rust-parking_lot+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-gix-worktree-stream-devel-0.6.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gix-worktree-stream-devel-0.6.0-2.fc40.noarch.rpm"
+}

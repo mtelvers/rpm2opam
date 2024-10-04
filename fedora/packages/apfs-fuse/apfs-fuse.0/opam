@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "apfs-fuse-0-25.20200928gitee71aa5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apfs-fuse-0-25.20200928gitee71aa5.fc40.x86_64.rpm"]
+depends: [
+  "bzip2-libs" 
+  "fuse3" 
+  "fuse3-libs" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "zlib-ng-compat" 
+]
+extra-source "apfs-fuse-0-25.20200928gitee71aa5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/apfs-fuse-0-25.20200928gitee71aa5.fc40.x86_64.rpm"
+}

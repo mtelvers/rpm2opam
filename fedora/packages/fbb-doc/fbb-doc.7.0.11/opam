@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fbb-doc-7.0.11-1.fc40.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fbb-doc-7.0.11-1.fc40.7.noarch.rpm"]
+depends: [
+  "fbb" {= "7.0.11"}
+]
+extra-source "fbb-doc-7.0.11-1.fc40.7.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fbb-doc-7.0.11-1.fc40.7.noarch.rpm"
+}

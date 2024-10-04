@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "obs-service-download_files-0.9.2-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "obs-service-download_files-0.9.2-1.4.noarch.rpm"]
+depends: [
+  "bash" 
+  "build" {>= "2012.8.24"}
+  "curl" 
+  "diffutils" 
+  "perl-YAML-LibYAML" 
+]
+extra-source "obs-service-download_files-0.9.2-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/obs-service-download_files-0.9.2-1.4.noarch.rpm"
+}

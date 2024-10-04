@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-interprocess+tokio_support-devel-1.2.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-interprocess+tokio_support-devel-1.2.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-interprocess+futures-core-devel" {= "1.2.1"}
+  "rust-interprocess+futures-io-devel" {= "1.2.1"}
+  "rust-interprocess+tokio-devel" {= "1.2.1"}
+  "rust-interprocess-devel" {= "1.2.1"}
+]
+extra-source "rust-interprocess+tokio_support-devel-1.2.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-interprocess+tokio_support-devel-1.2.1-1.fc40.noarch.rpm"
+}

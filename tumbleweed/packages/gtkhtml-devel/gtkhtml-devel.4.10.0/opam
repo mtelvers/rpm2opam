@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtkhtml-devel-4.10.0-8.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtkhtml-devel-4.10.0-8.1.x86_64.rpm"]
+depends: [
+  "cairo-devel" {>= "1.10.0"}
+  "enchant-1-devel" {>= "1.1.7"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gsettings-desktop-schemas-devel" 
+  "gtk3-devel" {>= "3.2.0"}
+  "iso-codes-devel" 
+  "libgtk-3-0" 
+  "libgtkhtml-4_0-0" 
+  "libgtkhtml-editor-4_0-0" 
+  "pkgconf-pkg-config" 
+]
+extra-source "gtkhtml-devel-4.10.0-8.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gtkhtml-devel-4.10.0-8.1.x86_64.rpm"
+}

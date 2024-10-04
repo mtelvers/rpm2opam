@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libwnck3-devel-43.0-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libwnck3-devel-43.0-8.fc40.x86_64.rpm"]
+depends: [
+  "cairo-devel" 
+  "glib2" 
+  "glib2-devel" 
+  "glibc" 
+  "gtk3" 
+  "gtk3-devel" 
+  "libX11" 
+  "libX11-devel" 
+  "libXres-devel" 
+  "libwnck3" {= "43.0"}
+  "pango-devel" 
+  "pkgconf-pkg-config" 
+  "startup-notification-devel" 
+]
+extra-source "libwnck3-devel-43.0-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libwnck3-devel-43.0-8.fc40.x86_64.rpm"
+}

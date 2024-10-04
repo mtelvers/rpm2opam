@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "munin-2.0.72-8.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "munin-2.0.72-8.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "munin-node" 
+  "perl" 
+  "perl-Date-Manip" 
+  "perl-FCGI" 
+  "perl-File-Copy-Recursive" 
+  "perl-HTML-Template" 
+  "perl-Log-Log4perl" 
+  "perl-Net-SNMP" 
+  "perl-Net-SSLeay" 
+  "perl-Net-Server" 
+  "perl-URI" 
+  "perl-base" 
+  "perl-rrdtool" 
+  "rrdtool" 
+  "shadow" 
+  "spawn-fcgi" 
+]
+extra-source "munin-2.0.72-8.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/munin-2.0.72-8.2.noarch.rpm"
+}

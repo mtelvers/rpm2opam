@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "SDL2_Pango-devel-2.1.5-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "SDL2_Pango-devel-2.1.5-1.6.x86_64.rpm"]
+depends: [
+  "SDL2-devel" 
+  "freetype2-devel" 
+  "libSDL2_Pango4" {= "2.1.5"}
+  "pango-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "SDL2_Pango-devel-2.1.5-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/SDL2_Pango-devel-2.1.5-1.6.x86_64.rpm"
+}

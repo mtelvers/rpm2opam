@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "autogen-5.18.16-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "autogen-5.18.16-20.fc40.x86_64.rpm"]
+depends: [
+  "autogen-libopts" {= "5.18.16"}
+  "bash" 
+  "glibc" 
+  "guile22" 
+  "libxml2" 
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-Scalar-List-Utils" 
+  "perl-Text-ParseWords" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+]
+extra-source "autogen-5.18.16-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/autogen-5.18.16-20.fc40.x86_64.rpm"
+}

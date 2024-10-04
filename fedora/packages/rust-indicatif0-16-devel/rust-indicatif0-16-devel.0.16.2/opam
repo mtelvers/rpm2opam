@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-indicatif0.16-devel-0.16.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-indicatif0.16-devel-0.16.2-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-console-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-number_prefix+default-devel" 
+  "rust-regex+std-devel" 
+  "rust-regex-devel" 
+]
+extra-source "rust-indicatif0.16-devel-0.16.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-indicatif0.16-devel-0.16.2-3.fc40.noarch.rpm"
+}

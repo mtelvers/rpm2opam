@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-spyder-notebook-0.6.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-spyder-notebook-0.6.1-1.1.noarch.rpm"]
+depends: [
+  "python311-QDarkStyle" 
+  "python311-QtPy" 
+  "python311-base" {= "3.11"}
+  "python311-nbformat" 
+  "python311-notebook" {>= "7"}
+  "python311-requests" 
+  "python311-tornado" 
+  "python311-traitlets" 
+  "spyder" 
+]
+extra-source "python3-spyder-notebook-0.6.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-spyder-notebook-0.6.1-1.1.noarch.rpm"
+}

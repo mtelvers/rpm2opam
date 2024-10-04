@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-corpus-0.10.2-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-corpus-0.10.2-9.fc40.x86_64.rpm"]
+depends: [
+  "R-core" 
+  "R-utf8" {>= "1.1.0"}
+  "glibc" 
+]
+extra-source "R-corpus-0.10.2-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-corpus-0.10.2-9.fc40.x86_64.rpm"
+}

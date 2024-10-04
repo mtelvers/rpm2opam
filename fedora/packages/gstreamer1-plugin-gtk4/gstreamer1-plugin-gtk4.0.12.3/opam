@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gstreamer1-plugin-gtk4-0.12.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gstreamer1-plugin-gtk4-0.12.3-1.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "graphene" 
+  "gstreamer1" 
+  "gstreamer1-plugins-base" 
+  "gtk4" 
+  "libgcc" 
+  "pango" 
+]
+extra-source "gstreamer1-plugin-gtk4-0.12.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gstreamer1-plugin-gtk4-0.12.3-1.fc40.x86_64.rpm"
+}

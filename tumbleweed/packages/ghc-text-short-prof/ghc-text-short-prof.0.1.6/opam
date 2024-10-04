@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-text-short-prof-0.1.6-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-text-short-prof-0.1.6-2.1.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-binary-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-hashable-prof" 
+  "ghc-template-haskell-prof" 
+  "ghc-text-prof" 
+  "ghc-text-short-devel" {= "0.1.6"}
+]
+extra-source "ghc-text-short-prof-0.1.6-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-text-short-prof-0.1.6-2.1.x86_64.rpm"
+}

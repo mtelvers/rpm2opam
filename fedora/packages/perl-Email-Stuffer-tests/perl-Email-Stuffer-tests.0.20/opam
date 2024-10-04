@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Email-Stuffer-tests-0.020-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Email-Stuffer-tests-0.020-5.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Email-Sender" {>= "0.120000"}
+  "perl-Email-Stuffer" 
+  "perl-Errno" 
+  "perl-ExtUtils-MakeMaker" 
+  "perl-Moo" 
+  "perl-PathTools" 
+  "perl-Test-Fatal" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.12.0"}
+]
+extra-source "perl-Email-Stuffer-tests-0.020-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Email-Stuffer-tests-0.020-5.fc40.noarch.rpm"
+}

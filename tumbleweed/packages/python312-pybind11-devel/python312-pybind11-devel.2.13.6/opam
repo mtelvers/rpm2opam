@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pybind11-devel-2.13.6-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pybind11-devel-2.13.6-1.1.noarch.rpm"]
+depends: [
+  "python-pybind11-common-devel" {= "2.13.6"}
+  "python312-base" {= "3.12"}
+  "python312-devel" 
+  "python312-pybind11" {= "2.13.6"}
+]
+extra-source "python312-pybind11-devel-2.13.6-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pybind11-devel-2.13.6-1.1.noarch.rpm"
+}

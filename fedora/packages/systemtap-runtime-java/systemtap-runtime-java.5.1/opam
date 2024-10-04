@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "systemtap-runtime-java-5.1~pre17062192g5fd8daba-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "systemtap-runtime-java-5.1~pre17062192g5fd8daba-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "byteman" {> "2.0"}
+  "glibc" 
+  "iproute" 
+  "java-21-openjdk-devel" 
+  "systemtap-runtime" {= "5.1"}
+]
+extra-source "systemtap-runtime-java-5.1~pre17062192g5fd8daba-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/systemtap-runtime-java-5.1~pre17062192g5fd8daba-1.fc40.x86_64.rpm"
+}

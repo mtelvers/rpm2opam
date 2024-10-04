@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-dbusmock-0.31.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-dbusmock-0.31.1-1.fc40.noarch.rpm"]
+depends: [
+  "dbus-x11" 
+  "python3" {= "3.12"}
+  "python3-dbus" 
+  "python3-gobject" 
+]
+extra-source "python3-dbusmock-0.31.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-dbusmock-0.31.1-1.fc40.noarch.rpm"
+}

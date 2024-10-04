@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libkdc2-7.8.0-slfo.1.1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libkdc2-7.8.0-slfo.1.1.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libasn1-8" 
+  "libhcrypto4" 
+  "libhdb9" 
+  "libheimbase1" 
+  "libheimntlm0" 
+  "libhx509-5" 
+  "libkrb5-26" 
+  "libroken18" 
+]
+extra-source "libkdc2-7.8.0-slfo.1.1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libkdc2-7.8.0-slfo.1.1.6.x86_64.rpm"
+}

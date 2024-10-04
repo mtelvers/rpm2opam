@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glib2-devel-2.80.5-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glib2-devel-2.80.5-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "dbus-1-daemon" 
+  "glib2-devel" 
+  "glib2-tools" {= "2.80.5"}
+  "glibc" 
+  "glibc-devel" 
+  "libffi-devel" {>= "3.0.0"}
+  "libffi8" 
+  "libgio-2_0-0" {= "2.80.5"}
+  "libgirepository-2_0-0" {= "2.80.5"}
+  "libglib-2_0-0" {= "2.80.5"}
+  "libgmodule-2_0-0" {= "2.80.5"}
+  "libgobject-2_0-0" {= "2.80.5"}
+  "libgthread-2_0-0" {= "2.80.5"}
+  "libmount-devel" {>= "2.23"}
+  "libselinux-devel" {>= "2.2"}
+  "pcre2-devel" {>= "10.32"}
+  "pkgconf-pkg-config" 
+  "python311-base" 
+  "typelib-1_0-GIRepository-3_0" {= "2.80.5"}
+  "typelib-1_0-GLib-2_0" {= "2.80.5"}
+  "typelib-1_0-GLibUnix-2_0" {= "2.80.5"}
+  "typelib-1_0-GModule-2_0" {= "2.80.5"}
+  "typelib-1_0-GObject-2_0" {= "2.80.5"}
+  "typelib-1_0-Gio-2_0" {= "2.80.5"}
+  "zlib-devel" 
+]
+extra-source "glib2-devel-2.80.5-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/glib2-devel-2.80.5-2.1.x86_64.rpm"
+}

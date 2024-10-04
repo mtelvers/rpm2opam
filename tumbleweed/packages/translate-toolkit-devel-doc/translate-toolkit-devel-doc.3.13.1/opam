@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "translate-toolkit-devel-doc-3.13.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "translate-toolkit-devel-doc-3.13.1-1.1.noarch.rpm"]
+depends: [
+  "python311-translate-toolkit" {= "3.13.1"}
+  "translate-toolkit-doc" {= "3.13.1"}
+]
+extra-source "translate-toolkit-devel-doc-3.13.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/translate-toolkit-devel-doc-3.13.1-1.1.noarch.rpm"
+}

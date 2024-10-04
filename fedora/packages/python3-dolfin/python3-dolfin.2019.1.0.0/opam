@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-dolfin-2019.1.0.post0-50.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-dolfin-2019.1.0.post0-50.fc40.x86_64.rpm"]
+depends: [
+  "dolfin" 
+  "dolfin-devel" {= "2019.1.0.0"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "python3" 
+  "python3-dijitso" 
+  "python3-ffc" 
+  "python3-numpy" 
+  "python3-pkgconfig" 
+  "python3-pybind11" {>= "2.2.4"}
+  "python3-ufl" 
+]
+extra-source "python3-dolfin-2019.1.0.post0-50.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-dolfin-2019.1.0.post0-50.fc40.x86_64.rpm"
+}

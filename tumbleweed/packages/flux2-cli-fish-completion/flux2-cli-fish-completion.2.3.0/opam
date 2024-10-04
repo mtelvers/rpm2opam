@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "flux2-cli-fish-completion-2.3.0-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flux2-cli-fish-completion-2.3.0-3.1.noarch.rpm"]
+depends: [
+  "flux2-cli" {= "2.3.0"}
+]
+extra-source "flux2-cli-fish-completion-2.3.0-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/flux2-cli-fish-completion-2.3.0-3.1.noarch.rpm"
+}

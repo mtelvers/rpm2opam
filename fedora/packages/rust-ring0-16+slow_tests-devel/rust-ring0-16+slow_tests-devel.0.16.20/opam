@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ring0.16+slow_tests-devel-0.16.20-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ring0.16+slow_tests-devel-0.16.20-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-ring0-16-devel" {= "0.16.20"}
+]
+extra-source "rust-ring0.16+slow_tests-devel-0.16.20-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ring0.16+slow_tests-devel-0.16.20-2.fc40.noarch.rpm"
+}

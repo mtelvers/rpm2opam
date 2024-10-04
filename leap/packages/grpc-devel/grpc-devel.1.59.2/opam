@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "grpc-devel-1.59.2-slfo.1.1.17.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grpc-devel-1.59.2-slfo.1.1.17.x86_64.rpm"]
+depends: [
+  "abseil-cpp-devel" 
+  "c-ares-devel" 
+  "glibc" 
+  "libabsl2308_0_0" 
+  "libgcc_s1" 
+  "libgrpc++1_59" {= "1.59.2"}
+  "libgrpc1_59" {= "1.59.2"}
+  "libgrpc36" {= "1.59.2"}
+  "libopenssl-3-devel" 
+  "libprotobuf23_4_0" 
+  "libprotoc23_4_0" 
+  "libstdc++6" 
+  "libupb36" {= "1.59.2"}
+  "pkgconf-pkg-config" 
+  "re2-devel" 
+  "zlib-devel" 
+]
+extra-source "grpc-devel-1.59.2-slfo.1.1.17.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/grpc-devel-1.59.2-slfo.1.1.17.x86_64.rpm"
+}

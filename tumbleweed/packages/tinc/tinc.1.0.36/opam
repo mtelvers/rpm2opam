@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tinc-1.0.36-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tinc-1.0.36-4.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "info" 
+  "liblzo2-2" 
+  "libopenssl3" 
+  "libz-ng-compat1" 
+]
+extra-source "tinc-1.0.36-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tinc-1.0.36-4.2.x86_64.rpm"
+}

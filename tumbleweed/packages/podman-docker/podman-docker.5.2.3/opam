@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "podman-docker-5.2.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "podman-docker-5.2.3-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "podman" {= "5.2.3"}
+]
+extra-source "podman-docker-5.2.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/podman-docker-5.2.3-1.1.noarch.rpm"
+}

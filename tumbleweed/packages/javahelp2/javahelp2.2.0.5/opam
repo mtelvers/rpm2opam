@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "javahelp2-2.0.05-32.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "javahelp2-2.0.05-32.11.noarch.rpm"]
+depends: [
+  "bash" 
+  "glassfish-jsp-api" 
+  "glassfish-servlet-api" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "javahelp2-2.0.05-32.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/javahelp2-2.0.05-32.11.noarch.rpm"
+}

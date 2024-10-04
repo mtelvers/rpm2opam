@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Starman-0.4017-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Starman-0.4017-1.4.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Data-Dump" 
+  "perl-HTTP-Date" 
+  "perl-HTTP-Message" 
+  "perl-HTTP-Parser-XS" 
+  "perl-Net-Server" {>= "2.7"}
+  "perl-Plack" {>= "0.9971"}
+  "perl-Test-TCP" {>= "2.0"}
+  "perl-base" 
+]
+extra-source "perl-Starman-0.4017-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Starman-0.4017-1.4.noarch.rpm"
+}

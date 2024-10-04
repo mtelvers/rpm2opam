@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-azure-cognitiveservices-search-visualsearch-0.2.0-5.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-azure-cognitiveservices-search-visualsearch-0.2.0-5.1.noarch.rpm"]
+depends: [
+  "python312-azure-cognitiveservices-nspkg" 
+  "python312-azure-cognitiveservices-search-nspkg" 
+  "python312-azure-common" 
+  "python312-azure-nspkg" 
+  "python312-base" {= "3.12"}
+  "python312-msrest" {>= "0.5.0"}
+]
+extra-source "python312-azure-cognitiveservices-search-visualsearch-0.2.0-5.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-azure-cognitiveservices-search-visualsearch-0.2.0-5.1.noarch.rpm"
+}

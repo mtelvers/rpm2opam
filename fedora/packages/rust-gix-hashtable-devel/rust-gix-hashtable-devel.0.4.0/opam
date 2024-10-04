@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gix-hashtable-devel-0.4.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gix-hashtable-devel-0.4.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-gix-hash+default-devel" 
+  "rust-hashbrown+inline-more-devel" 
+  "rust-hashbrown+raw-devel" 
+  "rust-hashbrown-devel" 
+  "rust-parking_lot+default-devel" 
+]
+extra-source "rust-gix-hashtable-devel-0.4.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gix-hashtable-devel-0.4.0-2.fc40.noarch.rpm"
+}

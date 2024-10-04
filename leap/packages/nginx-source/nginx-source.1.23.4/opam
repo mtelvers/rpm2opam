@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nginx-source-1.23.4-slfo.1.1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nginx-source-1.23.4-slfo.1.1.7.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gcc-build-c++" 
+  "gd-devel" 
+  "libatomic_ops-devel" 
+  "libopenssl-3-devel" 
+  "libxslt-devel" 
+  "nginx" {= "1.23.4"}
+  "nginx-macros" {>= "0.0.1"}
+  "pcre2-devel" 
+  "perl-base" 
+  "pkgconf-pkg-config" 
+  "vim" 
+  "zlib-devel" 
+]
+extra-source "nginx-source-1.23.4-slfo.1.1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/nginx-source-1.23.4-slfo.1.1.7.noarch.rpm"
+}

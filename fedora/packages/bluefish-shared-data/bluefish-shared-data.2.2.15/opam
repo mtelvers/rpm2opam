@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bluefish-shared-data-2.2.15-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bluefish-shared-data-2.2.15-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "python3" 
+]
+extra-source "bluefish-shared-data-2.2.15-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bluefish-shared-data-2.2.15-1.fc40.noarch.rpm"
+}

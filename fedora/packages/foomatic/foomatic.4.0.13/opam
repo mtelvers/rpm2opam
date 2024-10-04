@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "foomatic-4.0.13-31.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "foomatic-4.0.13-31.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "colord" 
+  "coreutils" 
+  "cups" 
+  "cups-filters" {>= "1.0.42"}
+  "dbus" 
+  "foomatic-db" 
+  "ghostscript" 
+  "glibc" 
+  "libxml2" 
+  "perl-Data-Dumper" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-FileHandle" 
+  "perl-Getopt-Long" 
+  "perl-Getopt-Std" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "foomatic-4.0.13-31.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/foomatic-4.0.13-31.fc40.x86_64.rpm"
+}

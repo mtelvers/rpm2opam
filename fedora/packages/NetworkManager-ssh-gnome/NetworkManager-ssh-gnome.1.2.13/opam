@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "NetworkManager-ssh-gnome-1.2.13-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "NetworkManager-ssh-gnome-1.2.13-1.fc40.x86_64.rpm"]
+depends: [
+  "NetworkManager-libnm" 
+  "NetworkManager-ssh" {= "1.2.13"}
+  "cairo" 
+  "cairo-gobject" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "graphene" 
+  "gtk4" 
+  "harfbuzz" 
+  "libgcc" 
+  "pango" 
+  "vulkan-loader" 
+]
+extra-source "NetworkManager-ssh-gnome-1.2.13-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/NetworkManager-ssh-gnome-1.2.13-1.fc40.x86_64.rpm"
+}

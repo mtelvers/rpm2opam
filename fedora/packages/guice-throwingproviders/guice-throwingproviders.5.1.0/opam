@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "guice-throwingproviders-5.1.0-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "guice-throwingproviders-5.1.0-11.fc40.noarch.rpm"]
+depends: [
+  "google-guice" {= "5.1.0"}
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "jsr-305" 
+]
+extra-source "guice-throwingproviders-5.1.0-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/guice-throwingproviders-5.1.0-11.fc40.noarch.rpm"
+}

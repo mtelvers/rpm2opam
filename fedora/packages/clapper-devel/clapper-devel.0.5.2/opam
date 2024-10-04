@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "clapper-devel-0.5.2-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clapper-devel-0.5.2-6.fc40.x86_64.rpm"]
+depends: [
+  "clapper" {= "0.5.2"}
+]
+extra-source "clapper-devel-0.5.2-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/clapper-devel-0.5.2-6.fc40.x86_64.rpm"
+}

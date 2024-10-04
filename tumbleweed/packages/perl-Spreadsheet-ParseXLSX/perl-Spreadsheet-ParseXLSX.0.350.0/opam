@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Spreadsheet-ParseXLSX-0.350.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Spreadsheet-ParseXLSX-0.350.0-1.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Archive-Zip" {>= "1.34"}
+  "perl-CryptX" 
+  "perl-Graphics-ColorUtils" 
+  "perl-OLE-Storage_Lite" 
+  "perl-Spreadsheet-ParseExcel" 
+  "perl-XML-Twig" 
+  "perl-base" 
+]
+extra-source "perl-Spreadsheet-ParseXLSX-0.350.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Spreadsheet-ParseXLSX-0.350.0-1.2.noarch.rpm"
+}

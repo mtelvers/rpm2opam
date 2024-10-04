@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-FFI-CheckLib-0.31-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-FFI-CheckLib-0.31-1.7.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-File-Which" 
+  "perl-Scalar-List-Utils" {>= "1.33"}
+]
+extra-source "perl-FFI-CheckLib-0.31-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-FFI-CheckLib-0.31-1.7.noarch.rpm"
+}

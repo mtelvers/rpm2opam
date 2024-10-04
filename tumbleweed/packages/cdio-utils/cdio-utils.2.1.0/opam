@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cdio-utils-2.1.0-9.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cdio-utils-2.1.0-9.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcddb2" 
+  "libcdio19" 
+  "libiso9660-11" 
+  "libncurses6" 
+  "libudf0" 
+  "libvcdinfo0" 
+]
+extra-source "cdio-utils-2.1.0-9.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cdio-utils-2.1.0-9.1.x86_64.rpm"
+}

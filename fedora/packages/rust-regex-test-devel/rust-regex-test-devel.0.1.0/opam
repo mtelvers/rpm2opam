@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-regex-test-devel-0.1.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-regex-test-devel-0.1.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-anyhow+default-devel" 
+  "rust-bstr+serde-devel" 
+  "rust-bstr+std-devel" 
+  "rust-bstr-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-toml+parse-devel" 
+  "rust-toml-devel" 
+]
+extra-source "rust-regex-test-devel-0.1.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-regex-test-devel-0.1.0-3.fc40.noarch.rpm"
+}

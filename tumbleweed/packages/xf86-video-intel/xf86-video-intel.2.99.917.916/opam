@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xf86-video-intel-2.99.917.916_g31486f40-6.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xf86-video-intel-2.99.917.916_g31486f40-6.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libX11-xcb1" 
+  "libXcursor1" 
+  "libXdamage1" 
+  "libXext6" 
+  "libXfixes3" 
+  "libXinerama1" 
+  "libXrandr2" 
+  "libXrender1" 
+  "libXss1" 
+  "libXtst6" 
+  "libXvMC1" 
+  "libdrm2" 
+  "libdrm_intel1" 
+  "libpixman-1-0" 
+  "libudev-mini1" 
+  "libxcb-dri2-0" 
+  "libxcb-dri3-0" 
+  "libxcb-sync1" 
+  "libxcb-util1" 
+  "libxcb1" 
+  "libxshmfence1" 
+  "xorg-x11-server" {= "25.2"}
+]
+extra-source "xf86-video-intel-2.99.917.916_g31486f40-6.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xf86-video-intel-2.99.917.916_g31486f40-6.2.x86_64.rpm"
+}

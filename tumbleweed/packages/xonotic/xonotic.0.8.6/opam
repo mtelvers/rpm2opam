@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xonotic-0.8.6-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xonotic-0.8.6-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libSDL2-2_0-0" 
+  "libX11-6" 
+  "libXext6" 
+  "libXpm4" 
+  "libXxf86vm1" 
+  "libasound2" 
+  "libd0_blind_id0" 
+  "libjpeg8" 
+  "libz-ng-compat1" 
+  "logrotate" 
+  "xonotic-data" {= "0.8.6"}
+]
+extra-source "xonotic-0.8.6-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xonotic-0.8.6-2.2.x86_64.rpm"
+}

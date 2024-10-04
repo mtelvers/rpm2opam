@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "flatpak-devel-1.15.6-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flatpak-devel-1.15.6-3.fc40.x86_64.rpm"]
+depends: [
+  "dconf-devel" {>= "0.26"}
+  "flatpak" {= "1.15.6"}
+  "flatpak-libs" 
+  "glib2-devel" 
+  "gpgme-devel" {>= "1.8.0"}
+  "json-glib-devel" 
+  "libXau-devel" 
+  "libarchive-devel" {>= "2.8.0"}
+  "libcurl-devel" {>= "7.29.0"}
+  "libseccomp-devel" 
+  "libxml2-devel" {>= "2.4"}
+  "libzstd-devel" {>= "0.8.1"}
+  "malcontent-devel" 
+  "ostree-devel" {>= "2020.8"}
+  "pkgconf-pkg-config" 
+  "polkit-devel" {>= "0.98"}
+  "systemd-devel" 
+  "wayland-devel" 
+]
+extra-source "flatpak-devel-1.15.6-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/flatpak-devel-1.15.6-3.fc40.x86_64.rpm"
+}

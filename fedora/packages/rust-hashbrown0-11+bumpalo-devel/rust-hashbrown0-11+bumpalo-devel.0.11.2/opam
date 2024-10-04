@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-hashbrown0.11+bumpalo-devel-0.11.2-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-hashbrown0.11+bumpalo-devel-0.11.2-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bumpalo+default-devel" 
+  "rust-hashbrown0-11-devel" {= "0.11.2"}
+]
+extra-source "rust-hashbrown0.11+bumpalo-devel-0.11.2-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-hashbrown0.11+bumpalo-devel-0.11.2-6.fc40.noarch.rpm"
+}

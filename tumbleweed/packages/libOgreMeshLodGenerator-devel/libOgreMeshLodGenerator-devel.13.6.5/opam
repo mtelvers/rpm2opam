@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libOgreMeshLodGenerator-devel-13.6.5-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libOgreMeshLodGenerator-devel-13.6.5-3.2.x86_64.rpm"]
+depends: [
+  "libOgreMain-devel" {= "13.6.5"}
+  "libOgreMeshLodGenerator13_6" {= "13.6.5"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libOgreMeshLodGenerator-devel-13.6.5-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libOgreMeshLodGenerator-devel-13.6.5-3.2.x86_64.rpm"
+}

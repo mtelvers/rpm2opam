@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cargo-audit-0.20.0~git66.972ac93-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cargo-audit-0.20.0~git66.972ac93-3.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+]
+extra-source "cargo-audit-0.20.0~git66.972ac93-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cargo-audit-0.20.0~git66.972ac93-3.1.x86_64.rpm"
+}

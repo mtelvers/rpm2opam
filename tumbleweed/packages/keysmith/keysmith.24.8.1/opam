@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "keysmith-24.08.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "keysmith-24.08.1-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf6-kirigami-imports" {>= "6.3.0"}
+  "kirigami-addons6" 
+  "libKF6DBusAddons6" 
+  "libKF6I18n6" 
+  "libKF6WindowSystem6" 
+  "libQt6Core6" 
+  "libQt6Gui6" 
+  "libQt6Qml6" 
+  "libQt6QuickControls2-6" 
+  "libQt6Widgets6" 
+  "libsodium26" 
+  "libstdc++6" 
+]
+extra-source "keysmith-24.08.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/keysmith-24.08.1-1.1.x86_64.rpm"
+}

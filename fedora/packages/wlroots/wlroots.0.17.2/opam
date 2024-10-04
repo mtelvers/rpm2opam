@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "wlroots-0.17.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wlroots-0.17.2-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libdisplay-info" 
+  "libdrm" 
+  "libglvnd-egl" 
+  "libglvnd-gles" 
+  "libinput" 
+  "libliftoff" 
+  "libseat" 
+  "libwayland-client" 
+  "libwayland-server" 
+  "libxcb" 
+  "libxkbcommon" 
+  "mesa-libgbm" 
+  "pixman" 
+  "systemd-libs" 
+  "vulkan-loader" 
+  "xcb-util-errors" 
+  "xcb-util-renderutil" 
+  "xcb-util-wm" 
+]
+extra-source "wlroots-0.17.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/wlroots-0.17.2-1.fc40.x86_64.rpm"
+}

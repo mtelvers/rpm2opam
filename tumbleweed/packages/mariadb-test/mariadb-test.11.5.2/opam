@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mariadb-test-11.5.2-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mariadb-test-11.5.2-2.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "libaio1" 
+  "libcrypt1" 
+  "libgcc_s1" 
+  "libmariadb_plugins" {>= "3.0"}
+  "libopenssl3" 
+  "libpcre2-8-0" 
+  "libpcre2-posix3" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "mariadb" {= "11.5.2"}
+  "mariadb-bench" {= "11.5.2"}
+  "mariadb-client" 
+  "mariadb-tools" {= "11.5.2"}
+  "pam" 
+  "perl" 
+  "perl-DBD-mysql" 
+  "perl-File-Temp" 
+  "perl-base" 
+  "procps" 
+  "time" 
+]
+extra-source "mariadb-test-11.5.2-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mariadb-test-11.5.2-2.1.x86_64.rpm"
+}

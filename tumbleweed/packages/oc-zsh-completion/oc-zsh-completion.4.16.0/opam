@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "oc-zsh-completion-4.16.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "oc-zsh-completion-4.16.0-1.1.noarch.rpm"]
+depends: [
+  "oc" {= "4.16.0"}
+]
+extra-source "oc-zsh-completion-4.16.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/oc-zsh-completion-4.16.0-1.1.noarch.rpm"
+}

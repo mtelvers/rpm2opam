@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-restfulr-0.0.15-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-restfulr-0.0.15-6.fc40.x86_64.rpm"]
+depends: [
+  "R-RCurl" 
+  "R-S4Vectors" {>= "0.13.15"}
+  "R-XML" 
+  "R-core" {= "4.3"}
+  "R-rjson" 
+  "R-yaml" 
+  "glibc" 
+]
+extra-source "R-restfulr-0.0.15-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-restfulr-0.0.15-6.fc40.x86_64.rpm"
+}

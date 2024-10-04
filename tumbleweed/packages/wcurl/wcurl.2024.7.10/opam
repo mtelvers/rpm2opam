@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wcurl-2024.07.10-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wcurl-2024.07.10-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "curl" {>= "7.46.0"}
+]
+extra-source "wcurl-2024.07.10-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/wcurl-2024.07.10-1.1.noarch.rpm"
+}

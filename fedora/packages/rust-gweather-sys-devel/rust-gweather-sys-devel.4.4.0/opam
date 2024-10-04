@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gweather-sys-devel-4.4.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gweather-sys-devel-4.4.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "libgweather-devel" {>= "4"}
+  "rust-gio-sys+default-devel" 
+  "rust-glib-sys+default-devel" 
+  "rust-gobject-sys+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-system-deps+default-devel" 
+]
+extra-source "rust-gweather-sys-devel-4.4.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gweather-sys-devel-4.4.0-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fontforge-20230101-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fontforge-20230101-11.fc40.x86_64.rpm"]
+depends: [
+  "autotrace" 
+  "cairo" 
+  "freetype" 
+  "giflib" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "hicolor-icon-theme" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libspiro" 
+  "libstdc++" 
+  "libtiff" 
+  "libxml2" 
+  "pango" 
+  "python3" {= "3.12"}
+  "python3-libs" 
+  "readline" 
+  "woff2" 
+  "xdg-utils" 
+  "zlib-ng-compat" 
+]
+extra-source "fontforge-20230101-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fontforge-20230101-11.fc40.x86_64.rpm"
+}

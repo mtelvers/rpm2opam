@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-emcee-3.1.6-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-emcee-3.1.6-1.2.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-h5py" 
+  "python311-numpy" 
+  "python311-scipy" 
+]
+extra-source "python311-emcee-3.1.6-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-emcee-3.1.6-1.2.noarch.rpm"
+}

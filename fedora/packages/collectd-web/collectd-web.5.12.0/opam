@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "collectd-web-5.12.0-37.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "collectd-web-5.12.0-37.fc40.x86_64.rpm"]
+depends: [
+  "collectd" {= "5.12.0"}
+  "collectd-rrdtool" {= "5.12.0"}
+  "httpd" 
+  "perl-CGI" 
+  "perl-Carp" 
+  "perl-Collectd" 
+  "perl-Config-General" 
+  "perl-Data-Dumper" 
+  "perl-Exporter" 
+  "perl-File-Temp" 
+  "perl-FindBin" 
+  "perl-HTML-Parser" 
+  "perl-JSON" 
+  "perl-Regexp-Common" 
+  "perl-URI" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "perl-vars" 
+  "rrdtool-perl" 
+]
+extra-source "collectd-web-5.12.0-37.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/collectd-web-5.12.0-37.fc40.x86_64.rpm"
+}

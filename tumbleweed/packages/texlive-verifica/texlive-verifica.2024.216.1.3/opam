@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-verifica-2024.216.1.3svn56625-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-verifica-2024.216.1.3svn56625-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-amsfonts" 
+  "texlive-cmbright" 
+  "texlive-enumitem" 
+  "texlive-eurosym" 
+  "texlive-extsizes" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-gensymb" 
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-lineno" 
+  "texlive-mathtools" 
+  "texlive-multido" 
+  "texlive-ncctools" 
+  "texlive-newunicodechar" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-setspace" 
+  "texlive-tabto-ltx" 
+  "texlive-tools" 
+]
+extra-source "texlive-verifica-2024.216.1.3svn56625-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-verifica-2024.216.1.3svn56625-56.1.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kf5-libkgeomap-devel-20.08.3-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kf5-libkgeomap-devel-20.08.3-10.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "kf5-libkgeomap" {= "20.8.3"}
+]
+extra-source "kf5-libkgeomap-devel-20.08.3-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kf5-libkgeomap-devel-20.08.3-10.fc40.x86_64.rpm"
+}

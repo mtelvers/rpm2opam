@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-osgi-0.3.0-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-osgi-0.3.0-1.5.noarch.rpm"]
+depends: [
+  "aqute-bndlib" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "maven-osgi-0.3.0-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-osgi-0.3.0-1.5.noarch.rpm"
+}

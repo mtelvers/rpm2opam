@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bvi-1.4.2-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bvi-1.4.2-1.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libncurses6" 
+]
+extra-source "bvi-1.4.2-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/bvi-1.4.2-1.6.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "radcli-devel-1.4.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "radcli-devel-1.4.0-1.1.x86_64.rpm"]
+depends: [
+  "libgnutls-devel" 
+  "libnettle-devel" 
+  "libradcli6" {= "1.4.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "radcli-devel-1.4.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/radcli-devel-1.4.0-1.1.x86_64.rpm"
+}

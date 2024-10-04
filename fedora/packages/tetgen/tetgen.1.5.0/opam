@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tetgen-1.5.0-25.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tetgen-1.5.0-25.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "tetgen-1.5.0-25.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tetgen-1.5.0-25.fc40.x86_64.rpm"
+}

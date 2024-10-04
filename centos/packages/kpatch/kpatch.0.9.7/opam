@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kpatch-0.9.7-3.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kpatch-0.9.7-3.el10.noarch.rpm"]
+depends: [
+  "bash" 
+  "binutils" 
+  "kmod" 
+]
+extra-source "kpatch-0.9.7-3.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/kpatch-0.9.7-3.el10.noarch.rpm"
+}

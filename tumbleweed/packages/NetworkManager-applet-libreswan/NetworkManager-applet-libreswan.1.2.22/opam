@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "NetworkManager-applet-libreswan-1.2.22-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "NetworkManager-applet-libreswan-1.2.22-1.1.x86_64.rpm"]
+depends: [
+  "NetworkManager-libreswan" {= "1.2.22"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgtk-3-0" 
+  "libgtk-4-1" 
+  "libnm0" 
+  "libnma-gtk4-0" 
+  "libnma0" 
+  "libsecret-1-0" 
+]
+extra-source "NetworkManager-applet-libreswan-1.2.22-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/NetworkManager-applet-libreswan-1.2.22-1.1.x86_64.rpm"
+}

@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "clamtk-6.18-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clamtk-6.18-1.fc40.noarch.rpm"]
+depends: [
+  "clamav" {>= "0.95"}
+  "clamav-data" 
+  "clamav-freshclam" 
+  "cronie" 
+  "gnome-icon-theme-legacy" 
+  "perl-Digest-MD5" 
+  "perl-Digest-SHA" 
+  "perl-Encode" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-Glib" 
+  "perl-Gtk3" 
+  "perl-JSON" 
+  "perl-LWP-Protocol-https" 
+  "perl-Locale-gettext" 
+  "perl-MIME-Base64" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Text-CSV" 
+  "perl-Time-Piece" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+  "perl-open" 
+]
+extra-source "clamtk-6.18-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/clamtk-6.18-1.fc40.noarch.rpm"
+}

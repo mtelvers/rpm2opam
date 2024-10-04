@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "system-user-loki-1.0.0-1.13.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "system-user-loki-1.0.0-1.13.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "system-user-loki-1.0.0-1.13.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/system-user-loki-1.0.0-1.13.noarch.rpm"
+}

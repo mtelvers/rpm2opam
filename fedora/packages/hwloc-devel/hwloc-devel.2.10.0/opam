@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hwloc-devel-2.10.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hwloc-devel-2.10.0-3.fc40.x86_64.rpm"]
+depends: [
+  "hwloc-libs" {= "2.10.0"}
+  "pkgconf-pkg-config" 
+  "rdma-core-devel" 
+]
+extra-source "hwloc-devel-2.10.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hwloc-devel-2.10.0-3.fc40.x86_64.rpm"
+}

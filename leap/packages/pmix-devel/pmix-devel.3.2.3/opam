@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pmix-devel-3.2.3-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pmix-devel-3.2.3-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "hwloc-devel" 
+  "libevent-devel" 
+  "libmca_common_dstore1" {= "3.2.3"}
+  "libpmix2" {= "3.2.3"}
+  "pkgconf-pkg-config" 
+  "pmix-headers" {= "3.2.3"}
+  "zlib-devel" 
+]
+extra-source "pmix-devel-3.2.3-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/pmix-devel-3.2.3-slfo.1.1.7.x86_64.rpm"
+}

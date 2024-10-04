@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "deluge-daemon-2.1.1-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deluge-daemon-2.1.1-6.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "deluge-common" {= "2.1.1"}
+  "python3" 
+  "shadow-utils" 
+]
+extra-source "deluge-daemon-2.1.1-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/deluge-daemon-2.1.1-6.fc40.noarch.rpm"
+}

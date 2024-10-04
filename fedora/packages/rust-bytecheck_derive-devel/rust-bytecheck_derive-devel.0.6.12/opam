@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-bytecheck_derive-devel-0.6.12-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-bytecheck_derive-devel-0.6.12-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-proc-macro2+default-devel" 
+  "rust-quote+default-devel" 
+  "rust-syn+default-devel" 
+]
+extra-source "rust-bytecheck_derive-devel-0.6.12-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-bytecheck_derive-devel-0.6.12-1.fc40.noarch.rpm"
+}

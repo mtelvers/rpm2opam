@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "typelib-1_0-Qmi-1_0-1.34.0-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "typelib-1_0-Qmi-1_0-1.34.0-2.3.x86_64.rpm"]
+depends: [
+  "libqmi-glib5" 
+  "typelib-1_0-GLib-2_0" {= "2.0"}
+  "typelib-1_0-GModule-2_0" {= "2.0"}
+  "typelib-1_0-GObject-2_0" {= "2.0"}
+  "typelib-1_0-Gio-2_0" {= "2.0"}
+  "typelib-1_0-Qrtr-1_0" {= "1.0"}
+]
+extra-source "typelib-1_0-Qmi-1_0-1.34.0-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/typelib-1_0-Qmi-1_0-1.34.0-2.3.x86_64.rpm"
+}

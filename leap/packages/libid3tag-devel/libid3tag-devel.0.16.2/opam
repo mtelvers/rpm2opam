@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libid3tag-devel-0.16.2-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libid3tag-devel-0.16.2-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "libid3tag0_16_2" {= "0.16.2"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libid3tag-devel-0.16.2-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libid3tag-devel-0.16.2-slfo.1.1.7.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kajongg-24.08.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kajongg-24.08.1-1.1.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "python311-PyQt6" 
+  "python311-Twisted" 
+]
+extra-source "kajongg-24.08.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kajongg-24.08.1-1.1.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "frozen-bubble-server-2.212-17.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "frozen-bubble-server-2.212-17.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "systemd" 
+]
+extra-source "frozen-bubble-server-2.212-17.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/frozen-bubble-server-2.212-17.1.x86_64.rpm"
+}

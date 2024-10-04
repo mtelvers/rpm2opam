@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gap-pkg-ctbllib-doc-1.3.9-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-pkg-ctbllib-doc-1.3.9-1.fc40.noarch.rpm"]
+depends: [
+  "gap-pkg-atlasrep-doc" 
+  "gap-pkg-ctbllib" {= "1.3.9"}
+  "gap-pkg-smallgrp-doc" 
+  "gap-pkg-tomlib-doc" 
+]
+extra-source "gap-pkg-ctbllib-doc-1.3.9-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gap-pkg-ctbllib-doc-1.3.9-1.fc40.noarch.rpm"
+}

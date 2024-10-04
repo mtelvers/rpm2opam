@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-IO-InSitu-0.0.2-41.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-IO-InSitu-0.0.2-41.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-File-Copy" 
+  "perl-File-Temp" 
+  "perl-IO" 
+  "perl-base" 
+  "perl-libs" 
+  "perl-version" 
+]
+extra-source "perl-IO-InSitu-0.0.2-41.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-IO-InSitu-0.0.2-41.fc40.noarch.rpm"
+}

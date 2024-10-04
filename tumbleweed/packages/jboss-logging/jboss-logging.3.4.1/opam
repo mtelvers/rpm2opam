@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jboss-logging-3.4.1-4.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jboss-logging-3.4.1-4.7.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "jboss-logging-3.4.1-4.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jboss-logging-3.4.1-4.7.noarch.rpm"
+}

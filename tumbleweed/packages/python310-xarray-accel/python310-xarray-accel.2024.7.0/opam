@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-xarray-accel-2024.7.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-xarray-accel-2024.7.0-1.1.noarch.rpm"]
+depends: [
+  "python310-Bottleneck" 
+  "python310-opt-einsum" 
+  "python310-scipy" 
+  "python310-xarray" {= "2024.7.0"}
+]
+extra-source "python310-xarray-accel-2024.7.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-xarray-accel-2024.7.0-1.1.noarch.rpm"
+}

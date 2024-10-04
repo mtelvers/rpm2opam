@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "game-music-emu-devel-0.6.3-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "game-music-emu-devel-0.6.3-14.fc40.x86_64.rpm"]
+depends: [
+  "game-music-emu" {= "0.6.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "game-music-emu-devel-0.6.3-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/game-music-emu-devel-0.6.3-14.fc40.x86_64.rpm"
+}

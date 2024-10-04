@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Catalyst-Plugin-CGI-Untaint-0.05-45.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Catalyst-Plugin-CGI-Untaint-0.05-45.fc40.noarch.rpm"]
+depends: [
+  "perl-CGI-Untaint" 
+  "perl-NEXT" 
+  "perl-libs" {>= "5.8.1"}
+]
+extra-source "perl-Catalyst-Plugin-CGI-Untaint-0.05-45.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Catalyst-Plugin-CGI-Untaint-0.05-45.fc40.noarch.rpm"
+}

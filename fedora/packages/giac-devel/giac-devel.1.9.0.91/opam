@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "giac-devel-1.9.0.91-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "giac-devel-1.9.0.91-2.fc40.x86_64.rpm"]
+depends: [
+  "fltk-devel" 
+  "giac" {= "1.9.0.91"}
+  "gsl-devel" 
+  "mpfi-devel" 
+  "ntl-devel" 
+]
+extra-source "giac-devel-1.9.0.91-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/giac-devel-1.9.0.91-2.fc40.x86_64.rpm"
+}

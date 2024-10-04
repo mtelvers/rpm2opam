@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "typelib-1_0-AyatanaAppIndicator-0_1-0.5.93-lp160.1.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "typelib-1_0-AyatanaAppIndicator-0_1-0.5.93-lp160.1.10.x86_64.rpm"]
+depends: [
+  "girepository-1_0" {= "2.0"}
+  "libayatana-appindicator1" 
+  "typelib-1_0-Atk-1_0" {= "1.0"}
+  "typelib-1_0-GdkPixbuf-2_0" {= "2.0"}
+  "typelib-1_0-Gtk-2_0" {= "2.0"}
+  "typelib-1_0-HarfBuzz-0_0" {= "0.0"}
+  "typelib-1_0-Pango-1_0" {= "1.0"}
+]
+extra-source "typelib-1_0-AyatanaAppIndicator-0_1-0.5.93-lp160.1.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/typelib-1_0-AyatanaAppIndicator-0_1-0.5.93-lp160.1.10.x86_64.rpm"
+}

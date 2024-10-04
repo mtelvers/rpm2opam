@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "postgresql15-test-15.5-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql15-test-15.5-4.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "postgresql15-contrib" {= "15.5"}
+  "postgresql15-server" {= "15.5"}
+  "postgresql15-server-devel" {= "15.5"}
+]
+extra-source "postgresql15-test-15.5-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/postgresql15-test-15.5-4.fc40.x86_64.rpm"
+}

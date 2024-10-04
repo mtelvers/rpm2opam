@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qt5-doctools-5.15.13-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qt5-doctools-5.15.13-1.fc40.x86_64.rpm"]
+depends: [
+  "clang17-libs" 
+  "glibc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtdeclarative" 
+  "qt5-qttools-libs-help" 
+]
+extra-source "qt5-doctools-5.15.13-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qt5-doctools-5.15.13-1.fc40.x86_64.rpm"
+}

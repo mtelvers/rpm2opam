@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nfsidmap-devel-1.0-43.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nfsidmap-devel-1.0-43.1.x86_64.rpm"]
+depends: [
+  "libnfsidmap1" {= "1.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "nfsidmap-devel-1.0-43.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/nfsidmap-devel-1.0-43.1.x86_64.rpm"
+}

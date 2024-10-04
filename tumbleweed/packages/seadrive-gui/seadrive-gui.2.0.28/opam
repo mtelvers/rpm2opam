@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "seadrive-gui-2.0.28-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "seadrive-gui-2.0.28-1.3.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5DBus5" 
+  "libQt5Gui5" 
+  "libQt5Network5" 
+  "libQt5Widgets5" 
+  "libgcc_s1" 
+  "libjansson4" 
+  "libqt5-qtwebengine" 
+  "libsearpc1" 
+  "libsqlite3-0" 
+  "libstdc++6" 
+  "seadrive-fuse" {>= "2.0.6"}
+]
+extra-source "seadrive-gui-2.0.28-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/seadrive-gui-2.0.28-1.3.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "supermin-5.3.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "supermin-5.3.5-1.1.x86_64.rpm"]
+depends: [
+  "Aeon-release" 
+  "e2fsprogs" 
+  "glibc" 
+  "libcom_err2" 
+  "libext2fs2" 
+  "rpm" 
+  "tar" 
+  "xmlstarlet" 
+  "zypper" 
+]
+extra-source "supermin-5.3.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/supermin-5.3.5-1.1.x86_64.rpm"
+}

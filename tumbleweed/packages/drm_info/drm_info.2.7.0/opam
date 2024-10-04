@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "drm_info-2.7.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "drm_info-2.7.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libdrm2" 
+  "libjson-c5" 
+  "libpci3" 
+]
+extra-source "drm_info-2.7.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/drm_info-2.7.0-1.1.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lsof-4.98.0-5.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lsof-4.98.0-5.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libselinux" 
+  "libtirpc" 
+]
+extra-source "lsof-4.98.0-5.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/lsof-4.98.0-5.el10.x86_64.rpm"
+}

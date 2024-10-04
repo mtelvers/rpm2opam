@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-cochineal-2024.216.1.085svn70528-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-cochineal-2024.216.1.085svn70528-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-carlisle" 
+  "texlive-cochineal-fonts" {>= "2024"}
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-fontaxes" 
+  "texlive-fontspec" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-mweights" 
+  "texlive-newtx" 
+  "texlive-realscripts" 
+  "texlive-scripts" 
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-xkeyval" 
+  "texlive-xstring" 
+]
+extra-source "texlive-cochineal-2024.216.1.085svn70528-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-cochineal-2024.216.1.085svn70528-56.1.noarch.rpm"
+}

@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cinnamon-control-center-6.0.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cinnamon-control-center-6.0.0-6.fc40.x86_64.rpm"]
+depends: [
+  "ModemManager-glib" 
+  "NetworkManager-libnm" 
+  "atk" 
+  "cairo" 
+  "cinnamon-control-center-filesystem" {= "6.0.0"}
+  "cinnamon-desktop" 
+  "cinnamon-menus" 
+  "cinnamon-settings-daemon" {>= "6.0.0"}
+  "cinnamon-translations" 
+  "colord-libs" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gnome-color-manager" 
+  "gtk3" 
+  "hicolor-icon-theme" 
+  "libX11" 
+  "libXi" 
+  "libgcc" 
+  "libgnomekbd" 
+  "libgudev" 
+  "libnma" 
+  "libnotify" 
+  "libwacom" 
+  "libxklavier" 
+  "nm-connection-editor" 
+  "pango" 
+  "polkit-libs" 
+  "redhat-menus" {>= "1.8"}
+  "upower-libs" 
+]
+extra-source "cinnamon-control-center-6.0.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cinnamon-control-center-6.0.0-6.fc40.x86_64.rpm"
+}

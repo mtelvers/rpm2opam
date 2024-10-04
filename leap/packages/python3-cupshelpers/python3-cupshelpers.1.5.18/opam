@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-cupshelpers-1.5.18-lp160.1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-cupshelpers-1.5.18-lp160.1.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-pycups" {>= "1.9.60"}
+  "python311-pycurl" 
+  "python311-requests" 
+]
+extra-source "python3-cupshelpers-1.5.18-lp160.1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/python3-cupshelpers-1.5.18-lp160.1.1.noarch.rpm"
+}

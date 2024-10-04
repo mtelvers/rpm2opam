@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-libwww-perl-tests-6.77-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-libwww-perl-tests-6.77-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "perl-ExtUtils-MakeMaker" 
+  "perl-File-Temp" 
+  "perl-FindBin" 
+  "perl-HTTP-CookieJar" 
+  "perl-HTTP-Cookies" {>= "6"}
+  "perl-HTTP-Daemon" {>= "6.1"}
+  "perl-HTTP-Message" {>= "6.18"}
+  "perl-IO" 
+  "perl-Net-HTTP" {>= "6.18"}
+  "perl-PathTools" 
+  "perl-Test-Fatal" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" {>= "0.96"}
+  "perl-URI" {>= "1.10"}
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+  "perl-parent" 
+]
+extra-source "perl-libwww-perl-tests-6.77-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-libwww-perl-tests-6.77-1.fc40.noarch.rpm"
+}

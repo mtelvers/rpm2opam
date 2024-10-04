@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-HTTP-OAI-tests-4.13-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTTP-OAI-tests-4.13-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Data-Dumper" 
+  "perl-HTTP-OAI" 
+  "perl-IO" 
+  "perl-Test" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" {>= "0.99"}
+  "perl-URI" 
+  "perl-XML-LibXML" {>= "1.60"}
+  "perl-XML-SAX" 
+  "perl-XML-SAX-Base" {>= "1.4"}
+  "perl-XML-SAX-Writer" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-HTTP-OAI-tests-4.13-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-HTTP-OAI-tests-4.13-4.fc40.noarch.rpm"
+}

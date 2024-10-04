@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcr3-viewer-3.41.2-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcr3-viewer-3.41.2-2.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcr-3-1" 
+  "libgtk-3-0" 
+]
+extra-source "gcr3-viewer-3.41.2-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gcr3-viewer-3.41.2-2.1.x86_64.rpm"
+}

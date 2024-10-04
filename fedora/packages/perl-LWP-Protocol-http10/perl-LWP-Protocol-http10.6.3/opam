@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-LWP-Protocol-http10-6.03-37.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-LWP-Protocol-http10-6.03-37.fc40.noarch.rpm"]
+depends: [
+  "perl-HTTP-Message" {>= "6"}
+  "perl-IO" 
+  "perl-URI" 
+  "perl-libs" 
+  "perl-libwww-perl" {>= "6"}
+  "perl-vars" 
+]
+extra-source "perl-LWP-Protocol-http10-6.03-37.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-LWP-Protocol-http10-6.03-37.fc40.noarch.rpm"
+}

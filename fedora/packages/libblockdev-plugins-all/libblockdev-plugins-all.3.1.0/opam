@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libblockdev-plugins-all-3.1.0-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libblockdev-plugins-all-3.1.0-2.fc40.x86_64.rpm"]
+depends: [
+  "libblockdev" {= "3.1.0"}
+  "libblockdev-btrfs" {= "3.1.0"}
+  "libblockdev-crypto" {= "3.1.0"}
+  "libblockdev-dm" {= "3.1.0"}
+  "libblockdev-fs" {= "3.1.0"}
+  "libblockdev-loop" {= "3.1.0"}
+  "libblockdev-lvm" {= "3.1.0"}
+  "libblockdev-mdraid" {= "3.1.0"}
+  "libblockdev-mpath" {= "3.1.0"}
+  "libblockdev-nvdimm" {= "3.1.0"}
+  "libblockdev-nvme" {= "3.1.0"}
+  "libblockdev-part" {= "3.1.0"}
+  "libblockdev-swap" {= "3.1.0"}
+]
+extra-source "libblockdev-plugins-all-3.1.0-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libblockdev-plugins-all-3.1.0-2.fc40.x86_64.rpm"
+}

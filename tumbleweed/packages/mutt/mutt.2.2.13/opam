@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mutt-2.2.13-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mutt-2.2.13-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "busybox-grep" 
+  "busybox-gzip" 
+  "cyrus-sasl-gssapi" 
+  "cyrus-sasl-plain" 
+  "glibc" 
+  "glibc-locale" 
+  "krb5" 
+  "libgnutls30" 
+  "libgpg-error0" 
+  "libgpgme11" 
+  "libidn2-0" 
+  "libkyotocabinet16" 
+  "libncurses6" 
+  "libsasl2-3" 
+  "libsqlite3-0" 
+  "libz-ng-compat1" 
+  "perl-base" 
+  "shared-mime-info" 
+]
+extra-source "mutt-2.2.13-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mutt-2.2.13-2.1.x86_64.rpm"
+}

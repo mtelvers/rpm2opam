@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw64-OpenSceneGraph-3.6.5-24.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-OpenSceneGraph-3.6.5-24.fc40.noarch.rpm"]
+depends: [
+  "mingw64-cairo" 
+  "mingw64-crt" 
+  "mingw64-curl" 
+  "mingw64-filesystem" {>= "95"}
+  "mingw64-fontconfig" 
+  "mingw64-freetype" 
+  "mingw64-gdal" 
+  "mingw64-gettext" 
+  "mingw64-giflib" 
+  "mingw64-glib2" 
+  "mingw64-imath" 
+  "mingw64-jasper" 
+  "mingw64-libgcc" 
+  "mingw64-libgta" 
+  "mingw64-libjpeg-turbo" 
+  "mingw64-libpng" 
+  "mingw64-librsvg2" 
+  "mingw64-libstdc++" 
+  "mingw64-libtiff" 
+  "mingw64-openexr" 
+  "mingw64-poppler-glib" 
+  "mingw64-zlib" 
+]
+extra-source "mingw64-OpenSceneGraph-3.6.5-24.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw64-OpenSceneGraph-3.6.5-24.fc40.noarch.rpm"
+}

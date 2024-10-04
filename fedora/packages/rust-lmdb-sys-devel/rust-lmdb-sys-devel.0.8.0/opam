@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-lmdb-sys-devel-0.8.0-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-lmdb-sys-devel-0.8.0-14.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "lmdb-devel" 
+  "rust-cc+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-pkg-config+default-devel" 
+]
+extra-source "rust-lmdb-sys-devel-0.8.0-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-lmdb-sys-devel-0.8.0-14.fc40.noarch.rpm"
+}

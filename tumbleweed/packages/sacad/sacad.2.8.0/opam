@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sacad-2.8.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sacad-2.8.0-1.1.noarch.rpm"]
+depends: [
+  "python311-Pillow" {>= "2.7.0"}
+  "python311-Unidecode" {>= "1.1.1"}
+  "python311-aiohttp" {>= "3.6"}
+  "python311-appdirs" {>= "1.4.0"}
+  "python311-base" {= "3.11"}
+  "python311-bitarray" {>= "0.8.3"}
+  "python311-cssselect" {>= "0.9.1"}
+  "python311-fake-useragent" {>= "0.1.11"}
+  "python311-lxml" {>= "4.0.0"}
+  "python311-mutagen" {>= "1.31"}
+  "python311-tqdm" {>= "4.28.1"}
+  "python311-web_cache" {>= "1.1.0"}
+]
+extra-source "sacad-2.8.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sacad-2.8.0-1.1.noarch.rpm"
+}

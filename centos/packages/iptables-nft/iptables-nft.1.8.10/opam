@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "iptables-nft-1.8.10-8.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "iptables-nft-1.8.10-8.el10.x86_64.rpm"]
+depends: [
+  "alternatives" 
+  "bash" 
+  "coreutils" 
+  "glibc" 
+  "iptables-libs" {= "1.8.10"}
+  "libmnl" 
+  "libnftnl" 
+]
+extra-source "iptables-nft-1.8.10-8.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/iptables-nft-1.8.10-8.el10.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libxmlsec1-openssl1-1.2.41-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxmlsec1-openssl1-1.2.41-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libopenssl3" 
+  "libxml2-2" 
+  "libxmlsec1-1" 
+]
+extra-source "libxmlsec1-openssl1-1.2.41-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libxmlsec1-openssl1-1.2.41-1.1.x86_64.rpm"
+}

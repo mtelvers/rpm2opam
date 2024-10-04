@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "open-vm-tools-12.4.0-slfo.1.1.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "open-vm-tools-12.4.0-slfo.1.1.9.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "kernel-debug" 
+  "libdrm2" 
+  "libfuse3-3" 
+  "libglib-2_0-0" 
+  "libgmodule-2_0-0" 
+  "libgobject-2_0-0" 
+  "libopenssl3" 
+  "libtirpc3" 
+  "libudev1" 
+  "libvmtools0" 
+  "libxml2-2" 
+  "libxmlsec1-1" 
+  "libxmlsec1-openssl1" {>= "1.2.37"}
+  "net-tools" 
+  "tar" 
+  "which" 
+]
+extra-source "open-vm-tools-12.4.0-slfo.1.1.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/open-vm-tools-12.4.0-slfo.1.1.9.x86_64.rpm"
+}

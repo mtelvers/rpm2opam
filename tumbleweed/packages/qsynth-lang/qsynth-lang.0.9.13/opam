@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qsynth-lang-0.9.13-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qsynth-lang-0.9.13-1.1.noarch.rpm"]
+depends: [
+  "qsynth" {= "0.9.13"}
+]
+extra-source "qsynth-lang-0.9.13-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/qsynth-lang-0.9.13-1.1.noarch.rpm"
+}

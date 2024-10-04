@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-zlib-0.6.3.0-6.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-zlib-0.6.3.0-6.1.x86_64.rpm"]
+depends: [
+  "ghc-array" 
+  "ghc-base" 
+  "ghc-bytestring" 
+  "ghc-deepseq" 
+  "ghc-ghc-bignum" 
+  "ghc-ghc-boot-th" 
+  "ghc-pretty" 
+  "ghc-template-haskell" 
+  "glibc" 
+  "libgmp10" 
+  "libz-ng-compat1" 
+]
+extra-source "ghc-zlib-0.6.3.0-6.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-zlib-0.6.3.0-6.1.x86_64.rpm"
+}

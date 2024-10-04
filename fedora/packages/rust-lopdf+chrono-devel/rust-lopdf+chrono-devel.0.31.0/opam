@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-lopdf+chrono-devel-0.31.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-lopdf+chrono-devel-0.31.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-chrono+clock-devel" 
+  "rust-chrono+std-devel" 
+  "rust-chrono-devel" 
+  "rust-lopdf-devel" {= "0.31.0"}
+]
+extra-source "rust-lopdf+chrono-devel-0.31.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-lopdf+chrono-devel-0.31.0-2.fc40.noarch.rpm"
+}

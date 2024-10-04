@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xreader-libs-4.0.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xreader-libs-4.0.2-3.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "djvulibre-libs" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libarchive" 
+  "libgcc" 
+  "libgxps" 
+  "libspectre" 
+  "libtiff" 
+  "libxml2" 
+  "pango" 
+  "poppler-glib" 
+  "t1lib" 
+  "texlive-lib" 
+  "webkit2gtk4-1" 
+  "xreader-data" {= "4.0.2"}
+  "zlib-ng-compat" 
+]
+extra-source "xreader-libs-4.0.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xreader-libs-4.0.2-3.fc40.x86_64.rpm"
+}

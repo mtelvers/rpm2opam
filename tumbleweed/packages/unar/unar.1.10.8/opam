@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "unar-1.10.8-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "unar-1.10.8-1.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbz2-1" 
+  "libgcc_s1" 
+  "libgnustep-base1_29" 
+  "libicu75" 
+  "libobjc4" 
+  "libstdc++6" 
+  "libwavpack1" 
+  "libz-ng-compat1" 
+]
+extra-source "unar-1.10.8-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/unar-1.10.8-1.4.x86_64.rpm"
+}

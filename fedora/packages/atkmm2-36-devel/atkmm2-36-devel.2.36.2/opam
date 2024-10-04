@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "atkmm2.36-devel-2.36.2-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "atkmm2.36-devel-2.36.2-5.fc40.x86_64.rpm"]
+depends: [
+  "atk-devel" {>= "2.33.3"}
+  "atkmm2-36" {= "2.36.2"}
+  "glibmm2-68-devel" {>= "2.68.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "atkmm2.36-devel-2.36.2-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/atkmm2.36-devel-2.36.2-5.fc40.x86_64.rpm"
+}

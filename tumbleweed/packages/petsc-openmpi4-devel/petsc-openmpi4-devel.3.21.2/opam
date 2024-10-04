@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "petsc-openmpi4-devel-3.21.2-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "petsc-openmpi4-devel-3.21.2-2.2.x86_64.rpm"]
+depends: [
+  "Modules" 
+  "bash-sh" 
+  "hdf5-openmpi4-devel" 
+  "hypre-openmpi4-devel" 
+  "libblacs2-openmpi4-devel" 
+  "libpetsc3_21-openmpi4" {= "3.21.2"}
+  "libscalapack2-openmpi4-devel" 
+  "libyaml-devel" 
+  "ptscotch-openmpi4-devel" 
+  "ptscotch-parmetis-openmpi4-devel" 
+  "python311-base" 
+  "suitesparse-devel" 
+]
+extra-source "petsc-openmpi4-devel-3.21.2-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/petsc-openmpi4-devel-3.21.2-2.2.x86_64.rpm"
+}

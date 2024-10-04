@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lua-bit32-5.3.5.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lua-bit32-5.3.5.1-6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "lua-libs" 
+]
+extra-source "lua-bit32-5.3.5.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lua-bit32-5.3.5.1-6.fc40.x86_64.rpm"
+}

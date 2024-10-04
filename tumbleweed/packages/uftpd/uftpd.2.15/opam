@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "uftpd-2.15-1.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "uftpd-2.15-1.10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libite5" 
+  "libuev3" 
+]
+extra-source "uftpd-2.15-1.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/uftpd-2.15-1.10.x86_64.rpm"
+}

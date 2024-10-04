@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postgresql15-llvmjit-devel-15.4-slfo.1.1.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql15-llvmjit-devel-15.4-slfo.1.1.10.x86_64.rpm"]
+depends: [
+  "clang15" {>= "15.0.7"}
+  "llvm15" {>= "15.0.7"}
+  "postgresql15-llvmjit" {= "15.4"}
+  "postgresql15-server-devel" {= "15.4"}
+]
+extra-source "postgresql15-llvmjit-devel-15.4-slfo.1.1.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/postgresql15-llvmjit-devel-15.4-slfo.1.1.10.x86_64.rpm"
+}

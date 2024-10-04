@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-slimit-0.8.1-11.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-slimit-0.8.1-11.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-base" 
+  "python310-ply" {>= "3.4"}
+  "update-alternatives" 
+]
+extra-source "python310-slimit-0.8.1-11.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-slimit-0.8.1-11.2.noarch.rpm"
+}

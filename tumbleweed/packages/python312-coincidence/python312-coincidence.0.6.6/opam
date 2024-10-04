@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-coincidence-0.6.6-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-coincidence-0.6.6-1.1.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-domdf-python-tools" {>= "2.8.0"}
+  "python312-pytest" {>= "6.2.0"}
+  "python312-pytest-regressions" {>= "2.0.2"}
+  "python312-typing_extensions" {>= "3.7.4.3"}
+]
+extra-source "python312-coincidence-0.6.6-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-coincidence-0.6.6-1.1.noarch.rpm"
+}

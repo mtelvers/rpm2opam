@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ocserv-1.3.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocserv-1.3.0-2.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "freeradius-client-libs" 
+  "glibc" 
+  "gnutls" {>= "3.1.10"}
+  "libcrypt1" 
+  "libev4" 
+  "libgnutls30" 
+  "liblz4-1" 
+  "libmaxminddb0" 
+  "libnettle8" 
+  "libnl3-200" 
+  "liboath0" 
+  "libprotobuf-c1" 
+  "libreadline8" 
+  "libsystemd0" 
+  "libtalloc2" 
+  "pam" 
+  "systemd" 
+]
+extra-source "ocserv-1.3.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ocserv-1.3.0-2.1.x86_64.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "zabbix-proxy-pgsql-6.0.27-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zabbix-proxy-pgsql-6.0.27-1.fc40.x86_64.rpm"]
+depends: [
+  "OpenIPMI-libs" 
+  "alternatives" 
+  "bash" 
+  "glibc" 
+  "libcurl" 
+  "libevent" 
+  "libpq" 
+  "libssh2" 
+  "libxml2" 
+  "net-snmp-libs" 
+  "openldap" 
+  "openssl-libs" 
+  "pcre2" 
+  "unixODBC" 
+  "zabbix-dbfiles-pgsql" 
+  "zabbix-proxy" {= "6.0.27"}
+  "zlib-ng-compat" 
+]
+extra-source "zabbix-proxy-pgsql-6.0.27-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/z/zabbix-proxy-pgsql-6.0.27-1.fc40.x86_64.rpm"
+}

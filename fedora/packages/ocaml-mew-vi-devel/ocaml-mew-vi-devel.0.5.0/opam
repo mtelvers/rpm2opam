@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-mew-vi-devel-0.5.0-25.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-mew-vi-devel-0.5.0-25.fc40.x86_64.rpm"]
+depends: [
+  "ocaml" {= "2125"}
+  "ocaml-mew" {= "854804"}
+  "ocaml-mew-devel" 
+  "ocaml-mew-vi" {= "0.5.0"}
+  "ocaml-react" {= "7"}
+  "ocaml-react-devel" 
+  "ocaml-trie" {= "0"}
+  "ocaml-trie-devel" {= "83073"}
+]
+extra-source "ocaml-mew-vi-devel-0.5.0-25.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-mew-vi-devel-0.5.0-25.fc40.x86_64.rpm"
+}

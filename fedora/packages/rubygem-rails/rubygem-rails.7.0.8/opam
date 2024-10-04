@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-rails-7.0.8-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-rails-7.0.8-2.fc40.noarch.rpm"]
+depends: [
+  "rubygem-actioncable" {= "7.0.8"}
+  "rubygem-actionmailbox" {= "7.0.8"}
+  "rubygem-actionmailer" {= "7.0.8"}
+  "rubygem-actionpack" {= "7.0.8"}
+  "rubygem-actiontext" {= "7.0.8"}
+  "rubygem-actionview" {= "7.0.8"}
+  "rubygem-activejob" {= "7.0.8"}
+  "rubygem-activemodel" {= "7.0.8"}
+  "rubygem-activerecord" {= "7.0.8"}
+  "rubygem-activestorage" {= "7.0.8"}
+  "rubygem-activesupport" {= "7.0.8"}
+  "rubygem-bundler" {>= "1.15.0"}
+  "rubygem-railties" {= "7.0.8"}
+  "rubygems" {>= "1.8.11"}
+]
+extra-source "rubygem-rails-7.0.8-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-rails-7.0.8-2.fc40.noarch.rpm"
+}

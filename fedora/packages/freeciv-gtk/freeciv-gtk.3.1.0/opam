@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "freeciv-gtk-3.1.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freeciv-gtk-3.1.0-1.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "SDL2_mixer" 
+  "bzip2-libs" 
+  "cairo" 
+  "freeciv-common" {= "3.1.0"}
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk4" 
+  "libcurl" 
+  "libicu" 
+  "libzstd" 
+  "pango" 
+  "sqlite-libs" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "freeciv-gtk-3.1.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/freeciv-gtk-3.1.0-1.fc40.x86_64.rpm"
+}

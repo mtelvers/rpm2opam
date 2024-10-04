@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-plugin-tools-beanshell-3.13.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-plugin-tools-beanshell-3.13.0-1.1.noarch.rpm"]
+depends: [
+  "bsh2" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "maven-lib" 
+  "maven-plugin-tools-api" {= "3.13.0"}
+]
+extra-source "maven-plugin-tools-beanshell-3.13.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-plugin-tools-beanshell-3.13.0-1.1.noarch.rpm"
+}

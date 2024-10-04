@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-minijinja+unicode-devel-1.0.13-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-minijinja+unicode-devel-1.0.13-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-minijinja+unicase-devel" {= "1.0.13"}
+  "rust-minijinja+unicode-ident-devel" {= "1.0.13"}
+  "rust-minijinja-devel" {= "1.0.13"}
+]
+extra-source "rust-minijinja+unicode-devel-1.0.13-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-minijinja+unicode-devel-1.0.13-1.fc40.noarch.rpm"
+}

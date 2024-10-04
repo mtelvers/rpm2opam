@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tracker-miners-3.7.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tracker-miners-3.7.1-1.fc40.x86_64.rpm"]
+depends: [
+  "NetworkManager-libnm" 
+  "bash" 
+  "exempi" 
+  "giflib" 
+  "glib2" 
+  "glibc" 
+  "gstreamer1" 
+  "gstreamer1-plugins-base" 
+  "libblkid" 
+  "libcue" 
+  "libexif" 
+  "libgcc" 
+  "libgexiv2" 
+  "libgrss" 
+  "libgsf" 
+  "libgxps" 
+  "libicu" 
+  "libiptcdata" 
+  "libjpeg-turbo" 
+  "libosinfo" 
+  "libpng" 
+  "libseccomp" 
+  "libtiff" 
+  "libtracker-sparql" 
+  "libxml2" 
+  "poppler-glib" 
+  "totem-pl-parser" 
+  "tracker" {>= "3.7"}
+  "upower-libs" 
+]
+extra-source "tracker-miners-3.7.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tracker-miners-3.7.1-1.fc40.x86_64.rpm"
+}

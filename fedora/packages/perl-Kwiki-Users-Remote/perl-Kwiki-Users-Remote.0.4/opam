@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Kwiki-Users-Remote-0.04-51.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Kwiki-Users-Remote-0.04-51.fc40.noarch.rpm"]
+depends: [
+  "perl-Kwiki" {>= "0.32"}
+  "perl-Kwiki-UserName" {>= "0.14"}
+  "perl-base" 
+  "perl-libs" 
+  "perl-mixin" 
+]
+extra-source "perl-Kwiki-Users-Remote-0.04-51.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Kwiki-Users-Remote-0.04-51.fc40.noarch.rpm"
+}

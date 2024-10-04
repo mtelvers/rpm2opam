@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "siege-4.1.6-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "siege-4.1.6-4.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libjoedog" {>= "0.1.2"}
+  "openssl-libs" 
+  "perl-interpreter" 
+  "zlib-ng-compat" 
+]
+extra-source "siege-4.1.6-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/siege-4.1.6-4.fc40.x86_64.rpm"
+}

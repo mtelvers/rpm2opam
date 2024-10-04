@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-warp-tls-prof-3.3.6-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-warp-tls-prof-3.3.6-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-cryptonite-prof" 
+  "ghc-data-default-class-prof" 
+  "ghc-network-prof" 
+  "ghc-recv-prof" 
+  "ghc-streaming-commons-prof" 
+  "ghc-tls-prof" 
+  "ghc-tls-session-manager-prof" 
+  "ghc-unliftio-prof" 
+  "ghc-wai-prof" 
+  "ghc-warp-prof" 
+  "ghc-warp-tls-devel" {= "3.3.6"}
+]
+extra-source "ghc-warp-tls-prof-3.3.6-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-warp-tls-prof-3.3.6-3.fc40.x86_64.rpm"
+}

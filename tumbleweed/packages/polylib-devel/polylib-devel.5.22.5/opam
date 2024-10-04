@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "polylib-devel-5.22.5-2.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "polylib-devel-5.22.5-2.4.x86_64.rpm"]
+depends: [
+  "gmp-devel" 
+  "libpolylibgmp8" {= "5.22.5"}
+  "pkgconf-pkg-config" 
+]
+extra-source "polylib-devel-5.22.5-2.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/polylib-devel-5.22.5-2.4.x86_64.rpm"
+}

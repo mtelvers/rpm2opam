@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lldb-18.1.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lldb-18.1.1-1.fc40.x86_64.rpm"]
+depends: [
+  "clang-libs" 
+  "glibc" 
+  "libedit" 
+  "libstdc++" 
+  "libxml2" 
+  "llvm-libs" 
+  "ncurses-libs" 
+  "python3-libs" 
+  "python3-lldb" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "lldb-18.1.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lldb-18.1.1-1.fc40.x86_64.rpm"
+}

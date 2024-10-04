@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ddnet-18.5.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ddnet-18.5.1-1.1.x86_64.rpm"]
+depends: [
+  "ddnet-data" {= "18.5.1"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libGLEW2_2" 
+  "libSDL2-2_0-0" 
+  "libcurl-mini4" 
+  "libfreetype6" 
+  "libgcc_s1" 
+  "libglvnd" 
+  "libnotify4" 
+  "libopenssl3" 
+  "libopusfile0" 
+  "libpng16-16" 
+  "libsqlite3-0" 
+  "libstdc++6" 
+  "libvulkan1" 
+  "libwavpack1" 
+  "libz-ng-compat1" 
+]
+extra-source "ddnet-18.5.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ddnet-18.5.1-1.1.x86_64.rpm"
+}

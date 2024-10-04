@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "iwlegacy-firmware-20240910-7.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "iwlegacy-firmware-20240910-7.el10.noarch.rpm"]
+depends: [
+  "linux-firmware-whence" 
+]
+extra-source "iwlegacy-firmware-20240910-7.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/iwlegacy-firmware-20240910-7.el10.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["/usr/bin/zypper" "-n" "install" "libSDL_gfx-devel-2.0.26-slfo.1.1.6.x86_64.rpm"]
+]
+remove: [
+  ["/usr/bin/zypper" "-n" "remove" "libSDL_gfx-devel-2.0.26-slfo.1.1.6.x86_64.rpm"]
+]
+depends: [
+  "libSDL_gfx15" {= "2.0.26"}
+  "pkgconf-pkg-config" 
+  "sdl12_compat-devel" {>= "1.2.60"}
+]
+extra-source "libSDL_gfx-devel-2.0.26-slfo.1.1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libSDL_gfx-devel-2.0.26-slfo.1.1.6.x86_64.rpm"
+}

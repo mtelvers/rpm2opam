@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqt5-qtwebengine-private-headers-devel-5.15.17-lp160.1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqt5-qtwebengine-private-headers-devel-5.15.17-lp160.1.2.noarch.rpm"]
+depends: [
+  "libqt5-qtbase-private-headers-devel" {>= "5.15.14"}
+  "libqt5-qtdeclarative-private-headers-devel" {>= "5.15.14"}
+  "libqt5-qtwebengine-devel" {= "5.15.17"}
+]
+extra-source "libqt5-qtwebengine-private-headers-devel-5.15.17-lp160.1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/libqt5-qtwebengine-private-headers-devel-5.15.17-lp160.1.2.noarch.rpm"
+}

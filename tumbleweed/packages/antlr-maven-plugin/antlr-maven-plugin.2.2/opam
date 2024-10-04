@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "antlr-maven-plugin-2.2-6.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "antlr-maven-plugin-2.2-6.4.noarch.rpm"]
+depends: [
+  "apache-commons-exec" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-lib" 
+  "maven-reporting-impl" 
+  "maven-wagon-provider-api" 
+  "plexus-i18n" 
+  "plexus-utils" 
+]
+extra-source "antlr-maven-plugin-2.2-6.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/antlr-maven-plugin-2.2-6.4.noarch.rpm"
+}

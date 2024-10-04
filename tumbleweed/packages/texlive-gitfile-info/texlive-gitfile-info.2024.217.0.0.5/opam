@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-gitfile-info-2024.217.0.0.5svn51928-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-gitfile-info-2024.217.0.0.5svn51928-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-currfile" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-l3packages" 
+  "texlive-latex" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tcolorbox" 
+]
+extra-source "texlive-gitfile-info-2024.217.0.0.5svn51928-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-gitfile-info-2024.217.0.0.5svn51928-56.1.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pronsole-2.0.0-0.30.rc8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pronsole-2.0.0-0.30.rc8.fc40.noarch.rpm"]
+depends: [
+  "3dprinter-udev-rules" 
+  "printrun-common" {= "2.0.0"}
+  "python3" 
+  "python3-pyserial" 
+]
+extra-source "pronsole-2.0.0-0.30.rc8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pronsole-2.0.0-0.30.rc8.fc40.noarch.rpm"
+}

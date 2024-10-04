@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-sqlalchemy-migrate-0.13.0-6.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-sqlalchemy-migrate-0.13.0-6.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-SQLAlchemy" {>= "0.7.8"}
+  "python312-Tempita" {>= "0.4"}
+  "python312-base" {= "3.12"}
+  "python312-decorator" 
+  "python312-six" {>= "1.7.0"}
+  "python312-sqlparse" 
+  "update-alternatives" 
+]
+extra-source "python312-sqlalchemy-migrate-0.13.0-6.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-sqlalchemy-migrate-0.13.0-6.3.noarch.rpm"
+}

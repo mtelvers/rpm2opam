@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-IPC-Cmd-1.04-504.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-IPC-Cmd-1.04-504.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-ExtUtils-MM-Utils" 
+  "perl-FileHandle" 
+  "perl-IO" 
+  "perl-IPC-Open3" 
+  "perl-Locale-Maketext-Simple" 
+  "perl-Module-Load-Conditional" {>= "0.66"}
+  "perl-POSIX" 
+  "perl-Params-Check" {>= "0.20"}
+  "perl-PathTools" 
+  "perl-Socket" 
+  "perl-Symbol" 
+  "perl-Text-ParseWords" 
+  "perl-Time-HiRes" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-IPC-Cmd-1.04-504.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-IPC-Cmd-1.04-504.fc40.noarch.rpm"
+}

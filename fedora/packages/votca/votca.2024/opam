@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "votca-2024-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "votca-2024-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "boost-program-options" 
+  "glibc" 
+  "libgcc" 
+  "libgomp" 
+  "libstdc++" 
+  "python3" 
+  "votca-common" {= "2024"}
+  "votca-common-xtp" {= "2024"}
+  "votca-libs" 
+]
+extra-source "votca-2024-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/votca-2024-2.fc40.x86_64.rpm"
+}

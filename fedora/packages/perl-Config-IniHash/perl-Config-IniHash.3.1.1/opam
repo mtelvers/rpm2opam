@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Config-IniHash-3.01.01-34.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Config-IniHash-3.01.01-34.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-Hash-Case" 
+  "perl-Hash-WithDefaults" {>= "0.4"}
+  "perl-Symbol" 
+  "perl-base" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-vars" 
+]
+extra-source "perl-Config-IniHash-3.01.01-34.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Config-IniHash-3.01.01-34.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "httpcomponents-core-4.4.13-slfo.1.2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "httpcomponents-core-4.4.13-slfo.1.2.3.noarch.rpm"]
+depends: [
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "httpcomponents-core-4.4.13-slfo.1.2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/httpcomponents-core-4.4.13-slfo.1.2.3.noarch.rpm"
+}

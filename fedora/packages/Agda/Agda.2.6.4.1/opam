@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "Agda-2.6.4.1-46.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Agda-2.6.4.1-46.fc40.x86_64.rpm"]
+depends: [
+  "Agda-common" {= "2.6.4.1"}
+  "glibc" 
+  "gmp" 
+  "libffi" 
+  "ncurses-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "Agda-2.6.4.1-46.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/Agda-2.6.4.1-46.fc40.x86_64.rpm"
+}

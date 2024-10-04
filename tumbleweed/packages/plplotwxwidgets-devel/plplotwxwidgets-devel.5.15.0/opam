@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plplotwxwidgets-devel-5.15.0-20.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plplotwxwidgets-devel-5.15.0-20.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libplplot17" 
+  "libplplotwxwidgets1" {= "5.15.0"}
+  "libstdc++6" 
+  "libwx_baseu-suse12_0_0" 
+  "libwx_gtk3u_core-suse12_0_0" 
+  "pkgconf-pkg-config" 
+  "plplot-common" {= "5.15.0"}
+  "plplot-devel" {= "5.15.0"}
+  "plplotcxx-devel" 
+  "wxWidgets-3_0-devel" 
+]
+extra-source "plplotwxwidgets-devel-5.15.0-20.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/plplotwxwidgets-devel-5.15.0-20.2.x86_64.rpm"
+}

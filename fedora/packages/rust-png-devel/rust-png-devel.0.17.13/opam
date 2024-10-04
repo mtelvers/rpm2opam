@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-png-devel-0.17.13-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-png-devel-0.17.13-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.57"}
+  "rust-bitflags+default-devel" 
+  "rust-crc32fast+default-devel" 
+  "rust-fdeflate+default-devel" 
+  "rust-flate2+default-devel" 
+  "rust-miniz_oxide+default-devel" 
+  "rust-miniz_oxide+simd-devel" 
+]
+extra-source "rust-png-devel-0.17.13-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-png-devel-0.17.13-1.fc40.noarch.rpm"
+}

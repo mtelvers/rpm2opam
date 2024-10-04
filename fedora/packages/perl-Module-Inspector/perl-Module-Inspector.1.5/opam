@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Module-Inspector-1.05-45.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Inspector-1.05-45.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-File-Find-Rule" 
+  "perl-File-Find-Rule-Perl" 
+  "perl-File-Find-Rule-VCS" 
+  "perl-Module-Extract" 
+  "perl-Module-Manifest" 
+  "perl-Module-Math-Depends" 
+  "perl-PPI" 
+  "perl-Params-Util" 
+  "perl-YAML-Tiny" 
+  "perl-base" 
+  "perl-libs" {>= "5.5.0"}
+  "perl-vars" 
+  "perl-version" 
+]
+extra-source "perl-Module-Inspector-1.05-45.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Module-Inspector-1.05-45.fc40.noarch.rpm"
+}

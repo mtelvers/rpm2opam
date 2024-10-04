@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CLI-Osprey-0.08-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CLI-Osprey-0.08-11.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Getopt-Long-Descriptive" {>= "0.100"}
+  "perl-Module-Runtime" 
+  "perl-Moo" 
+  "perl-Path-Tiny" 
+  "perl-Pod-Usage" 
+  "perl-Scalar-List-Utils" 
+  "perl-libs" 
+  "perl-overload" 
+]
+extra-source "perl-CLI-Osprey-0.08-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CLI-Osprey-0.08-11.fc40.noarch.rpm"
+}

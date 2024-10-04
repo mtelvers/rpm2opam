@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "keylime-7.9.0-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "keylime-7.9.0-5.fc40.x86_64.rpm"]
+depends: [
+  "keylime-agent-rust" 
+  "keylime-base" {= "7.9.0"}
+  "keylime-registrar" {= "7.9.0"}
+  "keylime-tenant" {= "7.9.0"}
+  "keylime-tools" {= "7.9.0"}
+  "keylime-verifier" {= "7.9.0"}
+  "python3-keylime" {= "7.9.0"}
+]
+extra-source "keylime-7.9.0-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/keylime-7.9.0-5.fc40.x86_64.rpm"
+}

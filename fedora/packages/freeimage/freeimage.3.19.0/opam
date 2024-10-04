@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "freeimage-3.19.0-0.23.svn1909.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freeimage-3.19.0-0.23.svn1909.fc40.x86_64.rpm"]
+depends: [
+  "LibRaw" 
+  "glibc" 
+  "imath" 
+  "jxrlib" 
+  "lcms2" 
+  "libgcc" 
+  "libgomp" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libstdc++" 
+  "libtiff" 
+  "libwebp" 
+  "openexr-libs" 
+  "openjpeg2" 
+  "zlib-ng-compat" 
+]
+extra-source "freeimage-3.19.0-0.23.svn1909.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/freeimage-3.19.0-0.23.svn1909.fc40.x86_64.rpm"
+}

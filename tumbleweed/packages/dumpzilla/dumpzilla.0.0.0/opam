@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dumpzilla-0.0.0+git.20210311-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dumpzilla-0.0.0+git.20210311-1.4.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-lz4" 
+  "python311-python-magic" 
+]
+extra-source "dumpzilla-0.0.0+git.20210311-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dumpzilla-0.0.0+git.20210311-1.4.noarch.rpm"
+}

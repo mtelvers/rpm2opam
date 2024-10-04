@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "patterns-sles-base-16.0-slfo.1.2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "patterns-sles-base-16.0-slfo.1.2.1.x86_64.rpm"]
+depends: [
+  "aaa_base" 
+  "bash" 
+  "coreutils" 
+  "dracut" 
+  "e2fsprogs" 
+  "glibc" 
+  "pam" 
+  "patterns-base-apparmor" {= "0"}
+  "polkit" 
+  "polkit-default-privs" 
+  "procps" 
+  "rpm" 
+  "shadow" 
+  "system-group-hardware" 
+  "system-user-nobody" 
+  "systemd" 
+  "util-linux" 
+  "which" 
+  "zypper" 
+]
+extra-source "patterns-sles-base-16.0-slfo.1.2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/patterns-sles-base-16.0-slfo.1.2.1.x86_64.rpm"
+}

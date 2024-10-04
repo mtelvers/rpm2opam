@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "video-downloader-0.12.11-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "video-downloader-0.12.11-1.fc40.noarch.rpm"]
+depends: [
+  "gtk4" 
+  "hicolor-icon-theme" 
+  "libadwaita" {>= "1.2.0"}
+  "python3" 
+  "python3-xlib" 
+  "yt-dlp" 
+]
+extra-source "video-downloader-0.12.11-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/video-downloader-0.12.11-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "PackageKit-devel-1.2.8-5.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "PackageKit-devel-1.2.8-5.1.x86_64.rpm"]
+depends: [
+  "PackageKit" {= "1.2.8"}
+  "busybox-coreutils" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libpackagekit-glib2-18" 
+  "libpackagekit-glib2-devel" {= "1.2.8"}
+]
+extra-source "PackageKit-devel-1.2.8-5.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/PackageKit-devel-1.2.8-5.1.x86_64.rpm"
+}

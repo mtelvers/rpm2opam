@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cargo-1.79.0-slfo.1.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cargo-1.79.0-slfo.1.1.2.x86_64.rpm"]
+depends: [
+  "cargo1-79" 
+  "rust" {= "1.79.0"}
+]
+extra-source "cargo-1.79.0-slfo.1.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/cargo-1.79.0-slfo.1.1.2.x86_64.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pulledpork-0.7.4-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pulledpork-0.7.4-10.fc40.noarch.rpm"]
+depends: [
+  "perl-Archive-Tar" 
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Digest-MD5" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-Getopt-Long" 
+  "perl-HTTP-Message" 
+  "perl-LWP-Protocol-https" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Sys-Syslog" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+]
+extra-source "pulledpork-0.7.4-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pulledpork-0.7.4-10.fc40.noarch.rpm"
+}

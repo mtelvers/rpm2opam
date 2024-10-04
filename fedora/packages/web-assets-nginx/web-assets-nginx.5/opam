@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "web-assets-nginx-5-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "web-assets-nginx-5-21.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "nginx" 
+  "web-assets-filesystem" {= "5"}
+]
+extra-source "web-assets-nginx-5-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/web-assets-nginx-5-21.fc40.noarch.rpm"
+}

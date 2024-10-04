@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfftw3-gnu-mvapich2-hpc-3.3.10-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfftw3-gnu-mvapich2-hpc-3.3.10-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "libfftw3_3_3_10-gnu-mvapich2-hpc" {= "3.3.10"}
+]
+extra-source "libfftw3-gnu-mvapich2-hpc-3.3.10-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libfftw3-gnu-mvapich2-hpc-3.3.10-slfo.1.1.7.x86_64.rpm"
+}

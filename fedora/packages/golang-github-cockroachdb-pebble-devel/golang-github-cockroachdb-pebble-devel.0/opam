@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-cockroachdb-pebble-devel-0-0.16.20210108git48f5530.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-cockroachdb-pebble-devel-0-0.16.20210108git48f5530.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-cespare-xxhash-2-devel" 
+  "compat-golang-github-codahale-hdrhistogram-devel" 
+  "go-filesystem" 
+  "golang-github-cockroachdb-errors-devel" 
+  "golang-github-cockroachdb-redact-devel" 
+  "golang-github-snappy-devel" 
+  "golang-github-spf13-cobra-devel" 
+  "golang-x-exp-devel" 
+  "golang-x-sys-devel" 
+]
+extra-source "golang-github-cockroachdb-pebble-devel-0-0.16.20210108git48f5530.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-cockroachdb-pebble-devel-0-0.16.20210108git48f5530.fc40.noarch.rpm"
+}

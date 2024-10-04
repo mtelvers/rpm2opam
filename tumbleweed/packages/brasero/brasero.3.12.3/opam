@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "brasero-3.12.3-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "brasero-3.12.3-4.1.x86_64.rpm"]
+depends: [
+  "cdda2wav" 
+  "cdrdao" 
+  "cdrecord" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gstreamer" {>= "0.11.2"}
+  "gstreamer-plugins-base" {>= "0.11.92"}
+  "gstreamer-plugins-good" {>= "0.11.92"}
+  "libbrasero-burn3-1" 
+  "libbrasero-media3-1" 
+  "libbrasero-utils3-1" 
+  "libburn4" 
+  "libcairo2" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgstreamer-1_0-0" 
+  "libgstvideo-1_0-0" 
+  "libgtk-3-0" 
+  "libisofs6" 
+  "libpango-1_0-0" 
+  "libtotem-plparser18" 
+  "libtracker-sparql-3_0-0" 
+  "libxml2-2" 
+  "mkisofs" 
+  "readcd" 
+]
+extra-source "brasero-3.12.3-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/brasero-3.12.3-4.1.x86_64.rpm"
+}

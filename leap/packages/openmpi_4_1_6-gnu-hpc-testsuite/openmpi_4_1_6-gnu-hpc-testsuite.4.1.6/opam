@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openmpi_4_1_6-gnu-hpc-testsuite-4.1.6-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openmpi_4_1_6-gnu-hpc-testsuite-4.1.6-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "gnu-compilers-hpc" 
+  "lua-lmod" 
+  "openmpi4-config" 
+  "openssh" 
+]
+extra-source "openmpi_4_1_6-gnu-hpc-testsuite-4.1.6-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/openmpi_4_1_6-gnu-hpc-testsuite-4.1.6-slfo.1.1.3.noarch.rpm"
+}

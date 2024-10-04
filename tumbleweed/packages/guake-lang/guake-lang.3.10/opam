@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "guake-lang-3.10-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "guake-lang-3.10-3.1.noarch.rpm"]
+depends: [
+  "guake" {= "3.10"}
+]
+extra-source "guake-lang-3.10-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/guake-lang-3.10-3.1.noarch.rpm"
+}

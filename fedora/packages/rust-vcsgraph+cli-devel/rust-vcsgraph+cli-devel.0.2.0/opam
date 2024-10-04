@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-vcsgraph+cli-devel-0.2.0-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-vcsgraph+cli-devel-0.2.0-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-vcsgraph+structopt-devel" {= "0.2.0"}
+  "rust-vcsgraph-devel" {= "0.2.0"}
+]
+extra-source "rust-vcsgraph+cli-devel-0.2.0-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-vcsgraph+cli-devel-0.2.0-6.fc40.noarch.rpm"
+}

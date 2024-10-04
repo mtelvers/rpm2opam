@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jnr-unixsocket-0.38.19-2.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jnr-unixsocket-0.38.19-2.6.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "jnr-constants" 
+  "jnr-enxio" 
+  "jnr-ffi" 
+  "jnr-posix" 
+]
+extra-source "jnr-unixsocket-0.38.19-2.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jnr-unixsocket-0.38.19-2.6.noarch.rpm"
+}

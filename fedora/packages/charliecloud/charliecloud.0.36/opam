@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "charliecloud-0.36-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "charliecloud-0.36-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "fuse3" 
+  "fuse3-libs" 
+  "glibc" 
+  "python3" 
+  "squashfuse" 
+  "squashfuse-libs" 
+]
+extra-source "charliecloud-0.36-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/charliecloud-0.36-1.fc40.x86_64.rpm"
+}

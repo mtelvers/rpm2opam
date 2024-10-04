@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "java-1_8_0-openjdk-accessibility-1.8.0.422-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "java-1_8_0-openjdk-accessibility-1.8.0.422-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "java-1_8_0-openjdk" {= "1.8.0.422"}
+  "java-atk-wrapper" 
+]
+extra-source "java-1_8_0-openjdk-accessibility-1.8.0.422-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/java-1_8_0-openjdk-accessibility-1.8.0.422-1.1.x86_64.rpm"
+}

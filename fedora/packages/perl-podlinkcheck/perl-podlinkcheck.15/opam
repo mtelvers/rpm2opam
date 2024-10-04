@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-podlinkcheck-15-24.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-podlinkcheck-15-24.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-File-Find-Iterator" 
+  "perl-File-HomeDir" 
+  "perl-File-Temp" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" 
+  "perl-IPC-Run" 
+  "perl-PathTools" {>= "0.8"}
+  "perl-Pod-Parser" 
+  "perl-Pod-Simple" 
+  "perl-Scalar-List-Utils" 
+  "perl-Search-Dict" 
+  "perl-Text-Tabs+Wrap" 
+  "perl-base" 
+  "perl-constant-defer" 
+  "perl-interpreter" 
+  "perl-libintl-perl" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-vars" 
+]
+extra-source "perl-podlinkcheck-15-24.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-podlinkcheck-15-24.fc40.noarch.rpm"
+}

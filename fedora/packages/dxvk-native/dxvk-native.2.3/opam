@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dxvk-native-2.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dxvk-native-2.3-1.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "glibc" 
+  "libdisplay-info" 
+  "libstdc++" 
+  "vulkan-loader" 
+]
+extra-source "dxvk-native-2.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dxvk-native-2.3-1.fc40.x86_64.rpm"
+}

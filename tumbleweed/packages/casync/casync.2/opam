@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "casync-2+git20201210.bd8898e-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "casync-2+git20201210.bd8898e-2.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libacl1" 
+  "libcurl-mini4" 
+  "libfuse2" 
+  "liblzma5" 
+  "libopenssl3" 
+  "libselinux1" 
+  "libudev-mini1" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+]
+extra-source "casync-2+git20201210.bd8898e-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/casync-2+git20201210.bd8898e-2.3.x86_64.rpm"
+}

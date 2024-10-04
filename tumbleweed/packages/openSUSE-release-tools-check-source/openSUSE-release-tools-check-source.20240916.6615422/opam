@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openSUSE-release-tools-check-source-20240916.6615422-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openSUSE-release-tools-check-source-20240916.6615422-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "obs-scm-bridge" 
+  "obs-service-download_files" 
+  "obs-service-source_validator" 
+  "osclib" {= "20240916.6615422"}
+  "perl-Text-Diff" 
+  "python311-base" 
+  "shadow" 
+]
+extra-source "openSUSE-release-tools-check-source-20240916.6615422-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/openSUSE-release-tools-check-source-20240916.6615422-1.1.noarch.rpm"
+}

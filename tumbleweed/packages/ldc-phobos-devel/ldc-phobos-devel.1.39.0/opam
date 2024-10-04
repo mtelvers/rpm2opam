@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ldc-phobos-devel-1.39.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ldc-phobos-devel-1.39.0-1.1.x86_64.rpm"]
+depends: [
+  "ldc-runtime-devel" {= "1.39.0"}
+  "libphobos2-ldc109" {= "1.39.0"}
+]
+extra-source "ldc-phobos-devel-1.39.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ldc-phobos-devel-1.39.0-1.1.x86_64.rpm"
+}

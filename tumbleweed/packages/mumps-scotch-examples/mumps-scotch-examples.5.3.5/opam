@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mumps-scotch-examples-5.3.5-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mumps-scotch-examples-5.3.5-5.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libblas3" 
+  "libgcc_s1" 
+  "libgfortran5" 
+  "liblapack3" 
+  "libmumps-ptscotch5_3_5-openmpi4" 
+  "libmumps-scotch5_3_5" 
+  "libscotch0" 
+]
+extra-source "mumps-scotch-examples-5.3.5-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mumps-scotch-examples-5.3.5-5.2.x86_64.rpm"
+}

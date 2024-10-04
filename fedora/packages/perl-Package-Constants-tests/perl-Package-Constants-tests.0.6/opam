@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Package-Constants-tests-0.06-30.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Package-Constants-tests-0.06-30.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Package-Constants" {= "0.6"}
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-Package-Constants-tests-0.06-30.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Package-Constants-tests-0.06-30.fc40.noarch.rpm"
+}

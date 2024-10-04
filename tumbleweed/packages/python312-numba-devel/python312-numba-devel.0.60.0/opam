@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-numba-devel-0.60.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-numba-devel-0.60.0-1.2.x86_64.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-devel" 
+  "python312-numba" {= "0.60.0"}
+  "python312-numpy-devel" {>= "1.22"}
+]
+extra-source "python312-numba-devel-0.60.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-numba-devel-0.60.0-1.2.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sendmail-starttls-8.18.1-2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sendmail-starttls-8.18.1-2.3.noarch.rpm"]
+depends: [
+  "bash" 
+  "cyrus-sasl-saslauthd" 
+  "openssl" 
+]
+extra-source "sendmail-starttls-8.18.1-2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sendmail-starttls-8.18.1-2.3.noarch.rpm"
+}

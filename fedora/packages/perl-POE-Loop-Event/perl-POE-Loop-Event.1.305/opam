@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-POE-Loop-Event-1.305-25.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-POE-Loop-Event-1.305-25.fc40.noarch.rpm"]
+depends: [
+  "perl-Event" {>= "1.21"}
+  "perl-POE" {>= "1.356"}
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-POE-Loop-Event-1.305-25.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-POE-Loop-Event-1.305-25.fc40.noarch.rpm"
+}

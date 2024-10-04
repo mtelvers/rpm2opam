@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-autobox-3.0.1-22.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-autobox-3.0.1-22.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-Scalar-List-Utils" 
+  "perl-Scope-Guard" {>= "0.21"}
+  "perl-Storable" 
+  "perl-libs" 
+  "perl-version" {>= "0.77"}
+]
+extra-source "perl-autobox-3.0.1-22.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-autobox-3.0.1-22.fc40.x86_64.rpm"
+}

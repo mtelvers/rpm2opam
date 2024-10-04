@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Expect-1.380.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Expect-1.380.0-1.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-IO-Tty" {>= "1.11"}
+]
+extra-source "perl-Expect-1.380.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Expect-1.380.0-1.2.noarch.rpm"
+}

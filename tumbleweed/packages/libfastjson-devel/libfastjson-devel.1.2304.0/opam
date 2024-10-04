@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfastjson-devel-1.2304.0-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfastjson-devel-1.2304.0-1.4.x86_64.rpm"]
+depends: [
+  "libfastjson4" {= "1.2304.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libfastjson-devel-1.2304.0-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfastjson-devel-1.2304.0-1.4.x86_64.rpm"
+}

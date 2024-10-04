@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "appstream-compose-1.0.2-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "appstream-compose-1.0.2-2.fc40.x86_64.rpm"]
+depends: [
+  "appstream" {= "1.0.2"}
+  "cairo" 
+  "fontconfig" 
+  "freetype" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "libgcc" 
+  "librsvg2" 
+  "libyaml" 
+  "pango" 
+]
+extra-source "appstream-compose-1.0.2-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/appstream-compose-1.0.2-2.fc40.x86_64.rpm"
+}

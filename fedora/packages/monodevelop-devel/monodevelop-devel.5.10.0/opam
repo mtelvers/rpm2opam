@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "monodevelop-devel-5.10.0-27.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "monodevelop-devel-5.10.0-27.fc40.x86_64.rpm"]
+depends: [
+  "monodevelop" {= "5.10.0"}
+  "newtonsoft-json" 
+  "pkgconf-pkg-config" 
+]
+extra-source "monodevelop-devel-5.10.0-27.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/monodevelop-devel-5.10.0-27.fc40.x86_64.rpm"
+}

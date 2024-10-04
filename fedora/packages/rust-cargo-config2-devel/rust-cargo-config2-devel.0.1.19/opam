@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-cargo-config2-devel-0.1.19-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-cargo-config2-devel-0.1.19-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.70"}
+  "rust-serde+default-devel" 
+  "rust-serde_derive+default-devel" 
+  "rust-toml_edit+parse-devel" 
+  "rust-toml_edit+serde-devel" 
+  "rust-toml_edit-devel" 
+]
+extra-source "rust-cargo-config2-devel-0.1.19-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-cargo-config2-devel-0.1.19-1.fc40.noarch.rpm"
+}

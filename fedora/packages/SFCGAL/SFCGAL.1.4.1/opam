@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "SFCGAL-1.4.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "SFCGAL-1.4.1-6.fc40.x86_64.rpm"]
+depends: [
+  "boost-serialization" 
+  "glibc" 
+  "gmp" 
+  "gmp-c++" 
+  "libgcc" 
+  "libstdc++" 
+  "mpfr" 
+]
+extra-source "SFCGAL-1.4.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/SFCGAL-1.4.1-6.fc40.x86_64.rpm"
+}

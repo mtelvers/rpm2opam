@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-owo-colors+supports-color-devel-4.0.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-owo-colors+supports-color-devel-4.0.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-owo-colors-devel" {= "4.0.0"}
+  "rust-supports-color+default-devel" 
+]
+extra-source "rust-owo-colors+supports-color-devel-4.0.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-owo-colors+supports-color-devel-4.0.0-2.fc40.noarch.rpm"
+}

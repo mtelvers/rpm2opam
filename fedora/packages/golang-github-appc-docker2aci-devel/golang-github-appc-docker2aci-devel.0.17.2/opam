@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-appc-docker2aci-devel-0.17.2-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-appc-docker2aci-devel-0.17.2-16.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-appc-spec-devel" 
+  "golang-github-coreos-ioprogress-devel" 
+  "golang-github-coreos-pkg-devel" 
+  "golang-github-docker-distribution-devel" 
+  "golang-github-klauspost-pgzip-devel" 
+  "golang-github-opencontainers-digest-devel" 
+  "golang-github-opencontainers-image-spec-devel" 
+]
+extra-source "golang-github-appc-docker2aci-devel-0.17.2-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-appc-docker2aci-devel-0.17.2-16.fc40.noarch.rpm"
+}

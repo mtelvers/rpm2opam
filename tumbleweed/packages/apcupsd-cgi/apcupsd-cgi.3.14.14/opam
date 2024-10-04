@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "apcupsd-cgi-3.14.14-16.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apcupsd-cgi-3.14.14-16.1.x86_64.rpm"]
+depends: [
+  "apcupsd" {= "3.14.14"}
+  "glibc" 
+  "libgd3" 
+]
+extra-source "apcupsd-cgi-3.14.14-16.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/apcupsd-cgi-3.14.14-16.1.x86_64.rpm"
+}

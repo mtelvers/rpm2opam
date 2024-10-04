@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fluidsynth-2.3.4-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fluidsynth-2.3.4-4.fc40.x86_64.rpm"]
+depends: [
+  "fluidsynth-libs" {= "2.3.4"}
+  "glib2" 
+  "glibc" 
+  "pipewire-libs" 
+  "systemd-libs" 
+]
+extra-source "fluidsynth-2.3.4-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fluidsynth-2.3.4-4.fc40.x86_64.rpm"
+}

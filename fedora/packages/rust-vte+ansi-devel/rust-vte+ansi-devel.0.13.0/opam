@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-vte+ansi-devel-0.13.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-vte+ansi-devel-0.13.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-vte+bitflags-devel" {= "0.13.0"}
+  "rust-vte+cursor-icon-devel" {= "0.13.0"}
+  "rust-vte+log-devel" {= "0.13.0"}
+  "rust-vte-devel" {= "0.13.0"}
+]
+extra-source "rust-vte+ansi-devel-0.13.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-vte+ansi-devel-0.13.0-2.fc40.noarch.rpm"
+}

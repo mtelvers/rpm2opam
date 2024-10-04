@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-fedora-flask-1.1.1-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-fedora-flask-1.1.1-12.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-fedora" {= "1.1.1"}
+  "python3-flask" 
+  "python3-flask-wtf" 
+  "python3-openid" 
+  "python3-openid-cla" 
+  "python3-openid-teams" 
+]
+extra-source "python3-fedora-flask-1.1.1-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-fedora-flask-1.1.1-12.fc40.noarch.rpm"
+}

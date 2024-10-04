@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-Singleton-0.30-1.28.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Singleton-0.30-1.28.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Moose" {>= "1.10"}
+]
+extra-source "perl-MooseX-Singleton-0.30-1.28.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-Singleton-0.30-1.28.noarch.rpm"
+}

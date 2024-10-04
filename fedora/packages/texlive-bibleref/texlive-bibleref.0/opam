@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-bibleref-svn55626-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-bibleref-svn55626-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-amsmath" 
+  "texlive-base" 
+  "texlive-fmtcount" 
+  "texlive-kpathsea" 
+  "texlive-latex" 
+]
+extra-source "texlive-bibleref-svn55626-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-bibleref-svn55626-71.fc40.noarch.rpm"
+}

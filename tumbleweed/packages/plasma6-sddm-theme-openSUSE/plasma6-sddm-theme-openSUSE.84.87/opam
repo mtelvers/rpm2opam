@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plasma6-sddm-theme-openSUSE-84.87~git20240313T170730~9c664b7-11.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plasma6-sddm-theme-openSUSE-84.87~git20240313T170730~9c664b7-11.1.noarch.rpm"]
+depends: [
+  "kf6-kirigami-imports" {>= "20"}
+  "libplasma6-components" 
+  "plasma6-workspace" 
+  "qt6-qt5compat-imports" 
+  "qtdeclarative-imports-provides-qt6" {>= "15"}
+  "wallpaper-branding-openSUSE" {= "84.87.20240405"}
+]
+extra-source "plasma6-sddm-theme-openSUSE-84.87~git20240313T170730~9c664b7-11.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/plasma6-sddm-theme-openSUSE-84.87~git20240313T170730~9c664b7-11.1.noarch.rpm"
+}

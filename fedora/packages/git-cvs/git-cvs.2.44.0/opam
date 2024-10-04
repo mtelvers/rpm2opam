@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "git-cvs-2.44.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "git-cvs-2.44.0-1.fc40.noarch.rpm"]
+depends: [
+  "cvs" 
+  "cvsps" 
+  "git" {= "2.44.0"}
+  "perl-DBD-SQLite" 
+  "perl-DBI" 
+  "perl-Data-Dumper" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-Getopt-Std" 
+  "perl-Git" 
+  "perl-IO" 
+  "perl-IPC-Open3" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Time-Local" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" {>= "5.8.1"}
+]
+extra-source "git-cvs-2.44.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/git-cvs-2.44.0-1.fc40.noarch.rpm"
+}

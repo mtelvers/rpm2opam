@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-skylighting-format-context-prof-0.1.0.2-1.44.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-skylighting-format-context-prof-0.1.0.2-1.44.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-skylighting-core-prof" 
+  "ghc-skylighting-format-context-devel" {= "0.1.0.2"}
+  "ghc-text-prof" 
+]
+extra-source "ghc-skylighting-format-context-prof-0.1.0.2-1.44.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-skylighting-format-context-prof-0.1.0.2-1.44.x86_64.rpm"
+}

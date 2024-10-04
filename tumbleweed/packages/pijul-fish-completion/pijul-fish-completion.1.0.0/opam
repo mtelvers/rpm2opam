@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pijul-fish-completion-1.0.0~beta.9-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pijul-fish-completion-1.0.0~beta.9-1.1.noarch.rpm"]
+depends: [
+  "fish" 
+  "pijul" {= "1.0.0"}
+]
+extra-source "pijul-fish-completion-1.0.0~beta.9-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pijul-fish-completion-1.0.0~beta.9-1.1.noarch.rpm"
+}

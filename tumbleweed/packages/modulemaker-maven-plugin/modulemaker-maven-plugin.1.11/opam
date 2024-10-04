@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "modulemaker-maven-plugin-1.11-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "modulemaker-maven-plugin-1.11-1.3.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-lib" 
+  "objectweb-asm" 
+]
+extra-source "modulemaker-maven-plugin-1.11-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/modulemaker-maven-plugin-1.11-1.3.noarch.rpm"
+}

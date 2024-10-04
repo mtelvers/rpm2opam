@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Perl-Critic-Deprecated-1.119-30.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Perl-Critic-Deprecated-1.119-30.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-English" 
+  "perl-Exporter" 
+  "perl-List-MoreUtils" 
+  "perl-PPI" 
+  "perl-Perl-Critic" {>= "1.94"}
+  "perl-Readonly" 
+  "perl-base" 
+  "perl-libs" {>= "5.6.1"}
+]
+extra-source "perl-Perl-Critic-Deprecated-1.119-30.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Perl-Critic-Deprecated-1.119-30.fc40.noarch.rpm"
+}

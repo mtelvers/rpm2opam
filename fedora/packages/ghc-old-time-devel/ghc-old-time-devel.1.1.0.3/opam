@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-old-time-devel-1.1.0.3-42.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-old-time-devel-1.1.0.3-42.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-old-locale-devel" 
+  "ghc-old-time" {= "1.1.0.3"}
+]
+extra-source "ghc-old-time-devel-1.1.0.3-42.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-old-time-devel-1.1.0.3-42.fc40.x86_64.rpm"
+}

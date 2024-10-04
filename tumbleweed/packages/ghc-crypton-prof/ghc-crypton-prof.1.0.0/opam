@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-crypton-prof-1.0.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-crypton-prof-1.0.0-1.1.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-basement-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-crypton-devel" {= "1.0.0"}
+  "ghc-deepseq-prof" 
+  "ghc-memory-prof" 
+]
+extra-source "ghc-crypton-prof-1.0.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-crypton-prof-1.0.0-1.1.x86_64.rpm"
+}

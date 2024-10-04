@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-pylatex-1.4.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-pylatex-1.4.2-1.fc40.noarch.rpm"]
+depends: [
+  "latexmk" 
+  "python3" {= "3.12"}
+  "python3-matplotlib" 
+  "python3-numpy" 
+  "python3-ordered-set" 
+  "python3-quantities" 
+  "texlive" 
+  "texlive-amsmath" 
+  "texlive-booktabs" 
+  "texlive-caption" 
+  "texlive-cleveref" 
+  "texlive-enumitem" 
+  "texlive-fancyhdr" 
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-hyperref" 
+  "texlive-lastpage" 
+  "texlive-latex" 
+  "texlive-lm" 
+  "texlive-ltablex" 
+  "texlive-mdframed" 
+  "texlive-microtype" 
+  "texlive-multirow" 
+  "texlive-parskip" 
+  "texlive-pgf" 
+  "texlive-pgfplots" 
+  "texlive-ragged2e" 
+  "texlive-siunitx" 
+  "texlive-tabu" 
+  "texlive-textpos" 
+  "texlive-tools" 
+  "texlive-xcolor" 
+]
+extra-source "python3-pylatex-1.4.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-pylatex-1.4.2-1.fc40.noarch.rpm"
+}

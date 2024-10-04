@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ikvm-8.0.5449.1-1.21.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ikvm-8.0.5449.1-1.21.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "mono-core" {= "1.0.5000.0"}
+  "mono-data" {= "2.0.0.0"}
+  "mono-devel" {= "3.5.0.0"}
+  "mono-winforms" {= "2.0.0.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "ikvm-8.0.5449.1-1.21.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ikvm-8.0.5449.1-1.21.noarch.rpm"
+}

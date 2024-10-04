@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dyninst-devel-12.3.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dyninst-devel-12.3.0-6.fc40.x86_64.rpm"]
+depends: [
+  "boost-devel" 
+  "cmake-filesystem" 
+  "dyninst" {= "12.3.0"}
+  "tbb-devel" 
+]
+extra-source "dyninst-devel-12.3.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dyninst-devel-12.3.0-6.fc40.x86_64.rpm"
+}

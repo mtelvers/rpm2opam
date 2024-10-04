@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kpipewire-devel-5.27.11-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kpipewire-devel-5.27.11-1.2.x86_64.rpm"]
+depends: [
+  "kpipewire-imports" {= "5.27.11"}
+  "libKPipeWire5" {= "5.27.11"}
+  "libKPipeWireDmaBuf5" {= "5.27.11"}
+  "libKPipeWireRecord5" {= "5.27.11"}
+  "libepoxy-devel" 
+  "pipewire-devel" 
+]
+extra-source "kpipewire-devel-5.27.11-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kpipewire-devel-5.27.11-1.2.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-libgit2-sys+ssh-devel-0.16.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-libgit2-sys+ssh-devel-0.16.2-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-libgit2-sys+libssh2-sys-devel" {= "0.16.2"}
+  "rust-libgit2-sys-devel" {= "0.16.2"}
+]
+extra-source "rust-libgit2-sys+ssh-devel-0.16.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-libgit2-sys+ssh-devel-0.16.2-1.fc40.noarch.rpm"
+}

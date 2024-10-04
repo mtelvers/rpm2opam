@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-devel-9.4.5-140.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-devel-9.4.5-140.fc40.x86_64.rpm"]
+depends: [
+  "ghc-Cabal-devel" {= "3.8.1.0"}
+  "ghc-Cabal-syntax-devel" {= "3.8.1.0"}
+  "ghc-array-devel" {= "0.5.4.0"}
+  "ghc-base-devel" {= "4.17.1.0"}
+  "ghc-binary-devel" {= "0.8.9.1"}
+  "ghc-bytestring-devel" {= "0.11.4.0"}
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" {= "0.6.7"}
+  "ghc-deepseq-devel" {= "1.4.8.0"}
+  "ghc-directory-devel" {= "1.3.7.1"}
+  "ghc-exceptions-devel" {= "0.10.5"}
+  "ghc-filepath-devel" {= "1.4.2.2"}
+  "ghc-ghc-boot-th-devel" {= "9.4.5"}
+  "ghc-haskeline-devel" {= "0.8.2"}
+  "ghc-mtl-devel" {= "2.2.2"}
+  "ghc-parsec-devel" {= "3.1.16.1"}
+  "ghc-pretty-devel" {= "1.1.3.6"}
+  "ghc-process-devel" {= "1.6.16.0"}
+  "ghc-stm-devel" {= "2.5.1.0"}
+  "ghc-template-haskell-devel" {= "2.19.0.0"}
+  "ghc-terminfo-devel" {= "0.4.1.5"}
+  "ghc-text-devel" {= "2.0.2"}
+  "ghc-time-devel" {= "1.12.2"}
+  "ghc-transformers-devel" {= "0.5.6.2"}
+  "ghc-unix-devel" {= "2.7.3"}
+  "ghc-xhtml-devel" {= "3000.2.2.1"}
+]
+extra-source "ghc-devel-9.4.5-140.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-devel-9.4.5-140.fc40.x86_64.rpm"
+}

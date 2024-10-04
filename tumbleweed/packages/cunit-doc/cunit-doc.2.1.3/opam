@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cunit-doc-2.1.3-7.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cunit-doc-2.1.3-7.2.x86_64.rpm"]
+depends: [
+  "libcunit1" {= "2.1.3"}
+]
+extra-source "cunit-doc-2.1.3-7.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cunit-doc-2.1.3-7.2.x86_64.rpm"
+}

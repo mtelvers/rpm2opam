@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-Role-WithOverloading-0.17-1.37.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Role-WithOverloading-0.17-1.37.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl" 
+  "perl-Moose" {>= "0.94"}
+  "perl-aliased" 
+  "perl-namespace-autoclean" {>= "0.16"}
+  "perl-namespace-clean" {>= "0.19"}
+]
+extra-source "perl-MooseX-Role-WithOverloading-0.17-1.37.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-MooseX-Role-WithOverloading-0.17-1.37.x86_64.rpm"
+}

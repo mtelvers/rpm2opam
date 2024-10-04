@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "akmods-0.5.8-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "akmods-0.5.8-8.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "bzip2" 
+  "coreutils" 
+  "diffutils" 
+  "elfutils-libelf-devel" 
+  "file" 
+  "findutils" 
+  "gawk" 
+  "gcc" 
+  "grep" 
+  "grubby" 
+  "gzip" 
+  "kernel-debug-devel" 
+  "kernel-debug-devel-matched" 
+  "kernel-devel-matched" 
+  "kmodtool" {>= "1.1"}
+  "make" 
+  "openssl" 
+  "rpm-build" 
+  "rpmdevtools" 
+  "sed" 
+  "shadow-utils" 
+  "systemd" 
+  "tar" 
+  "time" 
+  "unzip" 
+  "util-linux" 
+  "util-linux-core" 
+]
+extra-source "akmods-0.5.8-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/akmods-0.5.8-8.fc40.noarch.rpm"
+}

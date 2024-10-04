@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-fontools-svn65706-81.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-fontools-svn65706-81.fc40.noarch.rpm"]
+depends: [
+  "perl-Encode" 
+  "perl-File-Basename" 
+  "perl-File-Path" 
+  "perl-Getopt-Long" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Pod-Usage" 
+  "perl-Scalar-List-Utils" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "texlive-base" 
+  "texlive-fontware" 
+  "texlive-kpathsea" 
+  "texlive-lcdftypetools" 
+]
+extra-source "texlive-fontools-svn65706-81.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-fontools-svn65706-81.fc40.noarch.rpm"
+}

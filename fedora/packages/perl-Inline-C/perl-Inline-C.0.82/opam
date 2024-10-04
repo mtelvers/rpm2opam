@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Inline-C-0.82-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Inline-C-0.82-10.fc40.noarch.rpm"]
+depends: [
+  "gcc" 
+  "make" 
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Fcntl" 
+  "perl-FindBin" 
+  "perl-Inline" {>= "0.56"}
+  "perl-Parse-RecDescent" {>= "1.967009"}
+  "perl-PathTools" 
+  "perl-Pegex" 
+  "perl-Time-HiRes" 
+  "perl-constant" 
+  "perl-devel" 
+  "perl-if" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Inline-C-0.82-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Inline-C-0.82-10.fc40.noarch.rpm"
+}

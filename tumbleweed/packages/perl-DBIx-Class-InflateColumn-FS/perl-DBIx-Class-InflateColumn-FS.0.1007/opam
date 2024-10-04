@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-DBIx-Class-InflateColumn-FS-0.01007-2.26.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DBIx-Class-InflateColumn-FS-0.01007-2.26.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-DBD-SQLite" {>= "1.12"}
+  "perl-DBICx-TestDatabase" 
+  "perl-DBIx-Class" {>= "0.8"}
+  "perl-DBIx-Class-UUIDColumns" {>= "0.2005"}
+  "perl-Path-Class" 
+]
+extra-source "perl-DBIx-Class-InflateColumn-FS-0.01007-2.26.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-DBIx-Class-InflateColumn-FS-0.01007-2.26.noarch.rpm"
+}

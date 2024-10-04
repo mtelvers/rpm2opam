@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Plack-Test-ExternalServer-0.02-32.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Plack-Test-ExternalServer-0.02-32.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Plack-Test" 
+  "perl-URI" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+]
+extra-source "perl-Plack-Test-ExternalServer-0.02-32.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Plack-Test-ExternalServer-0.02-32.fc40.noarch.rpm"
+}

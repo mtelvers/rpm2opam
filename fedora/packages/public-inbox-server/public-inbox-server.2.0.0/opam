@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "public-inbox-server-2.0.0~20230714git590023f-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "public-inbox-server-2.0.0~20230714git590023f-2.fc40.noarch.rpm"]
+depends: [
+  "perl-Getopt-Long" 
+  "perl-PublicInbox" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.12.0"}
+  "public-inbox" {= "2.0.0"}
+]
+extra-source "public-inbox-server-2.0.0~20230714git590023f-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/public-inbox-server-2.0.0~20230714git590023f-2.fc40.noarch.rpm"
+}

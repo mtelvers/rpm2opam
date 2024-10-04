@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "picom-11.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "picom-11.2-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dbus-libs" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libX11" 
+  "libX11-xcb" 
+  "libconfig" 
+  "libepoxy" 
+  "libev" 
+  "libgcc" 
+  "libxcb" 
+  "pcre2" 
+  "pixman" 
+  "xcb-util-image" 
+  "xcb-util-renderutil" 
+]
+extra-source "picom-11.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/picom-11.2-1.fc40.x86_64.rpm"
+}

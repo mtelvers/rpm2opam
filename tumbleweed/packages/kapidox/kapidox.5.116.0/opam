@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kapidox-5.116.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kapidox-5.116.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "doxygen" 
+  "graphviz" 
+  "graphviz-gd" 
+  "libqt5-qttools" {>= "5.15.2"}
+  "python311-Jinja2" 
+  "python311-base" 
+]
+extra-source "kapidox-5.116.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kapidox-5.116.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Net-SNPP-1.17-51.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-SNPP-1.17-51.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Fcntl" 
+  "perl-IO" 
+  "perl-Socket" {>= "1.3"}
+  "perl-libnet" {>= "0.1"}
+  "perl-libs" {>= "5.1.0"}
+  "perl-vars" 
+]
+extra-source "perl-Net-SNPP-1.17-51.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Net-SNPP-1.17-51.fc40.noarch.rpm"
+}

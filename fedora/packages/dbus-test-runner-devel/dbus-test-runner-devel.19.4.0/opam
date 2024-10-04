@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dbus-test-runner-devel-19.04.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dbus-test-runner-devel-19.04.0-1.fc40.x86_64.rpm"]
+depends: [
+  "dbus-test-runner" {= "19.4.0"}
+  "glib2-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "dbus-test-runner-devel-19.04.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dbus-test-runner-devel-19.04.0-1.fc40.x86_64.rpm"
+}

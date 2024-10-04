@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-actionpack-7.0.8-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-actionpack-7.0.8-3.fc40.noarch.rpm"]
+depends: [
+  "rubygem-actionview" {= "7.0.8"}
+  "rubygem-activesupport" {= "7.0.8"}
+  "rubygem-rack" 
+  "rubygem-rack-test" {>= "0.6.3"}
+  "rubygem-rails-dom-testing" 
+  "rubygem-rails-html-sanitizer" 
+  "rubygems" 
+]
+extra-source "rubygem-actionpack-7.0.8-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-actionpack-7.0.8-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "Rivet-devel-3.1.10-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Rivet-devel-3.1.10-1.2.x86_64.rpm"]
+depends: [
+  "Rivet-data" {= "3.1.10"}
+  "YODA-devel" {>= "1.8.0"}
+  "bash" 
+  "libRivet-3_1_10" {= "3.1.10"}
+  "pkgconf-pkg-config" 
+]
+extra-source "Rivet-devel-3.1.10-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/Rivet-devel-3.1.10-1.2.x86_64.rpm"
+}

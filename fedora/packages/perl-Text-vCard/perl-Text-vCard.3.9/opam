@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Text-vCard-3.09-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Text-vCard-3.09-23.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Encode" 
+  "perl-MIME-Base64" {>= "3.7"}
+  "perl-Moo" 
+  "perl-Path-Tiny" 
+  "perl-Text-Tabs+Wrap" 
+  "perl-Text-vFile-asData" {>= "0.7"}
+  "perl-URI" 
+  "perl-Unicode-LineBreak" 
+  "perl-base" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-vars" 
+]
+extra-source "perl-Text-vCard-3.09-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Text-vCard-3.09-23.fc40.noarch.rpm"
+}

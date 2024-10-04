@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "apache-commons-pool2-2.4.2-slfo.1.2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apache-commons-pool2-2.4.2-slfo.1.2.3.noarch.rpm"]
+depends: [
+  "cglib" 
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "apache-commons-pool2-2.4.2-slfo.1.2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/apache-commons-pool2-2.4.2-slfo.1.2.3.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hledger-ui-1.34-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hledger-ui-1.34-2.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libffi8" 
+  "libgmp10" 
+  "libncurses6" 
+  "libnuma1" 
+  "libz-ng-compat1" 
+]
+extra-source "hledger-ui-1.34-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/hledger-ui-1.34-2.3.x86_64.rpm"
+}

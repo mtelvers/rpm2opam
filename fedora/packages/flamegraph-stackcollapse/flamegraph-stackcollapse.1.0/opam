@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "flamegraph-stackcollapse-1.0-17.20231107gitcd9ee4c.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flamegraph-stackcollapse-1.0-17.20231107gitcd9ee4c.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "flamegraph" {= "1.0"}
+  "gawk" 
+  "perl-File-Find" 
+  "perl-Getopt-Long" 
+  "perl-Getopt-Std" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "python3" 
+]
+extra-source "flamegraph-stackcollapse-1.0-17.20231107gitcd9ee4c.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/flamegraph-stackcollapse-1.0-17.20231107gitcd9ee4c.fc40.noarch.rpm"
+}

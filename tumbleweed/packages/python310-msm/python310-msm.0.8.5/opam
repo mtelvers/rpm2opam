@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-msm-0.8.5-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-msm-0.8.5-3.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "patch" 
+  "python310-GitPython" 
+  "python310-PyYAML" 
+  "python310-base" 
+  "python310-fasteners" 
+  "python310-lazy" 
+  "python310-pako" 
+  "python310-requests" 
+  "python310-setuptools" 
+  "update-alternatives" 
+]
+extra-source "python310-msm-0.8.5-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-msm-0.8.5-3.1.noarch.rpm"
+}

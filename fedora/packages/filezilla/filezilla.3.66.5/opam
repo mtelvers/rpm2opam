@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "filezilla-3.66.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "filezilla-3.66.5-1.fc40.x86_64.rpm"]
+depends: [
+  "dbus-libs" 
+  "glibc" 
+  "gtk3" 
+  "libfilezilla" 
+  "libgcc" 
+  "libstdc++" 
+  "nettle" 
+  "pugixml" 
+  "sqlite-libs" 
+  "wxBase" 
+  "wxGTK" 
+  "xdg-utils" 
+]
+extra-source "filezilla-3.66.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/filezilla-3.66.5-1.fc40.x86_64.rpm"
+}

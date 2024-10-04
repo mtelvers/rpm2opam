@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "resalloc-agent-spawner-5.4-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "resalloc-agent-spawner-5.4-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "python3" 
+  "python3-copr-common" {>= "0.23"}
+  "python3-daemon" 
+  "python3-redis" 
+  "python3-resalloc" {= "5.4"}
+  "python3-setproctitle" 
+  "shadow-utils" 
+]
+extra-source "resalloc-agent-spawner-5.4-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/resalloc-agent-spawner-5.4-1.fc40.noarch.rpm"
+}

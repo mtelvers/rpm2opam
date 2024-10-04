@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lzo-devel-2.10-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lzo-devel-2.10-12.fc40.x86_64.rpm"]
+depends: [
+  "lzo" 
+  "lzo-minilzo" 
+  "pkgconf-pkg-config" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "lzo-devel-2.10-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lzo-devel-2.10-12.fc40.x86_64.rpm"
+}

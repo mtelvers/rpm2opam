@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "limesuite-23.11.0-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "limesuite-23.11.0-1.6.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libLimeSuite23_11-0" 
+  "libgcc_s1" 
+  "libglvnd" 
+  "libstdc++6" 
+  "libwx_baseu-suse12_0_0" 
+  "libwx_gtk3u_core-suse12_0_0" 
+  "libwx_gtk3u_gl-suse12_0_0" 
+]
+extra-source "limesuite-23.11.0-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/limesuite-23.11.0-1.6.x86_64.rpm"
+}

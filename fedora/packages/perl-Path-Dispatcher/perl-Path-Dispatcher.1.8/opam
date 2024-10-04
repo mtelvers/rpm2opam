@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Path-Dispatcher-1.08-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Path-Dispatcher-1.08-8.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Moo" 
+  "perl-MooX-TypeTiny" 
+  "perl-Scalar-List-Utils" 
+  "perl-Try-Tiny" 
+  "perl-Type-Tiny" 
+  "perl-constant" 
+  "perl-libs" {>= "5.8.1"}
+  "perl-overload" 
+]
+extra-source "perl-Path-Dispatcher-1.08-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Path-Dispatcher-1.08-8.fc40.noarch.rpm"
+}

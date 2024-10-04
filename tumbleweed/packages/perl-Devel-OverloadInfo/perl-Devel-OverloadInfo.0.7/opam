@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Devel-OverloadInfo-0.007-1.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Devel-OverloadInfo-0.007-1.15.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-MRO-Compat" 
+  "perl-Package-Stash" {>= "0.14"}
+]
+extra-source "perl-Devel-OverloadInfo-0.007-1.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Devel-OverloadInfo-0.007-1.15.noarch.rpm"
+}

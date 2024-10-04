@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libavformat60-6.1.1-11.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libavformat60-6.1.1-11.1.x86_64.rpm"]
+depends: [
+  "ffmpeg-6-mini-libs" 
+  "glibc" 
+  "libavcodec60" {= "6.1.1"}
+  "libavutil58" {= "6.1.1"}
+  "libbluray2" 
+  "libbz2-1" 
+  "libgnutls30" 
+  "libopenmpt0" 
+  "librist4" 
+  "libsrt1_5" 
+  "libssh4" 
+  "libxml2-2" 
+  "libz-ng-compat1" 
+  "libzmq5" 
+]
+extra-source "libavformat60-6.1.1-11.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libavformat60-6.1.1-11.1.x86_64.rpm"
+}

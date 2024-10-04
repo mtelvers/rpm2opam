@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-scotty-devel-0.12.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-scotty-devel-0.12.1-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-devel" 
+  "ghc-base-compat-batteries-devel" 
+  "ghc-base-devel" 
+  "ghc-blaze-builder-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-case-insensitive-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-data-default-class-devel" 
+  "ghc-exceptions-devel" 
+  "ghc-http-types-devel" 
+  "ghc-monad-control-devel" 
+  "ghc-mtl-devel" 
+  "ghc-network-devel" 
+  "ghc-regex-compat-devel" 
+  "ghc-scotty" {= "0.12.1"}
+  "ghc-text-devel" 
+  "ghc-transformers-base-devel" 
+  "ghc-transformers-compat-devel" 
+  "ghc-transformers-devel" 
+  "ghc-wai-devel" 
+  "ghc-wai-extra-devel" 
+  "ghc-warp-devel" 
+]
+extra-source "ghc-scotty-devel-0.12.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-scotty-devel-0.12.1-6.fc40.x86_64.rpm"
+}

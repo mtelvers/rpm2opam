@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-algorithm2e-2023.201.5.2svn44846-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-algorithm2e-2023.201.5.2svn44846-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-endfloat" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-graphics" 
+  "texlive-ifoddpage" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-relsize" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-tocbibind" 
+  "texlive-tools" 
+]
+extra-source "texlive-algorithm2e-2023.201.5.2svn44846-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-algorithm2e-2023.201.5.2svn44846-slfo.1.1.4.noarch.rpm"
+}

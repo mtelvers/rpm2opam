@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "root-gui-6.30.04-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "root-gui-6.30.04-2.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "root-graf" 
+  "root-graf-gpad" 
+  "root-graf-x11" {= "6.30.4"}
+  "root-gui-ged" {= "6.30.4"}
+  "root-io" 
+  "root-mathcore" 
+]
+extra-source "root-gui-6.30.04-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/root-gui-6.30.04-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "globus-gssapi-gsi-14.20-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "globus-gssapi-gsi-14.20-6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "globus-common" 
+  "globus-gsi-callback" 
+  "globus-gsi-cert-utils" 
+  "globus-gsi-credential" 
+  "globus-gsi-openssl-error" 
+  "globus-gsi-proxy-core" 
+  "globus-gsi-sysconfig" {>= "8"}
+  "globus-openssl-module" 
+  "openssl-libs" 
+]
+extra-source "globus-gssapi-gsi-14.20-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/globus-gssapi-gsi-14.20-6.fc40.x86_64.rpm"
+}

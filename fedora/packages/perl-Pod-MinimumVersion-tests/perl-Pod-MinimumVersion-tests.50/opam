@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Pod-MinimumVersion-tests-50-40.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Pod-MinimumVersion-tests-50-40.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Exporter" 
+  "perl-Pod-MinimumVersion" 
+  "perl-Test" 
+  "perl-Test-Harness" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" {>= "5.4.0"}
+  "perl-vars" 
+]
+extra-source "perl-Pod-MinimumVersion-tests-50-40.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Pod-MinimumVersion-tests-50-40.fc40.noarch.rpm"
+}

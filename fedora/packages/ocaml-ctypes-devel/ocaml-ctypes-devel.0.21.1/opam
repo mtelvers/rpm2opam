@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-ctypes-devel-0.21.1-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-ctypes-devel-0.21.1-7.fc40.x86_64.rpm"]
+depends: [
+  "ocaml" {= "2125"}
+  "ocaml-bigarray-compat" {= "96"}
+  "ocaml-bigarray-compat-devel" 
+  "ocaml-compiler-libs" {= "32"}
+  "ocaml-ctypes" {= "8"}
+  "ocaml-integers" {= "521169221"}
+  "ocaml-integers-devel" 
+]
+extra-source "ocaml-ctypes-devel-0.21.1-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-ctypes-devel-0.21.1-7.fc40.x86_64.rpm"
+}

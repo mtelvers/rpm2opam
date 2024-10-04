@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "freefem++-4.14-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freefem++-4.14-8.fc40.x86_64.rpm"]
+depends: [
+  "NLopt" 
+  "SuperLU" 
+  "arpack" 
+  "bash" 
+  "coin-or-Ipopt" 
+  "fftw-libs-double" 
+  "flexiblas-netlib" 
+  "freeglut" 
+  "glibc" 
+  "gsl" 
+  "hdf5" 
+  "libaec" 
+  "libgcc" 
+  "libgfortran" 
+  "libglvnd-glx" 
+  "libquadmath" 
+  "libstdc++" 
+  "mesa-libGLU" 
+  "metis" 
+  "scotch" 
+  "scotch-devel" 
+  "suitesparse" 
+  "tetgen" 
+  "zlib-ng-compat" 
+]
+extra-source "freefem++-4.14-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/freefem++-4.14-8.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libadwaita-qt6-devel-1.4.2-4.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libadwaita-qt6-devel-1.4.2-4.4.x86_64.rpm"]
+depends: [
+  "libadwaitaqt6-1" {= "1.4.2"}
+  "qt6-core-devel" 
+  "qt6-widgets-devel" 
+]
+extra-source "libadwaita-qt6-devel-1.4.2-4.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libadwaita-qt6-devel-1.4.2-4.4.x86_64.rpm"
+}

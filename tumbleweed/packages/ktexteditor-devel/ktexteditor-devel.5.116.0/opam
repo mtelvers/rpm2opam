@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ktexteditor-devel-5.116.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ktexteditor-devel-5.116.0-1.1.x86_64.rpm"]
+depends: [
+  "kparts-devel" {>= "5.116.0"}
+  "ktexteditor" {= "5.116.0"}
+  "syntax-highlighting-devel" {>= "5.116.0"}
+]
+extra-source "ktexteditor-devel-5.116.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ktexteditor-devel-5.116.0-1.1.x86_64.rpm"
+}

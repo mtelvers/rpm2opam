@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vips-doc-8.15.1-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vips-doc-8.15.1-1.7.noarch.rpm"]
+depends: [
+  "libvips42" {= "8.15.1"}
+]
+extra-source "vips-doc-8.15.1-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/vips-doc-8.15.1-1.7.noarch.rpm"
+}

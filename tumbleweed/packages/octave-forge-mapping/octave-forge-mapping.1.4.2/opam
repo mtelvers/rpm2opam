@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "octave-forge-mapping-1.4.2-1.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "octave-forge-mapping-1.4.2-1.13.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libgcc_s1" 
+  "libgdal35" 
+  "libstdc++6" 
+  "octave-cli" {>= "3.8.0"}
+  "octave-forge-geometry" {>= "4.0.0"}
+  "octave-forge-io" {>= "2.2.7"}
+]
+extra-source "octave-forge-mapping-1.4.2-1.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/octave-forge-mapping-1.4.2-1.13.x86_64.rpm"
+}

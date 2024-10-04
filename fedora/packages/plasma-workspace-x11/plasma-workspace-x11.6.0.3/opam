@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "plasma-workspace-x11-6.0.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plasma-workspace-x11-6.0.3-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf6-kcmutils" 
+  "kf6-kcolorscheme" 
+  "kf6-kconfig" 
+  "kf6-kcoreaddons" 
+  "kf6-kdbusaddons" 
+  "kf6-kguiaddons" 
+  "kf6-kio-gui" 
+  "kf6-knotifications" 
+  "kf6-kpackage" 
+  "kf6-kservice" 
+  "kwin-x11" 
+  "libX11" 
+  "libkworkspace6" 
+  "libstdc++" 
+  "phonon-qt6" 
+  "plasma-workspace" {= "6.0.3"}
+  "plasma-workspace-libs" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "xorg-x11-server-Xorg" 
+  "xsetroot" 
+]
+extra-source "plasma-workspace-x11-6.0.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/plasma-workspace-x11-6.0.3-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jupyter-anywidget-0.9.13-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jupyter-anywidget-0.9.13-1.1.noarch.rpm"]
+depends: [
+  "jupyter-notebook" 
+  "python310-anywidget" {>= "0.9.13"}
+  "python311-ipywidgets" {>= "7.0.0"}
+]
+extra-source "jupyter-anywidget-0.9.13-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jupyter-anywidget-0.9.13-1.1.noarch.rpm"
+}

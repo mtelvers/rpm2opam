@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-radio-lang-128-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-radio-lang-128-1.1.noarch.rpm"]
+depends: [
+  "gnome-radio" {= "128"}
+]
+extra-source "gnome-radio-lang-128-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-radio-lang-128-1.1.noarch.rpm"
+}

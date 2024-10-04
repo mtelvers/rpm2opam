@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vlc-plugins-video-out-3.0.20-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vlc-plugins-video-out-3.0.20-12.fc40.x86_64.rpm"]
+depends: [
+  "aalib-libs" 
+  "glibc" 
+  "libX11" 
+  "libcaca" 
+  "libgcc" 
+  "libglvnd-egl" 
+  "libglvnd-gles" 
+  "libglvnd-glx" 
+  "libva" 
+  "libwayland-client" 
+  "libwayland-egl" 
+  "libxcb" 
+  "vlc-libs" 
+  "vlc-plugins-base" {= "3.0.20"}
+  "xcb-util-keysyms" 
+]
+extra-source "vlc-plugins-video-out-3.0.20-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vlc-plugins-video-out-3.0.20-12.fc40.x86_64.rpm"
+}

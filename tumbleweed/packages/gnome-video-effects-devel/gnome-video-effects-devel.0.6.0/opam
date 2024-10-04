@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-video-effects-devel-0.6.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-video-effects-devel-0.6.0-1.3.noarch.rpm"]
+depends: [
+  "gnome-video-effects" {= "0.6.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gnome-video-effects-devel-0.6.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-video-effects-devel-0.6.0-1.3.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dbus-sharp-glib-devel-0.5.0-15.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dbus-sharp-glib-devel-0.5.0-15.11.noarch.rpm"]
+depends: [
+  "dbus-sharp-devel" 
+  "dbus-sharp-glib" {= "0.5.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "dbus-sharp-glib-devel-0.5.0-15.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dbus-sharp-glib-devel-0.5.0-15.11.noarch.rpm"
+}

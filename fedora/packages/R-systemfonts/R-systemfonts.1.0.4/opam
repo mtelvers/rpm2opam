@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-systemfonts-1.0.4-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-systemfonts-1.0.4-6.fc40.x86_64.rpm"]
+depends: [
+  "R-core" {= "4.3"}
+  "fontconfig" 
+  "freetype" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "R-systemfonts-1.0.4-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-systemfonts-1.0.4-6.fc40.x86_64.rpm"
+}

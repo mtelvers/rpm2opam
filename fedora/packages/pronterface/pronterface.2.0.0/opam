@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pronterface-2.0.0-0.30.rc8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pronterface-2.0.0-0.30.rc8.fc40.noarch.rpm"]
+depends: [
+  "3dprinter-udev-rules" 
+  "pronsole" {= "2.0.0"}
+  "python3" 
+  "python3-cairocffi" 
+  "python3-cffi" 
+  "python3-dbus" 
+  "python3-gobject" 
+  "python3-psutil" 
+  "python3-pyglet" 
+  "python3-wxpython4" 
+  "simarrange" 
+]
+extra-source "pronterface-2.0.0-0.30.rc8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pronterface-2.0.0-0.30.rc8.fc40.noarch.rpm"
+}

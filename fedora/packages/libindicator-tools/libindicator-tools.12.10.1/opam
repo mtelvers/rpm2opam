@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libindicator-tools-12.10.1-28.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libindicator-tools-12.10.1-28.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "libindicator" {= "12.10.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libindicator-tools-12.10.1-28.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libindicator-tools-12.10.1-28.fc40.x86_64.rpm"
+}

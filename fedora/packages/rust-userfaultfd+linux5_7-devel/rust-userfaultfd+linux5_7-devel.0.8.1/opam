@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-userfaultfd+linux5_7-devel-0.8.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-userfaultfd+linux5_7-devel-0.8.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-userfaultfd-devel" {= "0.8.1"}
+  "rust-userfaultfd-sys+linux5_7-devel" 
+]
+extra-source "rust-userfaultfd+linux5_7-devel-0.8.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-userfaultfd+linux5_7-devel-0.8.1-2.fc40.noarch.rpm"
+}

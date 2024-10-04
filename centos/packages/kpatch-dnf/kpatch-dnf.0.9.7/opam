@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kpatch-dnf-0.9.7_0.4-3.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kpatch-dnf-0.9.7_0.4-3.el10.noarch.rpm"]
+depends: [
+  "bash" 
+  "python3" {= "3.12"}
+  "python3-dnf" 
+  "python3-hawkey" 
+]
+extra-source "kpatch-dnf-0.9.7_0.4-3.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/kpatch-dnf-0.9.7_0.4-3.el10.noarch.rpm"
+}

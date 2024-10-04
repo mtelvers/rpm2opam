@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sysstat-12.7.5-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sysstat-12.7.5-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libpcp3" 
+  "libpcp_import1" 
+  "libsensors4" 
+  "util-linux" 
+  "xz" 
+]
+extra-source "sysstat-12.7.5-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sysstat-12.7.5-2.1.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-typetag-devel-0.2.15-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-typetag-devel-0.2.15-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.62"}
+  "rust-erased-serde+alloc-devel" 
+  "rust-erased-serde-devel" 
+  "rust-inventory+default-devel" 
+  "rust-once_cell+alloc-devel" 
+  "rust-once_cell-devel" 
+  "rust-serde+alloc-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde-devel" 
+  "rust-typetag-impl+default-devel" {= "0.2.15"}
+]
+extra-source "rust-typetag-devel-0.2.15-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-typetag-devel-0.2.15-2.fc40.noarch.rpm"
+}

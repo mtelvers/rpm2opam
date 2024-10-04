@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-arabi-2023.201.1.1svn44662-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-arabi-2023.201.1.1svn44662-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-amsfonts" 
+  "texlive-arabi-fonts" {>= "2023"}
+  "texlive-babel" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-fp" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-multido" 
+  "texlive-psnfss" 
+  "texlive-pst-3d" 
+  "texlive-pst-grad" 
+  "texlive-pstricks" 
+  "texlive-scripts" 
+  "texlive-scripts-bin" {>= "2023"}
+]
+extra-source "texlive-arabi-2023.201.1.1svn44662-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-arabi-2023.201.1.1svn44662-slfo.1.1.4.noarch.rpm"
+}

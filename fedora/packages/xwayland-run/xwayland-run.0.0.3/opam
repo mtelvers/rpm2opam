@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xwayland-run-0.0.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xwayland-run-0.0.3-1.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "weston" 
+  "xorg-x11-server-Xwayland" 
+]
+extra-source "xwayland-run-0.0.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xwayland-run-0.0.3-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-pkfix-helper-2024.216.1.6svn56061-54.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-pkfix-helper-2024.216.1.6svn56061-54.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "perl" 
+  "perl-File-Temp" 
+  "perl-base" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-filesystem" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-pkfix-helper-bin" {>= "2024"}
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+]
+extra-source "texlive-pkfix-helper-2024.216.1.6svn56061-54.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-pkfix-helper-2024.216.1.6svn56061-54.1.noarch.rpm"
+}

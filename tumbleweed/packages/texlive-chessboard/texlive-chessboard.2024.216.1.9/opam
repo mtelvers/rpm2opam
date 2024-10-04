@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-chessboard-2024.216.1.9svn56833-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-chessboard-2024.216.1.9svn56833-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-animate" 
+  "texlive-babel" 
+  "texlive-booktabs" 
+  "texlive-caption" 
+  "texlive-chessfss" 
+  "texlive-csquotes" 
+  "texlive-etoolbox" 
+  "texlive-fancyhdr" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-fourier" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-microtype" 
+  "texlive-pgf" 
+  "texlive-psnfss" 
+  "texlive-pst-node" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-showexpl" 
+  "texlive-tools" 
+  "texlive-xcolor" 
+  "texlive-xifthen" 
+  "texlive-xkeyval" 
+]
+extra-source "texlive-chessboard-2024.216.1.9svn56833-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-chessboard-2024.216.1.9svn56833-56.1.noarch.rpm"
+}

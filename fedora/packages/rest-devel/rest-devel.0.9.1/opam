@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rest-devel-0.9.1-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rest-devel-0.9.1-9.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.44"}
+  "json-glib-devel" 
+  "libsoup3-devel" {>= "2.99.2"}
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+  "rest" 
+]
+extra-source "rest-devel-0.9.1-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rest-devel-0.9.1-9.fc40.x86_64.rpm"
+}

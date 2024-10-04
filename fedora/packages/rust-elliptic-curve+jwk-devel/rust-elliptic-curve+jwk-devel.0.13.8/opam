@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-elliptic-curve+jwk-devel-0.13.8-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-elliptic-curve+jwk-devel-0.13.8-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-base64ct+alloc-devel" 
+  "rust-base64ct-devel" 
+  "rust-elliptic-curve+alloc-devel" {= "0.13.8"}
+  "rust-elliptic-curve+serde-devel" {= "0.13.8"}
+  "rust-elliptic-curve-devel" {= "0.13.8"}
+  "rust-serde_json+alloc-devel" 
+  "rust-serde_json-devel" 
+  "rust-zeroize+alloc-devel" 
+]
+extra-source "rust-elliptic-curve+jwk-devel-0.13.8-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-elliptic-curve+jwk-devel-0.13.8-2.fc40.noarch.rpm"
+}

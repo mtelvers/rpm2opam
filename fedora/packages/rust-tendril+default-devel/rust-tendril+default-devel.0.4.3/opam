@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tendril+default-devel-0.4.3-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tendril+default-devel-0.4.3-8.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-tendril-devel" {= "0.4.3"}
+]
+extra-source "rust-tendril+default-devel-0.4.3-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tendril+default-devel-0.4.3-8.fc40.noarch.rpm"
+}

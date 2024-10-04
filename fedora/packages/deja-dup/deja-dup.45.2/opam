@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "deja-dup-45.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deja-dup-45.2-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "duplicity" {>= "0.6.23"}
+  "glib2" 
+  "glibc" 
+  "gtk4" 
+  "json-glib" 
+  "libadwaita" 
+  "libgpg-error" 
+  "libsecret" 
+  "libsoup3" 
+  "pango" 
+  "python3-PyDrive2" 
+  "python3-gobject-base" 
+]
+extra-source "deja-dup-45.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/deja-dup-45.2-3.fc40.x86_64.rpm"
+}

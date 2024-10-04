@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-haven-2.5.2-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-haven-2.5.2-7.fc40.x86_64.rpm"]
+depends: [
+  "R-cli" {>= "3.0.0"}
+  "R-core" {= "4.3"}
+  "R-forcats" {>= "0.2.0"}
+  "R-hms" 
+  "R-lifecycle" 
+  "R-readr" {>= "0.1.0"}
+  "R-rlang" {>= "0.4.0"}
+  "R-tibble" 
+  "R-tidyselect" 
+  "R-vctrs" {>= "0.3.0"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "zlib-ng-compat" 
+]
+extra-source "R-haven-2.5.2-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-haven-2.5.2-7.fc40.x86_64.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "util-linux-2.40.1-5.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "util-linux-2.40.1-5.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libaudit1" 
+  "libblkid1" 
+  "libcap-ng0" 
+  "libcrypt1" 
+  "libeconf0" 
+  "libfdisk1" 
+  "libmount1" 
+  "libncurses6" 
+  "libreadline8" 
+  "libselinux1" 
+  "libsmartcols1" 
+  "libuuid1" 
+  "libz-ng-compat1" 
+  "pam" 
+  "permissions" 
+]
+extra-source "util-linux-2.40.1-5.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/util-linux-2.40.1-5.1.x86_64.rpm"
+}

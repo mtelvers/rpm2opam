@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xsv-bash-completion-0.13.0-2.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xsv-bash-completion-0.13.0-2.12.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "xsv" {= "0.13.0"}
+]
+extra-source "xsv-bash-completion-0.13.0-2.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xsv-bash-completion-0.13.0-2.12.noarch.rpm"
+}

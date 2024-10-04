@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fdo-client-0.5.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fdo-client-0.5.0-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "clevis" 
+  "clevis-luks" 
+  "clevis-pin-tpm2" 
+  "cryptsetup" 
+  "cryptsetup-libs" 
+  "glibc" 
+  "libgcc" 
+  "openssl-libs" 
+  "tpm2-tss" 
+]
+extra-source "fdo-client-0.5.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fdo-client-0.5.0-1.fc40.x86_64.rpm"
+}

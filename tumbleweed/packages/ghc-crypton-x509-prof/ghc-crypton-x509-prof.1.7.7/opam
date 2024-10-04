@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-crypton-x509-prof-1.7.7-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-crypton-x509-prof-1.7.7-1.3.x86_64.rpm"]
+depends: [
+  "ghc-asn1-encoding-prof" 
+  "ghc-asn1-parse-prof" 
+  "ghc-asn1-types-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-crypton-prof" 
+  "ghc-crypton-x509-devel" {= "1.7.7"}
+  "ghc-hourglass-prof" 
+  "ghc-memory-prof" 
+  "ghc-pem-prof" 
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-crypton-x509-prof-1.7.7-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-crypton-x509-prof-1.7.7-1.3.x86_64.rpm"
+}

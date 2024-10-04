@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vdu_controls-2.1.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vdu_controls-2.1.0-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "ddcutil" 
+  "google-noto-sans-math-fonts" 
+  "google-noto-sans-symbols2-fonts" 
+  "python311" 
+  "python311-base" 
+  "python311-qt5" 
+]
+extra-source "vdu_controls-2.1.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/vdu_controls-2.1.0-1.1.noarch.rpm"
+}

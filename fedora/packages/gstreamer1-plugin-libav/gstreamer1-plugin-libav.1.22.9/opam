@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gstreamer1-plugin-libav-1.22.9-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gstreamer1-plugin-libav-1.22.9-1.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "gstreamer1" 
+  "gstreamer1-plugins-base" 
+  "libavcodec-free" 
+  "libavfilter-free" 
+  "libavformat-free" 
+  "libavutil-free" 
+]
+extra-source "gstreamer1-plugin-libav-1.22.9-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gstreamer1-plugin-libav-1.22.9-1.fc40.x86_64.rpm"
+}

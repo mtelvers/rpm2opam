@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-PyGithub-2.4.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-PyGithub-2.4.0-1.1.noarch.rpm"]
+depends: [
+  "python310-Deprecated" 
+  "python310-PyJWT" {>= "2.4.0"}
+  "python310-PyNaCl" {>= "1.4.0"}
+  "python310-base" {= "3.10"}
+  "python310-cryptography" {>= "3.4"}
+  "python310-requests" {>= "2.14.0"}
+  "python310-typing_extensions" {>= "4.0.0"}
+  "python310-urllib3" {>= "1.26.0"}
+]
+extra-source "python310-PyGithub-2.4.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-PyGithub-2.4.0-1.1.noarch.rpm"
+}

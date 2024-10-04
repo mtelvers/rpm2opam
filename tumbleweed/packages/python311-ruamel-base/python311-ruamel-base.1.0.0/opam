@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-ruamel.base-1.0.0+post1-2.22.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-ruamel.base-1.0.0+post1-2.22.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+]
+extra-source "python311-ruamel.base-1.0.0+post1-2.22.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-ruamel.base-1.0.0+post1-2.22.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libbfoverlay-tools-20240505-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libbfoverlay-tools-20240505-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbfoverlay1" 
+  "libcdata1" 
+  "libcerror1" 
+  "libclocale1" 
+  "libcnotify1" 
+  "libfuse2" 
+]
+extra-source "libbfoverlay-tools-20240505-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libbfoverlay-tools-20240505-1.1.x86_64.rpm"
+}

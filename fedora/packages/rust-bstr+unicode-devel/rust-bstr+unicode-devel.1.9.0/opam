@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-bstr+unicode-devel-1.9.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-bstr+unicode-devel-1.9.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bstr-devel" {= "1.9.0"}
+  "rust-regex-automata+dfa-search-devel" 
+  "rust-regex-automata-devel" 
+]
+extra-source "rust-bstr+unicode-devel-1.9.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-bstr+unicode-devel-1.9.0-2.fc40.noarch.rpm"
+}

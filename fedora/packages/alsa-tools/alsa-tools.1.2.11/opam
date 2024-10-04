@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "alsa-tools-1.2.11-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "alsa-tools-1.2.11-2.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "fltk" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "gtk3" 
+  "libgcc" 
+  "libstdc++" 
+  "python3" 
+  "python3-alsa" 
+  "xorg-x11-fonts-misc" 
+]
+extra-source "alsa-tools-1.2.11-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/alsa-tools-1.2.11-2.fc40.x86_64.rpm"
+}

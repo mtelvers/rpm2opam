@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-asymptote-bin-2024.20240311.svn70569-100.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-asymptote-bin-2024.20240311.svn70569-100.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libOSMesa8" 
+  "libfftw3-3" 
+  "libgc1" 
+  "libgcc_s1" 
+  "libglut3" 
+  "libgsl28" 
+  "libgslcblas0" 
+  "libncurses6" 
+  "libreadline8" 
+  "libsigsegv2" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+]
+extra-source "texlive-asymptote-bin-2024.20240311.svn70569-100.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/texlive-asymptote-bin-2024.20240311.svn70569-100.1.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libimobiledevice-1_0-6-1.3.0+190git.20230705-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libimobiledevice-1_0-6-1.3.0+190git.20230705-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libimobiledevice-glue-1_0-0" 
+  "libopenssl3" 
+  "libplist-2_0-4" 
+  "libusbmuxd-2_0-6" 
+]
+extra-source "libimobiledevice-1_0-6-1.3.0+190git.20230705-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libimobiledevice-1_0-6-1.3.0+190git.20230705-slfo.1.1.7.x86_64.rpm"
+}

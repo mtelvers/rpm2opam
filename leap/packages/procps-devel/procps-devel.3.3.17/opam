@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["/usr/bin/zypper" "-n" "install" "procps-devel-3.3.17-slfo.1.1.7.x86_64.rpm"]
+]
+remove: [
+  ["/usr/bin/zypper" "-n" "remove" "procps-devel-3.3.17-slfo.1.1.7.x86_64.rpm"]
+]
+depends: [
+  "libprocps8" {= "3.3.17"}
+  "pkgconf-pkg-config" 
+]
+extra-source "procps-devel-3.3.17-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/procps-devel-3.3.17-slfo.1.1.7.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libappmenu-gtk2-parser-devel-0.7.6-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libappmenu-gtk2-parser-devel-0.7.6-3.3.x86_64.rpm"]
+depends: [
+  "gtk2-devel" {>= "2.24.0"}
+  "libappmenu-gtk-parser-devel" {= "0.7.6"}
+  "libappmenu-gtk2-parser0" {= "0.7.6"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libappmenu-gtk2-parser-devel-0.7.6-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libappmenu-gtk2-parser-devel-0.7.6-3.3.x86_64.rpm"
+}

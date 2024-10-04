@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-allocator-api2+std-devel-0.2.16-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-allocator-api2+std-devel-0.2.16-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-allocator-api2+alloc-devel" {= "0.2.16"}
+  "rust-allocator-api2-devel" {= "0.2.16"}
+]
+extra-source "rust-allocator-api2+std-devel-0.2.16-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-allocator-api2+std-devel-0.2.16-3.fc40.noarch.rpm"
+}

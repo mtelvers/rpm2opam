@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-uber-tally-devel-4.1.7-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-uber-tally-devel-4.1.7-4.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-cactus-statsd-client-5-devel" 
+  "go-filesystem" 
+  "golang-github-pkg-errors-devel" 
+  "golang-github-prometheus-client-devel" 
+  "golang-github-twmb-murmur3-devel" 
+  "golang-uber-atomic-devel" 
+]
+extra-source "golang-github-uber-tally-devel-4.1.7-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-uber-tally-devel-4.1.7-4.fc40.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-devpi-client-7.0.2-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-devpi-client-7.0.2-2.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-build" 
+  "python311-check-manifest" {>= "0.28"}
+  "python311-devpi-common" {>= "4.0"}
+  "python311-iniconfig" 
+  "python311-pkginfo" {>= "1.4.2"}
+  "python311-platformdirs" 
+  "python311-pluggy" {>= "0.6.0"}
+  "python311-tox" {>= "3.1.0"}
+  "python311-virtualenv" 
+  "update-alternatives" 
+]
+extra-source "python311-devpi-client-7.0.2-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-devpi-client-7.0.2-2.2.noarch.rpm"
+}

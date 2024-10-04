@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "baekmuk-ttf-fonts-all-2.2-62.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "baekmuk-ttf-fonts-all-2.2-62.fc40.noarch.rpm"]
+depends: [
+  "baekmuk-batang-fonts" {= "2.2"}
+  "baekmuk-dotum-fonts" {= "2.2"}
+  "baekmuk-gulim-fonts" {= "2.2"}
+  "baekmuk-headline-fonts" {= "2.2"}
+]
+extra-source "baekmuk-ttf-fonts-all-2.2-62.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/baekmuk-ttf-fonts-all-2.2-62.fc40.noarch.rpm"
+}

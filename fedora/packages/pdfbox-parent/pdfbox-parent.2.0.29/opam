@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pdfbox-parent-2.0.29-2.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pdfbox-parent-2.0.29-2.fc39.noarch.rpm"]
+depends: [
+  "apache-parent" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "maven-compiler-plugin" 
+  "maven-jar-plugin" 
+]
+extra-source "pdfbox-parent-2.0.29-2.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pdfbox-parent-2.0.29-2.fc39.noarch.rpm"
+}

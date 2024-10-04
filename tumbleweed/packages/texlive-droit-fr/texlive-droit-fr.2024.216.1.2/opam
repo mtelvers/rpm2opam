@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-droit-fr-2024.216.1.2svn39802-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-droit-fr-2024.216.1.2svn39802-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-babel" 
+  "texlive-biblatex" 
+  "texlive-csquotes" 
+  "texlive-engrec" 
+  "texlive-filecontents" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-footmisc" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-kvoptions" 
+  "texlive-latex" 
+  "texlive-oberdiek" 
+  "texlive-refcount" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-xifthen" 
+  "texlive-xstring" 
+]
+extra-source "texlive-droit-fr-2024.216.1.2svn39802-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-droit-fr-2024.216.1.2svn39802-55.1.noarch.rpm"
+}

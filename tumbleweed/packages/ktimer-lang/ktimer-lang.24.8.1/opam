@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ktimer-lang-24.08.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ktimer-lang-24.08.1-1.1.noarch.rpm"]
+depends: [
+  "ktimer" {= "24.8.1"}
+]
+extra-source "ktimer-lang-24.08.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ktimer-lang-24.08.1-1.1.noarch.rpm"
+}

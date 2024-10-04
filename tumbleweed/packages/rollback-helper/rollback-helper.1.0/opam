@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rollback-helper-1.0+git20240301.73ac53e-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rollback-helper-1.0+git20240301.73ac53e-1.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "suseconnect-ng" 
+  "systemd" 
+]
+extra-source "rollback-helper-1.0+git20240301.73ac53e-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/rollback-helper-1.0+git20240301.73ac53e-1.2.noarch.rpm"
+}

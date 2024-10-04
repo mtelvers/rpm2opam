@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-App-perlbrew-0.980.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-App-perlbrew-0.980.0-2.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-CPAN-Perl-Releases" {>= "5.20230720"}
+  "perl-Capture-Tiny" {>= "0.48"}
+  "perl-Devel-PatchPerl" {>= "2.8"}
+  "perl-File-Temp" {>= "0.2304"}
+  "perl-base" 
+  "perl-local-lib" {>= "2.14"}
+]
+extra-source "perl-App-perlbrew-0.980.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-App-perlbrew-0.980.0-2.2.noarch.rpm"
+}

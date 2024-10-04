@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cmake-fedora-2.9.3-1.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cmake-fedora-2.9.3-1.12.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+]
+extra-source "cmake-fedora-2.9.3-1.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cmake-fedora-2.9.3-1.12.noarch.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libxapp1-2.8.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxapp1-2.8.5-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libcairo-gobject2" 
+  "libcairo2" 
+  "libdbusmenu-gtk3-4" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgnomekbd8" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+  "xapp-common" 
+]
+extra-source "libxapp1-2.8.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libxapp1-2.8.5-1.1.x86_64.rpm"
+}

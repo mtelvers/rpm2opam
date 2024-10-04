@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Math-Derivative-1.01-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Math-Derivative-1.01-20.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-libs" {>= "5.10.1"}
+]
+extra-source "perl-Math-Derivative-1.01-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Math-Derivative-1.01-20.fc40.noarch.rpm"
+}

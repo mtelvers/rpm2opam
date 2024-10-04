@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libdnf-devel-0.73.1-lp160.1.29.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdnf-devel-0.73.1-lp160.1.29.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libdnf2" {= "0.73.1"}
+  "librepo-devel" 
+  "libsolv-devel" 
+  "pkgconf-pkg-config" 
+  "rpm-devel" 
+  "sqlite3-devel" 
+]
+extra-source "libdnf-devel-0.73.1-lp160.1.29.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libdnf-devel-0.73.1-lp160.1.29.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "meson-1.5.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "meson-1.5.2-1.1.noarch.rpm"]
+depends: [
+  "ninja" {>= "1.8.2"}
+  "python311-base" 
+]
+extra-source "meson-1.5.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/meson-1.5.2-1.1.noarch.rpm"
+}

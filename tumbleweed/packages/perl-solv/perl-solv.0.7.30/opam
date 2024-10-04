@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-solv-0.7.30-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-solv-0.7.30-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbz2-1" 
+  "liblzma5" 
+  "libxml2-2" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+  "perl" {= "5.40.0"}
+  "rpm" 
+]
+extra-source "perl-solv-0.7.30-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-solv-0.7.30-1.1.x86_64.rpm"
+}

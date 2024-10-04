@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "grommunio-web-3.5.1.31715c1e-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grommunio-web-3.5.1.31715c1e-1.5.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "gromox" {>= "2.11"}
+  "mapi-header-php" {>= "1.2.3"}
+  "php8-bcmath" 
+  "php8-ctype" 
+  "php8-curl" 
+  "php8-dom" 
+  "php8-gd" 
+  "php8-gettext" 
+  "php8-iconv" 
+  "php8-mbstring" 
+  "php8-openssl" 
+  "php8-sodium" 
+  "php8-sqlite" 
+  "php8-sysvshm" 
+  "php8-zip" 
+  "php8-zlib" 
+  "system-user-grommunio" 
+]
+extra-source "grommunio-web-3.5.1.31715c1e-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/grommunio-web-3.5.1.31715c1e-1.5.noarch.rpm"
+}

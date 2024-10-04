@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "postfix-mta-sts-resolver+dev-1.4.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postfix-mta-sts-resolver+dev-1.4.0-4.fc40.noarch.rpm"]
+depends: [
+  "postfix-mta-sts-resolver" {= "1.4.0"}
+  "python3" {= "3.12"}
+  "python3-coverage" 
+  "python3-cryptography" {>= "1.6"}
+  "python3-pylint" 
+  "python3-pytest" {>= "3"}
+  "python3-pytest-asyncio" 
+  "python3-pytest-cov" 
+  "python3-pytest-timeout" 
+  "python3-setuptools" {>= "38.6"}
+  "python3-wheel" {>= "0.31"}
+  "tox" 
+  "twine" {>= "1.11"}
+]
+extra-source "postfix-mta-sts-resolver+dev-1.4.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/postfix-mta-sts-resolver+dev-1.4.0-4.fc40.noarch.rpm"
+}

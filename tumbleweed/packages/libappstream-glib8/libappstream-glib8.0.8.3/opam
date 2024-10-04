@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libappstream-glib8-0.8.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libappstream-glib8-0.8.3-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libarchive13" 
+  "libcurl-mini4" 
+  "libgdk_pixbuf-2_0-0" 
+  "libuuid1" 
+  "libyaml-0-2" 
+  "rpm" 
+]
+extra-source "libappstream-glib8-0.8.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libappstream-glib8-0.8.3-1.1.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hamlib-devel-4.5.5-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hamlib-devel-4.5.5-6.fc40.x86_64.rpm"]
+depends: [
+  "hamlib" {= "4.5.5"}
+  "libusb1-devel" 
+  "pkgconf-pkg-config" 
+  "tcl-hamlib" {= "4.5.5"}
+]
+extra-source "hamlib-devel-4.5.5-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hamlib-devel-4.5.5-6.fc40.x86_64.rpm"
+}

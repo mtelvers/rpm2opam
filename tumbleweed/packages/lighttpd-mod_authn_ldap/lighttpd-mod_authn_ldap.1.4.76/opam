@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lighttpd-mod_authn_ldap-1.4.76-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lighttpd-mod_authn_ldap-1.4.76-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libldap2" 
+  "lighttpd" {= "1.4.76"}
+]
+extra-source "lighttpd-mod_authn_ldap-1.4.76-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lighttpd-mod_authn_ldap-1.4.76-1.1.x86_64.rpm"
+}

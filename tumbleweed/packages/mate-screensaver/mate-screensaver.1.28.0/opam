@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mate-screensaver-1.28.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mate-screensaver-1.28.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libXext6" 
+  "libXss1" 
+  "libcairo2" 
+  "libdbus-1-3" 
+  "libdbus-glib-1-2" 
+  "libgdk_pixbuf-2_0-0" 
+  "libglvnd" 
+  "libgtk-3-0" 
+  "libmate-desktop-2-17" 
+  "libmate-menu2" 
+  "libmatekbdui6" 
+  "libnotify4" 
+  "libpango-1_0-0" 
+  "libsystemd0" 
+  "libxklavier16" 
+  "mate-session-manager-gschemas" {>= "1.28"}
+  "pam" 
+]
+extra-source "mate-screensaver-1.28.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mate-screensaver-1.28.0-1.1.x86_64.rpm"
+}

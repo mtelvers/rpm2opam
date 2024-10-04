@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "plotutils-2.6-34.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plotutils-2.6-34.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libICE" 
+  "libSM" 
+  "libX11" 
+  "libXaw" 
+  "libXext" 
+  "libXmu" 
+  "libXt" 
+  "libgcc" 
+  "libpng" 
+  "libstdc++" 
+  "zlib-ng-compat" 
+]
+extra-source "plotutils-2.6-34.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/plotutils-2.6-34.fc40.x86_64.rpm"
+}

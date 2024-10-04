@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xhtml2ps-1.0-0.52.b7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xhtml2ps-1.0-0.52.b7.fc40.noarch.rpm"]
+depends: [
+  "html2ps" {= "1.0"}
+  "tk" 
+  "xdg-utils" 
+]
+extra-source "xhtml2ps-1.0-0.52.b7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xhtml2ps-1.0-0.52.b7.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-Class-Most-0.08-1.29.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Class-Most-0.08-1.29.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Test-Class" {>= "0.38"}
+  "perl-Test-Most" {>= "0.31"}
+]
+extra-source "perl-Test-Class-Most-0.08-1.29.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-Class-Most-0.08-1.29.noarch.rpm"
+}

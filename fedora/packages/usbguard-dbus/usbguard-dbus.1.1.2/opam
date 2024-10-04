@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "usbguard-dbus-1.1.2-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "usbguard-dbus-1.1.2-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dbus" 
+  "glib2" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "polkit" 
+  "polkit-libs" 
+  "usbguard" 
+]
+extra-source "usbguard-dbus-1.1.2-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/usbguard-dbus-1.1.2-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pipx-1.7.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pipx-1.7.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311" {>= "3.8"}
+  "python311-argcomplete" {>= "1.9.4"}
+  "python311-base" {= "3.11"}
+  "python311-packaging" {>= "20"}
+  "python311-platformdirs" {>= "2.1"}
+  "python311-tomli" 
+  "python311-userpath" {>= "1.6"}
+  "update-alternatives" 
+]
+extra-source "python311-pipx-1.7.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pipx-1.7.1-1.1.noarch.rpm"
+}

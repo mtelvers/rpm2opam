@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-tufte-0.12-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-tufte-0.12-6.fc40.noarch.rpm"]
+depends: [
+  "R-core" {= "4.3"}
+  "R-htmltools" 
+  "R-knitr" {>= "1.28"}
+  "R-rmarkdown" {>= "2.11"}
+  "R-xfun" {>= "0.13"}
+]
+extra-source "R-tufte-0.12-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-tufte-0.12-6.fc40.noarch.rpm"
+}

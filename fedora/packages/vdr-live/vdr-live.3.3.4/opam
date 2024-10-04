@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vdr-live-3.3.4-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vdr-live-3.3.4-2.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "pcre2" 
+  "tntnet" 
+  "vdr" {= "2.6.6"}
+  "vdr-live-data" {= "3.3.4"}
+]
+extra-source "vdr-live-3.3.4-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vdr-live-3.3.4-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mingw64-cross-ctest-1.1.5-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-cross-ctest-1.1.5-1.5.noarch.rpm"]
+depends: [
+  "mingw64-cross-cmake" 
+  "mingw64-cross-wine" 
+]
+extra-source "mingw64-cross-ctest-1.1.5-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mingw64-cross-ctest-1.1.5-1.5.noarch.rpm"
+}

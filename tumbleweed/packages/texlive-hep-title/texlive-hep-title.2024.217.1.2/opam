@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-hep-title-2024.217.1.2svn67632-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-hep-title-2024.217.1.2svn67632-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-abstract" 
+  "texlive-atbegshi" 
+  "texlive-environ" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-picture" 
+  "texlive-preprint" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-titling" 
+  "texlive-tools" 
+  "texlive-varwidth" 
+  "texlive-xpatch" 
+]
+extra-source "texlive-hep-title-2024.217.1.2svn67632-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-hep-title-2024.217.1.2svn67632-56.1.noarch.rpm"
+}

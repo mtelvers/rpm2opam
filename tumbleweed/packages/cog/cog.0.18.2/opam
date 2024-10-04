@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cog-0.18.2-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cog-0.18.2-2.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libWPEBackend-fdo-1_0-1" 
+  "libWPEWebKit-2_0-1" 
+  "libcairo2" 
+  "libdrm2" 
+  "libepoxy0" 
+  "libglvnd" 
+  "libinput10" 
+  "libmanette-0_2-0" 
+  "libsoup-3_0-0" 
+  "libudev-mini1" 
+  "libwayland-client0" 
+  "libwayland-cursor0" 
+  "libwayland-server0" 
+  "libwpe-1_0-1" 
+]
+extra-source "cog-0.18.2-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cog-0.18.2-2.1.x86_64.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openwsman-server-2.7.2-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openwsman-server-2.7.2-3.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-hostname" 
+  "coreutils" 
+  "diffutils" 
+  "fillup" 
+  "glibc" 
+  "grep" 
+  "libcmpisfcc1" 
+  "libcrypt1" 
+  "libopenssl3" 
+  "libwsman1" 
+  "pam" 
+  "sed" 
+]
+extra-source "openwsman-server-2.7.2-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openwsman-server-2.7.2-3.3.x86_64.rpm"
+}

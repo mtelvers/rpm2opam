@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-frenchmath-2023.210.2.6svn66470-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-frenchmath-2023.210.2.6svn66470-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-amsfonts" 
+  "texlive-amsmath" 
+  "texlive-carlisle" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-ibrackets" 
+  "texlive-iftex" 
+  "texlive-jknapltx" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-lgrmath" 
+  "texlive-ncctools" 
+  "texlive-psnfss" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-tools" 
+  "texlive-was" 
+]
+extra-source "texlive-frenchmath-2023.210.2.6svn66470-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-frenchmath-2023.210.2.6svn66470-slfo.1.1.4.noarch.rpm"
+}

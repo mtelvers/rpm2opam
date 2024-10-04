@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-gtk3-devel-0.15.8-1.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-gtk3-devel-0.15.8-1.fc39.x86_64.rpm"]
+depends: [
+  "ghc-array-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-cairo-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-gio-devel" 
+  "ghc-glib-devel" 
+  "ghc-gtk3" {= "0.15.8"}
+  "ghc-mtl-devel" 
+  "ghc-pango-devel" 
+  "ghc-text-devel" 
+  "glib2-devel" 
+  "gtk3-devel" 
+]
+extra-source "ghc-gtk3-devel-0.15.8-1.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-gtk3-devel-0.15.8-1.fc39.x86_64.rpm"
+}

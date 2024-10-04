@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "WoeUSB-5.2.4-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "WoeUSB-5.2.4-7.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dosfstools" 
+  "gawk" 
+  "grep" 
+  "grub2-pc-modules" 
+  "ntfs-3g" 
+  "parted" 
+  "wget2-wget" 
+  "wimlib" 
+  "wimlib-utils" 
+]
+extra-source "WoeUSB-5.2.4-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/WoeUSB-5.2.4-7.fc40.x86_64.rpm"
+}

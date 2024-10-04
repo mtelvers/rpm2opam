@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "whois-5.5.23-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "whois-5.5.23-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcrypt1" 
+  "libidn2-0" 
+  "perl" 
+]
+extra-source "whois-5.5.23-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/whois-5.5.23-1.2.x86_64.rpm"
+}

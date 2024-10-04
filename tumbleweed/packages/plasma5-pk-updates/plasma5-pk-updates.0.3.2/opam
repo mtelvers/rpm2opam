@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plasma5-pk-updates-0.3.2+git70-2.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plasma5-pk-updates-0.3.2+git70-2.10.x86_64.rpm"]
+depends: [
+  "PackageKit" 
+  "glibc" 
+  "libKF5ConfigCore5" 
+  "libKF5CoreAddons5" 
+  "libKF5I18n5" 
+  "libKF5Notifications5" 
+  "libKF5Plasma5" 
+  "libKF5Solid5" 
+  "libQt5Core5" 
+  "libQt5DBus5" 
+  "libQtQuick5" 
+  "libpackagekitqt5-1" 
+  "libqt5-qtquickcontrols" {>= "2"}
+  "libqt5-qtquickcontrols2" {>= "5"}
+  "libstdc++6" 
+  "plasma-framework-components" 
+  "qtdeclarative-imports-provides-qt5" {>= "1"}
+]
+extra-source "plasma5-pk-updates-0.3.2+git70-2.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/plasma5-pk-updates-0.3.2+git70-2.10.x86_64.rpm"
+}

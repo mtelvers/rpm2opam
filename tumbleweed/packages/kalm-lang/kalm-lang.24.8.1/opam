@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kalm-lang-24.08.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kalm-lang-24.08.1-1.1.noarch.rpm"]
+depends: [
+  "kalm" {= "24.8.1"}
+]
+extra-source "kalm-lang-24.08.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kalm-lang-24.08.1-1.1.noarch.rpm"
+}

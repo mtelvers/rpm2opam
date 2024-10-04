@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "poweradmin-2.1.7-18.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "poweradmin-2.1.7-18.fc40.noarch.rpm"]
+depends: [
+  "httpd" 
+  "php" 
+  "php-pear-MDB2-Driver-mysqli" 
+  "php-pear-MDB2-Driver-pgsql" 
+  "php-pecl-mcrypt" 
+]
+extra-source "poweradmin-2.1.7-18.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/poweradmin-2.1.7-18.fc40.noarch.rpm"
+}

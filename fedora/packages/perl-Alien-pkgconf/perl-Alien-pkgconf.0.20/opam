@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Alien-pkgconf-0.20-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Alien-pkgconf-0.20-1.fc40.x86_64.rpm"]
+depends: [
+  "libpkgconf-devel" {= "2.1.0"}
+  "perl-File-ShareDir" {>= "1.102"}
+  "perl-JSON-PP" {>= "2.27400"}
+  "perl-PathTools" 
+  "perl-libs" 
+]
+extra-source "perl-Alien-pkgconf-0.20-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Alien-pkgconf-0.20-1.fc40.x86_64.rpm"
+}

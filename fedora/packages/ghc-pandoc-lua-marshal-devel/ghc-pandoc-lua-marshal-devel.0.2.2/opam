@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-pandoc-lua-marshal-devel-0.2.2-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-pandoc-lua-marshal-devel-0.2.2-29.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-exceptions-devel" 
+  "ghc-hslua-devel" 
+  "ghc-hslua-list-devel" 
+  "ghc-hslua-marshalling-devel" 
+  "ghc-lua-devel" 
+  "ghc-pandoc-lua-marshal" {= "0.2.2"}
+  "ghc-pandoc-types-devel" 
+  "ghc-safe-devel" 
+  "ghc-text-devel" 
+]
+extra-source "ghc-pandoc-lua-marshal-devel-0.2.2-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-pandoc-lua-marshal-devel-0.2.2-29.fc40.x86_64.rpm"
+}

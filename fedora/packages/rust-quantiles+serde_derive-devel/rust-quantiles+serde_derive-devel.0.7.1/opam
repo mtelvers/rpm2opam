@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-quantiles+serde_derive-devel-0.7.1-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-quantiles+serde_derive-devel-0.7.1-7.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-quantiles-devel" {= "0.7.1"}
+  "rust-serde_derive+default-devel" 
+]
+extra-source "rust-quantiles+serde_derive-devel-0.7.1-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-quantiles+serde_derive-devel-0.7.1-7.fc40.noarch.rpm"
+}

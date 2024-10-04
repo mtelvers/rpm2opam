@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-jupyter-polymake-0.16-27.20180129.7049940.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-jupyter-polymake-0.16-27.20180129.7049940.fc40.noarch.rpm"]
+depends: [
+  "python-jupyter-filesystem" 
+  "python3" {= "3.12"}
+  "python3-ipykernel" 
+  "python3-jupymake" 
+  "python3-pexpect" 
+]
+extra-source "python3-jupyter-polymake-0.16-27.20180129.7049940.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-jupyter-polymake-0.16-27.20180129.7049940.fc40.noarch.rpm"
+}

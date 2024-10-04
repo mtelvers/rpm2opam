@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mopidy-3.4.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mopidy-3.4.2-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "gstreamer1-plugins-good" 
+  "python3" 
+  "python3-Pykka" {>= "2.0.1"}
+  "python3-gstreamer1" 
+  "python3-requests" 
+  "python3-setuptools" 
+  "python3-tornado" 
+  "shadow-utils" 
+]
+extra-source "mopidy-3.4.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mopidy-3.4.2-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-rec-thy-2024.216.3.8.2svn63982-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-rec-thy-2024.216.3.8.2svn63982-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-amsmath" 
+  "texlive-bigfoot" 
+  "texlive-enumitem" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-ifmtarg" 
+  "texlive-iftex" 
+  "texlive-jknapltx" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-l3kernel" 
+  "texlive-l3packages" 
+  "texlive-ltxcmds" 
+  "texlive-mathtools" 
+  "texlive-pict2e" 
+  "texlive-picture" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-unicode-math" 
+  "texlive-xifthen" 
+  "texlive-xkeyval" 
+]
+extra-source "texlive-rec-thy-2024.216.3.8.2svn63982-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-rec-thy-2024.216.3.8.2svn63982-56.1.noarch.rpm"
+}

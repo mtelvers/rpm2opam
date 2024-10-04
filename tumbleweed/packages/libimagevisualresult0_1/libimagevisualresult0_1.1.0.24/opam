@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libimagevisualresult0_1-1.0.24-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libimagevisualresult0_1-1.0.24-1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libimagevisualresult-data" {= "1.0.24"}
+  "libstdc++6" 
+]
+extra-source "libimagevisualresult0_1-1.0.24-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libimagevisualresult0_1-1.0.24-1.7.x86_64.rpm"
+}

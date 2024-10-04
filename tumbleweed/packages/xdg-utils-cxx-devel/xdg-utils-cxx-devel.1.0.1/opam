@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xdg-utils-cxx-devel-1.0.1-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xdg-utils-cxx-devel-1.0.1-1.6.x86_64.rpm"]
+depends: [
+  "libXdgUtilsBaseDir1_0_1" {= "1.0.1"}
+  "libXdgUtilsDesktopEntry1_0_1" {= "1.0.1"}
+]
+extra-source "xdg-utils-cxx-devel-1.0.1-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xdg-utils-cxx-devel-1.0.1-1.6.x86_64.rpm"
+}

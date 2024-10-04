@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Image-Size-3.300-3.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Image-Size-3.300-3.17.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "perl" 
+  "perl-Module-Build" {>= "0.280000"}
+]
+extra-source "perl-Image-Size-3.300-3.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Image-Size-3.300-3.17.noarch.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Plack-Test-1.0051-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Plack-Test-1.0051-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Digest-MD5" 
+  "perl-Exporter" 
+  "perl-File-ShareDir" {>= "1.0"}
+  "perl-HTTP-Message" 
+  "perl-Plack" 
+  "perl-Test-Simple" {>= "0.88"}
+  "perl-Test-TCP" {>= "2.15"}
+  "perl-Try-Tiny" 
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-Plack-Test-1.0051-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Plack-Test-1.0051-3.fc40.noarch.rpm"
+}

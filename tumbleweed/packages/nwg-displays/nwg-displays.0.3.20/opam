@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nwg-displays-0.3.20-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nwg-displays-0.3.20-1.1.noarch.rpm"]
+depends: [
+  "libgtk-3-0" 
+  "libgtk-layer-shell0" 
+  "python311-base" 
+  "python311-gobject" 
+  "python311-i3ipc" 
+  "typelib-1_0-GtkLayerShell-0_1" 
+]
+extra-source "nwg-displays-0.3.20-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nwg-displays-0.3.20-1.1.noarch.rpm"
+}

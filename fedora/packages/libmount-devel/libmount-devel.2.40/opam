@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libmount-devel-2.40-0.9.rc1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmount-devel-2.40-0.9.rc1.fc40.x86_64.rpm"]
+depends: [
+  "libblkid-devel" 
+  "libmount" {= "2.40"}
+  "libselinux-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libmount-devel-2.40-0.9.rc1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libmount-devel-2.40-0.9.rc1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-ocamlnet-4.1.9-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-ocamlnet-4.1.9-19.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gnutls" 
+  "krb5-libs" 
+  "libzstd" 
+  "nettle" 
+  "ocaml" {= "24528204"}
+  "ocaml-camlp-streams" {= "9"}
+  "ocaml-lablgtk" {= "9"}
+  "ocaml-pcre" {= "0"}
+  "ocaml-zip" {= "73607"}
+  "tcl" 
+]
+extra-source "ocaml-ocamlnet-4.1.9-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-ocamlnet-4.1.9-19.fc40.x86_64.rpm"
+}

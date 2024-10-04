@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-test-log+env_logger-devel-0.2.15-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-test-log+env_logger-devel-0.2.15-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-env_logger-devel" 
+  "rust-test-log-devel" {= "0.2.15"}
+]
+extra-source "rust-test-log+env_logger-devel-0.2.15-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-test-log+env_logger-devel-0.2.15-1.fc40.noarch.rpm"
+}

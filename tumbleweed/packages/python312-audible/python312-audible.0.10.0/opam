@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-audible-0.10.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-audible-0.10.0-1.1.noarch.rpm"]
+depends: [
+  "python312-Pillow" 
+  "python312-base" {= "3.12"}
+  "python312-beautifulsoup4" 
+  "python312-httpx" {>= "0.20.0"}
+  "python312-pbkdf2" 
+  "python312-pyaes" 
+  "python312-rsa" 
+]
+extra-source "python312-audible-0.10.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-audible-0.10.0-1.1.noarch.rpm"
+}

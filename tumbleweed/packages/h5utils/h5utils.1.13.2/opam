@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "h5utils-1.13.2-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "h5utils-1.13.2-1.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libhdf5-200" 
+  "libpng16-16" 
+  "meep" 
+]
+extra-source "h5utils-1.13.2-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/h5utils-1.13.2-1.6.x86_64.rpm"
+}

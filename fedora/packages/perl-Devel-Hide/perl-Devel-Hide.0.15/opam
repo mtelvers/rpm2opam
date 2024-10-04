@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Devel-Hide-0.0015-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Devel-Hide-0.0015-8.fc40.noarch.rpm"]
+depends: [
+  "perl-lib" 
+  "perl-libs" {>= "5.6.1"}
+  "perl-vars" 
+]
+extra-source "perl-Devel-Hide-0.0015-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Devel-Hide-0.0015-8.fc40.noarch.rpm"
+}

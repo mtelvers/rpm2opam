@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libidn-devel-1.42-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libidn-devel-1.42-1.3.x86_64.rpm"]
+depends: [
+  "glibc-devel" 
+  "libidn12" {= "1.42"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libidn-devel-1.42-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libidn-devel-1.42-1.3.x86_64.rpm"
+}

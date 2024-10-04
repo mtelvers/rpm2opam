@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "globus-gss-assist-progs-12.7-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "globus-gss-assist-progs-12.7-6.fc40.noarch.rpm"]
+depends: [
+  "perl-English" 
+  "perl-Fcntl" 
+  "perl-File-Copy" 
+  "perl-FileHandle" 
+  "perl-Getopt-Long" 
+  "perl-PathTools" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "globus-gss-assist-progs-12.7-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/globus-gss-assist-progs-12.7-6.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libax25-devel-0.0.12~rc5-1.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libax25-devel-0.0.12~rc5-1.11.x86_64.rpm"]
+depends: [
+  "libax25-0" {= "0.0.12"}
+  "libax25io0" {= "0.0.12"}
+]
+extra-source "libax25-devel-0.0.12~rc5-1.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libax25-devel-0.0.12~rc5-1.11.x86_64.rpm"
+}

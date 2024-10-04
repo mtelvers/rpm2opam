@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hedgewars-1.0.2-5.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hedgewars-1.0.2-5.fc39.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "SDL2_image" 
+  "SDL2_mixer" 
+  "SDL2_net" 
+  "SDL2_ttf" 
+  "compat-lua-libs" 
+  "dejavu-sans-fonts" 
+  "glibc" 
+  "hedgewars-data" {= "1.0.2"}
+  "hicolor-icon-theme" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libstdc++" 
+  "physfs" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "wqy-zenhei-fonts" 
+]
+extra-source "hedgewars-1.0.2-5.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hedgewars-1.0.2-5.fc39.x86_64.rpm"
+}

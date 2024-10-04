@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-WWW-Mechanize-2.180.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-WWW-Mechanize-2.180.0-2.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-HTML-Form" {>= "6.8"}
+  "perl-HTML-Parser" 
+  "perl-HTML-Tree" {>= "5"}
+  "perl-HTTP-Cookies" 
+  "perl-HTTP-Message" {>= "1.30"}
+  "perl-URI" 
+  "perl-base" 
+  "perl-libwww-perl" 
+]
+extra-source "perl-WWW-Mechanize-2.180.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-WWW-Mechanize-2.180.0-2.2.noarch.rpm"
+}

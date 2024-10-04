@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-svg-2024.216.2.02ksvn57010-60.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-svg-2024.216.2.02ksvn57010-60.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-filesystem" {>= "2024"}
+  "texlive-graphics" 
+  "texlive-ifplatform" 
+  "texlive-iftex" 
+  "texlive-koma-script" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-pdftexcmds" 
+  "texlive-pgf" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tools" 
+  "texlive-transparent" 
+  "texlive-trimspaces" 
+  "texlive-xcolor" 
+]
+extra-source "texlive-svg-2024.216.2.02ksvn57010-60.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-svg-2024.216.2.02ksvn57010-60.1.noarch.rpm"
+}

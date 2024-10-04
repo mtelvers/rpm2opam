@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-App-Dochazka-WWW-0.155-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-App-Dochazka-WWW-0.155-3.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "perl" 
+  "perl-App-CELL" {>= "0.196"}
+  "perl-App-MFILE-WWW" {>= "0.164"}
+  "perl-File-ShareDir" {>= "1.0"}
+  "shadow" 
+]
+extra-source "perl-App-Dochazka-WWW-0.155-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-App-Dochazka-WWW-0.155-3.2.noarch.rpm"
+}

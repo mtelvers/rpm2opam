@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Net-Twitter-4.01043-1.26.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-Twitter-4.01043-1.26.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Carp-Clan" 
+  "perl-Class-Load" 
+  "perl-Data-Visitor" 
+  "perl-DateTime" 
+  "perl-DateTime-Format-Strptime" 
+  "perl-Devel-StackTrace" 
+  "perl-HTML-Parser" 
+  "perl-HTTP-Message" 
+  "perl-IO-Socket-SSL" {>= "2.5"}
+  "perl-JSON-MaybeXS" 
+  "perl-LWP-Protocol-https" 
+  "perl-Moose" 
+  "perl-MooseX-Role-Parameterized" 
+  "perl-Net-HTTP" {> "6.5"}
+  "perl-Net-OAuth" 
+  "perl-Try-Tiny" 
+  "perl-URI" 
+  "perl-base" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-Net-Twitter-4.01043-1.26.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Net-Twitter-4.01043-1.26.noarch.rpm"
+}

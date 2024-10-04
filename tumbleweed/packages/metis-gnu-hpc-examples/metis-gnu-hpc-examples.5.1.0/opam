@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "metis-gnu-hpc-examples-5.1.0-11.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "metis-gnu-hpc-examples-5.1.0-11.2.noarch.rpm"]
+depends: [
+  "metis_5_1_0-gnu-hpc-examples" {= "5.1.0"}
+]
+extra-source "metis-gnu-hpc-examples-5.1.0-11.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/metis-gnu-hpc-examples-5.1.0-11.2.noarch.rpm"
+}

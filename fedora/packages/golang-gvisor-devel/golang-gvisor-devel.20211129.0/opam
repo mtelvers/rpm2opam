@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-gvisor-devel-20211129.0-2.20211217git9bd5098.fc36.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-gvisor-devel-20211129.0-2.20211217git9bd5098.fc36.noarch.rpm"]
+depends: [
+  "containerd-devel" 
+  "go-filesystem" 
+  "golang-github-burntsushi-toml-devel" 
+  "golang-github-cenkalti-backoff-devel" 
+  "golang-github-containerd-cgroups-devel" 
+  "golang-github-containerd-console-devel" 
+  "golang-github-containerd-fifo-devel" 
+  "golang-github-containerd-runc-devel" 
+  "golang-github-containerd-typeurl-devel" 
+  "golang-github-gofrs-flock-devel" 
+  "golang-github-gogo-protobuf-devel" 
+  "golang-github-google-btree-devel" 
+  "golang-github-google-subcommands-devel" 
+  "golang-github-kr-pty-devel" 
+  "golang-github-mattbaird-jsonpatch-devel" 
+  "golang-github-mohae-deepcopy-devel" 
+  "golang-github-opencontainers-runtime-spec-devel" 
+  "golang-github-sirupsen-logrus-devel" 
+  "golang-github-syndtr-gocapability-devel" 
+  "golang-github-vishvananda-netlink-devel" 
+  "golang-google-grpc-devel" 
+  "golang-google-protobuf-devel" 
+  "golang-k8s-api-devel" 
+  "golang-k8s-apimachinery-devel" 
+  "golang-k8s-client-devel" 
+  "golang-x-sync-devel" 
+  "golang-x-sys-devel" 
+  "golang-x-time-devel" 
+]
+extra-source "golang-gvisor-devel-20211129.0-2.20211217git9bd5098.fc36.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-gvisor-devel-20211129.0-2.20211217git9bd5098.fc36.noarch.rpm"
+}

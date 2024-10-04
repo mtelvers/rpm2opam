@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "liblxqt-1.4.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "liblxqt-1.4.0-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf5-kwindowsystem" 
+  "libX11" 
+  "libXScrnSaver" 
+  "libqtxdg" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtx11extras" 
+  "xdg-utils" {>= "1.1.0"}
+]
+extra-source "liblxqt-1.4.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/liblxqt-1.4.0-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libchewing-devel-0.5.1+git20200627.452f622-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libchewing-devel-0.5.1+git20200627.452f622-3.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "libchewing3" {= "0.5.1"}
+  "pkgconf-pkg-config" 
+  "python-chewing" {= "0.5.1"}
+]
+extra-source "libchewing-devel-0.5.1+git20200627.452f622-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libchewing-devel-0.5.1+git20200627.452f622-3.2.x86_64.rpm"
+}

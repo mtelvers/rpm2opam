@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rsa-devel-0.9.6-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rsa-devel-0.9.6-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-const-oid-devel" 
+  "rust-digest+alloc-devel" 
+  "rust-digest+oid-devel" 
+  "rust-digest-devel" 
+  "rust-num-bigint-dig+i128-devel" 
+  "rust-num-bigint-dig+prime-devel" 
+  "rust-num-bigint-dig+zeroize-devel" 
+  "rust-num-bigint-dig-devel" 
+  "rust-num-integer-devel" 
+  "rust-num-traits+libm-devel" 
+  "rust-num-traits-devel" 
+  "rust-pkcs1+alloc-devel" 
+  "rust-pkcs1+pkcs8-devel" 
+  "rust-pkcs1-devel" 
+  "rust-pkcs8+alloc-devel" 
+  "rust-pkcs8-devel" 
+  "rust-rand_core-devel" 
+  "rust-signature+alloc-devel" 
+  "rust-signature+digest-devel" 
+  "rust-signature+rand_core-devel" 
+  "rust-signature-devel" 
+  "rust-spki+alloc-devel" 
+  "rust-spki-devel" 
+  "rust-subtle-devel" 
+  "rust-zeroize+alloc-devel" 
+  "rust-zeroize+default-devel" 
+]
+extra-source "rust-rsa-devel-0.9.6-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rsa-devel-0.9.6-2.fc40.noarch.rpm"
+}

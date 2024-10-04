@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ncid-mythtv-1.15-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ncid-mythtv-1.15-5.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "ncid-client" {= "1.15"}
+]
+extra-source "ncid-mythtv-1.15-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/ncid-mythtv-1.15-5.fc40.noarch.rpm"
+}

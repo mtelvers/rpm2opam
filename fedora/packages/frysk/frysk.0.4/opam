@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "frysk-0.4-94.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "frysk-0.4-94.fc40.x86_64.rpm"]
+depends: [
+  "antlr-tool" 
+  "audit-libs" 
+  "bash" 
+  "elfutils-libs" 
+  "glibc" 
+  "jline2" 
+  "junit" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "frysk-0.4-94.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/frysk-0.4-94.fc40.x86_64.rpm"
+}

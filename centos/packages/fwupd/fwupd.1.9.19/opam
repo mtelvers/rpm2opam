@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fwupd-1.9.19-1.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fwupd-1.9.19-1.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2" {>= "2.45.8"}
+  "glibc" 
+  "gnutls" 
+  "json-glib" 
+  "libarchive" 
+  "libcurl" 
+  "libgcc" 
+  "libgudev" 
+  "libgusb" {>= "0.3.5"}
+  "libjcat" 
+  "libxmlb" 
+  "polkit-libs" 
+  "shared-mime-info" 
+  "sqlite-libs" 
+  "systemd" 
+  "systemd-libs" 
+  "tpm2-tss" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "fwupd-1.9.19-1.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/fwupd-1.9.19-1.el10.x86_64.rpm"
+}

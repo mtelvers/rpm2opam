@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "PlayOnLinux-4.4.0-3.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "PlayOnLinux-4.4.0-3.3.noarch.rpm"]
+depends: [
+  "7zip" 
+  "ImageMagick" 
+  "bash" 
+  "bash-sh" 
+  "gettext-runtime" 
+  "icoutils" 
+  "jq" 
+  "python311" 
+  "python311-base" 
+  "python311-natsort" 
+  "python311-wxPython" 
+  "unzip" 
+  "wget" 
+  "wine" 
+  "xterm" 
+]
+extra-source "PlayOnLinux-4.4.0-3.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/PlayOnLinux-4.4.0-3.3.noarch.rpm"
+}

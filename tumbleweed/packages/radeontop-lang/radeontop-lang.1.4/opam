@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "radeontop-lang-1.4-1.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "radeontop-lang-1.4-1.12.noarch.rpm"]
+depends: [
+  "radeontop" {= "1.4"}
+]
+extra-source "radeontop-lang-1.4-1.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/radeontop-lang-1.4-1.12.noarch.rpm"
+}

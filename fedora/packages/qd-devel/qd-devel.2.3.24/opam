@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qd-devel-2.3.24-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qd-devel-2.3.24-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "pkgconf-pkg-config" 
+  "qd" 
+]
+extra-source "qd-devel-2.3.24-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qd-devel-2.3.24-3.fc40.x86_64.rpm"
+}

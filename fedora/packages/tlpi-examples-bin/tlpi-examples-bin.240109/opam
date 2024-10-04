@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tlpi-examples-bin-240109-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tlpi-examples-bin-240109-4.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gawk" 
+  "glibc" 
+  "libacl" 
+  "libcap" 
+  "libgcc" 
+  "libseccomp" 
+  "libxcrypt" 
+  "tlpi-licenses" 
+]
+extra-source "tlpi-examples-bin-240109-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tlpi-examples-bin-240109-4.fc40.x86_64.rpm"
+}

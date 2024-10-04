@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-time-macros+parsing-devel-0.2.17-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-time-macros+parsing-devel-0.2.17-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-time-macros-devel" {= "0.2.17"}
+]
+extra-source "rust-time-macros+parsing-devel-0.2.17-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-time-macros+parsing-devel-0.2.17-1.fc40.noarch.rpm"
+}

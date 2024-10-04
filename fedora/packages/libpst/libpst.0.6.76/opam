@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libpst-0.6.76-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpst-0.6.76-19.fc40.x86_64.rpm"]
+depends: [
+  "ImageMagick" 
+  "boost-python3" 
+  "gd" 
+  "glib2" 
+  "glibc" 
+  "libgcc" 
+  "libgsf" 
+  "libpst-libs" {= "0.6.76"}
+  "libstdc++" 
+]
+extra-source "libpst-0.6.76-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libpst-0.6.76-19.fc40.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Path-IsDev-1.001003-1.28.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Path-IsDev-1.001003-1.28.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Tiny" {>= "0.10"}
+  "perl-File-HomeDir" 
+  "perl-Module-Runtime" 
+  "perl-Path-Tiny" {>= "0.4"}
+  "perl-Role-Tiny" 
+  "perl-Sub-Exporter" 
+]
+extra-source "perl-Path-IsDev-1.001003-1.28.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Path-IsDev-1.001003-1.28.noarch.rpm"
+}

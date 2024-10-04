@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pymdown-extensions-10.7.1-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pymdown-extensions-10.7.1-2.2.noarch.rpm"]
+depends: [
+  "python311-Markdown" {>= "3.2"}
+  "python311-PyYAML" {>= "3.10"}
+  "python311-base" {= "3.11"}
+]
+extra-source "python311-pymdown-extensions-10.7.1-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pymdown-extensions-10.7.1-2.2.noarch.rpm"
+}

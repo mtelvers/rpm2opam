@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kproperty-devel-3.2.0-8.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kproperty-devel-3.2.0-8.fc39.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "kf5-kguiaddons-devel" 
+  "kf5-kwidgetsaddons-devel" 
+  "kproperty" {= "3.2.0"}
+  "pkgconf-pkg-config" 
+  "qt5-qtbase-devel" 
+]
+extra-source "kproperty-devel-3.2.0-8.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kproperty-devel-3.2.0-8.fc39.x86_64.rpm"
+}

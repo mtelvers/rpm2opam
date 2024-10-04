@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-IO-Compress-2.207-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-IO-Compress-2.207-1.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Compress-Raw-Bzip2" {>= "2.207"}
+  "perl-Compress-Raw-Zlib" {>= "2.207"}
+  "perl-Data-Dumper" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-Symbol" 
+  "perl-Time-Local" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-parent" 
+]
+extra-source "perl-IO-Compress-2.207-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-IO-Compress-2.207-1.fc40.noarch.rpm"
+}

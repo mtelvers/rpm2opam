@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-onnx-1.16.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-onnx-1.16.2-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libgcc_s1" 
+  "libonnx" {= "1.16.2"}
+  "libonnx_proto" {= "1.16.2"}
+  "libprotobuf3_21_12" 
+  "libstdc++-devel" 
+  "libstdc++6" 
+  "python310-base" 
+  "python310-numpy1" {< "2.0"}
+  "python310-protobuf" 
+  "python310-pybind11" 
+  "python310-typing_extensions" {>= "3.6.2.1"}
+  "update-alternatives" 
+]
+extra-source "python310-onnx-1.16.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-onnx-1.16.2-1.1.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcal-lang-4.1-4.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcal-lang-4.1-4.2.noarch.rpm"]
+depends: [
+  "gcal" {= "4.1"}
+]
+extra-source "gcal-lang-4.1-4.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gcal-lang-4.1-4.2.noarch.rpm"
+}

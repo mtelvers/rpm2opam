@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cockpit-ws-314-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cockpit-ws-314-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib-networking" 
+  "glib2" {>= "2.50.0"}
+  "glibc" 
+  "gnutls" 
+  "json-glib" 
+  "krb5-libs" 
+  "libgcc" 
+  "libxcrypt" 
+  "openssl" 
+  "pam-libs" 
+  "policycoreutils" 
+  "selinux-policy" 
+  "systemd-libs" 
+]
+extra-source "cockpit-ws-314-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cockpit-ws-314-1.fc40.x86_64.rpm"
+}

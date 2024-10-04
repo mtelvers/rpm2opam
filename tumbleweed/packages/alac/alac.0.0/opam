@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "alac-0.0+git.20160511-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "alac-0.0+git.20160511-4.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libalac0" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "alac-0.0+git.20160511-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/alac-0.0+git.20160511-4.2.x86_64.rpm"
+}

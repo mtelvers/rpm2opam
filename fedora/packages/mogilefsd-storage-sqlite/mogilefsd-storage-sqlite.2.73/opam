@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mogilefsd-storage-sqlite-2.73-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mogilefsd-storage-sqlite-2.73-22.fc40.noarch.rpm"]
+depends: [
+  "mogilefsd" 
+  "perl-DBD-SQLite" {>= "1.13"}
+  "perl-DBI" 
+  "perl-Digest-MD5" 
+  "perl-File-Temp" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" 
+]
+extra-source "mogilefsd-storage-sqlite-2.73-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mogilefsd-storage-sqlite-2.73-22.fc40.noarch.rpm"
+}

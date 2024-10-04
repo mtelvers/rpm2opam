@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvirt-daemon-lock-10.7.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvirt-daemon-lock-10.7.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcc_s1" 
+  "libtirpc3" 
+  "libvirt-libs" {= "10.7.0"}
+]
+extra-source "libvirt-daemon-lock-10.7.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libvirt-daemon-lock-10.7.0-1.1.x86_64.rpm"
+}

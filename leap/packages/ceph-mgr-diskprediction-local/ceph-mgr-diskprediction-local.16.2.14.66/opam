@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ceph-mgr-diskprediction-local-16.2.14.66+g7aa6ce9419f-slfo.1.1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ceph-mgr-diskprediction-local-16.2.14.66+g7aa6ce9419f-slfo.1.1.8.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "ceph-mgr" {= "16.2.14.66"}
+  "python311-numpy" 
+]
+extra-source "ceph-mgr-diskprediction-local-16.2.14.66+g7aa6ce9419f-slfo.1.1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/ceph-mgr-diskprediction-local-16.2.14.66+g7aa6ce9419f-slfo.1.1.8.noarch.rpm"
+}

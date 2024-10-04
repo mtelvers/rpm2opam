@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tokio-stream+full-devel-0.1.14-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tokio-stream+full-devel-0.1.14-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-tokio-stream+fs-devel" {= "0.1.14"}
+  "rust-tokio-stream+io-util-devel" {= "0.1.14"}
+  "rust-tokio-stream+net-devel" {= "0.1.14"}
+  "rust-tokio-stream+signal-devel" {= "0.1.14"}
+  "rust-tokio-stream+sync-devel" {= "0.1.14"}
+  "rust-tokio-stream+time-devel" {= "0.1.14"}
+  "rust-tokio-stream-devel" {= "0.1.14"}
+]
+extra-source "rust-tokio-stream+full-devel-0.1.14-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tokio-stream+full-devel-0.1.14-3.fc40.noarch.rpm"
+}

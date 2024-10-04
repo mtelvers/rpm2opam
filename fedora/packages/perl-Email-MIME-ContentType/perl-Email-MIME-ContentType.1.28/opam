@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Email-MIME-ContentType-1.028-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Email-MIME-ContentType-1.028-5.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Encode" {>= "2.87"}
+  "perl-Exporter" {>= "5.57"}
+  "perl-Text-Unidecode" 
+  "perl-libs" {>= "5.12.0"}
+]
+extra-source "perl-Email-MIME-ContentType-1.028-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Email-MIME-ContentType-1.028-5.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "containment-rpm-2.0.2-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "containment-rpm-2.0.2-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "bash" 
+  "jq" 
+  "libxml2-tools" 
+]
+extra-source "containment-rpm-2.0.2-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/containment-rpm-2.0.2-slfo.1.1.3.noarch.rpm"
+}

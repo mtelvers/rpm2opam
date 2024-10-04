@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-equivalence-prof-0.4.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-equivalence-prof-0.4.1-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-STMonadTrans-prof" 
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-equivalence-devel" {= "0.4.1"}
+  "ghc-mtl-prof" 
+  "ghc-transformers-compat-prof" 
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-equivalence-prof-0.4.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-equivalence-prof-0.4.1-6.fc40.x86_64.rpm"
+}

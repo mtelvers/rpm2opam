@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-cucumber-godog-devel-0.12.1-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-cucumber-godog-devel-0.12.1-10.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-cucumber-gherkin-21-devel" 
+  "compat-golang-github-cucumber-messages-17-devel" 
+  "go-filesystem" 
+  "golang-github-hashicorp-memdb-devel" 
+  "golang-github-spf13-cobra-devel" 
+  "golang-github-spf13-pflag-devel" 
+  "golang-github-stretchr-testify-devel" 
+]
+extra-source "golang-github-cucumber-godog-devel-0.12.1-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-cucumber-godog-devel-0.12.1-10.fc40.noarch.rpm"
+}

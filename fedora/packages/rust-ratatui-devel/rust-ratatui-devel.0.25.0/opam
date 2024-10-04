@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ratatui-devel-0.25.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ratatui-devel-0.25.0-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cargo" 
+  "rust" {>= "1.70.0"}
+  "rust-bitflags+default-devel" 
+  "rust-cassowary+default-devel" 
+  "rust-indoc+default-devel" 
+  "rust-itertools+default-devel" 
+  "rust-lru+default-devel" 
+  "rust-paste+default-devel" 
+  "rust-stability+default-devel" 
+  "rust-strum+default-devel" 
+  "rust-strum+derive-devel" 
+  "rust-unicode-segmentation+default-devel" 
+  "rust-unicode-width+default-devel" 
+]
+extra-source "rust-ratatui-devel-0.25.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ratatui-devel-0.25.0-1.fc40.noarch.rpm"
+}

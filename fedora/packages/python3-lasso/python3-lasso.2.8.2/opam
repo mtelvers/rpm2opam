@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-lasso-2.8.2-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-lasso-2.8.2-9.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "lasso" {= "2.8.2"}
+  "libtool-ltdl" 
+  "libxml2" 
+  "libxslt" 
+  "openssl-libs" 
+  "python3" {= "3.12"}
+  "xmlsec1" 
+  "xmlsec1-openssl" 
+  "zlib-ng-compat" 
+]
+extra-source "python3-lasso-2.8.2-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-lasso-2.8.2-9.fc40.x86_64.rpm"
+}

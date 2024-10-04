@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmtp-devel-1.1.21-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmtp-devel-1.1.21-1.5.x86_64.rpm"]
+depends: [
+  "libmtp9" {= "1.1.21"}
+  "libusb-1_0-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libmtp-devel-1.1.21-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmtp-devel-1.1.21-1.5.x86_64.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Module-Load-Conditional-0.74-503.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Load-Conditional-0.74-503.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-FileHandle" 
+  "perl-Locale-Maketext-Simple" 
+  "perl-Module-CoreList" {>= "2.22"}
+  "perl-Module-Load" {>= "0.28"}
+  "perl-Module-Metadata" {>= "1.5"}
+  "perl-Params-Check" 
+  "perl-PathTools" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-vars" 
+  "perl-version" {>= "0.69"}
+]
+extra-source "perl-Module-Load-Conditional-0.74-503.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Module-Load-Conditional-0.74-503.fc40.noarch.rpm"
+}

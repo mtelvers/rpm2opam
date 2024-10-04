@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kseexpr-lang-4.0.4.0-1.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kseexpr-lang-4.0.4.0-1.12.noarch.rpm"]
+depends: [
+  "libKSeExpr4" {= "4.0.4.0"}
+]
+extra-source "kseexpr-lang-4.0.4.0-1.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kseexpr-lang-4.0.4.0-1.12.noarch.rpm"
+}

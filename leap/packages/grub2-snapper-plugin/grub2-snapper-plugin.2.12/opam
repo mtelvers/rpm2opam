@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "grub2-snapper-plugin-2.12-slfo.1.2.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grub2-snapper-plugin-2.12-slfo.1.2.9.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "grub2" {= "2.12"}
+  "libxml2-tools" 
+]
+extra-source "grub2-snapper-plugin-2.12-slfo.1.2.9.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/grub2-snapper-plugin-2.12-slfo.1.2.9.noarch.rpm"
+}

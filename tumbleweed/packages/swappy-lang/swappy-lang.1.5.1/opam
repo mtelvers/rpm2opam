@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "swappy-lang-1.5.1-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "swappy-lang-1.5.1-1.6.noarch.rpm"]
+depends: [
+  "swappy" {= "1.5.1"}
+]
+extra-source "swappy-lang-1.5.1-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/swappy-lang-1.5.1-1.6.noarch.rpm"
+}

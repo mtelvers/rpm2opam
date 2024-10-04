@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-alt-ergo-lib-2.3.3-17.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-alt-ergo-lib-2.3.3-17.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "ocaml" {= "2125"}
+  "ocaml-num" {= "7414145"}
+  "ocaml-ocplib-simplex" {= "2075400216069"}
+  "ocaml-zarith" {= "0"}
+]
+extra-source "ocaml-alt-ergo-lib-2.3.3-17.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-alt-ergo-lib-2.3.3-17.fc40.x86_64.rpm"
+}

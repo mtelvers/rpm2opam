@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gdcm-applications-3.0.23-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdcm-applications-3.0.23-2.fc40.x86_64.rpm"]
+depends: [
+  "gdcm" {= "3.0.23"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "libxml2" 
+  "poppler" 
+  "zlib-ng-compat" 
+]
+extra-source "gdcm-applications-3.0.23-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gdcm-applications-3.0.23-2.fc40.x86_64.rpm"
+}

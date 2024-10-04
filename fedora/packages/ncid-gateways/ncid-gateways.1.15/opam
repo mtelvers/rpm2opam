@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ncid-gateways-1.15-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ncid-gateways-1.15-5.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "hidapi" 
+  "libpcap" {>= "1.5.0"}
+  "nmap-ncat" 
+  "perl-Config-Simple" 
+  "perl-Data-HexDump" 
+  "perl-Device-SerialPort" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-Net-Pcap" 
+  "perl-POSIX" 
+  "perl-Pod-Usage" 
+  "perl-Symbol" 
+  "perl-Sys-Hostname" 
+  "perl-Time-HiRes" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "ncid-gateways-1.15-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/ncid-gateways-1.15-5.fc40.x86_64.rpm"
+}

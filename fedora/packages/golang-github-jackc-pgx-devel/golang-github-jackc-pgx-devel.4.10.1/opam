@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-jackc-pgx-devel-4.10.1-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-jackc-pgx-devel-4.10.1-9.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-jackc-pgproto3-2-devel" 
+  "go-filesystem" 
+  "golang-github-jackc-pgconn-devel" 
+  "golang-github-jackc-pgio-devel" 
+  "golang-github-jackc-pgtype-devel" 
+  "golang-github-jackc-puddle-devel" 
+  "golang-github-rs-zerolog-devel" 
+  "golang-github-sirupsen-logrus-devel" 
+  "golang-uber-zap-devel" 
+  "golang-x-xerrors-devel" 
+]
+extra-source "golang-github-jackc-pgx-devel-4.10.1-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-jackc-pgx-devel-4.10.1-9.fc40.noarch.rpm"
+}

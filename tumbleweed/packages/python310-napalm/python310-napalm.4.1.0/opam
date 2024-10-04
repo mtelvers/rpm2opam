@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-napalm-4.1.0-2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-napalm-4.1.0-2.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-Jinja2" 
+  "python310-PyYAML" 
+  "python310-base" {= "3.10"}
+  "python310-cffi" {>= "1.11.3"}
+  "python310-junos-eznc" {>= "2.6.3"}
+  "python310-lxml" {>= "4.3.0"}
+  "python310-ncclient" 
+  "python310-netaddr" 
+  "python310-netmiko" {>= "4.0.0"}
+  "python310-netutils" {>= "1.0.0"}
+  "python310-paramiko" {>= "2.6.0"}
+  "python310-pyeapi" {>= "0.8.2"}
+  "python310-requests" {>= "2.7.0"}
+  "python310-scp" 
+  "python310-setuptools" {>= "38.4.0"}
+  "python310-textfsm" 
+  "python310-ttp" 
+  "python310-ttp-templates" 
+  "python310-typing_extensions" 
+  "update-alternatives" 
+]
+extra-source "python310-napalm-4.1.0-2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-napalm-4.1.0-2.3.noarch.rpm"
+}

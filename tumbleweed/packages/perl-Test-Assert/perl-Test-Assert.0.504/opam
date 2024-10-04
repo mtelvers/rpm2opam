@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-Assert-0.0504-9.33.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Assert-0.0504-9.33.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Exception-Base" {>= "0.21"}
+  "perl-Symbol-Util" {>= "0.202"}
+  "perl-constant-boolean" {>= "0.2"}
+]
+extra-source "perl-Test-Assert-0.0504-9.33.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-Assert-0.0504-9.33.noarch.rpm"
+}

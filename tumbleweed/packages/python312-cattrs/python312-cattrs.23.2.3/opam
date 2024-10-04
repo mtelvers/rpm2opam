@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-cattrs-23.2.3-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-cattrs-23.2.3-2.1.noarch.rpm"]
+depends: [
+  "python312-attrs" {>= "20"}
+  "python312-base" {= "3.12"}
+  "python312-cbor2" 
+  "python312-exceptiongroup" 
+  "python312-typing_extensions" 
+]
+extra-source "python312-cattrs-23.2.3-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-cattrs-23.2.3-2.1.noarch.rpm"
+}

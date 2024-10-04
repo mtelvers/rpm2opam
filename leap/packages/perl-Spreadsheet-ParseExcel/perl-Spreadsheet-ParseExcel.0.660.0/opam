@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Spreadsheet-ParseExcel-0.660.0-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Spreadsheet-ParseExcel-0.660.0-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Crypt-RC4" 
+  "perl-Digest-Perl-MD5" 
+  "perl-IO-stringy" 
+  "perl-OLE-Storage_Lite" {>= "0.19"}
+]
+extra-source "perl-Spreadsheet-ParseExcel-0.660.0-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/perl-Spreadsheet-ParseExcel-0.660.0-slfo.1.1.3.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nestopia-1.52.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nestopia-1.52.1-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libSDL2-2_0-0" 
+  "libarchive13" 
+  "libfltk1_3" 
+  "libgcc_s1" 
+  "libglvnd" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+]
+extra-source "nestopia-1.52.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/nestopia-1.52.1-1.1.x86_64.rpm"
+}

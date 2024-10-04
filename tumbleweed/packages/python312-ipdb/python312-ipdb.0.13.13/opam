@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-ipdb-0.13.13-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-ipdb-0.13.13-3.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-decorator" 
+  "python312-ipython" 
+  "python312-tomli" 
+  "update-alternatives" 
+]
+extra-source "python312-ipdb-0.13.13-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-ipdb-0.13.13-3.2.noarch.rpm"
+}

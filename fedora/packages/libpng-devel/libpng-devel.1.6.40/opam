@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libpng-devel-1.6.40-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpng-devel-1.6.40-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libpng" {= "1.6.40"}
+  "pkgconf-pkg-config" 
+  "zlib-ng-compat" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "libpng-devel-1.6.40-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libpng-devel-1.6.40-3.fc40.x86_64.rpm"
+}

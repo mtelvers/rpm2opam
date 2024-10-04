@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cockpit-tests-314-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cockpit-tests-314-1.fc40.x86_64.rpm"]
+depends: [
+  "cockpit-bridge" {>= "266"}
+  "cockpit-system" {>= "266"}
+  "glibc" 
+  "openssh-clients" 
+  "pam-libs" 
+]
+extra-source "cockpit-tests-314-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cockpit-tests-314-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-uber-jaeger-client-devel-2.30.0-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-uber-jaeger-client-devel-2.30.0-9.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-crossdock-devel" 
+  "golang-github-mock-devel" 
+  "golang-github-opentracing-devel" 
+  "golang-github-pkg-errors-devel" 
+  "golang-github-uber-jaeger-lib-devel" 
+  "golang-uber-atomic-devel" 
+  "golang-uber-zap-devel" 
+]
+extra-source "golang-github-uber-jaeger-client-devel-2.30.0-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-uber-jaeger-client-devel-2.30.0-9.fc40.noarch.rpm"
+}

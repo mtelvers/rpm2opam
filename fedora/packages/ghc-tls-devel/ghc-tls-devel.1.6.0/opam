@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-tls-devel-1.6.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-tls-devel-1.6.0-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-asn1-encoding-devel" 
+  "ghc-asn1-types-devel" 
+  "ghc-async-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-cereal-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-cryptonite-devel" 
+  "ghc-data-default-class-devel" 
+  "ghc-hourglass-devel" 
+  "ghc-memory-devel" 
+  "ghc-mtl-devel" 
+  "ghc-network-devel" 
+  "ghc-tls" {= "1.6.0"}
+  "ghc-transformers-devel" 
+  "ghc-x509-devel" 
+  "ghc-x509-store-devel" 
+  "ghc-x509-validation-devel" 
+]
+extra-source "ghc-tls-devel-1.6.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-tls-devel-1.6.0-3.fc40.x86_64.rpm"
+}

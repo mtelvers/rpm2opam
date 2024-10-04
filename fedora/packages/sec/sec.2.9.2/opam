@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sec-2.9.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sec-2.9.2-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "logrotate" 
+  "perl-Fcntl" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-POSIX" 
+  "perl-Socket" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-vars" 
+  "systemd" 
+]
+extra-source "sec-2.9.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sec-2.9.2-3.fc40.noarch.rpm"
+}

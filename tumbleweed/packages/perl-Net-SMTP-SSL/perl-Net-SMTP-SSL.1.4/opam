@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Net-SMTP-SSL-1.04-1.28.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-SMTP-SSL-1.04-1.28.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-IO-Socket-SSL" 
+]
+extra-source "perl-Net-SMTP-SSL-1.04-1.28.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Net-SMTP-SSL-1.04-1.28.noarch.rpm"
+}

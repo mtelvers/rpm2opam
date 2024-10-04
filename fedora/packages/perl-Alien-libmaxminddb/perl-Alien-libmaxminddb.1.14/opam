@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Alien-libmaxminddb-1.014-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Alien-libmaxminddb-1.014-1.fc40.x86_64.rpm"]
+depends: [
+  "libmaxminddb-devel" 
+  "perl-Alien-Base" 
+  "perl-libs" {>= "5.16.0"}
+  "perl-parent" 
+]
+extra-source "perl-Alien-libmaxminddb-1.014-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Alien-libmaxminddb-1.014-1.fc40.x86_64.rpm"
+}

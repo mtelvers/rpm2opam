@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Package-DeprecationManager-0.18-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Package-DeprecationManager-0.18-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Package-Stash" 
+  "perl-Params-Util" 
+  "perl-Sub-Install" 
+  "perl-base" {>= "1.33"}
+]
+extra-source "perl-Package-DeprecationManager-0.18-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/perl-Package-DeprecationManager-0.18-slfo.1.1.3.noarch.rpm"
+}

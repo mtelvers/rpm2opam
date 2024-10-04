@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "prelude-manager-db-plugin-5.2.0-10.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "prelude-manager-db-plugin-5.2.0-10.fc39.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libpreludedb" 
+  "prelude-manager" {= "5.2.0"}
+]
+extra-source "prelude-manager-db-plugin-5.2.0-10.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/prelude-manager-db-plugin-5.2.0-10.fc39.x86_64.rpm"
+}

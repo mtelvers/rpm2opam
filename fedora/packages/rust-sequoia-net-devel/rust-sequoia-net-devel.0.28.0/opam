@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-sequoia-net-devel-0.28.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-sequoia-net-devel-0.28.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.67"}
+  "rust-anyhow+default-devel" 
+  "rust-base64+default-devel" 
+  "rust-futures-util+default-devel" 
+  "rust-hickory-client+default-devel" 
+  "rust-hickory-resolver+default-devel" 
+  "rust-hickory-resolver+dnssec-openssl-devel" 
+  "rust-http+default-devel" 
+  "rust-hyper+default-devel" 
+  "rust-hyper+http1-devel" 
+  "rust-hyper+http2-devel" 
+  "rust-hyper-tls+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-percent-encoding+default-devel" 
+  "rust-reqwest+default-devel" 
+  "rust-sequoia-openpgp-devel" 
+  "rust-tempfile+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-tokio+default-devel" 
+  "rust-tokio+macros-devel" 
+  "rust-url+default-devel" 
+  "rust-z-base-32+default-devel" 
+]
+extra-source "rust-sequoia-net-devel-0.28.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-sequoia-net-devel-0.28.0-2.fc40.noarch.rpm"
+}

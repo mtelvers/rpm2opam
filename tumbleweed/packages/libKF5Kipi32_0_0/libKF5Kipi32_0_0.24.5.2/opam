@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libKF5Kipi32_0_0-24.05.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libKF5Kipi32_0_0-24.05.2-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kservice" 
+  "libKF5ConfigCore5" 
+  "libKF5CoreAddons5" 
+  "libKF5XmlGui5" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Widgets5" 
+  "libQt5Xml5" 
+  "libkipi-data" {>= "24.5.2"}
+  "libstdc++6" 
+]
+extra-source "libKF5Kipi32_0_0-24.05.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libKF5Kipi32_0_0-24.05.2-1.1.x86_64.rpm"
+}

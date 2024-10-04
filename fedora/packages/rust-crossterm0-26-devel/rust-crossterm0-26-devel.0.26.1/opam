@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-crossterm0.26-devel-0.26.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-crossterm0.26-devel-0.26.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bitflags+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-mio+default-devel" 
+  "rust-mio+os-poll-devel" 
+  "rust-parking_lot+default-devel" 
+  "rust-signal-hook+default-devel" 
+  "rust-signal-hook-mio+default-devel" 
+  "rust-signal-hook-mio+support-v0_8-devel" 
+]
+extra-source "rust-crossterm0.26-devel-0.26.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-crossterm0.26-devel-0.26.1-2.fc40.noarch.rpm"
+}

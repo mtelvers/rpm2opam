@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Module-Info-0.390.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Info-0.390.0-1.1.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-B-Utils" {>= "0.27"}
+  "perl-base" 
+]
+extra-source "perl-Module-Info-0.390.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Module-Info-0.390.0-1.1.noarch.rpm"
+}

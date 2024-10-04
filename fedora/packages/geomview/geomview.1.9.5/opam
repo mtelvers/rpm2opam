@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "geomview-1.9.5-26.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "geomview-1.9.5-26.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "geomview-libs" {= "1.9.5"}
+  "glibc" 
+  "libX11" 
+  "libXmu" 
+  "libXt" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libstdc++" 
+  "motif" 
+  "xdg-utils" 
+]
+extra-source "geomview-1.9.5-26.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/geomview-1.9.5-26.fc40.x86_64.rpm"
+}

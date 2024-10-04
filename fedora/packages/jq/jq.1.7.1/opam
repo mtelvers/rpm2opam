@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jq-1.7.1-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jq-1.7.1-4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" {>= "2.38.9000"}
+  "oniguruma" 
+]
+extra-source "jq-1.7.1-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jq-1.7.1-4.fc40.x86_64.rpm"
+}

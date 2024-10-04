@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kubectl-retina-fish-completion-0.0.16-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kubectl-retina-fish-completion-0.0.16-1.1.noarch.rpm"]
+depends: [
+  "kubectl-retina" {= "0.0.16"}
+]
+extra-source "kubectl-retina-fish-completion-0.0.16-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kubectl-retina-fish-completion-0.0.16-1.1.noarch.rpm"
+}

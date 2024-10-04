@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "llvm17-polly-17.0.6-6.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "llvm17-polly-17.0.6-6.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libstdc++6" 
+]
+extra-source "llvm17-polly-17.0.6-6.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/llvm17-polly-17.0.6-6.1.x86_64.rpm"
+}

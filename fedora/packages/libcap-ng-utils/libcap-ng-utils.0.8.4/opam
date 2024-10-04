@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libcap-ng-utils-0.8.4-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcap-ng-utils-0.8.4-4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcap-ng" {= "0.8.4"}
+]
+extra-source "libcap-ng-utils-0.8.4-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libcap-ng-utils-0.8.4-4.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kubectl-cnpg-fish-completion-1.24.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kubectl-cnpg-fish-completion-1.24.0-1.1.noarch.rpm"]
+depends: [
+  "kubectl-cnpg" {= "1.24.0"}
+]
+extra-source "kubectl-cnpg-fish-completion-1.24.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kubectl-cnpg-fish-completion-1.24.0-1.1.noarch.rpm"
+}

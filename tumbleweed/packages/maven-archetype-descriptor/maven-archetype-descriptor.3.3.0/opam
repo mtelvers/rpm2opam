@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-archetype-descriptor-3.3.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-archetype-descriptor-3.3.0-1.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "plexus-utils" 
+  "plexus-xml" 
+]
+extra-source "maven-archetype-descriptor-3.3.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-archetype-descriptor-3.3.0-1.1.noarch.rpm"
+}

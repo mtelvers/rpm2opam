@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-filepattern-devel-0.1.3-2.20.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-filepattern-devel-0.1.3-2.20.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-directory-devel" 
+  "ghc-extra-devel" 
+  "ghc-filepath-devel" 
+  "ghc-filepattern" {= "0.1.3"}
+]
+extra-source "ghc-filepattern-devel-0.1.3-2.20.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-filepattern-devel-0.1.3-2.20.x86_64.rpm"
+}

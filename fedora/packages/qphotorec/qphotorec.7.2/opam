@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qphotorec-7.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qphotorec-7.2-1.fc40.x86_64.rpm"]
+depends: [
+  "e2fsprogs-libs" 
+  "glibc" 
+  "libewf" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libstdc++" 
+  "ntfs-3g-libs" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "zlib-ng-compat" 
+]
+extra-source "qphotorec-7.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qphotorec-7.2-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "icmpinfo-1.11-716.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "icmpinfo-1.11-716.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libnss_usrfiles2" 
+  "netcfg" 
+]
+extra-source "icmpinfo-1.11-716.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/icmpinfo-1.11-716.2.x86_64.rpm"
+}

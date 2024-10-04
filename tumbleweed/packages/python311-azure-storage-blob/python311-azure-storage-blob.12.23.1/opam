@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-azure-storage-blob-12.23.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-azure-storage-blob-12.23.1-1.1.noarch.rpm"]
+depends: [
+  "python311-azure-common" {>= "1.1.5"}
+  "python311-azure-core" 
+  "python311-azure-nspkg" {>= "3.0.0"}
+  "python311-azure-storage-common" 
+  "python311-azure-storage-nspkg" {>= "3.0.0"}
+  "python311-base" {= "3.11"}
+  "python311-cryptography" {>= "2.1.4"}
+  "python311-isodate" {>= "0.6.1"}
+  "python311-typing_extensions" 
+]
+extra-source "python311-azure-storage-blob-12.23.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-azure-storage-blob-12.23.1-1.1.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libXbgi-devel-365-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libXbgi-devel-365-2.1.x86_64.rpm"]
+depends: [
+  "libX11-devel" 
+  "libXbgi1" {= "365"}
+  "xorgproto-devel" 
+]
+extra-source "libXbgi-devel-365-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libXbgi-devel-365-2.1.x86_64.rpm"
+}

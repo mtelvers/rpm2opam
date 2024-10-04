@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-extra-devel-1.7.14-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-extra-devel-1.7.14-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-clock-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-directory-devel" 
+  "ghc-extra" {= "1.7.14"}
+  "ghc-filepath-devel" 
+  "ghc-process-devel" 
+  "ghc-time-devel" 
+  "ghc-unix-devel" 
+]
+extra-source "ghc-extra-devel-1.7.14-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-extra-devel-1.7.14-3.fc40.x86_64.rpm"
+}

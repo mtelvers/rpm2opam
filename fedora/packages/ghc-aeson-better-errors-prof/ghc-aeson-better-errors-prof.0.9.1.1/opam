@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-aeson-better-errors-prof-0.9.1.1-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-aeson-better-errors-prof-0.9.1.1-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-better-errors-devel" {= "0.9.1.1"}
+  "ghc-aeson-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-dlist-prof" 
+  "ghc-mtl-prof" 
+  "ghc-scientific-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-compat-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unordered-containers-prof" 
+  "ghc-vector-prof" 
+  "ghc-void-prof" 
+]
+extra-source "ghc-aeson-better-errors-prof-0.9.1.1-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-aeson-better-errors-prof-0.9.1.1-8.fc40.x86_64.rpm"
+}

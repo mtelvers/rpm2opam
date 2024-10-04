@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-xymtex-2024.216.5.06svn32182-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-xymtex-2024.216.5.06svn32182-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-eepic" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-pgf" 
+  "texlive-pst-coil" 
+  "texlive-pstricks" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-xcolor" 
+]
+extra-source "texlive-xymtex-2024.216.5.06svn32182-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-xymtex-2024.216.5.06svn32182-55.1.noarch.rpm"
+}

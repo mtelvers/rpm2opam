@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-linearalgebraforcap-2024.02.02-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-linearalgebraforcap-2024.02.02-1.2.x86_64.rpm"]
+depends: [
+  "gap" {>= "4.12.1"}
+  "gap-cap" {>= "2023.10.7"}
+  "gap-gapdoc" {>= "1.5"}
+  "gap-gaussforhomalg" {>= "2021.4.2"}
+  "gap-matricesforhomalg" {>= "2023.1.1"}
+  "gap-monoidalcategories" {>= "2024.2.2"}
+  "gap-toolsforhomalg" {>= "2015.9.18"}
+]
+extra-source "gap-linearalgebraforcap-2024.02.02-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gap-linearalgebraforcap-2024.02.02-1.2.x86_64.rpm"
+}

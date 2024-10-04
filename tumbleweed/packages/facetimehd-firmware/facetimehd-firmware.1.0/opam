@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "facetimehd-firmware-1.0-1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "facetimehd-firmware-1.0-1.8.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "cpio" 
+  "curl" 
+  "unzip" 
+  "xz" 
+]
+extra-source "facetimehd-firmware-1.0-1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/facetimehd-firmware-1.0-1.8.noarch.rpm"
+}

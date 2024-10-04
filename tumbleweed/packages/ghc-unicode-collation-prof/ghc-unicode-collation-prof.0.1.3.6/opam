@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-unicode-collation-prof-0.1.3.6-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-unicode-collation-prof-0.1.3.6-2.1.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-binary-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-parsec-prof" 
+  "ghc-template-haskell-prof" 
+  "ghc-text-prof" 
+  "ghc-th-lift-instances-prof" 
+  "ghc-unicode-collation-devel" {= "0.1.3.6"}
+]
+extra-source "ghc-unicode-collation-prof-0.1.3.6-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-unicode-collation-prof-0.1.3.6-2.1.x86_64.rpm"
+}

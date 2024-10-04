@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-SummarizedExperiment-1.26.1-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-SummarizedExperiment-1.26.1-6.fc40.noarch.rpm"]
+depends: [
+  "R-Biobase" 
+  "R-BiocGenerics" {>= "0.37.0"}
+  "R-DelayedArray" {>= "0.15.10"}
+  "R-GenomeInfoDb" {>= "1.13.1"}
+  "R-GenomicRanges" {>= "1.41.5"}
+  "R-IRanges" {>= "2.23.9"}
+  "R-MatrixGenerics" {>= "1.1.3"}
+  "R-S4Vectors" {>= "0.33.7"}
+  "R-core" {= "4.3"}
+]
+extra-source "R-SummarizedExperiment-1.26.1-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-SummarizedExperiment-1.26.1-6.fc40.noarch.rpm"
+}

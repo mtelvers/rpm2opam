@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rss-glx-xscreensaver-0.9.1.p-60.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rss-glx-xscreensaver-0.9.1.p-60.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "rss-glx" {= "0.9.1.0"}
+  "xscreensaver-base" {>= "5.3"}
+  "xscreensaver-gl-base" 
+]
+extra-source "rss-glx-xscreensaver-0.9.1.p-60.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rss-glx-xscreensaver-0.9.1.p-60.fc40.x86_64.rpm"
+}

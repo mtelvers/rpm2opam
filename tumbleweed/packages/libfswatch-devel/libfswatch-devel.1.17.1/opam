@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfswatch-devel-1.17.1-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfswatch-devel-1.17.1-1.2.x86_64.rpm"]
+depends: [
+  "libfswatch13" {= "1.17.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libfswatch-devel-1.17.1-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfswatch-devel-1.17.1-1.2.x86_64.rpm"
+}

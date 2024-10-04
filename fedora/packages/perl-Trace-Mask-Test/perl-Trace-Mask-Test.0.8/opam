@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Trace-Mask-Test-0.000008-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Trace-Mask-Test-0.000008-23.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" {>= "1.3"}
+  "perl-Data-Dumper" 
+  "perl-Exporter" 
+  "perl-Scalar-List-Utils" {>= "1.10"}
+  "perl-Test-Simple" {>= "1.302026"}
+  "perl-Test2-Suite" {>= "0.30"}
+  "perl-Trace-Mask" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-Trace-Mask-Test-0.000008-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Trace-Mask-Test-0.000008-23.fc40.noarch.rpm"
+}

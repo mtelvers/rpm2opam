@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dh-make-2.202304-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dh-make-2.202304-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "debhelper" 
+  "dpkg-dev" 
+  "make" 
+  "python3" 
+]
+extra-source "dh-make-2.202304-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dh-make-2.202304-1.fc40.noarch.rpm"
+}

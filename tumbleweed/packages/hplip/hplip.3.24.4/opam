@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hplip-3.24.4-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hplip-3.24.4-2.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "busybox-findutils" 
+  "busybox-grep" 
+  "busybox-sed" 
+  "coreutils" 
+  "cups" {> "1.5"}
+  "cups-filters" 
+  "ghostscript" 
+  "glibc" 
+  "hplip-hpijs" {= "3.24.4"}
+  "hplip-sane" {= "3.24.4"}
+  "libcups2" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "lsb-release" 
+  "python311-base" 
+  "python311-dbus-python" {>= "0.80"}
+  "python311-gobject" 
+  "python311-qt5" 
+]
+extra-source "hplip-3.24.4-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/hplip-3.24.4-2.1.x86_64.rpm"
+}

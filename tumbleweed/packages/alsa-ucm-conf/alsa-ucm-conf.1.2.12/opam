@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "alsa-ucm-conf-1.2.12-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "alsa-ucm-conf-1.2.12-1.1.noarch.rpm"]
+depends: [
+  "libasound2" {>= "1.2.6.1"}
+]
+extra-source "alsa-ucm-conf-1.2.12-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/alsa-ucm-conf-1.2.12-1.1.noarch.rpm"
+}

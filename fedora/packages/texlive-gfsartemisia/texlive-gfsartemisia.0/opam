@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-gfsartemisia-svn19469.1.0-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-gfsartemisia-svn19469.1.0-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-euler" 
+  "texlive-kpathsea" 
+  "texlive-txfonts" 
+]
+extra-source "texlive-gfsartemisia-svn19469.1.0-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-gfsartemisia-svn19469.1.0-71.fc40.noarch.rpm"
+}

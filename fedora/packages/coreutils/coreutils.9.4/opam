@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "coreutils-9.4-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coreutils-9.4-6.fc40.x86_64.rpm"]
+depends: [
+  "coreutils-common" {= "9.4"}
+  "glibc" 
+  "gmp" 
+  "libacl" 
+  "libattr" 
+  "libcap" 
+  "libselinux" 
+  "openssl-libs" 
+]
+extra-source "coreutils-9.4-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/coreutils-9.4-6.fc40.x86_64.rpm"
+}

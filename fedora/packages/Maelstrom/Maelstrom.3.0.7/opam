@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "Maelstrom-3.0.7-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Maelstrom-3.0.7-9.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "SDL2_net" 
+  "coreutils" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "Maelstrom-3.0.7-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/Maelstrom-3.0.7-9.fc40.x86_64.rpm"
+}

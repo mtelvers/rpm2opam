@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libreoffice-gdb-pretty-printers-24.8.2.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libreoffice-gdb-pretty-printers-24.8.2.1-1.1.noarch.rpm"]
+depends: [
+  "gdb" 
+  "libreoffice" {= "24.8.2.1"}
+  "python311-six" 
+]
+extra-source "libreoffice-gdb-pretty-printers-24.8.2.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libreoffice-gdb-pretty-printers-24.8.2.1-1.1.noarch.rpm"
+}

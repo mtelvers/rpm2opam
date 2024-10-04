@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "swaks-20240103.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "swaks-20240103.0-2.1.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "perl" 
+  "perl-Net-DNS" 
+  "perl-Net-SSLeay" 
+]
+extra-source "swaks-20240103.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/swaks-20240103.0-2.1.noarch.rpm"
+}

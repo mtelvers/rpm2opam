@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mod_security-mlogc-2.9.7-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mod_security-mlogc-2.9.7-6.fc40.x86_64.rpm"]
+depends: [
+  "apr" 
+  "glibc" 
+  "httpd-filesystem" 
+  "libcurl" 
+  "mod_security" 
+  "pcre2" 
+  "perl-Digest-MD5" 
+  "perl-File-Find" 
+  "perl-PathTools" 
+  "perl-Sys-Hostname" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "mod_security-mlogc-2.9.7-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mod_security-mlogc-2.9.7-6.fc40.x86_64.rpm"
+}

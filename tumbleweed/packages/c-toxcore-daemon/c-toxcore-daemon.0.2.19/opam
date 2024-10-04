@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "c-toxcore-daemon-0.2.19-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "c-toxcore-daemon-0.2.19-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libconfig11" 
+  "libsodium26" 
+  "libtoxcore2" 
+]
+extra-source "c-toxcore-daemon-0.2.19-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/c-toxcore-daemon-0.2.19-1.2.x86_64.rpm"
+}

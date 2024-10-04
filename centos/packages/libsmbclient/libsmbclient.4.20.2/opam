@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsmbclient-4.20.2-104.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsmbclient-4.20.2-104.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libtalloc" 
+  "libtevent" 
+  "libwbclient" {= "4.20.2"}
+  "samba-client-libs" 
+  "samba-common" {= "4.20.2"}
+  "samba-common-libs" {= "4.20.2"}
+]
+extra-source "libsmbclient-4.20.2-104.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/libsmbclient-4.20.2-104.el10.x86_64.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MetaCPAN-Client-2.031001-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MetaCPAN-Client-2.031001-1.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-HTTP-Tiny" {>= "0.56"}
+  "perl-IO-Socket-SSL" {>= "1.42"}
+  "perl-JSON-MaybeXS" 
+  "perl-JSON-PP" 
+  "perl-Moo" 
+  "perl-Net-SSLeay" {>= "1.49"}
+  "perl-Ref-Util" 
+  "perl-Safe-Isa" 
+  "perl-Type-Tiny" 
+  "perl-URI" 
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-MetaCPAN-Client-2.031001-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MetaCPAN-Client-2.031001-1.fc40.noarch.rpm"
+}

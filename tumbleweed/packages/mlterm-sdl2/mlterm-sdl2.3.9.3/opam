@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mlterm-sdl2-3.9.3-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mlterm-sdl2-3.9.3-5.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libSDL2-2_0-0" 
+  "libfontconfig1" 
+  "libfreetype6" 
+  "mlterm-common" 
+  "system-group-hardware" 
+]
+extra-source "mlterm-sdl2-3.9.3-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mlterm-sdl2-3.9.3-5.2.x86_64.rpm"
+}

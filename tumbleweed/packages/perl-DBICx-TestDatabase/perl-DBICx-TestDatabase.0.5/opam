@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-DBICx-TestDatabase-0.05-2.26.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DBICx-TestDatabase-0.05-2.26.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-DBD-SQLite" {>= "1.29"}
+  "perl-SQL-Translator" 
+]
+extra-source "perl-DBICx-TestDatabase-0.05-2.26.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-DBICx-TestDatabase-0.05-2.26.noarch.rpm"
+}

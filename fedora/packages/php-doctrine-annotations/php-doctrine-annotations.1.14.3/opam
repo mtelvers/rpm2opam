@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-doctrine-annotations-1.14.3-2.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-doctrine-annotations-1.14.3-2.fc39.noarch.rpm"]
+depends: [
+  "php-common" {>= "7.1"}
+  "php-doctrine-lexer" 
+  "php-fedora-autoloader" 
+  "php-psr-cache" 
+]
+extra-source "php-doctrine-annotations-1.14.3-2.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-doctrine-annotations-1.14.3-2.fc39.noarch.rpm"
+}

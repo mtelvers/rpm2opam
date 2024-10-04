@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "systemtap-testsuite-5.1~pre17062192g5fd8daba-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "systemtap-testsuite-5.1~pre17062192g5fd8daba-1.fc40.x86_64.rpm"]
+depends: [
+  "avahi" 
+  "bash" 
+  "coreutils" 
+  "crash" 
+  "dejagnu" 
+  "elfutils" 
+  "elfutils-debuginfod" 
+  "gawk" 
+  "gcc" 
+  "gcc-c++" 
+  "glibc-devel" 
+  "grep" 
+  "make" 
+  "netcat" 
+  "nmap-ncat" 
+  "perf" 
+  "perl-interpreter" 
+  "strace" 
+  "stress" 
+  "systemtap" {= "5.1"}
+  "systemtap-client" 
+  "systemtap-runtime-java" {= "5.1"}
+  "systemtap-runtime-python3" {= "5.1"}
+  "systemtap-sdt-devel" {= "5.1"}
+  "systemtap-server" {= "5.1"}
+  "tcl" 
+  "tk" 
+  "wget2-wget" 
+  "which" 
+]
+extra-source "systemtap-testsuite-5.1~pre17062192g5fd8daba-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/systemtap-testsuite-5.1~pre17062192g5fd8daba-1.fc40.x86_64.rpm"
+}

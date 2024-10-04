@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kdm-themes-4.11.22-41.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kdm-themes-4.11.22-41.fc40.noarch.rpm"]
+depends: [
+  "kde-wallpapers" 
+  "kdm" {= "4.11.22"}
+]
+extra-source "kdm-themes-4.11.22-41.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kdm-themes-4.11.22-41.fc40.noarch.rpm"
+}

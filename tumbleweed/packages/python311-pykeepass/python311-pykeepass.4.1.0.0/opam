@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pykeepass-4.1.0.post1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pykeepass-4.1.0.post1-1.1.noarch.rpm"]
+depends: [
+  "python311-argon2-cffi" {>= "20.1.0"}
+  "python311-base" {= "3.11"}
+  "python311-construct" {>= "2.10.54"}
+  "python311-lxml" {>= "4.6.1"}
+  "python311-pycryptodomex" {>= "3.10.1"}
+]
+extra-source "python311-pykeepass-4.1.0.post1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pykeepass-4.1.0.post1-1.1.noarch.rpm"
+}

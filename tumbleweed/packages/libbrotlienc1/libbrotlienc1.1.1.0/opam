@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libbrotlienc1-1.1.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libbrotlienc1-1.1.0-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbrotlicommon1" 
+]
+extra-source "libbrotlienc1-1.1.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libbrotlienc1-1.1.0-1.3.x86_64.rpm"
+}

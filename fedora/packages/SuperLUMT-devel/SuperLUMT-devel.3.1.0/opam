@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "SuperLUMT-devel-3.1.0-38.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "SuperLUMT-devel-3.1.0-38.fc40.x86_64.rpm"]
+depends: [
+  "SuperLUMT" {= "3.1.0"}
+  "SuperLUMT-complex" {= "3.1.0"}
+  "SuperLUMT-complex16" {= "3.1.0"}
+  "SuperLUMT-double" {= "3.1.0"}
+]
+extra-source "SuperLUMT-devel-3.1.0-38.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/SuperLUMT-devel-3.1.0-38.fc40.x86_64.rpm"
+}

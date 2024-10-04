@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libliquid-1.6.0-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libliquid-1.6.0-2.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libfec3" 
+  "libfftw3-3" 
+]
+extra-source "libliquid-1.6.0-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libliquid-1.6.0-2.3.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tk-32bit-8.6.15-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tk-32bit-8.6.15-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libX11-6-32bit" 
+  "libXft2-32bit" 
+  "libXss1-32bit" 
+  "libfontconfig1-32bit" 
+]
+extra-source "tk-32bit-8.6.15-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tk-32bit-8.6.15-1.1.x86_64.rpm"
+}

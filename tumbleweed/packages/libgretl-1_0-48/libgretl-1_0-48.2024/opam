@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgretl-1_0-48-2024b-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgretl-1_0-48-2024b-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libblas3" 
+  "libcurl-mini4" 
+  "libfftw3-3" 
+  "libgmp10" 
+  "libgomp1" 
+  "libgsf-1-114" 
+  "liblapack3" 
+  "libxml2-2" 
+  "libz-ng-compat1" 
+]
+extra-source "libgretl-1_0-48-2024b-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgretl-1_0-48-2024b-1.1.x86_64.rpm"
+}

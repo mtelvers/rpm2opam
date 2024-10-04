@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mlnx-tools-23.07-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mlnx-tools-23.07-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "ethtool" 
+  "iproute" 
+  "pciutils" 
+  "python3" 
+  "systemd-udev" 
+]
+extra-source "mlnx-tools-23.07-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mlnx-tools-23.07-4.fc40.noarch.rpm"
+}

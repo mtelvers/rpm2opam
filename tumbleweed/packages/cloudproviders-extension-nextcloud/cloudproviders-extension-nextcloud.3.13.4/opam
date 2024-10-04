@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cloudproviders-extension-nextcloud-3.13.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cloudproviders-extension-nextcloud-3.13.4-1.1.noarch.rpm"]
+depends: [
+  "nextcloud-desktop" {= "3.13.4"}
+]
+extra-source "cloudproviders-extension-nextcloud-3.13.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cloudproviders-extension-nextcloud-3.13.4-1.1.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-x-perf-devel-0-0.23.20210123gitbdcc622.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-x-perf-devel-0-0.23.20210123gitbdcc622.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-cloud-google-storage-devel" 
+  "golang-github-aclements-gg-devel" 
+  "golang-github-mattn-sqlite3-devel" 
+  "golang-github-sql-driver-mysql-devel" 
+  "golang-google-api-devel" 
+  "golang-google-appengine-devel" 
+  "golang-x-net-devel" 
+  "golang-x-oauth2-devel" 
+]
+extra-source "golang-x-perf-devel-0-0.23.20210123gitbdcc622.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-x-perf-devel-0-0.23.20210123gitbdcc622.fc40.noarch.rpm"
+}

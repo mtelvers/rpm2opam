@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Catalyst-Authentication-Credential-HTTP-1.018-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Catalyst-Authentication-Credential-HTTP-1.018-21.fc40.noarch.rpm"]
+depends: [
+  "perl-Catalyst-Plugin-Authentication" 
+  "perl-Catalyst-Runtime" 
+  "perl-Class-Accessor" 
+  "perl-Data-UUID" {>= "0.11"}
+  "perl-Digest-MD5" 
+  "perl-String-Escape" 
+  "perl-URI" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-Catalyst-Authentication-Credential-HTTP-1.018-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Catalyst-Authentication-Credential-HTTP-1.018-21.fc40.noarch.rpm"
+}

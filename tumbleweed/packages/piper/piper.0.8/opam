@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "piper-0.8-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "piper-0.8-1.1.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-evdev" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-lxml" 
+  "python311-pycairo" 
+  "ratbagd" {>= "0.18"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" {= "2.0"}
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Rsvg-2_0" {= "2.0"}
+]
+extra-source "piper-0.8-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/piper-0.8-1.1.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nut-devel-2.8.2-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nut-devel-2.8.2-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libnutclient2" {= "2.8.2"}
+  "libnutclientstub1" {= "2.8.2"}
+  "libnutscan2" {= "2.8.2"}
+  "libopenssl-1_0_0-devel" 
+  "libupsclient6" {= "2.8.2"}
+  "pkgconf-pkg-config" 
+  "python311-base" 
+]
+extra-source "nut-devel-2.8.2-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/nut-devel-2.8.2-2.1.x86_64.rpm"
+}

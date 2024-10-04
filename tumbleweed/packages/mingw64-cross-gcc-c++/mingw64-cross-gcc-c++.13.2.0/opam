@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mingw64-cross-gcc-c++-13.2.0-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-cross-gcc-c++-13.2.0-3.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgmp10" 
+  "libmpc3" 
+  "libmpfr6" 
+  "libz-ng-compat1" 
+  "mingw64-cross-gcc" {= "13.2.0"}
+]
+extra-source "mingw64-cross-gcc-c++-13.2.0-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mingw64-cross-gcc-c++-13.2.0-3.1.x86_64.rpm"
+}

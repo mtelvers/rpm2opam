@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pcodedmp-1.2.6-2.16.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pcodedmp-1.2.6-2.16.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" {= "3.11"}
+  "python311-oletools" {>= "0.54"}
+]
+extra-source "python311-pcodedmp-1.2.6-2.16.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pcodedmp-1.2.6-2.16.noarch.rpm"
+}

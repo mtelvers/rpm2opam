@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnutls-3.8.3-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnutls-3.8.3-2.fc40.x86_64.rpm"]
+depends: [
+  "crypto-policies" 
+  "glibc" 
+  "gmp" 
+  "libidn2" 
+  "libtasn1" 
+  "libunistring" 
+  "nettle" 
+  "p11-kit" 
+  "p11-kit-trust" 
+]
+extra-source "gnutls-3.8.3-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnutls-3.8.3-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-hdf5storage-0.1.19-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-hdf5storage-0.1.19-3.1.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-h5py" {>= "3.3"}
+  "python312-numpy" 
+]
+extra-source "python312-hdf5storage-0.1.19-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-hdf5storage-0.1.19-3.1.noarch.rpm"
+}

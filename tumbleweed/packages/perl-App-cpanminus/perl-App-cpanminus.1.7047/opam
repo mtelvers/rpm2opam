@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-App-cpanminus-1.7047-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-App-cpanminus-1.7047-2.1.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-CPAN-DistnameInfo" 
+  "perl-CPAN-Meta-Check" 
+  "perl-File-pushd" 
+  "perl-Module-Build" 
+  "perl-Module-CPANfile" 
+  "perl-Parse-PMFile" 
+  "perl-String-ShellQuote" 
+  "perl-YAML" 
+  "perl-base" 
+  "perl-local-lib" 
+]
+extra-source "perl-App-cpanminus-1.7047-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-App-cpanminus-1.7047-2.1.noarch.rpm"
+}

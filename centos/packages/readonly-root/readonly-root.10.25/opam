@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "readonly-root-10.25-1.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "readonly-root-10.25-1.el10.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "cpio" 
+  "filesystem" {>= "3"}
+  "findutils" 
+  "gawk" 
+  "hostname" 
+  "initscripts" {= "10.26"}
+  "ipcalc" 
+  "iproute" 
+  "util-linux" 
+]
+extra-source "readonly-root-10.25-1.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/readonly-root-10.25-1.el10.noarch.rpm"
+}

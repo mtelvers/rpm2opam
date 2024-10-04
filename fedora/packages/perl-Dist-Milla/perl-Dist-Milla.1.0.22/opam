@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Dist-Milla-1.0.22-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Dist-Milla-1.0.22-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Dist-Zilla" {>= "6"}
+  "perl-Dist-Zilla-Config-Slicer" 
+  "perl-Dist-Zilla-Plugin-CheckChangesHasContent" 
+  "perl-Dist-Zilla-Plugin-CopyFilesFromBuild" {>= "0.163040"}
+  "perl-Dist-Zilla-Plugin-CopyFilesFromRelease" 
+  "perl-Dist-Zilla-Plugin-Git" 
+  "perl-Dist-Zilla-Plugin-Git-Contributors" {>= "0.9"}
+  "perl-Dist-Zilla-Plugin-GithubMeta" 
+  "perl-Dist-Zilla-Plugin-LicenseFromModule" {>= "0.5"}
+  "perl-Dist-Zilla-Plugin-ModuleBuildTiny" 
+  "perl-Dist-Zilla-Plugin-NameFromDirectory" {>= "0.4"}
+  "perl-Dist-Zilla-Plugin-Prereqs-FromCPANfile" {>= "0.6"}
+  "perl-Dist-Zilla-Plugin-ReadmeAnyFromPod" {>= "0.163250"}
+  "perl-Dist-Zilla-Plugin-ReadmeFromPod" {>= "0.37"}
+  "perl-Dist-Zilla-Plugin-ReversionOnRelease" {>= "0.4"}
+  "perl-Dist-Zilla-Plugin-StaticInstall" 
+  "perl-Dist-Zilla-Plugin-Test-Compile" 
+  "perl-Dist-Zilla-Plugin-VersionFromMainModule" 
+  "perl-Dist-Zilla-Role-PluginBundle-PluginRemover" 
+  "perl-File-pushd" 
+  "perl-Git-Wrapper" 
+  "perl-Module-CPANfile" {>= "0.9025"}
+  "perl-Moose" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-namespace-autoclean" 
+  "perl-parent" 
+  "perl-version" 
+]
+extra-source "perl-Dist-Milla-1.0.22-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Dist-Milla-1.0.22-4.fc40.noarch.rpm"
+}

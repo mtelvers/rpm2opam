@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-bacon-qr-code2-2.0.8-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-bacon-qr-code2-2.0.8-5.fc40.noarch.rpm"]
+depends: [
+  "php-common" {>= "7.1"}
+  "php-dasprid-enum" 
+  "php-fedora-autoloader" 
+  "php-xml" 
+]
+extra-source "php-bacon-qr-code2-2.0.8-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-bacon-qr-code2-2.0.8-5.fc40.noarch.rpm"
+}

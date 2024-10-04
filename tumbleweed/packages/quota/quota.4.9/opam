@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "quota-4.09-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "quota-4.09-2.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libdbus-1-3" 
+  "libext2fs2" 
+  "libldap2" 
+  "libnl3-200" 
+  "libtirpc3" 
+  "perl-base" 
+]
+extra-source "quota-4.09-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/quota-4.09-2.6.x86_64.rpm"
+}

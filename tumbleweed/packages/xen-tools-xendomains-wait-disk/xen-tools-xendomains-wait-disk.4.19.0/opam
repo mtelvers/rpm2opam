@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xen-tools-xendomains-wait-disk-4.19.0_04-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xen-tools-xendomains-wait-disk-4.19.0_04-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "sed" 
+  "vim" 
+  "xen-tools" {= "4.19.0"}
+]
+extra-source "xen-tools-xendomains-wait-disk-4.19.0_04-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xen-tools-xendomains-wait-disk-4.19.0_04-1.1.noarch.rpm"
+}

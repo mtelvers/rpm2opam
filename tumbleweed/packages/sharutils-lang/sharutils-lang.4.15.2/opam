@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sharutils-lang-4.15.2-9.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sharutils-lang-4.15.2-9.1.noarch.rpm"]
+depends: [
+  "sharutils" {= "4.15.2"}
+]
+extra-source "sharutils-lang-4.15.2-9.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sharutils-lang-4.15.2-9.1.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-pycadf-3.1.1-2.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-pycadf-3.1.1-2.9.noarch.rpm"]
+depends: [
+  "python-pycadf-common" 
+  "python3-debtcollector" {>= "1.2.0"}
+  "python3-oslo-config" {>= "5.2.0"}
+  "python3-oslo-serialization" {>= "2.18.0"}
+  "python311-base" {= "3.11"}
+  "python311-pytz" {>= "2013.6"}
+  "python311-six" {>= "1.10.0"}
+]
+extra-source "python3-pycadf-3.1.1-2.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-pycadf-3.1.1-2.9.noarch.rpm"
+}

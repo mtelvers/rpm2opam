@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "samba-dsdb-modules-4.20.2+git.348.4fb6af61307-slfo.1.1.18.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "samba-dsdb-modules-4.20.2+git.348.4fb6af61307-slfo.1.1.18.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "krb5" 
+  "libcom_err2" 
+  "libcrypt1" 
+  "libgnutls30" 
+  "libgpgme11" 
+  "libldb2" 
+  "libtalloc2" 
+  "libtdb1" 
+  "libtevent0" 
+  "samba-ad-dc-libs" 
+  "samba-client-libs" 
+  "samba-ldb-ldap" {= "4.20.2"}
+  "samba-libs" 
+]
+extra-source "samba-dsdb-modules-4.20.2+git.348.4fb6af61307-slfo.1.1.18.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/samba-dsdb-modules-4.20.2+git.348.4fb6af61307-slfo.1.1.18.x86_64.rpm"
+}

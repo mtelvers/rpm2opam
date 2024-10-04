@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-X2Go-Server-DB-4.1.0.6-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-X2Go-Server-DB-4.1.0.6-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-DBD-SQLite" 
+  "perl-DBI" 
+  "perl-Exporter" 
+  "perl-File-Copy" 
+  "perl-POSIX" 
+  "perl-Switch" 
+  "perl-Sys-Syslog" 
+  "perl-X2Go-Log" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "x2goserver-common" {= "4.1.0.6"}
+]
+extra-source "perl-X2Go-Server-DB-4.1.0.6-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-X2Go-Server-DB-4.1.0.6-3.fc40.x86_64.rpm"
+}

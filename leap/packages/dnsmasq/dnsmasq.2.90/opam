@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dnsmasq-2.90-slfo.1.1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dnsmasq-2.90-slfo.1.1.5.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libdbus-1-3" 
+  "libgmp10" 
+  "libhogweed6" 
+  "libidn2-0" 
+  "liblua5_4-5" 
+  "libnetfilter_conntrack3" 
+  "libnettle8" 
+  "system-user-tftp" 
+  "sysuser-shadow" {>= "3.1"}
+]
+extra-source "dnsmasq-2.90-slfo.1.1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/dnsmasq-2.90-slfo.1.1.5.x86_64.rpm"
+}

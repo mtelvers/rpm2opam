@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "translator-lang-1.4.1-1.24.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "translator-lang-1.4.1-1.24.noarch.rpm"]
+depends: [
+  "translator" {= "1.4.1"}
+]
+extra-source "translator-lang-1.4.1-1.24.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/translator-lang-1.4.1-1.24.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgpiod-devel-1.6.3-2.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgpiod-devel-1.6.3-2.7.x86_64.rpm"]
+depends: [
+  "libgpiod-utils" {= "1.6.3"}
+  "libgpiod2" {= "1.6.3"}
+  "libgpiodcxx1" {= "1.6.3"}
+  "libgpiomockup0" {= "1.6.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libgpiod-devel-1.6.3-2.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgpiod-devel-1.6.3-2.7.x86_64.rpm"
+}

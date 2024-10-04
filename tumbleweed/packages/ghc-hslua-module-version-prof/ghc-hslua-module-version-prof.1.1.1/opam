@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-hslua-module-version-prof-1.1.1-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hslua-module-version-prof-1.1.1-1.8.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-filepath-prof" 
+  "ghc-hslua-core-prof" 
+  "ghc-hslua-marshalling-prof" 
+  "ghc-hslua-module-version-devel" {= "1.1.1"}
+  "ghc-hslua-packaging-prof" 
+  "ghc-text-prof" 
+]
+extra-source "ghc-hslua-module-version-prof-1.1.1-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-hslua-module-version-prof-1.1.1-1.8.x86_64.rpm"
+}

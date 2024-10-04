@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-xattr-0.10.1-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-xattr-0.10.1-2.6.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "python310-base" 
+  "python310-cffi" {>= "1.11"}
+  "python310-setuptools" 
+  "update-alternatives" 
+]
+extra-source "python310-xattr-0.10.1-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-xattr-0.10.1-2.6.x86_64.rpm"
+}

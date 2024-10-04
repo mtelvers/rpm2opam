@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nfswatch-4.99.11-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nfswatch-4.99.11-3.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libncurses6" 
+  "libpcap1" 
+  "libtirpc3" 
+]
+extra-source "nfswatch-4.99.11-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/nfswatch-4.99.11-3.2.x86_64.rpm"
+}

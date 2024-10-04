@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sil-ezra-fonts-all-2.51-15.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sil-ezra-fonts-all-2.51-15.fc40.noarch.rpm"]
+depends: [
+  "sil-ezra-fonts" {= "2.51"}
+  "sil-ezra-sr-fonts" {= "2.51"}
+]
+extra-source "sil-ezra-fonts-all-2.51-15.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sil-ezra-fonts-all-2.51-15.fc40.noarch.rpm"
+}

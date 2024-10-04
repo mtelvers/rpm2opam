@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Config-INI-Reader-Ordered-tests-0.022-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Config-INI-Reader-Ordered-tests-0.022-5.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Config-INI-Reader-Ordered" {= "0.22"}
+  "perl-ExtUtils-MakeMaker" 
+  "perl-PathTools" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" {>= "0.96"}
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Config-INI-Reader-Ordered-tests-0.022-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Config-INI-Reader-Ordered-tests-0.022-5.fc40.noarch.rpm"
+}

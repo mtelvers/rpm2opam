@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "liblinear-cli-1.94-37.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "liblinear-cli-1.94-37.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "liblinear" {= "1.94"}
+  "libstdc++" 
+]
+extra-source "liblinear-cli-1.94-37.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/liblinear-cli-1.94-37.fc40.x86_64.rpm"
+}

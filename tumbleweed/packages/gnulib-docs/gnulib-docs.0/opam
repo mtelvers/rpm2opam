@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnulib-docs-git.20211127.db493d1ce-2.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnulib-docs-git.20211127.db493d1ce-2.11.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gnulib-devel" {= "0"}
+  "info" 
+]
+extra-source "gnulib-docs-git.20211127.db493d1ce-2.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnulib-docs-git.20211127.db493d1ce-2.11.noarch.rpm"
+}

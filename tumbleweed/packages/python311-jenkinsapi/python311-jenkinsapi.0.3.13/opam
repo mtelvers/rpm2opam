@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-jenkinsapi-0.3.13-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-jenkinsapi-0.3.13-1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-pytz" {>= "2014.4"}
+  "python311-requests" {>= "2.3.0"}
+  "python311-six" {>= "1.10.0"}
+  "update-alternatives" 
+]
+extra-source "python311-jenkinsapi-0.3.13-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-jenkinsapi-0.3.13-1.4.noarch.rpm"
+}

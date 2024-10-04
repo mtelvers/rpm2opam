@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-PPI-Tester-0.15-31.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-PPI-Tester-0.15-31.fc40.noarch.rpm"]
+depends: [
+  "perl-Devel-Dumpvar" {>= "0.4"}
+  "perl-PPI" {>= "1.0"}
+  "perl-Wx" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-vars" 
+]
+extra-source "perl-PPI-Tester-0.15-31.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-PPI-Tester-0.15-31.fc40.noarch.rpm"
+}

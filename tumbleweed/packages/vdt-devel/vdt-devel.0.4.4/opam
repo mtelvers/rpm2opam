@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vdt-devel-0.4.4-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vdt-devel-0.4.4-2.1.x86_64.rpm"]
+depends: [
+  "libvdt0" {= "0.4.4"}
+]
+extra-source "vdt-devel-0.4.4-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vdt-devel-0.4.4-2.1.x86_64.rpm"
+}

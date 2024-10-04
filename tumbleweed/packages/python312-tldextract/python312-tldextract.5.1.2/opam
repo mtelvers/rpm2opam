@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-tldextract-5.1.2-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-tldextract-5.1.2-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" {= "3.12"}
+  "python312-filelock" {>= "3.0.8"}
+  "python312-idna" {>= "2.1.0"}
+  "python312-requests" {>= "2.1.0"}
+  "python312-requests-file" {>= "1.4"}
+  "update-alternatives" 
+]
+extra-source "python312-tldextract-5.1.2-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-tldextract-5.1.2-1.2.noarch.rpm"
+}

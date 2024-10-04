@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "clutter-gst3-devel-3.0.27-18.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clutter-gst3-devel-3.0.27-18.fc40.x86_64.rpm"]
+depends: [
+  "clutter-devel" {>= "1.10.0"}
+  "clutter-gst3" {= "3.0.27"}
+  "cogl-devel" 
+  "glib2-devel" 
+  "gstreamer1-devel" 
+  "gstreamer1-plugins-base-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "clutter-gst3-devel-3.0.27-18.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/clutter-gst3-devel-3.0.27-18.fc40.x86_64.rpm"
+}

@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-PyCBC-2.5.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-PyCBC-2.5.1-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgomp1" 
+  "libstdc++6" 
+  "python312-Cython" {>= "0.29"}
+  "python312-Jinja2" 
+  "python312-Mako" {>= "1.0.1"}
+  "python312-Pillow" 
+  "python312-astropy" {>= "2.0.3"}
+  "python312-base" {= "3.12"}
+  "python312-beautifulsoup4" {>= "4.6.0"}
+  "python312-gwdatafind" 
+  "python312-h5py" {>= "3.0"}
+  "python312-lal" 
+  "python312-lalframe" 
+  "python312-lalpulsar" 
+  "python312-lalsimulation" 
+  "python312-ligo-lw" {>= "1.7.0"}
+  "python312-ligo-segments" 
+  "python312-lscsoft-glue" 
+  "python312-matplotlib" {>= "1.5.1"}
+  "python312-mpld3" {>= "0.3"}
+  "python312-numpy" {>= "1.16.0"}
+  "python312-pegasus-wms-api" {>= "5.0.1"}
+  "python312-scipy" {>= "0.16"}
+  "python312-tqdm" 
+]
+extra-source "python312-PyCBC-2.5.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-PyCBC-2.5.1-2.1.x86_64.rpm"
+}

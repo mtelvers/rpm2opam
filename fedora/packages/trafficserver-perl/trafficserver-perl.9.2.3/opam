@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "trafficserver-perl-9.2.3-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trafficserver-perl-9.2.3-2.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-IO" 
+  "perl-constant" 
+  "perl-libs" {>= "5.6.0"}
+  "trafficserver" {= "9.2.3"}
+]
+extra-source "trafficserver-perl-9.2.3-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/trafficserver-perl-9.2.3-2.fc40.noarch.rpm"
+}

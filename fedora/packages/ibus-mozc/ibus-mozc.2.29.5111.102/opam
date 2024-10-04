@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ibus-mozc-2.29.5111.102-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibus-mozc-2.29.5111.102-8.fc40.x86_64.rpm"]
+depends: [
+  "abseil-cpp" 
+  "bash" 
+  "cairo" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "ibus" {>= "1.5.4"}
+  "ibus-libs" 
+  "libgcc" 
+  "libstdc++" 
+  "libxcb" 
+  "mozc" {= "2.29.5111.102"}
+  "pango" 
+  "protobuf" 
+  "xrefresh" 
+]
+extra-source "ibus-mozc-2.29.5111.102-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/ibus-mozc-2.29.5111.102-8.fc40.x86_64.rpm"
+}

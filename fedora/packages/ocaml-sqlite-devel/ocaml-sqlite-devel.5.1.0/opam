@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-sqlite-devel-5.1.0-13.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-sqlite-devel-5.1.0-13.fc40.x86_64.rpm"]
+depends: [
+  "ocaml" {= "0"}
+  "ocaml-sqlite" {= "5.1.0"}
+  "sqlite-devel" {>= "3"}
+]
+extra-source "ocaml-sqlite-devel-5.1.0-13.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-sqlite-devel-5.1.0-13.fc40.x86_64.rpm"
+}

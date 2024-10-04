@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gmsh-libs-4.12.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gmsh-libs-4.12.2-1.fc40.x86_64.rpm"]
+depends: [
+  "ann-libs" 
+  "cairo" 
+  "cgnslib-libs" 
+  "fltk" 
+  "gl2ps" 
+  "glibc" 
+  "gmp" 
+  "libX11" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libgomp" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libstdc++" 
+  "mathex" 
+  "mesa-libGLU" 
+  "metis" 
+  "opencascade-foundation" 
+  "opencascade-modeling" 
+  "opencascade-ocaf" 
+  "voro++" 
+]
+extra-source "gmsh-libs-4.12.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gmsh-libs-4.12.2-1.fc40.x86_64.rpm"
+}

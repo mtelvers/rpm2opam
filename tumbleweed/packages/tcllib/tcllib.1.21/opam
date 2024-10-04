@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tcllib-1.21-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tcllib-1.21-1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "tcl" 
+]
+extra-source "tcllib-1.21-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tcllib-1.21-1.4.noarch.rpm"
+}

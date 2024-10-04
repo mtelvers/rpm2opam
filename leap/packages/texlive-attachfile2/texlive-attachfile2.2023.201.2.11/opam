@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-attachfile2-2023.201.2.11svn57959-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-attachfile2-2023.201.2.11svn57959-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "perl-base" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-attachfile2-bin" {>= "2023"}
+  "texlive-filesystem" {>= "2023"}
+  "texlive-graphics" 
+  "texlive-hycolor" 
+  "texlive-hyperref" 
+  "texlive-iftex" 
+  "texlive-infwarerr" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-kvoptions" 
+  "texlive-ltxcmds" 
+  "texlive-pdfescape" 
+  "texlive-pdftexcmds" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+]
+extra-source "texlive-attachfile2-2023.201.2.11svn57959-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-attachfile2-2023.201.2.11svn57959-slfo.1.1.4.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ceph-mgr-modules-core-16.2.15.74+gc5dd01a91d8-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ceph-mgr-modules-core-16.2.15.74+gc5dd01a91d8-1.2.noarch.rpm"]
+depends: [
+  "python311-CherryPy" 
+  "python311-PyYAML" 
+  "python311-Werkzeug" 
+  "python311-bcrypt" 
+  "python311-pecan" 
+  "python311-pyOpenSSL" 
+  "python311-python-dateutil" 
+  "python311-requests" 
+  "python311-setuptools" 
+]
+extra-source "ceph-mgr-modules-core-16.2.15.74+gc5dd01a91d8-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ceph-mgr-modules-core-16.2.15.74+gc5dd01a91d8-1.2.noarch.rpm"
+}

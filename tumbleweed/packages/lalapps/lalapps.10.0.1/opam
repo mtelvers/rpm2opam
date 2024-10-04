@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lalapps-10.0.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lalapps-10.0.1-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libcfitsio10" 
+  "libframel8" 
+  "libgsl28" 
+  "liblal20" 
+  "liblalburst8" 
+  "liblalframe14" 
+  "liblalinference23" 
+  "liblalinspiral18" 
+  "liblalmetaio11" 
+  "liblalpulsar30" 
+  "liblalsimulation37" 
+  "liblalsupport14" 
+  "libmetaio1" 
+  "python311-base" 
+  "python311-lalapps" {= "10.0.1"}
+]
+extra-source "lalapps-10.0.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lalapps-10.0.1-1.1.x86_64.rpm"
+}

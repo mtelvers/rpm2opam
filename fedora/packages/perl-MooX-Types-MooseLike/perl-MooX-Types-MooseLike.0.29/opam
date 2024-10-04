@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MooX-Types-MooseLike-0.29-26.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooX-Types-MooseLike-0.29-26.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" {>= "5.57"}
+  "perl-Module-Runtime" {>= "0.14"}
+  "perl-Scalar-List-Utils" 
+  "perl-libs" 
+]
+extra-source "perl-MooX-Types-MooseLike-0.29-26.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MooX-Types-MooseLike-0.29-26.fc40.noarch.rpm"
+}

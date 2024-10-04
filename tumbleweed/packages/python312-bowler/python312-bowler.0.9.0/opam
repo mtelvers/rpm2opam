@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-bowler-0.9.0-1.28.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-bowler-0.9.0-1.28.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-attrs" 
+  "python312-base" 
+  "python312-click" 
+  "python312-fissix" 
+  "python312-moreorless" 
+  "python312-setuptools" 
+  "python312-volatile" 
+  "update-alternatives" 
+]
+extra-source "python312-bowler-0.9.0-1.28.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-bowler-0.9.0-1.28.noarch.rpm"
+}

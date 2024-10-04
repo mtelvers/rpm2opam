@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rEFInd-0.13.3.1-6.fc38.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rEFInd-0.13.3.1-6.fc38.x86_64.rpm"]
+depends: [
+  "efi-filesystem" 
+  "efibootmgr" 
+  "rEFInd-tools" {= "0.13.3.1"}
+  "rEFInd-unsigned-x64" {= "0.13.3.1"}
+]
+extra-source "rEFInd-0.13.3.1-6.fc38.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rEFInd-0.13.3.1-6.fc38.x86_64.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-witherable-devel-0.4.2-5.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-witherable-devel-0.4.2-5.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-base-orphans-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-hashable-devel" 
+  "ghc-indexed-traversable-devel" 
+  "ghc-indexed-traversable-instances-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-vector-devel" 
+  "ghc-witherable" {= "0.4.2"}
+]
+extra-source "ghc-witherable-devel-0.4.2-5.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-witherable-devel-0.4.2-5.4.x86_64.rpm"
+}

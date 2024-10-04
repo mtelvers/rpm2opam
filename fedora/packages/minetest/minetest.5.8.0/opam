@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "minetest-5.8.0-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "minetest-5.8.0-5.fc40.x86_64.rpm"]
+depends: [
+  "freetype" 
+  "glibc" 
+  "gmp" 
+  "hicolor-icon-theme" 
+  "hiredis" 
+  "jsoncpp" 
+  "leveldb" 
+  "libX11" 
+  "libXi" 
+  "libcurl" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libglvnd-opengl" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libpq" 
+  "libstdc++" 
+  "libvorbis" 
+  "libzstd" 
+  "luajit" 
+  "minetest-server" {= "5.8.0"}
+  "openal-soft" 
+  "spatialindex" 
+  "sqlite-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "minetest-5.8.0-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/minetest-5.8.0-5.fc40.x86_64.rpm"
+}

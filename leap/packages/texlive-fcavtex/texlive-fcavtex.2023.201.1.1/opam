@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-fcavtex-2023.201.1.1svn38074-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-fcavtex-2023.201.1.1svn38074-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-abntex2" 
+  "texlive-babel" 
+  "texlive-cite" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-geometry" 
+  "texlive-hyperref" 
+  "texlive-hyphenat" 
+  "texlive-incgraph" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-memoir" 
+  "texlive-mfirstuc" 
+  "texlive-microtype" 
+  "texlive-pageslts" 
+  "texlive-paralist" 
+  "texlive-pgf" 
+  "texlive-psnfss" 
+  "texlive-ragged2e" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-sfmath" 
+  "texlive-textpos" 
+  "texlive-titlesec" 
+  "texlive-tocloft" 
+  "texlive-tools" 
+]
+extra-source "texlive-fcavtex-2023.201.1.1svn38074-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-fcavtex-2023.201.1.1svn38074-slfo.1.1.4.noarch.rpm"
+}

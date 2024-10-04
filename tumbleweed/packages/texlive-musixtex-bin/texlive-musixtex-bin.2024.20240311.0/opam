@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-musixtex-bin-2024.20240311.svn37026-100.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-musixtex-bin-2024.20240311.svn37026-100.1.x86_64.rpm"]
+depends: [
+  "texlive-m-tx-bin" {>= "2024"}
+  "texlive-pmx-bin" {>= "2024"}
+]
+extra-source "texlive-musixtex-bin-2024.20240311.svn37026-100.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/texlive-musixtex-bin-2024.20240311.svn37026-100.1.x86_64.rpm"
+}

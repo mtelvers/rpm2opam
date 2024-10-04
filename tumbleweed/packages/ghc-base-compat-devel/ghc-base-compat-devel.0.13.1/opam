@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-base-compat-devel-0.13.1-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-base-compat-devel-0.13.1-1.7.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-compat" {= "0.13.1"}
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-unix-devel" 
+]
+extra-source "ghc-base-compat-devel-0.13.1-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-base-compat-devel-0.13.1-1.7.x86_64.rpm"
+}

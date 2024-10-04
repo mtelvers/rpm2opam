@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "daps-3.3.2-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "daps-3.3.2-1.7.noarch.rpm"]
+depends: [
+  "ImageMagick" 
+  "bash" 
+  "bash-sh" 
+  "dia" 
+  "docbook-xsl-stylesheets" {>= "1.77"}
+  "docbook5-xsl-stylesheets" {>= "1.77"}
+  "docbook_4" 
+  "docbook_5" 
+  "inkscape" 
+  "java-11-openj9" {>= "1.8.0"}
+  "jing" 
+  "libxml2-tools" 
+  "libxslt-tools" 
+  "make" 
+  "poppler-tools" 
+  "python311-base" 
+  "python311-lxml" 
+  "ruby3-3-rubygem-asciidoctor" 
+  "sgml-skel" 
+  "suse-xsl-stylesheets" 
+  "svg-schema" 
+  "xerces-j2" 
+  "xml-commons-apis" 
+  "xmlgraphics-fop" {>= "0.94"}
+  "xmlstarlet" 
+  "zip" 
+]
+extra-source "daps-3.3.2-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/daps-3.3.2-1.7.noarch.rpm"
+}

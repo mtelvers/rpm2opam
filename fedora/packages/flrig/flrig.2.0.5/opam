@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "flrig-2.0.05-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flrig-2.0.05-3.fc40.x86_64.rpm"]
+depends: [
+  "fltk" 
+  "flxmlrpc" 
+  "glibc" 
+  "libX11" 
+  "libgcc" 
+  "libstdc++" 
+  "systemd-libs" 
+  "xdg-utils" 
+]
+extra-source "flrig-2.0.05-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/flrig-2.0.05-3.fc40.x86_64.rpm"
+}

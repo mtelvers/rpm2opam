@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libressl-devel-3.9.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libressl-devel-3.9.2-1.1.x86_64.rpm"]
+depends: [
+  "libcrypto53" {= "3.9.2"}
+  "libopenssl-1_0_0-devel" 
+  "libssl56" {= "3.9.2"}
+  "libtls29" {= "3.9.2"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libressl-devel-3.9.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libressl-devel-3.9.2-1.1.x86_64.rpm"
+}

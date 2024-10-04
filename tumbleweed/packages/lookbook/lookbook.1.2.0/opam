@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lookbook-1.2.0-1.14.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lookbook-1.2.0-1.14.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgranite6" 
+  "libgtk-3-0" 
+  "libgtksourceview-4-0" 
+  "libhandy-1-0" 
+]
+extra-source "lookbook-1.2.0-1.14.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lookbook-1.2.0-1.14.x86_64.rpm"
+}

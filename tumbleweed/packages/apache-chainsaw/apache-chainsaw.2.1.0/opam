@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "apache-chainsaw-2.1.0-5.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apache-chainsaw-2.1.0-5.3.noarch.rpm"]
+depends: [
+  "apache-commons-logging" 
+  "apache-commons-vfs2" 
+  "apache-log4j-extras" 
+  "bash" 
+  "java-11-openj9-headless" {>= "9"}
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+  "jmdns" 
+  "jsch" 
+  "reload4j" 
+  "slf4j" 
+  "xpp3" 
+  "xpp3-minimal" 
+  "xstream" 
+]
+extra-source "apache-chainsaw-2.1.0-5.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/apache-chainsaw-2.1.0-5.3.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tomcat10-jsp-3_1-api-10.1.25-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tomcat10-jsp-3_1-api-10.1.25-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "tomcat10-el-5_0-api" {= "10.1.25"}
+  "tomcat10-servlet-6_0-api" {= "10.1.25"}
+  "update-alternatives" 
+]
+extra-source "tomcat10-jsp-3_1-api-10.1.25-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tomcat10-jsp-3_1-api-10.1.25-2.1.noarch.rpm"
+}

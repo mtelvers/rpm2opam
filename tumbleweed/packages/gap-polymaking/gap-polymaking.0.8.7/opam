@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-polymaking-0.8.7-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-polymaking-0.8.7-1.3.noarch.rpm"]
+depends: [
+  "gap" {>= "4.8"}
+  "polymake" 
+]
+extra-source "gap-polymaking-0.8.7-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-polymaking-0.8.7-1.3.noarch.rpm"
+}

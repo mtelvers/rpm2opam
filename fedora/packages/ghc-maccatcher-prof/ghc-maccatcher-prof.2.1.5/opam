@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-maccatcher-prof-2.1.5-42.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-maccatcher-prof-2.1.5-42.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-binary-prof" 
+  "ghc-maccatcher-devel" {= "2.1.5"}
+  "ghc-parsec-prof" 
+  "ghc-process-prof" 
+]
+extra-source "ghc-maccatcher-prof-2.1.5-42.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-maccatcher-prof-2.1.5-42.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "enca-1.19-2.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "enca-1.19-2.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libenca0" 
+  "sed" 
+]
+extra-source "enca-1.19-2.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/enca-1.19-2.8.x86_64.rpm"
+}

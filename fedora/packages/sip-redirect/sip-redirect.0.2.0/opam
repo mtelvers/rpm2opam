@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sip-redirect-0.2.0-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sip-redirect-0.2.0-21.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "logrotate" 
+  "perl-Fcntl" 
+  "perl-IO" 
+  "perl-POSIX" 
+  "perl-Socket" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "sip-redirect-0.2.0-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sip-redirect-0.2.0-21.fc40.noarch.rpm"
+}

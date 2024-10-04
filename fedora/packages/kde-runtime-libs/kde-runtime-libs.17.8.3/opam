@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kde-runtime-libs-17.08.3-30.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kde-runtime-libs-17.08.3-30.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "glibc" 
+  "kactivities-libs" 
+  "kdelibs" {>= "4.14.38"}
+  "kdelibs-webkit" 
+  "libXcursor" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libssh" 
+  "libstdc++" 
+  "libtirpc" 
+  "libwebp" 
+  "openexr2-libs" 
+  "phonon-qt4" 
+  "qt" 
+  "qt-x11" 
+  "qtwebkit" 
+]
+extra-source "kde-runtime-libs-17.08.3-30.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kde-runtime-libs-17.08.3-30.fc40.x86_64.rpm"
+}

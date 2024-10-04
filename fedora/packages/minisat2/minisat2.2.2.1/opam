@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "minisat2-2.2.1-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "minisat2-2.2.1-19.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "minisat2-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "minisat2-2.2.1-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/minisat2-2.2.1-19.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-Tolerant-1.710-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Tolerant-1.710-5.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Number-Tolerant" 
+  "perl-Scalar-List-Utils" 
+  "perl-Sub-Exporter" {>= "0.950"}
+  "perl-Test-Simple" 
+  "perl-libs" 
+]
+extra-source "perl-Test-Tolerant-1.710-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-Tolerant-1.710-5.fc40.noarch.rpm"
+}

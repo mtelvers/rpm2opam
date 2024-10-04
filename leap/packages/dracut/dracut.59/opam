@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dracut-059+suse.607.g2d95edb5-slfo.1.1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dracut-059+suse.607.g2d95edb5-slfo.1.1.4.x86_64.rpm"]
+depends: [
+  "aaa_base" 
+  "bash" 
+  "bash-sh" 
+  "coreutils" 
+  "cpio" 
+  "elfutils" 
+  "file" 
+  "filesystem" 
+  "findutils" 
+  "gawk" 
+  "glibc" 
+  "grep" 
+  "kmod" 
+  "libgcc_s1" 
+  "libkmod2" 
+  "pigz" 
+  "pkgconf-pkg-config" 
+  "sed" 
+  "systemd" 
+  "udev" {> "166"}
+  "util-linux" 
+  "util-linux-systemd" {>= "2.36.2"}
+  "zstd" 
+]
+extra-source "dracut-059+suse.607.g2d95edb5-slfo.1.1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/dracut-059+suse.607.g2d95edb5-slfo.1.1.4.x86_64.rpm"
+}

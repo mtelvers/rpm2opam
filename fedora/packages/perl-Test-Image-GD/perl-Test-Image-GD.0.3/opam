@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-Image-GD-0.03-32.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Image-GD-0.03-32.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" 
+  "perl-GD" 
+  "perl-Scalar-List-Utils" 
+  "perl-Test-Simple" 
+  "perl-libs" 
+]
+extra-source "perl-Test-Image-GD-0.03-32.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-Image-GD-0.03-32.fc40.noarch.rpm"
+}

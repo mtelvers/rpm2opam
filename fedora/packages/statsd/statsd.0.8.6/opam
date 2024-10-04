@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "statsd-0.8.6-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "statsd-0.8.6-9.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "nodejs" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "statsd-0.8.6-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/statsd-0.8.6-9.fc40.noarch.rpm"
+}

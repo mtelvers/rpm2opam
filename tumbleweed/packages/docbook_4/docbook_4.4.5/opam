@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "docbook_4-4.5-144.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "docbook_4-4.5-144.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gawk" 
+  "grep" 
+  "iso_ent" 
+  "libxml2-tools" 
+  "sed" 
+  "sgml-skel" {>= "0.7"}
+]
+extra-source "docbook_4-4.5-144.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/docbook_4-4.5-144.2.noarch.rpm"
+}

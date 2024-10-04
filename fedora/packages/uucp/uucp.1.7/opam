@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "uucp-1.07-69.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "uucp-1.07-69.fc39.x86_64.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "cu" 
+  "glibc" {>= "2.37.9000"}
+  "info" 
+  "lockdev" 
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "uucp-1.07-69.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/uucp-1.07-69.fc39.x86_64.rpm"
+}

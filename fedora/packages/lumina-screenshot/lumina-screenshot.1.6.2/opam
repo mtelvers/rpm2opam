@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lumina-screenshot-1.6.2-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lumina-screenshot-1.6.2-11.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11" 
+  "libXdamage" 
+  "libgcc" 
+  "libstdc++" 
+  "libxcb" 
+  "lumina-desktop-filesystem" {= "1.6.2"}
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtx11extras" 
+  "xcb-util" 
+  "xcb-util-image" 
+  "xcb-util-wm" 
+]
+extra-source "lumina-screenshot-1.6.2-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lumina-screenshot-1.6.2-11.fc40.x86_64.rpm"
+}

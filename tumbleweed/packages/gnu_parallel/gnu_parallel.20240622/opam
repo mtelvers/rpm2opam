@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnu_parallel-20240622-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnu_parallel-20240622-1.1.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "perl-base" 
+]
+extra-source "gnu_parallel-20240622-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnu_parallel-20240622-1.1.noarch.rpm"
+}

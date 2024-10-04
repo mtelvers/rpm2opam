@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "apache-arrow-devel-17.0.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apache-arrow-devel-17.0.0-2.1.x86_64.rpm"]
+depends: [
+  "apache-parquet-devel" 
+  "libarrow1700" {= "17.0.0"}
+  "libarrow_acero1700" {= "17.0.0"}
+  "libarrow_dataset1700" {= "17.0.0"}
+  "libarrow_flight1700" {= "17.0.0"}
+  "libarrow_flight_sql1700" {= "17.0.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "apache-arrow-devel-17.0.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/apache-arrow-devel-17.0.0-2.1.x86_64.rpm"
+}

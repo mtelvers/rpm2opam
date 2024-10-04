@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gtkhtml3-devel-4.10.0-18.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtkhtml3-devel-4.10.0-18.fc39.x86_64.rpm"]
+depends: [
+  "cairo-devel" {>= "1.10.0"}
+  "enchant-devel" {>= "1.1.7"}
+  "glib2" 
+  "glibc" 
+  "gsettings-desktop-schemas-devel" 
+  "gtk3" 
+  "gtk3-devel" {>= "3.2.0"}
+  "gtkhtml3" {= "4.10.0"}
+  "iso-codes-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "gtkhtml3-devel-4.10.0-18.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gtkhtml3-devel-4.10.0-18.fc39.x86_64.rpm"
+}

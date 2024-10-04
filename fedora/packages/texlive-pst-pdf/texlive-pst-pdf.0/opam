@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-pst-pdf-svn56622-81.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-pst-pdf-svn56622-81.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "tex-preview" 
+  "texlive-base" 
+  "texlive-environ" 
+  "texlive-graphics" 
+  "texlive-iftex" 
+  "texlive-kpathsea" 
+  "texlive-luatex85" 
+  "texlive-pstricks" 
+]
+extra-source "texlive-pst-pdf-svn56622-81.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-pst-pdf-svn56622-81.fc40.noarch.rpm"
+}

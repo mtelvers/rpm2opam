@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-colcon-cmake-0.2.28-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-colcon-cmake-0.2.28-1.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-colcon-core" {>= "0.5.6"}
+  "python3-colcon-library-path" 
+  "python3-colcon-test-result" {>= "0.3.3"}
+  "python3-packaging" 
+]
+extra-source "python3-colcon-cmake-0.2.28-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-colcon-cmake-0.2.28-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ocaml-ppxlib-devel-0.32.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-ppxlib-devel-0.32.0-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "ocaml" {= "8"}
+  "ocaml-compiler-libs" {= "4"}
+  "ocaml-compiler-libs-devel" 
+  "ocaml-ocaml-compiler-libs-devel" {= "55"}
+  "ocaml-ppx_derivers-devel" {= "20204"}
+  "ocaml-ppxlib" {= "0.32.0"}
+  "ocaml-sexplib0-devel" {= "2"}
+  "ocaml-stdlib-shims-devel" 
+]
+extra-source "ocaml-ppxlib-devel-0.32.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ocaml-ppxlib-devel-0.32.0-1.3.x86_64.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pari-gp-2.15.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pari-gp-2.15.5-1.fc40.x86_64.rpm"]
+depends: [
+  "atril" 
+  "bash" 
+  "bzip2" 
+  "fltk" 
+  "glibc" 
+  "gzip" 
+  "libgcc" 
+  "libstdc++" 
+  "pari" 
+  "perl-Getopt-Long" 
+  "perl-interpreter" 
+  "readline" 
+  "xdg-utils" 
+]
+extra-source "pari-gp-2.15.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pari-gp-2.15.5-1.fc40.x86_64.rpm"
+}

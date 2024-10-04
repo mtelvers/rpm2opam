@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfontenc-devel-1.1.8-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfontenc-devel-1.1.8-1.2.x86_64.rpm"]
+depends: [
+  "libfontenc1" {= "1.1.8"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libfontenc-devel-1.1.8-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfontenc-devel-1.1.8-1.2.x86_64.rpm"
+}

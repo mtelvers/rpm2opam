@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "caja-extension-owncloud-5.0.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "caja-extension-owncloud-5.0.0-2.1.noarch.rpm"]
+depends: [
+  "caja" 
+  "owncloud-client" 
+  "python-caja" 
+  "python311-gobject" 
+]
+extra-source "caja-extension-owncloud-5.0.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/caja-extension-owncloud-5.0.0-2.1.noarch.rpm"
+}

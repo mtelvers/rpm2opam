@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "slf4j-jcl-1.7.36-slfo.1.2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "slf4j-jcl-1.7.36-slfo.1.2.3.noarch.rpm"]
+depends: [
+  "apache-commons-logging" 
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "slf4j" {= "1.7.36"}
+]
+extra-source "slf4j-jcl-1.7.36-slfo.1.2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/slf4j-jcl-1.7.36-slfo.1.2.3.noarch.rpm"
+}

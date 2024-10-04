@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-synstructure0.12+proc-macro-devel-0.12.6-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-synstructure0.12+proc-macro-devel-0.12.6-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-proc-macro2+proc-macro-devel" 
+  "rust-quote+proc-macro-devel" 
+  "rust-syn+proc-macro-devel" 
+  "rust-synstructure0-12-devel" {= "0.12.6"}
+]
+extra-source "rust-synstructure0.12+proc-macro-devel-0.12.6-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-synstructure0.12+proc-macro-devel-0.12.6-1.fc40.noarch.rpm"
+}

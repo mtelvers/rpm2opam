@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-HTML-Restrict-3.0.2-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTML-Restrict-3.0.2-1.6.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Data-Dump" 
+  "perl-HTML-Parser" 
+  "perl-Moo" {>= "1.2000"}
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-Sub-Quote" 
+  "perl-Type-Tiny" {>= "1.2001"}
+  "perl-URI" 
+  "perl-base" 
+  "perl-namespace-clean" 
+]
+extra-source "perl-HTML-Restrict-3.0.2-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-HTML-Restrict-3.0.2-1.6.noarch.rpm"
+}

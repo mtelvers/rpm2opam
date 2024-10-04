@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgwengui-gtk2-79-5.10.1-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgwengui-gtk2-79-5.10.1-1.8.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgtk-2_0-0" 
+  "libgwenhywfar79" 
+]
+extra-source "libgwengui-gtk2-79-5.10.1-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgwengui-gtk2-79-5.10.1-1.8.x86_64.rpm"
+}

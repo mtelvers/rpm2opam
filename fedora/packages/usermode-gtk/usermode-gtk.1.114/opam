@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "usermode-gtk-1.114-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "usermode-gtk-1.114-9.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "libICE" 
+  "libSM" 
+  "libblkid" 
+  "startup-notification" 
+  "usermode" {= "1.114"}
+]
+extra-source "usermode-gtk-1.114-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/usermode-gtk-1.114-9.fc40.x86_64.rpm"
+}

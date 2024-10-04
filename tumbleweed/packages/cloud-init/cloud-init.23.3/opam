@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cloud-init-23.3-13.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cloud-init-23.3-13.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "cloud-init-config-MicroOS" {= "0.7"}
+  "dhcp-client" 
+  "dmidecode" 
+  "e2fsprogs" 
+  "file" 
+  "growpart" 
+  "net-tools" 
+  "openssh" 
+  "procps" 
+  "python311-Jinja2" 
+  "python311-PyYAML" 
+  "python311-base" 
+  "python311-configobj" {>= "5.0.2"}
+  "python311-jsonpatch" 
+  "python311-jsonschema" 
+  "python311-netifaces" 
+  "python311-oauthlib" 
+  "python311-passlib" 
+  "python311-pyserial" 
+  "python311-requests" 
+  "python311-setuptools" 
+  "sudo" 
+  "systemd" 
+  "util-linux" 
+  "wget" 
+]
+extra-source "cloud-init-23.3-13.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cloud-init-23.3-13.1.x86_64.rpm"
+}

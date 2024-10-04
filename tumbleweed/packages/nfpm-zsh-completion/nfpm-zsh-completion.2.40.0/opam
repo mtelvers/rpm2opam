@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nfpm-zsh-completion-2.40.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nfpm-zsh-completion-2.40.0-1.1.noarch.rpm"]
+depends: [
+  "nfpm" {= "2.40.0"}
+]
+extra-source "nfpm-zsh-completion-2.40.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nfpm-zsh-completion-2.40.0-1.1.noarch.rpm"
+}

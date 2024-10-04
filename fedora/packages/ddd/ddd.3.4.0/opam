@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ddd-3.4.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ddd-3.4.0-4.fc40.x86_64.rpm"]
+depends: [
+  "gdb" 
+  "glibc" 
+  "gnuplot" 
+  "libX11" 
+  "libXaw" 
+  "libXmu" 
+  "libXpm" 
+  "libXt" 
+  "libgcc" 
+  "libstdc++" 
+  "motif" 
+  "ncurses-libs" 
+  "readline" 
+  "xclipboard" 
+  "xdg-utils" 
+  "xfontsel" 
+  "xorg-x11-fonts-ISO8859-1-100dpi" 
+  "xorg-x11-fonts-ISO8859-1-75dpi" 
+  "xterm" 
+]
+extra-source "ddd-3.4.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/ddd-3.4.0-4.fc40.x86_64.rpm"
+}

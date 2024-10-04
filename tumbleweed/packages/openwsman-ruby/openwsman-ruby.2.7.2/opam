@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openwsman-ruby-2.7.2-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openwsman-ruby-2.7.2-3.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libwsman1" 
+  "libwsman_client5" 
+  "ruby" 
+  "ruby3-3" {= "3.3.0"}
+]
+extra-source "openwsman-ruby-2.7.2-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openwsman-ruby-2.7.2-3.3.x86_64.rpm"
+}

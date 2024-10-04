@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-num-rational+num-bigint-devel-0.4.1-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-num-rational+num-bigint-devel-0.4.1-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-num-bigint-devel" 
+  "rust-num-rational-devel" {= "0.4.1"}
+]
+extra-source "rust-num-rational+num-bigint-devel-0.4.1-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-num-rational+num-bigint-devel-0.4.1-6.fc40.noarch.rpm"
+}

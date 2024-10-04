@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lua-luaossl-doc-20200709-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lua-luaossl-doc-20200709-6.fc40.noarch.rpm"]
+depends: [
+  "lua-luaossl" {= "20200709"}
+  "lua5-1-luaossl" {= "20200709"}
+]
+extra-source "lua-luaossl-doc-20200709-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lua-luaossl-doc-20200709-6.fc40.noarch.rpm"
+}

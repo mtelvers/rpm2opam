@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qtodotxt-1.9.0-3.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qtodotxt-1.9.0-3.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-python-dateutil" 
+  "python311-qt5" 
+]
+extra-source "qtodotxt-1.9.0-3.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/qtodotxt-1.9.0-3.4.noarch.rpm"
+}

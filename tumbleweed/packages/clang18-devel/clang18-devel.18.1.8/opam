@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "clang18-devel-18.1.8-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clang18-devel-18.1.8-3.1.x86_64.rpm"]
+depends: [
+  "clang-tools" {>= "18.1.8"}
+  "clang18" {= "18.1.8"}
+  "glibc" 
+  "libclang-cpp18" {= "18.1.8"}
+  "libclang13" {>= "18.1.8"}
+  "llvm18-devel" {= "18.1.8"}
+]
+extra-source "clang18-devel-18.1.8-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/clang18-devel-18.1.8-3.1.x86_64.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-Nuitka-1.8.4-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-Nuitka-1.8.4-3.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gcc-c++" 
+  "python311-Jinja2" 
+  "python311-PyYAML" 
+  "python311-appdirs" 
+  "python311-atomicwrites" 
+  "python311-base" 
+  "python311-devel" 
+  "python311-ordered-set" 
+  "python311-zstandard" 
+  "scons" 
+  "update-alternatives" 
+]
+extra-source "python311-Nuitka-1.8.4-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-Nuitka-1.8.4-3.2.noarch.rpm"
+}

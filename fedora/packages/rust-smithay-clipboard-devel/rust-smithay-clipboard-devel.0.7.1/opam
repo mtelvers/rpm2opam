@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-smithay-clipboard-devel-0.7.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-smithay-clipboard-devel-0.7.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65.0"}
+  "rust-libc+default-devel" 
+  "rust-smithay-client-toolkit+calloop-devel" 
+  "rust-smithay-client-toolkit-devel" 
+  "rust-wayland-backend+client_system-devel" 
+  "rust-wayland-backend-devel" 
+]
+extra-source "rust-smithay-clipboard-devel-0.7.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-smithay-clipboard-devel-0.7.1-1.fc40.noarch.rpm"
+}

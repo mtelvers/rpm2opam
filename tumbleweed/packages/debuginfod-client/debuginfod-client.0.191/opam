@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "debuginfod-client-0.191-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "debuginfod-client-0.191-2.1.x86_64.rpm"]
+depends: [
+  "debuginfod-profile" 
+  "glibc" 
+  "libdebuginfod1" 
+  "libdw1" 
+  "libelf1" 
+]
+extra-source "debuginfod-client-0.191-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/debuginfod-client-0.191-2.1.x86_64.rpm"
+}

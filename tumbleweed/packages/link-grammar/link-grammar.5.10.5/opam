@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "link-grammar-5.10.5-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "link-grammar-5.10.5-2.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libedit0" 
+  "liblink-grammar5" 
+]
+extra-source "link-grammar-5.10.5-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/link-grammar-5.10.5-2.3.x86_64.rpm"
+}

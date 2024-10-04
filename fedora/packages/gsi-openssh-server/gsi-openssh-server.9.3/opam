@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gsi-openssh-server-9.3p1-7.fc40.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gsi-openssh-server-9.3p1-7.fc40.1.x86_64.rpm"]
+depends: [
+  "audit-libs" 
+  "bash" 
+  "crypto-policies" {>= "20220824"}
+  "glibc" 
+  "globus-common" 
+  "globus-gss-assist" 
+  "globus-gssapi-gsi" 
+  "gsi-openssh" {= "9.3"}
+  "libgcc" 
+  "libselinux" 
+  "libxcrypt" 
+  "openssl-libs" 
+  "pam" {>= "1.0.1"}
+  "pam-libs" 
+  "shadow-utils" 
+  "systemd" 
+  "systemd-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "gsi-openssh-server-9.3p1-7.fc40.1.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gsi-openssh-server-9.3p1-7.fc40.1.x86_64.rpm"
+}

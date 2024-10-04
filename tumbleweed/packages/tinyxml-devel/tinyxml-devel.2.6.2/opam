@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tinyxml-devel-2.6.2-13.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tinyxml-devel-2.6.2-13.2.x86_64.rpm"]
+depends: [
+  "libtinyxml0" {= "2.6.2"}
+]
+extra-source "tinyxml-devel-2.6.2-13.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tinyxml-devel-2.6.2-13.2.x86_64.rpm"
+}

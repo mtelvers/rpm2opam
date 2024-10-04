@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libextractor-devel-1.13-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libextractor-devel-1.13-1.1.x86_64.rpm"]
+depends: [
+  "libextractor3" {= "1.13"}
+  "libextractor_common1" {= "1.13"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libextractor-devel-1.13-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libextractor-devel-1.13-1.1.x86_64.rpm"
+}

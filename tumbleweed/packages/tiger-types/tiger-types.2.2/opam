@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tiger-types-2.2-5.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tiger-types-2.2-5.6.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "tiger-types-2.2-5.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tiger-types-2.2-5.6.noarch.rpm"
+}

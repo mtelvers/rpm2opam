@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "coin-or-Bcps-doc-0.95.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coin-or-Bcps-doc-0.95.1-1.fc40.noarch.rpm"]
+depends: [
+  "coin-or-Alps-doc" 
+  "coin-or-Bcps" {= "0.95.1"}
+  "coin-or-CoinUtils-doc" 
+]
+extra-source "coin-or-Bcps-doc-0.95.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/coin-or-Bcps-doc-0.95.1-1.fc40.noarch.rpm"
+}

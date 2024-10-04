@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qcoro-qt6-devel-0.10.0-lp160.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qcoro-qt6-devel-0.10.0-lp160.1.2.x86_64.rpm"]
+depends: [
+  "libQCoro6Core0" {= "0.10.0"}
+  "libQCoro6DBus0" {= "0.10.0"}
+  "libQCoro6Network0" {= "0.10.0"}
+  "libQCoro6Qml0" {= "0.10.0"}
+  "libQCoro6Quick0" {= "0.10.0"}
+  "libQCoro6WebSockets0" {= "0.10.0"}
+]
+extra-source "qcoro-qt6-devel-0.10.0-lp160.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/qcoro-qt6-devel-0.10.0-lp160.1.2.x86_64.rpm"
+}

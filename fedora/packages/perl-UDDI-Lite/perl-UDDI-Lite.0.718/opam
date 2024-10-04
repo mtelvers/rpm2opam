@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-UDDI-Lite-0.718-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-UDDI-Lite-0.718-29.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-SOAP-Lite" {>= "0.716"}
+  "perl-libs" {>= "5.6.0"}
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-UDDI-Lite-0.718-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-UDDI-Lite-0.718-29.fc40.noarch.rpm"
+}

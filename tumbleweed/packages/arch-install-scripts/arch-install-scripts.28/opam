@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "arch-install-scripts-28-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "arch-install-scripts-28-1.4.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" {>= "8.15"}
+  "gawk" 
+  "util-linux" {>= "2.23"}
+  "util-linux-systemd" {>= "2.23"}
+]
+extra-source "arch-install-scripts-28-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/arch-install-scripts-28-1.4.noarch.rpm"
+}

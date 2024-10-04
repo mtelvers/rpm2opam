@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yarn-1.22.22-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yarn-1.22.22-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "nodejs-common" 
+  "nodejs-default" {>= "4.0"}
+  "sed" 
+]
+extra-source "yarn-1.22.22-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/yarn-1.22.22-1.1.noarch.rpm"
+}

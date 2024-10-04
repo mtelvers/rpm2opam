@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "speakersafetyd-0.1.9-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "speakersafetyd-0.1.9-2.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "bash" 
+  "glibc" 
+  "libgcc" 
+  "systemd-udev" 
+]
+extra-source "speakersafetyd-0.1.9-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/speakersafetyd-0.1.9-2.fc40.x86_64.rpm"
+}

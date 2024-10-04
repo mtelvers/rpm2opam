@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Redis-2.000-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Redis-2.000-5.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Errno" 
+  "perl-Fcntl" 
+  "perl-IO" 
+  "perl-IO-Socket-SSL" 
+  "perl-IO-Socket-Timeout" 
+  "perl-Scalar-List-Utils" 
+  "perl-Tie" 
+  "perl-Time-HiRes" 
+  "perl-Try-Tiny" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" 
+]
+extra-source "perl-Redis-2.000-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Redis-2.000-5.fc40.noarch.rpm"
+}

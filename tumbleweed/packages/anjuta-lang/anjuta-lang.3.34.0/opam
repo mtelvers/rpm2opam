@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "anjuta-lang-3.34.0-6.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "anjuta-lang-3.34.0-6.1.noarch.rpm"]
+depends: [
+  "anjuta" {= "3.34.0"}
+]
+extra-source "anjuta-lang-3.34.0-6.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/anjuta-lang-3.34.0-6.1.noarch.rpm"
+}

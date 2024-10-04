@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-nu-protocol-devel-0.91.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-nu-protocol-devel-0.91.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-byte-unit+default-devel" 
+  "rust-byte-unit+serde-devel" 
+  "rust-chrono+serde-devel" 
+  "rust-chrono+std-devel" 
+  "rust-chrono+unstable-locales-devel" 
+  "rust-chrono-devel" 
+  "rust-chrono-humanize+default-devel" 
+  "rust-fancy-regex+default-devel" 
+  "rust-indexmap+default-devel" 
+  "rust-lru+default-devel" 
+  "rust-miette+default-devel" 
+  "rust-miette+fancy-no-backtrace-devel" 
+  "rust-nu-path+default-devel" 
+  "rust-nu-system+default-devel" 
+  "rust-nu-utils+default-devel" 
+  "rust-num-format+default-devel" 
+  "rust-serde-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-typetag+default-devel" 
+]
+extra-source "rust-nu-protocol-devel-0.91.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-nu-protocol-devel-0.91.0-1.fc40.noarch.rpm"
+}

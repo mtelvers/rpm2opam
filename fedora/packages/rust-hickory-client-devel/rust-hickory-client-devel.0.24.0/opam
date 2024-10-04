@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-hickory-client-devel-0.24.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-hickory-client-devel-0.24.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.67.0"}
+  "rust-cfg-if+default-devel" 
+  "rust-data-encoding+default-devel" 
+  "rust-futures-channel+std-devel" 
+  "rust-futures-channel-devel" 
+  "rust-futures-util+std-devel" 
+  "rust-futures-util-devel" 
+  "rust-hickory-proto+text-parsing-devel" 
+  "rust-hickory-proto+tokio-runtime-devel" 
+  "rust-hickory-proto-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-radix_trie+default-devel" 
+  "rust-rand+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-tokio+default-devel" 
+  "rust-tokio+net-devel" 
+  "rust-tokio+rt-devel" 
+  "rust-tracing+default-devel" 
+]
+extra-source "rust-hickory-client-devel-0.24.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-hickory-client-devel-0.24.0-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "iptables-legacy-1.8.10-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "iptables-legacy-1.8.10-7.fc40.x86_64.rpm"]
+depends: [
+  "alternatives" 
+  "bash" 
+  "glibc" 
+  "iptables-legacy-libs" {= "1.8.10"}
+  "iptables-libs" {= "1.8.10"}
+]
+extra-source "iptables-legacy-1.8.10-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/iptables-legacy-1.8.10-7.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xmlsec1-gnutls-1.2.37-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xmlsec1-gnutls-1.2.37-7.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gnutls" 
+  "libgcrypt" 
+  "libtool-ltdl" 
+  "libxml2" 
+  "libxslt" 
+  "xmlsec1" 
+  "xmlsec1-gcrypt" 
+]
+extra-source "xmlsec1-gnutls-1.2.37-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xmlsec1-gnutls-1.2.37-7.fc40.x86_64.rpm"
+}

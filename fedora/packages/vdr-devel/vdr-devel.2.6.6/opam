@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vdr-devel-2.6.6-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vdr-devel-2.6.6-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gettext-runtime" 
+  "perl-interpreter" 
+  "pkgconf-pkg-config" 
+]
+extra-source "vdr-devel-2.6.6-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vdr-devel-2.6.6-1.fc40.x86_64.rpm"
+}

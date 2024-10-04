@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tokio0.1+default-devel-0.1.22-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tokio0.1+default-devel-0.1.22-13.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-tokio0-1+codec-devel" {= "0.1.22"}
+  "rust-tokio0-1+fs-devel" {= "0.1.22"}
+  "rust-tokio0-1+io-devel" {= "0.1.22"}
+  "rust-tokio0-1+reactor-devel" {= "0.1.22"}
+  "rust-tokio0-1+rt-full-devel" {= "0.1.22"}
+  "rust-tokio0-1+sync-devel" {= "0.1.22"}
+  "rust-tokio0-1+tcp-devel" {= "0.1.22"}
+  "rust-tokio0-1+timer-devel" {= "0.1.22"}
+  "rust-tokio0-1+udp-devel" {= "0.1.22"}
+  "rust-tokio0-1+uds-devel" {= "0.1.22"}
+  "rust-tokio0-1-devel" {= "0.1.22"}
+]
+extra-source "rust-tokio0.1+default-devel-0.1.22-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tokio0.1+default-devel-0.1.22-13.fc40.noarch.rpm"
+}

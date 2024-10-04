@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gimp-lang-2.10.38-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gimp-lang-2.10.38-2.2.noarch.rpm"]
+depends: [
+  "gimp" {= "2.10.38"}
+]
+extra-source "gimp-lang-2.10.38-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gimp-lang-2.10.38-2.2.noarch.rpm"
+}

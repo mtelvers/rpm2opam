@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Mo-Golf-0.40-25.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mo-Golf-0.40-25.fc40.noarch.rpm"]
+depends: [
+  "perl-Mo" {= "0.40"}
+  "perl-PPI" 
+  "perl-libs" 
+]
+extra-source "perl-Mo-Golf-0.40-25.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Mo-Golf-0.40-25.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xortool-1.0.0-2.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xortool-1.0.0-2.4.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "python311-base" 
+  "python311-docopt" 
+]
+extra-source "xortool-1.0.0-2.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xortool-1.0.0-2.4.noarch.rpm"
+}

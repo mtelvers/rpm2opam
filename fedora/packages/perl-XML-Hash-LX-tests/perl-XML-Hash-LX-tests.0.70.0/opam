@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-XML-Hash-LX-tests-0.70.0-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XML-Hash-LX-tests-0.70.0-14.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "glibc-gconv-extra" 
+  "perl-Data-Dumper" 
+  "perl-Test-Harness" 
+  "perl-Test-NoWarnings" 
+  "perl-Test-Simple" 
+  "perl-XML-Hash-LX" 
+  "perl-XML-LibXML" 
+  "perl-interpreter" 
+  "perl-lib-abs" {>= "0.90"}
+  "perl-libs" 
+]
+extra-source "perl-XML-Hash-LX-tests-0.70.0-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-XML-Hash-LX-tests-0.70.0-14.fc40.noarch.rpm"
+}

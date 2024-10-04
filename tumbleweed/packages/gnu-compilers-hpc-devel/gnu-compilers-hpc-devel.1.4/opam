@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnu-compilers-hpc-devel-1.4-16.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnu-compilers-hpc-devel-1.4-16.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gcc" 
+  "gcc-c++" 
+  "gcc-fortran" 
+  "gcc14" 
+  "gcc14-c++" 
+  "gcc14-fortran" 
+  "gnu-compilers-hpc" {= "1.4"}
+]
+extra-source "gnu-compilers-hpc-devel-1.4-16.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnu-compilers-hpc-devel-1.4-16.1.noarch.rpm"
+}

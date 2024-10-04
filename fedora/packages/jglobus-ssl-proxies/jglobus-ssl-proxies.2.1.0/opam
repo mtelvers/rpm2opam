@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jglobus-ssl-proxies-2.1.0-37.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jglobus-ssl-proxies-2.1.0-37.fc40.noarch.rpm"]
+depends: [
+  "apache-commons-codec" 
+  "apache-commons-io" 
+  "apache-commons-logging" 
+  "bouncycastle" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "log4j" 
+]
+extra-source "jglobus-ssl-proxies-2.1.0-37.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jglobus-ssl-proxies-2.1.0-37.fc40.noarch.rpm"
+}

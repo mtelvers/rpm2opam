@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openSUSE-release-tools-pkglistgen-20240916.6615422-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openSUSE-release-tools-pkglistgen-20240916.6615422-1.1.noarch.rpm"]
+depends: [
+  "busybox-xz" 
+  "obs-service-product_converter" 
+  "openSUSE-release-tools-repo-checker" 
+  "osclib" {= "20240916.6615422"}
+  "python311-GitPython" 
+  "python311-base" 
+  "python311-requests" 
+  "python311-solv" 
+  "zstd" 
+]
+extra-source "openSUSE-release-tools-pkglistgen-20240916.6615422-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/openSUSE-release-tools-pkglistgen-20240916.6615422-1.1.noarch.rpm"
+}

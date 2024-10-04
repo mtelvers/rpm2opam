@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sysuser-shadow-3.3-6.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sysuser-shadow-3.3-6.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "shadow" 
+  "systemd" 
+]
+extra-source "sysuser-shadow-3.3-6.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sysuser-shadow-3.3-6.1.noarch.rpm"
+}

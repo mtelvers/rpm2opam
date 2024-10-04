@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wget-lang-1.24.5-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wget-lang-1.24.5-3.1.noarch.rpm"]
+depends: [
+  "wget" {= "1.24.5"}
+]
+extra-source "wget-lang-1.24.5-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/wget-lang-1.24.5-3.1.noarch.rpm"
+}

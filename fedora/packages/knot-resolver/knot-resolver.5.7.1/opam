@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "knot-resolver-5.7.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "knot-resolver-5.7.1-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "gnutls" 
+  "jemalloc" 
+  "knot-libs" 
+  "libcap-ng" 
+  "libedit" 
+  "libgcc" 
+  "libnghttp2" 
+  "libstdc++" 
+  "libuv" 
+  "lmdb-libs" 
+  "lua5-1-basexx" 
+  "lua5-1-cqueues" 
+  "lua5-1-http" 
+  "luajit" 
+  "shadow-utils" 
+  "systemd" 
+  "systemd-libs" 
+]
+extra-source "knot-resolver-5.7.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/knot-resolver-5.7.1-1.fc40.x86_64.rpm"
+}

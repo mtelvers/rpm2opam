@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "clojure-maven-plugin-1.9.2-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clojure-maven-plugin-1.9.2-6.fc40.noarch.rpm"]
+depends: [
+  "apache-commons-exec" 
+  "apache-commons-io" 
+  "apache-commons-lang3" 
+  "guava" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "maven-lib" 
+  "maven-plugin-annotations" 
+  "plexus-compiler" 
+  "plexus-utils" 
+]
+extra-source "clojure-maven-plugin-1.9.2-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/clojure-maven-plugin-1.9.2-6.fc40.noarch.rpm"
+}

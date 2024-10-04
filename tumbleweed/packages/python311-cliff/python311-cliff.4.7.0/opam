@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-cliff-4.7.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-cliff-4.7.0-1.1.noarch.rpm"]
+depends: [
+  "python311-PyYAML" {>= "3.12"}
+  "python311-autopage" {>= "0.4.0"}
+  "python311-base" {= "3.11"}
+  "python311-cmd2" {>= "1.0.0"}
+  "python311-importlib-metadata" {>= "4.4"}
+  "python311-prettytable" {>= "0.7.2"}
+  "python311-stevedore" {>= "2.0.1"}
+]
+extra-source "python311-cliff-4.7.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-cliff-4.7.0-1.1.noarch.rpm"
+}

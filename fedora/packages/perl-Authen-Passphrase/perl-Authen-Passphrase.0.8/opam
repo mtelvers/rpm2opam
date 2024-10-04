@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Authen-Passphrase-0.008-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Authen-Passphrase-0.008-20.fc40.noarch.rpm"]
+depends: [
+  "perl-Authen-DecHpwd" {>= "2.3"}
+  "perl-Carp" 
+  "perl-Crypt-DES" 
+  "perl-Crypt-Eksblowfish" {>= "0.8"}
+  "perl-Crypt-MySQL" {>= "0.3"}
+  "perl-Crypt-PasswdMD5" {>= "1.0"}
+  "perl-Crypt-UnixCrypt_XS" {>= "0.8"}
+  "perl-Data-Entropy" {>= "0.0"}
+  "perl-Digest" {>= "1.0"}
+  "perl-Digest-MD4" {>= "1.2"}
+  "perl-Digest-MD5" {>= "1.99"}
+  "perl-Digest-SHA" 
+  "perl-MIME-Base64" {>= "2.21"}
+  "perl-Module-Runtime" {>= "0.11"}
+  "perl-Params-Classify" {>= "0.0"}
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-Authen-Passphrase-0.008-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Authen-Passphrase-0.008-20.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xfsdump-3.1.12-lp160.3.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xfsdump-3.1.12-lp160.3.10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libattr1" 
+  "libhandle1" 
+  "libncurses6" 
+  "libuuid1" 
+]
+extra-source "xfsdump-3.1.12-lp160.3.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/xfsdump-3.1.12-lp160.3.10.x86_64.rpm"
+}

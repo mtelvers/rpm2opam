@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-polyparse-devel-1.13-13.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-polyparse-devel-1.13-13.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-polyparse" {= "1.13"}
+  "ghc-text-devel" 
+]
+extra-source "ghc-polyparse-devel-1.13-13.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-polyparse-devel-1.13-13.8.x86_64.rpm"
+}

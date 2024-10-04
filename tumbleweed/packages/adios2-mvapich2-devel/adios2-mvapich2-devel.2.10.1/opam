@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "adios2-mvapich2-devel-2.10.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "adios2-mvapich2-devel-2.10.1-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libadios2-2_10" 
+  "libadios2-mpich-2_10" 
+  "libadios2-mvapich2-2_10" {= "2.10.1"}
+  "libgcc_s1" 
+  "libstdc++6" 
+  "mpich" 
+]
+extra-source "adios2-mvapich2-devel-2.10.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/adios2-mvapich2-devel-2.10.1-1.1.x86_64.rpm"
+}

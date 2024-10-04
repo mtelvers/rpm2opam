@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-Script-1.29-1.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Script-1.29-1.15.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Capture-Tiny" 
+  "perl-Probe-Perl" {>= "0.1"}
+]
+extra-source "perl-Test-Script-1.29-1.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-Script-1.29-1.15.noarch.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "angband-4.2.5-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "angband-4.2.5-3.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "SDL2_image" 
+  "SDL2_mixer" 
+  "SDL2_ttf" 
+  "angband-data" {= "4.2.5"}
+  "freetype" {>= "2.11.0"}
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libX11" 
+  "ncurses-libs" 
+]
+extra-source "angband-4.2.5-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/angband-4.2.5-3.fc40.x86_64.rpm"
+}

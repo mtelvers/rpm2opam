@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "budgie-recentlyused-applet-1.7.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "budgie-recentlyused-applet-1.7.1-2.1.x86_64.rpm"]
+depends: [
+  "budgie-extras-lang" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libbudgie-plugin0" 
+  "libgee-0_8-2" 
+  "libgtk-3-0" 
+  "libpeas-1_0-0" 
+  "xdg-utils" 
+]
+extra-source "budgie-recentlyused-applet-1.7.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/budgie-recentlyused-applet-1.7.1-2.1.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "preflight-2.0.29-2.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "preflight-2.0.29-2.fc39.noarch.rpm"]
+depends: [
+  "apache-commons-logging" 
+  "bash" 
+  "fontbox" 
+  "jakarta-activation1" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+  "jaxb-api2" 
+  "pdfbox" 
+  "xmpbox" 
+]
+extra-source "preflight-2.0.29-2.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/preflight-2.0.29-2.fc39.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-pretty-simple-devel-4.1.2.0-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-pretty-simple-devel-4.1.2.0-7.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-mtl-devel" 
+  "ghc-pretty-simple" {= "4.1.2.0"}
+  "ghc-prettyprinter-ansi-terminal-devel" 
+  "ghc-prettyprinter-devel" 
+  "ghc-text-devel" 
+  "ghc-transformers-devel" 
+  "glibc" 
+  "gmp" 
+  "libffi" 
+]
+extra-source "ghc-pretty-simple-devel-4.1.2.0-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-pretty-simple-devel-4.1.2.0-7.fc40.x86_64.rpm"
+}

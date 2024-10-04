@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-scheme-infraonly-2024.212.svn54191-62.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-scheme-infraonly-2024.212.svn54191-62.2.noarch.rpm"]
+depends: [
+  "texlive-hyphen-base" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-scripts" {>= "2024"}
+  "texlive-texlive-infra" {>= "2024"}
+]
+extra-source "texlive-scheme-infraonly-2024.212.svn54191-62.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-scheme-infraonly-2024.212.svn54191-62.2.noarch.rpm"
+}

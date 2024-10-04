@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "audacious-lang-4.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "audacious-lang-4.4-1.1.noarch.rpm"]
+depends: [
+  "audacious" {= "4.4"}
+]
+extra-source "audacious-lang-4.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/audacious-lang-4.4-1.1.noarch.rpm"
+}

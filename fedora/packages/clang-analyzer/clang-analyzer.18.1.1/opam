@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "clang-analyzer-18.1.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clang-analyzer-18.1.1-1.fc40.noarch.rpm"]
+depends: [
+  "clang" {= "18.1.1"}
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-FindBin" 
+  "perl-Hash-Util" 
+  "perl-PathTools" 
+  "perl-Sys-Hostname" 
+  "perl-Term-ANSIColor" 
+  "perl-Text-ParseWords" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "python3" 
+]
+extra-source "clang-analyzer-18.1.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/clang-analyzer-18.1.1-1.fc40.noarch.rpm"
+}

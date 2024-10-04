@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fprintd-lang-1.94.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fprintd-lang-1.94.4-1.1.noarch.rpm"]
+depends: [
+  "fprintd" {= "1.94.4"}
+]
+extra-source "fprintd-lang-1.94.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/fprintd-lang-1.94.4-1.1.noarch.rpm"
+}

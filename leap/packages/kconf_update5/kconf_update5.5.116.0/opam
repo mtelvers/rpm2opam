@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kconf_update5-5.116.0-lp160.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kconf_update5-5.116.0-lp160.1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libKF5ConfigCore5" 
+  "libQt5Core5" 
+  "libstdc++6" 
+]
+extra-source "kconf_update5-5.116.0-lp160.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/kconf_update5-5.116.0-lp160.1.2.x86_64.rpm"
+}

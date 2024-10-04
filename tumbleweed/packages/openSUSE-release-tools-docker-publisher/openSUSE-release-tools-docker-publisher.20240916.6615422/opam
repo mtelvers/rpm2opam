@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openSUSE-release-tools-docker-publisher-20240916.6615422-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openSUSE-release-tools-docker-publisher-20240916.6615422-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-lxml" 
+  "python311-requests" 
+  "shadow" 
+]
+extra-source "openSUSE-release-tools-docker-publisher-20240916.6615422-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/openSUSE-release-tools-docker-publisher-20240916.6615422-1.1.noarch.rpm"
+}

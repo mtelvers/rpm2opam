@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wget2-devel-2.1.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wget2-devel-2.1.0-1.3.x86_64.rpm"]
+depends: [
+  "libwget2" {= "2.1.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "wget2-devel-2.1.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/wget2-devel-2.1.0-1.3.x86_64.rpm"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-xmonad-contrib-prof-0.17.1-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-xmonad-contrib-prof-0.17.1-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-X11-prof" 
+  "ghc-X11-xft-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+  "ghc-mtl-prof" 
+  "ghc-process-prof" 
+  "ghc-random-prof" 
+  "ghc-time-prof" 
+  "ghc-unix-prof" 
+  "ghc-utf8-string-prof" 
+  "ghc-xmonad-contrib-devel" {= "0.17.1"}
+  "ghc-xmonad-prof" 
+]
+extra-source "ghc-xmonad-contrib-prof-0.17.1-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-xmonad-contrib-prof-0.17.1-8.fc40.x86_64.rpm"
+}

@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-sequoia-ipc-devel-0.34.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-sequoia-ipc-devel-0.34.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.67"}
+  "rust-anyhow+default-devel" 
+  "rust-buffered-reader-devel" 
+  "rust-capnp-rpc+default-devel" 
+  "rust-crossbeam-utils+default-devel" 
+  "rust-dirs+default-devel" 
+  "rust-fs2+default-devel" 
+  "rust-futures+default-devel" 
+  "rust-lalrpop-devel" 
+  "rust-lalrpop-util+default-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-memsec-devel" {>= "0.5.0"}
+  "rust-rand+default-devel" 
+  "rust-sequoia-openpgp-devel" 
+  "rust-socket2+default-devel" 
+  "rust-tempfile+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-tokio+default-devel" 
+  "rust-tokio+io-util-devel" 
+  "rust-tokio+net-devel" 
+  "rust-tokio+rt-multi-thread-devel" 
+  "rust-tokio-util+compat-devel" 
+  "rust-tokio-util+default-devel" 
+]
+extra-source "rust-sequoia-ipc-devel-0.34.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-sequoia-ipc-devel-0.34.1-1.fc40.noarch.rpm"
+}

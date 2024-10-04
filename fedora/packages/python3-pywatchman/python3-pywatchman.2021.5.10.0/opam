@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-pywatchman-2021.05.10.00-25.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-pywatchman-2021.05.10.00-25.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "procps-ng" 
+  "python3" {= "3.12"}
+  "watchman" {= "2021.5.10.0"}
+]
+extra-source "python3-pywatchman-2021.05.10.00-25.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-pywatchman-2021.05.10.00-25.fc40.x86_64.rpm"
+}

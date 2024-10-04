@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-DBIx-Simple-1.37-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DBIx-Simple-1.37-22.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-DBI" 
+  "perl-DBIx-XHTML_Table" 
+  "perl-Object-Accessor" 
+  "perl-SQL-Abstract" 
+  "perl-SQL-Interp" 
+  "perl-Text-Table" 
+  "perl-base" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-overload" 
+]
+extra-source "perl-DBIx-Simple-1.37-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-DBIx-Simple-1.37-22.fc40.noarch.rpm"
+}

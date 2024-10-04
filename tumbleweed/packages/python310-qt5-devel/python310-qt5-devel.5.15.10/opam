@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-qt5-devel-5.15.10-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-qt5-devel-5.15.10-1.7.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libQt5Core5" 
+  "libgcc_s1" 
+  "libpython3_10-1_0" 
+  "libqt5-qtbase-devel" 
+  "libqt5-qtconnectivity-devel" 
+  "libqt5-qtdeclarative-devel" 
+  "libqt5-qtlocation-devel" 
+  "libqt5-qtmultimedia-devel" 
+  "libqt5-qtserialport-devel" 
+  "libqt5-qtspeech-devel" 
+  "libqt5-qtsvg-devel" 
+  "libqt5-qttools-devel" 
+  "libqt5-qtwebchannel-devel" 
+  "libqt5-qtwebsockets-devel" 
+  "libqt5-qtx11extras-devel" 
+  "libqt5-qtxmlpatterns-devel" 
+  "libstdc++6" 
+  "python310-base" {= "3.10"}
+  "python310-dbus-python-devel" 
+  "python310-devel" 
+  "python310-qt5" {= "5.15.10"}
+  "update-alternatives" 
+]
+extra-source "python310-qt5-devel-5.15.10-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-qt5-devel-5.15.10-1.7.x86_64.rpm"
+}

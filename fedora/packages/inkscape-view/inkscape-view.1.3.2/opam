@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "inkscape-view-1.3.2-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "inkscape-view-1.3.2-6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gtkmm3-0" 
+  "inkscape-libs" 
+  "libgcc" 
+]
+extra-source "inkscape-view-1.3.2-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/inkscape-view-1.3.2-6.fc40.x86_64.rpm"
+}

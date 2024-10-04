@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "emacs-plugin-devhelp-43.0-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "emacs-plugin-devhelp-43.0-2.6.x86_64.rpm"]
+depends: [
+  "devhelp" {= "43.0"}
+  "emacs" 
+]
+extra-source "emacs-plugin-devhelp-43.0-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/emacs-plugin-devhelp-43.0-2.6.x86_64.rpm"
+}

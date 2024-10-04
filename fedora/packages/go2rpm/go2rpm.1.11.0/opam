@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "go2rpm-1.11.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "go2rpm-1.11.0-1.fc40.noarch.rpm"]
+depends: [
+  "askalono-cli" 
+  "go-rpm-macros" 
+  "python3" 
+  "python3-GitPython" 
+  "python3-aiohttp" 
+  "python3-jinja2" 
+]
+extra-source "go2rpm-1.11.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/go2rpm-1.11.0-1.fc40.noarch.rpm"
+}

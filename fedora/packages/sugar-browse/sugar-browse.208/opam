@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sugar-browse-208-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sugar-browse-208-1.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "sugar-toolkit-gtk3" 
+  "webkit2gtk4-1" 
+]
+extra-source "sugar-browse-208-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sugar-browse-208-1.fc40.noarch.rpm"
+}

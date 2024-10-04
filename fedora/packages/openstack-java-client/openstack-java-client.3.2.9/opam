@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openstack-java-client-3.2.9-14.fc38.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openstack-java-client-3.2.9-14.fc38.noarch.rpm"]
+depends: [
+  "jackson-databind" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "openstack-java-client-3.2.9-14.fc38.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openstack-java-client-3.2.9-14.fc38.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-xcb-devel-1.3.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-xcb-devel-1.3.0-2.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cargo" 
+  "libxcb-devel" 
+  "rust-bitflags+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-quick-xml+default-devel" 
+]
+extra-source "rust-xcb-devel-1.3.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-xcb-devel-1.3.0-2.fc40.noarch.rpm"
+}

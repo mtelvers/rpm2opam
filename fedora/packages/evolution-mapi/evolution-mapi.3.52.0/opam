@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "evolution-mapi-3.52.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "evolution-mapi-3.52.0-1.fc40.x86_64.rpm"]
+depends: [
+  "evolution" {>= "3.52.0"}
+  "evolution-data-server" {>= "3.52.0"}
+  "evolution-mapi-langpacks" {= "3.52.0"}
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libical-glib" 
+  "libtalloc" 
+  "openchange" 
+  "pango" 
+  "samba-client-libs" 
+]
+extra-source "evolution-mapi-3.52.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/evolution-mapi-3.52.0-1.fc40.x86_64.rpm"
+}

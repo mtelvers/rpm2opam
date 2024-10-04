@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "e2scrub-1.47.0-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "e2scrub-1.47.0-5.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "e2fsprogs" {= "1.47.0"}
+  "lvm2" 
+  "systemd" 
+  "util-linux" 
+]
+extra-source "e2scrub-1.47.0-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/e2scrub-1.47.0-5.fc40.x86_64.rpm"
+}

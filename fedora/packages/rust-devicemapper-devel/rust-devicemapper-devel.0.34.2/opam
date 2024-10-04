@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-devicemapper-devel-0.34.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-devicemapper-devel-0.34.2-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.71.1"}
+  "rust-bitflags+default-devel" 
+  "rust-devicemapper-sys+default-devel" 
+  "rust-env_logger+default-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-log+default-devel" 
+  "rust-nix+default-devel" 
+  "rust-nix+fs-devel" 
+  "rust-nix+ioctl-devel" 
+  "rust-nix+mount-devel" 
+  "rust-rand+default-devel" 
+  "rust-retry-devel" 
+  "rust-semver+default-devel" 
+  "rust-serde+default-devel" 
+]
+extra-source "rust-devicemapper-devel-0.34.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-devicemapper-devel-0.34.2-1.fc40.noarch.rpm"
+}

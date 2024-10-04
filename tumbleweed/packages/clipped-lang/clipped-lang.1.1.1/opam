@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "clipped-lang-1.1.1-1.23.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clipped-lang-1.1.1-1.23.noarch.rpm"]
+depends: [
+  "clipped" {= "1.1.1"}
+]
+extra-source "clipped-lang-1.1.1-1.23.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/clipped-lang-1.1.1-1.23.noarch.rpm"
+}

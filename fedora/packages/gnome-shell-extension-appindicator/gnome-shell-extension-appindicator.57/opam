@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-shell-extension-appindicator-57-7.20240307git03a7412.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-shell-extension-appindicator-57-7.20240307git03a7412.fc40.noarch.rpm"]
+depends: [
+  "gnome-shell" {>= "3.14.0"}
+  "libappindicator-gtk3" 
+]
+extra-source "gnome-shell-extension-appindicator-57-7.20240307git03a7412.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-shell-extension-appindicator-57-7.20240307git03a7412.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-aes0.7+armv8-devel-0.7.5-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-aes0.7+armv8-devel-0.7.5-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-aes0-7-devel" {= "0.7.5"}
+]
+extra-source "rust-aes0.7+armv8-devel-0.7.5-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-aes0.7+armv8-devel-0.7.5-6.fc40.noarch.rpm"
+}

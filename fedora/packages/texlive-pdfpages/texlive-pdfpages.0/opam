@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-pdfpages-svn65319-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-pdfpages-svn65319-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-eso-pic" 
+  "texlive-graphics" 
+  "texlive-kpathsea" 
+  "texlive-latex" 
+  "texlive-ms" 
+  "texlive-oberdiek" 
+  "texlive-pdflscape" 
+  "texlive-tools" 
+]
+extra-source "texlive-pdfpages-svn65319-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-pdfpages-svn65319-71.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sysusage-common-5.7-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sysusage-common-5.7-21.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" 
+  "perl-libs" 
+  "perl-open" 
+  "perl-vars" 
+]
+extra-source "sysusage-common-5.7-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sysusage-common-5.7-21.fc40.noarch.rpm"
+}

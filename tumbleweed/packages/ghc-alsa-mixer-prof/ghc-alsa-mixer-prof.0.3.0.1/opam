@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-alsa-mixer-prof-0.3.0.1-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-alsa-mixer-prof-0.3.0.1-1.6.x86_64.rpm"]
+depends: [
+  "ghc-alsa-core-prof" 
+  "ghc-alsa-mixer-devel" {= "0.3.0.1"}
+  "ghc-base-prof" 
+  "ghc-unix-prof" 
+]
+extra-source "ghc-alsa-mixer-prof-0.3.0.1-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-alsa-mixer-prof-0.3.0.1-1.6.x86_64.rpm"
+}

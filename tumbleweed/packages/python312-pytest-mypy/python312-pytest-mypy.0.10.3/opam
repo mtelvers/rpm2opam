@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pytest-mypy-0.10.3-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pytest-mypy-0.10.3-1.7.noarch.rpm"]
+depends: [
+  "python312-attrs" {>= "19.0"}
+  "python312-base" {= "3.12"}
+  "python312-filelock" {>= "3.0"}
+  "python312-mypy" {>= "0.900"}
+  "python312-pytest" {>= "2.8"}
+]
+extra-source "python312-pytest-mypy-0.10.3-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pytest-mypy-0.10.3-1.7.noarch.rpm"
+}

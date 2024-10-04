@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "auto-service-annotations-1.6.1-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "auto-service-annotations-1.6.1-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "java-11-openjdk-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "auto-service-annotations-1.6.1-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/auto-service-annotations-1.6.1-slfo.1.1.4.noarch.rpm"
+}

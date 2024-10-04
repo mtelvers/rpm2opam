@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-subliminal-2.2.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-subliminal-2.2.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-babelfish" {>= "0.6.1"}
+  "python312-base" {= "3.12"}
+  "python312-beautifulsoup4" {>= "4.4.0"}
+  "python312-chardet" {>= "5.0"}
+  "python312-click" {>= "8.0"}
+  "python312-click-option-group" {>= "0.5.6"}
+  "python312-dogpile-cache" {>= "1.0"}
+  "python312-enzyme" {>= "0.5.0"}
+  "python312-guessit" {>= "3.0.0"}
+  "python312-platformdirs" {>= "3"}
+  "python312-pysubs2" {>= "1.7"}
+  "python312-rarfile" {>= "2.7"}
+  "python312-requests" {>= "2.7.0"}
+  "python312-srt" {>= "3.5"}
+  "python312-stevedore" {>= "3.0"}
+  "python312-tomli" {>= "2"}
+  "update-alternatives" 
+]
+extra-source "python312-subliminal-2.2.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-subliminal-2.2.1-1.1.noarch.rpm"
+}

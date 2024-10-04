@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libbacktrace-devel-1.0+git20240805-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libbacktrace-devel-1.0+git20240805-1.1.x86_64.rpm"]
+depends: [
+  "libbacktrace0" {= "1.0"}
+]
+extra-source "libbacktrace-devel-1.0+git20240805-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libbacktrace-devel-1.0+git20240805-1.1.x86_64.rpm"
+}

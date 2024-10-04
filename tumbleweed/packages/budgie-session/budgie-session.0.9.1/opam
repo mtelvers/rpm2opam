@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "budgie-session-0.9.1-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "budgie-session-0.9.1-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "dbus-1" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gsettings-desktop-schemas" {>= "0.1.7"}
+  "hicolor-icon-theme" 
+  "libICE6" 
+  "libSM6" 
+  "libX11-6" 
+  "libXcomposite1" 
+  "libepoxy0" 
+  "libglvnd" 
+  "libgnome-desktop-3-20" 
+  "libgtk-3-0" 
+  "libjson-glib-1_0-0" 
+  "libsystemd0" 
+]
+extra-source "budgie-session-0.9.1-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/budgie-session-0.9.1-1.2.x86_64.rpm"
+}

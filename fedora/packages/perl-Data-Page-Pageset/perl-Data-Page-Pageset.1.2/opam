@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Data-Page-Pageset-1.02-26.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Data-Page-Pageset-1.02-26.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Class-Accessor" 
+  "perl-Data-Page" {>= "2"}
+  "perl-POSIX" 
+  "perl-base" 
+  "perl-libs" 
+  "perl-overload" 
+]
+extra-source "perl-Data-Page-Pageset-1.02-26.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Data-Page-Pageset-1.02-26.fc40.noarch.rpm"
+}

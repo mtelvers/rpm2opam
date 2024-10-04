@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sdl-asylum-0.3.2-3.22.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sdl-asylum-0.3.2-3.22.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libGLU1" 
+  "libSDL-1_2-0" 
+  "libSDL_mixer-1_2-0" 
+  "libglvnd" 
+  "system-user-games" 
+]
+extra-source "sdl-asylum-0.3.2-3.22.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sdl-asylum-0.3.2-3.22.x86_64.rpm"
+}

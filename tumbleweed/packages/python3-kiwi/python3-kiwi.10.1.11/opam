@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-kiwi-10.1.11-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-kiwi-10.1.11-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "file" 
+  "kiwi-systemdeps-core" {= "10.1.11"}
+  "python311" {>= "3.9"}
+  "python311-PyYAML" 
+  "python311-base" 
+  "python311-docopt" 
+  "python311-lxml" 
+  "python311-requests" 
+  "python311-setuptools" 
+  "python311-simplejson" 
+  "python311-xmltodict" 
+  "screen" 
+  "sed" 
+]
+extra-source "python3-kiwi-10.1.11-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python3-kiwi-10.1.11-1.1.x86_64.rpm"
+}

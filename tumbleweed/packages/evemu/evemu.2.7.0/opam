@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "evemu-2.7.0-3.18.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "evemu-2.7.0-3.18.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libevdev2" 
+  "libevemu3" 
+]
+extra-source "evemu-2.7.0-3.18.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/evemu-2.7.0-3.18.x86_64.rpm"
+}

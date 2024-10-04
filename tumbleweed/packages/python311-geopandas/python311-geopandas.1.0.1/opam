@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-geopandas-1.0.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-geopandas-1.0.1-1.1.noarch.rpm"]
+depends: [
+  "proj" 
+  "python311-Shapely" {>= "2"}
+  "python311-base" {= "3.11"}
+  "python311-numpy" {>= "1.22"}
+  "python311-packaging" 
+  "python311-pandas" {>= "1.4.0"}
+  "python311-pyogrio" {>= "0.7.2"}
+  "python311-pyproj" 
+]
+extra-source "python311-geopandas-1.0.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-geopandas-1.0.1-1.1.noarch.rpm"
+}

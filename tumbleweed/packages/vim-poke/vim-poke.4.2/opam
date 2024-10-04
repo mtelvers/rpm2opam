@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vim-poke-4.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vim-poke-4.2-1.1.noarch.rpm"]
+depends: [
+  "poke" {= "4.2"}
+  "vim" 
+]
+extra-source "vim-poke-4.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/vim-poke-4.2-1.1.noarch.rpm"
+}

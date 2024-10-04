@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "spu-tools-2.3.0-29.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "spu-tools-2.3.0-29.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libncurses6" 
+]
+extra-source "spu-tools-2.3.0-29.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/spu-tools-2.3.0-29.2.x86_64.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-arviz-0.18.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-arviz-0.18.0-1.1.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-dm-tree" 
+  "python310-h5netcdf" 
+  "python310-matplotlib" {>= "3.5"}
+  "python310-numpy" 
+  "python310-packaging" 
+  "python310-pandas" {>= "1.4.0"}
+  "python310-scipy" {>= "1.8.0"}
+  "python310-setuptools" {>= "60.0.0"}
+  "python310-typing_extensions" 
+  "python310-xarray" {>= "0.21.0"}
+  "python310-xarray-einstats" 
+]
+extra-source "python310-arviz-0.18.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-arviz-0.18.0-1.1.noarch.rpm"
+}

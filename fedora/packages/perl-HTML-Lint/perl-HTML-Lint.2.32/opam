@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-HTML-Lint-2.32-18.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTML-Lint-2.32-18.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" 
+  "perl-Getopt-Long" 
+  "perl-HTML-Parser" 
+  "perl-HTML-Tagset" {>= "3.3"}
+  "perl-Test-Simple" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-parent" 
+  "perl-vars" 
+]
+extra-source "perl-HTML-Lint-2.32-18.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-HTML-Lint-2.32-18.fc40.noarch.rpm"
+}

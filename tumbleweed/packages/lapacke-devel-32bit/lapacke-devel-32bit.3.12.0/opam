@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lapacke-devel-32bit-3.12.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lapacke-devel-32bit-3.12.0-2.1.x86_64.rpm"]
+depends: [
+  "lapack-devel-32bit" {= "3.12.0"}
+  "lapacke-devel" {= "3.12.0"}
+  "liblapacke3-32bit" {= "3.12.0"}
+]
+extra-source "lapacke-devel-32bit-3.12.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lapacke-devel-32bit-3.12.0-2.1.x86_64.rpm"
+}

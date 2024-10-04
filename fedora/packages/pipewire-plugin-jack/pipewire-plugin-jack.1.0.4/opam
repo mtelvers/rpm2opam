@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pipewire-plugin-jack-1.0.4-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pipewire-plugin-jack-1.0.4-2.fc40.x86_64.rpm"]
+depends: [
+  "dbus-libs" 
+  "glibc" 
+  "jack-audio-connection-kit" 
+  "pipewire-jack-audio-connection-kit-libs" {= "1.0.4"}
+  "pipewire-libs" 
+]
+extra-source "pipewire-plugin-jack-1.0.4-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pipewire-plugin-jack-1.0.4-2.fc40.x86_64.rpm"
+}

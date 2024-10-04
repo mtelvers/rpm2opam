@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sbd-1.5.2+20230316.5ec38cf-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sbd-1.5.2+20230316.5ec38cf-1.4.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "corosync-libs" 
+  "fillup" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libaio1" 
+  "libqb100" 
+  "libuuid1" 
+  "pacemaker-libs" 
+  "pkgconf-pkg-config" 
+  "systemd" 
+]
+extra-source "sbd-1.5.2+20230316.5ec38cf-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sbd-1.5.2+20230316.5ec38cf-1.4.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "raspberrypi-firmware-dt-2023.11.21-3.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "raspberrypi-firmware-dt-2023.11.21-3.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "raspberrypi-firmware" 
+]
+extra-source "raspberrypi-firmware-dt-2023.11.21-3.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/raspberrypi-firmware-dt-2023.11.21-3.3.noarch.rpm"
+}

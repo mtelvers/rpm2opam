@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-pysaml2-7.4.2-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-pysaml2-7.4.2-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "python3" 
+  "python3-cryptography" {>= "3.1"}
+  "python3-dateutil" 
+  "python3-defusedxml" 
+  "python3-pyOpenSSL" 
+  "python3-pytz" 
+  "python3-requests" 
+  "python3-xmlschema" {>= "1.2.1"}
+  "xmlsec1" 
+  "xmlsec1-openssl" 
+]
+extra-source "python3-pysaml2-7.4.2-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-pysaml2-7.4.2-4.fc40.noarch.rpm"
+}

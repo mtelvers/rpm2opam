@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rypper-0.24-1.22.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rypper-0.24-1.22.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-base" 
+  "zypper" 
+]
+extra-source "rypper-0.24-1.22.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/rypper-0.24-1.22.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "PDAL-2.8.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "PDAL-2.8.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libPDAL18" {= "2.8.0"}
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "PDAL-2.8.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/PDAL-2.8.0-1.1.x86_64.rpm"
+}

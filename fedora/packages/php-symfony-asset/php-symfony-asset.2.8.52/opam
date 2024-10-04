@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-symfony-asset-2.8.52-10.fc38.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-symfony-asset-2.8.52-10.fc38.noarch.rpm"]
+depends: [
+  "php-common" 
+  "php-symfony-http-foundation" {= "2.8.52"}
+]
+extra-source "php-symfony-asset-2.8.52-10.fc38.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-symfony-asset-2.8.52-10.fc38.noarch.rpm"
+}

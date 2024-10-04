@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cairo-devel-1.18.2-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cairo-devel-1.18.2-2.1.x86_64.rpm"]
+depends: [
+  "fontconfig-devel" {>= "2.13.0"}
+  "freetype2-devel" {>= "23.0.17"}
+  "glib2-devel" {>= "2.14"}
+  "libX11-devel" 
+  "libXext-devel" 
+  "libXrender-devel" {>= "0.6"}
+  "libcairo-gobject2" {= "1.18.2"}
+  "libcairo-script-interpreter2" {= "1.18.2"}
+  "libcairo2" {= "1.18.2"}
+  "libpixman-1-0-devel" {>= "0.40.0"}
+  "libpng16-compat-devel" {>= "1.4.0"}
+  "libxcb-devel" {>= "1.6"}
+  "pkgconf-pkg-config" 
+  "zlib-devel" 
+]
+extra-source "cairo-devel-1.18.2-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cairo-devel-1.18.2-2.1.x86_64.rpm"
+}

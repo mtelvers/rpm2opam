@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wimlib-devel-1.14.4-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wimlib-devel-1.14.4-1.2.x86_64.rpm"]
+depends: [
+  "fuse-devel" 
+  "libntfs-3g-devel" 
+  "libwim15" 
+  "pkgconf-pkg-config" 
+]
+extra-source "wimlib-devel-1.14.4-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/wimlib-devel-1.14.4-1.2.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "krdp-server-5.27.80~git20240131.f36bf16-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "krdp-server-5.27.80~git20240131.f36bf16-5.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "krdp" {= "5.27.80"}
+  "libstdc++" 
+  "openssl" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+]
+extra-source "krdp-server-5.27.80~git20240131.f36bf16-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/krdp-server-5.27.80~git20240131.f36bf16-5.fc40.x86_64.rpm"
+}

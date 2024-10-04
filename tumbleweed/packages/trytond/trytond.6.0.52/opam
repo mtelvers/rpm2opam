@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "trytond-6.0.52-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trytond-6.0.52-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "graphviz" 
+  "html2text" 
+  "libreoffice-pyuno" 
+  "python311-Genshi" 
+  "python311-Levenshtein" 
+  "python311-Pillow" 
+  "python311-Werkzeug" 
+  "python311-base" 
+  "python311-bcrypt" 
+  "python311-defusedxml" 
+  "python311-gevent" 
+  "python311-lxml" 
+  "python311-passlib" {>= "1.7.0"}
+  "python311-polib" 
+  "python311-psycopg2" {>= "2.7.0"}
+  "python311-pydot" 
+  "python311-python-dateutil" 
+  "python311-python-sql" {>= "0.5"}
+  "python311-relatorio" {>= "0.7.0"}
+  "python311-weasyprint" 
+  "python311-wrapt" 
+  "shadow" 
+  "unoconv" 
+]
+extra-source "trytond-6.0.52-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/trytond-6.0.52-1.1.noarch.rpm"
+}

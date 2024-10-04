@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "minder-lang-1.16.4-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "minder-lang-1.16.4-2.1.noarch.rpm"]
+depends: [
+  "minder" {= "1.16.4"}
+]
+extra-source "minder-lang-1.16.4-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/minder-lang-1.16.4-2.1.noarch.rpm"
+}

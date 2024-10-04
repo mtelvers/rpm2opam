@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-wayland-server-devel-0.31.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-wayland-server-devel-0.31.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-bitflags+default-devel" 
+  "rust-downcast-rs+default-devel" 
+  "rust-io-lifetimes+default-devel" 
+  "rust-rustix+default-devel" 
+  "rust-rustix+fs-devel" 
+  "rust-wayland-backend+default-devel" 
+  "rust-wayland-scanner+default-devel" 
+]
+extra-source "rust-wayland-server-devel-0.31.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-wayland-server-devel-0.31.1-1.fc40.noarch.rpm"
+}

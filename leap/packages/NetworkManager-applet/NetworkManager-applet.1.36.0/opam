@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "NetworkManager-applet-1.36.0-lp160.2.14.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "NetworkManager-applet-1.36.0-lp160.2.14.x86_64.rpm"]
+depends: [
+  "NetworkManager" {>= "0.9.3"}
+  "NetworkManager-connection-editor" 
+  "glibc" 
+  "gnome-keyring" 
+  "iso-codes" 
+  "libatk-1_0-0" 
+  "libayatana-appindicator3-1" 
+  "libcairo2" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgio-2_0-0" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libgtk-3-0" 
+  "libmm-glib0" 
+  "libnm0" 
+  "libnma0" 
+  "libpango-1_0-0" 
+  "libsecret-1-0" 
+  "mobile-broadband-provider-info" 
+  "timezone" 
+]
+extra-source "NetworkManager-applet-1.36.0-lp160.2.14.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/NetworkManager-applet-1.36.0-lp160.2.14.x86_64.rpm"
+}

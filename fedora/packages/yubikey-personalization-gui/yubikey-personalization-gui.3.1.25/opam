@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "yubikey-personalization-gui-3.1.25-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yubikey-personalization-gui-3.1.25-14.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "libyubikey" 
+  "qt" 
+  "qt-x11" 
+  "ykpers" 
+]
+extra-source "yubikey-personalization-gui-3.1.25-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/y/yubikey-personalization-gui-3.1.25-14.fc40.x86_64.rpm"
+}

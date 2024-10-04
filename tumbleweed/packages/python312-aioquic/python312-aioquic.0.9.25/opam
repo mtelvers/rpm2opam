@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-aioquic-0.9.25-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-aioquic-0.9.25-2.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libopenssl3" 
+  "python312-base" {= "3.12"}
+  "python312-certifi" 
+  "python312-cryptography" {>= "3.1"}
+  "python312-pyOpenSSL" {>= "22"}
+  "python312-pylsqpack" {>= "0.3.3"}
+  "python312-service_identity" 
+]
+extra-source "python312-aioquic-0.9.25-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-aioquic-0.9.25-2.3.x86_64.rpm"
+}

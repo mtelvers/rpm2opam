@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libGLC-devel-0.7.2-3.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libGLC-devel-0.7.2-3.9.x86_64.rpm"]
+depends: [
+  "Mesa-devel" 
+  "fontconfig-devel" 
+  "freetype2-devel" 
+  "fribidi-devel" 
+  "libGLC0" {= "0.7.2"}
+  "libexpat-devel" 
+  "pkgconf-pkg-config" 
+  "zlib-devel" 
+]
+extra-source "libGLC-devel-0.7.2-3.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libGLC-devel-0.7.2-3.9.x86_64.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "telepathy-gabble-0.18.4-23.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "telepathy-gabble-0.18.4-23.fc40.x86_64.rpm"]
+depends: [
+  "dbus-glib" 
+  "dbus-libs" 
+  "glib2" 
+  "glibc" 
+  "gnutls" 
+  "libgcc" 
+  "libnice" 
+  "libsoup3" 
+  "libxml2" 
+  "python3" 
+  "sqlite-libs" 
+  "telepathy-filesystem" 
+  "telepathy-glib" 
+  "telepathy-mission-control" {>= "5.5.0"}
+]
+extra-source "telepathy-gabble-0.18.4-23.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/telepathy-gabble-0.18.4-23.fc40.x86_64.rpm"
+}

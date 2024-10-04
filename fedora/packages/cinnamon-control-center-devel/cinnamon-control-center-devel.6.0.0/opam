@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cinnamon-control-center-devel-6.0.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cinnamon-control-center-devel-6.0.0-6.fc40.x86_64.rpm"]
+depends: [
+  "cinnamon-control-center" {= "6.0.0"}
+  "glib2-devel" 
+  "gtk3-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "cinnamon-control-center-devel-6.0.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cinnamon-control-center-devel-6.0.0-6.fc40.x86_64.rpm"
+}

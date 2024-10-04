@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-azure-mgmt-applicationinsights-1.0.0-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-azure-mgmt-applicationinsights-1.0.0-14.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-azure-common" 
+  "python3-azure-mgmt-core" 
+  "python3-msrest" {>= "0.5"}
+]
+extra-source "python3-azure-mgmt-applicationinsights-1.0.0-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-azure-mgmt-applicationinsights-1.0.0-14.fc40.noarch.rpm"
+}

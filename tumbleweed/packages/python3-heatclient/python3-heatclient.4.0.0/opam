@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-heatclient-4.0.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-heatclient-4.0.0-1.1.noarch.rpm"]
+depends: [
+  "python3-keystoneauth1" {>= "3.8.0"}
+  "python3-osc-lib" {>= "1.14.0"}
+  "python3-oslo-i18n" {>= "3.15.3"}
+  "python3-oslo-serialization" {>= "2.18.0"}
+  "python3-oslo-utils" {>= "3.33.0"}
+  "python3-swiftclient" {>= "3.2.0"}
+  "python311-Babel" 
+  "python311-PyYAML" {>= "3.13"}
+  "python311-base" {= "3.11"}
+  "python311-cliff" {>= "2.8.0"}
+  "python311-iso8601" {>= "0.1.11"}
+  "python311-prettytable" {>= "0.7.2"}
+  "python311-requests" {>= "2.14.2"}
+]
+extra-source "python3-heatclient-4.0.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-heatclient-4.0.0-1.1.noarch.rpm"
+}

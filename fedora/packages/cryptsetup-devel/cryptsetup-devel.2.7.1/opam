@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cryptsetup-devel-2.7.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cryptsetup-devel-2.7.1-1.fc40.x86_64.rpm"]
+depends: [
+  "cryptsetup-libs" {= "2.7.1"}
+  "device-mapper-devel" 
+  "json-c-devel" 
+  "libblkid-devel" 
+  "libuuid-devel" 
+  "openssl-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "cryptsetup-devel-2.7.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cryptsetup-devel-2.7.1-1.fc40.x86_64.rpm"
+}

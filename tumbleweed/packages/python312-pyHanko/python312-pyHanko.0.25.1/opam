@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pyHanko-0.25.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pyHanko-0.25.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-PyYAML" 
+  "python312-asn1crypto" 
+  "python312-base" 
+  "python312-click" 
+  "python312-cryptography" 
+  "python312-pyhanko-certvalidator" 
+  "python312-qrcode" 
+  "python312-requests" 
+  "python312-tzlocal" 
+  "update-alternatives" 
+]
+extra-source "python312-pyHanko-0.25.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pyHanko-0.25.1-1.1.noarch.rpm"
+}

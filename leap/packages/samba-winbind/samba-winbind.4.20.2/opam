@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "samba-winbind-4.20.2+git.348.4fb6af61307-slfo.1.1.18.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "samba-winbind-4.20.2+git.348.4fb6af61307-slfo.1.1.18.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "glibc" 
+  "krb5" 
+  "libcom_err2" 
+  "libgnutls30" 
+  "libpopt0" 
+  "libtalloc2" 
+  "libtdb1" 
+  "libtevent0" 
+  "pam-config" 
+  "samba-client" {= "4.20.2"}
+  "samba-client-libs" 
+  "samba-libs" 
+  "samba-winbind-libs" 
+  "sysuser-shadow" 
+]
+extra-source "samba-winbind-4.20.2+git.348.4fb6af61307-slfo.1.1.18.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/samba-winbind-4.20.2+git.348.4fb6af61307-slfo.1.1.18.x86_64.rpm"
+}

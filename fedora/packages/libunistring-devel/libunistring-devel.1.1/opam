@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libunistring-devel-1.1-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libunistring-devel-1.1-7.fc40.x86_64.rpm"]
+depends: [
+  "libunistring" {= "1.1"}
+]
+extra-source "libunistring-devel-1.1-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libunistring-devel-1.1-7.fc40.x86_64.rpm"
+}

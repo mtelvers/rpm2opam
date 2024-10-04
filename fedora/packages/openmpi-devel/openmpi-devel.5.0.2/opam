@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openmpi-devel-5.0.2-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openmpi-devel-5.0.2-2.fc40.x86_64.rpm"]
+depends: [
+  "gcc-gfortran" 
+  "glibc" 
+  "openmpi" {= "5.0.2"}
+  "pkgconf-pkg-config" 
+  "pmix" 
+  "python2-7" 
+  "rpm-mpi-hooks" 
+]
+extra-source "openmpi-devel-5.0.2-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openmpi-devel-5.0.2-2.fc40.x86_64.rpm"
+}

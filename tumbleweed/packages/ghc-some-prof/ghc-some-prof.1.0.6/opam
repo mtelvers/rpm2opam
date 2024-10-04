@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-some-prof-1.0.6-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-some-prof-1.0.6-4.2.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-some-devel" {= "1.0.6"}
+]
+extra-source "ghc-some-prof-1.0.6-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-some-prof-1.0.6-4.2.x86_64.rpm"
+}

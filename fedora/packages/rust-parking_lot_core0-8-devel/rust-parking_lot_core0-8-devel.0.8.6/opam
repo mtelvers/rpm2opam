@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-parking_lot_core0.8-devel-0.8.6-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-parking_lot_core0.8-devel-0.8.6-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-cfg-if+default-devel" 
+  "rust-instant+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-smallvec+default-devel" 
+]
+extra-source "rust-parking_lot_core0.8-devel-0.8.6-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-parking_lot_core0.8-devel-0.8.6-4.fc40.noarch.rpm"
+}

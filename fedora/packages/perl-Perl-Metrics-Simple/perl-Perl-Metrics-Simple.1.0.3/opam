@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Perl-Metrics-Simple-1.0.3-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Perl-Metrics-Simple-1.0.3-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-English" 
+  "perl-File-Basename" 
+  "perl-File-Find" {>= "1.1"}
+  "perl-Getopt-Long" 
+  "perl-IO" {>= "1.14"}
+  "perl-JSON-PP" 
+  "perl-PPI" {>= "1.113"}
+  "perl-Pod-Usage" 
+  "perl-Readonly" {>= "1.3"}
+  "perl-Statistics-Basic" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-parent" 
+]
+extra-source "perl-Perl-Metrics-Simple-1.0.3-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Perl-Metrics-Simple-1.0.3-3.fc40.noarch.rpm"
+}

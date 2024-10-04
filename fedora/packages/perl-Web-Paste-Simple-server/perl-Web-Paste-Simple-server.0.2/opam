@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Web-Paste-Simple-server-0.002-27.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Web-Paste-Simple-server-0.002-27.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Plack" 
+  "perl-Web-Paste-Simple" {= "0.2"}
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "perl-Web-Paste-Simple-server-0.002-27.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Web-Paste-Simple-server-0.002-27.fc40.noarch.rpm"
+}

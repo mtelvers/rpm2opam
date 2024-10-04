@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "folks-0.15.7-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "folks-0.15.7-3.fc40.x86_64.rpm"]
+depends: [
+  "evolution-data-server" 
+  "glib2" 
+  "glibc" 
+  "libgee" 
+]
+extra-source "folks-0.15.7-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/folks-0.15.7-3.fc40.x86_64.rpm"
+}

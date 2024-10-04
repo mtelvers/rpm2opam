@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-python-for-android-2024.1.21-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-python-for-android-2024.1.21-2.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "python311-Jinja2" 
+  "python311-appdirs" 
+  "python311-base" 
+  "python311-build" 
+  "python311-colorama" {>= "0.3.3"}
+  "python311-packaging" 
+  "python311-setuptools" 
+  "python311-sh" {>= "2"}
+  "python311-toml" 
+  "update-alternatives" 
+]
+extra-source "python311-python-for-android-2024.1.21-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-python-for-android-2024.1.21-2.1.noarch.rpm"
+}

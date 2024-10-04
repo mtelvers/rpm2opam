@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "storage-fixup-0.2-51.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "storage-fixup-0.2-51.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "coreutils" 
+  "dmidecode" 
+  "hdparm" 
+  "sed" 
+  "sg3_utils" 
+  "smartmontools" 
+  "systemd" 
+]
+extra-source "storage-fixup-0.2-51.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/storage-fixup-0.2-51.2.noarch.rpm"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tower+full-devel-0.4.13-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tower+full-devel-0.4.13-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-tower+balance-devel" {= "0.4.13"}
+  "rust-tower+buffer-devel" {= "0.4.13"}
+  "rust-tower+discover-devel" {= "0.4.13"}
+  "rust-tower+filter-devel" {= "0.4.13"}
+  "rust-tower+hedge-devel" {= "0.4.13"}
+  "rust-tower+limit-devel" {= "0.4.13"}
+  "rust-tower+load-devel" {= "0.4.13"}
+  "rust-tower+load-shed-devel" {= "0.4.13"}
+  "rust-tower+make-devel" {= "0.4.13"}
+  "rust-tower+ready-cache-devel" {= "0.4.13"}
+  "rust-tower+reconnect-devel" {= "0.4.13"}
+  "rust-tower+retry-devel" {= "0.4.13"}
+  "rust-tower+spawn-ready-devel" {= "0.4.13"}
+  "rust-tower+steer-devel" {= "0.4.13"}
+  "rust-tower+timeout-devel" {= "0.4.13"}
+  "rust-tower+util-devel" {= "0.4.13"}
+  "rust-tower-devel" {= "0.4.13"}
+]
+extra-source "rust-tower+full-devel-0.4.13-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tower+full-devel-0.4.13-2.fc40.noarch.rpm"
+}

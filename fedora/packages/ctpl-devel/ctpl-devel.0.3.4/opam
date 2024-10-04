@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ctpl-devel-0.3.4-18.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ctpl-devel-0.3.4-18.fc39.x86_64.rpm"]
+depends: [
+  "ctpl-libs" {= "0.3.4"}
+  "glib2-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "ctpl-devel-0.3.4-18.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/ctpl-devel-0.3.4-18.fc39.x86_64.rpm"
+}

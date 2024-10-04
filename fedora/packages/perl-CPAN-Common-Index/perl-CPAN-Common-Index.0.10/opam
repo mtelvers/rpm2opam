@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CPAN-Common-Index-0.010-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CPAN-Common-Index-0.010-21.fc40.noarch.rpm"]
+depends: [
+  "perl-CPAN-DistnameInfo" 
+  "perl-CPAN-Meta-YAML" 
+  "perl-Carp" 
+  "perl-Class-Tiny" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Fetch" 
+  "perl-File-Temp" {>= "0.19"}
+  "perl-File-stat" 
+  "perl-HTTP-Tiny" 
+  "perl-Module-Load" 
+  "perl-PathTools" 
+  "perl-Search-Dict" {>= "1.7"}
+  "perl-Tie-Handle-Offset" 
+  "perl-URI" 
+  "perl-libs" {>= "5.8.1"}
+  "perl-parent" 
+]
+extra-source "perl-CPAN-Common-Index-0.010-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CPAN-Common-Index-0.010-21.fc40.noarch.rpm"
+}

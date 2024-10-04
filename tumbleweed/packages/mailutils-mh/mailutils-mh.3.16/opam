@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mailutils-mh-3.16-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mailutils-mh-3.16-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libguile-3_0-1" 
+  "libmailutils9" 
+  "libncurses6" 
+  "libreadline8" 
+  "libunistring5" 
+]
+extra-source "mailutils-mh-3.16-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mailutils-mh-3.16-2.2.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpff-devel-20231205-2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpff-devel-20231205-2.5.x86_64.rpm"]
+depends: [
+  "libbfio-devel" 
+  "libpff1" {= "20231205"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libpff-devel-20231205-2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpff-devel-20231205-2.5.x86_64.rpm"
+}

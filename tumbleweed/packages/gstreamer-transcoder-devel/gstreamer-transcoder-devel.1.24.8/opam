@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gstreamer-transcoder-devel-1.24.8-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gstreamer-transcoder-devel-1.24.8-1.1.x86_64.rpm"]
+depends: [
+  "gstreamer-devel" 
+  "gstreamer-plugins-bad" {= "1.24.8"}
+  "gstreamer-plugins-bad-devel" {= "1.24.8"}
+  "gstreamer-plugins-base-devel" {>= "1.24.0"}
+  "libgsttranscoder-1_0-0" {= "1.24.8"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-GstTranscoder-1_0" {= "1.24.8"}
+]
+extra-source "gstreamer-transcoder-devel-1.24.8-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gstreamer-transcoder-devel-1.24.8-1.1.x86_64.rpm"
+}

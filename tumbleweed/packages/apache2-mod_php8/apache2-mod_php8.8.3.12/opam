@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "apache2-mod_php8-8.3.12-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apache2-mod_php8-8.3.12-1.1.x86_64.rpm"]
+depends: [
+  "apache2" 
+  "apache2-prefork" 
+  "bash-sh" 
+  "glibc" 
+  "libargon2-1" 
+  "libcrypt1" 
+  "libpcre2-8-0" 
+  "libxml2-2" 
+]
+extra-source "apache2-mod_php8-8.3.12-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/apache2-mod_php8-8.3.12-1.1.x86_64.rpm"
+}

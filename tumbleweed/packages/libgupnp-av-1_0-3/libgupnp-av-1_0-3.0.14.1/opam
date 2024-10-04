@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgupnp-av-1_0-3-0.14.1-4.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgupnp-av-1_0-3-0.14.1-4.3.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gupnp-av" {>= "0.14.1"}
+  "libxml2-2" 
+]
+extra-source "libgupnp-av-1_0-3-0.14.1-4.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgupnp-av-1_0-3-0.14.1-4.3.x86_64.rpm"
+}

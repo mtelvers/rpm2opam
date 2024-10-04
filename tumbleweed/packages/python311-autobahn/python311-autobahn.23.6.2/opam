@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-autobahn-23.6.2-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-autobahn-23.6.2-3.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "python311-PyNaCl" {>= "1.4.0"}
+  "python311-PyTrie" {>= "0.4.0"}
+  "python311-Twisted" {>= "20.3.0"}
+  "python311-argon2-cffi" {>= "20.1.0"}
+  "python311-attrs" {>= "20.3.0"}
+  "python311-base" 
+  "python311-cbor2" {>= "5.2.0"}
+  "python311-cffi" {>= "1.14.5"}
+  "python311-flatbuffers" {>= "22.12.6"}
+  "python311-hyperlink" {>= "21.0.0"}
+  "python311-msgpack" {>= "1.0.2"}
+  "python311-passlib" {>= "1.7.4"}
+  "python311-py-ubjson" {>= "0.16.1"}
+  "python311-pyOpenSSL" {>= "20.0.1"}
+  "python311-service_identity" {>= "18.1.0"}
+  "python311-txaio" {>= "21.2.1"}
+  "python311-ujson" {>= "4.0.2"}
+  "python311-wsaccel" {>= "0.6.3"}
+  "python311-zope-interface" {>= "5.2.0"}
+  "update-alternatives" 
+]
+extra-source "python311-autobahn-23.6.2-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-autobahn-23.6.2-3.1.x86_64.rpm"
+}

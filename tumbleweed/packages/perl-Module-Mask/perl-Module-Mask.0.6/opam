@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Module-Mask-0.06-1.13.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Mask-0.06-1.13.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Module-Util" {>= "1.0"}
+]
+extra-source "perl-Module-Mask-0.06-1.13.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Module-Mask-0.06-1.13.noarch.rpm"
+}

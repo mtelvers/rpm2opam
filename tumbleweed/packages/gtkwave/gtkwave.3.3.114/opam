@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtkwave-3.3.114-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtkwave-3.3.114-1.6.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libJudy1" 
+  "libbz2-1" 
+  "libgcc_s1" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-2_0-0" 
+  "liblzma5" 
+  "libpango-1_0-0" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "tcl" 
+  "tk" 
+]
+extra-source "gtkwave-3.3.114-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gtkwave-3.3.114-1.6.x86_64.rpm"
+}

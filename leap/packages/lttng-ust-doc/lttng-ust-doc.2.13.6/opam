@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lttng-ust-doc-2.13.6-slfo.1.1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lttng-ust-doc-2.13.6-slfo.1.1.6.noarch.rpm"]
+depends: [
+  "liblttng-ust-ctl5" {= "2.13.6"}
+  "liblttng-ust-python-agent1" {= "2.13.6"}
+  "liblttng-ust1" {= "2.13.6"}
+]
+extra-source "lttng-ust-doc-2.13.6-slfo.1.1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/lttng-ust-doc-2.13.6-slfo.1.1.6.noarch.rpm"
+}

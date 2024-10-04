@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "occt-devel-7.7.2-2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "occt-devel-7.7.2-2.5.x86_64.rpm"]
+depends: [
+  "Mesa-libGL-devel" 
+  "freetype2-devel" 
+  "glibc" 
+  "libXext-devel" 
+  "libXmu-devel" 
+  "libgcc_s1" 
+  "libopencascade-applicationframework7_7_2" {= "7.7.2"}
+  "libopencascade-dataexchange7_7_2" 
+  "libopencascade-draw7_7_2" {= "7.7.2"}
+  "libopencascade-foundationclasses7_7_2" 
+  "libopencascade-modelingalgorithms7_7_2" {= "7.7.2"}
+  "libopencascade-modelingdata7_7_2" {= "7.7.2"}
+  "libopencascade-visualization7_7_2" {= "7.7.2"}
+  "libstdc++6" 
+  "tcl-devel" 
+  "tk-devel" 
+]
+extra-source "occt-devel-7.7.2-2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/occt-devel-7.7.2-2.5.x86_64.rpm"
+}

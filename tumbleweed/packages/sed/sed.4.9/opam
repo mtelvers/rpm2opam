@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sed-4.9-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sed-4.9-2.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libacl1" 
+  "libselinux1" 
+]
+extra-source "sed-4.9-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sed-4.9-2.6.x86_64.rpm"
+}

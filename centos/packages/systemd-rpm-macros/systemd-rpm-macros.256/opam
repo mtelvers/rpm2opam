@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "systemd-rpm-macros-256-14.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "systemd-rpm-macros-256-14.el10.noarch.rpm"]
+depends: [
+  "bash" 
+]
+extra-source "systemd-rpm-macros-256-14.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/systemd-rpm-macros-256-14.el10.noarch.rpm"
+}

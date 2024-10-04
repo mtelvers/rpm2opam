@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kpartsplugin-0.0.1-0.31.20120723.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kpartsplugin-0.0.1-0.31.20120723.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kde-runtime" {>= "4.14.38"}
+  "kdelibs" 
+  "libstdc++" 
+  "mozilla-filesystem" 
+  "qt" 
+  "qt-x11" 
+]
+extra-source "kpartsplugin-0.0.1-0.31.20120723.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kpartsplugin-0.0.1-0.31.20120723.fc40.x86_64.rpm"
+}

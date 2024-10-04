@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-omake-0.10.6-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-omake-0.10.6-10.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "ncurses-libs" 
+  "readline" 
+]
+extra-source "ocaml-omake-0.10.6-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-omake-0.10.6-10.fc40.x86_64.rpm"
+}

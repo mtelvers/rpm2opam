@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kissat-3.1.1-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kissat-3.1.1-4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kissat-libs" {= "3.1.1"}
+]
+extra-source "kissat-3.1.1-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kissat-3.1.1-4.fc40.x86_64.rpm"
+}

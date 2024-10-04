@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "brotli-1.1.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "brotli-1.1.0-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbrotli" {= "1.1.0"}
+]
+extra-source "brotli-1.1.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/brotli-1.1.0-3.fc40.x86_64.rpm"
+}

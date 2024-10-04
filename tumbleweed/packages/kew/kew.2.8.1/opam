@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kew-2.8.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kew-2.8.1-1.1.x86_64.rpm"]
+depends: [
+  "ffmpeg-7-mini-libs" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libchafa0" 
+  "libfftw3-3" 
+  "libfreeimage3" 
+  "libnotify4" 
+  "libopusfile0" 
+  "libvorbisfile3" 
+]
+extra-source "kew-2.8.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kew-2.8.1-1.1.x86_64.rpm"
+}

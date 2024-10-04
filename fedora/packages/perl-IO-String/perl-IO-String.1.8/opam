@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-IO-String-1.08-50.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-IO-String-1.08-50.fc40.noarch.rpm"]
+depends: [
+  "perl-Data-Dumper" 
+  "perl-IO" 
+  "perl-Symbol" 
+  "perl-libs" {>= "5.5.0"}
+  "perl-vars" 
+]
+extra-source "perl-IO-String-1.08-50.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-IO-String-1.08-50.fc40.noarch.rpm"
+}

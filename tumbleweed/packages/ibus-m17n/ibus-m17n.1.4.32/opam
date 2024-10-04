@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ibus-m17n-1.4.32-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibus-m17n-1.4.32-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "ibus" 
+  "libgtk-3-0" 
+  "libibus-1_0-5" 
+  "libm17n0" 
+]
+extra-source "ibus-m17n-1.4.32-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ibus-m17n-1.4.32-1.1.x86_64.rpm"
+}

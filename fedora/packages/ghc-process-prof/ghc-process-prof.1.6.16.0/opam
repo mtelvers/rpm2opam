@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-process-prof-1.6.16.0-140.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-process-prof-1.6.16.0-140.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+  "ghc-process-devel" {= "1.6.16.0"}
+  "ghc-unix-prof" 
+]
+extra-source "ghc-process-prof-1.6.16.0-140.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-process-prof-1.6.16.0-140.fc40.x86_64.rpm"
+}

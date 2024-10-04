@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-vty-devel-6.2-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-vty-devel-6.2-1.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-binary-devel" 
+  "ghc-blaze-builder-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-deepseq-devel" 
+  "ghc-directory-devel" 
+  "ghc-filepath-devel" 
+  "ghc-microlens-devel" 
+  "ghc-microlens-mtl-devel" 
+  "ghc-mtl-devel" 
+  "ghc-parsec-devel" 
+  "ghc-stm-devel" 
+  "ghc-text-devel" 
+  "ghc-utf8-string-devel" 
+  "ghc-vector-devel" 
+  "ghc-vty" {= "6.2"}
+]
+extra-source "ghc-vty-devel-6.2-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-vty-devel-6.2-1.3.x86_64.rpm"
+}

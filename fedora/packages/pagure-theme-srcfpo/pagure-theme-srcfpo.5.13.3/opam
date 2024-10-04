@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pagure-theme-srcfpo-5.13.3-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pagure-theme-srcfpo-5.13.3-12.fc40.noarch.rpm"]
+depends: [
+  "pagure" {= "5.13.3"}
+]
+extra-source "pagure-theme-srcfpo-5.13.3-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pagure-theme-srcfpo-5.13.3-12.fc40.noarch.rpm"
+}

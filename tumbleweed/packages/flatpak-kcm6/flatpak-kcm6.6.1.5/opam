@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "flatpak-kcm6-6.1.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flatpak-kcm6-6.1.5-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libKF6ConfigCore6" 
+  "libKF6CoreAddons6" 
+  "libKF6I18n6" 
+  "libKF6KCMUtilsCore6" 
+  "libKF6KCMUtilsQuick6" 
+  "libQt6Core6" 
+  "libQt6Qml6" 
+  "libflatpak0" 
+  "libstdc++6" 
+  "systemsettings6" 
+]
+extra-source "flatpak-kcm6-6.1.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/flatpak-kcm6-6.1.5-1.1.x86_64.rpm"
+}

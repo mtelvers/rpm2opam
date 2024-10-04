@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "FastCGI-devel-2.4.0-175.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "FastCGI-devel-2.4.0-175.2.x86_64.rpm"]
+depends: [
+  "glibc-devel" 
+  "libfcgi0" {= "2.4.0"}
+]
+extra-source "FastCGI-devel-2.4.0-175.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/FastCGI-devel-2.4.0-175.2.x86_64.rpm"
+}

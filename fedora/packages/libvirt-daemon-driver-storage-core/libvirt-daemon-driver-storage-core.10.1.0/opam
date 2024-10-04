@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libvirt-daemon-driver-storage-core-10.1.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvirt-daemon-driver-storage-core-10.1.0-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "libblkid" 
+  "libgcc" 
+  "libselinux" 
+  "libtirpc" 
+  "libvirt-daemon-common" {= "10.1.0"}
+  "libvirt-libs" {= "10.1.0"}
+  "libxml2" 
+  "nfs-utils" 
+  "parted" 
+  "qemu-img" 
+  "scrub" 
+  "util-linux" 
+]
+extra-source "libvirt-daemon-driver-storage-core-10.1.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libvirt-daemon-driver-storage-core-10.1.0-1.fc40.x86_64.rpm"
+}

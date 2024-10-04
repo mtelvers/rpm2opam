@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpipewire-0_3-0-32bit-1.2.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpipewire-0_3-0-32bit-1.2.5-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "pipewire-modules-0_3-32bit" {= "1.2.5"}
+  "pipewire-spa-plugins-0_2-32bit" {= "1.2.5"}
+]
+extra-source "libpipewire-0_3-0-32bit-1.2.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpipewire-0_3-0-32bit-1.2.5-1.1.x86_64.rpm"
+}

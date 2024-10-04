@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "marker-0.0.2023.05.02-2.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "marker-0.0.2023.05.02-2.fc39.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" {>= "2.37.9000"}
+  "gtk3" 
+  "gtksourceview3" 
+  "gtkspell3" 
+  "hicolor-icon-theme" 
+  "libgcc" 
+  "marker-data" {= "0.0.2023.5.2"}
+  "pango" 
+  "webkit2gtk4-1" 
+]
+extra-source "marker-0.0.2023.05.02-2.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/marker-0.0.2023.05.02-2.fc39.x86_64.rpm"
+}

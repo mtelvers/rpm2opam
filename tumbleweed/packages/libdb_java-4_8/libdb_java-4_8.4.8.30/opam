@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libdb_java-4_8-4.8.30-45.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdb_java-4_8-4.8.30-45.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libdb-4_8" {= "4.8.30"}
+]
+extra-source "libdb_java-4_8-4.8.30-45.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libdb_java-4_8-4.8.30-45.1.x86_64.rpm"
+}

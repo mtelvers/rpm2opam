@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ulogd-pcap-2.0.8-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ulogd-pcap-2.0.8-1.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "ulogd" {= "2.0.8"}
+]
+extra-source "ulogd-pcap-2.0.8-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ulogd-pcap-2.0.8-1.4.x86_64.rpm"
+}

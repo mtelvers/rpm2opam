@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hawknl-devel-1.6.8-1.26.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hawknl-devel-1.6.8-1.26.x86_64.rpm"]
+depends: [
+  "hawknl-libs" {= "1.6.8"}
+]
+extra-source "hawknl-devel-1.6.8-1.26.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/hawknl-devel-1.6.8-1.26.x86_64.rpm"
+}

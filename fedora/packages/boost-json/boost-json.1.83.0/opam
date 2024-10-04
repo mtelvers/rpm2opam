@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "boost-json-1.83.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "boost-json-1.83.0-3.fc40.x86_64.rpm"]
+depends: [
+  "boost-container" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "boost-json-1.83.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/boost-json-1.83.0-3.fc40.x86_64.rpm"
+}

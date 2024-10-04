@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Mail-Message-3.15.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mail-Message-3.15.0-2.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-IO-stringy" 
+  "perl-MIME-Types" {>= "1.4"}
+  "perl-MailTools" {>= "2.17"}
+  "perl-TimeDate" 
+  "perl-URI" {>= "1.23"}
+  "perl-User-Identity" {>= "1.2"}
+]
+extra-source "perl-Mail-Message-3.15.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Mail-Message-3.15.0-2.2.noarch.rpm"
+}

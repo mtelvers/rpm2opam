@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "aopalliance-1.0-slfo.1.2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "aopalliance-1.0-slfo.1.2.3.noarch.rpm"]
+depends: [
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "aopalliance-1.0-slfo.1.2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/aopalliance-1.0-slfo.1.2.3.noarch.rpm"
+}

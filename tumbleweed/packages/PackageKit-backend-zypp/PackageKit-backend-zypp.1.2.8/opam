@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "PackageKit-backend-zypp-1.2.8-5.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "PackageKit-backend-zypp-1.2.8-5.1.x86_64.rpm"]
+depends: [
+  "PackageKit" {= "1.2.8"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcc_s1" 
+  "libpackagekit-glib2-18" 
+  "libstdc++6" 
+  "libzypp" {>= "17.31.0"}
+]
+extra-source "PackageKit-backend-zypp-1.2.8-5.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/PackageKit-backend-zypp-1.2.8-5.1.x86_64.rpm"
+}

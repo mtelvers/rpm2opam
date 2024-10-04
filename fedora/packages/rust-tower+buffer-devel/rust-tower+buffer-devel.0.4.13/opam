@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tower+buffer-devel-0.4.13-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tower+buffer-devel-0.4.13-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-tokio+default-devel" 
+  "rust-tokio+rt-devel" 
+  "rust-tokio+sync-devel" 
+  "rust-tower+__common-devel" {= "0.4.13"}
+  "rust-tower+tokio-util-devel" {= "0.4.13"}
+  "rust-tower+tracing-devel" {= "0.4.13"}
+  "rust-tower-devel" {= "0.4.13"}
+]
+extra-source "rust-tower+buffer-devel-0.4.13-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tower+buffer-devel-0.4.13-2.fc40.noarch.rpm"
+}

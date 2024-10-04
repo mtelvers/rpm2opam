@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "grpc-1.48.4-34.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grpc-1.48.4-34.fc40.x86_64.rpm"]
+depends: [
+  "abseil-cpp" 
+  "c-ares" 
+  "glibc" 
+  "grpc-data" {= "1.48.4"}
+  "libgcc" 
+  "libstdc++" 
+  "openssl-libs" 
+  "re2" 
+  "zlib-ng-compat" 
+]
+extra-source "grpc-1.48.4-34.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/grpc-1.48.4-34.fc40.x86_64.rpm"
+}

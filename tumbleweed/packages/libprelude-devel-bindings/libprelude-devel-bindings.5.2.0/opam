@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libprelude-devel-bindings-5.2.0-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libprelude-devel-bindings-5.2.0-3.3.x86_64.rpm"]
+depends: [
+  "libprelude-devel" {= "5.2.0"}
+  "lua51-devel" 
+  "python311-devel" 
+  "ruby-devel" 
+  "swig" 
+]
+extra-source "libprelude-devel-bindings-5.2.0-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libprelude-devel-bindings-5.2.0-3.3.x86_64.rpm"
+}

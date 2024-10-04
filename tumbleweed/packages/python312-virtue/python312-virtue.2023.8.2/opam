@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-virtue-2023.8.2-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-virtue-2023.8.2-1.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-Twisted" 
+  "python312-attrs" {>= "19"}
+  "python312-base" {= "3.12"}
+  "python312-click" 
+  "python312-colorama" 
+  "python312-pyrsistent" 
+  "update-alternatives" 
+]
+extra-source "python312-virtue-2023.8.2-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-virtue-2023.8.2-1.3.noarch.rpm"
+}

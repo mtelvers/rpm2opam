@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "slurm-torque-23.11.5-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "slurm-torque-23.11.5-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-Switch" 
+  "perl-base" 
+  "perl-slurm" {= "23.11.5"}
+  "slurm-plugins" {= "23.11.5"}
+]
+extra-source "slurm-torque-23.11.5-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/slurm-torque-23.11.5-1.3.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gasket-driver-1.0.18_5815ee3-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gasket-driver-1.0.18_5815ee3-1.5.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "gasket-driver-kmp-default" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "gasket-driver-1.0.18_5815ee3-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gasket-driver-1.0.18_5815ee3-1.5.x86_64.rpm"
+}

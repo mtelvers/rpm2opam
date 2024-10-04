@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "asymptote-2.90-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "asymptote-2.90-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libfftw3-3" 
+  "libgc1" 
+  "libgcc_s1" 
+  "libglut3" 
+  "libglvnd" 
+  "libgsl28" 
+  "libgslcblas0" 
+  "libncurses6" 
+  "libreadline8" 
+  "libstdc++6" 
+  "libtirpc3" 
+  "libz-ng-compat1" 
+  "python311-base" 
+]
+extra-source "asymptote-2.90-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/asymptote-2.90-1.1.x86_64.rpm"
+}

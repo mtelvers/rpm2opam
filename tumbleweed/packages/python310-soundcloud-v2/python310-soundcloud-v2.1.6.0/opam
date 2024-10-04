@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-soundcloud-v2-1.6.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-soundcloud-v2-1.6.0-1.1.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-dacite" {>= "1.8.1"}
+  "python310-python-dateutil" {>= "2.8.2"}
+  "python310-requests" 
+]
+extra-source "python310-soundcloud-v2-1.6.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-soundcloud-v2-1.6.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-pkgload-1.3.3-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-pkgload-1.3.3-3.fc40.noarch.rpm"]
+depends: [
+  "R-cli" {>= "3.3.0"}
+  "R-core" {= "4.3"}
+  "R-crayon" 
+  "R-desc" 
+  "R-fs" 
+  "R-glue" 
+  "R-pkgbuild" 
+  "R-rlang" {>= "1.1.1"}
+  "R-rprojroot" 
+  "R-withr" {>= "2.4.3"}
+]
+extra-source "R-pkgload-1.3.3-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-pkgload-1.3.3-3.fc40.noarch.rpm"
+}

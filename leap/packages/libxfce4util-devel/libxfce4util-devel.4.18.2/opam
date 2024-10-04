@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libxfce4util-devel-4.18.2-lp160.1.21.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxfce4util-devel-4.18.2-lp160.1.21.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libxfce4util-tools" {= "4.18.2"}
+  "libxfce4util7" {= "4.18.2"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Libxfce4util-1_0" {= "4.18.2"}
+]
+extra-source "libxfce4util-devel-4.18.2-lp160.1.21.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libxfce4util-devel-4.18.2-lp160.1.21.x86_64.rpm"
+}

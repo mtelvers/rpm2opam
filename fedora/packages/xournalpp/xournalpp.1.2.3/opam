@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xournalpp-1.2.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xournalpp-1.2.3-1.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gperftools-libs" 
+  "gtk3" 
+  "gtksourceview4" 
+  "hicolor-icon-theme" 
+  "libX11" 
+  "libXi" 
+  "libgcc" 
+  "librsvg2" 
+  "libsndfile" 
+  "libstdc++" 
+  "libxml2" 
+  "libzip" 
+  "lua-libs" 
+  "pango" 
+  "poppler-glib" 
+  "portaudio" 
+  "xournalpp-plugins" {= "1.2.3"}
+  "xournalpp-ui" {= "1.2.3"}
+  "zlib-ng-compat" 
+]
+extra-source "xournalpp-1.2.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xournalpp-1.2.3-1.fc40.x86_64.rpm"
+}

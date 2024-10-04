@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-pretty_assertions0.7+default-devel-0.7.2-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-pretty_assertions0.7+default-devel-0.7.2-7.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-pretty_assertions0-7-devel" {= "0.7.2"}
+]
+extra-source "rust-pretty_assertions0.7+default-devel-0.7.2-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-pretty_assertions0.7+default-devel-0.7.2-7.fc40.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-Pod-LinkCheck-tests-0.008-36.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Pod-LinkCheck-tests-0.008-36.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-File-Temp" 
+  "perl-Test-Harness" 
+  "perl-Test-Pod-LinkCheck" 
+  "perl-Test-Simple" {>= "0.88"}
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Test-Pod-LinkCheck-tests-0.008-36.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-Pod-LinkCheck-tests-0.008-36.fc40.noarch.rpm"
+}

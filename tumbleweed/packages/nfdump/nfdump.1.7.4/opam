@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nfdump-1.7.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nfdump-1.7.4-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libcurl-mini4" 
+  "libnfdumplibnfdump-1_7_4" 
+  "librrd8" 
+  "rrdtool" 
+]
+extra-source "nfdump-1.7.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/nfdump-1.7.4-1.1.x86_64.rpm"
+}

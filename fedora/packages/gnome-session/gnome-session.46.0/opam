@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-session-46.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-session-46.0-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dbus" 
+  "dconf" 
+  "fedora-logos" 
+  "glib2" 
+  "glibc" 
+  "gnome-control-center-filesystem" 
+  "gnome-desktop3" 
+  "gsettings-desktop-schemas" {>= "0.1.7"}
+  "gtk3" 
+  "json-glib" 
+  "libICE" 
+  "libSM" 
+  "libX11" 
+  "libXcomposite" 
+  "libepoxy" 
+  "libgcc" 
+  "libglvnd-egl" 
+  "libglvnd-gles" 
+  "libglvnd-glx" 
+  "systemd-libs" 
+]
+extra-source "gnome-session-46.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-session-46.0-1.fc40.x86_64.rpm"
+}

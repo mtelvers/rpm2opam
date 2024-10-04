@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpoppler-qt6-devel-24.07.0-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpoppler-qt6-devel-24.07.0-4.1.x86_64.rpm"]
+depends: [
+  "libpoppler-devel" {= "24.7.0"}
+  "libpoppler-qt6-3" {= "24.7.0"}
+  "pkgconf-pkg-config" 
+  "qt6-core-devel" 
+  "qt6-gui-devel" 
+  "qt6-widgets-devel" 
+]
+extra-source "libpoppler-qt6-devel-24.07.0-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpoppler-qt6-devel-24.07.0-4.1.x86_64.rpm"
+}

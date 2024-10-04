@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-python-coveralls-2.9.3-3.13.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-python-coveralls-2.9.3-3.13.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-PyYAML" 
+  "python311-base" 
+  "python311-coverage" {>= "4.4"}
+  "python311-requests" 
+  "python311-six" 
+  "update-alternatives" 
+]
+extra-source "python311-python-coveralls-2.9.3-3.13.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-python-coveralls-2.9.3-3.13.noarch.rpm"
+}

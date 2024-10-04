@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rng-tools-6.17-3.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rng-tools-6.17-3.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "jansson" 
+  "jitterentropy" 
+  "libcap" 
+  "libcurl" 
+  "openssl-libs" 
+  "selinux-policy" 
+  "systemd" 
+]
+extra-source "rng-tools-6.17-3.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/rng-tools-6.17-3.el10.x86_64.rpm"
+}

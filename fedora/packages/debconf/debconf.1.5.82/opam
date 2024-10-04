@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "debconf-1.5.82-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "debconf-1.5.82-5.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-CGI" 
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-File-Temp" 
+  "perl-FileHandle" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-IPC-Open3" 
+  "perl-Locale-gettext" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Term-ReadLine" 
+  "perl-Text-CharWidth" 
+  "perl-Text-Iconv" 
+  "perl-Text-Tabs+Wrap" 
+  "perl-Text-WrapI18N" 
+  "perl-base" {>= "1.1"}
+  "perl-fields" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "debconf-1.5.82-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/debconf-1.5.82-5.fc40.noarch.rpm"
+}

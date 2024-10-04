@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golly-4.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golly-4.2-3.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "glibc" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libstdc++" 
+  "lua-libs" 
+  "wxBase" 
+  "wxGTK" 
+  "wxGTK-gl" 
+  "zlib-ng-compat" 
+]
+extra-source "golly-4.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golly-4.2-3.fc40.x86_64.rpm"
+}

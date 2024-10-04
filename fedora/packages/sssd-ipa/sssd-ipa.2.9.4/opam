@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sssd-ipa-2.9.4-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sssd-ipa-2.9.4-4.fc40.x86_64.rpm"]
+depends: [
+  "dbus-libs" 
+  "glibc" 
+  "keyutils-libs" 
+  "krb5-libs" 
+  "libbasicobjects" 
+  "libcollection" 
+  "libcom_err" 
+  "libdhash" 
+  "libini_config" 
+  "libipa_hbac" {= "2.9.4"}
+  "libldb" 
+  "libref_array" 
+  "libselinux" 
+  "libsemanage" 
+  "libsss_certmap" {= "2.9.4"}
+  "libsss_idmap" {= "2.9.4"}
+  "libtalloc" 
+  "libtdb" 
+  "libtevent" 
+  "libunistring" 
+  "openldap" 
+  "openssl-libs" 
+  "pcre2" 
+  "popt" 
+  "samba-client-libs" 
+  "sssd-common" 
+  "sssd-common-pac" {= "2.9.4"}
+  "sssd-krb5-common" {= "2.9.4"}
+  "systemd-libs" 
+]
+extra-source "sssd-ipa-2.9.4-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sssd-ipa-2.9.4-4.fc40.x86_64.rpm"
+}

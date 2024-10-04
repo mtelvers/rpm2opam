@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "timg-1.6.0-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "timg-1.6.0-2.2.x86_64.rpm"]
+depends: [
+  "ffmpeg-7-mini-libs" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libGraphicsMagick++-Q16-12" 
+  "libGraphicsMagick-Q16-3" 
+  "libcairo2" 
+  "libdeflate0" 
+  "libexif12" 
+  "libgcc_s1" 
+  "libpoppler-glib8" 
+  "librsvg-2-2" 
+  "libsixel1" 
+  "libstdc++6" 
+  "libturbojpeg0" 
+]
+extra-source "timg-1.6.0-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/timg-1.6.0-2.2.x86_64.rpm"
+}

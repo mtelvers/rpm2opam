@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-packagekit-extras-43.0-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-packagekit-extras-43.0-1.6.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gnome-packagekit" {= "43.0"}
+  "libgtk-3-0" 
+  "libpackagekit-glib2-18" 
+]
+extra-source "gnome-packagekit-extras-43.0-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnome-packagekit-extras-43.0-1.6.x86_64.rpm"
+}

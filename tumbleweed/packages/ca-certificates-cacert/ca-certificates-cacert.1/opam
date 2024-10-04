@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ca-certificates-cacert-1-23.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ca-certificates-cacert-1-23.5.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "ca-certificates" 
+]
+extra-source "ca-certificates-cacert-1-23.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ca-certificates-cacert-1-23.5.noarch.rpm"
+}

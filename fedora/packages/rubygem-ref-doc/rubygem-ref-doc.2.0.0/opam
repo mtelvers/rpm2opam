@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-ref-doc-2.0.0-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-ref-doc-2.0.0-16.fc40.noarch.rpm"]
+depends: [
+  "rubygem-ref" {= "2.0.0"}
+]
+extra-source "rubygem-ref-doc-2.0.0-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-ref-doc-2.0.0-16.fc40.noarch.rpm"
+}

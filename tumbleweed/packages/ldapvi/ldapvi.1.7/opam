@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ldapvi-1.7-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ldapvi-1.7-3.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcrypt1" 
+  "libldap2" 
+  "libncurses6" 
+  "libopenssl3" 
+  "libpopt0" 
+  "libreadline8" 
+]
+extra-source "ldapvi-1.7-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ldapvi-1.7-3.1.x86_64.rpm"
+}

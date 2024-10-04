@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dump1090-fa-8.2-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dump1090-fa-8.2-1.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbladeRF2" 
+  "libncurses6" 
+  "librtlsdr0" 
+]
+extra-source "dump1090-fa-8.2-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/dump1090-fa-8.2-1.8.x86_64.rpm"
+}

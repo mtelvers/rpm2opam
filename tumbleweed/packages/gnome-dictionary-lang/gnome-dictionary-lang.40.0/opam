@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-dictionary-lang-40.0-4.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-dictionary-lang-40.0-4.3.noarch.rpm"]
+depends: [
+  "gnome-dictionary" {= "40.0"}
+]
+extra-source "gnome-dictionary-lang-40.0-4.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-dictionary-lang-40.0-4.3.noarch.rpm"
+}

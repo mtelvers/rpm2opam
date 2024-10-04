@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jtb-1.5.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jtb-1.5.1-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "java-11-openj9-headless" 
+  "javacc" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+]
+extra-source "jtb-1.5.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jtb-1.5.1-1.1.noarch.rpm"
+}

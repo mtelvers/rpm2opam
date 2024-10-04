@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "milia-devel-1.0.0-39.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "milia-devel-1.0.0-39.fc40.x86_64.rpm"]
+depends: [
+  "boost-devel" 
+  "gsl-devel" 
+  "milia" {= "1.0.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "milia-devel-1.0.0-39.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/milia-devel-1.0.0-39.fc40.x86_64.rpm"
+}

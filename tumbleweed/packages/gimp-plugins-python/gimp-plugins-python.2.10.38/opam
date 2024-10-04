@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gimp-plugins-python-2.10.38-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gimp-plugins-python-2.10.38-2.2.x86_64.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "gimp" {= "2.10.38"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libbabl-0_1-0" 
+  "libgegl-0_4-0" 
+  "libgimp-2_0-0" 
+  "libgimpui-2_0-0" 
+  "libgtk-2_0-0" 
+  "python-gtk" 
+]
+extra-source "gimp-plugins-python-2.10.38-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gimp-plugins-python-2.10.38-2.2.x86_64.rpm"
+}

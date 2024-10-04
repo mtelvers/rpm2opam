@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lightdm-gtk-greeter-2.0.8-1.19.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lightdm-gtk-greeter-2.0.8-1.19.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libcairo2" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "liblightdm-gobject-1-0" 
+  "lightdm-gtk-greeter-branding-openSUSE" {>= "2.0.8"}
+  "update-alternatives" 
+]
+extra-source "lightdm-gtk-greeter-2.0.8-1.19.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lightdm-gtk-greeter-2.0.8-1.19.x86_64.rpm"
+}

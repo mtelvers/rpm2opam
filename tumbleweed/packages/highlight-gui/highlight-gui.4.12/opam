@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "highlight-gui-4.12-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "highlight-gui-4.12-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "highlight-common" {= "4.12"}
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Widgets5" 
+  "libgcc_s1" 
+  "liblua5_4-5" 
+  "libstdc++6" 
+]
+extra-source "highlight-gui-4.12-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/highlight-gui-4.12-1.1.x86_64.rpm"
+}

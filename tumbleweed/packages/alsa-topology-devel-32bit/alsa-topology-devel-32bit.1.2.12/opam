@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "alsa-topology-devel-32bit-1.2.12-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "alsa-topology-devel-32bit-1.2.12-1.1.x86_64.rpm"]
+depends: [
+  "alsa-devel" {>= "1.2.12"}
+  "alsa-topology-devel" {= "1.2.12"}
+  "libatopology2-32bit" {= "1.2.12"}
+  "pkgconf-pkg-config" 
+]
+extra-source "alsa-topology-devel-32bit-1.2.12-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/alsa-topology-devel-32bit-1.2.12-1.1.x86_64.rpm"
+}

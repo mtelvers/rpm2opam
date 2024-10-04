@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "folks-lang-0.15.9-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "folks-lang-0.15.9-2.1.noarch.rpm"]
+depends: [
+  "libfolks26" {= "0.15.9"}
+]
+extra-source "folks-lang-0.15.9-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/folks-lang-0.15.9-2.1.noarch.rpm"
+}

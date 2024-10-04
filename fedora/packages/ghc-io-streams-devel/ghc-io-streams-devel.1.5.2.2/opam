@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-io-streams-devel-1.5.2.2-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-io-streams-devel-1.5.2.2-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-attoparsec-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-io-streams" {= "1.5.2.2"}
+  "ghc-network-devel" 
+  "ghc-primitive-devel" 
+  "ghc-process-devel" 
+  "ghc-text-devel" 
+  "ghc-time-devel" 
+  "ghc-transformers-devel" 
+  "ghc-vector-devel" 
+  "ghc-zlib-bindings-devel" 
+]
+extra-source "ghc-io-streams-devel-1.5.2.2-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-io-streams-devel-1.5.2.2-6.fc40.x86_64.rpm"
+}

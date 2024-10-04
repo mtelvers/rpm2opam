@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mpiP_3_5-gnu-mvapich2-hpc-3.5-7.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mpiP_3_5-gnu-mvapich2-hpc-3.5-7.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "gnu-compilers-hpc" 
+  "libunwind8" 
+  "lua-lmod" 
+  "mvapich2-gnu-hpc" 
+  "perl-base" 
+]
+extra-source "mpiP_3_5-gnu-mvapich2-hpc-3.5-7.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mpiP_3_5-gnu-mvapich2-hpc-3.5-7.1.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "grib_api-static-1.27.0-22.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grib_api-static-1.27.0-22.fc40.x86_64.rpm"]
+depends: [
+  "grib_api" {= "1.27.0"}
+  "grib_api-devel" {= "1.27.0"}
+  "libpng-devel" 
+]
+extra-source "grib_api-static-1.27.0-22.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/grib_api-static-1.27.0-22.fc40.x86_64.rpm"
+}

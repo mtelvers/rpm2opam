@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-invocations-3.0.2-2.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-invocations-3.0.2-2.5.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-blessings" {>= "1.6"}
+  "python310-invoke" {>= "1.7.2"}
+  "python310-lexicon" 
+  "python310-releases" {>= "1.6"}
+  "python310-semantic_version" {>= "2.4"}
+  "python310-tabulate" {>= "0.7.5"}
+  "python310-tqdm" {>= "4.8.1"}
+  "python310-twine" {>= "1.15"}
+  "python310-wheel" {>= "0.24.0"}
+]
+extra-source "python310-invocations-3.0.2-2.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-invocations-3.0.2-2.5.noarch.rpm"
+}

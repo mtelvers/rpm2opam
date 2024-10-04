@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-coloredlogs-15.0.1-4.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-coloredlogs-15.0.1-4.6.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-capturer" {>= "2.4"}
+  "python312-humanfriendly" {>= "9.1"}
+  "update-alternatives" 
+]
+extra-source "python312-coloredlogs-15.0.1-4.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-coloredlogs-15.0.1-4.6.noarch.rpm"
+}

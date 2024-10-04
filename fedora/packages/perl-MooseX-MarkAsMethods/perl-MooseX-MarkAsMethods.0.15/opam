@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MooseX-MarkAsMethods-0.15-33.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-MarkAsMethods-0.15-33.fc40.noarch.rpm"]
+depends: [
+  "perl-B-Hooks-EndOfScope" 
+  "perl-Moose" {>= "0.94"}
+  "perl-libs" 
+  "perl-namespace-autoclean" {>= "0.12"}
+]
+extra-source "perl-MooseX-MarkAsMethods-0.15-33.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MooseX-MarkAsMethods-0.15-33.fc40.noarch.rpm"
+}

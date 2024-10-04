@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cheese-devel-44.1-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cheese-devel-44.1-3.1.x86_64.rpm"]
+depends: [
+  "clutter-devel" {>= "1.13.2"}
+  "clutter-gst-devel" {>= "3.0.0"}
+  "clutter-gtk-devel" 
+  "gdk-pixbuf-devel" 
+  "glib2-devel" 
+  "gstreamer-devel" 
+  "gstreamer-plugins-bad-devel" {>= "1.4"}
+  "gstreamer-plugins-base-devel" 
+  "gtk3-devel" {>= "3.13.4"}
+  "libX11-devel" 
+  "libcheese-gtk25" {= "44.1"}
+  "libcheese8" {= "44.1"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Cheese-3_0" {= "44.1"}
+]
+extra-source "cheese-devel-44.1-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cheese-devel-44.1-3.1.x86_64.rpm"
+}

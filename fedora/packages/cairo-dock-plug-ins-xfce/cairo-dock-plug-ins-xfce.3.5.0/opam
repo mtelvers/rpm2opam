@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cairo-dock-plug-ins-xfce-3.5.0-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cairo-dock-plug-ins-xfce-3.5.0-2.fc40.x86_64.rpm"]
+depends: [
+  "cairo-dock-core" {>= "3.5.0"}
+  "cairo-dock-plug-ins-common" {= "3.5.0"}
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+]
+extra-source "cairo-dock-plug-ins-xfce-3.5.0-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cairo-dock-plug-ins-xfce-3.5.0-2.fc40.x86_64.rpm"
+}

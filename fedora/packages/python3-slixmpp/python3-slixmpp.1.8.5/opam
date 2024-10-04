@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-slixmpp-1.8.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-slixmpp-1.8.5-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libidn" 
+  "python3" {= "3.12"}
+  "python3-aiodns" 
+  "python3-aiohttp" 
+  "python3-defusedxml" 
+  "python3-emoji" 
+  "python3-pyasn1" 
+  "python3-pyasn1-modules" 
+]
+extra-source "python3-slixmpp-1.8.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-slixmpp-1.8.5-1.fc40.x86_64.rpm"
+}

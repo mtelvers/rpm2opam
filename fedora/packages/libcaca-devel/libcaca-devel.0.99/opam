@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libcaca-devel-0.99-0.73.beta20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcaca-devel-0.99-0.73.beta20.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "freeglut-devel" 
+  "imlib2-devel" 
+  "libX11-devel" 
+  "libcaca" {= "0.99"}
+  "mesa-libGLU-devel" 
+  "ncurses-devel" 
+  "pango-devel" 
+  "pkgconf-pkg-config" 
+  "slang-devel" 
+]
+extra-source "libcaca-devel-0.99-0.73.beta20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libcaca-devel-0.99-0.73.beta20.fc40.x86_64.rpm"
+}

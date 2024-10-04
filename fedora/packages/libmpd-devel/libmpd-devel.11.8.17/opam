@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libmpd-devel-11.8.17-25.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmpd-devel-11.8.17-25.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libmpd" {= "11.8.17"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libmpd-devel-11.8.17-25.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libmpd-devel-11.8.17-25.fc40.x86_64.rpm"
+}

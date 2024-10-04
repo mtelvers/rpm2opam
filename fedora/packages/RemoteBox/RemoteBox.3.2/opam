@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "RemoteBox-3.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "RemoteBox-3.2-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-FindBin" 
+  "perl-Glib" 
+  "perl-Gtk3" 
+  "perl-MIME-Base64" 
+  "perl-POSIX" 
+  "perl-SOAP-Lite" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+  "perl-vars" 
+  "rdesktop" 
+  "xdg-utils" 
+]
+extra-source "RemoteBox-3.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/RemoteBox-3.2-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "abi-tracker-1.11-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "abi-tracker-1.11-21.fc40.noarch.rpm"]
+depends: [
+  "abi-compliance-checker" {>= "1.99.21"}
+  "abi-dumper" {>= "0.99.16"}
+  "elfutils" 
+  "perl-Data-Dumper" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "pkgdiff" {>= "1.6.4"}
+  "rfcdiff" {>= "1.41"}
+  "vtable-dumper" {>= "1.1"}
+]
+extra-source "abi-tracker-1.11-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/abi-tracker-1.11-21.fc40.noarch.rpm"
+}

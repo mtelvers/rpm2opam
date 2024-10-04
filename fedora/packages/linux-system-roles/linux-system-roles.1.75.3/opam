@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "linux-system-roles-1.75.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "linux-system-roles-1.75.3-1.fc40.noarch.rpm"]
+depends: [
+  "ansible-collection-ansible-posix" 
+  "ansible-collection-community-general" {>= "6.6.0"}
+  "ansible-collection-containers-podman" 
+  "ansible-core" 
+  "bash" 
+]
+extra-source "linux-system-roles-1.75.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/linux-system-roles-1.75.3-1.fc40.noarch.rpm"
+}

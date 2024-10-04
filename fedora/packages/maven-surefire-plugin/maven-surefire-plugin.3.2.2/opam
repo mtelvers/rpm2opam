@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "maven-surefire-plugin-3.2.2-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-surefire-plugin-3.2.2-5.fc40.noarch.rpm"]
+depends: [
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "maven-surefire" {= "3.2.2"}
+  "maven-surefire-provider-junit" 
+  "maven-surefire-provider-junit5" 
+  "maven-surefire-provider-testng" 
+]
+extra-source "maven-surefire-plugin-3.2.2-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/maven-surefire-plugin-3.2.2-5.fc40.noarch.rpm"
+}

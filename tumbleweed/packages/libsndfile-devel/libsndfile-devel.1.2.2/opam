@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsndfile-devel-1.2.2-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsndfile-devel-1.2.2-2.3.x86_64.rpm"]
+depends: [
+  "flac-devel" 
+  "glibc-devel" 
+  "libogg-devel" 
+  "libopus-devel" 
+  "libsndfile1" {= "1.2.2"}
+  "libstdc++-devel" 
+  "libvorbis-devel" 
+  "pkgconf-pkg-config" 
+  "speex-devel" 
+]
+extra-source "libsndfile-devel-1.2.2-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libsndfile-devel-1.2.2-2.3.x86_64.rpm"
+}

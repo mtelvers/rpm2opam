@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Gnome2-1.048-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Gnome2-1.048-12.fc40.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "libbonoboui" 
+  "libgnome" 
+  "libgnomeui" 
+  "perl-DynaLoader" 
+  "perl-Gnome2-Canvas" {>= "1.0"}
+  "perl-Gnome2-VFS" {>= "1.0"}
+  "perl-Gtk2" {>= "1.0"}
+  "perl-libs" 
+]
+extra-source "perl-Gnome2-1.048-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Gnome2-1.048-12.fc40.x86_64.rpm"
+}

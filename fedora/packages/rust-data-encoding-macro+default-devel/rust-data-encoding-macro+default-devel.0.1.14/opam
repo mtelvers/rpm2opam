@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-data-encoding-macro+default-devel-0.1.14-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-data-encoding-macro+default-devel-0.1.14-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-data-encoding-macro-devel" {= "0.1.14"}
+]
+extra-source "rust-data-encoding-macro+default-devel-0.1.14-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-data-encoding-macro+default-devel-0.1.14-2.fc40.noarch.rpm"
+}

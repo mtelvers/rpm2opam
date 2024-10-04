@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ecolier-court-fonts-all-20070702-46.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ecolier-court-fonts-all-20070702-46.fc40.noarch.rpm"]
+depends: [
+  "ecolier-court-fonts" {= "20070702"}
+  "ecolier-lignes-court-fonts" {= "20070702"}
+]
+extra-source "ecolier-court-fonts-all-20070702-46.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/ecolier-court-fonts-all-20070702-46.fc40.noarch.rpm"
+}

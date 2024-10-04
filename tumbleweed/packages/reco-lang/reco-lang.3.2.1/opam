@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "reco-lang-3.2.1-1.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "reco-lang-3.2.1-1.10.noarch.rpm"]
+depends: [
+  "reco" {= "3.2.1"}
+]
+extra-source "reco-lang-3.2.1-1.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/reco-lang-3.2.1-1.10.noarch.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qt6-base-devel-6.7.2-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qt6-base-devel-6.7.2-3.1.noarch.rpm"]
+depends: [
+  "qt6-base-common-devel" 
+  "qt6-concurrent-devel" {= "6.7.2"}
+  "qt6-core-devel" {= "6.7.2"}
+  "qt6-dbus-devel" {= "6.7.2"}
+  "qt6-gui-devel" {= "6.7.2"}
+  "qt6-network-devel" {= "6.7.2"}
+  "qt6-opengl-devel" {= "6.7.2"}
+  "qt6-openglwidgets-devel" {= "6.7.2"}
+  "qt6-printsupport-devel" {= "6.7.2"}
+  "qt6-sql-devel" {= "6.7.2"}
+  "qt6-test-devel" {= "6.7.2"}
+  "qt6-widgets-devel" {= "6.7.2"}
+  "qt6-xml-devel" {= "6.7.2"}
+]
+extra-source "qt6-base-devel-6.7.2-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/qt6-base-devel-6.7.2-3.1.noarch.rpm"
+}

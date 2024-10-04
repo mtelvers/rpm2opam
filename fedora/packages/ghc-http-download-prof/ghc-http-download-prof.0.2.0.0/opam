@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-http-download-prof-0.2.0.0-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-http-download-prof-0.2.0.0-29.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-base64-bytestring-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-conduit-extra-prof" 
+  "ghc-conduit-prof" 
+  "ghc-cryptonite-conduit-prof" 
+  "ghc-cryptonite-prof" 
+  "ghc-directory-prof" 
+  "ghc-exceptions-prof" 
+  "ghc-filepath-prof" 
+  "ghc-http-client-prof" 
+  "ghc-http-conduit-prof" 
+  "ghc-http-download-devel" {= "0.2.0.0"}
+  "ghc-http-types-prof" 
+  "ghc-memory-prof" 
+  "ghc-path-io-prof" 
+  "ghc-path-prof" 
+  "ghc-retry-prof" 
+  "ghc-rio-prettyprint-prof" 
+  "ghc-rio-prof" 
+]
+extra-source "ghc-http-download-prof-0.2.0.0-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-http-download-prof-0.2.0.0-29.fc40.x86_64.rpm"
+}

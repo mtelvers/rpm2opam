@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "eb-lang-4.4.3-6.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eb-lang-4.4.3-6.1.noarch.rpm"]
+depends: [
+  "eb" {= "4.4.3"}
+]
+extra-source "eb-lang-4.4.3-6.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/eb-lang-4.4.3-6.1.noarch.rpm"
+}

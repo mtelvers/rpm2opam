@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-dependency-plugin-3.6.0-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-dependency-plugin-3.6.0-1.6.noarch.rpm"]
+depends: [
+  "apache-commons-collections4" 
+  "apache-commons-io" 
+  "apache-commons-lang3" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-artifact-transfer" 
+  "maven-common-artifact-filters" 
+  "maven-dependency-analyzer" 
+  "maven-dependency-tree" 
+  "maven-doxia-sink-api" 
+  "maven-reporting-api" 
+  "maven-reporting-impl" 
+  "maven-shared-utils" 
+  "plexus-archiver" 
+  "plexus-build-api0" 
+  "plexus-i18n" 
+  "plexus-io" 
+  "plexus-utils" 
+]
+extra-source "maven-dependency-plugin-3.6.0-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-dependency-plugin-3.6.0-1.6.noarch.rpm"
+}

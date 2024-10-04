@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "docker-25.0.6_ce-slfo.1.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "docker-25.0.6_ce-slfo.1.1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "ca-certificates-mozilla" 
+  "catatonit" 
+  "container-selinux" 
+  "containerd" {>= "1.7.3"}
+  "e2fsprogs" 
+  "fillup" 
+  "glibc" 
+  "iproute2" {>= "3.5"}
+  "iptables" {>= "1.4"}
+  "libsystemd0" 
+  "procps" 
+  "runc" {>= "1.1.9"}
+  "shadow" 
+  "sysuser-shadow" {>= "3.1"}
+  "tar" {>= "1.26"}
+  "udev" 
+  "xz" {>= "4.9"}
+]
+extra-source "docker-25.0.6_ce-slfo.1.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/docker-25.0.6_ce-slfo.1.1.1.x86_64.rpm"
+}

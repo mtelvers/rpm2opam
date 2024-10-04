@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-smbus-4.3-3.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-smbus-4.3-3.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libi2c0" 
+  "python311-base" {= "3.11"}
+]
+extra-source "python3-smbus-4.3-3.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python3-smbus-4.3-3.4.x86_64.rpm"
+}

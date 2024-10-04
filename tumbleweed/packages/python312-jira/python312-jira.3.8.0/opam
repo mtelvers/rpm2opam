@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-jira-3.8.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-jira-3.8.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-Pillow" {>= "2.1.0"}
+  "python312-base" 
+  "python312-defusedxml" 
+  "python312-keyring" 
+  "python312-oauthlib" 
+  "python312-packaging" 
+  "python312-requests" {>= "2.10.0"}
+  "python312-requests-oauthlib" {>= "0.6.1"}
+  "python312-requests-toolbelt" 
+  "python312-typing_extensions" {>= "3.7.4.2"}
+  "update-alternatives" 
+]
+extra-source "python312-jira-3.8.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-jira-3.8.0-1.1.noarch.rpm"
+}

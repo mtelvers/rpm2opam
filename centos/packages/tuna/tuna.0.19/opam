@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tuna-0.19-8.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tuna-0.19-8.el10.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-linux-procfs" {>= "0.7.3"}
+]
+extra-source "tuna-0.19-8.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/tuna-0.19-8.el10.noarch.rpm"
+}

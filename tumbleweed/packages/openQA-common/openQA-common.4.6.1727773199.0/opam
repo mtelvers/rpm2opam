@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openQA-common-4.6.1727773199.b638ad7b-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openQA-common-4.6.1727773199.b638ad7b-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "chrony" 
+  "perl" {>= "5.20.0"}
+  "perl-Carp-Always" {>= "0.14.2"}
+  "perl-Config-IniFiles" 
+  "perl-Config-Tiny" 
+  "perl-Cpanel-JSON-XS" {>= "4.9"}
+  "perl-Data-Dump" 
+  "perl-Digest-MD5" 
+  "perl-Filesys-Df" 
+  "perl-Minion" {>= "10.25"}
+  "perl-Mojolicious" {>= "8.24"}
+  "perl-Regexp-Common" 
+  "perl-Text-Glob" 
+  "perl-Time-Moment" 
+  "perl-Try-Tiny" 
+  "perl-base" 
+]
+extra-source "openQA-common-4.6.1727773199.b638ad7b-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openQA-common-4.6.1727773199.b638ad7b-1.1.x86_64.rpm"
+}

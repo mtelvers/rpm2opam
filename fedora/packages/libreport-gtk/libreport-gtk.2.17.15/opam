@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libreport-gtk-2.17.15-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libreport-gtk-2.17.15-1.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "augeas-libs" 
+  "cairo" 
+  "cairo-gobject" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "harfbuzz" 
+  "json-c" 
+  "libarchive" 
+  "libgcc" 
+  "libreport" {= "2.17.15"}
+  "libreport-plugin-reportuploader" {= "2.17.15"}
+  "pango" 
+  "satyr" 
+  "systemd-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "libreport-gtk-2.17.15-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libreport-gtk-2.17.15-1.fc40.x86_64.rpm"
+}

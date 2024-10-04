@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xfce4-vala-4.10.3-39.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xfce4-vala-4.10.3-39.fc40.noarch.rpm"]
+depends: [
+  "pkgconf-pkg-config" 
+  "vala" {= "0.56"}
+]
+extra-source "xfce4-vala-4.10.3-39.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xfce4-vala-4.10.3-39.fc40.noarch.rpm"
+}

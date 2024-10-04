@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libopenraw-gnome-0.1.3-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libopenraw-gnome-0.1.3-16.fc40.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "libopenraw" {= "0.1.3"}
+]
+extra-source "libopenraw-gnome-0.1.3-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libopenraw-gnome-0.1.3-16.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-topy-1.1.0-1.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-topy-1.1.0-1.17.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-beautifulsoup4" 
+  "python311-regex" {>= "2016.7.14"}
+  "update-alternatives" 
+]
+extra-source "python311-topy-1.1.0-1.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-topy-1.1.0-1.17.noarch.rpm"
+}

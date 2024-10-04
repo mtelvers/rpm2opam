@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-wagon-http-shared-3.5.3-slfo.1.2.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-wagon-http-shared-3.5.3-slfo.1.2.9.noarch.rpm"]
+depends: [
+  "httpcomponents-client" 
+  "httpcomponents-core" 
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "maven-wagon-provider-api" {= "3.5.3"}
+  "plexus-utils" 
+  "slf4j" 
+]
+extra-source "maven-wagon-http-shared-3.5.3-slfo.1.2.9.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/maven-wagon-http-shared-3.5.3-slfo.1.2.9.noarch.rpm"
+}

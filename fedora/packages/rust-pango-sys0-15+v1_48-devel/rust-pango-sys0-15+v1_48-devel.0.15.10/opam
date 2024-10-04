@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-pango-sys0.15+v1_48-devel-0.15.10-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-pango-sys0.15+v1_48-devel-0.15.10-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "pango-devel" {>= "1.48"}
+  "rust-pango-sys0-15+v1_46-devel" {= "0.15.10"}
+  "rust-pango-sys0-15-devel" {= "0.15.10"}
+]
+extra-source "rust-pango-sys0.15+v1_48-devel-0.15.10-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-pango-sys0.15+v1_48-devel-0.15.10-4.fc40.noarch.rpm"
+}

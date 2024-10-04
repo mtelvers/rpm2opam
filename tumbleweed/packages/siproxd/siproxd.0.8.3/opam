@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "siproxd-0.8.3-6.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "siproxd-0.8.3-6.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libltdl7" 
+  "libosip2-15" 
+  "libsqlite3-0" 
+  "logrotate" 
+  "shadow" 
+]
+extra-source "siproxd-0.8.3-6.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/siproxd-0.8.3-6.1.x86_64.rpm"
+}

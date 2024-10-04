@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tcpcrypt-0.5-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tcpcrypt-0.5-14.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libcap" 
+  "libnetfilter_conntrack" 
+  "libnetfilter_queue" 
+  "libnfnetlink" 
+  "libpcap" 
+  "openssl-libs" 
+  "shadow-utils" 
+  "systemd" 
+  "tcpcrypt-libs" 
+]
+extra-source "tcpcrypt-0.5-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tcpcrypt-0.5-14.fc40.x86_64.rpm"
+}

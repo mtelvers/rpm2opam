@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "urh-2.9.6-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "urh-2.9.6-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libLimeSuite23_11-0" 
+  "libairspy0" 
+  "libbladeRF2" 
+  "libgcc_s1" 
+  "libgomp1" 
+  "libhackrf0" 
+  "libiio0" 
+  "librtlsdr0" 
+  "libstdc++6" 
+  "libuhd4_7_0" 
+  "python311-Cython0" 
+  "python311-PyAudio" 
+  "python311-base" 
+  "python311-numpy" 
+  "python311-psutil" 
+  "python311-pyzmq" 
+  "python311-qt5" 
+]
+extra-source "urh-2.9.6-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/urh-2.9.6-2.2.x86_64.rpm"
+}

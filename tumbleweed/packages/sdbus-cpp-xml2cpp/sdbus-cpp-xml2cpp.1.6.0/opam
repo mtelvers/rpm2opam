@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sdbus-cpp-xml2cpp-1.6.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sdbus-cpp-xml2cpp-1.6.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libexpat1" 
+  "libgcc_s1" 
+  "libsdbus-c++1" {= "1.6.0"}
+  "libstdc++6" 
+]
+extra-source "sdbus-cpp-xml2cpp-1.6.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sdbus-cpp-xml2cpp-1.6.0-1.1.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qt-mobility-multimediakit-1.2.2-0.47.20140317git169da60c.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qt-mobility-multimediakit-1.2.2-0.47.20140317git169da60c.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libstdc++" 
+  "pulseaudio-libs" 
+  "qt" 
+  "qt-mobility-common" {= "1.2.2"}
+  "qt-x11" 
+]
+extra-source "qt-mobility-multimediakit-1.2.2-0.47.20140317git169da60c.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qt-mobility-multimediakit-1.2.2-0.47.20140317git169da60c.fc40.x86_64.rpm"
+}

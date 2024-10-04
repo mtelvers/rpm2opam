@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-connection-prof-0.3.1-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-connection-prof-0.3.1-19.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-basement-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-connection-devel" {= "0.3.1"}
+  "ghc-containers-prof" 
+  "ghc-data-default-class-prof" 
+  "ghc-network-prof" 
+  "ghc-socks-prof" 
+  "ghc-tls-prof" 
+  "ghc-x509-prof" 
+  "ghc-x509-store-prof" 
+  "ghc-x509-system-prof" 
+  "ghc-x509-validation-prof" 
+]
+extra-source "ghc-connection-prof-0.3.1-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-connection-prof-0.3.1-19.fc40.x86_64.rpm"
+}

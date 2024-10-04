@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-scrlayer-fancyhdr-2024.216.0.0.2.2svn63844-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-scrlayer-fancyhdr-2024.216.0.0.2.2svn63844-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-fancyhdr" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-koma-script" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+]
+extra-source "texlive-scrlayer-fancyhdr-2024.216.0.0.2.2svn63844-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-scrlayer-fancyhdr-2024.216.0.0.2.2svn63844-56.1.noarch.rpm"
+}

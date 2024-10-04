@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "OpenColorIO-tools-2.2.1-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "OpenColorIO-tools-2.2.1-10.fc40.x86_64.rpm"]
+depends: [
+  "OpenColorIO" {= "2.2.1"}
+  "freeglut" 
+  "glibc" 
+  "lcms2" 
+  "libGLEW" 
+  "libgcc" 
+  "libglvnd-egl" 
+  "libglvnd-glx" 
+  "libglvnd-opengl" 
+  "libstdc++" 
+  "mesa-libGLU" 
+  "minizip-ng-compat" 
+  "openexr-libs" 
+]
+extra-source "OpenColorIO-tools-2.2.1-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/OpenColorIO-tools-2.2.1-10.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-opentelemetry-test-utils-0.44b0-slfo.1.1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-opentelemetry-test-utils-0.44b0-slfo.1.1.1.noarch.rpm"]
+depends: [
+  "python311-asgiref" 
+  "python311-base" {= "3.11"}
+  "python311-opentelemetry-api" {>= "1.23.0"}
+]
+extra-source "python311-opentelemetry-test-utils-0.44b0-slfo.1.1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/python311-opentelemetry-test-utils-0.44b0-slfo.1.1.1.noarch.rpm"
+}

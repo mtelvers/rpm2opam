@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-keysign-0.9.7.2-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-keysign-0.9.7.2-3.2.x86_64.rpm"]
+depends: [
+  "gstreamer-plugins-bad" 
+  "python311-Twisted" 
+  "python311-avahi" 
+  "python311-base" 
+  "python311-dbus-python" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-gpg" 
+  "python311-pybluez" 
+  "python311-pycairo" 
+  "python311-qrcode" 
+  "python311-requests" 
+  "python311-setuptools" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gst-1_0" {= "1.0"}
+  "typelib-1_0-GstVideo-1_0" {= "1.0"}
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" 
+]
+extra-source "gnome-keysign-0.9.7.2-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnome-keysign-0.9.7.2-3.2.x86_64.rpm"
+}

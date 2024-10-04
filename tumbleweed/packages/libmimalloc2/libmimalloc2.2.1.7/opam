@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmimalloc2-2.1.7-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmimalloc2-2.1.7-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+]
+extra-source "libmimalloc2-2.1.7-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmimalloc2-2.1.7-1.1.x86_64.rpm"
+}

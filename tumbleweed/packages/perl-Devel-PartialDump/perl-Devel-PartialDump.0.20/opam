@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Devel-PartialDump-0.20-1.27.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Devel-PartialDump-0.20-1.27.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Tiny" 
+  "perl-Sub-Exporter" 
+  "perl-namespace-clean" {>= "0.19"}
+]
+extra-source "perl-Devel-PartialDump-0.20-1.27.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Devel-PartialDump-0.20-1.27.noarch.rpm"
+}

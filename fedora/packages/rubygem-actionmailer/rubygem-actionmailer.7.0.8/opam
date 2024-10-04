@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-actionmailer-7.0.8-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-actionmailer-7.0.8-3.fc40.noarch.rpm"]
+depends: [
+  "ruby-bundled-gems" 
+  "rubygem-actionpack" {= "7.0.8"}
+  "rubygem-actionview" {= "7.0.8"}
+  "rubygem-activejob" {= "7.0.8"}
+  "rubygem-activesupport" {= "7.0.8"}
+  "rubygem-mail" 
+  "rubygem-rails-dom-testing" 
+  "rubygems" 
+]
+extra-source "rubygem-actionmailer-7.0.8-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-actionmailer-7.0.8-3.fc40.noarch.rpm"
+}

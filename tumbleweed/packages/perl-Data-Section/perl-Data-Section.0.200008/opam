@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Data-Section-0.200008-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Data-Section-0.200008-1.7.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-MRO-Compat" {>= "0.9"}
+  "perl-Sub-Exporter" {>= "0.979"}
+]
+extra-source "perl-Data-Section-0.200008-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Data-Section-0.200008-1.7.noarch.rpm"
+}

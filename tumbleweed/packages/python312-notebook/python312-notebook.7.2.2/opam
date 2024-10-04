@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-notebook-7.2.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-notebook-7.2.2-1.1.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "jupyter-notebook" {= "7.2.2"}
+  "python312-base" 
+  "python312-jupyter-server" 
+  "python312-jupyterlab" 
+  "python312-jupyterlab-server" 
+  "python312-notebook-shim" 
+  "python312-tornado" {>= "6.2"}
+]
+extra-source "python312-notebook-7.2.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-notebook-7.2.2-1.1.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "x3270-x11-4.3ga6-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "x3270-x11-4.3ga6-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libX11" 
+  "libXaw" 
+  "libXmu" 
+  "libXt" 
+  "openssl-libs" 
+  "x3270" {= "4.3"}
+]
+extra-source "x3270-x11-4.3ga6-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/x3270-x11-4.3ga6-1.fc40.x86_64.rpm"
+}

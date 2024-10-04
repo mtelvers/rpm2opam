@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-trust-dns-proto-devel-0.23.2-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-trust-dns-proto-devel-0.23.2-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.64.0"}
+  "rust-async-trait+default-devel" 
+  "rust-cfg-if+default-devel" 
+  "rust-data-encoding+default-devel" 
+  "rust-enum-as-inner+default-devel" 
+  "rust-futures-channel+std-devel" 
+  "rust-futures-channel-devel" 
+  "rust-futures-io+std-devel" 
+  "rust-futures-io-devel" 
+  "rust-futures-util+std-devel" 
+  "rust-futures-util-devel" 
+  "rust-idna+default-devel" 
+  "rust-ipnet+default-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-rand+default-devel" 
+  "rust-smallvec+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-tinyvec+alloc-devel" 
+  "rust-tinyvec+default-devel" 
+  "rust-tracing+default-devel" 
+  "rust-url+default-devel" 
+]
+extra-source "rust-trust-dns-proto-devel-0.23.2-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-trust-dns-proto-devel-0.23.2-2.fc40.noarch.rpm"
+}

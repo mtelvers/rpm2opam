@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cairo-dock-devel-3.5.0-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cairo-dock-devel-3.5.0-2.fc40.x86_64.rpm"]
+depends: [
+  "cairo-devel" 
+  "cairo-dock-libs" {= "3.5.0"}
+  "dbus-devel" 
+  "dbus-glib-devel" 
+  "glib2-devel" 
+  "gtk3-devel" 
+  "libX11-devel" 
+  "libXcomposite-devel" 
+  "libXrandr-devel" 
+  "libXrender-devel" 
+  "libXtst-devel" 
+  "libcurl-devel" 
+  "libglvnd-devel" 
+  "librsvg2-devel" 
+  "libxml2-devel" 
+  "mesa-libGLU-devel" 
+  "pkgconf-pkg-config" 
+  "wayland-devel" 
+]
+extra-source "cairo-dock-devel-3.5.0-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cairo-dock-devel-3.5.0-2.fc40.x86_64.rpm"
+}

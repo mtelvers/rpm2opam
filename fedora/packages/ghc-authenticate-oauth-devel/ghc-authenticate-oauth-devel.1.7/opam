@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-authenticate-oauth-devel-1.7-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-authenticate-oauth-devel-1.7-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-RSA-devel" 
+  "ghc-SHA-devel" 
+  "ghc-authenticate-oauth" {= "1.7"}
+  "ghc-base-devel" 
+  "ghc-base64-bytestring-devel" 
+  "ghc-blaze-builder-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-crypto-pubkey-types-devel" 
+  "ghc-data-default-devel" 
+  "ghc-http-client-devel" 
+  "ghc-http-types-devel" 
+  "ghc-random-devel" 
+  "ghc-time-devel" 
+  "ghc-transformers-compat-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-authenticate-oauth-devel-1.7-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-authenticate-oauth-devel-1.7-6.fc40.x86_64.rpm"
+}

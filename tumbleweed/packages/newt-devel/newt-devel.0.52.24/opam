@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "newt-devel-0.52.24-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "newt-devel-0.52.24-2.1.x86_64.rpm"]
+depends: [
+  "libnewt0_52" {= "0.52.24"}
+  "pkgconf-pkg-config" 
+  "popt-devel" 
+  "python311-devel" 
+  "slang-devel" 
+]
+extra-source "newt-devel-0.52.24-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/newt-devel-0.52.24-2.1.x86_64.rpm"
+}

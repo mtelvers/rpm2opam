@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hsqldb-2.7.2-slfo.1.1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hsqldb-2.7.2-slfo.1.1.5.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "java-11-openjdk" {>= "1.8"}
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "servletapi5" 
+  "systemd" 
+]
+extra-source "hsqldb-2.7.2-slfo.1.1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/hsqldb-2.7.2-slfo.1.1.5.noarch.rpm"
+}

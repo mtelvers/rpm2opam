@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-libsystemd-devel-0.7.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-libsystemd-devel-0.7.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-hmac+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-log+default-devel" 
+  "rust-nix+dir-devel" 
+  "rust-nix+fs-devel" 
+  "rust-nix+process-devel" 
+  "rust-nix+socket-devel" 
+  "rust-nix+uio-devel" 
+  "rust-nix-devel" 
+  "rust-nom+default-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-sha2+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-uuid+default-devel" 
+  "rust-uuid+serde-devel" 
+]
+extra-source "rust-libsystemd-devel-0.7.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-libsystemd-devel-0.7.0-2.fc40.noarch.rpm"
+}

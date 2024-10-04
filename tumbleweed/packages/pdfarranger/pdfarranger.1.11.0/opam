@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pdfarranger-1.11.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pdfarranger-1.11.0-1.1.noarch.rpm"]
+depends: [
+  "libgtk-3-0" 
+  "python311-base" 
+  "python311-gobject-Gdk" 
+  "python311-pikepdf" {>= "6"}
+  "python311-pycairo" 
+  "python311-python-dateutil" {>= "2.4.0"}
+  "typelib-1_0-Gtk-3_0" 
+  "typelib-1_0-Poppler-0_18" 
+]
+extra-source "pdfarranger-1.11.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pdfarranger-1.11.0-1.1.noarch.rpm"
+}

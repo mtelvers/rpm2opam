@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pdfbox-tools-2.0.29-2.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pdfbox-tools-2.0.29-2.fc39.noarch.rpm"]
+depends: [
+  "apache-commons-logging" 
+  "bash" 
+  "fontbox" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+  "pdfbox" 
+  "pdfbox-debugger" 
+]
+extra-source "pdfbox-tools-2.0.29-2.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pdfbox-tools-2.0.29-2.fc39.noarch.rpm"
+}

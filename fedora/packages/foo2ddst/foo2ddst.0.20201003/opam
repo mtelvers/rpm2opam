@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "foo2ddst-0.20201003-25.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "foo2ddst-0.20201003-25.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "foo2zjs" {= "0.20201003"}
+  "glibc" 
+  "jbigkit-libs" 
+  "lcms" 
+]
+extra-source "foo2ddst-0.20201003-25.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/foo2ddst-0.20201003-25.fc40.x86_64.rpm"
+}

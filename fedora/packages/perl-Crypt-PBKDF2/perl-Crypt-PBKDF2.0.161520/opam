@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Crypt-PBKDF2-0.161520-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Crypt-PBKDF2-0.161520-21.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Digest" {>= "1.16"}
+  "perl-Digest-HMAC" {>= "1.1"}
+  "perl-Digest-SHA" 
+  "perl-Digest-SHA3" {>= "0.22"}
+  "perl-MIME-Base64" 
+  "perl-Module-Runtime" 
+  "perl-Moo" {>= "2"}
+  "perl-Scalar-List-Utils" 
+  "perl-Try-Tiny" {>= "0.4"}
+  "perl-Type-Tiny" 
+  "perl-libs" 
+  "perl-namespace-autoclean" 
+  "perl-strictures" {>= "2"}
+]
+extra-source "perl-Crypt-PBKDF2-0.161520-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Crypt-PBKDF2-0.161520-21.fc40.noarch.rpm"
+}

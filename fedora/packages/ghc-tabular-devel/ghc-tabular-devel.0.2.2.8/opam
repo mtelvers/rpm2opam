@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-tabular-devel-0.2.2.8-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-tabular-devel-0.2.2.8-11.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-csv-devel" 
+  "ghc-html-devel" 
+  "ghc-mtl-devel" 
+  "ghc-tabular" {= "0.2.2.8"}
+]
+extra-source "ghc-tabular-devel-0.2.2.8-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-tabular-devel-0.2.2.8-11.fc40.x86_64.rpm"
+}

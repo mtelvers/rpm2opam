@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "memkind-1.14.0-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "memkind-1.14.0-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libmemkind0" 
+  "libnuma1" 
+]
+extra-source "memkind-1.14.0-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/memkind-1.14.0-2.2.x86_64.rpm"
+}

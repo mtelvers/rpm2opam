@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-jiter-devel-0.0.6-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-jiter-devel-0.0.6-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "python3" 
+  "rust-ahash+default-devel" 
+  "rust-hashbrown+default-devel" 
+  "rust-lexical-parse-float+default-devel" 
+  "rust-lexical-parse-float+format-devel" 
+  "rust-num-bigint+default-devel" 
+  "rust-num-traits+default-devel" 
+  "rust-smallvec+default-devel" 
+]
+extra-source "rust-jiter-devel-0.0.6-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-jiter-devel-0.0.6-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-doclayout-prof-0.4.0.1-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-doclayout-prof-0.4.0.1-14.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-doclayout-devel" {= "0.4.0.1"}
+  "ghc-emojis-prof" 
+  "ghc-mtl-prof" 
+  "ghc-safe-prof" 
+  "ghc-text-prof" 
+]
+extra-source "ghc-doclayout-prof-0.4.0.1-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-doclayout-prof-0.4.0.1-14.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nemo-lang-6.0.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nemo-lang-6.0.2-1.1.noarch.rpm"]
+depends: [
+  "nemo" {>= "6.0.0"}
+]
+extra-source "nemo-lang-6.0.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nemo-lang-6.0.2-1.1.noarch.rpm"
+}

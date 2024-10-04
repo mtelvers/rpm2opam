@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "autobench-2.1.2-3.18.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "autobench-2.1.2-3.18.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "gawk" 
+  "glibc" 
+  "gnuplot" 
+  "httperf" 
+  "perl" 
+  "perl-base" 
+]
+extra-source "autobench-2.1.2-3.18.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/autobench-2.1.2-3.18.x86_64.rpm"
+}

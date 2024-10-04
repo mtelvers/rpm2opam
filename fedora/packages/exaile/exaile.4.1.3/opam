@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "exaile-4.1.3-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "exaile-4.1.3-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cairo-gobject" 
+  "gstreamer1-plugins-base" {>= "1.16"}
+  "gstreamer1-plugins-good" {>= "1.16"}
+  "gtk3" {>= "3.24"}
+  "python3" {>= "3.8"}
+  "python3-bsddb3" 
+  "python3-cairo" 
+  "python3-dbus" 
+  "python3-gobject" {>= "3.24"}
+  "python3-gstreamer1" {>= "1.16"}
+  "python3-mutagen" {>= "1.44"}
+  "python3-setproctitle" 
+]
+extra-source "exaile-4.1.3-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/exaile-4.1.3-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-lalinspiral-5.0.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-lalinspiral-5.0.1-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "liblal20" 
+  "liblalinspiral18" 
+  "liblalsupport14" 
+  "python311-base" {= "3.11"}
+  "python311-lal" {>= "7.2.0"}
+  "python311-lalburst" {>= "1.6.0"}
+  "python311-lalframe" {>= "2.0.0"}
+  "python311-lalmetaio" {>= "3.0.0"}
+  "python311-lalsimulation" {>= "4.0.0"}
+  "python311-lscsoft-glue" 
+  "python311-numpy" {>= "1.7"}
+]
+extra-source "python311-lalinspiral-5.0.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-lalinspiral-5.0.1-1.1.x86_64.rpm"
+}

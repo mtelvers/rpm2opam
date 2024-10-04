@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mariadb-connector-odbc-3.2.1-1.rc.fc40.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mariadb-connector-odbc-3.2.1-1.rc.fc40.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "mariadb-connector-c" 
+  "pkgconf-pkg-config" 
+  "unixODBC" 
+]
+extra-source "mariadb-connector-odbc-3.2.1-1.rc.fc40.2.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mariadb-connector-odbc-3.2.1-1.rc.fc40.2.x86_64.rpm"
+}

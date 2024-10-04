@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-orion+safe_api-devel-0.17.6-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-orion+safe_api-devel-0.17.6-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-orion+ct-codecs-devel" {= "0.17.6"}
+  "rust-orion+getrandom-devel" {= "0.17.6"}
+  "rust-orion-devel" {= "0.17.6"}
+]
+extra-source "rust-orion+safe_api-devel-0.17.6-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-orion+safe_api-devel-0.17.6-1.fc40.noarch.rpm"
+}

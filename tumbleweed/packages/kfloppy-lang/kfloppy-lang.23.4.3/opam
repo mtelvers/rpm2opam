@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kfloppy-lang-23.04.3-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kfloppy-lang-23.04.3-1.5.noarch.rpm"]
+depends: [
+  "kfloppy" {= "23.4.3"}
+]
+extra-source "kfloppy-lang-23.04.3-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kfloppy-lang-23.04.3-1.5.noarch.rpm"
+}

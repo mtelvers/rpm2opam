@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "coin-or-CoinUtils-devel-2.11.10-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coin-or-CoinUtils-devel-2.11.10-1.3.x86_64.rpm"]
+depends: [
+  "libCoinUtils3" {= "2.11.10"}
+  "pkgconf-pkg-config" 
+  "zlib-devel" 
+]
+extra-source "coin-or-CoinUtils-devel-2.11.10-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/coin-or-CoinUtils-devel-2.11.10-1.3.x86_64.rpm"
+}

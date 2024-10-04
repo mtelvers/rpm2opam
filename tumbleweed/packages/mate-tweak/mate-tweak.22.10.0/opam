@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mate-tweak-22.10.0-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mate-tweak-22.10.0-1.4.noarch.rpm"]
+depends: [
+  "Mesa-demo-x" 
+  "busybox-coreutils" 
+  "dconf" 
+  "mate-panel" 
+  "python311-base" 
+  "python311-configobj" 
+  "python311-distro" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-psutil" 
+  "python311-setproctitle" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Notify-0_7" {= "0.7"}
+  "xdg-utils" 
+]
+extra-source "mate-tweak-22.10.0-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mate-tweak-22.10.0-1.4.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libwayland-server-1.22.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libwayland-server-1.22.0-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libffi" 
+]
+extra-source "libwayland-server-1.22.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libwayland-server-1.22.0-3.fc40.x86_64.rpm"
+}

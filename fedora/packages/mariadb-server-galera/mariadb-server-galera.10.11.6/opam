@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mariadb-server-galera-10.11.6-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mariadb-server-galera-10.11.6-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "galera" {>= "26.4.3"}
+  "libselinux-utils" 
+  "lsof" 
+  "mariadb-common" {= "10.11.6"}
+  "mariadb-server" {= "10.11.6"}
+  "policycoreutils" 
+  "policycoreutils-python-utils" 
+  "rsync" 
+]
+extra-source "mariadb-server-galera-10.11.6-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mariadb-server-galera-10.11.6-3.fc40.x86_64.rpm"
+}

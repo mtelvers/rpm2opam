@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "thunarx-python-0.5.2-1.18.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "thunarx-python-0.5.2-1.18.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgtk-3-0" 
+  "libpython3_11-1_0" 
+  "libthunarx-3-0" 
+  "thunar" 
+]
+extra-source "thunarx-python-0.5.2-1.18.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/thunarx-python-0.5.2-1.18.x86_64.rpm"
+}

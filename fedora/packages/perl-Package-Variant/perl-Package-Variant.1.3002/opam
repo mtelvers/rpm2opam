@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Package-Variant-1.003002-25.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Package-Variant-1.003002-25.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Import-Into" 
+  "perl-Module-Runtime" 
+  "perl-libs" 
+  "perl-strictures" {>= "2"}
+]
+extra-source "perl-Package-Variant-1.003002-25.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Package-Variant-1.003002-25.fc40.noarch.rpm"
+}

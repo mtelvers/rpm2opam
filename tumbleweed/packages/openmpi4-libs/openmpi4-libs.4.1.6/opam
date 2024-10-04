@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openmpi4-libs-4.1.6-6.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openmpi4-libs-4.1.6-6.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libevent-2_1-7" 
+  "libfabric1" 
+  "libgcc_s1" 
+  "libibverbs1" 
+  "libpsm2-2" 
+  "librdmacm1" 
+  "libucm0" 
+  "libucp0" 
+  "libucs0" 
+  "openmpi4" {= "4.1.6"}
+]
+extra-source "openmpi4-libs-4.1.6-6.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openmpi4-libs-4.1.6-6.1.x86_64.rpm"
+}

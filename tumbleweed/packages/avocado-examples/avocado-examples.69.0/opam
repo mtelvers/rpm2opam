@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "avocado-examples-69.0-6.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "avocado-examples-69.0-6.14.noarch.rpm"]
+depends: [
+  "python3-avocado" {= "69.0"}
+]
+extra-source "avocado-examples-69.0-6.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/avocado-examples-69.0-6.14.noarch.rpm"
+}

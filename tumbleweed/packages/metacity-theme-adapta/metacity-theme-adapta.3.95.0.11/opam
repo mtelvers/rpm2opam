@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "metacity-theme-adapta-3.95.0.11-4.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "metacity-theme-adapta-3.95.0.11-4.3.noarch.rpm"]
+depends: [
+  "metacity" 
+  "metatheme-adapta-common" {= "3.95.0.11"}
+]
+extra-source "metacity-theme-adapta-3.95.0.11-4.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/metacity-theme-adapta-3.95.0.11-4.3.noarch.rpm"
+}

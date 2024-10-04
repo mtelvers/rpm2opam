@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "unar-1.10.8-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "unar-1.10.8-5.fc40.x86_64.rpm"]
+depends: [
+  "bzip2-libs" 
+  "glibc" 
+  "gnustep-base-libs" 
+  "libgcc" 
+  "libicu" 
+  "libobjc" 
+  "libstdc++" 
+  "wavpack" 
+  "zlib-ng-compat" 
+]
+extra-source "unar-1.10.8-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/unar-1.10.8-5.fc40.x86_64.rpm"
+}

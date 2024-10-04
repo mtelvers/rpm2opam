@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "findutils-4.10.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "findutils-4.10.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libselinux1" 
+]
+extra-source "findutils-4.10.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/findutils-4.10.0-1.1.x86_64.rpm"
+}

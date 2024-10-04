@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-cliapp-0.1.1-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-cliapp-0.1.1-12.fc40.noarch.rpm"]
+depends: [
+  "R-R6" 
+  "R-cli" 
+  "R-core" {= "4.3"}
+  "R-crayon" 
+  "R-fansi" 
+  "R-glue" {>= "1.3.0"}
+  "R-prettycode" 
+  "R-progress" {>= "1.2.0"}
+  "R-selectr" 
+  "R-withr" 
+  "R-xml2" 
+]
+extra-source "R-cliapp-0.1.1-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-cliapp-0.1.1-12.fc40.noarch.rpm"
+}

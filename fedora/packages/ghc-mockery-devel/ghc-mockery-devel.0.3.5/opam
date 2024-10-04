@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-mockery-devel-0.3.5-27.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-mockery-devel-0.3.5-27.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-compat-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-directory-devel" 
+  "ghc-filepath-devel" 
+  "ghc-logging-facade-devel" 
+  "ghc-mockery" {= "0.3.5"}
+  "ghc-temporary-devel" 
+]
+extra-source "ghc-mockery-devel-0.3.5-27.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-mockery-devel-0.3.5-27.fc40.x86_64.rpm"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CPANPLUS-Dist-Build-0.90-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CPANPLUS-Dist-Build-0.90-20.fc40.noarch.rpm"]
+depends: [
+  "perl-CPANPLUS" {>= "0.84"}
+  "perl-Exporter" 
+  "perl-FileHandle" 
+  "perl-IPC-Cmd" {>= "0.42"}
+  "perl-Locale-Maketext-Simple" 
+  "perl-Module-Build" {>= "0.32"}
+  "perl-Module-Load-Conditional" {>= "0.30"}
+  "perl-Params-Check" {>= "0.26"}
+  "perl-PathTools" 
+  "perl-constant" 
+  "perl-deprecate" 
+  "perl-if" 
+  "perl-libs" 
+  "perl-vars" 
+  "perl-version" 
+]
+extra-source "perl-CPANPLUS-Dist-Build-0.90-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CPANPLUS-Dist-Build-0.90-20.fc40.noarch.rpm"
+}

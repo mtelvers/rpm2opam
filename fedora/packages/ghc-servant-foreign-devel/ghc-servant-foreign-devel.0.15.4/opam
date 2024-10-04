@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-servant-foreign-devel-0.15.4-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-servant-foreign-devel-0.15.4-11.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-compat-devel" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-http-types-devel" 
+  "ghc-lens-devel" 
+  "ghc-servant-devel" 
+  "ghc-servant-foreign" {= "0.15.4"}
+  "ghc-text-devel" 
+]
+extra-source "ghc-servant-foreign-devel-0.15.4-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-servant-foreign-devel-0.15.4-11.fc40.x86_64.rpm"
+}

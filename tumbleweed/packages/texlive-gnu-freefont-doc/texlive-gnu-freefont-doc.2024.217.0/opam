@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-gnu-freefont-doc-2024.217.svn68624-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-gnu-freefont-doc-2024.217.svn68624-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "perl-base" 
+  "python311-base" 
+]
+extra-source "texlive-gnu-freefont-doc-2024.217.svn68624-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-gnu-freefont-doc-2024.217.svn68624-56.1.noarch.rpm"
+}

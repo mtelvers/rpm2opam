@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CGI-Ex-2.55-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CGI-Ex-2.55-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Digest-MD5" 
+  "perl-Exporter" 
+  "perl-MIME-Base64" 
+  "perl-Template-Alloy" {>= "1.16"}
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-CGI-Ex-2.55-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CGI-Ex-2.55-3.fc40.noarch.rpm"
+}

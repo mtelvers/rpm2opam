@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-walrus-0.9991-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-walrus-0.9991-1.3.noarch.rpm"]
+depends: [
+  "gap" {>= "4.8"}
+  "gap-gapdoc" {>= "1.5"}
+]
+extra-source "gap-walrus-0.9991-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-walrus-0.9991-1.3.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw64-gsm-1.0.16-18.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-gsm-1.0.16-18.fc40.noarch.rpm"]
+depends: [
+  "mingw64-crt" 
+  "mingw64-filesystem" {>= "95"}
+]
+extra-source "mingw64-gsm-1.0.16-18.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw64-gsm-1.0.16-18.fc40.noarch.rpm"
+}

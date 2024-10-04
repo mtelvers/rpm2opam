@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "microcode_ctl-20240910-1.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "microcode_ctl-20240910-1.el10.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "dracut" 
+  "systemd" 
+]
+extra-source "microcode_ctl-20240910-1.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/microcode_ctl-20240910-1.el10.noarch.rpm"
+}

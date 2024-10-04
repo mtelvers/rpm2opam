@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "aisleriot-lang-3.22.33-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "aisleriot-lang-3.22.33-1.1.noarch.rpm"]
+depends: [
+  "aisleriot" {= "3.22.33"}
+]
+extra-source "aisleriot-lang-3.22.33-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/aisleriot-lang-3.22.33-1.1.noarch.rpm"
+}

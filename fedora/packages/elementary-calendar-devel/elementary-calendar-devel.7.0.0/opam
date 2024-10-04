@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "elementary-calendar-devel-7.0.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "elementary-calendar-devel-7.0.0-4.fc40.x86_64.rpm"]
+depends: [
+  "elementary-calendar" {= "7.0.0"}
+  "evolution-data-server-devel" 
+  "glib2-devel" 
+  "granite-devel" {>= "6.2.0"}
+  "gtk3-devel" {>= "3.22"}
+  "libgee-devel" 
+  "libical-glib-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "elementary-calendar-devel-7.0.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/elementary-calendar-devel-7.0.0-4.fc40.x86_64.rpm"
+}

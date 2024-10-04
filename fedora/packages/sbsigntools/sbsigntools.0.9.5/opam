@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sbsigntools-0.9.5-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sbsigntools-0.9.5-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libuuid" 
+  "openssl-libs" 
+]
+extra-source "sbsigntools-0.9.5-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sbsigntools-0.9.5-3.fc40.x86_64.rpm"
+}

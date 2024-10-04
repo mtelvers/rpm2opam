@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mono-core-6.12.0-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mono-core-6.12.0-16.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libgcc" 
+  "libgdiplus" 
+  "mono-data" {= "4.0.0.0"}
+  "mono-extras" {= "4.0.0.0"}
+  "mono-wcf" {= "4.0.0.0"}
+  "mono-web" {= "4.0.0.0"}
+  "python3" 
+  "zlib-ng-compat" 
+]
+extra-source "mono-core-6.12.0-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mono-core-6.12.0-16.fc40.x86_64.rpm"
+}

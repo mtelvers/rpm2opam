@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-apeye-1.4.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-apeye-1.4.1-1.1.noarch.rpm"]
+depends: [
+  "python312-apeye-core" {>= "1.0.0"}
+  "python312-base" {= "3.12"}
+  "python312-domdf-python-tools" {>= "2.6.0"}
+  "python312-platformdirs" {>= "2.3.0"}
+  "python312-requests" {>= "2.24.0"}
+]
+extra-source "python312-apeye-1.4.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-apeye-1.4.1-1.1.noarch.rpm"
+}

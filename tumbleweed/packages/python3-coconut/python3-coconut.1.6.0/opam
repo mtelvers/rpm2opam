@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-coconut-1.6.0-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-coconut-1.6.0-1.5.noarch.rpm"]
+depends: [
+  "python311-Pygments" {>= "2.2"}
+  "python311-base" 
+  "python311-prompt_toolkit" {>= "2"}
+  "python311-pyparsing" {>= "2.2"}
+]
+extra-source "python3-coconut-1.6.0-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-coconut-1.6.0-1.5.noarch.rpm"
+}

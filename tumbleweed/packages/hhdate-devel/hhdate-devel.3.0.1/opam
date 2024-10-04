@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hhdate-devel-3.0.1-3.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hhdate-devel-3.0.1-3.6.x86_64.rpm"]
+depends: [
+  "libdate-tz3" {= "3.0.1"}
+]
+extra-source "hhdate-devel-3.0.1-3.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/hhdate-devel-3.0.1-3.6.x86_64.rpm"
+}

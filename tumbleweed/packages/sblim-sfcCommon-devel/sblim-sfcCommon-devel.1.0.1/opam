@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sblim-sfcCommon-devel-1.0.1-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sblim-sfcCommon-devel-1.0.1-4.2.x86_64.rpm"]
+depends: [
+  "libsfcUtil0" {= "1.0.1"}
+  "pkgconf-pkg-config" 
+  "sblim-cmpi-devel" 
+]
+extra-source "sblim-sfcCommon-devel-1.0.1-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sblim-sfcCommon-devel-1.0.1-4.2.x86_64.rpm"
+}

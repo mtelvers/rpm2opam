@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "obex-data-server-0.4.6-16.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "obex-data-server-0.4.6-16.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libbluetooth3" 
+  "libdbus-glib-1-2" 
+  "libgdk_pixbuf-2_0-0" 
+  "libopenobex2" 
+  "libusb-0_1-4" 
+]
+extra-source "obex-data-server-0.4.6-16.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/obex-data-server-0.4.6-16.2.x86_64.rpm"
+}

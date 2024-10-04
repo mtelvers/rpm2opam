@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ogre-demos-13.6.5-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ogre-demos-13.6.5-3.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libOgreBites13_6" 
+  "libOgreMain13_6" 
+  "libOgreMain13_6-plugins" {= "13.6.5"}
+  "libOgreMeshLodGenerator13_6" 
+  "libOgreOverlay13_6" 
+  "libOgrePaging13_6" 
+  "libOgreRTShaderSystem13_6" 
+  "libOgreTerrain13_6" 
+  "libOgreVolume13_6" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "ogre-media" {= "13.6.5"}
+]
+extra-source "ogre-demos-13.6.5-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ogre-demos-13.6.5-3.2.x86_64.rpm"
+}

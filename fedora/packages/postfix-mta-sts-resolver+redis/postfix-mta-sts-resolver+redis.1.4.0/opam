@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "postfix-mta-sts-resolver+redis-1.4.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postfix-mta-sts-resolver+redis-1.4.0-4.fc40.noarch.rpm"]
+depends: [
+  "postfix-mta-sts-resolver" {= "1.4.0"}
+  "python3" {= "3.12"}
+  "python3-redis" {>= "4.2"}
+]
+extra-source "postfix-mta-sts-resolver+redis-1.4.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/postfix-mta-sts-resolver+redis-1.4.0-4.fc40.noarch.rpm"
+}

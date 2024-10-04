@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "k8s-sidecar-0.1.144-1.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "k8s-sidecar-0.1.144-1.10.noarch.rpm"]
+depends: [
+  "python311" 
+  "python311-kubernetes" 
+  "python311-requests" 
+]
+extra-source "k8s-sidecar-0.1.144-1.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/k8s-sidecar-0.1.144-1.10.noarch.rpm"
+}

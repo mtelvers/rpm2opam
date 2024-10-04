@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcpuset-devel-1.0-37.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcpuset-devel-1.0-37.1.x86_64.rpm"]
+depends: [
+  "glibc-devel" 
+  "libcpuset1" {= "1.0"}
+]
+extra-source "libcpuset-devel-1.0-37.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcpuset-devel-1.0-37.1.x86_64.rpm"
+}

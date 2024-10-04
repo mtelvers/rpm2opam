@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xplayer-devel-2.4.4-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xplayer-devel-2.4.4-4.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.33.0"}
+  "gtk3-devel" {>= "3.5.2"}
+  "pkgconf-pkg-config" 
+  "xplayer" {= "2.4.4"}
+  "xplayer-plparser-devel" {>= "1.0.0"}
+]
+extra-source "xplayer-devel-2.4.4-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xplayer-devel-2.4.4-4.1.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nwg-panel-0.9.25-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nwg-panel-0.9.25-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "gtk-layer-shell" 
+  "gtk3" 
+  "python3" 
+  "python3-dasbus" 
+  "python3-gobject" 
+  "python3-gobject-base" 
+  "python3-i3ipc" 
+  "wlr-randr" 
+]
+extra-source "nwg-panel-0.9.25-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nwg-panel-0.9.25-1.fc40.noarch.rpm"
+}

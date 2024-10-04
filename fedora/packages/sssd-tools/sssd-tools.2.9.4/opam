@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sssd-tools-2.9.4-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sssd-tools-2.9.4-4.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libdhash" 
+  "libldb" 
+  "libref_array" 
+  "libsss_certmap" 
+  "libtalloc" 
+  "pam-libs" 
+  "popt" 
+  "python3" 
+  "python3-sss" {= "2.9.4"}
+  "python3-sssdconfig" {= "2.9.4"}
+  "python3-systemd" 
+  "sssd-common" 
+  "sssd-dbus" 
+]
+extra-source "sssd-tools-2.9.4-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sssd-tools-2.9.4-4.fc40.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-List-AllUtils-tests-0.19-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-List-AllUtils-tests-0.19-12.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-List-AllUtils" 
+  "perl-Scalar-List-Utils" {>= "1.56"}
+  "perl-Test-Harness" 
+  "perl-Test-Simple" {>= "0.96"}
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-List-AllUtils-tests-0.19-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-List-AllUtils-tests-0.19-12.fc40.noarch.rpm"
+}

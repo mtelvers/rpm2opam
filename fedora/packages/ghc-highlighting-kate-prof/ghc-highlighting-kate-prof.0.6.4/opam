@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-highlighting-kate-prof-0.6.4-34.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-highlighting-kate-prof-0.6.4-34.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-blaze-html-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-highlighting-kate-devel" {= "0.6.4"}
+  "ghc-mtl-prof" 
+  "ghc-parsec-prof" 
+  "ghc-pcre-light-prof" 
+  "ghc-utf8-string-prof" 
+]
+extra-source "ghc-highlighting-kate-prof-0.6.4-34.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-highlighting-kate-prof-0.6.4-34.fc40.x86_64.rpm"
+}

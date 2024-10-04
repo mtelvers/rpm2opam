@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ruby3.3-rubygem-omniauth-2.1.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ruby3.3-rubygem-omniauth-2.1.2-1.2.x86_64.rpm"]
+depends: [
+  "ruby3-3" {= "3.3.0"}
+  "ruby3-3-rubygem-hashie" {>= "3.4.6"}
+  "ruby3-3-rubygem-rack" {>= "2.2.3"}
+  "ruby3-3-rubygem-rack-protection" {>= "0"}
+]
+extra-source "ruby3.3-rubygem-omniauth-2.1.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ruby3.3-rubygem-omniauth-2.1.2-1.2.x86_64.rpm"
+}

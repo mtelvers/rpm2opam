@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-ORLite-Migrate-1.10-36.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-ORLite-Migrate-1.10-36.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-DBD-SQLite" {>= "1.21"}
+  "perl-DBI" {>= "1.58"}
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-File-Path" {>= "2.4"}
+  "perl-File-pushd" 
+  "perl-IPC-Run3" 
+  "perl-ORLite" {>= "1.28"}
+  "perl-Params-Util" {>= "0.37"}
+  "perl-PathTools" {>= "3.28"}
+  "perl-Probe-Perl" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-vars" 
+]
+extra-source "perl-ORLite-Migrate-1.10-36.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-ORLite-Migrate-1.10-36.fc40.noarch.rpm"
+}

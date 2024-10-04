@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ftsdf-2.13.2-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ftsdf-2.13.2-2.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libcairo2" 
+  "libfreetype6" 
+  "librsvg-2-2" 
+]
+extra-source "ftsdf-2.13.2-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ftsdf-2.13.2-2.2.x86_64.rpm"
+}

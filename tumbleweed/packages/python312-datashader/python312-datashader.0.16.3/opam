@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-datashader-0.16.3-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-datashader-0.16.3-4.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-Pillow" 
+  "python312-base" {= "3.12"}
+  "python312-colorcet" 
+  "python312-dask-dataframe" 
+  "python312-multipledispatch" 
+  "python312-numba" 
+  "python312-numpy" 
+  "python312-packaging" 
+  "python312-pandas" 
+  "python312-param" 
+  "python312-pyct" 
+  "python312-requests" 
+  "python312-scipy" 
+  "python312-toolz" 
+  "python312-xarray" 
+  "update-alternatives" 
+]
+extra-source "python312-datashader-0.16.3-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-datashader-0.16.3-4.1.noarch.rpm"
+}

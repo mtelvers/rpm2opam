@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gvfs-nfs-1.54.0-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gvfs-nfs-1.54.0-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "gvfs" {= "1.54.0"}
+  "gvfs-client" {= "1.54.0"}
+  "libgcc" 
+  "libnfs" 
+]
+extra-source "gvfs-nfs-1.54.0-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gvfs-nfs-1.54.0-2.fc40.x86_64.rpm"
+}

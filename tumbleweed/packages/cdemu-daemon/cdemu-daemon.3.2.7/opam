@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cdemu-daemon-3.2.7-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cdemu-daemon-3.2.7-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libao4" 
+  "libmirage11" 
+  "vhba-kmp-default" 
+]
+extra-source "cdemu-daemon-3.2.7-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cdemu-daemon-3.2.7-1.1.x86_64.rpm"
+}

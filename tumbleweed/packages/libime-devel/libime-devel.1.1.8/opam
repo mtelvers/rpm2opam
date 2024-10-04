@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libime-devel-1.1.8-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libime-devel-1.1.8-1.2.x86_64.rpm"]
+depends: [
+  "libIMECore0" {= "1.1.8"}
+  "libIMEPinyin0" {= "1.1.8"}
+  "libIMETable0" {= "1.1.8"}
+]
+extra-source "libime-devel-1.1.8-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libime-devel-1.1.8-1.2.x86_64.rpm"
+}

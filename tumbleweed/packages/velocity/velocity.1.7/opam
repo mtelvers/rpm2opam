@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "velocity-1.7-15.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "velocity-1.7-15.1.noarch.rpm"]
+depends: [
+  "apache-commons-collections" 
+  "apache-commons-lang3" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "velocity-1.7-15.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/velocity-1.7-15.1.noarch.rpm"
+}

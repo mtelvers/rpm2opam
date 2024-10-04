@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cura-5.4.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cura-5.4.0-4.fc40.noarch.rpm"]
+depends: [
+  "3dprinter-udev-rules" 
+  "CuraEngine" {= "5.4.0"}
+  "cura-fdm-materials" {>= "5.4"}
+  "libglvnd-devel" 
+  "open-sans-fonts" 
+  "python3" 
+  "python3-certifi" 
+  "python3-keyring" 
+  "python3-numpy-stl" 
+  "python3-pynest2d" 
+  "python3-pyserial" 
+  "python3-requests" 
+  "python3-savitar" {>= "5.3.0"}
+  "python3-trimesh" 
+  "python3-uranium" {>= "5.4.0"}
+  "python3-zeroconf" 
+]
+extra-source "cura-5.4.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cura-5.4.0-4.fc40.noarch.rpm"
+}

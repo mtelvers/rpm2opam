@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Locale-TextDomain-OO-Util-4.002-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Locale-TextDomain-OO-Util-4.002-16.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-English" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-Locale-TextDomain-OO-Util-4.002-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Locale-TextDomain-OO-Util-4.002-16.fc40.noarch.rpm"
+}

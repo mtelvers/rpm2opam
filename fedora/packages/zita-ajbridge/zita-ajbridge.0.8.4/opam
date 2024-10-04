@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "zita-ajbridge-0.8.4-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zita-ajbridge-0.8.4-9.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "jack-audio-connection-kit" 
+  "libgcc" 
+  "libstdc++" 
+  "zita-alsa-pcmi" 
+  "zita-resampler" 
+]
+extra-source "zita-ajbridge-0.8.4-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/z/zita-ajbridge-0.8.4-9.fc40.x86_64.rpm"
+}

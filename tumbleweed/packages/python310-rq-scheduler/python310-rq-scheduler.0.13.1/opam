@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-rq-scheduler-0.13.1-2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-rq-scheduler-0.13.1-2.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "python310-base" 
+  "python310-crontab" {>= "0.23.0"}
+  "python310-freezegun" 
+  "python310-python-dateutil" 
+  "python310-rq" {>= "0.13"}
+  "update-alternatives" 
+]
+extra-source "python310-rq-scheduler-0.13.1-2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-rq-scheduler-0.13.1-2.3.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tokio+net-devel-1.36.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tokio+net-devel-1.36.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-mio+net-devel" 
+  "rust-mio+os-ext-devel" 
+  "rust-mio+os-poll-devel" 
+  "rust-mio-devel" 
+  "rust-tokio+libc-devel" {= "1.36.0"}
+  "rust-tokio+socket2-devel" {= "1.36.0"}
+  "rust-tokio-devel" {= "1.36.0"}
+]
+extra-source "rust-tokio+net-devel-1.36.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tokio+net-devel-1.36.0-1.fc40.noarch.rpm"
+}

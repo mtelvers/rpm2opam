@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "virt-win-reg-1.52.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "virt-win-reg-1.52.0-3.fc40.noarch.rpm"]
+depends: [
+  "perl-File-Basename" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-Pod-Usage" 
+  "perl-Sys-Guestfs" 
+  "perl-hivex" 
+  "perl-interpreter" 
+  "perl-libintl-perl" 
+  "perl-libs" 
+]
+extra-source "virt-win-reg-1.52.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/virt-win-reg-1.52.0-3.fc40.noarch.rpm"
+}

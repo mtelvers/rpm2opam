@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CGI-Application-Server-0.063-32.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CGI-Application-Server-0.063-32.fc40.noarch.rpm"]
+depends: [
+  "perl-CGI" 
+  "perl-Carp" {>= "0.1"}
+  "perl-HTTP-Message" 
+  "perl-HTTP-Server-Simple" 
+  "perl-HTTP-Server-Simple-Static" {>= "0.2"}
+  "perl-Scalar-List-Utils" {>= "1.18"}
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-CGI-Application-Server-0.063-32.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CGI-Application-Server-0.063-32.fc40.noarch.rpm"
+}

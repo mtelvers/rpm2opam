@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mock-core-configs-40.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mock-core-configs-40.2-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "distribution-gpg-keys" {>= "1.98"}
+  "fedora-release" 
+  "mock-filesystem" 
+  "python3" 
+  "python3-dnf" 
+  "python3-hawkey" 
+  "sed" 
+]
+extra-source "mock-core-configs-40.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mock-core-configs-40.2-1.fc40.noarch.rpm"
+}

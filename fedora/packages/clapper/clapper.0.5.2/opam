@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "clapper-0.5.2-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clapper-0.5.2-6.fc40.x86_64.rpm"]
+depends: [
+  "gjs" 
+  "glib2" 
+  "glibc" 
+  "gstreamer1" 
+  "gstreamer1-plugins-base" 
+  "gtk4" 
+  "hicolor-icon-theme" 
+  "libadwaita" 
+  "libglvnd-gles" 
+]
+extra-source "clapper-0.5.2-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/clapper-0.5.2-6.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-shell-extension-user-theme-46.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-shell-extension-user-theme-46.2-1.1.noarch.rpm"]
+depends: [
+  "typelib-1_0-Adw-1" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+]
+extra-source "gnome-shell-extension-user-theme-46.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-shell-extension-user-theme-46.2-1.1.noarch.rpm"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Data-FormValidator-4.88-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Data-FormValidator-4.88-20.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Date-Calc" {>= "5"}
+  "perl-Email-Valid" 
+  "perl-Exporter" 
+  "perl-File-MMagic" {>= "1.17"}
+  "perl-IO" 
+  "perl-Image-Size" 
+  "perl-MIME-Types" {>= "1.5"}
+  "perl-PathTools" 
+  "perl-Regexp-Common" 
+  "perl-Scalar-List-Utils" 
+  "perl-Symbol" 
+  "perl-base" 
+  "perl-libs" {>= "5.5.0"}
+  "perl-overload" 
+]
+extra-source "perl-Data-FormValidator-4.88-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Data-FormValidator-4.88-20.fc40.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tarantool-devel-2.4.2.68-17.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tarantool-devel-2.4.2.68-17.fc40.x86_64.rpm"]
+depends: [
+  "tarantool" {= "2.4.2.68"}
+]
+extra-source "tarantool-devel-2.4.2.68-17.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tarantool-devel-2.4.2.68-17.fc40.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-charmbracelet-bubbletea-devel-0.24.2-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-charmbracelet-bubbletea-devel-0.24.2-4.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-containerd-console-devel" 
+  "golang-github-mattn-isatty-devel" 
+  "golang-github-mattn-localereader-devel" 
+  "golang-github-muesli-ansi-devel" 
+  "golang-github-muesli-cancelreader-devel" 
+  "golang-github-muesli-reflow-devel" 
+  "golang-github-muesli-termenv-devel" 
+  "golang-x-sync-devel" 
+  "golang-x-term-devel" 
+]
+extra-source "golang-github-charmbracelet-bubbletea-devel-0.24.2-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-charmbracelet-bubbletea-devel-0.24.2-4.fc40.noarch.rpm"
+}

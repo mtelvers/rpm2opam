@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Tree-DAG_Node-1.32-1.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Tree-DAG_Node-1.32-1.17.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-File-Slurp-Tiny" {>= "0.3"}
+]
+extra-source "perl-Tree-DAG_Node-1.32-1.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Tree-DAG_Node-1.32-1.17.noarch.rpm"
+}

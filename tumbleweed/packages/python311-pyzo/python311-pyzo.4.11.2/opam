@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pyzo-4.11.2-1.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pyzo-4.11.2-1.17.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "hicolor-icon-theme" 
+  "python311-base" {= "3.11"}
+  "python311-qt5" 
+  "pyzologo" 
+]
+extra-source "python311-pyzo-4.11.2-1.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pyzo-4.11.2-1.17.noarch.rpm"
+}

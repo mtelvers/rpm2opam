@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "brickv-2.4.26-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "brickv-2.4.26-1.2.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-pyserial" 
+  "python311-pytz" 
+  "python311-qt5" 
+  "python311-tzlocal" 
+]
+extra-source "brickv-2.4.26-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/brickv-2.4.26-1.2.noarch.rpm"
+}

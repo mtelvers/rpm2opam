@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "s-tui-1.1.6-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "s-tui-1.1.6-1.2.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-psutil" 
+  "python311-typing_extensions" 
+  "python311-urwid" 
+]
+extra-source "s-tui-1.1.6-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/s-tui-1.1.6-1.2.noarch.rpm"
+}

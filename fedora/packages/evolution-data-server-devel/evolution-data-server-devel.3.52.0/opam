@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "evolution-data-server-devel-3.52.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "evolution-data-server-devel-3.52.0-1.fc40.x86_64.rpm"]
+depends: [
+  "evolution-data-server" {= "3.52.0"}
+  "glib2-devel" 
+  "gnome-online-accounts-devel" {>= "3.8"}
+  "gtk3-devel" 
+  "gtk4-devel" 
+  "json-glib-devel" 
+  "libgweather-devel" {>= "4.0"}
+  "libical-glib-devel" 
+  "libsecret-devel" 
+  "libsoup3-devel" 
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+  "sqlite-devel" {>= "3.7.17"}
+  "webkit2gtk4-1-devel" {>= "2.34.0"}
+  "webkitgtk6-0-devel" {>= "2.36.0"}
+]
+extra-source "evolution-data-server-devel-3.52.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/evolution-data-server-devel-3.52.0-1.fc40.x86_64.rpm"
+}

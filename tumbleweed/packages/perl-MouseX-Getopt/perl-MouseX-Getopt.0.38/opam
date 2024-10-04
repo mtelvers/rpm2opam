@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MouseX-Getopt-0.38-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MouseX-Getopt-0.38-2.1.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Getopt-Long-Descriptive" {>= "0.91"}
+  "perl-Mouse" {>= "0.64"}
+  "perl-base" {>= "2.37"}
+]
+extra-source "perl-MouseX-Getopt-0.38-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MouseX-Getopt-0.38-2.1.noarch.rpm"
+}

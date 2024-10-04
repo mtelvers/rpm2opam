@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ufw-kde-0.5.0-0.24.20161006git.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ufw-kde-0.5.0-0.24.20161006git.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kde-runtime" 
+  "kdelibs" 
+  "libstdc++" 
+  "python3" 
+  "qt" 
+  "qt-x11" 
+  "ufw" 
+]
+extra-source "ufw-kde-0.5.0-0.24.20161006git.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/ufw-kde-0.5.0-0.24.20161006git.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cross-s390x-glibc-devel-2.40-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cross-s390x-glibc-devel-2.40-2.1.noarch.rpm"]
+depends: [
+  "cross-s390x-linux-glibc-devel" 
+]
+extra-source "cross-s390x-glibc-devel-2.40-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cross-s390x-glibc-devel-2.40-2.1.noarch.rpm"
+}

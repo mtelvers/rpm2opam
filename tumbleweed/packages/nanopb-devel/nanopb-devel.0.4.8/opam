@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nanopb-devel-0.4.8-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nanopb-devel-0.4.8-2.2.x86_64.rpm"]
+depends: [
+  "libprotobuf-nanopb0" {= "0.4.8"}
+  "python311-base" 
+]
+extra-source "nanopb-devel-0.4.8-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/nanopb-devel-0.4.8-2.2.x86_64.rpm"
+}

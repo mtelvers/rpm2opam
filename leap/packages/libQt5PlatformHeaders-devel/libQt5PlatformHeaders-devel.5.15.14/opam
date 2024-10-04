@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libQt5PlatformHeaders-devel-5.15.14+kde143-lp160.1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libQt5PlatformHeaders-devel-5.15.14+kde143-lp160.1.3.x86_64.rpm"]
+depends: [
+  "Mesa-libEGL-devel" 
+  "Mesa-libGL-devel" 
+  "libQt5Core-devel" {= "5.15.14"}
+  "libQt5Gui-devel" {= "5.15.14"}
+  "libX11-devel" 
+]
+extra-source "libQt5PlatformHeaders-devel-5.15.14+kde143-lp160.1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libQt5PlatformHeaders-devel-5.15.14+kde143-lp160.1.3.x86_64.rpm"
+}

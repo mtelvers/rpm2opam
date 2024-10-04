@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "liblalsupport14-7.6.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "liblalsupport14-7.6.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgsl28" 
+  "libhdf5-200" 
+  "libhdf5_hl200" 
+  "liblal20" 
+  "libz-ng-compat1" 
+]
+extra-source "liblalsupport14-7.6.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/liblalsupport14-7.6.0-1.1.x86_64.rpm"
+}

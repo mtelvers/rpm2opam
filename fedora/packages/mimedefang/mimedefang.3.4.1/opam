@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mimedefang-3.4.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mimedefang-3.4.1-5.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Digest-SHA" 
+  "perl-Errno" 
+  "perl-Exporter" 
+  "perl-File-Temp" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" 
+  "perl-Getopt-Std" 
+  "perl-IO" 
+  "perl-IO-Socket-SSL" 
+  "perl-MIME-tools" 
+  "perl-Mail-DKIM" 
+  "perl-Mail-SPF" 
+  "perl-Net-DNS" 
+  "perl-PathTools" 
+  "perl-Pod-Usage" 
+  "perl-Socket" 
+  "perl-Sys-Hostname" 
+  "perl-Time-Local" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "sendmail-milter" 
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "mimedefang-3.4.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mimedefang-3.4.1-5.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsuperlu_6_0_1-gnu-hpc-6.0.1-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsuperlu_6_0_1-gnu-hpc-6.0.1-1.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "gnu-compilers-hpc" 
+  "lua-lmod" {>= "7.6.1"}
+]
+extra-source "libsuperlu_6_0_1-gnu-hpc-6.0.1-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libsuperlu_6_0_1-gnu-hpc-6.0.1-1.8.x86_64.rpm"
+}

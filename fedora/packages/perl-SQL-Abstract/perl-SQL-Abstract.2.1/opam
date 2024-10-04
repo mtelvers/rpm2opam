@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-SQL-Abstract-2.000001-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-SQL-Abstract-2.000001-13.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Exporter" {>= "5.57"}
+  "perl-Hash-Merge" {>= "0.12"}
+  "perl-Module-Runtime" 
+  "perl-Moo" {>= "2.1"}
+  "perl-Scalar-List-Utils" 
+  "perl-Sub-Quote" {>= "2.1"}
+  "perl-Test-Deep" {>= "0.101"}
+  "perl-Test-Simple" 
+  "perl-Text-Balanced" {>= "2.0"}
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-mro" 
+  "perl-overload" 
+]
+extra-source "perl-SQL-Abstract-2.000001-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-SQL-Abstract-2.000001-13.fc40.noarch.rpm"
+}

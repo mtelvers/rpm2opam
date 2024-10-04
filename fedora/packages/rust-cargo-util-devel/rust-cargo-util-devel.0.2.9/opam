@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-cargo-util-devel-0.2.9-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-cargo-util-devel-0.2.9-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.73"}
+  "rust-anyhow+default-devel" 
+  "rust-filetime+default-devel" 
+  "rust-hex+default-devel" 
+  "rust-ignore+default-devel" 
+  "rust-jobserver+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-same-file+default-devel" 
+  "rust-sha2+default-devel" 
+  "rust-shell-escape+default-devel" 
+  "rust-tempfile+default-devel" 
+  "rust-tracing+default-devel" 
+  "rust-walkdir+default-devel" 
+]
+extra-source "rust-cargo-util-devel-0.2.9-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-cargo-util-devel-0.2.9-1.fc40.noarch.rpm"
+}

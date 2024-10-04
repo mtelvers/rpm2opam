@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pylint-3.3.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pylint-3.3.1-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-astroid" 
+  "python312-base" 
+  "python312-dill" {>= "0.3.7"}
+  "python312-isort" 
+  "python312-mccabe" 
+  "python312-platformdirs" {>= "2.2"}
+  "python312-tomlkit" {>= "0.10.1"}
+  "update-alternatives" 
+]
+extra-source "python312-pylint-3.3.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pylint-3.3.1-2.1.noarch.rpm"
+}

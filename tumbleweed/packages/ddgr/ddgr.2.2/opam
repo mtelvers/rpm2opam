@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ddgr-2.2-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ddgr-2.2-1.2.noarch.rpm"]
+depends: [
+  "python311" 
+  "python311-base" 
+]
+extra-source "ddgr-2.2-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ddgr-2.2-1.2.noarch.rpm"
+}

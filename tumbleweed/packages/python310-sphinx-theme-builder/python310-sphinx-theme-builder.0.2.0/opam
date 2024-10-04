@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-sphinx-theme-builder-0.2.0b2-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-sphinx-theme-builder-0.2.0b2-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-base" {= "3.10"}
+  "python310-click" 
+  "python310-nodeenv" 
+  "python310-packaging" 
+  "python310-pyproject-metadata" 
+  "python310-rich" 
+  "python310-setuptools" 
+  "python310-tomli" 
+  "update-alternatives" 
+]
+extra-source "python310-sphinx-theme-builder-0.2.0b2-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-sphinx-theme-builder-0.2.0b2-2.1.noarch.rpm"
+}

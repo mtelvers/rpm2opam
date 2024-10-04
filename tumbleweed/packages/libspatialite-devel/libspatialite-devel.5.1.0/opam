@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libspatialite-devel-5.1.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libspatialite-devel-5.1.0-1.3.x86_64.rpm"]
+depends: [
+  "freexl-devel" 
+  "librttopo-devel" 
+  "libspatialite8" {= "5.1.0"}
+  "libxml2-devel" 
+  "minizip-devel" 
+  "pkgconf-pkg-config" 
+  "proj-devel" 
+]
+extra-source "libspatialite-devel-5.1.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libspatialite-devel-5.1.0-1.3.x86_64.rpm"
+}

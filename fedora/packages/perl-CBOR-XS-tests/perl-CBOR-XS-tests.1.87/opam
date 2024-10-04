@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CBOR-XS-tests-1.87-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CBOR-XS-tests-1.87-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-CBOR-XS" 
+  "perl-Data-Dumper" 
+  "perl-Math-BigInt" 
+  "perl-Math-BigInt-FastCalc" 
+  "perl-Scalar-List-Utils" 
+  "perl-Test-Harness" 
+  "perl-Types-Serialiser" 
+]
+extra-source "perl-CBOR-XS-tests-1.87-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CBOR-XS-tests-1.87-3.fc40.noarch.rpm"
+}

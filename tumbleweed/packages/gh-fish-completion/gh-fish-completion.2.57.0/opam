@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gh-fish-completion-2.57.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gh-fish-completion-2.57.0-1.1.noarch.rpm"]
+depends: [
+  "gh" {= "2.57.0"}
+]
+extra-source "gh-fish-completion-2.57.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gh-fish-completion-2.57.0-1.1.noarch.rpm"
+}

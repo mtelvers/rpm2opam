@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-google-genproto-devel-0-26.20220801git83ce21f.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-google-genproto-devel-0-26.20220801git83ce21f.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-protobuf-devel" 
+  "golang-google-grpc-devel" 
+  "golang-google-protobuf-devel" 
+]
+extra-source "golang-google-genproto-devel-0-26.20220801git83ce21f.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-google-genproto-devel-0-26.20220801git83ce21f.fc40.noarch.rpm"
+}

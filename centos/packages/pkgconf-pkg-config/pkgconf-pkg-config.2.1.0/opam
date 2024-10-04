@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pkgconf-pkg-config-2.1.0-2.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pkgconf-pkg-config-2.1.0-2.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "pkgconf" {= "2.1.0"}
+  "pkgconf-m4" {= "2.1.0"}
+]
+extra-source "pkgconf-pkg-config-2.1.0-2.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/pkgconf-pkg-config-2.1.0-2.el10.x86_64.rpm"
+}

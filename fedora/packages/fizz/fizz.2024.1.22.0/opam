@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fizz-2024.01.22.00-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fizz-2024.01.22.00-2.fc40.x86_64.rpm"]
+depends: [
+  "double-conversion" 
+  "fmt" 
+  "folly" 
+  "gflags" 
+  "glibc" 
+  "glog" 
+  "libgcc" 
+  "libsodium" 
+  "libstdc++" 
+  "libzstd" 
+  "openssl-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "fizz-2024.01.22.00-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fizz-2024.01.22.00-2.fc40.x86_64.rpm"
+}

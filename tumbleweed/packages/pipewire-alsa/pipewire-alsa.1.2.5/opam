@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pipewire-alsa-1.2.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pipewire-alsa-1.2.5-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libasound2" 
+  "libpipewire-0_3-0" 
+  "pipewire-pulseaudio" 
+]
+extra-source "pipewire-alsa-1.2.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pipewire-alsa-1.2.5-1.1.x86_64.rpm"
+}

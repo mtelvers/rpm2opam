@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "root-graf-gviz-6.30.04-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "root-graf-gviz-6.30.04-2.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "graphviz" 
+  "libgcc" 
+  "libstdc++" 
+  "root-core" 
+  "root-graf" 
+  "root-hist" 
+]
+extra-source "root-graf-gviz-6.30.04-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/root-graf-gviz-6.30.04-2.fc40.x86_64.rpm"
+}

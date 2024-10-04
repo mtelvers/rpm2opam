@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gdk-pixbuf-loader-libheif-1.18.2-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdk-pixbuf-loader-libheif-1.18.2-2.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgdk_pixbuf-2_0-0" 
+  "libheif1" 
+]
+extra-source "gdk-pixbuf-loader-libheif-1.18.2-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gdk-pixbuf-loader-libheif-1.18.2-2.2.x86_64.rpm"
+}

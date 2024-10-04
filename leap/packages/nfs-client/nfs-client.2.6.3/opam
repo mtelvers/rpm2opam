@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nfs-client-2.6.3-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nfs-client-2.6.3-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "keyutils" 
+  "krb5" 
+  "libcom_err2" 
+  "libdevmapper1_03" 
+  "libevent-2_1-7" 
+  "libkeyutils1" 
+  "libmount1" 
+  "libnfsidmap1" 
+  "libnss_usrfiles2" 
+  "libsqlite3-0" 
+  "libtirpc3" 
+  "netcfg" 
+  "permissions" 
+  "rpcbind" 
+  "sysuser-shadow" {>= "3.1"}
+]
+extra-source "nfs-client-2.6.3-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/nfs-client-2.6.3-slfo.1.1.8.x86_64.rpm"
+}

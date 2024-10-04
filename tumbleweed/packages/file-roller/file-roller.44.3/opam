@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "file-roller-44.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "file-roller-44.3-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libadwaita-1-0" 
+  "libarchive13" 
+  "libgtk-4-1" 
+  "libjson-glib-1_0-0" 
+  "libpango-1_0-0" 
+  "libportal-gtk4-1" 
+  "libportal1" 
+]
+extra-source "file-roller-44.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/file-roller-44.3-1.1.x86_64.rpm"
+}

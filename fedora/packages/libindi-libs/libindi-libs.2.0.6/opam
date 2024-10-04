@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libindi-libs-2.0.6-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libindi-libs-2.0.6-1.fc40.x86_64.rpm"]
+depends: [
+  "boost-system" 
+  "boost-thread" 
+  "cfitsio" 
+  "fftw-libs-double" 
+  "glibc" 
+  "gsl" 
+  "libXISF" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libnova" 
+  "libogg" 
+  "libstdc++" 
+  "libtheora" 
+  "libusb1" 
+  "zlib-ng-compat" 
+]
+extra-source "libindi-libs-2.0.6-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libindi-libs-2.0.6-1.fc40.x86_64.rpm"
+}

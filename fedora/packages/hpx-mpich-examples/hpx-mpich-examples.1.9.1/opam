@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hpx-mpich-examples-1.9.1-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hpx-mpich-examples-1.9.1-2.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gperftools-libs" 
+  "hpx-mpich" {= "1.9.1"}
+  "hpx-mpich-devel" 
+  "libatomic" 
+  "libgcc" 
+  "libstdc++" 
+  "mpich" 
+  "python3" 
+]
+extra-source "hpx-mpich-examples-1.9.1-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hpx-mpich-examples-1.9.1-2.fc40.x86_64.rpm"
+}

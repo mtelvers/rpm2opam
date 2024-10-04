@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ncid-kpopup-1.15-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ncid-kpopup-1.15-5.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "kde-baseapps" 
+  "kmix" 
+  "ncid-client" {= "1.15"}
+  "ncid-speak" {= "1.15"}
+]
+extra-source "ncid-kpopup-1.15-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/ncid-kpopup-1.15-5.fc40.noarch.rpm"
+}

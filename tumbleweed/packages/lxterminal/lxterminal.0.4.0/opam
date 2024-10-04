@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lxterminal-0.4.0-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lxterminal-0.4.0-2.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+  "libvte-2_91-0" 
+]
+extra-source "lxterminal-0.4.0-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lxterminal-0.4.0-2.2.x86_64.rpm"
+}

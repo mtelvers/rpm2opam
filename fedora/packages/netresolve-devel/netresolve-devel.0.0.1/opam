@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "netresolve-devel-0.0.1-0.39.20160317git.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netresolve-devel-0.0.1-0.39.20160317git.fc40.x86_64.rpm"]
+depends: [
+  "netresolve" {= "0.0.1"}
+  "netresolve-backends-aresdns" 
+  "netresolve-backends-avahi" 
+  "netresolve-backends-compat" 
+  "netresolve-backends-ubdns" 
+  "netresolve-compat" 
+  "netresolve-core" 
+]
+extra-source "netresolve-devel-0.0.1-0.39.20160317git.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/netresolve-devel-0.0.1-0.39.20160317git.fc40.x86_64.rpm"
+}

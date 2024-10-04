@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "netsurf-buildsystem-1.10-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netsurf-buildsystem-1.10-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-IO" 
+  "perl-IPC-Open3" 
+  "perl-PathTools" 
+  "perl-Symbol" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "netsurf-buildsystem-1.10-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/netsurf-buildsystem-1.10-4.fc40.noarch.rpm"
+}

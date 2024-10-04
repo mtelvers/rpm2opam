@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-bindgen0.59+clap-devel-0.59.2-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-bindgen0.59+clap-devel-0.59.2-5.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bindgen0-59-devel" {= "0.59.2"}
+  "rust-clap+default-devel" 
+]
+extra-source "rust-bindgen0.59+clap-devel-0.59.2-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-bindgen0.59+clap-devel-0.59.2-5.fc40.noarch.rpm"
+}

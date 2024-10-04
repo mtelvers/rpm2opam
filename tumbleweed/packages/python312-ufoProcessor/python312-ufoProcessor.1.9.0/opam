@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-ufoProcessor-1.9.0-3.13.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-ufoProcessor-1.9.0-3.13.noarch.rpm"]
+depends: [
+  "python312-FontTools" {>= "3.32.0"}
+  "python312-base" {= "3.12"}
+  "python312-defcon" {>= "0.6.0"}
+  "python312-fontMath" {>= "0.4.9"}
+  "python312-fontParts" {>= "0.8.2"}
+  "python312-fontPens" {>= "0.1.0"}
+  "python312-lxml" {>= "4.0"}
+  "python312-mutatorMath" {>= "2.1.2"}
+  "python312-unicodedata2" {>= "13.0"}
+]
+extra-source "python312-ufoProcessor-1.9.0-3.13.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-ufoProcessor-1.9.0-3.13.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "buildpacks-cli-fish-completion-0.35.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "buildpacks-cli-fish-completion-0.35.1-1.1.noarch.rpm"]
+depends: [
+  "buildpacks-cli" {= "0.35.1"}
+]
+extra-source "buildpacks-cli-fish-completion-0.35.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/buildpacks-cli-fish-completion-0.35.1-1.1.noarch.rpm"
+}

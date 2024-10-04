@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "webalizer-2.23-27.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "webalizer-2.23-27.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libbz2-1" 
+  "libdb-4_8" 
+  "libgd3" 
+  "libz-ng-compat1" 
+  "webalizer-flags" 
+]
+extra-source "webalizer-2.23-27.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/webalizer-2.23-27.2.x86_64.rpm"
+}

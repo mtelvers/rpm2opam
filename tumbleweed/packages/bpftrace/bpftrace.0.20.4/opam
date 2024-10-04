@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bpftrace-0.20.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bpftrace-0.20.4-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libLLVM17" 
+  "libbcc0" 
+  "libbpf1" 
+  "libclang13" 
+  "libdw1" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+]
+extra-source "bpftrace-0.20.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/bpftrace-0.20.4-1.1.x86_64.rpm"
+}

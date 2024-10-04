@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openssl_tpm2_engine-4.3.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openssl_tpm2_engine-4.3.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libibmtss2" 
+  "libopenssl3" 
+]
+extra-source "openssl_tpm2_engine-4.3.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openssl_tpm2_engine-4.3.0-1.1.x86_64.rpm"
+}

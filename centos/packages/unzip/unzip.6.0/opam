@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "unzip-6.0-64.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "unzip-6.0-64.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bzip2-libs" 
+  "glibc" 
+]
+extra-source "unzip-6.0-64.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/unzip-6.0-64.el10.x86_64.rpm"
+}

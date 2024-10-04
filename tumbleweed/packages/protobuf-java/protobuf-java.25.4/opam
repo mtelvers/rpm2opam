@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "protobuf-java-25.4-13.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "protobuf-java-25.4-13.1.noarch.rpm"]
+depends: [
+  "java-11-openj9" {>= "1.6.0"}
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "protobuf-java-25.4-13.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/protobuf-java-25.4-13.1.noarch.rpm"
+}

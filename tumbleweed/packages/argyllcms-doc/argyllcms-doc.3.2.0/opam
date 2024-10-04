@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "argyllcms-doc-3.2.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "argyllcms-doc-3.2.0-1.1.noarch.rpm"]
+depends: [
+  "argyllcms" {= "3.2.0"}
+]
+extra-source "argyllcms-doc-3.2.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/argyllcms-doc-3.2.0-1.1.noarch.rpm"
+}

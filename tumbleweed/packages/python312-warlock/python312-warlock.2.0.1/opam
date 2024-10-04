@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-warlock-2.0.1-2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-warlock-2.0.1-2.3.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-jsonpatch" {>= "1"}
+  "python312-jsonschema" {>= "4"}
+]
+extra-source "python312-warlock-2.0.1-2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-warlock-2.0.1-2.3.noarch.rpm"
+}

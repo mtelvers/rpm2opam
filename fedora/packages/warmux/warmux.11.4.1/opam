@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "warmux-11.04.1-38.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "warmux-11.04.1-38.fc40.x86_64.rpm"]
+depends: [
+  "SDL_gfx" 
+  "SDL_image" 
+  "SDL_mixer" 
+  "SDL_net" 
+  "SDL_ttf" 
+  "fribidi" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libX11" 
+  "libcurl" 
+  "libpng" 
+  "libstdc++" 
+  "libxml2" 
+  "sdl12-compat" 
+  "warmux-data" {= "11.4.1"}
+]
+extra-source "warmux-11.04.1-38.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/warmux-11.04.1-38.fc40.x86_64.rpm"
+}

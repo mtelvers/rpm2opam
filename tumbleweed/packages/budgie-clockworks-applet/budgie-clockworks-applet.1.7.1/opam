@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "budgie-clockworks-applet-1.7.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "budgie-clockworks-applet-1.7.1-2.1.x86_64.rpm"]
+depends: [
+  "python311-CairoSVG" 
+  "python311-Pillow" 
+  "python311-base" 
+  "python311-gobject-Gdk" 
+  "python311-svgwrite" 
+  "typelib-1_0-Budgie-1_0" {= "1.0"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+]
+extra-source "budgie-clockworks-applet-1.7.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/budgie-clockworks-applet-1.7.1-2.1.x86_64.rpm"
+}

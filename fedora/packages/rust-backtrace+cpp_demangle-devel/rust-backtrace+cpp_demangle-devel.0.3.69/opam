@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-backtrace+cpp_demangle-devel-0.3.69-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-backtrace+cpp_demangle-devel-0.3.69-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-backtrace-devel" {= "0.3.69"}
+  "rust-cpp_demangle+alloc-devel" 
+  "rust-cpp_demangle-devel" 
+]
+extra-source "rust-backtrace+cpp_demangle-devel-0.3.69-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-backtrace+cpp_demangle-devel-0.3.69-2.fc40.noarch.rpm"
+}

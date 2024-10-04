@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-PerlIO-via-QuotedPrint-tests-0.10-502.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-PerlIO-via-QuotedPrint-tests-0.10-502.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-PerlIO-via-QuotedPrint" {= "0.10"}
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.8.1"}
+]
+extra-source "perl-PerlIO-via-QuotedPrint-tests-0.10-502.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-PerlIO-via-QuotedPrint-tests-0.10-502.fc40.noarch.rpm"
+}

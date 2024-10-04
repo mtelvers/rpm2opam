@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-anywidget-0.9.13-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-anywidget-0.9.13-1.1.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-ipywidgets" {>= "7.6.0"}
+  "python312-psygnal" {>= "0.8.1"}
+  "python312-typing_extensions" {>= "4.2.0"}
+]
+extra-source "python312-anywidget-0.9.13-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-anywidget-0.9.13-1.1.noarch.rpm"
+}

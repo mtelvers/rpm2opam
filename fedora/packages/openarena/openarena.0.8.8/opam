@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openarena-0.8.8-32.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openarena-0.8.8-32.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "hicolor-icon-theme" 
+  "opengl-games-utils" 
+  "quake3" {>= "1.36"}
+  "rsync" 
+]
+extra-source "openarena-0.8.8-32.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openarena-0.8.8-32.fc40.noarch.rpm"
+}

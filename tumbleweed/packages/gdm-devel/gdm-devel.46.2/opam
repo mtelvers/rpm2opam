@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gdm-devel-46.2-6.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdm-devel-46.2-6.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.68.0"}
+  "libgdm1" {= "46.2"}
+  "libselinux-devel" 
+  "pkgconf-pkg-config" 
+  "systemd-devel" 
+  "typelib-1_0-Gdm-1_0" {= "46.2"}
+]
+extra-source "gdm-devel-46.2-6.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gdm-devel-46.2-6.1.x86_64.rpm"
+}

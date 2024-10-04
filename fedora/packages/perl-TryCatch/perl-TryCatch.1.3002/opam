@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-TryCatch-1.003002-35.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-TryCatch-1.003002-35.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-B-Hooks-EndOfScope" {>= "0.12"}
+  "perl-B-Hooks-OP-PPAddr" {>= "0.3"}
+  "perl-Carp" 
+  "perl-Devel-Declare" {>= "0.5007"}
+  "perl-Devel-PartialDump" 
+  "perl-Moose" 
+  "perl-Parse-Method-Signatures" {>= "1.3012"}
+  "perl-Scope-Upper" {>= "0.6"}
+  "perl-Sub-Exporter" {>= "0.979"}
+  "perl-base" 
+  "perl-libs" 
+  "perl-namespace-clean" {>= "0.20"}
+]
+extra-source "perl-TryCatch-1.003002-35.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-TryCatch-1.003002-35.fc40.x86_64.rpm"
+}

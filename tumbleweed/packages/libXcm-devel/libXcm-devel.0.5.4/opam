@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libXcm-devel-0.5.4-1.23.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libXcm-devel-0.5.4-1.23.x86_64.rpm"]
+depends: [
+  "libX11-devel" 
+  "libXcm0" {= "0.5.4"}
+  "libXcmDDC0" {= "0.5.4"}
+  "libXcmEDID0" {= "0.5.4"}
+  "libXcmX11-0" {= "0.5.4"}
+  "pkgconf-pkg-config" 
+  "xorgproto-devel" 
+]
+extra-source "libXcm-devel-0.5.4-1.23.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libXcm-devel-0.5.4-1.23.x86_64.rpm"
+}

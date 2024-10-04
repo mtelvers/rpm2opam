@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "udisks-devel-1.0.5-26.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "udisks-devel-1.0.5-26.fc40.x86_64.rpm"]
+depends: [
+  "pkgconf-pkg-config" 
+  "udisks" {= "1.0.5"}
+]
+extra-source "udisks-devel-1.0.5-26.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/udisks-devel-1.0.5-26.fc40.x86_64.rpm"
+}

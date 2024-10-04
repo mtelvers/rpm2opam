@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-HTTPolice-0.9.0-4.21.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-HTTPolice-0.9.0-4.21.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-Brotli" {>= "1.0.1"}
+  "python310-base" {= "3.10"}
+  "python310-bitstring" {>= "3.1.4"}
+  "python310-defusedxml" {>= "0.5.0"}
+  "python310-dominate" {>= "2.2.0"}
+  "python310-lxml" {>= "4.1.0"}
+  "update-alternatives" 
+]
+extra-source "python310-HTTPolice-0.9.0-4.21.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-HTTPolice-0.9.0-4.21.noarch.rpm"
+}

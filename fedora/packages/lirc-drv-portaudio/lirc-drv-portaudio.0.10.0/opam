@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lirc-drv-portaudio-0.10.0-42.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lirc-drv-portaudio-0.10.0-42.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "glibc" 
+  "libusb-compat-0-1" 
+  "libusb1" 
+  "lirc-core" {= "0.10.0"}
+  "lirc-libs" 
+  "portaudio" 
+  "systemd-libs" 
+]
+extra-source "lirc-drv-portaudio-0.10.0-42.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lirc-drv-portaudio-0.10.0-42.fc40.x86_64.rpm"
+}

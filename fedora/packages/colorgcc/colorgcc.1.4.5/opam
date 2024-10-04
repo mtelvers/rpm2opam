@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "colorgcc-1.4.5-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "colorgcc-1.4.5-23.fc40.noarch.rpm"]
+depends: [
+  "perl-File-Basename" 
+  "perl-IPC-Open3" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-Term-ANSIColor" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "colorgcc-1.4.5-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/colorgcc-1.4.5-23.fc40.noarch.rpm"
+}

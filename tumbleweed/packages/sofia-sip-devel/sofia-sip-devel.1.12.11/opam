@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sofia-sip-devel-1.12.11+20110422-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sofia-sip-devel-1.12.11+20110422-2.3.x86_64.rpm"]
+depends: [
+  "busybox-gawk" 
+  "glib2-devel" 
+  "libopenssl-devel" 
+  "libsofia-sip-ua-glib3" {= "1.12.11"}
+  "libsofia-sip-ua0" {= "1.12.11"}
+  "pkgconf-pkg-config" 
+]
+extra-source "sofia-sip-devel-1.12.11+20110422-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sofia-sip-devel-1.12.11+20110422-2.3.x86_64.rpm"
+}

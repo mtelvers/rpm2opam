@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "elixir-1.17.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "elixir-1.17.3-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "erlang" {>= "25"}
+]
+extra-source "elixir-1.17.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/elixir-1.17.3-1.1.noarch.rpm"
+}

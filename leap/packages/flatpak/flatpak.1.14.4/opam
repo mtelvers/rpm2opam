@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "flatpak-1.14.4-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flatpak-1.14.4-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "bubblewrap" {>= "0.5.0"}
+  "glibc" 
+  "libXau6" 
+  "libarchive13" 
+  "libcurl-mini4" 
+  "libdconf1" 
+  "libflatpak0" {= "1.14.4"}
+  "libfuse3-3" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgio-2_0-0" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libjson-glib-1_0-0" 
+  "libostree" {>= "2020.8"}
+  "libostree-1-1" 
+  "libpolkit-agent-1-0" 
+  "libpolkit-gobject-1-0" 
+  "libseccomp2" 
+  "libsystemd0" 
+  "libxml2-2" 
+  "libzstd1" 
+  "system-user-flatpak" 
+  "xdg-dbus-proxy" {>= "0.1.0"}
+  "xdg-desktop-portal" {>= "0.10"}
+]
+extra-source "flatpak-1.14.4-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/flatpak-1.14.4-slfo.1.1.8.x86_64.rpm"
+}

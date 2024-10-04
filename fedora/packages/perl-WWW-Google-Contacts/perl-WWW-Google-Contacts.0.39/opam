@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-WWW-Google-Contacts-0.39-23.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-WWW-Google-Contacts-0.39-23.fc39.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Crypt-SSLeay" 
+  "perl-Data-Dumper" 
+  "perl-Encode" 
+  "perl-File-Slurp" 
+  "perl-Moose" {>= "1.9"}
+  "perl-MooseX-Role-Parameterized" 
+  "perl-MooseX-Types" 
+  "perl-Perl6-Junction" 
+  "perl-Scalar-List-Utils" 
+  "perl-Try-Tiny" 
+  "perl-URI" 
+  "perl-XML-Simple" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+]
+extra-source "perl-WWW-Google-Contacts-0.39-23.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-WWW-Google-Contacts-0.39-23.fc39.noarch.rpm"
+}

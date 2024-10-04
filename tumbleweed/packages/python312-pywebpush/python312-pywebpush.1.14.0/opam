@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pywebpush-1.14.0-3.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pywebpush-1.14.0-3.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-cryptography" {>= "2.6.1"}
+  "python312-http-ece" {>= "1.1.0"}
+  "python312-py-vapid" {>= "1.5.0"}
+  "python312-requests" {>= "2.21.0"}
+  "update-alternatives" 
+]
+extra-source "python312-pywebpush-1.14.0-3.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pywebpush-1.14.0-3.4.noarch.rpm"
+}

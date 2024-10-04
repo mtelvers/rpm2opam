@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-DateTime-Format-Oracle-0.06-35.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DateTime-Format-Oracle-0.06-35.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Convert-NLS_DATE_FORMAT" 
+  "perl-DateTime" 
+  "perl-DateTime-Format-Builder" 
+  "perl-libs" 
+]
+extra-source "perl-DateTime-Format-Oracle-0.06-35.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-DateTime-Format-Oracle-0.06-35.fc40.noarch.rpm"
+}

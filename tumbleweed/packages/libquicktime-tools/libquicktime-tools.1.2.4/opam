@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libquicktime-tools-1.2.4+git20180804.fff99cd-5.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libquicktime-tools-1.2.4+git20180804.fff99cd-5.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXaw7" 
+  "libXext6" 
+  "libXt6" 
+  "libXv1" 
+  "libasound2" 
+  "libglvnd" 
+  "libquicktime" {= "1.2.4"}
+  "libquicktime0" 
+]
+extra-source "libquicktime-tools-1.2.4+git20180804.fff99cd-5.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libquicktime-tools-1.2.4+git20180804.fff99cd-5.1.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Perl-Critic-Community-1.0.3-1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Perl-Critic-Community-1.0.3-1.8.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-PPI" {>= "1.254"}
+  "perl-Path-Tiny" {>= "0.101"}
+  "perl-Perl-Critic" {>= "1.126"}
+  "perl-Perl-Critic-Policy-Variables-ProhibitLoopOnHash" {>= "0.5"}
+  "perl-Perl-Critic-Pulp" {>= "90"}
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-base" 
+]
+extra-source "perl-Perl-Critic-Community-1.0.3-1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Perl-Critic-Community-1.0.3-1.8.noarch.rpm"
+}

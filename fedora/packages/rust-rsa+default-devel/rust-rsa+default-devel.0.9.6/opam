@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rsa+default-devel-0.9.6-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rsa+default-devel-0.9.6-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-rsa+pem-devel" {= "0.9.6"}
+  "rust-rsa+std-devel" {= "0.9.6"}
+  "rust-rsa+u64_digit-devel" {= "0.9.6"}
+  "rust-rsa-devel" {= "0.9.6"}
+]
+extra-source "rust-rsa+default-devel-0.9.6-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rsa+default-devel-0.9.6-2.fc40.noarch.rpm"
+}

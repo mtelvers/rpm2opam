@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pew-1.2.0-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pew-1.2.0-22.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-setuptools" {>= "17.1"}
+  "python3-virtualenv" {>= "1.11"}
+  "python3-virtualenv-clone" {>= "0.2.5"}
+]
+extra-source "pew-1.2.0-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pew-1.2.0-22.fc40.noarch.rpm"
+}

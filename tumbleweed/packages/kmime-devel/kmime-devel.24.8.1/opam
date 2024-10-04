@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kmime-devel-24.08.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kmime-devel-24.08.1-1.1.x86_64.rpm"]
+depends: [
+  "kf6-kcodecs-devel" {>= "6.3.0"}
+  "libKPim6Mime6" {= "24.8.1"}
+]
+extra-source "kmime-devel-24.08.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kmime-devel-24.08.1-1.1.x86_64.rpm"
+}

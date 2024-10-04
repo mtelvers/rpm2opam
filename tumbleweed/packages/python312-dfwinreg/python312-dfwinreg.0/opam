@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-dfwinreg-0~20240316-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-dfwinreg-0~20240316-1.1.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-dfdatetime" 
+  "python312-dtfabric" 
+  "python312-libcreg" {>= "20210502"}
+  "python312-libregf" {>= "20201002"}
+]
+extra-source "python312-dfwinreg-0~20240316-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-dfwinreg-0~20240316-1.1.noarch.rpm"
+}

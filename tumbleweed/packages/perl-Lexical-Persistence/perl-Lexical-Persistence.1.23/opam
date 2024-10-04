@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Lexical-Persistence-1.023-3.32.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Lexical-Persistence-1.023-3.32.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Devel-LexAlias" {>= "0.5"}
+  "perl-PadWalker" {>= "1.96"}
+]
+extra-source "perl-Lexical-Persistence-1.023-3.32.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Lexical-Persistence-1.023-3.32.noarch.rpm"
+}

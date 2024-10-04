@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lagrange-1.17.6-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lagrange-1.17.6-1.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "fribidi" 
+  "glibc" 
+  "harfbuzz" 
+  "libgcc" 
+  "libwebp" 
+  "mpg123-libs" 
+  "the_foundation" 
+]
+extra-source "lagrange-1.17.6-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lagrange-1.17.6-1.fc40.x86_64.rpm"
+}

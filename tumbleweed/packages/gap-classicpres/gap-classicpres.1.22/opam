@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-classicpres-1.22-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-classicpres-1.22-1.3.noarch.rpm"]
+depends: [
+  "gap" {>= "4.11"}
+  "gap-atlasrep" {>= "1.4.0"}
+]
+extra-source "gap-classicpres-1.22-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-classicpres-1.22-1.3.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "restore-0.4-0.58.b47.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "restore-0.4-0.58.b47.el10.x86_64.rpm"]
+depends: [
+  "bzip2-libs" 
+  "e2fsprogs-libs" 
+  "glibc" 
+  "libselinux" 
+  "lzo" 
+  "readline" 
+  "rmt" 
+  "setup" 
+  "zlib-ng-compat" 
+]
+extra-source "restore-0.4-0.58.b47.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/restore-0.4-0.58.b47.el10.x86_64.rpm"
+}

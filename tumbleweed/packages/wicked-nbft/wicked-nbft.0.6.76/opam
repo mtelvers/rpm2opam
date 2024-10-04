@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wicked-nbft-0.6.76-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wicked-nbft-0.6.76-2.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "jq" {>= "1.6"}
+  "nvme-cli" {>= "2.4"}
+  "wicked" {= "0.6.76"}
+]
+extra-source "wicked-nbft-0.6.76-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/wicked-nbft-0.6.76-2.1.x86_64.rpm"
+}

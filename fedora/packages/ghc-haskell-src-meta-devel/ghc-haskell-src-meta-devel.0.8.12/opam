@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-haskell-src-meta-devel-0.8.12-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-haskell-src-meta-devel-0.8.12-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-haskell-src-exts-devel" 
+  "ghc-haskell-src-meta" {= "0.8.12"}
+  "ghc-pretty-devel" 
+  "ghc-syb-devel" 
+  "ghc-template-haskell-devel" 
+  "ghc-th-orphans-devel" 
+]
+extra-source "ghc-haskell-src-meta-devel-0.8.12-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-haskell-src-meta-devel-0.8.12-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "collectd-5.12.0-37.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "collectd-5.12.0-37.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libcurl" 
+  "libgcrypt" 
+  "libgpg-error" 
+  "libmnl" 
+  "openssl-libs" 
+  "systemd" 
+  "yajl" 
+]
+extra-source "collectd-5.12.0-37.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/collectd-5.12.0-37.fc40.x86_64.rpm"
+}

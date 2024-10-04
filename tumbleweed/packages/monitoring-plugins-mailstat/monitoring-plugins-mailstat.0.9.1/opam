@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "monitoring-plugins-mailstat-0.9.1-103.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "monitoring-plugins-mailstat-0.9.1-103.2.noarch.rpm"]
+depends: [
+  "mailgraph" 
+  "monitoring-plugins-common" 
+  "perl-base" 
+  "perl-rrdtool" 
+]
+extra-source "monitoring-plugins-mailstat-0.9.1-103.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/monitoring-plugins-mailstat-0.9.1-103.2.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-jupyter-events-0.9.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-jupyter-events-0.9.0-3.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-json-logger" {>= "2.0.4"}
+  "python3-jsonschema" {>= "4.18"}
+  "python3-jsonschema+format-nongpl" {>= "4.18"}
+  "python3-pyyaml" {>= "5.3"}
+  "python3-referencing" 
+  "python3-rfc3339-validator" 
+  "python3-rfc3986-validator" {>= "0.1.1"}
+  "python3-traitlets" {>= "5.3"}
+]
+extra-source "python3-jupyter-events-0.9.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-jupyter-events-0.9.0-3.fc40.noarch.rpm"
+}

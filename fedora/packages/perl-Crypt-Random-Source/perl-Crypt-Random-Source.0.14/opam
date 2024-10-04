@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Crypt-Random-Source-0.14-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Crypt-Random-Source-0.14-20.fc40.noarch.rpm"]
+depends: [
+  "perl-Capture-Tiny" {>= "0.8"}
+  "perl-Carp" 
+  "perl-Errno" 
+  "perl-IO" {>= "1.14"}
+  "perl-Module-Find" 
+  "perl-Module-Runtime" 
+  "perl-Moo" 
+  "perl-PathTools" 
+  "perl-Sub-Exporter" 
+  "perl-Type-Tiny" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-namespace-clean" 
+]
+extra-source "perl-Crypt-Random-Source-0.14-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Crypt-Random-Source-0.14-20.fc40.noarch.rpm"
+}

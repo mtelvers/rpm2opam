@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-ipyparallel+test-8.7.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-ipyparallel+test-8.7.0-1.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-ipyparallel" {= "8.7.0"}
+  "python3-ipython" 
+  "python3-ipython+test" 
+  "python3-pytest" 
+  "python3-pytest-asyncio" 
+  "python3-pytest-cov" 
+  "python3-testpath" 
+  "python3-zmq-tests" 
+]
+extra-source "python3-ipyparallel+test-8.7.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-ipyparallel+test-8.7.0-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "clicfs-1.4.6-7.37.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clicfs-1.4.6-7.37.x86_64.rpm"]
+depends: [
+  "fuse" 
+  "glibc" 
+  "libfuse2" 
+  "libgcc_s1" 
+  "liblzma5" 
+  "libopenssl3" 
+  "libstdc++6" 
+]
+extra-source "clicfs-1.4.6-7.37.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/clicfs-1.4.6-7.37.x86_64.rpm"
+}

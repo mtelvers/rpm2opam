@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-symfony3-var-dumper-3.4.49-5.fc38.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-symfony3-var-dumper-3.4.49-5.fc38.noarch.rpm"]
+depends: [
+  "php-common" 
+  "php-gd" 
+  "php-mbstring" 
+  "php-process" 
+  "php-symfony3-common" {= "3.4.49"}
+  "php-xml" 
+]
+extra-source "php-symfony3-var-dumper-3.4.49-5.fc38.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-symfony3-var-dumper-3.4.49-5.fc38.noarch.rpm"
+}

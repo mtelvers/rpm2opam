@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "grafana-piechart-panel-1.6.1-3.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grafana-piechart-panel-1.6.1-3.4.noarch.rpm"]
+depends: [
+  "grafana" 
+  "system-user-grafana" 
+]
+extra-source "grafana-piechart-panel-1.6.1-3.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/grafana-piechart-panel-1.6.1-3.4.noarch.rpm"
+}

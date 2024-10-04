@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-Bessel-0.6.0-17.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-Bessel-0.6.0-17.fc40.x86_64.rpm"]
+depends: [
+  "R-Rmpfr" 
+  "R-core" {= "4.3"}
+  "glibc" 
+]
+extra-source "R-Bessel-0.6.0-17.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-Bessel-0.6.0-17.fc40.x86_64.rpm"
+}

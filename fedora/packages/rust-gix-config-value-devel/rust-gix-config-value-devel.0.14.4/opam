@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gix-config-value-devel-0.14.4-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gix-config-value-devel-0.14.4-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-bitflags+default-devel" 
+  "rust-bstr+std-devel" 
+  "rust-bstr-devel" 
+  "rust-gix-path+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-gix-config-value-devel-0.14.4-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gix-config-value-devel-0.14.4-1.fc40.noarch.rpm"
+}

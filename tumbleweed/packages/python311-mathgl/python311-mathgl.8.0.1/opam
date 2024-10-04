@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-mathgl-8.0.1-8.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-mathgl-8.0.1-8.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libgomp1" 
+  "libmgl8" 
+  "libpython3_11-1_0" 
+  "libstdc++6" 
+  "python311-base" {= "3.11"}
+  "python311-numpy1" {< "2.0"}
+]
+extra-source "python311-mathgl-8.0.1-8.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-mathgl-8.0.1-8.2.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-getsentry-sentry-devel-0.23.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-getsentry-sentry-devel-0.23.0-3.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-gin-gonic-devel" 
+  "golang-github-google-cmp-devel" 
+  "golang-github-labstack-echo-4-devel" 
+  "golang-github-martini-devel" 
+  "golang-github-sirupsen-logrus-devel" 
+  "golang-github-urfave-negroni-devel" 
+  "golang-github-valyala-fasthttp-devel" 
+  "golang-opentelemetry-otel-devel" 
+  "golang-x-sys-devel" 
+  "golang-x-text-devel" 
+]
+extra-source "golang-github-getsentry-sentry-devel-0.23.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-getsentry-sentry-devel-0.23.0-3.fc40.noarch.rpm"
+}

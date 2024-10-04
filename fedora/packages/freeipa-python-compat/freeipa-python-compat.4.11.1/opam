@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "freeipa-python-compat-4.11.1-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freeipa-python-compat-4.11.1-4.fc40.noarch.rpm"]
+depends: [
+  "freeipa-common" {= "4.11.1"}
+  "python3-ipalib" {= "4.11.1"}
+]
+extra-source "freeipa-python-compat-4.11.1-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/freeipa-python-compat-4.11.1-4.fc40.noarch.rpm"
+}

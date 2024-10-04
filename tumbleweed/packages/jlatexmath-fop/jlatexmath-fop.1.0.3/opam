@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jlatexmath-fop-1.0.3-7.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jlatexmath-fop-1.0.3-7.2.noarch.rpm"]
+depends: [
+  "javapackages-tools" 
+  "jlatexmath" {= "1.0.3"}
+  "xmlgraphics-fop" 
+]
+extra-source "jlatexmath-fop-1.0.3-7.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jlatexmath-fop-1.0.3-7.2.noarch.rpm"
+}

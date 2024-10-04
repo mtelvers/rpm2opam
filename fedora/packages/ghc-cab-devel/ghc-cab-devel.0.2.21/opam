@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-cab-devel-0.2.21-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-cab-devel-0.2.21-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-Cabal-devel" 
+  "ghc-attoparsec-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-cab" {= "0.2.21"}
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-conduit-devel" 
+  "ghc-conduit-extra-devel" 
+  "ghc-containers-devel" 
+  "ghc-directory-devel" 
+  "ghc-filepath-devel" 
+  "ghc-process-devel" 
+  "ghc-resourcet-devel" 
+]
+extra-source "ghc-cab-devel-0.2.21-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-cab-devel-0.2.21-3.fc40.x86_64.rpm"
+}

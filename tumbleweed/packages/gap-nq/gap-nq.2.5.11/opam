@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-nq-2.5.11-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-nq-2.5.11-1.3.x86_64.rpm"]
+depends: [
+  "gap" {>= "4.9"}
+  "gap-polycyclic" {>= "2.11"}
+  "glibc" 
+  "libgmp10" 
+]
+extra-source "gap-nq-2.5.11-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gap-nq-2.5.11-1.3.x86_64.rpm"
+}

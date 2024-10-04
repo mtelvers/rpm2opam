@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-gert-1.9.0-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-gert-1.9.0-10.fc40.x86_64.rpm"]
+depends: [
+  "R-askpass" 
+  "R-core" {= "4.3"}
+  "R-credentials" {>= "1.2.1"}
+  "R-openssl" {>= "2.0.3"}
+  "R-rstudioapi" {>= "0.11"}
+  "R-sys" 
+  "R-zip" {>= "2.1.0"}
+  "glibc" 
+  "libgit2" 
+]
+extra-source "R-gert-1.9.0-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-gert-1.9.0-10.fc40.x86_64.rpm"
+}

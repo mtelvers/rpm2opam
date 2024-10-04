@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cron-4.2-97.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cron-4.2-97.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "cronie" {= "1.7.2"}
+  "permissions" 
+]
+extra-source "cron-4.2-97.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cron-4.2-97.1.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfsxfs-devel-20240501-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfsxfs-devel-20240501-1.1.x86_64.rpm"]
+depends: [
+  "libbfio-devel" 
+  "libfsxfs1" {= "20240501"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libfsxfs-devel-20240501-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfsxfs-devel-20240501-1.1.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-doxia-module-xhtml5-1.12.0-slfo.1.3.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-doxia-module-xhtml5-1.12.0-slfo.1.3.3.noarch.rpm"]
+depends: [
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "maven-doxia-core" {= "1.12.0"}
+  "maven-doxia-sink-api" {= "1.12.0"}
+  "plexus-containers-component-annotations" 
+  "plexus-utils" 
+  "plexus-xml" 
+]
+extra-source "maven-doxia-module-xhtml5-1.12.0-slfo.1.3.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/maven-doxia-module-xhtml5-1.12.0-slfo.1.3.3.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-nbclient-0.10.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-nbclient-0.10.0-2.1.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "python312-base" 
+  "python312-jupyter-client" {>= "6.1.12"}
+  "python312-nbformat" {>= "5.1"}
+  "python312-traitlets" {>= "5.4"}
+]
+extra-source "python312-nbclient-0.10.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-nbclient-0.10.0-2.1.noarch.rpm"
+}

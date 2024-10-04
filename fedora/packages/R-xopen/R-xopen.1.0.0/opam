@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-xopen-1.0.0-17.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-xopen-1.0.0-17.fc40.noarch.rpm"]
+depends: [
+  "R-core" {= "4.3"}
+  "R-processx" 
+  "xdg-utils" 
+]
+extra-source "R-xopen-1.0.0-17.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-xopen-1.0.0-17.fc40.noarch.rpm"
+}

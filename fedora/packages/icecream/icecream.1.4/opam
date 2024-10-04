@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "icecream-1.4-0.12.rc1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "icecream-1.4-0.12.rc1.fc40.x86_64.rpm"]
+depends: [
+  "Lmod" 
+  "bash" 
+  "findutils" 
+  "firewalld-filesystem" 
+  "glibc" 
+  "libarchive" 
+  "libcap-ng" 
+  "libgcc" 
+  "libstdc++" 
+  "libzstd" 
+  "lzo" 
+  "policycoreutils" 
+  "policycoreutils-python-utils" 
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "icecream-1.4-0.12.rc1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/icecream-1.4-0.12.rc1.fc40.x86_64.rpm"
+}

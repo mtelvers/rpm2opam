@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-HTML-Format-2.12-1.26.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTML-Format-2.12-1.26.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Font-AFM" 
+  "perl-HTML-Tree" {>= "3.15"}
+  "perl-base" 
+]
+extra-source "perl-HTML-Format-2.12-1.26.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-HTML-Format-2.12-1.26.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openobex-devel-1.7.2-26.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openobex-devel-1.7.2-26.fc40.x86_64.rpm"]
+depends: [
+  "bluez-libs-devel" 
+  "cmake-filesystem" 
+  "libusb1-devel" 
+  "openobex" 
+  "pkgconf-pkg-config" 
+]
+extra-source "openobex-devel-1.7.2-26.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openobex-devel-1.7.2-26.fc40.x86_64.rpm"
+}

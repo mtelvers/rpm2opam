@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "evemu-2.7.0-28.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "evemu-2.7.0-28.fc40.x86_64.rpm"]
+depends: [
+  "evemu-libs" {= "2.7.0"}
+  "glibc" 
+  "libevdev" {>= "0.5"}
+]
+extra-source "evemu-2.7.0-28.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/evemu-2.7.0-28.fc40.x86_64.rpm"
+}

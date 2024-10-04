@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gdk-pixbuf0.15+v2_42-devel-0.15.11-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gdk-pixbuf0.15+v2_42-devel-0.15.11-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-gdk-pixbuf-sys+v2_42-devel" 
+  "rust-gdk-pixbuf0-15+v2_40-devel" {= "0.15.11"}
+  "rust-gdk-pixbuf0-15-devel" {= "0.15.11"}
+]
+extra-source "rust-gdk-pixbuf0.15+v2_42-devel-0.15.11-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gdk-pixbuf0.15+v2_42-devel-0.15.11-4.fc40.noarch.rpm"
+}

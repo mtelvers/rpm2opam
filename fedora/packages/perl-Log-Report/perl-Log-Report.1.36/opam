@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Log-Report-1.36-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Log-Report-1.36-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Devel-GlobalDestruction" {>= "0.9"}
+  "perl-Encode" {>= "2.0"}
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-IO" 
+  "perl-Log-Report-Optional" {>= "1.7"}
+  "perl-POSIX" 
+  "perl-Scalar-List-Utils" 
+  "perl-base" 
+  "perl-libs" 
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-Log-Report-1.36-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Log-Report-1.36-3.fc40.noarch.rpm"
+}

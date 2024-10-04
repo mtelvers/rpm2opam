@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-CheckManifest-1.43-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-CheckManifest-1.43-1.6.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-base" {>= "3.75"}
+]
+extra-source "perl-Test-CheckManifest-1.43-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-CheckManifest-1.43-1.6.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lua5.1-http-0.3-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lua5.1-http-0.3-14.fc40.noarch.rpm"]
+depends: [
+  "lua5-1-basexx" {>= "0.2.0"}
+  "lua5-1-binaryheap" {>= "0.3"}
+  "lua5-1-bitop" 
+  "lua5-1-compat53" {>= "0.3"}
+  "lua5-1-cqueues" {>= "20171014"}
+  "lua5-1-fifo" 
+  "lua5-1-lpeg" 
+  "lua5-1-lpeg-patterns" {>= "0.5"}
+  "lua5-1-luaossl" {>= "20161208"}
+]
+extra-source "lua5.1-http-0.3-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lua5.1-http-0.3-14.fc40.noarch.rpm"
+}

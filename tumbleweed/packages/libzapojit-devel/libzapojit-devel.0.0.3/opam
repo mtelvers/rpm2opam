@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libzapojit-devel-0.0.3-9.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libzapojit-devel-0.0.3-9.3.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "gnome-online-accounts-devel" 
+  "json-glib-devel" 
+  "librest0_7-devel" 
+  "libsoup2-devel" 
+  "libzapojit-0_0-0" {= "0.0.3"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Zpj-0_0" 
+]
+extra-source "libzapojit-devel-0.0.3-9.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libzapojit-devel-0.0.3-9.3.x86_64.rpm"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-filesystem-2023.201-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-filesystem-2023.201-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "busybox-ncurses-utils" 
+  "busybox-util-linux" 
+  "coreutils" 
+  "cron" 
+  "dialog" 
+  "ed" 
+  "fillup" 
+  "findutils" 
+  "grep" 
+  "perl-base" 
+  "permissions" 
+  "python311" 
+  "sed" 
+  "system-user-mktex" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+]
+extra-source "texlive-filesystem-2023.201-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-filesystem-2023.201-slfo.1.1.3.noarch.rpm"
+}

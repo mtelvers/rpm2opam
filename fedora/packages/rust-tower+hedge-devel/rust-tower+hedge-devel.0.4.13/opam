@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tower+hedge-devel-0.4.13-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tower+hedge-devel-0.4.13-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-tokio+default-devel" 
+  "rust-tokio+sync-devel" 
+  "rust-tokio+time-devel" 
+  "rust-tower+filter-devel" {= "0.4.13"}
+  "rust-tower+futures-util-devel" {= "0.4.13"}
+  "rust-tower+hdrhistogram-devel" {= "0.4.13"}
+  "rust-tower+tracing-devel" {= "0.4.13"}
+  "rust-tower+util-devel" {= "0.4.13"}
+  "rust-tower-devel" {= "0.4.13"}
+]
+extra-source "rust-tower+hedge-devel-0.4.13-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tower+hedge-devel-0.4.13-2.fc40.noarch.rpm"
+}

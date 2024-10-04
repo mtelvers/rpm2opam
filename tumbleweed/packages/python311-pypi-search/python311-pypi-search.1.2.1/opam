@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pypi-search-1.2.1-2.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pypi-search-1.2.1-2.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-beautifulsoup4" {>= "4.9.2"}
+  "python311-html2text" {>= "2020.1.16"}
+  "python311-requests" {>= "2.22.0"}
+  "update-alternatives" 
+]
+extra-source "python311-pypi-search-1.2.1-2.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pypi-search-1.2.1-2.4.noarch.rpm"
+}

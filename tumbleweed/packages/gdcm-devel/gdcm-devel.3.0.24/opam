@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gdcm-devel-3.0.24-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdcm-devel-3.0.24-2.1.x86_64.rpm"]
+depends: [
+  "gdcm-applications" {= "3.0.24"}
+  "libgdcm3_0" 
+  "libsocketxx1_2" 
+]
+extra-source "gdcm-devel-3.0.24-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gdcm-devel-3.0.24-2.1.x86_64.rpm"
+}

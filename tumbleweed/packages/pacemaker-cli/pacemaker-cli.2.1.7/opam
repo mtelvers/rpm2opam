@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pacemaker-cli-2.1.7+20240711.239cba384-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pacemaker-cli-2.1.7+20240711.239cba384-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "cluster-glue" 
+  "coreutils" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libncurses6" 
+  "libqb100" 
+  "libxml2-2" 
+  "logrotate" 
+  "pacemaker-libs" 
+  "perl-TimeDate" 
+  "procps" 
+  "psmisc" 
+]
+extra-source "pacemaker-cli-2.1.7+20240711.239cba384-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pacemaker-cli-2.1.7+20240711.239cba384-1.1.x86_64.rpm"
+}

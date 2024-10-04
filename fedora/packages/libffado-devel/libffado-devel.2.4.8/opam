@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libffado-devel-2.4.8-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libffado-devel-2.4.8-1.fc40.x86_64.rpm"]
+depends: [
+  "libffado" {= "2.4.8"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libffado-devel-2.4.8-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libffado-devel-2.4.8-1.fc40.x86_64.rpm"
+}

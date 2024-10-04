@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "authselect-1.5.0-6.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "authselect-1.5.0-6.el10.x86_64.rpm"]
+depends: [
+  "authselect-libs" {= "1.5.0"}
+  "bash" 
+  "glibc" 
+  "popt" 
+]
+extra-source "authselect-1.5.0-6.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/authselect-1.5.0-6.el10.x86_64.rpm"
+}

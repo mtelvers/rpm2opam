@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-recipes-2.0.4-1.21.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-recipes-2.0.4-1.21.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libcanberra0" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgnome-autoar-0-0" 
+  "libgoa-1_0-0" 
+  "libgspell-1-2" 
+  "libgtk-3-0" 
+  "libjson-glib-1_0-0" 
+  "libpango-1_0-0" 
+  "librest-0_7-0" 
+  "libsoup-2_4-1" 
+]
+extra-source "gnome-recipes-2.0.4-1.21.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnome-recipes-2.0.4-1.21.x86_64.rpm"
+}

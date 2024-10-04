@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgnome-desktop-4-devel-44.0-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgnome-desktop-4-devel-44.0-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf-devel" {>= "2.36.5"}
+  "glib2-devel" {>= "2.53.0"}
+  "gsettings-desktop-schemas-devel" {>= "3.27.0"}
+  "gtk4-devel" {>= "4.4.0"}
+  "iso-codes-devel" 
+  "libgnome-desktop-4-2" {= "44.0"}
+  "libseccomp-devel" 
+  "libxkbregistry-devel" 
+  "pkgconf-pkg-config" 
+  "systemd-devel" 
+  "typelib-1_0-GnomeBG-4_0" {= "44.0"}
+  "typelib-1_0-GnomeDesktop-4_0" {= "44.0"}
+  "typelib-1_0-GnomeRR-4_0" {= "44.0"}
+  "xkeyboard-config" 
+]
+extra-source "libgnome-desktop-4-devel-44.0-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libgnome-desktop-4-devel-44.0-slfo.1.1.7.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postgresql15-docs-15.8-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql15-docs-15.8-1.1.noarch.rpm"]
+depends: [
+  "postgresql-docs" {>= "15"}
+]
+extra-source "postgresql15-docs-15.8-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/postgresql15-docs-15.8-1.1.noarch.rpm"
+}

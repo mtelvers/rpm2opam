@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "notcurses-core-devel-3.0.9-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "notcurses-core-devel-3.0.9-3.2.x86_64.rpm"]
+depends: [
+  "libnotcurses-core3" {= "3.0.9"}
+  "ncurses-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "notcurses-core-devel-3.0.9-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/notcurses-core-devel-3.0.9-3.2.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-netlink-proto-devel-0.11.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-netlink-proto-devel-0.11.3-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bytes+default-devel" 
+  "rust-futures+default-devel" 
+  "rust-log+default-devel" 
+  "rust-netlink-packet-core+default-devel" 
+  "rust-netlink-sys-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-tokio+io-util-devel" 
+  "rust-tokio+time-devel" 
+  "rust-tokio-devel" 
+]
+extra-source "rust-netlink-proto-devel-0.11.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-netlink-proto-devel-0.11.3-1.fc40.noarch.rpm"
+}

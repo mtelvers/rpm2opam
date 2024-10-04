@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rocksdb-tools-9.6.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rocksdb-tools-9.6.1-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "librocksdb9" 
+  "libstdc++6" 
+]
+extra-source "rocksdb-tools-9.6.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rocksdb-tools-9.6.1-1.1.x86_64.rpm"
+}

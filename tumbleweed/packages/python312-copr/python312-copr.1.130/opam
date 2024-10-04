@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-copr-1.130-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-copr-1.130-1.3.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-filelock" 
+  "python312-munch" 
+  "python312-requests" 
+  "python312-requests-toolbelt" 
+  "python312-setuptools" 
+  "python312-six" 
+]
+extra-source "python312-copr-1.130-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-copr-1.130-1.3.noarch.rpm"
+}

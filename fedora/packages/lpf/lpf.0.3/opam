@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lpf-0.3-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lpf-0.3-8.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "dnf" 
+  "dnf-plugins-core" 
+  "hicolor-icon-theme" 
+  "inotify-tools" 
+  "polkit" 
+  "procps-ng" 
+  "python3" 
+  "python3-gobject-base" 
+  "rpm-build" 
+  "rpmdevtools" 
+  "shadow-utils" 
+  "sudo" 
+  "zenity" 
+]
+extra-source "lpf-0.3-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lpf-0.3-8.fc40.noarch.rpm"
+}

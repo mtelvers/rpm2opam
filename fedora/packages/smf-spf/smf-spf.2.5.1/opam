@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "smf-spf-2.5.1^20220423g061e937-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "smf-spf-2.5.1^20220423g061e937-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libspf2" 
+  "sendmail" {>= "8.12"}
+  "sendmail-milter" 
+  "shadow-utils" 
+]
+extra-source "smf-spf-2.5.1^20220423g061e937-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/smf-spf-2.5.1^20220423g061e937-3.fc40.x86_64.rpm"
+}

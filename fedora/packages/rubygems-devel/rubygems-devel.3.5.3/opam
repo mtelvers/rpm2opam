@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygems-devel-3.5.3-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygems-devel-3.5.3-4.fc40.noarch.rpm"]
+depends: [
+  "rubygem-json" {>= "2.7.1"}
+  "rubygem-rdoc" {>= "6.6.2"}
+  "rubygems" {>= "3.5.3"}
+  "rubypick" 
+]
+extra-source "rubygems-devel-3.5.3-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygems-devel-3.5.3-4.fc40.noarch.rpm"
+}

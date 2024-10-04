@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "spdlog-devel-1.14.1-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "spdlog-devel-1.14.1-3.1.x86_64.rpm"]
+depends: [
+  "fmt-10-devel" 
+  "libspdlog1_14" {= "1.14.1"}
+  "libstdc++-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "spdlog-devel-1.14.1-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/spdlog-devel-1.14.1-3.1.x86_64.rpm"
+}

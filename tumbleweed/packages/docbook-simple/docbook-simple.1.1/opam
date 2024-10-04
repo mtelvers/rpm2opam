@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "docbook-simple-1.1-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "docbook-simple-1.1-1.9.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "libxml2-tools" 
+  "sgml-skel" 
+]
+extra-source "docbook-simple-1.1-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/docbook-simple-1.1-1.9.noarch.rpm"
+}

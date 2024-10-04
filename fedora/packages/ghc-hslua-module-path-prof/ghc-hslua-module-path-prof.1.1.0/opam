@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-hslua-module-path-prof-1.1.0-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hslua-module-path-prof-1.1.0-29.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-filepath-prof" 
+  "ghc-hslua-core-prof" 
+  "ghc-hslua-marshalling-prof" 
+  "ghc-hslua-module-path-devel" {= "1.1.0"}
+  "ghc-hslua-packaging-prof" 
+  "ghc-text-prof" 
+]
+extra-source "ghc-hslua-module-path-prof-1.1.0-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-hslua-module-path-prof-1.1.0-29.fc40.x86_64.rpm"
+}

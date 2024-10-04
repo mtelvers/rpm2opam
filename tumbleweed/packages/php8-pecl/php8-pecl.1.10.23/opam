@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "php8-pecl-1.10.23-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php8-pecl-1.10.23-1.2.noarch.rpm"]
+depends: [
+  "autoconf" 
+  "automake" 
+  "bash-sh" 
+  "gcc-c++" 
+  "libtool" 
+  "php8-pear" {= "1.10.23"}
+]
+extra-source "php8-pecl-1.10.23-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/php8-pecl-1.10.23-1.2.noarch.rpm"
+}

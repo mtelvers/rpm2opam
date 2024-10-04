@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcscreensaver-0_0_0-6.2.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcscreensaver-0_0_0-6.2.0-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libXext6" 
+  "libXinerama1" 
+  "libXrandr2" 
+  "libgtk-3-0" 
+  "pam" 
+  "xdotool" 
+]
+extra-source "libcscreensaver-0_0_0-6.2.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcscreensaver-0_0_0-6.2.0-1.1.x86_64.rpm"
+}

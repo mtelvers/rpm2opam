@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfsapfs-20240429-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfsapfs-20240429-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbfio1" 
+  "libcerror1" 
+  "libclocale1" 
+  "libcnotify1" 
+  "libfdatetime1" 
+  "libfguid1" 
+  "libfsapfs1" 
+  "libfuse2" 
+  "libhmac1" 
+  "libuna1" 
+]
+extra-source "libfsapfs-20240429-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfsapfs-20240429-1.1.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "uxplay-1.68.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "uxplay-1.68.2-3.fc40.x86_64.rpm"]
+depends: [
+  "avahi-compat-libdns_sd" 
+  "glib2" 
+  "glibc" 
+  "gstreamer1" 
+  "gstreamer1-plugins-base" 
+  "libX11" 
+  "libgcc" 
+  "libplist" 
+  "libstdc++" 
+  "llhttp" 
+  "openssl-libs" 
+]
+extra-source "uxplay-1.68.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/uxplay-1.68.2-3.fc40.x86_64.rpm"
+}

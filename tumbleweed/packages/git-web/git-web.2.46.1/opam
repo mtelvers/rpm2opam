@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "git-web-2.46.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "git-web-2.46.1-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "git-core" {= "2.46.1"}
+  "perl-CGI" 
+  "perl-Git" {= "2.46.1"}
+  "perl-base" 
+]
+extra-source "git-web-2.46.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/git-web-2.46.1-1.1.x86_64.rpm"
+}

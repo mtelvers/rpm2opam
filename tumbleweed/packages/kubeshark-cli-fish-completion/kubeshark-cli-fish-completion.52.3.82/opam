@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kubeshark-cli-fish-completion-52.3.82-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kubeshark-cli-fish-completion-52.3.82-1.1.noarch.rpm"]
+depends: [
+  "kubeshark-cli" {= "52.3.82"}
+]
+extra-source "kubeshark-cli-fish-completion-52.3.82-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kubeshark-cli-fish-completion-52.3.82-1.1.noarch.rpm"
+}

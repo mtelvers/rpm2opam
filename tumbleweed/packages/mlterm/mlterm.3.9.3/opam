@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mlterm-3.9.3-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mlterm-3.9.3-5.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libcairo2" 
+  "libfontconfig1" 
+  "libfreetype6" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-3-0" 
+  "libwayland-client0" 
+  "libwayland-cursor0" 
+  "libxkbcommon0" 
+  "mlterm-common" 
+  "system-group-hardware" 
+]
+extra-source "mlterm-3.9.3-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mlterm-3.9.3-5.2.x86_64.rpm"
+}

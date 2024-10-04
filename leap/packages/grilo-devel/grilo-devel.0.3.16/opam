@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "grilo-devel-0.3.16-lp160.2.22.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grilo-devel-0.3.16-lp160.2.22.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.66"}
+  "libgrilo-0_3-0" {= "0.3.16"}
+  "libgrlnet-0_3-0" {= "0.3.16"}
+  "libgrlpls-0_3-0" {= "0.3.16"}
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Grl-0_3" {= "0.3.16"}
+  "typelib-1_0-GrlNet-0_3" {= "0.3.16"}
+  "typelib-1_0-GrlPls-0_3" {= "0.3.16"}
+]
+extra-source "grilo-devel-0.3.16-lp160.2.22.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/grilo-devel-0.3.16-lp160.2.22.x86_64.rpm"
+}

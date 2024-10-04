@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "minidlna-1.3.3-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "minidlna-1.3.3-3.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ffmpeg-7-mini-libs" 
+  "glibc" 
+  "libFLAC12" 
+  "libexif12" 
+  "libffmpegthumbnailer4" 
+  "libid3tag0" 
+  "libjpeg8" 
+  "libogg0" 
+  "libsqlite3-0" 
+  "libvorbis0" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "minidlna-1.3.3-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/minidlna-1.3.3-3.1.x86_64.rpm"
+}

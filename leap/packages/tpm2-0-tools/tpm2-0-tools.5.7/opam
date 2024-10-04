@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tpm2.0-tools-5.7-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tpm2.0-tools-5.7-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcurl-mini4" 
+  "libefivar1" 
+  "libopenssl3" 
+  "libtss2-esys0" 
+  "libtss2-fapi1" 
+  "libtss2-mu0" 
+  "libtss2-rc0" 
+  "libtss2-sys1" 
+  "libtss2-tctildr0" 
+]
+extra-source "tpm2.0-tools-5.7-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/tpm2.0-tools-5.7-slfo.1.1.7.x86_64.rpm"
+}

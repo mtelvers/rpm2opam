@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "domination-1.2.9-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "domination-1.2.9-1.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "domination-data" 
+  "java-11-openj9" {>= "1.6.0"}
+]
+extra-source "domination-1.2.9-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/domination-1.2.9-1.3.noarch.rpm"
+}

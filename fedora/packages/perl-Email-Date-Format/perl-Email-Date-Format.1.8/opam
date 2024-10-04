@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Email-Date-Format-1.008-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Email-Date-Format-1.008-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" {>= "5.57"}
+  "perl-Time-Local" {>= "1.27"}
+  "perl-libs" {>= "5.12.0"}
+]
+extra-source "perl-Email-Date-Format-1.008-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Email-Date-Format-1.008-4.fc40.noarch.rpm"
+}

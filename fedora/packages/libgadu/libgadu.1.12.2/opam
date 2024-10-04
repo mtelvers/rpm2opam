@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libgadu-1.12.2-26.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgadu-1.12.2-26.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gnutls" 
+  "libgcc" 
+  "protobuf-c" 
+  "zlib-ng-compat" 
+]
+extra-source "libgadu-1.12.2-26.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libgadu-1.12.2-26.fc40.x86_64.rpm"
+}

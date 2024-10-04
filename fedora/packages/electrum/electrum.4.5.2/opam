@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "electrum-4.5.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "electrum-4.5.2-1.fc40.noarch.rpm"]
+depends: [
+  "hicolor-icon-theme" 
+  "libsecp256k1" 
+  "python3" 
+  "python3-aiohttp" 
+  "python3-aiohttp-socks" {>= "0.3"}
+  "python3-aiorpcx" 
+  "python3-attrs" {>= "20.1"}
+  "python3-bitstring" 
+  "python3-certifi" 
+  "python3-cryptography" 
+  "python3-dns" {>= "2"}
+  "python3-jsonpatch" 
+  "python3-protobuf" 
+  "python3-qdarkstyle" {>= "2.7"}
+  "python3-qrcode" 
+  "python3-qt5-base" 
+]
+extra-source "electrum-4.5.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/electrum-4.5.2-1.fc40.noarch.rpm"
+}

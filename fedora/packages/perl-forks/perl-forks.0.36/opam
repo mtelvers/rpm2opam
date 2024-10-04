@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-forks-0.36-28.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-forks-0.36-28.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-Acme-Damn" 
+  "perl-Attribute-Handlers" 
+  "perl-Carp" 
+  "perl-IO" 
+  "perl-List-MoreUtils" {>= "0.15"}
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" {>= "1.11"}
+  "perl-Socket" 
+  "perl-Storable" 
+  "perl-Sys-SigAction" {>= "0.11"}
+  "perl-Time-HiRes" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-overload" 
+  "perl-sigtrap" 
+  "perl-vars" 
+]
+extra-source "perl-forks-0.36-28.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-forks-0.36-28.fc40.x86_64.rpm"
+}

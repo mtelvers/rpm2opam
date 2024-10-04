@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "adios_1_13_1-gnu-mpich-hpc-devel-1.13.1-7.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "adios_1_13_1-gnu-mpich-hpc-devel-1.13.1-7.4.x86_64.rpm"]
+depends: [
+  "adios_1_13_1-gnu-mpich-hpc" {= "1.13.1"}
+  "adios_1_13_1-gnu-mpich-hpc-devel-static" {= "1.13.1"}
+  "gnu-compilers-hpc-devel" 
+  "hdf5-gnu-mpich-hpc-devel" {= "1.12.3"}
+  "lua-lmod" 
+  "mpich-gnu-hpc-devel" 
+  "netcdf-gnu-mpich-hpc-devel" {= "4.9.2"}
+]
+extra-source "adios_1_13_1-gnu-mpich-hpc-devel-1.13.1-7.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/adios_1_13_1-gnu-mpich-hpc-devel-1.13.1-7.4.x86_64.rpm"
+}

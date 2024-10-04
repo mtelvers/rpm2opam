@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-azure-cognitiveservices-inkrecognizer-1.0.0b1-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-azure-cognitiveservices-inkrecognizer-1.0.0b1-4.1.noarch.rpm"]
+depends: [
+  "python311-azure-cognitiveservices-nspkg" {>= "3.0.0"}
+  "python311-azure-common" 
+  "python311-azure-core" 
+  "python311-base" {= "3.11"}
+]
+extra-source "python311-azure-cognitiveservices-inkrecognizer-1.0.0b1-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-azure-cognitiveservices-inkrecognizer-1.0.0b1-4.1.noarch.rpm"
+}

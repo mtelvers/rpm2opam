@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "boost-gnu-openmpi4-hpc-devel-1.86.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "boost-gnu-openmpi4-hpc-devel-1.86.0-1.1.noarch.rpm"]
+depends: [
+  "boost_1_86_0-gnu-openmpi4-hpc-devel" {= "1.86.0"}
+]
+extra-source "boost-gnu-openmpi4-hpc-devel-1.86.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/boost-gnu-openmpi4-hpc-devel-1.86.0-1.1.noarch.rpm"
+}

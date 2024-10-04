@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Search-Elasticsearch-8.120.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Search-Elasticsearch-8.120.0-2.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Any-URI-Escape" 
+  "perl-Devel-GlobalDestruction" 
+  "perl-HTTP-Message" 
+  "perl-JSON-MaybeXS" {>= "1.2002"}
+  "perl-Log-Any" {>= "1.2"}
+  "perl-Module-Runtime" 
+  "perl-Moo" {>= "2.1000"}
+  "perl-Net-IP" 
+  "perl-Package-Stash" {>= "0.34"}
+  "perl-Sub-Exporter" 
+  "perl-Try-Tiny" 
+  "perl-URI" 
+  "perl-libwww-perl" 
+  "perl-namespace-clean" 
+]
+extra-source "perl-Search-Elasticsearch-8.120.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Search-Elasticsearch-8.120.0-2.2.noarch.rpm"
+}

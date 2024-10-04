@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-xmlschema-3.4.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-xmlschema-3.4.2-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-elementpath" {>= "3.0.0"}
+  "python311-lxml" 
+  "update-alternatives" 
+]
+extra-source "python311-xmlschema-3.4.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-xmlschema-3.4.2-1.1.noarch.rpm"
+}

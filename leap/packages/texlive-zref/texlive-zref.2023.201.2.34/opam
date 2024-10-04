@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-zref-2023.201.2.34svn62977-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-zref-2023.201.2.34svn62977-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-atbegshi" 
+  "texlive-atveryend" 
+  "texlive-auxhook" 
+  "texlive-etexcmds" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-gettitlestring" 
+  "texlive-graphics" 
+  "texlive-iftex" 
+  "texlive-infwarerr" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-kvdefinekeys" 
+  "texlive-kvoptions" 
+  "texlive-kvsetkeys" 
+  "texlive-ltxcmds" 
+  "texlive-makerobust" 
+  "texlive-pdftexcmds" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-uniquecounter" 
+]
+extra-source "texlive-zref-2023.201.2.34svn62977-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-zref-2023.201.2.34svn62977-slfo.1.1.4.noarch.rpm"
+}

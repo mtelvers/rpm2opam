@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "svn2git-1.0.18-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "svn2git-1.0.18-1.5.x86_64.rpm"]
+depends: [
+  "git" 
+  "glibc" 
+  "libQt5Core5" 
+  "libapr1-0" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "subversion" 
+]
+extra-source "svn2git-1.0.18-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/svn2git-1.0.18-1.5.x86_64.rpm"
+}

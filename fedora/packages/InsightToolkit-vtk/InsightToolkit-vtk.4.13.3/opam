@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "InsightToolkit-vtk-4.13.3-15.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "InsightToolkit-vtk-4.13.3-15.fc39.x86_64.rpm"]
+depends: [
+  "InsightToolkit" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "vtk" 
+  "vxl" 
+]
+extra-source "InsightToolkit-vtk-4.13.3-15.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/InsightToolkit-vtk-4.13.3-15.fc39.x86_64.rpm"
+}

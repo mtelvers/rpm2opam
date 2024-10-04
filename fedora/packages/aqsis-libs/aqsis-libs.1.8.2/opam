@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "aqsis-libs-1.8.2-57.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "aqsis-libs-1.8.2-57.fc40.x86_64.rpm"]
+depends: [
+  "boost-filesystem" 
+  "boost-iostreams" 
+  "boost-thread" 
+  "glibc" 
+  "libgcc" 
+  "libpng" 
+  "libstdc++" 
+  "libtiff" 
+  "openexr2-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "aqsis-libs-1.8.2-57.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/aqsis-libs-1.8.2-57.fc40.x86_64.rpm"
+}

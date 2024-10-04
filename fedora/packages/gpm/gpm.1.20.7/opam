@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gpm-1.20.7-46.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gpm-1.20.7-46.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "gpm-libs" {= "1.20.7"}
+  "info" 
+  "linuxconsoletools" 
+]
+extra-source "gpm-1.20.7-46.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gpm-1.20.7-46.fc40.x86_64.rpm"
+}

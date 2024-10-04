@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "4ti2-1.6.10-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "4ti2-1.6.10-1.5.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "lib4ti2-0" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libzsolve0" 
+]
+extra-source "4ti2-1.6.10-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/4ti2-1.6.10-1.5.x86_64.rpm"
+}

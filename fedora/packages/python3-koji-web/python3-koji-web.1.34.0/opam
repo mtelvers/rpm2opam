@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-koji-web-1.34.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-koji-web-1.34.0-3.fc40.noarch.rpm"]
+depends: [
+  "httpd" 
+  "mod_auth_gssapi" 
+  "python3-cheetah" 
+  "python3-koji" {= "1.34.0"}
+  "python3-mod_wsgi" 
+  "python3-psycopg2" 
+]
+extra-source "python3-koji-web-1.34.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-koji-web-1.34.0-3.fc40.noarch.rpm"
+}

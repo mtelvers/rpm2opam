@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "genius-1.0.27-1.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "genius-1.0.27-1.12.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgmp10" 
+  "libmpfr6" 
+  "libncurses6" 
+  "libreadline8" 
+]
+extra-source "genius-1.0.27-1.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/genius-1.0.27-1.12.x86_64.rpm"
+}

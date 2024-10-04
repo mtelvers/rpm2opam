@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-icon-theme-legacy-3.12.0-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-icon-theme-legacy-3.12.0-22.fc40.noarch.rpm"]
+depends: [
+  "gnome-icon-theme" {= "3.12.0"}
+]
+extra-source "gnome-icon-theme-legacy-3.12.0-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-icon-theme-legacy-3.12.0-22.fc40.noarch.rpm"
+}

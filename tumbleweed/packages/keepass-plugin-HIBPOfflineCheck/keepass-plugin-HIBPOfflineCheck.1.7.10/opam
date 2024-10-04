@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "keepass-plugin-HIBPOfflineCheck-1.7.10-1.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "keepass-plugin-HIBPOfflineCheck-1.7.10-1.11.noarch.rpm"]
+depends: [
+  "keepass" {= "2.57.0.28913"}
+  "mono-core" {= "4.0.0.0"}
+  "mono-winforms" {= "4.0.0.0"}
+]
+extra-source "keepass-plugin-HIBPOfflineCheck-1.7.10-1.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/keepass-plugin-HIBPOfflineCheck-1.7.10-1.11.noarch.rpm"
+}

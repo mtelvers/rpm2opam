@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-async-compression+lzma-devel-0.4.6-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-async-compression+lzma-devel-0.4.6-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-async-compression+xz2-devel" {= "0.4.6"}
+  "rust-async-compression-devel" {= "0.4.6"}
+]
+extra-source "rust-async-compression+lzma-devel-0.4.6-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-async-compression+lzma-devel-0.4.6-1.fc40.noarch.rpm"
+}

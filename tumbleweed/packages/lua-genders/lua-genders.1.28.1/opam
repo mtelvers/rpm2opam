@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lua-genders-1.28.1-2.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lua-genders-1.28.1-2.11.x86_64.rpm"]
+depends: [
+  "genders" {= "1.28.1"}
+  "glibc" 
+  "libgenders0" 
+  "liblua5_4-5" 
+  "lua51" 
+]
+extra-source "lua-genders-1.28.1-2.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lua-genders-1.28.1-2.11.x86_64.rpm"
+}

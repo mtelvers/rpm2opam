@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mod_security_crs-3.3.4-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mod_security_crs-3.3.4-8.fc40.noarch.rpm"]
+depends: [
+  "mod_security" {>= "2.9.6"}
+]
+extra-source "mod_security_crs-3.3.4-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mod_security_crs-3.3.4-8.fc40.noarch.rpm"
+}

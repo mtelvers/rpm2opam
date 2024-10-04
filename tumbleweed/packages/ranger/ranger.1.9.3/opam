@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ranger-1.9.3+git20240221.38bb890-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ranger-1.9.3+git20240221.38bb890-1.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "file" 
+  "python311-base" 
+  "python311-curses" 
+]
+extra-source "ranger-1.9.3+git20240221.38bb890-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ranger-1.9.3+git20240221.38bb890-1.2.noarch.rpm"
+}

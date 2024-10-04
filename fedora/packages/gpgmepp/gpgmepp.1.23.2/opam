@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gpgmepp-1.23.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gpgmepp-1.23.2-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gpgme" {= "1.23.2"}
+  "libassuan" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "gpgmepp-1.23.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gpgmepp-1.23.2-3.fc40.x86_64.rpm"
+}

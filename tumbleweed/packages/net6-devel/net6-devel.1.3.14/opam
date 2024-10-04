@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "net6-devel-1.3.14-13.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "net6-devel-1.3.14-13.2.x86_64.rpm"]
+depends: [
+  "libgnutls-devel" 
+  "libsigc++2-devel" 
+  "net6" {= "1.3.14"}
+  "pkgconf-pkg-config" 
+]
+extra-source "net6-devel-1.3.14-13.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/net6-devel-1.3.14-13.2.x86_64.rpm"
+}

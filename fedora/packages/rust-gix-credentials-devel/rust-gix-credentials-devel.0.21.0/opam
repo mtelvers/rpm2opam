@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gix-credentials-devel-0.21.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gix-credentials-devel-0.21.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-bstr+std-devel" 
+  "rust-bstr-devel" 
+  "rust-gix-command+default-devel" 
+  "rust-gix-config-value+default-devel" 
+  "rust-gix-path+default-devel" 
+  "rust-gix-prompt+default-devel" 
+  "rust-gix-sec+default-devel" 
+  "rust-gix-url+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-gix-credentials-devel-0.21.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gix-credentials-devel-0.21.0-2.fc40.noarch.rpm"
+}

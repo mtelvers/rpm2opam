@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libscotch_6_1_0-gnu-hpc-6.1.0-3.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libscotch_6_1_0-gnu-hpc-6.1.0-3.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "gnu-compilers-hpc" 
+  "libbz2-1" 
+  "libgfortran5" 
+  "libz-ng-compat1" 
+  "lua-lmod" {>= "7.6.1"}
+]
+extra-source "libscotch_6_1_0-gnu-hpc-6.1.0-3.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libscotch_6_1_0-gnu-hpc-6.1.0-3.4.x86_64.rpm"
+}

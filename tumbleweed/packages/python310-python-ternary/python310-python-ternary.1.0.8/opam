@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-python-ternary-1.0.8-1.13.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-python-ternary-1.0.8-1.13.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-matplotlib" {>= "1.4"}
+]
+extra-source "python310-python-ternary-1.0.8-1.13.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-python-ternary-1.0.8-1.13.noarch.rpm"
+}

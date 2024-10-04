@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "avahi-gobject-devel-0.8-26.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "avahi-gobject-devel-0.8-26.fc40.x86_64.rpm"]
+depends: [
+  "avahi-devel" {= "0.8"}
+  "avahi-glib-devel" 
+  "avahi-gobject" {= "0.8"}
+  "glib2-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "avahi-gobject-devel-0.8-26.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/avahi-gobject-devel-0.8-26.fc40.x86_64.rpm"
+}

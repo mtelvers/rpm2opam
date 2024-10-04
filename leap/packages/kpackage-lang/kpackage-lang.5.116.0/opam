@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kpackage-lang-5.116.0-lp160.1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kpackage-lang-5.116.0-lp160.1.2.noarch.rpm"]
+depends: [
+  "kpackage" {= "5.116.0"}
+]
+extra-source "kpackage-lang-5.116.0-lp160.1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/kpackage-lang-5.116.0-lp160.1.2.noarch.rpm"
+}

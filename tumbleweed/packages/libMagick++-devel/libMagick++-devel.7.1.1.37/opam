@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libMagick++-devel-7.1.1.37-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libMagick++-devel-7.1.1.37-1.2.x86_64.rpm"]
+depends: [
+  "ImageMagick-devel" {= "7.1.1"}
+  "bash-sh" 
+  "libMagick++-7_Q16HDRI5" {= "7.1.1.37"}
+  "libstdc++-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libMagick++-devel-7.1.1.37-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libMagick++-devel-7.1.1.37-1.2.x86_64.rpm"
+}

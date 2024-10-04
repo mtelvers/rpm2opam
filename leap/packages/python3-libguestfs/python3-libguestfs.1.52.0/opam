@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-libguestfs-1.52.0-slfo.1.2.18.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-libguestfs-1.52.0-slfo.1.2.18.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libguestfs" {= "1.52.0"}
+  "libguestfs0" 
+  "python311-base" {= "3.11"}
+]
+extra-source "python3-libguestfs-1.52.0-slfo.1.2.18.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/python3-libguestfs-1.52.0-slfo.1.2.18.x86_64.rpm"
+}

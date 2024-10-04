@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tuxpaint-devel-0.9.33-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tuxpaint-devel-0.9.33-1.1.noarch.rpm"]
+depends: [
+  "SDL2-devel" 
+  "SDL2_Pango-devel" 
+  "SDL2_image-devel" 
+  "SDL2_mixer-devel" 
+  "SDL2_ttf-devel" 
+  "bash-sh" 
+  "fribidi-devel" 
+  "gcc-c++" 
+  "gettext-tools" 
+  "libpaper-devel" 
+  "libpng12-compat-devel" 
+  "librsvg-devel" 
+  "tuxpaint" {= "0.9.33"}
+  "zlib-devel" 
+]
+extra-source "tuxpaint-devel-0.9.33-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tuxpaint-devel-0.9.33-1.1.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ibus-sunpinyin-2.0.99.2-4.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibus-sunpinyin-2.0.99.2-4.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcc_s1" 
+  "libibus-1_0-5" 
+  "libstdc++6" 
+  "libsunpinyin3" 
+  "sunpinyin-data" 
+]
+extra-source "ibus-sunpinyin-2.0.99.2-4.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ibus-sunpinyin-2.0.99.2-4.3.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "plasma-workspace-doc-6.0.3-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plasma-workspace-doc-6.0.3-2.fc40.noarch.rpm"]
+depends: [
+  "plasma-workspace-common" {= "6.0.3"}
+]
+extra-source "plasma-workspace-doc-6.0.3-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/plasma-workspace-doc-6.0.3-2.fc40.noarch.rpm"
+}

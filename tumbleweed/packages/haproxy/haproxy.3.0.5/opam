@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "haproxy-3.0.5+git0.8e879a52e-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "haproxy-3.0.5+git0.8e879a52e-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libcrypt1" 
+  "liblua5_4-5" 
+  "libopenssl3" 
+  "libpcre2-8-0" 
+  "libz-ng-compat1" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "haproxy-3.0.5+git0.8e879a52e-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/haproxy-3.0.5+git0.8e879a52e-1.1.x86_64.rpm"
+}

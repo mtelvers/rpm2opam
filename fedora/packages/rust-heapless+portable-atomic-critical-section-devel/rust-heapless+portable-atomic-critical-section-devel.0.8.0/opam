@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-heapless+portable-atomic-critical-section-devel-0.8.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-heapless+portable-atomic-critical-section-devel-0.8.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-heapless+portable-atomic-devel" {= "0.8.0"}
+  "rust-heapless-devel" {= "0.8.0"}
+  "rust-portable-atomic+critical-section-devel" 
+  "rust-portable-atomic+default-devel" 
+]
+extra-source "rust-heapless+portable-atomic-critical-section-devel-0.8.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-heapless+portable-atomic-critical-section-devel-0.8.0-1.fc40.noarch.rpm"
+}

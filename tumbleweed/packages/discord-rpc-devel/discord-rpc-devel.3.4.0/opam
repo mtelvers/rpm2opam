@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "discord-rpc-devel-3.4.0-3.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "discord-rpc-devel-3.4.0-3.5.x86_64.rpm"]
+depends: [
+  "libdiscord-rpc3_4_0" {= "3.4.0"}
+]
+extra-source "discord-rpc-devel-3.4.0-3.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/discord-rpc-devel-3.4.0-3.5.x86_64.rpm"
+}

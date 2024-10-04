@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-req-devel-3.13.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-req-devel-3.13.0-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-devel" 
+  "ghc-authenticate-oauth-devel" 
+  "ghc-base-devel" 
+  "ghc-blaze-builder-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-case-insensitive-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-connection-devel" 
+  "ghc-containers-devel" 
+  "ghc-exceptions-devel" 
+  "ghc-http-api-data-devel" 
+  "ghc-http-client-devel" 
+  "ghc-http-client-tls-devel" 
+  "ghc-http-types-devel" 
+  "ghc-modern-uri-devel" 
+  "ghc-monad-control-devel" 
+  "ghc-mtl-devel" 
+  "ghc-req" {= "3.13.0"}
+  "ghc-retry-devel" 
+  "ghc-template-haskell-devel" 
+  "ghc-text-devel" 
+  "ghc-time-devel" 
+  "ghc-transformers-base-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unliftio-core-devel" 
+]
+extra-source "ghc-req-devel-3.13.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-req-devel-3.13.0-6.fc40.x86_64.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "proftpd-1.3.8b-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "proftpd-1.3.8b-3.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libacl1" 
+  "libcrypt1" 
+  "libhiredis1_1_0" 
+  "libmemcached11" 
+  "libmemcachedutil2" 
+  "libncurses6" 
+  "libopenssl3" 
+  "libpcre1" 
+  "libpcreposix0" 
+  "libsodium26" 
+  "libz-ng-compat1" 
+  "logrotate" 
+  "pam" 
+  "perl-base" 
+  "system-user-ftp" 
+]
+extra-source "proftpd-1.3.8b-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/proftpd-1.3.8b-3.3.x86_64.rpm"
+}

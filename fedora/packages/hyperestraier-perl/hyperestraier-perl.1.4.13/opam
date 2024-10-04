@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hyperestraier-perl-1.4.13-60.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hyperestraier-perl-1.4.13-60.fc40.x86_64.rpm"]
+depends: [
+  "bzip2-libs" 
+  "glibc" 
+  "hyperestraier" {= "1.4.13"}
+  "lzo" 
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-ExtUtils-MakeMaker" 
+  "perl-Time-HiRes" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "qdbm" 
+  "zlib-ng-compat" 
+]
+extra-source "hyperestraier-perl-1.4.13-60.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hyperestraier-perl-1.4.13-60.fc40.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-gear-0.16.0-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-gear-0.16.0-3.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" {= "3.12"}
+  "python312-extras" 
+  "python312-pbr" {>= "1.8.0"}
+  "python312-python-daemon" {>= "2.0.4"}
+  "python312-six" {>= "1.5.2"}
+  "update-alternatives" 
+]
+extra-source "python312-gear-0.16.0-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-gear-0.16.0-3.1.noarch.rpm"
+}

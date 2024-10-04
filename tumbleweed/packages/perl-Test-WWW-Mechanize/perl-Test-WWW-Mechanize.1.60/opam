@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-WWW-Mechanize-1.60-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-WWW-Mechanize-1.60-1.7.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Carp-Assert-More" {>= "1.16"}
+  "perl-HTML-Form" 
+  "perl-HTML-Parser" 
+  "perl-HTTP-Message" {>= "6.29"}
+  "perl-Test-LongString" {>= "0.15"}
+  "perl-WWW-Mechanize" {>= "1.68"}
+  "perl-base" 
+  "perl-libwww-perl" {>= "6.2"}
+]
+extra-source "perl-Test-WWW-Mechanize-1.60-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-WWW-Mechanize-1.60-1.7.noarch.rpm"
+}

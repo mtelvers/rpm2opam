@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-urlextract-1.9.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-urlextract-1.9.0-2.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" {= "3.11"}
+  "python311-dnspython" 
+  "python311-filelock" 
+  "python311-idna" 
+  "python311-platformdirs" 
+  "python311-uritools" 
+  "update-alternatives" 
+]
+extra-source "python311-urlextract-1.9.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-urlextract-1.9.0-2.2.noarch.rpm"
+}

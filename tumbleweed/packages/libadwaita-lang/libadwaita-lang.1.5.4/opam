@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libadwaita-lang-1.5.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libadwaita-lang-1.5.4-1.1.noarch.rpm"]
+depends: [
+  "libadwaita-1-0" {= "1.5.4"}
+]
+extra-source "libadwaita-lang-1.5.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libadwaita-lang-1.5.4-1.1.noarch.rpm"
+}

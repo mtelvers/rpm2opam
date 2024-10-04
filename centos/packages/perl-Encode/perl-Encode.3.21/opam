@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Encode-3.21-510.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Encode-3.21-510.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-Carp" 
+  "perl-Encode" 
+  "perl-Exporter" {>= "5.57"}
+  "perl-File-Basename" 
+  "perl-Getopt-Long" 
+  "perl-Getopt-Std" 
+  "perl-MIME-Base64" 
+  "perl-Storable" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-overload" 
+  "perl-parent" {>= "0.221"}
+  "perl-vars" 
+]
+extra-source "perl-Encode-3.21-510.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/perl-Encode-3.21-510.el10.x86_64.rpm"
+}

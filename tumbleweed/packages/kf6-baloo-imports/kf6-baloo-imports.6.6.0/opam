@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kf6-baloo-imports-6.6.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kf6-baloo-imports-6.6.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libKF6Baloo6" 
+  "libKF6BalooEngine6" 
+  "libKF6CoreAddons6" 
+  "libQt6Core6" 
+  "libQt6DBus6" 
+  "libQt6Qml6" 
+  "libstdc++6" 
+]
+extra-source "kf6-baloo-imports-6.6.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kf6-baloo-imports-6.6.0-1.1.x86_64.rpm"
+}

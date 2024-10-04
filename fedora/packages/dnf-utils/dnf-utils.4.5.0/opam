@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dnf-utils-4.5.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dnf-utils-4.5.0-1.fc40.noarch.rpm"]
+depends: [
+  "dnf-plugins-core" {= "4.5.0"}
+  "python3" 
+  "python3-dnf" {>= "4.19.0"}
+]
+extra-source "dnf-utils-4.5.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dnf-utils-4.5.0-1.fc40.noarch.rpm"
+}

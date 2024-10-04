@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsliplu1-1.0.2-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsliplu1-1.0.2-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libamd2" 
+  "libcolamd2" 
+  "libgmp10" 
+  "libmpfr6" 
+  "libsuitesparseconfig5" 
+]
+extra-source "libsliplu1-1.0.2-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libsliplu1-1.0.2-slfo.1.1.8.x86_64.rpm"
+}

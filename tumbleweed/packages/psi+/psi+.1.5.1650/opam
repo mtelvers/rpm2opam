@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "psi+-1.5.1650+2-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "psi+-1.5.1650+2-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt5Concurrent5" 
+  "libQt5Core5" 
+  "libQt5DBus5" 
+  "libQt5Gui5" 
+  "libQt5Multimedia5" 
+  "libQt5Network5" 
+  "libQt5Sql5" 
+  "libQt5Svg5" 
+  "libQt5WebChannel5" 
+  "libQt5Widgets5" 
+  "libQt5X11Extras5" 
+  "libQt5Xml5" 
+  "libX11-6" 
+  "libXss1" 
+  "libgcc_s1" 
+  "libhunspell-1_7-0" 
+  "libqca-qt5-2" 
+  "libqt5-qtwebengine" 
+  "libqt5keychain1" 
+  "libstdc++6" 
+  "libusrsctp2" 
+  "libz-ng-compat1" 
+  "psi+-data" {= "1.5.1650"}
+]
+extra-source "psi+-1.5.1650+2-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/psi+-1.5.1650+2-1.3.x86_64.rpm"
+}

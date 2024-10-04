@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-mocket-3.13.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-mocket-3.13.0-1.1.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-decorator" {>= "4"}
+  "python312-h11" 
+  "python312-python-magic" {>= "0.4.5"}
+  "python312-urllib3" {>= "1.25.3"}
+]
+extra-source "python312-mocket-3.13.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-mocket-3.13.0-1.1.noarch.rpm"
+}

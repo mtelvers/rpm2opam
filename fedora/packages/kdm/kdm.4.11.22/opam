@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kdm-4.11.22-41.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kdm-4.11.22-41.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kde-workspace-common" {= "4.11.22"}
+  "kdelibs" 
+  "kdm-settings" {= "4.11.22"}
+  "kgreeter-plugins" {= "4.11.22"}
+  "libX11" 
+  "libXau" 
+  "libXdmcp" 
+  "libXtst" 
+  "libkworkspace" {= "4.11.22"}
+  "libstdc++" 
+  "pam-libs" 
+  "qimageblitz" 
+  "qt" 
+  "qt-x11" 
+]
+extra-source "kdm-4.11.22-41.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kdm-4.11.22-41.fc40.x86_64.rpm"
+}

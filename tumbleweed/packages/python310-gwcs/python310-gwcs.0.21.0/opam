@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-gwcs-0.21.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-gwcs-0.21.0-1.2.noarch.rpm"]
+depends: [
+  "python310-asdf" {>= "2.8.1"}
+  "python310-asdf-astropy" {>= "0.2.0"}
+  "python310-asdf-wcs-schemas" {>= "0.4.0"}
+  "python310-astropy" {>= "5.1"}
+  "python310-base" {= "3.10"}
+  "python310-numpy" 
+  "python310-scipy" 
+]
+extra-source "python310-gwcs-0.21.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-gwcs-0.21.0-1.2.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ngrep-1.47^20180128git2a9603b-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ngrep-1.47^20180128git2a9603b-6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libnet" 
+  "libpcap" 
+  "pcre2" 
+]
+extra-source "ngrep-1.47^20180128git2a9603b-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/ngrep-1.47^20180128git2a9603b-6.fc40.x86_64.rpm"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cawbird-1.4.2-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cawbird-1.4.2-9.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "cairo-gobject" 
+  "dbus-common" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gspell" 
+  "gstreamer1" 
+  "gtk3" 
+  "hicolor-icon-theme" 
+  "json-glib" 
+  "libX11" 
+  "liboauth" 
+  "libsoup" 
+  "pango" 
+  "rest0-7" 
+  "sqlite-libs" 
+]
+extra-source "cawbird-1.4.2-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cawbird-1.4.2-9.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Net-CUPS-0.64-26.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-CUPS-0.64-26.fc40.x86_64.rpm"]
+depends: [
+  "cups-libs" 
+  "glibc" 
+  "perl-AutoLoader" 
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-libs" 
+]
+extra-source "perl-Net-CUPS-0.64-26.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Net-CUPS-0.64-26.fc40.x86_64.rpm"
+}

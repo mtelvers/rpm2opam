@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "steghide-0.5.1-48.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "steghide-0.5.1-48.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libmcrypt" {>= "2.5.8"}
+  "libstdc++" 
+  "mhash" 
+  "zlib-ng-compat" 
+]
+extra-source "steghide-0.5.1-48.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/steghide-0.5.1-48.fc40.x86_64.rpm"
+}

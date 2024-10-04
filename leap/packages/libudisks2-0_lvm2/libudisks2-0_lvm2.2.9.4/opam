@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libudisks2-0_lvm2-2.9.4-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libudisks2-0_lvm2-2.9.4-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbd_lvm2" {>= "2.19"}
+  "libgio-2_0-0" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libgudev-1_0-0" 
+  "libudisks2-0" {>= "2.9.4"}
+  "lvm2" 
+]
+extra-source "libudisks2-0_lvm2-2.9.4-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libudisks2-0_lvm2-2.9.4-slfo.1.1.7.x86_64.rpm"
+}

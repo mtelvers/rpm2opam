@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-k8s-cli-runtime-devel-1.22.0-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-k8s-cli-runtime-devel-1.22.0-9.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-evanphx-json-patch-devel" 
+  "golang-github-google-uuid-devel" 
+  "golang-github-googleapis-gnostic-devel" 
+  "golang-github-liggitt-tabwriter-devel" 
+  "golang-github-spf13-cobra-devel" 
+  "golang-github-spf13-pflag-devel" 
+  "golang-gopkg-yaml-2-devel" 
+  "golang-k8s-api-devel" 
+  "golang-k8s-apimachinery-devel" 
+  "golang-k8s-client-devel" 
+  "golang-sigs-k8s-yaml-devel" 
+  "golang-x-text-devel" 
+]
+extra-source "golang-k8s-cli-runtime-devel-1.22.0-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-k8s-cli-runtime-devel-1.22.0-9.fc40.noarch.rpm"
+}

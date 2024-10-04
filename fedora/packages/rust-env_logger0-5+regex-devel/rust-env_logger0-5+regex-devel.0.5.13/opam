@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-env_logger0.5+regex-devel-0.5.13-19.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-env_logger0.5+regex-devel-0.5.13-19.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-env_logger0-5-devel" {= "0.5.13"}
+  "rust-regex+default-devel" 
+]
+extra-source "rust-env_logger0.5+regex-devel-0.5.13-19.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-env_logger0.5+regex-devel-0.5.13-19.fc40.noarch.rpm"
+}

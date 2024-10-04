@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fpm2-0.90-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fpm2-0.90-11.fc40.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libX11" 
+  "libxml2" 
+  "nettle" 
+]
+extra-source "fpm2-0.90-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fpm2-0.90-11.fc40.x86_64.rpm"
+}

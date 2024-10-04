@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-plotly-jupyter-5.22.0-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-plotly-jupyter-5.22.0-3.2.noarch.rpm"]
+depends: [
+  "jupyter-plotly" {= "5.22.0"}
+  "python311-base" {= "3.11"}
+  "python311-ipywidgets" {>= "7.6"}
+  "python311-jupyterlab" 
+  "python311-plotly" {= "5.22.0"}
+]
+extra-source "python311-plotly-jupyter-5.22.0-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-plotly-jupyter-5.22.0-3.2.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "weston-devel-13.0.0-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "weston-devel-13.0.0-5.fc40.x86_64.rpm"]
+depends: [
+  "libxkbcommon-devel" {>= "0.3.0"}
+  "pixman-devel" {>= "0.25.2"}
+  "pkgconf-pkg-config" 
+  "wayland-devel" {>= "1.22.0"}
+  "weston" {= "13.0.0"}
+  "weston-libs" 
+]
+extra-source "weston-devel-13.0.0-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/weston-devel-13.0.0-5.fc40.x86_64.rpm"
+}

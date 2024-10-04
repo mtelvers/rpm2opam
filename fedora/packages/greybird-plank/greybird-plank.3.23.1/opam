@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "greybird-plank-3.23.1-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "greybird-plank-3.23.1-7.fc40.noarch.rpm"]
+depends: [
+  "greybird-dark-theme" 
+  "greybird-light-theme" 
+  "plank" 
+]
+extra-source "greybird-plank-3.23.1-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/greybird-plank-3.23.1-7.fc40.noarch.rpm"
+}

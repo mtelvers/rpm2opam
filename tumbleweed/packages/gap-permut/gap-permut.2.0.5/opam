@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-permut-2.0.5-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-permut-2.0.5-1.3.noarch.rpm"]
+depends: [
+  "gap" {>= "4.7.4"}
+  "gap-format" {>= "1.3"}
+]
+extra-source "gap-permut-2.0.5-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-permut-2.0.5-1.3.noarch.rpm"
+}

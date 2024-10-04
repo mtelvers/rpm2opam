@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nginx-all-modules-1.24.0-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nginx-all-modules-1.24.0-8.fc40.noarch.rpm"]
+depends: [
+  "nginx-mod-http-image-filter" {= "1.24.0"}
+  "nginx-mod-http-perl" {= "1.24.0"}
+  "nginx-mod-http-xslt-filter" {= "1.24.0"}
+  "nginx-mod-mail" {= "1.24.0"}
+  "nginx-mod-stream" {= "1.24.0"}
+]
+extra-source "nginx-all-modules-1.24.0-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nginx-all-modules-1.24.0-8.fc40.noarch.rpm"
+}

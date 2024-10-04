@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qt5-qtxmlpatterns-devel-5.15.13-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qt5-qtxmlpatterns-devel-5.15.13-1.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "glibc" 
+  "libstdc++" 
+  "pkgconf-pkg-config" 
+  "qt5-qtbase" 
+  "qt5-qtbase-devel" 
+  "qt5-qtxmlpatterns" 
+]
+extra-source "qt5-qtxmlpatterns-devel-5.15.13-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qt5-qtxmlpatterns-devel-5.15.13-1.fc40.x86_64.rpm"
+}

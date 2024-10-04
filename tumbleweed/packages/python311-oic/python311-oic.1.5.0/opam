@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-oic-1.5.0-1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-oic-1.5.0-1.8.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-Beaker" 
+  "python311-Mako" 
+  "python311-base" 
+  "python311-cryptography" 
+  "python311-dbm" 
+  "python311-defusedxml" 
+  "python311-pycryptodomex" 
+  "python311-pyjwkest" {>= "1.3.6"}
+  "python311-requests" 
+  "python311-typing_extensions" 
+]
+extra-source "python311-oic-1.5.0-1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-oic-1.5.0-1.8.noarch.rpm"
+}

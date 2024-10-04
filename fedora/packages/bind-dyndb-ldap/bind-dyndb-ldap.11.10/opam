@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bind-dyndb-ldap-11.10-27.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bind-dyndb-ldap-11.10-27.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bind" {>= "9.16.16"}
+  "bind-libs" 
+  "glibc" 
+  "krb5-libs" 
+  "libuuid" 
+  "openldap" 
+  "openssl-pkcs11" {>= "0.4.10"}
+  "softhsm" {>= "2.5.0"}
+]
+extra-source "bind-dyndb-ldap-11.10-27.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bind-dyndb-ldap-11.10-27.fc40.x86_64.rpm"
+}

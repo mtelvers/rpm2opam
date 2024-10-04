@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-oslo.vmware-4.5.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-oslo.vmware-4.5.0-1.1.noarch.rpm"]
+depends: [
+  "python3-oslo-concurrency" {>= "3.26.0"}
+  "python3-oslo-context" {>= "2.19.2"}
+  "python3-oslo-i18n" {>= "3.15.3"}
+  "python3-oslo-utils" {>= "3.33.0"}
+  "python311-PyYAML" {>= "3.13"}
+  "python311-base" {= "3.11"}
+  "python311-defusedxml" {>= "0.7.1"}
+  "python311-eventlet" {>= "0.18.2"}
+  "python311-lxml" {>= "4.5.0"}
+  "python311-netaddr" {>= "0.7.18"}
+  "python311-requests" {>= "2.14.2"}
+  "python311-stevedore" {>= "1.20.0"}
+  "python311-suds" {>= "0.6"}
+  "python311-urllib3" {>= "1.21.1"}
+]
+extra-source "python3-oslo.vmware-4.5.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-oslo.vmware-4.5.0-1.1.noarch.rpm"
+}

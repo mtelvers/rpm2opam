@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-oci-sdk-2.134.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-oci-sdk-2.134.0-1.1.noarch.rpm"]
+depends: [
+  "python310-PyJWT" 
+  "python310-base" {= "3.10"}
+  "python310-certifi" 
+  "python310-circuitbreaker" {>= "1.3.1"}
+  "python310-cryptography" {>= "3.2.1"}
+  "python310-httpsig_cffi" 
+  "python310-pyOpenSSL" {>= "17.5.0"}
+  "python310-python-dateutil" {>= "2.5.3"}
+  "python310-pytz" {>= "2016.10"}
+  "python310-requests" 
+  "python310-six" 
+  "python310-sseclient" 
+  "python310-urllib3_1" {< "2"}
+]
+extra-source "python310-oci-sdk-2.134.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-oci-sdk-2.134.0-1.1.noarch.rpm"
+}

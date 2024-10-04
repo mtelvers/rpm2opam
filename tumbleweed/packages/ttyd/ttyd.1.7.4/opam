@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ttyd-1.7.4-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ttyd-1.7.4-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libjson-c5" 
+  "libopenssl3" 
+  "libuv1" 
+  "libwebsockets19" 
+  "libz-ng-compat1" 
+]
+extra-source "ttyd-1.7.4-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ttyd-1.7.4-1.3.x86_64.rpm"
+}

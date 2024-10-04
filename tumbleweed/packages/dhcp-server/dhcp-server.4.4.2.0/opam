@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dhcp-server-4.4.2.P1-18.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dhcp-server-4.4.2.P1-18.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "dhcp" {= "4.4.2.0"}
+  "fillup" 
+  "glibc" 
+  "libldap2" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "dhcp-server-4.4.2.P1-18.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/dhcp-server-4.4.2.P1-18.1.x86_64.rpm"
+}

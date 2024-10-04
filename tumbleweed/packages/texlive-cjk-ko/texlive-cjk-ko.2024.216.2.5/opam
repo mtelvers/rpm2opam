@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-cjk-ko-2024.216.2.5svn70300-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-cjk-ko-2024.216.2.5svn70300-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-cjk" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-kotex-utf" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-luatexko" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-ulem" 
+  "texlive-xetexko" 
+]
+extra-source "texlive-cjk-ko-2024.216.2.5svn70300-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-cjk-ko-2024.216.2.5svn70300-56.1.noarch.rpm"
+}

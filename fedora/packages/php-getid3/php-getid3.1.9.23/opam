@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-getid3-1.9.23-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-getid3-1.9.23-3.fc40.noarch.rpm"]
+depends: [
+  "php-common" {>= "5.3.0"}
+  "php-fedora-autoloader" 
+  "php-gd" 
+  "php-mbstring" 
+  "php-xml" 
+]
+extra-source "php-getid3-1.9.23-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-getid3-1.9.23-3.fc40.noarch.rpm"
+}

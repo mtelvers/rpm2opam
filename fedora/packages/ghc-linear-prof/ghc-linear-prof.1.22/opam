@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-linear-prof-1.22-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-linear-prof-1.22-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-adjunctions-prof" 
+  "ghc-base-orphans-prof" 
+  "ghc-base-prof" 
+  "ghc-binary-prof" 
+  "ghc-bytes-prof" 
+  "ghc-cereal-prof" 
+  "ghc-containers-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-distributive-prof" 
+  "ghc-hashable-prof" 
+  "ghc-indexed-traversable-prof" 
+  "ghc-lens-prof" 
+  "ghc-linear-devel" {= "1.22"}
+  "ghc-random-prof" 
+  "ghc-reflection-prof" 
+  "ghc-semigroupoids-prof" 
+  "ghc-tagged-prof" 
+  "ghc-template-haskell-prof" 
+  "ghc-transformers-compat-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unordered-containers-prof" 
+  "ghc-vector-prof" 
+  "ghc-void-prof" 
+]
+extra-source "ghc-linear-prof-1.22-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-linear-prof-1.22-3.fc40.x86_64.rpm"
+}

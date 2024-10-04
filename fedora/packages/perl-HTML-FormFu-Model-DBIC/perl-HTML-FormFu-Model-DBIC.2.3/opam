@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-HTML-FormFu-Model-DBIC-2.03-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTML-FormFu-Model-DBIC-2.03-20.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-DBIx-Class" {>= "0.8108"}
+  "perl-HTML-FormFu" 
+  "perl-List-MoreUtils" 
+  "perl-Moose" 
+  "perl-MooseX-Attribute-Chained" 
+  "perl-Scalar-List-Utils" 
+  "perl-Storable" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-HTML-FormFu-Model-DBIC-2.03-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-HTML-FormFu-Model-DBIC-2.03-20.fc40.noarch.rpm"
+}

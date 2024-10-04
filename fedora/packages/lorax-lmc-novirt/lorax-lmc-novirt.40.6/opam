@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lorax-lmc-novirt-40.6-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lorax-lmc-novirt-40.6-1.fc40.x86_64.rpm"]
+depends: [
+  "anaconda-core" 
+  "anaconda-install-env-deps" 
+  "anaconda-tui" 
+  "fedora-logos" 
+  "lorax" {= "40.6"}
+  "python3-psutil" 
+]
+extra-source "lorax-lmc-novirt-40.6-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lorax-lmc-novirt-40.6-1.fc40.x86_64.rpm"
+}

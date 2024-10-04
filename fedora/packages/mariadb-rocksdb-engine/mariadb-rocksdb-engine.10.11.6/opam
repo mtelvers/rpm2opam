@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mariadb-rocksdb-engine-10.11.6-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mariadb-rocksdb-engine-10.11.6-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libstdc++" 
+  "lz4-libs" 
+  "mariadb-server" {= "10.11.6"}
+  "python3" 
+  "zlib-ng-compat" 
+]
+extra-source "mariadb-rocksdb-engine-10.11.6-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mariadb-rocksdb-engine-10.11.6-3.fc40.x86_64.rpm"
+}

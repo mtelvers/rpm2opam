@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rpki-devel-0.18.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rpki-devel-0.18.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.63"}
+  "rust-base64+default-devel" 
+  "rust-bytes+default-devel" 
+  "rust-chrono+default-devel" 
+  "rust-chrono+serde-devel" 
+  "rust-log+default-devel" 
+  "rust-uuid+default-devel" 
+]
+extra-source "rust-rpki-devel-0.18.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rpki-devel-0.18.1-1.fc40.noarch.rpm"
+}

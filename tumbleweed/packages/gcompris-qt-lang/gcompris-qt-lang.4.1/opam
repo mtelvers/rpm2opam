@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcompris-qt-lang-4.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcompris-qt-lang-4.1-1.1.noarch.rpm"]
+depends: [
+  "gcompris-qt" {= "4.1"}
+]
+extra-source "gcompris-qt-lang-4.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gcompris-qt-lang-4.1-1.1.noarch.rpm"
+}

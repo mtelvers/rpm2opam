@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cozy-1.2.1-2.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cozy-1.2.1-2.5.noarch.rpm"]
+depends: [
+  "libdazzle-devel" 
+  "libgranite-7-7" 
+  "libhandy-1-0" 
+  "python311-apsw" 
+  "python311-base" 
+  "python311-distro" 
+  "python311-gst" 
+  "python311-mutagen" 
+  "python311-packaging" 
+  "python311-peewee" {>= "3.9.6"}
+  "python311-pycairo" 
+  "python311-pytaglib" 
+  "python311-pytz" 
+  "python311-requests" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gst-1_0" {= "1.0"}
+  "typelib-1_0-GstPbutils-1_0" {= "1.0"}
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Handy-1_0" {= "1"}
+  "typelib-1_0-Pango-1_0" 
+  "typelib-1_0-libdazzle-1_0" {= "1.0"}
+]
+extra-source "cozy-1.2.1-2.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cozy-1.2.1-2.5.noarch.rpm"
+}

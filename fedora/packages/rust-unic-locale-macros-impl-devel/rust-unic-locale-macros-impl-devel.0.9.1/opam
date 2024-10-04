@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-unic-locale-macros-impl-devel-0.9.1-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-unic-locale-macros-impl-devel-0.9.1-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-proc-macro-hack+default-devel" 
+  "rust-quote+default-devel" 
+  "rust-syn+parsing-devel" 
+  "rust-syn+proc-macro-devel" 
+  "rust-syn-devel" 
+  "rust-unic-locale-impl+default-devel" 
+]
+extra-source "rust-unic-locale-macros-impl-devel-0.9.1-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-unic-locale-macros-impl-devel-0.9.1-3.fc40.noarch.rpm"
+}

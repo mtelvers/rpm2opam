@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "opencsg-devel-1.6.0-2.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opencsg-devel-1.6.0-2.4.x86_64.rpm"]
+depends: [
+  "freeglut-devel" 
+  "glew-devel" 
+  "libopencsg1" {= "1.6.0"}
+]
+extra-source "opencsg-devel-1.6.0-2.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/opencsg-devel-1.6.0-2.4.x86_64.rpm"
+}

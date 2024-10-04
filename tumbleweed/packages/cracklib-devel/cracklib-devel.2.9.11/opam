@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cracklib-devel-2.9.11-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cracklib-devel-2.9.11-1.4.x86_64.rpm"]
+depends: [
+  "glibc-devel" 
+  "libcrack2" {= "2.9.11"}
+]
+extra-source "cracklib-devel-2.9.11-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cracklib-devel-2.9.11-1.4.x86_64.rpm"
+}

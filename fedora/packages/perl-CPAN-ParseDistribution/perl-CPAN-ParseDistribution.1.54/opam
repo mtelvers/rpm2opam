@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CPAN-ParseDistribution-1.54-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CPAN-ParseDistribution-1.54-23.fc40.noarch.rpm"]
+depends: [
+  "perl-Archive-Tar" 
+  "perl-Archive-Zip" 
+  "perl-Data-Dumper" 
+  "perl-Devel-CheckOS" 
+  "perl-File-Find-Rule" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-Parallel-ForkManager" {>= "1.3"}
+  "perl-PathTools" 
+  "perl-Safe" 
+  "perl-YAML" {>= "0.6"}
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-CPAN-ParseDistribution-1.54-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CPAN-ParseDistribution-1.54-23.fc40.noarch.rpm"
+}

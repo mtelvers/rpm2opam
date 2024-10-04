@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xerces-j2-demo-2.12.2-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xerces-j2-demo-2.12.2-10.fc40.noarch.rpm"]
+depends: [
+  "xerces-j2" {= "2.12.2"}
+]
+extra-source "xerces-j2-demo-2.12.2-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xerces-j2-demo-2.12.2-10.fc40.noarch.rpm"
+}

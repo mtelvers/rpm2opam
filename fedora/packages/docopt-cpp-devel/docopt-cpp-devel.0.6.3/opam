@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "docopt-cpp-devel-0.6.3-13.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "docopt-cpp-devel-0.6.3-13.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "docopt-cpp" {= "0.6.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "docopt-cpp-devel-0.6.3-13.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/docopt-cpp-devel-0.6.3-13.fc40.x86_64.rpm"
+}

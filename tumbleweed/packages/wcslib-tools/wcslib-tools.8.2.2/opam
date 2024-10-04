@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wcslib-tools-8.2.2-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wcslib-tools-8.2.2-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcfitsio10" 
+  "libwcs8" {= "8.2.2"}
+]
+extra-source "wcslib-tools-8.2.2-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/wcslib-tools-8.2.2-1.3.x86_64.rpm"
+}

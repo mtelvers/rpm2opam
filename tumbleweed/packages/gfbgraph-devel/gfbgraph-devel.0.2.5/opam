@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gfbgraph-devel-0.2.5-1.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gfbgraph-devel-0.2.5-1.11.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "gnome-online-accounts-devel" 
+  "json-glib-devel" 
+  "libgfbgraph-0_2-0" {= "0.2.5"}
+  "librest0_7-devel" 
+  "libsoup2-devel" 
+  "pkgconf-pkg-config" 
+  "typelib-1_0-GFBGraph-0_2" {= "0.2.5"}
+]
+extra-source "gfbgraph-devel-0.2.5-1.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gfbgraph-devel-0.2.5-1.11.x86_64.rpm"
+}

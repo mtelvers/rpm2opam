@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gstreamer-plugins-good-lang-1.24.8-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gstreamer-plugins-good-lang-1.24.8-1.1.noarch.rpm"]
+depends: [
+  "gstreamer-plugins-good" {= "1.24.8"}
+]
+extra-source "gstreamer-plugins-good-lang-1.24.8-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gstreamer-plugins-good-lang-1.24.8-1.1.noarch.rpm"
+}

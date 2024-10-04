@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqca-qt6-2-2.3.9-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqca-qt6-2-2.3.9-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt6Core5Compat6" 
+  "libQt6Core6" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "qca-qt6" {>= "2.3.9"}
+]
+extra-source "libqca-qt6-2-2.3.9-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libqca-qt6-2-2.3.9-1.1.x86_64.rpm"
+}

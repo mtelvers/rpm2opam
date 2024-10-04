@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "skrooge-2.28.0-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "skrooge-2.28.0-5.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf5-kconfig-core" 
+  "kf5-kcoreaddons" 
+  "kf5-kdbusaddons" 
+  "kf5-ki18n" 
+  "libstdc++" 
+  "python3" 
+  "qca-qt5-ossl" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "skrooge-libs" 
+]
+extra-source "skrooge-2.28.0-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/skrooge-2.28.0-5.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-plotters+ttf-devel-0.3.5-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-plotters+ttf-devel-0.3.5-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-plotters+font-kit-devel" {= "0.3.5"}
+  "rust-plotters+lazy_static-devel" {= "0.3.5"}
+  "rust-plotters+pathfinder_geometry-devel" {= "0.3.5"}
+  "rust-plotters+ttf-parser-devel" {= "0.3.5"}
+  "rust-plotters-devel" {= "0.3.5"}
+]
+extra-source "rust-plotters+ttf-devel-0.3.5-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-plotters+ttf-devel-0.3.5-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "imapsync-2.229-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "imapsync-2.229-6.fc40.noarch.rpm"]
+depends: [
+  "perl-Data-Uniqid" 
+  "perl-Digest-HMAC" 
+  "perl-Digest-MD5" 
+  "perl-Encode-IMAPUTF7" 
+  "perl-English" 
+  "perl-File-Copy-Recursive" 
+  "perl-File-Path" 
+  "perl-File-Tail" 
+  "perl-IO-Compress" 
+  "perl-IO-Socket-SSL" 
+  "perl-IO-Tee" 
+  "perl-JSON-WebToken" 
+  "perl-Mail-IMAPClient" {>= "3.25"}
+  "perl-NTLM" 
+  "perl-PathTools" 
+  "perl-Pod-Usage" 
+  "perl-Proc-ProcessTable" 
+  "perl-Readonly" 
+  "perl-Regexp-Common" 
+  "perl-Sys-MemInfo" 
+  "perl-TermReadKey" 
+  "perl-Test-MockObject" 
+  "perl-Test-Pod" 
+  "perl-Test-Simple" 
+  "perl-Time-HiRes" 
+  "perl-URI" 
+  "perl-Unicode-String" 
+  "perl-interpreter" 
+  "procps-ng" 
+]
+extra-source "imapsync-2.229-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/imapsync-2.229-6.fc40.noarch.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mod_auth_openid-0.8-23.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mod_auth_openid-0.8-23.fc40.x86_64.rpm"]
+depends: [
+  "apr" 
+  "expat" 
+  "glibc" 
+  "httpd" 
+  "httpd-core" {= "20120211"}
+  "libcurl" 
+  "libgcc" 
+  "libopkele" 
+  "libtidy" 
+  "libuuid" 
+  "openssl-libs" 
+  "pcre" 
+  "sqlite-libs" 
+]
+extra-source "mod_auth_openid-0.8-23.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mod_auth_openid-0.8-23.fc40.x86_64.rpm"
+}

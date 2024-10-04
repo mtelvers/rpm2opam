@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "OpenIPMI-2.0.34-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "OpenIPMI-2.0.34-1.fc40.x86_64.rpm"]
+depends: [
+  "OpenIPMI-libs" {= "2.0.34"}
+  "bash" 
+  "gdbm-libs" 
+  "glib2" 
+  "glibc" 
+  "net-snmp-libs" 
+  "readline" 
+  "systemd" 
+]
+extra-source "OpenIPMI-2.0.34-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/OpenIPMI-2.0.34-1.fc40.x86_64.rpm"
+}

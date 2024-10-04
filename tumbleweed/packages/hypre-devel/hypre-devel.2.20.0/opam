@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hypre-devel-2.20.0-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hypre-devel-2.20.0-3.2.x86_64.rpm"]
+depends: [
+  "lapack-devel" 
+  "libHYPRE2_20_0" {= "2.20.0"}
+  "superlu-devel" 
+]
+extra-source "hypre-devel-2.20.0-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/hypre-devel-2.20.0-3.2.x86_64.rpm"
+}

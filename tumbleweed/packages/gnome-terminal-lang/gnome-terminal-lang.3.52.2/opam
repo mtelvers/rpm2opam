@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-terminal-lang-3.52.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-terminal-lang-3.52.2-1.1.noarch.rpm"]
+depends: [
+  "gnome-terminal" {= "3.52.2"}
+]
+extra-source "gnome-terminal-lang-3.52.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-terminal-lang-3.52.2-1.1.noarch.rpm"
+}

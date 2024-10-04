@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "avahi-libs-0.8-29.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "avahi-libs-0.8-29.el10.x86_64.rpm"]
+depends: [
+  "dbus-libs" 
+  "glibc" 
+  "libevent" 
+]
+extra-source "avahi-libs-0.8-29.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/avahi-libs-0.8-29.el10.x86_64.rpm"
+}

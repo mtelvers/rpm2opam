@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-PyQt6-3D-6.7.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-PyQt6-3D-6.7.0-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt63DAnimation6" 
+  "libQt63DCore6" 
+  "libQt63DExtras6" 
+  "libQt63DInput6" 
+  "libQt63DLogic6" 
+  "libQt63DRender6" 
+  "libQt6Core6" 
+  "libQt6Gui6" 
+  "libstdc++6" 
+  "python312-PyQt6" {>= "6.7.0"}
+  "python312-PyQt6-sip" {>= "13.6.0"}
+  "python312-base" {= "3.12"}
+]
+extra-source "python312-PyQt6-3D-6.7.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-PyQt6-3D-6.7.0-1.3.x86_64.rpm"
+}

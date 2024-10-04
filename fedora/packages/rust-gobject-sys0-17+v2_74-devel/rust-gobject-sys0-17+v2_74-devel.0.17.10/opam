@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gobject-sys0.17+v2_74-devel-0.17.10-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gobject-sys0.17+v2_74-devel-0.17.10-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "glib2-devel" {>= "2.74"}
+  "rust-gobject-sys0-17+v2_72-devel" {= "0.17.10"}
+  "rust-gobject-sys0-17-devel" {= "0.17.10"}
+]
+extra-source "rust-gobject-sys0.17+v2_74-devel-0.17.10-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gobject-sys0.17+v2_74-devel-0.17.10-2.fc40.noarch.rpm"
+}

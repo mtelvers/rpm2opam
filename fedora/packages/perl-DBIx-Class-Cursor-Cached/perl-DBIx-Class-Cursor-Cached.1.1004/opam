@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-DBIx-Class-Cursor-Cached-1.001004-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DBIx-Class-Cursor-Cached-1.001004-23.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp-Clan" {>= "6.0"}
+  "perl-DBIx-Class" {>= "0.8124"}
+  "perl-Digest-SHA" 
+  "perl-Storable" 
+  "perl-libs" {>= "5.8.1"}
+  "perl-vars" 
+]
+extra-source "perl-DBIx-Class-Cursor-Cached-1.001004-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-DBIx-Class-Cursor-Cached-1.001004-23.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-cxx-devel-1.0.119-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-cxx-devel-1.0.119-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.60"}
+  "rust-cc+default-devel" 
+  "rust-cxxbridge-flags-devel" {= "1.0.119"}
+  "rust-cxxbridge-macro+default-devel" {= "1.0.119"}
+  "rust-link-cplusplus+default-devel" 
+]
+extra-source "rust-cxx-devel-1.0.119-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-cxx-devel-1.0.119-1.fc40.noarch.rpm"
+}

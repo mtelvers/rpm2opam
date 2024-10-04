@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "subunit-static-1.4.4-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "subunit-static-1.4.4-2.fc40.x86_64.rpm"]
+depends: [
+  "subunit-devel" {= "1.4.4"}
+]
+extra-source "subunit-static-1.4.4-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/subunit-static-1.4.4-2.fc40.x86_64.rpm"
+}

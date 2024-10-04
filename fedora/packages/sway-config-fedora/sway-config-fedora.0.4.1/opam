@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sway-config-fedora-0.4.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sway-config-fedora-0.4.1-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "brightnessctl" {>= "0.5.1"}
+  "desktop-backgrounds-compat" 
+  "grimshot" 
+  "lxqt-policykit" 
+  "mesa-dri-drivers" 
+  "playerctl" 
+  "polkit" 
+  "procps-ng" 
+  "pulseaudio-utils" 
+  "python3" 
+  "swaybg" 
+  "swayidle" 
+  "swaylock" 
+  "waybar" 
+  "xorg-x11-server-Xwayland" 
+]
+extra-source "sway-config-fedora-0.4.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sway-config-fedora-0.4.1-1.fc40.noarch.rpm"
+}

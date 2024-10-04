@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-hslua-packaging-devel-2.3.1-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hslua-packaging-devel-2.3.1-1.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-hslua-core-devel" 
+  "ghc-hslua-marshalling-devel" 
+  "ghc-hslua-objectorientation-devel" 
+  "ghc-hslua-packaging" {= "2.3.1"}
+  "ghc-hslua-typing-devel" 
+  "ghc-mtl-devel" 
+  "ghc-text-devel" 
+]
+extra-source "ghc-hslua-packaging-devel-2.3.1-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-hslua-packaging-devel-2.3.1-1.8.x86_64.rpm"
+}

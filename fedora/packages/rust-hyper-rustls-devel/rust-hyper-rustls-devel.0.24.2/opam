@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-hyper-rustls-devel-0.24.2-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-hyper-rustls-devel-0.24.2-2.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cargo" 
+  "rust" {>= "1.63"}
+  "rust-futures-util-devel" 
+  "rust-http+default-devel" 
+  "rust-hyper+client-devel" 
+  "rust-hyper-devel" 
+  "rust-rustls-devel" 
+  "rust-tokio+default-devel" 
+  "rust-tokio-rustls-devel" 
+]
+extra-source "rust-hyper-rustls-devel-0.24.2-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-hyper-rustls-devel-0.24.2-2.fc40.noarch.rpm"
+}

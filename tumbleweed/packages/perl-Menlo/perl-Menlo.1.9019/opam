@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Menlo-1.9019-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Menlo-1.9019-2.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-CPAN-Common-Index" {>= "0.6"}
+  "perl-CPAN-DistnameInfo" 
+  "perl-CPAN-Meta-Check" 
+  "perl-Capture-Tiny" 
+  "perl-Class-Tiny" {>= "1.1"}
+  "perl-ExtUtils-Config" {>= "0.3"}
+  "perl-ExtUtils-Helpers" {>= "0.20"}
+  "perl-ExtUtils-InstallPaths" {>= "0.2"}
+  "perl-File-Which" 
+  "perl-File-pushd" 
+  "perl-HTTP-Tinyish" {>= "0.4"}
+  "perl-Module-CPANfile" 
+  "perl-Parse-PMFile" {>= "0.26"}
+  "perl-String-ShellQuote" 
+  "perl-URI" 
+  "perl-base" {>= "2.36"}
+  "perl-local-lib" 
+]
+extra-source "perl-Menlo-1.9019-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Menlo-1.9019-2.2.noarch.rpm"
+}

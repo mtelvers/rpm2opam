@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sendemail-1.56-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sendemail-1.56-14.fc40.noarch.rpm"]
+depends: [
+  "perl-IO" 
+  "perl-IO-Socket-INET6" 
+  "perl-IO-Socket-SSL" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "sendemail-1.56-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sendemail-1.56-14.fc40.noarch.rpm"
+}

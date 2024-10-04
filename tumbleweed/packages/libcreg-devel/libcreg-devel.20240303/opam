@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcreg-devel-20240303-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcreg-devel-20240303-1.2.x86_64.rpm"]
+depends: [
+  "libbfio-devel" 
+  "libcreg1" {= "20240303"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libcreg-devel-20240303-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcreg-devel-20240303-1.2.x86_64.rpm"
+}

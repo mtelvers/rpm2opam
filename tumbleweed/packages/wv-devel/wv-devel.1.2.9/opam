@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wv-devel-1.2.9-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wv-devel-1.2.9-3.2.x86_64.rpm"]
+depends: [
+  "libgsf-devel" 
+  "libwmf-devel" 
+  "libwv-1_2-4" {= "1.2.9"}
+  "pkgconf-pkg-config" 
+]
+extra-source "wv-devel-1.2.9-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/wv-devel-1.2.9-3.2.x86_64.rpm"
+}

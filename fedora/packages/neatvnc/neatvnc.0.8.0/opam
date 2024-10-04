@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "neatvnc-0.8.0-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "neatvnc-0.8.0-2.fc40.x86_64.rpm"]
+depends: [
+  "aml" 
+  "glibc" 
+  "gmp" 
+  "gnutls" 
+  "libavcodec-free" 
+  "libavfilter-free" 
+  "libavutil-free" 
+  "libdrm" 
+  "mesa-libgbm" 
+  "nettle" 
+  "pixman" 
+  "turbojpeg" 
+  "zlib-ng-compat" 
+]
+extra-source "neatvnc-0.8.0-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/neatvnc-0.8.0-2.fc40.x86_64.rpm"
+}

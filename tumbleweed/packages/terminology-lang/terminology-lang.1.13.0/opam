@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "terminology-lang-1.13.0-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "terminology-lang-1.13.0-1.5.noarch.rpm"]
+depends: [
+  "terminology" {= "1.13.0"}
+]
+extra-source "terminology-lang-1.13.0-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/terminology-lang-1.13.0-1.5.noarch.rpm"
+}

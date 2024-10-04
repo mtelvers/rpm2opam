@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpst-0.6.76-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpst-0.6.76-2.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcc_s1" 
+  "libgsf-1-114" 
+  "libpst4" 
+  "libstdc++6" 
+]
+extra-source "libpst-0.6.76-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpst-0.6.76-2.1.x86_64.rpm"
+}

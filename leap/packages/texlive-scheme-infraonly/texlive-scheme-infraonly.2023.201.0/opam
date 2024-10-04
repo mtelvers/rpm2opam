@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-scheme-infraonly-2023.201.svn54191-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-scheme-infraonly-2023.201.svn54191-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "texlive-hyphen-base" {>= "2023"}
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-scripts" {>= "2023"}
+  "texlive-texlive-infra" {>= "2023"}
+]
+extra-source "texlive-scheme-infraonly-2023.201.svn54191-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-scheme-infraonly-2023.201.svn54191-slfo.1.1.3.noarch.rpm"
+}

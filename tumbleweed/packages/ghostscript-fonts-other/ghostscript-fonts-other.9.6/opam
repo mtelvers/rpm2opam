@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghostscript-fonts-other-9.06-13.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghostscript-fonts-other-9.06-13.15.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "ghostscript-fonts-std" 
+]
+extra-source "ghostscript-fonts-other-9.06-13.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ghostscript-fonts-other-9.06-13.15.noarch.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "btrfs-progs-6.8-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "btrfs-progs-6.8-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "e2fsprogs-libs" 
+  "glibc" 
+  "libblkid" 
+  "libcom_err" 
+  "libgcrypt" 
+  "libuuid" 
+  "libzstd" 
+  "lzo" 
+  "systemd-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "btrfs-progs-6.8-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/btrfs-progs-6.8-1.fc40.x86_64.rpm"
+}

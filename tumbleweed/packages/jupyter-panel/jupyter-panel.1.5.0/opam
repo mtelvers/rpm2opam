@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jupyter-panel-1.5.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jupyter-panel-1.5.0-1.1.noarch.rpm"]
+depends: [
+  "jupyter-bokeh" 
+  "python310-panel" {= "1.5"}
+]
+extra-source "jupyter-panel-1.5.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jupyter-panel-1.5.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-icalendar-5.0.13-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-icalendar-5.0.13-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "python311-base" 
+  "python311-python-dateutil" 
+  "python311-pytz" 
+  "update-alternatives" 
+]
+extra-source "python311-icalendar-5.0.13-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-icalendar-5.0.13-1.1.noarch.rpm"
+}

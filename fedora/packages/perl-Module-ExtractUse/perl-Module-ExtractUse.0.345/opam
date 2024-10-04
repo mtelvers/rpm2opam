@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Module-ExtractUse-0.345-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-ExtractUse-0.345-5.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Parse-RecDescent" {>= "1.967009"}
+  "perl-Pod-Strip" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-vars" 
+]
+extra-source "perl-Module-ExtractUse-0.345-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Module-ExtractUse-0.345-5.fc40.noarch.rpm"
+}

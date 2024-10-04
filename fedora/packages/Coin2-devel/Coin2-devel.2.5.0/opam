@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "Coin2-devel-2.5.0-49.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Coin2-devel-2.5.0-49.fc40.x86_64.rpm"]
+depends: [
+  "Coin2" {= "2.5.0"}
+  "alternatives" 
+  "bash" 
+  "bzip2-devel" 
+  "fontconfig-devel" 
+  "freetype-devel" 
+  "mesa-libGLU-devel" 
+  "pkgconf-pkg-config" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "Coin2-devel-2.5.0-49.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/Coin2-devel-2.5.0-49.fc40.x86_64.rpm"
+}

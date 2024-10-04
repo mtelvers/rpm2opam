@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sisu-mojos-0.9.0.M3-slfo.1.2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sisu-mojos-0.9.0.M3-slfo.1.2.2.noarch.rpm"]
+depends: [
+  "java-11-openjdk-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-common-artifact-filters" 
+  "plexus-build-api0" 
+  "plexus-utils" 
+  "sisu-inject" 
+  "sisu-plexus" 
+  "slf4j" 
+]
+extra-source "sisu-mojos-0.9.0.M3-slfo.1.2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/sisu-mojos-0.9.0.M3-slfo.1.2.2.noarch.rpm"
+}

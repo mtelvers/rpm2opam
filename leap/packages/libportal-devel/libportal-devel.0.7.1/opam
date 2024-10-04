@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libportal-devel-0.7.1-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libportal-devel-0.7.1-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libportal-1" {= "0.7.1"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Xdp-1_0" {= "0.7.1"}
+]
+extra-source "libportal-devel-0.7.1-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libportal-devel-0.7.1-slfo.1.1.7.x86_64.rpm"
+}

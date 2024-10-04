@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gtksourceview5-devel-5.12.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtksourceview5-devel-5.12.0-1.fc40.x86_64.rpm"]
+depends: [
+  "fontconfig-devel" 
+  "fribidi-devel" {>= "0.19.7"}
+  "glib2-devel" {>= "2.72"}
+  "gtk4-devel" {>= "4.6"}
+  "gtksourceview5" {= "5.12.0"}
+  "libxml2-devel" {>= "2.6"}
+  "pango-devel" 
+  "pcre2-devel" {>= "10.21"}
+  "pkgconf-pkg-config" 
+  "sysprof-capture-devel" 
+]
+extra-source "gtksourceview5-devel-5.12.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gtksourceview5-devel-5.12.0-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-tidyr-1.3.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-tidyr-1.3.0-6.fc40.x86_64.rpm"]
+depends: [
+  "R-cli" {>= "3.4.1"}
+  "R-core" {= "4.3"}
+  "R-dplyr" {>= "1.0.10"}
+  "R-glue" 
+  "R-lifecycle" {>= "1.0.3"}
+  "R-magrittr" 
+  "R-purrr" {>= "1.0.1"}
+  "R-rlang" {>= "1.0.4"}
+  "R-stringr" {>= "1.5.0"}
+  "R-tibble" {>= "2.1.1"}
+  "R-tidyselect" {>= "1.2.0"}
+  "R-vctrs" {>= "0.5.2"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "R-tidyr-1.3.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-tidyr-1.3.0-6.fc40.x86_64.rpm"
+}

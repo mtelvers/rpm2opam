@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-ptex-fontmaps-svn65953-81.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-ptex-fontmaps-svn65953-81.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Getopt-Long" 
+  "perl-PathTools" 
+  "perl-Pod-Usage" 
+  "perl-Tk" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "texlive-arphic-ttf" 
+  "texlive-baekmuk" 
+  "texlive-base" 
+  "texlive-ipaex" 
+  "texlive-kpathsea" 
+]
+extra-source "texlive-ptex-fontmaps-svn65953-81.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-ptex-fontmaps-svn65953-81.fc40.noarch.rpm"
+}

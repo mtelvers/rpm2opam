@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "scalasca-mpich-2.6.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scalasca-mpich-2.6.1-6.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cube-libs" 
+  "glibc" 
+  "libgcc" 
+  "libgomp" 
+  "libstdc++" 
+  "mpich" 
+  "otf2" 
+  "scorep-mpich-config" 
+  "zlib-ng-compat" 
+]
+extra-source "scalasca-mpich-2.6.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/scalasca-mpich-2.6.1-6.fc40.x86_64.rpm"
+}

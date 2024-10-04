@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-NetPacket-1.7.2-1.22.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-NetPacket-1.7.2-1.22.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-base" {>= "1.87"}
+]
+extra-source "perl-NetPacket-1.7.2-1.22.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-NetPacket-1.7.2-1.22.noarch.rpm"
+}

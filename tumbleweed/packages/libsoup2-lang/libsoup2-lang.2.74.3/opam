@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsoup2-lang-2.74.3-3.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsoup2-lang-2.74.3-3.3.noarch.rpm"]
+depends: [
+  "libsoup-2_4-1" {= "2.74.3"}
+]
+extra-source "libsoup2-lang-2.74.3-3.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libsoup2-lang-2.74.3-3.3.noarch.rpm"
+}

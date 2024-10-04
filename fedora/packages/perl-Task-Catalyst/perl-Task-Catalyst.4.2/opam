@@ -1,0 +1,42 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Task-Catalyst-4.02-35.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Task-Catalyst-4.02-35.fc40.noarch.rpm"]
+depends: [
+  "perl-Catalyst-Action-REST" 
+  "perl-Catalyst-ActionRole-ACL" 
+  "perl-Catalyst-Authentication-Credential-HTTP" 
+  "perl-Catalyst-Authentication-Store-DBIx-Class" 
+  "perl-Catalyst-Component-InstancePerContext" 
+  "perl-Catalyst-Controller-ActionRole" 
+  "perl-Catalyst-Devel" {>= "1.26"}
+  "perl-Catalyst-Manual" {>= "5.8000"}
+  "perl-Catalyst-Model-Adaptor" 
+  "perl-Catalyst-Model-DBIC-Schema" 
+  "perl-Catalyst-Plugin-Authentication" 
+  "perl-Catalyst-Plugin-ConfigLoader" 
+  "perl-Catalyst-Plugin-I18N" 
+  "perl-Catalyst-Plugin-Session" 
+  "perl-Catalyst-Plugin-Session-State-Cookie" 
+  "perl-Catalyst-Plugin-Session-Store-DBIC" 
+  "perl-Catalyst-Plugin-Session-Store-File" 
+  "perl-Catalyst-Plugin-StackTrace" 
+  "perl-Catalyst-Plugin-Static-Simple" 
+  "perl-Catalyst-Runtime" {>= "5.80000"}
+  "perl-Catalyst-Runtime-scripts" 
+  "perl-Catalyst-View-Email" 
+  "perl-Catalyst-View-TT" 
+  "perl-CatalystX-Component-Traits" 
+  "perl-CatalystX-LeakChecker" 
+  "perl-CatalystX-Profile" 
+  "perl-CatalystX-REPL" 
+  "perl-CatalystX-SimpleLogin" 
+  "perl-FCGI" 
+  "perl-FCGI-ProcManager" 
+  "perl-Starman" 
+  "perl-Test-WWW-Mechanize-Catalyst" 
+  "perl-libs" 
+  "perl-local-lib" 
+]
+extra-source "perl-Task-Catalyst-4.02-35.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Task-Catalyst-4.02-35.fc40.noarch.rpm"
+}

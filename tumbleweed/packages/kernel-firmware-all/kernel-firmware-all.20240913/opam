@@ -1,0 +1,44 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kernel-firmware-all-20240913-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kernel-firmware-all-20240913-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "dracut" {>= "49"}
+  "kernel-firmware-amdgpu" {= "20240913"}
+  "kernel-firmware-ath10k" {= "20240913"}
+  "kernel-firmware-ath11k" {= "20240913"}
+  "kernel-firmware-ath12k" {= "20240913"}
+  "kernel-firmware-atheros" {= "20240913"}
+  "kernel-firmware-bluetooth" {= "20240913"}
+  "kernel-firmware-bnx2" {= "20240913"}
+  "kernel-firmware-brcm" {= "20240913"}
+  "kernel-firmware-chelsio" {= "20240913"}
+  "kernel-firmware-dpaa2" {= "20240913"}
+  "kernel-firmware-i915" {= "20240913"}
+  "kernel-firmware-intel" {= "20240913"}
+  "kernel-firmware-iwlwifi" {= "20240913"}
+  "kernel-firmware-liquidio" {= "20240913"}
+  "kernel-firmware-marvell" {= "20240913"}
+  "kernel-firmware-media" {= "20240913"}
+  "kernel-firmware-mediatek" {= "20240913"}
+  "kernel-firmware-mellanox" {= "20240913"}
+  "kernel-firmware-mwifiex" {= "20240913"}
+  "kernel-firmware-network" {= "20240913"}
+  "kernel-firmware-nfp" {= "20240913"}
+  "kernel-firmware-nvidia" {= "20240913"}
+  "kernel-firmware-platform" {= "20240913"}
+  "kernel-firmware-prestera" {= "20240913"}
+  "kernel-firmware-qcom" {= "20240913"}
+  "kernel-firmware-qlogic" {= "20240913"}
+  "kernel-firmware-radeon" {= "20240913"}
+  "kernel-firmware-realtek" {= "20240913"}
+  "kernel-firmware-serial" {= "20240913"}
+  "kernel-firmware-sound" {= "20240913"}
+  "kernel-firmware-ti" {= "20240913"}
+  "kernel-firmware-ueagle" {= "20240913"}
+  "kernel-firmware-usb-network" {= "20240913"}
+]
+extra-source "kernel-firmware-all-20240913-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kernel-firmware-all-20240913-1.1.noarch.rpm"
+}

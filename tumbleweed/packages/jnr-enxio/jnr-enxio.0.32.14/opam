@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jnr-enxio-0.32.14-2.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jnr-enxio-0.32.14-2.6.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "jnr-constants" 
+  "jnr-ffi" 
+]
+extra-source "jnr-enxio-0.32.14-2.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jnr-enxio-0.32.14-2.6.noarch.rpm"
+}

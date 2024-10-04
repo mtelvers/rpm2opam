@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gap-pkg-qpa-doc-1.35-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-pkg-qpa-doc-1.35-5.fc40.noarch.rpm"]
+depends: [
+  "gap-online-help" 
+  "gap-pkg-qpa" {= "1.35"}
+]
+extra-source "gap-pkg-qpa-doc-1.35-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gap-pkg-qpa-doc-1.35-5.fc40.noarch.rpm"
+}

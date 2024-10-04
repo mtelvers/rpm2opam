@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "spamassassin-4.0.1-77.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "spamassassin-4.0.1-77.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "curl" 
+  "fillup" 
+  "perl" {>= "1.23"}
+  "perl-Error" 
+  "perl-Mail-SpamAssassin" {= "4.1"}
+  "perl-Net-Server" 
+  "perl-base" 
+  "perl-libwww-perl" 
+  "re2c" 
+  "spamassassin-spamc" {= "4.0.1"}
+]
+extra-source "spamassassin-4.0.1-77.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/spamassassin-4.0.1-77.2.x86_64.rpm"
+}

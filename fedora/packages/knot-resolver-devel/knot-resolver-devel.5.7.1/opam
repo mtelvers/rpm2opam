@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "knot-resolver-devel-5.7.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "knot-resolver-devel-5.7.1-1.fc40.x86_64.rpm"]
+depends: [
+  "gnutls-devel" 
+  "knot-devel" {>= "3.0.2"}
+  "knot-resolver" {= "5.7.1"}
+  "libuv-devel" {>= "1.7"}
+  "lmdb-devel" 
+  "luajit-devel" 
+  "pkgconf-pkg-config" 
+  "systemd-devel" 
+]
+extra-source "knot-resolver-devel-5.7.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/knot-resolver-devel-5.7.1-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,39 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gstreamer-plugins-base-1.24.8-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gstreamer-plugins-base-1.24.8-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gstreamer" {>= "1.24.8"}
+  "libX11-6" 
+  "libXext6" 
+  "libXi6" 
+  "libXv1" 
+  "libasound2" 
+  "libcairo2" 
+  "libcdda_interface0" 
+  "libcdda_paranoia0" 
+  "libgraphene-1_0-0" 
+  "libgstapp-1_0-0" 
+  "libgstaudio-1_0-0" 
+  "libgstgl-1_0-0" 
+  "libgstpbutils-1_0-0" 
+  "libgstreamer-1_0-0" 
+  "libgstriff-1_0-0" 
+  "libgsttag-1_0-0" 
+  "libgstvideo-1_0-0" 
+  "libjpeg8" 
+  "libogg0" 
+  "libopus0" 
+  "liborc-0_4-0" 
+  "libpango-1_0-0" 
+  "libpng16-16" 
+  "libtheoradec1" 
+  "libtheoraenc1" 
+  "libvisual-0_4-0" 
+  "libvorbis0" 
+  "libvorbisenc2" 
+]
+extra-source "gstreamer-plugins-base-1.24.8-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gstreamer-plugins-base-1.24.8-1.1.x86_64.rpm"
+}

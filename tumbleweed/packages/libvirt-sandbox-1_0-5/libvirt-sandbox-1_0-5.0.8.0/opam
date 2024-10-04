@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvirt-sandbox-1_0-5-0.8.0-5.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvirt-sandbox-1_0-5-0.8.0-5.7.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "liblzma5" 
+  "libselinux1" 
+  "libtirpc3" 
+  "libvirt-daemon-lxc" 
+  "libvirt-daemon-qemu" 
+  "libvirt-glib-1_0-0" 
+  "libz-ng-compat1" 
+]
+extra-source "libvirt-sandbox-1_0-5-0.8.0-5.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libvirt-sandbox-1_0-5-0.8.0-5.7.x86_64.rpm"
+}

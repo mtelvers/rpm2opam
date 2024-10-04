@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kernel-modules-6.8.5-301.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kernel-modules-6.8.5-301.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "kernel-core" {= "6.8.5"}
+  "kernel-modules-core" {= "6.8.5"}
+]
+extra-source "kernel-modules-6.8.5-301.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kernel-modules-6.8.5-301.fc40.x86_64.rpm"
+}

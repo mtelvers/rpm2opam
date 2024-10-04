@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "caribou-antler-0.4.21-38.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "caribou-antler-0.4.21-38.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "python3-caribou" {= "0.4.21"}
+]
+extra-source "caribou-antler-0.4.21-38.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/caribou-antler-0.4.21-38.fc40.x86_64.rpm"
+}

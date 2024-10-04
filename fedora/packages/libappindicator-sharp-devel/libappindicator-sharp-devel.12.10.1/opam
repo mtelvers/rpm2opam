@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libappindicator-sharp-devel-12.10.1-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libappindicator-sharp-devel-12.10.1-4.fc40.x86_64.rpm"]
+depends: [
+  "gtk-sharp2-devel" 
+  "libappindicator-sharp" {= "12.10.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libappindicator-sharp-devel-12.10.1-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libappindicator-sharp-devel-12.10.1-4.fc40.x86_64.rpm"
+}

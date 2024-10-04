@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-repoze.sphinx.autointerface-1.0.0-2.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-repoze.sphinx.autointerface-1.0.0-2.8.noarch.rpm"]
+depends: [
+  "python310-Sphinx" 
+  "python310-base" {= "3.10"}
+  "python310-zope-interface" 
+]
+extra-source "python310-repoze.sphinx.autointerface-1.0.0-2.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-repoze.sphinx.autointerface-1.0.0-2.8.noarch.rpm"
+}

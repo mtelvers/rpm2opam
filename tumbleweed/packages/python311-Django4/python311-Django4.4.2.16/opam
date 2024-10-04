@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-Django4-4.2.16-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-Django4-4.2.16-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311" 
+  "python311-Pillow" {>= "6.2.0"}
+  "python311-argon2-cffi" {>= "19.1.0"}
+  "python311-asgiref" {>= "3.6.0"}
+  "python311-base" 
+  "python311-bcrypt" 
+  "python311-pytz" 
+  "python311-setuptools" 
+  "python311-sqlparse" {>= "0.3.1"}
+  "update-alternatives" 
+]
+extra-source "python311-Django4-4.2.16-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-Django4-4.2.16-1.1.noarch.rpm"
+}

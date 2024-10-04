@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python2-pycairo-devel-1.18.1-5.23.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python2-pycairo-devel-1.18.1-5.23.x86_64.rpm"]
+depends: [
+  "cairo-devel" 
+  "pkgconf-pkg-config" 
+  "python-devel" 
+  "python2-pycairo" {= "1.18.1"}
+  "python2-pycairo-common-devel" {= "1.18.1"}
+]
+extra-source "python2-pycairo-devel-1.18.1-5.23.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python2-pycairo-devel-1.18.1-5.23.x86_64.rpm"
+}

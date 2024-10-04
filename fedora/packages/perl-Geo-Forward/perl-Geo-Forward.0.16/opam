@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Geo-Forward-0.16-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Geo-Forward-0.16-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Geo-Constants" {>= "0.4"}
+  "perl-Geo-Ellipsoids" {>= "0.9"}
+  "perl-Geo-Functions" {>= "0.3"}
+  "perl-Package-New" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-Geo-Forward-0.16-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Geo-Forward-0.16-4.fc40.noarch.rpm"
+}

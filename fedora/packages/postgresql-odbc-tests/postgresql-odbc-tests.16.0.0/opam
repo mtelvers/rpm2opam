@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "postgresql-odbc-tests-16.00.0000-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql-odbc-tests-16.00.0000-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gcc" 
+  "make" 
+  "postgresql-odbc" {= "16.0.0"}
+  "postgresql-test" 
+  "unixODBC-devel" 
+]
+extra-source "postgresql-odbc-tests-16.00.0000-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/postgresql-odbc-tests-16.00.0000-3.fc40.x86_64.rpm"
+}

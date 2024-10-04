@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-consolekit-1.7.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-consolekit-1.7.1-1.1.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-click" {>= "7.1.2"}
+  "python310-deprecation-alias" {>= "0.1.1"}
+  "python310-domdf-python-tools" {>= "3.8.0"}
+  "python310-mistletoe" {>= "0.7.2"}
+  "python310-typing_extensions" {>= "3.10.0.0"}
+]
+extra-source "python310-consolekit-1.7.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-consolekit-1.7.1-1.1.noarch.rpm"
+}

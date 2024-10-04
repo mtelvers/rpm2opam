@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libyaz-devel-5.34.0-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libyaz-devel-5.34.0-8.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "libicu-devel" 
+  "libxslt-devel" 
+  "libyaz" {= "5.34.0"}
+  "pkgconf-pkg-config" 
+  "tcl" 
+]
+extra-source "libyaz-devel-5.34.0-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libyaz-devel-5.34.0-8.fc40.x86_64.rpm"
+}

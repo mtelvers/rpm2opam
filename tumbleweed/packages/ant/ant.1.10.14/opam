@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ant-1.10.14-10.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ant-1.10.14-10.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-devel" {>= "1.8"}
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+  "xerces-j2" 
+  "xml-commons-apis" 
+  "xml-commons-resolver" 
+]
+extra-source "ant-1.10.14-10.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ant-1.10.14-10.1.noarch.rpm"
+}

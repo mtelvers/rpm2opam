@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-File-1.99.3-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-File-1.99.3-6.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-PathTools" 
+  "perl-Test-Simple" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-Test-File-1.99.3-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-File-1.99.3-6.fc40.noarch.rpm"
+}

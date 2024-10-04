@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-anyhow+default-devel-1.0.80-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-anyhow+default-devel-1.0.80-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-anyhow+std-devel" {= "1.0.80"}
+  "rust-anyhow-devel" {= "1.0.80"}
+]
+extra-source "rust-anyhow+default-devel-1.0.80-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-anyhow+default-devel-1.0.80-1.fc40.noarch.rpm"
+}

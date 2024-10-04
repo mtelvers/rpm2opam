@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pciutils-3.13.0-1.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pciutils-3.13.0-1.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "hwdata" 
+  "kmod-libs" 
+  "pciutils-libs" 
+]
+extra-source "pciutils-3.13.0-1.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/pciutils-3.13.0-1.el10.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-io-lifetimes1+socket2-devel-1.0.11-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-io-lifetimes1+socket2-devel-1.0.11-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-io-lifetimes1-devel" {= "1.0.11"}
+  "rust-socket2+default-devel" 
+]
+extra-source "rust-io-lifetimes1+socket2-devel-1.0.11-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-io-lifetimes1+socket2-devel-1.0.11-2.fc40.noarch.rpm"
+}

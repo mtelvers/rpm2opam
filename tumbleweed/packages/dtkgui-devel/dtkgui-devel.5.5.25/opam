@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dtkgui-devel-5.5.25-1.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dtkgui-devel-5.5.25-1.16.x86_64.rpm"]
+depends: [
+  "dtkcore-devel" 
+  "libdtkgui5" {= "5.5.25"}
+  "pkgconf-pkg-config" 
+]
+extra-source "dtkgui-devel-5.5.25-1.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/dtkgui-devel-5.5.25-1.16.x86_64.rpm"
+}

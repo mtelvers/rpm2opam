@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-flasgger-0.9.7.1-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-flasgger-0.9.7.1-4.1.noarch.rpm"]
+depends: [
+  "python312-Flask" {>= "0.10"}
+  "python312-PyYAML" {>= "3.0"}
+  "python312-base" {= "3.12"}
+  "python312-jsonschema" {>= "3.0.1"}
+  "python312-mistune" {>= "3"}
+  "python312-packaging" 
+  "python312-six" {>= "1.10"}
+]
+extra-source "python312-flasgger-0.9.7.1-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-flasgger-0.9.7.1-4.1.noarch.rpm"
+}

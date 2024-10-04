@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dpdk-tools-22.11.1-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dpdk-tools-22.11.1-4.fc40.x86_64.rpm"]
+depends: [
+  "dpdk" {= "22.11.1"}
+  "findutils" 
+  "glibc" 
+  "iproute" 
+  "kmod" 
+  "libarchive" 
+  "libfdt" 
+  "libpcap" 
+  "numactl-libs" 
+  "pciutils" 
+  "python3" 
+  "python3-pyelftools" 
+  "zlib-ng-compat" 
+]
+extra-source "dpdk-tools-22.11.1-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dpdk-tools-22.11.1-4.fc40.x86_64.rpm"
+}

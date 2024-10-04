@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tigervnc-1.13.1-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tigervnc-1.13.1-12.fc40.x86_64.rpm"]
+depends: [
+  "coreutils" 
+  "fltk" 
+  "glibc" 
+  "gmp" 
+  "gnutls" 
+  "hicolor-icon-theme" 
+  "libX11" 
+  "libXext" 
+  "libXi" 
+  "libXrandr" 
+  "libXrender" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libstdc++" 
+  "nettle" 
+  "pixman" 
+  "tigervnc-icons" 
+  "tigervnc-license" 
+  "zlib-ng-compat" 
+]
+extra-source "tigervnc-1.13.1-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tigervnc-1.13.1-12.fc40.x86_64.rpm"
+}

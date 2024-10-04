@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lirc-config-0.10.1-slfo.1.1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lirc-config-0.10.1-slfo.1.1.8.noarch.rpm"]
+depends: [
+  "lirc-core" {= "0.10.1"}
+  "python311-PyYAML" 
+  "python311-gobject" 
+]
+extra-source "lirc-config-0.10.1-slfo.1.1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/lirc-config-0.10.1-slfo.1.1.8.noarch.rpm"
+}

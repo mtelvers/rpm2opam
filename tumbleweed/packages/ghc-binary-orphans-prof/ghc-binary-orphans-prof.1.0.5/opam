@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-binary-orphans-prof-1.0.5-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-binary-orphans-prof-1.0.5-1.2.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-binary-orphans-devel" {= "1.0.5"}
+  "ghc-binary-prof" 
+]
+extra-source "ghc-binary-orphans-prof-1.0.5-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-binary-orphans-prof-1.0.5-1.2.x86_64.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "frozen-bubble-2.212-17.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "frozen-bubble-2.212-17.1.x86_64.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "fillup" 
+  "frozen-bubble-server" {= "2.212"}
+  "glibc" 
+  "libSDL-1_2-0" 
+  "libSDL_mixer-1_2-0" 
+  "net-tools" 
+  "perl" {= "5.40.0"}
+  "perl-Alien-SDL" 
+  "perl-Compress-Bzip2" 
+  "perl-Locale-Maketext-Lexicon" 
+  "perl-SDL" {>= "2.400"}
+  "perl-Tie-Simple" 
+  "perl-base" 
+]
+extra-source "frozen-bubble-2.212-17.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/frozen-bubble-2.212-17.1.x86_64.rpm"
+}

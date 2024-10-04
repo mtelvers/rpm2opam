@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xpilot-ng-logwatch-4.7.3-31.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xpilot-ng-logwatch-4.7.3-31.fc40.x86_64.rpm"]
+depends: [
+  "logwatch" 
+  "xpilot-ng-server" {= "4.7.3"}
+]
+extra-source "xpilot-ng-logwatch-4.7.3-31.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xpilot-ng-logwatch-4.7.3-31.fc40.x86_64.rpm"
+}

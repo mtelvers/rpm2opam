@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pijul-bash-completion-1.0.0~beta.9-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pijul-bash-completion-1.0.0~beta.9-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "pijul" {= "1.0.0"}
+]
+extra-source "pijul-bash-completion-1.0.0~beta.9-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pijul-bash-completion-1.0.0~beta.9-1.1.noarch.rpm"
+}

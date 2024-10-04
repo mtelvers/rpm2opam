@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "opae-extra-tools-2.2.0-1.1.fc40.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opae-extra-tools-2.2.0-1.1.fc40.8.x86_64.rpm"]
+depends: [
+  "fmt" 
+  "glibc" 
+  "hwloc-libs" 
+  "libedit" 
+  "libgcc" 
+  "libstdc++" 
+  "libuuid" 
+  "opae" 
+  "opae-devel" 
+  "python3" 
+  "python3-libs" 
+  "spdlog" 
+  "tbb" 
+]
+extra-source "opae-extra-tools-2.2.0-1.1.fc40.8.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/opae-extra-tools-2.2.0-1.1.fc40.8.x86_64.rpm"
+}

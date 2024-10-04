@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtk2-metatheme-adapta-3.95.0.11-4.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk2-metatheme-adapta-3.95.0.11-4.3.noarch.rpm"]
+depends: [
+  "gtk2-engine-murrine" {>= "0.98.1"}
+  "libgtk-2_0-0" {>= "2.24.30"}
+  "metatheme-adapta-common" {= "3.95.0.11"}
+]
+extra-source "gtk2-metatheme-adapta-3.95.0.11-4.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gtk2-metatheme-adapta-3.95.0.11-4.3.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fnott-1.7.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fnott-1.7.0-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libdbus-1-3" 
+  "libfcft4" 
+  "libfontconfig1" 
+  "libpixman-1-0" 
+  "libpng16-16" 
+  "libwayland-client0" 
+  "libwayland-cursor0" 
+]
+extra-source "fnott-1.7.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/fnott-1.7.0-2.1.x86_64.rpm"
+}

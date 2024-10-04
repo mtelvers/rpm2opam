@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "stgit-fish-completion-2.4.12-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "stgit-fish-completion-2.4.12-1.1.noarch.rpm"]
+depends: [
+  "fish" 
+  "stgit" {= "2.4.12"}
+]
+extra-source "stgit-fish-completion-2.4.12-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/stgit-fish-completion-2.4.12-1.1.noarch.rpm"
+}

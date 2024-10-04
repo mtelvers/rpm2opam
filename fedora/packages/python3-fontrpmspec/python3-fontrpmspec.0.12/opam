@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-fontrpmspec-0.12-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-fontrpmspec-0.12-5.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-babel" 
+  "python3-fonttools" 
+  "python3-jinja2" 
+  "python3-lxml" 
+  "python3-pyrpm" {>= "0.12"}
+  "python3-termcolor" 
+]
+extra-source "python3-fontrpmspec-0.12-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-fontrpmspec-0.12-5.fc40.noarch.rpm"
+}

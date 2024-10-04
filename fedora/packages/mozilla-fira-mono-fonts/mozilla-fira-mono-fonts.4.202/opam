@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mozilla-fira-mono-fonts-4.202-17.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mozilla-fira-mono-fonts-4.202-17.fc40.noarch.rpm"]
+depends: [
+  "mozilla-fira-fonts-common" {= "4.202"}
+]
+extra-source "mozilla-fira-mono-fonts-4.202-17.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mozilla-fira-mono-fonts-4.202-17.fc40.noarch.rpm"
+}

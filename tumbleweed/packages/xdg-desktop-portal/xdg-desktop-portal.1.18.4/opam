@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xdg-desktop-portal-1.18.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xdg-desktop-portal-1.18.4-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "fuse3" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libfuse3-3" 
+  "libgdk_pixbuf-2_0-0" 
+  "libjson-glib-1_0-0" 
+  "libpipewire-0_3-0" 
+  "libsystemd0" 
+]
+extra-source "xdg-desktop-portal-1.18.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xdg-desktop-portal-1.18.4-1.1.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "util-linux-core-2.40.2-4.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "util-linux-core-2.40.2-4.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libblkid" 
+  "libmount" {= "2.40.2"}
+  "libselinux" 
+  "libsmartcols" 
+  "libuuid" {= "2.40.2"}
+  "libxcrypt" 
+  "ncurses-libs" 
+  "systemd-libs" 
+]
+extra-source "util-linux-core-2.40.2-4.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/util-linux-core-2.40.2-4.el10.x86_64.rpm"
+}

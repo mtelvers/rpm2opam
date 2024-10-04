@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "crash-8.0.5-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "crash-8.0.5-1.4.x86_64.rpm"]
+depends: [
+  "binutils" 
+  "glibc" 
+  "libgcc_s1" 
+  "liblzo2-2" 
+  "libncurses6" 
+  "libsnappy1" 
+  "libstdc++6" 
+  "libzstd1" 
+]
+extra-source "crash-8.0.5-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/crash-8.0.5-1.4.x86_64.rpm"
+}

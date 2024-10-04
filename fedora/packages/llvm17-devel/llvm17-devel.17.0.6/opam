@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "llvm17-devel-17.0.6-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "llvm17-devel-17.0.6-7.fc40.x86_64.rpm"]
+depends: [
+  "alternatives" 
+  "bash" 
+  "libedit-devel" 
+  "llvm17" {= "17.0.6"}
+  "llvm17-googletest" {= "17.0.6"}
+  "llvm17-libs" {= "17.0.6"}
+  "llvm17-static" {= "17.0.6"}
+  "llvm17-test" {= "17.0.6"}
+]
+extra-source "llvm17-devel-17.0.6-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/llvm17-devel-17.0.6-7.fc40.x86_64.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-tackerclient-tests-unit-1.14.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-tackerclient-tests-unit-1.14.0-3.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-fixtures" 
+  "python3-flake8" 
+  "python3-hacking" 
+  "python3-mock" 
+  "python3-oslo-log" 
+  "python3-oslo-serialization" 
+  "python3-pbr" 
+  "python3-setuptools" 
+  "python3-stestr" 
+  "python3-subunit" 
+  "python3-tackerclient" {= "1.14.0"}
+  "python3-testtools" 
+]
+extra-source "python3-tackerclient-tests-unit-1.14.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-tackerclient-tests-unit-1.14.0-3.fc40.noarch.rpm"
+}

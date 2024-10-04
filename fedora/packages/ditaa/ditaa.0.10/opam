@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ditaa-0.10-24.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ditaa-0.10-24.fc40.noarch.rpm"]
+depends: [
+  "apache-commons-cli" 
+  "bash" 
+  "batik" 
+  "java-21-openjdk-headless" {>= "1.6.0"}
+  "javapackages-tools" 
+  "jericho-html" 
+  "xml-commons-apis" 
+]
+extra-source "ditaa-0.10-24.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/ditaa-0.10-24.fc40.noarch.rpm"
+}

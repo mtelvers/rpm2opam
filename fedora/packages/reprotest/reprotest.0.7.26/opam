@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "reprotest-0.7.26-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "reprotest-0.7.26-3.fc40.noarch.rpm"]
+depends: [
+  "diffoscope" 
+  "disorderfs" 
+  "fakeroot" 
+  "glibc-all-langpacks" 
+  "libfaketime" 
+  "python3" 
+  "python3-distro" 
+  "python3-rstr" 
+  "rpm-build" 
+]
+extra-source "reprotest-0.7.26-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/reprotest-0.7.26-3.fc40.noarch.rpm"
+}

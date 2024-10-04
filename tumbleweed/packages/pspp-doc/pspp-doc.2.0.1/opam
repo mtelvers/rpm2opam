@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pspp-doc-2.0.1-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pspp-doc-2.0.1-1.2.noarch.rpm"]
+depends: [
+  "pspp" {= "2.0.1"}
+]
+extra-source "pspp-doc-2.0.1-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pspp-doc-2.0.1-1.2.noarch.rpm"
+}

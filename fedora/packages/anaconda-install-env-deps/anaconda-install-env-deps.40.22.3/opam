@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "anaconda-install-env-deps-40.22.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "anaconda-install-env-deps-40.22.3-1.fc40.x86_64.rpm"]
+depends: [
+  "btrfs-progs" 
+  "dosfstools" 
+  "e2fsprogs" 
+  "f2fs-tools" 
+  "gdb" 
+  "hfsplus-tools" 
+  "isomd5sum" {>= "1.0.10"}
+  "kexec-tools" 
+  "libblockdev-lvm-dbus" 
+  "libblockdev-plugins-all" {>= "2.1"}
+  "ntfs-3g" 
+  "ntfsprogs" 
+  "realmd" 
+  "rsync" 
+  "tmux" 
+  "udisks2-iscsi" 
+  "xfsprogs" 
+]
+extra-source "anaconda-install-env-deps-40.22.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/anaconda-install-env-deps-40.22.3-1.fc40.x86_64.rpm"
+}

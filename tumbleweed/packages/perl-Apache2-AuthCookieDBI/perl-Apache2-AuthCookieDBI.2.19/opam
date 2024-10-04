@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Apache2-AuthCookieDBI-2.19-1.21.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Apache2-AuthCookieDBI-2.19-1.21.noarch.rpm"]
+depends: [
+  "apache2-mod_perl" 
+  "perl" 
+  "perl-Apache-AuthCookie" {>= "3.8"}
+  "perl-Crypt-CBC" {>= "2.13"}
+  "perl-DBI" {>= "1.4"}
+  "perl-Date-Calc" 
+  "perl-base" {>= "5.47"}
+]
+extra-source "perl-Apache2-AuthCookieDBI-2.19-1.21.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Apache2-AuthCookieDBI-2.19-1.21.noarch.rpm"
+}

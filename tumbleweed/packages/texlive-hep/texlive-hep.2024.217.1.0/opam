@@ -1,0 +1,39 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-hep-2024.217.1.0svn15878-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-hep-2024.217.1.0svn15878-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-amsmath" 
+  "texlive-booktabs" 
+  "texlive-braket" 
+  "texlive-cancel" 
+  "texlive-caption" 
+  "texlive-carlisle" 
+  "texlive-ccaption" 
+  "texlive-cite" 
+  "texlive-fancyhdr" 
+  "texlive-feynmf" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-hepnames" 
+  "texlive-hepunits" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-morefloats" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-setspace" 
+  "texlive-subfigure" 
+  "texlive-tocbibind" 
+  "texlive-tools" 
+  "texlive-url" 
+]
+extra-source "texlive-hep-2024.217.1.0svn15878-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-hep-2024.217.1.0svn15878-56.1.noarch.rpm"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-luatextra-2024.216.1.0.1svn20747-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-luatextra-2024.216.1.0.1svn20747-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-filesystem" {>= "2024"}
+  "texlive-fontspec" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-luacode" 
+  "texlive-luatexbase" 
+  "texlive-metalogo" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+]
+extra-source "texlive-luatextra-2024.216.1.0.1svn20747-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-luatextra-2024.216.1.0.1svn20747-55.1.noarch.rpm"
+}

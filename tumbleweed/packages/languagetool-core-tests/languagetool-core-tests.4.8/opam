@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "languagetool-core-tests-4.8-7.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "languagetool-core-tests-4.8-7.1.noarch.rpm"]
+depends: [
+  "apache-commons-csv" 
+  "apache-commons-lang3" 
+  "apache-commons-pool2" 
+  "apache-commons-text" 
+  "glassfish-activation-api" 
+  "glassfish-jaxb-api" 
+  "glassfish-jaxb-runtime" 
+  "guava" 
+  "hppc" 
+  "indriya" 
+  "jackson-databind" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "jetbrains-annotations" 
+  "jna" 
+  "language-detector" 
+  "lucene-backward-codecs" 
+  "lucene-core" 
+  "morfologik-stemming" 
+  "segment" 
+  "slf4j" 
+  "unit-api" 
+  "xgboost" 
+  "xgboost-predictor" 
+]
+extra-source "languagetool-core-tests-4.8-7.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/languagetool-core-tests-4.8-7.1.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "belle-sip-data-5.3.37-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "belle-sip-data-5.3.37-1.1.noarch.rpm"]
+depends: [
+  "libbelle-sip1" {= "5.3.37"}
+]
+extra-source "belle-sip-data-5.3.37-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/belle-sip-data-5.3.37-1.1.noarch.rpm"
+}

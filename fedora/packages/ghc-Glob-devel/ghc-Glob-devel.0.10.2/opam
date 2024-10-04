@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-Glob-devel-0.10.2-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-Glob-devel-0.10.2-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-Glob" {= "0.10.2"}
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-directory-devel" 
+  "ghc-dlist-devel" 
+  "ghc-filepath-devel" 
+  "ghc-transformers-compat-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-Glob-devel-0.10.2-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-Glob-devel-0.10.2-8.fc40.x86_64.rpm"
+}

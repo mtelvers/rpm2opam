@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-gettext-camomile-devel-0.4.2-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-gettext-camomile-devel-0.4.2-19.fc40.x86_64.rpm"]
+depends: [
+  "ocaml" {= "2125"}
+  "ocaml-camlp-streams" {= "0"}
+  "ocaml-camomile" {= "0"}
+  "ocaml-camomile-devel" 
+  "ocaml-fileutils" {= "248"}
+  "ocaml-gettext" {= "8"}
+  "ocaml-gettext-camomile" {= "0.4.2"}
+  "ocaml-gettext-devel" {= "0.4.2"}
+]
+extra-source "ocaml-gettext-camomile-devel-0.4.2-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-gettext-camomile-devel-0.4.2-19.fc40.x86_64.rpm"
+}

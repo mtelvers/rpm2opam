@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-kiwi_crossprepare_plugin-0.1.6-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-kiwi_crossprepare_plugin-0.1.6-1.6.noarch.rpm"]
+depends: [
+  "python3-kiwi" {>= "9.21.21"}
+  "python311-PyYAML" 
+  "python311-base" {= "3.11"}
+  "python311-docopt" 
+  "python311-setuptools" 
+  "qemu-linux-user" 
+]
+extra-source "python3-kiwi_crossprepare_plugin-0.1.6-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-kiwi_crossprepare_plugin-0.1.6-1.6.noarch.rpm"
+}

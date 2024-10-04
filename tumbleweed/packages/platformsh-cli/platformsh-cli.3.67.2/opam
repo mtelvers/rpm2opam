@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "platformsh-cli-3.67.2-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "platformsh-cli-3.67.2-1.9.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "php8" {>= "5.5.9"}
+]
+extra-source "platformsh-cli-3.67.2-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/platformsh-cli-3.67.2-1.9.noarch.rpm"
+}

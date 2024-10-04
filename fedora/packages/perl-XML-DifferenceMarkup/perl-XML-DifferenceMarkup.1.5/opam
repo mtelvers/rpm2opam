@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-XML-DifferenceMarkup-1.05-35.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XML-DifferenceMarkup-1.05-35.fc40.x86_64.rpm"]
+depends: [
+  "diffmark" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "libxml2" 
+  "perl-Exporter" 
+  "perl-XML-LibXML" {>= "1.70"}
+  "perl-libs" 
+]
+extra-source "perl-XML-DifferenceMarkup-1.05-35.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-XML-DifferenceMarkup-1.05-35.fc40.x86_64.rpm"
+}

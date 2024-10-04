@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "yash-doc-2.56.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yash-doc-2.56.1-1.fc40.noarch.rpm"]
+depends: [
+  "yash" {= "2.56.1"}
+]
+extra-source "yash-doc-2.56.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/y/yash-doc-2.56.1-1.fc40.noarch.rpm"
+}

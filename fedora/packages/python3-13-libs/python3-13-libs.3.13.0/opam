@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3.13-libs-3.13.0~a5-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3.13-libs-3.13.0~a5-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bzip2-libs" 
+  "expat" 
+  "gdbm-libs" 
+  "glibc" 
+  "libb2" 
+  "libffi" 
+  "libuuid" 
+  "mpdecimal" 
+  "ncurses-libs" 
+  "openssl-libs" 
+  "python-pip-wheel" {>= "23.1.2"}
+  "readline" 
+  "sqlite-libs" 
+  "tzdata" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "python3.13-libs-3.13.0~a5-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3.13-libs-3.13.0~a5-2.fc40.x86_64.rpm"
+}

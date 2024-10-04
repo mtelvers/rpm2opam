@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "anthy-devel-9100h-42.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "anthy-devel-9100h-42.3.x86_64.rpm"]
+depends: [
+  "libanthy0" {= "9100"}
+  "pkgconf-pkg-config" 
+]
+extra-source "anthy-devel-9100h-42.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/anthy-devel-9100h-42.3.x86_64.rpm"
+}

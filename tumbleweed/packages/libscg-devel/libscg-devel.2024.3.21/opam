@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libscg-devel-2024.03.21-49.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libscg-devel-2024.03.21-49.1.x86_64.rpm"]
+depends: [
+  "librscg1_0" {= "2024.3.21"}
+  "libscg1_0" {= "2024.3.21"}
+  "libscgcmd1_0" {= "2024.3.21"}
+  "libschily-devel" 
+]
+extra-source "libscg-devel-2024.03.21-49.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libscg-devel-2024.03.21-49.1.x86_64.rpm"
+}

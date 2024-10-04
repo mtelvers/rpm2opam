@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-sidpy-0.12.3-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-sidpy-0.12.3-3.1.noarch.rpm"]
+depends: [
+  "python310-ase" 
+  "python310-base" {= "3.10"}
+  "python310-cytoolz" 
+  "python310-dask" {>= "0.10"}
+  "python310-dask-array" {>= "0.10"}
+  "python310-distributed" {>= "2"}
+  "python310-h5py" {>= "2.6.0"}
+  "python310-ipykernel" 
+  "python310-ipympl" 
+  "python310-ipython" {>= "6"}
+  "python310-ipywidgets" {>= "5.2.2"}
+  "python310-joblib" {>= "0.11.0"}
+  "python310-matplotlib" {>= "2.0.0"}
+  "python310-numpy" 
+  "python310-psutil" 
+  "python310-scikit-learn" 
+  "python310-scipy" 
+  "python310-toolz" 
+]
+extra-source "python310-sidpy-0.12.3-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-sidpy-0.12.3-3.1.noarch.rpm"
+}

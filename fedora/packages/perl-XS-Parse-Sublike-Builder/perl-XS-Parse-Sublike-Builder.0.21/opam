@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-XS-Parse-Sublike-Builder-0.21-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XS-Parse-Sublike-Builder-0.21-3.fc40.x86_64.rpm"]
+depends: [
+  "perl-XS-Parse-Sublike" {= "0.21"}
+  "perl-interpreter" 
+  "perl-libs" {>= "5.14.0"}
+]
+extra-source "perl-XS-Parse-Sublike-Builder-0.21-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-XS-Parse-Sublike-Builder-0.21-3.fc40.x86_64.rpm"
+}

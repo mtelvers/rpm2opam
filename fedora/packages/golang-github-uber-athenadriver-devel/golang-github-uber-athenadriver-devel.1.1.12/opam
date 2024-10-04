@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-uber-athenadriver-devel-1.1.12-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-uber-athenadriver-devel-1.1.12-13.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-aws-sdk-devel" 
+  "golang-github-data-dog-sqlmock-devel" 
+  "golang-github-jedib0t-pretty-devel" 
+  "golang-github-uber-tally-devel" 
+  "golang-github-xwb1989-sqlparser-devel" 
+  "golang-uber-config-devel" 
+  "golang-uber-fx-devel" 
+  "golang-uber-zap-devel" 
+]
+extra-source "golang-github-uber-athenadriver-devel-1.1.12-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-uber-athenadriver-devel-1.1.12-13.fc40.noarch.rpm"
+}

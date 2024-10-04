@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-ydoc-2024.216.0.0.7alphasvn64887-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-ydoc-2024.216.0.0.7alphasvn64887-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-float" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-listings" 
+  "texlive-needspace" 
+  "texlive-newverbs" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-showexpl" {>= "2024"}
+  "texlive-tools" 
+  "texlive-url" 
+  "texlive-xcolor" 
+]
+extra-source "texlive-ydoc-2024.216.0.0.7alphasvn64887-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-ydoc-2024.216.0.0.7alphasvn64887-55.1.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vcontrold-v0.98.10+git20210418.977e6f5-1.15.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vcontrold-v0.98.10+git20210418.977e6f5-1.15.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libxml2-2" 
+  "system-group-hardware" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "vcontrold-v0.98.10+git20210418.977e6f5-1.15.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vcontrold-v0.98.10+git20210418.977e6f5-1.15.x86_64.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-libslirp+default-devel-4.2.2-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-libslirp+default-devel-4.2.2-20.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-libslirp+dbus-devel" {= "4.2.2"}
+  "rust-libslirp+ipnetwork-devel" {= "4.2.2"}
+  "rust-libslirp+lazy_static-devel" {= "4.2.2"}
+  "rust-libslirp+libc-devel" {= "4.2.2"}
+  "rust-libslirp+libsystemd-devel" {= "4.2.2"}
+  "rust-libslirp+mio-devel" {= "4.2.2"}
+  "rust-libslirp+mio-extras-devel" {= "4.2.2"}
+  "rust-libslirp+nix-devel" {= "4.2.2"}
+  "rust-libslirp+slab-devel" {= "4.2.2"}
+  "rust-libslirp+structopt-devel" {= "4.2.2"}
+  "rust-libslirp+url-devel" {= "4.2.2"}
+  "rust-libslirp-devel" {= "4.2.2"}
+]
+extra-source "rust-libslirp+default-devel-4.2.2-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-libslirp+default-devel-4.2.2-20.fc40.noarch.rpm"
+}

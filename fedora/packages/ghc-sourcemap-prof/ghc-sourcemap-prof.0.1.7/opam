@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-sourcemap-prof-0.1.7-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-sourcemap-prof-0.1.7-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-prof" 
+  "ghc-attoparsec-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-process-prof" 
+  "ghc-sourcemap-devel" {= "0.1.7"}
+  "ghc-text-prof" 
+  "ghc-unordered-containers-prof" 
+  "ghc-utf8-string-prof" 
+]
+extra-source "ghc-sourcemap-prof-0.1.7-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-sourcemap-prof-0.1.7-8.fc40.x86_64.rpm"
+}

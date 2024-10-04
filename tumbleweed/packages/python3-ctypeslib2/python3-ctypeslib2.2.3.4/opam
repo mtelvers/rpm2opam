@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-ctypeslib2-2.3.4-2.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-ctypeslib2-2.3.4-2.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python3-clang15" {>= "11"}
+  "python311-base" 
+  "update-alternatives" 
+]
+extra-source "python3-ctypeslib2-2.3.4-2.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-ctypeslib2-2.3.4-2.4.noarch.rpm"
+}

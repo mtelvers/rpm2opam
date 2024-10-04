@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ckeditor-samples-4.22.1-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ckeditor-samples-4.22.1-3.fc40.noarch.rpm"]
+depends: [
+  "ckeditor" {= "4.22.1"}
+]
+extra-source "ckeditor-samples-4.22.1-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/ckeditor-samples-4.22.1-3.fc40.noarch.rpm"
+}

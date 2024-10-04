@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postgresql16-docs-16.4-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql16-docs-16.4-2.1.noarch.rpm"]
+depends: [
+  "postgresql-docs" {>= "16"}
+]
+extra-source "postgresql16-docs-16.4-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/postgresql16-docs-16.4-2.1.noarch.rpm"
+}

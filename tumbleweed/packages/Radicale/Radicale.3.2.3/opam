@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "Radicale-3.2.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Radicale-3.2.3-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311" {>= "3.8"}
+  "python311-base" {= "3.11"}
+  "python311-defusedxml" 
+  "python311-passlib" 
+  "python311-pika" {>= "1.1.0"}
+  "python311-python-dateutil" {>= "2.7.3"}
+  "python311-vobject" {>= "0.9.6"}
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "Radicale-3.2.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/Radicale-3.2.3-1.1.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-hickory-client+dns-over-https-openssl-devel-0.24.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-hickory-client+dns-over-https-openssl-devel-0.24.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-hickory-client+dns-over-https-devel" {= "0.24.0"}
+  "rust-hickory-client+dns-over-openssl-devel" {= "0.24.0"}
+  "rust-hickory-client-devel" {= "0.24.0"}
+]
+extra-source "rust-hickory-client+dns-over-https-openssl-devel-0.24.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-hickory-client+dns-over-https-openssl-devel-0.24.0-2.fc40.noarch.rpm"
+}

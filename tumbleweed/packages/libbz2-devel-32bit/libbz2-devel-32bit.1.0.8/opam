@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libbz2-devel-32bit-1.0.8-5.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libbz2-devel-32bit-1.0.8-5.10.x86_64.rpm"]
+depends: [
+  "libbz2-1-32bit" {= "1.0.8"}
+  "libbz2-devel" {= "1.0.8"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libbz2-devel-32bit-1.0.8-5.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libbz2-devel-32bit-1.0.8-5.10.x86_64.rpm"
+}

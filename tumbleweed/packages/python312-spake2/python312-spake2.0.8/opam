@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-spake2-0.8-4.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-spake2-0.8-4.2.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-hkdf" 
+]
+extra-source "python312-spake2-0.8-4.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-spake2-0.8-4.2.noarch.rpm"
+}

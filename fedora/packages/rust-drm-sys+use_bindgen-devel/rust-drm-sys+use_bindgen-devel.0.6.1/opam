@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-drm-sys+use_bindgen-devel-0.6.1-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-drm-sys+use_bindgen-devel-0.6.1-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "libdrm-devel" 
+  "rust-drm-sys+bindgen-devel" {= "0.6.1"}
+  "rust-drm-sys+pkg-config-devel" {= "0.6.1"}
+  "rust-drm-sys-devel" {= "0.6.1"}
+]
+extra-source "rust-drm-sys+use_bindgen-devel-0.6.1-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-drm-sys+use_bindgen-devel-0.6.1-3.fc40.noarch.rpm"
+}

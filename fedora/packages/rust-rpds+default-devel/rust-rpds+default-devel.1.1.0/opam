@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rpds+default-devel-1.1.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rpds+default-devel-1.1.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-rpds+std-devel" {= "1.1.0"}
+  "rust-rpds-devel" {= "1.1.0"}
+]
+extra-source "rust-rpds+default-devel-1.1.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rpds+default-devel-1.1.0-3.fc40.noarch.rpm"
+}

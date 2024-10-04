@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gio-sys0.15+v2_72-devel-0.15.10-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gio-sys0.15+v2_72-devel-0.15.10-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "glib2-devel" {>= "2.72"}
+  "rust-gio-sys0-15+v2_70-devel" {= "0.15.10"}
+  "rust-gio-sys0-15-devel" {= "0.15.10"}
+]
+extra-source "rust-gio-sys0.15+v2_72-devel-0.15.10-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gio-sys0.15+v2_72-devel-0.15.10-4.fc40.noarch.rpm"
+}

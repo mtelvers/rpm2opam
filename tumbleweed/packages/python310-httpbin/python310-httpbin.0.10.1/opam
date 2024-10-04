@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-httpbin-0.10.1-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-httpbin-0.10.1-1.3.noarch.rpm"]
+depends: [
+  "python310-Brotli" 
+  "python310-Flask" {>= "3.0.3"}
+  "python310-Werkzeug" {>= "3.0.4"}
+  "python310-base" {= "3.10.15"}
+  "python310-decorator" 
+  "python310-flasgger" 
+  "python310-gevent" 
+  "python310-six" 
+]
+extra-source "python310-httpbin-0.10.1-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-httpbin-0.10.1-1.3.noarch.rpm"
+}

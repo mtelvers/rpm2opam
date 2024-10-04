@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libdmlc-0.5-1.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdmlc-0.5-1.11.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcurl-mini4" 
+  "libgcc_s1" 
+  "libgomp1" 
+  "libopenssl3" 
+  "libstdc++6" 
+]
+extra-source "libdmlc-0.5-1.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libdmlc-0.5-1.11.x86_64.rpm"
+}

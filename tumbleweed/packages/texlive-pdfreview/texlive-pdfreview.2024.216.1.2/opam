@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-pdfreview-2024.216.1.2svn50100-54.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-pdfreview-2024.216.1.2svn50100-54.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-bookmark" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-geometry" 
+  "texlive-grffile" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-ulem" 
+]
+extra-source "texlive-pdfreview-2024.216.1.2svn50100-54.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-pdfreview-2024.216.1.2svn50100-54.1.noarch.rpm"
+}

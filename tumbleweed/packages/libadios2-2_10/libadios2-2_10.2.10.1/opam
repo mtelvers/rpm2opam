@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libadios2-2_10-2.10.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libadios2-2_10-2.10.1-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbz2-1" 
+  "libgcc_s1" 
+  "libgfortran5" 
+  "libstdc++6" 
+]
+extra-source "libadios2-2_10-2.10.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libadios2-2_10-2.10.1-1.1.x86_64.rpm"
+}

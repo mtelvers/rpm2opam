@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "geoclue2-2.7.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "geoclue2-2.7.1-2.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libavahi-client3" 
+  "libavahi-common3" 
+  "libavahi-glib1" 
+  "libjson-glib-1_0-0" 
+  "libmm-glib0" 
+  "libnotify4" 
+  "libsoup-3_0-0" 
+  "system-user-srvGeoClue" 
+  "systemd" 
+]
+extra-source "geoclue2-2.7.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/geoclue2-2.7.1-2.1.x86_64.rpm"
+}

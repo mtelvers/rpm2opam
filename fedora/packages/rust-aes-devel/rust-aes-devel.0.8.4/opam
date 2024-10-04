@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-aes-devel-0.8.4-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-aes-devel-0.8.4-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.56"}
+  "rust-cfg-if+default-devel" 
+  "rust-cipher+default-devel" 
+  "rust-cpufeatures+default-devel" 
+]
+extra-source "rust-aes-devel-0.8.4-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-aes-devel-0.8.4-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "virt-scenario-gtk-2.1.2-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "virt-scenario-gtk-2.1.2-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "python3-virt-scenario" {= "2.1.2"}
+  "python311-base" {= "3.11"}
+]
+extra-source "virt-scenario-gtk-2.1.2-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/virt-scenario-gtk-2.1.2-slfo.1.1.4.noarch.rpm"
+}

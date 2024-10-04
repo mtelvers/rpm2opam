@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Mon-0.11-44.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mon-0.11-44.fc40.noarch.rpm"]
+depends: [
+  "perl-Convert-BER" 
+  "perl-Exporter" 
+  "perl-IO" 
+  "perl-Socket" 
+  "perl-Text-ParseWords" 
+  "perl-libs" {>= "5.4.0"}
+]
+extra-source "perl-Mon-0.11-44.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Mon-0.11-44.fc40.noarch.rpm"
+}

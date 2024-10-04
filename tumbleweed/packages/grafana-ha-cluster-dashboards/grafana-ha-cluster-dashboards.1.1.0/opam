@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "grafana-ha-cluster-dashboards-1.1.0+git.1622804483.3ca98bd-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grafana-ha-cluster-dashboards-1.1.0+git.1622804483.3ca98bd-1.9.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "grafana-sleha-provider" 
+  "shadow" 
+  "system-user-grafana" 
+]
+extra-source "grafana-ha-cluster-dashboards-1.1.0+git.1622804483.3ca98bd-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/grafana-ha-cluster-dashboards-1.1.0+git.1622804483.3ca98bd-1.9.noarch.rpm"
+}

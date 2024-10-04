@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-libxml-sax-prof-0.7.5-42.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-libxml-sax-prof-0.7.5-42.fc39.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-libxml-sax-devel" {= "0.7.5"}
+  "ghc-text-prof" 
+  "ghc-xml-types-prof" 
+]
+extra-source "ghc-libxml-sax-prof-0.7.5-42.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-libxml-sax-prof-0.7.5-42.fc39.x86_64.rpm"
+}

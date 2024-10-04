@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvncserver1-0.9.14-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvncserver1-0.9.14-1.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcrypt20" 
+  "libgnutls30" 
+  "libjpeg8" 
+  "liblzo2-2" 
+  "libpng16-16" 
+  "libz-ng-compat1" 
+]
+extra-source "libvncserver1-0.9.14-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libvncserver1-0.9.14-1.4.x86_64.rpm"
+}

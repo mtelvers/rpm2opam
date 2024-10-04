@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ovn-23.03.0-slfo.1.1.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ovn-23.03.0-slfo.1.1.9.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "libopenvswitch-3_1-0" 
+  "libovn-23_03-0" 
+  "openvswitch" {= "3.1.0"}
+  "python311-base" 
+]
+extra-source "ovn-23.03.0-slfo.1.1.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/ovn-23.03.0-slfo.1.1.9.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vkd3d-devel-1.13-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vkd3d-devel-1.13-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libncurses6" 
+  "libvkd3d-shader1" 
+  "libvkd3d-utils1" {= "1.13"}
+  "libvkd3d1" {= "1.13"}
+  "pkgconf-pkg-config" 
+]
+extra-source "vkd3d-devel-1.13-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vkd3d-devel-1.13-1.1.x86_64.rpm"
+}

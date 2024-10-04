@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "numlockx-1.2-181.23.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "numlockx-1.2-181.23.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXtst6" 
+]
+extra-source "numlockx-1.2-181.23.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/numlockx-1.2-181.23.x86_64.rpm"
+}

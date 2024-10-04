@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-ounit-lwt-2.2.7-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-ounit-lwt-2.2.7-8.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "ocaml" {= "0"}
+  "ocaml-lwt" {= "0"}
+  "ocaml-ounit" {= "63"}
+]
+extra-source "ocaml-ounit-lwt-2.2.7-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-ounit-lwt-2.2.7-8.fc40.x86_64.rpm"
+}

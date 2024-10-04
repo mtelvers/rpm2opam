@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pytest-vcr-1.0.2-2.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pytest-vcr-1.0.2-2.5.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-pytest" {>= "3.6.0"}
+  "python310-vcrpy" 
+]
+extra-source "python310-pytest-vcr-1.0.2-2.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-pytest-vcr-1.0.2-2.5.noarch.rpm"
+}

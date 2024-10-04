@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gns3-server-doc-2.2.46-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gns3-server-doc-2.2.46-2.fc40.noarch.rpm"]
+depends: [
+  "gns3-server" {= "2.2.46"}
+]
+extra-source "gns3-server-doc-2.2.46-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gns3-server-doc-2.2.46-2.fc40.noarch.rpm"
+}

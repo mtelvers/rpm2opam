@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-twisted+tls-23.10.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-twisted+tls-23.10.0-4.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-idna" {>= "2.4"}
+  "python3-pyOpenSSL" {>= "21"}
+  "python3-service-identity" {>= "18.1"}
+  "python3-twisted" {= "23.10.0"}
+]
+extra-source "python3-twisted+tls-23.10.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-twisted+tls-23.10.0-4.fc40.noarch.rpm"
+}

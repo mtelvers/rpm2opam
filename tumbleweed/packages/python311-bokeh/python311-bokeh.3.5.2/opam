@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-bokeh-3.5.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-bokeh-3.5.2-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-Jinja2" {>= "2.9"}
+  "python311-Pillow" {>= "7.1.0"}
+  "python311-PyYAML" {>= "3.10"}
+  "python311-base" 
+  "python311-contourpy" {>= "1.2"}
+  "python311-numpy" {>= "1.16"}
+  "python311-packaging" {>= "16.8"}
+  "python311-pandas" {>= "1.2"}
+  "python311-tornado" {>= "6.2"}
+  "python311-xyzservices" {>= "2021.9.1"}
+  "update-alternatives" 
+]
+extra-source "python311-bokeh-3.5.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-bokeh-3.5.2-1.1.noarch.rpm"
+}

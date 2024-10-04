@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-RhpcBLASctl-0.21.247.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-RhpcBLASctl-0.21.247.1-6.fc40.x86_64.rpm"]
+depends: [
+  "R-core" 
+  "glibc" 
+  "libgomp" 
+]
+extra-source "R-RhpcBLASctl-0.21.247.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-RhpcBLASctl-0.21.247.1-6.fc40.x86_64.rpm"
+}

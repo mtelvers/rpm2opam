@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wordnet-devel-3.0-35.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wordnet-devel-3.0-35.5.x86_64.rpm"]
+depends: [
+  "libWN3" {= "3.0"}
+  "tcl-devel" 
+  "tk-devel" 
+]
+extra-source "wordnet-devel-3.0-35.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/wordnet-devel-3.0-35.5.x86_64.rpm"
+}

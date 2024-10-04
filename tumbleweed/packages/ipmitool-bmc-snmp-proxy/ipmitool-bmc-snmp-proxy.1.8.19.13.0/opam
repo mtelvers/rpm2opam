@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ipmitool-bmc-snmp-proxy-1.8.19.13.gbe11d94-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ipmitool-bmc-snmp-proxy-1.8.19.13.gbe11d94-3.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "ipmitool" {>= "1.8.19.13.0"}
+  "net-snmp" 
+]
+extra-source "ipmitool-bmc-snmp-proxy-1.8.19.13.gbe11d94-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ipmitool-bmc-snmp-proxy-1.8.19.13.gbe11d94-3.1.noarch.rpm"
+}

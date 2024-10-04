@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-YAML-PP-tests-0.38.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-YAML-PP-tests-0.38.0-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-B" 
+  "perl-Data-Dumper" 
+  "perl-Encode" 
+  "perl-File-Basename" 
+  "perl-FindBin" 
+  "perl-IO" 
+  "perl-IPC-Open3" 
+  "perl-PathTools" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-Test-Warn" 
+  "perl-URI" 
+  "perl-YAML-PP" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" {>= "5.10.0"}
+]
+extra-source "perl-YAML-PP-tests-0.38.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-YAML-PP-tests-0.38.0-1.fc40.noarch.rpm"
+}

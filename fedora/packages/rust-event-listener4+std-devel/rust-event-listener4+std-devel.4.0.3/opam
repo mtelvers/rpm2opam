@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-event-listener4+std-devel-4.0.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-event-listener4+std-devel-4.0.3-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-concurrent-queue+std-devel" 
+  "rust-event-listener4+parking-devel" {= "4.0.3"}
+  "rust-event-listener4-devel" {= "4.0.3"}
+]
+extra-source "rust-event-listener4+std-devel-4.0.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-event-listener4+std-devel-4.0.3-1.fc40.noarch.rpm"
+}

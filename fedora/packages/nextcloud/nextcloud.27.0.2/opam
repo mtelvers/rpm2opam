@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nextcloud-27.0.2-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nextcloud-27.0.2-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "ca-certificates" 
+  "nextcloud-httpd" {= "27.0.2"}
+  "nextcloud-mysql" {= "27.0.2"}
+  "php-cli" 
+  "php-common" 
+  "php-gd" 
+  "php-gmp" 
+  "php-ldap" 
+  "php-mbstring" 
+  "php-pdo" 
+  "php-pecl-apcu" 
+  "php-pecl-imagick" 
+  "php-pecl-memcached" 
+  "php-pecl-redis5" 
+  "php-pecl-zip" 
+  "php-process" 
+  "php-smbclient" 
+  "php-xml" 
+  "systemd" 
+]
+extra-source "nextcloud-27.0.2-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nextcloud-27.0.2-4.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfmos-devel-20240415-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfmos-devel-20240415-1.1.x86_64.rpm"]
+depends: [
+  "libfmos1" {= "20240415"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libfmos-devel-20240415-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfmos-devel-20240415-1.1.x86_64.rpm"
+}

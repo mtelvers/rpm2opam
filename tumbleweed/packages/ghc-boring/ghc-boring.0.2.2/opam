@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-boring-0.2.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-boring-0.2.2-1.2.x86_64.rpm"]
+depends: [
+  "ghc-array" 
+  "ghc-base" 
+  "ghc-deepseq" 
+  "ghc-ghc-bignum" 
+  "ghc-ghc-boot-th" 
+  "ghc-pretty" 
+  "ghc-tagged" 
+  "ghc-template-haskell" 
+  "ghc-transformers" 
+  "glibc" 
+  "libgmp10" 
+]
+extra-source "ghc-boring-0.2.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-boring-0.2.2-1.2.x86_64.rpm"
+}

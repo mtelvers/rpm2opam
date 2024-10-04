@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ganyremote-8.1.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ganyremote-8.1.1-1.fc40.noarch.rpm"]
+depends: [
+  "anyremote" {>= "6.7"}
+  "bluez" {>= "4.64"}
+  "gdk-pixbuf2" 
+  "gtk3" 
+  "python3" 
+  "python3-bluez" {>= "0.9.1"}
+]
+extra-source "ganyremote-8.1.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ganyremote-8.1.1-1.fc40.noarch.rpm"
+}

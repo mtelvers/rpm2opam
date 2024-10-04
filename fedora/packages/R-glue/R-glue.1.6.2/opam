@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-glue-1.6.2-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-glue-1.6.2-6.fc40.x86_64.rpm"]
+depends: [
+  "R-core" 
+  "glibc" 
+]
+extra-source "R-glue-1.6.2-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-glue-1.6.2-6.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "amiri-fonts-all-1.000-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "amiri-fonts-all-1.000-4.fc40.noarch.rpm"]
+depends: [
+  "amiri-fonts" {= "1.0"}
+  "amiri-quran-colored-fonts" {= "1.0"}
+  "amiri-quran-fonts" {= "1.0"}
+]
+extra-source "amiri-fonts-all-1.000-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/amiri-fonts-all-1.000-4.fc40.noarch.rpm"
+}

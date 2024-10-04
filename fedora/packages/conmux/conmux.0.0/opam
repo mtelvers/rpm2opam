@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "conmux-0.0-51.493svn.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "conmux-0.0-51.493svn.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "chkconfig" 
+  "conmux-client" {= "0.0"}
+  "expect" 
+  "initscripts-service" 
+  "logrotate" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-IO-Multiplex" 
+  "perl-IPC-Open3" 
+  "perl-Symbol" 
+  "perl-URI" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libnet" 
+  "perl-libs" 
+]
+extra-source "conmux-0.0-51.493svn.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/conmux-0.0-51.493svn.fc40.noarch.rpm"
+}

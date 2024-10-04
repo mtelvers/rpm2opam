@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-indicatif0.15+rayon-devel-0.15.0-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-indicatif0.15+rayon-devel-0.15.0-7.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-indicatif0-15-devel" {= "0.15.0"}
+  "rust-rayon+default-devel" 
+]
+extra-source "rust-indicatif0.15+rayon-devel-0.15.0-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-indicatif0.15+rayon-devel-0.15.0-7.fc40.noarch.rpm"
+}

@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-dbus-devel-1.3.3-1.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-dbus-devel-1.3.3-1.13.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-cereal-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-conduit-devel" 
+  "ghc-containers-devel" 
+  "ghc-dbus" {= "1.3.3"}
+  "ghc-deepseq-devel" 
+  "ghc-exceptions-devel" 
+  "ghc-filepath-devel" 
+  "ghc-lens-devel" 
+  "ghc-network-devel" 
+  "ghc-parsec-devel" 
+  "ghc-random-devel" 
+  "ghc-split-devel" 
+  "ghc-template-haskell-devel" 
+  "ghc-text-devel" 
+  "ghc-th-lift-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unix-devel" 
+  "ghc-vector-devel" 
+  "ghc-xml-conduit-devel" 
+  "ghc-xml-types-devel" 
+]
+extra-source "ghc-dbus-devel-1.3.3-1.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-dbus-devel-1.3.3-1.13.x86_64.rpm"
+}

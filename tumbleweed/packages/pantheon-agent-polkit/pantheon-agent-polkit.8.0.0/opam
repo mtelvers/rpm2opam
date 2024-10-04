@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pantheon-agent-polkit-8.0.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pantheon-agent-polkit-8.0.0-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libadwaita-1-0" 
+  "libgranite-7-7" 
+  "libgtk-4-1" 
+  "libpolkit-agent-1-0" 
+  "libpolkit-gobject-1-0" 
+]
+extra-source "pantheon-agent-polkit-8.0.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pantheon-agent-polkit-8.0.0-1.1.x86_64.rpm"
+}

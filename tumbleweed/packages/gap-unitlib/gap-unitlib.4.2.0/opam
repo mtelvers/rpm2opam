@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-unitlib-4.2.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-unitlib-4.2.0-1.3.noarch.rpm"]
+depends: [
+  "gap" {>= "4.11"}
+  "gap-gapdoc" {>= "1.6"}
+  "gap-io" {>= "4.5"}
+  "gap-laguna" {>= "3.9.4"}
+  "gzip" 
+]
+extra-source "gap-unitlib-4.2.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-unitlib-4.2.0-1.3.noarch.rpm"
+}

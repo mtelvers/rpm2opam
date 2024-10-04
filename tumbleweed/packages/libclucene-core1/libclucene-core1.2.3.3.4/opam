@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libclucene-core1-2.3.3.4-19.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libclucene-core1-2.3.3.4-19.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libclucene-shared1" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "libclucene-core1-2.3.3.4-19.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libclucene-core1-2.3.3.4-19.1.x86_64.rpm"
+}

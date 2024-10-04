@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "edg-mkgridmap-4.0.4-18.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "edg-mkgridmap-4.0.4-18.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Date-Manip" 
+  "perl-File-Copy" 
+  "perl-Getopt-Long" 
+  "perl-IO-Socket-SSL" {>= "0.90"}
+  "perl-LDAP" 
+  "perl-LWP-Protocol-https" 
+  "perl-Net-SSLeay" {>= "1.16"}
+  "perl-Sys-Syslog" 
+  "perl-TermReadKey" 
+  "perl-URI" 
+  "perl-XML-DOM" 
+  "perl-XML-Parser" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+  "perl-vars" 
+]
+extra-source "edg-mkgridmap-4.0.4-18.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/edg-mkgridmap-4.0.4-18.fc40.noarch.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mutter-devel-45.3-slfo.1.1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mutter-devel-45.3-slfo.1.1.4.x86_64.rpm"]
+depends: [
+  "Mesa-libEGL-devel" 
+  "Mesa-libGL-devel" 
+  "Mesa-libGLESv2-devel" 
+  "at-spi2-core-devel" {>= "2.5.3"}
+  "cairo-devel" {>= "1.10.0"}
+  "glib2-devel" {>= "2.75.1"}
+  "gsettings-desktop-schemas-devel" {>= "40.0"}
+  "harfbuzz-devel" {>= "2.6"}
+  "json-glib-devel" {>= "0.12.0"}
+  "libX11-devel" {>= "1.7.0"}
+  "libXfixes-devel" {>= "6"}
+  "libXi-devel" {>= "1.7.4"}
+  "libgraphene-devel" {>= "1.10.2"}
+  "mutter" {= "45.3"}
+  "pango-devel" {>= "1.20"}
+  "pkgconf-pkg-config" 
+  "wayland-devel" {>= "1.21"}
+]
+extra-source "mutter-devel-45.3-slfo.1.1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/mutter-devel-45.3-slfo.1.1.4.x86_64.rpm"
+}

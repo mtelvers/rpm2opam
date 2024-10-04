@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sc-7.16-14.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sc-7.16-14.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libncurses6" 
+]
+extra-source "sc-7.16-14.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sc-7.16-14.2.x86_64.rpm"
+}

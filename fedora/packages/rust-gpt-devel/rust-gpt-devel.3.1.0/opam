@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gpt-devel-3.1.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gpt-devel-3.1.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.60"}
+  "rust-bitflags+default-devel" 
+  "rust-crc+default-devel" 
+  "rust-log+default-devel" 
+  "rust-uuid+default-devel" 
+  "rust-uuid+v4-devel" 
+]
+extra-source "rust-gpt-devel-3.1.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gpt-devel-3.1.0-2.fc40.noarch.rpm"
+}

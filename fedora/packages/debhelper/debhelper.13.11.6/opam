@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "debhelper-13.11.6-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "debhelper-13.11.6-3.fc40.noarch.rpm"]
+depends: [
+  "binutils" 
+  "dh-autoreconf" {>= "17"}
+  "dpkg" {>= "1.18.0"}
+  "dpkg-dev" {>= "1.18.2"}
+  "dpkg-perl" {>= "1.17.14"}
+  "gzip" 
+  "perl-Carp" 
+  "perl-Digest-SHA" 
+  "perl-Errno" 
+  "perl-Exporter" 
+  "perl-File-Copy" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-File-stat" 
+  "perl-Getopt-Long" 
+  "perl-JSON-PP" 
+  "perl-PathTools" 
+  "perl-Time-Piece" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.24.0"}
+  "perl-parent" 
+  "po-debconf" 
+]
+extra-source "debhelper-13.11.6-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/debhelper-13.11.6-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pagemon-bash-completion-0.02.01-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pagemon-bash-completion-0.02.01-1.7.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "pagemon" {= "0.2.1"}
+]
+extra-source "pagemon-bash-completion-0.02.01-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pagemon-bash-completion-0.02.01-1.7.noarch.rpm"
+}

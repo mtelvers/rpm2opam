@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "wine-binfmt-standalone-1.2.1-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wine-binfmt-standalone-1.2.1-1.7.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "wine-binfmt" 
+]
+extra-source "wine-binfmt-standalone-1.2.1-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/wine-binfmt-standalone-1.2.1-1.7.noarch.rpm"
+}

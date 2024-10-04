@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "diffoscope-272-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "diffoscope-272-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" {= "3.11"}
+  "python311-curses" 
+  "python311-libarchive-c" 
+  "python311-python-magic" 
+  "python311-setuptools" 
+  "update-alternatives" 
+]
+extra-source "diffoscope-272-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/diffoscope-272-1.1.noarch.rpm"
+}

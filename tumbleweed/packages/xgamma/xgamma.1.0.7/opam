@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xgamma-1.0.7-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xgamma-1.0.7-1.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXxf86vm1" 
+]
+extra-source "xgamma-1.0.7-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xgamma-1.0.7-1.6.x86_64.rpm"
+}

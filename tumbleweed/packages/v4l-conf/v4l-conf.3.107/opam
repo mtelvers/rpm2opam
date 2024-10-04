@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "v4l-conf-3.107-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "v4l-conf-3.107-3.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libX11-6" 
+  "libXxf86dga1" 
+  "permissions" 
+  "system-group-hardware" 
+]
+extra-source "v4l-conf-3.107-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/v4l-conf-3.107-3.2.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "frescobaldi-3.3.0-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "frescobaldi-3.3.0-3.2.noarch.rpm"]
+depends: [
+  "lilypond" 
+  "python311-base" 
+  "python311-ly" 
+  "python311-poppler-qt5" 
+  "python311-qpageview" 
+  "python311-qt5" 
+  "python311-qt5-sip" 
+  "python311-qtwebengine-qt5" 
+]
+extra-source "frescobaldi-3.3.0-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/frescobaldi-3.3.0-3.2.noarch.rpm"
+}

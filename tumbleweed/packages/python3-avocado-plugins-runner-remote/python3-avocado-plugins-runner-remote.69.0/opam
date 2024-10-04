@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-avocado-plugins-runner-remote-69.0-6.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-avocado-plugins-runner-remote-69.0-6.14.noarch.rpm"]
+depends: [
+  "python3-avocado" {= "69.0"}
+  "python311-Fabric" 
+  "python311-base" {= "3.11"}
+]
+extra-source "python3-avocado-plugins-runner-remote-69.0-6.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-avocado-plugins-runner-remote-69.0-6.14.noarch.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lv2-x42-plugins-0.19.0-0.2.20230915.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lv2-x42-plugins-0.19.0-0.2.20230915.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "fftw-libs-single" 
+  "glib2" 
+  "glibc" 
+  "gnu-free-mono-fonts" 
+  "gnu-free-sans-fonts" 
+  "gnu-free-serif-fonts" 
+  "jack-audio-connection-kit" 
+  "libX11" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libltc" 
+  "libsamplerate" 
+  "libsndfile" 
+  "libstdc++" 
+  "lv2" {>= "1.8.1"}
+  "pango" 
+]
+extra-source "lv2-x42-plugins-0.19.0-0.2.20230915.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lv2-x42-plugins-0.19.0-0.2.20230915.fc40.x86_64.rpm"
+}

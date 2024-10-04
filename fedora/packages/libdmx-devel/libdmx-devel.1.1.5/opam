@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libdmx-devel-1.1.5-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdmx-devel-1.1.5-3.fc40.x86_64.rpm"]
+depends: [
+  "libX11-devel" 
+  "libXext-devel" 
+  "libdmx" {= "1.1.5"}
+  "pkgconf-pkg-config" 
+  "xorg-x11-proto-devel" 
+]
+extra-source "libdmx-devel-1.1.5-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libdmx-devel-1.1.5-3.fc40.x86_64.rpm"
+}

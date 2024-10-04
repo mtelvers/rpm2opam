@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-commonmark-prof-0.2.4.1-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-commonmark-prof-0.2.4.1-29.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-commonmark-devel" {= "0.2.4.1"}
+  "ghc-containers-prof" 
+  "ghc-parsec-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unicode-data-prof" 
+  "ghc-unicode-transforms-prof" 
+]
+extra-source "ghc-commonmark-prof-0.2.4.1-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-commonmark-prof-0.2.4.1-29.fc40.x86_64.rpm"
+}

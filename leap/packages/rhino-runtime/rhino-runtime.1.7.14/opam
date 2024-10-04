@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rhino-runtime-1.7.14-slfo.1.1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rhino-runtime-1.7.14-slfo.1.1.5.noarch.rpm"]
+depends: [
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "rhino-runtime-1.7.14-slfo.1.1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/rhino-runtime-1.7.14-slfo.1.1.5.noarch.rpm"
+}

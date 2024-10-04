@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pip-24.2-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pip-24.2-2.1.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "ca-certificates" 
+  "coreutils" 
+  "python311-base" 
+]
+extra-source "python311-pip-24.2-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pip-24.2-2.1.noarch.rpm"
+}

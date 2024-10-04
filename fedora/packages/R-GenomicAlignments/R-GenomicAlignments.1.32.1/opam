@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-GenomicAlignments-1.32.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-GenomicAlignments-1.32.1-6.fc40.x86_64.rpm"]
+depends: [
+  "R-BiocGenerics" {>= "0.37.0"}
+  "R-BiocParallel" 
+  "R-Biostrings" {>= "2.55.7"}
+  "R-GenomeInfoDb" {>= "1.13.1"}
+  "R-GenomicRanges" {>= "1.41.5"}
+  "R-IRanges" {>= "2.23.9"}
+  "R-Rsamtools" {>= "1.31.2"}
+  "R-S4Vectors" {>= "0.27.12"}
+  "R-SummarizedExperiment" {>= "1.9.13"}
+  "R-core" {= "4.3"}
+  "glibc" 
+]
+extra-source "R-GenomicAlignments-1.32.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-GenomicAlignments-1.32.1-6.fc40.x86_64.rpm"
+}

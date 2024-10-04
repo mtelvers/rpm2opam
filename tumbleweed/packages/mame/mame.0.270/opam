@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mame-0.270-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mame-0.270-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libFLAC12" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Widgets5" 
+  "libSDL2-2_0-0" 
+  "libSDL2_ttf-2_0-0" 
+  "libX11-6" 
+  "libXext6" 
+  "libXi6" 
+  "libXinerama1" 
+  "libasound2" 
+  "libexpat1" 
+  "libfontconfig1" 
+  "libfreetype6" 
+  "libgcc_s1" 
+  "libglvnd" 
+  "libjpeg8" 
+  "libportaudio2" 
+  "libportmidi2" 
+  "libpugixml1" 
+  "libpulse0" 
+  "libsqlite3-0" 
+  "libstdc++6" 
+  "libutf8proc3" 
+  "libz-ng-compat1" 
+  "mame-data" {= "0.270"}
+]
+extra-source "mame-0.270-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mame-0.270-1.1.x86_64.rpm"
+}

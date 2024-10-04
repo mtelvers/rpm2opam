@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-ipysheet-0.7.0-4.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-ipysheet-0.7.0-4.3.noarch.rpm"]
+depends: [
+  "jupyter-ipysheet" {= "0.7.0"}
+  "python311-base" {= "3.11"}
+  "python311-ipywidgets" 
+]
+extra-source "python311-ipysheet-0.7.0-4.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-ipysheet-0.7.0-4.3.noarch.rpm"
+}

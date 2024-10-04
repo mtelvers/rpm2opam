@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libHYPRE-gnu-mvapich2-hpc-2.20.0-3.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libHYPRE-gnu-mvapich2-hpc-2.20.0-3.5.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "libHYPRE_2_20_0-gnu-mvapich2-hpc" {= "2.20.0"}
+]
+extra-source "libHYPRE-gnu-mvapich2-hpc-2.20.0-3.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libHYPRE-gnu-mvapich2-hpc-2.20.0-3.5.x86_64.rpm"
+}

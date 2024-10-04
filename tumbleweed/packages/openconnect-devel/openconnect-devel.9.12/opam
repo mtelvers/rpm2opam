@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openconnect-devel-9.12-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openconnect-devel-9.12-3.1.x86_64.rpm"]
+depends: [
+  "libgnutls-devel" 
+  "liblz4-devel" 
+  "libopenconnect5" {= "9.12"}
+  "libproxy-devel" 
+  "libpskc-devel" 
+  "libxml2-devel" 
+  "p11-kit-devel" 
+  "pcsc-lite-devel" 
+  "pkgconf-pkg-config" 
+  "stoken-devel" 
+  "zlib-devel" 
+]
+extra-source "openconnect-devel-9.12-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openconnect-devel-9.12-3.1.x86_64.rpm"
+}

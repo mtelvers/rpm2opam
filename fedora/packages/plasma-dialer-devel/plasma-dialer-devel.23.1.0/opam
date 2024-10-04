@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "plasma-dialer-devel-23.01.0-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plasma-dialer-devel-23.01.0-9.fc40.x86_64.rpm"]
+depends: [
+  "kf5-modemmanager-qt-devel" 
+  "libphonenumber-devel" 
+  "plasma-dialer" {= "23.1.0"}
+  "protobuf-devel" 
+]
+extra-source "plasma-dialer-devel-23.01.0-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/plasma-dialer-devel-23.01.0-9.fc40.x86_64.rpm"
+}

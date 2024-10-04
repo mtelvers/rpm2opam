@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jcodings-1.0.12-3.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jcodings-1.0.12-3.11.noarch.rpm"]
+depends: [
+  "java-11-openj9" {>= "1.8"}
+  "javapackages-tools" 
+]
+extra-source "jcodings-1.0.12-3.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jcodings-1.0.12-3.11.noarch.rpm"
+}

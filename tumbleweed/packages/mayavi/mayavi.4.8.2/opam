@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mayavi-4.8.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mayavi-4.8.2-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "python3-vtk" 
+  "python311-Pygments" 
+  "python311-apptools" 
+  "python311-base" 
+  "python311-envisage" 
+  "python311-numpy" 
+  "python311-packaging" 
+  "python311-pyface" {>= "6.1.1"}
+  "python311-traits" {>= "6.0.0"}
+  "python311-traitsui" {>= "7.0.0"}
+]
+extra-source "mayavi-4.8.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mayavi-4.8.2-1.1.x86_64.rpm"
+}

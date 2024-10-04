@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Catalyst-Plugin-ConfigLoader-0.35-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Catalyst-Plugin-ConfigLoader-0.35-12.fc40.noarch.rpm"]
+depends: [
+  "perl-Catalyst-Runtime" {>= "5.7008"}
+  "perl-Config-Any" {>= "0.20"}
+  "perl-Data-Visitor" {>= "0.24"}
+  "perl-MRO-Compat" 
+  "perl-libs" 
+]
+extra-source "perl-Catalyst-Plugin-ConfigLoader-0.35-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Catalyst-Plugin-ConfigLoader-0.35-12.fc40.noarch.rpm"
+}

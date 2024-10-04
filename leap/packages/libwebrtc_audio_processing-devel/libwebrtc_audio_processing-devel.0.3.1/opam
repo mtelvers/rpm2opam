@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libwebrtc_audio_processing-devel-0.3.1-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libwebrtc_audio_processing-devel-0.3.1-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "libwebrtc_audio_processing1" {= "0.3.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libwebrtc_audio_processing-devel-0.3.1-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libwebrtc_audio_processing-devel-0.3.1-slfo.1.1.7.x86_64.rpm"
+}

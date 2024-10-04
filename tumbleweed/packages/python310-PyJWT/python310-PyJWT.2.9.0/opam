@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-PyJWT-2.9.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-PyJWT-2.9.0-1.1.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-cryptography" {>= "3.3.1"}
+  "python310-typing_extensions" 
+  "update-alternatives" 
+]
+extra-source "python310-PyJWT-2.9.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-PyJWT-2.9.0-1.1.noarch.rpm"
+}

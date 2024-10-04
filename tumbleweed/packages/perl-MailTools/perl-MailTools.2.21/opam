@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MailTools-2.21-1.23.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MailTools-2.21-1.23.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-TimeDate" 
+]
+extra-source "perl-MailTools-2.21-1.23.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MailTools-2.21-1.23.noarch.rpm"
+}

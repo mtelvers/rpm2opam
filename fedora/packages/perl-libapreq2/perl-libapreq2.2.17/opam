@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-libapreq2-2.17-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-libapreq2-2.17-6.fc40.x86_64.rpm"]
+depends: [
+  "apr" 
+  "apr-util" 
+  "glibc" 
+  "libapreq2-libs" 
+  "mod_perl" {>= "2.0.0"}
+  "perl-DynaLoader" 
+  "perl-base" 
+  "perl-libs" 
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-libapreq2-2.17-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-libapreq2-2.17-6.fc40.x86_64.rpm"
+}

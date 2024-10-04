@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fluidsynth-devel-2.3.3-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fluidsynth-devel-2.3.3-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "SDL2-devel" 
+  "alsa-devel" 
+  "dbus-1-devel" 
+  "glib2-devel" 
+  "glibc-devel" 
+  "libfluidsynth3" {= "2.3.3"}
+  "libinstpatch-devel" 
+  "libjack-devel" 
+  "libpulse-devel" 
+  "libsndfile-devel" 
+  "pkgconf-pkg-config" 
+  "readline-devel" 
+  "systemd-devel" 
+]
+extra-source "fluidsynth-devel-2.3.3-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/fluidsynth-devel-2.3.3-slfo.1.1.8.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kustomize-fish-completion-5.1.1-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kustomize-fish-completion-5.1.1-1.4.noarch.rpm"]
+depends: [
+  "kustomize" {= "5.1.1"}
+]
+extra-source "kustomize-fish-completion-5.1.1-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kustomize-fish-completion-5.1.1-1.4.noarch.rpm"
+}

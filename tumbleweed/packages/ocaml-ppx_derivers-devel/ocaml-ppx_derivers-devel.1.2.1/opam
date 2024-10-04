@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ocaml-ppx_derivers-devel-1.2.1-4.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-ppx_derivers-devel-1.2.1-4.12.x86_64.rpm"]
+depends: [
+  "ocaml" {= "79"}
+  "ocaml-ppx_derivers" {= "1.2.1"}
+]
+extra-source "ocaml-ppx_derivers-devel-1.2.1-4.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ocaml-ppx_derivers-devel-1.2.1-4.12.x86_64.rpm"
+}

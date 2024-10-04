@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-atdgen-runtime-devel-2.15.0-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-atdgen-runtime-devel-2.15.0-5.fc40.x86_64.rpm"]
+depends: [
+  "ocaml" {= "2125"}
+  "ocaml-atdgen-runtime" {= "2.15.0"}
+  "ocaml-biniou" {= "750334"}
+  "ocaml-biniou-devel" 
+  "ocaml-yojson" {= "6"}
+  "ocaml-yojson-devel" 
+]
+extra-source "ocaml-atdgen-runtime-devel-2.15.0-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-atdgen-runtime-devel-2.15.0-5.fc40.x86_64.rpm"
+}

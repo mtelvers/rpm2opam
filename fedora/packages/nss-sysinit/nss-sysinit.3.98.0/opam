@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nss-sysinit-3.98.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nss-sysinit-3.98.0-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "glibc" 
+  "nspr" 
+  "nss-util" 
+  "sed" 
+]
+extra-source "nss-sysinit-3.98.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nss-sysinit-3.98.0-1.fc40.x86_64.rpm"
+}

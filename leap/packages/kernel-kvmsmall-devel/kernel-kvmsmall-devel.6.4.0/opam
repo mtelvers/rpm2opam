@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kernel-kvmsmall-devel-6.4.0-slfo.1.6.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kernel-kvmsmall-devel-6.4.0-slfo.1.6.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "dwarves" {>= "1.22"}
+  "glibc" 
+  "kernel-devel" {= "6.4.0"}
+  "libelf-devel" 
+  "libelf1" 
+  "libopenssl3" 
+]
+extra-source "kernel-kvmsmall-devel-6.4.0-slfo.1.6.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/kernel-kvmsmall-devel-6.4.0-slfo.1.6.4.x86_64.rpm"
+}

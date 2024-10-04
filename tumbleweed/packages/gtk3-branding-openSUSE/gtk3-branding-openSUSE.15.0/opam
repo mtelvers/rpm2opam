@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtk3-branding-openSUSE-15.0-2.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk3-branding-openSUSE-15.0-2.5.noarch.rpm"]
+depends: [
+  "gtk3-metatheme-adwaita" 
+  "libgtk-3-0" {= "3.24.43"}
+]
+extra-source "gtk3-branding-openSUSE-15.0-2.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gtk3-branding-openSUSE-15.0-2.5.noarch.rpm"
+}

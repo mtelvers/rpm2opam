@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "uimaj-3.5.0-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "uimaj-3.5.0-4.2.x86_64.rpm"]
+depends: [
+  "jackson-core" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "log4j" 
+  "log4j-slf4j" 
+  "slf4j" 
+]
+extra-source "uimaj-3.5.0-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/uimaj-3.5.0-4.2.x86_64.rpm"
+}

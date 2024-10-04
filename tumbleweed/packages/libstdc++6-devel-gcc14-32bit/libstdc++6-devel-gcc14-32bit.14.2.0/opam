@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libstdc++6-devel-gcc14-32bit-14.2.0+git10526-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libstdc++6-devel-gcc14-32bit-14.2.0+git10526-2.1.x86_64.rpm"]
+depends: [
+  "glibc-32bit" 
+  "glibc-devel-32bit" 
+  "libstdc++6-32bit" {>= "14.2.0"}
+]
+extra-source "libstdc++6-devel-gcc14-32bit-14.2.0+git10526-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libstdc++6-devel-gcc14-32bit-14.2.0+git10526-2.1.x86_64.rpm"
+}

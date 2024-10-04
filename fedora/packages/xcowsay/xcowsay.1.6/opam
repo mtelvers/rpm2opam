@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xcowsay-1.6-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xcowsay-1.6-6.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cairo" 
+  "dbus-glib" 
+  "fortune-mod" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "pango" 
+]
+extra-source "xcowsay-1.6-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xcowsay-1.6-6.fc40.x86_64.rpm"
+}

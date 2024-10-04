@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qdbm-perl-1.8.78-62.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qdbm-perl-1.8.78-62.fc40.x86_64.rpm"]
+depends: [
+  "bzip2-libs" 
+  "glibc" 
+  "lzo" 
+  "perl-Exporter" 
+  "perl-ExtUtils-MakeMaker" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "qdbm" 
+  "zlib-ng-compat" 
+]
+extra-source "qdbm-perl-1.8.78-62.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qdbm-perl-1.8.78-62.fc40.x86_64.rpm"
+}

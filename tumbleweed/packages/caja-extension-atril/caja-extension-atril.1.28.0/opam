@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "caja-extension-atril-1.28.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "caja-extension-atril-1.28.0-1.1.x86_64.rpm"]
+depends: [
+  "atril" {= "1.28.0"}
+  "caja" {>= "1.28"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libatrildocument3" 
+  "libcaja-extension1" 
+  "libgtk-3-0" 
+]
+extra-source "caja-extension-atril-1.28.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/caja-extension-atril-1.28.0-1.1.x86_64.rpm"
+}

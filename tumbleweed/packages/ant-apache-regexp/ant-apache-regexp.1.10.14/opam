@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ant-apache-regexp-1.10.14-10.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ant-apache-regexp-1.10.14-10.1.noarch.rpm"]
+depends: [
+  "ant" {= "1.10.14"}
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "regexp" 
+]
+extra-source "ant-apache-regexp-1.10.14-10.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ant-apache-regexp-1.10.14-10.1.noarch.rpm"
+}

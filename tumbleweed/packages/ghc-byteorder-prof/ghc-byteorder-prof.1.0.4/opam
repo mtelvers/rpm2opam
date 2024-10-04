@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-byteorder-prof-1.0.4-4.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-byteorder-prof-1.0.4-4.9.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-byteorder-devel" {= "1.0.4"}
+]
+extra-source "ghc-byteorder-prof-1.0.4-4.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-byteorder-prof-1.0.4-4.9.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Role-Hooks-0.008-1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Role-Hooks-0.008-1.8.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Method-Modifiers" 
+  "perl-Scalar-List-Utils" {>= "1.45"}
+]
+extra-source "perl-Role-Hooks-0.008-1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Role-Hooks-0.008-1.8.noarch.rpm"
+}

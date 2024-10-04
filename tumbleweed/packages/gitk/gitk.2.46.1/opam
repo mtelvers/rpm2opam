@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gitk-2.46.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gitk-2.46.1-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "git-core" {= "2.46.1"}
+  "tk" {>= "8.4"}
+]
+extra-source "gitk-2.46.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gitk-2.46.1-1.1.x86_64.rpm"
+}

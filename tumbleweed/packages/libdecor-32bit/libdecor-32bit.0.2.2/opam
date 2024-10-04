@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libdecor-32bit-0.2.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdecor-32bit-0.2.2-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libcairo2-32bit" 
+  "libdbus-1-3-32bit" 
+  "libdecor-0-0-32bit" 
+  "libglib-2_0-0-32bit" 
+  "libgobject-2_0-0-32bit" 
+  "libgtk-3-0-32bit" 
+  "libpango-1_0-0-32bit" 
+  "libwayland-client0-32bit" 
+  "libwayland-cursor0-32bit" 
+]
+extra-source "libdecor-32bit-0.2.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libdecor-32bit-0.2.2-1.1.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libXrender-devel-32bit-0.9.11-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libXrender-devel-32bit-0.9.11-1.4.x86_64.rpm"]
+depends: [
+  "libX11-devel" 
+  "libXrender-devel" {= "0.9.11"}
+  "libXrender1-32bit" {= "0.9.11"}
+  "pkgconf-pkg-config" 
+  "xorgproto-devel" {>= "0.9"}
+]
+extra-source "libXrender-devel-32bit-0.9.11-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libXrender-devel-32bit-0.9.11-1.4.x86_64.rpm"
+}

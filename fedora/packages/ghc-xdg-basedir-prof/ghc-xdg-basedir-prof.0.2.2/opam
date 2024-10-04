@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-xdg-basedir-prof-0.2.2-44.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-xdg-basedir-prof-0.2.2-44.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+  "ghc-xdg-basedir-devel" {= "0.2.2"}
+]
+extra-source "ghc-xdg-basedir-prof-0.2.2-44.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-xdg-basedir-prof-0.2.2-44.fc40.x86_64.rpm"
+}

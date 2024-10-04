@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-uber-fx-devel-1.13.1-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-uber-fx-devel-1.13.1-9.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-uber-dig-devel" 
+  "golang-uber-multierr-devel" 
+]
+extra-source "golang-uber-fx-devel-1.13.1-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-uber-fx-devel-1.13.1-9.fc40.noarch.rpm"
+}

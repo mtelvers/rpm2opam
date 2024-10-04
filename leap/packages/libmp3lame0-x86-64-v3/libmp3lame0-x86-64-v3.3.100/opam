@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmp3lame0-x86-64-v3-3.100-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmp3lame0-x86-64-v3-3.100-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "libmp3lame0" {= "3.100"}
+]
+extra-source "libmp3lame0-x86-64-v3-3.100-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libmp3lame0-x86-64-v3-3.100-slfo.1.1.8.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libreport-2.17.15-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libreport-2.17.15-1.1.x86_64.rpm"]
+depends: [
+  "glib2-tools" {>= "2.43.4"}
+  "glibc" 
+  "libreport-filesystem" {= "2.17.15"}
+  "satyr" {>= "0.38"}
+]
+extra-source "libreport-2.17.15-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libreport-2.17.15-1.1.x86_64.rpm"
+}

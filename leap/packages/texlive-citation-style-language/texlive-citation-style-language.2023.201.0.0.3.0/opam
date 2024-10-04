@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-citation-style-language-2023.201.0.0.3.0svn65878-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-citation-style-language-2023.201.0.0.3.0svn65878-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-citation-style-language-bin" {>= "2023"}
+  "texlive-filehook" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-l3kernel" 
+  "texlive-l3packages" 
+  "texlive-lua-uca" {>= "2023"}
+  "texlive-lualibs" {>= "2023"}
+  "texlive-luatex" {>= "2023"}
+  "texlive-luatex-bin" 
+  "texlive-luaxml" {>= "2023"}
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-url" 
+]
+extra-source "texlive-citation-style-language-2023.201.0.0.3.0svn65878-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-citation-style-language-2023.201.0.0.3.0svn65878-slfo.1.1.4.noarch.rpm"
+}

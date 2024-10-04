@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-gobject-devel-3.48.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-gobject-devel-3.48.2-1.1.x86_64.rpm"]
+depends: [
+  "python-gobject-common-devel" {= "3.48.2"}
+  "python311-devel" 
+  "python311-gobject" {= "3.48.2"}
+  "python311-gobject-Gdk" {= "3.48.2"}
+  "python311-gobject-cairo" {= "3.48.2"}
+]
+extra-source "python311-gobject-devel-3.48.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-gobject-devel-3.48.2-1.1.x86_64.rpm"
+}

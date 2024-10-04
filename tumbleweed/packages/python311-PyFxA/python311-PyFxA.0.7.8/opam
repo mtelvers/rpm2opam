@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-PyFxA-0.7.8-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-PyFxA-0.7.8-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-PyBrowserID" 
+  "python311-PyJWT" 
+  "python311-base" {= "3.11"}
+  "python311-cryptography" 
+  "python311-requests" {>= "2.4.2"}
+  "python311-six" {>= "1.14"}
+  "update-alternatives" 
+]
+extra-source "python311-PyFxA-0.7.8-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-PyFxA-0.7.8-1.2.noarch.rpm"
+}

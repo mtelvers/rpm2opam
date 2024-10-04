@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "love-11.5-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "love-11.5-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "hicolor-icon-theme" 
+  "liblove" {= "11.5"}
+  "luajit" 
+]
+extra-source "love-11.5-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/love-11.5-3.fc40.x86_64.rpm"
+}

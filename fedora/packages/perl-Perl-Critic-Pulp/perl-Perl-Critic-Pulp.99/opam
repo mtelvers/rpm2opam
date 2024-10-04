@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Perl-Critic-Pulp-99-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Perl-Critic-Pulp-99-10.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" 
+  "perl-IO-String" {>= "1.2"}
+  "perl-List-MoreUtils" {>= "0.24"}
+  "perl-POSIX" 
+  "perl-PPI" {>= "1.208"}
+  "perl-Perl-Critic" {>= "1.84"}
+  "perl-Pod-Escapes" 
+  "perl-Pod-MinimumVersion" {>= "50"}
+  "perl-Pod-Parser" 
+  "perl-Scalar-List-Utils" 
+  "perl-Test-Simple" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-podlators" 
+  "perl-vars" 
+  "perl-version" 
+]
+extra-source "perl-Perl-Critic-Pulp-99-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Perl-Critic-Pulp-99-10.fc40.noarch.rpm"
+}

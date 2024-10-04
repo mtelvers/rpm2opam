@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Socket-tests-2.037-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Socket-tests-2.037-5.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "perl-Errno" 
+  "perl-Socket" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.6.1"}
+]
+extra-source "perl-Socket-tests-2.037-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Socket-tests-2.037-5.fc40.x86_64.rpm"
+}

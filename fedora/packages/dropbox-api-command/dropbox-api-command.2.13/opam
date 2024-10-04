@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dropbox-api-command-2.13-15.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dropbox-api-command-2.13-15.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-DateTime" 
+  "perl-DateTime-Format-Strptime" 
+  "perl-Encode" 
+  "perl-Encode-Locale" 
+  "perl-File-Basename" 
+  "perl-File-Temp" 
+  "perl-Getopt-Std" 
+  "perl-JSON" 
+  "perl-POSIX" 
+  "perl-Path-Class" 
+  "perl-PathTools" 
+  "perl-WebService-Dropbox" {>= "2.6"}
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "dropbox-api-command-2.13-15.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dropbox-api-command-2.13-15.fc40.noarch.rpm"
+}

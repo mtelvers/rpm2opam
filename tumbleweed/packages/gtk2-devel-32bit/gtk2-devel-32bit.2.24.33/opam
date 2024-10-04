@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtk2-devel-32bit-2.24.33-12.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk2-devel-32bit-2.24.33-12.1.x86_64.rpm"]
+depends: [
+  "at-spi2-core-devel" 
+  "cairo-devel" 
+  "gdk-pixbuf-devel" 
+  "glib2-devel" 
+  "glibc-32bit" 
+  "gtk2-devel" {= "2.24.33"}
+  "libatk-1_0-0-32bit" 
+  "libglib-2_0-0-32bit" 
+  "libgobject-2_0-0-32bit" 
+  "libgtk-2_0-0-32bit" {= "2.24.33"}
+  "pango-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "gtk2-devel-32bit-2.24.33-12.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gtk2-devel-32bit-2.24.33-12.1.x86_64.rpm"
+}

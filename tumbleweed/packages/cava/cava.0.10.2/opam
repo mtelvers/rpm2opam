@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cava-0.10.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cava-0.10.2-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kbd" 
+  "libasound2" 
+  "libfftw3-3" 
+  "libiniparser1" 
+  "libncurses6" 
+  "libpipewire-0_3-0" 
+  "libpulse0" 
+]
+extra-source "cava-0.10.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cava-0.10.2-1.1.x86_64.rpm"
+}

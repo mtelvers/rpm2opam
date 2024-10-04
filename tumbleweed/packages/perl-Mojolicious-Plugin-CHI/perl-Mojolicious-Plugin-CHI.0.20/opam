@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Mojolicious-Plugin-CHI-0.20-1.26.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mojolicious-Plugin-CHI-0.20-1.26.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-CHI" {>= "0.58"}
+  "perl-Digest-JHash" {>= "0.5"}
+  "perl-Mojolicious" {>= "4.77"}
+]
+extra-source "perl-Mojolicious-Plugin-CHI-0.20-1.26.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Mojolicious-Plugin-CHI-0.20-1.26.noarch.rpm"
+}

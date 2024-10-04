@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqcow-tools-20240308-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqcow-tools-20240308-1.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcdata1" 
+  "libcerror1" 
+  "libclocale1" 
+  "libcnotify1" 
+  "libcpath1" 
+  "libfuse2" 
+  "libqcow1" 
+  "libuna1" 
+]
+extra-source "libqcow-tools-20240308-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libqcow-tools-20240308-1.4.x86_64.rpm"
+}

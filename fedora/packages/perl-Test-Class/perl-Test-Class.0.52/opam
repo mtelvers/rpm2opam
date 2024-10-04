@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-Class-0.52-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Class-0.52-10.fc40.noarch.rpm"]
+depends: [
+  "perl-Attribute-Handlers" {>= "0.77"}
+  "perl-Carp" 
+  "perl-File-Find" 
+  "perl-MRO-Compat" {>= "0.11"}
+  "perl-Module-Runtime" 
+  "perl-PathTools" 
+  "perl-Storable" {>= "2.4"}
+  "perl-Test-Simple" {>= "0.78"}
+  "perl-Try-Tiny" 
+  "perl-constant" 
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "perl-Test-Class-0.52-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-Class-0.52-10.fc40.noarch.rpm"
+}

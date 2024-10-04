@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-XML-Feed-0.650.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XML-Feed-0.650.0-1.1.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-ErrorHandler" 
+  "perl-DateTime" 
+  "perl-DateTime-Format-Flexible" 
+  "perl-DateTime-Format-ISO8601" 
+  "perl-DateTime-Format-Mail" 
+  "perl-DateTime-Format-Natural" 
+  "perl-DateTime-Format-W3CDTF" 
+  "perl-Feed-Find" 
+  "perl-HTML-Parser" 
+  "perl-Module-Pluggable" 
+  "perl-URI-Fetch" 
+  "perl-XML-Atom" {>= "0.38"}
+  "perl-XML-LibXML" {>= "1.66"}
+  "perl-XML-RSS" {>= "1.47"}
+  "perl-libwww-perl" 
+]
+extra-source "perl-XML-Feed-0.650.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-XML-Feed-0.650.0-1.1.noarch.rpm"
+}

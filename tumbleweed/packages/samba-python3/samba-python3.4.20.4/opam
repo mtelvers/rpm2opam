@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "samba-python3-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "samba-python3-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "krb5" 
+  "libcom_err2" 
+  "libgnutls30" 
+  "libldb2" 
+  "libpython3_11-1_0" 
+  "libsamba-policy0-python3" 
+  "libtalloc2" 
+  "libtevent0" 
+  "python3-ldb" 
+  "python3-talloc" 
+  "python3-tdb" 
+  "python3-tevent" 
+  "python311-base" {= "3.11"}
+  "samba" {= "4.20.4"}
+  "samba-ad-dc-libs" 
+  "samba-client-libs" 
+  "samba-libs" 
+  "samba-libs-python3" 
+]
+extra-source "samba-python3-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/samba-python3-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm"
+}

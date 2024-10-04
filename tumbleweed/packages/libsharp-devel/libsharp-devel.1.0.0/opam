@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsharp-devel-1.0.0-1.15.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsharp-devel-1.0.0-1.15.x86_64.rpm"]
+depends: [
+  "libsharp0" {= "1.0.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libsharp-devel-1.0.0-1.15.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libsharp-devel-1.0.0-1.15.x86_64.rpm"
+}

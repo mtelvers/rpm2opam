@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sqlgrey-1.8.0-27.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sqlgrey-1.8.0-27.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-DBD-SQLite" 
+  "perl-DBI" 
+  "perl-Date-Calc" 
+  "perl-Getopt-Long" {>= "2.25"}
+  "perl-Math-BigInt" 
+  "perl-Net-Server" 
+  "perl-POSIX" 
+  "perl-Pod-Usage" 
+  "perl-Time-Local" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-vars" 
+  "postfix" 
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "sqlgrey-1.8.0-27.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sqlgrey-1.8.0-27.fc40.noarch.rpm"
+}

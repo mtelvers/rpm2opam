@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tree-sitter-config-devel-0.22.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tree-sitter-config-devel-0.22.2-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.74.1"}
+  "rust-anyhow+default-devel" 
+  "rust-dirs+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde_json+default-devel" 
+  "rust-serde_json+preserve_order-devel" 
+]
+extra-source "rust-tree-sitter-config-devel-0.22.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tree-sitter-config-devel-0.22.2-1.fc40.noarch.rpm"
+}

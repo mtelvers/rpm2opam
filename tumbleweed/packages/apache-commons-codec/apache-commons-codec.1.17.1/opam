@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "apache-commons-codec-1.17.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apache-commons-codec-1.17.1-1.1.noarch.rpm"]
+depends: [
+  "java-11-openj9" {>= "1.8"}
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "apache-commons-codec-1.17.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/apache-commons-codec-1.17.1-1.1.noarch.rpm"
+}

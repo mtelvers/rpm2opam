@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qmlpluginexports-qt6-1.0-1.27.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qmlpluginexports-qt6-1.0-1.27.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt6Core6" 
+  "libQt6Gui6" 
+  "libQt6Qml6" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "qmlpluginexports-qt6-1.0-1.27.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/qmlpluginexports-qt6-1.0-1.27.x86_64.rpm"
+}

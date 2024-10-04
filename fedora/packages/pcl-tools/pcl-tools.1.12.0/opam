@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pcl-tools-1.12.0-33.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcl-tools-1.12.0-33.fc40.x86_64.rpm"]
+depends: [
+  "boost-filesystem" 
+  "glibc" 
+  "libgcc" 
+  "libgomp" 
+  "libstdc++" 
+  "openni" 
+  "pcl" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "vtk" 
+  "vtk-qt" 
+]
+extra-source "pcl-tools-1.12.0-33.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pcl-tools-1.12.0-33.fc40.x86_64.rpm"
+}

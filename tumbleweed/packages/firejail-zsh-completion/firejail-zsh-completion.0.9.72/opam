@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "firejail-zsh-completion-0.9.72-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "firejail-zsh-completion-0.9.72-2.2.noarch.rpm"]
+depends: [
+  "firejail" {= "0.9.72"}
+  "zsh" 
+]
+extra-source "firejail-zsh-completion-0.9.72-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/firejail-zsh-completion-0.9.72-2.2.noarch.rpm"
+}

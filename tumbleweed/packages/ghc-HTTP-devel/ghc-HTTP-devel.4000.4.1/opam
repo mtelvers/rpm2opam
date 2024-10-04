@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-HTTP-devel-4000.4.1-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-HTTP-devel-4000.4.1-3.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-HTTP" {= "4000.4.1"}
+  "ghc-array-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-mtl-devel" 
+  "ghc-network-devel" 
+  "ghc-network-uri-devel" 
+  "ghc-parsec-devel" 
+  "ghc-time-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-HTTP-devel-4000.4.1-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-HTTP-devel-4000.4.1-3.2.x86_64.rpm"
+}

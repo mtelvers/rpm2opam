@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-doctrine-doctrine-cache-bundle-1.4.0-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-doctrine-doctrine-cache-bundle-1.4.0-10.fc40.noarch.rpm"]
+depends: [
+  "php-common" {>= "7.1"}
+  "php-doctrine-cache" 
+  "php-doctrine-inflector" 
+  "php-fedora-autoloader" 
+  "php-symfony-doctrine-bridge" 
+]
+extra-source "php-doctrine-doctrine-cache-bundle-1.4.0-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-doctrine-doctrine-cache-bundle-1.4.0-10.fc40.noarch.rpm"
+}

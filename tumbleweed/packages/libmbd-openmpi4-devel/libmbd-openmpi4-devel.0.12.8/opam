@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmbd-openmpi4-devel-0.12.8-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmbd-openmpi4-devel-0.12.8-1.2.x86_64.rpm"]
+depends: [
+  "libmbd-openmpi4" {= "0.12.8"}
+  "libscalapack2-openmpi4-devel" 
+]
+extra-source "libmbd-openmpi4-devel-0.12.8-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmbd-openmpi4-devel-0.12.8-1.2.x86_64.rpm"
+}

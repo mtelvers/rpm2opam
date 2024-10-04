@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gimagereader-qt-3.4.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gimagereader-qt-3.4.2-1.fc40.x86_64.rpm"]
+depends: [
+  "djvulibre-libs" 
+  "enchant2" 
+  "gimagereader-common" {= "3.4.2"}
+  "glibc" 
+  "libgcc" 
+  "libgomp" 
+  "libstdc++" 
+  "podofo" 
+  "poppler-qt5" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qtspell-qt5" 
+  "quazip-qt5" 
+  "sane-backends-libs" 
+  "tesseract" 
+]
+extra-source "gimagereader-qt-3.4.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gimagereader-qt-3.4.2-1.fc40.x86_64.rpm"
+}

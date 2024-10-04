@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-panel-1.5.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-panel-1.5.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-Markdown" 
+  "python310-base" 
+  "python310-bleach" 
+  "python310-bokeh" 
+  "python310-linkify-it-py" 
+  "python310-markdown-it-py" 
+  "python310-mdit-py-plugins" 
+  "python310-packaging" 
+  "python310-pandas" {>= "1.2"}
+  "python310-param" 
+  "python310-pyviz-comms" {>= "2.0.0"}
+  "python310-requests" 
+  "python310-tqdm" 
+  "python310-typing_extensions" 
+  "update-alternatives" 
+]
+extra-source "python310-panel-1.5.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-panel-1.5.0-1.1.noarch.rpm"
+}

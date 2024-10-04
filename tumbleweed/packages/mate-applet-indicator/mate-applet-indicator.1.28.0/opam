@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mate-applet-indicator-1.28.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mate-applet-indicator-1.28.0-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libatk-1_0-0" 
+  "libayatana-ido3-0_4-0" 
+  "libayatana-indicator3-7" 
+  "libgtk-3-0" 
+  "libmate-panel-applet-4-1" 
+]
+extra-source "mate-applet-indicator-1.28.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mate-applet-indicator-1.28.0-1.1.x86_64.rpm"
+}

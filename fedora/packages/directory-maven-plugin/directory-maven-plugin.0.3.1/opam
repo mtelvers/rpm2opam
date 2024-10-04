@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "directory-maven-plugin-0.3.1-15.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "directory-maven-plugin-0.3.1-15.fc40.noarch.rpm"]
+depends: [
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "maven-lib" 
+]
+extra-source "directory-maven-plugin-0.3.1-15.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/directory-maven-plugin-0.3.1-15.fc40.noarch.rpm"
+}

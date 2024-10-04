@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-XML-TreeBuilder-5.4-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XML-TreeBuilder-5.4-29.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-File-Basename" 
+  "perl-HTML-Tagset" 
+  "perl-HTML-Tree" {>= "4.1"}
+  "perl-IO" 
+  "perl-PathTools" 
+  "perl-XML-Catalog" {>= "1.2"}
+  "perl-XML-Parser" 
+  "perl-libs" {>= "5.0.0"}
+  "perl-vars" 
+]
+extra-source "perl-XML-TreeBuilder-5.4-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-XML-TreeBuilder-5.4-29.fc40.noarch.rpm"
+}

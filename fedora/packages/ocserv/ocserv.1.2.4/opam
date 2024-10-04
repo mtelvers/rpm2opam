@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocserv-1.2.4-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocserv-1.2.4-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "gnutls" 
+  "http-parser" 
+  "krb5-libs" 
+  "libev" 
+  "libmaxminddb" 
+  "libnl3" 
+  "liboath" 
+  "libseccomp" 
+  "libtalloc" 
+  "libtasn1" 
+  "libxcrypt" 
+  "lz4-libs" 
+  "nettle" 
+  "pam-libs" 
+  "protobuf-c" 
+  "radcli" 
+  "readline" 
+  "shadow-utils" 
+  "systemd" 
+  "systemd-libs" 
+]
+extra-source "ocserv-1.2.4-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocserv-1.2.4-2.fc40.x86_64.rpm"
+}

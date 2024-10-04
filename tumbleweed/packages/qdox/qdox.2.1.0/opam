@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qdox-2.1.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qdox-2.1.0-1.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "qdox-2.1.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/qdox-2.1.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-LDAP-0.68-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-LDAP-0.68-13.fc40.noarch.rpm"]
+depends: [
+  "perl-Authen-SASL" {>= "2.0"}
+  "perl-Carp" 
+  "perl-Convert-ASN1" {>= "0.2"}
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-HTTP-Message" 
+  "perl-HTTP-Negotiate" 
+  "perl-IO" 
+  "perl-IO-Socket-SSL" {>= "1.26"}
+  "perl-JSON" 
+  "perl-LWP-MediaTypes" 
+  "perl-MIME-Base64" 
+  "perl-Socket" 
+  "perl-Text-Soundex" 
+  "perl-Time-Local" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+]
+extra-source "perl-LDAP-0.68-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-LDAP-0.68-13.fc40.noarch.rpm"
+}

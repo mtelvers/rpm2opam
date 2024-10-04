@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Net-GitHub-1.05-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-GitHub-1.05-5.fc40.noarch.rpm"]
+depends: [
+  "perl-Cache-LRU" 
+  "perl-Carp" 
+  "perl-HTTP-Message" 
+  "perl-JSON-MaybeXS" 
+  "perl-LWP-Protocol-https" 
+  "perl-MIME-Base64" 
+  "perl-Moo" 
+  "perl-Scalar-List-Utils" 
+  "perl-Type-Tiny" 
+  "perl-URI" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+]
+extra-source "perl-Net-GitHub-1.05-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Net-GitHub-1.05-5.fc40.noarch.rpm"
+}

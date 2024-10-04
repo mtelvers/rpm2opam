@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libopenshot-devel-0.3.3-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libopenshot-devel-0.3.3-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libgcc_s1" 
+  "libjsoncpp25" 
+  "libopencv410" 
+  "libopenshot-audio9" 
+  "libopenshot26" {= "0.3.3"}
+  "libruby3_3-3_3" 
+  "libstdc++6" 
+]
+extra-source "libopenshot-devel-0.3.3-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libopenshot-devel-0.3.3-1.2.x86_64.rpm"
+}

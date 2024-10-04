@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tktable-2.10-6.20.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tktable-2.10-6.20.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "tcl" {>= "8.6"}
+  "tk" {>= "8.6"}
+]
+extra-source "tktable-2.10-6.20.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tktable-2.10-6.20.x86_64.rpm"
+}

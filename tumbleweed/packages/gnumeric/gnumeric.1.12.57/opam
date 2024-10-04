@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnumeric-1.12.57-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnumeric-1.12.57-2.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libatk-1_0-0" 
+  "libcairo2" 
+  "libgda-6_0-6_0_0" 
+  "libgda-ui-6_0-6_0_0" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgoffice-0_10-10" 
+  "libgsf-1-114" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+  "libxml2-2" 
+  "libz-ng-compat1" 
+  "perl" 
+  "perl-base" 
+]
+extra-source "gnumeric-1.12.57-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnumeric-1.12.57-2.1.x86_64.rpm"
+}

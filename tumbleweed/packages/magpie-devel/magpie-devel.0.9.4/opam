@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "magpie-devel-0.9.4+0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "magpie-devel-0.9.4+0-1.1.x86_64.rpm"]
+depends: [
+  "Mesa-libEGL-devel" 
+  "Mesa-libGL-devel" 
+  "Mesa-libGLESv2-devel" 
+  "at-spi2-core-devel" {>= "2.5.3"}
+  "cairo-devel" {>= "1.10.0"}
+  "glib2-devel" {>= "2.69.0"}
+  "gsettings-desktop-schemas-devel" {>= "40.0"}
+  "gtk3-devel" {>= "3.19.8"}
+  "json-glib-devel" {>= "0.12.0"}
+  "libX11-devel" 
+  "libXfixes-devel" {>= "6"}
+  "libXi-devel" {>= "1.7.4"}
+  "libgraphene-devel" {>= "1.10.2"}
+  "magpie" {= "0.9.4"}
+  "pango-devel" {>= "1.46.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "magpie-devel-0.9.4+0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/magpie-devel-0.9.4+0-1.1.x86_64.rpm"
+}

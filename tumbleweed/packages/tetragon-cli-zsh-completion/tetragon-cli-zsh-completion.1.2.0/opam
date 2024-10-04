@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tetragon-cli-zsh-completion-1.2.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tetragon-cli-zsh-completion-1.2.0-1.1.noarch.rpm"]
+depends: [
+  "tetragon-cli" {= "1.2.0"}
+]
+extra-source "tetragon-cli-zsh-completion-1.2.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tetragon-cli-zsh-completion-1.2.0-1.1.noarch.rpm"
+}

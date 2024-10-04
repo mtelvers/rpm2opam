@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pdns-ixfrdist-4.8.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pdns-ixfrdist-4.8.4-1.fc40.x86_64.rpm"]
+depends: [
+  "boost-program-options" 
+  "glibc" 
+  "libgcc" 
+  "libsodium" 
+  "libstdc++" 
+  "openssl-libs" 
+  "p11-kit" 
+  "yaml-cpp" 
+]
+extra-source "pdns-ixfrdist-4.8.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pdns-ixfrdist-4.8.4-1.fc40.x86_64.rpm"
+}

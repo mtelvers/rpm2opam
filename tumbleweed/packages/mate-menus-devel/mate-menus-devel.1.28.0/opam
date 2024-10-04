@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mate-menus-devel-1.28.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mate-menus-devel-1.28.0-1.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libmate-menu2" {= "1.28.0"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-MateMenu-2_0" {= "2.0"}
+]
+extra-source "mate-menus-devel-1.28.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mate-menus-devel-1.28.0-1.1.x86_64.rpm"
+}

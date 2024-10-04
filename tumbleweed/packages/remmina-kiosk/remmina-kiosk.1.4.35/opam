@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "remmina-kiosk-1.4.35-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "remmina-kiosk-1.4.35-2.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "remmina" {= "1.4.35"}
+]
+extra-source "remmina-kiosk-1.4.35-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/remmina-kiosk-1.4.35-2.2.x86_64.rpm"
+}

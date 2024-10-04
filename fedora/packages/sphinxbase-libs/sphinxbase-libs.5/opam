@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sphinxbase-libs-5-0.18.prealpha.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sphinxbase-libs-5-0.18.prealpha.fc40.x86_64.rpm"]
+depends: [
+  "flexiblas-netlib" 
+  "glibc" 
+  "pulseaudio-libs" 
+]
+extra-source "sphinxbase-libs-5-0.18.prealpha.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sphinxbase-libs-5-0.18.prealpha.fc40.x86_64.rpm"
+}

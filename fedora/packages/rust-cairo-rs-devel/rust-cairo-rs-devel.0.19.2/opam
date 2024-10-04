@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-cairo-rs-devel-0.19.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-cairo-rs-devel-0.19.2-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.70"}
+  "rust-bitflags+default-devel" 
+  "rust-cairo-sys-rs+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-cairo-rs-devel-0.19.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-cairo-rs-devel-0.19.2-1.fc40.noarch.rpm"
+}

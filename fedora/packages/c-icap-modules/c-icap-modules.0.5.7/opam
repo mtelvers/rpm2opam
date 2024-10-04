@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "c-icap-modules-0.5.7-1.20240112git56d0179.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "c-icap-modules-0.5.7-1.20240112git56d0179.fc40.x86_64.rpm"]
+depends: [
+  "c-icap" {>= "0.5.7"}
+  "c-icap-libs" 
+  "clamav-lib" 
+  "glibc" 
+  "lmdb-libs" 
+]
+extra-source "c-icap-modules-0.5.7-1.20240112git56d0179.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/c-icap-modules-0.5.7-1.20240112git56d0179.fc40.x86_64.rpm"
+}

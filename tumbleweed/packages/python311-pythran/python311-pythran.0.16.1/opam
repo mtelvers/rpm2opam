@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pythran-0.16.1-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pythran-0.16.1-4.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "boost-devel" 
+  "gcc-c++" 
+  "python311-base" 
+  "python311-beniget" {>= "0.4.0"}
+  "python311-devel" 
+  "python311-gast" 
+  "python311-numpy" 
+  "python311-numpy-devel" 
+  "python311-ply" {>= "3.4"}
+  "python311-setuptools" 
+  "update-alternatives" 
+  "xsimd-devel" {>= "13.0.0"}
+]
+extra-source "python311-pythran-0.16.1-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pythran-0.16.1-4.1.noarch.rpm"
+}

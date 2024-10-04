@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Tk-ObjScanner-2.018-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Tk-ObjScanner-2.018-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Getopt-Long" 
+  "perl-JSON" 
+  "perl-Path-Tiny" 
+  "perl-Scalar-List-Utils" {>= "1.1"}
+  "perl-Tk" 
+  "perl-YAML-PP" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.16.0"}
+  "perl-open" 
+]
+extra-source "perl-Tk-ObjScanner-2.018-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Tk-ObjScanner-2.018-3.fc40.noarch.rpm"
+}

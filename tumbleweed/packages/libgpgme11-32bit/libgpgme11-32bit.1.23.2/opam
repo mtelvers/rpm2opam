@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgpgme11-32bit-1.23.2-4.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgpgme11-32bit-1.23.2-4.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libassuan9-32bit" 
+  "libgpg-error0-32bit" 
+]
+extra-source "libgpgme11-32bit-1.23.2-4.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgpgme11-32bit-1.23.2-4.3.x86_64.rpm"
+}

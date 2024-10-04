@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtk2-metatheme-bluebird-1.3-2.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk2-metatheme-bluebird-1.3-2.11.noarch.rpm"]
+depends: [
+  "gtk2-engine-murrine" 
+  "metatheme-bluebird-common" {= "1.3"}
+]
+extra-source "gtk2-metatheme-bluebird-1.3-2.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gtk2-metatheme-bluebird-1.3-2.11.noarch.rpm"
+}

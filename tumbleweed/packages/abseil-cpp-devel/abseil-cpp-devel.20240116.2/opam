@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "abseil-cpp-devel-20240116.2-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "abseil-cpp-devel-20240116.2-3.1.x86_64.rpm"]
+depends: [
+  "libabsl_2401_0_0" 
+  "libabsl_lite_2401_0_0" 
+  "pkgconf-pkg-config" 
+]
+extra-source "abseil-cpp-devel-20240116.2-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/abseil-cpp-devel-20240116.2-3.1.x86_64.rpm"
+}

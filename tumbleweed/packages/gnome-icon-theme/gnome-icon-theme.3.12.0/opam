@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-icon-theme-3.12.0-5.16.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-icon-theme-3.12.0-5.16.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gtk3-tools" 
+  "pkgconf-pkg-config" 
+]
+extra-source "gnome-icon-theme-3.12.0-5.16.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-icon-theme-3.12.0-5.16.noarch.rpm"
+}

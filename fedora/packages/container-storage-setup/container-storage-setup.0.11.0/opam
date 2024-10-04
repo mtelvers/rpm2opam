@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "container-storage-setup-0.11.0-15.dev.git413b408.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "container-storage-setup-0.11.0-15.dev.git413b408.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "lvm2" 
+  "parted" 
+  "xfsprogs" 
+]
+extra-source "container-storage-setup-0.11.0-15.dev.git413b408.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/container-storage-setup-0.11.0-15.dev.git413b408.fc40.noarch.rpm"
+}

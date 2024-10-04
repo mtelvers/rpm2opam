@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bluez-mesh-5.73-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bluez-mesh-5.73-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bluez" {= "5.73"}
+  "bluez-libs" {= "5.73"}
+  "glibc" 
+  "json-c" 
+  "libell" 
+  "readline" 
+]
+extra-source "bluez-mesh-5.73-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bluez-mesh-5.73-3.fc40.x86_64.rpm"
+}

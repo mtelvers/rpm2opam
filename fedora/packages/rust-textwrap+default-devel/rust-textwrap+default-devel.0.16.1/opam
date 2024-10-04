@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-textwrap+default-devel-0.16.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-textwrap+default-devel-0.16.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-textwrap+smawk-devel" {= "0.16.1"}
+  "rust-textwrap+unicode-linebreak-devel" {= "0.16.1"}
+  "rust-textwrap+unicode-width-devel" {= "0.16.1"}
+  "rust-textwrap-devel" {= "0.16.1"}
+]
+extra-source "rust-textwrap+default-devel-0.16.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-textwrap+default-devel-0.16.1-1.fc40.noarch.rpm"
+}

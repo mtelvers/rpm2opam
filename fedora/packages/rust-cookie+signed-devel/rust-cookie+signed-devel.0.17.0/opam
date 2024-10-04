@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-cookie+signed-devel-0.17.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-cookie+signed-devel-0.17.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-cookie+base64-devel" {= "0.17.0"}
+  "rust-cookie+hmac-devel" {= "0.17.0"}
+  "rust-cookie+rand-devel" {= "0.17.0"}
+  "rust-cookie+sha2-devel" {= "0.17.0"}
+  "rust-cookie+subtle-devel" {= "0.17.0"}
+  "rust-cookie-devel" {= "0.17.0"}
+]
+extra-source "rust-cookie+signed-devel-0.17.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-cookie+signed-devel-0.17.0-2.fc40.noarch.rpm"
+}

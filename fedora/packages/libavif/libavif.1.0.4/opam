@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libavif-1.0.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libavif-1.0.4-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libaom" 
+  "libdav1d" 
+  "libwebp" 
+  "rav1e-libs" 
+  "svt-av1-libs" 
+]
+extra-source "libavif-1.0.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libavif-1.0.4-1.fc40.x86_64.rpm"
+}

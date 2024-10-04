@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "omniORB-devel-4.3.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "omniORB-devel-4.3.2-1.1.x86_64.rpm"]
+depends: [
+  "libomniORB4-3" {= "4.3.2"}
+  "libomnithread4" {= "4.3.2"}
+  "omniORB" {= "4.3.2"}
+  "pkgconf-pkg-config" 
+]
+extra-source "omniORB-devel-4.3.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/omniORB-devel-4.3.2-1.1.x86_64.rpm"
+}

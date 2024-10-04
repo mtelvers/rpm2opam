@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xmoto-0.6.2-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xmoto-0.6.2-1.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libGLU1" 
+  "libSDL2-2_0-0" 
+  "libSDL2_mixer-2_0-0" 
+  "libSDL2_net-2_0-0" 
+  "libSDL2_ttf-2_0-0" 
+  "libbz2-1" 
+  "libcurl-mini4" 
+  "libgcc_s1" 
+  "libjpeg8" 
+  "liblua5_4-5" 
+  "libpng16-16" 
+  "libsqlite3-0" 
+  "libstdc++6" 
+  "libxml2-2" 
+  "libz-ng-compat1" 
+  "xmoto-data" {= "0.6.2"}
+]
+extra-source "xmoto-0.6.2-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xmoto-0.6.2-1.6.x86_64.rpm"
+}

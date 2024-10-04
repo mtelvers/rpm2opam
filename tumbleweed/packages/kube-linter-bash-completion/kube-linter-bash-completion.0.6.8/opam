@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kube-linter-bash-completion-0.6.8-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kube-linter-bash-completion-0.6.8-1.2.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "kube-linter" {= "0.6.8"}
+]
+extra-source "kube-linter-bash-completion-0.6.8-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kube-linter-bash-completion-0.6.8-1.2.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sysmontask-1.3.9-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sysmontask-1.3.9-12.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "gtk3" 
+  "hicolor-icon-theme" 
+  "libwnck3" 
+  "python3" 
+  "python3-cairo" 
+  "python3-gobject-base" 
+  "python3-psutil" {>= "5.7.2"}
+]
+extra-source "sysmontask-1.3.9-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sysmontask-1.3.9-12.fc40.noarch.rpm"
+}

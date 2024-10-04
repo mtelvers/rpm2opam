@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-File-Copy-Recursive-0.45-15.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-Copy-Recursive-0.45-15.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-File-Copy" 
+  "perl-PathTools" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-File-Copy-Recursive-0.45-15.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-File-Copy-Recursive-0.45-15.fc40.noarch.rpm"
+}

@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-reqwest-devel-0.11.24-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-reqwest-devel-0.11.24-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.63.0"}
+  "rust-base64+default-devel" 
+  "rust-bytes+default-devel" 
+  "rust-encoding_rs+default-devel" 
+  "rust-futures-core-devel" 
+  "rust-futures-util-devel" 
+  "rust-h2+default-devel" 
+  "rust-http+default-devel" 
+  "rust-http-body+default-devel" 
+  "rust-hyper+client-devel" 
+  "rust-hyper+http1-devel" 
+  "rust-hyper+http2-devel" 
+  "rust-hyper+runtime-devel" 
+  "rust-hyper+tcp-devel" 
+  "rust-hyper-devel" 
+  "rust-ipnet+default-devel" 
+  "rust-log+default-devel" 
+  "rust-mime+default-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-percent-encoding+default-devel" 
+  "rust-pin-project-lite+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde_urlencoded+default-devel" 
+  "rust-sync_wrapper+default-devel" 
+  "rust-tokio+net-devel" 
+  "rust-tokio+time-devel" 
+  "rust-tokio-devel" 
+  "rust-tower-service+default-devel" 
+  "rust-url+default-devel" 
+]
+extra-source "rust-reqwest-devel-0.11.24-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-reqwest-devel-0.11.24-1.fc40.noarch.rpm"
+}

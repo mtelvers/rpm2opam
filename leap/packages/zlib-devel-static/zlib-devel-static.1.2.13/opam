@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zlib-devel-static-1.2.13-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zlib-devel-static-1.2.13-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "zlib-devel" {= "1.2.13"}
+]
+extra-source "zlib-devel-static-1.2.13-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/zlib-devel-static-1.2.13-slfo.1.1.8.x86_64.rpm"
+}

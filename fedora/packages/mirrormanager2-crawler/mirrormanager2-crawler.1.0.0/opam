@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mirrormanager2-crawler-1.0.0-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mirrormanager2-crawler-1.0.0-5.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "logrotate" 
+  "mirrormanager2-filesystem" {= "1.0.0"}
+  "mirrormanager2-lib" {= "1.0.0"}
+  "python3" 
+  "python3-geoip2" 
+  "shadow-utils" 
+]
+extra-source "mirrormanager2-crawler-1.0.0-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mirrormanager2-crawler-1.0.0-5.fc40.noarch.rpm"
+}

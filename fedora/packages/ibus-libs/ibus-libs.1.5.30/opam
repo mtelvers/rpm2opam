@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ibus-libs-1.5.30~rc1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibus-libs-1.5.30~rc1-1.fc40.x86_64.rpm"]
+depends: [
+  "dbus" {>= "1.2.4"}
+  "glib2" {>= "2.79"}
+  "glibc" 
+  "gobject-introspection" 
+]
+extra-source "ibus-libs-1.5.30~rc1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/ibus-libs-1.5.30~rc1-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnotify4-0.8.3-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnotify4-0.8.3-2.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgdk_pixbuf-2_0-0" 
+]
+extra-source "libnotify4-0.8.3-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libnotify4-0.8.3-2.2.x86_64.rpm"
+}

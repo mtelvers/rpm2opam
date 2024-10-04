@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-IRanges-2.30.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-IRanges-2.30.1-6.fc40.x86_64.rpm"]
+depends: [
+  "R-BiocGenerics" {>= "0.39.2"}
+  "R-S4Vectors" {>= "0.33.3"}
+  "R-core" {= "4.3"}
+  "glibc" 
+]
+extra-source "R-IRanges-2.30.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-IRanges-2.30.1-6.fc40.x86_64.rpm"
+}

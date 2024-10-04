@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-Alien-CPP-1.03-1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-Alien-CPP-1.03-1.8.noarch.rpm"]
+depends: [
+  "perl" {>= "0.27"}
+  "perl-Alien-Build" {>= "1.88"}
+  "perl-ExtUtils-CppGuess" 
+]
+extra-source "perl-Test-Alien-CPP-1.03-1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-Alien-CPP-1.03-1.8.noarch.rpm"
+}

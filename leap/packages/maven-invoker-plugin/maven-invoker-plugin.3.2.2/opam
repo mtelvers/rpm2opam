@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-invoker-plugin-3.2.2-slfo.1.1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-invoker-plugin-3.2.2-slfo.1.1.7.noarch.rpm"]
+depends: [
+  "apache-commons-io" 
+  "bsh2" 
+  "java-11-openjdk-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-artifact-transfer" 
+  "maven-common-artifact-filters" 
+  "maven-doxia-core" 
+  "maven-doxia-sink-api" 
+  "maven-doxia-sitetools" 
+  "maven-invoker" 
+  "maven-lib" 
+  "maven-reporting-api" 
+  "maven-reporting-impl" 
+  "maven-script-interpreter" 
+  "maven-shared-utils" 
+  "plexus-i18n" 
+  "plexus-interpolation" 
+  "plexus-utils" 
+]
+extra-source "maven-invoker-plugin-3.2.2-slfo.1.1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/maven-invoker-plugin-3.2.2-slfo.1.1.7.noarch.rpm"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "blueman-2.4.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "blueman-2.4.2-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "bluez" {>= "5.48"}
+  "gdk-pixbuf-loader-rsvg" 
+  "glibc" 
+  "gnome-shell" 
+  "libbluetooth3" 
+  "obex-data-server" 
+  "polkit" 
+  "pulseaudio-utils" 
+  "python311-base" 
+  "python311-dbus-python" 
+  "python311-gobject-Gdk" 
+  "python311-notify2" 
+  "python311-pycairo" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-NM-1_0" {= "1.0"}
+  "typelib-1_0-Pango-1_0" {= "1.0"}
+]
+extra-source "blueman-2.4.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/blueman-2.4.2-1.1.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-JSON-Color-tests-0.134-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-JSON-Color-tests-0.134-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-IO" 
+  "perl-IPC-Open3" 
+  "perl-JSON-Color" 
+  "perl-PathTools" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" {>= "0.98"}
+  "perl-interpreter" 
+  "perl-libs" {>= "5.10.1"}
+]
+extra-source "perl-JSON-Color-tests-0.134-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-JSON-Color-tests-0.134-4.fc40.noarch.rpm"
+}

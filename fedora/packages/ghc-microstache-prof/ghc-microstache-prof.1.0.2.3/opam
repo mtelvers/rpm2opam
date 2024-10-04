@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-microstache-prof-1.0.2.3-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-microstache-prof-1.0.2.3-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-prof" 
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+  "ghc-microstache-devel" {= "1.0.2.3"}
+  "ghc-parsec-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unordered-containers-prof" 
+  "ghc-vector-prof" 
+]
+extra-source "ghc-microstache-prof-1.0.2.3-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-microstache-prof-1.0.2.3-6.fc40.x86_64.rpm"
+}

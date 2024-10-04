@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "claws-mail-lang-4.3.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "claws-mail-lang-4.3.0-1.2.noarch.rpm"]
+depends: [
+  "claws-mail" {= "4.3.0"}
+]
+extra-source "claws-mail-lang-4.3.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/claws-mail-lang-4.3.0-1.2.noarch.rpm"
+}

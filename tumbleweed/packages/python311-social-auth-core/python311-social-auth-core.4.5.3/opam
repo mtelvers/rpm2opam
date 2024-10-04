@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-social-auth-core-4.5.3-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-social-auth-core-4.5.3-2.2.noarch.rpm"]
+depends: [
+  "python311-PyJWT" {>= "2.0.0"}
+  "python311-base" {= "3.11"}
+  "python311-cryptography" {>= "2.1.1"}
+  "python311-defusedxml" {>= "0.5.0"}
+  "python311-oauthlib" {>= "1.0.3"}
+  "python311-python3-openid" {>= "3.0.10"}
+  "python311-requests" {>= "2.9.1"}
+  "python311-requests-oauthlib" {>= "0.6.1"}
+]
+extra-source "python311-social-auth-core-4.5.3-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-social-auth-core-4.5.3-2.2.noarch.rpm"
+}

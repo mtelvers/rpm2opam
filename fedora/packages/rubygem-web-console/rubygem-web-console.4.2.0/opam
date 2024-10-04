@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-web-console-4.2.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-web-console-4.2.0-4.fc40.noarch.rpm"]
+depends: [
+  "rubygem-actionview" {>= "6.0.0"}
+  "rubygem-activemodel" {>= "6.0.0"}
+  "rubygem-bindex" {>= "0.4.0"}
+  "rubygem-railties" {>= "6.0.0"}
+  "rubygems" 
+]
+extra-source "rubygem-web-console-4.2.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-web-console-4.2.0-4.fc40.noarch.rpm"
+}

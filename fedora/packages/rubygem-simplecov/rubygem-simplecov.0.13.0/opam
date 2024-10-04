@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-simplecov-0.13.0-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-simplecov-0.13.0-16.fc40.noarch.rpm"]
+depends: [
+  "ruby" 
+  "ruby-libs" 
+  "rubygem-docile" 
+  "rubygem-json" 
+  "rubygem-multi_json" {>= "1.0"}
+  "rubygem-simplecov-html" 
+  "rubygems" 
+]
+extra-source "rubygem-simplecov-0.13.0-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-simplecov-0.13.0-16.fc40.noarch.rpm"
+}

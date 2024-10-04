@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kpmcore-devel-24.08.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kpmcore-devel-24.08.1-1.1.x86_64.rpm"]
+depends: [
+  "libkpmcore12" {= "24.8.1"}
+]
+extra-source "kpmcore-devel-24.08.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kpmcore-devel-24.08.1-1.1.x86_64.rpm"
+}

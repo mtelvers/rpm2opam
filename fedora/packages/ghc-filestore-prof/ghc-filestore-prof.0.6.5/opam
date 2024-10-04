@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-filestore-prof-0.6.5-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-filestore-prof-0.6.5-11.fc40.x86_64.rpm"]
+depends: [
+  "ghc-Diff-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+  "ghc-filestore-devel" {= "0.6.5"}
+  "ghc-old-locale-prof" 
+  "ghc-parsec-prof" 
+  "ghc-process-prof" 
+  "ghc-split-prof" 
+  "ghc-time-prof" 
+  "ghc-utf8-string-prof" 
+  "ghc-xml-prof" 
+]
+extra-source "ghc-filestore-prof-0.6.5-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-filestore-prof-0.6.5-11.fc40.x86_64.rpm"
+}

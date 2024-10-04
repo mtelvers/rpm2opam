@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openqa-client-4.6^20240208git46cfab2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openqa-client-4.6^20240208git46cfab2-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "curl" 
+  "git-core" 
+  "jq" 
+  "openqa-common" {= "4.6"}
+  "perl-Carp" 
+  "perl-Config-IniFiles" 
+  "perl-Cpanel-JSON-XS" 
+  "perl-Data-Dump" 
+  "perl-File-Basename" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" 
+  "perl-Getopt-Long-Descriptive" 
+  "perl-IO-Socket-SSL" {>= "2.9"}
+  "perl-IPC-Run" 
+  "perl-JSON-Validator" 
+  "perl-LWP-Protocol-https" 
+  "perl-Mojolicious" 
+  "perl-Scalar-List-Utils" 
+  "perl-Test-Simple" 
+  "perl-Try-Tiny" 
+  "perl-YAML-LibYAML" 
+  "perl-YAML-PP" {>= "0.20"}
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-libwww-perl" 
+]
+extra-source "openqa-client-4.6^20240208git46cfab2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openqa-client-4.6^20240208git46cfab2-1.fc40.noarch.rpm"
+}

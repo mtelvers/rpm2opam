@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "obs-service-snapcraft-0.10.41-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "obs-service-snapcraft-0.10.41-3.fc40.noarch.rpm"]
+depends: [
+  "obs-service-obs_scm-common" {= "0.10.41"}
+]
+extra-source "obs-service-snapcraft-0.10.41-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/obs-service-snapcraft-0.10.41-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-binary-devel-0.8.9.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-binary-devel-0.8.9.1-2.1.x86_64.rpm"]
+depends: [
+  "ghc-array-devel" 
+  "ghc-base-devel" 
+  "ghc-binary" {= "0.8.9.1"}
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+]
+extra-source "ghc-binary-devel-0.8.9.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-binary-devel-0.8.9.1-2.1.x86_64.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lynis-3.1.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lynis-3.1.2-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "cron" 
+  "fillup" 
+  "findutils" 
+  "gawk" 
+  "libnss_usrfiles2" 
+  "logrotate" 
+  "net-tools-deprecated" 
+  "netcfg" 
+  "wget" 
+]
+extra-source "lynis-3.1.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/lynis-3.1.2-1.1.noarch.rpm"
+}

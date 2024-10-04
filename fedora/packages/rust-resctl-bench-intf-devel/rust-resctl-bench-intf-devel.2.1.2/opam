@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-resctl-bench-intf-devel-2.1.2-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-resctl-bench-intf-devel-2.1.2-7.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-anyhow+default-devel" 
+  "rust-clap+default-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-log+default-devel" 
+  "rust-rd-agent-intf+default-devel" 
+  "rust-rd-util+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+]
+extra-source "rust-resctl-bench-intf-devel-2.1.2-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-resctl-bench-intf-devel-2.1.2-7.fc40.noarch.rpm"
+}

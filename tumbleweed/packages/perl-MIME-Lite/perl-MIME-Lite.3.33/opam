@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MIME-Lite-3.033-1.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MIME-Lite-3.033-1.15.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Email-Date-Format" {>= "1.0"}
+  "perl-MIME-Types" {>= "1.28"}
+  "perl-MailTools" {>= "1.62"}
+]
+extra-source "perl-MIME-Lite-3.033-1.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MIME-Lite-3.033-1.15.noarch.rpm"
+}

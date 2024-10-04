@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "liblinebreak-devel-2.1-16.29.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "liblinebreak-devel-2.1-16.29.x86_64.rpm"]
+depends: [
+  "liblinebreak2" {= "2.1"}
+]
+extra-source "liblinebreak-devel-2.1-16.29.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/liblinebreak-devel-2.1-16.29.x86_64.rpm"
+}

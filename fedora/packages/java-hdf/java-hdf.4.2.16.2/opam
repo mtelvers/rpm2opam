@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "java-hdf-4.2.16.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "java-hdf-4.2.16.2-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "hdf" 
+  "libjpeg-turbo" 
+  "libtirpc" 
+  "slf4j" 
+  "zlib-ng-compat" 
+]
+extra-source "java-hdf-4.2.16.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/java-hdf-4.2.16.2-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-iCal-Parser-1.21-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-iCal-Parser-1.21-23.fc40.noarch.rpm"]
+depends: [
+  "perl-DateTime-Format-ICal" {>= "0.8"}
+  "perl-DateTime-TimeZone" 
+  "perl-File-Basename" 
+  "perl-IO" 
+  "perl-IO-String" 
+  "perl-Text-vFile-asData" {>= "0.2"}
+  "perl-libs" 
+]
+extra-source "perl-iCal-Parser-1.21-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-iCal-Parser-1.21-23.fc40.noarch.rpm"
+}

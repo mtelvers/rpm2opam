@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-http-conduit-prof-2.3.8.1-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-http-conduit-prof-2.3.8.1-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-prof" 
+  "ghc-attoparsec-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-conduit-extra-prof" 
+  "ghc-conduit-prof" 
+  "ghc-http-client-prof" 
+  "ghc-http-client-tls-prof" 
+  "ghc-http-conduit-devel" {= "2.3.8.1"}
+  "ghc-http-types-prof" 
+  "ghc-mtl-prof" 
+  "ghc-resourcet-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unliftio-core-prof" 
+]
+extra-source "ghc-http-conduit-prof-2.3.8.1-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-http-conduit-prof-2.3.8.1-3.fc40.x86_64.rpm"
+}

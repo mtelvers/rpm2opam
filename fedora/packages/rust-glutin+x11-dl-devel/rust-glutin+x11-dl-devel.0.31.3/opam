@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-glutin+x11-dl-devel-0.31.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-glutin+x11-dl-devel-0.31.3-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-glutin-devel" {= "0.31.3"}
+  "rust-x11-dl+default-devel" 
+]
+extra-source "rust-glutin+x11-dl-devel-0.31.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-glutin+x11-dl-devel-0.31.3-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libzmf-devel-0.0.2-1.47.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libzmf-devel-0.0.2-1.47.x86_64.rpm"]
+depends: [
+  "librevenge-devel" 
+  "libzmf-0_0-0" {= "0.0.2"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libzmf-devel-0.0.2-1.47.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libzmf-devel-0.0.2-1.47.x86_64.rpm"
+}

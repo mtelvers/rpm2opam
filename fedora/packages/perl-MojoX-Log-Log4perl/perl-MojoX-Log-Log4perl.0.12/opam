@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MojoX-Log-Log4perl-0.12-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MojoX-Log-Log4perl-0.12-12.fc40.noarch.rpm"]
+depends: [
+  "perl-Log-Log4perl" 
+  "perl-Mojolicious" 
+  "perl-libs" 
+]
+extra-source "perl-MojoX-Log-Log4perl-0.12-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MojoX-Log-Log4perl-0.12-12.fc40.noarch.rpm"
+}

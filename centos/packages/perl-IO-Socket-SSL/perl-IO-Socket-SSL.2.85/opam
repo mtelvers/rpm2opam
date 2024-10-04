@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-IO-Socket-SSL-2.085-2.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-IO-Socket-SSL-2.085-2.el10.noarch.rpm"]
+depends: [
+  "openssl-libs" {>= "0.9.8"}
+  "perl-Carp" 
+  "perl-Errno" 
+  "perl-Exporter" 
+  "perl-HTTP-Tiny" 
+  "perl-IO" 
+  "perl-IO-Socket-IP" {>= "0.31"}
+  "perl-IO-Socket-SSL" 
+  "perl-Net-SSLeay" {>= "1.46"}
+  "perl-Socket" {>= "1.95"}
+  "perl-URI" 
+  "perl-constant" 
+  "perl-vars" 
+]
+extra-source "perl-IO-Socket-SSL-2.085-2.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/perl-IO-Socket-SSL-2.085-2.el10.noarch.rpm"
+}

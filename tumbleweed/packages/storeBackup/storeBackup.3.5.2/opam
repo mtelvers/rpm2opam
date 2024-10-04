@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "storeBackup-3.5.2-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "storeBackup-3.5.2-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "bzip2" 
+  "coreutils" 
+  "e2fsprogs" 
+  "perl-base" 
+  "which" 
+]
+extra-source "storeBackup-3.5.2-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/storeBackup-3.5.2-1.2.noarch.rpm"
+}

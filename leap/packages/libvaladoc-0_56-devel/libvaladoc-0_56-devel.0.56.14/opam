@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvaladoc-0_56-devel-0.56.14-slfo.1.1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvaladoc-0_56-devel-0.56.14-slfo.1.1.5.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "graphviz-devel" 
+  "libvala-0_56-devel" 
+  "libvaladoc-0_56-0" {= "0.56.14"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libvaladoc-0_56-devel-0.56.14-slfo.1.1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libvaladoc-0_56-devel-0.56.14-slfo.1.1.5.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-examplesforhomalg-2023.10.01-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-examplesforhomalg-2023.10.01-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gap" {>= "4.12.1"}
+  "gap-gapdoc" {>= "1.1"}
+  "gap-gaussforhomalg" {>= "2023.8.1"}
+  "gap-homalg" {>= "2015.6.1"}
+  "gap-homalgtocas" {>= "2023.8.1"}
+  "gap-matricesforhomalg" {>= "2023.10.1"}
+  "gap-modules" {>= "2023.10.1"}
+  "gap-ringsforhomalg" {>= "2023.9.1"}
+]
+extra-source "gap-examplesforhomalg-2023.10.01-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-examplesforhomalg-2023.10.01-1.2.noarch.rpm"
+}

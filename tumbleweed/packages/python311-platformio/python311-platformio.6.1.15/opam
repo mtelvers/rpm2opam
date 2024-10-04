@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-platformio-6.1.15-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-platformio-6.1.15-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-aiofiles" {>= "0.8"}
+  "python311-ajsonrpc" {>= "1"}
+  "python311-base" {= "3.11"}
+  "python311-bottle" {>= "0.12"}
+  "python311-click" {>= "8.0.4"}
+  "python311-colorama" 
+  "python311-marshmallow" {>= "3"}
+  "python311-pyelftools" {>= "0.27"}
+  "python311-pyserial" {>= "3.5"}
+  "python311-requests" {>= "2"}
+  "python311-semantic_version" {>= "2.10"}
+  "python311-starlette" {>= "0.20"}
+  "python311-tabulate" {>= "0.8"}
+  "python311-uvicorn" {>= "0.16"}
+  "python311-wsproto" {>= "1.0"}
+  "python311-zeroconf" 
+  "update-alternatives" 
+]
+extra-source "python311-platformio-6.1.15-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-platformio-6.1.15-1.1.noarch.rpm"
+}

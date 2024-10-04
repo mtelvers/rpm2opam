@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gtk4_0.7+blueprint-devel-0.7.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gtk4_0.7+blueprint-devel-0.7.3-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-gtk4-macros+blueprint-devel" 
+  "rust-gtk4_0-7-devel" {= "0.7.3"}
+]
+extra-source "rust-gtk4_0.7+blueprint-devel-0.7.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gtk4_0.7+blueprint-devel-0.7.3-1.fc40.noarch.rpm"
+}

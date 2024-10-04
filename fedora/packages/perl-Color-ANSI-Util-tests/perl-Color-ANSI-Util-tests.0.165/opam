@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Color-ANSI-Util-tests-0.165-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Color-ANSI-Util-tests-0.165-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Color-ANSI-Util" 
+  "perl-IO" 
+  "perl-IPC-Open3" 
+  "perl-PathTools" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" {>= "0.98"}
+  "perl-interpreter" 
+  "perl-libs" {>= "5.10.1"}
+]
+extra-source "perl-Color-ANSI-Util-tests-0.165-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Color-ANSI-Util-tests-0.165-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bnd-maven-plugin-6.3.1-slfo.1.2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bnd-maven-plugin-6.3.1-slfo.1.2.3.noarch.rpm"]
+depends: [
+  "aqute-bndlib" 
+  "java-11-openjdk-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-mapping" 
+  "plexus-build-api0" 
+]
+extra-source "bnd-maven-plugin-6.3.1-slfo.1.2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/bnd-maven-plugin-6.3.1-slfo.1.2.3.noarch.rpm"
+}

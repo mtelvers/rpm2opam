@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openshadinglanguage-1.12.14.0-13.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openshadinglanguage-1.12.14.0-13.fc40.x86_64.rpm"]
+depends: [
+  "OpenImageIO" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "openshadinglanguage-libs" 
+  "pugixml" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "openshadinglanguage-1.12.14.0-13.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openshadinglanguage-1.12.14.0-13.fc40.x86_64.rpm"
+}

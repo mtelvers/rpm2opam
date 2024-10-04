@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "virt-install-4.1.0-slfo.1.2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "virt-install-4.1.0-slfo.1.2.2.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-requests" 
+  "virt-manager-common" {= "4.1.0"}
+]
+extra-source "virt-install-4.1.0-slfo.1.2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/virt-install-4.1.0-slfo.1.2.2.noarch.rpm"
+}

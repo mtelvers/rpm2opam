@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mediastreamer2-5.3.37-2.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mediastreamer2-5.3.37-2.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQtQuick5" 
+  "libbctoolbox1" 
+  "libgcc_s1" 
+  "libmediastreamer2-11" 
+  "libortp15" 
+  "libstdc++6" 
+]
+extra-source "mediastreamer2-5.3.37-2.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mediastreamer2-5.3.37-2.4.x86_64.rpm"
+}

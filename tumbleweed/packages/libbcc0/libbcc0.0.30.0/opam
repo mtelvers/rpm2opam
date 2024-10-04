@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libbcc0-0.30.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libbcc0-0.30.0-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kernel-debug" {>= "4.1.0"}
+  "kernel-debug-devel" 
+  "kernel-default-devel" 
+  "kernel-devel" {>= "4.1.0"}
+  "kernel-kvmsmall-devel" 
+  "kernel-vanilla-devel" 
+  "libLLVM17" 
+  "libbpf1" 
+  "libclang-cpp17" 
+  "libelf1" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "libbcc0-0.30.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libbcc0-0.30.0-2.1.x86_64.rpm"
+}

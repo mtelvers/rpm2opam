@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libinputsynth0_15-0-0.15.0-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libinputsynth0_15-0-0.15.0-1.6.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libXi6" 
+  "libXtst6" 
+  "xdotool" 
+]
+extra-source "libinputsynth0_15-0-0.15.0-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libinputsynth0_15-0-0.15.0-1.6.x86_64.rpm"
+}

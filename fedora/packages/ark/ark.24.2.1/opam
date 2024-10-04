@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ark-24.02.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ark-24.02.1-1.fc40.x86_64.rpm"]
+depends: [
+  "ark-libs" {= "24.2.1"}
+  "bash" 
+  "bzip2" 
+  "glibc" 
+  "gzip" 
+  "kf6-kconfig" 
+  "kf6-kconfigwidgets" 
+  "kf6-kcoreaddons" 
+  "kf6-kcrash" 
+  "kf6-kdbusaddons" 
+  "kf6-ki18n" 
+  "kf6-kio-core-libs" 
+  "kf6-kio-gui" 
+  "kf6-kparts" 
+  "kf6-kwidgetsaddons" 
+  "kf6-kwindowsystem" 
+  "kf6-kxmlgui" 
+  "libstdc++" 
+  "p7zip-plugins" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "unzip" 
+]
+extra-source "ark-24.02.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/ark-24.02.1-1.fc40.x86_64.rpm"
+}

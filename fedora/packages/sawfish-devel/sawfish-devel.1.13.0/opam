@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sawfish-devel-1.13.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sawfish-devel-1.13.0-6.fc40.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf2-xlib-devel" {>= "2.23.0"}
+  "gtk2-devel" {>= "2.24.0"}
+  "librep-devel" {>= "0.92.3"}
+  "pkgconf-pkg-config" 
+  "rep-gtk-devel" {>= "0.90.7"}
+  "sawfish" {= "1.13.0"}
+]
+extra-source "sawfish-devel-1.13.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sawfish-devel-1.13.0-6.fc40.x86_64.rpm"
+}

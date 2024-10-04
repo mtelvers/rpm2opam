@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "OpenIPMI-devel-2.0.36.4+git.c114912-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "OpenIPMI-devel-2.0.36.4+git.c114912-1.1.x86_64.rpm"]
+depends: [
+  "glibc-devel" 
+  "libOpenIPMI0" {= "2.0.36.4"}
+  "libOpenIPMIui1" {= "2.0.36.4"}
+  "ncurses-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "OpenIPMI-devel-2.0.36.4+git.c114912-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/OpenIPMI-devel-2.0.36.4+git.c114912-1.1.x86_64.rpm"
+}

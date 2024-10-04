@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texi2html-5.0-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texi2html-5.0-22.fc40.noarch.rpm"]
+depends: [
+  "latex2html" 
+  "perl-Data-Dumper" 
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Text-Unidecode" 
+  "perl-Unicode-EastAsianWidth" 
+  "perl-interpreter" 
+  "perl-libintl-perl" 
+  "perl-libs" {>= "5.4.50"}
+  "perl-vars" 
+]
+extra-source "texi2html-5.0-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texi2html-5.0-22.fc40.noarch.rpm"
+}

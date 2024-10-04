@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "oidc-agent-desktop-5.1.0-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "oidc-agent-desktop-5.1.0-2.fc40.x86_64.rpm"]
+depends: [
+  "cjson" 
+  "clibs-list" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "javascriptcoregtk4-1" 
+  "libgcc" 
+  "libsodium" 
+  "libstdc++" 
+  "oidc-agent-cli" {= "5.1.0"}
+  "oidc-agent-libs" {= "5.1.0"}
+  "webkit2gtk4-1" 
+]
+extra-source "oidc-agent-desktop-5.1.0-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/oidc-agent-desktop-5.1.0-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-cursive-devel-0.20.0-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-cursive-devel-0.20.0-5.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-ahash+default-devel" 
+  "rust-cfg-if+default-devel" 
+  "rust-crossbeam-channel+default-devel" 
+  "rust-cursive_core+default-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-log+default-devel" 
+  "rust-signal-hook+default-devel" 
+  "rust-unicode-segmentation+default-devel" 
+  "rust-unicode-width+default-devel" 
+]
+extra-source "rust-cursive-devel-0.20.0-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-cursive-devel-0.20.0-5.fc40.noarch.rpm"
+}

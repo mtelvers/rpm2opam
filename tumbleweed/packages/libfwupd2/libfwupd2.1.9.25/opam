@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfwupd2-1.9.25-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfwupd2-1.9.25-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcurl-mini4" 
+  "libjcat1" 
+  "libjson-glib-1_0-0" 
+]
+extra-source "libfwupd2-1.9.25-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfwupd2-1.9.25-1.1.x86_64.rpm"
+}

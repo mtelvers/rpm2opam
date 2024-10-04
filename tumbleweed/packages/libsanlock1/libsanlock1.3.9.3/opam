@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsanlock1-3.9.3-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsanlock1-3.9.3-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libaio1" 
+  "libblkid1" 
+]
+extra-source "libsanlock1-3.9.3-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libsanlock1-3.9.3-2.1.x86_64.rpm"
+}

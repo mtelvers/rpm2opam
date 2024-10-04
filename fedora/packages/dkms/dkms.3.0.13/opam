@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dkms-3.0.13-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dkms-3.0.13-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "cpio" 
+  "elfutils-libelf-devel" 
+  "file" 
+  "findutils" 
+  "gawk" 
+  "gcc" 
+  "grep" 
+  "gzip" 
+  "kernel-debug-devel-matched" 
+  "kernel-devel-matched" 
+  "kmod" 
+  "make" 
+  "sed" 
+  "systemd" 
+  "tar" 
+  "which" 
+]
+extra-source "dkms-3.0.13-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dkms-3.0.13-1.fc40.noarch.rpm"
+}

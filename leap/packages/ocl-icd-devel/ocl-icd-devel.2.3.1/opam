@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ocl-icd-devel-2.3.1-lp160.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocl-icd-devel-2.3.1-lp160.1.1.x86_64.rpm"]
+depends: [
+  "Mesa-libEGL-devel" 
+  "libOpenCL1" {= "2.3.1"}
+  "opencl-headers" {>= "2.2"}
+  "pkgconf-pkg-config" 
+]
+extra-source "ocl-icd-devel-2.3.1-lp160.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/ocl-icd-devel-2.3.1-lp160.1.1.x86_64.rpm"
+}

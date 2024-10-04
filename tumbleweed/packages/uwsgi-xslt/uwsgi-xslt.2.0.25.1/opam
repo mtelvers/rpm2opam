@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "uwsgi-xslt-2.0.25.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "uwsgi-xslt-2.0.25.1-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libxml2-2" 
+  "libxslt1" 
+  "uwsgi" {= "2.0.25.1"}
+]
+extra-source "uwsgi-xslt-2.0.25.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/uwsgi-xslt-2.0.25.1-2.1.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-yq-3.4.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-yq-3.4.3-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "jq" 
+  "python311-PyYAML" {>= "5.3.1"}
+  "python311-argcomplete" {>= "1.8.1"}
+  "python311-base" 
+  "python311-tomlkit" {>= "0.11.6"}
+  "python311-xmltodict" {>= "0.11.0"}
+  "update-alternatives" 
+]
+extra-source "python311-yq-3.4.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-yq-3.4.3-1.1.noarch.rpm"
+}

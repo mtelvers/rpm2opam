@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "notcurses-3.0.9-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "notcurses-3.0.9-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gpm-libs" 
+  "libavcodec-free" 
+  "libavformat-free" 
+  "libavutil-free" 
+  "libdeflate" 
+  "libgcc" 
+  "libqrcodegen" 
+  "libstdc++" 
+  "libswscale-free" 
+  "libunistring" 
+  "ncurses-libs" 
+]
+extra-source "notcurses-3.0.9-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/notcurses-3.0.9-1.fc40.x86_64.rpm"
+}

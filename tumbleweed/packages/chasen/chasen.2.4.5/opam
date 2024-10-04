@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "chasen-2.4.5-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "chasen-2.4.5-3.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "ipadic" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "chasen-2.4.5-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/chasen-2.4.5-3.3.x86_64.rpm"
+}

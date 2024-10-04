@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sssd-common-pac-2.10.0~beta2-3.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sssd-common-pac-2.10.0~beta2-3.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libldb" 
+  "libselinux" 
+  "libsss_idmap" {= "2.10.0"}
+  "libtalloc" 
+  "libtdb" 
+  "libtevent" 
+  "popt" 
+  "samba-client-libs" 
+  "sssd-common" 
+  "systemd-libs" 
+]
+extra-source "sssd-common-pac-2.10.0~beta2-3.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/sssd-common-pac-2.10.0~beta2-3.el10.x86_64.rpm"
+}

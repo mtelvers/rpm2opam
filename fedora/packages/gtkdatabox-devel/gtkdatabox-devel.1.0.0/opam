@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gtkdatabox-devel-1.0.0-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtkdatabox-devel-1.0.0-9.fc40.x86_64.rpm"]
+depends: [
+  "cairo-devel" {>= "1.10.0"}
+  "gtk3-devel" {>= "3.4.0"}
+  "gtkdatabox" {= "1.0.0"}
+  "pango-devel" {>= "1.29.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gtkdatabox-devel-1.0.0-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gtkdatabox-devel-1.0.0-9.fc40.x86_64.rpm"
+}

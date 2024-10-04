@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mumps_5_3_5-gnu-mvapich2-hpc-devel-5.3.5-5.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mumps_5_3_5-gnu-mvapich2-hpc-devel-5.3.5-5.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gnu-compilers-hpc-devel" 
+  "libgcc_s1" 
+  "libgfortran5" 
+  "libmumps_5_3_5-gnu-mvapich2-hpc" {= "5.3.5"}
+  "libscalapack2-gnu-mvapich2-hpc-devel" {= "2.2.0"}
+  "mvapich2-gnu-hpc-devel" 
+]
+extra-source "mumps_5_3_5-gnu-mvapich2-hpc-devel-5.3.5-5.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mumps_5_3_5-gnu-mvapich2-hpc-devel-5.3.5-5.3.x86_64.rpm"
+}

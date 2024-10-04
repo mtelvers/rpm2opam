@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-tomlib-1.2.11-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-tomlib-1.2.11-1.2.noarch.rpm"]
+depends: [
+  "gap" {>= "4.4"}
+  "gap-atlasrep" {>= "1.5"}
+]
+extra-source "gap-tomlib-1.2.11-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-tomlib-1.2.11-1.2.noarch.rpm"
+}

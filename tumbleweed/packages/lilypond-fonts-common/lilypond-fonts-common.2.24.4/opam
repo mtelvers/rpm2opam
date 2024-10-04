@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lilypond-fonts-common-2.24.4-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lilypond-fonts-common-2.24.4-1.2.noarch.rpm"]
+depends: [
+  "lilypond-emmentaler-fonts" {= "2.24.4"}
+]
+extra-source "lilypond-fonts-common-2.24.4-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/lilypond-fonts-common-2.24.4-1.2.noarch.rpm"
+}

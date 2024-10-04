@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gstreamer-plugin-crystalhd-3.10.0-32.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gstreamer-plugin-crystalhd-3.10.0-32.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "gstreamer1" 
+  "gstreamer1-plugins-base" 
+  "libcrystalhd" {= "3.10.0"}
+]
+extra-source "gstreamer-plugin-crystalhd-3.10.0-32.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gstreamer-plugin-crystalhd-3.10.0-32.fc40.x86_64.rpm"
+}

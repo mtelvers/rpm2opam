@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqxp-devel-0.0.2-1.25.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqxp-devel-0.0.2-1.25.x86_64.rpm"]
+depends: [
+  "libqxp-0_0-0" {= "0.0.2"}
+  "librevenge-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libqxp-devel-0.0.2-1.25.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libqxp-devel-0.0.2-1.25.x86_64.rpm"
+}

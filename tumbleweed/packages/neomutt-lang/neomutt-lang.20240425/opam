@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "neomutt-lang-20240425-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "neomutt-lang-20240425-2.1.noarch.rpm"]
+depends: [
+  "neomutt" {= "20240425"}
+]
+extra-source "neomutt-lang-20240425-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/neomutt-lang-20240425-2.1.noarch.rpm"
+}

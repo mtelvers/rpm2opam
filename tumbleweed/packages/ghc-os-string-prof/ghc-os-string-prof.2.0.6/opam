@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-os-string-prof-2.0.6-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-os-string-prof-2.0.6-1.1.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-exceptions-prof" 
+  "ghc-os-string-devel" {= "2.0.6"}
+  "ghc-template-haskell-prof" 
+]
+extra-source "ghc-os-string-prof-2.0.6-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-os-string-prof-2.0.6-1.1.x86_64.rpm"
+}

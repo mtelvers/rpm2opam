@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "shaderc-2024.1-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "shaderc-2024.1-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libSPIRV-Tools-2024_3" 
+  "libgcc_s1" 
+  "libglslang15" 
+  "libstdc++6" 
+]
+extra-source "shaderc-2024.1-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/shaderc-2024.1-1.3.x86_64.rpm"
+}

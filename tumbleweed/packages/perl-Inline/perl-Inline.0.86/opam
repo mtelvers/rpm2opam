@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Inline-0.86-2.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Inline-0.86-2.12.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-base" {>= "0.82"}
+]
+extra-source "perl-Inline-0.86-2.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Inline-0.86-2.12.noarch.rpm"
+}

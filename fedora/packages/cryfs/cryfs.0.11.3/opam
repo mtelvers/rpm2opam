@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cryfs-0.11.3-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cryfs-0.11.3-7.fc40.x86_64.rpm"]
+depends: [
+  "boost-chrono" 
+  "boost-filesystem" 
+  "boost-program-options" 
+  "boost-thread" 
+  "fmt" 
+  "fuse-libs" 
+  "glibc" 
+  "libcurl" 
+  "libgcc" 
+  "libgomp" 
+  "libstdc++" 
+  "spdlog" 
+]
+extra-source "cryfs-0.11.3-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cryfs-0.11.3-7.fc40.x86_64.rpm"
+}

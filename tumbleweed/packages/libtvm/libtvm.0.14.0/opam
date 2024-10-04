@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libtvm-0.14.0-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libtvm-0.14.0-2.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libLLVM14" 
+  "libSPIRV-Tools-2024_3" 
+  "libgcc_s1" 
+  "libopenblas_openmp0" 
+  "libstdc++6" 
+  "libvulkan1" 
+]
+extra-source "libtvm-0.14.0-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libtvm-0.14.0-2.3.x86_64.rpm"
+}

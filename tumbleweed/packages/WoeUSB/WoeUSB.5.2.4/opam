@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "WoeUSB-5.2.4-1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "WoeUSB-5.2.4-1.8.noarch.rpm"]
+depends: [
+  "bash" {>= "4.3"}
+  "dosfstools" 
+  "findutils" 
+  "gawk" 
+  "grep" 
+  "grub2" 
+  "ntfsprogs" 
+  "parted" 
+  "util-linux" 
+  "wget" 
+  "wimtools" 
+]
+extra-source "WoeUSB-5.2.4-1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/WoeUSB-5.2.4-1.8.noarch.rpm"
+}

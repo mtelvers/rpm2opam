@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libnbd-bash-completion-1.19.7-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnbd-bash-completion-1.19.7-1.fc40.noarch.rpm"]
+depends: [
+  "bash-completion" {>= "2.0"}
+  "libnbd" {= "1.19.7"}
+]
+extra-source "libnbd-bash-completion-1.19.7-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libnbd-bash-completion-1.19.7-1.fc40.noarch.rpm"
+}

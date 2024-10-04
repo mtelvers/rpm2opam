@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "am-utils-6.2.0-56.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "am-utils-6.2.0-56.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "findutils" 
+  "gawk" 
+  "grep" 
+  "libnsl2" 
+  "libtirpc" 
+  "rpcbind" 
+  "systemd" 
+]
+extra-source "am-utils-6.2.0-56.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/am-utils-6.2.0-56.fc40.x86_64.rpm"
+}

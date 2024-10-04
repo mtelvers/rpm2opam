@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libmspub-devel-0.1.4-32.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmspub-devel-0.1.4-32.fc40.x86_64.rpm"]
+depends: [
+  "libicu-devel" 
+  "libmspub" {= "0.1.4"}
+  "librevenge-devel" 
+  "pkgconf-pkg-config" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "libmspub-devel-0.1.4-32.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libmspub-devel-0.1.4-32.fc40.x86_64.rpm"
+}

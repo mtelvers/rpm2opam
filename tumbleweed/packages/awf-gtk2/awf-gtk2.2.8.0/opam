@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "awf-gtk2-2.8.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "awf-gtk2-2.8.0-1.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-2_0-0" 
+  "libpango-1_0-0" 
+]
+extra-source "awf-gtk2-2.8.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/awf-gtk2-2.8.0-1.2.x86_64.rpm"
+}

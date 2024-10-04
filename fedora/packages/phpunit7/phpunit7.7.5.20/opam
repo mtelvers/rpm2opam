@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "phpunit7-7.5.20-15.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "phpunit7-7.5.20-15.fc40.noarch.rpm"]
+depends: [
+  "php-cli" 
+  "php-common" {>= "7.1"}
+  "php-doctrine-instantiator" 
+  "php-fedora-autoloader" 
+  "php-mbstring" 
+  "php-myclabs-deep-copy" 
+  "php-phar-io-manifest" 
+  "php-phar-io-version" 
+  "php-phpspec-prophecy" 
+  "php-phpunit-Text-Template" 
+  "php-phpunit-Version" 
+  "php-phpunit-php-code-coverage10" 
+  "php-phpunit-php-file-iterator2" 
+  "php-phpunit-php-invoker2" 
+  "php-phpunit-php-timer2" 
+  "php-sebastian-comparator3" 
+  "php-sebastian-diff3" 
+  "php-sebastian-environment4" 
+  "php-sebastian-exporter3" 
+  "php-sebastian-global-state2" 
+  "php-sebastian-object-enumerator3" 
+  "php-sebastian-resource-operations2" 
+  "php-xml" 
+]
+extra-source "phpunit7-7.5.20-15.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/phpunit7-7.5.20-15.fc40.noarch.rpm"
+}

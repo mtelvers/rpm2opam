@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rusqlite-devel-0.28.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rusqlite-devel-0.28.0-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bitflags+default-devel" 
+  "rust-fallible-iterator+default-devel" 
+  "rust-fallible-streaming-iterator+default-devel" 
+  "rust-hashlink+default-devel" 
+  "rust-libsqlite3-sys+default-devel" 
+  "rust-smallvec+default-devel" 
+]
+extra-source "rust-rusqlite-devel-0.28.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rusqlite-devel-0.28.0-4.fc40.noarch.rpm"
+}

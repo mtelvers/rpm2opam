@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "eventviews-devel-24.08.0-lp160.1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eventviews-devel-24.08.0-lp160.1.4.x86_64.rpm"]
+depends: [
+  "akonadi-calendar-devel" {>= "6.2.0"}
+  "akonadi-devel" {>= "6.2.0"}
+  "calendarsupport-devel" {>= "6.2.0"}
+  "kcalutils-devel" {>= "6.2.0"}
+  "kf6-kcalendarcore-devel" {>= "6.3.0"}
+  "libKPim6EventViews6" {= "24.8.0"}
+]
+extra-source "eventviews-devel-24.08.0-lp160.1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/eventviews-devel-24.08.0-lp160.1.4.x86_64.rpm"
+}

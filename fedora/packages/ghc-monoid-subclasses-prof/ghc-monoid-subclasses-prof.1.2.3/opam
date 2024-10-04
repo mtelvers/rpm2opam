@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-monoid-subclasses-prof-1.2.3-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-monoid-subclasses-prof-1.2.3-14.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-commutative-semigroups-prof" 
+  "ghc-containers-prof" 
+  "ghc-monoid-subclasses-devel" {= "1.2.3"}
+  "ghc-primes-prof" 
+  "ghc-text-prof" 
+  "ghc-vector-prof" 
+]
+extra-source "ghc-monoid-subclasses-prof-1.2.3-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-monoid-subclasses-prof-1.2.3-14.fc40.x86_64.rpm"
+}

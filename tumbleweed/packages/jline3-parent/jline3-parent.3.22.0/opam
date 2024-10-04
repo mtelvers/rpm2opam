@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jline3-parent-3.22.0-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jline3-parent-3.22.0-3.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "maven-bundle-plugin" 
+  "maven-compiler-plugin" 
+  "maven-jar-plugin" 
+  "maven-resources-plugin" 
+  "maven-surefire-plugin" 
+  "sonatype-oss-parent" 
+]
+extra-source "jline3-parent-3.22.0-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jline3-parent-3.22.0-3.1.noarch.rpm"
+}

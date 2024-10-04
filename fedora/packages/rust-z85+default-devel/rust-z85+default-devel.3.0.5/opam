@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-z85+default-devel-3.0.5-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-z85+default-devel-3.0.5-5.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-z85-devel" {= "3.0.5"}
+]
+extra-source "rust-z85+default-devel-3.0.5-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-z85+default-devel-3.0.5-5.fc40.noarch.rpm"
+}

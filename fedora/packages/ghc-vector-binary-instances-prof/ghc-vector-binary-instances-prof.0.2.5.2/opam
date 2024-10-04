@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-vector-binary-instances-prof-0.2.5.2-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-vector-binary-instances-prof-0.2.5.2-11.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-binary-prof" 
+  "ghc-vector-binary-instances-devel" {= "0.2.5.2"}
+  "ghc-vector-prof" 
+]
+extra-source "ghc-vector-binary-instances-prof-0.2.5.2-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-vector-binary-instances-prof-0.2.5.2-11.fc40.x86_64.rpm"
+}

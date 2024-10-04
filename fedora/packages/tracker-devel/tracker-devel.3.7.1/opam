@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tracker-devel-3.7.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tracker-devel-3.7.1-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2-devel" {> "2.52.0"}
+  "json-glib-devel" {>= "1.4"}
+  "libtracker-sparql" {= "3.7.1"}
+  "libxml2-devel" {> "2.6"}
+  "pkgconf-pkg-config" 
+  "sqlite-devel" {> "3.20.0"}
+]
+extra-source "tracker-devel-3.7.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tracker-devel-3.7.1-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "e_smi_tool-3.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "e_smi_tool-3.0-1.fc40.x86_64.rpm"]
+depends: [
+  "esmi_ib_library" 
+  "glibc" 
+]
+extra-source "e_smi_tool-3.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/e_smi_tool-3.0-1.fc40.x86_64.rpm"
+}

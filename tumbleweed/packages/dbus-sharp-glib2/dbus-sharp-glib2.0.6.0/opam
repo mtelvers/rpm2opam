@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dbus-sharp-glib2-0.6.0-2.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dbus-sharp-glib2-0.6.0-2.11.noarch.rpm"]
+depends: [
+  "dbus-sharp" 
+  "dbus-sharp2" {= "2.0.0.0"}
+  "mono-core" {= "4.0.0.0"}
+]
+extra-source "dbus-sharp-glib2-0.6.0-2.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dbus-sharp-glib2-0.6.0-2.11.noarch.rpm"
+}

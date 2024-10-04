@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-itemloaders-1.3.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-itemloaders-1.3.1-1.1.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-itemadapter" {>= "0.1.0"}
+  "python312-jmespath" {>= "0.9.5"}
+  "python312-parsel" {>= "1.8.1"}
+  "python312-w3lib" {>= "1.17.0"}
+]
+extra-source "python312-itemloaders-1.3.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-itemloaders-1.3.1-1.1.noarch.rpm"
+}

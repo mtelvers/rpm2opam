@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "docker-lock-0.8.10-1.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "docker-lock-0.8.10-1.13.x86_64.rpm"]
+depends: [
+  "glibc" 
+]
+extra-source "docker-lock-0.8.10-1.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/docker-lock-0.8.10-1.13.x86_64.rpm"
+}

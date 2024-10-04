@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-vrothberg-vgrep-devel-2.7.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-vrothberg-vgrep-devel-2.7.0-2.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-google-shlex-devel" 
+  "golang-github-jessevdk-flags-devel" 
+  "golang-github-json-iterator-devel" 
+  "golang-github-mattn-shellwords-devel" 
+  "golang-github-nightlyone-lockfile-devel" 
+  "golang-github-peterh-liner-devel" 
+  "golang-github-sirupsen-logrus-devel" 
+  "golang-x-term-devel" 
+]
+extra-source "golang-github-vrothberg-vgrep-devel-2.7.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-vrothberg-vgrep-devel-2.7.0-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rmp+std-devel-0.8.12-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rmp+std-devel-0.8.12-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-byteorder+std-devel" 
+  "rust-num-traits+std-devel" 
+  "rust-rmp-devel" {= "0.8.12"}
+]
+extra-source "rust-rmp+std-devel-0.8.12-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rmp+std-devel-0.8.12-2.fc40.noarch.rpm"
+}

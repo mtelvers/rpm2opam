@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ispc-1.23.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ispc-1.23.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "ispc-devel" 
+  "libLLVM14" 
+  "libclang-cpp14" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "ispc-1.23.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ispc-1.23.0-1.1.x86_64.rpm"
+}

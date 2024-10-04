@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openvswitch-devel-3.1.0-slfo.1.1.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openvswitch-devel-3.1.0-slfo.1.1.9.x86_64.rpm"]
+depends: [
+  "libopenvswitch-3_1-0" {= "3.1.0"}
+  "pkgconf-pkg-config" 
+  "python3-ovs" {= "3.1.0"}
+  "python311-base" 
+]
+extra-source "openvswitch-devel-3.1.0-slfo.1.1.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/openvswitch-devel-3.1.0-slfo.1.1.9.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xen-tools-xendomains-wait-disk-4.18.3_04-slfo.1.1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xen-tools-xendomains-wait-disk-4.18.3_04-slfo.1.1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "sed" 
+  "vim" 
+  "xen-tools" {= "4.18.3"}
+]
+extra-source "xen-tools-xendomains-wait-disk-4.18.3_04-slfo.1.1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/xen-tools-xendomains-wait-disk-4.18.3_04-slfo.1.1.1.noarch.rpm"
+}

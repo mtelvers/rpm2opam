@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mate-utils-1.28.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mate-utils-1.28.0-1.fc40.x86_64.rpm"]
+depends: [
+  "mate-dictionary" {= "1.28.0"}
+  "mate-disk-usage-analyzer" {= "1.28.0"}
+  "mate-screenshot" {= "1.28.0"}
+  "mate-search-tool" {= "1.28.0"}
+  "mate-system-log" {= "1.28.0"}
+]
+extra-source "mate-utils-1.28.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mate-utils-1.28.0-1.fc40.x86_64.rpm"
+}

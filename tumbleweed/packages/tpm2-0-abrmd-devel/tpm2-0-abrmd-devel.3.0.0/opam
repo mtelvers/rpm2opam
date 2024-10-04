@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tpm2.0-abrmd-devel-3.0.0-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tpm2.0-abrmd-devel-3.0.0-4.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "glibc-devel" 
+  "libtss2-tcti-tabrmd0" {= "3.0.0"}
+  "pkgconf-pkg-config" 
+  "tpm2-0-abrmd" {= "3.0.0"}
+  "tpm2-0-tss-devel" 
+]
+extra-source "tpm2.0-abrmd-devel-3.0.0-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tpm2.0-abrmd-devel-3.0.0-4.1.x86_64.rpm"
+}

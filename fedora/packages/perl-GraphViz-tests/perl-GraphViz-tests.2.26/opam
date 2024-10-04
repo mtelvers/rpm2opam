@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-GraphViz-tests-2.26-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-GraphViz-tests-2.26-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-File-Which" 
+  "perl-GraphViz" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+]
+extra-source "perl-GraphViz-tests-2.26-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-GraphViz-tests-2.26-4.fc40.noarch.rpm"
+}

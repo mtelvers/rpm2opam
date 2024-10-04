@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lldb18-devel-18.1.8-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lldb18-devel-18.1.8-3.1.x86_64.rpm"]
+depends: [
+  "clang18-devel" {= "18.1.8"}
+  "libedit-devel" 
+  "liblldb18" {= "18.1.8"}
+  "libxml2-devel" 
+  "llvm18-devel" {= "18.1.8"}
+]
+extra-source "lldb18-devel-18.1.8-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lldb18-devel-18.1.8-3.1.x86_64.rpm"
+}

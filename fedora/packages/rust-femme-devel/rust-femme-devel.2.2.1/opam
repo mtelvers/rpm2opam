@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-femme-devel-2.2.1-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-femme-devel-2.2.1-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-cfg-if+default-devel" 
+  "rust-log+default-devel" 
+  "rust-log+kv_unstable-devel" 
+  "rust-log+kv_unstable_serde-devel" 
+  "rust-log+std-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde_derive+default-devel" 
+  "rust-serde_json+default-devel" 
+]
+extra-source "rust-femme-devel-2.2.1-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-femme-devel-2.2.1-6.fc40.noarch.rpm"
+}

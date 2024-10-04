@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-dkimpy-1.1.8-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-dkimpy-1.1.8-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-PyNaCl" 
+  "python310-authres" 
+  "python310-base" {= "3.10"}
+  "python310-dnspython" {>= "1.16"}
+  "python310-setuptools" 
+  "update-alternatives" 
+]
+extra-source "python310-dkimpy-1.1.8-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-dkimpy-1.1.8-1.1.noarch.rpm"
+}

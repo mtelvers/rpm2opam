@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "usbredir-devel-0.14.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "usbredir-devel-0.14.0-1.2.x86_64.rpm"]
+depends: [
+  "libusb-1_0-devel" {>= "1.0.9"}
+  "libusbredirhost1" {= "0.14.0"}
+  "libusbredirparser1" {= "0.14.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "usbredir-devel-0.14.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/usbredir-devel-0.14.0-1.2.x86_64.rpm"
+}

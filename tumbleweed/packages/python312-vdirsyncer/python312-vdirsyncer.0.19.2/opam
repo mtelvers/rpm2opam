@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-vdirsyncer-0.19.2-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-vdirsyncer-0.19.2-1.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-aiohttp" 
+  "python312-aiostream" 
+  "python312-atomicwrites" {>= "0.1.7"}
+  "python312-base" 
+  "python312-click" {>= "5.0"}
+  "python312-click-log" {>= "0.3"}
+  "python312-click-threading" {>= "0.2"}
+  "python312-requests" {>= "2.20.0"}
+  "python312-requests-toolbelt" {>= "0.4.0"}
+  "update-alternatives" 
+]
+extra-source "python312-vdirsyncer-0.19.2-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-vdirsyncer-0.19.2-1.3.noarch.rpm"
+}

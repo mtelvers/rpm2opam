@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ugrep-6.5.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ugrep-6.5.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libbrotlidec1" 
+  "libbz2-1" 
+  "libbzip3-0" 
+  "libgcc_s1" 
+  "liblz4-1" 
+  "liblzma5" 
+  "libpcre2-8-0" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+]
+extra-source "ugrep-6.5.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ugrep-6.5.0-1.1.x86_64.rpm"
+}

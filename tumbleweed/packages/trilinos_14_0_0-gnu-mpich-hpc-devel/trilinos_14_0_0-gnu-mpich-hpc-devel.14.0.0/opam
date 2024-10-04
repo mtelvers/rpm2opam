@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "trilinos_14_0_0-gnu-mpich-hpc-devel-14.0.0-5.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trilinos_14_0_0-gnu-mpich-hpc-devel-14.0.0-5.4.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "glibc" 
+  "gnu-compilers-hpc" 
+  "gnu-compilers-hpc-devel" 
+  "hdf5-gnu-mpich-hpc-devel" {= "1.12.3"}
+  "libgcc_s1" 
+  "libgomp1" 
+  "libopenblas-gnu-hpc-devel" {= "0.3.27"}
+  "libstdc++6" 
+  "libtrilinos_14_0_0-gnu-mpich-hpc" {= "14.0.0"}
+  "mpich-gnu-hpc" 
+  "mpich-gnu-hpc-devel" 
+  "netcdf-gnu-mpich-hpc-devel" {= "4.9.2"}
+  "python311-base" 
+]
+extra-source "trilinos_14_0_0-gnu-mpich-hpc-devel-14.0.0-5.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/trilinos_14_0_0-gnu-mpich-hpc-devel-14.0.0-5.4.x86_64.rpm"
+}

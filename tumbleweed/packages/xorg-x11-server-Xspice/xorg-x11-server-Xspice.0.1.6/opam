@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xorg-x11-server-Xspice-0.1.6-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xorg-x11-server-Xspice-0.1.6-2.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libXfont2-2" 
+  "libspice-server1" 
+  "python311-base" 
+  "xorg-x11-server" {= "25.2"}
+]
+extra-source "xorg-x11-server-Xspice-0.1.6-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xorg-x11-server-Xspice-0.1.6-2.3.x86_64.rpm"
+}

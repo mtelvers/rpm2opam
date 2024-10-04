@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qtkeychain-qt6-lang-0.14.2-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qtkeychain-qt6-lang-0.14.2-1.2.noarch.rpm"]
+depends: [
+  "libqt6keychain1" {= "0.14.2"}
+]
+extra-source "qtkeychain-qt6-lang-0.14.2-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/qtkeychain-qt6-lang-0.14.2-1.2.noarch.rpm"
+}

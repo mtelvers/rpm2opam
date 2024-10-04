@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fftw-libs-quad-3.3.10-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fftw-libs-quad-3.3.10-11.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libgomp" 
+  "libquadmath" 
+]
+extra-source "fftw-libs-quad-3.3.10-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fftw-libs-quad-3.3.10-11.fc40.x86_64.rpm"
+}

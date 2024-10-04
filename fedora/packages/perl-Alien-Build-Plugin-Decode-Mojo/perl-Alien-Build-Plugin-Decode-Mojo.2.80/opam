@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Alien-Build-Plugin-Decode-Mojo-2.80-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Alien-Build-Plugin-Decode-Mojo-2.80-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Mojolicious" {>= "7.0"}
+  "perl-URI" 
+  "perl-libs" {>= "5.8.4"}
+]
+extra-source "perl-Alien-Build-Plugin-Decode-Mojo-2.80-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Alien-Build-Plugin-Decode-Mojo-2.80-4.fc40.noarch.rpm"
+}

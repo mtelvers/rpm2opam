@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libadwaita-devel-1.5.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libadwaita-devel-1.5.0-1.fc40.x86_64.rpm"]
+depends: [
+  "appstream-devel" 
+  "fribidi-devel" 
+  "glib2-devel" 
+  "gtk4-devel" {>= "4.13.4"}
+  "libadwaita" {= "1.5.0"}
+  "pkgconf-pkg-config" 
+  "vala" 
+]
+extra-source "libadwaita-devel-1.5.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libadwaita-devel-1.5.0-1.fc40.x86_64.rpm"
+}

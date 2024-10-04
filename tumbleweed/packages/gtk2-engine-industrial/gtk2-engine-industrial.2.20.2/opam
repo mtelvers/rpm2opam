@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtk2-engine-industrial-2.20.2-21.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk2-engine-industrial-2.20.2-21.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-2_0-0" {= "2.24.33"}
+]
+extra-source "gtk2-engine-industrial-2.20.2-21.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gtk2-engine-industrial-2.20.2-21.2.x86_64.rpm"
+}

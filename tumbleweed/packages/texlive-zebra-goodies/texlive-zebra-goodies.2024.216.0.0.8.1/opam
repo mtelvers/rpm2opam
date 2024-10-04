@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-zebra-goodies-2024.216.0.0.8.1svn66630-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-zebra-goodies-2024.216.0.0.8.1svn66630-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-filesystem" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-kvoptions" 
+  "texlive-manfnt" 
+  "texlive-marginnote" 
+  "texlive-microtype" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tikzpagenodes" 
+  "texlive-xcolor" 
+]
+extra-source "texlive-zebra-goodies-2024.216.0.0.8.1svn66630-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-zebra-goodies-2024.216.0.0.8.1svn66630-55.1.noarch.rpm"
+}

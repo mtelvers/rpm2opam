@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-azure-communication-phonenumbers-1.1.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-azure-communication-phonenumbers-1.1.0-2.1.noarch.rpm"]
+depends: [
+  "python310-azure-communication-nspkg" {>= "0.0.0"}
+  "python310-azure-core" 
+  "python310-azure-nspkg" {>= "3.0.0"}
+  "python310-base" {= "3.10"}
+  "python310-msrest" {>= "0.7.1"}
+  "python310-six" {>= "1.11.0"}
+]
+extra-source "python310-azure-communication-phonenumbers-1.1.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-azure-communication-phonenumbers-1.1.0-2.1.noarch.rpm"
+}

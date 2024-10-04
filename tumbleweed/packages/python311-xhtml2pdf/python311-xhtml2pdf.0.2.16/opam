@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-xhtml2pdf-0.2.16-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-xhtml2pdf-0.2.16-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-Pillow" {>= "8.1.1"}
+  "python311-arabic-reshaper" {>= "3.0.0"}
+  "python311-base" 
+  "python311-html5lib" {>= "1.1"}
+  "python311-pyHanko" {>= "0.12.1"}
+  "python311-pyhanko-certvalidator" {>= "0.19.5"}
+  "python311-pypdf" {>= "3.1.0"}
+  "python311-python-bidi" {>= "0.4.2"}
+  "python311-reportlab" {>= "4.0.4"}
+  "python311-svglib" {>= "1.2.1"}
+  "update-alternatives" 
+]
+extra-source "python311-xhtml2pdf-0.2.16-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-xhtml2pdf-0.2.16-1.1.noarch.rpm"
+}

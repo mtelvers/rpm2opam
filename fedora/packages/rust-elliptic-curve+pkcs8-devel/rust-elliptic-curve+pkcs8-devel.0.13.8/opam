@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-elliptic-curve+pkcs8-devel-0.13.8-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-elliptic-curve+pkcs8-devel-0.13.8-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-elliptic-curve+sec1-devel" {= "0.13.8"}
+  "rust-elliptic-curve-devel" {= "0.13.8"}
+  "rust-pkcs8-devel" 
+]
+extra-source "rust-elliptic-curve+pkcs8-devel-0.13.8-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-elliptic-curve+pkcs8-devel-0.13.8-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "Io-language-postgresql-20170906-18.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Io-language-postgresql-20170906-18.fc40.x86_64.rpm"]
+depends: [
+  "Io-language" {= "20170906"}
+  "glibc" 
+]
+extra-source "Io-language-postgresql-20170906-18.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/Io-language-postgresql-20170906-18.fc40.x86_64.rpm"
+}

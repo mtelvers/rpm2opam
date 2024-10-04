@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sssd-tools-2.9.5-slfo.1.1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sssd-tools-2.9.5-slfo.1.1.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "glibc" 
+  "libdhash1" 
+  "libldb2" 
+  "libpopt0" 
+  "libref_array1" 
+  "libsss_certmap0" 
+  "libtalloc2" 
+  "pam" 
+  "python3-sssd-config" {= "2.9.5"}
+  "python311-base" 
+  "sssd" 
+]
+extra-source "sssd-tools-2.9.5-slfo.1.1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/sssd-tools-2.9.5-slfo.1.1.4.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-readme_renderer-43.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-readme_renderer-43.0-1.2.noarch.rpm"]
+depends: [
+  "python310-Pygments" {>= "2.5.1"}
+  "python310-base" {= "3.10"}
+  "python310-docutils" {>= "0.13.1"}
+  "python310-nh3" {>= "0.2.14"}
+]
+extra-source "python310-readme_renderer-43.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-readme_renderer-43.0-1.2.noarch.rpm"
+}

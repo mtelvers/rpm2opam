@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jack-1.9.22-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jack-1.9.22-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libasound2" 
+  "libcelt0-2" 
+  "libdbus-1-3" 
+  "libexpat1" 
+  "libffado2" 
+  "libgcc_s1" 
+  "libjackserver0" 
+  "libopus0" 
+  "libsamplerate0" 
+  "libstdc++6" 
+  "libsystemd0" 
+  "python311-base" 
+]
+extra-source "jack-1.9.22-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/jack-1.9.22-slfo.1.1.8.x86_64.rpm"
+}

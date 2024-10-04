@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postgresql-server-17-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql-server-17-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "postgresql" {= "17"}
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "postgresql-server-17-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/postgresql-server-17-1.1.noarch.rpm"
+}

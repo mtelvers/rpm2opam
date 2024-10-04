@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pandas-all-2.2.2-7.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pandas-all-2.2.2-7.1.noarch.rpm"]
+depends: [
+  "python310-Bottleneck" {>= "1.3.6"}
+  "python310-Jinja2" {>= "3.1.2"}
+  "python310-PyMySQL" {>= "1.0.2"}
+  "python310-QtPy" {>= "2.3.0"}
+  "python310-SQLAlchemy" {>= "2"}
+  "python310-XlsxWriter" {>= "3.0.5"}
+  "python310-beautifulsoup4" {>= "4.11.2"}
+  "python310-blosc" 
+  "python310-fsspec" {>= "2022.11"}
+  "python310-gcsfs" {>= "2022.11"}
+  "python310-html5lib" {>= "1.1"}
+  "python310-hypothesis" {>= "6.46.1"}
+  "python310-lxml" {>= "4.9.2"}
+  "python310-matplotlib" {>= "3.6.3"}
+  "python310-numba" {>= "0.56.4"}
+  "python310-numexpr" {>= "2.8.4"}
+  "python310-odfpy" {>= "1.4.1"}
+  "python310-openpyxl" {>= "3.1.0"}
+  "python310-pandas" {= "2.2.2"}
+  "python310-psycopg2" {>= "2.9.6"}
+  "python310-pyreadstat" {>= "1.2.0"}
+  "python310-pytest" {>= "7.3.2"}
+  "python310-pytest-xdist" {>= "2.2.0"}
+  "python310-qt5" {>= "5.15.9"}
+  "python310-scipy" {>= "1.10.0"}
+  "python310-tables" {>= "3.8.0"}
+  "python310-tabulate" {>= "0.9"}
+  "python310-xarray" {>= "2022.12"}
+  "python310-xlrd" {>= "2.0.1"}
+  "python310-zstandard" {>= "0.19.0"}
+]
+extra-source "python310-pandas-all-2.2.2-7.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-pandas-all-2.2.2-7.1.noarch.rpm"
+}

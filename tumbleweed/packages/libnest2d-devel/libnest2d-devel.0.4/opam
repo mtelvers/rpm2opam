@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnest2d-devel-0.4+git.20201105-1.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnest2d-devel-0.4+git.20201105-1.12.x86_64.rpm"]
+depends: [
+  "libboost_headers-devel" 
+  "libpolyclipping-devel" 
+  "nlopt-devel" 
+]
+extra-source "libnest2d-devel-0.4+git.20201105-1.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libnest2d-devel-0.4+git.20201105-1.12.x86_64.rpm"
+}

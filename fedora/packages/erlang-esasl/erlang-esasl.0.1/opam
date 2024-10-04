@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "erlang-esasl-0.1-39.20120116git665cc80.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "erlang-esasl-0.1-39.20120116git665cc80.fc40.x86_64.rpm"]
+depends: [
+  "erlang-erts" {= "3.3"}
+  "erlang-kernel" 
+  "erlang-stdlib" 
+  "glibc" 
+  "libgsasl" 
+]
+extra-source "erlang-esasl-0.1-39.20120116git665cc80.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/erlang-esasl-0.1-39.20120116git665cc80.fc40.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lasso-2.8.2-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lasso-2.8.2-9.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "libtool-ltdl" 
+  "libxml2" 
+  "libxslt" 
+  "openssl-libs" 
+  "xmlsec1" 
+  "xmlsec1-openssl" 
+  "zlib-ng-compat" 
+]
+extra-source "lasso-2.8.2-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lasso-2.8.2-9.fc40.x86_64.rpm"
+}

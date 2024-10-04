@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcc7-obj-c++-7.5.0+r278197-17.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcc7-obj-c++-7.5.0+r278197-17.1.x86_64.rpm"]
+depends: [
+  "gcc7-c++" {= "7.5.0"}
+  "gcc7-objc" {= "7.5.0"}
+  "glibc" 
+  "libgmp10" 
+  "libisl23" 
+  "libmpc3" 
+  "libmpfr6" 
+  "libz-ng-compat1" 
+]
+extra-source "gcc7-obj-c++-7.5.0+r278197-17.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gcc7-obj-c++-7.5.0+r278197-17.1.x86_64.rpm"
+}

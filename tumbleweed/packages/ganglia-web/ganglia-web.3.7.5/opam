@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ganglia-web-3.7.5-2.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ganglia-web-3.7.5-2.5.noarch.rpm"]
+depends: [
+  "apache2" 
+  "apache2-mod_php8" 
+  "bash" 
+  "bash-sh" 
+  "php8" 
+  "php8-gd" 
+  "rrdtool" 
+  "system-user-wwwrun" 
+]
+extra-source "ganglia-web-3.7.5-2.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ganglia-web-3.7.5-2.5.noarch.rpm"
+}

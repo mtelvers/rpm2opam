@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tame-index+sparse-devel-0.7.2-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tame-index+sparse-devel-0.7.2-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-crossbeam-channel+default-devel" 
+  "rust-rayon+default-devel" 
+  "rust-reqwest+blocking-devel" 
+  "rust-reqwest+gzip-devel" 
+  "rust-reqwest-devel" 
+  "rust-tame-index-devel" {= "0.7.2"}
+  "rust-tokio+rt-multi-thread-devel" 
+  "rust-tokio+time-devel" 
+  "rust-tokio-devel" 
+]
+extra-source "rust-tame-index+sparse-devel-0.7.2-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tame-index+sparse-devel-0.7.2-2.fc40.noarch.rpm"
+}

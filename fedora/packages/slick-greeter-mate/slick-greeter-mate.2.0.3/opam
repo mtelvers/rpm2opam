@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "slick-greeter-mate-2.0.3-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "slick-greeter-mate-2.0.3-4.fc40.noarch.rpm"]
+depends: [
+  "slick-greeter" {= "2.0.3"}
+]
+extra-source "slick-greeter-mate-2.0.3-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/slick-greeter-mate-2.0.3-4.fc40.noarch.rpm"
+}

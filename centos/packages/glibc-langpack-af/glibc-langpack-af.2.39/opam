@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glibc-langpack-af-2.39-22.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glibc-langpack-af-2.39-22.el10.x86_64.rpm"]
+depends: [
+  "glibc" {= "2.39"}
+  "glibc-common" {= "2.39"}
+]
+extra-source "glibc-langpack-af-2.39-22.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/glibc-langpack-af-2.39-22.el10.x86_64.rpm"
+}

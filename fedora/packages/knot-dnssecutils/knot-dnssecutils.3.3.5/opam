@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "knot-dnssecutils-3.3.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "knot-dnssecutils-3.3.5-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "knot-libs" 
+  "libgcc" 
+  "lmdb-libs" 
+  "systemd-libs" 
+  "userspace-rcu" 
+]
+extra-source "knot-dnssecutils-3.3.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/knot-dnssecutils-3.3.5-1.fc40.x86_64.rpm"
+}

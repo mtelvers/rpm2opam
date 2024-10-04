@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Plack-Middleware-Session-0.33-1.24.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Plack-Middleware-Session-0.33-1.24.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Cookie-Baker" {>= "0.10"}
+  "perl-Digest-HMAC" {>= "1.3"}
+  "perl-Plack" {>= "0.9910"}
+  "perl-base" 
+]
+extra-source "perl-Plack-Middleware-Session-0.33-1.24.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Plack-Middleware-Session-0.33-1.24.noarch.rpm"
+}

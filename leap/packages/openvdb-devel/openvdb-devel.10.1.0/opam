@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openvdb-devel-10.1.0-lp160.1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openvdb-devel-10.1.0-lp160.1.5.x86_64.rpm"]
+depends: [
+  "libopenvdb10_1" {= "10.1.0"}
+]
+extra-source "openvdb-devel-10.1.0-lp160.1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/openvdb-devel-10.1.0-lp160.1.5.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "patterns-kde-kde_yast-20240311-lp160.1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "patterns-kde-kde_yast-20240311-lp160.1.1.noarch.rpm"]
+depends: [
+  "libyui-qt-pkg16" 
+  "yast2-control-center-qt" 
+]
+extra-source "patterns-kde-kde_yast-20240311-lp160.1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/patterns-kde-kde_yast-20240311-lp160.1.1.noarch.rpm"
+}

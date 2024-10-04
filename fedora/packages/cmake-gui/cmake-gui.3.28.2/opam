@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cmake-gui-3.28.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cmake-gui-3.28.2-1.fc40.x86_64.rpm"]
+depends: [
+  "cmake" {= "3.28.2"}
+  "glibc" 
+  "hicolor-icon-theme" 
+  "jsoncpp" 
+  "libarchive" 
+  "libcurl" 
+  "libgcc" 
+  "libstdc++" 
+  "libuv" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "rhash" 
+  "shared-mime-info" 
+  "zlib-ng-compat" 
+]
+extra-source "cmake-gui-3.28.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cmake-gui-3.28.2-1.fc40.x86_64.rpm"
+}

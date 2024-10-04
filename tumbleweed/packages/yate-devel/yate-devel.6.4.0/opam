@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yate-devel-6.4.0-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yate-devel-6.4.0-5.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "libyate6_4_0" {= "6.4.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "yate-devel-6.4.0-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/yate-devel-6.4.0-5.2.x86_64.rpm"
+}

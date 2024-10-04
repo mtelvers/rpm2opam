@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "slurm-gui-22.05.11-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "slurm-gui-22.05.11-3.fc40.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "slurm" {= "22.5.11"}
+  "slurm-libs" 
+]
+extra-source "slurm-gui-22.05.11-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/slurm-gui-22.05.11-3.fc40.x86_64.rpm"
+}

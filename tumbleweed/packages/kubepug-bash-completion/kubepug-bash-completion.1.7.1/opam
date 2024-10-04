@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kubepug-bash-completion-1.7.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kubepug-bash-completion-1.7.1-2.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "kubepug" {= "1.7.1"}
+]
+extra-source "kubepug-bash-completion-1.7.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kubepug-bash-completion-1.7.1-2.1.noarch.rpm"
+}

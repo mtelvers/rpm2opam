@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-doctemplates-devel-0.11-1.35.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-doctemplates-devel-0.11-1.35.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-aeson-devel" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-doclayout-devel" 
+  "ghc-doctemplates" {= "0.11"}
+  "ghc-filepath-devel" 
+  "ghc-mtl-devel" 
+  "ghc-parsec-devel" 
+  "ghc-safe-devel" 
+  "ghc-scientific-devel" 
+  "ghc-text-conversions-devel" 
+  "ghc-text-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-doctemplates-devel-0.11-1.35.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-doctemplates-devel-0.11-1.35.x86_64.rpm"
+}

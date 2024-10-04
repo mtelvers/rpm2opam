@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "resteasy-jaxb-provider-3.0.26-4.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "resteasy-jaxb-provider-3.0.26-4.6.noarch.rpm"]
+depends: [
+  "glassfish-jaxb-api" 
+  "glassfish-jaxb-runtime" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "jboss-logging" 
+  "jboss-logging-tools" 
+  "tomcat-servlet-4_0-api" 
+]
+extra-source "resteasy-jaxb-provider-3.0.26-4.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/resteasy-jaxb-provider-3.0.26-4.6.noarch.rpm"
+}

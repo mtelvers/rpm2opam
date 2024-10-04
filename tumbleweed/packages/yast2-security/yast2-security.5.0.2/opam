@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-security-5.0.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-security-5.0.2-1.1.noarch.rpm"]
+depends: [
+  "augeas-lenses" 
+  "bash-sh" 
+  "yast2" {>= "4.4.47"}
+  "yast2-bootloader" 
+  "yast2-network" 
+  "yast2-pam" {>= "2.14.0"}
+  "yast2-ruby-bindings" {>= "1.0.0"}
+  "yast2-storage-ng" 
+]
+extra-source "yast2-security-5.0.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/yast2-security-5.0.2-1.1.noarch.rpm"
+}

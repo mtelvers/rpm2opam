@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pfsview-2.2.0-4.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pfsview-2.2.0-4.6.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Widgets5" 
+  "libgcc_s1" 
+  "libgomp1" 
+  "libpfs2" 
+  "libstdc++6" 
+]
+extra-source "pfsview-2.2.0-4.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pfsview-2.2.0-4.6.x86_64.rpm"
+}

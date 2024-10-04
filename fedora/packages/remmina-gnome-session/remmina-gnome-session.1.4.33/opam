@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "remmina-gnome-session-1.4.33-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "remmina-gnome-session-1.4.33-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gnome-session" 
+  "remmina" {= "1.4.33"}
+]
+extra-source "remmina-gnome-session-1.4.33-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/remmina-gnome-session-1.4.33-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plexus-bsh-factory-1.0~a7-slfo.1.2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plexus-bsh-factory-1.0~a7-slfo.1.2.3.noarch.rpm"]
+depends: [
+  "bsh2" 
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "plexus-classworlds" 
+  "plexus-utils" 
+  "sisu-plexus" 
+]
+extra-source "plexus-bsh-factory-1.0~a7-slfo.1.2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/plexus-bsh-factory-1.0~a7-slfo.1.2.3.noarch.rpm"
+}

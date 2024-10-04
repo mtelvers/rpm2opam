@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cepces-certmonger-0.3.7-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cepces-certmonger-0.3.7-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "certmonger" 
+  "python311-base" 
+]
+extra-source "cepces-certmonger-0.3.7-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/cepces-certmonger-0.3.7-slfo.1.1.4.noarch.rpm"
+}

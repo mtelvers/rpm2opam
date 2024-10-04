@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libICE-devel-1.1.1-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libICE-devel-1.1.1-1.6.x86_64.rpm"]
+depends: [
+  "libICE6" {= "1.1.1"}
+  "pkgconf-pkg-config" 
+  "xorgproto-devel" 
+]
+extra-source "libICE-devel-1.1.1-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libICE-devel-1.1.1-1.6.x86_64.rpm"
+}

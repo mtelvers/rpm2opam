@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-uucore-devel-0.0.23-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-uucore-devel-0.0.23-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-clap+cargo-devel" 
+  "rust-clap+default-devel" 
+  "rust-clap+wrap_help-devel" 
+  "rust-glob+default-devel" 
+  "rust-nix+fs-devel" 
+  "rust-nix+signal-devel" 
+  "rust-nix+uio-devel" 
+  "rust-nix+zerocopy-devel" 
+  "rust-nix-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-os_display+default-devel" 
+  "rust-uucore_procs+default-devel" {>= "0.0.19"}
+  "rust-wild+default-devel" 
+]
+extra-source "rust-uucore-devel-0.0.23-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-uucore-devel-0.0.23-2.fc40.noarch.rpm"
+}

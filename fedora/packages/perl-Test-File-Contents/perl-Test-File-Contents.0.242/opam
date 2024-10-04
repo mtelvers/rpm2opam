@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-File-Contents-0.242-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-File-Contents-0.242-5.fc40.noarch.rpm"]
+depends: [
+  "perl-Digest-MD5" 
+  "perl-Exporter" 
+  "perl-PathTools" 
+  "perl-Test-Simple" {>= "0.70"}
+  "perl-Text-Diff" {>= "0.35"}
+  "perl-libs" {>= "5.8.3"}
+]
+extra-source "perl-Test-File-Contents-0.242-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-File-Contents-0.242-5.fc40.noarch.rpm"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-rpkg-1.66-17.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-rpkg-1.66-17.fc40.noarch.rpm"]
+depends: [
+  "mock" 
+  "python3" {= "3.12"}
+  "python3-GitPython" {>= "0.2.0"}
+  "python3-argcomplete" 
+  "python3-cccolutils" 
+  "python3-koji" {>= "1.24"}
+  "python3-libmodulemd" 
+  "python3-pycurl" 
+  "python3-pyyaml" 
+  "python3-requests" 
+  "python3-rpm" 
+  "python3-rpmautospec" {>= "0.3.8"}
+  "python3-six" {>= "1.9.0"}
+  "redhat-rpm-config" 
+  "rpkg-common" {= "1.66"}
+  "rpm-build" 
+  "rpmdevtools" 
+  "rpmlint" 
+]
+extra-source "python3-rpkg-1.66-17.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-rpkg-1.66-17.fc40.noarch.rpm"
+}

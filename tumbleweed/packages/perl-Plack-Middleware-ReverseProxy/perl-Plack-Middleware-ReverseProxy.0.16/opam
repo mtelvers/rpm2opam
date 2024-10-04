@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Plack-Middleware-ReverseProxy-0.16-1.13.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Plack-Middleware-ReverseProxy-0.16-1.13.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Plack" {>= "0.9988"}
+  "perl-base" 
+]
+extra-source "perl-Plack-Middleware-ReverseProxy-0.16-1.13.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Plack-Middleware-ReverseProxy-0.16-1.13.noarch.rpm"
+}

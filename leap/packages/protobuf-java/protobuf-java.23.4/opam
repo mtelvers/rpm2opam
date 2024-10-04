@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "protobuf-java-23.4-slfo.1.1.22.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "protobuf-java-23.4-slfo.1.1.22.x86_64.rpm"]
+depends: [
+  "java-11-openjdk" {>= "1.6.0"}
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "protobuf-java-23.4-slfo.1.1.22.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/protobuf-java-23.4-slfo.1.1.22.x86_64.rpm"
+}

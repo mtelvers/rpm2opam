@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnutls-devel-3.8.3-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnutls-devel-3.8.3-2.fc40.x86_64.rpm"]
+depends: [
+  "gnutls" {= "3.8.3"}
+  "gnutls-c++" {= "3.8.3"}
+  "gnutls-dane" {= "3.8.3"}
+  "libidn2-devel" 
+  "libtasn1-devel" 
+  "nettle-devel" 
+  "p11-kit-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "gnutls-devel-3.8.3-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnutls-devel-3.8.3-2.fc40.x86_64.rpm"
+}

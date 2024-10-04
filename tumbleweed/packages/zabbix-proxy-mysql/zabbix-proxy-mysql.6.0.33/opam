@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zabbix-proxy-mysql-6.0.33-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zabbix-proxy-mysql-6.0.33-2.1.x86_64.rpm"]
+depends: [
+  "OpenIPMI" 
+  "bash-sh" 
+  "glibc" 
+  "libOpenIPMI0" 
+  "libcurl-mini4" 
+  "libevent-2_1-7" 
+  "libldap2" 
+  "libmariadb3" 
+  "libodbc2" 
+  "libopenssl3" 
+  "libpcre1" 
+  "libsnmp40" 
+  "libssh2-1" 
+  "libxml2-2" 
+  "libz-ng-compat1" 
+  "mariadb" 
+  "update-alternatives" 
+]
+extra-source "zabbix-proxy-mysql-6.0.33-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/zabbix-proxy-mysql-6.0.33-2.1.x86_64.rpm"
+}

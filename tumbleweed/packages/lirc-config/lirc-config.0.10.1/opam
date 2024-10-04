@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lirc-config-0.10.1-11.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lirc-config-0.10.1-11.1.noarch.rpm"]
+depends: [
+  "lirc-core" {= "0.10.1"}
+  "python311-PyYAML" 
+  "python311-gobject" 
+]
+extra-source "lirc-config-0.10.1-11.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/lirc-config-0.10.1-11.1.noarch.rpm"
+}

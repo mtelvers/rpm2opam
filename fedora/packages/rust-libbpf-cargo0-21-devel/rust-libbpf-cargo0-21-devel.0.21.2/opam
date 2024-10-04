@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-libbpf-cargo0.21-devel-0.21.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-libbpf-cargo0.21-devel-0.21.2-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "clang" 
+  "rust" {>= "1.64"}
+  "rust-anyhow+default-devel" 
+  "rust-cargo_metadata+default-devel" 
+  "rust-clap+derive-devel" 
+  "rust-clap+help-devel" 
+  "rust-clap+std-devel" 
+  "rust-clap+usage-devel" 
+  "rust-clap-devel" 
+  "rust-libbpf-rs+default-devel" 
+  "rust-libbpf-sys+default-devel" 
+  "rust-memmap2+default-devel" 
+  "rust-num_enum+default-devel" 
+  "rust-regex+std-devel" 
+  "rust-regex+unicode-perl-devel" 
+  "rust-regex-devel" 
+  "rust-scroll+default-devel" 
+  "rust-scroll_derive+default-devel" 
+  "rust-semver+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde_json+default-devel" 
+  "rust-tempfile+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rustfmt" 
+]
+extra-source "rust-libbpf-cargo0.21-devel-0.21.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-libbpf-cargo0.21-devel-0.21.2-3.fc40.noarch.rpm"
+}

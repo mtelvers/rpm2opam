@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-PyChromecast-14.0.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-PyChromecast-14.0.1-1.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-casttube" {>= "0.2.0"}
+  "python311-protobuf" {>= "3.19.1"}
+  "python311-zeroconf" {>= "0.25.1"}
+]
+extra-source "python311-PyChromecast-14.0.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-PyChromecast-14.0.1-1.1.noarch.rpm"
+}

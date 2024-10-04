@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tokio-uring-devel-0.4.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tokio-uring-devel-0.4.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-io-uring+default-devel" 
+  "rust-io-uring0-5+unstable-devel" 
+  "rust-libc+default-devel" 
+  "rust-scoped-tls+default-devel" 
+  "rust-slab+default-devel" 
+  "rust-socket2+all-devel" 
+  "rust-socket2+default-devel" 
+  "rust-tokio+default-devel" 
+  "rust-tokio+net-devel" 
+  "rust-tokio+rt-devel" 
+]
+extra-source "rust-tokio-uring-devel-0.4.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tokio-uring-devel-0.4.0-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-poetry-1.8.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-poetry-1.8.3-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-CacheControl" {>= "0.13"}
+  "python312-base" 
+  "python312-build" {>= "1.0.3"}
+  "python312-cleo" {>= "2.0.0"}
+  "python312-crashtest" {>= "0.4.1"}
+  "python312-dulwich" {>= "0.21.2"}
+  "python312-fastjsonschema" {>= "2.18.0"}
+  "python312-filelock" {>= "3.8.0"}
+  "python312-installer" {>= "0.7.0"}
+  "python312-keyring" {>= "24.0"}
+  "python312-packaging" {>= "23.1"}
+  "python312-pexpect" {>= "4.7.0"}
+  "python312-pkginfo" {>= "1.10.0"}
+  "python312-platformdirs" 
+  "python312-poetry-core" {= "1.9.0"}
+  "python312-poetry-plugin-export" {>= "1.6.0"}
+  "python312-pyproject-hooks" {>= "1.0.0"}
+  "python312-requests" {>= "2.26"}
+  "python312-requests-toolbelt" 
+  "python312-shellingham" {>= "1.5"}
+  "python312-tomlkit" 
+  "python312-trove-classifiers" {>= "2022.5.19"}
+  "python312-virtualenv" {>= "20.22"}
+  "update-alternatives" 
+]
+extra-source "python312-poetry-1.8.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-poetry-1.8.3-1.1.noarch.rpm"
+}

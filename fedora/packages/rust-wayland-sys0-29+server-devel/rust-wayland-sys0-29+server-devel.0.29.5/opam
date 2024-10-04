@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-wayland-sys0.29+server-devel-0.29.5-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-wayland-sys0.29+server-devel-0.29.5-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-wayland-sys0-29+dlib-devel" {= "0.29.5"}
+  "rust-wayland-sys0-29+libc-devel" {= "0.29.5"}
+  "rust-wayland-sys0-29+memoffset-devel" {= "0.29.5"}
+  "rust-wayland-sys0-29-devel" {= "0.29.5"}
+  "wayland-devel" 
+]
+extra-source "rust-wayland-sys0.29+server-devel-0.29.5-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-wayland-sys0.29+server-devel-0.29.5-3.fc40.noarch.rpm"
+}

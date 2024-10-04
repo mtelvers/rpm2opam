@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nagios-www-4.5.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nagios-www-4.5.4-1.1.x86_64.rpm"]
+depends: [
+  "apache2" 
+  "apache2-mod_php8" 
+  "bash-sh" 
+  "busybox-util-linux" 
+  "coreutils" 
+  "gawk" 
+  "gd" 
+  "glibc" 
+  "grep" 
+  "libgd3" 
+  "nagios" {= "4.5.4"}
+  "perl-base" 
+  "php8" 
+  "sed" 
+  "shadow" 
+  "system-user-nagios" 
+]
+extra-source "nagios-www-4.5.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/nagios-www-4.5.4-1.1.x86_64.rpm"
+}

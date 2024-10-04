@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-tasty-rerun-devel-1.1.18-13.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-tasty-rerun-devel-1.1.18-13.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-mtl-devel" 
+  "ghc-optparse-applicative-devel" 
+  "ghc-split-devel" 
+  "ghc-stm-devel" 
+  "ghc-tagged-devel" 
+  "ghc-tasty-devel" 
+  "ghc-tasty-rerun" {= "1.1.18"}
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-tasty-rerun-devel-1.1.18-13.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-tasty-rerun-devel-1.1.18-13.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Net-AMQP-RabbitMQ-2.40012-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-AMQP-RabbitMQ-2.40012-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libopenssl3" 
+  "perl" 
+  "perl-Math-Int64" {>= "0.34"}
+]
+extra-source "perl-Net-AMQP-RabbitMQ-2.40012-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-Net-AMQP-RabbitMQ-2.40012-1.1.x86_64.rpm"
+}

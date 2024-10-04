@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Image-ExifTool-12.97-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Image-ExifTool-12.97-1.1.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-File-RandomAccess" {>= "1.11"}
+]
+extra-source "perl-Image-ExifTool-12.97-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Image-ExifTool-12.97-1.1.noarch.rpm"
+}

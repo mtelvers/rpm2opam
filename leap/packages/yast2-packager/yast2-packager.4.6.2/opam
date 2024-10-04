@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yast2-packager-4.6.2-slfo.1.1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yast2-packager-4.6.2-slfo.1.1.3.x86_64.rpm"]
+depends: [
+  "augeas-lenses" 
+  "bash" 
+  "busybox-coreutils" 
+  "libyui-ncurses-pkg16" 
+  "perl-base" 
+  "ruby-solv" 
+  "ruby3-2-rubygem-cfa" {>= "0.5.0"}
+  "ruby3-2-rubygem-nokogiri" 
+  "unzip" 
+  "yast2" {>= "4.4.38"}
+  "yast2-core" {>= "2.16.35"}
+  "yast2-country-data" {>= "2.16.3"}
+  "yast2-pkg-bindings" {>= "4.2.8"}
+  "yast2-ruby-bindings" {>= "1.0.0"}
+  "yast2-storage-ng" {>= "4.0.141"}
+  "yast2-transfer" 
+]
+extra-source "yast2-packager-4.6.2-slfo.1.1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/yast2-packager-4.6.2-slfo.1.1.3.x86_64.rpm"
+}

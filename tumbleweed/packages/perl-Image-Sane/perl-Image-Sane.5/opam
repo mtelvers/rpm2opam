@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Image-Sane-5-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Image-Sane-5-4.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libsane1" 
+  "perl" 
+  "perl-Exception-Class" 
+  "perl-Readonly" 
+]
+extra-source "perl-Image-Sane-5-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-Image-Sane-5-4.2.x86_64.rpm"
+}

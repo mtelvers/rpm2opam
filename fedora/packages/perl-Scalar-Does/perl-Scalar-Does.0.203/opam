@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Scalar-Does-0.203-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Scalar-Does-0.203-23.fc40.noarch.rpm"]
+depends: [
+  "perl-B" 
+  "perl-Carp" {>= "0"}
+  "perl-Exporter-Tiny" {>= "0.26"}
+  "perl-Scalar-List-Utils" {>= "1.24"}
+  "perl-Type-Tiny" {>= "0.4"}
+  "perl-URI" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-if" 
+  "perl-lexical-underscore" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-namespace-clean" {>= "0.19"}
+  "perl-overload" 
+]
+extra-source "perl-Scalar-Does-0.203-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Scalar-Does-0.203-23.fc40.noarch.rpm"
+}

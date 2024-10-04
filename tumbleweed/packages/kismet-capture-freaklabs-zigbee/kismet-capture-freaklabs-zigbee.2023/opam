@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kismet-capture-freaklabs-zigbee-2023_07_R1-3.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kismet-capture-freaklabs-zigbee-2023_07_R1-3.6.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-protobuf" {>= "3.0.0"}
+  "python311-pyserial" 
+]
+extra-source "kismet-capture-freaklabs-zigbee-2023_07_R1-3.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kismet-capture-freaklabs-zigbee-2023_07_R1-3.6.noarch.rpm"
+}

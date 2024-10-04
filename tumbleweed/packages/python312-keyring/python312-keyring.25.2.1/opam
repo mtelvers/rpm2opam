@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-keyring-25.2.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-keyring-25.2.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-SecretStorage" {>= "3.2"}
+  "python312-base" {= "3.12"}
+  "python312-jaraco-classes" 
+  "python312-jaraco-context" 
+  "python312-jaraco-functools" 
+  "python312-jeepney" {>= "0.4.2"}
+  "update-alternatives" 
+]
+extra-source "python312-keyring-25.2.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-keyring-25.2.1-1.1.noarch.rpm"
+}

@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-tabularray-2024.216.2024asvn69906-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-tabularray-2024.216.2024asvn69906-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-amsmath" 
+  "texlive-booktabs" 
+  "texlive-diagbox" 
+  "texlive-environ" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-functional" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-l3kernel" 
+  "texlive-l3packages" 
+  "texlive-ninecolors" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-siunitx" 
+  "texlive-varwidth" 
+  "texlive-xcolor" 
+  "texlive-zref" 
+]
+extra-source "texlive-tabularray-2024.216.2024asvn69906-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-tabularray-2024.216.2024asvn69906-57.1.noarch.rpm"
+}

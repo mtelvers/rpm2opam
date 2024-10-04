@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-ara+server-1.7.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-ara+server-1.7.0-3.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-ara" {= "1.7.0"}
+  "python3-django" 
+  "python3-django-cors-headers" 
+  "python3-django-filter" 
+  "python3-django-health-check" 
+  "python3-django-rest-framework" {>= "3.9.1"}
+  "python3-pygments" 
+  "python3-ruamel-yaml" 
+  "python3-tzlocal" {>= "4"}
+  "python3-whitenoise" 
+]
+extra-source "python3-ara+server-1.7.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-ara+server-1.7.0-3.fc40.noarch.rpm"
+}

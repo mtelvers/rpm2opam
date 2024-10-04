@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-clap_derive+unstable-v5-devel-4.5.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-clap_derive+unstable-v5-devel-4.5.3-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-clap_derive+deprecated-devel" {= "4.5.3"}
+  "rust-clap_derive-devel" {= "4.5.3"}
+]
+extra-source "rust-clap_derive+unstable-v5-devel-4.5.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-clap_derive+unstable-v5-devel-4.5.3-1.fc40.noarch.rpm"
+}

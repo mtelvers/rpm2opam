@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-goblin0.5+default-devel-0.5.4-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-goblin0.5+default-devel-0.5.4-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-goblin0-5+archive-devel" {= "0.5.4"}
+  "rust-goblin0-5+elf32-devel" {= "0.5.4"}
+  "rust-goblin0-5+elf64-devel" {= "0.5.4"}
+  "rust-goblin0-5+endian_fd-devel" {= "0.5.4"}
+  "rust-goblin0-5+mach32-devel" {= "0.5.4"}
+  "rust-goblin0-5+mach64-devel" {= "0.5.4"}
+  "rust-goblin0-5+pe32-devel" {= "0.5.4"}
+  "rust-goblin0-5+pe64-devel" {= "0.5.4"}
+  "rust-goblin0-5+std-devel" {= "0.5.4"}
+  "rust-goblin0-5-devel" {= "0.5.4"}
+]
+extra-source "rust-goblin0.5+default-devel-0.5.4-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-goblin0.5+default-devel-0.5.4-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "oz-0.18.1-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "oz-0.18.1-13.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "genisoimage" 
+  "libvirt-daemon-config-network" 
+  "libvirt-daemon-kvm" 
+  "libvirt-daemon-qemu" 
+  "mtools" 
+  "openssh-clients" 
+  "perl-interpreter" 
+  "python3" 
+  "python3-libguestfs" {>= "1.18"}
+  "python3-libvirt" 
+  "python3-lxml" 
+  "python3-m2crypto" 
+  "python3-monotonic" 
+  "python3-requests" 
+]
+extra-source "oz-0.18.1-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/oz-0.18.1-13.fc40.noarch.rpm"
+}

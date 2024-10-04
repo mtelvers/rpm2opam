@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "enet-devel-1.3.18-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "enet-devel-1.3.18-1.1.x86_64.rpm"]
+depends: [
+  "libenet7" {= "1.3.18"}
+  "pkgconf-pkg-config" 
+]
+extra-source "enet-devel-1.3.18-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/enet-devel-1.3.18-1.1.x86_64.rpm"
+}

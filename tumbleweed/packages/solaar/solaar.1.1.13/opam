@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "solaar-1.1.13-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "solaar-1.1.13-1.1.noarch.rpm"]
+depends: [
+  "python311-PyYAML" 
+  "python311-base" {= "3.11"}
+  "python311-dbus-python" 
+  "python311-evdev" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-hid-parser" 
+  "python311-psutil" 
+  "python311-python-xlib" 
+  "python311-pyudev" 
+  "python311-typing_extensions" 
+  "solaar-udev" {>= "1.1.13"}
+  "typelib-1_0-AyatanaAppIndicator3-0_1" 
+  "typelib-1_0-Gtk-3_0" {>= "3.0"}
+]
+extra-source "solaar-1.1.13-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/solaar-1.1.13-1.1.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "curtail-lang-1.10.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "curtail-lang-1.10.0-2.1.noarch.rpm"]
+depends: [
+  "curtail" {= "1.10.0"}
+]
+extra-source "curtail-lang-1.10.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/curtail-lang-1.10.0-2.1.noarch.rpm"
+}

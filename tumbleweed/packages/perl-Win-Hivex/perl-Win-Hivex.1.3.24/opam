@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Win-Hivex-1.3.24-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Win-Hivex-1.3.24-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libhivex0" 
+  "perl" {= "5.40.0"}
+]
+extra-source "perl-Win-Hivex-1.3.24-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-Win-Hivex-1.3.24-1.1.x86_64.rpm"
+}

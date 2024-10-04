@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kernel-install-tools-0.3.0-2.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kernel-install-tools-0.3.0-2.4.x86_64.rpm"]
+depends: [
+  "bash" 
+  "mozilla-nss-tools" 
+  "openssl" 
+  "pesign" 
+]
+extra-source "kernel-install-tools-0.3.0-2.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kernel-install-tools-0.3.0-2.4.x86_64.rpm"
+}

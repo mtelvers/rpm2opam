@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-parsel-1.9.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-parsel-1.9.1-1.1.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-cssselect" {>= "1.2.0"}
+  "python312-jmespath" 
+  "python312-lxml" 
+  "python312-typing_extensions" 
+  "python312-w3lib" {>= "1.19.0"}
+]
+extra-source "python312-parsel-1.9.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-parsel-1.9.1-1.1.noarch.rpm"
+}

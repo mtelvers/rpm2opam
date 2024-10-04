@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfwps-devel-20240417-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfwps-devel-20240417-1.1.x86_64.rpm"]
+depends: [
+  "libfwps1" {= "20240417"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libfwps-devel-20240417-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfwps-devel-20240417-1.1.x86_64.rpm"
+}

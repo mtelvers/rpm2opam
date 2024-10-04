@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "oaml-devel-1.3.4-1.19.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "oaml-devel-1.3.4-1.19.x86_64.rpm"]
+depends: [
+  "liboaml1" {= "1.3.4"}
+  "libogg-devel" 
+  "libvorbis-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "oaml-devel-1.3.4-1.19.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/oaml-devel-1.3.4-1.19.x86_64.rpm"
+}

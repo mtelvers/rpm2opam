@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-distributed-2024.8.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-distributed-2024.8.2-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-Jinja2" {>= "2.10.3"}
+  "python310-PyYAML" {>= "5.4.1"}
+  "python310-base" {= "3.10"}
+  "python310-click" {>= "8.0"}
+  "python310-cloudpickle" {>= "3.0.0"}
+  "python310-dask" {= "2024.8.2"}
+  "python310-locket" {>= "1.0.0"}
+  "python310-msgpack" {>= "1.0.2"}
+  "python310-packaging" {>= "20.0"}
+  "python310-psutil" {>= "5.8.0"}
+  "python310-sortedcontainers" {>= "2.0.5"}
+  "python310-tblib" {>= "1.6.0"}
+  "python310-toolz" {>= "0.11.2"}
+  "python310-tornado" {>= "6.2.0"}
+  "python310-urllib3" {>= "1.26.5"}
+  "python310-zict" {>= "2.2.0"}
+  "update-alternatives" 
+]
+extra-source "python310-distributed-2024.8.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-distributed-2024.8.2-1.1.noarch.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-typed-process-devel-0.2.12.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-typed-process-devel-0.2.12.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-async-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-process-devel" 
+  "ghc-stm-devel" 
+  "ghc-transformers-devel" 
+  "ghc-typed-process" {= "0.2.12.0"}
+  "ghc-unliftio-core-devel" 
+]
+extra-source "ghc-typed-process-devel-0.2.12.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-typed-process-devel-0.2.12.0-1.1.x86_64.rpm"
+}

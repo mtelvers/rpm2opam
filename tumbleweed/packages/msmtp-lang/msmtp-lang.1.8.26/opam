@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "msmtp-lang-1.8.26-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "msmtp-lang-1.8.26-1.1.noarch.rpm"]
+depends: [
+  "msmtp" {= "1.8.26"}
+]
+extra-source "msmtp-lang-1.8.26-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/msmtp-lang-1.8.26-1.1.noarch.rpm"
+}

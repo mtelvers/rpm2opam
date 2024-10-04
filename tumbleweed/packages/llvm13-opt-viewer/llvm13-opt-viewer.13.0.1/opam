@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "llvm13-opt-viewer-13.0.1-17.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "llvm13-opt-viewer-13.0.1-17.1.noarch.rpm"]
+depends: [
+  "python311-PyYAML" 
+  "python311-Pygments" 
+  "python311-base" 
+]
+extra-source "llvm13-opt-viewer-13.0.1-17.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/llvm13-opt-viewer-13.0.1-17.1.noarch.rpm"
+}

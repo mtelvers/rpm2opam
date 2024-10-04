@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rep-gtk-devel-0.90.8.3-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rep-gtk-devel-0.90.8.3-20.fc40.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf2-devel" 
+  "gtk2-devel" 
+  "librep-devel" 
+  "pkgconf-pkg-config" 
+  "rep-gtk" {= "0.90.8.3"}
+]
+extra-source "rep-gtk-devel-0.90.8.3-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rep-gtk-devel-0.90.8.3-20.fc40.x86_64.rpm"
+}

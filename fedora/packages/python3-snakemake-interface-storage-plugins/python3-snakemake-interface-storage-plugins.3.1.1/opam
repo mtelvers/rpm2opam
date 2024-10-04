@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-snakemake-interface-storage-plugins-3.1.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-snakemake-interface-storage-plugins-3.1.1-1.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-reretry" 
+  "python3-snakemake-interface-common" 
+  "python3-throttler" 
+  "python3-wrapt" 
+]
+extra-source "python3-snakemake-interface-storage-plugins-3.1.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-snakemake-interface-storage-plugins-3.1.1-1.fc40.noarch.rpm"
+}

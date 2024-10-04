@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-pattern-arrows-prof-0.0.2-41.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-pattern-arrows-prof-0.0.2-41.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-mtl-prof" 
+  "ghc-pattern-arrows-devel" {= "0.0.2"}
+]
+extra-source "ghc-pattern-arrows-prof-0.0.2-41.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-pattern-arrows-prof-0.0.2-41.fc40.x86_64.rpm"
+}

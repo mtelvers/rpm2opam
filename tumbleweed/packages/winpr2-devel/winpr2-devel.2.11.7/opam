@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "winpr2-devel-2.11.7-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "winpr2-devel-2.11.7-1.2.x86_64.rpm"]
+depends: [
+  "cmake" {>= "2.8"}
+  "libopenssl-1_0_0-devel" 
+  "libwinpr2-2" {= "2.11.7"}
+  "pkgconf-pkg-config" 
+]
+extra-source "winpr2-devel-2.11.7-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/winpr2-devel-2.11.7-1.2.x86_64.rpm"
+}

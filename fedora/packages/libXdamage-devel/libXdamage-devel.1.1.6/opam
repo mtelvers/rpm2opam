@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libXdamage-devel-1.1.6-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libXdamage-devel-1.1.6-3.fc40.x86_64.rpm"]
+depends: [
+  "libX11-devel" 
+  "libXdamage" {= "1.1.6"}
+  "libXfixes-devel" 
+  "pkgconf-pkg-config" 
+  "xorg-x11-proto-devel" {>= "1.1"}
+]
+extra-source "libXdamage-devel-1.1.6-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libXdamage-devel-1.1.6-3.fc40.x86_64.rpm"
+}

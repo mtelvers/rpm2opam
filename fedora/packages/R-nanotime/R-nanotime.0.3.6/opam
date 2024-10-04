@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-nanotime-0.3.6-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-nanotime-0.3.6-6.fc40.x86_64.rpm"]
+depends: [
+  "R-RcppCCTZ" {>= "0.2.9"}
+  "R-bit64" 
+  "R-core" {= "4.3"}
+  "R-zoo" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "R-nanotime-0.3.6-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-nanotime-0.3.6-6.fc40.x86_64.rpm"
+}

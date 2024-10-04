@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "yawn-0-0.47.20140318svn632.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yawn-0-0.47.20140318svn632.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "httpd" 
+  "python3" 
+  "python3-mako" 
+  "python3-mod_wsgi" 
+  "python3-pywbem" 
+  "python3-werkzeug" 
+]
+extra-source "yawn-0-0.47.20140318svn632.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/y/yawn-0-0.47.20140318svn632.fc40.noarch.rpm"
+}

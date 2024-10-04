@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-dparse-0.6.3-2.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-dparse-0.6.3-2.5.noarch.rpm"]
+depends: [
+  "python311-PyYAML" 
+  "python311-base" {= "3.11"}
+  "python311-packaging" 
+  "python311-tomli" 
+]
+extra-source "python311-dparse-0.6.3-2.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-dparse-0.6.3-2.5.noarch.rpm"
+}

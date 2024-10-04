@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "munge-maven-plugin-1.0-2.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "munge-maven-plugin-1.0-2.15.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-lib" 
+]
+extra-source "munge-maven-plugin-1.0-2.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/munge-maven-plugin-1.0-2.15.noarch.rpm"
+}

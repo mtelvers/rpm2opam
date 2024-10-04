@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dns24-update-1.1-1.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dns24-update-1.1-1.17.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "curl" 
+]
+extra-source "dns24-update-1.1-1.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dns24-update-1.1-1.17.noarch.rpm"
+}

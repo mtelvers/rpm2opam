@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "chronic-0.68-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "chronic-0.68-1.3.noarch.rpm"]
+depends: [
+  "perl-IPC-Run" 
+  "perl-base" 
+]
+extra-source "chronic-0.68-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/chronic-0.68-1.3.noarch.rpm"
+}

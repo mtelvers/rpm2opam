@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Cache-2.11-27.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Cache-2.11-27.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-DB_File" 
+  "perl-Digest-SHA" 
+  "perl-Fcntl" 
+  "perl-File-NFSLock" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-Heap" 
+  "perl-IO" 
+  "perl-IO-String" 
+  "perl-PathTools" 
+  "perl-Storable" 
+  "perl-Symbol" 
+  "perl-TimeDate" 
+  "perl-base" 
+  "perl-fields" 
+  "perl-libs" {>= "5.6.0"}
+]
+extra-source "perl-Cache-2.11-27.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Cache-2.11-27.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libclaw-1.7.4-38.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libclaw-1.7.4-38.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libstdc++" 
+]
+extra-source "libclaw-1.7.4-38.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libclaw-1.7.4-38.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-menus-devel-3.36.0-3.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-menus-devel-3.36.0-3.5.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libgnome-menu-3-0" {= "3.36.0"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-GMenu-3_0" {= "3.36.0"}
+]
+extra-source "gnome-menus-devel-3.36.0-3.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnome-menus-devel-3.36.0-3.5.x86_64.rpm"
+}

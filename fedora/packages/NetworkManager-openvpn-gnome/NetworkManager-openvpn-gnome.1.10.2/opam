@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "NetworkManager-openvpn-gnome-1.10.2-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "NetworkManager-openvpn-gnome-1.10.2-6.fc40.x86_64.rpm"]
+depends: [
+  "NetworkManager-libnm" 
+  "NetworkManager-openvpn" {= "1.10.2"}
+  "atk" 
+  "cairo" 
+  "cairo-gobject" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "graphene" 
+  "gtk3" 
+  "gtk4" 
+  "harfbuzz" 
+  "libgcc" 
+  "libnma" 
+  "libnma-gtk4" 
+  "libsecret" 
+  "pango" 
+  "shared-mime-info" 
+  "vulkan-loader" 
+  "zlib-ng-compat" 
+]
+extra-source "NetworkManager-openvpn-gnome-1.10.2-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/NetworkManager-openvpn-gnome-1.10.2-6.fc40.x86_64.rpm"
+}

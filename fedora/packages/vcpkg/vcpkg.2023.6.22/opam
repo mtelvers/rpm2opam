@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vcpkg-2023.06.22-3.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vcpkg-2023.06.22-3.fc39.x86_64.rpm"]
+depends: [
+  "cmake" 
+  "fmt" 
+  "gcc-c++" 
+  "git-core" 
+  "glibc" {>= "2.37.9000"}
+  "libgcc" 
+  "libstdc++" 
+  "ninja-build" 
+]
+extra-source "vcpkg-2023.06.22-3.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vcpkg-2023.06.22-3.fc39.x86_64.rpm"
+}

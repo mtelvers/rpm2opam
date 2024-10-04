@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-snap-server-prof-1.1.2.1-25.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-snap-server-prof-1.1.2.1-25.fc40.x86_64.rpm"]
+depends: [
+  "ghc-attoparsec-prof" 
+  "ghc-base-prof" 
+  "ghc-blaze-builder-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-case-insensitive-prof" 
+  "ghc-clock-prof" 
+  "ghc-containers-prof" 
+  "ghc-filepath-prof" 
+  "ghc-io-streams-haproxy-prof" 
+  "ghc-io-streams-prof" 
+  "ghc-lifted-base-prof" 
+  "ghc-mtl-prof" 
+  "ghc-network-prof" 
+  "ghc-old-locale-prof" 
+  "ghc-snap-core-prof" 
+  "ghc-snap-server-devel" {= "1.1.2.1"}
+  "ghc-text-prof" 
+  "ghc-time-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unix-compat-prof" 
+  "ghc-unix-prof" 
+  "ghc-vector-prof" 
+]
+extra-source "ghc-snap-server-prof-1.1.2.1-25.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-snap-server-prof-1.1.2.1-25.fc40.x86_64.rpm"
+}

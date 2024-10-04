@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-ppxlib-devel-0.31.0-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-ppxlib-devel-0.31.0-7.fc40.x86_64.rpm"]
+depends: [
+  "ocaml" {= "2125"}
+  "ocaml-compiler-libs" {= "2"}
+  "ocaml-compiler-libs-janestreet" {= "31"}
+  "ocaml-compiler-libs-janestreet-devel" 
+  "ocaml-ppx-derivers" {= "3"}
+  "ocaml-ppx-derivers-devel" 
+  "ocaml-ppxlib" {= "0.31.0"}
+  "ocaml-sexplib0" {= "0"}
+  "ocaml-sexplib0-devel" 
+]
+extra-source "ocaml-ppxlib-devel-0.31.0-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-ppxlib-devel-0.31.0-7.fc40.x86_64.rpm"
+}

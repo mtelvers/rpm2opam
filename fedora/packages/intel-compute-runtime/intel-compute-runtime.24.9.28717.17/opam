@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "intel-compute-runtime-24.09.28717.17-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "intel-compute-runtime-24.09.28717.17-1.fc40.x86_64.rpm"]
+depends: [
+  "intel-igc" 
+  "intel-level-zero" {= "24.9.28717.17"}
+  "intel-ocloc" {= "24.9.28717.17"}
+  "intel-opencl" {= "24.9.28717.17"}
+]
+extra-source "intel-compute-runtime-24.09.28717.17-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/intel-compute-runtime-24.09.28717.17-1.fc40.x86_64.rpm"
+}

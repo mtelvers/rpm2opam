@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtk2-branding-openSUSE-15.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk2-branding-openSUSE-15.0-2.2.noarch.rpm"]
+depends: [
+  "gtk2-metatheme-adwaita" 
+  "libgtk-2_0-0" {= "2.24.33"}
+]
+extra-source "gtk2-branding-openSUSE-15.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gtk2-branding-openSUSE-15.0-2.2.noarch.rpm"
+}

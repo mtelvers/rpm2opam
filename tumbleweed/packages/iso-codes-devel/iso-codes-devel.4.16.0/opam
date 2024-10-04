@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "iso-codes-devel-4.16.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "iso-codes-devel-4.16.0-2.1.noarch.rpm"]
+depends: [
+  "iso-codes" {= "4.16.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "iso-codes-devel-4.16.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/iso-codes-devel-4.16.0-2.1.noarch.rpm"
+}

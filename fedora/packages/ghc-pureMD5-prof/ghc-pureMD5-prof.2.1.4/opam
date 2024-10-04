@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-pureMD5-prof-2.1.4-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-pureMD5-prof-2.1.4-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-binary-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-cereal-prof" 
+  "ghc-crypto-api-prof" 
+  "ghc-pureMD5-devel" {= "2.1.4"}
+  "ghc-tagged-prof" 
+]
+extra-source "ghc-pureMD5-prof-2.1.4-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-pureMD5-prof-2.1.4-8.fc40.x86_64.rpm"
+}

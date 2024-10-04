@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jupyter-jupyterlab-ipyvuetify-1.10.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jupyter-jupyterlab-ipyvuetify-1.10.0-1.1.noarch.rpm"]
+depends: [
+  "jupyter-jupyterlab" 
+  "python310-ipyvuetify" {= "1.10"}
+]
+extra-source "jupyter-jupyterlab-ipyvuetify-1.10.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jupyter-jupyterlab-ipyvuetify-1.10.0-1.1.noarch.rpm"
+}

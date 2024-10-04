@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "zynaddsubfx-3.0.6-1.fc38.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zynaddsubfx-3.0.6-1.fc38.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "fftw-libs-single" 
+  "fltk" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "jack-audio-connection-kit" 
+  "lash-libs" 
+  "libXpm" 
+  "libgcc" 
+  "liblo" 
+  "libstdc++" 
+  "mxml" 
+  "non-ntk" 
+  "portaudio" 
+  "zlib-ng-compat" 
+  "zynaddsubfx-common" {= "3.0.6"}
+]
+extra-source "zynaddsubfx-3.0.6-1.fc38.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/z/zynaddsubfx-3.0.6-1.fc38.x86_64.rpm"
+}

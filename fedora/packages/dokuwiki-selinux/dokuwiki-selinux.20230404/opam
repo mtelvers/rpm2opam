@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dokuwiki-selinux-20230404a-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dokuwiki-selinux-20230404a-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "dokuwiki" {= "20230404"}
+  "policycoreutils" 
+  "policycoreutils-python-utils" 
+]
+extra-source "dokuwiki-selinux-20230404a-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dokuwiki-selinux-20230404a-4.fc40.noarch.rpm"
+}

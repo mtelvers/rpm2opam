@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Net-Whois-Raw-2.99040-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-Whois-Raw-2.99040-1.1.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "perl" 
+  "perl-HTTP-Message" 
+  "perl-Net-IDN-Encode" 
+  "perl-Regexp-IPv6" 
+  "perl-URI" 
+  "perl-libwww-perl" 
+]
+extra-source "perl-Net-Whois-Raw-2.99040-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Net-Whois-Raw-2.99040-1.1.noarch.rpm"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-x11+all-devel-2.21.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-x11+all-devel-2.21.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-x11+dox-devel" {= "2.21.0"}
+  "rust-x11+dpms-devel" {= "2.21.0"}
+  "rust-x11+glx-devel" {= "2.21.0"}
+  "rust-x11+xcursor-devel" {= "2.21.0"}
+  "rust-x11+xf86vmode-devel" {= "2.21.0"}
+  "rust-x11+xfixes-devel" {= "2.21.0"}
+  "rust-x11+xft-devel" {= "2.21.0"}
+  "rust-x11+xinerama-devel" {= "2.21.0"}
+  "rust-x11+xinput-devel" {= "2.21.0"}
+  "rust-x11+xlib-devel" {= "2.21.0"}
+  "rust-x11+xlib_xcb-devel" {= "2.21.0"}
+  "rust-x11+xmu-devel" {= "2.21.0"}
+  "rust-x11+xrandr-devel" {= "2.21.0"}
+  "rust-x11+xrecord-devel" {= "2.21.0"}
+  "rust-x11+xrender-devel" {= "2.21.0"}
+  "rust-x11+xss-devel" {= "2.21.0"}
+  "rust-x11+xt-devel" {= "2.21.0"}
+  "rust-x11+xtest-devel" {= "2.21.0"}
+  "rust-x11+xtst-devel" {= "2.21.0"}
+  "rust-x11-devel" {= "2.21.0"}
+]
+extra-source "rust-x11+all-devel-2.21.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-x11+all-devel-2.21.0-3.fc40.noarch.rpm"
+}

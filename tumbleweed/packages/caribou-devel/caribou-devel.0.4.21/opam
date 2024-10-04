@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "caribou-devel-0.4.21-9.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "caribou-devel-0.4.21-9.1.x86_64.rpm"]
+depends: [
+  "gtk3-devel" 
+  "libXtst-devel" 
+  "libcaribou0" {= "0.4.21"}
+  "libgee-devel" 
+  "libxklavier-devel" 
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Caribou-1_0" {= "0.4.21"}
+]
+extra-source "caribou-devel-0.4.21-9.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/caribou-devel-0.4.21-9.1.x86_64.rpm"
+}

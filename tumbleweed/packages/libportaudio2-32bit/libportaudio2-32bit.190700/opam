@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libportaudio2-32bit-190700_20210406-1.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libportaudio2-32bit-190700_20210406-1.11.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libasound2-32bit" 
+  "libgcc_s1-32bit" 
+  "libjack0-32bit" 
+]
+extra-source "libportaudio2-32bit-190700_20210406-1.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libportaudio2-32bit-190700_20210406-1.11.x86_64.rpm"
+}

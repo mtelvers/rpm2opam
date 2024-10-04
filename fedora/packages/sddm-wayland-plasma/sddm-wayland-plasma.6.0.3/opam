@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sddm-wayland-plasma-6.0.3-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sddm-wayland-plasma-6.0.3-2.fc40.noarch.rpm"]
+depends: [
+  "kwin-wayland" 
+  "layer-shell-qt" 
+  "maliit-keyboard" 
+]
+extra-source "sddm-wayland-plasma-6.0.3-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sddm-wayland-plasma-6.0.3-2.fc40.noarch.rpm"
+}

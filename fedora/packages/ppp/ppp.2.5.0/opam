@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ppp-2.5.0-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ppp-2.5.0-7.fc40.x86_64.rpm"]
+depends: [
+  "authselect-libs" 
+  "bash" 
+  "glib2" 
+  "glibc" {>= "2.0.6"}
+  "glibc-common" 
+  "libpcap" 
+  "libxcrypt" 
+  "linux-atm-libs" 
+  "openssl-libs" 
+  "pam-libs" 
+  "shadow-utils" 
+  "systemd" 
+  "systemd-libs" 
+]
+extra-source "ppp-2.5.0-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/ppp-2.5.0-7.fc40.x86_64.rpm"
+}

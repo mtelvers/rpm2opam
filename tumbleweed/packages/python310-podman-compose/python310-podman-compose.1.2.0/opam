@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-podman-compose-1.2.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-podman-compose-1.2.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "podman" 
+  "python310-PyYAML" 
+  "python310-base" 
+  "python310-python-dotenv" 
+  "python310-setuptools" 
+  "update-alternatives" 
+]
+extra-source "python310-podman-compose-1.2.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-podman-compose-1.2.0-1.1.noarch.rpm"
+}

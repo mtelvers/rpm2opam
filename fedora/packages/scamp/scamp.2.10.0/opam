@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "scamp-2.10.0-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scamp-2.10.0-9.fc40.x86_64.rpm"]
+depends: [
+  "cdsclient" 
+  "fftw-libs-single" 
+  "glibc" 
+  "libcurl" 
+  "openblas-threads" 
+  "plplot-libs" 
+]
+extra-source "scamp-2.10.0-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/scamp-2.10.0-9.fc40.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "scim-sunpinyin-2.0.3-12.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scim-sunpinyin-2.0.3-12.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcc_s1" 
+  "libgtk-3-0" 
+  "libstdc++6" 
+  "libsunpinyin3" 
+  "scim" 
+]
+extra-source "scim-sunpinyin-2.0.3-12.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/scim-sunpinyin-2.0.3-12.2.x86_64.rpm"
+}

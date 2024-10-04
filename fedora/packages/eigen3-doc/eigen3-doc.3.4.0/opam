@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "eigen3-doc-3.4.0-15.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eigen3-doc-3.4.0-15.fc40.noarch.rpm"]
+depends: [
+  "eigen3-devel" {= "3.4.0"}
+]
+extra-source "eigen3-doc-3.4.0-15.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/eigen3-doc-3.4.0-15.fc40.noarch.rpm"
+}

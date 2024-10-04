@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-string_cache_codegen-devel-0.5.2-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-string_cache_codegen-devel-0.5.2-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-phf_generator+default-devel" 
+  "rust-phf_shared+default-devel" 
+  "rust-proc-macro2+default-devel" 
+  "rust-quote+default-devel" 
+]
+extra-source "rust-string_cache_codegen-devel-0.5.2-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-string_cache_codegen-devel-0.5.2-6.fc40.noarch.rpm"
+}

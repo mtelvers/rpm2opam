@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "resalloc-ibm-cloud-2.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "resalloc-ibm-cloud-2.1-1.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-ibm-cloud-sdk-core" {>= "3.13"}
+  "python3-ibm-vpc" {>= "0.9"}
+  "resalloc-helpers" 
+]
+extra-source "resalloc-ibm-cloud-2.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/resalloc-ibm-cloud-2.1-1.fc40.noarch.rpm"
+}

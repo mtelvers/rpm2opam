@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-resolver-transport-http-1.9.22-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-resolver-transport-http-1.9.22-1.1.noarch.rpm"]
+depends: [
+  "apache-commons-codec" 
+  "httpcomponents-client" 
+  "httpcomponents-core" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "jcl-over-slf4j" 
+  "maven-resolver-api" {= "1.9.22"}
+  "maven-resolver-spi" {= "1.9.22"}
+  "maven-resolver-util" {= "1.9.22"}
+  "slf4j" 
+]
+extra-source "maven-resolver-transport-http-1.9.22-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-resolver-transport-http-1.9.22-1.1.noarch.rpm"
+}

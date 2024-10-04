@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-x-vuln-devel-0-0.4.20230221git6ad3e3d.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-x-vuln-devel-0-0.4.20230221git6ad3e3d.fc39.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-google-cmp-devel" 
+  "golang-x-exp-devel" 
+  "golang-x-mod-devel" 
+]
+extra-source "golang-x-vuln-devel-0-0.4.20230221git6ad3e3d.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-x-vuln-devel-0-0.4.20230221git6ad3e3d.fc39.noarch.rpm"
+}

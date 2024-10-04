@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-DBD-SQLite-1.740.0-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DBD-SQLite-1.740.0-4.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libsqlite3-0" 
+  "perl" 
+  "perl-DBI" {>= "1.57"}
+]
+extra-source "perl-DBD-SQLite-1.740.0-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-DBD-SQLite-1.740.0-4.2.x86_64.rpm"
+}

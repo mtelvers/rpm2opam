@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Plack-Middleware-Session-0.33-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Plack-Middleware-Session-0.33-16.fc40.noarch.rpm"]
+depends: [
+  "perl-Cookie-Baker" 
+  "perl-Digest-HMAC" 
+  "perl-Digest-SHA" 
+  "perl-MIME-Base64" 
+  "perl-Plack" 
+  "perl-Scalar-List-Utils" 
+  "perl-Storable" 
+  "perl-Time-HiRes" 
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-Plack-Middleware-Session-0.33-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Plack-Middleware-Session-0.33-16.fc40.noarch.rpm"
+}

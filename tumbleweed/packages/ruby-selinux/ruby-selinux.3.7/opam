@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ruby-selinux-3.7-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ruby-selinux-3.7-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libruby3_3-3_3" 
+  "libselinux1" 
+  "ruby" 
+]
+extra-source "ruby-selinux-3.7-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ruby-selinux-3.7-1.1.x86_64.rpm"
+}

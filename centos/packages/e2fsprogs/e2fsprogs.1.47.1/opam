@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "e2fsprogs-1.47.1-2.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "e2fsprogs-1.47.1-2.el10.x86_64.rpm"]
+depends: [
+  "e2fsprogs-libs" {= "1.47.1"}
+  "fuse3-libs" 
+  "glibc" 
+  "libblkid" 
+  "libcom_err" 
+  "libss" {= "1.47.1"}
+  "libuuid" 
+]
+extra-source "e2fsprogs-1.47.1-2.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/e2fsprogs-1.47.1-2.el10.x86_64.rpm"
+}

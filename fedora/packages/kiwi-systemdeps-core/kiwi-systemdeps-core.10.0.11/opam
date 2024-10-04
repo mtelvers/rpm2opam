@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kiwi-systemdeps-core-10.0.11-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kiwi-systemdeps-core-10.0.11-1.fc40.x86_64.rpm"]
+depends: [
+  "dnf" 
+  "dnf5" 
+  "lsof" 
+  "mtools" 
+  "openssl" 
+  "rsync" 
+  "screen" 
+  "tar" {>= "1.2.7"}
+  "xz" 
+]
+extra-source "kiwi-systemdeps-core-10.0.11-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kiwi-systemdeps-core-10.0.11-1.fc40.x86_64.rpm"
+}

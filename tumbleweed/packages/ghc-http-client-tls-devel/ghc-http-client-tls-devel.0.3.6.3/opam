@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-http-client-tls-devel-0.3.6.3-1.22.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-http-client-tls-devel-0.3.6.3-1.22.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-case-insensitive-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-crypton-connection-devel" 
+  "ghc-crypton-devel" 
+  "ghc-data-default-class-devel" 
+  "ghc-exceptions-devel" 
+  "ghc-http-client-devel" 
+  "ghc-http-client-tls" {= "0.3.6.3"}
+  "ghc-http-types-devel" 
+  "ghc-memory-devel" 
+  "ghc-network-devel" 
+  "ghc-network-uri-devel" 
+  "ghc-text-devel" 
+  "ghc-tls-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-http-client-tls-devel-0.3.6.3-1.22.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-http-client-tls-devel-0.3.6.3-1.22.x86_64.rpm"
+}

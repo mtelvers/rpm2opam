@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libshadowsocks-libev2-3.3.5-5.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libshadowsocks-libev2-3.3.5-5.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libev4" 
+  "libmbedcrypto7" 
+  "libpcre1" 
+  "libsodium26" 
+]
+extra-source "libshadowsocks-libev2-3.3.5-5.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libshadowsocks-libev2-3.3.5-5.4.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "trytond_account-6.0.27-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trytond_account-6.0.27-1.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "trytond" 
+  "trytond_company" 
+  "trytond_currency" 
+  "trytond_party" 
+]
+extra-source "trytond_account-6.0.27-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/trytond_account-6.0.27-1.1.noarch.rpm"
+}

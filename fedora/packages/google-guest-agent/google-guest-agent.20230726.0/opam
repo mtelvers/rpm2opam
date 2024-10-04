@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "google-guest-agent-20230726.00-3.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "google-guest-agent-20230726.00-3.fc39.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "systemd" 
+]
+extra-source "google-guest-agent-20230726.00-3.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/google-guest-agent-20230726.00-3.fc39.x86_64.rpm"
+}

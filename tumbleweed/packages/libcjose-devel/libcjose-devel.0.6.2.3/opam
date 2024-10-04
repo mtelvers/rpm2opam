@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcjose-devel-0.6.2.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcjose-devel-0.6.2.3-1.1.x86_64.rpm"]
+depends: [
+  "libcjose0" {= "0.6.2.3"}
+  "libjansson-devel" {>= "2.3"}
+  "libopenssl-1_0_0-devel" {>= "1.0.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libcjose-devel-0.6.2.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcjose-devel-0.6.2.3-1.1.x86_64.rpm"
+}

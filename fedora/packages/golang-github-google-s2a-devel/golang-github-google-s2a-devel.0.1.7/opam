@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-google-s2a-devel-0.1.7-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-google-s2a-devel-0.1.7-2.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-protobuf-devel" 
+  "golang-google-protobuf-devel" 
+  "golang-x-crypto-devel" 
+]
+extra-source "golang-github-google-s2a-devel-0.1.7-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-google-s2a-devel-0.1.7-2.fc40.noarch.rpm"
+}

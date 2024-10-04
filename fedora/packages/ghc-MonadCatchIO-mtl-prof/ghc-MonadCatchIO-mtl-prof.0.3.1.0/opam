@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-MonadCatchIO-mtl-prof-0.3.1.0-40.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-MonadCatchIO-mtl-prof-0.3.1.0-40.fc40.x86_64.rpm"]
+depends: [
+  "ghc-MonadCatchIO-mtl-devel" {= "0.3.1.0"}
+  "ghc-MonadCatchIO-transformers-prof" 
+  "ghc-base-prof" 
+  "ghc-extensible-exceptions-prof" 
+]
+extra-source "ghc-MonadCatchIO-mtl-prof-0.3.1.0-40.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-MonadCatchIO-mtl-prof-0.3.1.0-40.fc40.x86_64.rpm"
+}

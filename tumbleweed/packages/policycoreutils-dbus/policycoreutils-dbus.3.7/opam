@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "policycoreutils-dbus-3.7-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "policycoreutils-dbus-3.7-1.1.noarch.rpm"]
+depends: [
+  "polkit" 
+  "python311-base" 
+  "python311-gobject" 
+  "python311-policycoreutils" {= "3.7"}
+]
+extra-source "policycoreutils-dbus-3.7-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/policycoreutils-dbus-3.7-1.1.noarch.rpm"
+}

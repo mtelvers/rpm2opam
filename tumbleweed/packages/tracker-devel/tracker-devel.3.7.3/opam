@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tracker-devel-3.7.3-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tracker-devel-3.7.3-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-devel" {> "2.52.0"}
+  "json-glib-devel" {>= "1.4"}
+  "libtracker-sparql-3_0-0" {= "3.7.3"}
+  "libxml2-devel" {> "2.6"}
+  "pkgconf-pkg-config" 
+  "sqlite3-devel" {> "3.20.0"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Tracker-3_0" {= "3.0"}
+]
+extra-source "tracker-devel-3.7.3-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tracker-devel-3.7.3-1.2.x86_64.rpm"
+}

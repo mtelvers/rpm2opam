@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libusb-compat-0.1-devel-0.1.8-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libusb-compat-0.1-devel-0.1.8-7.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "libusb-compat-0-1" {= "0.1.8"}
+  "libusb1-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libusb-compat-0.1-devel-0.1.8-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libusb-compat-0.1-devel-0.1.8-7.fc40.x86_64.rpm"
+}

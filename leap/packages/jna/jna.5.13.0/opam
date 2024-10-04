@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jna-5.13.0-slfo.1.2.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jna-5.13.0-slfo.1.2.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "java-11-openjdk-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "libffi8" 
+]
+extra-source "jna-5.13.0-slfo.1.2.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/jna-5.13.0-slfo.1.2.8.x86_64.rpm"
+}

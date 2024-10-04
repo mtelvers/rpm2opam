@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "poke-emacs-3.90.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "poke-emacs-3.90.3-1.fc40.noarch.rpm"]
+depends: [
+  "poke" {= "3.90.3"}
+]
+extra-source "poke-emacs-3.90.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/poke-emacs-3.90.3-1.fc40.noarch.rpm"
+}

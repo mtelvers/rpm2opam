@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Dist-Zilla-Plugin-ReversionOnRelease-0.06-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Dist-Zilla-Plugin-ReversionOnRelease-0.06-22.fc40.noarch.rpm"]
+depends: [
+  "perl-Dist-Zilla" {>= "4.2"}
+  "perl-Moose" 
+  "perl-Version-Next" {>= "0.2"}
+  "perl-libs" {>= "5.8.0"}
+  "perl-version" 
+]
+extra-source "perl-Dist-Zilla-Plugin-ReversionOnRelease-0.06-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Dist-Zilla-Plugin-ReversionOnRelease-0.06-22.fc40.noarch.rpm"
+}

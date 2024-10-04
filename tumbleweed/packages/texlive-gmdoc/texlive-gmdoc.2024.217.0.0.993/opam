@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-gmdoc-2024.217.0.0.993svn21292-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-gmdoc-2024.217.0.0.993svn21292-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-amsfonts" 
+  "texlive-amsmath" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-geometry" 
+  "texlive-gmiflink" 
+  "texlive-gmutils" 
+  "texlive-gmverb" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-lm" 
+  "texlive-pgf" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tools" 
+  "texlive-xcolor" 
+  "texlive-xkeyval" 
+]
+extra-source "texlive-gmdoc-2024.217.0.0.993svn21292-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-gmdoc-2024.217.0.0.993svn21292-56.1.noarch.rpm"
+}

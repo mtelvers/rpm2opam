@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-picky-asn1-der+lazy_static-devel-0.4.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-picky-asn1-der+lazy_static-devel-0.4.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-lazy_static+default-devel" 
+  "rust-picky-asn1-der-devel" {= "0.4.1"}
+]
+extra-source "rust-picky-asn1-der+lazy_static-devel-0.4.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-picky-asn1-der+lazy_static-devel-0.4.1-2.fc40.noarch.rpm"
+}

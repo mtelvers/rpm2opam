@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "automake-1.17-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "automake-1.17-1.1.noarch.rpm"]
+depends: [
+  "autoconf" {>= "2.69"}
+  "bash-sh" 
+  "info" 
+  "perl" 
+  "perl-base" 
+]
+extra-source "automake-1.17-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/automake-1.17-1.1.noarch.rpm"
+}

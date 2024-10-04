@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jack_capture-0.9.73-14.fc38.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jack_capture-0.9.73-14.fc38.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "jack-audio-connection-kit" 
+  "lame-libs" 
+  "liblo" 
+  "libsndfile" 
+  "meterbridge" 
+  "vorbis-tools" 
+]
+extra-source "jack_capture-0.9.73-14.fc38.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jack_capture-0.9.73-14.fc38.x86_64.rpm"
+}

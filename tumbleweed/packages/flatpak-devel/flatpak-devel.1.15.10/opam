@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "flatpak-devel-1.15.10-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flatpak-devel-1.15.10-2.1.x86_64.rpm"]
+depends: [
+  "dconf-devel" {>= "0.26"}
+  "flatpak" {= "1.15.10"}
+  "glib2-devel" 
+  "json-glib-devel" 
+  "libXau-devel" 
+  "libarchive-devel" {>= "2.8.0"}
+  "libcurl-devel" {>= "7.29.0"}
+  "libflatpak0" {= "1.15.10"}
+  "libgpgme-devel" {>= "1.8.0"}
+  "libostree-devel" {>= "2020.8"}
+  "libseccomp-devel" 
+  "libxml2-devel" {>= "2.4"}
+  "libzstd-devel" {>= "0.8.1"}
+  "pkgconf-pkg-config" 
+  "polkit-devel" {>= "0.98"}
+  "python311-base" 
+  "systemd-devel" 
+  "typelib-1_0-Flatpak-1_0" {= "1.0"}
+  "typelib-1_0-GLib-2_0" 
+  "wayland-devel" 
+]
+extra-source "flatpak-devel-1.15.10-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/flatpak-devel-1.15.10-2.1.x86_64.rpm"
+}

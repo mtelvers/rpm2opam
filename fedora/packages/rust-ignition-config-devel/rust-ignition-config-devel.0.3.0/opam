@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ignition-config-devel-0.3.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ignition-config-devel-0.3.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.56.0"}
+  "rust-anyhow+default-devel" 
+  "rust-semver+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde_ignored+default-devel" 
+  "rust-serde_json+default-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-ignition-config-devel-0.3.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ignition-config-devel-0.3.0-3.fc40.noarch.rpm"
+}

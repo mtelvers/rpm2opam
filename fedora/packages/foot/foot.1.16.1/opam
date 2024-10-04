@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "foot-1.16.1-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "foot-1.16.1-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "fcft" 
+  "fontconfig" 
+  "foot-terminfo" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libwayland-client" 
+  "libwayland-cursor" 
+  "libxkbcommon" 
+  "ncurses-base" 
+  "pixman" 
+  "utf8proc" 
+]
+extra-source "foot-1.16.1-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/foot-1.16.1-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libdnf-plugin-subscription-manager-1.29.40-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdnf-plugin-subscription-manager-1.29.40-2.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "json-c" 
+  "libdnf" 
+  "librepo" 
+  "openssl-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "libdnf-plugin-subscription-manager-1.29.40-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libdnf-plugin-subscription-manager-1.29.40-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "elfutils-0.191-5.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "elfutils-0.191-5.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "elfutils-debuginfod-client" {= "0.191"}
+  "elfutils-libelf" {= "0.191"}
+  "elfutils-libs" {= "0.191"}
+  "glibc" 
+  "libarchive" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "elfutils-0.191-5.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/elfutils-0.191-5.el10.x86_64.rpm"
+}

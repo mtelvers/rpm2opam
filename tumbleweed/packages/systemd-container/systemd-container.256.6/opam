@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "systemd-container-256.6-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "systemd-container-256.6-1.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-tar" 
+  "glibc" 
+  "gpg2" 
+  "libacl1" 
+  "libbz2-1" 
+  "libcap2" 
+  "libcurl-mini4" 
+  "libgcrypt20" 
+  "liblzma5" 
+  "libseccomp2" 
+  "libselinux1" 
+  "libz-ng-compat1" 
+  "systemd" 
+]
+extra-source "systemd-container-256.6-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/systemd-container-256.6-1.2.x86_64.rpm"
+}

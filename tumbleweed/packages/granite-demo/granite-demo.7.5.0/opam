@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "granite-demo-7.5.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "granite-demo-7.5.0-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgranite-7-7" 
+  "libgtk-4-1" 
+]
+extra-source "granite-demo-7.5.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/granite-demo-7.5.0-1.1.x86_64.rpm"
+}

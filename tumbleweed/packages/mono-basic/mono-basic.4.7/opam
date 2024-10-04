@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mono-basic-4.7-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mono-basic-4.7-3.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "mono-core" {= "4.0.0.0"}
+  "mono-winforms" {= "4.0.0.0"}
+]
+extra-source "mono-basic-4.7-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mono-basic-4.7-3.1.noarch.rpm"
+}

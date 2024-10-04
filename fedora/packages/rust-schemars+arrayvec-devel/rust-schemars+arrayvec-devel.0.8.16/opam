@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-schemars+arrayvec-devel-0.8.16-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-schemars+arrayvec-devel-0.8.16-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-schemars+arrayvec05-devel" {= "0.8.16"}
+  "rust-schemars-devel" {= "0.8.16"}
+]
+extra-source "rust-schemars+arrayvec-devel-0.8.16-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-schemars+arrayvec-devel-0.8.16-2.fc40.noarch.rpm"
+}

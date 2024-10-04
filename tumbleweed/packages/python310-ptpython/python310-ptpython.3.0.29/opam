@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-ptpython-3.0.29-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-ptpython-3.0.29-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-Pygments" 
+  "python310-appdirs" 
+  "python310-base" 
+  "python310-docopt" 
+  "python310-jedi" {>= "0.9.0"}
+  "python310-prompt_toolkit" {>= "3.0.0"}
+]
+extra-source "python310-ptpython-3.0.29-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-ptpython-3.0.29-1.1.noarch.rpm"
+}

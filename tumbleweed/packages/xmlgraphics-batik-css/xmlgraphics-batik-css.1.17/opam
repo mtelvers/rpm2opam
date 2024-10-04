@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xmlgraphics-batik-css-1.17-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xmlgraphics-batik-css-1.17-2.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "xml-commons-apis" 
+]
+extra-source "xmlgraphics-batik-css-1.17-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xmlgraphics-batik-css-1.17-2.1.noarch.rpm"
+}

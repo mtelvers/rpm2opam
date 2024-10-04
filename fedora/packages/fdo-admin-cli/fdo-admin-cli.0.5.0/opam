@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fdo-admin-cli-0.5.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fdo-admin-cli-0.5.0-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "fdo-client" {= "0.5.0"}
+  "fdo-init" {= "0.5.0"}
+  "fdo-manufacturing-server" {= "0.5.0"}
+  "fdo-owner-cli" {= "0.5.0"}
+  "fdo-owner-onboarding-server" {= "0.5.0"}
+  "fdo-rendezvous-server" {= "0.5.0"}
+  "glibc" 
+  "libgcc" 
+  "openssl-libs" 
+  "tpm2-tss" 
+]
+extra-source "fdo-admin-cli-0.5.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fdo-admin-cli-0.5.0-1.fc40.x86_64.rpm"
+}

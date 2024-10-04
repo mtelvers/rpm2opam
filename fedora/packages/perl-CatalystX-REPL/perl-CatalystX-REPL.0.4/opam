@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CatalystX-REPL-0.04-36.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CatalystX-REPL-0.04-36.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp-REPL" 
+  "perl-Catalyst-Runtime" {>= "5.80006"}
+  "perl-Moose" 
+  "perl-libs" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-CatalystX-REPL-0.04-36.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CatalystX-REPL-0.04-36.fc40.noarch.rpm"
+}

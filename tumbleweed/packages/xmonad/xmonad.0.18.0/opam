@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xmonad-0.18.0-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xmonad-0.18.0-1.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXext6" 
+  "libXinerama1" 
+  "libXrandr2" 
+  "libXss1" 
+  "libffi8" 
+  "libgmp10" 
+  "libnuma1" 
+]
+extra-source "xmonad-0.18.0-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xmonad-0.18.0-1.5.x86_64.rpm"
+}

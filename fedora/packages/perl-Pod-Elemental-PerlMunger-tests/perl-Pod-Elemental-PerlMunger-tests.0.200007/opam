@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Pod-Elemental-PerlMunger-tests-0.200007-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Pod-Elemental-PerlMunger-tests-0.200007-5.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-ExtUtils-MakeMaker" 
+  "perl-Moose" 
+  "perl-PathTools" 
+  "perl-Pod-Elemental" {>= "0.103000"}
+  "perl-Pod-Elemental-PerlMunger" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" {>= "0.96"}
+  "perl-libs" 
+]
+extra-source "perl-Pod-Elemental-PerlMunger-tests-0.200007-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Pod-Elemental-PerlMunger-tests-0.200007-5.fc40.noarch.rpm"
+}

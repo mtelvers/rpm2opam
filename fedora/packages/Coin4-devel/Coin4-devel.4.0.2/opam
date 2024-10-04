@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "Coin4-devel-4.0.2-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Coin4-devel-4.0.2-4.fc40.x86_64.rpm"]
+depends: [
+  "Coin4" {= "4.0.2"}
+  "alternatives" 
+  "bash" 
+  "bzip2-devel" 
+  "cmake-filesystem" 
+  "fontconfig-devel" 
+  "freetype-devel" 
+  "mesa-libGLU-devel" 
+  "pkgconf-pkg-config" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "Coin4-devel-4.0.2-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/Coin4-devel-4.0.2-4.fc40.x86_64.rpm"
+}

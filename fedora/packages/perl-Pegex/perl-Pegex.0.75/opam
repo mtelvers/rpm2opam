@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Pegex-0.75-15.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Pegex-0.75-15.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Exporter" 
+  "perl-JSON-PP" 
+  "perl-Scalar-List-Utils" 
+  "perl-Term-ANSIColor" 
+  "perl-XXX" {>= "0.35"}
+  "perl-YAML-PP" {>= "0.19"}
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-overload" 
+]
+extra-source "perl-Pegex-0.75-15.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Pegex-0.75-15.fc40.noarch.rpm"
+}

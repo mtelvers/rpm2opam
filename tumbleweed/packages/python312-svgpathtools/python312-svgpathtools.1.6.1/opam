@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-svgpathtools-1.6.1-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-svgpathtools-1.6.1-1.6.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-numpy" 
+  "python312-scipy" 
+  "python312-svgwrite" 
+]
+extra-source "python312-svgpathtools-1.6.1-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-svgpathtools-1.6.1-1.6.noarch.rpm"
+}

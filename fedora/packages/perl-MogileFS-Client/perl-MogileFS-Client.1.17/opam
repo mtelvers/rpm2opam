@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MogileFS-Client-1.17-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MogileFS-Client-1.17-29.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Errno" 
+  "perl-HTTP-Message" 
+  "perl-IO" 
+  "perl-IO-stringy" {>= "2.102"}
+  "perl-POSIX" 
+  "perl-Scalar-List-Utils" 
+  "perl-Socket" 
+  "perl-Time-HiRes" 
+  "perl-fields" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+  "perl-vars" 
+]
+extra-source "perl-MogileFS-Client-1.17-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MogileFS-Client-1.17-29.fc40.noarch.rpm"
+}

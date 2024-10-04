@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-py2pack-0.9.0-2.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-py2pack-0.9.0-2.6.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-Jinja2" 
+  "python312-base" 
+  "python312-metaextract" 
+  "python312-pbr" 
+  "python312-pypi-search" 
+  "python312-requests" 
+  "python312-setuptools" 
+  "python312-tomli" 
+  "update-alternatives" 
+]
+extra-source "python312-py2pack-0.9.0-2.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-py2pack-0.9.0-2.6.noarch.rpm"
+}

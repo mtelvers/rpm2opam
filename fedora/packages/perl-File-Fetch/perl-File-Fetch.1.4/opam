@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-File-Fetch-1.04-502.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-Fetch-1.04-502.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-FileHandle" 
+  "perl-IPC-Cmd" {>= "0.42"}
+  "perl-Locale-Maketext-Simple" 
+  "perl-Module-Load-Conditional" {>= "0.66"}
+  "perl-Params-Check" {>= "0.7"}
+  "perl-PathTools" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-File-Fetch-1.04-502.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-File-Fetch-1.04-502.fc40.noarch.rpm"
+}

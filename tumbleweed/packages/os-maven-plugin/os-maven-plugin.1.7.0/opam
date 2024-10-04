@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "os-maven-plugin-1.7.0-4.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "os-maven-plugin-1.7.0-4.4.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "jsr-305" 
+  "maven-lib" 
+  "plexus-utils" 
+]
+extra-source "os-maven-plugin-1.7.0-4.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/os-maven-plugin-1.7.0-4.4.noarch.rpm"
+}

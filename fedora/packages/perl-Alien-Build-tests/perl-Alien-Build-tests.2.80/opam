@@ -1,0 +1,44 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Alien-Build-tests-2.80-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Alien-Build-tests-2.80-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "perl-Acme-Alien-DontPanic" {>= "0.26"}
+  "perl-Alien-Base" 
+  "perl-Alien-Base-ModuleBuild" {>= "0.40"}
+  "perl-Alien-Build" 
+  "perl-Alien-Build-Plugin-Decode-HTML" 
+  "perl-Alien-Build-Plugin-Decode-Mojo" 
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Devel-Hide" 
+  "perl-Digest-SHA" 
+  "perl-Env" 
+  "perl-Env-ShellWords" 
+  "perl-Exporter" 
+  "perl-ExtUtils-CBuilder" 
+  "perl-FFI-CheckLib" 
+  "perl-File-Temp" 
+  "perl-File-Which" 
+  "perl-File-chdir" 
+  "perl-HTTP-Tiny" {>= "0.44"}
+  "perl-JSON-PP" 
+  "perl-Mojolicious" 
+  "perl-Readonly" {>= "1.60"}
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-Sort-Versions" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" {>= "1.302096"}
+  "perl-Test2-Suite" {>= "0.121"}
+  "perl-URI" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libnet" 
+  "perl-libs" {>= "5.8.4"}
+  "perl-parent" 
+]
+extra-source "perl-Alien-Build-tests-2.80-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Alien-Build-tests-2.80-4.fc40.noarch.rpm"
+}

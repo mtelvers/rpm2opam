@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "inxi-3.3.33-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "inxi-3.3.33-1.fc40.noarch.rpm"]
+depends: [
+  "bind-utils" 
+  "freeipmi" 
+  "hddtemp" 
+  "ipmitool" 
+  "iproute" 
+  "lm_sensors" 
+  "pciutils" 
+  "perl-Cpanel-JSON-XS" 
+  "perl-Data-Dumper" 
+  "perl-File-Copy" 
+  "perl-File-Find" 
+  "perl-File-stat" 
+  "perl-Getopt-Long" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Time-HiRes" 
+  "perl-interpreter" 
+  "perl-libnet" 
+  "perl-libs" {>= "5.8.0"}
+  "procps-ng" 
+  "tar" 
+  "usbutils" 
+  "wmctrl" 
+  "xdpyinfo" 
+  "xprop" 
+  "xrandr" 
+]
+extra-source "inxi-3.3.33-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/inxi-3.3.33-1.fc40.noarch.rpm"
+}

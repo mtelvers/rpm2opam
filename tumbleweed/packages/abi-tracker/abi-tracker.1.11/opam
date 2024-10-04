@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "abi-tracker-1.11-2.13.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "abi-tracker-1.11-2.13.noarch.rpm"]
+depends: [
+  "abi-compliance-checker" {>= "2.2"}
+  "abi-dumper" {>= "1.1"}
+  "abi-monitor" {>= "1.12"}
+  "binutils" 
+  "perl-base" 
+  "pkgdiff" {>= "1.6.4"}
+  "rfcdiff" {>= "1.41"}
+  "vtable-dumper" {>= "1.1"}
+]
+extra-source "abi-tracker-1.11-2.13.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/abi-tracker-1.11-2.13.noarch.rpm"
+}

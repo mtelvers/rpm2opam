@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-testsuite-3.10.15-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-testsuite-3.10.15-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "python310" {= "3.10.15"}
+  "python310-base" {= "3.10"}
+  "python310-tk" {= "3.10.15"}
+]
+extra-source "python310-testsuite-3.10.15-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-testsuite-3.10.15-1.1.x86_64.rpm"
+}

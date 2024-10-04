@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vorbis-tools-1.4.2-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vorbis-tools-1.4.2-4.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libFLAC12" 
+  "libao4" 
+  "libcurl-mini4" 
+  "libkate1" 
+  "libogg0" 
+  "liboggkate1" 
+  "libspeex1" 
+  "libvorbis0" 
+  "libvorbisenc2" 
+  "libvorbisfile3" 
+]
+extra-source "vorbis-tools-1.4.2-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vorbis-tools-1.4.2-4.1.x86_64.rpm"
+}

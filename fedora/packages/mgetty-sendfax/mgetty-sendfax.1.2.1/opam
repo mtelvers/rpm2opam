@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mgetty-sendfax-1.2.1-22.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mgetty-sendfax-1.2.1-22.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "glibc" 
+  "lockdev" 
+  "mgetty" {= "1.2.1"}
+  "netpbm-progs" 
+  "perl-Getopt-Std" 
+  "perl-IO" 
+  "perl-POSIX" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.4.0"}
+  "perl-vars" 
+  "shadow-utils" 
+]
+extra-source "mgetty-sendfax-1.2.1-22.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mgetty-sendfax-1.2.1-22.fc40.x86_64.rpm"
+}

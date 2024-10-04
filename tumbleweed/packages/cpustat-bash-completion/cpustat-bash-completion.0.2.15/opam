@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cpustat-bash-completion-0.02.15-1.13.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cpustat-bash-completion-0.02.15-1.13.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "cpustat" {= "0.2.15"}
+]
+extra-source "cpustat-bash-completion-0.02.15-1.13.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cpustat-bash-completion-0.02.15-1.13.noarch.rpm"
+}

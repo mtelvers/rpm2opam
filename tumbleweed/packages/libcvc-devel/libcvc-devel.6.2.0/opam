@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcvc-devel-6.2.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcvc-devel-6.2.0-1.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libcvc0" {= "6.2.0"}
+  "libpulse-devel" 
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Cvc-1_0" {= "6.2.0"}
+]
+extra-source "libcvc-devel-6.2.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcvc-devel-6.2.0-1.1.x86_64.rpm"
+}

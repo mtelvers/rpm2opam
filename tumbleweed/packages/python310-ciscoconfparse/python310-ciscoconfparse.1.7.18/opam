@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-ciscoconfparse-1.7.18-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-ciscoconfparse-1.7.18-1.5.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-dnspython" {>= "2.1.0"}
+  "python310-loguru" {>= "0.6.0"}
+  "python310-toml" {>= "0.10.2"}
+]
+extra-source "python310-ciscoconfparse-1.7.18-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-ciscoconfparse-1.7.18-1.5.noarch.rpm"
+}

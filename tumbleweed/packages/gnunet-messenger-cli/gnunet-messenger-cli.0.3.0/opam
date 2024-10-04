@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnunet-messenger-cli-0.3.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnunet-messenger-cli-0.3.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgnunetchat" 
+  "libgnunetutil16" 
+  "libncurses6" 
+]
+extra-source "gnunet-messenger-cli-0.3.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnunet-messenger-cli-0.3.0-1.1.x86_64.rpm"
+}

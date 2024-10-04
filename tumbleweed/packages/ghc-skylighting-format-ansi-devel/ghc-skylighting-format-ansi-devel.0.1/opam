@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-skylighting-format-ansi-devel-0.1-2.45.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-skylighting-format-ansi-devel-0.1-2.45.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-ansi-terminal-devel" 
+  "ghc-base-devel" 
+  "ghc-binary-devel" 
+  "ghc-colour-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-skylighting-core-devel" 
+  "ghc-skylighting-format-ansi" {= "0.1"}
+  "ghc-text-devel" 
+]
+extra-source "ghc-skylighting-format-ansi-devel-0.1-2.45.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-skylighting-format-ansi-devel-0.1-2.45.x86_64.rpm"
+}

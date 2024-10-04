@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "occt-DRAWEXE-7.7.2-2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "occt-DRAWEXE-7.7.2-2.5.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libopencascade-draw7_7_2" 
+  "libstdc++6" 
+]
+extra-source "occt-DRAWEXE-7.7.2-2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/occt-DRAWEXE-7.7.2-2.5.x86_64.rpm"
+}

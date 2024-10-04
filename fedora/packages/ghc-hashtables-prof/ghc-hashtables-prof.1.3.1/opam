@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-hashtables-prof-1.3.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hashtables-prof-1.3.1-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-hashable-prof" 
+  "ghc-hashtables-devel" {= "1.3.1"}
+  "ghc-primitive-prof" 
+  "ghc-vector-prof" 
+]
+extra-source "ghc-hashtables-prof-1.3.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-hashtables-prof-1.3.1-6.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtk4-branding-upstream-4.12.4-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk4-branding-upstream-4.12.4-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "libgtk-4-1" {= "4.12.4"}
+]
+extra-source "gtk4-branding-upstream-4.12.4-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/gtk4-branding-upstream-4.12.4-slfo.1.1.4.noarch.rpm"
+}

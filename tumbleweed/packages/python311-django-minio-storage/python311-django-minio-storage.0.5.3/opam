@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-django-minio-storage-0.5.3-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-django-minio-storage-0.5.3-2.2.noarch.rpm"]
+depends: [
+  "python311-Django" {>= "1.11"}
+  "python311-base" {= "3.11"}
+  "python311-minio" {>= "7"}
+]
+extra-source "python311-django-minio-storage-0.5.3-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-django-minio-storage-0.5.3-2.2.noarch.rpm"
+}

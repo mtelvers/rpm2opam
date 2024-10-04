@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "net-snmp-devel-5.9.4-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "net-snmp-devel-5.9.4-5.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "elfutils-devel" 
+  "elfutils-libelf-devel" 
+  "lm_sensors-devel" 
+  "net-snmp-agent-libs" 
+  "net-snmp-libs" 
+  "openssl-devel" 
+  "perl-devel" 
+  "pkgconf-pkg-config" 
+  "redhat-rpm-config" 
+  "rpm-devel" 
+]
+extra-source "net-snmp-devel-5.9.4-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/net-snmp-devel-5.9.4-5.fc40.x86_64.rpm"
+}

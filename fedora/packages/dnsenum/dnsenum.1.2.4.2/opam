@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dnsenum-1.2.4.2-27.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dnsenum-1.2.4.2-27.fc39.noarch.rpm"]
+depends: [
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-Net-DNS" 
+  "perl-Net-IP" 
+  "perl-Net-Netmask" 
+  "perl-Readonly" 
+  "perl-Socket" 
+  "perl-String-Random" 
+  "perl-Term-ANSIColor" 
+  "perl-Thread-Queue" 
+  "perl-WWW-Mechanize" 
+  "perl-XML-Writer" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-threads-shared" 
+]
+extra-source "dnsenum-1.2.4.2-27.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dnsenum-1.2.4.2-27.fc39.noarch.rpm"
+}

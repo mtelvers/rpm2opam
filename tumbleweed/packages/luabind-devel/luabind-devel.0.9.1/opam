@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "luabind-devel-0.9.1+git20150408.a0edf58-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "luabind-devel-0.9.1+git20150408.a0edf58-3.2.x86_64.rpm"]
+depends: [
+  "libluabind0_9_1" {= "0.9.1"}
+  "lua53-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "luabind-devel-0.9.1+git20150408.a0edf58-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/luabind-devel-0.9.1+git20150408.a0edf58-3.2.x86_64.rpm"
+}

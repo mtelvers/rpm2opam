@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hexchat-lang-2.16.2-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hexchat-lang-2.16.2-2.1.noarch.rpm"]
+depends: [
+  "hexchat" {= "2.16.2"}
+]
+extra-source "hexchat-lang-2.16.2-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/hexchat-lang-2.16.2-2.1.noarch.rpm"
+}

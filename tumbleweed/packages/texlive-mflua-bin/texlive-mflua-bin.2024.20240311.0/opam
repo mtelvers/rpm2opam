@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-mflua-bin-2024.20240311.svn70276-100.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-mflua-bin-2024.20240311.svn70276-100.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXt6" 
+  "libkpathsea6" 
+  "libpotrace0" 
+  "libtexlua53-5" 
+  "libtexluajit2" 
+]
+extra-source "texlive-mflua-bin-2024.20240311.svn70276-100.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/texlive-mflua-bin-2024.20240311.svn70276-100.1.x86_64.rpm"
+}

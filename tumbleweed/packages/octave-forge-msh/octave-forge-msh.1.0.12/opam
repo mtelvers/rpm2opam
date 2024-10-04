@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "octave-forge-msh-1.0.12-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "octave-forge-msh-1.0.12-1.6.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "octave-cli" {>= "3.0"}
+  "octave-forge-splines" 
+]
+extra-source "octave-forge-msh-1.0.12-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/octave-forge-msh-1.0.12-1.6.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-nucleo-matcher-devel-0.2.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-nucleo-matcher-devel-0.2.0-2.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cargo" 
+  "rust-memchr+default-devel" 
+]
+extra-source "rust-nucleo-matcher-devel-0.2.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-nucleo-matcher-devel-0.2.0-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "twirssi-2.6.4-15.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "twirssi-2.6.4-15.fc40.noarch.rpm"]
+depends: [
+  "irssi" 
+  "perl-Data-Dumper" 
+  "perl-DateTime" 
+  "perl-DateTime-Format-Strptime" 
+  "perl-File-Temp" 
+  "perl-HTML-Parser" 
+  "perl-HTTP-Date" 
+  "perl-JSON-Any" 
+  "perl-LWP-Protocol-https" 
+  "perl-Net-Twitter" {>= "3.11009"}
+  "perl-WWW-Shorten" 
+  "perl-base" 
+  "perl-libwww-perl" 
+]
+extra-source "twirssi-2.6.4-15.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/twirssi-2.6.4-15.fc40.noarch.rpm"
+}

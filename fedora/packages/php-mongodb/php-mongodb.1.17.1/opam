@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-mongodb-1.17.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-mongodb-1.17.1-1.fc40.noarch.rpm"]
+depends: [
+  "php-PsrLog" 
+  "php-common" {>= "7.4"}
+  "php-fedora-autoloader" 
+  "php-pecl-mongodb" {>= "1.17.0"}
+  "php-symfony-polyfill" 
+]
+extra-source "php-mongodb-1.17.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-mongodb-1.17.1-1.fc40.noarch.rpm"
+}

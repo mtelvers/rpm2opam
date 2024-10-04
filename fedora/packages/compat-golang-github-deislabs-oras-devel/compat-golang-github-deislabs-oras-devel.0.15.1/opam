@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "compat-golang-github-deislabs-oras-devel-0.15.1-1.20221105git690716b.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "compat-golang-github-deislabs-oras-devel-0.15.1-1.20221105git690716b.fc39.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-oras-devel" {= "0.15.1"}
+]
+extra-source "compat-golang-github-deislabs-oras-devel-0.15.1-1.20221105git690716b.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/compat-golang-github-deislabs-oras-devel-0.15.1-1.20221105git690716b.fc39.noarch.rpm"
+}

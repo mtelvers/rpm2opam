@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "policycoreutils-lang-3.7-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "policycoreutils-lang-3.7-1.1.noarch.rpm"]
+depends: [
+  "policycoreutils" {= "3.7"}
+]
+extra-source "policycoreutils-lang-3.7-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/policycoreutils-lang-3.7-1.1.noarch.rpm"
+}

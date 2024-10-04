@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "paprefs-1.2-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "paprefs-1.2-7.fc40.x86_64.rpm"]
+depends: [
+  "atkmm" 
+  "glib2" 
+  "glibc" 
+  "glibmm2-4" 
+  "gtk3" 
+  "gtkmm3-0" 
+  "libgcc" 
+  "libsigc++20" 
+  "libstdc++" 
+  "pulseaudio-module-gsettings" 
+]
+extra-source "paprefs-1.2-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/paprefs-1.2-7.fc40.x86_64.rpm"
+}

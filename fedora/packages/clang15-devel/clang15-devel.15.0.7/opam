@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "clang15-devel-15.0.7-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clang15-devel-15.0.7-7.fc40.x86_64.rpm"]
+depends: [
+  "clang15" {= "15.0.7"}
+  "clang15-libs" {= "15.0.7"}
+]
+extra-source "clang15-devel-15.0.7-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/clang15-devel-15.0.7-7.fc40.x86_64.rpm"
+}

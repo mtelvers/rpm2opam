@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xrestop-0.6-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xrestop-0.6-1.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11-6" 
+  "libXRes1" 
+  "libncurses6" 
+]
+extra-source "xrestop-0.6-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xrestop-0.6-1.6.x86_64.rpm"
+}

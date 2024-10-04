@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "samba-common-tools-4.20.0-0.5.rc4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "samba-common-tools-4.20.0-0.5.rc4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gnutls" 
+  "jansson" 
+  "krb5-libs" 
+  "libcom_err" 
+  "libnetapi" {= "4.20.0"}
+  "libtalloc" 
+  "libtdb" 
+  "libtevent" 
+  "libwbclient" {= "4.20.0"}
+  "openldap" 
+  "popt" 
+  "python3" 
+  "readline" 
+  "samba-client-libs" 
+  "samba-common-libs" 
+  "samba-ldb-ldap-modules" {= "4.20.0"}
+  "samba-libs" {= "4.20.0"}
+]
+extra-source "samba-common-tools-4.20.0-0.5.rc4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/samba-common-tools-4.20.0-0.5.rc4.fc40.x86_64.rpm"
+}

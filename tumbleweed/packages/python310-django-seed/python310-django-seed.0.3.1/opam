@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-django-seed-0.3.1-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-django-seed-0.3.1-1.2.noarch.rpm"]
+depends: [
+  "python310-Django" 
+  "python310-Faker" 
+  "python310-base" {= "3.10"}
+  "python310-toposort" 
+]
+extra-source "python310-django-seed-0.3.1-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-django-seed-0.3.1-1.2.noarch.rpm"
+}

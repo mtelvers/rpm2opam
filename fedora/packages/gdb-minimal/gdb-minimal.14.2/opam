@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gdb-minimal-14.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdb-minimal-14.2-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "elfutils-debuginfod-client" 
+  "glibc" 
+  "gmp" 
+  "libgcc" 
+  "libstdc++" 
+  "mpfr" 
+  "ncurses-libs" 
+  "readline" 
+  "xxhash-libs" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "gdb-minimal-14.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gdb-minimal-14.2-1.fc40.x86_64.rpm"
+}

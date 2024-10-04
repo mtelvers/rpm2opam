@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "skopeo-fish-completion-1.16.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "skopeo-fish-completion-1.16.1-1.1.noarch.rpm"]
+depends: [
+  "fish" 
+  "skopeo" {= "1.16.1"}
+]
+extra-source "skopeo-fish-completion-1.16.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/skopeo-fish-completion-1.16.1-1.1.noarch.rpm"
+}

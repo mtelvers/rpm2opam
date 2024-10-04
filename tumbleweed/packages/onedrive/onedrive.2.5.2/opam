@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "onedrive-2.5.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "onedrive-2.5.2-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcc_s1" 
+  "libnotify4" 
+  "libsqlite3-0" 
+]
+extra-source "onedrive-2.5.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/onedrive-2.5.2-1.1.x86_64.rpm"
+}

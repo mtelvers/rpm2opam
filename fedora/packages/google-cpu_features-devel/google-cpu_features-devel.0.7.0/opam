@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "google-cpu_features-devel-0.7.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "google-cpu_features-devel-0.7.0-6.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "google-cpu_features" {= "0.7.0"}
+]
+extra-source "google-cpu_features-devel-0.7.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/google-cpu_features-devel-0.7.0-6.fc40.x86_64.rpm"
+}

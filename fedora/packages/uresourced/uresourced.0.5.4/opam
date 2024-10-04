@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "uresourced-0.5.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "uresourced-0.5.4-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "libgcc" 
+  "pipewire-libs" 
+  "systemd-libs" 
+]
+extra-source "uresourced-0.5.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/uresourced-0.5.4-1.fc40.x86_64.rpm"
+}

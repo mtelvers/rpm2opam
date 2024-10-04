@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libguestfs-appliance-1.53.6-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libguestfs-appliance-1.53.6-1.1.x86_64.rpm"]
+depends: [
+  "augeas" 
+  "augeas-lenses" 
+  "btrfsprogs" 
+  "cryptsetup" 
+  "dhcp-client" 
+  "dosfstools" 
+  "e2fsprogs" 
+  "gptfdisk" 
+  "jfsutils" 
+  "ldmtool" 
+  "libaugeas0" 
+  "libcap2" 
+  "libguestfs0" 
+  "libhivex0" 
+  "libpcre1" 
+  "mdadm" 
+  "mkisofs" 
+  "parted" 
+  "qemu-tools" 
+  "supermin" {>= "5.1.18"}
+  "xfsprogs" 
+]
+extra-source "libguestfs-appliance-1.53.6-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libguestfs-appliance-1.53.6-1.1.x86_64.rpm"
+}

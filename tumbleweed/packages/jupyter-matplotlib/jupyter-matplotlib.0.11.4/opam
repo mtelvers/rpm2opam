@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jupyter-matplotlib-0.11.4-14.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jupyter-matplotlib-0.11.4-14.2.noarch.rpm"]
+depends: [
+  "jupyter-notebook" 
+  "python310-ipympl" {= "0.9.4"}
+]
+extra-source "jupyter-matplotlib-0.11.4-14.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jupyter-matplotlib-0.11.4-14.2.noarch.rpm"
+}

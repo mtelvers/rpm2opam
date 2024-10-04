@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "grub2-i386-pc-2.12-24.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "grub2-i386-pc-2.12-24.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "grub2-common" {= "2.12"}
+  "perl-base" 
+]
+extra-source "grub2-i386-pc-2.12-24.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/grub2-i386-pc-2.12-24.1.noarch.rpm"
+}

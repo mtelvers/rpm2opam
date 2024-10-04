@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-HTTP-OAI-4.13-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTTP-OAI-4.13-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Encode" {>= "2.12"}
+  "perl-Exporter" 
+  "perl-Getopt-Long" 
+  "perl-HTTP-Message" 
+  "perl-POSIX" 
+  "perl-Pod-Usage" 
+  "perl-Term-ReadLine" 
+  "perl-TermReadKey" 
+  "perl-URI" 
+  "perl-XML-LibXML" {>= "1.60"}
+  "perl-XML-NamespaceSupport" 
+  "perl-XML-SAX" 
+  "perl-XML-SAX-Base" {>= "1.4"}
+  "perl-base" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-HTTP-OAI-4.13-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-HTTP-OAI-4.13-4.fc40.noarch.rpm"
+}

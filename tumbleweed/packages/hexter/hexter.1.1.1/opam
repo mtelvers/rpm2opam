@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hexter-1.1.1-1.15.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hexter-1.1.1-1.15.x86_64.rpm"]
+depends: [
+  "dssi" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libasound2" 
+  "libcairo2" 
+  "libgtk-2_0-0" 
+  "liblo7" 
+  "libpango-1_0-0" 
+]
+extra-source "hexter-1.1.1-1.15.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/hexter-1.1.1-1.15.x86_64.rpm"
+}

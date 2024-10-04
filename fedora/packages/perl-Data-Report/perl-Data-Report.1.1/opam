@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Data-Report-1.001-44.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Data-Report-1.001-44.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Text-CSV" 
+  "perl-base" 
+  "perl-generators" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.10.1"}
+]
+extra-source "perl-Data-Report-1.001-44.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Data-Report-1.001-44.fc40.noarch.rpm"
+}

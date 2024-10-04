@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-clientsession-devel-0.9.3.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-clientsession-devel-0.9.3.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-base64-bytestring-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-cereal-devel" 
+  "ghc-clientsession" {= "0.9.3.0"}
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-crypto-api-devel" 
+  "ghc-crypton-devel" 
+  "ghc-directory-devel" 
+  "ghc-entropy-devel" 
+  "ghc-setenv-devel" 
+  "ghc-skein-devel" 
+  "ghc-tagged-devel" 
+]
+extra-source "ghc-clientsession-devel-0.9.3.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-clientsession-devel-0.9.3.0-1.1.x86_64.rpm"
+}

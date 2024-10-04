@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gcc-openrisc-linux-gnu-13.2.1-1.fc40.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcc-openrisc-linux-gnu-13.2.1-1.fc40.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "binutils-openrisc-linux-gnu" {>= "2.39"}
+  "cross-gcc-common" {= "13.2.1"}
+  "glibc" 
+  "gmp" 
+  "gmp-devel" {>= "4.1.2"}
+  "isl" 
+  "libgcc" 
+  "libmpc" 
+  "libmpc-devel" {>= "0.8.1"}
+  "libstdc++" 
+  "libzstd" 
+  "mpfr" 
+  "mpfr-devel" {>= "3.1.0"}
+  "zlib-ng-compat" 
+]
+extra-source "gcc-openrisc-linux-gnu-13.2.1-1.fc40.2.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gcc-openrisc-linux-gnu-13.2.1-1.fc40.2.x86_64.rpm"
+}

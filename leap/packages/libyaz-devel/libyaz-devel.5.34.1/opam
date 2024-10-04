@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libyaz-devel-5.34.1-lp160.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libyaz-devel-5.34.1-lp160.1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "libicu-devel" 
+  "libopenssl-devel" 
+  "libxslt-devel" 
+  "libyaz5" {= "5.34.1"}
+  "pkgconf-pkg-config" 
+  "tcl" 
+  "tcpd-devel" 
+  "yaz" {= "5.34.1"}
+]
+extra-source "libyaz-devel-5.34.1-lp160.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libyaz-devel-5.34.1-lp160.1.1.x86_64.rpm"
+}

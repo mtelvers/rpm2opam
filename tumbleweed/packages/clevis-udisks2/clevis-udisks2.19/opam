@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "clevis-udisks2-19-2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clevis-udisks2-19-2.5.x86_64.rpm"]
+depends: [
+  "clevis-luks" {= "19"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libaudit1" 
+  "libcryptsetup12" 
+  "libjansson4" 
+  "libluksmeta0" 
+  "libudisks2-0" 
+]
+extra-source "clevis-udisks2-19-2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/clevis-udisks2-19-2.5.x86_64.rpm"
+}

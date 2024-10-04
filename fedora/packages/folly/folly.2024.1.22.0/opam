@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "folly-2024.01.22.00-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "folly-2024.01.22.00-3.fc40.x86_64.rpm"]
+depends: [
+  "boost-context" 
+  "boost-filesystem" 
+  "boost-program-options" 
+  "bzip2-libs" 
+  "double-conversion" 
+  "fmt" 
+  "gflags" 
+  "glibc" 
+  "glog" 
+  "libaio" 
+  "libevent" 
+  "libgcc" 
+  "libsodium" 
+  "libstdc++" 
+  "libunwind" 
+  "liburing" 
+  "libzstd" 
+  "lz4-libs" 
+  "openssl-libs" 
+  "snappy" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "folly-2024.01.22.00-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/folly-2024.01.22.00-3.fc40.x86_64.rpm"
+}

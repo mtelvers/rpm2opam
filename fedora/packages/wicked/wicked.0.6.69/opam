@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "wicked-0.6.69-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wicked-0.6.69-6.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dbus-common" 
+  "dbus-libs" 
+  "glibc" 
+  "libwicked" {= "0.6.69"}
+  "systemd" 
+  "systemd-libs" 
+]
+extra-source "wicked-0.6.69-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/wicked-0.6.69-6.fc40.x86_64.rpm"
+}

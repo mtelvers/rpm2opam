@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-altair-widgets-0.2.2-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-altair-widgets-0.2.2-4.1.noarch.rpm"]
+depends: [
+  "python312-altair" {>= "2.0.0"}
+  "python312-base" {= "3.12"}
+  "python312-ipython" 
+  "python312-ipywidgets" {>= "7.0.0"}
+  "python312-pandas" 
+  "python312-vega" {>= "0.4.4"}
+]
+extra-source "python312-altair-widgets-0.2.2-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-altair-widgets-0.2.2-4.1.noarch.rpm"
+}

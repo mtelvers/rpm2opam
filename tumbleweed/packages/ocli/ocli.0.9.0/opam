@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ocli-0.9.0-6.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocli-0.9.0-6.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgps30" 
+  "libmosquitto1" 
+]
+extra-source "ocli-0.9.0-6.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ocli-0.9.0-6.2.x86_64.rpm"
+}

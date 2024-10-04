@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "calamares-libs-3.3.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "calamares-libs-3.3.5-1.fc40.x86_64.rpm"]
+depends: [
+  "boost-python3" 
+  "glibc" 
+  "kf6-kcoreaddons" 
+  "kpmcore" 
+  "libgcc" 
+  "libicu" 
+  "libpwquality" 
+  "libstdc++" 
+  "libxcrypt" 
+  "parted" 
+  "python3-libs" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qt6-qtdeclarative" 
+  "qt6-qtsvg" 
+  "yaml-cpp" 
+]
+extra-source "calamares-libs-3.3.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/calamares-libs-3.3.5-1.fc40.x86_64.rpm"
+}

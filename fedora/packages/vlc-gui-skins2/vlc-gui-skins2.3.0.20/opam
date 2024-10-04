@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vlc-gui-skins2-3.0.20-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vlc-gui-skins2-3.0.20-12.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "freetype" 
+  "fribidi" 
+  "glibc" 
+  "gnu-free-sans-fonts" 
+  "libX11" 
+  "libXext" 
+  "libXinerama" 
+  "libXpm" 
+  "libgcc" 
+  "libstdc++" 
+  "vlc-cli" {= "3.0.20"}
+  "vlc-gui-qt" {= "3.0.20"}
+  "vlc-libs" 
+]
+extra-source "vlc-gui-skins2-3.0.20-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vlc-gui-skins2-3.0.20-12.fc40.x86_64.rpm"
+}

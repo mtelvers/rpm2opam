@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ffmpeg-free-6.1.1-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ffmpeg-free-6.1.1-8.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "glibc" 
+  "libavcodec-free" {= "6.1.1"}
+  "libavdevice-free" {= "6.1.1"}
+  "libavfilter-free" {= "6.1.1"}
+  "libavformat-free" {= "6.1.1"}
+  "libavutil-free" {= "6.1.1"}
+  "libpostproc-free" {= "6.1.1"}
+  "libswresample-free" {= "6.1.1"}
+  "libswscale-free" {= "6.1.1"}
+]
+extra-source "ffmpeg-free-6.1.1-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/ffmpeg-free-6.1.1-8.fc40.x86_64.rpm"
+}

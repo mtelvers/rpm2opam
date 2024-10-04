@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-contrib-opencensus-exporter-stackdriver-devel-0.13.13-5.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-contrib-opencensus-exporter-stackdriver-devel-0.13.13-5.fc39.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-cloud-google-compute-metadata-devel" 
+  "golang-cloud-google-monitoring-devel" 
+  "golang-cloud-google-trace-devel" 
+  "golang-github-aws-sdk-devel" 
+  "golang-github-census-instrumentation-opencensus-proto-devel" 
+  "golang-github-prometheus-devel" 
+  "golang-github-protobuf-devel" 
+  "golang-google-api-devel" 
+  "golang-google-genproto-devel" 
+  "golang-google-protobuf-devel" 
+  "golang-opencensus-devel" 
+  "golang-x-oauth2-devel" 
+]
+extra-source "golang-contrib-opencensus-exporter-stackdriver-devel-0.13.13-5.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-contrib-opencensus-exporter-stackdriver-devel-0.13.13-5.fc39.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plplotcxx-devel-5.15.0-20.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plplotcxx-devel-5.15.0-20.2.x86_64.rpm"]
+depends: [
+  "libplplotcxx15" {= "5.15.0"}
+  "pkgconf-pkg-config" 
+  "plplot-common" {= "5.15.0"}
+  "plplot-devel" 
+]
+extra-source "plplotcxx-devel-5.15.0-20.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/plplotcxx-devel-5.15.0-20.2.x86_64.rpm"
+}

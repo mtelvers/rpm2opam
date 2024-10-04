@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnotify-devel-32bit-0.8.3-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnotify-devel-32bit-0.8.3-2.2.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf-devel" 
+  "glib2-devel" {>= "2.62.0"}
+  "libnotify-devel" {= "0.8.3"}
+  "libnotify4-32bit" {= "0.8.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libnotify-devel-32bit-0.8.3-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libnotify-devel-32bit-0.8.3-2.2.x86_64.rpm"
+}

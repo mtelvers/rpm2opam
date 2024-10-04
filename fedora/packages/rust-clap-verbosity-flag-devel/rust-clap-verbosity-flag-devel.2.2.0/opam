@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-clap-verbosity-flag-devel-2.2.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-clap-verbosity-flag-devel-2.2.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.73"}
+  "rust-clap+derive-devel" 
+  "rust-clap+std-devel" 
+  "rust-clap-devel" 
+  "rust-log+default-devel" 
+]
+extra-source "rust-clap-verbosity-flag-devel-2.2.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-clap-verbosity-flag-devel-2.2.0-1.fc40.noarch.rpm"
+}

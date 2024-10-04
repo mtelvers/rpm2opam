@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lv2-examples-1.18.10-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lv2-examples-1.18.10-3.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libgtk-2_0-0" 
+  "libsamplerate0" 
+  "libsndfile1" 
+  "lv2" {= "1.18.10"}
+]
+extra-source "lv2-examples-1.18.10-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lv2-examples-1.18.10-3.2.x86_64.rpm"
+}

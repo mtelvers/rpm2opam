@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qemu-hw-s390x-virtio-gpu-ccw-8.2.6-slfo.1.2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qemu-hw-s390x-virtio-gpu-ccw-8.2.6-slfo.1.2.1.x86_64.rpm"]
+depends: [
+  "qemu-hw-display-virtio-gpu" {= "8.2.6"}
+]
+extra-source "qemu-hw-s390x-virtio-gpu-ccw-8.2.6-slfo.1.2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/qemu-hw-s390x-virtio-gpu-ccw-8.2.6-slfo.1.2.1.x86_64.rpm"
+}

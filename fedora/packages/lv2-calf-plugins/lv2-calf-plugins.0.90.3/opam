@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lv2-calf-plugins-0.90.3-18.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lv2-calf-plugins-0.90.3-18.fc40.x86_64.rpm"]
+depends: [
+  "calf" {= "0.90.3"}
+  "lv2" 
+]
+extra-source "lv2-calf-plugins-0.90.3-18.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lv2-calf-plugins-0.90.3-18.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mingw64-gcc-c++-13.2.0-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-gcc-c++-13.2.0-3.1.noarch.rpm"]
+depends: [
+  "mingw64-libgmp10" 
+  "mingw64-libmpc3" 
+  "mingw64-libmpfr4" 
+  "mingw64-libstdc++-gdb-printer" {= "13.2.0"}
+  "mingw64-libwinpthread1" 
+  "mingw64-libz" 
+]
+extra-source "mingw64-gcc-c++-13.2.0-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mingw64-gcc-c++-13.2.0-3.1.noarch.rpm"
+}

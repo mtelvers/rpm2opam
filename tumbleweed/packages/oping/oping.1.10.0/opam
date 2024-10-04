@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "oping-1.10.0-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "oping-1.10.0-2.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "liboping0" 
+]
+extra-source "oping-1.10.0-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/oping-1.10.0-2.3.x86_64.rpm"
+}

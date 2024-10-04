@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "llvm17-doc-17.0.6-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "llvm17-doc-17.0.6-7.fc40.noarch.rpm"]
+depends: [
+  "llvm17" {= "17.0.6"}
+]
+extra-source "llvm17-doc-17.0.6-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/llvm17-doc-17.0.6-7.fc40.noarch.rpm"
+}

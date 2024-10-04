@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpeas2-devel-2.0.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpeas2-devel-2.0.3-1.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.74"}
+  "libpeas-2-0" {= "2.0.3"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Peas-2" {= "2.0.3"}
+]
+extra-source "libpeas2-devel-2.0.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpeas2-devel-2.0.3-1.1.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "facedetect-0.1-3.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "facedetect-0.1-3.4.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-numpy" 
+  "python311-opencv" 
+]
+extra-source "facedetect-0.1-3.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/facedetect-0.1-3.4.noarch.rpm"
+}

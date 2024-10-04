@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "virt-p2v-1.42.3-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "virt-p2v-1.42.3-1.7.x86_64.rpm"]
+depends: [
+  "bash" 
+  "binutils" 
+  "busybox-gzip" 
+  "gawk" 
+  "guestfs-tools" {>= "1.42"}
+]
+extra-source "virt-p2v-1.42.3-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/virt-p2v-1.42.3-1.7.x86_64.rpm"
+}

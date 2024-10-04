@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "selinux-targeted-setup-20201215-lp160.1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "selinux-targeted-setup-20201215-lp160.1.8.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "selinux-policy-targeted" 
+]
+extra-source "selinux-targeted-setup-20201215-lp160.1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/selinux-targeted-setup-20201215-lp160.1.8.noarch.rpm"
+}

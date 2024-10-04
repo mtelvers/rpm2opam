@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "minizip-ng-devel-4.0.4-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "minizip-ng-devel-4.0.4-1.3.x86_64.rpm"]
+depends: [
+  "libminizip-ng4" {= "4.0.4"}
+  "pkgconf-pkg-config" 
+  "zlib-ng-devel" 
+]
+extra-source "minizip-ng-devel-4.0.4-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/minizip-ng-devel-4.0.4-1.3.x86_64.rpm"
+}

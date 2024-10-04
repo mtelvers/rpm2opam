@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "udav-8.0.1-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "udav-8.0.1-10.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "hdf5" 
+  "libgcc" 
+  "libgomp" 
+  "libstdc++" 
+  "mathgl" 
+  "mathgl-qt5" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "udav-8.0.1-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/udav-8.0.1-10.fc40.x86_64.rpm"
+}

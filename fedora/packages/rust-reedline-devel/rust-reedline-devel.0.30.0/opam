@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-reedline-devel-0.30.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-reedline-devel-0.30.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.62.1"}
+  "rust-chrono+clock-devel" 
+  "rust-chrono+serde-devel" 
+  "rust-chrono-devel" 
+  "rust-crossterm+default-devel" 
+  "rust-crossterm+serde-devel" 
+  "rust-fd-lock+default-devel" 
+  "rust-itertools+default-devel" 
+  "rust-nu-ansi-term+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-strip-ansi-escapes+default-devel" 
+  "rust-strum+default-devel" 
+  "rust-strum_macros+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-unicode-segmentation+default-devel" 
+  "rust-unicode-width+default-devel" 
+]
+extra-source "rust-reedline-devel-0.30.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-reedline-devel-0.30.0-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcin-gtk3-2.9.0-6.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcin-gtk3-2.9.0-6.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "gcin" {= "2.9.0"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcin-im-client1" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+]
+extra-source "gcin-gtk3-2.9.0-6.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gcin-gtk3-2.9.0-6.2.x86_64.rpm"
+}

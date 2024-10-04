@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "s-tui-1.1.6-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "s-tui-1.1.6-1.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-psutil" {>= "5.9.1"}
+  "python3-urwid" {>= "2.0.1"}
+]
+extra-source "s-tui-1.1.6-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/s-tui-1.1.6-1.fc40.noarch.rpm"
+}

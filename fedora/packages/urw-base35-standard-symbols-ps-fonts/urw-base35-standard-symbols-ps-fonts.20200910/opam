@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "urw-base35-standard-symbols-ps-fonts-20200910-19.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "urw-base35-standard-symbols-ps-fonts-20200910-19.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "urw-base35-fonts-common" {= "20200910"}
+]
+extra-source "urw-base35-standard-symbols-ps-fonts-20200910-19.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/urw-base35-standard-symbols-ps-fonts-20200910-19.fc40.noarch.rpm"
+}

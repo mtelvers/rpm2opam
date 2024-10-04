@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Mail-Transport-3.005-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mail-Transport-3.005-11.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Errno" 
+  "perl-IO" 
+  "perl-IO-stringy" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-base" 
+  "perl-libnet" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-Mail-Transport-3.005-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Mail-Transport-3.005-11.fc40.noarch.rpm"
+}

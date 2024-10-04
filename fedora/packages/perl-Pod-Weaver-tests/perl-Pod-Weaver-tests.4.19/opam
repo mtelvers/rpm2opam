@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Pod-Weaver-tests-4.019-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Pod-Weaver-tests-4.019-5.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-ExtUtils-MakeMaker" 
+  "perl-PPI" 
+  "perl-PathTools" 
+  "perl-Pod-Elemental" 
+  "perl-Pod-Weaver" 
+  "perl-Software-License" 
+  "perl-Test-Differences" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" {>= "0.96"}
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Pod-Weaver-tests-4.019-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Pod-Weaver-tests-4.019-5.fc40.noarch.rpm"
+}

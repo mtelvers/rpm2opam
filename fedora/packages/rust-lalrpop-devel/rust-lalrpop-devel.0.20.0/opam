@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-lalrpop-devel-0.20.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-lalrpop-devel-0.20.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.64"}
+  "rust-ascii-canvas-devel" 
+  "rust-bit-set-devel" 
+  "rust-diff-devel" 
+  "rust-ena-devel" 
+  "rust-is-terminal+default-devel" 
+  "rust-itertools+use_std-devel" 
+  "rust-itertools-devel" 
+  "rust-lalrpop-util+default-devel" 
+  "rust-petgraph-devel" 
+  "rust-regex+std-devel" 
+  "rust-regex-devel" 
+  "rust-regex-syntax-devel" 
+  "rust-string_cache-devel" 
+  "rust-term-devel" 
+  "rust-tiny-keccak+default-devel" 
+  "rust-tiny-keccak+sha3-devel" 
+  "rust-unicode-xid-devel" 
+]
+extra-source "rust-lalrpop-devel-0.20.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-lalrpop-devel-0.20.0-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-spki+sha2-devel-0.7.3-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-spki+sha2-devel-0.7.3-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-sha2-devel" 
+  "rust-spki-devel" {= "0.7.3"}
+]
+extra-source "rust-spki+sha2-devel-0.7.3-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-spki+sha2-devel-0.7.3-2.fc40.noarch.rpm"
+}

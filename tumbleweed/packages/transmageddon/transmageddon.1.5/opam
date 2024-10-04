@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "transmageddon-1.5-6.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "transmageddon-1.5-6.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "gstreamer-plugins-base" {>= "1.2.0"}
+  "python311" 
+  "python311-gobject" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GUdev-1_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gst-1_0" 
+  "typelib-1_0-GstPbutils-1_0" 
+  "typelib-1_0-GstTag-1_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Notify-0_7" 
+]
+extra-source "transmageddon-1.5-6.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/transmageddon-1.5-6.2.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-rspec-rails-6.0.3-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-rspec-rails-6.0.3-2.fc40.noarch.rpm"]
+depends: [
+  "rubygem-actionpack" {>= "6.1"}
+  "rubygem-activesupport" {>= "6.1"}
+  "rubygem-railties" {>= "6.1"}
+  "rubygem-rspec-core" 
+  "rubygem-rspec-expectations" 
+  "rubygem-rspec-mocks" 
+  "rubygem-rspec-support" 
+  "rubygems" 
+]
+extra-source "rubygem-rspec-rails-6.0.3-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-rspec-rails-6.0.3-2.fc40.noarch.rpm"
+}

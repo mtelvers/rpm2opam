@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "istack-commons-buildtools-3.0.7-8.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "istack-commons-buildtools-3.0.7-8.3.noarch.rpm"]
+depends: [
+  "ant" 
+  "codemodel" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "istack-commons-buildtools-3.0.7-8.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/istack-commons-buildtools-3.0.7-8.3.noarch.rpm"
+}

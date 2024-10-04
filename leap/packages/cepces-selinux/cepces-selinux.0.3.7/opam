@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cepces-selinux-0.3.7-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cepces-selinux-0.3.7-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "selinux-policy" 
+  "selinux-policy-targeted" 
+]
+extra-source "cepces-selinux-0.3.7-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/cepces-selinux-0.3.7-slfo.1.1.4.noarch.rpm"
+}

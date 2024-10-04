@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-bifunctors-devel-5.5.15-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-bifunctors-devel-5.5.15-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-base-orphans-devel" 
+  "ghc-bifunctors" {= "5.5.15"}
+  "ghc-comonad-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-tagged-devel" 
+  "ghc-template-haskell-devel" 
+  "ghc-th-abstraction-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-bifunctors-devel-5.5.15-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-bifunctors-devel-5.5.15-3.fc40.x86_64.rpm"
+}

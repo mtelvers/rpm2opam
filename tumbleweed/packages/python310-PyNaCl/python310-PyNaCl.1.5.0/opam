@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-PyNaCl-1.5.0-4.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-PyNaCl-1.5.0-4.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libsodium26" 
+  "python310-base" {= "3.10"}
+  "python310-cffi" 
+]
+extra-source "python310-PyNaCl-1.5.0-4.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-PyNaCl-1.5.0-4.6.x86_64.rpm"
+}

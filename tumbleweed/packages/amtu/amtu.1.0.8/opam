@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "amtu-1.0.8-29.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "amtu-1.0.8-29.1.x86_64.rpm"]
+depends: [
+  "audit" {>= "1.2.9"}
+  "glibc" 
+  "libaudit1" 
+]
+extra-source "amtu-1.0.8-29.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/amtu-1.0.8-29.1.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "java-mraa-2.2.0-2.19.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "java-mraa-2.2.0-2.19.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "javapackages-tools" 
+  "libgcc_s1" 
+  "libmraa2" 
+  "libstdc++6" 
+  "pkgconf-pkg-config" 
+]
+extra-source "java-mraa-2.2.0-2.19.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/java-mraa-2.2.0-2.19.x86_64.rpm"
+}

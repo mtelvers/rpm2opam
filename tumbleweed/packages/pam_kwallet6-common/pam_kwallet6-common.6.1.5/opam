@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pam_kwallet6-common-6.1.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pam_kwallet6-common-6.1.5-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "kwalletd6" 
+  "socat" 
+]
+extra-source "pam_kwallet6-common-6.1.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pam_kwallet6-common-6.1.5-1.1.noarch.rpm"
+}

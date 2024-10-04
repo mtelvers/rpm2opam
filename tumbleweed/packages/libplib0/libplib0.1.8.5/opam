@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libplib0-1.8.5+svn.2173-7.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libplib0-1.8.5+svn.2173-7.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libglvnd" 
+  "libstdc++6" 
+]
+extra-source "libplib0-1.8.5+svn.2173-7.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libplib0-1.8.5+svn.2173-7.3.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pango-devel-1.51.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pango-devel-1.51.2-1.fc40.x86_64.rpm"]
+depends: [
+  "cairo-devel" {>= "1.12.10"}
+  "fontconfig-devel" {>= "2.13.0"}
+  "freetype-devel" {>= "2.1.5"}
+  "fribidi-devel" {>= "1.0.6"}
+  "glib2-devel" {>= "2.62"}
+  "harfbuzz-devel" {>= "2.6.0"}
+  "libXft-devel" {>= "2.0.0"}
+  "libXrender-devel" 
+  "libthai-devel" {>= "0.1.9"}
+  "pango" 
+  "pkgconf-pkg-config" 
+]
+extra-source "pango-devel-1.51.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pango-devel-1.51.2-1.fc40.x86_64.rpm"
+}

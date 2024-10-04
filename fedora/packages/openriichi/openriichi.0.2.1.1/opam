@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openriichi-0.2.1.1-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openriichi-0.2.1.1-5.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "SDL2_image" 
+  "SDL2_mixer" 
+  "fontconfig" 
+  "glib2" 
+  "glibc" 
+  "google-noto-sans-cjk-vf-fonts" 
+  "gtk3" 
+  "libGLEW" 
+  "libgee" 
+  "libglvnd-glx" 
+  "openriichi-data" {= "0.2.1.1"}
+  "pango" 
+  "zlib-ng-compat" 
+]
+extra-source "openriichi-0.2.1.1-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openriichi-0.2.1.1-5.fc40.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "asciio-1.51.3-26.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "asciio-1.51.3-26.fc40.noarch.rpm"]
+depends: [
+  "perl-App-Asciio" 
+  "perl-File-Basename" 
+  "perl-Glib" 
+  "perl-Gtk2" 
+  "perl-Module-Util" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "asciio-1.51.3-26.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/asciio-1.51.3-26.fc40.noarch.rpm"
+}

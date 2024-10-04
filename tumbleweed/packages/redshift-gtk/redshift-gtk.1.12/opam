@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "redshift-gtk-1.12-8.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "redshift-gtk-1.12-8.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "hicolor-icon-theme" 
+  "python311-base" 
+  "python311-gobject-Gdk" 
+  "redshift" {= "1.12"}
+  "systemd" 
+  "typelib-1_0-AppIndicator3-0_1" {= "0.1"}
+  "typelib-1_0-GLib-2_0" {= "2.0"}
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+]
+extra-source "redshift-gtk-1.12-8.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/redshift-gtk-1.12-8.2.x86_64.rpm"
+}

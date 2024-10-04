@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cvs2cl-2.73-28.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cvs2cl-2.73-28.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long" 
+  "perl-Text-Tabs+Wrap" 
+  "perl-Time-Local" 
+  "perl-User-pwent" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "xml-common" 
+]
+extra-source "cvs2cl-2.73-28.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cvs2cl-2.73-28.fc40.noarch.rpm"
+}

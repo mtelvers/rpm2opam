@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "b43-tools-019-22.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "b43-tools-019-22.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "python3" 
+]
+extra-source "b43-tools-019-22.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/b43-tools-019-22.fc40.x86_64.rpm"
+}

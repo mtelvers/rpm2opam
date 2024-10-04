@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-doc-5.38.2-slfo.1.1.13.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-doc-5.38.2-slfo.1.1.13.noarch.rpm"]
+depends: [
+  "perl" {= "5.38.2"}
+]
+extra-source "perl-doc-5.38.2-slfo.1.1.13.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/perl-doc-5.38.2-slfo.1.1.13.noarch.rpm"
+}

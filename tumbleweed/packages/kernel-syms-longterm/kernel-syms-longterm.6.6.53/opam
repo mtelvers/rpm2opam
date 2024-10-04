@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kernel-syms-longterm-6.6.53-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kernel-syms-longterm-6.6.53-1.1.x86_64.rpm"]
+depends: [
+  "kernel-devel-longterm" {= "6.6.53"}
+  "kernel-longterm-devel" {= "6.6.53"}
+  "pesign-obs-integration" 
+]
+extra-source "kernel-syms-longterm-6.6.53-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kernel-syms-longterm-6.6.53-1.1.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-pymilter-1.0.5-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-pymilter-1.0.5-6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "python-pymilter-common" {= "1.0.5"}
+  "python3" {= "3.12"}
+  "python3-py3dns" 
+  "sendmail-milter" 
+]
+extra-source "python3-pymilter-1.0.5-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-pymilter-1.0.5-6.fc40.x86_64.rpm"
+}

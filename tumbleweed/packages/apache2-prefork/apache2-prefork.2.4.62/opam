@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "apache2-prefork-2.4.62-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apache2-prefork-2.4.62-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "grep" 
+  "libapr-util1-0" 
+  "libapr1-0" 
+  "libbrotlienc1" 
+  "libcrypt1" 
+  "libcurl-mini4" 
+  "libjansson4" 
+  "libldap2" 
+  "liblua5_4-5" 
+  "libnghttp2-14" 
+  "libopenssl3" 
+  "libpcre2-8-0" 
+  "libsystemd0" 
+  "libxml2-2" 
+  "libz-ng-compat1" 
+  "permissions" 
+  "update-alternatives" 
+]
+extra-source "apache2-prefork-2.4.62-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/apache2-prefork-2.4.62-1.1.x86_64.rpm"
+}

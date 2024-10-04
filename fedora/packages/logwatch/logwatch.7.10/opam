@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "logwatch-7.10-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "logwatch-7.10-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "crontabs" 
+  "grep" 
+  "perl-Date-Manip" 
+  "perl-Errno" 
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-HTML-Parser" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Socket" 
+  "perl-Time-Local" 
+  "perl-URI" 
+  "perl-diagnostics" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "perl-subs" 
+  "perl-vars" 
+]
+extra-source "logwatch-7.10-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/logwatch-7.10-1.fc40.noarch.rpm"
+}

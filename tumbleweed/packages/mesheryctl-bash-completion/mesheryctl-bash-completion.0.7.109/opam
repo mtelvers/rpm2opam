@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mesheryctl-bash-completion-0.7.109-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mesheryctl-bash-completion-0.7.109-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "mesheryctl" {= "0.7.109"}
+]
+extra-source "mesheryctl-bash-completion-0.7.109-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mesheryctl-bash-completion-0.7.109-1.1.noarch.rpm"
+}

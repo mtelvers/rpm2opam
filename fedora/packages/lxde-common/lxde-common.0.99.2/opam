@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lxde-common-0.99.2-25.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lxde-common-0.99.2-25.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "desktop-backgrounds-compat" 
+  "fedora-logos" 
+  "lxmenu-data" 
+  "lxpanel" 
+  "lxsession" {>= "0.4.0"}
+  "openbox" 
+  "pcmanfm" 
+  "xdg-utils" 
+  "xorg-x11-xinit" 
+  "xprop" 
+]
+extra-source "lxde-common-0.99.2-25.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lxde-common-0.99.2-25.fc40.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-google-cloud-spanner-3.40.1-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-google-cloud-spanner-3.40.1-3.2.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-google-api-core" {>= "1.34.0"}
+  "python310-google-cloud-core" {>= "1.4.1"}
+  "python310-grpc-google-iam-v1" {>= "0.12.4"}
+  "python310-proto-plus" {>= "1.22.0"}
+  "python310-protobuf" {>= "3.19.5"}
+  "python310-sqlparse" {>= "0.4.4"}
+]
+extra-source "python310-google-cloud-spanner-3.40.1-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-google-cloud-spanner-3.40.1-3.2.noarch.rpm"
+}

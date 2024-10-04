@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sblim-testsuite-1.3.0-7.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sblim-testsuite-1.3.0-7.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "perl-base" 
+  "sblim-wbemcli" 
+]
+extra-source "sblim-testsuite-1.3.0-7.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sblim-testsuite-1.3.0-7.2.noarch.rpm"
+}

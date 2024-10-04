@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Catalyst-Action-REST-1.21-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Catalyst-Action-REST-1.21-20.fc40.noarch.rpm"]
+depends: [
+  "perl-Catalyst-Runtime" {>= "5.80030"}
+  "perl-Class-Inspector" 
+  "perl-Config-General" 
+  "perl-Data-Taxi" 
+  "perl-FreezeThaw" 
+  "perl-HTTP-Body" 
+  "perl-HTTP-Message" 
+  "perl-JSON" {>= "2.12"}
+  "perl-JSON-MaybeXS" 
+  "perl-JSON-XS" 
+  "perl-MRO-Compat" 
+  "perl-Module-Pluggable" 
+  "perl-Moose" 
+  "perl-PHP-Serialization" 
+  "perl-Params-Validate" 
+  "perl-Scalar-List-Utils" 
+  "perl-URI-Find" 
+  "perl-XML-Simple" 
+  "perl-YAML-Syck" 
+  "perl-libs" {>= "5.8.1"}
+  "perl-libwww-perl" {>= "5.0"}
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-Catalyst-Action-REST-1.21-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Catalyst-Action-REST-1.21-20.fc40.noarch.rpm"
+}

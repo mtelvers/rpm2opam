@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "wine-9.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wine-9.1-1.fc40.x86_64.rpm"]
+depends: [
+  "mesa-dri-drivers" 
+  "mingw32-wine-gecko" {= "2.47.4"}
+  "mingw64-wine-gecko" {= "2.47.4"}
+  "samba-winbind-clients" 
+  "wine-cms" {= "9.1"}
+  "wine-common" {= "9.1"}
+  "wine-core" {= "9.1"}
+  "wine-desktop" {= "9.1"}
+  "wine-fonts" {= "9.1"}
+  "wine-ldap" {= "9.1"}
+  "wine-mono" {= "8.1.0"}
+  "wine-opencl" {= "9.1"}
+  "wine-pulseaudio" {= "9.1"}
+  "wine-twain" {= "9.1"}
+]
+extra-source "wine-9.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/wine-9.1-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-XML-SAX-Writer-0.57-1.28.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XML-SAX-Writer-0.57-1.28.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-XML-Filter-BufferText" {>= "1.0"}
+  "perl-XML-NamespaceSupport" {>= "1.0"}
+  "perl-XML-SAX-Base" {>= "1.1"}
+]
+extra-source "perl-XML-SAX-Writer-0.57-1.28.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-XML-SAX-Writer-0.57-1.28.noarch.rpm"
+}

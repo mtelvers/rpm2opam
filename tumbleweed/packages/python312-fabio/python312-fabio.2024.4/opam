@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-fabio-2024.4-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-fabio-2024.4-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "python312-Pillow" 
+  "python312-base" 
+  "python312-h5py" 
+  "python312-hdf5plugin" 
+  "python312-lxml" 
+  "python312-numpy" 
+  "update-alternatives" 
+]
+extra-source "python312-fabio-2024.4-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-fabio-2024.4-1.2.x86_64.rpm"
+}

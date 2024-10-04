@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-linode-cli-5.25.0-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-linode-cli-5.25.0-3.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-PyYAML" 
+  "python311-base" 
+  "python311-requests" 
+  "python311-terminaltables" 
+  "update-alternatives" 
+]
+extra-source "python311-linode-cli-5.25.0-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-linode-cli-5.25.0-3.2.x86_64.rpm"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-feed-devel-1.3.2.1-6.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-feed-devel-1.3.2.1-6.10.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-compat-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-feed" {= "1.3.2.1"}
+  "ghc-old-locale-devel" 
+  "ghc-old-time-devel" 
+  "ghc-safe-devel" 
+  "ghc-text-devel" 
+  "ghc-time-devel" 
+  "ghc-time-locale-compat-devel" 
+  "ghc-utf8-string-devel" 
+  "ghc-xml-conduit-devel" 
+  "ghc-xml-types-devel" 
+]
+extra-source "ghc-feed-devel-1.3.2.1-6.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-feed-devel-1.3.2.1-6.10.x86_64.rpm"
+}

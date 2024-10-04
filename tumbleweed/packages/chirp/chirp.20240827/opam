@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "chirp-20240827-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "chirp-20240827-1.1.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-pyserial" 
+  "python311-requests" 
+  "python311-six" 
+  "python311-suds" 
+  "python311-wxPython" 
+  "python311-yattag" 
+]
+extra-source "chirp-20240827-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/chirp-20240827-1.1.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "osmosdr-devel-0.1+git.20151211-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "osmosdr-devel-0.1+git.20151211-2.2.x86_64.rpm"]
+depends: [
+  "libosmosdr0" {= "0.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "osmosdr-devel-0.1+git.20151211-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/osmosdr-devel-0.1+git.20151211-2.2.x86_64.rpm"
+}

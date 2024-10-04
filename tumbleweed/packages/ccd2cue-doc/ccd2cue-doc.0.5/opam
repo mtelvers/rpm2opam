@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ccd2cue-doc-0.5-2.27.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ccd2cue-doc-0.5-2.27.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "ccd2cue" {= "0.5"}
+  "info" 
+]
+extra-source "ccd2cue-doc-0.5-2.27.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ccd2cue-doc-0.5-2.27.noarch.rpm"
+}

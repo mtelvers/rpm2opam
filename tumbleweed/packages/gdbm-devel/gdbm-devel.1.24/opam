@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gdbm-devel-1.24-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdbm-devel-1.24-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgdbm6" 
+  "libgdbm_compat4" {= "1.24"}
+  "libreadline8" 
+]
+extra-source "gdbm-devel-1.24-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gdbm-devel-1.24-1.1.x86_64.rpm"
+}

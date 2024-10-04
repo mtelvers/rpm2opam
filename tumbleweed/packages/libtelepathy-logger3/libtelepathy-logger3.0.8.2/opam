@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libtelepathy-logger3-0.8.2-10.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libtelepathy-logger3-0.8.2-10.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libdbus-glib-1-2" 
+  "libsqlite3-0" 
+  "libtelepathy-glib0" 
+  "libxml2-2" 
+  "telepathy-logger-schema" {>= "0.8.2"}
+]
+extra-source "libtelepathy-logger3-0.8.2-10.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libtelepathy-logger3-0.8.2-10.1.x86_64.rpm"
+}

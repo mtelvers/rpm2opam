@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ca-certificates-steamtricks-1-1.18.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ca-certificates-steamtricks-1-1.18.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "ca-certificates" 
+  "coreutils" 
+]
+extra-source "ca-certificates-steamtricks-1-1.18.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ca-certificates-steamtricks-1-1.18.noarch.rpm"
+}

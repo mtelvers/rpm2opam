@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpoppler-qt5-devel-24.07.0-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpoppler-qt5-devel-24.07.0-4.1.x86_64.rpm"]
+depends: [
+  "libQt5Core-devel" 
+  "libQt5Gui-devel" 
+  "libQt5Widgets-devel" 
+  "libQt5Xml-devel" 
+  "libpoppler-devel" {= "24.7.0"}
+  "libpoppler-qt5-1" {= "24.7.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libpoppler-qt5-devel-24.07.0-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpoppler-qt5-devel-24.07.0-4.1.x86_64.rpm"
+}

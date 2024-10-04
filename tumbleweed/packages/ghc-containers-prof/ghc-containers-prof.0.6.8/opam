@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-containers-prof-0.6.8-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-containers-prof-0.6.8-2.1.x86_64.rpm"]
+depends: [
+  "ghc-array-prof" 
+  "ghc-base-prof" 
+  "ghc-containers-devel" {= "0.6.8"}
+  "ghc-deepseq-prof" 
+  "ghc-template-haskell-prof" 
+]
+extra-source "ghc-containers-prof-0.6.8-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-containers-prof-0.6.8-2.1.x86_64.rpm"
+}

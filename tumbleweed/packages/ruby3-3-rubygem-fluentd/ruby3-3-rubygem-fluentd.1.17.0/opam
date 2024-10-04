@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ruby3.3-rubygem-fluentd-1.17.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ruby3.3-rubygem-fluentd-1.17.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "ruby3-3" {= "3.3.0"}
+  "ruby3-3-rubygem-cool-io" {>= "1.4.5"}
+  "ruby3-3-rubygem-http_parser-rb" {>= "0.5.1"}
+  "ruby3-3-rubygem-msgpack" {< "2.0.0"}
+  "ruby3-3-rubygem-serverengine" {>= "2.3.2"}
+  "ruby3-3-rubygem-sigdump" {>= "0.2.5"}
+  "ruby3-3-rubygem-strptime" {>= "0.2.4"}
+  "ruby3-3-rubygem-tzinfo" {>= "1.0"}
+  "ruby3-3-rubygem-tzinfo-data" {>= "1"}
+  "ruby3-3-rubygem-webrick" {>= "1.4"}
+  "ruby3-3-rubygem-yajl-ruby" {>= "1"}
+  "update-alternatives" 
+]
+extra-source "ruby3.3-rubygem-fluentd-1.17.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ruby3.3-rubygem-fluentd-1.17.0-1.1.x86_64.rpm"
+}

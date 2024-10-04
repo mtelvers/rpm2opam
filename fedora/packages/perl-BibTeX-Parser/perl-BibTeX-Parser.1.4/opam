@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-BibTeX-Parser-1.04-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-BibTeX-Parser-1.04-3.fc40.noarch.rpm"]
+depends: [
+  "perl-LaTeX-ToUnicode" {>= "0.11"}
+  "perl-libs" 
+  "perl-overload" 
+]
+extra-source "perl-BibTeX-Parser-1.04-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-BibTeX-Parser-1.04-3.fc40.noarch.rpm"
+}

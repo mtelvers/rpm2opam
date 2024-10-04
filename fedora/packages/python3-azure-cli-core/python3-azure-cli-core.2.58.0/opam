@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-azure-cli-core-2.58.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-azure-cli-core-2.58.0-1.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-argcomplete" {>= "2"}
+  "python3-azure-cli-telemetry" 
+  "python3-azure-mgmt-core" 
+  "python3-cryptography" 
+  "python3-distro" 
+  "python3-humanfriendly" {>= "10"}
+  "python3-jmespath" 
+  "python3-jwt" {>= "2.1"}
+  "python3-knack" {>= "0.11"}
+  "python3-msal" {>= "1.26"}
+  "python3-msal+broker" {>= "1.26"}
+  "python3-msal-extensions" {>= "1"}
+  "python3-msrestazure" 
+  "python3-packaging" {>= "20.9"}
+  "python3-paramiko" 
+  "python3-pkginfo" {>= "1.5.0.1"}
+  "python3-psutil" {>= "5.9"}
+  "python3-pyOpenSSL" {>= "17.1"}
+  "python3-requests" 
+  "python3-requests+socks" 
+]
+extra-source "python3-azure-cli-core-2.58.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-azure-cli-core-2.58.0-1.fc40.noarch.rpm"
+}

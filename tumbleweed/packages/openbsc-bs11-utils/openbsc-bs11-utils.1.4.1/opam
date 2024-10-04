@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openbsc-bs11-utils-1.4.1-1.15.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openbsc-bs11-utils-1.4.1-1.15.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libosmoabis13" 
+  "libosmocore21" 
+  "libosmogsm20" 
+  "libtalloc2" 
+]
+extra-source "openbsc-bs11-utils-1.4.1-1.15.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openbsc-bs11-utils-1.4.1-1.15.x86_64.rpm"
+}

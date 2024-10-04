@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gdk-pixbuf2-devel-2.42.10-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gdk-pixbuf2-devel-2.42.10-8.fc40.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf2" {= "2.42.10"}
+  "glib2" 
+  "glib2-devel" {>= "2.56.0"}
+  "glibc" 
+  "libjpeg-turbo-devel" 
+  "libpng-devel" 
+  "libtiff-devel" 
+  "pkgconf-pkg-config" 
+  "shared-mime-info" 
+]
+extra-source "gdk-pixbuf2-devel-2.42.10-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gdk-pixbuf2-devel-2.42.10-8.fc40.x86_64.rpm"
+}

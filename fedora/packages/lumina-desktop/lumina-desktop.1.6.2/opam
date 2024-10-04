@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lumina-desktop-1.6.2-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lumina-desktop-1.6.2-11.fc40.x86_64.rpm"]
+depends: [
+  "enlightenment" 
+  "glibc" 
+  "libX11" 
+  "libXdamage" 
+  "libgcc" 
+  "libstdc++" 
+  "libxcb" 
+  "lumina-desktop-data" {= "1.6.2"}
+  "lumina-desktop-filesystem" {= "1.6.2"}
+  "lumina-info" {= "1.6.2"}
+  "lumina-open" {= "1.6.2"}
+  "lumina-themeengine" {= "1.6.2"}
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtdeclarative" 
+  "qt5-qtmultimedia" 
+  "qt5-qtx11extras" 
+  "xcb-util" 
+  "xcb-util-image" 
+  "xcb-util-wm" 
+]
+extra-source "lumina-desktop-1.6.2-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lumina-desktop-1.6.2-11.fc40.x86_64.rpm"
+}

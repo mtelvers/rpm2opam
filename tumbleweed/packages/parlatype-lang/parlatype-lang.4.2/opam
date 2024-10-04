@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "parlatype-lang-4.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "parlatype-lang-4.2-1.1.noarch.rpm"]
+depends: [
+  "parlatype" {= "4.2"}
+]
+extra-source "parlatype-lang-4.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/parlatype-lang-4.2-1.1.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "minicom-lang-2.9-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "minicom-lang-2.9-1.3.noarch.rpm"]
+depends: [
+  "minicom" {= "2.9"}
+]
+extra-source "minicom-lang-2.9-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/minicom-lang-2.9-1.3.noarch.rpm"
+}

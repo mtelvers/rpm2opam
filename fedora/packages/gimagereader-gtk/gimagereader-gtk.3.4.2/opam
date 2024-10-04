@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gimagereader-gtk-3.4.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gimagereader-gtk-3.4.2-1.fc40.x86_64.rpm"]
+depends: [
+  "atkmm" 
+  "cairomm" 
+  "djvulibre-libs" 
+  "enchant2" 
+  "fontconfig" 
+  "gimagereader-common" {= "3.4.2"}
+  "glib2" 
+  "glibc" 
+  "glibmm2-4" 
+  "gtk3" 
+  "gtkmm3-0" 
+  "gtksourceviewmm3" 
+  "gtkspellmm30" 
+  "gvfs-client" 
+  "json-glib" 
+  "libgcc" 
+  "libgomp" 
+  "libjpeg-turbo" 
+  "libsigc++20" 
+  "libstdc++" 
+  "libxml++30" 
+  "libzip" 
+  "pango" 
+  "pangomm" 
+  "podofo" 
+  "poppler-glib" 
+  "sane-backends-libs" 
+  "tesseract" 
+]
+extra-source "gimagereader-gtk-3.4.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gimagereader-gtk-3.4.2-1.fc40.x86_64.rpm"
+}

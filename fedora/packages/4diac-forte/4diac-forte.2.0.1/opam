@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "4diac-forte-2.0.1-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "4diac-forte-2.0.1-8.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libmodbus" 
+  "libstdc++" 
+  "luajit" 
+  "paho-c" 
+  "systemd" 
+]
+extra-source "4diac-forte-2.0.1-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/4/4diac-forte-2.0.1-8.fc40.x86_64.rpm"
+}

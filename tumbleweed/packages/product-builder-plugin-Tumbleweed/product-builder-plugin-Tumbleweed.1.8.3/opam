@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "product-builder-plugin-Tumbleweed-1.8.3-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "product-builder-plugin-Tumbleweed-1.8.3-1.3.noarch.rpm"]
+depends: [
+  "build" {>= "20230215"}
+  "createrepo_c" 
+  "dnf" 
+  "dosfstools" 
+  "instsource-susedata" 
+  "mtools" 
+  "openSUSE-EULAs" 
+  "openSUSE-appstream-process" 
+  "package-translations" 
+  "perl-YAML-LibYAML" 
+]
+extra-source "product-builder-plugin-Tumbleweed-1.8.3-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/product-builder-plugin-Tumbleweed-1.8.3-1.3.noarch.rpm"
+}

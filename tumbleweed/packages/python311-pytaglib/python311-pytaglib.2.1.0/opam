@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pytaglib-2.1.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pytaglib-2.1.0-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libtag2" 
+  "python311-base" 
+  "python311-setuptools" 
+  "update-alternatives" 
+]
+extra-source "python311-pytaglib-2.1.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-pytaglib-2.1.0-1.2.x86_64.rpm"
+}

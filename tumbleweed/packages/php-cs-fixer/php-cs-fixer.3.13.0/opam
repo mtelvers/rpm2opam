@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "php-cs-fixer-3.13.0-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-cs-fixer-3.13.0-1.4.noarch.rpm"]
+depends: [
+  "php8-iconv" 
+  "php8-phar" 
+  "php8-tokenizer" 
+]
+extra-source "php-cs-fixer-3.13.0-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/php-cs-fixer-3.13.0-1.4.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-stm-devel-2.5.2.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-stm-devel-2.5.2.1-2.1.x86_64.rpm"]
+depends: [
+  "ghc-array-devel" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-stm" {= "2.5.2.1"}
+]
+extra-source "ghc-stm-devel-2.5.2.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-stm-devel-2.5.2.1-2.1.x86_64.rpm"
+}

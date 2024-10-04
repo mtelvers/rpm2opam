@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libgovirt-devel-0.3.9-3.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgovirt-devel-0.3.9-3.fc39.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libgovirt" {= "0.3.9"}
+  "pkgconf-pkg-config" 
+  "rest-devel" {>= "0.9"}
+]
+extra-source "libgovirt-devel-0.3.9-3.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libgovirt-devel-0.3.9-3.fc39.x86_64.rpm"
+}

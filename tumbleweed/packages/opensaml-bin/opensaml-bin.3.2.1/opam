@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "opensaml-bin-3.2.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opensaml-bin-3.2.1-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "liblog4shib2" 
+  "libsaml12" 
+  "libstdc++6" 
+  "libxerces-c-3_2" 
+  "libxmltooling10" 
+]
+extra-source "opensaml-bin-3.2.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/opensaml-bin-3.2.1-2.1.x86_64.rpm"
+}

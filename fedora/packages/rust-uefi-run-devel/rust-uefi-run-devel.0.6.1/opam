@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-uefi-run-devel-0.6.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-uefi-run-devel-0.6.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-anyhow+default-devel" 
+  "rust-clap+cargo-devel" 
+  "rust-clap+default-devel" 
+  "rust-clap+derive-devel" 
+  "rust-ctrlc+default-devel" 
+  "rust-ctrlc+termination-devel" 
+  "rust-fatfs+default-devel" 
+  "rust-tempfile+default-devel" 
+  "rust-wait-timeout+default-devel" 
+]
+extra-source "rust-uefi-run-devel-0.6.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-uefi-run-devel-0.6.1-2.fc40.noarch.rpm"
+}

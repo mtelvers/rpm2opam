@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "net-snmp-devel-32bit-5.9.4-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "net-snmp-devel-32bit-5.9.4-2.6.x86_64.rpm"]
+depends: [
+  "libsnmp40-32bit" {= "5.9.4"}
+  "net-snmp-devel" {= "5.9.4"}
+  "pkgconf-pkg-config" 
+]
+extra-source "net-snmp-devel-32bit-5.9.4-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/net-snmp-devel-32bit-5.9.4-2.6.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "eclipse-emf-core-bootstrap-2.22.0-5.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eclipse-emf-core-bootstrap-2.22.0-5.3.x86_64.rpm"]
+depends: [
+  "eclipse-equinox-osgi" 
+  "eclipse-platform" 
+  "java-11-openj9-headless" {>= "1.6"}
+  "javapackages-filesystem" 
+]
+extra-source "eclipse-emf-core-bootstrap-2.22.0-5.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/eclipse-emf-core-bootstrap-2.22.0-5.3.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "falcoctl-zsh-completion-0.10.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "falcoctl-zsh-completion-0.10.0-1.1.noarch.rpm"]
+depends: [
+  "falcoctl" {= "0.10.0"}
+]
+extra-source "falcoctl-zsh-completion-0.10.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/falcoctl-zsh-completion-0.10.0-1.1.noarch.rpm"
+}

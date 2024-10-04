@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-block-svn17209.0-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-block-svn17209.0-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-kpathsea" 
+]
+extra-source "texlive-block-svn17209.0-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-block-svn17209.0-71.fc40.noarch.rpm"
+}

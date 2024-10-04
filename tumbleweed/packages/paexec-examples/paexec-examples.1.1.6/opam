@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "paexec-examples-1.1.6-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "paexec-examples-1.1.6-1.1.noarch.rpm"]
+depends: [
+  "paexec" {= "1.1.6"}
+]
+extra-source "paexec-examples-1.1.6-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/paexec-examples-1.1.6-1.1.noarch.rpm"
+}

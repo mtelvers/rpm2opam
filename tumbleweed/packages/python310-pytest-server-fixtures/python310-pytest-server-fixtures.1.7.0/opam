@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pytest-server-fixtures-1.7.0-9.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pytest-server-fixtures-1.7.0-9.4.noarch.rpm"]
+depends: [
+  "lsof" 
+  "net-tools-deprecated" 
+  "python310-base" {= "3.10"}
+  "python310-psutil" 
+  "python310-pytest" 
+  "python310-pytest-fixture-config" 
+  "python310-pytest-shutil" 
+  "python310-requests" 
+  "python310-retry" 
+]
+extra-source "python310-pytest-server-fixtures-1.7.0-9.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-pytest-server-fixtures-1.7.0-9.4.noarch.rpm"
+}

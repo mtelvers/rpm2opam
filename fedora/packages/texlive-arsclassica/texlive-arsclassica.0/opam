@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-arsclassica-svn45656-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-arsclassica-svn45656-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-caption" 
+  "texlive-classicthesis" 
+  "texlive-iwona" 
+  "texlive-kpathsea" 
+  "texlive-soul" 
+  "texlive-titlesec" 
+]
+extra-source "texlive-arsclassica-svn45656-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-arsclassica-svn45656-71.fc40.noarch.rpm"
+}

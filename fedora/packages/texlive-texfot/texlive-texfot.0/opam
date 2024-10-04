@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-texfot-svn65545-81.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-texfot-svn65545-81.fc40.noarch.rpm"]
+depends: [
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-IPC-Open3" 
+  "perl-Pod-Usage" 
+  "perl-interpreter" 
+  "texlive-base" 
+  "texlive-kpathsea" 
+]
+extra-source "texlive-texfot-svn65545-81.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-texfot-svn65545-81.fc40.noarch.rpm"
+}

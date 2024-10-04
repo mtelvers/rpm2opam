@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lpsolve-devel-5.5.2.0-10.37.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lpsolve-devel-5.5.2.0-10.37.x86_64.rpm"]
+depends: [
+  "liblpsolve55-0" {= "5.5.2.0"}
+]
+extra-source "lpsolve-devel-5.5.2.0-10.37.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lpsolve-devel-5.5.2.0-10.37.x86_64.rpm"
+}

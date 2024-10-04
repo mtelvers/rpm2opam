@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "thinkfan-1.3.1-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "thinkfan-1.3.1-3.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libatasmart4" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libyaml-cpp0_8" 
+]
+extra-source "thinkfan-1.3.1-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/thinkfan-1.3.1-3.2.x86_64.rpm"
+}

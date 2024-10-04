@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-rs-zerolog-devel-1.32.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-rs-zerolog-devel-1.32.0-1.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-coreos-systemd-22-devel" 
+  "go-filesystem" 
+  "golang-github-mattn-colorable-devel" 
+  "golang-github-pkg-errors-devel" 
+  "golang-github-rs-xid-devel" 
+  "golang-x-tools-devel" 
+]
+extra-source "golang-github-rs-zerolog-devel-1.32.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-rs-zerolog-devel-1.32.0-1.fc40.noarch.rpm"
+}

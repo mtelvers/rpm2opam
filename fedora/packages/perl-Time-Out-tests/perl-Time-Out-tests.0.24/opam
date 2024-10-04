@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Time-Out-tests-0.24-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Time-Out-tests-0.24-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-IO" 
+  "perl-POSIX" 
+  "perl-Scalar-List-Utils" 
+  "perl-Test-Fatal" 
+  "perl-Test-Harness" 
+  "perl-Test-Needs" 
+  "perl-Test-Simple" 
+  "perl-Time-HiRes" {>= "1.9726"}
+  "perl-Time-Out" 
+  "perl-Try-Tiny" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Time-Out-tests-0.24-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Time-Out-tests-0.24-3.fc40.noarch.rpm"
+}

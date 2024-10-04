@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sweeper-lang-24.08.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sweeper-lang-24.08.1-1.1.noarch.rpm"]
+depends: [
+  "sweeper" {= "24.8.1"}
+]
+extra-source "sweeper-lang-24.08.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sweeper-lang-24.08.1-1.1.noarch.rpm"
+}

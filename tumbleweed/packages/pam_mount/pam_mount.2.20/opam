@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pam_mount-2.20-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pam_mount-2.20-1.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "device-mapper" {>= "1.2.48"}
+  "fd0ssh" 
+  "glibc" 
+  "libHX32" 
+  "libcryptmount0" 
+  "libcryptsetup12" 
+  "libmount1" 
+  "libpcre2-8-0" 
+  "libxml2-2" 
+  "ofl" 
+  "pam" 
+  "perl-XML-Parser" 
+  "perl-XML-Writer" 
+  "util-linux" {>= "2.20"}
+]
+extra-source "pam_mount-2.20-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pam_mount-2.20-1.3.x86_64.rpm"
+}

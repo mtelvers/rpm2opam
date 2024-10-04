@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libidn2-lang-2.3.4-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libidn2-lang-2.3.4-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "libidn2-0" {= "2.3.4"}
+]
+extra-source "libidn2-lang-2.3.4-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/libidn2-lang-2.3.4-slfo.1.1.4.noarch.rpm"
+}

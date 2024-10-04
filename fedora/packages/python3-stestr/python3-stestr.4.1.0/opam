@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-stestr-4.1.0-3.fc40~bootstrap.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-stestr-4.1.0-3.fc40~bootstrap.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-cliff" {>= "2.8.0"}
+  "python3-extras" {>= "1"}
+  "python3-fixtures" {>= "3.0.0"}
+  "python3-pbr" 
+  "python3-pyyaml" {>= "3.10.0"}
+  "python3-subunit" {>= "1.4.0"}
+  "python3-testtools" {>= "2.2.0"}
+  "python3-tomlkit" {>= "0.11.6"}
+  "python3-voluptuous" {>= "0.8.9"}
+]
+extra-source "python3-stestr-4.1.0-3.fc40~bootstrap.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-stestr-4.1.0-3.fc40~bootstrap.noarch.rpm"
+}

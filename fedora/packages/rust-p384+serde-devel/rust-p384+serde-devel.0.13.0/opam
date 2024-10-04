@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-p384+serde-devel-0.13.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-p384+serde-devel-0.13.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-ecdsa+der-devel" 
+  "rust-ecdsa+serde-devel" 
+  "rust-ecdsa-devel" 
+  "rust-elliptic-curve+serde-devel" 
+  "rust-p384+serdect-devel" {= "0.13.0"}
+  "rust-p384-devel" {= "0.13.0"}
+]
+extra-source "rust-p384+serde-devel-0.13.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-p384+serde-devel-0.13.0-3.fc40.noarch.rpm"
+}

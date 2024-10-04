@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "webkit2gtk4-devel-2.44.4-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "webkit2gtk4-devel-2.44.4-1.2.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "gtk4-devel" 
+  "libjavascriptcoregtk-6_0-1" {= "2.44.4"}
+  "libsoup-devel" 
+  "libwebkitgtk-6_0-4" {= "2.44.4"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-JavaScriptCore-6_0" 
+  "typelib-1_0-WebKit-6_0" 
+  "typelib-1_0-WebKitWebProcessExtension-6_0" 
+]
+extra-source "webkit2gtk4-devel-2.44.4-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/webkit2gtk4-devel-2.44.4-1.2.x86_64.rpm"
+}

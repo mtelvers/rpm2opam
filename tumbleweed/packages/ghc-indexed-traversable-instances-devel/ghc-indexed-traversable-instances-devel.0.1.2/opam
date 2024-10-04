@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-indexed-traversable-instances-devel-0.1.2-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-indexed-traversable-instances-devel-0.1.2-1.5.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-OneTuple-devel" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-indexed-traversable-devel" 
+  "ghc-indexed-traversable-instances" {= "0.1.2"}
+  "ghc-tagged-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-indexed-traversable-instances-devel-0.1.2-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-indexed-traversable-instances-devel-0.1.2-1.5.x86_64.rpm"
+}

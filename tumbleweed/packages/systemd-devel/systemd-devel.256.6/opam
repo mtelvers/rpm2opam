@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "systemd-devel-256.6-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "systemd-devel-256.6-1.2.x86_64.rpm"]
+depends: [
+  "libsystemd0" {= "256.6"}
+  "libudev-mini1" {= "256.6"}
+  "pkgconf-pkg-config" 
+  "systemd-rpm-macros" 
+]
+extra-source "systemd-devel-256.6-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/systemd-devel-256.6-1.2.x86_64.rpm"
+}

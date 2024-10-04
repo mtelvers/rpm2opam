@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-axodraw2-svn58155-81.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-axodraw2-svn58155-81.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "texlive-base" 
+  "texlive-graphics" 
+  "texlive-iftex" 
+  "texlive-kpathsea" 
+  "texlive-latex" 
+]
+extra-source "texlive-axodraw2-svn58155-81.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-axodraw2-svn58155-81.fc40.x86_64.rpm"
+}

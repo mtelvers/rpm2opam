@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libreport-web_2-devel-2.17.15-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libreport-web_2-devel-2.17.15-1.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libcurl-devel" 
+  "libjson-c-devel" 
+  "libreport-devel" 
+  "libreport-web_2" {= "2.17.15"}
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+  "satyr-devel" 
+  "xmlrpc-c-devel" 
+]
+extra-source "libreport-web_2-devel-2.17.15-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libreport-web_2-devel-2.17.15-1.1.x86_64.rpm"
+}

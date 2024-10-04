@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Config-MVP-2.200013-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Config-MVP-2.200013-1.7.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Load" {>= "0.17"}
+  "perl-Module-Pluggable" 
+  "perl-Moose" {>= "0.91"}
+  "perl-MooseX-OneArgNew" 
+  "perl-Params-Util" 
+  "perl-Role-HasMessage" 
+  "perl-Role-Identifiable" 
+  "perl-Throwable" 
+  "perl-Tie-IxHash" 
+  "perl-Try-Tiny" 
+]
+extra-source "perl-Config-MVP-2.200013-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Config-MVP-2.200013-1.7.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-arrayref+default-devel-0.3.7-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-arrayref+default-devel-0.3.7-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-arrayref-devel" {= "0.3.7"}
+]
+extra-source "rust-arrayref+default-devel-0.3.7-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-arrayref+default-devel-0.3.7-3.fc40.noarch.rpm"
+}

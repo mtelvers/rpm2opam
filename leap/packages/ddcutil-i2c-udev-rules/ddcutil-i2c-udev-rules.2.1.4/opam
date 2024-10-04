@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ddcutil-i2c-udev-rules-2.1.4-lp160.1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ddcutil-i2c-udev-rules-2.1.4-lp160.1.2.noarch.rpm"]
+depends: [
+  "kernel-debug" 
+  "libddcutil5" {= "2.1.4"}
+]
+extra-source "ddcutil-i2c-udev-rules-2.1.4-lp160.1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/ddcutil-i2c-udev-rules-2.1.4-lp160.1.2.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Net-OpenStack-Compute-1.1200-1.29.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-OpenStack-Compute-1.1200-1.29.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "perl" 
+  "perl-App-Rad" 
+  "perl-App-Rad-Plugin-MoreHelp" 
+  "perl-HTTP-Message" 
+  "perl-JSON" 
+  "perl-Moose" 
+  "perl-Test-Most" 
+  "perl-libwww-perl" 
+]
+extra-source "perl-Net-OpenStack-Compute-1.1200-1.29.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Net-OpenStack-Compute-1.1200-1.29.noarch.rpm"
+}

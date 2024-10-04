@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nedit-5.7-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nedit-5.7-3.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libX11-6" 
+  "libXm4" 
+  "libXt6" 
+  "update-desktop-files" 
+]
+extra-source "nedit-5.7-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/nedit-5.7-3.2.x86_64.rpm"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tss-esapi-devel-7.4.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tss-esapi-devel-7.4.0-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cargo" 
+  "rust-bitfield+default-devel" 
+  "rust-enumflags2+default-devel" 
+  "rust-hostname-validator+default-devel" 
+  "rust-log+default-devel" 
+  "rust-mbox+default-devel" 
+  "rust-num-derive+default-devel" 
+  "rust-num-traits+default-devel" 
+  "rust-oid+default-devel" 
+  "rust-picky-asn1+default-devel" 
+  "rust-picky-asn1-x509+default-devel" 
+  "rust-regex+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-tss-esapi-sys+default-devel" 
+  "rust-zeroize+default-devel" 
+  "rust-zeroize+zeroize_derive-devel" 
+  "tpm2-tss-devel" {>= "4.0.0"}
+]
+extra-source "rust-tss-esapi-devel-7.4.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tss-esapi-devel-7.4.0-3.fc40.noarch.rpm"
+}

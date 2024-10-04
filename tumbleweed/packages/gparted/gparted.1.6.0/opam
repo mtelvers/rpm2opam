@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gparted-1.6.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gparted-1.6.0-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gpart" 
+  "hdparm" 
+  "libatkmm-1_6-1" 
+  "libcairomm-1_0-1" 
+  "libgcc_s1" 
+  "libglibmm-2_4-1" 
+  "libgtk-3-0" 
+  "libgtkmm-3_0-1" 
+  "libpangomm-1_4-1" 
+  "libparted-fs-resize0" 
+  "libparted2" 
+  "libsigc-2_0-0" 
+  "libstdc++6" 
+  "libuuid1" 
+  "mtools" 
+  "parted" 
+  "pkexec" 
+  "polkit" 
+  "util-linux" 
+]
+extra-source "gparted-1.6.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gparted-1.6.0-2.1.x86_64.rpm"
+}

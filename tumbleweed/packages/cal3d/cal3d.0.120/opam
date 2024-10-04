@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cal3d-0.120-4.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cal3d-0.120-4.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcal3d12" {= "0.120"}
+  "libgcc_s1" 
+  "libstdc++6" 
+  "pkgconf-pkg-config" 
+]
+extra-source "cal3d-0.120-4.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cal3d-0.120-4.2.x86_64.rpm"
+}

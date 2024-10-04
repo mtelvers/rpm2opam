@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-table-fct-2023.201.1.1svn41849-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-table-fct-2023.201.1.1svn41849-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-environ" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-graphics" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-pstricks" 
+  "texlive-pstricks-add" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-xargs" 
+  "texlive-xcolor" 
+  "texlive-xifthen" 
+  "texlive-xkeyval" 
+]
+extra-source "texlive-table-fct-2023.201.1.1svn41849-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-table-fct-2023.201.1.1svn41849-slfo.1.1.4.noarch.rpm"
+}

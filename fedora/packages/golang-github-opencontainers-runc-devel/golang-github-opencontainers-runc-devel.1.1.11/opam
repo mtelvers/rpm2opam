@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-opencontainers-runc-devel-1.1.11-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-opencontainers-runc-devel-1.1.11-3.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-checkpoint-restore-criu-5-devel" 
+  "compat-golang-github-coreos-systemd-22-devel" 
+  "compat-golang-github-godbus-dbus-5-devel" 
+  "go-filesystem" 
+  "golang-github-cilium-ebpf-devel" 
+  "golang-github-containerd-console-devel" 
+  "golang-github-cyphar-filepath-securejoin-devel" 
+  "golang-github-docker-units-devel" 
+  "golang-github-moby-sys-devel" 
+  "golang-github-mrunalp-fileutils-devel" 
+  "golang-github-opencontainers-runtime-spec-devel" 
+  "golang-github-opencontainers-selinux-devel" 
+  "golang-github-sirupsen-logrus-devel" 
+  "golang-github-syndtr-gocapability-devel" 
+  "golang-github-urfave-cli-devel" 
+  "golang-github-vishvananda-netlink-devel" 
+  "golang-google-protobuf-devel" 
+  "golang-x-sys-devel" 
+]
+extra-source "golang-github-opencontainers-runc-devel-1.1.11-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-opencontainers-runc-devel-1.1.11-3.fc40.noarch.rpm"
+}

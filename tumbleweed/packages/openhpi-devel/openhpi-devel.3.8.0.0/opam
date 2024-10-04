@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openhpi-devel-3.8.0.ge4631e8a-3.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openhpi-devel-3.8.0.ge4631e8a-3.9.x86_64.rpm"]
+depends: [
+  "OpenIPMI-devel" 
+  "bzip2" 
+  "e2fsprogs-devel" 
+  "gdbm-devel" 
+  "glib2-devel" 
+  "glibc-devel" 
+  "libopenhpi4" {= "3.8.0.0"}
+  "libopenssl-1_0_0-devel" 
+  "libstdc++-devel" 
+  "libtool" 
+  "ncurses-devel" 
+  "net-snmp-devel" 
+  "pkgconf-pkg-config" 
+  "popt-devel" 
+  "zlib-devel" 
+]
+extra-source "openhpi-devel-3.8.0.ge4631e8a-3.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openhpi-devel-3.8.0.ge4631e8a-3.9.x86_64.rpm"
+}

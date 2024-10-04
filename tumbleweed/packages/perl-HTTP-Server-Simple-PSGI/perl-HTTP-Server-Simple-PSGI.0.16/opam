@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-HTTP-Server-Simple-PSGI-0.16-1.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTTP-Server-Simple-PSGI-0.16-1.17.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-HTTP-Server-Simple" {>= "0.42"}
+]
+extra-source "perl-HTTP-Server-Simple-PSGI-0.16-1.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-HTTP-Server-Simple-PSGI-0.16-1.17.noarch.rpm"
+}

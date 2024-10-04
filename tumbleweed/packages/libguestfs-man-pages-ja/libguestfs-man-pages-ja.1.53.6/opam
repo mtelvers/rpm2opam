@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libguestfs-man-pages-ja-1.53.6-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libguestfs-man-pages-ja-1.53.6-1.1.noarch.rpm"]
+depends: [
+  "libguestfs" {= "1.53.6"}
+]
+extra-source "libguestfs-man-pages-ja-1.53.6-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libguestfs-man-pages-ja-1.53.6-1.1.noarch.rpm"
+}

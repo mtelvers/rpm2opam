@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "intel-vsc-firmware-20240910-7.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "intel-vsc-firmware-20240910-7.el10.noarch.rpm"]
+depends: [
+  "linux-firmware-whence" 
+]
+extra-source "intel-vsc-firmware-20240910-7.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/intel-vsc-firmware-20240910-7.el10.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pandas-test-2.2.2-7.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pandas-test-2.2.2-7.1.noarch.rpm"]
+depends: [
+  "python311-hypothesis" {>= "6.46.1"}
+  "python311-pandas" {= "2.2.2"}
+  "python311-pytest" {>= "7.3.2"}
+  "python311-pytest-xdist" {>= "2.2.0"}
+]
+extra-source "python311-pandas-test-2.2.2-7.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-pandas-test-2.2.2-7.1.noarch.rpm"
+}

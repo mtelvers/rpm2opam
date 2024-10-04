@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qle-0.0.18-35.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qle-0.0.18-35.fc40.noarch.rpm"]
+depends: [
+  "cwdaemon" 
+  "hamlib" 
+  "perl-Config-General" 
+  "perl-DBD-SQLite" 
+  "perl-DBI" 
+  "perl-English" 
+  "perl-File-Basename" 
+  "perl-IO" 
+  "perl-PDF-Create" 
+  "perl-PathTools" 
+  "perl-Tk" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "qle-0.0.18-35.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qle-0.0.18-35.fc40.noarch.rpm"
+}

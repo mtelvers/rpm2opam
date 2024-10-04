@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-requests-2.32.3-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-requests-2.32.3-2.1.noarch.rpm"]
+depends: [
+  "ca-certificates" 
+  "python310" 
+  "python310-base" {= "3.10"}
+  "python310-certifi" {>= "2017.4.17"}
+  "python310-charset-normalizer" {>= "2.0.0"}
+  "python310-idna" {>= "2.5"}
+  "python310-urllib3" {>= "1.21.1"}
+]
+extra-source "python310-requests-2.32.3-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-requests-2.32.3-2.1.noarch.rpm"
+}

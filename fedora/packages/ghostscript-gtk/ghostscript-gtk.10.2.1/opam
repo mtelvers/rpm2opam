@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghostscript-gtk-10.02.1-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghostscript-gtk-10.02.1-8.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libgs" {= "10.2.1"}
+]
+extra-source "ghostscript-gtk-10.02.1-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghostscript-gtk-10.02.1-8.fc40.x86_64.rpm"
+}

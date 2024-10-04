@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpfs2-2.2.0-4.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpfs2-2.2.0-4.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "libpfs2-2.2.0-4.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libpfs2-2.2.0-4.6.x86_64.rpm"
+}

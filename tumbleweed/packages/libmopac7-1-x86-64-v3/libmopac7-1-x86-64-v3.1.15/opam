@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmopac7-1-x86-64-v3-1.15-8.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmopac7-1-x86-64-v3-1.15-8.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "libmopac7-1" {= "1.15"}
+]
+extra-source "libmopac7-1-x86-64-v3-1.15-8.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmopac7-1-x86-64-v3-1.15-8.8.x86_64.rpm"
+}

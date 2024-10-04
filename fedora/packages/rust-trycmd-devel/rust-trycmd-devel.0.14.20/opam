@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-trycmd-devel-0.14.20-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-trycmd-devel-0.14.20-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.70.0"}
+  "rust-glob+default-devel" 
+  "rust-humantime+default-devel" 
+  "rust-humantime-serde+default-devel" 
+  "rust-rayon+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-shlex+default-devel" 
+  "rust-snapbox+cmd-devel" 
+  "rust-snapbox-devel" 
+  "rust-toml_edit+default-devel" 
+  "rust-toml_edit+serde-devel" 
+]
+extra-source "rust-trycmd-devel-0.14.20-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-trycmd-devel-0.14.20-2.fc40.noarch.rpm"
+}

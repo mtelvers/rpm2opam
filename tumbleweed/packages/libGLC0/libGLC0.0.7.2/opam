@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libGLC0-0.7.2-3.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libGLC0-0.7.2-3.9.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libGLU1" 
+  "libfontconfig1" 
+  "libfreetype6" 
+  "libfribidi0" 
+  "libglvnd" 
+]
+extra-source "libGLC0-0.7.2-3.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libGLC0-0.7.2-3.9.x86_64.rpm"
+}

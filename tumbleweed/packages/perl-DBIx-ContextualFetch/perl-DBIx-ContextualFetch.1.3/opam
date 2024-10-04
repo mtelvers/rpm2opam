@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-DBIx-ContextualFetch-1.03-5.32.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DBIx-ContextualFetch-1.03-5.32.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-DBI" {>= "1.35"}
+]
+extra-source "perl-DBIx-ContextualFetch-1.03-5.32.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-DBIx-ContextualFetch-1.03-5.32.noarch.rpm"
+}

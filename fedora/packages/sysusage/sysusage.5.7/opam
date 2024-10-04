@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sysusage-5.7-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sysusage-5.7-21.fc40.noarch.rpm"]
+depends: [
+  "crontabs" 
+  "perl-Benchmark" 
+  "perl-File-Copy" 
+  "perl-File-Find" 
+  "perl-FileHandle" 
+  "perl-Getopt-Long" 
+  "perl-Net-Ping" 
+  "perl-POSIX" 
+  "perl-Proc-Queue" 
+  "perl-Time-HiRes" 
+  "perl-interpreter" 
+  "perl-libnet" 
+  "perl-libs" 
+  "rrdtool" 
+  "rrdtool-perl" 
+  "sysstat" 
+  "sysusage-common" 
+  "sysusage-rsysusage" {= "5.7"}
+]
+extra-source "sysusage-5.7-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sysusage-5.7-21.fc40.noarch.rpm"
+}

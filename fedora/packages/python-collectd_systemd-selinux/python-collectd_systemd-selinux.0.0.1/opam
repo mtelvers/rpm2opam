@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python-collectd_systemd-selinux-0.0.1-0.30.20181018git212cb79.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python-collectd_systemd-selinux-0.0.1-0.30.20181018git212cb79.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "policycoreutils" 
+  "selinux-policy" 
+]
+extra-source "python-collectd_systemd-selinux-0.0.1-0.30.20181018git212cb79.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python-collectd_systemd-selinux-0.0.1-0.30.20181018git212cb79.fc40.noarch.rpm"
+}

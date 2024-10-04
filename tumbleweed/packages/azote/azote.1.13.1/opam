@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "azote-1.13.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "azote-1.13.1-1.1.noarch.rpm"]
+depends: [
+  "ImageMagick" 
+  "feh" 
+  "python311-Pillow" 
+  "python311-PyYAML" 
+  "python311-Send2Trash" 
+  "python311-base" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "typelib-1_0-AppIndicator3-0_1" {= "0.1"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "wget" 
+  "wmctrl" 
+  "xrandr" 
+]
+extra-source "azote-1.13.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/azote-1.13.1-1.1.noarch.rpm"
+}

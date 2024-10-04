@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tokio-util-devel-0.7.10-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tokio-util-devel-0.7.10-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.56"}
+  "rust-bytes+default-devel" 
+  "rust-futures-core+default-devel" 
+  "rust-futures-sink+default-devel" 
+  "rust-pin-project-lite+default-devel" 
+  "rust-tokio+default-devel" 
+  "rust-tokio+sync-devel" 
+]
+extra-source "rust-tokio-util-devel-0.7.10-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tokio-util-devel-0.7.10-2.fc40.noarch.rpm"
+}

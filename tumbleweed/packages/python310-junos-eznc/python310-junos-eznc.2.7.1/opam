@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-junos-eznc-2.7.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-junos-eznc-2.7.1-1.1.noarch.rpm"]
+depends: [
+  "python310-Jinja2" {>= "2.7.1"}
+  "python310-PyYAML" {>= "5.1"}
+  "python310-base" {= "3.10"}
+  "python310-lxml" {>= "3.2.4"}
+  "python310-ncclient" {>= "0.6.15"}
+  "python310-paramiko" {>= "1.15.2"}
+  "python310-pyparsing" 
+  "python310-pyserial" 
+  "python310-scp" {>= "0.7.0"}
+  "python310-transitions" 
+]
+extra-source "python310-junos-eznc-2.7.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-junos-eznc-2.7.1-1.1.noarch.rpm"
+}

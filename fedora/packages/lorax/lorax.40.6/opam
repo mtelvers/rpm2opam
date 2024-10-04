@@ -1,0 +1,42 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lorax-40.6-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lorax-40.6-1.fc40.x86_64.rpm"]
+depends: [
+  "cpio" 
+  "device-mapper" 
+  "dosfstools" 
+  "dracut" {>= "30"}
+  "e2fsprogs" 
+  "findutils" 
+  "gawk" 
+  "glib2" 
+  "glibc" 
+  "glibc-common" 
+  "grub2-pc" 
+  "grub2-tools" 
+  "gzip" 
+  "hfsplus-tools" 
+  "isomd5sum" 
+  "kmod" 
+  "kpartx" 
+  "lorax-templates-generic" 
+  "parted" 
+  "pbzip2" 
+  "pigz" 
+  "psmisc" 
+  "python3" 
+  "python3-kickstart" {>= "3.19"}
+  "python3-libdnf5" 
+  "python3-librepo" 
+  "python3-libselinux" 
+  "python3-mako" 
+  "python3-pycdio" 
+  "squashfs-tools" {>= "4.2"}
+  "util-linux" 
+  "xorriso" 
+  "xz" 
+  "xz-lzma-compat" 
+]
+extra-source "lorax-40.6-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lorax-40.6-1.fc40.x86_64.rpm"
+}

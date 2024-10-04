@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-DBIx-Class-0.082843-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DBIx-Class-0.082843-1.9.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "perl" 
+  "perl-Class-Accessor-Grouped" {>= "0.10012"}
+  "perl-Class-C3-Componentised" {>= "1.9"}
+  "perl-Class-Inspector" {>= "1.24"}
+  "perl-Config-Any" {>= "0.20"}
+  "perl-Context-Preserve" {>= "0.1"}
+  "perl-DBI" {>= "1.57"}
+  "perl-Data-Dumper-Concise" {>= "2.20"}
+  "perl-Devel-GlobalDestruction" {>= "0.9"}
+  "perl-Hash-Merge" {>= "0.12"}
+  "perl-MRO-Compat" {>= "0.12"}
+  "perl-Module-Find" {>= "0.7"}
+  "perl-Moo" {>= "2.0"}
+  "perl-Path-Class" {>= "0.18"}
+  "perl-SQL-Abstract-Classic" {>= "1.91"}
+  "perl-Scope-Guard" {>= "0.3"}
+  "perl-Sub-Name" {>= "0.4"}
+  "perl-Try-Tiny" {>= "0.7"}
+  "perl-base" {>= "2.0"}
+  "perl-namespace-clean" {>= "0.24"}
+]
+extra-source "perl-DBIx-Class-0.082843-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-DBIx-Class-0.082843-1.9.noarch.rpm"
+}

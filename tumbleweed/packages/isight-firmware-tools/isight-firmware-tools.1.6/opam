@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "isight-firmware-tools-1.6-18.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "isight-firmware-tools-1.6-18.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libusb-0_1-4" 
+  "systemd" 
+]
+extra-source "isight-firmware-tools-1.6-18.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/isight-firmware-tools-1.6-18.2.x86_64.rpm"
+}

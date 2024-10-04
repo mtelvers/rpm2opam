@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["/usr/bin/zypper" "-n" "install" "git-credential-libsecret-2.45.1-slfo.1.1.6.x86_64.rpm"]
+]
+remove: [
+  ["/usr/bin/zypper" "-n" "remove" "git-credential-libsecret-2.45.1-slfo.1.1.6.x86_64.rpm"]
+]
+depends: [
+  "git-core" {= "2.45.1"}
+  "glibc" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libsecret-1-0" 
+]
+extra-source "git-credential-libsecret-2.45.1-slfo.1.1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/git-credential-libsecret-2.45.1-slfo.1.1.6.x86_64.rpm"
+}

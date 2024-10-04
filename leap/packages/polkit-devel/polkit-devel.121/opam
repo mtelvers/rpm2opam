@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "polkit-devel-121-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "polkit-devel-121-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.30.0"}
+  "glibc" 
+  "libglib-2_0-0" 
+  "libpolkit-agent-1-0" {= "121"}
+  "libpolkit-gobject-1-0" {= "121"}
+  "pkgconf-pkg-config" 
+  "polkit" {= "121"}
+  "typelib-1_0-Polkit-1_0" {= "121"}
+]
+extra-source "polkit-devel-121-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/polkit-devel-121-slfo.1.1.7.x86_64.rpm"
+}

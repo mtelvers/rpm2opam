@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-qtconsole-5.6.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-qtconsole-5.6.0-1.1.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "python311-Pygments" 
+  "python311-QtPy" {>= "2.4.0"}
+  "python311-base" 
+  "python311-ipykernel" {>= "4.1"}
+  "python311-jupyter-client" {>= "4.1"}
+  "python311-jupyter-core" 
+  "python311-packaging" 
+  "python311-qt5" 
+  "python311-traitlets" 
+]
+extra-source "python311-qtconsole-5.6.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-qtconsole-5.6.0-1.1.noarch.rpm"
+}

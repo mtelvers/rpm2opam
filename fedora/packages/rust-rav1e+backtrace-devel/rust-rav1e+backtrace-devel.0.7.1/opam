@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rav1e+backtrace-devel-0.7.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rav1e+backtrace-devel-0.7.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-backtrace+default-devel" 
+  "rust-rav1e-devel" {= "0.7.1"}
+]
+extra-source "rust-rav1e+backtrace-devel-0.7.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rav1e+backtrace-devel-0.7.1-1.fc40.noarch.rpm"
+}

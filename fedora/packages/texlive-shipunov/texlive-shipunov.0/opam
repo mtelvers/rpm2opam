@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-shipunov-svn52334-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-shipunov-svn52334-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-footnpag" 
+  "texlive-kpathsea" 
+  "texlive-latex" 
+  "texlive-tools" 
+  "texlive-xtab" 
+]
+extra-source "texlive-shipunov-svn52334-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-shipunov-svn52334-71.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Date-ICal-2.682-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Date-ICal-2.682-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Date-Leapyear" {>= "1.3"}
+  "perl-Time-Local" 
+  "perl-libs" 
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-Date-ICal-2.682-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Date-ICal-2.682-4.fc40.noarch.rpm"
+}

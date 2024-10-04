@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kuserfeedback-lang-1.2.0-1.23.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kuserfeedback-lang-1.2.0-1.23.noarch.rpm"]
+depends: [
+  "libKUserFeedbackCore1" {= "1.2.0"}
+]
+extra-source "kuserfeedback-lang-1.2.0-1.23.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kuserfeedback-lang-1.2.0-1.23.noarch.rpm"
+}

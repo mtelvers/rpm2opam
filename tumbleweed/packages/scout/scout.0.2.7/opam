@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "scout-0.2.7+20230124.b4e3468-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scout-0.2.7+20230124.b4e3468-2.2.noarch.rpm"]
+depends: [
+  "python311" 
+  "python311-base" 
+  "python311-solv" {>= "0.6.0"}
+]
+extra-source "scout-0.2.7+20230124.b4e3468-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/scout-0.2.7+20230124.b4e3468-2.2.noarch.rpm"
+}

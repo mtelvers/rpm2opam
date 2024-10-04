@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-trio-typing-0.10.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-trio-typing-0.10.0-1.1.noarch.rpm"]
+depends: [
+  "python312-async_generator" 
+  "python312-base" {= "3.12"}
+  "python312-importlib-metadata" 
+  "python312-mypy_extensions" {>= "0.4.2"}
+  "python312-packaging" 
+  "python312-trio" {>= "0.16.0"}
+  "python312-typing_extensions" {>= "3.7.4"}
+]
+extra-source "python312-trio-typing-0.10.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-trio-typing-0.10.0-1.1.noarch.rpm"
+}

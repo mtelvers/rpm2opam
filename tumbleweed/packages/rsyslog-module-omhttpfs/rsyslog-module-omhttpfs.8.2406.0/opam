@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rsyslog-module-omhttpfs-8.2406.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rsyslog-module-omhttpfs-8.2406.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libcurl-mini4" 
+  "libfastjson4" 
+  "rsyslog" {= "8.2406.0"}
+]
+extra-source "rsyslog-module-omhttpfs-8.2406.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rsyslog-module-omhttpfs-8.2406.0-1.1.x86_64.rpm"
+}

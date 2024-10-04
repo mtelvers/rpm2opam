@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xorg-x11-7.6_1-16.20.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xorg-x11-7.6_1-16.20.noarch.rpm"]
+depends: [
+  "xorg-x11-essentials" 
+]
+extra-source "xorg-x11-7.6_1-16.20.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xorg-x11-7.6_1-16.20.noarch.rpm"
+}

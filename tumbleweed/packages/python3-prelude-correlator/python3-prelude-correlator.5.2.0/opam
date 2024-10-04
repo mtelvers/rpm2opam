@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-prelude-correlator-5.2.0-2.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-prelude-correlator-5.2.0-2.8.noarch.rpm"]
+depends: [
+  "python3-libprelude" 
+  "python311-base" 
+  "python311-netaddr" 
+]
+extra-source "python3-prelude-correlator-5.2.0-2.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-prelude-correlator-5.2.0-2.8.noarch.rpm"
+}

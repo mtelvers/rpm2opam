@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rb_libtorrent-devel-2.0.9-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rb_libtorrent-devel-2.0.9-6.fc40.x86_64.rpm"]
+depends: [
+  "boost-devel" 
+  "cmake-filesystem" 
+  "openssl-devel" 
+  "pkgconf-pkg-config" 
+  "rb_libtorrent" 
+]
+extra-source "rb_libtorrent-devel-2.0.9-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rb_libtorrent-devel-2.0.9-6.fc40.x86_64.rpm"
+}

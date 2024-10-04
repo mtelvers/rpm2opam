@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-vtk-openmpi4-9.3.0-2.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-vtk-openmpi4-9.3.0-2.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libpython3_11-1_0" 
+  "libstdc++6" 
+  "libvtk1" 
+  "libvtk1-openmpi4" {= "9.3.0"}
+  "openmpi4-libs" 
+  "python311-mpi4py" 
+  "python311-numpy" 
+  "python311-qt5" 
+  "vtk-openmpi4-qt" 
+]
+extra-source "python3-vtk-openmpi4-9.3.0-2.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python3-vtk-openmpi4-9.3.0-2.4.x86_64.rpm"
+}

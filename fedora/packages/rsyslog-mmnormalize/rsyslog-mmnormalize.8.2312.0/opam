@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rsyslog-mmnormalize-8.2312.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rsyslog-mmnormalize-8.2312.0-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcap-ng" 
+  "libfastjson" 
+  "liblognorm" 
+  "rsyslog" {= "8.2312.0"}
+]
+extra-source "rsyslog-mmnormalize-8.2312.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rsyslog-mmnormalize-8.2312.0-1.fc40.x86_64.rpm"
+}

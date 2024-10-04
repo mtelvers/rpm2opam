@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tcl-8.6.13-3.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tcl-8.6.13-3.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "zlib-ng-compat" 
+]
+extra-source "tcl-8.6.13-3.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/tcl-8.6.13-3.el10.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-imagequant-sys-devel-4.0.3-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-imagequant-sys-devel-4.0.3-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.63"}
+  "rust-bitflags+default-devel" 
+  "rust-imagequant+_internal_c_ffi-devel" 
+  "rust-imagequant-devel" 
+  "rust-libc+default-devel" 
+]
+extra-source "rust-imagequant-sys-devel-4.0.3-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-imagequant-sys-devel-4.0.3-3.fc40.noarch.rpm"
+}

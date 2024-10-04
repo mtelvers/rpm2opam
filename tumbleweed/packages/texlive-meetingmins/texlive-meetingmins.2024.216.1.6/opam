@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-meetingmins-2024.216.1.6svn31878-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-meetingmins-2024.216.1.6svn31878-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-enumitem" 
+  "texlive-environ" 
+  "texlive-fancyhdr" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-geometry" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-lm" 
+  "texlive-mathabx" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-xstring" 
+]
+extra-source "texlive-meetingmins-2024.216.1.6svn31878-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-meetingmins-2024.216.1.6svn31878-55.1.noarch.rpm"
+}

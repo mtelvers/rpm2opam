@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-linked-hash-map+heapsize-devel-0.5.6-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-linked-hash-map+heapsize-devel-0.5.6-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-heapsize+default-devel" 
+  "rust-linked-hash-map-devel" {= "0.5.6"}
+]
+extra-source "rust-linked-hash-map+heapsize-devel-0.5.6-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-linked-hash-map+heapsize-devel-0.5.6-6.fc40.noarch.rpm"
+}

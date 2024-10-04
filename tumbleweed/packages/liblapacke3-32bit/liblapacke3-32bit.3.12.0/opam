@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "liblapacke3-32bit-3.12.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "liblapacke3-32bit-3.12.0-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "liblapack3-32bit" 
+  "update-alternatives" 
+]
+extra-source "liblapacke3-32bit-3.12.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/liblapacke3-32bit-3.12.0-2.1.x86_64.rpm"
+}

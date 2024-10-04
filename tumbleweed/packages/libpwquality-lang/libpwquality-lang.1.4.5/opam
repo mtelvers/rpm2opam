@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libpwquality-lang-1.4.5-2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpwquality-lang-1.4.5-2.3.noarch.rpm"]
+depends: [
+  "libpwquality1" {= "1.4.5"}
+]
+extra-source "libpwquality-lang-1.4.5-2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libpwquality-lang-1.4.5-2.3.noarch.rpm"
+}

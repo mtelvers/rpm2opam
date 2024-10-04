@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-huggingface-hub-0.23.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-huggingface-hub-0.23.4-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-PyYAML" {>= "5.1"}
+  "python311-base" {= "3.11"}
+  "python311-filelock" 
+  "python311-fsspec" {>= "2023.5.0"}
+  "python311-packaging" {>= "20.9"}
+  "python311-requests" 
+  "python311-tqdm" {>= "4.42.1"}
+  "python311-typing_extensions" {>= "3.7.4.3"}
+]
+extra-source "python311-huggingface-hub-0.23.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-huggingface-hub-0.23.4-1.1.noarch.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "alpine-2.26-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "alpine-2.26-8.fc40.x86_64.rpm"]
+depends: [
+  "esmtp" 
+  "glibc" 
+  "hunspell" 
+  "krb5-libs" 
+  "libgcc" 
+  "libxcrypt" 
+  "mailcap" 
+  "ncurses-libs" 
+  "openldap" 
+  "openssl-libs" 
+]
+extra-source "alpine-2.26-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/alpine-2.26-8.fc40.x86_64.rpm"
+}

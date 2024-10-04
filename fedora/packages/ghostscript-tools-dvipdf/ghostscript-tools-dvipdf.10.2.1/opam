@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghostscript-tools-dvipdf-10.02.1-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghostscript-tools-dvipdf-10.02.1-8.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "ghostscript" {= "10.2.1"}
+  "texlive-dvips" 
+]
+extra-source "ghostscript-tools-dvipdf-10.02.1-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghostscript-tools-dvipdf-10.02.1-8.fc40.noarch.rpm"
+}

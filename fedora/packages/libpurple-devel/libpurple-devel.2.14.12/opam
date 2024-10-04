@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libpurple-devel-2.14.12-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpurple-devel-2.14.12-8.fc40.x86_64.rpm"]
+depends: [
+  "dbus-devel" {>= "0.60"}
+  "dbus-glib-devel" {>= "0.70"}
+  "glib2-devel" 
+  "libpurple" {= "2.14.12"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libpurple-devel-2.14.12-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libpurple-devel-2.14.12-8.fc40.x86_64.rpm"
+}

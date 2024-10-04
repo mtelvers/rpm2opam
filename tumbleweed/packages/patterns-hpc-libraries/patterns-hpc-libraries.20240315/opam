@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "patterns-hpc-libraries-20240315-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "patterns-hpc-libraries-20240315-1.2.x86_64.rpm"]
+depends: [
+  "gnu-compilers-hpc-devel" 
+  "lua-lmod" 
+  "mpich-gnu-hpc" 
+  "mpich-gnu-hpc-devel" 
+  "mpich-ofi-gnu-hpc" 
+  "mpich-ofi-gnu-hpc-devel" 
+  "mvapich2-gnu-hpc" 
+  "mvapich2-gnu-hpc-devel" 
+  "openmpi4-gnu-hpc" 
+]
+extra-source "patterns-hpc-libraries-20240315-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/patterns-hpc-libraries-20240315-1.2.x86_64.rpm"
+}

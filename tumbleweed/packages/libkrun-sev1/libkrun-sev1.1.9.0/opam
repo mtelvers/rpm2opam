@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libkrun-sev1-1.9.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libkrun-sev1-1.9.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libkrunfw-sev4" 
+  "libopenssl3" 
+  "libz-ng-compat1" 
+]
+extra-source "libkrun-sev1-1.9.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libkrun-sev1-1.9.0-1.1.x86_64.rpm"
+}

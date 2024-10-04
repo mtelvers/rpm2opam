@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgdruntime5-14.2.0+git10526-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgdruntime5-14.2.0+git10526-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+]
+extra-source "libgdruntime5-14.2.0+git10526-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgdruntime5-14.2.0+git10526-2.1.x86_64.rpm"
+}

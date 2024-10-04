@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ddclient-3.11.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ddclient-3.11.2-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Data-Validate-IP" 
+  "perl-Digest-SHA1" 
+  "perl-File-Basename" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-IO-Socket-INET6" 
+  "perl-IO-Socket-SSL" 
+  "perl-JSON-PP" 
+  "perl-Sys-Hostname" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.10.1"}
+  "perl-vars" 
+  "perl-version" {>= "0.77"}
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "ddclient-3.11.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/ddclient-3.11.2-3.fc40.noarch.rpm"
+}

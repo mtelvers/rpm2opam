@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "softhsm-2.6.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "softhsm-2.6.1-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libsoftokn3" 
+  "libsqlite3-0" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "mozilla-nspr" 
+  "mozilla-nss" 
+  "mozilla-nss-tools" 
+  "p11-kit" 
+  "shadow" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "softhsm-2.6.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/softhsm-2.6.1-2.1.x86_64.rpm"
+}

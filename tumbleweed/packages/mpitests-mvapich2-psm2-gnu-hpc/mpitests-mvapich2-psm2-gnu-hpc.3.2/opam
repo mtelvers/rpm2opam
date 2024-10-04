@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mpitests-mvapich2-psm2-gnu-hpc-3.2-15.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mpitests-mvapich2-psm2-gnu-hpc-3.2-15.3.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "mpich" 
+  "mpitests" {= "3.2"}
+  "mvapich2-psm2-gnu-hpc" 
+]
+extra-source "mpitests-mvapich2-psm2-gnu-hpc-3.2-15.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mpitests-mvapich2-psm2-gnu-hpc-3.2-15.3.x86_64.rpm"
+}

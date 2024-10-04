@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fcitx5-chinese-addons-5.1.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fcitx5-chinese-addons-5.1.4-1.fc40.x86_64.rpm"]
+depends: [
+  "boost-iostreams" 
+  "fcitx5-chinese-addons-data" {= "5.1.4"}
+  "fcitx5-data" 
+  "fcitx5-libs" 
+  "fcitx5-lua" 
+  "fcitx5-qt-libfcitx5qt6widgets" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libcurl" 
+  "libgcc" 
+  "libime" 
+  "libstdc++" 
+  "opencc" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qt6-qtwebengine" 
+]
+extra-source "fcitx5-chinese-addons-5.1.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fcitx5-chinese-addons-5.1.4-1.fc40.x86_64.rpm"
+}

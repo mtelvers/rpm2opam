@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libhackrf0-2024.02.1-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libhackrf0-2024.02.1-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "hackrf-udev" 
+  "libusb-1_0-0" 
+]
+extra-source "libhackrf0-2024.02.1-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libhackrf0-2024.02.1-1.2.x86_64.rpm"
+}

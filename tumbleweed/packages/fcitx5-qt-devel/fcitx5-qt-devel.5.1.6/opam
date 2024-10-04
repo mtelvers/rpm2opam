@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fcitx5-qt-devel-5.1.6-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fcitx5-qt-devel-5.1.6-1.5.x86_64.rpm"]
+depends: [
+  "fcitx5-qt5" {= "5.1.6"}
+  "fcitx5-qt6" {= "5.1.6"}
+  "libFcitx5Qt5DBusAddons1" {= "5.1.6"}
+  "libFcitx5Qt5WidgetsAddons2" {= "5.1.6"}
+  "libFcitx5Qt6DBusAddons1" {= "5.1.6"}
+  "libFcitx5Qt6WidgetsAddons2" {= "5.1.6"}
+]
+extra-source "fcitx5-qt-devel-5.1.6-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/fcitx5-qt-devel-5.1.6-1.5.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "abcde-2.9.3-7.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "abcde-2.9.3-7.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "cd-discid" 
+  "cdparanoia" 
+  "perl-MusicBrainz-DiscID" 
+  "perl-WebService-MusicBrainz" {>= "1.0.4"}
+  "perl-base" 
+  "wget" 
+]
+extra-source "abcde-2.9.3-7.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/abcde-2.9.3-7.1.noarch.rpm"
+}

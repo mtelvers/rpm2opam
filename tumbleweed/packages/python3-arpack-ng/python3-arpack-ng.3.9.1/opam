@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-arpack-ng-3.9.1-3.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-arpack-ng-3.9.1-3.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libboost_numpy-py3-1_86_0" 
+  "libboost_python-py3-1_86_0" 
+  "libgcc_s1" 
+  "libgfortran5" 
+  "libopenblas_openmp0" 
+  "libpython3_11-1_0" 
+  "libstdc++6" 
+  "python311-base" {= "3.11"}
+]
+extra-source "python3-arpack-ng-3.9.1-3.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python3-arpack-ng-3.9.1-3.4.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libftdi0-devel-0.20-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libftdi0-devel-0.20-2.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "libftdi1" {= "0.20"}
+  "libusb-compat-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libftdi0-devel-0.20-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libftdi0-devel-0.20-2.3.x86_64.rpm"
+}

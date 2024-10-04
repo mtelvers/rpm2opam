@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tomcat-webapps-9.0.91-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tomcat-webapps-9.0.91-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "jakarta-taglibs-standard" {>= "1.1"}
+  "libxslt-tools" 
+  "tomcat" 
+  "util-linux" 
+]
+extra-source "tomcat-webapps-9.0.91-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tomcat-webapps-9.0.91-2.1.noarch.rpm"
+}

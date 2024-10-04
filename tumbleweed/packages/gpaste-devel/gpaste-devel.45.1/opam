@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gpaste-devel-45.1+14-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gpaste-devel-45.1+14-1.1.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf-devel" {>= "2.38.0"}
+  "glib2-devel" {>= "2.70.0"}
+  "gtk3-devel" {>= "3.24.0"}
+  "gtk4-devel" {>= "4.6.0"}
+  "libadwaita-devel" {>= "1.1"}
+  "libgpaste-gtk-3-0" {= "45.1"}
+  "libgpaste-gtk4-0" {= "45.1"}
+  "libgpaste2-0" {= "45.1"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-GPaste-2" {= "45.1"}
+]
+extra-source "gpaste-devel-45.1+14-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gpaste-devel-45.1+14-1.1.x86_64.rpm"
+}

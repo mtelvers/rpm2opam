@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-dtparse-devel-2.0.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-dtparse-devel-2.0.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-chrono+clock-devel" 
+  "rust-chrono-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-num-traits+default-devel" 
+  "rust-rust_decimal-devel" 
+]
+extra-source "rust-dtparse-devel-2.0.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-dtparse-devel-2.0.0-2.fc40.noarch.rpm"
+}

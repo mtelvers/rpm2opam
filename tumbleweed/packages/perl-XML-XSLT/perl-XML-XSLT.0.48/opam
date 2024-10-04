@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-XML-XSLT-0.48-198.19.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XML-XSLT-0.48-198.19.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-XML-DOM" {>= "1.25"}
+  "perl-XML-Parser" {>= "2.23"}
+  "perl-base" 
+]
+extra-source "perl-XML-XSLT-0.48-198.19.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-XML-XSLT-0.48-198.19.noarch.rpm"
+}

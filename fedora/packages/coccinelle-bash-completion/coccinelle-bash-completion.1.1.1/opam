@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "coccinelle-bash-completion-1.1.1-30.20230624git0afff7f.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coccinelle-bash-completion-1.1.1-30.20230624git0afff7f.fc40.noarch.rpm"]
+depends: [
+  "bash-completion" {> "2.0"}
+  "coccinelle" {= "1.1.1"}
+]
+extra-source "coccinelle-bash-completion-1.1.1-30.20230624git0afff7f.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/coccinelle-bash-completion-1.1.1-30.20230624git0afff7f.fc40.noarch.rpm"
+}

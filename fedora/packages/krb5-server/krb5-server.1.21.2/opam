@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "krb5-server-1.21.2-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "krb5-server-1.21.2-5.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "keyutils-libs" 
+  "krb5-libs" {= "1.21.2"}
+  "krb5-pkinit" {= "1.21.2"}
+  "libcom_err" 
+  "libkadm5" {= "1.21.2"}
+  "libselinux" 
+  "libss" 
+  "libverto" 
+  "libverto-libev" 
+  "lmdb-libs" 
+  "logrotate" 
+  "openssl-libs" 
+  "systemd" 
+  "words" 
+]
+extra-source "krb5-server-1.21.2-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/krb5-server-1.21.2-5.fc40.x86_64.rpm"
+}

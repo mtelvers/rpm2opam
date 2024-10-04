@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-devel-8.3.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-devel-8.3.4-1.fc40.x86_64.rpm"]
+depends: [
+  "autoconf" 
+  "automake" 
+  "bash" 
+  "gcc" 
+  "gcc-c++" 
+  "krb5-devel" 
+  "libtool" 
+  "libxml2-devel" 
+  "make" 
+  "openssl-devel" {>= "1.0.2"}
+  "pcre2-devel" 
+  "php-cli" {= "8.3.4"}
+  "zlib-ng-compat-devel" 
+]
+extra-source "php-devel-8.3.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-devel-8.3.4-1.fc40.x86_64.rpm"
+}

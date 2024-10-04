@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pptp-setup-1.10.0-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pptp-setup-1.10.0-20.fc40.x86_64.rpm"]
+depends: [
+  "perl-Getopt-Long" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-vars" 
+  "pptp" {= "1.10.0"}
+]
+extra-source "pptp-setup-1.10.0-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pptp-setup-1.10.0-20.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ptl-devel-2.3.3-4.20230707gitf892a93.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ptl-devel-2.3.3-4.20230707gitf892a93.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "pkgconf-pkg-config" 
+  "ptl" 
+  "tbb-devel" {= "2021.11.0"}
+]
+extra-source "ptl-devel-2.3.3-4.20230707gitf892a93.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/ptl-devel-2.3.3-4.20230707gitf892a93.fc40.x86_64.rpm"
+}

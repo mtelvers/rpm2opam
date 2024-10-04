@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pacman-6.1.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pacman-6.1.0-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bsdtar" 
+  "glibc" 
+  "libalpm" 
+  "libarchive" 
+  "pacman-filesystem" {= "6.1.0"}
+  "perl-Getopt-Long" 
+  "perl-Module-Load" 
+  "perl-Module-Load-Conditional" 
+  "perl-PathTools" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.10.1"}
+]
+extra-source "pacman-6.1.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pacman-6.1.0-1.fc40.x86_64.rpm"
+}

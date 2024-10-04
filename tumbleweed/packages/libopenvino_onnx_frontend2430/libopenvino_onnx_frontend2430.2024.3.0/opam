@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libopenvino_onnx_frontend2430-2024.3.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libopenvino_onnx_frontend2430-2024.3.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libopenvino2430" 
+  "libprotobuf-lite25_4_0" 
+  "libstdc++6" 
+]
+extra-source "libopenvino_onnx_frontend2430-2024.3.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libopenvino_onnx_frontend2430-2024.3.0-1.1.x86_64.rpm"
+}

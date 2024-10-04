@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "atomix-44.0-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "atomix-44.0-1.5.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgnome-games-support-1-3" 
+  "libgtk-3-0" 
+]
+extra-source "atomix-44.0-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/atomix-44.0-1.5.x86_64.rpm"
+}

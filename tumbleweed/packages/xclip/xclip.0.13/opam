@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xclip-0.13+git20220129-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xclip-0.13+git20220129-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libX11-6" 
+  "libXmu6" 
+]
+extra-source "xclip-0.13+git20220129-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xclip-0.13+git20220129-1.1.x86_64.rpm"
+}

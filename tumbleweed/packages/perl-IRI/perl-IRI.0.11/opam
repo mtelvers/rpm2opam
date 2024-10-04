@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-IRI-0.011-1.20.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-IRI-0.011-1.20.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Moo" 
+  "perl-MooX-HandlesVia" 
+  "perl-Type-Tiny" {>= "0.8"}
+]
+extra-source "perl-IRI-0.011-1.20.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-IRI-0.011-1.20.noarch.rpm"
+}

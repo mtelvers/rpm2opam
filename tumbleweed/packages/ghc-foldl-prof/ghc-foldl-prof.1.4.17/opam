@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-foldl-prof-1.4.17-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-foldl-prof-1.4.17-1.1.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-comonad-prof" 
+  "ghc-containers-prof" 
+  "ghc-contravariant-prof" 
+  "ghc-foldl-devel" {= "1.4.17"}
+  "ghc-hashable-prof" 
+  "ghc-primitive-prof" 
+  "ghc-profunctors-prof" 
+  "ghc-random-prof" 
+  "ghc-semigroupoids-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unordered-containers-prof" 
+  "ghc-vector-prof" 
+]
+extra-source "ghc-foldl-prof-1.4.17-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-foldl-prof-1.4.17-1.1.x86_64.rpm"
+}

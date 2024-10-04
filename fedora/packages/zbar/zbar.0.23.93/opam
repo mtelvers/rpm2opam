@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "zbar-0.23.93-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zbar-0.23.93-2.fc40.x86_64.rpm"]
+depends: [
+  "GraphicsMagick" 
+  "glibc" 
+  "zbar-libs" 
+]
+extra-source "zbar-0.23.93-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/z/zbar-0.23.93-2.fc40.x86_64.rpm"
+}

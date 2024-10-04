@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libminc-devel-2.4.03-18.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libminc-devel-2.4.03-18.fc40.x86_64.rpm"]
+depends: [
+  "cmake" 
+  "cmake-filesystem" 
+  "hdf5-devel" 
+  "libminc" {= "2.4.3"}
+  "netcdf-devel" 
+  "nifticlib-devel" 
+  "zlib-ng-compat-devel" 
+]
+extra-source "libminc-devel-2.4.03-18.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libminc-devel-2.4.03-18.fc40.x86_64.rpm"
+}

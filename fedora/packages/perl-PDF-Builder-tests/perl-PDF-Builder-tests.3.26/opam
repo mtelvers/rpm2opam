@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-PDF-Builder-tests-3.026-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-PDF-Builder-tests-3.026-3.fc40.noarch.rpm"]
+depends: [
+  "ImageMagick" {>= "6.9.7"}
+  "bash" 
+  "dejavu-sans-fonts" 
+  "ghostscript" {>= "9.25.0"}
+  "libtiff-tools" 
+  "perl-English" 
+  "perl-File-Temp" 
+  "perl-GD" 
+  "perl-IPC-Cmd" 
+  "perl-PDF-Builder" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-Test-Exception" 
+  "perl-Test-Harness" 
+  "perl-Test-Memory-Cycle" {>= "1"}
+  "perl-Test-Simple" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-version" 
+  "urw-base35-gothic-fonts" 
+]
+extra-source "perl-PDF-Builder-tests-3.026-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-PDF-Builder-tests-3.026-3.fc40.noarch.rpm"
+}

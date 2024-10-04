@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-MinimumVersion-0.101083-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-MinimumVersion-0.101083-5.fc40.noarch.rpm"]
+depends: [
+  "perl-CPAN-Meta" 
+  "perl-Exporter" 
+  "perl-File-Find-Rule" 
+  "perl-File-Find-Rule-Perl" 
+  "perl-Perl-MinimumVersion" {>= "1.32"}
+  "perl-Test-Simple" 
+  "perl-base" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-version" {>= "0.70"}
+]
+extra-source "perl-Test-MinimumVersion-0.101083-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-MinimumVersion-0.101083-5.fc40.noarch.rpm"
+}

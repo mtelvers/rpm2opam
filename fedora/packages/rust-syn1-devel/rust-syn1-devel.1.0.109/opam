@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-syn1-devel-1.0.109-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-syn1-devel-1.0.109-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.31"}
+  "rust-proc-macro2-0-4-devel" 
+  "rust-unicode-ident+default-devel" 
+]
+extra-source "rust-syn1-devel-1.0.109-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-syn1-devel-1.0.109-3.fc40.noarch.rpm"
+}

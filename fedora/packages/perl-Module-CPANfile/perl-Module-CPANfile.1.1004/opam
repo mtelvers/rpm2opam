@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Module-CPANfile-1.1004-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-CPANfile-1.1004-20.fc40.noarch.rpm"]
+depends: [
+  "perl-CPAN-Meta" {>= "2.12091"}
+  "perl-CPAN-Meta-Requirements" 
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Getopt-Long" 
+  "perl-PathTools" 
+  "perl-Pod-Usage" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Module-CPANfile-1.1004-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Module-CPANfile-1.1004-20.fc40.noarch.rpm"
+}

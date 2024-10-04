@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xcb-util-cursor-devel-0.1.4-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xcb-util-cursor-devel-0.1.4-4.fc40.x86_64.rpm"]
+depends: [
+  "libxcb-devel" 
+  "pkgconf-pkg-config" 
+  "xcb-util-cursor" 
+  "xcb-util-image-devel" 
+  "xcb-util-renderutil-devel" 
+]
+extra-source "xcb-util-cursor-devel-0.1.4-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xcb-util-cursor-devel-0.1.4-4.fc40.x86_64.rpm"
+}

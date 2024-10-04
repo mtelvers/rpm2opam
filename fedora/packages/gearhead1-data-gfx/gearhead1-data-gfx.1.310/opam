@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gearhead1-data-gfx-1.310-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gearhead1-data-gfx-1.310-14.fc40.noarch.rpm"]
+depends: [
+  "bitstream-vera-sans-fonts" 
+  "bitstream-vera-sans-mono-fonts" 
+  "bitstream-vera-serif-fonts" 
+  "gearhead1-data" {= "1.310"}
+  "hicolor-icon-theme" 
+]
+extra-source "gearhead1-data-gfx-1.310-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gearhead1-data-gfx-1.310-14.fc40.noarch.rpm"
+}

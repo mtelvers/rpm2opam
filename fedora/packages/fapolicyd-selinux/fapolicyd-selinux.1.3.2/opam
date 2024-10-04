@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fapolicyd-selinux-1.3.2-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fapolicyd-selinux-1.3.2-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "fapolicyd" {= "1.3.2"}
+  "libselinux-utils" 
+  "policycoreutils" 
+  "policycoreutils-python-utils" 
+  "selinux-policy" {>= "40.9"}
+  "selinux-policy-targeted" 
+]
+extra-source "fapolicyd-selinux-1.3.2-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fapolicyd-selinux-1.3.2-4.fc40.noarch.rpm"
+}

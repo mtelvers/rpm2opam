@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-LWP-Protocol-connect-tests-6.09-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-LWP-Protocol-connect-tests-6.09-29.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-LWP-Protocol-connect" {= "6.9"}
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-interpreter" 
+]
+extra-source "perl-LWP-Protocol-connect-tests-6.09-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-LWP-Protocol-connect-tests-6.09-29.fc40.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-extra-prof-1.7.16-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-extra-prof-1.7.16-1.2.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-clock-prof" 
+  "ghc-directory-prof" 
+  "ghc-extra-devel" {= "1.7.16"}
+  "ghc-filepath-prof" 
+  "ghc-process-prof" 
+  "ghc-time-prof" 
+  "ghc-unix-prof" 
+]
+extra-source "ghc-extra-prof-1.7.16-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-extra-prof-1.7.16-1.2.x86_64.rpm"
+}

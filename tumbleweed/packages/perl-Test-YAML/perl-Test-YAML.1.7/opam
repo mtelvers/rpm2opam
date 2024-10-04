@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-YAML-1.07-1.25.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-YAML-1.07-1.25.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl" 
+  "perl-Test-Base" {>= "0.89"}
+]
+extra-source "perl-Test-YAML-1.07-1.25.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-YAML-1.07-1.25.noarch.rpm"
+}

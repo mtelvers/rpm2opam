@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Cairo-GObject-1.005-1.25.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Cairo-GObject-1.005-1.25.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo-gobject2" 
+  "libcairo2" 
+  "perl" 
+  "perl-Cairo" {>= "1.80"}
+  "perl-ExtUtils-Depends" {>= "0.2"}
+  "perl-ExtUtils-PkgConfig" {>= "1.0"}
+  "perl-Glib" {>= "1.224"}
+]
+extra-source "perl-Cairo-GObject-1.005-1.25.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-Cairo-GObject-1.005-1.25.x86_64.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-sequoia-cert-store-devel-0.5.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-sequoia-cert-store-devel-0.5.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.70"}
+  "rust-anyhow+default-devel" 
+  "rust-crossbeam+default-devel" 
+  "rust-dirs+default-devel" 
+  "rust-num_cpus+default-devel" 
+  "rust-openpgp-cert-d+default-devel" 
+  "rust-rayon+default-devel" 
+  "rust-rusqlite+blob-devel" 
+  "rust-rusqlite+collation-devel" 
+  "rust-rusqlite+default-devel" 
+  "rust-sequoia-net-devel" 
+  "rust-sequoia-openpgp-devel" 
+  "rust-smallvec+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-tokio+default-devel" 
+  "rust-tokio+rt-devel" 
+]
+extra-source "rust-sequoia-cert-store-devel-0.5.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-sequoia-cert-store-devel-0.5.0-1.fc40.noarch.rpm"
+}

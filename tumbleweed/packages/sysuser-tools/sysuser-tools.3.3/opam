@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sysuser-tools-3.3-6.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sysuser-tools-3.3-6.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "sysuser-shadow" 
+]
+extra-source "sysuser-tools-3.3-6.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sysuser-tools-3.3-6.1.noarch.rpm"
+}

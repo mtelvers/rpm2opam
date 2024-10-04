@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-quagroup-1.8.4-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-quagroup-1.8.4-1.2.noarch.rpm"]
+depends: [
+  "gap" {>= "4.8"}
+]
+extra-source "gap-quagroup-1.8.4-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-quagroup-1.8.4-1.2.noarch.rpm"
+}

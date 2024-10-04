@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Template-Plugin-Cycle-1.06-41.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Template-Plugin-Cycle-1.06-41.fc40.noarch.rpm"]
+depends: [
+  "perl-Params-Util" {>= "0.20"}
+  "perl-Template-Toolkit" {>= "2.10"}
+  "perl-libs" {>= "5.5.0"}
+  "perl-overload" 
+  "perl-vars" 
+]
+extra-source "perl-Template-Plugin-Cycle-1.06-41.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Template-Plugin-Cycle-1.06-41.fc40.noarch.rpm"
+}

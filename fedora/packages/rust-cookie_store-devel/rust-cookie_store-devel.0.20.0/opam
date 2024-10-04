@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-cookie_store-devel-0.20.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-cookie_store-devel-0.20.0-2.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cargo" 
+  "rust-cookie+default-devel" 
+  "rust-cookie+percent-encode-devel" 
+  "rust-idna+default-devel" 
+  "rust-log+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde_derive+default-devel" 
+  "rust-serde_json+default-devel" 
+  "rust-time+default-devel" 
+  "rust-url+default-devel" 
+]
+extra-source "rust-cookie_store-devel-0.20.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-cookie_store-devel-0.20.0-2.fc40.noarch.rpm"
+}

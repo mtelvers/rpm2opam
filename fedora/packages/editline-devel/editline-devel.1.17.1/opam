@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "editline-devel-1.17.1-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "editline-devel-1.17.1-10.fc40.x86_64.rpm"]
+depends: [
+  "editline" {= "1.17.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "editline-devel-1.17.1-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/editline-devel-1.17.1-10.fc40.x86_64.rpm"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Dumbbench-0.503-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Dumbbench-0.503-7.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Carp" 
+  "perl-Class-XSAccessor" {>= "1.5"}
+  "perl-Devel-CheckOS" 
+  "perl-Exporter" 
+  "perl-Getopt-Long" 
+  "perl-Number-WithError" {>= "1.0"}
+  "perl-Params-Util" 
+  "perl-Scalar-List-Utils" 
+  "perl-Statistics-CaseResampling" {>= "0.6"}
+  "perl-Time-HiRes" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-parent" 
+  "sudo" 
+]
+extra-source "perl-Dumbbench-0.503-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Dumbbench-0.503-7.fc40.noarch.rpm"
+}

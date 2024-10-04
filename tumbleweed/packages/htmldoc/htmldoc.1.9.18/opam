@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "htmldoc-1.9.18-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "htmldoc-1.9.18-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libXpm4" 
+  "libcups2" 
+  "libfltk1_3" 
+  "libjpeg8" 
+  "libpng16-16" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+]
+extra-source "htmldoc-1.9.18-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/htmldoc-1.9.18-2.1.x86_64.rpm"
+}

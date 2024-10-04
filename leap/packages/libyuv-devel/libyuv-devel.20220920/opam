@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libyuv-devel-20220920+f9fda6e-slfo.1.1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libyuv-devel-20220920+f9fda6e-slfo.1.1.6.x86_64.rpm"]
+depends: [
+  "libyuv0" {= "20220920"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libyuv-devel-20220920+f9fda6e-slfo.1.1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libyuv-devel-20220920+f9fda6e-slfo.1.1.6.x86_64.rpm"
+}

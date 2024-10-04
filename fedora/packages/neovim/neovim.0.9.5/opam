@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "neovim-0.9.5-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "neovim-0.9.5-4.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libluv" 
+  "libtermkey" 
+  "libtree-sitter" {>= "0.20.8"}
+  "libuv" 
+  "libvterm" {>= "0.3"}
+  "luajit" 
+  "luajit2-1-luv" {>= "1.43.0"}
+  "msgpack" 
+  "unibilium" 
+]
+extra-source "neovim-0.9.5-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/neovim-0.9.5-4.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-ntfy-2.7.0-11.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-ntfy-2.7.0-11.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-appdirs" 
+  "python312-base" 
+  "python312-requests" 
+  "python312-ruamel-yaml" 
+  "update-alternatives" 
+]
+extra-source "python312-ntfy-2.7.0-11.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-ntfy-2.7.0-11.1.noarch.rpm"
+}

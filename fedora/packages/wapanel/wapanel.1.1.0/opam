@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "wapanel-1.1.0-5.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wapanel-1.1.0-5.fc39.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" {>= "2.37.9000"}
+  "gtk-layer-shell" 
+  "gtk3" 
+  "libgcc" 
+  "libstdc++" 
+  "libwayland-client" 
+  "pango" 
+  "pulseaudio-libs" 
+]
+extra-source "wapanel-1.1.0-5.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/wapanel-1.1.0-5.fc39.x86_64.rpm"
+}

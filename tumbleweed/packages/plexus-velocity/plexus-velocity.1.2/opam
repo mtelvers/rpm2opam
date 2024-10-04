@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plexus-velocity-1.2-6.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plexus-velocity-1.2-6.1.noarch.rpm"]
+depends: [
+  "apache-commons-collections" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "sisu-plexus" 
+  "velocity" 
+]
+extra-source "plexus-velocity-1.2-6.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/plexus-velocity-1.2-6.1.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "open-lldp-devel-1.1+106.74c0600a8692-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "open-lldp-devel-1.1+106.74c0600a8692-1.3.x86_64.rpm"]
+depends: [
+  "liblldp_clif1" {= "1.1"}
+  "open-lldp" {= "1.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "open-lldp-devel-1.1+106.74c0600a8692-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/open-lldp-devel-1.1+106.74c0600a8692-1.3.x86_64.rpm"
+}

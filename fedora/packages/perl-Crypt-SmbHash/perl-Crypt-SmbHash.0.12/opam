@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Crypt-SmbHash-0.12-51.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Crypt-SmbHash-0.12-51.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Digest-MD4" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-libs" {>= "5.5.0"}
+  "perl-vars" 
+]
+extra-source "perl-Crypt-SmbHash-0.12-51.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Crypt-SmbHash-0.12-51.fc40.noarch.rpm"
+}

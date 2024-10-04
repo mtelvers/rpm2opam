@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "anjuta-3.34.0-6.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "anjuta-3.34.0-6.1.x86_64.rpm"]
+depends: [
+  "autoconf" 
+  "autogen" 
+  "automake" 
+  "busybox-coreutils" 
+  "cinnamon" 
+  "gettext-runtime" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libanjuta-3-0" 
+  "libapr1-0" 
+  "libcairo2" 
+  "libgcc_s1" 
+  "libgda-6_0-6_0_0" 
+  "libgda-6_0-sqlite" {>= "6.0.0"}
+  "libgdk_pixbuf-2_0-0" 
+  "libgdl-3-5" 
+  "libgladeui-2-13" 
+  "libgtk-3-0" 
+  "libgtksourceview-3_0-1" 
+  "libpango-1_0-0" 
+  "libstdc++6" 
+  "libtool" 
+  "libvte-2_91-0" 
+  "libxml2-2" 
+  "subversion" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+]
+extra-source "anjuta-3.34.0-6.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/anjuta-3.34.0-6.1.x86_64.rpm"
+}

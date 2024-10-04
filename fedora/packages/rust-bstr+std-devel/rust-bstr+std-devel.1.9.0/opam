@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-bstr+std-devel-1.9.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-bstr+std-devel-1.9.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bstr+alloc-devel" {= "1.9.0"}
+  "rust-bstr-devel" {= "1.9.0"}
+  "rust-memchr+std-devel" 
+  "rust-serde+std-devel" 
+  "rust-serde-devel" 
+]
+extra-source "rust-bstr+std-devel-1.9.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-bstr+std-devel-1.9.0-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libayatana-indicator-gtk3-devel-0.9.4-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libayatana-indicator-gtk3-devel-0.9.4-3.fc40.x86_64.rpm"]
+depends: [
+  "gtk3-devel" 
+  "libayatana-ido-gtk3-devel" 
+  "libayatana-indicator-gtk3" {= "0.9.4"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libayatana-indicator-gtk3-devel-0.9.4-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libayatana-indicator-gtk3-devel-0.9.4-3.fc40.x86_64.rpm"
+}

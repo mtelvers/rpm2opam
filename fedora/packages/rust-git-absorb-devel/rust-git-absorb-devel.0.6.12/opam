@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-git-absorb-devel-0.6.12-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-git-absorb-devel-0.6.12-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-anyhow+default-devel" 
+  "rust-clap+default-devel" 
+  "rust-git2-devel" 
+  "rust-memchr+default-devel" 
+  "rust-slog+default-devel" 
+  "rust-slog-async+default-devel" 
+  "rust-slog-term+default-devel" 
+]
+extra-source "rust-git-absorb-devel-0.6.12-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-git-absorb-devel-0.6.12-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pytest-server-fixtures-1.7.0-9.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pytest-server-fixtures-1.7.0-9.4.noarch.rpm"]
+depends: [
+  "lsof" 
+  "net-tools-deprecated" 
+  "python312-base" {= "3.12"}
+  "python312-psutil" 
+  "python312-pytest" 
+  "python312-pytest-fixture-config" 
+  "python312-pytest-shutil" 
+  "python312-requests" 
+  "python312-retry" 
+]
+extra-source "python312-pytest-server-fixtures-1.7.0-9.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pytest-server-fixtures-1.7.0-9.4.noarch.rpm"
+}

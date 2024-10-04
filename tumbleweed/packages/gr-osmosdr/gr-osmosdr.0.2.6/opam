@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gr-osmosdr-0.2.6-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gr-osmosdr-0.2.6-1.5.x86_64.rpm"]
+depends: [
+  "python3-gr-osmosdr" {= "0.2.6"}
+  "python311-base" 
+]
+extra-source "gr-osmosdr-0.2.6-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gr-osmosdr-0.2.6-1.5.x86_64.rpm"
+}

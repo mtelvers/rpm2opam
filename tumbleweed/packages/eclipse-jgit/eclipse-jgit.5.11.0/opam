@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "eclipse-jgit-5.11.0-15.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eclipse-jgit-5.11.0-15.1.noarch.rpm"]
+depends: [
+  "apache-commons-compress" 
+  "apache-sshd" {>= "2.7"}
+  "args4j" 
+  "bouncycastle" 
+  "bouncycastle-pg" 
+  "bouncycastle-pkix" 
+  "ed25519-java" 
+  "google-gson" 
+  "hamcrest" 
+  "java-11-openj9-headless" 
+  "javaewah" 
+  "javapackages-filesystem" 
+  "jgit" {= "5.11.0"}
+  "junit" 
+  "jzlib" 
+  "slf4j" 
+  "xml-commons-apis" 
+]
+extra-source "eclipse-jgit-5.11.0-15.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/eclipse-jgit-5.11.0-15.1.noarch.rpm"
+}

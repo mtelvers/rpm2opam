@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "yle-dl+extra-20240130-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yle-dl+extra-20240130-1.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-psutil" 
+  "python3-xattr" 
+  "yle-dl" {= "20240130"}
+]
+extra-source "yle-dl+extra-20240130-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/y/yle-dl+extra-20240130-1.fc40.noarch.rpm"
+}

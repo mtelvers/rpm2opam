@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cheat-bash-completion-4.2.2-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cheat-bash-completion-4.2.2-11.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-completion" 
+  "cheat" {= "4.2.2"}
+]
+extra-source "cheat-bash-completion-4.2.2-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cheat-bash-completion-4.2.2-11.fc40.noarch.rpm"
+}

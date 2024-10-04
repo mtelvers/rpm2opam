@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-xarray-io-2024.7.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-xarray-io-2024.7.0-1.1.noarch.rpm"]
+depends: [
+  "python311-cftime" 
+  "python311-fsspec" 
+  "python311-h5netcdf" 
+  "python311-netCDF4" 
+  "python311-pooch" 
+  "python311-scipy" 
+  "python311-xarray" {= "2024.7.0"}
+  "python311-zarr" 
+]
+extra-source "python311-xarray-io-2024.7.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-xarray-io-2024.7.0-1.1.noarch.rpm"
+}

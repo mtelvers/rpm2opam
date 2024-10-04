@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kirigami-addons-0.11.0-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kirigami-addons-0.11.0-1.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kirigami2" 
+  "kitemmodels-imports" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Multimedia5" {>= "15"}
+  "libQt5QuickControls2-5" 
+  "libQtQuick5" 
+  "libqt5-qtgraphicaleffects" 
+  "libqt5-qtquickcontrols2" {>= "1"}
+  "libstdc++6" 
+  "plasma-framework-components" 
+  "qqc2-desktop-style" 
+  "qtdeclarative-imports-provides-qt5" 
+]
+extra-source "kirigami-addons-0.11.0-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kirigami-addons-0.11.0-1.8.x86_64.rpm"
+}

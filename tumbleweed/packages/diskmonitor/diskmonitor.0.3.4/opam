@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "diskmonitor-0.3.4-3.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "diskmonitor-0.3.4-3.12.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libKF5ConfigCore5" 
+  "libKF5ConfigGui5" 
+  "libKF5ConfigWidgets5" 
+  "libKF5CoreAddons5" 
+  "libKF5I18n5" 
+  "libKF5IconThemes5" 
+  "libKF5Notifications5" 
+  "libKF5Plasma5" 
+  "libKF5WidgetsAddons5" 
+  "libKF5XmlGui5" 
+  "libQt5Core5" 
+  "libQt5DBus5" 
+  "libQt5Gui5" 
+  "libQt5Widgets5" 
+  "libQtQuick5" 
+  "libgcc_s1" 
+  "libqt5-qtquickcontrols" 
+  "libstdc++6" 
+  "plasma-framework-components" 
+  "qtdeclarative-imports-provides-qt5" {>= "3"}
+  "udisks2" {>= "2.1"}
+]
+extra-source "diskmonitor-0.3.4-3.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/diskmonitor-0.3.4-3.12.x86_64.rpm"
+}

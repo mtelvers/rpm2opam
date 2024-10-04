@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "signpost-commonshttp4-1.2.1.2-3.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "signpost-commonshttp4-1.2.1.2-3.14.noarch.rpm"]
+depends: [
+  "httpcomponents-client" 
+  "httpcomponents-core" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "signpost-core" {= "1.2.1.2"}
+]
+extra-source "signpost-commonshttp4-1.2.1.2-3.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/signpost-commonshttp4-1.2.1.2-3.14.noarch.rpm"
+}

@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "flatpak-1.15.6-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flatpak-1.15.6-3.fc40.x86_64.rpm"]
+depends: [
+  "appstream" {>= "1.0.0"}
+  "bash" 
+  "bubblewrap" {>= "0.8.0"}
+  "dconf" 
+  "flatpak-selinux" 
+  "flatpak-session-helper" {= "1.15.6"}
+  "fuse" 
+  "fuse3-libs" 
+  "gdk-pixbuf2" 
+  "glib2" {>= "2.46.0"}
+  "glibc" 
+  "json-glib" 
+  "libXau" 
+  "libarchive" 
+  "libcurl" {>= "7.29.0"}
+  "libgcc" 
+  "librsvg2" 
+  "libseccomp" 
+  "libwayland-client" 
+  "libxml2" 
+  "libzstd" 
+  "malcontent-libs" 
+  "ostree-libs" 
+  "polkit-libs" 
+  "python3" 
+  "shadow-utils" 
+  "systemd-libs" 
+  "xdg-dbus-proxy" 
+]
+extra-source "flatpak-1.15.6-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/flatpak-1.15.6-3.fc40.x86_64.rpm"
+}

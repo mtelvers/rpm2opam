@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "guile-zlib-0.1.0-1.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "guile-zlib-0.1.0-1.11.x86_64.rpm"]
+depends: [
+  "guile" 
+  "zlib-devel" 
+]
+extra-source "guile-zlib-0.1.0-1.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/guile-zlib-0.1.0-1.11.x86_64.rpm"
+}

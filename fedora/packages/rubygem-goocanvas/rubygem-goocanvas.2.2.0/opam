@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rubygem-goocanvas-2.2.0-33.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rubygem-goocanvas-2.2.0-33.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "goocanvas2" 
+  "ruby-libs" 
+  "rubygem-gobject-introspection" {>= "2.2.0"}
+  "rubygem-gtk3" {>= "2.2.0"}
+  "rubygems" 
+]
+extra-source "rubygem-goocanvas-2.2.0-33.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rubygem-goocanvas-2.2.0-33.fc40.x86_64.rpm"
+}

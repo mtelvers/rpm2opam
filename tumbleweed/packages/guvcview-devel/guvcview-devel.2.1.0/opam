@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "guvcview-devel-2.1.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "guvcview-devel-2.1.0-1.1.x86_64.rpm"]
+depends: [
+  "SDL2-devel" 
+  "alsa-devel" 
+  "ffmpeg-4-libavcodec-devel" 
+  "ffmpeg-4-libavutil-devel" 
+  "glibc-devel" 
+  "gsl-devel" 
+  "libgviewaudio-2_2-2" {= "2.1.0"}
+  "libgviewencoder-2_2-2" {= "2.1.0"}
+  "libgviewrender-2_2-2" {= "2.1.0"}
+  "libgviewv4l2core-2_2-2" {= "2.1.0"}
+  "libpng12-compat-devel" 
+  "libpulse-devel" 
+  "libusb-1_0-devel" 
+  "libv4l-devel" 
+  "pkgconf-pkg-config" 
+  "portaudio-devel" 
+  "systemd-devel" 
+]
+extra-source "guvcview-devel-2.1.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/guvcview-devel-2.1.0-1.1.x86_64.rpm"
+}

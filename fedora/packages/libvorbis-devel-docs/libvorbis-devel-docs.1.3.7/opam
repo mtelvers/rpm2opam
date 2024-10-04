@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libvorbis-devel-docs-1.3.7-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvorbis-devel-docs-1.3.7-10.fc40.noarch.rpm"]
+depends: [
+  "libvorbis-devel" {= "1.3.7"}
+]
+extra-source "libvorbis-devel-docs-1.3.7-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libvorbis-devel-docs-1.3.7-10.fc40.noarch.rpm"
+}

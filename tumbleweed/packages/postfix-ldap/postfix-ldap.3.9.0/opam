@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postfix-ldap-3.9.0-8.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postfix-ldap-3.9.0-8.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libldap2" 
+  "postfix" {= "3.9.0"}
+]
+extra-source "postfix-ldap-3.9.0-8.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/postfix-ldap-3.9.0-8.1.x86_64.rpm"
+}

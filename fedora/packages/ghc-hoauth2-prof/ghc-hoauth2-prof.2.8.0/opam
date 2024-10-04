@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-hoauth2-prof-2.8.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hoauth2-prof-2.8.0-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-prof" 
+  "ghc-base-prof" 
+  "ghc-base64-prof" 
+  "ghc-binary-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-cryptonite-prof" 
+  "ghc-data-default-prof" 
+  "ghc-exceptions-prof" 
+  "ghc-hoauth2-devel" {= "2.8.0"}
+  "ghc-http-conduit-prof" 
+  "ghc-http-types-prof" 
+  "ghc-memory-prof" 
+  "ghc-microlens-prof" 
+  "ghc-text-prof" 
+  "ghc-transformers-prof" 
+  "ghc-uri-bytestring-aeson-prof" 
+  "ghc-uri-bytestring-prof" 
+]
+extra-source "ghc-hoauth2-prof-2.8.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-hoauth2-prof-2.8.0-3.fc40.x86_64.rpm"
+}

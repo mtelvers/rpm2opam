@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mariadb-pam-10.11.6-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mariadb-pam-10.11.6-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "mariadb-server" {= "10.11.6"}
+  "pam-libs" 
+]
+extra-source "mariadb-pam-10.11.6-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mariadb-pam-10.11.6-3.fc40.x86_64.rpm"
+}

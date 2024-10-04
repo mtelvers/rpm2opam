@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "waypipe-0.9.1-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "waypipe-0.9.1-1.2.x86_64.rpm"]
+depends: [
+  "ffmpeg-7-mini-libs" 
+  "glibc" 
+  "libgbm1" 
+  "liblz4-1" 
+  "libva2" 
+  "libzstd1" 
+]
+extra-source "waypipe-0.9.1-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/waypipe-0.9.1-1.2.x86_64.rpm"
+}

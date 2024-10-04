@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-osprofiler-4.2.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-osprofiler-4.2.0-1.1.noarch.rpm"]
+depends: [
+  "python3-oslo-concurrency" {>= "3.26.0"}
+  "python3-oslo-config" {>= "5.2.0"}
+  "python3-oslo-log" 
+  "python3-oslo-utils" {>= "3.33.0"}
+  "python311-WebOb" {>= "1.7.1"}
+  "python311-base" 
+  "python311-importlib-metadata" 
+  "python311-prettytable" {>= "0.7.2"}
+]
+extra-source "python3-osprofiler-4.2.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-osprofiler-4.2.0-1.1.noarch.rpm"
+}

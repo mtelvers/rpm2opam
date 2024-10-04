@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-terminal-3.50.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-terminal-3.50.1-6.fc40.x86_64.rpm"]
+depends: [
+  "dbus" 
+  "glib2" {>= "2.52.0"}
+  "glibc" 
+  "gsettings-desktop-schemas" 
+  "gtk3" {>= "3.24.0"}
+  "libX11" 
+  "libgcc" 
+  "libhandy" 
+  "libstdc++" 
+  "libuuid" 
+  "pango" 
+  "vte291" 
+]
+extra-source "gnome-terminal-3.50.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-terminal-3.50.1-6.fc40.x86_64.rpm"
+}

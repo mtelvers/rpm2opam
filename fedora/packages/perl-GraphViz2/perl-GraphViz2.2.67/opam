@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-GraphViz2-2.67-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-GraphViz2-2.67-5.fc40.noarch.rpm"]
+depends: [
+  "perl-Data-Section-Simple" 
+  "perl-File-Temp" 
+  "perl-File-Which" 
+  "perl-Graph" 
+  "perl-IPC-Run3" 
+  "perl-Moo" 
+  "perl-Text-ParseWords" 
+  "perl-Type-Tiny" 
+  "perl-libs" 
+]
+extra-source "perl-GraphViz2-2.67-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-GraphViz2-2.67-5.fc40.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cvsutils-0.2.6-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cvsutils-0.2.6-20.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cvs" 
+  "perl-File-Basename" 
+  "perl-Getopt-Long" 
+  "perl-Time-Local" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.4.0"}
+  "perl-vars" 
+]
+extra-source "cvsutils-0.2.6-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cvsutils-0.2.6-20.fc40.noarch.rpm"
+}

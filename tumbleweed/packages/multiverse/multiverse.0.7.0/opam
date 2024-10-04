@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "multiverse-0.7.0-3.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "multiverse-0.7.0-3.14.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+]
+extra-source "multiverse-0.7.0-3.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/multiverse-0.7.0-3.14.noarch.rpm"
+}

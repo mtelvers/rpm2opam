@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "osc-1.6.1-400.1.1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "osc-1.6.1-400.1.1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "python3" 
+  "python3-cryptography" 
+  "python3-distro" 
+  "python3-lxml" 
+  "python3-progressbar2" 
+  "python3-rpm" 
+  "python3-urllib3" 
+]
+extra-source "osc-1.6.1-400.1.1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/osc-1.6.1-400.1.1.fc40.noarch.rpm"
+}

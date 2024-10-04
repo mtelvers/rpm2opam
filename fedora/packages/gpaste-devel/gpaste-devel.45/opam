@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gpaste-devel-45-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gpaste-devel-45-4.fc40.x86_64.rpm"]
+depends: [
+  "gdk-pixbuf2-devel" {>= "2.38.0"}
+  "glib2-devel" {>= "2.70.0"}
+  "gpaste-libs" {= "45"}
+  "gtk3-devel" {>= "3.24.0"}
+  "gtk4-devel" {>= "4.6.0"}
+  "libadwaita-devel" {>= "1.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gpaste-devel-45-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gpaste-devel-45-4.fc40.x86_64.rpm"
+}

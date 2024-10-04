@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Business-ISBN-tests-3.009-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Business-ISBN-tests-3.009-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Business-ISBN" 
+  "perl-Data-Dumper" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" {>= "0.95"}
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Business-ISBN-tests-3.009-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Business-ISBN-tests-3.009-4.fc40.noarch.rpm"
+}

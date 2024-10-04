@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "calligra-karbon-libs-3.2.1-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "calligra-karbon-libs-3.2.1-29.fc40.x86_64.rpm"]
+depends: [
+  "calligra-karbon" {= "3.2.1"}
+  "glibc" 
+  "kf5-karchive" 
+  "kf5-kcompletion" 
+  "kf5-kconfig-core" 
+  "kf5-kcoreaddons" 
+  "kf5-kguiaddons" 
+  "kf5-ki18n" 
+  "kf5-kiconthemes" 
+  "kf5-kwidgetsaddons" 
+  "kf5-kxmlgui" 
+  "libgcc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "calligra-karbon-libs-3.2.1-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/calligra-karbon-libs-3.2.1-29.fc40.x86_64.rpm"
+}

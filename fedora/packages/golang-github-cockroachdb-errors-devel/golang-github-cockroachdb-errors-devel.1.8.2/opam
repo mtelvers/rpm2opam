@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-cockroachdb-errors-devel-1.8.2-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-cockroachdb-errors-devel-1.8.2-10.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-cockroachdb-logtags-devel" 
+  "golang-github-cockroachdb-redact-devel" 
+  "golang-github-cockroachdb-sentry-devel" 
+  "golang-github-gogo-protobuf-devel" 
+  "golang-github-gogo-status-devel" 
+  "golang-github-kr-pretty-devel" 
+  "golang-github-pkg-errors-devel" 
+  "golang-github-protobuf-devel" 
+  "golang-google-grpc-devel" 
+]
+extra-source "golang-github-cockroachdb-errors-devel-1.8.2-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-cockroachdb-errors-devel-1.8.2-10.fc40.noarch.rpm"
+}

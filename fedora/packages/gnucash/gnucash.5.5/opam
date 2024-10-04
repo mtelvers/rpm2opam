@@ -1,0 +1,42 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnucash-5.5-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnucash-5.5-6.fc40.x86_64.rpm"]
+depends: [
+  "aqbanking" 
+  "boost-filesystem" 
+  "boost-locale" 
+  "boost-program-options" 
+  "cairo" 
+  "dconf" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gnome-icon-theme" 
+  "gnucash-docs" {>= "5.5"}
+  "gtk3" 
+  "guile30" 
+  "gwenhywfar" 
+  "gwenhywfar-gui-gtk3" 
+  "libdbi" 
+  "libgcc" 
+  "libicu" 
+  "libofx" 
+  "libsecret" 
+  "libstdc++" 
+  "libxml2" 
+  "pango" 
+  "perl-English" 
+  "perl-Finance-Quote" 
+  "perl-Getopt-Std" 
+  "perl-JSON" 
+  "perl-JSON-Parse" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "python3" {= "3.12"}
+  "python3-libs" 
+  "webkit2gtk4-1" 
+  "zlib-ng-compat" 
+]
+extra-source "gnucash-5.5-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnucash-5.5-6.fc40.x86_64.rpm"
+}

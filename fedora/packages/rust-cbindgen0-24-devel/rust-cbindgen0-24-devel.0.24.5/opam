@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-cbindgen0.24-devel-0.24.5-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-cbindgen0.24-devel-0.24.5-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-heck+default-devel" 
+  "rust-indexmap+default-devel" 
+  "rust-log+default-devel" 
+  "rust-proc-macro2+default-devel" 
+  "rust-quote+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde-devel" 
+  "rust-serde_json+default-devel" 
+  "rust-syn+clone-impls-devel" 
+  "rust-syn+extra-traits-devel" 
+  "rust-syn+full-devel" 
+  "rust-syn+parsing-devel" 
+  "rust-syn+printing-devel" 
+  "rust-syn-devel" 
+  "rust-tempfile+default-devel" 
+  "rust-toml+default-devel" 
+]
+extra-source "rust-cbindgen0.24-devel-0.24.5-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-cbindgen0.24-devel-0.24.5-2.fc40.noarch.rpm"
+}

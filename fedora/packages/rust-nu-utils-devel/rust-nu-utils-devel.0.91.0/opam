@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-nu-utils-devel-0.91.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-nu-utils-devel-0.91.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-log+default-devel" 
+  "rust-lscolors+nu-ansi-term-devel" 
+  "rust-lscolors-devel" 
+  "rust-num-format+default-devel" 
+  "rust-strip-ansi-escapes+default-devel" 
+  "rust-sys-locale+default-devel" 
+  "rust-unicase+default-devel" 
+]
+extra-source "rust-nu-utils-devel-0.91.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-nu-utils-devel-0.91.0-1.fc40.noarch.rpm"
+}

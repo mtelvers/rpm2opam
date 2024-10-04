@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xforms-1.2.4-24.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xforms-1.2.4-24.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11" 
+  "libXpm" 
+  "libglvnd-glx" 
+  "libjpeg-turbo" 
+  "netpbm-progs" 
+  "xorg-x11-fonts-ISO8859-1-100dpi" 
+  "xorg-x11-fonts-ISO8859-1-75dpi" 
+]
+extra-source "xforms-1.2.4-24.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xforms-1.2.4-24.fc40.x86_64.rpm"
+}

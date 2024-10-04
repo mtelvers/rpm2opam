@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-certbot-dns-nsone-2.9.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-certbot-dns-nsone-2.9.0-1.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-acme" {= "2.9.0"}
+  "python3-certbot" {= "2.9.0"}
+  "python3-dns-lexicon" {>= "3.14.1"}
+  "python3-setuptools" {>= "41.6"}
+]
+extra-source "python3-certbot-dns-nsone-2.9.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-certbot-dns-nsone-2.9.0-1.fc40.noarch.rpm"
+}

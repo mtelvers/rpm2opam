@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-themes-lang-3.0.0-22.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-themes-lang-3.0.0-22.8.noarch.rpm"]
+depends: [
+  "gnome-themes" {= "3.0.0"}
+]
+extra-source "gnome-themes-lang-3.0.0-22.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-themes-lang-3.0.0-22.8.noarch.rpm"
+}

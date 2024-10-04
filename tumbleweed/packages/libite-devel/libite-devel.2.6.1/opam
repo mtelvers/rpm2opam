@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libite-devel-2.6.1-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libite-devel-2.6.1-1.3.x86_64.rpm"]
+depends: [
+  "libite5" {= "2.6.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libite-devel-2.6.1-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libite-devel-2.6.1-1.3.x86_64.rpm"
+}

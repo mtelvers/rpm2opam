@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ursa-major-0.4.2-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ursa-major-0.4.2-10.fc40.noarch.rpm"]
+depends: [
+  "gobject-introspection" 
+  "koji" 
+  "krb5-workstation" 
+  "libmodulemd" {> "1"}
+  "python3" 
+  "python3-cairo" 
+  "python3-gobject-base" 
+  "python3-jinja2" 
+  "python3-koji" 
+  "python3-m2crypto" 
+  "python3-requests" 
+  "python3-setuptools" 
+  "python3-six" 
+]
+extra-source "ursa-major-0.4.2-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/ursa-major-0.4.2-10.fc40.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kpipewire6-imports-6.1.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kpipewire6-imports-6.1.5-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libKPipeWire6" 
+  "libKPipeWireDmaBuf6" {= "6.1.5"}
+  "libKPipeWireRecord6" 
+  "libQt6Core6" 
+  "libQt6Qml6" 
+  "libQt6Quick6" 
+  "libpipewire-0_3-0" 
+  "libstdc++6" 
+]
+extra-source "kpipewire6-imports-6.1.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kpipewire6-imports-6.1.5-1.1.x86_64.rpm"
+}

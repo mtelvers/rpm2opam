@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nbdkit-1.37.13-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nbdkit-1.37.13-1.fc40.x86_64.rpm"]
+depends: [
+  "nbdkit-basic-filters" {= "1.37.13"}
+  "nbdkit-basic-plugins" {= "1.37.13"}
+  "nbdkit-selinux" 
+  "nbdkit-server" {= "1.37.13"}
+]
+extra-source "nbdkit-1.37.13-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nbdkit-1.37.13-1.fc40.x86_64.rpm"
+}

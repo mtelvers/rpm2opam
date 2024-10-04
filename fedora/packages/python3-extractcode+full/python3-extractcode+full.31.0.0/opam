@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-extractcode+full-31.0.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-extractcode+full-31.0.0-3.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-extractcode" {= "31.0.0"}
+  "python3-extractcode-7z" 
+  "python3-extractcode-libarchive" 
+  "python3-typecode" {>= "21.6.1"}
+  "python3-typecode+full" {>= "21.6.1"}
+]
+extra-source "python3-extractcode+full-31.0.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-extractcode+full-31.0.0-3.fc40.noarch.rpm"
+}

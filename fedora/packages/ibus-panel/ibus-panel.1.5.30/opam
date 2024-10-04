@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ibus-panel-1.5.30~rc1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibus-panel-1.5.30~rc1-1.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "ibus-libs" {= "1.5.30"}
+  "libX11" 
+  "libXi" 
+  "libdbusmenu" 
+  "libdbusmenu-gtk3" 
+  "libnotify" 
+  "libwayland-client" 
+  "libxkbcommon" 
+  "pango" 
+]
+extra-source "ibus-panel-1.5.30~rc1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/ibus-panel-1.5.30~rc1-1.fc40.x86_64.rpm"
+}

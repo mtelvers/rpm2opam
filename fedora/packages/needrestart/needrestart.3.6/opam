@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "needrestart-3.6-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "needrestart-3.6-11.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-Getopt-Std" 
+  "perl-Module-Find" 
+  "perl-Module-ScanDeps" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Proc-ProcessTable" 
+  "perl-Scalar-List-Utils" 
+  "perl-Sort-Naturally" 
+  "perl-TermReadKey" 
+  "perl-Text-Tabs+Wrap" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libintl-perl" 
+  "perl-libs" 
+  "perl-parent" 
+  "python3" {= "3.12"}
+  "python3-dnf" 
+  "xz" 
+]
+extra-source "needrestart-3.6-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/needrestart-3.6-11.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-modisom-3.0.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-modisom-3.0.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "gap" {>= "4.7"}
+  "gap-polycyclic" {>= "1.0"}
+]
+extra-source "gap-modisom-3.0.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gap-modisom-3.0.0-1.1.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "bind-doc-9.18.24-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bind-doc-9.18.24-1.fc40.noarch.rpm"]
+depends: [
+  "bind-license" {= "9.18.24"}
+  "python3-sphinx_rtd_theme" 
+]
+extra-source "bind-doc-9.18.24-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/bind-doc-9.18.24-1.fc40.noarch.rpm"
+}

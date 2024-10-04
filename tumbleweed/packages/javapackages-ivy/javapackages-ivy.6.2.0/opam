@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "javapackages-ivy-6.2.0-5.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "javapackages-ivy-6.2.0-5.1.noarch.rpm"]
+depends: [
+  "javapackages-local" {= "6.2.0"}
+  "javapackages-tools" {= "6.2.0"}
+]
+extra-source "javapackages-ivy-6.2.0-5.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/javapackages-ivy-6.2.0-5.1.noarch.rpm"
+}

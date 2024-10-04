@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "oro-2.0.8-297.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "oro-2.0.8-297.12.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "oro-2.0.8-297.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/oro-2.0.8-297.12.noarch.rpm"
+}

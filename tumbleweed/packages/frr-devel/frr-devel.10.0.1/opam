@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "frr-devel-10.0.1-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "frr-devel-10.0.1-4.1.x86_64.rpm"]
+depends: [
+  "libfrr0" {= "10.0.1"}
+  "libfrr_pb0" {= "10.0.1"}
+  "libfrrcares0" {= "10.0.1"}
+  "libfrrfpm_pb0" {= "10.0.1"}
+  "libfrrospfapiclient0" {= "10.0.1"}
+  "libfrrsnmp0" {= "10.0.1"}
+  "libfrrzmq0" {= "10.0.1"}
+  "libmgmt_be_nb0" {= "10.0.1"}
+]
+extra-source "frr-devel-10.0.1-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/frr-devel-10.0.1-4.1.x86_64.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Flickr-Upload-1.6-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Flickr-Upload-1.6-23.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Digest-MD5" 
+  "perl-Encode" 
+  "perl-Flickr-API" {>= "1.9"}
+  "perl-Getopt-Long" {>= "1"}
+  "perl-HTTP-Message" {>= "1"}
+  "perl-Net-OAuth" {>= "0.28"}
+  "perl-Pod-Usage" {>= "1"}
+  "perl-Term-ProgressBar" {>= "2.0"}
+  "perl-URI" 
+  "perl-XML-Simple" {>= "2"}
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-libwww-perl" {>= "1"}
+]
+extra-source "perl-Flickr-Upload-1.6-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Flickr-Upload-1.6-23.fc40.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfprint-tod-devel-1.94.7+tod1-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfprint-tod-devel-1.94.7+tod1-1.2.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libfprint-2-2" {= "1.94.7"}
+  "libfprint-2-tod1" 
+  "libfprint-devel" {= "1.94.7"}
+  "libgudev-1_0-devel" 
+  "libgusb-devel" 
+  "libpixman-1-0-devel" 
+  "mozilla-nss-devel" {>= "3.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libfprint-tod-devel-1.94.7+tod1-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfprint-tod-devel-1.94.7+tod1-1.2.x86_64.rpm"
+}

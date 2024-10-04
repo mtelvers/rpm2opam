@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pidgin-plugin-otr-4.0.2-3.27.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pidgin-plugin-otr-4.0.2-3.27.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcrypt20" 
+  "libotr5" 
+  "pidgin" {>= "2.14.12"}
+]
+extra-source "pidgin-plugin-otr-4.0.2-3.27.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pidgin-plugin-otr-4.0.2-3.27.x86_64.rpm"
+}

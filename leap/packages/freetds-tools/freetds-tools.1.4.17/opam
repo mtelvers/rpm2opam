@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "freetds-tools-1.4.17-slfo.1.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "freetds-tools-1.4.17-slfo.1.1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "krb5" 
+  "libgmp10" 
+  "libgnutls30" 
+  "libhogweed6" 
+  "libnettle8" 
+  "libodbc2" 
+  "libreadline8" 
+  "libsybdb5" 
+]
+extra-source "freetds-tools-1.4.17-slfo.1.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/freetds-tools-1.4.17-slfo.1.1.1.x86_64.rpm"
+}

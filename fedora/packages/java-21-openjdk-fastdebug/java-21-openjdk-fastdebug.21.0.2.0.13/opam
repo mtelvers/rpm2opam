@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "java-21-openjdk-fastdebug-21.0.2.0.13-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "java-21-openjdk-fastdebug-21.0.2.0.13-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "fontconfig" 
+  "java-21-openjdk-headless-fastdebug" {= "21.0.2.0.13"}
+  "libXcomposite" 
+  "xorg-x11-fonts-Type1" 
+]
+extra-source "java-21-openjdk-fastdebug-21.0.2.0.13-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/java-21-openjdk-fastdebug-21.0.2.0.13-3.fc40.x86_64.rpm"
+}

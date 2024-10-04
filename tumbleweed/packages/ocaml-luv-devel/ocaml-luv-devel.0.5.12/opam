@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ocaml-luv-devel-0.5.12-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-luv-devel-0.5.12-1.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libuv-devel" 
+  "libuv1" 
+  "ocaml" {= "8"}
+  "ocaml-bigarray-compat-devel" {= "0"}
+  "ocaml-ctypes-devel" {= "8620"}
+  "ocaml-integers-devel" {= "0"}
+  "ocaml-luv" {= "0.5.12"}
+]
+extra-source "ocaml-luv-devel-0.5.12-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ocaml-luv-devel-0.5.12-1.8.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "coccigrep-1.20-4.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coccigrep-1.20-4.5.noarch.rpm"]
+depends: [
+  "coccinelle" 
+  "python311" 
+  "python311-base" 
+]
+extra-source "coccigrep-1.20-4.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/coccigrep-1.20-4.5.noarch.rpm"
+}

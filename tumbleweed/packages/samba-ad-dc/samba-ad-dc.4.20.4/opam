@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "samba-ad-dc-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "samba-ad-dc-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libldb2" 
+  "libpopt0" 
+  "libtalloc2" 
+  "libtevent0" 
+  "python311-base" 
+  "samba" {= "4.20.4"}
+  "samba-ad-dc-libs" 
+  "samba-client-libs" 
+  "samba-dsdb-modules" {= "4.20.4"}
+  "samba-python3" {= "4.20.4"}
+  "samba-tool" {= "4.20.4"}
+]
+extra-source "samba-ad-dc-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/samba-ad-dc-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm"
+}

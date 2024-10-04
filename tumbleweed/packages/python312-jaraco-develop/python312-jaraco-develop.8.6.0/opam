@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-jaraco.develop-8.6.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-jaraco.develop-8.6.0-1.3.noarch.rpm"]
+depends: [
+  "python312-PyNaCl" 
+  "python312-autocommand" 
+  "python312-base" {= "3.12"}
+  "python312-build" 
+  "python312-jaraco-collections" 
+  "python312-jaraco-context" 
+  "python312-jaraco-ui" 
+  "python312-jaraco-vcs" {>= "1.1"}
+  "python312-keyring" 
+  "python312-packaging" 
+  "python312-path" 
+  "python312-requests-toolbelt" 
+  "python312-setuptools" 
+  "python312-subprocess-tee" 
+]
+extra-source "python312-jaraco.develop-8.6.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-jaraco.develop-8.6.0-1.3.noarch.rpm"
+}

@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-DBI-tests-1.643-22.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DBI-tests-1.643-22.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "perl-B" 
+  "perl-Benchmark" 
+  "perl-Clone" {>= "0.34"}
+  "perl-DBI" 
+  "perl-DB_File" 
+  "perl-Data-Dumper" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Path" 
+  "perl-Getopt-Long" 
+  "perl-MLDBM" 
+  "perl-PathTools" 
+  "perl-SQL-Statement" {>= "1.402"}
+  "perl-Scalar-List-Utils" 
+  "perl-Storable" 
+  "perl-Symbol" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" {>= "0.84"}
+  "perl-base" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-overload" 
+  "perl-threads" 
+  "perl-vars" 
+]
+extra-source "perl-DBI-tests-1.643-22.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-DBI-tests-1.643-22.fc40.x86_64.rpm"
+}

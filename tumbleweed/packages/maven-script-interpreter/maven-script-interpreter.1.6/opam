@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-script-interpreter-1.6-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-script-interpreter-1.6-1.1.noarch.rpm"]
+depends: [
+  "apache-commons-io" 
+  "bsh2" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "slf4j" 
+]
+extra-source "maven-script-interpreter-1.6-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/maven-script-interpreter-1.6-1.1.noarch.rpm"
+}

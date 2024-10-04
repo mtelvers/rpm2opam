@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libstoragemgmt-targetd-plugin-1.9.8-slfo.1.1.23.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libstoragemgmt-targetd-plugin-1.9.8-slfo.1.1.23.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python3-libstoragemgmt" {= "1.9.8"}
+  "python311-base" 
+]
+extra-source "libstoragemgmt-targetd-plugin-1.9.8-slfo.1.1.23.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/libstoragemgmt-targetd-plugin-1.9.8-slfo.1.1.23.noarch.rpm"
+}

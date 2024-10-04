@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-diesel+chrono-devel-2.1.4-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-diesel+chrono-devel-2.1.4-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-chrono+clock-devel" 
+  "rust-chrono+std-devel" 
+  "rust-chrono-devel" 
+  "rust-diesel-devel" {= "2.1.4"}
+  "rust-diesel_derives+chrono-devel" 
+]
+extra-source "rust-diesel+chrono-devel-2.1.4-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-diesel+chrono-devel-2.1.4-2.fc40.noarch.rpm"
+}

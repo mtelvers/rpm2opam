@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "doublecmd-qt-1.1.11-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "doublecmd-qt-1.1.11-1.fc40.x86_64.rpm"]
+depends: [
+  "dbus-libs" 
+  "doublecmd-common" {= "1.1.11"}
+  "glib2" 
+  "glibc" 
+  "libX11" 
+  "qt5pas" 
+]
+extra-source "doublecmd-qt-1.1.11-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/doublecmd-qt-1.1.11-1.fc40.x86_64.rpm"
+}

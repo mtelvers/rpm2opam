@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "stfl-ruby-0.22-46.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "stfl-ruby-0.22-46.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "ncurses-libs" 
+  "ruby-libs" 
+  "stfl" {= "0.22"}
+]
+extra-source "stfl-ruby-0.22-46.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/stfl-ruby-0.22-46.fc40.x86_64.rpm"
+}

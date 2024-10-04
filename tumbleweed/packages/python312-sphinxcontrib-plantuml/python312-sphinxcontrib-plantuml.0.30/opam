@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-sphinxcontrib-plantuml-0.30-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-sphinxcontrib-plantuml-0.30-1.1.noarch.rpm"]
+depends: [
+  "plantuml" 
+  "python312-Sphinx" {>= "2"}
+  "python312-base" {= "3.12"}
+]
+extra-source "python312-sphinxcontrib-plantuml-0.30-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-sphinxcontrib-plantuml-0.30-1.1.noarch.rpm"
+}

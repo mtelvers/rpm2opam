@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libxfce4windowing-lang-4.19.3-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxfce4windowing-lang-4.19.3-1.2.noarch.rpm"]
+depends: [
+  "libxfce4windowing-0-0" {= "4.19.3"}
+]
+extra-source "libxfce4windowing-lang-4.19.3-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libxfce4windowing-lang-4.19.3-1.2.noarch.rpm"
+}

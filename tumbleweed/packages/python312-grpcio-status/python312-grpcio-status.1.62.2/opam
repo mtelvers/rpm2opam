@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-grpcio-status-1.62.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-grpcio-status-1.62.2-1.1.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-googleapis-common-protos" {>= "1.5.5"}
+  "python312-grpcio" {>= "1.62.2"}
+  "python312-protobuf" {>= "3.6.0"}
+]
+extra-source "python312-grpcio-status-1.62.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-grpcio-status-1.62.2-1.1.noarch.rpm"
+}

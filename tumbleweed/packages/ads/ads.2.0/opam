@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ads-2.0+git.0.bdc680d-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ads-2.0+git.0.bdc680d-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "krb5-client" 
+  "ntp" 
+  "python3-ldb" 
+  "python311-base" 
+  "python311-dnspython" 
+  "python311-netifaces" 
+  "python311-psutil" 
+  "python311-python-pam" 
+  "samba-client" 
+  "samba-dsdb-modules" 
+  "samba-python3" 
+]
+extra-source "ads-2.0+git.0.bdc680d-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ads-2.0+git.0.bdc680d-2.1.noarch.rpm"
+}

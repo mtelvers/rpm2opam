@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-dbus-devel-1.2.29-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-dbus-devel-1.2.29-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-cereal-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-conduit-devel" 
+  "ghc-containers-devel" 
+  "ghc-dbus" {= "1.2.29"}
+  "ghc-deepseq-devel" 
+  "ghc-exceptions-devel" 
+  "ghc-filepath-devel" 
+  "ghc-lens-devel" 
+  "ghc-network-devel" 
+  "ghc-parsec-devel" 
+  "ghc-random-devel" 
+  "ghc-split-devel" 
+  "ghc-template-haskell-devel" 
+  "ghc-text-devel" 
+  "ghc-th-lift-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unix-devel" 
+  "ghc-vector-devel" 
+  "ghc-xml-conduit-devel" 
+  "ghc-xml-types-devel" 
+]
+extra-source "ghc-dbus-devel-1.2.29-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-dbus-devel-1.2.29-3.fc40.x86_64.rpm"
+}

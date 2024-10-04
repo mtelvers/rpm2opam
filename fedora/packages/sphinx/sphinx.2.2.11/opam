@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sphinx-2.2.11-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sphinx-2.2.11-29.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "expat" 
+  "glibc" 
+  "libgcc" 
+  "libpq" 
+  "libstdc++" 
+  "mariadb-connector-c" 
+  "shadow-utils" 
+  "systemd" 
+  "zlib-ng-compat" 
+]
+extra-source "sphinx-2.2.11-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sphinx-2.2.11-29.fc40.x86_64.rpm"
+}

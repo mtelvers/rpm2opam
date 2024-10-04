@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-GooseMPL-0.12.1-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-GooseMPL-0.12.1-1.9.noarch.rpm"]
+depends: [
+  "python311-PyYAML" 
+  "python311-base" {= "3.11"}
+  "python311-deprecation" 
+  "python311-matplotlib" 
+  "python311-matplotlib-latex" 
+  "python311-numpy" 
+  "python311-scipy" 
+  "texlive-amsfonts" 
+  "texlive-amsmath" 
+  "texlive-tools" 
+]
+extra-source "python311-GooseMPL-0.12.1-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-GooseMPL-0.12.1-1.9.noarch.rpm"
+}

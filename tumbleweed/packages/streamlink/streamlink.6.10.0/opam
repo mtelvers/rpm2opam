@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "streamlink-6.10.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "streamlink-6.10.0-1.1.noarch.rpm"]
+depends: [
+  "python311-PySocks" {>= "1.7.1"}
+  "python311-base" {= "3.11.10"}
+  "python311-certifi" 
+  "python311-isodate" 
+  "python311-lxml" {>= "5.3.0"}
+  "python311-pycountry" 
+  "python311-pycryptodome" {>= "3.20.0"}
+  "python311-requests" {>= "2.32.3"}
+  "python311-trio" {>= "0.26.2"}
+  "python311-trio-websocket" {>= "0.11.1"}
+  "python311-typing_extensions" {>= "4.12.2"}
+  "python311-urllib3" {>= "2.1.0"}
+  "python311-websocket-client" {>= "1.7.0"}
+]
+extra-source "streamlink-6.10.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/streamlink-6.10.0-1.1.noarch.rpm"
+}

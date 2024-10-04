@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "collectl-4.3.8-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "collectl-4.3.8-2.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "perl-base" 
+  "systemd" 
+]
+extra-source "collectl-4.3.8-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/collectl-4.3.8-2.2.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "clamav-milter-1.0.5-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clamav-milter-1.0.5-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "clamav-filesystem" {= "1.0.5"}
+  "clamav-lib" 
+  "glibc" 
+  "sendmail-milter" 
+  "shadow-utils" 
+]
+extra-source "clamav-milter-1.0.5-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/clamav-milter-1.0.5-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rofi-calc-2.2.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rofi-calc-2.2.1-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "qalculate" {>= "2.0"}
+  "rofi" {>= "1.5"}
+]
+extra-source "rofi-calc-2.2.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rofi-calc-2.2.1-1.1.x86_64.rpm"
+}

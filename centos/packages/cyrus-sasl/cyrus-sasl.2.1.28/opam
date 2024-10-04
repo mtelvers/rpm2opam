@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cyrus-sasl-2.1.28-22.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cyrus-sasl-2.1.28-22.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cyrus-sasl-lib" {= "2.1.28"}
+  "gdbm-libs" 
+  "glibc" 
+  "krb5-libs" 
+  "libxcrypt" 
+  "openldap" 
+  "openssl-libs" 
+  "pam-libs" 
+  "shadow-utils" 
+  "util-linux" 
+]
+extra-source "cyrus-sasl-2.1.28-22.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/cyrus-sasl-2.1.28-22.el10.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-dennis-1.1.0-1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-dennis-1.1.0-1.8.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-click" {>= "6"}
+  "python311-polib" {>= "1.0.8"}
+  "update-alternatives" 
+]
+extra-source "python311-dennis-1.1.0-1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-dennis-1.1.0-1.8.noarch.rpm"
+}

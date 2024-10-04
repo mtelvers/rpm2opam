@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libofa-0.9.3-47.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libofa-0.9.3-47.fc40.x86_64.rpm"]
+depends: [
+  "fftw-libs-double" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "libofa-0.9.3-47.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libofa-0.9.3-47.fc40.x86_64.rpm"
+}

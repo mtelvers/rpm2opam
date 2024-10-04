@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-logreduce-0.6.1-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-logreduce-0.6.1-3.1.noarch.rpm"]
+depends: [
+  "python311-CherryPy" 
+  "python311-PyYAML" 
+  "python311-SQLAlchemy" 
+  "python311-aiohttp" 
+  "python311-alembic" 
+  "python311-base" {= "3.11"}
+  "python311-numpy" 
+  "python311-requests" 
+  "python311-scikit-learn" 
+  "python311-scipy" 
+  "python311-voluptuous" 
+]
+extra-source "python3-logreduce-0.6.1-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-logreduce-0.6.1-3.1.noarch.rpm"
+}

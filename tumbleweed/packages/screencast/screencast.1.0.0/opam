@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "screencast-1.0.0-2.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "screencast-1.0.0-2.13.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libXtst6" 
+  "libappindicator3-1" 
+  "libcairo2" 
+  "libgranite6" 
+  "libgstreamer-1_0-0" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+]
+extra-source "screencast-1.0.0-2.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/screencast-1.0.0-2.13.x86_64.rpm"
+}

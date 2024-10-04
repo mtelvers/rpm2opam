@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-language-ecmascript-devel-0.19.1.0-28.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-language-ecmascript-devel-0.19.1.0-28.fc40.x86_64.rpm"]
+depends: [
+  "ghc-Diff-devel" 
+  "ghc-QuickCheck-devel" 
+  "ghc-ansi-wl-pprint-devel" 
+  "ghc-base-devel" 
+  "ghc-charset-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-data-default-class-devel" 
+  "ghc-language-ecmascript" {= "0.19.1.0"}
+  "ghc-mtl-devel" 
+  "ghc-parsec-devel" 
+  "ghc-template-haskell-devel" 
+  "ghc-uniplate-devel" 
+]
+extra-source "ghc-language-ecmascript-devel-0.19.1.0-28.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-language-ecmascript-devel-0.19.1.0-28.fc40.x86_64.rpm"
+}

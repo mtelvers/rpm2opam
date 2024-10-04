@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "exiftool-12.97-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "exiftool-12.97-1.1.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "perl-Image-ExifTool" {= "12.97"}
+]
+extra-source "exiftool-12.97-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/exiftool-12.97-1.1.noarch.rpm"
+}

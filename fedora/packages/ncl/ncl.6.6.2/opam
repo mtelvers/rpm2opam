@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ncl-6.6.2-41.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ncl-6.6.2-41.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "flexiblas-netlib" 
+  "freetype" 
+  "gdal-libs" 
+  "glibc" 
+  "gsl" 
+  "hdf" 
+  "hdf5" 
+  "jasper-libs" 
+  "libICE" 
+  "libSM" 
+  "libX11" 
+  "libXaw" 
+  "libXext" 
+  "libXmu" 
+  "libXt" 
+  "libcurl" 
+  "libgcc" 
+  "libgfortran" 
+  "libgomp" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libstdc++" 
+  "ncl-common" {= "6.6.2"}
+  "netcdf" 
+  "proj" 
+  "tcsh" 
+  "udunits2" 
+  "zlib-ng-compat" 
+]
+extra-source "ncl-6.6.2-41.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/ncl-6.6.2-41.fc40.x86_64.rpm"
+}

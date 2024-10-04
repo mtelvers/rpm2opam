@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libigc1-1.0.17193.4-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libigc1-1.0.17193.4-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libSPIRV-Tools-2024_3" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "libigc1-1.0.17193.4-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libigc1-1.0.17193.4-1.1.x86_64.rpm"
+}

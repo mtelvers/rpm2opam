@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-browse-1.8.21-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-browse-1.8.21-1.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "gap" {>= "4.12"}
+  "gap-gapdoc" {>= "1.6"}
+  "glibc" 
+  "libncurses5" 
+]
+extra-source "gap-browse-1.8.21-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gap-browse-1.8.21-1.4.x86_64.rpm"
+}

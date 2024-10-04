@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-env_logger0.8+default-devel-0.8.4-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-env_logger0.8+default-devel-0.8.4-7.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-env_logger0-8+atty-devel" {= "0.8.4"}
+  "rust-env_logger0-8+humantime-devel" {= "0.8.4"}
+  "rust-env_logger0-8+regex-devel" {= "0.8.4"}
+  "rust-env_logger0-8+termcolor-devel" {= "0.8.4"}
+  "rust-env_logger0-8-devel" {= "0.8.4"}
+]
+extra-source "rust-env_logger0.8+default-devel-0.8.4-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-env_logger0.8+default-devel-0.8.4-7.fc40.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libparpack2-openmpi5-3.9.1-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libparpack2-openmpi5-3.9.1-3.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libarpack2" 
+  "libgcc_s1" 
+  "libgfortran5" 
+  "libopenblas_openmp0" 
+  "openmpi4-libs" 
+  "openmpi5-libs" 
+]
+extra-source "libparpack2-openmpi5-3.9.1-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libparpack2-openmpi5-3.9.1-3.1.x86_64.rpm"
+}

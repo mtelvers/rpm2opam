@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw32-dbus-glib-0.112-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw32-dbus-glib-0.112-9.fc40.noarch.rpm"]
+depends: [
+  "mingw32-crt" 
+  "mingw32-dbus" 
+  "mingw32-expat" 
+  "mingw32-filesystem" {>= "95"}
+  "mingw32-glib2" 
+]
+extra-source "mingw32-dbus-glib-0.112-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw32-dbus-glib-0.112-9.fc40.noarch.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "open-vm-tools-containerinfo-12.4.5-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "open-vm-tools-containerinfo-12.4.5-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "curl" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libabsl_lite_2401_0_0" 
+  "libcurl-mini4" 
+  "libgcc_s1" 
+  "libgrpc++1_62" 
+  "libgrpc39" 
+  "libprotobuf25_4_0" 
+  "libstdc++6" 
+  "libvmtools0" 
+  "open-vm-tools" {= "12.4.5"}
+]
+extra-source "open-vm-tools-containerinfo-12.4.5-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/open-vm-tools-containerinfo-12.4.5-1.2.x86_64.rpm"
+}

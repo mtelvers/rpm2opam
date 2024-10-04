@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libdb-cxx-5.3.28-61.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdb-cxx-5.3.28-61.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libdb" {= "5.3.28"}
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "libdb-cxx-5.3.28-61.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libdb-cxx-5.3.28-61.fc40.x86_64.rpm"
+}

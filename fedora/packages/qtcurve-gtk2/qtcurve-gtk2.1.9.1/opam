@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qtcurve-gtk2-1.9.1-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qtcurve-gtk2-1.9.1-29.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "libgcc" 
+  "libstdc++" 
+  "pango" 
+  "perl-interpreter" 
+  "qtcurve-libs" 
+]
+extra-source "qtcurve-gtk2-1.9.1-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qtcurve-gtk2-1.9.1-29.fc40.x86_64.rpm"
+}

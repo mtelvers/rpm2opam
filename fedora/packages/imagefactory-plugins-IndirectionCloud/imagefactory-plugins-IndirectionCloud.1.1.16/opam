@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "imagefactory-plugins-IndirectionCloud-1.1.16-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "imagefactory-plugins-IndirectionCloud-1.1.16-11.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "imagefactory" {= "1.0"}
+  "imagefactory-plugins" 
+  "oz" {>= "0.12.0"}
+  "python3" {= "3.12"}
+]
+extra-source "imagefactory-plugins-IndirectionCloud-1.1.16-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/imagefactory-plugins-IndirectionCloud-1.1.16-11.fc40.noarch.rpm"
+}

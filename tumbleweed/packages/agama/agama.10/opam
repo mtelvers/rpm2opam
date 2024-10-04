@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "agama-10+0-6.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "agama-10+0-6.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "dbus-1-common" 
+  "glibc" 
+  "golang-github-google-jsonnet" 
+  "gzip" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libz-ng-compat1" 
+  "lshw" 
+  "pam" 
+  "python-langtable-data" 
+  "ruby3-3-rubygem-agama-yast" 
+  "tar" 
+  "timezone" 
+  "xkeyboard-config-lang" 
+]
+extra-source "agama-10+0-6.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/agama-10+0-6.1.x86_64.rpm"
+}

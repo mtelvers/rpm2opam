@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xmvn-connector-4.3.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xmvn-connector-4.3.0-2.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "xmvn-api" 
+  "xmvn-core" 
+]
+extra-source "xmvn-connector-4.3.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xmvn-connector-4.3.0-2.1.noarch.rpm"
+}

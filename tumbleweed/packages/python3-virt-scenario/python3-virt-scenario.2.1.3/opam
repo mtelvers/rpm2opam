@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-virt-scenario-2.1.3-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-virt-scenario-2.1.3-1.3.noarch.rpm"]
+depends: [
+  "python311-PyYAML" 
+  "python311-base" {= "3.11"}
+  "python311-curses" 
+  "python311-libvirt-python" 
+  "python311-psutil" 
+  "python311-pyudev" 
+]
+extra-source "python3-virt-scenario-2.1.3-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-virt-scenario-2.1.3-1.3.noarch.rpm"
+}

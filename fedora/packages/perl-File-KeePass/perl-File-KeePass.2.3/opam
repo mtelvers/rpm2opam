@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-File-KeePass-2.03-34.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-KeePass-2.03-34.fc40.noarch.rpm"]
+depends: [
+  "perl-Compress-Raw-Zlib" 
+  "perl-Crypt-Rijndael" 
+  "perl-Digest-SHA" 
+  "perl-MIME-Base64" 
+  "perl-XML-Parser" 
+  "perl-constant" 
+  "perl-libs" 
+]
+extra-source "perl-File-KeePass-2.03-34.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-File-KeePass-2.03-34.fc40.noarch.rpm"
+}

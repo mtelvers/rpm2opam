@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-qpdf-1.3.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-qpdf-1.3.0-6.fc40.x86_64.rpm"]
+depends: [
+  "R-Rcpp" 
+  "R-askpass" 
+  "R-core" {= "4.3"}
+  "R-curl" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "qpdf-libs" 
+]
+extra-source "R-qpdf-1.3.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-qpdf-1.3.0-6.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmateweather-lang-1.28.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmateweather-lang-1.28.0-1.2.noarch.rpm"]
+depends: [
+  "libmateweather1" {= "1.28.0"}
+]
+extra-source "libmateweather-lang-1.28.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libmateweather-lang-1.28.0-1.2.noarch.rpm"
+}

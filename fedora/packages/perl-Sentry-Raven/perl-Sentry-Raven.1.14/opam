@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Sentry-Raven-1.14-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Sentry-Raven-1.14-11.fc40.noarch.rpm"]
+depends: [
+  "perl-Data-Dump" 
+  "perl-Devel-StackTrace" 
+  "perl-English" 
+  "perl-File-Basename" 
+  "perl-File-Slurp" 
+  "perl-HTTP-Message" 
+  "perl-JSON-XS" 
+  "perl-LWP-Protocol-https" 
+  "perl-Moo" 
+  "perl-MooX-Types-MooseLike" 
+  "perl-Scalar-List-Utils" 
+  "perl-Sys-Hostname" 
+  "perl-Time-Piece" 
+  "perl-URI" 
+  "perl-UUID-Tiny" 
+  "perl-constant" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-libwww-perl" 
+]
+extra-source "perl-Sentry-Raven-1.14-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Sentry-Raven-1.14-11.fc40.noarch.rpm"
+}

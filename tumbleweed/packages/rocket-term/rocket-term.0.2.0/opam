@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rocket.term-0.2.0-2.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rocket.term-0.2.0-2.12.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-requests" 
+  "python311-urwid" 
+  "python311-websocket-client" 
+]
+extra-source "rocket.term-0.2.0-2.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/rocket.term-0.2.0-2.12.noarch.rpm"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MooX-Struct-0.020-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooX-Struct-0.020-13.fc40.noarch.rpm"]
+depends: [
+  "perl-B" 
+  "perl-B-Hooks-EndOfScope" 
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Data-Printer" 
+  "perl-Exporter-Tiny" {>= "0.44"}
+  "perl-IO" 
+  "perl-Moo" {>= "1.0"}
+  "perl-Object-ID" 
+  "perl-Scalar-List-Utils" 
+  "perl-Term-ANSIColor" 
+  "perl-Type-Tiny" {>= "1.0"}
+  "perl-libs" {>= "5.8.0"}
+  "perl-namespace-autoclean" {>= "0.19"}
+  "perl-namespace-clean" 
+  "perl-overload" 
+]
+extra-source "perl-MooX-Struct-0.020-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MooX-Struct-0.020-13.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-getch-devel-0.3.1-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-getch-devel-0.3.1-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-termios+default-devel" 
+]
+extra-source "rust-getch-devel-0.3.1-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-getch-devel-0.3.1-4.fc40.noarch.rpm"
+}

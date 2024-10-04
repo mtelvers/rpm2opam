@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-cargo-c-devel-0.9.28-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-cargo-c-devel-0.9.28-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.72"}
+  "rust-anyhow+default-devel" 
+  "rust-cargo+default-devel" 
+  "rust-cargo-util+default-devel" 
+  "rust-cbindgen-devel" 
+  "rust-cc+default-devel" 
+  "rust-clap+cargo-devel" 
+  "rust-clap+color-devel" 
+  "rust-clap+default-devel" 
+  "rust-clap+derive-devel" 
+  "rust-glob+default-devel" 
+  "rust-itertools+default-devel" 
+  "rust-log+default-devel" 
+  "rust-regex+default-devel" 
+  "rust-semver+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde_derive+default-devel" 
+  "rust-serde_json+default-devel" 
+  "rust-toml+default-devel" 
+]
+extra-source "rust-cargo-c-devel-0.9.28-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-cargo-c-devel-0.9.28-4.fc40.noarch.rpm"
+}

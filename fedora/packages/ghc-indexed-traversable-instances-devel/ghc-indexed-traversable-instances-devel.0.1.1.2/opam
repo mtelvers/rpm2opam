@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-indexed-traversable-instances-devel-0.1.1.2-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-indexed-traversable-instances-devel-0.1.1.2-5.fc40.x86_64.rpm"]
+depends: [
+  "ghc-OneTuple-devel" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-indexed-traversable-devel" 
+  "ghc-indexed-traversable-instances" {= "0.1.1.2"}
+  "ghc-tagged-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-indexed-traversable-instances-devel-0.1.1.2-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-indexed-traversable-instances-devel-0.1.1.2-5.fc40.x86_64.rpm"
+}

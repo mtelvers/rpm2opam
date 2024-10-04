@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-openpgp-cert-d-devel-0.3.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-openpgp-cert-d-devel-0.3.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.70"}
+  "rust-anyhow+std-devel" 
+  "rust-anyhow-devel" 
+  "rust-dirs-devel" 
+  "rust-fd-lock-devel" 
+  "rust-libc+default-devel" 
+  "rust-sha1collisiondetection-devel" 
+  "rust-tempfile-devel" 
+  "rust-thiserror-devel" 
+  "rust-walkdir-devel" 
+]
+extra-source "rust-openpgp-cert-d-devel-0.3.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-openpgp-cert-d-devel-0.3.1-2.fc40.noarch.rpm"
+}

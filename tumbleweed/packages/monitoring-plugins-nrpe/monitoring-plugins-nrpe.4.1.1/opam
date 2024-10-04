@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "monitoring-plugins-nrpe-4.1.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "monitoring-plugins-nrpe-4.1.1-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libopenssl3" 
+  "system-user-nagios" 
+]
+extra-source "monitoring-plugins-nrpe-4.1.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/monitoring-plugins-nrpe-4.1.1-1.1.x86_64.rpm"
+}

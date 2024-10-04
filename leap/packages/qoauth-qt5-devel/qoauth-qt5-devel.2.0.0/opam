@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qoauth-qt5-devel-2.0.0-lp160.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qoauth-qt5-devel-2.0.0-lp160.1.1.x86_64.rpm"]
+depends: [
+  "libQt5Core-devel" 
+  "libQt5Network-devel" 
+  "libqoauth2" {= "2.0.0"}
+  "pkgconf-pkg-config" 
+  "qca-qt5-devel" 
+]
+extra-source "qoauth-qt5-devel-2.0.0-lp160.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/qoauth-qt5-devel-2.0.0-lp160.1.1.x86_64.rpm"
+}

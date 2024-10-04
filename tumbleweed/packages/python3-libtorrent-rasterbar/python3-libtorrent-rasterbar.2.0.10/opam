@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-libtorrent-rasterbar-2.0.10-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-libtorrent-rasterbar-2.0.10-2.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libboost_python-py3-1_86_0" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libstdc++6" 
+  "libtorrent-rasterbar2_0" 
+  "python311-base" {= "3.11"}
+]
+extra-source "python3-libtorrent-rasterbar-2.0.10-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python3-libtorrent-rasterbar-2.0.10-2.3.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "killbots-lang-24.08.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "killbots-lang-24.08.1-1.1.noarch.rpm"]
+depends: [
+  "killbots" {= "24.8.1"}
+]
+extra-source "killbots-lang-24.08.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/killbots-lang-24.08.1-1.1.noarch.rpm"
+}

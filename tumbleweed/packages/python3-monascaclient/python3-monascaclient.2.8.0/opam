@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-monascaclient-2.8.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-monascaclient-2.8.0-1.1.noarch.rpm"]
+depends: [
+  "python3-osc-lib" {>= "1.8.0"}
+  "python3-oslo-serialization" {>= "2.18.0"}
+  "python3-oslo-utils" {>= "3.33.0"}
+  "python311-Babel" {>= "2.3.4"}
+  "python311-PyYAML" {>= "3.12"}
+  "python311-base" {= "3.11"}
+  "python311-iso8601" {>= "0.1.11"}
+  "python311-pbr" {>= "2.0.0"}
+  "python311-prettytable" {>= "0.7.2"}
+  "python311-requests" 
+  "python311-six" 
+]
+extra-source "python3-monascaclient-2.8.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-monascaclient-2.8.0-1.1.noarch.rpm"
+}

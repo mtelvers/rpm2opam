@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Net-AMQP-0.06-15.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-AMQP-0.06-15.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Class-Accessor" 
+  "perl-Class-Data-Inheritable" 
+  "perl-Data-Dumper" 
+  "perl-Exporter" 
+  "perl-File-Path" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-XML-LibXML" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-overload" 
+]
+extra-source "perl-Net-AMQP-0.06-15.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Net-AMQP-0.06-15.fc40.noarch.rpm"
+}

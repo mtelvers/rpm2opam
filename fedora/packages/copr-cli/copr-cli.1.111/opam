@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "copr-cli-1.111-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "copr-cli-1.111-1.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-copr" {>= "1.128.1"}
+  "python3-humanize" 
+  "python3-jinja2" 
+  "python3-koji" 
+  "python3-setuptools" 
+  "python3-simplejson" 
+  "wget2-wget" 
+]
+extra-source "copr-cli-1.111-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/copr-cli-1.111-1.fc40.noarch.rpm"
+}

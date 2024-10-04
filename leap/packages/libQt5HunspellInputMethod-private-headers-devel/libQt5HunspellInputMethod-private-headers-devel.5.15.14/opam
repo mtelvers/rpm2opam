@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libQt5HunspellInputMethod-private-headers-devel-5.15.14+kde0-lp160.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libQt5HunspellInputMethod-private-headers-devel-5.15.14+kde0-lp160.1.1.x86_64.rpm"]
+depends: [
+  "libQt5HunspellInputMethod5" {= "5.15.14"}
+  "libqt5-qtvirtualkeyboard-private-headers-devel" {= "5.15.14"}
+]
+extra-source "libQt5HunspellInputMethod-private-headers-devel-5.15.14+kde0-lp160.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libQt5HunspellInputMethod-private-headers-devel-5.15.14+kde0-lp160.1.1.x86_64.rpm"
+}

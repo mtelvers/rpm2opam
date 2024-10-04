@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-nbclassic-1.1.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-nbclassic-1.1.0-1.1.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "python310-Jinja2" 
+  "python310-Send2Trash" {>= "1.8.0"}
+  "python310-argon2-cffi" 
+  "python310-base" 
+  "python310-ipykernel" 
+  "python310-ipython_genutils" 
+  "python310-jupyter-client" {>= "6.1.1"}
+  "python310-jupyter-core" {>= "4.6.1"}
+  "python310-nbconvert" {>= "5"}
+  "python310-nbformat" 
+  "python310-nest-asyncio" {>= "1.5"}
+  "python310-notebook-shim" {>= "0.2.3"}
+  "python310-prometheus-client" 
+  "python310-pyzmq" {>= "17"}
+  "python310-terminado" {>= "0.8.3"}
+  "python310-tornado" {>= "6.1"}
+  "python310-traitlets" {>= "4.2.1"}
+]
+extra-source "python310-nbclassic-1.1.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-nbclassic-1.1.0-1.1.noarch.rpm"
+}

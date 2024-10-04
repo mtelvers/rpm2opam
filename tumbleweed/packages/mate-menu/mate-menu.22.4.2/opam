@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mate-menu-22.04.2-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mate-menu-22.04.2-2.2.noarch.rpm"]
+depends: [
+  "glib2-tools" 
+  "gvfs" 
+  "mate-menus" 
+  "mozo" 
+  "python311-Unidecode" 
+  "python311-base" 
+  "python311-configobj" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-python-xlib" 
+  "python311-pyxdg" 
+  "python311-setproctitle" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-MateMenu-2_0" {= "2.0"}
+  "typelib-1_0-MatePanelApplet-4_0" {= "4.0"}
+  "typelib-1_0-Pango-1_0" 
+  "xdg-utils" 
+]
+extra-source "mate-menu-22.04.2-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mate-menu-22.04.2-2.2.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gio-qt-devel-0.0.12-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gio-qt-devel-0.0.12-1.3.x86_64.rpm"]
+depends: [
+  "glibmm2_4-devel" 
+  "libQt5Core-devel" 
+  "libgio-qt0" {= "0.0.12"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gio-qt-devel-0.0.12-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gio-qt-devel-0.0.12-1.3.x86_64.rpm"
+}

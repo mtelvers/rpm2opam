@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xsd-4.1.0-0.13.a11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xsd-4.1.0-0.13.a11.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcutl" 
+  "libgcc" 
+  "libstdc++" 
+  "xerces-c" 
+]
+extra-source "xsd-4.1.0-0.13.a11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xsd-4.1.0-0.13.a11.fc40.x86_64.rpm"
+}

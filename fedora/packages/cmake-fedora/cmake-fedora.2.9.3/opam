@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cmake-fedora-2.9.3-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cmake-fedora-2.9.3-20.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "bodhi-client" 
+  "cmake" {>= "2.6.2"}
+  "curl" 
+  "fedora-packager" 
+  "fedpkg" 
+  "git" 
+  "koji" 
+  "rpm-build" 
+]
+extra-source "cmake-fedora-2.9.3-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cmake-fedora-2.9.3-20.fc40.noarch.rpm"
+}

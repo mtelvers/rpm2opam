@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-tasty-quickcheck-devel-0.10.3-2.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-tasty-quickcheck-devel-0.10.3-2.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-QuickCheck-devel" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-optparse-applicative-devel" 
+  "ghc-random-devel" 
+  "ghc-tagged-devel" 
+  "ghc-tasty-devel" 
+  "ghc-tasty-quickcheck" {= "0.10.3"}
+]
+extra-source "ghc-tasty-quickcheck-devel-0.10.3-2.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-tasty-quickcheck-devel-0.10.3-2.4.x86_64.rpm"
+}

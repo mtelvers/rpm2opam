@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-meta-tests-0.004-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-meta-tests-0.004-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Test-Harness" 
+  "perl-Test2-Suite" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.14.0"}
+  "perl-meta" 
+]
+extra-source "perl-meta-tests-0.004-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-meta-tests-0.004-1.fc40.noarch.rpm"
+}

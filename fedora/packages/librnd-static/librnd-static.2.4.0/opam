@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "librnd-static-2.4.0-8.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "librnd-static-2.4.0-8.fc39.x86_64.rpm"]
+depends: [
+  "librnd-devel" {= "2.4.0"}
+]
+extra-source "librnd-static-2.4.0-8.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/librnd-static-2.4.0-8.fc39.x86_64.rpm"
+}

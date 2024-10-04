@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Server-Starter-start_server-0.35-15.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Server-Starter-start_server-0.35-15.fc40.noarch.rpm"]
+depends: [
+  "perl-Getopt-Long" 
+  "perl-Pod-Usage" 
+  "perl-Server-Starter" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Server-Starter-start_server-0.35-15.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Server-Starter-start_server-0.35-15.fc40.noarch.rpm"
+}

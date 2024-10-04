@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-dfVFS-0~20231208-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-dfVFS-0~20231208-1.3.noarch.rpm"]
+depends: [
+  "python310-PyYAML" 
+  "python310-base" {= "3.10"}
+  "python310-cffi" 
+  "python310-construct" 
+  "python310-cryptography" 
+  "python310-dfdatetime" {>= "0"}
+  "python310-dtfabric" {>= "20220219"}
+  "python310-idna" 
+  "python310-libbde" 
+  "python310-libcaes" 
+  "python310-libewf" 
+  "python310-libfsapfs" 
+  "python310-libfsext" 
+  "python310-libfsfat" 
+  "python310-libfshfs" 
+  "python310-libfsntfs" {>= "0"}
+  "python310-libfsxfs" 
+  "python310-libfvde" 
+  "python310-libfwnt" {>= "20210717"}
+  "python310-libluksde" {>= "20220121"}
+  "python310-libmodi" 
+  "python310-libphdi" 
+  "python310-libqcow" 
+  "python310-libsigscan" 
+  "python310-libsmdev" 
+  "python310-libsmraw" 
+  "python310-libvhdi" 
+  "python310-libvmdk" 
+  "python310-libvsapm" 
+  "python310-libvsgpt" 
+  "python310-libvshadow" {>= "0"}
+  "python310-libvslvm" 
+  "python310-tsk" {>= "0"}
+]
+extra-source "python310-dfVFS-0~20231208-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-dfVFS-0~20231208-1.3.noarch.rpm"
+}

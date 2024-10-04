@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-django-qsessions-1.1.4-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-django-qsessions-1.1.4-1.7.noarch.rpm"]
+depends: [
+  "python312-Django" {>= "1.10"}
+  "python312-base" {= "3.12"}
+  "python312-django-ipware" {>= "2.0.0"}
+  "python312-user-agents" {>= "1.1.0"}
+]
+extra-source "python312-django-qsessions-1.1.4-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-django-qsessions-1.1.4-1.7.noarch.rpm"
+}

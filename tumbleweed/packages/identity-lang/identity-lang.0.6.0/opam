@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "identity-lang-0.6.0-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "identity-lang-0.6.0-1.4.noarch.rpm"]
+depends: [
+  "identity" {= "0.6.0"}
+]
+extra-source "identity-lang-0.6.0-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/identity-lang-0.6.0-1.4.noarch.rpm"
+}

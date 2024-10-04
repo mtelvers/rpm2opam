@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lemonldap-ng-handler-2.18.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lemonldap-ng-handler-2.18.2-1.fc40.noarch.rpm"]
+depends: [
+  "crontabs" 
+  "lemonldap-ng-conf" {= "2.18.2"}
+  "perl-Lemonldap-NG-Common" 
+  "perl-Lemonldap-NG-Handler" {= "2.18.2"}
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "lemonldap-ng-handler-2.18.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lemonldap-ng-handler-2.18.2-1.fc40.noarch.rpm"
+}

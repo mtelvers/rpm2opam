@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gtk0.15-devel-0.15.5-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gtk0.15-devel-0.15.5-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.56"}
+  "rust-atk+default-devel" 
+  "rust-bitflags+default-devel" 
+  "rust-cairo-rs+default-devel" 
+  "rust-field-offset+default-devel" 
+  "rust-futures-channel+default-devel" 
+  "rust-gdk+default-devel" 
+  "rust-gdk-pixbuf+default-devel" 
+  "rust-gio+default-devel" 
+  "rust-glib+default-devel" 
+  "rust-gtk-sys+default-devel" 
+  "rust-gtk3-macros+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-pango+default-devel" 
+  "rust-pkg-config+default-devel" 
+]
+extra-source "rust-gtk0.15-devel-0.15.5-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gtk0.15-devel-0.15.5-4.fc40.noarch.rpm"
+}

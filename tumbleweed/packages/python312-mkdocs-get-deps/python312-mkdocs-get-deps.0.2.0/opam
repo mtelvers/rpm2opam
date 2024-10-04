@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-mkdocs-get-deps-0.2.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-mkdocs-get-deps-0.2.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-PyYAML" {>= "5.1"}
+  "python312-base" 
+  "python312-mergedeep" {>= "1.3.4"}
+  "python312-platformdirs" {>= "2.2.0"}
+  "update-alternatives" 
+]
+extra-source "python312-mkdocs-get-deps-0.2.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-mkdocs-get-deps-0.2.0-1.1.noarch.rpm"
+}

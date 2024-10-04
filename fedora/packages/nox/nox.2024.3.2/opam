@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nox-2024.03.02-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nox-2024.03.02-1.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-argcomplete" 
+  "python3-colorlog" 
+  "python3-packaging" {>= "20.9"}
+  "python3-virtualenv" {>= "20.14.1"}
+]
+extra-source "nox-2024.03.02-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nox-2024.03.02-1.fc40.noarch.rpm"
+}

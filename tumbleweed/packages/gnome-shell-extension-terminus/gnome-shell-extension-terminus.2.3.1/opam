@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-shell-extension-terminus-2.3.1-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-shell-extension-terminus-2.3.1-1.6.noarch.rpm"]
+depends: [
+  "gnome-shell" 
+  "terminus" {= "2.3.1"}
+]
+extra-source "gnome-shell-extension-terminus-2.3.1-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-shell-extension-terminus-2.3.1-1.6.noarch.rpm"
+}

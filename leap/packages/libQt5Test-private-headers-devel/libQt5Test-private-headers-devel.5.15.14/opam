@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libQt5Test-private-headers-devel-5.15.14+kde143-lp160.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libQt5Test-private-headers-devel-5.15.14+kde143-lp160.1.3.noarch.rpm"]
+depends: [
+  "libQt5Core-private-headers-devel" {= "5.15.14"}
+  "libQt5Test-devel" {= "5.15.14"}
+]
+extra-source "libQt5Test-private-headers-devel-5.15.14+kde143-lp160.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/libQt5Test-private-headers-devel-5.15.14+kde143-lp160.1.3.noarch.rpm"
+}

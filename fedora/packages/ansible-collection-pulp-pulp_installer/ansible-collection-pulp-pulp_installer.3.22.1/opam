@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ansible-collection-pulp-pulp_installer-3.22.1-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ansible-collection-pulp-pulp_installer-3.22.1-4.fc40.noarch.rpm"]
+depends: [
+  "ansible-collection-ansible-posix" 
+  "ansible-collection-community-crypto" {>= "1.0.0"}
+  "ansible-collection-community-general" 
+  "ansible-collection-community-postgresql" 
+  "ansible-collection-mdellweg-filters" 
+  "ansible-core" 
+  "bash" 
+]
+extra-source "ansible-collection-pulp-pulp_installer-3.22.1-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/ansible-collection-pulp-pulp_installer-3.22.1-4.fc40.noarch.rpm"
+}

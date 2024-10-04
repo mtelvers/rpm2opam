@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xmlsec1-devel-1.2.40-slfo.1.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xmlsec1-devel-1.2.40-slfo.1.1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "libopenssl-devel" {>= "0.9.6"}
+  "libxml2-devel" {>= "2.6.0"}
+  "libxmlsec1-1" {= "1.2.40"}
+  "libxslt-devel" {>= "1.1.0"}
+  "pkgconf-pkg-config" 
+  "zlib-devel" 
+]
+extra-source "xmlsec1-devel-1.2.40-slfo.1.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/xmlsec1-devel-1.2.40-slfo.1.1.1.x86_64.rpm"
+}

@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perlbrew-tests-0.98-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perlbrew-tests-0.98-3.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-CPAN-Perl-Releases" 
+  "perl-Capture-Tiny" 
+  "perl-English" 
+  "perl-File-Basename" 
+  "perl-File-Temp" 
+  "perl-File-Which" 
+  "perl-FindBin" 
+  "perl-Hash-Util" 
+  "perl-IO-All" 
+  "perl-JSON-PP" 
+  "perl-Path-Class" 
+  "perl-PathTools" 
+  "perl-Test-Deep" 
+  "perl-Test-Exception" 
+  "perl-Test-Harness" 
+  "perl-Test-NoWarnings" 
+  "perl-Test-Output" 
+  "perl-Test-Simple" 
+  "perl-Test-Spec" {>= "0.49"}
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "perlbrew" 
+]
+extra-source "perlbrew-tests-0.98-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perlbrew-tests-0.98-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "SIMVoleon-devel-2.1.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "SIMVoleon-devel-2.1.0-6.fc40.x86_64.rpm"]
+depends: [
+  "Coin4-devel" 
+  "SIMVoleon" {= "2.1.0"}
+  "cmake-filesystem" 
+  "pkgconf-pkg-config" 
+]
+extra-source "SIMVoleon-devel-2.1.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/SIMVoleon-devel-2.1.0-6.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "apache-log4j-extras-1.2.17.1-4.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "apache-log4j-extras-1.2.17.1-4.5.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "reload4j" 
+]
+extra-source "apache-log4j-extras-1.2.17.1-4.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/apache-log4j-extras-1.2.17.1-4.5.noarch.rpm"
+}

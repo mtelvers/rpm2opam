@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "etckeeper-zypp-plugin-1.18.21-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "etckeeper-zypp-plugin-1.18.21-1.1.noarch.rpm"]
+depends: [
+  "etckeeper" {= "1.18.21"}
+  "python311-base" 
+  "python311-zypp-plugin" 
+]
+extra-source "etckeeper-zypp-plugin-1.18.21-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/etckeeper-zypp-plugin-1.18.21-1.1.noarch.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ktextaddons-qt5-1.5.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ktextaddons-qt5-1.5.4-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf5-karchive" 
+  "kf5-kconfig-core" 
+  "kf5-kconfig-gui" 
+  "kf5-kconfigwidgets" 
+  "kf5-ki18n" 
+  "kf5-kio-widgets-libs" 
+  "kf5-kwidgetsaddons" 
+  "kf5-sonnet-core" 
+  "kf5-sonnet-ui" 
+  "kf5-syntax-highlighting" 
+  "ktextaddons-common" {= "1.5.4"}
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtspeech" 
+  "qtkeychain-qt5" 
+]
+extra-source "ktextaddons-qt5-1.5.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/ktextaddons-qt5-1.5.4-1.fc40.x86_64.rpm"
+}

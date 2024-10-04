@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-h2-devel-0.3.25-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-h2-devel-0.3.25-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.63"}
+  "rust-bytes+default-devel" 
+  "rust-fnv+default-devel" 
+  "rust-futures-core-devel" 
+  "rust-futures-sink-devel" 
+  "rust-futures-util-devel" 
+  "rust-http+default-devel" 
+  "rust-indexmap+default-devel" 
+  "rust-indexmap+std-devel" 
+  "rust-slab+default-devel" 
+  "rust-tokio+default-devel" 
+  "rust-tokio+io-util-devel" 
+  "rust-tokio-util+codec-devel" 
+  "rust-tokio-util+default-devel" 
+  "rust-tokio-util+io-devel" 
+  "rust-tracing+std-devel" 
+  "rust-tracing-devel" 
+]
+extra-source "rust-h2-devel-0.3.25-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-h2-devel-0.3.25-1.fc40.noarch.rpm"
+}

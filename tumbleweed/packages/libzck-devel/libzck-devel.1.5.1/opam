@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libzck-devel-1.5.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libzck-devel-1.5.1-1.1.x86_64.rpm"]
+depends: [
+  "libopenssl-1_0_0-devel" 
+  "libzck1" {= "1.5.1"}
+  "libzstd-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libzck-devel-1.5.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libzck-devel-1.5.1-1.1.x86_64.rpm"
+}

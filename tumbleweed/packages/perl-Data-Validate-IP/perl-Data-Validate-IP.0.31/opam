@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Data-Validate-IP-0.31-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Data-Validate-IP-0.31-1.7.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-NetAddr-IP" {>= "4"}
+]
+extra-source "perl-Data-Validate-IP-0.31-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Data-Validate-IP-0.31-1.7.noarch.rpm"
+}

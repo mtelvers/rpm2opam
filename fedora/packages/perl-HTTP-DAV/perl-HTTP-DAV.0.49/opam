@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-HTTP-DAV-0.49-17.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTTP-DAV-0.49-17.fc40.noarch.rpm"]
+depends: [
+  "perl-AutoLoader" 
+  "perl-Data-Dumper" 
+  "perl-File-Temp" 
+  "perl-FileHandle" 
+  "perl-Getopt-Long" 
+  "perl-HTTP-Date" 
+  "perl-HTTP-Message" 
+  "perl-PathTools" 
+  "perl-Pod-Parser" 
+  "perl-Pod-Usage" 
+  "perl-Scalar-List-Utils" 
+  "perl-Term-ReadLine" 
+  "perl-Text-ParseWords" 
+  "perl-Time-Local" 
+  "perl-URI" 
+  "perl-XML-DOM" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-libwww-perl" {>= "5.48"}
+  "perl-vars" 
+]
+extra-source "perl-HTTP-DAV-0.49-17.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-HTTP-DAV-0.49-17.fc40.noarch.rpm"
+}

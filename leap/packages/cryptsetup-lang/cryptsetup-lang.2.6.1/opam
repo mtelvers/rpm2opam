@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cryptsetup-lang-2.6.1-slfo.1.1.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cryptsetup-lang-2.6.1-slfo.1.1.8.noarch.rpm"]
+depends: [
+  "cryptsetup" {= "2.6.1"}
+]
+extra-source "cryptsetup-lang-2.6.1-slfo.1.1.8.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/cryptsetup-lang-2.6.1-slfo.1.1.8.noarch.rpm"
+}

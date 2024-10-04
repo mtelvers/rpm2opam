@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-scikit-image-0.24.0-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-scikit-image-0.24.0-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "python310-Pillow" {>= "9.1"}
+  "python310-PyWavelets" {>= "1.1.1"}
+  "python310-base" {= "3.10"}
+  "python310-imageio" {>= "2.33"}
+  "python310-lazy-loader" {>= "0.4"}
+  "python310-networkx" {>= "2.8"}
+  "python310-numpy" {>= "1.23"}
+  "python310-packaging" {>= "21.0"}
+  "python310-scipy" {>= "1.9"}
+  "python310-tifffile" {>= "2022.8.12"}
+  "update-alternatives" 
+]
+extra-source "python310-scikit-image-0.24.0-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-scikit-image-0.24.0-2.2.x86_64.rpm"
+}

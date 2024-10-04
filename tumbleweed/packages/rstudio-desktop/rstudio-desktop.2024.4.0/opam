@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rstudio-desktop-2024.04.0+735-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rstudio-desktop-2024.04.0+735-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5DBus5" 
+  "libQt5Gui5" 
+  "libQt5Network5" 
+  "libQt5PrintSupport5" 
+  "libQt5WebChannel5" 
+  "libQt5Widgets5" 
+  "libQtQuick5" 
+  "libboost_chrono1_86_0" 
+  "libboost_filesystem1_86_0" 
+  "libboost_iostreams1_86_0" 
+  "libboost_thread1_86_0" 
+  "libfmt11" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libqt5-qtwebengine" 
+  "libstdc++6" 
+  "libuuid1" 
+  "rstudio" {= "2024.4.0"}
+]
+extra-source "rstudio-desktop-2024.04.0+735-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rstudio-desktop-2024.04.0+735-1.2.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Mail-SpamAssassin-Plugin-iXhash2-4.00-77.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mail-SpamAssassin-Plugin-iXhash2-4.00-77.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Digest-MD5" 
+  "perl-Mail-SpamAssassin" {= "4.1"}
+]
+extra-source "perl-Mail-SpamAssassin-Plugin-iXhash2-4.00-77.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Mail-SpamAssassin-Plugin-iXhash2-4.00-77.2.noarch.rpm"
+}

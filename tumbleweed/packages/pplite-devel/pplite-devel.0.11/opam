@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pplite-devel-0.11-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pplite-devel-0.11-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libflint19" 
+  "libgcc_s1" 
+  "libgmp10" 
+  "libgmpxx4" 
+  "libpplite4" {= "0.11"}
+  "libstdc++6" 
+]
+extra-source "pplite-devel-0.11-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pplite-devel-0.11-1.3.x86_64.rpm"
+}

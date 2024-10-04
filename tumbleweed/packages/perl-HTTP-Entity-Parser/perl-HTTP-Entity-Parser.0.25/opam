@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-HTTP-Entity-Parser-0.25-1.18.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTTP-Entity-Parser-0.25-1.18.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-HTTP-MultiPartParser" 
+  "perl-Hash-MultiValue" 
+  "perl-JSON-MaybeXS" {>= "1.3007"}
+  "perl-Stream-Buffered" 
+  "perl-WWW-Form-UrlEncoded" {>= "0.23"}
+]
+extra-source "perl-HTTP-Entity-Parser-0.25-1.18.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-HTTP-Entity-Parser-0.25-1.18.noarch.rpm"
+}

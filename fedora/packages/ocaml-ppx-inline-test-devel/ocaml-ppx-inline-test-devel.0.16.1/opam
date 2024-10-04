@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-ppx-inline-test-devel-0.16.1-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-ppx-inline-test-devel-0.16.1-4.fc40.x86_64.rpm"]
+depends: [
+  "ocaml" {= "2125"}
+  "ocaml-base" {= "0"}
+  "ocaml-base-devel" 
+  "ocaml-compiler-libs" {= "2"}
+  "ocaml-compiler-libs-janestreet" {= "31"}
+  "ocaml-ppx-inline-test" {= "0.16.1"}
+  "ocaml-ppxlib" {= "22"}
+  "ocaml-ppxlib-devel" 
+  "ocaml-sexplib0" {= "0"}
+  "ocaml-sexplib0-devel" {= "5753"}
+  "ocaml-time-now" {= "0"}
+  "ocaml-time-now-devel" 
+]
+extra-source "ocaml-ppx-inline-test-devel-0.16.1-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-ppx-inline-test-devel-0.16.1-4.fc40.x86_64.rpm"
+}

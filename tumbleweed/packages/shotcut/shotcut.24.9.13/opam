@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "shotcut-24.09.13-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "shotcut-24.09.13-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ffmpeg-4" {>= "2.7"}
+  "frei0r-plugins" {>= "1.4"}
+  "glibc" 
+  "ladspa" 
+  "libQt6Charts6" 
+  "libQt6Core6" 
+  "libQt6Gui6" 
+  "libQt6Multimedia6" 
+  "libQt6Network6" 
+  "libQt6OpenGL6" 
+  "libQt6Qml6" 
+  "libQt6Quick6" 
+  "libQt6QuickControls2-6" 
+  "libQt6QuickWidgets6" 
+  "libQt6Sql6" 
+  "libQt6Widgets6" 
+  "libQt6Xml6" 
+  "libfftw3-3" 
+  "libgcc_s1" 
+  "libmlt++-7-7" 
+  "libmlt-7-7" 
+  "libstdc++6" 
+  "libvpx9" {>= "1.14.1"}
+  "melt" 
+  "qt6-sql-sqlite" {= "6.7.2"}
+  "qtdeclarative-imports-provides-qt6" 
+]
+extra-source "shotcut-24.09.13-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/shotcut-24.09.13-1.1.x86_64.rpm"
+}

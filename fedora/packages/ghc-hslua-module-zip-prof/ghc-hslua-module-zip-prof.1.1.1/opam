@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-hslua-module-zip-prof-1.1.1-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hslua-module-zip-prof-1.1.1-29.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-filepath-prof" 
+  "ghc-hslua-core-prof" 
+  "ghc-hslua-list-prof" 
+  "ghc-hslua-marshalling-prof" 
+  "ghc-hslua-module-zip-devel" {= "1.1.1"}
+  "ghc-hslua-packaging-prof" 
+  "ghc-hslua-typing-prof" 
+  "ghc-text-prof" 
+  "ghc-time-prof" 
+  "ghc-zip-archive-prof" 
+]
+extra-source "ghc-hslua-module-zip-prof-1.1.1-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-hslua-module-zip-prof-1.1.1-29.fc40.x86_64.rpm"
+}

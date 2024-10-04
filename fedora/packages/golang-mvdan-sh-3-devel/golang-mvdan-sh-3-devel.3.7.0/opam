@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-mvdan-sh-3-devel-3.7.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-mvdan-sh-3-devel-3.7.0-3.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-google-renameio-2-devel" 
+  "golang-github-pkg-diff-devel" 
+  "golang-mvdan-editorconfig-devel" 
+  "golang-x-sync-devel" 
+  "golang-x-sys-devel" 
+  "golang-x-term-devel" 
+]
+extra-source "golang-mvdan-sh-3-devel-3.7.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-mvdan-sh-3-devel-3.7.0-3.fc40.noarch.rpm"
+}

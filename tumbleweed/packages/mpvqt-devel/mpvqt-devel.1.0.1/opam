@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mpvqt-devel-1.0.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mpvqt-devel-1.0.1-1.1.x86_64.rpm"]
+depends: [
+  "libMpvQt1" {= "1.0.1"}
+  "mpv-devel" 
+  "qt6-quick-devel" {>= "6.5.0"}
+]
+extra-source "mpvqt-devel-1.0.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mpvqt-devel-1.0.1-1.1.x86_64.rpm"
+}

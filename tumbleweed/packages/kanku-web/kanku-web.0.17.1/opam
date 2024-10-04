@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kanku-web-0.17.1-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kanku-web-0.17.1-1.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "busybox-sendmail" 
+  "kanku-common" {= "0.17.1"}
+  "kanku-common-server" {= "0.17.1"}
+  "perl-Dancer2-Plugin-WebSocket" 
+  "perl-Mail-Message" 
+  "perl-Mail-Transport" 
+  "perl-Net-AMQP-RabbitMQ" 
+  "perl-Template-Plugin-JSON-Escape" 
+  "perl-Twiggy" 
+  "perl-UUID" 
+  "system-user-kankurun" 
+]
+extra-source "kanku-web-0.17.1-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kanku-web-0.17.1-1.2.noarch.rpm"
+}

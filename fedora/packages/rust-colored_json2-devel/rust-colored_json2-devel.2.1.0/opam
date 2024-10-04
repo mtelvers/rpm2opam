@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-colored_json2-devel-2.1.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-colored_json2-devel-2.1.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-ansi_term+default-devel" 
+  "rust-atty+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde_json+default-devel" 
+]
+extra-source "rust-colored_json2-devel-2.1.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-colored_json2-devel-2.1.0-2.fc40.noarch.rpm"
+}

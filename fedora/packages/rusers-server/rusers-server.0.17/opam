@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rusers-server-0.17-105.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rusers-server-0.17-105.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libselinux" 
+  "libtirpc" 
+  "rpcbind" 
+  "systemd" 
+  "systemd-libs" 
+]
+extra-source "rusers-server-0.17-105.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rusers-server-0.17-105.fc40.x86_64.rpm"
+}

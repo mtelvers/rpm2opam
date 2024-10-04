@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "trader-lang-7.20-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trader-lang-7.20-1.3.noarch.rpm"]
+depends: [
+  "trader" {= "7.20"}
+]
+extra-source "trader-lang-7.20-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/trader-lang-7.20-1.3.noarch.rpm"
+}

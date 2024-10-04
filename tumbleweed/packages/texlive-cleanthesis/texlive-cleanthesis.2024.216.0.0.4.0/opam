@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-cleanthesis-2024.216.0.0.4.0svn51472-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-cleanthesis-2024.216.0.0.4.0svn51472-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-blindtext" 
+  "texlive-enumitem" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-graphics" 
+  "texlive-hyperref" 
+  "texlive-koma-script" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-listings" 
+  "texlive-lm" 
+  "texlive-microtype" 
+  "texlive-psnfss" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-setspace" 
+  "texlive-tex-gyre" 
+  "texlive-tocloft" 
+  "texlive-tools" 
+  "texlive-xcolor" 
+  "texlive-xkeyval" 
+]
+extra-source "texlive-cleanthesis-2024.216.0.0.4.0svn51472-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-cleanthesis-2024.216.0.0.4.0svn51472-56.1.noarch.rpm"
+}

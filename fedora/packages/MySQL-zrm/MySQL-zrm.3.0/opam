@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "MySQL-zrm-3.0-40.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "MySQL-zrm-3.0-40.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "logrotate" 
+  "perl-DBI" 
+  "perl-Data-Report" {>= "0.5"}
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Socket" 
+  "perl-Time-Local" 
+  "perl-XML-Parser" 
+  "perl-XML-RSS" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "perl-vars" 
+  "s-nail" 
+  "systemd" 
+]
+extra-source "MySQL-zrm-3.0-40.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/MySQL-zrm-3.0-40.fc40.noarch.rpm"
+}

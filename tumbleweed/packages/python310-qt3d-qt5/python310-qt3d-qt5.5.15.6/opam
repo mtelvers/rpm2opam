@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-qt3d-qt5-5.15.6-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-qt3d-qt5-5.15.6-2.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt53DAnimation5" 
+  "libQt53DCore5" 
+  "libQt53DExtras5" 
+  "libQt53DInput5" 
+  "libQt53DLogic5" 
+  "libQt53DRender5" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libstdc++6" 
+  "python310-base" {= "3.10"}
+  "python310-qt5" {>= "5.15.4"}
+  "python310-qt5-sip" 
+]
+extra-source "python310-qt3d-qt5-5.15.6-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-qt3d-qt5-5.15.6-2.6.x86_64.rpm"
+}

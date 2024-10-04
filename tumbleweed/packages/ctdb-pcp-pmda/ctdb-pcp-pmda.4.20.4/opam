@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ctdb-pcp-pmda-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ctdb-pcp-pmda-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libpcp3" 
+  "libpopt0" 
+  "libtalloc2" 
+  "libtdb1" 
+  "libtevent0" 
+  "samba-client-libs" 
+]
+extra-source "ctdb-pcp-pmda-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ctdb-pcp-pmda-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm"
+}

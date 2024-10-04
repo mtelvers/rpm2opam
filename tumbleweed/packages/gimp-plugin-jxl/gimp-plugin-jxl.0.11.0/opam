@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gimp-plugin-jxl-0.11.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gimp-plugin-jxl-0.11.0-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libbabl-0_1-0" 
+  "libgcc_s1" 
+  "libgegl-0_4-0" 
+  "libgimp-2_0-0" 
+  "libgimpui-2_0-0" 
+  "libgtk-2_0-0" 
+  "libjxl0_11" 
+  "libstdc++6" 
+]
+extra-source "gimp-plugin-jxl-0.11.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gimp-plugin-jxl-0.11.0-1.1.x86_64.rpm"
+}

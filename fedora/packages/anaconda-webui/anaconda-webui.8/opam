@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "anaconda-webui-8-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "anaconda-webui-8-1.fc40.noarch.rpm"]
+depends: [
+  "anaconda-core" {>= "40.22.2"}
+  "bash" 
+  "cockpit-bridge" {>= "275"}
+  "cockpit-storaged" {>= "311"}
+  "cockpit-ws" {>= "275"}
+  "fedora-logos" 
+  "firefox" 
+]
+extra-source "anaconda-webui-8-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/anaconda-webui-8-1.fc40.noarch.rpm"
+}

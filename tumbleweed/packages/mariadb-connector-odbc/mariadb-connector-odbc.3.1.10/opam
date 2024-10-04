@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mariadb-connector-odbc-3.1.10-1.17.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mariadb-connector-odbc-3.1.10-1.17.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libmariadb3" 
+  "libodbc2" 
+]
+extra-source "mariadb-connector-odbc-3.1.10-1.17.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mariadb-connector-odbc-3.1.10-1.17.x86_64.rpm"
+}

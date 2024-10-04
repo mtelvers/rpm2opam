@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-yaml-sexp-devel-3.2.0-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-yaml-sexp-devel-3.2.0-5.fc40.x86_64.rpm"]
+depends: [
+  "ocaml" {= "2125"}
+  "ocaml-ppx-sexp-conv-devel" 
+  "ocaml-sexplib-devel" 
+  "ocaml-sexplib0" {= "0"}
+  "ocaml-sexplib0-devel" {= "5753"}
+  "ocaml-yaml" {= "825160"}
+  "ocaml-yaml-devel" {= "3.2.0"}
+  "ocaml-yaml-sexp" {= "3.2.0"}
+]
+extra-source "ocaml-yaml-sexp-devel-3.2.0-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-yaml-sexp-devel-3.2.0-5.fc40.x86_64.rpm"
+}

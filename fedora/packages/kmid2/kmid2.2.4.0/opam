@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kmid2-2.4.0-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kmid2-2.4.0-29.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "drumstick0" {>= "0.4"}
+  "glibc" 
+  "kde4-filesystem" {= "2"}
+  "kdelibs" {>= "4.14.38"}
+  "kmid2-libs" {= "2.4.0"}
+  "libgcc" 
+  "libstdc++" 
+  "oxygen-icon-theme" 
+  "qt" 
+  "qt-x11" 
+]
+extra-source "kmid2-2.4.0-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kmid2-2.4.0-29.fc40.x86_64.rpm"
+}

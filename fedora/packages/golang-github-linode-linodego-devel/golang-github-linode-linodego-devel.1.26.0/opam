@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-linode-linodego-devel-1.26.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-linode-linodego-devel-1.26.0-3.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-resty-2-devel" 
+  "go-filesystem" 
+  "golang-gopkg-ini-1-devel" 
+  "golang-k8s-api-devel" 
+  "golang-k8s-apimachinery-devel" 
+  "golang-k8s-client-devel" 
+  "golang-x-net-devel" 
+  "golang-x-text-devel" 
+]
+extra-source "golang-github-linode-linodego-devel-1.26.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-linode-linodego-devel-1.26.0-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-tortilla-0.5.0-2.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-tortilla-0.5.0-2.4.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-colorama" 
+  "python312-formats" 
+  "python312-httpretty" 
+  "python312-requests" 
+  "python312-six" 
+]
+extra-source "python312-tortilla-0.5.0-2.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-tortilla-0.5.0-2.4.noarch.rpm"
+}

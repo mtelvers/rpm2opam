@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sway-1.9-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sway-1.9-3.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libevdev2" 
+  "libinput10" 
+  "libjson-c5" 
+  "libpango-1_0-0" 
+  "libpcre2-8-0" 
+  "libpixman-1-0" 
+  "libudev-mini1" 
+  "libwayland-server0" 
+  "libwlroots12" 
+  "libxcb-icccm4" 
+  "libxcb1" 
+  "libxkbcommon0" 
+]
+extra-source "sway-1.9-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sway-1.9-3.1.x86_64.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "subversion-gnome-1.14.3-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "subversion-gnome-1.14.3-5.fc40.x86_64.rpm"]
+depends: [
+  "apr" 
+  "apr-util" 
+  "expat" 
+  "file-libs" 
+  "glib2" 
+  "glibc" 
+  "libsecret" 
+  "libxcrypt" 
+  "lz4-libs" 
+  "sqlite-libs" 
+  "subversion-libs" 
+  "utf8proc" 
+  "zlib-ng-compat" 
+]
+extra-source "subversion-gnome-1.14.3-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/subversion-gnome-1.14.3-5.fc40.x86_64.rpm"
+}

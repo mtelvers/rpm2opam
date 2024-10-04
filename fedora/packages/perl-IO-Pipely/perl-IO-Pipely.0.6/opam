@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-IO-Pipely-0.006-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-IO-Pipely-0.006-7.fc40.noarch.rpm"]
+depends: [
+  "perl-Errno" 
+  "perl-Exporter" {>= "5.72"}
+  "perl-Fcntl" {>= "1.13"}
+  "perl-IO" {>= "1.38"}
+  "perl-Symbol" {>= "1.8"}
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-IO-Pipely-0.006-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-IO-Pipely-0.006-7.fc40.noarch.rpm"
+}

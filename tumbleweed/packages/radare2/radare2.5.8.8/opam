@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "radare2-5.8.8-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "radare2-5.8.8-1.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libcapstone4" 
+  "libmagic1" 
+  "libxxhash0" 
+  "libz-ng-compat1" 
+  "libzip5" 
+]
+extra-source "radare2-5.8.8-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/radare2-5.8.8-1.4.x86_64.rpm"
+}

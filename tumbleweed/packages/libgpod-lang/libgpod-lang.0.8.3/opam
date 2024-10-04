@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libgpod-lang-0.8.3-14.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgpod-lang-0.8.3-14.1.noarch.rpm"]
+depends: [
+  "libgpod4" {= "0.8.3"}
+]
+extra-source "libgpod-lang-0.8.3-14.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libgpod-lang-0.8.3-14.1.noarch.rpm"
+}

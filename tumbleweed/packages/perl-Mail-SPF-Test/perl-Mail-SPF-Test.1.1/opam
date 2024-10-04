@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Mail-SPF-Test-1.001-8.31.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Mail-SPF-Test-1.001-8.31.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Net-DNS" {>= "0.58"}
+  "perl-NetAddr-IP" {>= "4"}
+  "perl-YAML" {>= "0.50"}
+  "perl-base" 
+]
+extra-source "perl-Mail-SPF-Test-1.001-8.31.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Mail-SPF-Test-1.001-8.31.noarch.rpm"
+}

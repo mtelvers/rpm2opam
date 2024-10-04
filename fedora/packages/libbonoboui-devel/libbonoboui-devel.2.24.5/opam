@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libbonoboui-devel-2.24.5-25.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libbonoboui-devel-2.24.5-25.fc39.x86_64.rpm"]
+depends: [
+  "ORBit2" 
+  "ORBit2-devel" {>= "2.5.1"}
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glib2-devel" {>= "2.6.0"}
+  "glibc" 
+  "gtk2" 
+  "gtk2-devel" {>= "2.6.0"}
+  "libart_lgpl-devel" {>= "2.3.8"}
+  "libbonobo" 
+  "libbonobo-devel" {>= "2.13.0"}
+  "libbonoboui" {= "2.24.5"}
+  "libglade2-devel" {>= "2.0.0"}
+  "libgnome" 
+  "libgnome-devel" {>= "2.13.7"}
+  "libgnomecanvas-devel" {>= "2.0.1"}
+  "libxml2-devel" {>= "2.5"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libbonoboui-devel-2.24.5-25.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libbonoboui-devel-2.24.5-25.fc39.x86_64.rpm"
+}

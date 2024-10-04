@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-uncased+default-devel-0.9.10-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-uncased+default-devel-0.9.10-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-uncased+alloc-devel" {= "0.9.10"}
+  "rust-uncased-devel" {= "0.9.10"}
+]
+extra-source "rust-uncased+default-devel-0.9.10-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-uncased+default-devel-0.9.10-1.fc40.noarch.rpm"
+}

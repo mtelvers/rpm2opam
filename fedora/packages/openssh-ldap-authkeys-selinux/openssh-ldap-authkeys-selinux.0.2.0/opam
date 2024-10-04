@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openssh-ldap-authkeys-selinux-0.2.0^git20230224.62ece4b-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openssh-ldap-authkeys-selinux-0.2.0^git20230224.62ece4b-5.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "libselinux-utils" 
+  "policycoreutils" 
+  "policycoreutils-python-utils" 
+  "selinux-policy" {>= "40.9"}
+]
+extra-source "openssh-ldap-authkeys-selinux-0.2.0^git20230224.62ece4b-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openssh-ldap-authkeys-selinux-0.2.0^git20230224.62ece4b-5.fc40.noarch.rpm"
+}

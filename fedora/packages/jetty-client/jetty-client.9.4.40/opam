@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jetty-client-9.4.40-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jetty-client-9.4.40-11.fc40.noarch.rpm"]
+depends: [
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "jetty-http" {= "9.4.40.0"}
+  "jetty-io" {= "9.4.40.0"}
+]
+extra-source "jetty-client-9.4.40-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jetty-client-9.4.40-11.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pcp-pmda-openvswitch-6.2.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcp-pmda-openvswitch-6.2.0-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "pcp" 
+  "pcp-libs" {= "6.2.0"}
+  "python3-pcp" 
+]
+extra-source "pcp-pmda-openvswitch-6.2.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pcp-pmda-openvswitch-6.2.0-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "geany-2.0-lp160.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "geany-2.0-lp160.1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libgeany0" 
+  "libgio-2_0-0" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+]
+extra-source "geany-2.0-lp160.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/geany-2.0-lp160.1.2.x86_64.rpm"
+}

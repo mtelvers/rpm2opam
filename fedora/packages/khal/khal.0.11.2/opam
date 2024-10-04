@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "khal-0.11.2-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "khal-0.11.2-6.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-atomicwrites" {>= "0.1.7"}
+  "python3-click" {>= "3.2"}
+  "python3-click-log" {>= "0.2"}
+  "python3-configobj" 
+  "python3-dateutil" 
+  "python3-icalendar" 
+  "python3-pytz" 
+  "python3-pyxdg" 
+  "python3-tzlocal" 
+  "python3-urwid" 
+  "vdirsyncer" {>= "0.8.1"}
+]
+extra-source "khal-0.11.2-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/khal-0.11.2-6.fc40.noarch.rpm"
+}

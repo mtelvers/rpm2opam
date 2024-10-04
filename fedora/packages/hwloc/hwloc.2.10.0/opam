@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hwloc-2.10.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hwloc-2.10.0-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "hwloc-libs" 
+  "ncurses-libs" 
+  "systemd" 
+]
+extra-source "hwloc-2.10.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hwloc-2.10.0-3.fc40.x86_64.rpm"
+}

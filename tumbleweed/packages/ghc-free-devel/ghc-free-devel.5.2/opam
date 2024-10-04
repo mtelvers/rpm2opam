@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-free-devel-5.2-3.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-free-devel-5.2-3.5.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-comonad-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-distributive-devel" 
+  "ghc-exceptions-devel" 
+  "ghc-free" {= "5.2"}
+  "ghc-indexed-traversable-devel" 
+  "ghc-mtl-devel" 
+  "ghc-profunctors-devel" 
+  "ghc-semigroupoids-devel" 
+  "ghc-template-haskell-devel" 
+  "ghc-th-abstraction-devel" 
+  "ghc-transformers-base-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-free-devel-5.2-3.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-free-devel-5.2-3.5.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MooseX-Types-DateTimeX-0.10-42.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Types-DateTimeX-0.10-42.fc40.noarch.rpm"]
+depends: [
+  "perl-DateTime" 
+  "perl-DateTimeX-Easy" {>= "0.85"}
+  "perl-Moose" {>= "0.41"}
+  "perl-MooseX-Types" 
+  "perl-MooseX-Types-DateTime-ButMaintained" {>= "0.4"}
+  "perl-Time-Duration-Parse" {>= "0.6"}
+  "perl-libs" 
+  "perl-namespace-clean" {>= "0.8"}
+]
+extra-source "perl-MooseX-Types-DateTimeX-0.10-42.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MooseX-Types-DateTimeX-0.10-42.fc40.noarch.rpm"
+}

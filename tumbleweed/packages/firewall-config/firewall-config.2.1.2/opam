@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "firewall-config-2.1.2-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "firewall-config-2.1.2-3.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "firewalld" {= "2.1.2"}
+  "hicolor-icon-theme" 
+  "python311-base" 
+  "python311-gobject-Gdk" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" 
+]
+extra-source "firewall-config-2.1.2-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/firewall-config-2.1.2-3.1.noarch.rpm"
+}

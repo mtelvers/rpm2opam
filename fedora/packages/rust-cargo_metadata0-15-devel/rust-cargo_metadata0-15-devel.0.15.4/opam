@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-cargo_metadata0.15-devel-0.15.4-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-cargo_metadata0.15-devel-0.15.4-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.42.0"}
+  "rust-camino+default-devel" 
+  "rust-camino+serde1-devel" 
+  "rust-cargo-platform+default-devel" 
+  "rust-semver+default-devel" 
+  "rust-semver+serde-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde_json+default-devel" 
+  "rust-serde_json+unbounded_depth-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-cargo_metadata0.15-devel-0.15.4-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-cargo_metadata0.15-devel-0.15.4-2.fc40.noarch.rpm"
+}

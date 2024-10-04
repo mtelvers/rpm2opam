@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-yesod-persistent-prof-1.6.0.8-2.63.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-yesod-persistent-prof-1.6.0.8-2.63.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-blaze-builder-prof" 
+  "ghc-conduit-prof" 
+  "ghc-persistent-prof" 
+  "ghc-resource-pool-prof" 
+  "ghc-resourcet-prof" 
+  "ghc-transformers-prof" 
+  "ghc-yesod-core-prof" 
+  "ghc-yesod-persistent-devel" {= "1.6.0.8"}
+]
+extra-source "ghc-yesod-persistent-prof-1.6.0.8-2.63.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-yesod-persistent-prof-1.6.0.8-2.63.x86_64.rpm"
+}

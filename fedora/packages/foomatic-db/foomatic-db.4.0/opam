@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "foomatic-db-4.0-79.20230810.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "foomatic-db-4.0-79.20230810.fc40.noarch.rpm"]
+depends: [
+  "foomatic-db-filesystem" {= "4.0"}
+  "foomatic-db-ppds" {= "4.0"}
+]
+extra-source "foomatic-db-4.0-79.20230810.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/foomatic-db-4.0-79.20230810.fc40.noarch.rpm"
+}

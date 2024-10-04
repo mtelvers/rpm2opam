@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dar-2.7.15-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dar-2.7.15-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libdar64-6000" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "dar-2.7.15-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/dar-2.7.15-1.1.x86_64.rpm"
+}

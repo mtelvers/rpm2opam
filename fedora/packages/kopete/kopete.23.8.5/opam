@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kopete-23.08.5-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kopete-23.08.5-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "kf5-kconfig-core" 
+  "kf5-kconfigwidgets" 
+  "kf5-kcoreaddons" 
+  "kf5-kcrash" 
+  "kf5-kdbusaddons" 
+  "kf5-kdelibs4support-libs" 
+  "kf5-ki18n" 
+  "kf5-kiconthemes" 
+  "kf5-kio-file-widgets" 
+  "kf5-kitemviews" 
+  "kf5-knotifications" 
+  "kf5-knotifyconfig" 
+  "kf5-kservice" 
+  "kf5-kwidgetsaddons" 
+  "kf5-kwindowsystem" 
+  "kf5-kxmlgui" 
+  "kopete-libs" {= "23.8.5"}
+  "libstdc++" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "qca-qt5-ossl" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "kopete-23.08.5-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kopete-23.08.5-1.fc40.x86_64.rpm"
+}

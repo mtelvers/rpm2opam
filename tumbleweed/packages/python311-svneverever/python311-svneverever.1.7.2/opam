@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-svneverever-1.7.2-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-svneverever-1.7.2-1.6.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "subversion" 
+  "update-alternatives" 
+]
+extra-source "python311-svneverever-1.7.2-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-svneverever-1.7.2-1.6.noarch.rpm"
+}

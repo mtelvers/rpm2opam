@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python313-nogil-dbm-3.13.0~rc3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python313-nogil-dbm-3.13.0~rc3-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgdbm6" 
+  "libgdbm_compat4" 
+  "python313-nogil" {= "3.13.0"}
+]
+extra-source "python313-nogil-dbm-3.13.0~rc3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python313-nogil-dbm-3.13.0~rc3-1.1.x86_64.rpm"
+}

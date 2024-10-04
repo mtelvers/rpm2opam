@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-edk2toolext-0.14.0-1.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-edk2toolext-0.14.0-1.10.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-PyYAML" {>= "5.2"}
+  "python311-base" {= "3.11"}
+  "python311-edk2toollib" {>= "0.10.13"}
+  "python311-pefile" {>= "2019.4.18"}
+  "python311-pyOpenSSL" 
+  "update-alternatives" 
+]
+extra-source "python311-edk2toolext-0.14.0-1.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-edk2toolext-0.14.0-1.10.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gr-rds-3.10-13.20220804gitf3646d04.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gr-rds-3.10-13.20220804gitf3646d04.fc40.x86_64.rpm"]
+depends: [
+  "boost-locale" 
+  "glibc" 
+  "gnuradio" 
+  "gr-osmosdr" 
+  "libgcc" 
+  "libstdc++" 
+  "python3" {= "3.12"}
+]
+extra-source "gr-rds-3.10-13.20220804gitf3646d04.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gr-rds-3.10-13.20220804gitf3646d04.fc40.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-pest_generator-devel-2.7.6-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-pest_generator-devel-2.7.6-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.61"}
+  "rust-pest-devel" 
+  "rust-pest_meta+default-devel" 
+  "rust-proc-macro2+default-devel" 
+  "rust-quote+default-devel" 
+  "rust-syn+default-devel" 
+]
+extra-source "rust-pest_generator-devel-2.7.6-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-pest_generator-devel-2.7.6-2.fc40.noarch.rpm"
+}

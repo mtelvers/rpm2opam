@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "madplay-0.15.2b-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "madplay-0.15.2b-3.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libasound2" 
+  "libid3tag0" 
+  "libmad0" 
+]
+extra-source "madplay-0.15.2b-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/madplay-0.15.2b-3.2.x86_64.rpm"
+}

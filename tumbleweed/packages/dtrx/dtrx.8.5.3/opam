@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dtrx-8.5.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dtrx-8.5.3-1.1.noarch.rpm"]
+depends: [
+  "bzip2" 
+  "cpio" 
+  "gzip" 
+  "python311-base" 
+  "tar" 
+  "unzip" 
+]
+extra-source "dtrx-8.5.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dtrx-8.5.3-1.1.noarch.rpm"
+}

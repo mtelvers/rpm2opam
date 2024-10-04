@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "composer-2.7.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "composer-2.7.2-1.fc40.noarch.rpm"]
+depends: [
+  "ca-certificates" 
+  "coreutils" 
+  "php-cli" 
+  "php-common" {>= "7.2.5"}
+  "php-intl" 
+  "php-mbstring" 
+  "php-pecl-zip" 
+  "php-process" 
+  "php-xml" 
+]
+extra-source "composer-2.7.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/composer-2.7.2-1.fc40.noarch.rpm"
+}

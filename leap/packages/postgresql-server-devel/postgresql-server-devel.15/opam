@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postgresql-server-devel-15-slfo.1.1.20.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql-server-devel-15-slfo.1.1.20.noarch.rpm"]
+depends: [
+  "postgresql15-server-devel" 
+]
+extra-source "postgresql-server-devel-15-slfo.1.1.20.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/postgresql-server-devel-15-slfo.1.1.20.noarch.rpm"
+}

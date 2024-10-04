@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dokuwiki-20230404a-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dokuwiki-20230404a-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "php-cli" 
+  "php-common" 
+  "php-email-address-validation" {>= "2.0.1"}
+  "php-gd" 
+  "php-geshi" {>= "1.0.9.1"}
+  "php-kissifrot-php-ixr" {>= "1.8.3"}
+  "php-marcusschwarz-lesserphp" {>= "0.5.5"}
+  "php-openpsa-universalfeedcreator" {>= "1.8.4.1"}
+  "php-phpseclib" {>= "2.0.31"}
+  "php-simplepie" {>= "1.5.6"}
+  "php-splitbrain-php-archive" {>= "1.2.1"}
+  "php-splitbrain-php-cli" {>= "1.1.8"}
+  "php-splitbrain-php-jsstrip" {>= "1.0.1"}
+  "php-splitbrain-slika" {>= "1.0.5"}
+  "php-xml" 
+]
+extra-source "dokuwiki-20230404a-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dokuwiki-20230404a-4.fc40.noarch.rpm"
+}

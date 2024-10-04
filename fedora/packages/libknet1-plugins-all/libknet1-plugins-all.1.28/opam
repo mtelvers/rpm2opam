@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libknet1-plugins-all-1.28-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libknet1-plugins-all-1.28-3.fc40.x86_64.rpm"]
+depends: [
+  "libknet1-compress-plugins-all" {= "1.28"}
+  "libknet1-crypto-plugins-all" {= "1.28"}
+]
+extra-source "libknet1-plugins-all-1.28-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libknet1-plugins-all-1.28-3.fc40.x86_64.rpm"
+}

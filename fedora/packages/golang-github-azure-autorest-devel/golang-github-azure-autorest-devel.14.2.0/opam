@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-azure-autorest-devel-14.2.0-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-azure-autorest-devel-14.2.0-13.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-contrib-opencensus-exporter-ocagent-devel" 
+  "golang-github-dimchansky-utfbom-devel" 
+  "golang-github-form3tech-oss-jwt-devel" 
+  "golang-github-mitchellh-homedir-devel" 
+  "golang-opencensus-devel" 
+  "golang-x-crypto-devel" 
+]
+extra-source "golang-github-azure-autorest-devel-14.2.0-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-azure-autorest-devel-14.2.0-13.fc40.noarch.rpm"
+}

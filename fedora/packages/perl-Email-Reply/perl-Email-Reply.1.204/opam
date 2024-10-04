@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Email-Reply-1.204-26.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Email-Reply-1.204-26.fc40.noarch.rpm"]
+depends: [
+  "perl-Email-Abstract" {>= "2.1"}
+  "perl-Email-Address" {>= "1.80"}
+  "perl-Email-MIME" {>= "1.82"}
+  "perl-Exporter" {>= "5.57"}
+  "perl-libs" 
+]
+extra-source "perl-Email-Reply-1.204-26.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Email-Reply-1.204-26.fc40.noarch.rpm"
+}

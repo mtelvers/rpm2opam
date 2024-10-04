@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libt3highlight-devel-0.5.0-1.22.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libt3highlight-devel-0.5.0-1.22.x86_64.rpm"]
+depends: [
+  "libt3config-devel" {>= "0.2.5"}
+  "libt3highlight2" {= "0.5.0"}
+  "pcre2-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libt3highlight-devel-0.5.0-1.22.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libt3highlight-devel-0.5.0-1.22.x86_64.rpm"
+}

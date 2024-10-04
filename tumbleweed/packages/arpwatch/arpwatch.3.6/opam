@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "arpwatch-3.6-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "arpwatch-3.6-2.1.x86_64.rpm"]
+depends: [
+  "arpwatch-ethercodes" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "coreutils" 
+  "fillup" 
+  "glibc" 
+  "libpcap1" 
+]
+extra-source "arpwatch-3.6-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/arpwatch-3.6-2.1.x86_64.rpm"
+}

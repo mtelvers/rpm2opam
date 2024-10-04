@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw64-gstreamer1-plugins-good-1.22.9-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-gstreamer1-plugins-good-1.22.9-1.fc40.noarch.rpm"]
+depends: [
+  "mingw64-bzip2" 
+  "mingw64-cairo" 
+  "mingw64-crt" 
+  "mingw64-filesystem" {>= "95"}
+  "mingw64-gdk-pixbuf" 
+  "mingw64-gettext" 
+  "mingw64-glib2" 
+  "mingw64-gstreamer1" 
+  "mingw64-gstreamer1-plugins-base" 
+  "mingw64-libgcc" 
+  "mingw64-libjpeg-turbo" 
+  "mingw64-libpng" 
+  "mingw64-libstdc++" 
+  "mingw64-libxml2" 
+  "mingw64-nettle" 
+  "mingw64-speex" 
+  "mingw64-taglib" 
+  "mingw64-wavpack" 
+  "mingw64-zlib" 
+]
+extra-source "mingw64-gstreamer1-plugins-good-1.22.9-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw64-gstreamer1-plugins-good-1.22.9-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "globus-gsi-cert-utils-devel-10.11-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "globus-gsi-cert-utils-devel-10.11-1.fc40.x86_64.rpm"]
+depends: [
+  "globus-common-devel" {>= "14"}
+  "globus-gsi-cert-utils" {= "10.11"}
+  "globus-gsi-openssl-error-devel" {>= "2"}
+  "globus-openssl-module-devel" {>= "3"}
+  "openssl-devel" {>= "1.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "globus-gsi-cert-utils-devel-10.11-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/globus-gsi-cert-utils-devel-10.11-1.fc40.x86_64.rpm"
+}

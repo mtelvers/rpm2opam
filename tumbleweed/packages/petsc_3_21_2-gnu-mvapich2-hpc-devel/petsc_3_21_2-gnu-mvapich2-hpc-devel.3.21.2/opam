@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "petsc_3_21_2-gnu-mvapich2-hpc-devel-3.21.2-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "petsc_3_21_2-gnu-mvapich2-hpc-devel-3.21.2-2.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "gnu-compilers-hpc-devel" 
+  "hdf5-gnu-mvapich2-hpc-devel" {= "1.12.3"}
+  "libgcc_s1" 
+  "libgfortran5" 
+  "libopenblas-gnu-hpc-devel" {= "0.3.27"}
+  "libpetsc_3_21_2-gnu-mvapich2-hpc" {= "3.21.2"}
+  "libscalapack2-gnu-mvapich2-hpc-devel" {= "2.2.0"}
+  "libstdc++6" 
+  "libyaml-0-2" 
+  "libyaml-devel" 
+  "mvapich2-gnu-hpc-devel" 
+  "python311-base" 
+]
+extra-source "petsc_3_21_2-gnu-mvapich2-hpc-devel-3.21.2-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/petsc_3_21_2-gnu-mvapich2-hpc-devel-3.21.2-2.2.x86_64.rpm"
+}

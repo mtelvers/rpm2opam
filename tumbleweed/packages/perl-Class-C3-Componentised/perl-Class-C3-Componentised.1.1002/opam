@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Class-C3-Componentised-1.001002-1.26.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Class-C3-Componentised-1.001002-1.26.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-C3" {>= "0.20"}
+  "perl-Class-Inspector" {>= "1.32"}
+  "perl-MRO-Compat" {>= "0.9"}
+]
+extra-source "perl-Class-C3-Componentised-1.001002-1.26.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Class-C3-Componentised-1.001002-1.26.noarch.rpm"
+}

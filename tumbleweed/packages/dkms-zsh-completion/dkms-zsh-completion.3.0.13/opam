@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dkms-zsh-completion-3.0.13-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dkms-zsh-completion-3.0.13-1.2.noarch.rpm"]
+depends: [
+  "dkms" {= "3.0.13"}
+  "zsh" 
+]
+extra-source "dkms-zsh-completion-3.0.13-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dkms-zsh-completion-3.0.13-1.2.noarch.rpm"
+}

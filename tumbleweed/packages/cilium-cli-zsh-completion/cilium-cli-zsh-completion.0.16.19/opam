@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cilium-cli-zsh-completion-0.16.19-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cilium-cli-zsh-completion-0.16.19-1.1.noarch.rpm"]
+depends: [
+  "cilium-cli" {= "0.16.19"}
+]
+extra-source "cilium-cli-zsh-completion-0.16.19-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cilium-cli-zsh-completion-0.16.19-1.1.noarch.rpm"
+}

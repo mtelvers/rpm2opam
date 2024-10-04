@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "git-annex-10.20240808-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "git-annex-10.20240808-1.2.x86_64.rpm"]
+depends: [
+  "desktop-file-utils" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libffi8" 
+  "libgmp10" 
+  "libmagic1" 
+  "libnuma1" 
+  "libsqlite3-0" 
+  "libyaml-0-2" 
+  "libz-ng-compat1" 
+]
+extra-source "git-annex-10.20240808-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/git-annex-10.20240808-1.2.x86_64.rpm"
+}

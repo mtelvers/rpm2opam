@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-tlc-article-2024.216.1.0.17svn51431-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-tlc-article-2024.216.1.0.17svn51431-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-appendix" 
+  "texlive-bookmark" 
+  "texlive-csvsimple" 
+  "texlive-enumitem" 
+  "texlive-fancyhdr" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-lastpage" 
+  "texlive-latex" 
+  "texlive-listings" 
+  "texlive-lm" 
+  "texlive-makecell" 
+  "texlive-pdflscape" 
+  "texlive-pdfpages" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-spverbatim" 
+  "texlive-titling" 
+  "texlive-tocloft" 
+  "texlive-todonotes" 
+  "texlive-tools" 
+  "texlive-xcolor" 
+]
+extra-source "texlive-tlc-article-2024.216.1.0.17svn51431-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-tlc-article-2024.216.1.0.17svn51431-55.1.noarch.rpm"
+}

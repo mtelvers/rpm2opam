@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-semialign-prof-1.3-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-semialign-prof-1.3-5.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-hashable-prof" 
+  "ghc-indexed-traversable-instances-prof" 
+  "ghc-indexed-traversable-prof" 
+  "ghc-semialign-devel" {= "1.3"}
+  "ghc-semigroupoids-prof" 
+  "ghc-tagged-prof" 
+  "ghc-these-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unordered-containers-prof" 
+  "ghc-vector-prof" 
+]
+extra-source "ghc-semialign-prof-1.3-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-semialign-prof-1.3-5.fc40.x86_64.rpm"
+}

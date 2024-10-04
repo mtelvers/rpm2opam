@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Text-Xslate-3.5.9-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Text-Xslate-3.5.9-9.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-B" 
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Data-MessagePack" {>= "0.38"}
+  "perl-Digest-MD5" 
+  "perl-Encode" {>= "2.26"}
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-File-Path" 
+  "perl-Getopt-Long" 
+  "perl-Mouse" {>= "2.5.0"}
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-overload" 
+  "perl-parent" {>= "0.221"}
+  "perl-version" 
+]
+extra-source "perl-Text-Xslate-3.5.9-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Text-Xslate-3.5.9-9.fc40.x86_64.rpm"
+}

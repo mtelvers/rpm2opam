@@ -1,0 +1,42 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "amavis-2.13.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "amavis-2.13.1-1.fc40.noarch.rpm"]
+depends: [
+  "altermime" 
+  "bash" 
+  "clamav-filesystem" 
+  "file" 
+  "perl-Amavis" 
+  "perl-Archive-Tar" 
+  "perl-Authen-SASL" 
+  "perl-BerkeleyDB" 
+  "perl-Compress-Raw-Zlib" {>= "2.17"}
+  "perl-Errno" 
+  "perl-File-LibMagic" 
+  "perl-File-Temp" 
+  "perl-IO" 
+  "perl-IO-Socket-IP" 
+  "perl-MIME-Base64" 
+  "perl-MIME-tools" 
+  "perl-Mail-DKIM" 
+  "perl-Mail-SPF" 
+  "perl-MailTools" 
+  "perl-Net-DNS" 
+  "perl-Net-LibIDN2" 
+  "perl-Net-SSLeay" 
+  "perl-Net-Server" {>= "0.91"}
+  "perl-NetAddr-IP" 
+  "perl-POSIX" 
+  "perl-Razor-Agent" 
+  "perl-Socket" 
+  "perl-Sys-Syslog" 
+  "perl-Time-HiRes" 
+  "perl-URI" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-sigtrap" 
+  "perl-vars" 
+]
+extra-source "amavis-2.13.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/amavis-2.13.1-1.fc40.noarch.rpm"
+}

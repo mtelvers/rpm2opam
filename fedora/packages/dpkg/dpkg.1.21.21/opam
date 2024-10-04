@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dpkg-1.21.21-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dpkg-1.21.21-4.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bzip2-libs" 
+  "coreutils" 
+  "glibc" 
+  "libmd" 
+  "libselinux" 
+  "libzstd" 
+  "perl-File-Find" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-POSIX" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "tar" {>= "1.28"}
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "dpkg-1.21.21-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dpkg-1.21.21-4.fc40.x86_64.rpm"
+}

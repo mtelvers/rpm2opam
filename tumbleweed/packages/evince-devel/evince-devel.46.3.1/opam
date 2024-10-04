@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "evince-devel-46.3.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "evince-devel-46.3.1-1.1.x86_64.rpm"]
+depends: [
+  "evince" {= "46.3.1"}
+  "glib2-devel" {>= "2.44.0"}
+  "gtk3-devel" {>= "3.22.0"}
+  "libevdocument3-4" {= "46.3.1"}
+  "libevview3-3" {= "46.3.1"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-EvinceDocument-3_0" {= "46.3.1"}
+  "typelib-1_0-EvinceView-3_0" {= "46.3.1"}
+]
+extra-source "evince-devel-46.3.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/evince-devel-46.3.1-1.1.x86_64.rpm"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mariadb-10.11.6-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mariadb-10.11.6-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "glibc" 
+  "grep" 
+  "libedit" 
+  "libstdc++" 
+  "mariadb-common" {= "10.11.6"}
+  "mariadb-connector-c" {>= "3.0"}
+  "ncurses-libs" 
+  "openssl-libs" 
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-IPC-Open3" 
+  "perl-Sys-Hostname" 
+  "perl-interpreter" 
+  "zlib-ng-compat" 
+]
+extra-source "mariadb-10.11.6-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mariadb-10.11.6-3.fc40.x86_64.rpm"
+}

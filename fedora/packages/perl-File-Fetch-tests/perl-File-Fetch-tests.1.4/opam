@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-File-Fetch-tests-1.04-502.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-Fetch-tests-1.04-502.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Data-Dumper" 
+  "perl-File-Basename" 
+  "perl-File-Fetch" {= "1.4"}
+  "perl-File-Path" 
+  "perl-IO" 
+  "perl-PathTools" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-File-Fetch-tests-1.04-502.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-File-Fetch-tests-1.04-502.fc40.noarch.rpm"
+}

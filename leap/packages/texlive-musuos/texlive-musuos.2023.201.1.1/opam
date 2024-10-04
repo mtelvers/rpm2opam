@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-musuos-2023.201.1.1dsvn24857-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-musuos-2023.201.1.1dsvn24857-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-csquotes" 
+  "texlive-environ" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-float" 
+  "texlive-geometry" 
+  "texlive-koma-script" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-kpfonts" 
+  "texlive-kvoptions" 
+  "texlive-psnfss" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-setspace" 
+  "texlive-tex-gyre" 
+  "texlive-titlesec" 
+  "texlive-tools" 
+  "texlive-txfonts" 
+  "texlive-verse" 
+  "texlive-yafoot" 
+]
+extra-source "texlive-musuos-2023.201.1.1dsvn24857-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-musuos-2023.201.1.1dsvn24857-slfo.1.1.4.noarch.rpm"
+}

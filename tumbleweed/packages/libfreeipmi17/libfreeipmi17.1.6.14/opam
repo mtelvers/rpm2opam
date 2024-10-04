@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfreeipmi17-1.6.14-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfreeipmi17-1.6.14-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcrypt20" 
+]
+extra-source "libfreeipmi17-1.6.14-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfreeipmi17-1.6.14-2.1.x86_64.rpm"
+}

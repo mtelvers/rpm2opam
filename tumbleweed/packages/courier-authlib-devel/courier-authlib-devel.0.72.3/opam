@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "courier-authlib-devel-0.72.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "courier-authlib-devel-0.72.3-1.1.x86_64.rpm"]
+depends: [
+  "courier-authlib" {= "0.72.3"}
+  "courier-authlib-ldap" {= "0.72.3"}
+  "courier-authlib-mysql" {= "0.72.3"}
+  "courier-authlib-pgsql" {= "0.72.3"}
+  "courier-authlib-pipe" {= "0.72.3"}
+  "courier-authlib-sqlite" {= "0.72.3"}
+  "courier-authlib-userdb" {= "0.72.3"}
+  "glibc" 
+]
+extra-source "courier-authlib-devel-0.72.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/courier-authlib-devel-0.72.3-1.1.x86_64.rpm"
+}

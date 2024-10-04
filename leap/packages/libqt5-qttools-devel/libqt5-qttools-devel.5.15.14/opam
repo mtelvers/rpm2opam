@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqt5-qttools-devel-5.15.14+kde4-lp160.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqt5-qttools-devel-5.15.14+kde4-lp160.1.2.x86_64.rpm"]
+depends: [
+  "libQt5Core-devel" 
+  "libQt5Designer5" {= "5.15.14"}
+  "libQt5DesignerComponents5" {= "5.15.14"}
+  "libQt5Gui-devel" 
+  "libQt5Help5" {= "5.15.14"}
+  "libQt5Sql-devel" 
+  "libQt5Widgets-devel" 
+  "libQt5Xml-devel" 
+  "libqt5-linguist-devel" {= "5.15.14"}
+  "libqt5-qttools-qhelpgenerator" {= "5.15.14"}
+  "libxslt-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libqt5-qttools-devel-5.15.14+kde4-lp160.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libqt5-qttools-devel-5.15.14+kde4-lp160.1.2.x86_64.rpm"
+}

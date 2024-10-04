@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "squashfs-tools-ng-1.2.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "squashfs-tools-ng-1.2.0-4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libselinux" 
+  "libzstd" 
+  "lzo" 
+  "squashfs-tools-ng-libs" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "squashfs-tools-ng-1.2.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/squashfs-tools-ng-1.2.0-4.fc40.x86_64.rpm"
+}

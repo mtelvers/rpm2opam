@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "direwolf-1.7-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "direwolf-1.7-3.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "ax25-apps" 
+  "ax25-tools" 
+  "bash" 
+  "glibc" 
+  "gpsd-libs" 
+  "hamlib" 
+  "shadow-utils" 
+  "systemd-libs" 
+]
+extra-source "direwolf-1.7-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/direwolf-1.7-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsnmp40-5.9.4-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsnmp40-5.9.4-2.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libopenssl3" 
+  "libsensors4" 
+  "libsystemd0" 
+  "libwrap0" 
+  "perl" 
+  "perl-base" {= "5.40.0"}
+  "rpm" 
+  "snmp-mibs" {>= "5.9.4"}
+]
+extra-source "libsnmp40-5.9.4-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libsnmp40-5.9.4-2.6.x86_64.rpm"
+}

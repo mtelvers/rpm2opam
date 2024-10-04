@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Alien-SDL-1.446-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Alien-SDL-1.446-29.fc40.x86_64.rpm"]
+depends: [
+  "perl-Capture-Tiny" 
+  "perl-Data-Dumper" 
+  "perl-ExtUtils-CBuilder" 
+  "perl-File-Find" 
+  "perl-File-ShareDir" {>= "1.0"}
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-Module-Build" 
+  "perl-PathTools" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "sdl12-compat-devel" 
+]
+extra-source "perl-Alien-SDL-1.446-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Alien-SDL-1.446-29.fc40.x86_64.rpm"
+}

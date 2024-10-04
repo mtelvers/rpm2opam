@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-setuptools-rust-1.9.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-setuptools-rust-1.9.0-1.2.noarch.rpm"]
+depends: [
+  "cargo" 
+  "python310-base" {= "3.10"}
+  "python310-semantic_version" {>= "2.8.2"}
+  "python310-setuptools" {>= "62.4"}
+  "python310-tomli" {>= "1.2.1"}
+  "rust" 
+]
+extra-source "python310-setuptools-rust-1.9.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-setuptools-rust-1.9.0-1.2.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dbus-doc-1.14.10-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dbus-doc-1.14.10-3.fc40.noarch.rpm"]
+depends: [
+  "dbus-daemon" {= "1.14.10"}
+]
+extra-source "dbus-doc-1.14.10-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dbus-doc-1.14.10-3.fc40.noarch.rpm"
+}

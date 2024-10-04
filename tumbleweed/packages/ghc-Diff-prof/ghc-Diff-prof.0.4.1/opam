@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-Diff-prof-0.4.1-2.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-Diff-prof-0.4.1-2.16.x86_64.rpm"]
+depends: [
+  "ghc-Diff-devel" {= "0.4.1"}
+  "ghc-array-prof" 
+  "ghc-base-prof" 
+  "ghc-pretty-prof" 
+]
+extra-source "ghc-Diff-prof-0.4.1-2.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-Diff-prof-0.4.1-2.16.x86_64.rpm"
+}

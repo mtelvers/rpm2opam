@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Glib-Object-Introspection-0.51.0-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Glib-Object-Introspection-0.51.0-2.3.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libffi8" 
+  "libgirepository-1_0-1" 
+  "perl" 
+  "perl-ExtUtils-Depends" {>= "0.3"}
+  "perl-ExtUtils-PkgConfig" {>= "1"}
+  "perl-Glib" {>= "1.32"}
+  "perl-base" 
+]
+extra-source "perl-Glib-Object-Introspection-0.51.0-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-Glib-Object-Introspection-0.51.0-2.3.x86_64.rpm"
+}

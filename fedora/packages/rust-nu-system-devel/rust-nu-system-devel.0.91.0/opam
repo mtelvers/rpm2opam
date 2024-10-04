@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-nu-system-devel-0.91.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-nu-system-devel-0.91.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-libc+default-devel" 
+  "rust-log+default-devel" 
+  "rust-nix+fs-devel" 
+  "rust-nix+process-devel" 
+  "rust-nix+signal-devel" 
+  "rust-nix+term-devel" 
+  "rust-nix-devel" 
+  "rust-procfs+default-devel" 
+  "rust-sysinfo+default-devel" 
+]
+extra-source "rust-nu-system-devel-0.91.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-nu-system-devel-0.91.0-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-branding-Aeon-20231005-5.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-branding-Aeon-20231005-5.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "flatpak" 
+  "gio-branding-openSUSE" 
+  "gnome-initial-setup" 
+  "polkit" 
+  "sound-theme-freedesktop" 
+  "sudo" 
+  "transactional-update" 
+  "zenity" 
+]
+extra-source "gnome-branding-Aeon-20231005-5.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-branding-Aeon-20231005-5.2.noarch.rpm"
+}

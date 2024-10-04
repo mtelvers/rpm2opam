@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postgresql17-llvmjit-17.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql17-llvmjit-17.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libLLVM17" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "postgresql-llvmjit" {>= "17"}
+  "postgresql17-server" {= "17.0"}
+]
+extra-source "postgresql17-llvmjit-17.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/postgresql17-llvmjit-17.0-1.1.x86_64.rpm"
+}

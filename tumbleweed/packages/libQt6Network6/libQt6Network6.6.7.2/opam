@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libQt6Network6-6.7.2-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libQt6Network6-6.7.2-3.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "krb5" 
+  "libQt6Core6" 
+  "libQt6DBus6" {= "6.7.2"}
+  "libbrotlidec1" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libproxy1" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+  "qt6-network-tls" {= "6.7.2"}
+  "qt6-networkinformation-glib" {= "6.7.2"}
+  "qt6-networkinformation-nm" {= "6.7.2"}
+]
+extra-source "libQt6Network6-6.7.2-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libQt6Network6-6.7.2-3.1.x86_64.rpm"
+}

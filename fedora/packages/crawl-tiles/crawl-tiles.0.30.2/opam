@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "crawl-tiles-0.30.2-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "crawl-tiles-0.30.2-2.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "SDL2_image" 
+  "SDL2_mixer" 
+  "compat-lua-libs" 
+  "crawl-common-data" {= "0.30.2"}
+  "freetype" 
+  "glibc" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libstdc++" 
+  "mesa-libGLU" 
+  "sqlite-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "crawl-tiles-0.30.2-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/crawl-tiles-0.30.2-2.fc40.x86_64.rpm"
+}

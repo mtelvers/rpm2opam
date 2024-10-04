@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libyui-mga-ncurses-1.2.0-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libyui-mga-ncurses-1.2.0-7.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "libyui" 
+  "libyui-mga" 
+  "libyui-ncurses" 
+  "ncurses-libs" 
+]
+extra-source "libyui-mga-ncurses-1.2.0-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libyui-mga-ncurses-1.2.0-7.fc40.x86_64.rpm"
+}

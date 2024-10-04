@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-usethis-2.1.6-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-usethis-2.1.6-6.fc40.noarch.rpm"]
+depends: [
+  "R-cli" {>= "3.0.1"}
+  "R-clipr" {>= "0.3.0"}
+  "R-core" {= "4.3"}
+  "R-crayon" 
+  "R-curl" {>= "2.7"}
+  "R-desc" {>= "1.4.0"}
+  "R-fs" {>= "1.3.0"}
+  "R-gert" {>= "1.4.1"}
+  "R-gh" {>= "1.2.1"}
+  "R-glue" {>= "1.3.0"}
+  "R-jsonlite" 
+  "R-lifecycle" {>= "1.0.0"}
+  "R-purrr" 
+  "R-rappdirs" 
+  "R-rlang" {>= "1.0.0"}
+  "R-rprojroot" {>= "1.2"}
+  "R-rstudioapi" 
+  "R-whisker" 
+  "R-withr" {>= "2.3.0"}
+  "R-yaml" 
+]
+extra-source "R-usethis-2.1.6-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-usethis-2.1.6-6.fc40.noarch.rpm"
+}

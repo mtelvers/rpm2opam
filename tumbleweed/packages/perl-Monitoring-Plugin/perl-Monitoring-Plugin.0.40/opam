@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Monitoring-Plugin-0.40-1.22.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Monitoring-Plugin-0.40-1.22.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Accessor" 
+  "perl-Config-Tiny" 
+  "perl-Math-Calc-Units" 
+  "perl-Params-Validate" 
+  "perl-base" 
+]
+extra-source "perl-Monitoring-Plugin-0.40-1.22.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Monitoring-Plugin-0.40-1.22.noarch.rpm"
+}

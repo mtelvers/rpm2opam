@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cups-client-2.4.10-slfo.1.1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cups-client-2.4.10-slfo.1.1.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libavahi-client3" 
+  "libavahi-common3" 
+  "libcups2" 
+  "libcupsimage2" {= "2.4.10"}
+  "pam" 
+]
+extra-source "cups-client-2.4.10-slfo.1.1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/cups-client-2.4.10-slfo.1.1.5.x86_64.rpm"
+}

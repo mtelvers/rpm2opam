@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-zbus+tokio-devel-4.1.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-zbus+tokio-devel-4.1.2-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-tokio+default-devel" 
+  "rust-tokio+fs-devel" 
+  "rust-tokio+io-util-devel" 
+  "rust-tokio+net-devel" 
+  "rust-tokio+process-devel" 
+  "rust-tokio+rt-devel" 
+  "rust-tokio+sync-devel" 
+  "rust-tokio+time-devel" 
+  "rust-zbus-devel" {= "4.1.2"}
+]
+extra-source "rust-zbus+tokio-devel-4.1.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-zbus+tokio-devel-4.1.2-1.fc40.noarch.rpm"
+}

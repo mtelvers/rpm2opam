@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-hawkey-0.73.1-5.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-hawkey-0.73.1-5.el10.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "libdnf" {= "0.73.1"}
+  "libgcc" 
+  "libsolv" 
+  "libstdc++" 
+  "python3" {= "3.12"}
+  "python3-libdnf" {= "0.73.1"}
+  "python3-libs" 
+]
+extra-source "python3-hawkey-0.73.1-5.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/python3-hawkey-0.73.1-5.el10.x86_64.rpm"
+}

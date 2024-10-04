@@ -1,0 +1,44 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "condor-23.1.0-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "condor-23.1.0-5.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "esmtp" 
+  "expat" 
+  "glibc" 
+  "krb5-libs" 
+  "libcom_err" 
+  "libcurl" 
+  "libgcc" 
+  "libgomp" 
+  "libstdc++" 
+  "libuuid" 
+  "munge-libs" 
+  "net-tools" 
+  "openssh-server" 
+  "openssl-libs" 
+  "pcre2" 
+  "perl-Data-Dumper" 
+  "perl-Date-Manip" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-POSIX" 
+  "perl-Time-Local" 
+  "perl-XML-Simple" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "python3" 
+  "python3-condor" {= "23.1.0"}
+  "python3-requests" 
+  "scitokens-cpp" {>= "0.6.2"}
+  "sqlite-libs" 
+  "systemd-libs" 
+  "voms" 
+]
+extra-source "condor-23.1.0-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/condor-23.1.0-5.fc40.x86_64.rpm"
+}

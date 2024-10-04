@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "spack-build-dependencies-0.22.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "spack-build-dependencies-0.22.1-1.1.noarch.rpm"]
+depends: [
+  "bison" 
+  "cmake-full" 
+  "flex" 
+  "libcurl-devel" 
+  "libopenssl-devel" 
+  "libtool" 
+  "libzip-devel" 
+  "ncurses-devel" 
+  "xz-devel" 
+  "zip" 
+]
+extra-source "spack-build-dependencies-0.22.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/spack-build-dependencies-0.22.1-1.1.noarch.rpm"
+}

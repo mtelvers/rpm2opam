@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "iptables-utils-1.8.10-8.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "iptables-utils-1.8.10-8.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "iptables-nft" {= "1.8.10"}
+  "libnfnetlink" 
+  "libpcap" 
+]
+extra-source "iptables-utils-1.8.10-8.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/iptables-utils-1.8.10-8.el10.x86_64.rpm"
+}

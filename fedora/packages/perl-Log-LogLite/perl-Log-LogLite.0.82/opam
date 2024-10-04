@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Log-LogLite-0.82-41.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Log-LogLite-0.82-41.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-IO-LockedFile" {>= "0.21"}
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-Log-LogLite-0.82-41.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Log-LogLite-0.82-41.fc40.noarch.rpm"
+}

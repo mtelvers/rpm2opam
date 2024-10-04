@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "maven-doxia-core-1.12.0-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-doxia-core-1.12.0-7.fc40.noarch.rpm"]
+depends: [
+  "apache-commons-lang3" 
+  "apache-commons-text" 
+  "httpcomponents-client" 
+  "httpcomponents-core" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "maven-doxia-logging-api" {= "1.12.0"}
+  "maven-doxia-sink-api" {= "1.12.0"}
+  "plexus-containers-component-annotations" 
+  "plexus-utils" 
+  "sisu" 
+]
+extra-source "maven-doxia-core-1.12.0-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/maven-doxia-core-1.12.0-7.fc40.noarch.rpm"
+}

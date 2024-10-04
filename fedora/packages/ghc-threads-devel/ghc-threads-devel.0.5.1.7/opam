@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-threads-devel-0.5.1.7-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-threads-devel-0.5.1.7-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-stm-devel" 
+  "ghc-threads" {= "0.5.1.7"}
+]
+extra-source "ghc-threads-devel-0.5.1.7-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-threads-devel-0.5.1.7-6.fc40.x86_64.rpm"
+}

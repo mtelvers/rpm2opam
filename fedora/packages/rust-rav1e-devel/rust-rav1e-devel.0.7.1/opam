@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rav1e-devel-0.7.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rav1e-devel-0.7.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.70.0"}
+  "rust-arg_enum_proc_macro+default-devel" 
+  "rust-arrayvec+default-devel" 
+  "rust-av1-grain+default-devel" 
+  "rust-bitstream-io+default-devel" 
+  "rust-cfg-if+default-devel" 
+  "rust-itertools+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-log+default-devel" 
+  "rust-maybe-rayon-devel" 
+  "rust-new_debug_unreachable+default-devel" 
+  "rust-noop_proc_macro+default-devel" 
+  "rust-num-derive+default-devel" 
+  "rust-num-traits+default-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-paste+default-devel" 
+  "rust-simd_helpers+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-v_frame+default-devel" 
+]
+extra-source "rust-rav1e-devel-0.7.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rav1e-devel-0.7.1-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-endesive-2.17.2-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-endesive-2.17.2-1.1.noarch.rpm"]
+depends: [
+  "python312-Pillow" 
+  "python312-PyKCS11" 
+  "python312-asn1crypto" 
+  "python312-attrs" 
+  "python312-base" {= "3.12"}
+  "python312-certvalidator" 
+  "python312-cryptography" 
+  "python312-lxml" 
+  "python312-oscrypto" 
+  "python312-paramiko" 
+  "python312-pytz" 
+  "python312-requests" 
+]
+extra-source "python312-endesive-2.17.2-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-endesive-2.17.2-1.1.noarch.rpm"
+}

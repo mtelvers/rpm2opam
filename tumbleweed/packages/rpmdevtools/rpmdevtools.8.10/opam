@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rpmdevtools-8.10-7.13.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rpmdevtools-8.10-7.13.noarch.rpm"]
+depends: [
+  "Aeon-release" 
+  "bash" 
+  "bash-completion" 
+  "bash-sh" 
+  "cpio" 
+  "curl" 
+  "fakeroot" 
+  "perl-base" 
+  "python311-base" 
+  "python311-rpm" 
+]
+extra-source "rpmdevtools-8.10-7.13.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/rpmdevtools-8.10-7.13.noarch.rpm"
+}

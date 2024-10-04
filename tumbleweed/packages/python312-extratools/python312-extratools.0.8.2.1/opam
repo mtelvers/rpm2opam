@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-extratools-0.8.2.1-2.18.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-extratools-0.8.2.1-2.18.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-RegexOrder" {>= "0.2"}
+  "python312-TagStats" {>= "0.1.2"}
+  "python312-base" {= "3.12"}
+  "python312-sh" {>= "1.12.13"}
+  "python312-sortedcontainers" {>= "1.5.10"}
+  "python312-toolz" {>= "0.9.0"}
+  "update-alternatives" 
+]
+extra-source "python312-extratools-0.8.2.1-2.18.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-extratools-0.8.2.1-2.18.noarch.rpm"
+}

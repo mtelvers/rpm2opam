@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Net-Dropbox-API-1.9-2.27.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-Dropbox-API-1.9-2.27.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Data-Random" 
+  "perl-HTTP-Message" 
+  "perl-JSON" 
+  "perl-Mouse" 
+  "perl-Net-OAuth" 
+  "perl-URI" 
+  "perl-common-sense" 
+  "perl-libwww-perl" 
+]
+extra-source "perl-Net-Dropbox-API-1.9-2.27.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Net-Dropbox-API-1.9-2.27.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "postgresql15-decoderbufs-1.9.7-6.Final.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql15-decoderbufs-1.9.7-6.Final.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "postgresql-server" {>= "15"}
+  "postgresql15-server" {< "16"}
+  "protobuf-c" 
+]
+extra-source "postgresql15-decoderbufs-1.9.7-6.Final.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/postgresql15-decoderbufs-1.9.7-6.Final.fc40.x86_64.rpm"
+}

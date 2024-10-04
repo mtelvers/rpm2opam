@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "remmina-1.4.33-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "remmina-1.4.33-1.fc40.x86_64.rpm"]
+depends: [
+  "avahi-libs" 
+  "avahi-ui-gtk3" 
+  "bash" 
+  "cairo" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "json-glib" 
+  "libappindicator-gtk3" 
+  "libgcc" 
+  "libgcrypt" 
+  "libsodium" 
+  "libssh" 
+  "pango" 
+  "vte291" 
+]
+extra-source "remmina-1.4.33-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/remmina-1.4.33-1.fc40.x86_64.rpm"
+}

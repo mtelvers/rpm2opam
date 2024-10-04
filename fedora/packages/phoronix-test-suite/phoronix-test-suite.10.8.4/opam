@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "phoronix-test-suite-10.8.4-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "phoronix-test-suite-10.8.4-6.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "hicolor-icon-theme" 
+  "php-cli" 
+  "php-common" 
+  "php-gd" 
+  "php-pdo" 
+  "php-process" 
+  "php-xml" 
+  "systemd" 
+]
+extra-source "phoronix-test-suite-10.8.4-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/phoronix-test-suite-10.8.4-6.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-slog-term+erased-serde-devel-2.9.0-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-slog-term+erased-serde-devel-2.9.0-6.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-erased-serde+default-devel" 
+  "rust-slog-term-devel" {= "2.9.0"}
+]
+extra-source "rust-slog-term+erased-serde-devel-2.9.0-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-slog-term+erased-serde-devel-2.9.0-6.fc40.noarch.rpm"
+}

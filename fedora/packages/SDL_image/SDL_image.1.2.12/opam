@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "SDL_image-1.2.12-37.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "SDL_image-1.2.12-37.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libtiff" 
+  "sdl12-compat" 
+  "zlib-ng-compat" 
+]
+extra-source "SDL_image-1.2.12-37.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/SDL_image-1.2.12-37.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cockpit-networkmanager-322-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cockpit-networkmanager-322-1.1.noarch.rpm"]
+depends: [
+  "NetworkManager" {>= "1.6"}
+  "cockpit-bridge" {>= "266"}
+  "cockpit-system" {>= "266"}
+]
+extra-source "cockpit-networkmanager-322-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cockpit-networkmanager-322-1.1.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qstardict-1.4.1-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qstardict-1.4.1-2.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "libX11" 
+  "libgcc" 
+  "libstdc++" 
+  "libzim" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "zlib-ng-compat" 
+]
+extra-source "qstardict-1.4.1-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qstardict-1.4.1-2.fc40.x86_64.rpm"
+}

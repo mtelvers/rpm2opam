@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vdr-skinenigmang-0.1.4-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vdr-skinenigmang-0.1.4-7.fc40.x86_64.rpm"]
+depends: [
+  "GraphicsMagick-c++" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "vdr" {= "2.6.6"}
+]
+extra-source "vdr-skinenigmang-0.1.4-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vdr-skinenigmang-0.1.4-7.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libopenzwave-1.6.1914-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libopenzwave-1.6.1914-7.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "systemd-libs" 
+  "tinyxml" 
+]
+extra-source "libopenzwave-1.6.1914-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libopenzwave-1.6.1914-7.fc40.x86_64.rpm"
+}

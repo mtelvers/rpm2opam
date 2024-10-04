@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pcp-pmda-nutcracker-6.2.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcp-pmda-nutcracker-6.2.1-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "perl-JSON" 
+  "perl-PCP-PMDA" {= "6.2.1"}
+  "perl-YAML-LibYAML" 
+]
+extra-source "pcp-pmda-nutcracker-6.2.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pcp-pmda-nutcracker-6.2.1-2.1.noarch.rpm"
+}

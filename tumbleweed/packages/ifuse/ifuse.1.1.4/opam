@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ifuse-1.1.4-1.18.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ifuse-1.1.4-1.18.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libfuse2" 
+  "libimobiledevice-1_0-6" 
+  "libplist-2_0-4" 
+]
+extra-source "ifuse-1.1.4-1.18.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ifuse-1.1.4-1.18.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vncmanager-1.0.2-12.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vncmanager-1.0.2-12.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libboost_iostreams1_86_0" 
+  "libboost_program_options1_86_0" 
+  "libgcc_s1" 
+  "libgnutls30" 
+  "libstdc++6" 
+  "vncmanager-greeter" 
+  "xorg-x11-Xvnc" 
+]
+extra-source "vncmanager-1.0.2-12.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vncmanager-1.0.2-12.4.x86_64.rpm"
+}

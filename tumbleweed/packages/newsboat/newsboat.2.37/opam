@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "newsboat-2.37-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "newsboat-2.37-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcurl-mini4" 
+  "libgcc_s1" 
+  "libjson-c5" 
+  "libncurses6" 
+  "libsqlite3-0" 
+  "libstdc++6" 
+  "libstfl0" 
+  "libxml2-2" 
+]
+extra-source "newsboat-2.37-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/newsboat-2.37-1.1.x86_64.rpm"
+}

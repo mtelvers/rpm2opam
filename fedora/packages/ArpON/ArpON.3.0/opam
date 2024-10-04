@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ArpON-3.0-26.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ArpON-3.0-26.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libdnet" 
+  "libnet" 
+  "libpcap" 
+]
+extra-source "ArpON-3.0-26.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/ArpON-3.0-26.fc40.x86_64.rpm"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lalpulsar-devel-7.0.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lalpulsar-devel-7.0.0-1.1.x86_64.rpm"]
+depends: [
+  "cfitsio-devel" 
+  "fftw3-devel" 
+  "glibc" 
+  "gsl-devel" 
+  "lal-devel" {>= "7.2.0"}
+  "lalframe-devel" {>= "3.0.0"}
+  "lalinference-devel" {>= "4.0.0"}
+  "lalsimulation-devel" {>= "4.0.0"}
+  "libcfitsio10" 
+  "libgsl28" 
+  "liblal20" 
+  "liblalframe14" 
+  "liblalinference23" 
+  "liblalpulsar30" 
+  "liblalsimulation37" 
+  "liblalsupport14" 
+  "pkgconf-pkg-config" 
+  "python311-base" 
+]
+extra-source "lalpulsar-devel-7.0.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lalpulsar-devel-7.0.0-1.1.x86_64.rpm"
+}

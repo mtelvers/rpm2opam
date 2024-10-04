@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "licensecheck-3.3.9-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "licensecheck-3.3.9-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Encode" {>= "2.93"}
+  "perl-Fcntl" 
+  "perl-Feature-Compat-Class" {>= "0.4"}
+  "perl-Feature-Compat-Try" 
+  "perl-Getopt-Long" {>= "2.24"}
+  "perl-IO-Interactive" 
+  "perl-Log-Any" 
+  "perl-Log-Any-Adapter-Screen" 
+  "perl-Path-Iterator-Rule" 
+  "perl-Path-Tiny" 
+  "perl-Pod-Constants" 
+  "perl-Pod-Usage" {>= "1.60"}
+  "perl-Scalar-List-Utils" {>= "1.45"}
+  "perl-String-Copyright" {>= "0.3"}
+  "perl-String-Escape" 
+  "perl-String-License" 
+  "perl-autodie" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.12.0"}
+  "perl-namespace-clean" 
+  "perl-open" 
+]
+extra-source "licensecheck-3.3.9-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/licensecheck-3.3.9-4.fc40.noarch.rpm"
+}

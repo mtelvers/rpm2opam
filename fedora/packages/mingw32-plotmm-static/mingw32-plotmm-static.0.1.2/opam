@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw32-plotmm-static-0.1.2-40.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw32-plotmm-static-0.1.2-40.fc40.noarch.rpm"]
+depends: [
+  "mingw32-plotmm" {= "0.1.2"}
+]
+extra-source "mingw32-plotmm-static-0.1.2-40.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw32-plotmm-static-0.1.2-40.fc40.noarch.rpm"
+}

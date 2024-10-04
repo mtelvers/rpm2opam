@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Passwd-Keyring-KDEWallet-1.0001-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Passwd-Keyring-KDEWallet-1.0001-2.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-File-ShareDir" {>= "1.0"}
+  "perl-Net-DBus" 
+  "perl-Proc-SyncExec" {>= "1.1"}
+  "perl-Try-Tiny" 
+]
+extra-source "perl-Passwd-Keyring-KDEWallet-1.0001-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Passwd-Keyring-KDEWallet-1.0001-2.2.noarch.rpm"
+}

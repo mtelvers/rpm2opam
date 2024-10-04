@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-naive-ebnf-svn66017-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-naive-ebnf-svn66017-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-filecontentsdef" 
+  "texlive-kpathsea" 
+  "texlive-l3kernel" 
+  "texlive-pgfopts" 
+]
+extra-source "texlive-naive-ebnf-svn66017-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-naive-ebnf-svn66017-71.fc40.noarch.rpm"
+}

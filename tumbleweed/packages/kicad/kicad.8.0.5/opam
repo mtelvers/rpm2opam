@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kicad-8.0.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kicad-8.0.5-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "kicad-footprints" {= "8.0.0"}
+  "kicad-symbols" {= "8.0.0"}
+  "libGLEW2_2" 
+  "libGLU1" 
+  "libcairo2" 
+  "libcurl-mini4" 
+  "libfontconfig1" 
+  "libfreetype6" 
+  "libgcc_s1" 
+  "libgit2-1_8" 
+  "libglvnd" 
+  "libgtk-3-0" 
+  "libharfbuzz0" 
+  "libngspice0" 
+  "libodbc2" 
+  "libopencascade-applicationframework7_7_2" 
+  "libopencascade-dataexchange7_7_2" 
+  "libopencascade-foundationclasses7_7_2" 
+  "libopencascade-modelingalgorithms7_7_2" 
+  "libopencascade-modelingdata7_7_2" 
+  "libpython3_11-1_0" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "python311-base" {= "3.11"}
+]
+extra-source "kicad-8.0.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kicad-8.0.5-1.1.x86_64.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-nbdime-4.0.2-17.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-nbdime-4.0.2-17.1.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "jupyter-nbdime" {= "7.0.2"}
+  "python311-GitPython" {>= "2.1.6"}
+  "python311-Jinja2" {>= "2.9"}
+  "python311-Pygments" 
+  "python311-base" 
+  "python311-colorama" 
+  "python311-jupyter-server" 
+  "python311-jupyter-server-mathjax" {>= "0.2.2"}
+  "python311-nbformat" 
+  "python311-requests" 
+  "python311-tornado" 
+]
+extra-source "python311-nbdime-4.0.2-17.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-nbdime-4.0.2-17.1.noarch.rpm"
+}

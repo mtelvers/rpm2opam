@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gio-sharp3-devel-2.99.4-7.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gio-sharp3-devel-2.99.4-7.1.x86_64.rpm"]
+depends: [
+  "gio-sharp3" {= "2.99.4"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gio-sharp3-devel-2.99.4-7.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gio-sharp3-devel-2.99.4-7.1.x86_64.rpm"
+}

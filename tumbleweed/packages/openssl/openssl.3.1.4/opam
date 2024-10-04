@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openssl-3.1.4-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openssl-3.1.4-3.2.noarch.rpm"]
+depends: [
+  "openssl-3" {= "3.1.4"}
+]
+extra-source "openssl-3.1.4-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/openssl-3.1.4-3.2.noarch.rpm"
+}

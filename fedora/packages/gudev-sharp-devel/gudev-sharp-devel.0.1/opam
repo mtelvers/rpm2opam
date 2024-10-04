@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gudev-sharp-devel-0.1-37.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gudev-sharp-devel-0.1-37.fc40.x86_64.rpm"]
+depends: [
+  "gtk-sharp2-devel" 
+  "gudev-sharp" {= "0.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gudev-sharp-devel-0.1-37.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gudev-sharp-devel-0.1-37.fc40.x86_64.rpm"
+}

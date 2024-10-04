@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tomboy-1.15.9-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tomboy-1.15.9-20.fc40.x86_64.rpm"]
+depends: [
+  "GConf2" 
+  "atk" 
+  "bash" 
+  "cairo" 
+  "dbus-sharp" {= "2.0.0.0"}
+  "dbus-sharp-glib" {= "2.0.0.0"}
+  "fontconfig" 
+  "freetype" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gnome-sharp" {= "2.24.0.0"}
+  "gtk-sharp2" {= "2.12.0.0"}
+  "gtk2" 
+  "gtkspell" 
+  "harfbuzz" 
+  "libX11" 
+  "mono-addins" {= "1.0.0.0"}
+  "mono-core" {= "4.0.0.0"}
+  "pango" 
+]
+extra-source "tomboy-1.15.9-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tomboy-1.15.9-20.fc40.x86_64.rpm"
+}

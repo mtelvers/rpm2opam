@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Parse-Method-Signatures-1.003019-1.28.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Parse-Method-Signatures-1.003019-1.28.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Load" {>= "0.19"}
+  "perl-List-MoreUtils" {>= "0.20"}
+  "perl-Moose" 
+  "perl-MooseX-Traits" {>= "0.6"}
+  "perl-MooseX-Types" {>= "0.17"}
+  "perl-MooseX-Types-Structured" 
+  "perl-PPI" {>= "1.203"}
+  "perl-namespace-clean" {>= "0.10"}
+]
+extra-source "perl-Parse-Method-Signatures-1.003019-1.28.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Parse-Method-Signatures-1.003019-1.28.noarch.rpm"
+}

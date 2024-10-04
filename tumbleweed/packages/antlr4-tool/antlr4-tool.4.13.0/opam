@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "antlr4-tool-4.13.0-5.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "antlr4-tool-4.13.0-5.3.noarch.rpm"]
+depends: [
+  "antlr3-java" 
+  "antlr4-java" {= "4.13.0"}
+  "bash" 
+  "icu4j" 
+  "java-11-openj9-headless" {>= "11"}
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+  "stringtemplate4" 
+  "treelayout" 
+]
+extra-source "antlr4-tool-4.13.0-5.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/antlr4-tool-4.13.0-5.3.noarch.rpm"
+}

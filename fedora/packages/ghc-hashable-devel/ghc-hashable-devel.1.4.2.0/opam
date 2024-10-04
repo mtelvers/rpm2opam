@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-hashable-devel-1.4.2.0-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-hashable-devel-1.4.2.0-5.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-deepseq-devel" 
+  "ghc-filepath-devel" 
+  "ghc-ghc-bignum-devel" 
+  "ghc-hashable" {= "1.4.2.0"}
+  "ghc-text-devel" 
+]
+extra-source "ghc-hashable-devel-1.4.2.0-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-hashable-devel-1.4.2.0-5.fc40.x86_64.rpm"
+}

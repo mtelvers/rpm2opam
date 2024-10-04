@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "weechat-lang-4.3.1-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "weechat-lang-4.3.1-1.2.noarch.rpm"]
+depends: [
+  "weechat" {= "4.3.1"}
+]
+extra-source "weechat-lang-4.3.1-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/weechat-lang-4.3.1-1.2.noarch.rpm"
+}

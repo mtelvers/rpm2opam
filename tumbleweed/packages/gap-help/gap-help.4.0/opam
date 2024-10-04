@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-help-4.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-help-4.0-1.2.noarch.rpm"]
+depends: [
+  "4ti2" {>= "1.6.5"}
+  "gap" {>= "4.8.2"}
+  "gap-4ti2interface" {>= "2015.4.29"}
+  "gap-atlasrep" {>= "1.5"}
+  "gap-ctbllib" {>= "1.2.2"}
+  "gap-io" {>= "4.2"}
+  "gap-normalizinterface" {>= "0.9.6"}
+]
+extra-source "gap-help-4.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-help-4.0-1.2.noarch.rpm"
+}

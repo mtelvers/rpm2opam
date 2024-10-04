@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-promises-1.2.0.1-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-promises-1.2.0.1-10.fc40.x86_64.rpm"]
+depends: [
+  "R-R6" 
+  "R-Rcpp" 
+  "R-core" {= "4.3"}
+  "R-later" 
+  "R-magrittr" 
+  "R-rlang" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "R-promises-1.2.0.1-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-promises-1.2.0.1-10.fc40.x86_64.rpm"
+}

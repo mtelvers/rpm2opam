@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Hash-AutoHash-1.17-19.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Hash-AutoHash-1.17-19.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" {>= "1.2"}
+  "perl-List-MoreUtils" {>= "0.33"}
+  "perl-Scalar-List-Utils" 
+  "perl-Tie-ToObject" {>= "0.3"}
+  "perl-libs" {>= "1.4"}
+  "perl-vars" 
+]
+extra-source "perl-Hash-AutoHash-1.17-19.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Hash-AutoHash-1.17-19.fc40.noarch.rpm"
+}

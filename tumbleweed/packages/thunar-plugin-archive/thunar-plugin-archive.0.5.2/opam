@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "thunar-plugin-archive-0.5.2-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "thunar-plugin-archive-0.5.2-1.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgtk-3-0" 
+  "libthunarx-3-0" 
+  "thunar" {>= "1.7.0"}
+]
+extra-source "thunar-plugin-archive-0.5.2-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/thunar-plugin-archive-0.5.2-1.3.x86_64.rpm"
+}

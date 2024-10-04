@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "incidenceeditor-devel-24.08.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "incidenceeditor-devel-24.08.1-1.1.x86_64.rpm"]
+depends: [
+  "akonadi-mime-devel" {>= "6.2.1"}
+  "calendarsupport-devel" {>= "6.2.1"}
+  "eventviews-devel" {>= "6.2.1"}
+  "kcalutils-devel" {>= "6.2.1"}
+  "kf6-kcalendarcore-devel" {>= "6.3.0"}
+  "kmime-devel" {>= "6.2.1"}
+  "libKPim6IncidenceEditor6" {= "24.8.1"}
+]
+extra-source "incidenceeditor-devel-24.08.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/incidenceeditor-devel-24.08.1-1.1.x86_64.rpm"
+}

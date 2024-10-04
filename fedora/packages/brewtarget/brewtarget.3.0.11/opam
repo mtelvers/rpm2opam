@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "brewtarget-3.0.11-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "brewtarget-3.0.11-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtmultimedia" 
+  "sqlite" 
+  "xalan-c" 
+  "xerces-c" 
+]
+extra-source "brewtarget-3.0.11-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/brewtarget-3.0.11-1.fc40.x86_64.rpm"
+}

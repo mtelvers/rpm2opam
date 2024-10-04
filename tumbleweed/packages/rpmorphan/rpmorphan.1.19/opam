@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rpmorphan-1.19-3.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rpmorphan-1.19-3.14.noarch.rpm"]
+depends: [
+  "perl-base" 
+  "rpm" 
+]
+extra-source "rpmorphan-1.19-3.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/rpmorphan-1.19-3.14.noarch.rpm"
+}

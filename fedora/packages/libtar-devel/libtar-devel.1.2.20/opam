@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libtar-devel-1.2.20-31.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libtar-devel-1.2.20-31.fc40.x86_64.rpm"]
+depends: [
+  "libtar" {= "1.2.20"}
+]
+extra-source "libtar-devel-1.2.20-31.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libtar-devel-1.2.20-31.fc40.x86_64.rpm"
+}

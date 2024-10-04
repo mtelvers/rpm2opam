@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-smartmatch-0.05-33.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-smartmatch-0.05-33.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-B-Hooks-OP-Check" 
+  "perl-DynaLoader" 
+  "perl-Module-Runtime" 
+  "perl-Package-Stash" 
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "perl-smartmatch-0.05-33.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-smartmatch-0.05-33.fc40.x86_64.rpm"
+}

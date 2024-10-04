@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "squirrel-devel-3.2-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "squirrel-devel-3.2-3.2.x86_64.rpm"]
+depends: [
+  "libsquirrel1001" {= "3.2"}
+]
+extra-source "squirrel-devel-3.2-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/squirrel-devel-3.2-3.2.x86_64.rpm"
+}

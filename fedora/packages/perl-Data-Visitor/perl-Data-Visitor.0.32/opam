@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Data-Visitor-0.32-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Data-Visitor-0.32-4.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Moose" 
+  "perl-Scalar-List-Utils" 
+  "perl-Symbol" 
+  "perl-Tie-ToObject" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-namespace-clean" 
+  "perl-overload" 
+]
+extra-source "perl-Data-Visitor-0.32-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Data-Visitor-0.32-4.fc40.noarch.rpm"
+}

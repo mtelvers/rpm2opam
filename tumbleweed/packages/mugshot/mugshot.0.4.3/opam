@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mugshot-0.4.3-1.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mugshot-0.4.3-1.12.noarch.rpm"]
+depends: [
+  "magpie" 
+  "python311" 
+  "python311-base" 
+  "python311-dbus-python" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-pexpect" 
+  "python311-pycairo" 
+  "typelib-1_0-Cheese-3_0" {= "3.0"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gst-1_0" {= "1.0"}
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-GtkClutter-1_0" {= "1.0"}
+]
+extra-source "mugshot-0.4.3-1.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mugshot-0.4.3-1.12.noarch.rpm"
+}

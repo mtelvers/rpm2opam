@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-fgl-devel-5.8.2.0-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-fgl-devel-5.8.2.0-1.7.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-array-devel" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-deepseq-devel" 
+  "ghc-fgl" {= "5.8.2.0"}
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-fgl-devel-5.8.2.0-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-fgl-devel-5.8.2.0-1.7.x86_64.rpm"
+}

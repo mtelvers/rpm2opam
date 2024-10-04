@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-HaXml-devel-1.25.13-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-HaXml-devel-1.25.13-3.fc40.x86_64.rpm"]
+depends: [
+  "ghc-HaXml" {= "1.25.13"}
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-filepath-devel" 
+  "ghc-polyparse-devel" 
+  "ghc-pretty-devel" 
+  "ghc-random-devel" 
+]
+extra-source "ghc-HaXml-devel-1.25.13-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-HaXml-devel-1.25.13-3.fc40.x86_64.rpm"
+}

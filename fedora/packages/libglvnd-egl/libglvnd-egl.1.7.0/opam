@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libglvnd-egl-1.7.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libglvnd-egl-1.7.0-4.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libglvnd" {= "1.7.0"}
+  "mesa-libEGL" {>= "13.0.4"}
+]
+extra-source "libglvnd-egl-1.7.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libglvnd-egl-1.7.0-4.fc40.x86_64.rpm"
+}

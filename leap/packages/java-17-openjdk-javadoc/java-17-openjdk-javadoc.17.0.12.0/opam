@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "java-17-openjdk-javadoc-17.0.12.0-slfo.1.1.16.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "java-17-openjdk-javadoc-17.0.12.0-slfo.1.1.16.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "javapackages-tools" 
+  "update-alternatives" 
+]
+extra-source "java-17-openjdk-javadoc-17.0.12.0-slfo.1.1.16.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/java-17-openjdk-javadoc-17.0.12.0-slfo.1.1.16.noarch.rpm"
+}

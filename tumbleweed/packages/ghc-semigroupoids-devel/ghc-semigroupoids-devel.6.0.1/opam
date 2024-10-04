@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-semigroupoids-devel-6.0.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-semigroupoids-devel-6.0.1-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-base-orphans-devel" 
+  "ghc-bifunctors-devel" 
+  "ghc-comonad-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-contravariant-devel" 
+  "ghc-distributive-devel" 
+  "ghc-hashable-devel" 
+  "ghc-semigroupoids" {= "6.0.1"}
+  "ghc-tagged-devel" 
+  "ghc-template-haskell-devel" 
+  "ghc-transformers-compat-devel" 
+  "ghc-transformers-devel" 
+  "ghc-unordered-containers-devel" 
+]
+extra-source "ghc-semigroupoids-devel-6.0.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-semigroupoids-devel-6.0.1-2.1.x86_64.rpm"
+}

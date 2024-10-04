@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tkinfo-2.11-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tkinfo-2.11-2.2.noarch.rpm"]
+depends: [
+  "tk" 
+]
+extra-source "tkinfo-2.11-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tkinfo-2.11-2.2.noarch.rpm"
+}

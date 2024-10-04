@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sagator-2.0.2-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sagator-2.0.2-4.fc40.noarch.rpm"]
+depends: [
+  "clamav-freshclam" 
+  "clamav-lib" {>= "0.100"}
+  "sagator-core" {= "2.0.2"}
+  "sed" 
+  "spamassassin" 
+]
+extra-source "sagator-2.0.2-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sagator-2.0.2-4.fc40.noarch.rpm"
+}

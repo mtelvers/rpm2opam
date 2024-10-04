@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-symfony-form-2.8.52-10.fc38.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-symfony-form-2.8.52-10.fc38.noarch.rpm"]
+depends: [
+  "php-common" 
+  "php-intl" 
+  "php-mbstring" 
+  "php-symfony-event-dispatcher" {= "2.8.52"}
+  "php-symfony-intl" {= "2.8.52"}
+  "php-symfony-options-resolver" {= "2.8.52"}
+  "php-symfony-property-access" {= "2.8.52"}
+  "php-symfony-security" {= "2.8.52"}
+  "php-symfony-validator" {= "2.8.52"}
+]
+extra-source "php-symfony-form-2.8.52-10.fc38.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-symfony-form-2.8.52-10.fc38.noarch.rpm"
+}

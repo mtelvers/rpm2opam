@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-text-editor-lang-46.3-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-text-editor-lang-46.3-1.2.noarch.rpm"]
+depends: [
+  "gnome-text-editor" {= "46.3"}
+]
+extra-source "gnome-text-editor-lang-46.3-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-text-editor-lang-46.3-1.2.noarch.rpm"
+}

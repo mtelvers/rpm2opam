@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "prometheus-blackbox_exporter-0.24.0-2.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "prometheus-blackbox_exporter-0.24.0-2.5.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "permissions" 
+  "system-user-prometheus" 
+]
+extra-source "prometheus-blackbox_exporter-0.24.0-2.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/prometheus-blackbox_exporter-0.24.0-2.5.x86_64.rpm"
+}

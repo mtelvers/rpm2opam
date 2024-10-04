@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "unbound-1.21.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "unbound-1.21.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "ldns" {>= "1.6.16"}
+  "libevent-2_1-7" 
+  "libnghttp2-14" 
+  "libopenssl3" 
+  "libprotobuf-c1" 
+  "libpython3_11-1_0" 
+  "libsodium26" 
+  "libunbound-devel-mini" 
+  "openssl" 
+  "sudo" 
+  "systemd" 
+  "unbound-anchor" 
+]
+extra-source "unbound-1.21.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/unbound-1.21.0-1.1.x86_64.rpm"
+}

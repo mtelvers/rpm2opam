@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-CHI-0.61-1.13.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CHI-0.61-1.13.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Carp-Assert" {>= "0.20"}
+  "perl-Class-Load" 
+  "perl-Digest-JHash" 
+  "perl-Hash-MoreUtils" 
+  "perl-JSON-MaybeXS" {>= "1.3003"}
+  "perl-List-MoreUtils" {>= "0.13"}
+  "perl-Log-Any" {>= "0.8"}
+  "perl-Moo" {>= "1.3"}
+  "perl-MooX-Types-MooseLike" {>= "0.23"}
+  "perl-MooX-Types-MooseLike-Numeric" 
+  "perl-OSSP-uuid" 
+  "perl-String-RewritePrefix" 
+  "perl-Task-Weaken" 
+  "perl-Time-Duration" {>= "1.60000"}
+  "perl-Time-Duration-Parse" {>= "0.3"}
+  "perl-Try-Tiny" {>= "0.5"}
+]
+extra-source "perl-CHI-0.61-1.13.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-CHI-0.61-1.13.noarch.rpm"
+}

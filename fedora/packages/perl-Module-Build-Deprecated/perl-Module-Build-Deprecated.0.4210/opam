@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Module-Build-Deprecated-0.4210-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Build-Deprecated-0.4210-29.fc40.noarch.rpm"]
+depends: [
+  "perl-CPAN-Meta-YAML" {>= "0.2"}
+  "perl-Module-Metadata" 
+  "perl-base" 
+  "perl-libs" 
+  "perl-parent" 
+  "perl-version" {>= "0.87"}
+]
+extra-source "perl-Module-Build-Deprecated-0.4210-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Module-Build-Deprecated-0.4210-29.fc40.noarch.rpm"
+}

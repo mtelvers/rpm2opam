@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-rio-devel-0.1.22.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-rio-devel-0.1.22.0-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-deepseq-devel" 
+  "ghc-directory-devel" 
+  "ghc-exceptions-devel" 
+  "ghc-filepath-devel" 
+  "ghc-hashable-devel" 
+  "ghc-microlens-devel" 
+  "ghc-microlens-mtl-devel" 
+  "ghc-mtl-devel" 
+  "ghc-primitive-devel" 
+  "ghc-process-devel" 
+  "ghc-rio" {= "0.1.22.0"}
+  "ghc-text-devel" 
+  "ghc-time-devel" 
+  "ghc-typed-process-devel" 
+  "ghc-unix-devel" 
+  "ghc-unliftio-core-devel" 
+  "ghc-unliftio-devel" 
+  "ghc-unordered-containers-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-rio-devel-0.1.22.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-rio-devel-0.1.22.0-6.fc40.x86_64.rpm"
+}

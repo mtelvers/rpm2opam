@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "susefirewall2-to-firewalld-0.0.4-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "susefirewall2-to-firewalld-0.0.4-3.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "firewalld" 
+  "iptables" 
+]
+extra-source "susefirewall2-to-firewalld-0.0.4-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/susefirewall2-to-firewalld-0.0.4-3.2.noarch.rpm"
+}

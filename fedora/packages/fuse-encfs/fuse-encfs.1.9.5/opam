@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fuse-encfs-1.9.5-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fuse-encfs-1.9.5-20.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "fuse" {>= "2.6"}
+  "fuse-libs" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "openssl-libs" 
+  "tinyxml2" 
+]
+extra-source "fuse-encfs-1.9.5-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fuse-encfs-1.9.5-20.fc40.x86_64.rpm"
+}

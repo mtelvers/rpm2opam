@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jnr-netdb-1.2.0-1.18.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jnr-netdb-1.2.0-1.18.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "jnr-ffi" 
+]
+extra-source "jnr-netdb-1.2.0-1.18.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jnr-netdb-1.2.0-1.18.noarch.rpm"
+}

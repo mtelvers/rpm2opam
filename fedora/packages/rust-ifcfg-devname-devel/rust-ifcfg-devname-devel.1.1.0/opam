@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ifcfg-devname-devel-1.1.0-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ifcfg-devname-devel-1.1.0-7.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-glob+default-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-log+default-devel" 
+  "rust-mac_address+default-devel" 
+  "rust-regex+default-devel" 
+  "rust-stderrlog+default-devel" 
+  "rust-syslog+default-devel" 
+]
+extra-source "rust-ifcfg-devname-devel-1.1.0-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ifcfg-devname-devel-1.1.0-7.fc40.noarch.rpm"
+}

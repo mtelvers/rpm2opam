@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "syslinux-perl-6.04-0.26.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "syslinux-perl-6.04-0.26.fc40.x86_64.rpm"]
+depends: [
+  "perl-Crypt-PasswdMD5" 
+  "perl-Digest-SHA1" 
+  "perl-Errno" 
+  "perl-Fcntl" 
+  "perl-IO" 
+  "perl-MIME-Base64" 
+  "perl-PathTools" 
+  "perl-Socket" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "syslinux-perl-6.04-0.26.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/syslinux-perl-6.04-0.26.fc40.x86_64.rpm"
+}

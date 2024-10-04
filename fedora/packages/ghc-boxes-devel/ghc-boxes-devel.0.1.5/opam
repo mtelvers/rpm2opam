@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-boxes-devel-0.1.5-25.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-boxes-devel-0.1.5-25.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-boxes" {= "0.1.5"}
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-split-devel" 
+]
+extra-source "ghc-boxes-devel-0.1.5-25.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-boxes-devel-0.1.5-25.fc40.x86_64.rpm"
+}

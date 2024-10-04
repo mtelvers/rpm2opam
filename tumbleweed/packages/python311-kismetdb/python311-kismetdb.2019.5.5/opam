@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-kismetdb-2019.05.05-2.22.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-kismetdb-2019.05.05-2.22.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-python-dateutil" 
+  "python311-simplekml" 
+  "update-alternatives" 
+]
+extra-source "python311-kismetdb-2019.05.05-2.22.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-kismetdb-2019.05.05-2.22.noarch.rpm"
+}

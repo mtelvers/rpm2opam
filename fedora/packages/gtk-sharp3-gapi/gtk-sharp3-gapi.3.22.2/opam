@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gtk-sharp3-gapi-3.22.2-8.20220808git3.22.2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk-sharp3-gapi-3.22.2-8.20220808git3.22.2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "mono-core" {= "4.0.0.0"}
+  "perl-XML-LibXML" 
+  "perl-interpreter" 
+  "pkgconf-pkg-config" 
+]
+extra-source "gtk-sharp3-gapi-3.22.2-8.20220808git3.22.2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gtk-sharp3-gapi-3.22.2-8.20220808git3.22.2.fc40.x86_64.rpm"
+}

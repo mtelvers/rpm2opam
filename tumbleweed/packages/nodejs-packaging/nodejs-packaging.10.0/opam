@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nodejs-packaging-10.beta11-4.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nodejs-packaging-10.beta11-4.5.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "gcc-c++" 
+  "nodejs-devel-default" 
+  "npm-default" 
+  "ruby" 
+  "ruby3-3" 
+]
+extra-source "nodejs-packaging-10.beta11-4.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nodejs-packaging-10.beta11-4.5.noarch.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-x509-store-devel-1.6.9-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-x509-store-devel-1.6.9-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-asn1-encoding-devel" 
+  "ghc-asn1-types-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-cryptonite-devel" 
+  "ghc-directory-devel" 
+  "ghc-filepath-devel" 
+  "ghc-mtl-devel" 
+  "ghc-pem-devel" 
+  "ghc-x509-devel" 
+  "ghc-x509-store" {= "1.6.9"}
+]
+extra-source "ghc-x509-store-devel-1.6.9-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-x509-store-devel-1.6.9-8.fc40.x86_64.rpm"
+}

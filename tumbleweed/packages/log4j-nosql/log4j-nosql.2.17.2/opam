@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "log4j-nosql-2.17.2-7.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "log4j-nosql-2.17.2-7.2.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "lightcouch" 
+  "log4j" {= "2.17.2"}
+]
+extra-source "log4j-nosql-2.17.2-7.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/log4j-nosql-2.17.2-7.2.noarch.rpm"
+}

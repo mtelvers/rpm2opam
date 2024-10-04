@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "prosody-0.12.4-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "prosody-0.12.4-3.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libicu75" 
+  "libopenssl3" 
+  "lua54" 
+  "lua54-luaexpat" 
+  "lua54-luafilesystem" 
+  "lua54-luasec" 
+  "lua54-luasocket" 
+  "lua54-readline" 
+  "permissions" 
+  "shadow" 
+  "systemd" 
+]
+extra-source "prosody-0.12.4-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/prosody-0.12.4-3.3.x86_64.rpm"
+}

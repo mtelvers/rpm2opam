@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-agt-0.3.1-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-agt-0.3.1-1.2.noarch.rpm"]
+depends: [
+  "gap" {>= "4.10"}
+  "gap-design" {>= "1.7"}
+  "gap-digraphs" {>= "0.15.2"}
+  "gap-gapdoc" {>= "1.6"}
+  "gap-grape" {>= "4.8"}
+]
+extra-source "gap-agt-0.3.1-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-agt-0.3.1-1.2.noarch.rpm"
+}

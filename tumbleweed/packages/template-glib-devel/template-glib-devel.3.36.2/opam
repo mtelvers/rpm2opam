@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "template-glib-devel-3.36.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "template-glib-devel-3.36.2-1.2.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "gobject-introspection-devel" 
+  "libtemplate_glib-1_0-0" {= "3.36.2"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Template-1_0" {= "3.36.2"}
+]
+extra-source "template-glib-devel-3.36.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/template-glib-devel-3.36.2-1.2.x86_64.rpm"
+}

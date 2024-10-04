@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Alien-ZMQ-0.06-25.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Alien-ZMQ-0.06-25.fc40.noarch.rpm"]
+depends: [
+  "perl-String-ShellQuote" 
+  "perl-libs" 
+  "zeromq-devel" 
+]
+extra-source "perl-Alien-ZMQ-0.06-25.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Alien-ZMQ-0.06-25.fc40.noarch.rpm"
+}

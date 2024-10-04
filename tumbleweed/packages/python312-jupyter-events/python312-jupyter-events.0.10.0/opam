@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-jupyter-events-0.10.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-jupyter-events-0.10.0-1.1.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "python312-PyYAML" {>= "5.3"}
+  "python312-base" 
+  "python312-jsonschema-format-nongpl" {>= "4.18"}
+  "python312-python-json-logger" {>= "2.0.4"}
+  "python312-referencing" 
+  "python312-rfc3339-validator" 
+  "python312-rfc3986-validator" {>= "0.1.1"}
+  "python312-traitlets" {>= "5.3"}
+]
+extra-source "python312-jupyter-events-0.10.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-jupyter-events-0.10.0-1.1.noarch.rpm"
+}

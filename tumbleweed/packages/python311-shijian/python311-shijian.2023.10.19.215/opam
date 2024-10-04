@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-shijian-2023.10.19.215-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-shijian-2023.10.19.215-1.5.noarch.rpm"]
+depends: [
+  "python311-matplotlib" 
+  "python311-numpy" 
+  "python311-pandas" 
+  "python311-python-dateutil" 
+  "python311-scikit-learn" 
+  "python311-scipy" 
+  "python311-seaborn" 
+  "python311-technicolor" 
+]
+extra-source "python311-shijian-2023.10.19.215-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-shijian-2023.10.19.215-1.5.noarch.rpm"
+}

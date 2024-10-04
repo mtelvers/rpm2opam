@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-urllib3-2.1.0-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-urllib3-2.1.0-3.1.noarch.rpm"]
+depends: [
+  "ca-certificates-mozilla" 
+  "python310-base" {= "3.10"}
+  "python310-certifi" 
+  "python310-cryptography" {>= "1.9"}
+  "python310-idna" {>= "3.4"}
+  "python310-pyOpenSSL" {>= "23.2.0"}
+]
+extra-source "python310-urllib3-2.1.0-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-urllib3-2.1.0-3.1.noarch.rpm"
+}

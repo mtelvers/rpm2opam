@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python3-morecvutils-1.0.2-4.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-morecvutils-1.0.2-4.10.noarch.rpm"]
+depends: [
+  "ffmpeg-4" 
+  "gstreamer-plugins-good" 
+  "python311-base" 
+  "python311-imageio" 
+  "python311-imageio-ffmpeg" 
+  "python311-numpy" 
+  "python311-opencv" 
+]
+extra-source "python3-morecvutils-1.0.2-4.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python3-morecvutils-1.0.2-4.10.noarch.rpm"
+}

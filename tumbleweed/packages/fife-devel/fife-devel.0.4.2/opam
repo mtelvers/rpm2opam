@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fife-devel-0.4.2-8.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fife-devel-0.4.2-8.2.x86_64.rpm"]
+depends: [
+  "libfife0_4_2" {= "0.4.2"}
+  "python3-fife" {= "0.4.2"}
+]
+extra-source "fife-devel-0.4.2-8.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/fife-devel-0.4.2-8.2.x86_64.rpm"
+}

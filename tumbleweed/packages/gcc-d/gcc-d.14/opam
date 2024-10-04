@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcc-d-14-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcc-d-14-2.1.x86_64.rpm"]
+depends: [
+  "gcc" {= "14"}
+  "gcc14-d" 
+  "update-alternatives" 
+]
+extra-source "gcc-d-14-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gcc-d-14-2.1.x86_64.rpm"
+}

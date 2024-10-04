@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "quantum-espresso-6.8-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "quantum-espresso-6.8-3.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libblas3" 
+  "libgcc_s1" 
+  "libgfortran5" 
+  "liblapack3" 
+]
+extra-source "quantum-espresso-6.8-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/quantum-espresso-6.8-3.3.x86_64.rpm"
+}

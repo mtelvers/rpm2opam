@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-hyper+tcp-devel-0.14.28-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-hyper+tcp-devel-0.14.28-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-hyper+socket2-devel" {= "0.14.28"}
+  "rust-hyper-devel" {= "0.14.28"}
+  "rust-tokio+net-devel" 
+  "rust-tokio+rt-devel" 
+  "rust-tokio+time-devel" 
+]
+extra-source "rust-hyper+tcp-devel-0.14.28-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-hyper+tcp-devel-0.14.28-2.fc40.noarch.rpm"
+}

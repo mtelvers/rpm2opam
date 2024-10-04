@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "resteasy-client-3.0.26-4.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "resteasy-client-3.0.26-4.6.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "jboss-logging" 
+  "jboss-logging-tools" 
+  "resteasy-core" {= "3.0.26.0"}
+]
+extra-source "resteasy-client-3.0.26-4.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/resteasy-client-3.0.26-4.6.noarch.rpm"
+}

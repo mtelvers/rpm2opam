@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsigc++3-devel-3.6.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsigc++3-devel-3.6.0-2.1.x86_64.rpm"]
+depends: [
+  "libsigc-3_0-0" {= "3.6.0"}
+  "libstdc++-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libsigc++3-devel-3.6.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libsigc++3-devel-3.6.0-2.1.x86_64.rpm"
+}

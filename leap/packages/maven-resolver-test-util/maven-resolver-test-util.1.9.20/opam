@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-resolver-test-util-1.9.20-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-resolver-test-util-1.9.20-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "maven-resolver-api" {= "1.9.20"}
+  "maven-resolver-spi" {= "1.9.20"}
+]
+extra-source "maven-resolver-test-util-1.9.20-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/maven-resolver-test-util-1.9.20-slfo.1.1.3.noarch.rpm"
+}

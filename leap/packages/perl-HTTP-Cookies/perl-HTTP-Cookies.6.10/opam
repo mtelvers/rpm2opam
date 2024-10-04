@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-HTTP-Cookies-6.10-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTTP-Cookies-6.10-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-HTTP-Date" {>= "6"}
+  "perl-HTTP-Message" {>= "6"}
+]
+extra-source "perl-HTTP-Cookies-6.10-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/perl-HTTP-Cookies-6.10-slfo.1.1.3.noarch.rpm"
+}

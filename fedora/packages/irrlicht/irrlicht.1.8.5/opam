@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "irrlicht-1.8.5-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "irrlicht-1.8.5-7.fc40.x86_64.rpm"]
+depends: [
+  "bzip2-libs" 
+  "glibc" 
+  "irrXML" 
+  "libXxf86vm" 
+  "libaesgm" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libstdc++" 
+  "zlib-ng-compat" 
+]
+extra-source "irrlicht-1.8.5-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/irrlicht-1.8.5-7.fc40.x86_64.rpm"
+}

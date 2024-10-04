@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libv3270-config-5.4+git20240219-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libv3270-config-5.4+git20240219-1.1.noarch.rpm"]
+depends: [
+  "libv3270-5_4" {= "5.4"}
+]
+extra-source "libv3270-config-5.4+git20240219-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libv3270-config-5.4+git20240219-1.1.noarch.rpm"
+}

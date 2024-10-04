@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openhpi-subagent-2.3.4-51.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openhpi-subagent-2.3.4-51.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glib2" 
+  "glibc" 
+  "net-snmp-agent-libs" 
+  "net-snmp-libs" 
+  "openhpi-libs" 
+  "systemd" 
+]
+extra-source "openhpi-subagent-2.3.4-51.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openhpi-subagent-2.3.4-51.fc40.x86_64.rpm"
+}

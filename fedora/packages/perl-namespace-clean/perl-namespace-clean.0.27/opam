@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-namespace-clean-0.27-26.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-namespace-clean-0.27-26.fc40.noarch.rpm"]
+depends: [
+  "perl-B-Hooks-EndOfScope" 
+  "perl-Exporter" 
+  "perl-Package-Stash" {>= "0.23"}
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" 
+]
+extra-source "perl-namespace-clean-0.27-26.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-namespace-clean-0.27-26.fc40.noarch.rpm"
+}

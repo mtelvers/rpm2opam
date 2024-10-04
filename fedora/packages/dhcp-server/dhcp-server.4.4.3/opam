@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dhcp-server-4.4.3-13.P1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dhcp-server-4.4.3-13.P1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "dhcp-common" {= "4.4.3"}
+  "glibc" 
+  "grep" 
+  "krb5-libs" 
+  "openldap" 
+  "sed" 
+  "shadow-utils" 
+  "systemd" 
+  "systemd-libs" 
+]
+extra-source "dhcp-server-4.4.3-13.P1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dhcp-server-4.4.3-13.P1.fc40.x86_64.rpm"
+}

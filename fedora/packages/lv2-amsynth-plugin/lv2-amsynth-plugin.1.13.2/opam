@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lv2-amsynth-plugin-1.13.2-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lv2-amsynth-plugin-1.13.2-4.fc40.x86_64.rpm"]
+depends: [
+  "amsynth-data" {= "1.13.2"}
+  "atk" 
+  "cairo" 
+  "fontconfig" 
+  "freetype" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "harfbuzz" 
+  "libgcc" 
+  "libstdc++" 
+  "lv2" 
+  "pango" 
+]
+extra-source "lv2-amsynth-plugin-1.13.2-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lv2-amsynth-plugin-1.13.2-4.fc40.x86_64.rpm"
+}

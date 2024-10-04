@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "maven-filtering-3.3.2-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "maven-filtering-3.3.2-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "apache-commons-io" 
+  "apache-commons-lang3" 
+  "atinject" 
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "plexus-build-api0" 
+  "plexus-interpolation" 
+  "plexus-utils" 
+  "plexus-xml" 
+  "slf4j" 
+]
+extra-source "maven-filtering-3.3.2-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/maven-filtering-3.3.2-slfo.1.1.3.noarch.rpm"
+}

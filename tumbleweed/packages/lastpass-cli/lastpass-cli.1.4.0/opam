@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lastpass-cli-1.4.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lastpass-cli-1.4.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcurl-mini4" 
+  "libopenssl3" 
+  "libxml2-2" 
+]
+extra-source "lastpass-cli-1.4.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lastpass-cli-1.4.0-1.1.x86_64.rpm"
+}

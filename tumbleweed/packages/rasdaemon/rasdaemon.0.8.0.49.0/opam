@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rasdaemon-0.8.0.49.git+f9cb13b-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rasdaemon-0.8.0.49.git+f9cb13b-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "dmidecode" 
+  "fillup" 
+  "glibc" 
+  "libsqlite3-0" 
+  "libtraceevent1" 
+  "perl-DBD-SQLite" 
+  "perl-base" 
+]
+extra-source "rasdaemon-0.8.0.49.git+f9cb13b-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rasdaemon-0.8.0.49.git+f9cb13b-1.2.x86_64.rpm"
+}

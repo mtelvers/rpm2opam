@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "httpd-core-2.4.58-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "httpd-core-2.4.58-7.fc40.x86_64.rpm"]
+depends: [
+  "apr" 
+  "apr-util" 
+  "apr-util-lmdb" 
+  "bash" 
+  "glibc" 
+  "httpd-filesystem" {= "2.4.58"}
+  "httpd-tools" {= "2.4.58"}
+  "mailcap" 
+  "pcre2" 
+  "zlib-ng-compat" 
+]
+extra-source "httpd-core-2.4.58-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/httpd-core-2.4.58-7.fc40.x86_64.rpm"
+}

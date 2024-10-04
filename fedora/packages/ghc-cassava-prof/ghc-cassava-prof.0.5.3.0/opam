@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-cassava-prof-0.5.3.0-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-cassava-prof-0.5.3.0-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-Only-prof" 
+  "ghc-array-prof" 
+  "ghc-attoparsec-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-cassava-devel" {= "0.5.3.0"}
+  "ghc-containers-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-hashable-prof" 
+  "ghc-scientific-prof" 
+  "ghc-text-prof" 
+  "ghc-text-short-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unordered-containers-prof" 
+  "ghc-vector-prof" 
+]
+extra-source "ghc-cassava-prof-0.5.3.0-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-cassava-prof-0.5.3.0-6.fc40.x86_64.rpm"
+}

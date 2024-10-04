@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vnstat-cgi-2.12-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vnstat-cgi-2.12-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgd3" 
+  "libsqlite3-0" 
+  "perl-base" 
+  "vnstat" {= "2.12"}
+]
+extra-source "vnstat-cgi-2.12-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/vnstat-cgi-2.12-1.2.x86_64.rpm"
+}

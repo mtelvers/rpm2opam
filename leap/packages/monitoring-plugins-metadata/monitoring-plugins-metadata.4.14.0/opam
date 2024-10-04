@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "monitoring-plugins-metadata-4.14.0+git15.c784b83c-slfo.1.1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "monitoring-plugins-metadata-4.14.0+git15.c784b83c-slfo.1.1.1.noarch.rpm"]
+depends: [
+  "monitoring-plugins-fping" 
+  "monitoring-plugins-http" 
+  "monitoring-plugins-ldap" 
+  "monitoring-plugins-mysql" 
+  "monitoring-plugins-pgsql" 
+  "monitoring-plugins-tcp" 
+  "resource-agents" 
+]
+extra-source "monitoring-plugins-metadata-4.14.0+git15.c784b83c-slfo.1.1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/monitoring-plugins-metadata-4.14.0+git15.c784b83c-slfo.1.1.1.noarch.rpm"
+}

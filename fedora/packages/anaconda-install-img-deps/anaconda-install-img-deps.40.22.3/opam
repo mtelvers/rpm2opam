@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "anaconda-install-img-deps-40.22.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "anaconda-install-img-deps-40.22.3-1.fc40.x86_64.rpm"]
+depends: [
+  "anaconda-install-env-deps" {= "40.22.3"}
+  "brltty" 
+  "createrepo_c" 
+  "dbus-x11" 
+  "device-mapper-multipath" 
+  "fcoe-utils" {>= "1.0.12"}
+  "gnome-kiosk" 
+  "gsettings-desktop-schemas" 
+  "kdump-anaconda-addon" 
+  "librsvg2" 
+  "nm-connection-editor" 
+  "ostree" 
+  "rpm-ostree" {>= "2023.2"}
+  "skopeo" 
+  "xorg-x11-drivers" 
+  "xorg-x11-server-Xorg" 
+  "xrandr" 
+  "xrdb" 
+  "zram-generator-defaults" 
+]
+extra-source "anaconda-install-img-deps-40.22.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/anaconda-install-img-deps-40.22.3-1.fc40.x86_64.rpm"
+}

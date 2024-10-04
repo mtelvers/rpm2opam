@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "crosstool-ng-1.25.0-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "crosstool-ng-1.25.0-1.7.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "bzip2" 
+  "gcc" 
+  "gcc-c++" 
+  "glibc" 
+  "glibc-devel-static" 
+  "gzip" 
+  "libncurses6" 
+  "m4" 
+  "make" 
+  "wget" 
+  "xz" 
+]
+extra-source "crosstool-ng-1.25.0-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/crosstool-ng-1.25.0-1.7.x86_64.rpm"
+}

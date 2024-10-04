@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openQA-client-4.6.1727773199.b638ad7b-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openQA-client-4.6.1727773199.b638ad7b-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "curl" 
+  "git-core" 
+  "jq" 
+  "openQA-common" {= "4.6.1727773199.0"}
+  "perl" 
+  "perl-Getopt-Long-Descriptive" 
+  "perl-IO-Socket-SSL" {>= "2.9"}
+  "perl-IPC-Run" 
+  "perl-JSON-Validator" 
+  "perl-LWP-Protocol-https" 
+  "perl-YAML-LibYAML" 
+  "perl-YAML-PP" {>= "0.20"}
+  "perl-base" 
+  "perl-libwww-perl" 
+]
+extra-source "openQA-client-4.6.1727773199.b638ad7b-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openQA-client-4.6.1727773199.b638ad7b-1.1.x86_64.rpm"
+}

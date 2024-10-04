@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-openapi-core-0.19.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-openapi-core-0.19.4-1.1.noarch.rpm"]
+depends: [
+  "python310-Werkzeug" 
+  "python310-asgiref" {>= "3.6.0"}
+  "python310-base" {= "3.10"}
+  "python310-isodate" 
+  "python310-jsonschema" 
+  "python310-jsonschema-path" 
+  "python310-more-itertools" 
+  "python310-openapi-schema-validator" 
+  "python310-openapi-spec-validator" 
+  "python310-parse" 
+]
+extra-source "python310-openapi-core-0.19.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-openapi-core-0.19.4-1.1.noarch.rpm"
+}

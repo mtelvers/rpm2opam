@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qemu-vhost-user-gpu-9.1.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qemu-vhost-user-gpu-9.1.0-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libepoxy0" 
+  "libgbm1" 
+  "libnuma1" 
+  "libpixman-1-0" 
+  "libvirglrenderer1" 
+]
+extra-source "qemu-vhost-user-gpu-9.1.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/qemu-vhost-user-gpu-9.1.0-1.1.x86_64.rpm"
+}

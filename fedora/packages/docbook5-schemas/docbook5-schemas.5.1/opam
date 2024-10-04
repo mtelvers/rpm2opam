@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "docbook5-schemas-5.1-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "docbook5-schemas-5.1-10.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "libxml2" {>= "2.4.8"}
+  "perl-English" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "xml-common" {>= "0.6.3"}
+]
+extra-source "docbook5-schemas-5.1-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/docbook5-schemas-5.1-10.fc40.noarch.rpm"
+}

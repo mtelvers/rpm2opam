@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libruby3_3-3_3-3.3.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libruby3_3-3_3-3.3.5-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcrypt1" 
+  "libgmp10" 
+  "libz-ng-compat1" 
+]
+extra-source "libruby3_3-3_3-3.3.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libruby3_3-3_3-3.3.5-1.1.x86_64.rpm"
+}

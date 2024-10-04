@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "abi-compliance-checker-2.3-4.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "abi-compliance-checker-2.3-4.1.noarch.rpm"]
+depends: [
+  "abi-dumper" {>= "1.1"}
+  "binutils" 
+  "coreutils" 
+  "cpio" 
+  "ctags" 
+  "diffutils" 
+  "file" 
+  "gcc-c++" 
+  "gzip" 
+  "perl-base" 
+  "rpm" 
+  "tar" 
+]
+extra-source "abi-compliance-checker-2.3-4.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/abi-compliance-checker-2.3-4.1.noarch.rpm"
+}

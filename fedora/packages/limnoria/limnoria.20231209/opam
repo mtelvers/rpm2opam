@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "limnoria-20231209-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "limnoria-20231209-3.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-chardet" 
+  "python3-dateutil" 
+  "python3-devel" 
+  "python3-ecdsa" 
+  "python3-feedparser" 
+  "python3-gnupg" 
+  "python3-pysocks" 
+  "python3-pytz" 
+  "python3-sqlalchemy" 
+]
+extra-source "limnoria-20231209-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/limnoria-20231209-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gstreamermm-devel-1.10.0-22.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gstreamermm-devel-1.10.0-22.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "glibmm2-4" 
+  "glibmm2-4-devel" {>= "2.47.6"}
+  "gstreamer1" 
+  "gstreamer1-devel" {>= "1.10.0"}
+  "gstreamer1-plugins-base-devel" {>= "1.10.0"}
+  "gstreamermm" {= "1.10.0"}
+  "libgcc" 
+  "libstdc++" 
+  "pkgconf-pkg-config" 
+]
+extra-source "gstreamermm-devel-1.10.0-22.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gstreamermm-devel-1.10.0-22.fc40.x86_64.rpm"
+}

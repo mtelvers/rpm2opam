@@ -1,0 +1,43 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libguestfs-1.52.0-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libguestfs-1.52.0-7.fc40.x86_64.rpm"]
+depends: [
+  "augeas-libs" {>= "1.7.0"}
+  "bash" 
+  "coreutils" 
+  "fuse" 
+  "fuse-libs" 
+  "glibc" 
+  "grep" 
+  "hexedit" 
+  "hivex-libs" {>= "1.3.10"}
+  "jansson" 
+  "less" 
+  "libacl" 
+  "libcap" 
+  "libconfig" 
+  "libgcc" 
+  "libguestfs-appliance" 
+  "libselinux" 
+  "libtirpc" 
+  "libvirt-daemon-driver-qemu" {>= "7.1.0"}
+  "libvirt-daemon-driver-secret" 
+  "libvirt-daemon-driver-storage-core" 
+  "libvirt-libs" 
+  "libxml2" 
+  "man-db" 
+  "ncurses-libs" 
+  "pcre2" 
+  "qemu-img" 
+  "qemu-kvm-core" 
+  "readline" 
+  "rpm-libs" {>= "4.16.1.3"}
+  "selinux-policy" 
+  "systemd-libs" 
+  "tar" 
+  "vim-minimal" 
+  "xz" 
+]
+extra-source "libguestfs-1.52.0-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libguestfs-1.52.0-7.fc40.x86_64.rpm"
+}

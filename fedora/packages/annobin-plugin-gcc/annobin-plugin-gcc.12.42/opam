@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "annobin-plugin-gcc-12.42-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "annobin-plugin-gcc-12.42-1.fc40.x86_64.rpm"]
+depends: [
+  "annobin-docs" {= "12.42"}
+  "gcc" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "annobin-plugin-gcc-12.42-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/annobin-plugin-gcc-12.42-1.fc40.x86_64.rpm"
+}

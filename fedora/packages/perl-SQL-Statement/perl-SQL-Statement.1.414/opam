@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-SQL-Statement-1.414-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-SQL-Statement-1.414-13.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Clone" {>= "0.30"}
+  "perl-DBI" {>= "1.616"}
+  "perl-Data-Dumper" 
+  "perl-Encode" 
+  "perl-Errno" 
+  "perl-Exporter" 
+  "perl-Math-Base-Convert" 
+  "perl-Math-Complex" 
+  "perl-Module-Runtime" 
+  "perl-Params-Util" {>= "1.0"}
+  "perl-Scalar-List-Utils" 
+  "perl-Text-Balanced" 
+  "perl-Text-Soundex" 
+  "perl-Time-HiRes" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-sort" 
+  "perl-vars" 
+]
+extra-source "perl-SQL-Statement-1.414-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-SQL-Statement-1.414-13.fc40.noarch.rpm"
+}

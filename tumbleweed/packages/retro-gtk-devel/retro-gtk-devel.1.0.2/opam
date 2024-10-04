@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "retro-gtk-devel-1.0.2-2.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "retro-gtk-devel-1.0.2-2.11.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgtk-3-0" 
+  "libretro-gtk-1-0" {= "1.0.2"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Retro-1-0" {= "1.0.2"}
+]
+extra-source "retro-gtk-devel-1.0.2-2.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/retro-gtk-devel-1.0.2-2.11.x86_64.rpm"
+}

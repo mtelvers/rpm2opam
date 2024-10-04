@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "colord-gtk4-devel-0.3.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "colord-gtk4-devel-0.3.1-1.fc40.x86_64.rpm"]
+depends: [
+  "colord-devel" 
+  "colord-gtk-devel" {= "0.3.1"}
+  "colord-gtk4" 
+  "gtk4-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "colord-gtk4-devel-0.3.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/colord-gtk4-devel-0.3.1-1.fc40.x86_64.rpm"
+}

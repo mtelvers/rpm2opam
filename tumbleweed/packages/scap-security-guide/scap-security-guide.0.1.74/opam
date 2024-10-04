@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "scap-security-guide-0.1.74-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scap-security-guide-0.1.74-1.1.noarch.rpm"]
+depends: [
+  "coreutils" 
+  "findutils" 
+  "gawk" 
+  "grep" 
+  "sed" 
+  "sudo" 
+  "zypper" 
+]
+extra-source "scap-security-guide-0.1.74-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/scap-security-guide-0.1.74-1.1.noarch.rpm"
+}

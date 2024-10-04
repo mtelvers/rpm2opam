@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "accountsservice-libs-23.13.9-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "accountsservice-libs-23.13.9-4.fc40.x86_64.rpm"]
+depends: [
+  "accountsservice" {= "23.13.9"}
+  "glib2" 
+  "glibc" 
+  "libgcc" 
+  "libxcrypt" 
+  "systemd-libs" 
+]
+extra-source "accountsservice-libs-23.13.9-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/accountsservice-libs-23.13.9-4.fc40.x86_64.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-URI-5.27-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-URI-5.27-1.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Encode" 
+  "perl-Exporter" {>= "5.57"}
+  "perl-MIME-Base64" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-URI" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libnet" 
+  "perl-overload" 
+  "perl-parent" 
+]
+extra-source "perl-URI-5.27-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-URI-5.27-1.fc40.noarch.rpm"
+}

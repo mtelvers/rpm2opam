@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jigdo-0.8.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jigdo-0.8.2-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libbz2-1" 
+  "libdb-4_8" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "wget" 
+]
+extra-source "jigdo-0.8.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/jigdo-0.8.2-1.2.x86_64.rpm"
+}

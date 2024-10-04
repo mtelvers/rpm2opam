@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-regex-syntax0.7+default-devel-0.7.5-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-regex-syntax0.7+default-devel-0.7.5-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-regex-syntax0-7+std-devel" {= "0.7.5"}
+  "rust-regex-syntax0-7+unicode-devel" {= "0.7.5"}
+  "rust-regex-syntax0-7-devel" {= "0.7.5"}
+]
+extra-source "rust-regex-syntax0.7+default-devel-0.7.5-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-regex-syntax0.7+default-devel-0.7.5-2.fc40.noarch.rpm"
+}

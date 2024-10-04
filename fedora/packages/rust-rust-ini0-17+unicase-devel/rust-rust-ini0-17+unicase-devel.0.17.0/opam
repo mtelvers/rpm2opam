@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rust-ini0.17+unicase-devel-0.17.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rust-ini0.17+unicase-devel-0.17.0-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-rust-ini0-17-devel" {= "0.17.0"}
+  "rust-unicase+default-devel" 
+]
+extra-source "rust-rust-ini0.17+unicase-devel-0.17.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rust-ini0.17+unicase-devel-0.17.0-4.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw32-openjpeg2-tools-2.5.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw32-openjpeg2-tools-2.5.2-1.fc40.noarch.rpm"]
+depends: [
+  "mingw32-crt" 
+  "mingw32-filesystem" {>= "95"}
+  "mingw32-lcms2" 
+  "mingw32-libpng" 
+  "mingw32-libtiff" 
+  "mingw32-openjpeg2" 
+]
+extra-source "mingw32-openjpeg2-tools-2.5.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw32-openjpeg2-tools-2.5.2-1.fc40.noarch.rpm"
+}

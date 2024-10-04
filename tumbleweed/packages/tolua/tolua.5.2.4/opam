@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tolua-5.2.4-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tolua-5.2.4-5.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "liblua5_4-5" 
+  "libtolua5" {= "5.2.4"}
+]
+extra-source "tolua-5.2.4-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tolua-5.2.4-5.2.x86_64.rpm"
+}

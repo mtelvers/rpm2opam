@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libfsxfs-tools-20240501-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfsxfs-tools-20240501-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbfio1" 
+  "libcerror1" 
+  "libclocale1" 
+  "libcnotify1" 
+  "libfdatetime1" 
+  "libfsxfs1" 
+  "libhmac1" 
+  "libuna1" 
+]
+extra-source "libfsxfs-tools-20240501-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libfsxfs-tools-20240501-1.1.x86_64.rpm"
+}

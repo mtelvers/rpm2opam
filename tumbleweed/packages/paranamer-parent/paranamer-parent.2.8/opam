@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "paranamer-parent-2.8-4.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "paranamer-parent-2.8-4.4.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+  "maven-compiler-plugin" 
+  "maven-surefire-plugin" 
+]
+extra-source "paranamer-parent-2.8-4.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/paranamer-parent-2.8-4.4.noarch.rpm"
+}

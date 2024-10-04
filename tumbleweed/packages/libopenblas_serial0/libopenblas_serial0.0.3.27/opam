@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libopenblas_serial0-0.3.27-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libopenblas_serial0-0.3.27-4.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "glibc" 
+  "libgfortran5" 
+  "update-alternatives" 
+]
+extra-source "libopenblas_serial0-0.3.27-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libopenblas_serial0-0.3.27-4.1.x86_64.rpm"
+}

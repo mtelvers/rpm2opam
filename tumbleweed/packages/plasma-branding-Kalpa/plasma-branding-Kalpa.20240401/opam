@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plasma-branding-Kalpa-20240401-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plasma-branding-Kalpa-20240401-3.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "flatpak" 
+  "kdialog" 
+  "polkit" 
+  "sound-theme-freedesktop" 
+  "sudo" 
+  "transactional-update" 
+]
+extra-source "plasma-branding-Kalpa-20240401-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/plasma-branding-Kalpa-20240401-3.2.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "reiser4progs-devel-2.0.5-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "reiser4progs-devel-2.0.5-2.1.x86_64.rpm"]
+depends: [
+  "libreiser4-2_0-5" {= "2.0.5"}
+  "libreiser4-minimal-2_0-5" {= "2.0.5"}
+  "librepair-2_0-5" {= "2.0.5"}
+]
+extra-source "reiser4progs-devel-2.0.5-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/reiser4progs-devel-2.0.5-2.1.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcppunit_subunit0-1.4.2-3.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcppunit_subunit0-1.4.2-3.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "subunit" {>= "1.4.2"}
+]
+extra-source "libcppunit_subunit0-1.4.2-3.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcppunit_subunit0-1.4.2-3.7.x86_64.rpm"
+}

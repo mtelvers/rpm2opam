@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pymol-3.0.0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pymol-3.0.0-1.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libGLEW2_2" 
+  "libfreetype6" 
+  "libgcc_s1" 
+  "libglvnd" 
+  "libgomp1" 
+  "libnetcdf19" 
+  "libpng16-16" 
+  "libstdc++6" 
+  "libxml2-2" 
+  "python310-base" {= "3.10"}
+  "python310-numpy" 
+  "python310-pmw" 
+  "python310-qt5" 
+  "update-alternatives" 
+]
+extra-source "python310-pymol-3.0.0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-pymol-3.0.0-1.2.x86_64.rpm"
+}

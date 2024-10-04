@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-platformio-6.1.15-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-platformio-6.1.15-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-aiofiles" {>= "0.8"}
+  "python310-ajsonrpc" {>= "1"}
+  "python310-base" {= "3.10"}
+  "python310-bottle" {>= "0.12"}
+  "python310-click" {>= "8.0.4"}
+  "python310-colorama" 
+  "python310-marshmallow" {>= "3"}
+  "python310-pyelftools" {>= "0.27"}
+  "python310-pyserial" {>= "3.5"}
+  "python310-requests" {>= "2"}
+  "python310-semantic_version" {>= "2.10"}
+  "python310-starlette" {>= "0.20"}
+  "python310-tabulate" {>= "0.8"}
+  "python310-uvicorn" {>= "0.16"}
+  "python310-wsproto" {>= "1.0"}
+  "python310-zeroconf" 
+  "update-alternatives" 
+]
+extra-source "python310-platformio-6.1.15-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-platformio-6.1.15-1.1.noarch.rpm"
+}

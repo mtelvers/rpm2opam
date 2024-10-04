@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "opensc-0.24.0-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opensc-0.24.0-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libopenssl3" 
+  "libreadline8" 
+  "libz-ng-compat1" 
+  "pcsc-lite" 
+  "pkgconf-pkg-config" 
+]
+extra-source "opensc-0.24.0-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/opensc-0.24.0-slfo.1.1.7.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "llvm17-opt-viewer-17.0.6-6.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "llvm17-opt-viewer-17.0.6-6.1.noarch.rpm"]
+depends: [
+  "python311-PyYAML" 
+  "python311-Pygments" 
+  "python311-base" 
+]
+extra-source "llvm17-opt-viewer-17.0.6-6.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/llvm17-opt-viewer-17.0.6-6.1.noarch.rpm"
+}

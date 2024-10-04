@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-threads-lite-0.034-32.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-threads-lite-0.034-32.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-Carp" 
+  "perl-Exporter" {>= "5.57"}
+  "perl-Scalar-List-Utils" 
+  "perl-Storable" {>= "2.5"}
+  "perl-constant" 
+  "perl-experimental" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-overload" 
+]
+extra-source "perl-threads-lite-0.034-32.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-threads-lite-0.034-32.fc40.x86_64.rpm"
+}

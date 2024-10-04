@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "google-disk-expand-20240122.00-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "google-disk-expand-20240122.00-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "dracut" 
+  "e2fsprogs" 
+  "gawk" 
+  "gdisk" 
+  "grep" 
+  "parted" 
+  "sed" 
+  "systemd" 
+  "util-linux" 
+]
+extra-source "google-disk-expand-20240122.00-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/google-disk-expand-20240122.00-1.fc40.noarch.rpm"
+}

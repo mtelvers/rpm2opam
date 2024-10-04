@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-below-btrfs-devel-0.7.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-below-btrfs-devel-0.7.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-below-common+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-nix+default-devel" 
+  "rust-openat+default-devel" 
+  "rust-rand+default-devel" 
+  "rust-rand+small_rng-devel" 
+  "rust-rand_distr+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde+rc-devel" 
+  "rust-slog+default-devel" 
+  "rust-slog+max_level_trace-devel" 
+  "rust-slog+nested-values-devel" 
+  "rust-thiserror+default-devel" 
+]
+extra-source "rust-below-btrfs-devel-0.7.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-below-btrfs-devel-0.7.1-2.fc40.noarch.rpm"
+}

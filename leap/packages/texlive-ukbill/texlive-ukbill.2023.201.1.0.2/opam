@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-ukbill-2023.201.1.0.2svn65485-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-ukbill-2023.201.1.0.2svn65485-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-babel" 
+  "texlive-ccicons" 
+  "texlive-changepage" 
+  "texlive-enumitem" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-fontspec" 
+  "texlive-geometry" 
+  "texlive-hyphenat" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-lettrine" 
+  "texlive-memoir" 
+  "texlive-paralist" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-setspace" 
+  "texlive-textpos" 
+  "texlive-titlesec" 
+]
+extra-source "texlive-ukbill-2023.201.1.0.2svn65485-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-ukbill-2023.201.1.0.2svn65485-slfo.1.1.4.noarch.rpm"
+}

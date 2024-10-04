@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xbiso-0.6.1-32.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xbiso-0.6.1-32.fc40.x86_64.rpm"]
+depends: [
+  "ftplib" 
+  "glibc" 
+]
+extra-source "xbiso-0.6.1-32.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xbiso-0.6.1-32.fc40.x86_64.rpm"
+}

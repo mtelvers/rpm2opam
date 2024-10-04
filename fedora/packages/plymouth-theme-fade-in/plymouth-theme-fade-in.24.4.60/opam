@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "plymouth-theme-fade-in-24.004.60-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plymouth-theme-fade-in-24.004.60-4.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "plymouth-plugin-fade-throbber" {= "24.4.60"}
+  "plymouth-scripts" 
+]
+extra-source "plymouth-theme-fade-in-24.004.60-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/plymouth-theme-fade-in-24.004.60-4.fc40.x86_64.rpm"
+}

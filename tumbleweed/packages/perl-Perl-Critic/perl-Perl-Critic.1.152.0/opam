@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Perl-Critic-1.152.0-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Perl-Critic-1.152.0-2.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-B-Keywords" {>= "1.23"}
+  "perl-Config-Tiny" {>= "2"}
+  "perl-Exception-Class" {>= "1.23"}
+  "perl-File-Which" 
+  "perl-List-SomeUtils" {>= "0.55"}
+  "perl-Module-Pluggable" {>= "3.1"}
+  "perl-PPI" {>= "1.277.0"}
+  "perl-PPIx-QuoteLike" 
+  "perl-PPIx-Regexp" {>= "0.27"}
+  "perl-PPIx-Utils" {>= "0.3"}
+  "perl-Perl-Tidy" 
+  "perl-Pod-Parser" 
+  "perl-Pod-Spell" {>= "1"}
+  "perl-Readonly" {>= "2"}
+  "perl-String-Format" {>= "1.18"}
+  "perl-base" 
+]
+extra-source "perl-Perl-Critic-1.152.0-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Perl-Critic-1.152.0-2.2.noarch.rpm"
+}

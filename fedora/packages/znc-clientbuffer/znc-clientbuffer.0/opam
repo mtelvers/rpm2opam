@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "znc-clientbuffer-0-0.25.20190129git9766a4a.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "znc-clientbuffer-0-0.25.20190129git9766a4a.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "znc" {= "1.8.2"}
+]
+extra-source "znc-clientbuffer-0-0.25.20190129git9766a4a.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/z/znc-clientbuffer-0-0.25.20190129git9766a4a.fc40.x86_64.rpm"
+}

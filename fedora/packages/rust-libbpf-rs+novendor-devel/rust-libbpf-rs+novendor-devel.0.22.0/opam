@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-libbpf-rs+novendor-devel-0.22.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-libbpf-rs+novendor-devel-0.22.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-libbpf-rs-devel" {= "0.22.0"}
+  "rust-libbpf-sys+novendor-devel" 
+]
+extra-source "rust-libbpf-rs+novendor-devel-0.22.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-libbpf-rs+novendor-devel-0.22.0-2.fc40.noarch.rpm"
+}

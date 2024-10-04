@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Module-Faker-tests-0.025-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Module-Faker-tests-0.025-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-CPAN-Meta" 
+  "perl-CPAN-Meta-Requirements" 
+  "perl-Encode" 
+  "perl-ExtUtils-MakeMaker" 
+  "perl-File-Temp" 
+  "perl-JSON-PP" 
+  "perl-Module-Faker" 
+  "perl-Path-Class" {>= "0.6"}
+  "perl-PathTools" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" {>= "0.88"}
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Module-Faker-tests-0.025-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Module-Faker-tests-0.025-4.fc40.noarch.rpm"
+}

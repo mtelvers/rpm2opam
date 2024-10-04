@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "selinux-tools-3.5-slfo.1.1.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "selinux-tools-3.5-slfo.1.1.9.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libpcre2-8-0" 
+  "libselinux1" 
+  "libsepol2" 
+]
+extra-source "selinux-tools-3.5-slfo.1.1.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/selinux-tools-3.5-slfo.1.1.9.x86_64.rpm"
+}

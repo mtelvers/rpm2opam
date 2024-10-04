@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ibus-anthy-1.5.16-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibus-anthy-1.5.16-1.fc40.x86_64.rpm"]
+depends: [
+  "anthy-unicode" 
+  "glib2" 
+  "glibc" 
+  "ibus" {>= "1.5.3"}
+  "ibus-anthy-python" {= "1.5.16"}
+  "kasumi-unicode" 
+]
+extra-source "ibus-anthy-1.5.16-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/ibus-anthy-1.5.16-1.fc40.x86_64.rpm"
+}

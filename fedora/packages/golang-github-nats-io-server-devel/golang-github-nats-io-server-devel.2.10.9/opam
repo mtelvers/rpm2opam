@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-nats-io-server-devel-2.10.9-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-nats-io-server-devel-2.10.9-4.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-klauspost-compress-devel" 
+  "golang-github-minio-highwayhash-devel" 
+  "golang-github-nats-io-jwt-devel" 
+  "golang-github-nats-io-nkeys-devel" 
+  "golang-github-nats-io-nuid-devel" 
+  "golang-uber-automaxprocs-devel" 
+  "golang-x-crypto-devel" 
+  "golang-x-time-devel" 
+]
+extra-source "golang-github-nats-io-server-devel-2.10.9-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-nats-io-server-devel-2.10.9-4.fc40.noarch.rpm"
+}

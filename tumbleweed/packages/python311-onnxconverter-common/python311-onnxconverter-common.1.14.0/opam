@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-onnxconverter-common-1.14.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-onnxconverter-common-1.14.0-1.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-numpy" 
+  "python311-onnx" 
+  "python311-packaging" 
+  "python311-protobuf" 
+]
+extra-source "python311-onnxconverter-common-1.14.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-onnxconverter-common-1.14.0-1.1.noarch.rpm"
+}

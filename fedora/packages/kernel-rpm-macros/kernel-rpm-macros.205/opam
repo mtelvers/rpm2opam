@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kernel-rpm-macros-205-23.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kernel-rpm-macros-205-23.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "binutils" 
+  "findutils" 
+  "gawk" 
+  "grep" 
+  "kmod" 
+  "perl-interpreter" 
+  "redhat-rpm-config" {>= "205"}
+  "sed" 
+  "xz" 
+]
+extra-source "kernel-rpm-macros-205-23.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kernel-rpm-macros-205-23.fc40.noarch.rpm"
+}

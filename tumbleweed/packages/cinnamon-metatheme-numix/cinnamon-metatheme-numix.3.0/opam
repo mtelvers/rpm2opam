@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cinnamon-metatheme-numix-3.0-1.16.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cinnamon-metatheme-numix-3.0-1.16.noarch.rpm"]
+depends: [
+  "cinnamon" {>= "3.0"}
+  "metatheme-numix-common" 
+]
+extra-source "cinnamon-metatheme-numix-3.0-1.16.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cinnamon-metatheme-numix-3.0-1.16.noarch.rpm"
+}

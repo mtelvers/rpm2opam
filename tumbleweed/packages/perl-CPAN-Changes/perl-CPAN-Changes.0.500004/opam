@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-CPAN-Changes-0.500004-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CPAN-Changes-0.500004-1.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Module-Runtime" 
+  "perl-Moo" {>= "1.6000"}
+  "perl-Sub-Quote" {>= "1.5000"}
+  "perl-Type-Tiny" 
+  "perl-base" 
+]
+extra-source "perl-CPAN-Changes-0.500004-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-CPAN-Changes-0.500004-1.2.noarch.rpm"
+}

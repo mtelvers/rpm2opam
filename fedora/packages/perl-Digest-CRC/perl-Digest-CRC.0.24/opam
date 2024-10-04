@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Digest-CRC-0.24-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Digest-CRC-0.24-7.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-DynaLoader" 
+  "perl-Exporter" 
+  "perl-Symbol" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-Digest-CRC-0.24-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Digest-CRC-0.24-7.fc40.x86_64.rpm"
+}

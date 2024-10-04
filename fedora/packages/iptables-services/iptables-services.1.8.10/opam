@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "iptables-services-1.8.10-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "iptables-services-1.8.10-7.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "iptables-legacy" {= "1.8.10"}
+  "iptables-utils" {= "1.8.10"}
+]
+extra-source "iptables-services-1.8.10-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/iptables-services-1.8.10-7.fc40.noarch.rpm"
+}

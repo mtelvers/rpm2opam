@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-githash-devel-0.1.7.0-1.14.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-githash-devel-0.1.7.0-1.14.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-directory-devel" 
+  "ghc-filepath-devel" 
+  "ghc-githash" {= "0.1.7.0"}
+  "ghc-process-devel" 
+  "ghc-template-haskell-devel" 
+  "ghc-th-compat-devel" 
+]
+extra-source "ghc-githash-devel-0.1.7.0-1.14.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-githash-devel-0.1.7.0-1.14.x86_64.rpm"
+}

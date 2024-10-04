@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pronsole-2.0.0~rc7.1599393390.c451359-3.19.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pronsole-2.0.0~rc7.1599393390.c451359-3.19.noarch.rpm"]
+depends: [
+  "Printrun-common" {= "2.0.0"}
+  "python311-base" 
+]
+extra-source "pronsole-2.0.0~rc7.1599393390.c451359-3.19.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pronsole-2.0.0~rc7.1599393390.c451359-3.19.noarch.rpm"
+}

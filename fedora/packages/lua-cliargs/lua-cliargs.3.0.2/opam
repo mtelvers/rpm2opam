@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lua-cliargs-3.0.2-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lua-cliargs-3.0.2-5.fc40.noarch.rpm"]
+depends: [
+  "lua-libs" {= "5.4"}
+]
+extra-source "lua-cliargs-3.0.2-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lua-cliargs-3.0.2-5.fc40.noarch.rpm"
+}

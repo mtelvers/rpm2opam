@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "amsynth-lang-1.13.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "amsynth-lang-1.13.4-1.1.noarch.rpm"]
+depends: [
+  "amsynth" {= "1.13.4"}
+]
+extra-source "amsynth-lang-1.13.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/amsynth-lang-1.13.4-1.1.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-steam-1.4.4-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-steam-1.4.4-5.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-cachetools" {>= "3"}
+  "python3-pycryptodomex" {>= "3.7"}
+  "python3-requests" {>= "2.9.1"}
+  "python3-six" {>= "1.10"}
+  "python3-vdf" {>= "3.3"}
+]
+extra-source "python3-steam-1.4.4-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-steam-1.4.4-5.fc40.noarch.rpm"
+}

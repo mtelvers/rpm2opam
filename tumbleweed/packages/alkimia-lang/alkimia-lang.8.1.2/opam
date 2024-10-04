@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "alkimia-lang-8.1.2-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "alkimia-lang-8.1.2-1.3.noarch.rpm"]
+depends: [
+  "alkimia" {= "8.1.2"}
+]
+extra-source "alkimia-lang-8.1.2-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/alkimia-lang-8.1.2-1.3.noarch.rpm"
+}

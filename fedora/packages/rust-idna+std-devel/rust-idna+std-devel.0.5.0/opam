@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-idna+std-devel-0.5.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-idna+std-devel-0.5.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-idna+alloc-devel" {= "0.5.0"}
+  "rust-idna-devel" {= "0.5.0"}
+  "rust-unicode-bidi+std-devel" 
+  "rust-unicode-normalization+std-devel" 
+]
+extra-source "rust-idna+std-devel-0.5.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-idna+std-devel-0.5.0-2.fc40.noarch.rpm"
+}

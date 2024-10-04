@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dmraid-events-logwatch-1.0.0.rc16-59.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dmraid-events-logwatch-1.0.0.rc16-59.fc40.x86_64.rpm"]
+depends: [
+  "crontabs" 
+  "dmraid-events" {= "1.0.0.0"}
+  "logwatch" 
+]
+extra-source "dmraid-events-logwatch-1.0.0.rc16-59.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dmraid-events-logwatch-1.0.0.rc16-59.fc40.x86_64.rpm"
+}

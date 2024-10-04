@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-xml5ever-devel-0.17.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-xml5ever-devel-0.17.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-log+default-devel" 
+  "rust-mac+default-devel" 
+  "rust-markup5ever+default-devel" 
+]
+extra-source "rust-xml5ever-devel-0.17.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-xml5ever-devel-0.17.0-3.fc40.noarch.rpm"
+}

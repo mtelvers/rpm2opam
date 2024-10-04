@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pfscalibration-2.2.0-4.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pfscalibration-2.2.0-4.6.x86_64.rpm"]
+depends: [
+  "bash" 
+  "dcraw" 
+  "glibc" 
+  "jhead" 
+  "libgcc_s1" 
+  "libpfs2" 
+  "libstdc++6" 
+  "perl" {= "5.40.0"}
+  "perl-base" 
+]
+extra-source "pfscalibration-2.2.0-4.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pfscalibration-2.2.0-4.6.x86_64.rpm"
+}

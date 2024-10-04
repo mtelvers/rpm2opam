@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnbd-bash-completion-1.20.2-slfo.1.1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnbd-bash-completion-1.20.2-slfo.1.1.1.noarch.rpm"]
+depends: [
+  "bash-completion" {>= "2.0"}
+  "libnbd0" {= "1.20.2"}
+]
+extra-source "libnbd-bash-completion-1.20.2-slfo.1.1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/libnbd-bash-completion-1.20.2-slfo.1.1.1.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glpk-5.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glpk-5.0-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libglpk40" 
+]
+extra-source "glpk-5.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/glpk-5.0-2.1.x86_64.rpm"
+}

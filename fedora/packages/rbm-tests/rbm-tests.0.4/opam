@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rbm-tests-0.4^20240215git10c6b24-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rbm-tests-0.4^20240215git10c6b24-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "perl-Path-Tiny" 
+  "perl-Test-Simple" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "rbm" 
+]
+extra-source "rbm-tests-0.4^20240215git10c6b24-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rbm-tests-0.4^20240215git10c6b24-1.fc40.noarch.rpm"
+}

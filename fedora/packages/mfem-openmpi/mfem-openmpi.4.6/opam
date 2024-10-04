@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mfem-openmpi-4.6-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mfem-openmpi-4.6-5.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "hypre-openmpi" 
+  "libgcc" 
+  "libstdc++" 
+  "metis" 
+  "openmpi" 
+]
+extra-source "mfem-openmpi-4.6-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mfem-openmpi-4.6-5.fc40.x86_64.rpm"
+}

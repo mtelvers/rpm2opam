@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-inferno-devel-0.11.15-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-inferno-devel-0.11.15-4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cargo" 
+  "rust-ahash+default-devel" 
+  "rust-is-terminal+default-devel" 
+  "rust-itoa+default-devel" 
+  "rust-log+default-devel" 
+  "rust-num-format-devel" 
+  "rust-once_cell+default-devel" 
+  "rust-quick-xml-devel" 
+  "rust-rgb+default-devel" 
+  "rust-str_stack+default-devel" 
+]
+extra-source "rust-inferno-devel-0.11.15-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-inferno-devel-0.11.15-4.fc40.noarch.rpm"
+}

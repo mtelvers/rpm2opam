@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-rtslib-fb-2.1.76-5.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-rtslib-fb-2.1.76-5.1.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "python-rtslib-fb-common" 
+  "python312-base" 
+  "python312-pyudev" 
+]
+extra-source "python312-rtslib-fb-2.1.76-5.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-rtslib-fb-2.1.76-5.1.noarch.rpm"
+}

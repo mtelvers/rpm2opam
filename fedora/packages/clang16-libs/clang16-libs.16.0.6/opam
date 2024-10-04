@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "clang16-libs-16.0.6-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clang16-libs-16.0.6-5.fc40.x86_64.rpm"]
+depends: [
+  "clang16-resource-filesystem" {= "16.0.6"}
+  "glibc" 
+  "libstdc++" 
+  "llvm16-libs" 
+]
+extra-source "clang16-libs-16.0.6-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/clang16-libs-16.0.6-5.fc40.x86_64.rpm"
+}

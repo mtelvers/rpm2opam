@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-blobby0.1-devel-0.1.2-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-blobby0.1-devel-0.1.2-10.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-byteorder-devel" 
+]
+extra-source "rust-blobby0.1-devel-0.1.2-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-blobby0.1-devel-0.1.2-10.fc40.noarch.rpm"
+}

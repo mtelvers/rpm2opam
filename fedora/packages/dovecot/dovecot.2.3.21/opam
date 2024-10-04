@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dovecot-2.3.21-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dovecot-2.3.21-6.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bzip2-libs" 
+  "expat" 
+  "glibc" 
+  "krb5-libs" 
+  "libcap" 
+  "libcom_err" 
+  "libicu" 
+  "libsodium" 
+  "libstemmer" 
+  "libxcrypt" 
+  "libzstd" 
+  "lua-libs" 
+  "lz4-libs" 
+  "openldap" 
+  "openssl" {>= "0.9.7"}
+  "openssl-libs" 
+  "pam-libs" 
+  "shadow-utils" 
+  "sqlite-libs" 
+  "systemd" 
+  "systemd-libs" 
+  "xz-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "dovecot-2.3.21-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dovecot-2.3.21-6.fc40.x86_64.rpm"
+}

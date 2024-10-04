@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pyramid-2.0.2-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pyramid-2.0.2-1.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-PasteDeploy" {>= "1.5.0"}
+  "python310-WebOb" {>= "1.8.3"}
+  "python310-base" 
+  "python310-hupper" {>= "1.5"}
+  "python310-plaster" 
+  "python310-plaster-pastedeploy" 
+  "python310-setuptools" 
+  "python310-translationstring" {>= "0.4"}
+  "python310-venusian" {>= "1.0"}
+  "python310-zope-deprecation" {>= "3.5.0"}
+  "python310-zope-interface" {>= "3.8.0"}
+  "update-alternatives" 
+]
+extra-source "python310-pyramid-2.0.2-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-pyramid-2.0.2-1.3.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nginx-core-1.24.0-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nginx-core-1.24.0-8.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "gperftools-libs" 
+  "libxcrypt" 
+  "nginx-filesystem" 
+  "nginx-mimetypes" 
+  "openssl-libs" 
+  "pcre2" 
+  "zlib-ng-compat" 
+]
+extra-source "nginx-core-1.24.0-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nginx-core-1.24.0-8.fc40.x86_64.rpm"
+}

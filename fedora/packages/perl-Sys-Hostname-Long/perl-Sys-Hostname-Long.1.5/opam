@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Sys-Hostname-Long-1.5-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Sys-Hostname-Long-1.5-29.fc40.noarch.rpm"]
+depends: [
+  "hostname" 
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-IO" 
+  "perl-Sys-Hostname" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-Sys-Hostname-Long-1.5-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Sys-Hostname-Long-1.5-29.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-deepdiver-zipstreamer-2.0.0-8.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-deepdiver-zipstreamer-2.0.0-8.fc39.noarch.rpm"]
+depends: [
+  "php-common" {>= "5.6"}
+  "php-fedora-autoloader" 
+  "php-mbstring" 
+]
+extra-source "php-deepdiver-zipstreamer-2.0.0-8.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-deepdiver-zipstreamer-2.0.0-8.fc39.noarch.rpm"
+}

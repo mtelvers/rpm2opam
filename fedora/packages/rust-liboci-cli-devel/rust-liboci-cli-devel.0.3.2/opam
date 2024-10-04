@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-liboci-cli-devel-0.3.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-liboci-cli-devel-0.3.2-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-clap+cargo-devel" 
+  "rust-clap+derive-devel" 
+  "rust-clap+error-context-devel" 
+  "rust-clap+help-devel" 
+  "rust-clap+std-devel" 
+  "rust-clap+suggestions-devel" 
+  "rust-clap+usage-devel" 
+  "rust-clap-devel" 
+]
+extra-source "rust-liboci-cli-devel-0.3.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-liboci-cli-devel-0.3.2-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-ansi-terminal-devel-1.0.2-1.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-ansi-terminal-devel-1.0.2-1.6.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-ansi-terminal" {= "1.0.2"}
+  "ghc-ansi-terminal-types-devel" 
+  "ghc-base-devel" 
+  "ghc-colour-devel" 
+  "ghc-compiler" {= "9.8.2"}
+]
+extra-source "ghc-ansi-terminal-devel-1.0.2-1.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-ansi-terminal-devel-1.0.2-1.6.x86_64.rpm"
+}

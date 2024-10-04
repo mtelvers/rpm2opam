@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "GAPDoc-doc-1.6.7-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "GAPDoc-doc-1.6.7-2.fc40.noarch.rpm"]
+depends: [
+  "GAPDoc" {= "1.6.7"}
+  "gap-online-help" 
+  "gap-pkg-io-doc" 
+]
+extra-source "GAPDoc-doc-1.6.7-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/GAPDoc-doc-1.6.7-2.fc40.noarch.rpm"
+}

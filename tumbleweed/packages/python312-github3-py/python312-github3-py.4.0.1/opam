@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-github3.py-4.0.1-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-github3.py-4.0.1-1.4.noarch.rpm"]
+depends: [
+  "python312-PyJWT" {>= "2.3.0"}
+  "python312-base" {= "3.12"}
+  "python312-jwcrypto" {>= "0.5.0"}
+  "python312-python-dateutil" {>= "2.6.0"}
+  "python312-requests" {>= "2.18"}
+  "python312-uritemplate" {>= "3.0.0"}
+]
+extra-source "python312-github3.py-4.0.1-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-github3.py-4.0.1-1.4.noarch.rpm"
+}

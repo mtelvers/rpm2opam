@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-bangorexam-2023.201.1.5.0svn65140-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-bangorexam-2023.201.1.5.0svn65140-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2023"}
+  "texlive-babel" 
+  "texlive-etoolbox" 
+  "texlive-exam" 
+  "texlive-filesystem" {>= "2023"}
+  "texlive-forloop" 
+  "texlive-graphics" 
+  "texlive-isodate" 
+  "texlive-kpathsea" {>= "2023"}
+  "texlive-kpathsea-bin" {>= "2023"}
+  "texlive-latex" 
+  "texlive-letltxmacro" 
+  "texlive-newpx" 
+  "texlive-pgf" 
+  "texlive-psnfss" 
+  "texlive-scripts" {>= "2023"}
+  "texlive-scripts-bin" {>= "2023"}
+  "texlive-tools" 
+  "texlive-totcount" 
+  "texlive-xcolor" 
+  "texlive-xstring" 
+]
+extra-source "texlive-bangorexam-2023.201.1.5.0svn65140-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/texlive-bangorexam-2023.201.1.5.0svn65140-slfo.1.1.4.noarch.rpm"
+}

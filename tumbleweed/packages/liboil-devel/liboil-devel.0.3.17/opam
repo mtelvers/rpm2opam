@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "liboil-devel-0.3.17-26.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "liboil-devel-0.3.17-26.10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "glibc-devel" 
+  "liboil-0_3-0" {= "0.3.17"}
+  "pkgconf-pkg-config" 
+]
+extra-source "liboil-devel-0.3.17-26.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/liboil-devel-0.3.17-26.10.x86_64.rpm"
+}

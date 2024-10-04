@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "seahorse-daemon-3.12.2-10.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "seahorse-daemon-3.12.2-10.7.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libatk-1_0-0" 
+  "libcryptui-data" 
+  "libcryptui0" 
+  "libdbus-1-3" 
+  "libdbus-glib-1-2" 
+  "libgnome-keyring0" 
+  "libgpgme11" 
+  "libgtk-3-0" 
+  "libnotify4" 
+]
+extra-source "seahorse-daemon-3.12.2-10.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/seahorse-daemon-3.12.2-10.7.x86_64.rpm"
+}

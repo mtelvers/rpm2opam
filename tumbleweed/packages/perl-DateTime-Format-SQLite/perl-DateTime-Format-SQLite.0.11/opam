@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-DateTime-Format-SQLite-0.11-3.32.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DateTime-Format-SQLite-0.11-3.32.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-DateTime" {>= "0.1"}
+  "perl-DateTime-Format-Builder" {>= "0.6"}
+]
+extra-source "perl-DateTime-Format-SQLite-0.11-3.32.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-DateTime-Format-SQLite-0.11-3.32.noarch.rpm"
+}

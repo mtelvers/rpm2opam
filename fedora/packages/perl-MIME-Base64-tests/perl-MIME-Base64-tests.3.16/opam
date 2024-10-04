@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MIME-Base64-tests-3.16-503.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MIME-Base64-tests-3.16-503.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "perl-ExtUtils-MakeMaker" 
+  "perl-MIME-Base64" 
+  "perl-PathTools" 
+  "perl-Test" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-MIME-Base64-tests-3.16-503.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MIME-Base64-tests-3.16-503.fc40.x86_64.rpm"
+}

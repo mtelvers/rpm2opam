@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-hickory-proto+quinn-devel-0.24.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-hickory-proto+quinn-devel-0.24.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-hickory-proto-devel" {= "0.24.0"}
+  "rust-quinn+log-devel" 
+  "rust-quinn+runtime-tokio-devel" 
+  "rust-quinn+tls-rustls-devel" 
+  "rust-quinn-devel" 
+]
+extra-source "rust-hickory-proto+quinn-devel-0.24.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-hickory-proto+quinn-devel-0.24.0-2.fc40.noarch.rpm"
+}

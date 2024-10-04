@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libportaudio2-190700_20210406-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libportaudio2-190700_20210406-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libasound2" 
+  "libgcc_s1" 
+  "libjack0" 
+]
+extra-source "libportaudio2-190700_20210406-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libportaudio2-190700_20210406-slfo.1.1.7.x86_64.rpm"
+}

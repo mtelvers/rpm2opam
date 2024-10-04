@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glew-devel-2.2.0-4.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glew-devel-2.2.0-4.3.x86_64.rpm"]
+depends: [
+  "Mesa-libEGL-devel" 
+  "glu-devel" 
+  "libGLEW2_2" {= "2.2.0"}
+  "libX11-devel" 
+  "pkgconf-pkg-config" 
+  "xorgproto-devel" 
+]
+extra-source "glew-devel-2.2.0-4.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/glew-devel-2.2.0-4.3.x86_64.rpm"
+}

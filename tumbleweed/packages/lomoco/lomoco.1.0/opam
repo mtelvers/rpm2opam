@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lomoco-1.0-128.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lomoco-1.0-128.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "libusb-0_1-4" 
+]
+extra-source "lomoco-1.0-128.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lomoco-1.0-128.2.x86_64.rpm"
+}

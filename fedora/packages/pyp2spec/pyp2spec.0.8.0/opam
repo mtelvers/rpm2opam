@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pyp2spec-0.8.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pyp2spec-0.8.0-3.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-click" 
+  "python3-jinja2" 
+  "python3-license-expression" 
+  "python3-packaging" 
+  "python3-requests" 
+  "python3-tomli-w" 
+]
+extra-source "pyp2spec-0.8.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pyp2spec-0.8.0-3.fc40.noarch.rpm"
+}

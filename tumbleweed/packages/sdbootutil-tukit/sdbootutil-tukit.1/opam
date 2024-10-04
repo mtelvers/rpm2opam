@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sdbootutil-tukit-1+git20241002.7da4a47-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sdbootutil-tukit-1+git20241002.7da4a47-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "sdbootutil" {= "1"}
+  "tukit" 
+]
+extra-source "sdbootutil-tukit-1+git20241002.7da4a47-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sdbootutil-tukit-1+git20241002.7da4a47-1.1.x86_64.rpm"
+}

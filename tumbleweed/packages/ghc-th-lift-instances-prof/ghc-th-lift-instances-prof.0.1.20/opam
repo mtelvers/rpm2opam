@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-th-lift-instances-prof-0.1.20-2.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-th-lift-instances-prof-0.1.20-2.12.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-containers-prof" 
+  "ghc-template-haskell-prof" 
+  "ghc-text-prof" 
+  "ghc-th-lift-instances-devel" {= "0.1.20"}
+  "ghc-th-lift-prof" 
+  "ghc-transformers-prof" 
+  "ghc-vector-prof" 
+]
+extra-source "ghc-th-lift-instances-prof-0.1.20-2.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-th-lift-instances-prof-0.1.20-2.12.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mpich-gnu-hpc-macros-devel-4.2.2-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mpich-gnu-hpc-macros-devel-4.2.2-1.2.noarch.rpm"]
+depends: [
+  "mpich_4_2_2-gnu-hpc-macros-devel" {= "4.2.2"}
+]
+extra-source "mpich-gnu-hpc-macros-devel-4.2.2-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mpich-gnu-hpc-macros-devel-4.2.2-1.2.noarch.rpm"
+}

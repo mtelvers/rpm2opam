@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-string_cache+default-devel-0.8.7-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-string_cache+default-devel-0.8.7-4.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-string_cache+serde_support-devel" {= "0.8.7"}
+  "rust-string_cache-devel" {= "0.8.7"}
+]
+extra-source "rust-string_cache+default-devel-0.8.7-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-string_cache+default-devel-0.8.7-4.fc40.noarch.rpm"
+}

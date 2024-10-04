@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-beamer2thesis-2024.216.2.2svn27539-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-beamer2thesis-2024.216.2.2svn27539-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-babel" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-fontspec" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-metalogo" 
+  "texlive-polyglossia" 
+  "texlive-psnfss" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-xkeyval" 
+  "texlive-xltxtra" 
+  "texlive-xunicode" 
+]
+extra-source "texlive-beamer2thesis-2024.216.2.2svn27539-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-beamer2thesis-2024.216.2.2svn27539-57.1.noarch.rpm"
+}

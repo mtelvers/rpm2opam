@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-VM-EC2-1.28-28.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-VM-EC2-1.28-28.fc40.noarch.rpm"]
+depends: [
+  "perl-AnyEvent" {>= "7.4"}
+  "perl-AnyEvent-CacheDNS" 
+  "perl-AnyEvent-HTTP" {>= "2.15"}
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Digest-SHA" {>= "5.47"}
+  "perl-File-Basename" 
+  "perl-File-Find" 
+  "perl-File-Path" {>= "2.8"}
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-HTTP-Message" 
+  "perl-JSON" 
+  "perl-MIME-Base64" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-Storable" 
+  "perl-String-Approx" {>= "3.26"}
+  "perl-URI" 
+  "perl-XML-Simple" {>= "2.18"}
+  "perl-base" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+  "perl-libwww-perl" {>= "5.835"}
+  "perl-overload" 
+]
+extra-source "perl-VM-EC2-1.28-28.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-VM-EC2-1.28-28.fc40.noarch.rpm"
+}

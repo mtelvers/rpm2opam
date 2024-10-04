@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vorta-0.9.1-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vorta-0.9.1-2.1.noarch.rpm"]
+depends: [
+  "borgbackup" 
+  "python311-APScheduler" {< "4.0"}
+  "python311-PyQt6" 
+  "python311-QDarkStyle" 
+  "python311-base" 
+  "python311-keyring" 
+  "python311-peewee" 
+  "python311-platformdirs" 
+  "python311-psutil" 
+  "python311-python-dateutil" 
+]
+extra-source "vorta-0.9.1-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/vorta-0.9.1-2.1.noarch.rpm"
+}

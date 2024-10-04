@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-mwc-random-prof-0.15.1.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-mwc-random-prof-0.15.1.0-1.1.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-math-functions-prof" 
+  "ghc-mwc-random-devel" {= "0.15.1.0"}
+  "ghc-primitive-prof" 
+  "ghc-random-prof" 
+  "ghc-time-prof" 
+  "ghc-vector-prof" 
+]
+extra-source "ghc-mwc-random-prof-0.15.1.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-mwc-random-prof-0.15.1.0-1.1.x86_64.rpm"
+}

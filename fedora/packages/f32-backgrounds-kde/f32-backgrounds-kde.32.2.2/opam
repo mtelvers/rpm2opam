@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "f32-backgrounds-kde-32.2.2-8.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "f32-backgrounds-kde-32.2.2-8.fc39.noarch.rpm"]
+depends: [
+  "f32-backgrounds-base" {= "32.2.2"}
+  "kde-filesystem" 
+]
+extra-source "f32-backgrounds-kde-32.2.2-8.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/f32-backgrounds-kde-32.2.2-8.fc39.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "snmpsim-0.4.7-2.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "snmpsim-0.4.7-2.12.noarch.rpm"]
+depends: [
+  "python311-base" 
+  "python311-dbm" 
+  "python311-pysnmp" {>= "4.4.3"}
+]
+extra-source "snmpsim-0.4.7-2.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/snmpsim-0.4.7-2.12.noarch.rpm"
+}

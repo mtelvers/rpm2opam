@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libjpeg62-devel-62.4.0-81.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libjpeg62-devel-62.4.0-81.1.x86_64.rpm"]
+depends: [
+  "libjpeg62" {= "62.4.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libjpeg62-devel-62.4.0-81.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libjpeg62-devel-62.4.0-81.1.x86_64.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-free-prof-5.1.10-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-free-prof-5.1.10-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-comonad-prof" 
+  "ghc-containers-prof" 
+  "ghc-distributive-prof" 
+  "ghc-exceptions-prof" 
+  "ghc-free-devel" {= "5.1.10"}
+  "ghc-indexed-traversable-prof" 
+  "ghc-mtl-prof" 
+  "ghc-profunctors-prof" 
+  "ghc-semigroupoids-prof" 
+  "ghc-template-haskell-prof" 
+  "ghc-th-abstraction-prof" 
+  "ghc-transformers-base-prof" 
+  "ghc-transformers-prof" 
+]
+extra-source "ghc-free-prof-5.1.10-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-free-prof-5.1.10-6.fc40.x86_64.rpm"
+}

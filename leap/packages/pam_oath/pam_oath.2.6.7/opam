@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pam_oath-2.6.7-slfo.1.1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pam_oath-2.6.7-slfo.1.1.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "liboath0" 
+  "pam" 
+]
+extra-source "pam_oath-2.6.7-slfo.1.1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/pam_oath-2.6.7-slfo.1.1.8.x86_64.rpm"
+}

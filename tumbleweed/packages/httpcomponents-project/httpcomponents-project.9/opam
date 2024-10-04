@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "httpcomponents-project-9-1.17.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "httpcomponents-project-9-1.17.noarch.rpm"]
+depends: [
+  "apache-parent" 
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "httpcomponents-project-9-1.17.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/httpcomponents-project-9-1.17.noarch.rpm"
+}

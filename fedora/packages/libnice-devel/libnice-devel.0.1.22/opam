@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libnice-devel-0.1.22-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnice-devel-0.1.22-1.fc40.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "gnutls-devel" {>= "2.12.0"}
+  "gupnp-igd-devel" {>= "0.2.4"}
+  "libnice" {= "0.1.22"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libnice-devel-0.1.22-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libnice-devel-0.1.22-1.fc40.x86_64.rpm"
+}

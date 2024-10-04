@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "hbci4java-3.1.79-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hbci4java-3.1.79-1.2.x86_64.rpm"]
+depends: [
+  "glassfish-jaxb-api" 
+  "glassfish-jaxb-runtime" 
+  "glibc" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "libstdc++6" 
+]
+extra-source "hbci4java-3.1.79-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/hbci4java-3.1.79-1.2.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libXrender-0.9.11-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libXrender-0.9.11-6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libX11" {>= "1.5.99.902"}
+]
+extra-source "libXrender-0.9.11-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libXrender-0.9.11-6.fc40.x86_64.rpm"
+}

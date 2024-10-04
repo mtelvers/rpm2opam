@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hyprland-0.37.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hyprland-0.37.1-1.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "glib2" 
+  "glibc" 
+  "hyprcursor" 
+  "hyprlang" 
+  "libdisplay-info" 
+  "libdrm" {>= "2.4.120"}
+  "libgcc" 
+  "libglvnd-egl" 
+  "libglvnd-gles" 
+  "libinput" 
+  "libliftoff" 
+  "libseat" 
+  "libstdc++" 
+  "libwayland-client" 
+  "libwayland-server" 
+  "libxcb" 
+  "libxkbcommon" 
+  "mesa-libgbm" 
+  "pango" 
+  "pixman" 
+  "systemd-libs" 
+  "tomlplusplus" 
+  "xcb-util-renderutil" 
+  "xcb-util-wm" 
+  "xdg-desktop-portal" 
+  "xorg-x11-server-Xwayland" 
+]
+extra-source "hyprland-0.37.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hyprland-0.37.1-1.fc40.x86_64.rpm"
+}

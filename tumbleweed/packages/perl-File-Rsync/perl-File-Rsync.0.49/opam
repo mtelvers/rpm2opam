@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-File-Rsync-0.49-1.30.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-Rsync-0.49-1.30.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-IPC-Run3" 
+  "rsync" 
+]
+extra-source "perl-File-Rsync-0.49-1.30.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-File-Rsync-0.49-1.30.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "geany-plugins-geanyminiscript-2.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "geany-plugins-geanyminiscript-2.0-3.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "cairo-gobject" 
+  "gdk-pixbuf2" 
+  "geany-libgeany" 
+  "geany-plugins-common" {= "2.0"}
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "harfbuzz" 
+  "pango" 
+  "zlib-ng-compat" 
+]
+extra-source "geany-plugins-geanyminiscript-2.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/geany-plugins-geanyminiscript-2.0-3.fc40.x86_64.rpm"
+}

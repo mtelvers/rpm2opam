@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xtables-plugins-1.8.10-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xtables-plugins-1.8.10-3.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libnetfilter_conntrack3" 
+  "libnfnetlink0" 
+  "libxtables12" 
+]
+extra-source "xtables-plugins-1.8.10-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xtables-plugins-1.8.10-3.1.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-futures-util+compat-devel-0.3.30-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-futures-util+compat-devel-0.3.30-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-futures-util+futures_01-devel" {= "0.3.30"}
+  "rust-futures-util+std-devel" {= "0.3.30"}
+  "rust-futures-util-devel" {= "0.3.30"}
+]
+extra-source "rust-futures-util+compat-devel-0.3.30-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-futures-util+compat-devel-0.3.30-3.fc40.noarch.rpm"
+}

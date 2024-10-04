@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "layer-shell-qt5-devel-5.27.11-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "layer-shell-qt5-devel-5.27.11-1.5.x86_64.rpm"]
+depends: [
+  "layer-shell-qt5" {= "5.27.11"}
+  "libqt5-qtdeclarative-devel" 
+  "libqt5-qtwayland-private-headers-devel" 
+  "wayland-devel" {>= "1.3.0"}
+]
+extra-source "layer-shell-qt5-devel-5.27.11-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/layer-shell-qt5-devel-5.27.11-1.5.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-bindep-2.11.0-3.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-bindep-2.11.0-3.6.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-Parsley" 
+  "python311-base" 
+  "python311-distro" {>= "1.7.0"}
+  "python311-packaging" 
+  "python311-pbr" {>= "2.0.0"}
+]
+extra-source "python311-bindep-2.11.0-3.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-bindep-2.11.0-3.6.noarch.rpm"
+}

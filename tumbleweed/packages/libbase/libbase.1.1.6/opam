@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libbase-1.1.6-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libbase-1.1.6-2.2.noarch.rpm"]
+depends: [
+  "apache-commons-logging" 
+  "java-11-openj9" 
+  "javapackages-tools" 
+]
+extra-source "libbase-1.1.6-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libbase-1.1.6-2.2.noarch.rpm"
+}

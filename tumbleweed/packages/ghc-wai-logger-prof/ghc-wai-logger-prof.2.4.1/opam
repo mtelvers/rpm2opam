@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-wai-logger-prof-2.4.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-wai-logger-prof-2.4.1-1.1.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-byteorder-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-fast-logger-prof" 
+  "ghc-http-types-prof" 
+  "ghc-network-prof" 
+  "ghc-wai-logger-devel" {= "2.4.1"}
+  "ghc-wai-prof" 
+]
+extra-source "ghc-wai-logger-prof-2.4.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-wai-logger-prof-2.4.1-1.1.x86_64.rpm"
+}

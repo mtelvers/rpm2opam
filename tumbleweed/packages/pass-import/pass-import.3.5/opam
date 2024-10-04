@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pass-import-3.5-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pass-import-3.5-2.2.noarch.rpm"]
+depends: [
+  "bash" 
+  "python311-PyYAML" 
+  "python311-base" 
+  "python311-requests" 
+  "python311-zxcvbn" 
+]
+extra-source "pass-import-3.5-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pass-import-3.5-2.2.noarch.rpm"
+}

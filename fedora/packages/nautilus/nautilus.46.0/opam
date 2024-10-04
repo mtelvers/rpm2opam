@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nautilus-46.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nautilus-46.0-1.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "gdk-pixbuf2" 
+  "glib2" {>= "2.79.0"}
+  "glibc" 
+  "gnome-autoar" {>= "0.4.4"}
+  "gnome-desktop4" 
+  "graphene" 
+  "gsettings-desktop-schemas" 
+  "gstreamer1" 
+  "gstreamer1-plugins-base" 
+  "gtk4" {>= "4.13.6"}
+  "gvfs" 
+  "libadwaita" {>= "1.4"}
+  "libcloudproviders" 
+  "libgcc" 
+  "libgexiv2" 
+  "libportal" 
+  "libportal-gtk4" 
+  "libselinux" 
+  "libtracker-sparql" 
+  "nautilus-extensions" 
+  "pango" 
+  "tracker-miners" 
+]
+extra-source "nautilus-46.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nautilus-46.0-1.fc40.x86_64.rpm"
+}

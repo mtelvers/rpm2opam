@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-axum+json-devel-0.6.20-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-axum+json-devel-0.6.20-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-axum-devel" {= "0.6.20"}
+  "rust-serde_json+default-devel" 
+  "rust-serde_json+raw_value-devel" 
+  "rust-serde_path_to_error+default-devel" 
+]
+extra-source "rust-axum+json-devel-0.6.20-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-axum+json-devel-0.6.20-2.fc40.noarch.rpm"
+}

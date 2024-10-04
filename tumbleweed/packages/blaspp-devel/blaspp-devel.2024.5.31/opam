@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "blaspp-devel-2024.05.31-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "blaspp-devel-2024.05.31-2.1.x86_64.rpm"]
+depends: [
+  "blas-devel" 
+  "libblaspp1" {= "2024.5.31"}
+]
+extra-source "blaspp-devel-2024.05.31-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/blaspp-devel-2024.05.31-2.1.x86_64.rpm"
+}

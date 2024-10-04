@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-shell-extension-gsconnect-56-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-shell-extension-gsconnect-56-3.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "ffmpeg-free" 
+  "firewalld-filesystem" 
+  "gnome-shell" 
+  "openssh" 
+  "openssh-clients" 
+  "openssl" 
+]
+extra-source "gnome-shell-extension-gsconnect-56-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-shell-extension-gsconnect-56-3.fc40.x86_64.rpm"
+}

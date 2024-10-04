@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-File-Comments-0.08-40.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-Comments-0.08-40.fc40.noarch.rpm"]
+depends: [
+  "perl-File-Basename" 
+  "perl-HTML-Parser" 
+  "perl-HTML-Tree" 
+  "perl-Log-Log4perl" 
+  "perl-Module-Pluggable" 
+  "perl-PPI" {>= "1.115"}
+  "perl-Pod-Parser" {>= "1.14"}
+  "perl-Sysadm-Install" 
+  "perl-libs" 
+]
+extra-source "perl-File-Comments-0.08-40.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-File-Comments-0.08-40.fc40.noarch.rpm"
+}

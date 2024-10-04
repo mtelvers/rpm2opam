@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-docs-5.1.1-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-docs-5.1.1-4.fc40.noarch.rpm"]
+depends: [
+  "ocaml" {= "5.1.1"}
+]
+extra-source "ocaml-docs-5.1.1-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-docs-5.1.1-4.fc40.noarch.rpm"
+}

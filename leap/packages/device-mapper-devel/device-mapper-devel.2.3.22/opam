@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["/usr/bin/zypper" "-n" "install" "device-mapper-devel-2.03.22_1.02.196-slfo.1.1.7.x86_64.rpm"]
+]
+remove: [
+  ["/usr/bin/zypper" "-n" "remove" "device-mapper-devel-2.03.22_1.02.196-slfo.1.1.7.x86_64.rpm"]
+]
+depends: [
+  "device-mapper" {= "2.3.22"}
+  "libdevmapper-event1_03" {= "2.3.22"}
+  "libdevmapper1_03" {= "2.3.22"}
+  "libselinux-devel" 
+  "pkgconf-pkg-config" 
+  "systemd-devel" 
+]
+extra-source "device-mapper-devel-2.03.22_1.02.196-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/device-mapper-devel-2.03.22_1.02.196-slfo.1.1.7.x86_64.rpm"
+}

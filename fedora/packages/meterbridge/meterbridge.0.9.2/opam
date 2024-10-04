@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "meterbridge-0.9.2-33.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "meterbridge-0.9.2-33.fc40.x86_64.rpm"]
+depends: [
+  "SDL_image" 
+  "glibc" 
+  "jack-audio-connection-kit" 
+  "sdl12-compat" 
+]
+extra-source "meterbridge-0.9.2-33.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/meterbridge-0.9.2-33.fc40.x86_64.rpm"
+}

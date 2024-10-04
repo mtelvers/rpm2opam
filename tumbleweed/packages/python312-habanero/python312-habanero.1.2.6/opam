@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-habanero-1.2.6-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-habanero-1.2.6-1.1.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-requests" {>= "2.7.0"}
+  "python312-tqdm" 
+]
+extra-source "python312-habanero-1.2.6-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-habanero-1.2.6-1.1.noarch.rpm"
+}

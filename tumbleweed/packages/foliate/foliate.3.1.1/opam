@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "foliate-3.1.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "foliate-3.1.1-1.1.noarch.rpm"]
+depends: [
+  "girepository-1_0" 
+  "gjs" 
+  "typelib-1_0-Adw-1" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Pango-1_0" 
+  "typelib-1_0-Tracker-3_0" 
+  "typelib-1_0-WebKit-6_0" 
+]
+extra-source "foliate-3.1.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/foliate-3.1.1-1.1.noarch.rpm"
+}

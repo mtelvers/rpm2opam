@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "elfutils-0.191-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "elfutils-0.191-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libasm1" 
+  "libdw1" 
+  "libelf1" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "elfutils-0.191-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/elfutils-0.191-2.1.x86_64.rpm"
+}

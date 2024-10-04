@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "sssd-krb5-2.9.4-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sssd-krb5-2.9.4-4.fc40.x86_64.rpm"]
+depends: [
+  "dbus-libs" 
+  "glibc" 
+  "keyutils-libs" 
+  "krb5-libs" 
+  "libbasicobjects" 
+  "libcollection" 
+  "libcom_err" 
+  "libdhash" 
+  "libini_config" 
+  "libldb" 
+  "libref_array" 
+  "libselinux" 
+  "libtalloc" 
+  "libtdb" 
+  "libtevent" 
+  "libunistring" 
+  "openssl-libs" 
+  "pcre2" 
+  "popt" 
+  "sssd-common" 
+  "sssd-krb5-common" {= "2.9.4"}
+  "systemd-libs" 
+]
+extra-source "sssd-krb5-2.9.4-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/sssd-krb5-2.9.4-4.fc40.x86_64.rpm"
+}

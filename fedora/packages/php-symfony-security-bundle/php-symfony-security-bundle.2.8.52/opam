@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-symfony-security-bundle-2.8.52-10.fc38.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-symfony-security-bundle-2.8.52-10.fc38.noarch.rpm"]
+depends: [
+  "php-common" 
+  "php-symfony-http-kernel" {= "2.8.52"}
+  "php-symfony-security" {= "2.8.52"}
+  "php-symfony-security-acl" 
+]
+extra-source "php-symfony-security-bundle-2.8.52-10.fc38.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-symfony-security-bundle-2.8.52-10.fc38.noarch.rpm"
+}

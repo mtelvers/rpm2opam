@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-libqtile-0.23.0-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-libqtile-0.23.0-8.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libinput" 
+  "python3" {= "3.12"}
+  "python3-cairocffi" {>= "1.6"}
+  "python3-cairocffi+xcb" {>= "1.6"}
+  "python3-cffi" {>= "1.1"}
+  "python3-xcffib" {>= "1.4"}
+  "wlroots0-16" 
+]
+extra-source "python3-libqtile-0.23.0-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-libqtile-0.23.0-8.fc40.x86_64.rpm"
+}

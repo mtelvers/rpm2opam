@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "barrier-2.4.0-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "barrier-2.4.0-7.fc40.x86_64.rpm"]
+depends: [
+  "avahi-compat-libdns_sd" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libX11" 
+  "libXext" 
+  "libXi" 
+  "libXtst" 
+  "libgcc" 
+  "libstdc++" 
+  "openssl-libs" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "barrier-2.4.0-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/b/barrier-2.4.0-7.fc40.x86_64.rpm"
+}

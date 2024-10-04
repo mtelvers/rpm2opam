@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "llvm15-devel-15.0.7-slfo.1.1.21.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "llvm15-devel-15.0.7-slfo.1.1.21.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libLLVM15" {= "15.0.7"}
+  "libLTO15" {= "15.0.7"}
+  "libgcc_s1" 
+  "libncurses6" 
+  "libomp15-devel" 
+  "libstdc++-build-devel" 
+  "libstdc++6" 
+  "libtool" 
+  "llvm15" {= "15.0.7"}
+  "llvm15-gold" 
+  "llvm15-polly-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "llvm15-devel-15.0.7-slfo.1.1.21.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/llvm15-devel-15.0.7-slfo.1.1.21.x86_64.rpm"
+}

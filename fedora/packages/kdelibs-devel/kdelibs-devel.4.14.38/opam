@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kdelibs-devel-4.14.38-45.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kdelibs-devel-4.14.38-45.fc40.x86_64.rpm"]
+depends: [
+  "attica-devel" {>= "0.4.2"}
+  "automoc" {>= "0.9.88"}
+  "bash" 
+  "cmake" {>= "2.8.9"}
+  "cmake-filesystem" 
+  "gcc-c++" 
+  "glibc" 
+  "kdelibs" {= "4.14.38"}
+  "kdelibs-ktexteditor" {= "4.14.38"}
+  "libSM-devel" 
+  "libXScrnSaver-devel" 
+  "libXcomposite-devel" 
+  "libXdamage-devel" 
+  "libXpm-devel" 
+  "libXtst-devel" 
+  "libXv-devel" 
+  "libstdc++" 
+  "libxkbfile-devel" 
+  "openssl-devel" 
+  "perl-interpreter" 
+  "phonon-qt4-devel" 
+  "qt" 
+  "qt-devel" 
+  "xorg-x11-proto-devel" 
+]
+extra-source "kdelibs-devel-4.14.38-45.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kdelibs-devel-4.14.38-45.fc40.x86_64.rpm"
+}

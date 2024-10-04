@@ -1,0 +1,48 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Alien-Build-2.80-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Alien-Build-2.80-4.fc40.noarch.rpm"]
+depends: [
+  "coreutils" 
+  "gcc" 
+  "make" 
+  "perl-Alien-Base" 
+  "perl-Alien-Build-Plugin-Decode-Mojo" 
+  "perl-Alien-cmake3" {>= "0.2"}
+  "perl-Archive-Tar" 
+  "perl-Archive-Zip" 
+  "perl-Capture-Tiny" {>= "0.17"}
+  "perl-Carp" 
+  "perl-Config-INI-Reader-Multiline" 
+  "perl-Data-Dumper" 
+  "perl-Digest-SHA" 
+  "perl-Env" 
+  "perl-Exporter" 
+  "perl-ExtUtils-CBuilder" 
+  "perl-ExtUtils-MakeMaker" {>= "6.52"}
+  "perl-ExtUtils-ParseXS" {>= "3.30"}
+  "perl-File-BOM" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Find" 
+  "perl-File-Temp" 
+  "perl-File-Which" {>= "1.10"}
+  "perl-File-chdir" 
+  "perl-HTTP-Tiny" {>= "0.44"}
+  "perl-JSON-PP" 
+  "perl-Mozilla-CA" 
+  "perl-Path-Tiny" {>= "0.77"}
+  "perl-PathTools" 
+  "perl-PkgConfig-LibPkgConf" {>= "0.4"}
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-Storable" 
+  "perl-Term-ANSIColor" 
+  "perl-Test-Simple" {>= "1.302096"}
+  "perl-Text-ParseWords" {>= "3.26"}
+  "perl-constant" 
+  "perl-libs" {>= "5.6.0"}
+  "perl-overload" 
+  "perl-parent" 
+]
+extra-source "perl-Alien-Build-2.80-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Alien-Build-2.80-4.fc40.noarch.rpm"
+}

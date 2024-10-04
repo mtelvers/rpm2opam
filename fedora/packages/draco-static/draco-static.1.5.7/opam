@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "draco-static-1.5.7-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "draco-static-1.5.7-2.fc40.x86_64.rpm"]
+depends: [
+  "draco-devel" {= "1.5.7"}
+]
+extra-source "draco-static-1.5.7-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/draco-static-1.5.7-2.fc40.x86_64.rpm"
+}

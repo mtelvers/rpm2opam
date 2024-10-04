@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tig-2.5.10-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tig-2.5.10-1.1.x86_64.rpm"]
+depends: [
+  "git-core" 
+  "glibc" 
+  "libncurses6" 
+  "libpcre2-8-0" 
+  "libpcre2-posix3" 
+  "libreadline8" 
+]
+extra-source "tig-2.5.10-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tig-2.5.10-1.1.x86_64.rpm"
+}

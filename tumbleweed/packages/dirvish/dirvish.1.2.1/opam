@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dirvish-1.2.1-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dirvish-1.2.1-3.2.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Time-Period" 
+  "perl-Time-modules" 
+  "perl-base" 
+  "rsync" 
+]
+extra-source "dirvish-1.2.1-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dirvish-1.2.1-3.2.noarch.rpm"
+}

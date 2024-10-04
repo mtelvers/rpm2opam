@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openslide-devel-4.0.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openslide-devel-4.0.0-3.fc40.x86_64.rpm"]
+depends: [
+  "cairo-devel" {>= "1.2"}
+  "gdk-pixbuf2-devel" {>= "2.14"}
+  "glib2-devel" 
+  "libdicom-devel" {>= "1.0.0"}
+  "libjpeg-turbo-devel" 
+  "libpng-devel" {> "1.2"}
+  "libtiff-devel" 
+  "libxml2-devel" 
+  "openjpeg2-devel" {>= "2.1.0"}
+  "openslide" 
+  "pkgconf-pkg-config" 
+  "sqlite-devel" {>= "3.14"}
+  "zlib-ng-compat-devel" 
+]
+extra-source "openslide-devel-4.0.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openslide-devel-4.0.0-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "notify-sharp-devel-0.4.0.r3032-11.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "notify-sharp-devel-0.4.0.r3032-11.1.noarch.rpm"]
+depends: [
+  "gtk-sharp2" 
+  "notify-sharp" {= "0.4.0.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "notify-sharp-devel-0.4.0.r3032-11.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/notify-sharp-devel-0.4.0.r3032-11.1.noarch.rpm"
+}

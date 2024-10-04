@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libgda-ui-devel-6.0.0-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgda-ui-devel-6.0.0-9.fc40.x86_64.rpm"]
+depends: [
+  "gtk3-devel" {>= "3.0.0"}
+  "libgda" {= "6.0.0"}
+  "libgda-devel" {= "6.0.0"}
+  "libgda-ui" {= "6.0.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libgda-ui-devel-6.0.0-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libgda-ui-devel-6.0.0-9.fc40.x86_64.rpm"
+}

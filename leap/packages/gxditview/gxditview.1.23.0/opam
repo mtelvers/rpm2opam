@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gxditview-1.23.0-slfo.1.1.25.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gxditview-1.23.0-slfo.1.1.25.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "groff-full" {= "1.23.0"}
+  "libX11-6" 
+  "libXaw7" 
+  "libXmu6" 
+  "libXt6" 
+]
+extra-source "gxditview-1.23.0-slfo.1.1.25.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/gxditview-1.23.0-slfo.1.1.25.x86_64.rpm"
+}

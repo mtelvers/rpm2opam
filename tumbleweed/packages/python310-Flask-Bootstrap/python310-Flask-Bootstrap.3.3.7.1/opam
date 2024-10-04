@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-Flask-Bootstrap-3.3.7.1-1.22.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-Flask-Bootstrap-3.3.7.1-1.22.noarch.rpm"]
+depends: [
+  "python310-Flask" {>= "0.8"}
+  "python310-base" {= "3.10"}
+  "python310-dominate" 
+  "python310-visitor" 
+]
+extra-source "python310-Flask-Bootstrap-3.3.7.1-1.22.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-Flask-Bootstrap-3.3.7.1-1.22.noarch.rpm"
+}

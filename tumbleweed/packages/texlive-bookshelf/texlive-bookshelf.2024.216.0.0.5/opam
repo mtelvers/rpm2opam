@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-bookshelf-2024.216.0.0.5svn55475-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-bookshelf-2024.216.0.0.5svn55475-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-eso-pic" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-fontspec" 
+  "texlive-fp" 
+  "texlive-graphics" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-random" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tools" 
+  "texlive-xcolor" 
+]
+extra-source "texlive-bookshelf-2024.216.0.0.5svn55475-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-bookshelf-2024.216.0.0.5svn55475-55.1.noarch.rpm"
+}

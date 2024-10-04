@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-adjunctions-devel-4.4.2-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-adjunctions-devel-4.4.2-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-adjunctions" {= "4.4.2"}
+  "ghc-array-devel" 
+  "ghc-base-devel" 
+  "ghc-comonad-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-containers-devel" 
+  "ghc-contravariant-devel" 
+  "ghc-distributive-devel" 
+  "ghc-free-devel" 
+  "ghc-mtl-devel" 
+  "ghc-profunctors-devel" 
+  "ghc-semigroupoids-devel" 
+  "ghc-semigroups-devel" 
+  "ghc-tagged-devel" 
+  "ghc-transformers-compat-devel" 
+  "ghc-transformers-devel" 
+  "ghc-void-devel" 
+]
+extra-source "ghc-adjunctions-devel-4.4.2-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-adjunctions-devel-4.4.2-6.fc40.x86_64.rpm"
+}

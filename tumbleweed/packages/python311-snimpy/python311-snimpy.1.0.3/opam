@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-snimpy-1.0.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-snimpy-1.0.3-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libsmi2" 
+  "python311-base" 
+  "python311-cffi" {>= "1.0.0"}
+  "python311-pysnmp" {>= "5"}
+  "python311-setuptools" 
+  "update-alternatives" 
+]
+extra-source "python311-snimpy-1.0.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python311-snimpy-1.0.3-1.1.x86_64.rpm"
+}

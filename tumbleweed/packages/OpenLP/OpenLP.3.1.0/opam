@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "OpenLP-3.1.0-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "OpenLP-3.1.0-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "hicolor-icon-theme" 
+  "python311-Flask" 
+  "python311-Flask-Cors" 
+  "python311-Mako" 
+  "python311-PyICU" 
+  "python311-QtAwesome" 
+  "python311-SQLAlchemy" 
+  "python311-alembic" 
+  "python311-base" 
+  "python311-beautifulsoup4" 
+  "python311-chardet" 
+  "python311-dbus-python" 
+  "python311-distro" 
+  "python311-lxml" 
+  "python311-platformdirs" 
+  "python311-pyenchant" 
+  "python311-pymediainfo" {>= "2.2"}
+  "python311-qrcode" 
+  "python311-qt5" {>= "5.12"}
+  "python311-qtwebengine-qt5" 
+  "python311-requests" 
+  "python311-waitress" 
+  "python311-websockets" 
+  "shared-mime-info" 
+]
+extra-source "OpenLP-3.1.0-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/OpenLP-3.1.0-1.2.noarch.rpm"
+}

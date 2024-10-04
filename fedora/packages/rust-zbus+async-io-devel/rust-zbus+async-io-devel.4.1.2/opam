@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-zbus+async-io-devel-4.1.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-zbus+async-io-devel-4.1.2-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-async-io+default-devel" 
+  "rust-futures-util+io-devel" 
+  "rust-zbus+async-executor-devel" {= "4.1.2"}
+  "rust-zbus+async-fs-devel" {= "4.1.2"}
+  "rust-zbus+async-lock-devel" {= "4.1.2"}
+  "rust-zbus+async-task-devel" {= "4.1.2"}
+  "rust-zbus+blocking-devel" {= "4.1.2"}
+  "rust-zbus-devel" {= "4.1.2"}
+]
+extra-source "rust-zbus+async-io-devel-4.1.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-zbus+async-io-devel-4.1.2-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lua-lmod-apparmor-abstractions-8.7.48-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lua-lmod-apparmor-abstractions-8.7.48-1.1.noarch.rpm"]
+depends: [
+  "apparmor-abstractions" 
+  "bash-sh" 
+]
+extra-source "lua-lmod-apparmor-abstractions-8.7.48-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/lua-lmod-apparmor-abstractions-8.7.48-1.1.noarch.rpm"
+}

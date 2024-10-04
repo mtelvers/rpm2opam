@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cockpit-ws-322-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cockpit-ws-322-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "distribution-logos-openSUSE-Aeon" 
+  "glib-networking" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "krb5" 
+  "libcrypt1" 
+  "libglib-2_0-0" {>= "2.50.0"}
+  "libgnutls30" 
+  "libjson-glib-1_0-0" 
+  "libsystemd0" 
+  "openssl" 
+  "pam" 
+  "permissions" 
+  "policycoreutils" 
+  "selinux-policy" 
+  "wallpaper-branding-openSUSE" 
+]
+extra-source "cockpit-ws-322-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cockpit-ws-322-1.1.x86_64.rpm"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "clamtk-6.18-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clamtk-6.18-1.1.noarch.rpm"]
+depends: [
+  "clamav" {>= "0.88"}
+  "gnome-icon-theme" {>= "3"}
+  "perl" 
+  "perl-File-Path" 
+  "perl-Glib" 
+  "perl-Gtk3" 
+  "perl-JSON" 
+  "perl-LWP-Protocol-https" 
+  "perl-Net-DNS" 
+  "perl-Text-CSV" 
+  "perl-base" 
+  "perl-gettext" 
+  "perl-libwww-perl" 
+  "typelib-1_0-GdkPixbuf-2_0" {= "2.0"}
+  "typelib-1_0-GdkPixdata-2_0" {= "2.0"}
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" {= "1.0"}
+  "zenity" 
+]
+extra-source "clamtk-6.18-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/clamtk-6.18-1.1.noarch.rpm"
+}

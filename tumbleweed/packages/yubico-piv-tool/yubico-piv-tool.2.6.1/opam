@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "yubico-piv-tool-2.6.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "yubico-piv-tool-2.6.1-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libopenssl3" 
+  "libykcs11-2" {= "2.6.1"}
+  "libykpiv2" 
+  "libz-ng-compat1" 
+]
+extra-source "yubico-piv-tool-2.6.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/yubico-piv-tool-2.6.1-1.1.x86_64.rpm"
+}

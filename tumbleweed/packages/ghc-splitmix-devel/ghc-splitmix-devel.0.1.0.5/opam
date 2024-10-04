@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-splitmix-devel-0.1.0.5-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-splitmix-devel-0.1.0.5-2.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-deepseq-devel" 
+  "ghc-splitmix" {= "0.1.0.5"}
+]
+extra-source "ghc-splitmix-devel-0.1.0.5-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-splitmix-devel-0.1.0.5-2.2.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "device-mapper-multipath-libs-0.9.9-1.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "device-mapper-multipath-libs-0.9.9-1.el10.x86_64.rpm"]
+depends: [
+  "device-mapper-libs" 
+  "glibc" 
+  "libaio" 
+  "libgcc" 
+  "libmount" 
+  "systemd-libs" 
+  "userspace-rcu" 
+]
+extra-source "device-mapper-multipath-libs-0.9.9-1.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/device-mapper-multipath-libs-0.9.9-1.el10.x86_64.rpm"
+}

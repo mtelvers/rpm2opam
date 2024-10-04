@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pytest-env-0.8.2-slfo.1.1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pytest-env-0.8.2-slfo.1.1.5.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-pytest" {>= "2.6.0"}
+]
+extra-source "python311-pytest-env-0.8.2-slfo.1.1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/python311-pytest-env-0.8.2-slfo.1.1.5.noarch.rpm"
+}

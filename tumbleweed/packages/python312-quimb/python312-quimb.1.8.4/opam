@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-quimb-1.8.4-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-quimb-1.8.4-2.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "python312-autoray" {>= "0.6.12"}
+  "python312-base" {= "3.12"}
+  "python312-cotengra" {>= "0.6.1"}
+  "python312-cytoolz" {>= "0.8.0"}
+  "python312-numba" {>= "0.39"}
+  "python312-numpy" {>= "1.17"}
+  "python312-psutil" {>= "4.3.1"}
+  "python312-scipy" {>= "1.0.0"}
+  "python312-tqdm" {>= "4"}
+  "update-alternatives" 
+]
+extra-source "python312-quimb-1.8.4-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-quimb-1.8.4-2.1.noarch.rpm"
+}

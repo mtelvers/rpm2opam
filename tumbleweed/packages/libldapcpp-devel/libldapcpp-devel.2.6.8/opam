@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libldapcpp-devel-2.6.8-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libldapcpp-devel-2.6.8-2.1.x86_64.rpm"]
+depends: [
+  "libldapcpp0" {= "2.6.8"}
+  "openldap2-devel" 
+]
+extra-source "libldapcpp-devel-2.6.8-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libldapcpp-devel-2.6.8-2.1.x86_64.rpm"
+}

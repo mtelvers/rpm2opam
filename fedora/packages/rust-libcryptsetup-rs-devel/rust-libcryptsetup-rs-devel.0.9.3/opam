@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-libcryptsetup-rs-devel-0.9.3-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-libcryptsetup-rs-devel-0.9.3-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.71.1"}
+  "rust-bitflags+default-devel" 
+  "rust-either+default-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-libcryptsetup-rs-sys+default-devel" 
+  "rust-log+default-devel" 
+  "rust-pkg-config+default-devel" 
+  "rust-semver+default-devel" 
+  "rust-serde_json+default-devel" 
+  "rust-uuid+default-devel" 
+  "rust-uuid+v4-devel" 
+]
+extra-source "rust-libcryptsetup-rs-devel-0.9.3-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-libcryptsetup-rs-devel-0.9.3-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-moto-all-5.0.3-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-moto-all-5.0.3-1.2.noarch.rpm"]
+depends: [
+  "python311-PyYAML" {>= "5.1"}
+  "python311-aws-xray-sdk" {>= "0.93"}
+  "python311-cfn-lint" {>= "0.40.0"}
+  "python311-docker" {>= "3.0.0"}
+  "python311-ecdsa" 
+  "python311-graphql-core" 
+  "python311-joserfc" 
+  "python311-jsondiff" {>= "1.1.2"}
+  "python311-moto" {= "5.0.3"}
+  "python311-openapi-spec-validator" {>= "0.5.0"}
+  "python311-py-partiql-parser" {>= "0.5.0"}
+  "python311-pyparsing" {>= "3.0.7"}
+  "python311-python-multipart" 
+  "python311-setuptools" 
+]
+extra-source "python311-moto-all-5.0.3-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-moto-all-5.0.3-1.2.noarch.rpm"
+}

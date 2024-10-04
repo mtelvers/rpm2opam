@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "duc-1.4.5-1.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "duc-1.4.5-1.8.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libglfw3" 
+  "libncurses6" 
+  "libpango-1_0-0" 
+  "libsqlite3-0" 
+]
+extra-source "duc-1.4.5-1.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/duc-1.4.5-1.8.x86_64.rpm"
+}

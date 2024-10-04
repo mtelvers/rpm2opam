@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ucrt64-gcc-14.0.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ucrt64-gcc-14.0.1-1.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "gmp" 
+  "libgcc" 
+  "libmpc" 
+  "libstdc++" 
+  "mpfr" 
+  "ucrt64-binutils" 
+  "ucrt64-cpp" 
+  "ucrt64-crt" 
+  "ucrt64-headers" 
+  "ucrt64-libgcc" 
+  "ucrt64-winpthreads-static" 
+  "zlib-ng-compat" 
+]
+extra-source "ucrt64-gcc-14.0.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/ucrt64-gcc-14.0.1-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-File-ShareDir-PAR-0.06-41.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-File-ShareDir-PAR-0.06-41.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Class-Inspector" 
+  "perl-Exporter" 
+  "perl-File-Path" 
+  "perl-File-ShareDir" {>= "1.2"}
+  "perl-PAR" {>= "0.989"}
+  "perl-PathTools" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" {>= "5.5.0"}
+  "perl-vars" 
+]
+extra-source "perl-File-ShareDir-PAR-0.06-41.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-File-ShareDir-PAR-0.06-41.fc40.noarch.rpm"
+}

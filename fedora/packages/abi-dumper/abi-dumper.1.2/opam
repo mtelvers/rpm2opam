@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "abi-dumper-1.2-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "abi-dumper-1.2-12.fc40.noarch.rpm"]
+depends: [
+  "elfutils" 
+  "perl-Data-Dumper" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-PathTools" 
+  "perl-Storable" 
+  "perl-interpreter" 
+  "vtable-dumper" {>= "1.1"}
+]
+extra-source "abi-dumper-1.2-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/abi-dumper-1.2-12.fc40.noarch.rpm"
+}

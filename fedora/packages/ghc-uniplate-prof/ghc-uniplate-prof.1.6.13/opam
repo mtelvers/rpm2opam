@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-uniplate-prof-1.6.13-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-uniplate-prof-1.6.13-12.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-hashable-prof" 
+  "ghc-syb-prof" 
+  "ghc-uniplate-devel" {= "1.6.13"}
+  "ghc-unordered-containers-prof" 
+]
+extra-source "ghc-uniplate-prof-1.6.13-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-uniplate-prof-1.6.13-12.fc40.x86_64.rpm"
+}

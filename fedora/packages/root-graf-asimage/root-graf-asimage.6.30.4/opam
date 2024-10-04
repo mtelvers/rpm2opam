@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "root-graf-asimage-6.30.04-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "root-graf-asimage-6.30.04-2.fc40.x86_64.rpm"]
+depends: [
+  "fontconfig" 
+  "freetype" 
+  "glibc" 
+  "libAfterImage" {>= "1.20"}
+  "libX11" 
+  "libgcc" 
+  "libstdc++" 
+  "root-graf" 
+  "root-gui" 
+  "root-hist" 
+  "root-io" 
+  "root-mathcore" 
+]
+extra-source "root-graf-asimage-6.30.04-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/root-graf-asimage-6.30.04-2.fc40.x86_64.rpm"
+}

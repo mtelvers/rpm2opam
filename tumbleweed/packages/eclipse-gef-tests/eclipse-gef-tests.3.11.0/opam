@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "eclipse-gef-tests-3.11.0-2.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eclipse-gef-tests-3.11.0-2.14.noarch.rpm"]
+depends: [
+  "eclipse-gef" {= "3.10.100.202203291401"}
+  "eclipse-jdt" 
+  "eclipse-pde" 
+  "java-11-openj9-headless" {>= "1.6"}
+  "javapackages-filesystem" 
+  "junit" 
+]
+extra-source "eclipse-gef-tests-3.11.0-2.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/eclipse-gef-tests-3.11.0-2.14.noarch.rpm"
+}

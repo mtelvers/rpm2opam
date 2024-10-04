@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gprompter-0.9.1-15.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gprompter-0.9.1-15.3.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcairo2" 
+  "libgcc_s1" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgtk-2_0-0" 
+  "libpango-1_0-0" 
+  "libpresage1" 
+  "libstdc++6" 
+]
+extra-source "gprompter-0.9.1-15.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gprompter-0.9.1-15.3.x86_64.rpm"
+}

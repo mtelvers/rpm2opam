@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pangomm2.48-2.50.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pangomm2.48-2.50.2-1.fc40.x86_64.rpm"]
+depends: [
+  "cairomm1-16" {>= "1.15.1"}
+  "glib2" 
+  "glibc" 
+  "glibmm2-68" {>= "2.68.0"}
+  "libgcc" 
+  "libsigc++30" 
+  "libstdc++" 
+  "pango" 
+]
+extra-source "pangomm2.48-2.50.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pangomm2.48-2.50.2-1.fc40.x86_64.rpm"
+}

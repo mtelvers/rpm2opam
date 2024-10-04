@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-azure-service-bus-devel-0.11.5-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-azure-service-bus-devel-0.11.5-3.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-azure-amqp-common-3-devel" 
+  "go-filesystem" 
+  "golang-github-azure-amqp-devel" 
+  "golang-github-azure-autorest-devel" 
+  "golang-github-azure-sdk-devel" 
+  "golang-github-devigned-tab-devel" 
+  "golang-github-joho-godotenv-devel" 
+  "golang-github-mitchellh-mapstructure-devel" 
+  "golang-github-stretchr-testify-devel" 
+  "golang-nhooyr-websocket-devel" 
+]
+extra-source "golang-github-azure-service-bus-devel-0.11.5-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-azure-service-bus-devel-0.11.5-3.fc40.noarch.rpm"
+}

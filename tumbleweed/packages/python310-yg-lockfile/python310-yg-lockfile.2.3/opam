@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-yg.lockfile-2.3-1.16.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-yg.lockfile-2.3-1.16.noarch.rpm"]
+depends: [
+  "python310-base" {= "3.10"}
+  "python310-jaraco-functools" {>= "1.16"}
+  "python310-tempora" 
+  "python310-zc-lockfile" 
+]
+extra-source "python310-yg.lockfile-2.3-1.16.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-yg.lockfile-2.3-1.16.noarch.rpm"
+}

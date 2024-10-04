@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mod_log_post-0.1.0-30.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mod_log_post-0.1.0-30.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "httpd-core" {= "20120211"}
+]
+extra-source "mod_log_post-0.1.0-30.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mod_log_post-0.1.0-30.fc40.x86_64.rpm"
+}

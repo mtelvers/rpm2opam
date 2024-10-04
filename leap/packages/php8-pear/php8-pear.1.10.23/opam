@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "php8-pear-1.10.23-slfo.1.1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php8-pear-1.10.23-slfo.1.1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "php8-cli" 
+  "php8-openssl" 
+  "php8-phar" 
+]
+extra-source "php8-pear-1.10.23-slfo.1.1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/php8-pear-1.10.23-slfo.1.1.1.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-kafka+lz4-2.0.2-14.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-kafka+lz4-2.0.2-14.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-kafka" {= "2.0.2"}
+  "python3-lz4" 
+]
+extra-source "python3-kafka+lz4-2.0.2-14.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-kafka+lz4-2.0.2-14.fc40.noarch.rpm"
+}

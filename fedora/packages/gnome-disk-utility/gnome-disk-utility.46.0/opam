@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-disk-utility-46.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-disk-utility-46.0-1.fc40.x86_64.rpm"]
+depends: [
+  "atk" 
+  "cairo" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk3" 
+  "libcanberra-gtk3" 
+  "libdvdread" 
+  "libgcc" 
+  "libhandy" {>= "1.5.0"}
+  "libnotify" 
+  "libpwquality" 
+  "libsecret" 
+  "libudisks2" 
+  "pango" 
+  "systemd-libs" 
+  "udisks2" 
+  "xz-libs" 
+]
+extra-source "gnome-disk-utility-46.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-disk-utility-46.0-1.fc40.x86_64.rpm"
+}

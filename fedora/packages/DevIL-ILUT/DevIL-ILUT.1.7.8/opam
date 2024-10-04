@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "DevIL-ILUT-1.7.8-43.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "DevIL-ILUT-1.7.8-43.fc40.x86_64.rpm"]
+depends: [
+  "DevIL" {= "1.7.8"}
+  "allegro" 
+  "glibc" 
+  "jasper-libs" 
+  "libX11" 
+  "libXext" 
+  "libXrender" 
+  "libglvnd-glx" 
+  "libjpeg-turbo" 
+  "libmng" 
+  "libpng" 
+  "libtiff" 
+  "mesa-libGLU" 
+  "sdl12-compat" 
+  "zlib-ng-compat" 
+]
+extra-source "DevIL-ILUT-1.7.8-43.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/DevIL-ILUT-1.7.8-43.fc40.x86_64.rpm"
+}

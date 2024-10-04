@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pssh-2.3.4+git10.d4909c9-4.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pssh-2.3.4+git10.d4909c9-4.2.noarch.rpm"]
+depends: [
+  "python-pssh" {= "2.3.4"}
+  "python311-base" 
+]
+extra-source "pssh-2.3.4+git10.d4909c9-4.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pssh-2.3.4+git10.d4909c9-4.2.noarch.rpm"
+}

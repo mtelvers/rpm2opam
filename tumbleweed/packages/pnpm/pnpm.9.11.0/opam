@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pnpm-9.11.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pnpm-9.11.0-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "nodejs-common" 
+]
+extra-source "pnpm-9.11.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pnpm-9.11.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vte-devel-0.28.2-42.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vte-devel-0.28.2-42.fc40.x86_64.rpm"]
+depends: [
+  "cairo-devel" 
+  "glib2" 
+  "glib2-devel" 
+  "glibc" 
+  "gtk2" 
+  "gtk2-devel" 
+  "libX11-devel" 
+  "ncurses-devel" 
+  "pango" 
+  "pango-devel" {>= "1.22.0"}
+  "pkgconf-pkg-config" 
+  "vte" 
+]
+extra-source "vte-devel-0.28.2-42.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vte-devel-0.28.2-42.fc40.x86_64.rpm"
+}

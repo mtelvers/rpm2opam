@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-chs-physics-report-2024.216.svn54512-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-chs-physics-report-2024.216.svn54512-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-amsmath" 
+  "texlive-fancyhdr" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-letltxmacro" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-titlesec" 
+  "texlive-tools" 
+  "texlive-transparent" 
+  "texlive-xcolor" 
+]
+extra-source "texlive-chs-physics-report-2024.216.svn54512-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-chs-physics-report-2024.216.svn54512-56.1.noarch.rpm"
+}

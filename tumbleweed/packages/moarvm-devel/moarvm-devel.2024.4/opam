@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "moarvm-devel-2024.04-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "moarvm-devel-2024.04-1.1.noarch.rpm"]
+depends: [
+  "libffi-devel" 
+  "libtommath-devel" 
+  "libuv-devel" 
+  "libzstd-devel" 
+  "moarvm" {= "2024.4"}
+  "pkgconf-pkg-config" 
+]
+extra-source "moarvm-devel-2024.04-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/moarvm-devel-2024.04-1.1.noarch.rpm"
+}

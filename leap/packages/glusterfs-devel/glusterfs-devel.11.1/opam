@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glusterfs-devel-11.1-slfo.1.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glusterfs-devel-11.1-slfo.1.1.1.x86_64.rpm"]
+depends: [
+  "glusterfs" {= "11.1"}
+  "libacl-devel" 
+  "libgfapi0" {= "11.1"}
+  "libgfchangelog0" {= "11.1"}
+  "libgfrpc0" {= "11.1"}
+  "libgfxdr0" {= "11.1"}
+  "libglusterfs0" {= "11.1"}
+  "libuuid-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "glusterfs-devel-11.1-slfo.1.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/glusterfs-devel-11.1-slfo.1.1.1.x86_64.rpm"
+}

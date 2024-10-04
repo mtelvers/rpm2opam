@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-cabal-doctest-prof-1.0.9-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-cabal-doctest-prof-1.0.9-8.fc40.x86_64.rpm"]
+depends: [
+  "ghc-Cabal-prof" 
+  "ghc-base-prof" 
+  "ghc-cabal-doctest-devel" {= "1.0.9"}
+  "ghc-directory-prof" 
+  "ghc-filepath-prof" 
+]
+extra-source "ghc-cabal-doctest-prof-1.0.9-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-cabal-doctest-prof-1.0.9-8.fc40.x86_64.rpm"
+}

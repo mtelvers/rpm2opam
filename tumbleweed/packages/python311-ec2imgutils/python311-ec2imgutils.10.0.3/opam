@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-ec2imgutils-10.0.3-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-ec2imgutils-10.0.3-2.1.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "python311" 
+  "python311-base" 
+  "python311-boto3" {>= "1.29.84"}
+  "python311-paramiko" {>= "2.2.0"}
+  "python311-python-dateutil" 
+]
+extra-source "python311-ec2imgutils-10.0.3-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-ec2imgutils-10.0.3-2.1.noarch.rpm"
+}

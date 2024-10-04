@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "plasma-nano-6.0.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plasma-nano-6.0.3-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf6-kcoreaddons" 
+  "kf6-kpackage" 
+  "kf6-kservice" 
+  "kf6-kwindowsystem" 
+  "kwayland" 
+  "libplasma" 
+  "libstdc++" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qt6-qtdeclarative" 
+]
+extra-source "plasma-nano-6.0.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/plasma-nano-6.0.3-1.fc40.x86_64.rpm"
+}

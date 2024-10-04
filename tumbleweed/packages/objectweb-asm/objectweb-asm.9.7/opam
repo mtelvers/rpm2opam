@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "objectweb-asm-9.7-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "objectweb-asm-9.7-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "java-11-openj9" {>= "1.8"}
+  "javapackages-filesystem" 
+  "javapackages-tools" 
+]
+extra-source "objectweb-asm-9.7-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/objectweb-asm-9.7-1.1.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Class-CSV-1.03-45.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Class-CSV-1.03-45.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Class-Accessor" {>= "0.18"}
+  "perl-Text-CSV_XS" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-Class-CSV-1.03-45.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Class-CSV-1.03-45.fc40.noarch.rpm"
+}

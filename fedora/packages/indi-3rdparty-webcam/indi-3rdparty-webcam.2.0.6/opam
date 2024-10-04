@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "indi-3rdparty-webcam-2.0.6-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "indi-3rdparty-webcam-2.0.6-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libavcodec-free" 
+  "libavdevice-free" 
+  "libavformat-free" 
+  "libavutil-free" 
+  "libgcc" 
+  "libindi" {= "2.0.6"}
+  "libindi-libs" 
+  "libstdc++" 
+  "libswscale-free" 
+]
+extra-source "indi-3rdparty-webcam-2.0.6-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/indi-3rdparty-webcam-2.0.6-1.fc40.x86_64.rpm"
+}

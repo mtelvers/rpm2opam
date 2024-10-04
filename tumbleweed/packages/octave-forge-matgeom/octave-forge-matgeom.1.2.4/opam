@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "octave-forge-matgeom-1.2.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "octave-forge-matgeom-1.2.4-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "octave-cli" {>= "4.2.0"}
+]
+extra-source "octave-forge-matgeom-1.2.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/octave-forge-matgeom-1.2.4-1.1.noarch.rpm"
+}

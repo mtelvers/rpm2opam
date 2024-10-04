@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qt6-protobuf-devel-6.7.2-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qt6-protobuf-devel-6.7.2-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt6Protobuf6" {= "6.7.2"}
+  "libabsl_lite_2401_0_0" 
+  "libgcc_s1" 
+  "libprotobuf25_4_0" 
+  "libprotoc25_4_0" 
+  "libstdc++6" 
+  "pkgconf-pkg-config" 
+  "protobuf-devel" 
+  "qt6-core-devel" {= "6.7.2"}
+]
+extra-source "qt6-protobuf-devel-6.7.2-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/qt6-protobuf-devel-6.7.2-2.2.x86_64.rpm"
+}

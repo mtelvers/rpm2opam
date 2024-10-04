@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-debugger-1.60-506.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-debugger-1.60-506.fc40.noarch.rpm"]
+depends: [
+  "perl-IO" 
+  "perl-PathTools" 
+  "perl-Term-ReadLine" 
+  "perl-libs" 
+  "perl-meta-notation" {= "5.38.2"}
+  "perl-mro" 
+  "perl-threads" 
+  "perl-threads-shared" 
+  "perl-vars" 
+]
+extra-source "perl-debugger-1.60-506.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-debugger-1.60-506.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-virt-firmware-tests-24.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-virt-firmware-tests-24.2-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "edk2-ovmf" 
+  "python3-pytest" 
+  "python3-virt-firmware" 
+]
+extra-source "python3-virt-firmware-tests-24.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-virt-firmware-tests-24.2-1.fc40.noarch.rpm"
+}

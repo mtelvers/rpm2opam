@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "matio-1.5.26-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "matio-1.5.26-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "hdf5" {= "1.12.1"}
+  "zlib-ng-compat" 
+]
+extra-source "matio-1.5.26-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/matio-1.5.26-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tuikit-devel-0.5.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tuikit-devel-0.5.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bitflags+default-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-log+default-devel" 
+  "rust-nix+fs-devel" 
+  "rust-nix+poll-devel" 
+  "rust-nix+signal-devel" 
+  "rust-nix+term-devel" 
+  "rust-nix-devel" 
+  "rust-term+default-devel" 
+  "rust-unicode-width+default-devel" 
+]
+extra-source "rust-tuikit-devel-0.5.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tuikit-devel-0.5.0-2.fc40.noarch.rpm"
+}

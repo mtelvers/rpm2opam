@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-new_debug_unreachable+default-devel-1.0.6-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-new_debug_unreachable+default-devel-1.0.6-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-new_debug_unreachable-devel" {= "1.0.6"}
+]
+extra-source "rust-new_debug_unreachable+default-devel-1.0.6-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-new_debug_unreachable+default-devel-1.0.6-1.fc40.noarch.rpm"
+}

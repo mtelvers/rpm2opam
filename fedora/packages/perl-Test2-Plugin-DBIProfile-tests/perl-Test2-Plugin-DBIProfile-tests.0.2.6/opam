@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test2-Plugin-DBIProfile-tests-0.2.6-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test2-Plugin-DBIProfile-tests-0.2.6-10.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-DBD-SQLite" {>= "1.44"}
+  "perl-DBI" 
+  "perl-Data-Dumper" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" {>= "1.302165"}
+  "perl-Test2-Plugin-DBIProfile" 
+  "perl-Test2-Suite" {>= "0.124"}
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-Test2-Plugin-DBIProfile-tests-0.2.6-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test2-Plugin-DBIProfile-tests-0.2.6-10.fc40.noarch.rpm"
+}

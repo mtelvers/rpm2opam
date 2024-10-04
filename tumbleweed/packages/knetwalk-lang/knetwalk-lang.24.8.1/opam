@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "knetwalk-lang-24.08.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "knetwalk-lang-24.08.1-1.1.noarch.rpm"]
+depends: [
+  "knetwalk" {= "24.8.1"}
+]
+extra-source "knetwalk-lang-24.08.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/knetwalk-lang-24.08.1-1.1.noarch.rpm"
+}

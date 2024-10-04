@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ffmpeg-7-mini-devel-7.0.2-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ffmpeg-7-mini-devel-7.0.2-2.1.x86_64.rpm"]
+depends: [
+  "ffmpeg-7-libavcodec-devel" {>= "61.3.100"}
+  "ffmpeg-7-libavfilter-devel" {>= "10.1.100"}
+  "ffmpeg-7-libavformat-devel" {>= "61.1.100"}
+  "ffmpeg-7-libavutil-devel" {>= "59.8.100"}
+  "ffmpeg-7-libpostproc-devel" {>= "58.1.100"}
+  "ffmpeg-7-libswresample-devel" {>= "5.1.100"}
+  "ffmpeg-7-libswscale-devel" {>= "8.1.100"}
+  "ffmpeg-7-mini-libs" {= "7.0.2"}
+  "pkgconf-pkg-config" 
+]
+extra-source "ffmpeg-7-mini-devel-7.0.2-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ffmpeg-7-mini-devel-7.0.2-2.1.x86_64.rpm"
+}

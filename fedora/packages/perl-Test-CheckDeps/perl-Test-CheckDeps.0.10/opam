@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Test-CheckDeps-0.010-40.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-CheckDeps-0.010-40.fc40.noarch.rpm"]
+depends: [
+  "perl-CPAN-Meta" {>= "2.120920"}
+  "perl-CPAN-Meta-Check" {>= "0.7"}
+  "perl-Exporter" {>= "5.57"}
+  "perl-Scalar-List-Utils" 
+  "perl-Test-Simple" 
+  "perl-libs" 
+]
+extra-source "perl-Test-CheckDeps-0.010-40.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Test-CheckDeps-0.010-40.fc40.noarch.rpm"
+}

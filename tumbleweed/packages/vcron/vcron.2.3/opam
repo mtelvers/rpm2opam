@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vcron-2.3-283.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vcron-2.3-283.2.noarch.rpm"]
+depends: [
+  "at" 
+  "bash-sh" 
+  "cron" 
+  "libfreetype6" 
+  "tcl" {>= "8"}
+  "tk" {>= "8"}
+]
+extra-source "vcron-2.3-283.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/vcron-2.3-283.2.noarch.rpm"
+}

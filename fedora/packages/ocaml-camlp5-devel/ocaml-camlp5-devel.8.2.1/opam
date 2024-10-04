@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-camlp5-devel-8.02.01-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-camlp5-devel-8.02.01-7.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "ocaml" {= "2125"}
+  "ocaml-camlp-streams" {= "0"}
+  "ocaml-camlp-streams-devel" 
+  "ocaml-camlp5" {= "5"}
+  "ocaml-compiler-libs" {= "791"}
+  "ocaml-re-devel" 
+  "ocaml-runtime" 
+]
+extra-source "ocaml-camlp5-devel-8.02.01-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-camlp5-devel-8.02.01-7.fc40.x86_64.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-fast-logger-prof-3.2.3-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-fast-logger-prof-3.2.3-1.5.x86_64.rpm"]
+depends: [
+  "ghc-array-prof" 
+  "ghc-auto-update-prof" 
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-directory-prof" 
+  "ghc-easy-file-prof" 
+  "ghc-fast-logger-devel" {= "3.2.3"}
+  "ghc-filepath-prof" 
+  "ghc-stm-prof" 
+  "ghc-text-prof" 
+  "ghc-unix-compat-prof" 
+  "ghc-unix-time-prof" 
+]
+extra-source "ghc-fast-logger-prof-3.2.3-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-fast-logger-prof-3.2.3-1.5.x86_64.rpm"
+}

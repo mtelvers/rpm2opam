@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libavahi-gobject0-0.8-35.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libavahi-gobject0-0.8-35.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libavahi-client3" 
+  "libavahi-common3" 
+  "libavahi-glib1" 
+]
+extra-source "libavahi-gobject0-0.8-35.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libavahi-gobject0-0.8-35.1.x86_64.rpm"
+}

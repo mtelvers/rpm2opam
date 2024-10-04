@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sbd-1.5.2+20230316.5ec38cf-slfo.1.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sbd-1.5.2+20230316.5ec38cf-slfo.1.1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "corosync-libs" 
+  "fillup" 
+  "glibc" 
+  "libaio1" 
+  "libglib-2_0-0" 
+  "libqb100" 
+  "libuuid1" 
+  "pacemaker-libs" 
+  "pkgconf-pkg-config" 
+  "systemd" 
+]
+extra-source "sbd-1.5.2+20230316.5ec38cf-slfo.1.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/sbd-1.5.2+20230316.5ec38cf-slfo.1.1.1.x86_64.rpm"
+}

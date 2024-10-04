@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kmozillahelper-5.0.6-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kmozillahelper-5.0.6-3.2.x86_64.rpm"]
+depends: [
+  "MozillaFirefox" {= "6"}
+  "glibc" 
+  "kio" 
+  "kio-core" 
+  "kservice" 
+  "libKF5ConfigCore5" 
+  "libKF5CoreAddons5" 
+  "libKF5I18n5" 
+  "libKF5Notifications5" 
+  "libKF5WindowSystem5" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Widgets5" 
+  "libstdc++6" 
+]
+extra-source "kmozillahelper-5.0.6-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kmozillahelper-5.0.6-3.2.x86_64.rpm"
+}

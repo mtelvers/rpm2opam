@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ruby3.3-doc-ri-3.3.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ruby3.3-doc-ri-3.3.5-1.1.noarch.rpm"]
+depends: [
+  "ruby3-3" {= "3.3.5"}
+]
+extra-source "ruby3.3-doc-ri-3.3.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ruby3.3-doc-ri-3.3.5-1.1.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-DateTime-Format-ICal-0.09-44.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-DateTime-Format-ICal-0.09-44.fc40.noarch.rpm"]
+depends: [
+  "perl-DateTime" {>= "0.17"}
+  "perl-DateTime-Event-ICal" {>= "0.3"}
+  "perl-DateTime-Set" {>= "0.1"}
+  "perl-DateTime-TimeZone" {>= "0.22"}
+  "perl-Params-Validate" {>= "0.59"}
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-DateTime-Format-ICal-0.09-44.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-DateTime-Format-ICal-0.09-44.fc40.noarch.rpm"
+}

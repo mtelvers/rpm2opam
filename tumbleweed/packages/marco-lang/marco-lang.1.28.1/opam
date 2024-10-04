@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "marco-lang-1.28.1-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "marco-lang-1.28.1-1.2.noarch.rpm"]
+depends: [
+  "marco" {= "1.28.1"}
+]
+extra-source "marco-lang-1.28.1-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/marco-lang-1.28.1-1.2.noarch.rpm"
+}

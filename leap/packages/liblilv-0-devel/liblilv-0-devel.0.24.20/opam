@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "liblilv-0-devel-0.24.20-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "liblilv-0-devel-0.24.20-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "liblilv-0-0" {= "0.24.20"}
+  "lv2-devel" {>= "1.18.2"}
+  "pkgconf-pkg-config" 
+  "serd-devel" {>= "0.30.10"}
+  "sord-devel" {>= "0.16.10"}
+  "sratom-devel" {>= "0.6.10"}
+]
+extra-source "liblilv-0-devel-0.24.20-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/liblilv-0-devel-0.24.20-slfo.1.1.7.x86_64.rpm"
+}

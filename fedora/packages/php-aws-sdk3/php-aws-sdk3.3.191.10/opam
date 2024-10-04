@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "php-aws-sdk3-3.191.10-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "php-aws-sdk3-3.191.10-6.fc40.noarch.rpm"]
+depends: [
+  "php-common" {>= "5.5"}
+  "php-fedora-autoloader" 
+  "php-guzzlehttp-guzzle6" 
+  "php-guzzlehttp-promises" 
+  "php-guzzlehttp-psr7" 
+  "php-mbstring" 
+  "php-mtdowling-jmespath-php" 
+  "php-tidy" 
+  "php-xml" 
+]
+extra-source "php-aws-sdk3-3.191.10-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/php-aws-sdk3-3.191.10-6.fc40.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gettext-runtime-0.22.5-7.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gettext-runtime-0.22.5-7.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "envsubst" {= "0.22.5"}
+  "glibc" 
+  "libstdc++6" 
+  "libtextstyle0" 
+  "libxml2-2" 
+]
+extra-source "gettext-runtime-0.22.5-7.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gettext-runtime-0.22.5-7.1.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ceph-mgr-cephadm-18.2.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ceph-mgr-cephadm-18.2.2-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "ceph-mgr" {= "18.2.2"}
+  "cephadm" {= "18.2.2"}
+  "openssh-clients" 
+  "python3-asyncssh" 
+  "python3-cherrypy" 
+  "python3-jinja2" 
+  "python3-natsort" 
+]
+extra-source "ceph-mgr-cephadm-18.2.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/ceph-mgr-cephadm-18.2.2-1.fc40.noarch.rpm"
+}

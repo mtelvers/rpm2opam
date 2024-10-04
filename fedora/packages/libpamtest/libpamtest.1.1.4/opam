@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libpamtest-1.1.4-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libpamtest-1.1.4-12.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "pam-libs" 
+  "pam_wrapper" {= "1.1.4"}
+]
+extra-source "libpamtest-1.1.4-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libpamtest-1.1.4-12.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xonsh-0.16.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xonsh-0.16.0-1.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+]
+extra-source "xonsh-0.16.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xonsh-0.16.0-1.1.noarch.rpm"
+}

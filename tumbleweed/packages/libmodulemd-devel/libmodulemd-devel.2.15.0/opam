@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmodulemd-devel-2.15.0-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmodulemd-devel-2.15.0-3.1.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "libmodulemd2" {= "2.15.0"}
+  "libyaml-devel" 
+  "pkgconf-pkg-config" 
+  "rpm-devel" 
+  "typelib-1_0-Modulemd-2_0" {= "2.15.0"}
+]
+extra-source "libmodulemd-devel-2.15.0-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmodulemd-devel-2.15.0-3.1.x86_64.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pigz-2.8-7.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pigz-2.8-7.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "zlib-ng-compat" 
+]
+extra-source "pigz-2.8-7.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/pigz-2.8-7.el10.x86_64.rpm"
+}

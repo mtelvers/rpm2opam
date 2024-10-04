@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "melange-bash-completion-0.12.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "melange-bash-completion-0.12.1-1.1.noarch.rpm"]
+depends: [
+  "melange" {= "0.12.1"}
+]
+extra-source "melange-bash-completion-0.12.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/melange-bash-completion-0.12.1-1.1.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Authen-Simple-Passwd-0.6-40.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Authen-Simple-Passwd-0.6-40.fc40.noarch.rpm"]
+depends: [
+  "perl-Authen-Simple" 
+  "perl-Carp" 
+  "perl-Fcntl" 
+  "perl-IO" 
+  "perl-Params-Validate" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-Authen-Simple-Passwd-0.6-40.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Authen-Simple-Passwd-0.6-40.fc40.noarch.rpm"
+}

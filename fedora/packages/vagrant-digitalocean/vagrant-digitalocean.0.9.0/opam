@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vagrant-digitalocean-0.9.0-17.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vagrant-digitalocean-0.9.0-17.fc40.noarch.rpm"]
+depends: [
+  "rubygem-faraday" 
+  "rubygem-highline" 
+  "vagrant" {>= "1.9.1"}
+]
+extra-source "vagrant-digitalocean-0.9.0-17.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vagrant-digitalocean-0.9.0-17.fc40.noarch.rpm"
+}

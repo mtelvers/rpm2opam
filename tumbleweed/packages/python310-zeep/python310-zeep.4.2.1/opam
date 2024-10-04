@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-zeep-4.2.1-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-zeep-4.2.1-1.3.noarch.rpm"]
+depends: [
+  "python310-attrs" {>= "17.2.0"}
+  "python310-base" {= "3.10"}
+  "python310-cached-property" {>= "1.3.0"}
+  "python310-isodate" {>= "0.5.4"}
+  "python310-lxml" {>= "4.6.0"}
+  "python310-platformdirs" {>= "1.4.0"}
+  "python310-pytz" 
+  "python310-requests" {>= "2.7.0"}
+  "python310-requests-file" {>= "1.5.1"}
+  "python310-requests-toolbelt" {>= "0.7.1"}
+]
+extra-source "python310-zeep-4.2.1-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-zeep-4.2.1-1.3.noarch.rpm"
+}

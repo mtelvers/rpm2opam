@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Algorithm-Diff-XS-0.04-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Algorithm-Diff-XS-0.04-29.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-Algorithm-Diff" {>= "1.19"}
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-Algorithm-Diff-XS-0.04-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Algorithm-Diff-XS-0.04-29.fc40.x86_64.rpm"
+}

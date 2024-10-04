@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmpdclient-devel-2.22-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmpdclient-devel-2.22-1.1.x86_64.rpm"]
+depends: [
+  "libmpdclient2" {= "2.22"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libmpdclient-devel-2.22-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmpdclient-devel-2.22-1.1.x86_64.rpm"
+}

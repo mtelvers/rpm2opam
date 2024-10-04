@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "git-credential-libsecret-2.44.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "git-credential-libsecret-2.44.0-1.fc40.x86_64.rpm"]
+depends: [
+  "git" {= "2.44.0"}
+  "glib2" 
+  "glibc" 
+  "libsecret" 
+]
+extra-source "git-credential-libsecret-2.44.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/git-credential-libsecret-2.44.0-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-factura-2024.216.4.32svn61697-55.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-factura-2024.216.4.32svn61697-55.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-anyfontsize" 
+  "texlive-atbegshi" 
+  "texlive-babel" 
+  "texlive-datetime2" 
+  "texlive-environ" 
+  "texlive-eso-pic" 
+  "texlive-etoolbox" 
+  "texlive-fancyhdr" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-fp" 
+  "texlive-geometry" 
+  "texlive-graphics" 
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-l3packages" 
+  "texlive-latex" 
+  "texlive-numprint" 
+  "texlive-pgf" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-textpos" 
+  "texlive-tools" 
+  "texlive-xstring" 
+  "texlive-zref" 
+]
+extra-source "texlive-factura-2024.216.4.32svn61697-55.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-factura-2024.216.4.32svn61697-55.1.noarch.rpm"
+}

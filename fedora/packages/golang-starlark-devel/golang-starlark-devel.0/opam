@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-starlark-devel-0-19.20230725git0d72639.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-starlark-devel-0-19.20230725git0d72639.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-chzyer-readline-devel" 
+  "go-filesystem" 
+  "golang-google-protobuf-devel" 
+  "golang-x-term-devel" 
+]
+extra-source "golang-starlark-devel-0-19.20230725git0d72639.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-starlark-devel-0-19.20230725git0d72639.fc40.noarch.rpm"
+}

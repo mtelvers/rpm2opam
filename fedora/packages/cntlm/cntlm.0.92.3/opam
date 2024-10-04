@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cntlm-0.92.3-28.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cntlm-0.92.3-28.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "shadow-utils" 
+  "systemd" 
+]
+extra-source "cntlm-0.92.3-28.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cntlm-0.92.3-28.fc40.x86_64.rpm"
+}

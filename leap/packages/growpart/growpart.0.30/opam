@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "growpart-0.30-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "growpart-0.30-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gptfdisk" 
+  "util-linux" 
+]
+extra-source "growpart-0.30-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/growpart-0.30-slfo.1.1.3.noarch.rpm"
+}

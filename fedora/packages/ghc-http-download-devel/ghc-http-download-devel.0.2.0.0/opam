@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-http-download-devel-0.2.0.0-29.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-http-download-devel-0.2.0.0-29.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-devel" 
+  "ghc-base64-bytestring-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-conduit-devel" 
+  "ghc-conduit-extra-devel" 
+  "ghc-cryptonite-conduit-devel" 
+  "ghc-cryptonite-devel" 
+  "ghc-directory-devel" 
+  "ghc-exceptions-devel" 
+  "ghc-filepath-devel" 
+  "ghc-http-client-devel" 
+  "ghc-http-conduit-devel" 
+  "ghc-http-download" {= "0.2.0.0"}
+  "ghc-http-types-devel" 
+  "ghc-memory-devel" 
+  "ghc-path-devel" 
+  "ghc-path-io-devel" 
+  "ghc-retry-devel" 
+  "ghc-rio-devel" 
+  "ghc-rio-prettyprint-devel" 
+]
+extra-source "ghc-http-download-devel-0.2.0.0-29.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-http-download-devel-0.2.0.0-29.fc40.x86_64.rpm"
+}

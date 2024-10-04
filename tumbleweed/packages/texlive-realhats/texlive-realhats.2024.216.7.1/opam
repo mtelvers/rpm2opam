@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-realhats-2024.216.7.1svn66924-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-realhats-2024.216.7.1svn66924-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-amsmath" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-graphics" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-lcg" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-stackengine" 
+  "texlive-tools" 
+]
+extra-source "texlive-realhats-2024.216.7.1svn66924-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-realhats-2024.216.7.1svn66924-56.1.noarch.rpm"
+}

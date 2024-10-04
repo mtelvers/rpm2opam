@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Perl-PrereqScanner-NotQuiteLite-0.9917-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Perl-PrereqScanner-NotQuiteLite-0.9917-1.6.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-CPAN-Meta-Requirements" {>= "2.140000"}
+  "perl-Data-Dump" 
+  "perl-Module-CPANfile" {>= "1.1004"}
+  "perl-Module-Find" 
+  "perl-Parse-Distname" 
+  "perl-Regexp-Trie" 
+  "perl-base" 
+]
+extra-source "perl-Perl-PrereqScanner-NotQuiteLite-0.9917-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Perl-PrereqScanner-NotQuiteLite-0.9917-1.6.noarch.rpm"
+}

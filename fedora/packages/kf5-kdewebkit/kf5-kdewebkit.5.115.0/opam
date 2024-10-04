@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kf5-kdewebkit-5.115.0-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kf5-kdewebkit-5.115.0-2.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf5-kconfig-gui" 
+  "kf5-kcoreaddons" 
+  "kf5-kio-core-libs" 
+  "kf5-kio-gui" 
+  "kf5-kio-widgets-libs" 
+  "kf5-kjobwidgets" 
+  "kf5-kparts" 
+  "kf5-kservice" 
+  "kf5-kwallet-libs" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtwebkit" 
+]
+extra-source "kf5-kdewebkit-5.115.0-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kf5-kdewebkit-5.115.0-2.fc40.x86_64.rpm"
+}

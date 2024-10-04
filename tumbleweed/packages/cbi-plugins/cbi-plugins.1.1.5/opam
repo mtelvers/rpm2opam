@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cbi-plugins-1.1.5-6.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cbi-plugins-1.1.5-6.1.noarch.rpm"]
+depends: [
+  "apache-commons-compress" 
+  "auto-value" 
+  "auto-value-annotations" 
+  "bouncycastle-pg" 
+  "decentxml" 
+  "guava" 
+  "httpcomponents-client" 
+  "jackson-annotations" 
+  "jackson-core" 
+  "jackson-databind" 
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "jsr-305" 
+  "maven-lib" 
+  "tycho" 
+]
+extra-source "cbi-plugins-1.1.5-6.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/cbi-plugins-1.1.5-6.1.noarch.rpm"
+}

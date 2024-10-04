@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Net-Patricia-1.22-38.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-Patricia-1.22-38.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-Carp" 
+  "perl-DynaLoader" 
+  "perl-Exporter" 
+  "perl-Net-CIDR-Lite" {>= "0.20"}
+  "perl-Socket" 
+  "perl-Socket6" 
+  "perl-libs" 
+  "perl-vars" 
+  "perl-version" 
+]
+extra-source "perl-Net-Patricia-1.22-38.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Net-Patricia-1.22-38.fc40.x86_64.rpm"
+}

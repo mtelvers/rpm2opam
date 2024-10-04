@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dnsdist-1.9.6-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dnsdist-1.9.6-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libcap2" 
+  "libedit0" 
+  "libfstrm0" 
+  "libgcc_s1" 
+  "liblmdb-0_9_30" 
+  "libluajit-5_1-2" 
+  "libnghttp2-14" 
+  "libopenssl3" 
+  "libre2-11" 
+  "libsnmp40" 
+  "libsodium26" 
+  "libstdc++6" 
+  "libsystemd0" 
+  "sysuser-shadow" {>= "3.2"}
+]
+extra-source "dnsdist-1.9.6-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/dnsdist-1.9.6-1.1.x86_64.rpm"
+}

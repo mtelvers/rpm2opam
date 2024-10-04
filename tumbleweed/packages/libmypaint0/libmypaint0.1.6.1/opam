@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libmypaint0-1.6.1-2.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmypaint0-1.6.1-2.6.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgomp1" 
+  "libjson-c5" 
+]
+extra-source "libmypaint0-1.6.1-2.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libmypaint0-1.6.1-2.6.x86_64.rpm"
+}

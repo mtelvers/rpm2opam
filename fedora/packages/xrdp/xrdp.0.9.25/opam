@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xrdp-0.9.25-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xrdp-0.9.25-2.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "fuse-libs" 
+  "glibc" 
+  "imlib2" 
+  "libX11" 
+  "libXfixes" 
+  "libXrandr" 
+  "openssl" 
+  "openssl-libs" 
+  "pam-libs" 
+  "pixman" 
+  "systemd" 
+  "tigervnc-server-minimal" 
+  "util-linux" 
+  "xorg-x11-xinit" 
+]
+extra-source "xrdp-0.9.25-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xrdp-0.9.25-2.fc40.x86_64.rpm"
+}

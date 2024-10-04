@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xorg-x11-server-Xephyr-1.20.14-32.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xorg-x11-server-Xephyr-1.20.14-32.fc40.x86_64.rpm"]
+depends: [
+  "audit-libs" 
+  "glibc" 
+  "libX11" 
+  "libX11-xcb" 
+  "libXau" 
+  "libXdmcp" 
+  "libXfont2" 
+  "libepoxy" 
+  "libglvnd-glx" 
+  "libselinux" 
+  "libunwind" 
+  "libxcb" 
+  "libxshmfence" 
+  "openssl-libs" 
+  "pixman" 
+  "systemd-libs" 
+  "xcb-util" 
+  "xcb-util-image" 
+  "xcb-util-keysyms" 
+  "xcb-util-renderutil" 
+  "xcb-util-wm" 
+  "xorg-x11-server-common" {>= "1.20.14"}
+]
+extra-source "xorg-x11-server-Xephyr-1.20.14-32.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xorg-x11-server-Xephyr-1.20.14-32.fc40.x86_64.rpm"
+}

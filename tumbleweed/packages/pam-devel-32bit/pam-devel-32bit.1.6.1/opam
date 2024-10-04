@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pam-devel-32bit-1.6.1-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pam-devel-32bit-1.6.1-4.1.x86_64.rpm"]
+depends: [
+  "pam-devel" {= "1.6.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "pam-devel-32bit-1.6.1-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pam-devel-32bit-1.6.1-4.1.x86_64.rpm"
+}

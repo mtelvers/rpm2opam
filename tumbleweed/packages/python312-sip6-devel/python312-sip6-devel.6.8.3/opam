@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-sip6-devel-6.8.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-sip6-devel-6.8.3-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gcc-c++" 
+  "python312-base" 
+  "python312-packaging" 
+  "python312-setuptools" 
+  "python312-tomli" 
+  "update-alternatives" 
+]
+extra-source "python312-sip6-devel-6.8.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-sip6-devel-6.8.3-1.1.noarch.rpm"
+}

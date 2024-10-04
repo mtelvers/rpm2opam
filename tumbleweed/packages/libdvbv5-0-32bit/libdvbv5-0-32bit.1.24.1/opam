@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libdvbv5-0-32bit-1.24.1-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdvbv5-0-32bit-1.24.1-1.7.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+  "libudev1-32bit" 
+]
+extra-source "libdvbv5-0-32bit-1.24.1-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libdvbv5-0-32bit-1.24.1-1.7.x86_64.rpm"
+}

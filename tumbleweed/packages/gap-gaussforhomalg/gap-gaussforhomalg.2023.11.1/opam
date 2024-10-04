@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-gaussforhomalg-2023.11.01-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-gaussforhomalg-2023.11.01-1.2.noarch.rpm"]
+depends: [
+  "gap" {>= "4.11.1"}
+  "gap-gapdoc" {>= "1.0"}
+  "gap-gauss" {>= "2021.4.1"}
+  "gap-matricesforhomalg" {>= "2023.10.1"}
+  "gap-toolsforhomalg" {>= "2023.11.1"}
+]
+extra-source "gap-gaussforhomalg-2023.11.01-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-gaussforhomalg-2023.11.01-1.2.noarch.rpm"
+}

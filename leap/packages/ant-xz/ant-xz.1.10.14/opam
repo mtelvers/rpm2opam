@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ant-xz-1.10.14-slfo.1.2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ant-xz-1.10.14-slfo.1.2.3.noarch.rpm"]
+depends: [
+  "ant" {= "1.10.14"}
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "xz-java" 
+]
+extra-source "ant-xz-1.10.14-slfo.1.2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/ant-xz-1.10.14-slfo.1.2.3.noarch.rpm"
+}

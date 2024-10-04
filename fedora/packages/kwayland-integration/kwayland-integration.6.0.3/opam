@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kwayland-integration-6.0.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kwayland-integration-6.0.3-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf5-filesystem" 
+  "kf5-kwayland" 
+  "kf5-kwindowsystem" 
+  "libstdc++" 
+  "libwayland-client" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtwayland" 
+]
+extra-source "kwayland-integration-6.0.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kwayland-integration-6.0.3-1.fc40.x86_64.rpm"
+}

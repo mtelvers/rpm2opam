@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "octave-forge-level-set-0.3.1-1.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "octave-forge-level-set-0.3.1-1.12.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "octave-cli" {>= "4.0.0"}
+  "octave-forge-parallel" 
+]
+extra-source "octave-forge-level-set-0.3.1-1.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/octave-forge-level-set-0.3.1-1.12.noarch.rpm"
+}

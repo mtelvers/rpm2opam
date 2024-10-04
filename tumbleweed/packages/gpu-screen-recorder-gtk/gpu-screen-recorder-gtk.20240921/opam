@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gpu-screen-recorder-gtk-20240921-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gpu-screen-recorder-gtk-20240921-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gpu-screen-recorder" 
+  "libX11-6" 
+  "libayatana-appindicator3-1" 
+  "libcairo2" 
+  "libgcc_s1" 
+  "libgtk-3-0" 
+  "libstdc++6" 
+]
+extra-source "gpu-screen-recorder-gtk-20240921-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gpu-screen-recorder-gtk-20240921-1.1.x86_64.rpm"
+}

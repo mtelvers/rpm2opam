@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nexus-4.4.3-15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nexus-4.4.3-15.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "hdf" 
+  "hdf5" 
+  "libgcc" 
+  "libstdc++" 
+  "mxml" 
+]
+extra-source "nexus-4.4.3-15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nexus-4.4.3-15.fc40.x86_64.rpm"
+}

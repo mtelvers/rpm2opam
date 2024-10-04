@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kf6-kwindowsystem-devel-6.6.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kf6-kwindowsystem-devel-6.6.0-1.1.x86_64.rpm"]
+depends: [
+  "libKF6WindowSystem6" {= "6.6.0"}
+  "libX11-devel" 
+  "libxcb-devel" 
+  "pkgconf-pkg-config" 
+  "qt6-gui-devel" {>= "6.6.0"}
+]
+extra-source "kf6-kwindowsystem-devel-6.6.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kf6-kwindowsystem-devel-6.6.0-1.1.x86_64.rpm"
+}

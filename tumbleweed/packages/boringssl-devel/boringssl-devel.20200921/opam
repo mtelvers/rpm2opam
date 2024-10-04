@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "boringssl-devel-20200921-3.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "boringssl-devel-20200921-3.2.x86_64.rpm"]
+depends: [
+  "libboringssl1" {= "20200921"}
+]
+extra-source "boringssl-devel-20200921-3.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/boringssl-devel-20200921-3.2.x86_64.rpm"
+}

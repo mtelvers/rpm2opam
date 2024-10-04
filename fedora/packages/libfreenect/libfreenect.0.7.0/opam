@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libfreenect-0.7.0-8.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libfreenect-0.7.0-8.fc40.x86_64.rpm"]
+depends: [
+  "freeglut" 
+  "glibc" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libglvnd-opengl" 
+  "libstdc++" 
+  "libusb1" 
+  "mesa-libGLU" 
+  "systemd-udev" 
+]
+extra-source "libfreenect-0.7.0-8.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libfreenect-0.7.0-8.fc40.x86_64.rpm"
+}

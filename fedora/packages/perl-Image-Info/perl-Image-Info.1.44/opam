@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Image-Info-1.44-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Image-Info-1.44-3.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Exporter" 
+  "perl-IO-Compress" 
+  "perl-IO-stringy" 
+  "perl-Image-Xbm" {>= "1.7"}
+  "perl-Image-Xpm" {>= "1.9"}
+  "perl-XML-LibXML" 
+  "perl-XML-Simple" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-overload" 
+  "perl-vars" 
+  "rgb" 
+]
+extra-source "perl-Image-Info-1.44-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Image-Info-1.44-3.fc40.noarch.rpm"
+}

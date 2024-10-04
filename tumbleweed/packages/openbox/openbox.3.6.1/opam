@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openbox-3.6.1-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openbox-3.6.1-5.2.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libICE6" 
+  "libSM6" 
+  "libX11-6" 
+  "libXcursor1" 
+  "libXext6" 
+  "libXinerama1" 
+  "libXrandr2" 
+  "libobrender32" 
+  "libobt2" 
+  "libstartup-notification-1-0" 
+  "libxslt-tools" 
+  "xdg-menu" 
+]
+extra-source "openbox-3.6.1-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openbox-3.6.1-5.2.x86_64.rpm"
+}

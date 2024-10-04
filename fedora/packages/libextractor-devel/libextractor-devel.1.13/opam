@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libextractor-devel-1.13-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libextractor-devel-1.13-4.fc40.x86_64.rpm"]
+depends: [
+  "exiv2-libs" 
+  "file-libs" 
+  "flac-libs" 
+  "gdk-pixbuf2" 
+  "giflib" 
+  "glib2" 
+  "glibc" 
+  "libextractor" {= "1.13"}
+  "libgcc" 
+  "libgsf" 
+  "libjpeg-turbo" 
+  "libstdc++" 
+  "libtiff" 
+  "libvorbis" 
+  "pkgconf-pkg-config" 
+  "rpm-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "libextractor-devel-1.13-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libextractor-devel-1.13-4.fc40.x86_64.rpm"
+}

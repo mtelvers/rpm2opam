@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xorg-x11-util-devel-7.6_1-lp160.3.8.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xorg-x11-util-devel-7.6_1-lp160.3.8.noarch.rpm"]
+depends: [
+  "gccmakedep" 
+  "imake" 
+  "lndir" 
+  "makedepend" 
+  "xorg-cf-files" 
+  "xorg-sgml-doctools" 
+]
+extra-source "xorg-x11-util-devel-7.6_1-lp160.3.8.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/xorg-x11-util-devel-7.6_1-lp160.3.8.noarch.rpm"
+}

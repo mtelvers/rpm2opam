@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-encoding_rs+fast-big5-hanzi-encode-devel-0.8.33-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-encoding_rs+fast-big5-hanzi-encode-devel-0.8.33-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-encoding_rs-devel" {= "0.8.33"}
+]
+extra-source "rust-encoding_rs+fast-big5-hanzi-encode-devel-0.8.33-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-encoding_rs+fast-big5-hanzi-encode-devel-0.8.33-2.fc40.noarch.rpm"
+}

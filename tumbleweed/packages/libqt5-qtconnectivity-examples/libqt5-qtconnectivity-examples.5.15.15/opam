@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqt5-qtconnectivity-examples-5.15.15+kde3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqt5-qtconnectivity-examples-5.15.15+kde3-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt5Bluetooth5" 
+  "libQt5Bluetooth5-imports" {>= "2"}
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Nfc5" 
+  "libQt5Nfc5-imports" {>= "5"}
+  "libQt5Widgets5" 
+  "libQtQuick5" 
+  "libstdc++6" 
+  "qtdeclarative-imports-provides-qt5" 
+]
+extra-source "libqt5-qtconnectivity-examples-5.15.15+kde3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libqt5-qtconnectivity-examples-5.15.15+kde3-1.1.x86_64.rpm"
+}

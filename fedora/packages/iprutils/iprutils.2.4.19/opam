@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "iprutils-2.4.19-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "iprutils-2.4.19-10.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "ncurses-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "iprutils-2.4.19-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/iprutils-2.4.19-10.fc40.x86_64.rpm"
+}

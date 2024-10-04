@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Chart-2.403.9-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Chart-2.403.9-1.7.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-GD" {>= "2"}
+  "perl-Graphics-Toolkit-Color" {>= "1"}
+  "perl-base" {>= "1.35"}
+]
+extra-source "perl-Chart-2.403.9-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Chart-2.403.9-1.7.noarch.rpm"
+}

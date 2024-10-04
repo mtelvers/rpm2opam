@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "evince-plugin-pdfdocument-46.1-lp160.1.28.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "evince-plugin-pdfdocument-46.1-lp160.1.28.x86_64.rpm"]
+depends: [
+  "evince" 
+  "glibc" 
+  "libcairo2" 
+  "libevdocument3-4" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgio-2_0-0" 
+  "libglib-2_0-0" 
+  "libgobject-2_0-0" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+  "libpoppler-glib8" 
+]
+extra-source "evince-plugin-pdfdocument-46.1-lp160.1.28.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/evince-plugin-pdfdocument-46.1-lp160.1.28.x86_64.rpm"
+}

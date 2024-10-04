@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pyscreenshot-3.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pyscreenshot-3.1-1.1.noarch.rpm"]
+depends: [
+  "python312-EasyProcess" 
+  "python312-base" {= "3.12"}
+  "python312-entrypoint2" 
+  "python312-jeepney" 
+  "python312-mss" 
+  "xorg-x11-server-extra" 
+]
+extra-source "python312-pyscreenshot-3.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pyscreenshot-3.1-1.1.noarch.rpm"
+}

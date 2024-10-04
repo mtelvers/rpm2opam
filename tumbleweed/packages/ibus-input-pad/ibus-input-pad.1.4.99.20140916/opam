@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ibus-input-pad-1.4.99.20140916-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ibus-input-pad-1.4.99.20140916-2.3.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "ibus" 
+  "input-pad" 
+  "libgtk-3-0" 
+  "libibus-1_0-5" 
+]
+extra-source "ibus-input-pad-1.4.99.20140916-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ibus-input-pad-1.4.99.20140916-2.3.x86_64.rpm"
+}

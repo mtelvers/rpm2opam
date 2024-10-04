@@ -1,0 +1,54 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openqa-worker-4.6^20240208git46cfab2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openqa-worker-4.6^20240208git46cfab2-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "bsdcat" 
+  "bsdtar" 
+  "coreutils" 
+  "openqa-client" 
+  "openqa-common" {= "4.6"}
+  "optipng" 
+  "os-autoinst" {>= "4.6"}
+  "perl-Capture-Tiny" 
+  "perl-Carp" 
+  "perl-Carp-Always" 
+  "perl-Config-IniFiles" 
+  "perl-Cpanel-JSON-XS" 
+  "perl-Data-Dump" 
+  "perl-Digest-MD5" 
+  "perl-Errno" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Map" 
+  "perl-File-Which" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-MIME-Base64" 
+  "perl-Minion-Backend-SQLite" {>= "5.0.7"}
+  "perl-Module-Loaded" 
+  "perl-Mojo-IOLoop-ReadWriteProcess" 
+  "perl-Mojo-SQLite" 
+  "perl-Mojolicious" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Regexp-Common" 
+  "perl-SQL-SplitStatement" 
+  "perl-Scalar-List-Utils" 
+  "perl-Socket" 
+  "perl-Time-HiRes" 
+  "perl-Time-Piece" 
+  "perl-Try-Tiny" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libnet" 
+  "perl-libs" 
+  "psmisc" 
+  "sqlite" {>= "3.24.0"}
+  "systemd" 
+]
+extra-source "openqa-worker-4.6^20240208git46cfab2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openqa-worker-4.6^20240208git46cfab2-1.fc40.noarch.rpm"
+}

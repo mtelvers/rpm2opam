@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bookworm-lang-1.1.2-2.14.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bookworm-lang-1.1.2-2.14.noarch.rpm"]
+depends: [
+  "bookworm" {= "1.1.2"}
+]
+extra-source "bookworm-lang-1.1.2-2.14.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/bookworm-lang-1.1.2-2.14.noarch.rpm"
+}

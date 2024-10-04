@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gdk4-devel-0.8.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gdk4-devel-0.8.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.70"}
+  "rust-cairo-rs+default-devel" 
+  "rust-cairo-rs+use_glib-devel" 
+  "rust-gdk-pixbuf+default-devel" 
+  "rust-gdk4-sys+default-devel" 
+  "rust-gio+default-devel" 
+  "rust-gio+v2_66-devel" 
+  "rust-glib+default-devel" 
+  "rust-glib+v2_66-devel" 
+  "rust-libc+default-devel" 
+  "rust-pango+default-devel" 
+  "rust-pango+v1_46-devel" 
+]
+extra-source "rust-gdk4-devel-0.8.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gdk4-devel-0.8.1-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-http-client-restricted-prof-0.0.5-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-http-client-restricted-prof-0.0.5-6.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-connection-prof" 
+  "ghc-data-default-prof" 
+  "ghc-http-client-prof" 
+  "ghc-http-client-restricted-devel" {= "0.0.5"}
+  "ghc-http-client-tls-prof" 
+  "ghc-network-bsd-prof" 
+  "ghc-network-prof" 
+  "ghc-utf8-string-prof" 
+]
+extra-source "ghc-http-client-restricted-prof-0.0.5-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-http-client-restricted-prof-0.0.5-6.fc40.x86_64.rpm"
+}

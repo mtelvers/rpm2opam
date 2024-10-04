@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dovecot-2.3-6.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dovecot-2.3-6.11.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "dovecot23" 
+  "shadow" 
+]
+extra-source "dovecot-2.3-6.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dovecot-2.3-6.11.noarch.rpm"
+}

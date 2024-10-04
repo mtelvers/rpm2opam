@@ -1,0 +1,42 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "i3-gaps-4.21.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "i3-gaps-4.21.1-6.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cairo" 
+  "glib2" 
+  "glibc" 
+  "i3-config" 
+  "libev" 
+  "libxcb" 
+  "libxkbcommon" 
+  "libxkbcommon-x11" 
+  "pango" 
+  "pcre2" 
+  "perl-AnyEvent-I3" 
+  "perl-Data-Dumper" 
+  "perl-Encode" 
+  "perl-File-Basename" 
+  "perl-File-Find" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-IPC-Open3" 
+  "perl-JSON-XS" 
+  "perl-POSIX" 
+  "perl-Pod-Usage" 
+  "perl-Scalar-List-Utils" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-open" 
+  "startup-notification" 
+  "xcb-util" 
+  "xcb-util-cursor" 
+  "xcb-util-keysyms" 
+  "xcb-util-wm" 
+  "xcb-util-xrm" 
+  "xorg-x11-fonts-misc" 
+  "yajl" 
+]
+extra-source "i3-gaps-4.21.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/i3-gaps-4.21.1-6.fc40.x86_64.rpm"
+}

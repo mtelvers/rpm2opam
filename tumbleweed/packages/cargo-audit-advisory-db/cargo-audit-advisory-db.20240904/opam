@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cargo-audit-advisory-db-20240904-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cargo-audit-advisory-db-20240904-1.1.x86_64.rpm"]
+depends: [
+  "cargo-audit" 
+]
+extra-source "cargo-audit-advisory-db-20240904-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cargo-audit-advisory-db-20240904-1.1.x86_64.rpm"
+}

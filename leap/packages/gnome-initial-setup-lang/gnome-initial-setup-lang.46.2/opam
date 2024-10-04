@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-initial-setup-lang-46.2-lp160.1.26.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-initial-setup-lang-46.2-lp160.1.26.noarch.rpm"]
+depends: [
+  "gnome-initial-setup" {= "46.2"}
+]
+extra-source "gnome-initial-setup-lang-46.2-lp160.1.26.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/gnome-initial-setup-lang-46.2-lp160.1.26.noarch.rpm"
+}

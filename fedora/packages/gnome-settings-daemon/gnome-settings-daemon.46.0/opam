@@ -1,0 +1,46 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-settings-daemon-46.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-settings-daemon-46.0-1.fc40.x86_64.rpm"]
+depends: [
+  "ModemManager-glib" 
+  "NetworkManager-libnm" 
+  "alsa-lib" 
+  "bash" 
+  "cairo" 
+  "colord" {>= "1.4.5"}
+  "colord-libs" 
+  "cups-libs" 
+  "fontconfig" 
+  "gcr-libs" 
+  "geoclue2" {>= "2.3.1"}
+  "geoclue2-libs" 
+  "geocode-glib" {>= "3.26.3"}
+  "glib2" {>= "2.58"}
+  "glibc" 
+  "gnome-desktop3" {>= "3.37.1"}
+  "gsettings-desktop-schemas" {>= "46"}
+  "gtk3" {>= "3.15.3"}
+  "iio-sensor-proxy" 
+  "libX11" 
+  "libXext" 
+  "libXfixes" 
+  "libXi" 
+  "libcanberra" 
+  "libcanberra-gtk3" 
+  "libgcc" 
+  "libgudev" 
+  "libgweather" 
+  "libnotify" 
+  "libwacom" 
+  "libwayland-client" 
+  "p11-kit" 
+  "pango" 
+  "polkit-libs" 
+  "pulseaudio-libs" 
+  "pulseaudio-libs-glib2" 
+  "systemd-libs" 
+  "upower-libs" 
+]
+extra-source "gnome-settings-daemon-46.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-settings-daemon-46.0-1.fc40.x86_64.rpm"
+}

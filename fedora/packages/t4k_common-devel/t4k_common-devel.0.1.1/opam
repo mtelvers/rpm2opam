@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "t4k_common-devel-0.1.1-36.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "t4k_common-devel-0.1.1-36.fc40.x86_64.rpm"]
+depends: [
+  "SDL_Pango-devel" 
+  "SDL_image-devel" 
+  "librsvg2-devel" 
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+  "sdl12-compat-devel" {>= "1.2.0"}
+  "t4k_common" 
+]
+extra-source "t4k_common-devel-0.1.1-36.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/t4k_common-devel-0.1.1-36.fc40.x86_64.rpm"
+}

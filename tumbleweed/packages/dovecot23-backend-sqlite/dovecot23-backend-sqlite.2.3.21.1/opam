@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dovecot23-backend-sqlite-2.3.21.1-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dovecot23-backend-sqlite-2.3.21.1-1.1.x86_64.rpm"]
+depends: [
+  "dovecot23" {= "2.3.21.1"}
+  "glibc" 
+  "libsqlite3-0" 
+]
+extra-source "dovecot23-backend-sqlite-2.3.21.1-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/dovecot23-backend-sqlite-2.3.21.1-1.1.x86_64.rpm"
+}

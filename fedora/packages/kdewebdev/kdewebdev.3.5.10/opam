@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kdewebdev-3.5.10-55.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kdewebdev-3.5.10-55.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "kdelibs3" 
+  "kdewebdev-libs" {= "3.5.10"}
+  "libX11" 
+  "libgcc" 
+  "libstdc++" 
+  "libxml2" 
+  "libxslt" 
+  "perl-interpreter" 
+  "qt3" 
+  "tidy" 
+  "zlib-ng-compat" 
+]
+extra-source "kdewebdev-3.5.10-55.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kdewebdev-3.5.10-55.fc40.x86_64.rpm"
+}

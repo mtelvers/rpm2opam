@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-oeis-devel-0.3.10-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-oeis-devel-0.3.10-19.fc40.x86_64.rpm"]
+depends: [
+  "ghc-HTTP-devel" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-network-devel" 
+  "ghc-network-uri-devel" 
+  "ghc-oeis" {= "0.3.10"}
+]
+extra-source "ghc-oeis-devel-0.3.10-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-oeis-devel-0.3.10-19.fc40.x86_64.rpm"
+}

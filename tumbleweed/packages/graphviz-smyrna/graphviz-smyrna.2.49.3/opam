@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "graphviz-smyrna-2.49.3-11.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "graphviz-smyrna-2.49.3-11.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "graphviz" 
+  "libGLU1" 
+  "libcairo2" 
+  "libcdt5" 
+  "libglade-2_0-0" 
+  "libglut3" 
+  "libglvnd" 
+  "libgtk-2_0-0" 
+  "libgtkglext-x11-1_0-0" 
+  "libgts-0_7-5" 
+  "libpango-1_0-0" 
+]
+extra-source "graphviz-smyrna-2.49.3-11.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/graphviz-smyrna-2.49.3-11.1.x86_64.rpm"
+}

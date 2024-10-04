@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "samba-common-4.20.0-0.5.rc4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "samba-common-4.20.0-0.5.rc4.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "systemd-standalone-tmpfiles" 
+]
+extra-source "samba-common-4.20.0-0.5.rc4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/samba-common-4.20.0-0.5.rc4.fc40.noarch.rpm"
+}

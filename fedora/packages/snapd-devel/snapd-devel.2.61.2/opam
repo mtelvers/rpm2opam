@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "snapd-devel-2.61.2-0.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "snapd-devel-2.61.2-0.fc40.noarch.rpm"]
+depends: [
+  "golang-github-boltdb-bolt-devel" 
+  "golang-github-coreos-systemd-devel" 
+  "golang-github-godbus-dbus-devel" 
+  "golang-github-gorilla-mux-devel" 
+  "golang-github-jessevdk-flags-devel" 
+  "golang-github-juju-ratelimit-devel" 
+  "golang-github-kr-pretty-devel" 
+  "golang-github-kr-text-devel" 
+  "golang-github-mvo5-goconfigparser-devel" 
+  "golang-github-seccomp-libseccomp-devel" 
+  "golang-github-snapcore-gettext-devel" 
+  "golang-gopkg-check-1-devel" 
+  "golang-gopkg-macaroon-1-devel" 
+  "golang-gopkg-mgo-2-devel" 
+  "golang-gopkg-retry-1-devel" 
+  "golang-gopkg-tomb-2-devel" 
+  "golang-gopkg-yaml-2-devel" 
+  "golang-gopkg-yaml-3-devel" 
+  "golang-x-crypto-devel" 
+  "golang-x-xerrors-devel" 
+]
+extra-source "snapd-devel-2.61.2-0.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/snapd-devel-2.61.2-0.fc40.noarch.rpm"
+}

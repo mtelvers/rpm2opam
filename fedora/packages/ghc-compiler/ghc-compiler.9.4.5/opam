@@ -1,0 +1,48 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-compiler-9.4.5-140.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-compiler-9.4.5-140.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "gcc" 
+  "ghc-Cabal" 
+  "ghc-Cabal-syntax" 
+  "ghc-array" 
+  "ghc-base" 
+  "ghc-base-devel" {= "4.17.1.0"}
+  "ghc-binary" 
+  "ghc-bytestring" 
+  "ghc-containers" 
+  "ghc-deepseq" 
+  "ghc-directory" 
+  "ghc-exceptions" 
+  "ghc-filepath" 
+  "ghc-filesystem" {= "9.4.5"}
+  "ghc-ghc" 
+  "ghc-ghc-bignum" 
+  "ghc-ghc-boot" 
+  "ghc-ghc-boot-th" 
+  "ghc-ghc-heap" 
+  "ghc-ghci" 
+  "ghc-haskeline" 
+  "ghc-hpc" 
+  "ghc-libiserv" 
+  "ghc-mtl" 
+  "ghc-parsec" 
+  "ghc-pretty" 
+  "ghc-process" 
+  "ghc-stm" 
+  "ghc-template-haskell" 
+  "ghc-terminfo" 
+  "ghc-text" 
+  "ghc-time" 
+  "ghc-transformers" 
+  "ghc-unix" 
+  "ghc-xhtml" 
+  "glibc" 
+  "gmp" 
+  "libffi" 
+  "ncurses-libs" 
+]
+extra-source "ghc-compiler-9.4.5-140.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-compiler-9.4.5-140.fc40.x86_64.rpm"
+}

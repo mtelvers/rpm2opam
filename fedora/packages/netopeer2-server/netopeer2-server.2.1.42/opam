@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "netopeer2-server-2.1.42-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "netopeer2-server-2.1.42-6.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "libcurl" 
+  "libnetconf2" 
+  "libssh" 
+  "libyang" {>= "2.0.231"}
+  "openssl" 
+  "sysrepo" 
+  "sysrepo-tools" 
+  "systemd" 
+  "systemd-libs" 
+]
+extra-source "netopeer2-server-2.1.42-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/netopeer2-server-2.1.42-6.fc40.x86_64.rpm"
+}

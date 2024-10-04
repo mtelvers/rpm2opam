@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["/usr/bin/zypper" "-n" "install" "libcreaterepo_c-devel-1.0.2-slfo.1.1.7.x86_64.rpm"]
+]
+remove: [
+  ["/usr/bin/zypper" "-n" "remove" "libcreaterepo_c-devel-1.0.2-slfo.1.1.7.x86_64.rpm"]
+]
+depends: [
+  "glib2-devel" 
+  "libcreaterepo_c1" {= "1.0.2"}
+  "libcurl-devel" 
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+  "rpm-devel" 
+  "sqlite3-devel" 
+  "zlib-devel" 
+]
+extra-source "libcreaterepo_c-devel-1.0.2-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libcreaterepo_c-devel-1.0.2-slfo.1.1.7.x86_64.rpm"
+}

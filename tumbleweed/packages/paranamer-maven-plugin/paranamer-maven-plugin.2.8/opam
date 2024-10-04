@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "paranamer-maven-plugin-2.8-4.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "paranamer-maven-plugin-2.8-4.4.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "maven-lib" 
+  "paranamer-generator" {= "2.8"}
+]
+extra-source "paranamer-maven-plugin-2.8-4.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/paranamer-maven-plugin-2.8-4.4.noarch.rpm"
+}

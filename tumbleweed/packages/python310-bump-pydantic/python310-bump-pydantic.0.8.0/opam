@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-bump-pydantic-0.8.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-bump-pydantic-0.8.0-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-base" {= "3.10"}
+  "python310-libcst" {>= "0.4.2"}
+  "python310-rich" 
+  "python310-typer" {>= "0.7.0"}
+  "python310-typing_extensions" 
+  "update-alternatives" 
+]
+extra-source "python310-bump-pydantic-0.8.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-bump-pydantic-0.8.0-1.1.noarch.rpm"
+}

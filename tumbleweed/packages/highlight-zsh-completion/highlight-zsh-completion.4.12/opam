@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "highlight-zsh-completion-4.12-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "highlight-zsh-completion-4.12-1.1.noarch.rpm"]
+depends: [
+  "highlight" 
+  "zsh" 
+]
+extra-source "highlight-zsh-completion-4.12-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/highlight-zsh-completion-4.12-1.1.noarch.rpm"
+}

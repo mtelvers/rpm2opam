@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-arabic-book-2024.216.1.0svn59594-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-arabic-book-2024.216.1.0svn59594-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-amsmath" 
+  "texlive-caption" 
+  "texlive-collcell" 
+  "texlive-enumitem" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-float" 
+  "texlive-geometry" 
+  "texlive-hyperref" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-latex" 
+  "texlive-newfloat" 
+  "texlive-pgf" 
+  "texlive-polyglossia" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-setspace" 
+  "texlive-titlesec" 
+  "texlive-titling" 
+  "texlive-tocbibind" 
+  "texlive-tocloft" 
+  "texlive-tools" 
+  "texlive-totalcount" 
+  "texlive-xwatermark" 
+]
+extra-source "texlive-arabic-book-2024.216.1.0svn59594-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-arabic-book-2024.216.1.0svn59594-57.1.noarch.rpm"
+}

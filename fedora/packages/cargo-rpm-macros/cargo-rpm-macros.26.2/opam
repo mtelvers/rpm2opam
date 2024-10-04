@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cargo-rpm-macros-26.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cargo-rpm-macros-26.2-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "cargo2rpm" {>= "0.1.8"}
+  "gawk" 
+  "grep" 
+  "rust-srpm-macros" {= "26.2"}
+]
+extra-source "cargo-rpm-macros-26.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cargo-rpm-macros-26.2-1.fc40.noarch.rpm"
+}

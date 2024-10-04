@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-network-multicast-devel-0.3.2-4.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-network-multicast-devel-0.3.2-4.10.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-network-bsd-devel" 
+  "ghc-network-devel" 
+  "ghc-network-multicast" {= "0.3.2"}
+]
+extra-source "ghc-network-multicast-devel-0.3.2-4.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-network-multicast-devel-0.3.2-4.10.x86_64.rpm"
+}

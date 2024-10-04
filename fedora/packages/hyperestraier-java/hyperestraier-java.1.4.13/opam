@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "hyperestraier-java-1.4.13-60.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "hyperestraier-java-1.4.13-60.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "hyperestraier" {= "1.4.13"}
+  "qdbm" 
+]
+extra-source "hyperestraier-java-1.4.13-60.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/h/hyperestraier-java-1.4.13-60.fc40.x86_64.rpm"
+}

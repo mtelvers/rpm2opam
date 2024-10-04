@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "SDL3-devel-3.1.2-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "SDL3-devel-3.1.2-2.1.x86_64.rpm"]
+depends: [
+  "Mesa-libEGL-devel" 
+  "Mesa-libGL-devel" 
+  "Mesa-libGLESv1_CM-devel" 
+  "Mesa-libGLESv2-devel" 
+  "alsa-devel" 
+  "gcc" 
+  "glu-devel" 
+  "libSDL3-0" {= "3.1.2"}
+  "libX11-devel" 
+  "libXcursor-devel" 
+  "libXext-devel" 
+  "libXfixes-devel" 
+  "libXi-devel" 
+  "libXrandr-devel" 
+  "libXss-devel" 
+  "libdecor-devel" {>= "0.2.0"}
+  "libdrm-devel" 
+  "libgbm-devel" 
+  "libpulse-devel" {>= "0.9.15"}
+  "libxkbcommon-devel" {>= "0.5.0"}
+  "pipewire-devel" {>= "0.3.44"}
+  "pkgconf-pkg-config" 
+  "wayland-devel" {>= "1.18"}
+  "xorgproto-devel" 
+]
+extra-source "SDL3-devel-3.1.2-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/SDL3-devel-3.1.2-2.1.x86_64.rpm"
+}

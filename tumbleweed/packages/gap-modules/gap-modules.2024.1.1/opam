@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gap-modules-2024.01.01-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-modules-2024.01.01-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gap" {>= "4.12.1"}
+  "gap-gapdoc" {>= "1.0"}
+  "gap-gaussforhomalg" {>= "2023.8.1"}
+  "gap-homalg" {>= "2022.2.1"}
+  "gap-matricesforhomalg" {>= "2023.10.1"}
+  "gap-toolsforhomalg" {>= "2013.4.12"}
+]
+extra-source "gap-modules-2024.01.01-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gap-modules-2024.01.01-1.2.noarch.rpm"
+}

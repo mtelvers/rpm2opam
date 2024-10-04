@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-faccess+default-devel-0.2.4-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-faccess+default-devel-0.2.4-7.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-faccess-devel" {= "0.2.4"}
+]
+extra-source "rust-faccess+default-devel-0.2.4-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-faccess+default-devel-0.2.4-7.fc40.noarch.rpm"
+}

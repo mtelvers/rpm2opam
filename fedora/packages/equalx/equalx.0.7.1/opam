@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "equalx-0.7.1-25.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "equalx-0.7.1-25.fc40.x86_64.rpm"]
+depends: [
+  "exempi" 
+  "ghostscript" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "poppler-utils" 
+  "qt" 
+  "qt-x11" 
+  "texlive-collection-latexrecommended" 
+]
+extra-source "equalx-0.7.1-25.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/equalx-0.7.1-25.fc40.x86_64.rpm"
+}

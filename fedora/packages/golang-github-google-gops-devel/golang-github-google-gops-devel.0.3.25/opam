@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-google-gops-devel-0.3.25-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-google-gops-devel-0.3.25-6.fc40.noarch.rpm"]
+depends: [
+  "compat-golang-github-shirou-gopsutil-3-devel" 
+  "go-filesystem" 
+  "golang-github-keybase-ps-devel" 
+  "golang-github-xlab-treeprint-devel" 
+  "golang-x-sys-devel" 
+]
+extra-source "golang-github-google-gops-devel-0.3.25-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-google-gops-devel-0.3.25-6.fc40.noarch.rpm"
+}

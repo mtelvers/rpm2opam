@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pyp2rpm-3.3.10-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pyp2rpm-3.3.10-3.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-click" 
+  "python3-jinja2" 
+  "python3-rpm" 
+  "python3-setuptools" 
+  "python3-virtualenv-api" 
+  "rpmdevtools" 
+]
+extra-source "pyp2rpm-3.3.10-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pyp2rpm-3.3.10-3.fc40.noarch.rpm"
+}

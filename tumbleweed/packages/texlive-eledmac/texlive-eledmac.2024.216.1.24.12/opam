@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-eledmac-2024.216.1.24.12svn45418-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-eledmac-2024.216.1.24.12svn45418-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-bigfoot" 
+  "texlive-etex-pkg" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-iftex" 
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-ragged2e" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tools" 
+  "texlive-xargs" 
+  "texlive-xkeyval" 
+  "texlive-xstring" 
+]
+extra-source "texlive-eledmac-2024.216.1.24.12svn45418-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-eledmac-2024.216.1.24.12svn45418-57.1.noarch.rpm"
+}

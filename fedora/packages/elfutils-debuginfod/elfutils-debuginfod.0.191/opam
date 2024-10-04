@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "elfutils-debuginfod-0.191-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "elfutils-debuginfod-0.191-4.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bsdtar" 
+  "elfutils-debuginfod-client" {= "0.191"}
+  "elfutils-libelf" {= "0.191"}
+  "elfutils-libs" {= "0.191"}
+  "glibc" 
+  "libarchive" 
+  "libgcc" 
+  "libmicrohttpd" 
+  "libstdc++" 
+  "shadow-utils" 
+  "sqlite-libs" 
+  "systemd" 
+]
+extra-source "elfutils-debuginfod-0.191-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/elfutils-debuginfod-0.191-4.fc40.x86_64.rpm"
+}

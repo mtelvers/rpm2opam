@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libwebp-tools-1.4.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libwebp-tools-1.4.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgif7" 
+  "libglut3" 
+  "libglvnd" 
+  "libjpeg8" 
+  "libpng16-16" 
+  "libsharpyuv0" 
+  "libtiff6" 
+  "libwebp7" 
+  "libwebpdemux2" 
+  "libwebpmux3" 
+]
+extra-source "libwebp-tools-1.4.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libwebp-tools-1.4.0-1.1.x86_64.rpm"
+}

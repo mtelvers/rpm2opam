@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "petsc-gnu-mpich-hpc-devel-3.21.2-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "petsc-gnu-mpich-hpc-devel-3.21.2-2.2.x86_64.rpm"]
+depends: [
+  "petsc_3_21_2-gnu-mpich-hpc-devel" {= "3.21.2"}
+]
+extra-source "petsc-gnu-mpich-hpc-devel-3.21.2-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/petsc-gnu-mpich-hpc-devel-3.21.2-2.2.x86_64.rpm"
+}

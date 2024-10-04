@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "liblogg44-devel-4.4.3.1-1.22.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "liblogg44-devel-4.4.3.1-1.22.x86_64.rpm"]
+depends: [
+  "liballeg44-devel" {>= "4.4.3"}
+  "liblogg4_4" {= "4.4.3.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "liblogg44-devel-4.4.3.1-1.22.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/liblogg44-devel-4.4.3.1-1.22.x86_64.rpm"
+}

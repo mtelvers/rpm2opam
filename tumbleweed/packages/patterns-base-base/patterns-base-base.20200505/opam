@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "patterns-base-base-20200505-54.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "patterns-base-base-20200505-54.1.x86_64.rpm"]
+depends: [
+  "aaa_base" 
+  "bash" 
+  "ca-certificates-mozilla" 
+  "coreutils" 
+  "coreutils-systemd" 
+  "glibc" 
+  "libnss_usrfiles2" 
+  "pam" 
+  "pam-config" 
+  "patterns-aeon-base" {= "0"}
+  "purge-kernels-service" 
+  "rpm" 
+  "system-user-nobody" 
+  "systemd" 
+  "util-linux" 
+]
+extra-source "patterns-base-base-20200505-54.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/patterns-base-base-20200505-54.1.x86_64.rpm"
+}

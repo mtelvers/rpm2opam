@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ubyte+serde-devel-0.10.4-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ubyte+serde-devel-0.10.4-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-serde-devel" 
+  "rust-ubyte-devel" {= "0.10.4"}
+]
+extra-source "rust-ubyte+serde-devel-0.10.4-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ubyte+serde-devel-0.10.4-2.fc40.noarch.rpm"
+}

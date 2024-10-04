@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "avahi-compat-libdns_sd-0.8-26.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "avahi-compat-libdns_sd-0.8-26.fc40.x86_64.rpm"]
+depends: [
+  "avahi-libs" 
+  "dbus-libs" 
+  "glibc" 
+]
+extra-source "avahi-compat-libdns_sd-0.8-26.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/avahi-compat-libdns_sd-0.8-26.fc40.x86_64.rpm"
+}

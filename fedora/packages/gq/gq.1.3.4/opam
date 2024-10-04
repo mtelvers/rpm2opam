@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gq-1.3.4-48.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gq-1.3.4-48.fc39.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "gtk2" 
+  "libgcrypt" 
+  "libglade2" 
+  "libgnome-keyring" 
+  "libxml2" 
+  "openldap" 
+  "openssl-libs" 
+  "pango" 
+]
+extra-source "gq-1.3.4-48.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gq-1.3.4-48.fc39.x86_64.rpm"
+}

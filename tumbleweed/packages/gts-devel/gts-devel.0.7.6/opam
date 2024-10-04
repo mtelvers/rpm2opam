@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gts-devel-0.7.6_p20121130-4.36.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gts-devel-0.7.6_p20121130-4.36.x86_64.rpm"]
+depends: [
+  "gcc" 
+  "gcc-c++" 
+  "glib2-devel" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gts" {= "0.7.6"}
+  "libgts-0_7-5" {= "0.7.6"}
+  "libnetpbm11" 
+  "pkgconf-pkg-config" 
+]
+extra-source "gts-devel-0.7.6_p20121130-4.36.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gts-devel-0.7.6_p20121130-4.36.x86_64.rpm"
+}

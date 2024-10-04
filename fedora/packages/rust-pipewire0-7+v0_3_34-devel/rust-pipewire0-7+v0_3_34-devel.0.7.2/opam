@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-pipewire0.7+v0_3_34-devel-0.7.2-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-pipewire0.7+v0_3_34-devel-0.7.2-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-pipewire0-7+v0_3_33-devel" {= "0.7.2"}
+  "rust-pipewire0-7-devel" {= "0.7.2"}
+]
+extra-source "rust-pipewire0.7+v0_3_34-devel-0.7.2-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-pipewire0.7+v0_3_34-devel-0.7.2-1.fc40.noarch.rpm"
+}

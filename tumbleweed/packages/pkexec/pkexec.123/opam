@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pkexec-123-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pkexec-123-4.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libpolkit-agent-1-0" 
+  "libpolkit-gobject-1-0" 
+  "pam" 
+  "permissions" 
+  "polkit" {= "123"}
+]
+extra-source "pkexec-123-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pkexec-123-4.1.x86_64.rpm"
+}

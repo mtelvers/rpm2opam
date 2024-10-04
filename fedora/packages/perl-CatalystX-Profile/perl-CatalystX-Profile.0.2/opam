@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-CatalystX-Profile-0.02-35.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-CatalystX-Profile-0.02-35.fc40.noarch.rpm"]
+depends: [
+  "perl-Catalyst-Runtime" {>= "5.80020"}
+  "perl-CatalystX-InjectComponent" 
+  "perl-Devel-NYTProf" {>= "3.1"}
+  "perl-Moose" 
+  "perl-Sub-Identify" {>= "0.4"}
+  "perl-libs" 
+  "perl-namespace-autoclean" {>= "0.9"}
+]
+extra-source "perl-CatalystX-Profile-0.02-35.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-CatalystX-Profile-0.02-35.fc40.noarch.rpm"
+}

@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Archive-Extract-0.88-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Archive-Extract-0.88-11.fc40.noarch.rpm"]
+depends: [
+  "perl-Archive-Extract-Z-Compress-Zlib" 
+  "perl-Archive-Extract-bz2-IO-Uncompress-Bunzip2" 
+  "perl-Archive-Extract-gz-Compress-Zlib" 
+  "perl-Archive-Extract-lzma-IO-Uncompress-UnLzma" 
+  "perl-Archive-Extract-tar-Archive-Tar" 
+  "perl-Archive-Extract-tbz-Archive-Tar-IO-Uncompress-Bunzip2" 
+  "perl-Archive-Extract-tgz-Archive-Tar-Compress-Zlib" 
+  "perl-Archive-Extract-txz-Archive-Tar-IO-Uncompress-UnXz" 
+  "perl-Archive-Extract-xz-IO-Uncompress-UnXz" 
+  "perl-Archive-Extract-zip-Archive-Zip" 
+  "perl-Archive-Tar" 
+  "perl-Carp" 
+  "perl-File-Basename" 
+  "perl-File-Path" 
+  "perl-FileHandle" 
+  "perl-IPC-Cmd" {>= "0.64"}
+  "perl-Locale-Maketext-Simple" 
+  "perl-Module-Load-Conditional" {>= "0.66"}
+  "perl-Params-Check" {>= "0.7"}
+  "perl-PathTools" 
+  "perl-constant" 
+  "perl-deprecate" 
+  "perl-if" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-Archive-Extract-0.88-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Archive-Extract-0.88-11.fc40.noarch.rpm"
+}

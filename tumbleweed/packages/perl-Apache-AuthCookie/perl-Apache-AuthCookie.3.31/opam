@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Apache-AuthCookie-3.31-1.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Apache-AuthCookie-3.31-1.12.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Load" {>= "0.3"}
+  "perl-HTTP-Body" 
+  "perl-Hash-MultiValue" 
+  "perl-URI" {>= "1.36"}
+  "perl-WWW-Form-UrlEncoded" 
+]
+extra-source "perl-Apache-AuthCookie-3.31-1.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Apache-AuthCookie-3.31-1.12.noarch.rpm"
+}

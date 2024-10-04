@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MooseX-Clone-0.06-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Clone-0.06-29.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Data-Visitor" {>= "0.24"}
+  "perl-Hash-Util-FieldHash-Compat" 
+  "perl-Moose" 
+  "perl-Storable" 
+  "perl-libs" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-MooseX-Clone-0.06-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MooseX-Clone-0.06-29.fc40.noarch.rpm"
+}

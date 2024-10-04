@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "converseen-lang-0.9.11.1-1.6.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "converseen-lang-0.9.11.1-1.6.noarch.rpm"]
+depends: [
+  "converseen" {= "0.9.11.1"}
+]
+extra-source "converseen-lang-0.9.11.1-1.6.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/converseen-lang-0.9.11.1-1.6.noarch.rpm"
+}

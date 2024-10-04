@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cups-pk-helper-0.2.7-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cups-pk-helper-0.2.7-7.fc40.x86_64.rpm"]
+depends: [
+  "cups-libs" {>= "1.6"}
+  "glib2" {>= "2.36.0"}
+  "glibc" 
+  "polkit-libs" 
+]
+extra-source "cups-pk-helper-0.2.7-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cups-pk-helper-0.2.7-7.fc40.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-jupyter-server-fileid-0.9.1-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-jupyter-server-fileid-0.9.1-2.2.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "jupyter-server-fileid" {= "0.9.1"}
+  "python311-base" 
+  "python311-jupyter-events" {>= "0.5.0"}
+  "python311-jupyter-server" 
+]
+extra-source "python311-jupyter-server-fileid-0.9.1-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-jupyter-server-fileid-0.9.1-2.2.noarch.rpm"
+}

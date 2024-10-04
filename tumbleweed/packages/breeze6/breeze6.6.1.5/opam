@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "breeze6-6.1.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "breeze6-6.1.5-1.1.x86_64.rpm"]
+depends: [
+  "breeze6-cursors" {>= "6.1.5"}
+  "breeze6-style" {>= "6.1.5"}
+  "kf6-breeze-icons" {>= "6.0.0"}
+]
+extra-source "breeze6-6.1.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/breeze6-6.1.5-1.1.x86_64.rpm"
+}

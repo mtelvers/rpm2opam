@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tpm-quote-tools-1.0.4-1.27.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tpm-quote-tools-1.0.4-1.27.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libopenssl3" 
+  "libtspi1" 
+]
+extra-source "tpm-quote-tools-1.0.4-1.27.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tpm-quote-tools-1.0.4-1.27.x86_64.rpm"
+}

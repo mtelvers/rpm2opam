@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kochmorse-3.5.1-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kochmorse-3.5.1-2.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Multimedia5" 
+  "libQt5Network5" 
+  "libQt5Widgets5" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "kochmorse-3.5.1-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kochmorse-3.5.1-2.2.x86_64.rpm"
+}

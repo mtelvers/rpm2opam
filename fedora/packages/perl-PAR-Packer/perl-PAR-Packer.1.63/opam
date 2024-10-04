@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-PAR-Packer-1.063-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-PAR-Packer-1.063-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "perl-Archive-Zip" {>= "1"}
+  "perl-ExtUtils-MakeMaker" 
+  "perl-File-Basename" 
+  "perl-File-Find" 
+  "perl-File-Temp" {>= "0.5"}
+  "perl-Getopt-ArgvFile" {>= "1.7"}
+  "perl-Getopt-Long" 
+  "perl-IO-Compress" {>= "1.3"}
+  "perl-Module-ScanDeps" {>= "1.21"}
+  "perl-PAR" {>= "1.20"}
+  "perl-PAR-Dist" {>= "0.22"}
+  "perl-PathTools" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "perl-PAR-Packer-1.063-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-PAR-Packer-1.063-1.fc40.x86_64.rpm"
+}

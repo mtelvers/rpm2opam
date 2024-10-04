@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Exception-Tiny-0.2.1-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Exception-Tiny-0.2.1-29.fc40.noarch.rpm"]
+depends: [
+  "perl-Class-Accessor-Lite" 
+  "perl-Data-Dumper" 
+  "perl-Scalar-List-Utils" 
+  "perl-libs" {>= "5.8.5"}
+  "perl-overload" 
+]
+extra-source "perl-Exception-Tiny-0.2.1-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Exception-Tiny-0.2.1-29.fc40.noarch.rpm"
+}

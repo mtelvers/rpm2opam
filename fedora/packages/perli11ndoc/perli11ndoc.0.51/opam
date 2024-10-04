@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perli11ndoc-0.051-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perli11ndoc-0.051-1.fc40.noarch.rpm"]
+depends: [
+  "perl-File-Basename" 
+  "perl-File-Find" 
+  "perl-Glib-Object-Introspection" {= "0.51"}
+  "perl-PathTools" 
+  "perl-Text-Tabs+Wrap" 
+  "perl-XML-LibXML" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-open" 
+]
+extra-source "perli11ndoc-0.051-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perli11ndoc-0.051-1.fc40.noarch.rpm"
+}

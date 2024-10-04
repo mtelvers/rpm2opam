@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xmlgraphics-batik-demo-1.17-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xmlgraphics-batik-demo-1.17-2.1.noarch.rpm"]
+depends: [
+  "xmlgraphics-batik" {= "1.17"}
+]
+extra-source "xmlgraphics-batik-demo-1.17-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xmlgraphics-batik-demo-1.17-2.1.noarch.rpm"
+}

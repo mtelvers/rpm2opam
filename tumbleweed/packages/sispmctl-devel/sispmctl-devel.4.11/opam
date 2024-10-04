@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sispmctl-devel-4.11-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sispmctl-devel-4.11-1.4.x86_64.rpm"]
+depends: [
+  "libsispmctl0" {= "4.11"}
+]
+extra-source "sispmctl-devel-4.11-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sispmctl-devel-4.11-1.4.x86_64.rpm"
+}

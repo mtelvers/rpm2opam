@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "scim-devel-1.4.18-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "scim-devel-1.4.18-9.fc40.x86_64.rpm"]
+depends: [
+  "gtk2-devel" 
+  "pkgconf-pkg-config" 
+  "scim-libs" 
+]
+extra-source "scim-devel-1.4.18-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/scim-devel-1.4.18-9.fc40.x86_64.rpm"
+}

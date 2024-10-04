@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "opae-2.0.0-7.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opae-2.0.0-7.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbitstream2" 
+  "libfmt10" 
+  "libgcc_s1" 
+  "libhwloc15" 
+  "libjson-c5" 
+  "libopae-c2" 
+  "libstdc++6" 
+  "libtbb12" 
+  "libuuid1" 
+  "python311-base" 
+]
+extra-source "opae-2.0.0-7.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/opae-2.0.0-7.2.x86_64.rpm"
+}

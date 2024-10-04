@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "zabbix-proxy-6.0.33-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zabbix-proxy-6.0.33-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "fping" 
+  "logrotate" 
+  "shadow" 
+  "system-user-zabbix" 
+  "update-alternatives" 
+  "zabbix-proxy-mysql" {= "6.0.33"}
+]
+extra-source "zabbix-proxy-6.0.33-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/zabbix-proxy-6.0.33-2.1.x86_64.rpm"
+}

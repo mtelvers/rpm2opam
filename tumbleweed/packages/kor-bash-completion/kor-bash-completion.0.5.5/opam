@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kor-bash-completion-0.5.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kor-bash-completion-0.5.5-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "kor" {= "0.5.5"}
+]
+extra-source "kor-bash-completion-0.5.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kor-bash-completion-0.5.5-1.1.noarch.rpm"
+}

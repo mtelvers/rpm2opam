@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "brltty-driver-brlapi-6.5-slfo.1.1.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "brltty-driver-brlapi-6.5-slfo.1.1.11.x86_64.rpm"]
+depends: [
+  "brltty" {= "6.5"}
+  "glibc" 
+  "libbrlapi0_8" 
+]
+extra-source "brltty-driver-brlapi-6.5-slfo.1.1.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/brltty-driver-brlapi-6.5-slfo.1.1.11.x86_64.rpm"
+}

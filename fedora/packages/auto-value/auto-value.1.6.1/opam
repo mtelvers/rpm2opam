@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "auto-value-1.6.1-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "auto-value-1.6.1-10.fc40.noarch.rpm"]
+depends: [
+  "auto-common" {= "0.10"}
+  "guava" 
+  "java-21-openjdk-headless" 
+  "javapackages-filesystem" 
+  "javapoet" 
+]
+extra-source "auto-value-1.6.1-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/auto-value-1.6.1-10.fc40.noarch.rpm"
+}

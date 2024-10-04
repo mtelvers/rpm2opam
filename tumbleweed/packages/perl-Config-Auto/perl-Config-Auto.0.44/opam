@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Config-Auto-0.44-3.31.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Config-Auto-0.44-3.31.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Config-IniFiles" 
+  "perl-IO-String" 
+  "perl-YAML" {>= "0.67"}
+]
+extra-source "perl-Config-Auto-0.44-3.31.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Config-Auto-0.44-3.31.noarch.rpm"
+}

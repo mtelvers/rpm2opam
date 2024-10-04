@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openbao-agent-2.0.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openbao-agent-2.0.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "openbao" {= "2.0.1"}
+  "system-user-openbao" 
+]
+extra-source "openbao-agent-2.0.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/openbao-agent-2.0.1-1.1.noarch.rpm"
+}

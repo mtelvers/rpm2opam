@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "partio-1.14.6-1.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "partio-1.14.6-1.12.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libGLU1" 
+  "libgcc_s1" 
+  "libglut3" 
+  "libglvnd" 
+  "libpartio1" 
+  "libstdc++6" 
+  "python311-base" 
+]
+extra-source "partio-1.14.6-1.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/partio-1.14.6-1.12.x86_64.rpm"
+}

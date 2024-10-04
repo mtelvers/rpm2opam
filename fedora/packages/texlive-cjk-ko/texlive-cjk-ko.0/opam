@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-cjk-ko-svn63561-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-cjk-ko-svn63561-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-cjk" 
+  "texlive-cjk-ko" 
+  "texlive-kotex-utf" 
+  "texlive-kpathsea" 
+  "texlive-latex" 
+  "texlive-luatexko" 
+  "texlive-nanumtype1" 
+  "texlive-ulem" 
+]
+extra-source "texlive-cjk-ko-svn63561-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-cjk-ko-svn63561-71.fc40.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-oletools-0.60.1-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-oletools-0.60.1-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-base" {= "3.10"}
+  "python310-colorclass" 
+  "python310-easygui" 
+  "python310-msoffcrypto-tool" 
+  "python310-olefile" {>= "0.46"}
+  "python310-pyparsing" {>= "2.1.0"}
+  "update-alternatives" 
+]
+extra-source "python310-oletools-0.60.1-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-oletools-0.60.1-1.2.noarch.rpm"
+}

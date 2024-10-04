@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Test-JSON-0.11-1.31.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Test-JSON-0.11-1.31.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-JSON-Any" {>= "1.2"}
+  "perl-Test-Differences" {>= "0.47"}
+]
+extra-source "perl-Test-JSON-0.11-1.31.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Test-JSON-0.11-1.31.noarch.rpm"
+}

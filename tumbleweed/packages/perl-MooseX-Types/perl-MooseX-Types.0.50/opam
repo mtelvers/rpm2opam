@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-Types-0.50-1.28.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Types-0.50-1.28.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Carp-Clan" {>= "6.0"}
+  "perl-Module-Runtime" 
+  "perl-Moose" 
+  "perl-Scalar-List-Utils" {>= "1.19"}
+  "perl-Sub-Exporter" 
+  "perl-Sub-Exporter-ForMethods" {>= "0.100052"}
+  "perl-Sub-Install" 
+  "perl-Sub-Name" 
+  "perl-namespace-autoclean" {>= "0.16"}
+]
+extra-source "perl-MooseX-Types-0.50-1.28.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-Types-0.50-1.28.noarch.rpm"
+}

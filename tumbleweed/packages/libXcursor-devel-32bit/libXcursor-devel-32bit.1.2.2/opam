@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libXcursor-devel-32bit-1.2.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libXcursor-devel-32bit-1.2.2-1.2.x86_64.rpm"]
+depends: [
+  "libX11-devel" 
+  "libXcursor-devel" {= "1.2.2"}
+  "libXcursor1-32bit" {= "1.2.2"}
+  "libXfixes-devel" 
+  "libXrender-devel" 
+  "pkgconf-pkg-config" 
+  "xorgproto-devel" 
+]
+extra-source "libXcursor-devel-32bit-1.2.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libXcursor-devel-32bit-1.2.2-1.2.x86_64.rpm"
+}

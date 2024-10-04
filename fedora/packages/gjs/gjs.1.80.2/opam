@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gjs-1.80.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gjs-1.80.2-1.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "cairo-gobject" 
+  "glib2" {>= "2.66.0"}
+  "glibc" 
+  "gobject-introspection" {>= "1.66.0"}
+  "libX11" 
+  "libffi" 
+  "libgcc" 
+  "libstdc++" 
+  "mozjs115" 
+  "readline" 
+]
+extra-source "gjs-1.80.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gjs-1.80.2-1.fc40.x86_64.rpm"
+}

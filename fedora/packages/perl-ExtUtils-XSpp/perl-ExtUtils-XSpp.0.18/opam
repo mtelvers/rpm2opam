@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-ExtUtils-XSpp-0.18-30.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-ExtUtils-XSpp-0.18-30.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Digest-MD5" 
+  "perl-Exporter" 
+  "perl-ExtUtils-ParseXS" {>= "3.7"}
+  "perl-File-Basename" 
+  "perl-File-Path" 
+  "perl-Getopt-Long" 
+  "perl-IO" 
+  "perl-IPC-Open3" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.4.0"}
+  "perl-vars" 
+]
+extra-source "perl-ExtUtils-XSpp-0.18-30.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-ExtUtils-XSpp-0.18-30.fc40.noarch.rpm"
+}

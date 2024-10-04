@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-libbpf-rs-devel-0.22.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-libbpf-rs-devel-0.22.0-2.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "cargo" 
+  "rust" {>= "1.65"}
+  "rust-bitflags+default-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-libbpf-sys+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-nix+net-devel" 
+  "rust-nix+user-devel" 
+  "rust-nix-devel" 
+  "rust-num_enum+default-devel" 
+  "rust-strum_macros+default-devel" 
+  "rust-thiserror+default-devel" 
+  "rust-vsprintf+default-devel" 
+]
+extra-source "rust-libbpf-rs-devel-0.22.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-libbpf-rs-devel-0.22.0-2.fc40.noarch.rpm"
+}

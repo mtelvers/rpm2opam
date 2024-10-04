@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "quiterss-0.19.4-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "quiterss-0.19.4-11.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtmultimedia" 
+  "qt5-qtwebkit" 
+  "qtsingleapplication-qt5" 
+  "sqlite-libs" 
+]
+extra-source "quiterss-0.19.4-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/quiterss-0.19.4-11.fc40.x86_64.rpm"
+}

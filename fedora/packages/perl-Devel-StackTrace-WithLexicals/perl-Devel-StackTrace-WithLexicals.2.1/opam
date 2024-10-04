@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Devel-StackTrace-WithLexicals-2.01-29.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Devel-StackTrace-WithLexicals-2.01-29.fc40.noarch.rpm"]
+depends: [
+  "perl-Devel-StackTrace" {>= "2.0"}
+  "perl-PadWalker" {>= "1.98"}
+  "perl-base" 
+  "perl-libs" {>= "5.8.1"}
+]
+extra-source "perl-Devel-StackTrace-WithLexicals-2.01-29.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Devel-StackTrace-WithLexicals-2.01-29.fc40.noarch.rpm"
+}

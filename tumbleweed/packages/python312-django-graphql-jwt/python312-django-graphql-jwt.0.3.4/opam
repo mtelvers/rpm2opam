@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-django-graphql-jwt-0.3.4-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-django-graphql-jwt-0.3.4-1.5.noarch.rpm"]
+depends: [
+  "python312-Django" {>= "2.0"}
+  "python312-PyJWT" {>= "2"}
+  "python312-base" {= "3.12"}
+  "python312-graphene" {>= "2.1"}
+  "python312-graphene-django" {>= "2.0"}
+]
+extra-source "python312-django-graphql-jwt-0.3.4-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-django-graphql-jwt-0.3.4-1.5.noarch.rpm"
+}

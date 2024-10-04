@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dssp-3.0.0-23.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dssp-3.0.0-23.fc40.x86_64.rpm"]
+depends: [
+  "boost-program-options" 
+  "boost-thread" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+]
+extra-source "dssp-3.0.0-23.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dssp-3.0.0-23.fc40.x86_64.rpm"
+}

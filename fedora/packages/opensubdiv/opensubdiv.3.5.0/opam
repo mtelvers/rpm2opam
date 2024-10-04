@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "opensubdiv-3.5.0-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opensubdiv-3.5.0-10.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libgomp" 
+  "libstdc++" 
+  "tbb2020-3" 
+]
+extra-source "opensubdiv-3.5.0-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/opensubdiv-3.5.0-10.fc40.x86_64.rpm"
+}

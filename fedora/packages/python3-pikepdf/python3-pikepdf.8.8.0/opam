@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-pikepdf-8.8.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-pikepdf-8.8.0-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "python3" {= "3.12"}
+  "python3-deprecated" 
+  "python3-lxml" {>= "4.8"}
+  "python3-packaging" 
+  "python3-pillow" {>= "10.0.1"}
+  "qpdf-libs" 
+]
+extra-source "python3-pikepdf-8.8.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-pikepdf-8.8.0-3.fc40.x86_64.rpm"
+}

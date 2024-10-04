@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "vamp-plugin-sdk-2.10.0-slfo.1.1.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vamp-plugin-sdk-2.10.0-slfo.1.1.9.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libsndfile1" 
+  "libstdc++6" 
+]
+extra-source "vamp-plugin-sdk-2.10.0-slfo.1.1.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/vamp-plugin-sdk-2.10.0-slfo.1.1.9.x86_64.rpm"
+}

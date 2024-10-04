@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-tls-session-manager-devel-0.0.6-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-tls-session-manager-devel-0.0.6-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-auto-update-devel" 
+  "ghc-base-devel" 
+  "ghc-basement-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-clock-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-crypto-token-devel" 
+  "ghc-memory-devel" 
+  "ghc-psqueues-devel" 
+  "ghc-serialise-devel" 
+  "ghc-tls-devel" 
+  "ghc-tls-session-manager" {= "0.0.6"}
+]
+extra-source "ghc-tls-session-manager-devel-0.0.6-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-tls-session-manager-devel-0.0.6-1.1.x86_64.rpm"
+}

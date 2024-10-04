@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-pod2pdf-0.42-35.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-pod2pdf-0.42-35.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-File-Basename" 
+  "perl-File-Type" 
+  "perl-FindBin" 
+  "perl-Getopt-ArgvFile" 
+  "perl-Getopt-Long" 
+  "perl-Image-Size" 
+  "perl-PDF-API2" 
+  "perl-POSIX" 
+  "perl-Paper-Specs" {>= "0.10"}
+  "perl-PathTools" 
+  "perl-Pod-Escapes" 
+  "perl-Pod-Parser" 
+  "perl-Scalar-List-Utils" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-podlators" 
+]
+extra-source "perl-pod2pdf-0.42-35.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-pod2pdf-0.42-35.fc40.noarch.rpm"
+}

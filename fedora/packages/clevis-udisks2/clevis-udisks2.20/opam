@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "clevis-udisks2-20-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clevis-udisks2-20-1.fc40.x86_64.rpm"]
+depends: [
+  "audit-libs" 
+  "clevis-luks" {= "20"}
+  "cryptsetup-libs" 
+  "glib2" 
+  "glibc" 
+  "jansson" 
+  "libgcc" 
+  "libluksmeta" 
+  "libudisks2" 
+]
+extra-source "clevis-udisks2-20-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/clevis-udisks2-20-1.fc40.x86_64.rpm"
+}

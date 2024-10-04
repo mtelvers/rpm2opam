@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Dist-Zilla-Plugin-Test-Compile-2.058-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Dist-Zilla-Plugin-Test-Compile-2.058-21.fc40.noarch.rpm"]
+depends: [
+  "perl-Data-Section" {>= "0.4"}
+  "perl-Dist-Zilla" 
+  "perl-Moose" 
+  "perl-Path-Tiny" 
+  "perl-Sub-Exporter-ForMethods" 
+  "perl-libs" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-Dist-Zilla-Plugin-Test-Compile-2.058-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Dist-Zilla-Plugin-Test-Compile-2.058-21.fc40.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "autoyast_xml_validator-1.0.9+gite8164d1-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "autoyast_xml_validator-1.0.9+gite8164d1-1.9.noarch.rpm"]
+depends: [
+  "jing" 
+  "libxml2-tools" 
+  "python311-base" 
+  "yast2-schema-collection" 
+]
+extra-source "autoyast_xml_validator-1.0.9+gite8164d1-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/autoyast_xml_validator-1.0.9+gite8164d1-1.9.noarch.rpm"
+}

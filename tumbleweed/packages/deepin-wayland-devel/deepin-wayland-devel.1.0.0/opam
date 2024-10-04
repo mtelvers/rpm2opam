@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "deepin-wayland-devel-1.0.0-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deepin-wayland-devel-1.0.0-2.2.x86_64.rpm"]
+depends: [
+  "libdde-wayland-client0" {= "1.0.0"}
+  "libdde-wayland-server0" {= "1.0.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "deepin-wayland-devel-1.0.0-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/deepin-wayland-devel-1.0.0-2.2.x86_64.rpm"
+}

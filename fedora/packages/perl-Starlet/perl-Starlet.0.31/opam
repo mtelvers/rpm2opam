@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Starlet-0.31-24.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Starlet-0.31-24.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Fcntl" 
+  "perl-File-Temp" 
+  "perl-HTTP-Date" 
+  "perl-HTTP-Message" 
+  "perl-IO" 
+  "perl-POSIX" 
+  "perl-Parallel-Prefork" 
+  "perl-Plack" 
+  "perl-Scalar-List-Utils" 
+  "perl-Server-Starter" 
+  "perl-Socket" 
+  "perl-Time-HiRes" 
+  "perl-Try-Tiny" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" {>= "5.8.0"}
+]
+extra-source "perl-Starlet-0.31-24.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Starlet-0.31-24.fc40.noarch.rpm"
+}

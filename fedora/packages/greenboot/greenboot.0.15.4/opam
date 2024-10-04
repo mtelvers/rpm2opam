@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "greenboot-0.15.4-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "greenboot-0.15.4-5.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "grub2-tools-minimal" 
+  "pam" {>= "1.4.0"}
+  "rpm-ostree" 
+  "systemd" 
+]
+extra-source "greenboot-0.15.4-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/greenboot-0.15.4-5.fc40.x86_64.rpm"
+}

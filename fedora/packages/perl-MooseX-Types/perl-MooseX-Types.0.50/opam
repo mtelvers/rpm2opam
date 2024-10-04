@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-MooseX-Types-0.50-22.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Types-0.50-22.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Carp-Clan" 
+  "perl-Exporter" 
+  "perl-Module-Runtime" 
+  "perl-Moose" 
+  "perl-Scalar-List-Utils" 
+  "perl-Sub-Exporter" 
+  "perl-Sub-Exporter-ForMethods" {>= "0.100052"}
+  "perl-Sub-Install" 
+  "perl-Sub-Name" 
+  "perl-base" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-namespace-autoclean" {>= "0.16"}
+  "perl-overload" 
+]
+extra-source "perl-MooseX-Types-0.50-22.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-MooseX-Types-0.50-22.fc40.noarch.rpm"
+}

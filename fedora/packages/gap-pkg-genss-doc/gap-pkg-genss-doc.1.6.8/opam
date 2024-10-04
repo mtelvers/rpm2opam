@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gap-pkg-genss-doc-1.6.8-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-pkg-genss-doc-1.6.8-10.fc40.noarch.rpm"]
+depends: [
+  "gap-pkg-genss" {= "1.6.8"}
+  "gap-pkg-orb-doc" 
+]
+extra-source "gap-pkg-genss-doc-1.6.8-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gap-pkg-genss-doc-1.6.8-10.fc40.noarch.rpm"
+}

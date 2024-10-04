@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python39-tools-3.9.20-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python39-tools-3.9.20-3.1.x86_64.rpm"]
+depends: [
+  "python39-base" {= "3.9"}
+]
+extra-source "python39-tools-3.9.20-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python39-tools-3.9.20-3.1.x86_64.rpm"
+}

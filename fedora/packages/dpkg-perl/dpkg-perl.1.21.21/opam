@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dpkg-perl-1.21.21-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dpkg-perl-1.21.21-4.fc40.noarch.rpm"]
+depends: [
+  "dpkg" {= "1.21.21"}
+  "perl-Carp" 
+  "perl-Digest" 
+  "perl-Digest-MD5" 
+  "perl-Digest-SHA" 
+  "perl-Digest-SHA1" 
+  "perl-Errno" 
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Compare" 
+  "perl-File-Copy" 
+  "perl-File-Find" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-IO" 
+  "perl-MIME-Base64" 
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-Storable" 
+  "perl-Tie" 
+  "perl-Time-HiRes" 
+  "perl-Time-Piece" 
+  "perl-TimeDate" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-overload" 
+  "perl-parent" 
+]
+extra-source "dpkg-perl-1.21.21-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dpkg-perl-1.21.21-4.fc40.noarch.rpm"
+}

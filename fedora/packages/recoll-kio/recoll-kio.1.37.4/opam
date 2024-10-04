@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "recoll-kio-1.37.4-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "recoll-kio-1.37.4-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kdelibs" 
+  "kf5-kio-core-libs" 
+  "libgcc" 
+  "libstdc++" 
+  "qt" 
+  "qt5-qtbase" 
+  "recoll" {= "1.37.4"}
+  "recoll-libs" 
+]
+extra-source "recoll-kio-1.37.4-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/recoll-kio-1.37.4-1.fc40.x86_64.rpm"
+}

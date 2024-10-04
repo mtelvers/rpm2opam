@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-nbclassic-1.1.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-nbclassic-1.1.0-1.1.noarch.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "jupyter-nbclassic" {= "1.1.0"}
+  "python311-Jinja2" 
+  "python311-Send2Trash" {>= "1.8.0"}
+  "python311-argon2-cffi" 
+  "python311-base" 
+  "python311-ipykernel" 
+  "python311-ipython_genutils" 
+  "python311-jupyter-client" {>= "6.1.1"}
+  "python311-jupyter-core" {>= "4.6.1"}
+  "python311-nbconvert" {>= "5"}
+  "python311-nbformat" 
+  "python311-nest-asyncio" {>= "1.5"}
+  "python311-notebook-shim" {>= "0.2.3"}
+  "python311-prometheus-client" 
+  "python311-pyzmq" {>= "17"}
+  "python311-terminado" {>= "0.8.3"}
+  "python311-tornado" {>= "6.1"}
+  "python311-traitlets" {>= "4.2.1"}
+]
+extra-source "python311-nbclassic-1.1.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-nbclassic-1.1.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libze_intel_gpu1-24.26.30049.6-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libze_intel_gpu1-24.26.30049.6-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "level-zero" 
+  "libgcc_s1" 
+  "libigc1" 
+  "libigdgmm12" 
+  "libstdc++6" 
+]
+extra-source "libze_intel_gpu1-24.26.30049.6-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libze_intel_gpu1-24.26.30049.6-1.1.x86_64.rpm"
+}

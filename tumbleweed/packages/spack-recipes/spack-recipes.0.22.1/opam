@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "spack-recipes-0.22.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "spack-recipes-0.22.1-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+]
+extra-source "spack-recipes-0.22.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/spack-recipes-0.22.1-1.1.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tryton-6.0.41-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tryton-6.0.41-1.1.noarch.rpm"]
+depends: [
+  "python311-GooCalendar" {>= "0.7"}
+  "python311-base" {= "3.11"}
+  "python311-chardet" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-gobject-cairo" {>= "1.15.10"}
+  "python311-pycairo" 
+  "python311-python-dateutil" 
+  "python311-python-gnupg" 
+  "python311-pytz" 
+  "python311-setuptools" 
+  "python311-simplejson" 
+]
+extra-source "tryton-6.0.41-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tryton-6.0.41-1.1.noarch.rpm"
+}

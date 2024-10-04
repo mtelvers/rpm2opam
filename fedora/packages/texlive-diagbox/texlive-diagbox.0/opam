@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-diagbox-svn54080-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-diagbox-svn54080-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-etex" 
+  "texlive-fp" 
+  "texlive-graphics" 
+  "texlive-kpathsea" 
+  "texlive-pict2e" 
+  "texlive-tools" 
+]
+extra-source "texlive-diagbox-svn54080-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-diagbox-svn54080-71.fc40.noarch.rpm"
+}

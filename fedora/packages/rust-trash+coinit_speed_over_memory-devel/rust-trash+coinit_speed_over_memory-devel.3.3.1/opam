@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-trash+coinit_speed_over_memory-devel-3.3.1-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-trash+coinit_speed_over_memory-devel-3.3.1-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-trash-devel" {= "3.3.1"}
+]
+extra-source "rust-trash+coinit_speed_over_memory-devel-3.3.1-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-trash+coinit_speed_over_memory-devel-3.3.1-1.fc40.noarch.rpm"
+}

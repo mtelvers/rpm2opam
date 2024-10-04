@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mcelog-200-1.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mcelog-200-1.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "systemd" 
+]
+extra-source "mcelog-200-1.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/mcelog-200-1.el10.x86_64.rpm"
+}

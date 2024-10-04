@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-input-linux+tokio-util-0_7-devel-0.6.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-input-linux+tokio-util-0_7-devel-0.6.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-input-linux+bytes-devel" {= "0.6.0"}
+  "rust-input-linux+codec-devel" {= "0.6.0"}
+  "rust-input-linux-devel" {= "0.6.0"}
+  "rust-tokio-util+codec-devel" 
+  "rust-tokio-util-devel" 
+]
+extra-source "rust-input-linux+tokio-util-0_7-devel-0.6.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-input-linux+tokio-util-0_7-devel-0.6.0-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libopenhpi4-3.8.0.ge4631e8a-3.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libopenhpi4-3.8.0.ge4631e8a-3.9.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcc_s1" 
+  "libopenssl3" 
+  "libstdc++6" 
+]
+extra-source "libopenhpi4-3.8.0.ge4631e8a-3.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libopenhpi4-3.8.0.ge4631e8a-3.9.x86_64.rpm"
+}

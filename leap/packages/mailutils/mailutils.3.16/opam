@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mailutils-3.16-slfo.1.1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mailutils-3.16-slfo.1.1.7.x86_64.rpm"]
+depends: [
+  "alts" 
+  "bash-sh" 
+  "cups" 
+  "glibc" 
+  "guile" {= "3.0.8"}
+  "libfribidi0" 
+  "libmailutils9" 
+  "libreadline8" 
+  "libunistring5" 
+  "python311-base" {= "3.11"}
+]
+extra-source "mailutils-3.16-slfo.1.1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/mailutils-3.16-slfo.1.1.7.x86_64.rpm"
+}

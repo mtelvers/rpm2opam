@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-ogr-0.45.0-2.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-ogr-0.45.0-2.5.noarch.rpm"]
+depends: [
+  "python312-Deprecated" 
+  "python312-GitPython" 
+  "python312-PyGithub" 
+  "python312-PyYAML" 
+  "python312-base" {= "3.12"}
+  "python312-cryptography" 
+  "python312-python-gitlab" 
+  "python312-requests" 
+]
+extra-source "python312-ogr-0.45.0-2.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-ogr-0.45.0-2.5.noarch.rpm"
+}

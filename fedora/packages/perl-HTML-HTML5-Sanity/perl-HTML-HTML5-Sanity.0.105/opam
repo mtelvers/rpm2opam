@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-HTML-HTML5-Sanity-0.105-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-HTML-HTML5-Sanity-0.105-16.fc40.noarch.rpm"]
+depends: [
+  "perl-Exporter" 
+  "perl-Locale-Codes" 
+  "perl-XML-LibXML" {>= "1.70"}
+  "perl-libs" {>= "5.10.0"}
+]
+extra-source "perl-HTML-HTML5-Sanity-0.105-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-HTML-HTML5-Sanity-0.105-16.fc40.noarch.rpm"
+}

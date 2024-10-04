@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gns3-server-2.2.44.1-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gns3-server-2.2.44.1-2.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox" 
+  "cpulimit" 
+  "docker" 
+  "dynamips" {>= "0.2.11"}
+  "iouyap" 
+  "python311-Jinja2" {>= "3.0.1"}
+  "python311-aiofiles" {>= "0.7"}
+  "python311-aiohttp" {>= "3.8.3"}
+  "python311-aiohttp_cors" {>= "0.7.0"}
+  "python311-async_timeout" {>= "4.0.2"}
+  "python311-base" 
+  "python311-distro" {>= "1.6.0"}
+  "python311-jsonschema" {>= "3.2.0"}
+  "python311-platformdirs" 
+  "python311-psutil" {>= "5.8.0"}
+  "python311-py-cpuinfo" {>= "8.0.0"}
+  "python311-sentry-sdk" {>= "1.12.1"}
+  "python311-truststore" 
+  "qemu" 
+  "shadow" 
+  "ubridge" {>= "0.9.14"}
+  "vpcs" {>= "0.5"}
+  "wireshark" 
+]
+extra-source "gns3-server-2.2.44.1-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gns3-server-2.2.44.1-2.2.noarch.rpm"
+}

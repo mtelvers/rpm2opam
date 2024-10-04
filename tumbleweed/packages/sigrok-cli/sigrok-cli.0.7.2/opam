@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sigrok-cli-0.7.2-1.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sigrok-cli-0.7.2-1.16.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libsigrok4" 
+  "libsigrokdecode4" 
+]
+extra-source "sigrok-cli-0.7.2-1.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sigrok-cli-0.7.2-1.16.x86_64.rpm"
+}

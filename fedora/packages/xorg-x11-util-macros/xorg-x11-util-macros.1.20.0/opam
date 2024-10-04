@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xorg-x11-util-macros-1.20.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xorg-x11-util-macros-1.20.0-4.fc40.noarch.rpm"]
+depends: [
+  "autoconf" 
+  "automake" 
+  "pkgconf-pkg-config" 
+]
+extra-source "xorg-x11-util-macros-1.20.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xorg-x11-util-macros-1.20.0-4.fc40.noarch.rpm"
+}

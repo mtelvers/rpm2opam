@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libevdi1-1.14.5-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libevdi1-1.14.5-1.3.x86_64.rpm"]
+depends: [
+  "evdi-kmp-default" 
+  "glibc" 
+]
+extra-source "libevdi1-1.14.5-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libevdi1-1.14.5-1.3.x86_64.rpm"
+}

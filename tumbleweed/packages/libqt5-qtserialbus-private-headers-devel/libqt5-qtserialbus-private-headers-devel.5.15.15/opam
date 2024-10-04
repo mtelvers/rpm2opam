@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqt5-qtserialbus-private-headers-devel-5.15.15+kde0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqt5-qtserialbus-private-headers-devel-5.15.15+kde0-1.1.noarch.rpm"]
+depends: [
+  "libQt5Core-private-headers-devel" {>= "5.15.15"}
+  "libqt5-qtserialbus-devel" {= "5.15.15"}
+]
+extra-source "libqt5-qtserialbus-private-headers-devel-5.15.15+kde0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libqt5-qtserialbus-private-headers-devel-5.15.15+kde0-1.1.noarch.rpm"
+}

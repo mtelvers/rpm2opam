@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openSUSE-release-tools-20240916.6615422-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openSUSE-release-tools-20240916.6615422-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "osclib" {= "20240916.6615422"}
+  "python311-PyYAML" 
+  "python311-base" 
+  "python311-cmdln" 
+  "python311-colorama" 
+  "python311-lxml" 
+  "python311-pycurl" 
+  "python311-python-dateutil" 
+  "python311-pyxdg" 
+  "python311-requests" 
+]
+extra-source "openSUSE-release-tools-20240916.6615422-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/openSUSE-release-tools-20240916.6615422-1.1.noarch.rpm"
+}

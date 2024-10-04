@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "varlink-bash-completion-23-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "varlink-bash-completion-23-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "varlink-util" {= "23"}
+]
+extra-source "varlink-bash-completion-23-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/varlink-bash-completion-23-1.1.noarch.rpm"
+}

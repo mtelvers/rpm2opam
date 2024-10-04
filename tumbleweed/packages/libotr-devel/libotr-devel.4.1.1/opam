@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libotr-devel-4.1.1-4.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libotr-devel-4.1.1-4.8.x86_64.rpm"]
+depends: [
+  "libgcrypt-devel" 
+  "libotr5" {= "4.1.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libotr-devel-4.1.1-4.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libotr-devel-4.1.1-4.8.x86_64.rpm"
+}

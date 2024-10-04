@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-alacritty_terminal+serde-devel-0.23.0-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-alacritty_terminal+serde-devel-0.23.0-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-alacritty_terminal-devel" {= "0.23.0"}
+  "rust-bitflags+serde-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde+rc-devel" 
+  "rust-vte+serde-devel" 
+]
+extra-source "rust-alacritty_terminal+serde-devel-0.23.0-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-alacritty_terminal+serde-devel-0.23.0-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Lingua-EN-Tagger-0.31-1.22.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Lingua-EN-Tagger-0.31-1.22.x86_64.rpm"]
+depends: [
+  "perl" 
+  "perl-HTML-Parser" {>= "3.45"}
+  "perl-HTML-Tagset" {>= "3.20"}
+  "perl-Lingua-Stem" {>= "0.81"}
+  "perl-Memoize-ExpireLRU" {>= "0.55"}
+]
+extra-source "perl-Lingua-EN-Tagger-0.31-1.22.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-Lingua-EN-Tagger-0.31-1.22.x86_64.rpm"
+}

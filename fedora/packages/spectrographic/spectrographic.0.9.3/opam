@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "spectrographic-0.9.3-15.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "spectrographic-0.9.3-15.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-numpy" {>= "1.18"}
+  "python3-pillow" {>= "6.2.1"}
+  "python3-simpleaudio" {>= "1.0.4"}
+  "python3-wavio" {>= "0.0.4"}
+]
+extra-source "spectrographic-0.9.3-15.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/spectrographic-0.9.3-15.fc40.noarch.rpm"
+}

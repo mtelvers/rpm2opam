@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnustep-base-1.29.0-3.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnustep-base-1.29.0-3.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "gnustep-make" 
+  "libgcc_s1" 
+  "libgnustep-base1_29" 
+  "libobjc4" 
+]
+extra-source "gnustep-base-1.29.0-3.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gnustep-base-1.29.0-3.4.x86_64.rpm"
+}

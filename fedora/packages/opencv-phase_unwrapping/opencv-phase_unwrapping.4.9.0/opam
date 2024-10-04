@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "opencv-phase_unwrapping-4.9.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "opencv-phase_unwrapping-4.9.0-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "opencv-core" 
+]
+extra-source "opencv-phase_unwrapping-4.9.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/opencv-phase_unwrapping-4.9.0-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-IO-Compress-tests-2.207-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-IO-Compress-tests-2.207-1.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Carp" 
+  "perl-Compress-Raw-Zlib" {>= "2"}
+  "perl-Data-Dumper" 
+  "perl-File-Path" 
+  "perl-IO" 
+  "perl-IO-Compress" {>= "2"}
+  "perl-PathTools" 
+  "perl-Symbol" 
+  "perl-Test-Harness" 
+  "perl-Test-Simple" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-lib" 
+  "perl-libs" 
+]
+extra-source "perl-IO-Compress-tests-2.207-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-IO-Compress-tests-2.207-1.fc40.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-curlylint-0.13.1-1.10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-curlylint-0.13.1-1.10.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-attrs" {>= "17.2.0"}
+  "python310-base" 
+  "python310-click" {>= "6.5"}
+  "python310-parsy" {>= "1.1.0"}
+  "python310-pathspec" {>= "0.6"}
+  "python310-toml" {>= "0.9.4"}
+]
+extra-source "python310-curlylint-0.13.1-1.10.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-curlylint-0.13.1-1.10.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw64-libstdc++-14.0.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-libstdc++-14.0.1-1.fc40.x86_64.rpm"]
+depends: [
+  "mingw64-crt" 
+  "mingw64-filesystem" {>= "95"}
+  "mingw64-libgcc" 
+  "mingw64-winpthreads" 
+]
+extra-source "mingw64-libstdc++-14.0.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw64-libstdc++-14.0.1-1.fc40.x86_64.rpm"
+}

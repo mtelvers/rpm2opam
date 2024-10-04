@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MouseX-Types-Path-Class-0.07-4.26.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MouseX-Types-Path-Class-0.07-4.26.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Mouse" {>= "0.39"}
+  "perl-MouseX-Types" {>= "0.2"}
+  "perl-Path-Class" 
+]
+extra-source "perl-MouseX-Types-Path-Class-0.07-4.26.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MouseX-Types-Path-Class-0.07-4.26.noarch.rpm"
+}

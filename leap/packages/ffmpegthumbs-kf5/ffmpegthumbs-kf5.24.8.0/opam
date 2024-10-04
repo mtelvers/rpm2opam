@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ffmpegthumbs-kf5-24.08.0-lp160.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ffmpegthumbs-kf5-24.08.0-lp160.1.2.x86_64.rpm"]
+depends: [
+  "ffmpegthumbs" {= "24.8.0"}
+  "glibc" 
+  "kio" 
+  "libKF5ConfigCore5" 
+  "libKF5ConfigGui5" 
+  "libKF5CoreAddons5" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libavcodec61" 
+  "libavfilter10" 
+  "libavformat61" 
+  "libavutil59" 
+  "libstdc++6" 
+  "libswscale8" 
+]
+extra-source "ffmpegthumbs-kf5-24.08.0-lp160.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/ffmpegthumbs-kf5-24.08.0-lp160.1.2.x86_64.rpm"
+}

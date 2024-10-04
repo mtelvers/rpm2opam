@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ca-certificates-2+git20240805.fd24d50-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ca-certificates-2+git20240805.fd24d50-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "p11-kit" 
+  "p11-kit-tools" 
+]
+extra-source "ca-certificates-2+git20240805.fd24d50-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/ca-certificates-2+git20240805.fd24d50-1.1.noarch.rpm"
+}

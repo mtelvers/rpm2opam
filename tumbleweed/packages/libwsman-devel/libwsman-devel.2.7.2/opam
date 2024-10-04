@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libwsman-devel-2.7.2-3.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libwsman-devel-2.7.2-3.3.x86_64.rpm"]
+depends: [
+  "libwsman1" {= "2.7.2"}
+  "libwsman_client5" {= "2.7.2"}
+  "libxml2-devel" 
+  "openwsman-server" {= "2.7.2"}
+  "pam-devel" 
+  "pkgconf-pkg-config" 
+  "sblim-sfcc-devel" 
+]
+extra-source "libwsman-devel-2.7.2-3.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libwsman-devel-2.7.2-3.3.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libsecret-devel-0.21.4-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libsecret-devel-0.21.4-1.2.x86_64.rpm"]
+depends: [
+  "glib2-devel" {>= "2.44"}
+  "libgcrypt-devel" {>= "1.2.2"}
+  "libsecret-1-0" {= "0.21.4"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Secret-1" {= "0.21.4"}
+]
+extra-source "libsecret-devel-0.21.4-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libsecret-devel-0.21.4-1.2.x86_64.rpm"
+}

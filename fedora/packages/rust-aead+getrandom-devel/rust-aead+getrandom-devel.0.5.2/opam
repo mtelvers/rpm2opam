@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-aead+getrandom-devel-0.5.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-aead+getrandom-devel-0.5.2-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-aead+rand_core-devel" {= "0.5.2"}
+  "rust-aead-devel" {= "0.5.2"}
+  "rust-crypto-common+getrandom-devel" 
+]
+extra-source "rust-aead+getrandom-devel-0.5.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-aead+getrandom-devel-0.5.2-3.fc40.noarch.rpm"
+}

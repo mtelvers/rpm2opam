@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-generics-sop-prof-0.5.1.3-15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-generics-sop-prof-0.5.1.3-15.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-generics-sop-devel" {= "0.5.1.3"}
+  "ghc-sop-core-prof" 
+  "ghc-template-haskell-prof" 
+  "ghc-th-abstraction-prof" 
+]
+extra-source "ghc-generics-sop-prof-0.5.1.3-15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-generics-sop-prof-0.5.1.3-15.fc40.x86_64.rpm"
+}

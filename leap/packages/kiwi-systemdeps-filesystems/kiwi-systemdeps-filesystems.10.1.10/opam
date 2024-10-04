@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kiwi-systemdeps-filesystems-10.1.10-slfo.1.1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kiwi-systemdeps-filesystems-10.1.10-slfo.1.1.1.x86_64.rpm"]
+depends: [
+  "btrfsprogs" 
+  "dosfstools" 
+  "e2fsprogs" 
+  "kiwi-systemdeps-core" {= "10.1.10"}
+  "qemu-tools" 
+  "squashfs" 
+  "xfsprogs" 
+]
+extra-source "kiwi-systemdeps-filesystems-10.1.10-slfo.1.1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/kiwi-systemdeps-filesystems-10.1.10-slfo.1.1.1.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-liblinear-1.94-37.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-liblinear-1.94-37.fc40.x86_64.rpm"]
+depends: [
+  "liblinear" {= "1.94"}
+  "python3" {= "3.12"}
+]
+extra-source "python3-liblinear-1.94-37.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-liblinear-1.94-37.fc40.x86_64.rpm"
+}

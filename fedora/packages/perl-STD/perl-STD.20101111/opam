@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-STD-20101111-31.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-STD-20101111-31.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Path" 
+  "perl-File-ShareDir" {>= "1.2"}
+  "perl-FindBin" 
+  "perl-Getopt-Long" {>= "2.34"}
+  "perl-Moose" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" 
+  "perl-Storable" 
+  "perl-Term-ANSIColor" 
+  "perl-Try-Tiny" 
+  "perl-YAML-LibYAML" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-overload" 
+]
+extra-source "perl-STD-20101111-31.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-STD-20101111-31.fc40.noarch.rpm"
+}

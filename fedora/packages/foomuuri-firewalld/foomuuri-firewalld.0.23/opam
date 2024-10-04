@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "foomuuri-firewalld-0.23-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "foomuuri-firewalld-0.23-1.fc40.noarch.rpm"]
+depends: [
+  "foomuuri" {= "0.23"}
+]
+extra-source "foomuuri-firewalld-0.23-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/foomuuri-firewalld-0.23-1.fc40.noarch.rpm"
+}

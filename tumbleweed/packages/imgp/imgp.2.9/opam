@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "imgp-2.9-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "imgp-2.9-1.3.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "python311-Pillow" 
+  "python311-base" 
+]
+extra-source "imgp-2.9-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/imgp-2.9-1.3.noarch.rpm"
+}

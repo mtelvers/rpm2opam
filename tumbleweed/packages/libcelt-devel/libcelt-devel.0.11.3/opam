@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libcelt-devel-0.11.3-1.34.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libcelt-devel-0.11.3-1.34.x86_64.rpm"]
+depends: [
+  "celt" {= "0.11.3"}
+  "glibc-devel" 
+  "libcelt0-2" {= "0.11.3"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libcelt-devel-0.11.3-1.34.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libcelt-devel-0.11.3-1.34.x86_64.rpm"
+}

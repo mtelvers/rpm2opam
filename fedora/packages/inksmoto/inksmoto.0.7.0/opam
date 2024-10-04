@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "inksmoto-0.7.0-34.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "inksmoto-0.7.0-34.fc40.noarch.rpm"]
+depends: [
+  "inkscape" 
+  "python3" 
+  "python3-gobject" 
+  "python3-lxml" 
+  "xmoto" 
+]
+extra-source "inksmoto-0.7.0-34.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/inksmoto-0.7.0-34.fc40.noarch.rpm"
+}

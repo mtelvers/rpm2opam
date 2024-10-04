@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "un-core-fonts-all-1.0.2-0.46.080608.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "un-core-fonts-all-1.0.2-0.46.080608.fc40.noarch.rpm"]
+depends: [
+  "un-core-batang-fonts" {= "1.0.2"}
+  "un-core-dinaru-fonts" {= "1.0.2"}
+  "un-core-dotum-fonts" {= "1.0.2"}
+  "un-core-graphic-fonts" {= "1.0.2"}
+  "un-core-gungseo-fonts" {= "1.0.2"}
+  "un-core-pilgi-fonts" {= "1.0.2"}
+]
+extra-source "un-core-fonts-all-1.0.2-0.46.080608.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/u/un-core-fonts-all-1.0.2-0.46.080608.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pymisp-2.4.170.2-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pymisp-2.4.170.2-1.4.noarch.rpm"]
+depends: [
+  "python310-Deprecated" {>= "1.2.14"}
+  "python310-base" {= "3.10"}
+  "python310-jsonschema" {>= "4.18.4"}
+  "python310-python-dateutil" {>= "2.8.2"}
+  "python310-requests" {>= "2.31.0"}
+]
+extra-source "python310-pymisp-2.4.170.2-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-pymisp-2.4.170.2-1.4.noarch.rpm"
+}

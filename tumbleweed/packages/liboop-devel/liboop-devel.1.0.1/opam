@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "liboop-devel-1.0.1-2.20.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "liboop-devel-1.0.1-2.20.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "liboop4" {= "1.0.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "liboop-devel-1.0.1-2.20.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/liboop-devel-1.0.1-2.20.x86_64.rpm"
+}

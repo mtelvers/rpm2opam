@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "flexiblas-openblas-serial-3.4.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flexiblas-openblas-serial-3.4.2-1.fc40.x86_64.rpm"]
+depends: [
+  "flexiblas" {= "3.4.2"}
+  "flexiblas-netlib" {= "3.4.2"}
+  "glibc" 
+  "openblas-serial" 
+]
+extra-source "flexiblas-openblas-serial-3.4.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/flexiblas-openblas-serial-3.4.2-1.fc40.x86_64.rpm"
+}

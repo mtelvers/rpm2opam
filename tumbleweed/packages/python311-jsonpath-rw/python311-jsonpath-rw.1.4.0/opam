@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-jsonpath-rw-1.4.0-6.21.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-jsonpath-rw-1.4.0-6.21.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-decorator" 
+  "python311-ply" {>= "3.4"}
+  "python311-six" 
+  "update-alternatives" 
+]
+extra-source "python311-jsonpath-rw-1.4.0-6.21.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-jsonpath-rw-1.4.0-6.21.noarch.rpm"
+}

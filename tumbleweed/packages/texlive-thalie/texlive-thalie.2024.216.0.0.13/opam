@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-thalie-2024.216.0.0.13asvn65249-57.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-thalie-2024.216.0.0.13asvn65249-57.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-bigfoot" 
+  "texlive-etoolbox" 
+  "texlive-filesystem" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-pgf" 
+  "texlive-pgfopts" 
+  "texlive-scripts" {>= "2024"}
+  "texlive-scripts-bin" {>= "2024"}
+  "texlive-tools" 
+  "texlive-translations" 
+]
+extra-source "texlive-thalie-2024.216.0.0.13asvn65249-57.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-thalie-2024.216.0.0.13asvn65249-57.1.noarch.rpm"
+}

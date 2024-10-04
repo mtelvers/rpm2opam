@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qt6-gui-devel-6.7.2-lp160.1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qt6-gui-devel-6.7.2-lp160.1.4.x86_64.rpm"]
+depends: [
+  "Mesa-libEGL-devel" 
+  "Mesa-libGL-devel" 
+  "at-spi2-core-devel" 
+  "libQt6Gui6" {= "6.7.2"}
+  "libdrm-devel" 
+  "libxkbcommon-devel" {>= "0.4.1"}
+  "pkgconf-pkg-config" 
+  "qt6-core-devel" {= "6.7.2"}
+  "qt6-dbus-devel" {= "6.7.2"}
+  "vulkan-devel" 
+]
+extra-source "qt6-gui-devel-6.7.2-lp160.1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/qt6-gui-devel-6.7.2-lp160.1.4.x86_64.rpm"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xsnow-3.7.9-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xsnow-3.7.9-1.2.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libX11-6" 
+  "libXext6" 
+  "libXinerama1" 
+  "libXpm4" 
+  "libXtst6" 
+  "libcairo2" 
+  "libgcc_s1" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgsl28" 
+  "libgslcblas0" 
+  "libgtk-3-0" 
+  "libstdc++6" 
+  "libxkbcommon0" 
+]
+extra-source "xsnow-3.7.9-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/xsnow-3.7.9-1.2.x86_64.rpm"
+}

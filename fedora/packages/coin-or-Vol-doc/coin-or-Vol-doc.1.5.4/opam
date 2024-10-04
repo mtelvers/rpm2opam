@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "coin-or-Vol-doc-1.5.4-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coin-or-Vol-doc-1.5.4-13.fc40.noarch.rpm"]
+depends: [
+  "coin-or-Osi-doc" 
+  "coin-or-Vol" {= "1.5.4"}
+]
+extra-source "coin-or-Vol-doc-1.5.4-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/coin-or-Vol-doc-1.5.4-13.fc40.noarch.rpm"
+}

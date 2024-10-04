@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-picky-asn1-devel-0.8.0-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-picky-asn1-devel-0.8.0-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.60"}
+  "rust-oid+serde_support-devel" 
+  "rust-oid-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde-devel" 
+  "rust-serde_bytes+default-devel" 
+]
+extra-source "rust-picky-asn1-devel-0.8.0-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-picky-asn1-devel-0.8.0-3.fc40.noarch.rpm"
+}

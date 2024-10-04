@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-Twisted-all_non_platform-24.7.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-Twisted-all_non_platform-24.7.0-1.1.noarch.rpm"]
+depends: [
+  "python310-PyHamcrest" {>= "1.9.0"}
+  "python310-Twisted-conch" {= "24.7.0"}
+  "python310-Twisted-contextvars" {= "24.7.0"}
+  "python310-Twisted-http2" {= "24.7.0"}
+  "python310-Twisted-serial" {= "24.7.0"}
+  "python310-Twisted-tls" {= "24.7.0"}
+]
+extra-source "python310-Twisted-all_non_platform-24.7.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-Twisted-all_non_platform-24.7.0-1.1.noarch.rpm"
+}

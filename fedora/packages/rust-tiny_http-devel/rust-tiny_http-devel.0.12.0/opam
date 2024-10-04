@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tiny_http-devel-0.12.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tiny_http-devel-0.12.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-ascii+default-devel" 
+  "rust-chunked_transfer+default-devel" 
+  "rust-httpdate+default-devel" 
+  "rust-log+default-devel" 
+]
+extra-source "rust-tiny_http-devel-0.12.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tiny_http-devel-0.12.0-2.fc40.noarch.rpm"
+}

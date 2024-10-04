@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-unravel-svn59175-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-unravel-svn59175-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-gtl" 
+  "texlive-kpathsea" 
+  "texlive-l3experimental" 
+  "texlive-l3kernel" 
+  "texlive-l3packages" 
+]
+extra-source "texlive-unravel-svn59175-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-unravel-svn59175-71.fc40.noarch.rpm"
+}

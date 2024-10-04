@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "goverlay-0.9-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "goverlay-0.9-7.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libX11" 
+  "libglvnd-glx" 
+  "mangohud" 
+  "mesa-libGLU" 
+  "qt5pas" 
+]
+extra-source "goverlay-0.9-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/goverlay-0.9-7.fc40.x86_64.rpm"
+}

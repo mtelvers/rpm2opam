@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kscope-1.9.4-41.20170716git98db2b4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kscope-1.9.4-41.20170716git98db2b4.fc40.x86_64.rpm"]
+depends: [
+  "cscope" 
+  "ctags" 
+  "glibc" 
+  "graphviz" 
+  "libgcc" 
+  "libstdc++" 
+  "qscintilla-qt5" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+]
+extra-source "kscope-1.9.4-41.20170716git98db2b4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kscope-1.9.4-41.20170716git98db2b4.fc40.x86_64.rpm"
+}

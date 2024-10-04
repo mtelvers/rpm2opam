@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "faust-tools-0.9.46-28.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "faust-tools-0.9.46-28.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "faust-osclib-devel" {= "0.9.46"}
+  "rubypick" 
+]
+extra-source "faust-tools-0.9.46-28.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/faust-tools-0.9.46-28.fc40.noarch.rpm"
+}

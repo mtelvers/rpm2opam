@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "unoconv-0.9.0-1.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "unoconv-0.9.0-1.12.noarch.rpm"]
+depends: [
+  "libreoffice-pyuno" 
+  "python311" 
+  "python311-base" 
+]
+extra-source "unoconv-0.9.0-1.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/unoconv-0.9.0-1.12.noarch.rpm"
+}

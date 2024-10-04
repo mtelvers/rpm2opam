@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "awesome-doc-4.3-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "awesome-doc-4.3-16.fc40.noarch.rpm"]
+depends: [
+  "awesome" {= "4.3"}
+]
+extra-source "awesome-doc-4.3-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/a/awesome-doc-4.3-16.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-codecov-2.1.13-1.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-codecov-2.1.13-1.5.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-coverage" 
+  "python312-requests" {>= "2.7.9"}
+  "update-alternatives" 
+]
+extra-source "python312-codecov-2.1.13-1.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-codecov-2.1.13-1.5.noarch.rpm"
+}

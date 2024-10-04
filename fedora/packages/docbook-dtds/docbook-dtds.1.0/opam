@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "docbook-dtds-1.0-85.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "docbook-dtds-1.0-85.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "coreutils" 
+  "libxml2" 
+  "sed" 
+  "sgml-common" 
+  "xml-common" 
+]
+extra-source "docbook-dtds-1.0-85.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/docbook-dtds-1.0-85.fc40.noarch.rpm"
+}

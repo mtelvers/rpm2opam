@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cinnamon-screensaver-6.0.2-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cinnamon-screensaver-6.0.2-4.fc40.x86_64.rpm"]
+depends: [
+  "accountsservice-libs" 
+  "bash" 
+  "cinnamon-desktop" {>= "6.0.0"}
+  "cinnamon-translations" {>= "6.0.0"}
+  "glib2" 
+  "glibc" 
+  "gnome-keyring-pam" 
+  "gtk3" 
+  "libX11" 
+  "libXext" 
+  "libXinerama" 
+  "libXrandr" 
+  "libgcc" 
+  "libgnomekbd" 
+  "libxdo" 
+  "pam-libs" 
+  "pango" 
+  "python3" 
+  "python3-gobject" 
+  "python3-setproctitle" 
+  "python3-xapp" 
+  "python3-xapps-overrides" 
+  "xapps" 
+  "xprop" 
+]
+extra-source "cinnamon-screensaver-6.0.2-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cinnamon-screensaver-6.0.2-4.fc40.x86_64.rpm"
+}

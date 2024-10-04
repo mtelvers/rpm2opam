@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "clutter-gtk-devel-1.8.4-5.22.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clutter-gtk-devel-1.8.4-5.22.x86_64.rpm"]
+depends: [
+  "clutter-devel" 
+  "gtk3-devel" 
+  "libclutter-gtk-1_0-0" {= "1.8.4"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-GtkClutter-1_0" {= "1.8.4"}
+]
+extra-source "clutter-gtk-devel-1.8.4-5.22.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/clutter-gtk-devel-1.8.4-5.22.x86_64.rpm"
+}

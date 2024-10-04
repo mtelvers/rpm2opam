@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "postgresql14-timescaledb-2.16.1-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "postgresql14-timescaledb-2.16.1-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "postgresql14-server" {>= "14.13"}
+]
+extra-source "postgresql14-timescaledb-2.16.1-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/postgresql14-timescaledb-2.16.1-1.2.x86_64.rpm"
+}

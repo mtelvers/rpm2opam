@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "texlive-ascmac-2024.216.2.1svn53411-56.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-ascmac-2024.216.2.1svn53411-56.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "coreutils" 
+  "ed" 
+  "findutils" 
+  "grep" 
+  "sed" 
+  "texlive" {>= "2024"}
+  "texlive-ascmac-fonts" {>= "2024"}
+  "texlive-filesystem" {>= "2024"}
+  "texlive-kpathsea" {>= "2024"}
+  "texlive-kpathsea-bin" {>= "2024"}
+  "texlive-scripts" 
+  "texlive-scripts-bin" {>= "2024"}
+]
+extra-source "texlive-ascmac-2024.216.2.1svn53411-56.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/texlive-ascmac-2024.216.2.1svn53411-56.1.noarch.rpm"
+}

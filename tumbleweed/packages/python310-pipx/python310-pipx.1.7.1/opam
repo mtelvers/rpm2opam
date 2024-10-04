@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-pipx-1.7.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-pipx-1.7.1-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310" {>= "3.8"}
+  "python310-argcomplete" {>= "1.9.4"}
+  "python310-base" {= "3.10"}
+  "python310-packaging" {>= "20"}
+  "python310-platformdirs" {>= "2.1"}
+  "python310-tomli" 
+  "python310-userpath" {>= "1.6"}
+  "update-alternatives" 
+]
+extra-source "python310-pipx-1.7.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-pipx-1.7.1-1.1.noarch.rpm"
+}

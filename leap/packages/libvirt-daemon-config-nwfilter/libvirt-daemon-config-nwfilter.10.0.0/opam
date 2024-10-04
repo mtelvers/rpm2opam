@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvirt-daemon-config-nwfilter-10.0.0-slfo.1.3.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvirt-daemon-config-nwfilter-10.0.0-slfo.1.3.4.x86_64.rpm"]
+depends: [
+  "libvirt-daemon-driver-nwfilter" {= "10.0.0"}
+]
+extra-source "libvirt-daemon-config-nwfilter-10.0.0-slfo.1.3.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/libvirt-daemon-config-nwfilter-10.0.0-slfo.1.3.4.x86_64.rpm"
+}

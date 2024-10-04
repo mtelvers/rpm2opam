@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fusioninventory-agent-task-deploy-2.6-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fusioninventory-agent-task-deploy-2.6-11.fc40.noarch.rpm"]
+depends: [
+  "fusioninventory-agent" {= "2.6"}
+  "perl-Archive-Extract" 
+  "perl-Digest-SHA" 
+  "perl-Encode" 
+  "perl-English" 
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Copy-Recursive" 
+  "perl-File-Path" 
+  "perl-FusionInventory-Agent" 
+  "perl-HTTP-Message" 
+  "perl-IO-Compress" 
+  "perl-Net-IP" 
+  "perl-Net-Ping" 
+  "perl-Parallel-ForkManager" 
+  "perl-PathTools" 
+  "perl-UNIVERSAL-require" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-parent" 
+]
+extra-source "fusioninventory-agent-task-deploy-2.6-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fusioninventory-agent-task-deploy-2.6-11.fc40.noarch.rpm"
+}

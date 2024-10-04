@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openresolv-3.13.2-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openresolv-3.13.2-1.3.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+]
+extra-source "openresolv-3.13.2-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/openresolv-3.13.2-1.3.noarch.rpm"
+}

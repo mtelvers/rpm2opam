@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pidgin-plugin-sipe-1.25.0-3.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pidgin-plugin-sipe-1.25.0-3.3.noarch.rpm"]
+depends: [
+  "libpurple-plugin-sipe" {= "1.25.0"}
+]
+extra-source "pidgin-plugin-sipe-1.25.0-3.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/pidgin-plugin-sipe-1.25.0-3.3.noarch.rpm"
+}

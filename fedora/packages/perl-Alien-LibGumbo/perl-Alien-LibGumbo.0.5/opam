@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Alien-LibGumbo-0.05-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Alien-LibGumbo-0.05-9.fc40.x86_64.rpm"]
+depends: [
+  "gumbo-parser" 
+  "perl-Alien-Base" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-parent" 
+]
+extra-source "perl-Alien-LibGumbo-0.05-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Alien-LibGumbo-0.05-9.fc40.x86_64.rpm"
+}

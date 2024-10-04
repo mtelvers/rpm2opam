@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "graphviz-tcl-9.0.0-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "graphviz-tcl-9.0.0-11.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "expat" 
+  "fontconfig" 
+  "freetype" 
+  "gd" 
+  "glib2" 
+  "glibc" 
+  "graphviz" {= "9.0.0"}
+  "gts" 
+  "harfbuzz" 
+  "libgcc" 
+  "libstdc++" 
+  "libtool-ltdl" 
+  "pango" 
+  "tcl" {>= "8.3"}
+  "tk" 
+  "zlib-ng-compat" 
+]
+extra-source "graphviz-tcl-9.0.0-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/graphviz-tcl-9.0.0-11.fc40.x86_64.rpm"
+}

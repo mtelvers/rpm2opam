@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cddlib-devel-0.94m-1.16.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cddlib-devel-0.94m-1.16.x86_64.rpm"]
+depends: [
+  "gmp-devel" 
+  "libcdd0" {= "0.94"}
+  "pkgconf-pkg-config" 
+]
+extra-source "cddlib-devel-0.94m-1.16.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cddlib-devel-0.94m-1.16.x86_64.rpm"
+}

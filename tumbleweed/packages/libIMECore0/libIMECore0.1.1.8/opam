@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libIMECore0-1.1.8-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libIMECore0-1.1.8-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libFcitx5Utils2" 
+  "libgcc_s1" 
+  "libime-tools" 
+  "libstdc++6" 
+  "libzstd1" 
+]
+extra-source "libIMECore0-1.1.8-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libIMECore0-1.1.8-1.2.x86_64.rpm"
+}

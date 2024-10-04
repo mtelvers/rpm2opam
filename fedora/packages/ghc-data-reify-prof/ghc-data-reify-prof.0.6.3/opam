@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-data-reify-prof-0.6.3-12.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-data-reify-prof-0.6.3-12.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-containers-prof" 
+  "ghc-data-reify-devel" {= "0.6.3"}
+  "ghc-hashable-prof" 
+  "ghc-unordered-containers-prof" 
+]
+extra-source "ghc-data-reify-prof-0.6.3-12.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-data-reify-prof-0.6.3-12.fc40.x86_64.rpm"
+}

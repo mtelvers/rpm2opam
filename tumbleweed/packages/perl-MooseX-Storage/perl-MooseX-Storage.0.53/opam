@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-Storage-0.53-1.20.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Storage-0.53-1.20.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-IO-stringy" 
+  "perl-JSON-MaybeXS" {>= "1.1000"}
+  "perl-Module-Runtime" 
+  "perl-Moose" {>= "0.99"}
+  "perl-String-RewritePrefix" 
+  "perl-YAML" 
+  "perl-namespace-autoclean" 
+]
+extra-source "perl-MooseX-Storage-0.53-1.20.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-Storage-0.53-1.20.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tracker-miner-files-3.7.3-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tracker-miner-files-3.7.3-1.3.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libblkid1" 
+  "libgstreamer-1_0-0" 
+  "libtracker-sparql-3_0-0" 
+  "libupower-glib3" 
+  "tracker-miners" 
+]
+extra-source "tracker-miner-files-3.7.3-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/tracker-miner-files-3.7.3-1.3.x86_64.rpm"
+}

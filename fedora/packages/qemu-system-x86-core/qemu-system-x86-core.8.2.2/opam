@@ -1,0 +1,43 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qemu-system-x86-core-8.2.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qemu-system-x86-core-8.2.2-1.fc40.x86_64.rpm"]
+depends: [
+  "capstone" 
+  "cyrus-sasl-lib" 
+  "daxctl-libs" 
+  "edk2-ovmf" 
+  "elfutils-libs" 
+  "fuse3-libs" 
+  "glib2" 
+  "glibc" 
+  "gnutls" 
+  "keyutils-libs" 
+  "libaio" 
+  "libbpf" 
+  "libfdt" 
+  "libgcc" 
+  "libibverbs" 
+  "libjpeg-turbo" 
+  "libpmem" 
+  "libpng" 
+  "librdmacm" 
+  "libseccomp" 
+  "libslirp" 
+  "liburing" 
+  "libxdp" 
+  "libzstd" 
+  "lzo" 
+  "numactl-libs" 
+  "pam-libs" 
+  "pixman" 
+  "qemu-common" {= "8.2.2"}
+  "seabios-bin" 
+  "seavgabios-bin" 
+  "snappy" 
+  "systemd-libs" 
+  "xen-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "qemu-system-x86-core-8.2.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qemu-system-x86-core-8.2.2-1.fc40.x86_64.rpm"
+}

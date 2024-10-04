@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "emacs-blacken-0-0.13.20210406git880cf50.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "emacs-blacken-0-0.13.20210406git880cf50.fc40.noarch.rpm"]
+depends: [
+  "black" 
+  "emacs" {>= "29.2"}
+]
+extra-source "emacs-blacken-0-0.13.20210406git880cf50.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/emacs-blacken-0-0.13.20210406git880cf50.fc40.noarch.rpm"
+}

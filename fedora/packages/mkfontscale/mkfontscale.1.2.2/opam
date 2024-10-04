@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mkfontscale-1.2.2-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mkfontscale-1.2.2-6.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "freetype" 
+  "glibc" 
+  "libfontenc" 
+  "zlib-ng-compat" 
+]
+extra-source "mkfontscale-1.2.2-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mkfontscale-1.2.2-6.fc40.x86_64.rpm"
+}

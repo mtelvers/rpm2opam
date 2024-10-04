@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Crypt-OpenSSL-X509-1.915-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Crypt-OpenSSL-X509-1.915-5.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "openssl-libs" 
+  "perl-Convert-ASN1" 
+  "perl-DynaLoader" 
+  "perl-Exporter" 
+  "perl-base" 
+  "perl-libs" 
+]
+extra-source "perl-Crypt-OpenSSL-X509-1.915-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Crypt-OpenSSL-X509-1.915-5.fc40.x86_64.rpm"
+}

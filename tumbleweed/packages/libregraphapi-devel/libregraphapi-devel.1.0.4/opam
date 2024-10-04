@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libregraphapi-devel-1.0.4-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libregraphapi-devel-1.0.4-2.2.x86_64.rpm"]
+depends: [
+  "libLibreGraphAPI1" {= "1.0.4"}
+]
+extra-source "libregraphapi-devel-1.0.4-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libregraphapi-devel-1.0.4-2.2.x86_64.rpm"
+}

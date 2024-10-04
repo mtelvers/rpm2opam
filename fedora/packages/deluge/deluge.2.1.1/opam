@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "deluge-2.1.1-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "deluge-2.1.1-6.fc40.noarch.rpm"]
+depends: [
+  "deluge-common" {= "2.1.1"}
+  "deluge-console" {= "2.1.1"}
+  "deluge-daemon" {= "2.1.1"}
+  "deluge-gtk" {= "2.1.1"}
+  "deluge-images" {= "2.1.1"}
+  "deluge-web" {= "2.1.1"}
+]
+extra-source "deluge-2.1.1-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/deluge-2.1.1-6.fc40.noarch.rpm"
+}

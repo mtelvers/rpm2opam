@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "flatpak-builder-1.4.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "flatpak-builder-1.4.1-1.fc40.x86_64.rpm"]
+depends: [
+  "appstream-compose" {>= "0.15.0"}
+  "debugedit" {>= "5.0"}
+  "elfutils-libelf" 
+  "flatpak" {>= "0.99.1"}
+  "glib2" {>= "2.66"}
+  "glibc" 
+  "json-glib" 
+  "libcurl" 
+  "libgcc" 
+  "libxml2" 
+  "libyaml" 
+  "ostree" 
+  "ostree-libs" 
+]
+extra-source "flatpak-builder-1.4.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/flatpak-builder-1.4.1-1.fc40.x86_64.rpm"
+}

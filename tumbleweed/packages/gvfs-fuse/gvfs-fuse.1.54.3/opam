@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gvfs-fuse-1.54.3-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gvfs-fuse-1.54.3-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "fuse3" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "gvfs" {= "1.54.3"}
+  "libfuse3-3" 
+]
+extra-source "gvfs-fuse-1.54.3-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gvfs-fuse-1.54.3-1.1.x86_64.rpm"
+}

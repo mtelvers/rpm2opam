@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "googler-4.3.2-8.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "googler-4.3.2-8.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+]
+extra-source "googler-4.3.2-8.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/googler-4.3.2-8.fc40.noarch.rpm"
+}

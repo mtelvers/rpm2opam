@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-comonad-devel-5.0.8-4.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-comonad-devel-5.0.8-4.10.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-comonad" {= "5.0.8"}
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-distributive-devel" 
+  "ghc-indexed-traversable-devel" 
+  "ghc-tagged-devel" 
+  "ghc-transformers-compat-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-comonad-devel-5.0.8-4.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-comonad-devel-5.0.8-4.10.x86_64.rpm"
+}

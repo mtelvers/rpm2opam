@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "syslog-ng-4.8.0-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "syslog-ng-4.8.0-2.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "busybox-gawk" 
+  "fillup" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcap2" 
+  "libevtlog-4_8-0" 
+  "libgcc_s1" 
+  "libjson-c5" 
+  "libnet9" 
+  "libopenssl3" 
+  "libpcre2-8-0" 
+  "libstdc++6" 
+  "libsystemd0" 
+  "libwrap0" 
+  "syslog-service" {>= "2.0"}
+]
+extra-source "syslog-ng-4.8.0-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/syslog-ng-4.8.0-2.1.x86_64.rpm"
+}

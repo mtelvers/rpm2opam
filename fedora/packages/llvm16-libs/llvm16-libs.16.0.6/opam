@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "llvm16-libs-16.0.6-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "llvm16-libs-16.0.6-7.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libedit" 
+  "libffi" 
+  "libgcc" 
+  "libstdc++" 
+  "ncurses-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "llvm16-libs-16.0.6-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/llvm16-libs-16.0.6-7.fc40.x86_64.rpm"
+}

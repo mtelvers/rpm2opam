@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-cipher-aes-devel-0.2.11-4.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-cipher-aes-devel-0.2.11-4.13.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-byteable-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-cipher-aes" {= "0.2.11"}
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-crypto-cipher-types-devel" 
+  "ghc-securemem-devel" 
+]
+extra-source "ghc-cipher-aes-devel-0.2.11-4.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-cipher-aes-devel-0.2.11-4.13.x86_64.rpm"
+}

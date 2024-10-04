@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvips-devel-8.15.1-1.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvips-devel-8.15.1-1.7.x86_64.rpm"]
+depends: [
+  "cairo-devel" {>= "1.2"}
+  "cfitsio-devel" 
+  "fftw3-devel" 
+  "fontconfig-devel" 
+  "glib2-devel" 
+  "highway-devel" {>= "1.0.5"}
+  "libarchive-devel" {>= "3.0.0"}
+  "libexif-devel" {>= "0.6"}
+  "libexpat-devel" 
+  "libimagequant-devel" 
+  "libjpeg62-devel" 
+  "liblcms2-devel" 
+  "libmatio-devel" 
+  "libpng12-compat-devel" {>= "1.2.9"}
+  "librsvg-devel" {>= "2.40.3"}
+  "libtiff-devel" 
+  "libvips42" {= "8.15.1"}
+  "libwebp-devel" {>= "0.6"}
+  "openexr-devel" {>= "1.2.2"}
+  "openjpeg2-devel" {>= "2.4"}
+  "pango-devel" {>= "1.32.6"}
+  "pkgconf-pkg-config" 
+  "zlib-devel" 
+]
+extra-source "libvips-devel-8.15.1-1.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libvips-devel-8.15.1-1.7.x86_64.rpm"
+}

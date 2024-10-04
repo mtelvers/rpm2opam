@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "plasma6-vault-6.1.4-lp160.1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plasma6-vault-6.1.4-lp160.1.2.x86_64.rpm"]
+depends: [
+  "fuse" 
+  "glibc" 
+  "kf6-kirigami-imports" {>= "20"}
+  "kf6-kitemmodels-imports" 
+  "libKF6ConfigCore6" 
+  "libKF6CoreAddons6" 
+  "libKF6DBusAddons6" 
+  "libKF6I18n6" 
+  "libKF6KIO6" 
+  "libKF6NetworkManagerQt6" 
+  "libKF6Service6" 
+  "libKF6WidgetsAddons6" 
+  "libPlasma6" 
+  "libPlasmaActivities6" 
+  "libQt6Core6" 
+  "libQt6DBus6" 
+  "libQt6Gui6" 
+  "libQt6Widgets6" 
+  "libgcc_s1" 
+  "libksysguard6" 
+  "libplasma6-components" 
+  "libstdc++6" 
+  "plasma6-vault-backend-cryfs" 
+  "qtdeclarative-imports-provides-qt6" {>= "4"}
+]
+extra-source "plasma6-vault-6.1.4-lp160.1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/plasma6-vault-6.1.4-lp160.1.2.x86_64.rpm"
+}

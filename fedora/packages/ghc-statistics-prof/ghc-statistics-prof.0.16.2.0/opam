@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-statistics-prof-0.16.2.0-17.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-statistics-prof-0.16.2.0-17.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-prof" 
+  "ghc-async-prof" 
+  "ghc-base-prof" 
+  "ghc-binary-prof" 
+  "ghc-data-default-class-prof" 
+  "ghc-deepseq-prof" 
+  "ghc-dense-linear-algebra-prof" 
+  "ghc-math-functions-prof" 
+  "ghc-mwc-random-prof" 
+  "ghc-parallel-prof" 
+  "ghc-primitive-prof" 
+  "ghc-random-prof" 
+  "ghc-statistics-devel" {= "0.16.2.0"}
+  "ghc-vector-algorithms-prof" 
+  "ghc-vector-binary-instances-prof" 
+  "ghc-vector-prof" 
+  "ghc-vector-th-unbox-prof" 
+]
+extra-source "ghc-statistics-prof-0.16.2.0-17.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-statistics-prof-0.16.2.0-17.fc40.x86_64.rpm"
+}

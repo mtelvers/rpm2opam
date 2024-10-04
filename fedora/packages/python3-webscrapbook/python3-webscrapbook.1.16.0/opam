@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-webscrapbook-1.16.0-2.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-webscrapbook-1.16.0-2.fc39.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-CommonMark" {>= "0.8"}
+  "python3-flask" {>= "2"}
+  "python3-jinja2" {>= "2.10.1"}
+  "python3-lxml" {>= "4"}
+  "python3-werkzeug" {>= "2.0.1"}
+]
+extra-source "python3-webscrapbook-1.16.0-2.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-webscrapbook-1.16.0-2.fc39.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-mozilla-pkcs7-devel-0-0.10.20220831git33d0574.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-mozilla-pkcs7-devel-0-0.10.20220831git33d0574.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "openssl" 
+]
+extra-source "golang-mozilla-pkcs7-devel-0-0.10.20220831git33d0574.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-mozilla-pkcs7-devel-0-0.10.20220831git33d0574.fc40.noarch.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "blktests-0+20240213.ac3d8d0-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "blktests-0+20240213.ac3d8d0-1.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "fio" 
+  "gawk" 
+  "gcc" 
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "make" 
+]
+extra-source "blktests-0+20240213.ac3d8d0-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/blktests-0+20240213.ac3d8d0-1.2.x86_64.rpm"
+}

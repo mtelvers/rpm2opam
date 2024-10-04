@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "openbabel-gui-3.1.1-2.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openbabel-gui-3.1.1-2.8.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libopenbabel7" 
+  "libstdc++6" 
+  "libwx_baseu-suse12_0_0" 
+  "libwx_gtk2u_core-suse12_0_0" 
+]
+extra-source "openbabel-gui-3.1.1-2.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/openbabel-gui-3.1.1-2.8.x86_64.rpm"
+}

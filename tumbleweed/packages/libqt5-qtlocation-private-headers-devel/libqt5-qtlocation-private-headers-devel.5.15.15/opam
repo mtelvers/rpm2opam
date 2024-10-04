@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libqt5-qtlocation-private-headers-devel-5.15.15+kde7-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libqt5-qtlocation-private-headers-devel-5.15.15+kde7-1.1.noarch.rpm"]
+depends: [
+  "libqt5-qtbase-private-headers-devel" {>= "5.15.15"}
+  "libqt5-qtdeclarative-private-headers-devel" 
+  "libqt5-qtlocation-devel" {= "5.15.15"}
+]
+extra-source "libqt5-qtlocation-private-headers-devel-5.15.15+kde7-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/libqt5-qtlocation-private-headers-devel-5.15.15+kde7-1.1.noarch.rpm"
+}

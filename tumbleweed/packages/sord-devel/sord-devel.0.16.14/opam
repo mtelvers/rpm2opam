@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sord-devel-0.16.14-3.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sord-devel-0.16.14-3.1.x86_64.rpm"]
+depends: [
+  "libsord-0-0" {= "0.16.14"}
+  "pkgconf-pkg-config" 
+  "serd-devel" {>= "0.30.10"}
+]
+extra-source "sord-devel-0.16.14-3.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sord-devel-0.16.14-3.1.x86_64.rpm"
+}

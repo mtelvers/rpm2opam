@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-roifile-2024.5.24-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-roifile-2024.5.24-2.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-matplotlib" {>= "3.2"}
+  "python312-numpy" {>= "1.15.1"}
+  "python312-tifffile" {>= "2020.8.13"}
+  "update-alternatives" 
+]
+extra-source "python312-roifile-2024.5.24-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-roifile-2024.5.24-2.2.noarch.rpm"
+}

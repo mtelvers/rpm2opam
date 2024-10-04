@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "qatlib-tests-24.02.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qatlib-tests-24.02.0-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "openssl-libs" 
+  "qatlib" 
+  "zlib-ng-compat" 
+]
+extra-source "qatlib-tests-24.02.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/q/qatlib-tests-24.02.0-1.fc40.x86_64.rpm"
+}

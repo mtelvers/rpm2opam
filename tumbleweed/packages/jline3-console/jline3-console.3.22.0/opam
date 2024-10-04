@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "jline3-console-3.22.0-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jline3-console-3.22.0-3.1.noarch.rpm"]
+depends: [
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "jline3-builtins" {= "3.22.0"}
+  "jline3-style" {= "3.22.0"}
+]
+extra-source "jline3-console-3.22.0-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/jline3-console-3.22.0-3.1.noarch.rpm"
+}

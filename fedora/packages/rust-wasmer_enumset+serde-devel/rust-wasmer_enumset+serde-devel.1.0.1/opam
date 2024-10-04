@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-wasmer_enumset+serde-devel-1.0.1-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-wasmer_enumset+serde-devel-1.0.1-9.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-wasmer_enumset+serde2-devel" {= "1.0.1"}
+  "rust-wasmer_enumset-devel" {= "1.0.1"}
+  "rust-wasmer_enumset_derive+serde-devel" 
+]
+extra-source "rust-wasmer_enumset+serde-devel-1.0.1-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-wasmer_enumset+serde-devel-1.0.1-9.fc40.noarch.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "firewall-applet-2.1.2-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "firewall-applet-2.1.2-3.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "firewall-config" {= "2.1.2"}
+  "hicolor-icon-theme" 
+  "python311-base" 
+  "python311-gobject" 
+  "python311-qt5" 
+  "typelib-1_0-Notify-0_7" {= "0.7"}
+]
+extra-source "firewall-applet-2.1.2-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/firewall-applet-2.1.2-3.1.noarch.rpm"
+}

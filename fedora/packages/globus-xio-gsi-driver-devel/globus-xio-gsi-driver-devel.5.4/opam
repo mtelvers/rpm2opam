@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "globus-xio-gsi-driver-devel-5.4-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "globus-xio-gsi-driver-devel-5.4-7.fc40.x86_64.rpm"]
+depends: [
+  "globus-common-devel" {>= "14"}
+  "globus-gss-assist-devel" {>= "11"}
+  "globus-gssapi-error-devel" {>= "4"}
+  "globus-gssapi-gsi-devel" {>= "13"}
+  "globus-xio-devel" {>= "3"}
+  "globus-xio-gsi-driver" {= "5.4"}
+  "pkgconf-pkg-config" 
+]
+extra-source "globus-xio-gsi-driver-devel-5.4-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/globus-xio-gsi-driver-devel-5.4-7.fc40.x86_64.rpm"
+}

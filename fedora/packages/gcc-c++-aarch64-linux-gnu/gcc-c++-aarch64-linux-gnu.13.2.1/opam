@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gcc-c++-aarch64-linux-gnu-13.2.1-1.fc40.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcc-c++-aarch64-linux-gnu-13.2.1-1.fc40.2.x86_64.rpm"]
+depends: [
+  "gcc-aarch64-linux-gnu" {= "13.2.1"}
+  "glibc" 
+  "gmp" 
+  "libgcc" 
+  "libmpc" 
+  "libstdc++" 
+  "libzstd" 
+  "mpfr" 
+  "zlib-ng-compat" 
+]
+extra-source "gcc-c++-aarch64-linux-gnu-13.2.1-1.fc40.2.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gcc-c++-aarch64-linux-gnu-13.2.1-1.fc40.2.x86_64.rpm"
+}

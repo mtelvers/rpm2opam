@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "imsettings-mate-1.8.9-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "imsettings-mate-1.8.9-1.fc40.x86_64.rpm"]
+depends: [
+  "glib2" 
+  "glibc" 
+  "im-chooser" 
+  "imsettings" {= "1.8.9"}
+  "imsettings-libs" 
+  "mate-session-manager" 
+  "mate-settings-daemon" {>= "1.5.0"}
+]
+extra-source "imsettings-mate-1.8.9-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/i/imsettings-mate-1.8.9-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "HyperKitty-web-1.3.12-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "HyperKitty-web-1.3.12-1.1.noarch.rpm"]
+depends: [
+  "HyperKitty" 
+  "acl" 
+  "bash" 
+  "bash-sh" 
+  "openssl" 
+  "python311-base" 
+  "sudo" 
+  "system-user-hyperkitty" 
+]
+extra-source "HyperKitty-web-1.3.12-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/HyperKitty-web-1.3.12-1.1.noarch.rpm"
+}

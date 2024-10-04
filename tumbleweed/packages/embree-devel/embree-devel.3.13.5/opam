@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "embree-devel-3.13.5-2.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "embree-devel-3.13.5-2.7.x86_64.rpm"]
+depends: [
+  "libembree3" {= "3.13.5"}
+]
+extra-source "embree-devel-3.13.5-2.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/embree-devel-3.13.5-2.7.x86_64.rpm"
+}

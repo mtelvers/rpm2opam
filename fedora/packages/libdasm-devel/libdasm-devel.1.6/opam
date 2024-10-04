@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libdasm-devel-1.6-18.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libdasm-devel-1.6-18.fc40.x86_64.rpm"]
+depends: [
+  "libdasm" {= "1.6"}
+]
+extra-source "libdasm-devel-1.6-18.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libdasm-devel-1.6-18.fc40.x86_64.rpm"
+}

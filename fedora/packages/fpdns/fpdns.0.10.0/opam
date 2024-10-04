@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "fpdns-0.10.0-15.20190131.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fpdns-0.10.0-15.20190131.fc40.noarch.rpm"]
+depends: [
+  "perl-Getopt-Std" 
+  "perl-Net-DNS" 
+  "perl-POSIX" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "fpdns-0.10.0-15.20190131.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/fpdns-0.10.0-15.20190131.fc40.noarch.rpm"
+}

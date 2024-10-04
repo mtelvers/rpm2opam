@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pagure-web-apache-httpd-5.13.3-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pagure-web-apache-httpd-5.13.3-12.fc40.noarch.rpm"]
+depends: [
+  "httpd-filesystem" 
+  "pagure" {= "5.13.3"}
+  "python3-mod_wsgi" 
+]
+extra-source "pagure-web-apache-httpd-5.13.3-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pagure-web-apache-httpd-5.13.3-12.fc40.noarch.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-MooseX-Has-Options-0.003-5.32.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-MooseX-Has-Options-0.003-5.32.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Class-Load" 
+  "perl-List-MoreUtils" 
+  "perl-Package-Stash" {>= "0.18"}
+  "perl-String-RewritePrefix" 
+]
+extra-source "perl-MooseX-Has-Options-0.003-5.32.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-MooseX-Has-Options-0.003-5.32.noarch.rpm"
+}

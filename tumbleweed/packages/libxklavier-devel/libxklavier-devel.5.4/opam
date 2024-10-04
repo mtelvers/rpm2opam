@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libxklavier-devel-5.4-2.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libxklavier-devel-5.4-2.2.x86_64.rpm"]
+depends: [
+  "glib2-devel" 
+  "glibc-devel" 
+  "libxklavier16" {= "5.4"}
+  "libxml2-devel" 
+  "pkgconf-pkg-config" 
+  "typelib-1_0-Xkl-1_0" {= "5.4"}
+]
+extra-source "libxklavier-devel-5.4-2.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libxklavier-devel-5.4-2.2.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "device-mapper-event-1.02.197-2.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "device-mapper-event-1.02.197-2.el10.x86_64.rpm"]
+depends: [
+  "bash" 
+  "device-mapper" {= "1.2.198"}
+  "device-mapper-event-libs" {= "1.2.198"}
+  "device-mapper-libs" 
+  "glibc" 
+  "libgcc" 
+  "systemd" 
+]
+extra-source "device-mapper-event-1.02.197-2.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/device-mapper-event-1.02.197-2.el10.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "openchange-2.3-50.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "openchange-2.3-50.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libldb" 
+  "libstdc++" 
+  "libtalloc" 
+  "libtevent" 
+  "samba-client-libs" 
+]
+extra-source "openchange-2.3-50.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/openchange-2.3-50.fc40.x86_64.rpm"
+}

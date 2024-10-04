@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libblosc1-1.21.6-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libblosc1-1.21.6-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "liblz4-1" 
+  "libsnappy1" 
+  "libz-ng-compat1" 
+  "libzstd1" 
+]
+extra-source "libblosc1-1.21.6-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libblosc1-1.21.6-1.1.x86_64.rpm"
+}

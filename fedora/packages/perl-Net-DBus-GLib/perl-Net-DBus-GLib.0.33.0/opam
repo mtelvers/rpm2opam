@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Net-DBus-GLib-0.33.0-46.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Net-DBus-GLib-0.33.0-46.fc40.x86_64.rpm"]
+depends: [
+  "dbus-glib" 
+  "glibc" 
+  "perl-Glib" 
+  "perl-Net-DBus" {>= "0.33.0"}
+  "perl-libs" 
+]
+extra-source "perl-Net-DBus-GLib-0.33.0-46.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Net-DBus-GLib-0.33.0-46.fc40.x86_64.rpm"
+}

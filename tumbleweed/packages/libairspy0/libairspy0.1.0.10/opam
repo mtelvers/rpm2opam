@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libairspy0-1.0.10-1.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libairspy0-1.0.10-1.13.x86_64.rpm"]
+depends: [
+  "airspy-udev" 
+  "glibc" 
+  "libusb-1_0-0" 
+]
+extra-source "libairspy0-1.0.10-1.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libairspy0-1.0.10-1.13.x86_64.rpm"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "quazip-qt6-devel-1.4-2.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "quazip-qt6-devel-1.4-2.7.x86_64.rpm"]
+depends: [
+  "libbz2-devel" 
+  "libquazip1-qt6-1_4_0" {= "1.4"}
+  "pkgconf-pkg-config" 
+  "qt6-core-devel" 
+  "qt6-qt5compat-devel" 
+  "zlib-devel" 
+]
+extra-source "quazip-qt6-devel-1.4-2.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/quazip-qt6-devel-1.4-2.7.x86_64.rpm"
+}

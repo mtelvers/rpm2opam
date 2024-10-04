@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tomcat10-webapps-10.1.25-slfo.1.1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tomcat10-webapps-10.1.25-slfo.1.1.3.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "jakarta-taglibs-standard" {>= "1.1"}
+  "libxslt-tools" 
+  "tomcat10" {= "10.1.25"}
+  "util-linux" 
+]
+extra-source "tomcat10-webapps-10.1.25-slfo.1.1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/tomcat10-webapps-10.1.25-slfo.1.1.3.noarch.rpm"
+}

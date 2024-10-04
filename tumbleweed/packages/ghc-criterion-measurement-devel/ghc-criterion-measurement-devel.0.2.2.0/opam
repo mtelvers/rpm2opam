@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-criterion-measurement-devel-0.2.2.0-1.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-criterion-measurement-devel-0.2.2.0-1.9.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-aeson-devel" 
+  "ghc-base-compat-devel" 
+  "ghc-base-devel" 
+  "ghc-binary-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-criterion-measurement" {= "0.2.2.0"}
+  "ghc-deepseq-devel" 
+  "ghc-vector-devel" 
+]
+extra-source "ghc-criterion-measurement-devel-0.2.2.0-1.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-criterion-measurement-devel-0.2.2.0-1.9.x86_64.rpm"
+}

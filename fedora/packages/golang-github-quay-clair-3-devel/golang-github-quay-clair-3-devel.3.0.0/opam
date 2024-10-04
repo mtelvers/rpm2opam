@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-quay-clair-3-devel-3.0.0~pre1-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-quay-clair-3-devel-3.0.0~pre1-10.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-cockroachdb-cmux-devel" 
+  "golang-github-coreos-pkg-devel" 
+  "golang-github-deckarep-set-devel" 
+  "golang-github-fernet-devel" 
+  "golang-github-grpc-ecosystem-gateway-devel" 
+  "golang-github-grpc-ecosystem-prometheus-devel" 
+  "golang-github-guregu-null-devel" 
+  "golang-github-hashicorp-lru-devel" 
+  "golang-github-julienschmidt-httprouter-devel" 
+  "golang-github-lib-pq-devel" 
+  "golang-github-pborman-uuid-devel" 
+  "golang-github-prometheus-client-devel" 
+  "golang-github-protobuf-devel" 
+  "golang-github-remind101-migrate-devel" 
+  "golang-github-sirupsen-logrus-devel" 
+  "golang-github-stretchr-testify-devel" 
+  "golang-google-genproto-devel" 
+  "golang-google-grpc-devel" 
+  "golang-gopkg-yaml-2-devel" 
+  "golang-x-net-devel" 
+  "golang-x-sync-devel" 
+]
+extra-source "golang-github-quay-clair-3-devel-3.0.0~pre1-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-quay-clair-3-devel-3.0.0~pre1-10.fc40.noarch.rpm"
+}

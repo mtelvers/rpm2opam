@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "slop-devel-7.6-2.9.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "slop-devel-7.6-2.9.x86_64.rpm"]
+depends: [
+  "libslopy7_6" {= "7.6"}
+]
+extra-source "slop-devel-7.6-2.9.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/slop-devel-7.6-2.9.x86_64.rpm"
+}

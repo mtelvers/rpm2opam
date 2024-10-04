@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-warp-sessions-devel-1.0.19-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-warp-sessions-devel-1.0.19-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-async-session+default-devel" 
+  "rust-async-trait+default-devel" 
+  "rust-http+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-tokio+default-devel" 
+  "rust-tokio+macros-devel" 
+  "rust-tokio+rt-multi-thread-devel" 
+  "rust-warp+default-devel" 
+]
+extra-source "rust-warp-sessions-devel-1.0.19-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-warp-sessions-devel-1.0.19-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libges-1_0-0-1.24.8-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libges-1_0-0-1.24.8-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgstpbutils-1_0-0" 
+  "libgstreamer-1_0-0" 
+  "libgstvalidate-1_0-0" 
+  "libgstvideo-1_0-0" 
+  "libpython3_11-1_0" 
+  "libxml2-2" 
+  "typelib-1_0-GES-1_0" {= "1.0"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-Gst-1_0" {= "1.0"}
+]
+extra-source "libges-1_0-0-1.24.8-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libges-1_0-0-1.24.8-1.1.x86_64.rpm"
+}

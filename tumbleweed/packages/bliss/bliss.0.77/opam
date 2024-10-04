@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bliss-0.77-1.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bliss-0.77-1.12.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libbliss0_77" 
+  "libgcc_s1" 
+  "libgmp10" 
+  "libstdc++6" 
+]
+extra-source "bliss-0.77-1.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/bliss-0.77-1.12.x86_64.rpm"
+}

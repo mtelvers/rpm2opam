@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libflux-devel-0.195.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libflux-devel-0.195.2-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libflux0_195_2" {= "0.195.2"}
+  "libgcc_s1" 
+  "pkgconf-pkg-config" 
+]
+extra-source "libflux-devel-0.195.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libflux-devel-0.195.2-1.1.x86_64.rpm"
+}

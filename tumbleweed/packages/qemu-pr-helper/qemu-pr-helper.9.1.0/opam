@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qemu-pr-helper-9.1.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qemu-pr-helper-9.1.0-1.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libcap-ng0" 
+  "libgcrypt20" 
+  "libgnutls30" 
+  "libmpath0" 
+  "libnuma1" 
+  "libudev-mini1" 
+  "liburing2" 
+  "pam" 
+]
+extra-source "qemu-pr-helper-9.1.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/qemu-pr-helper-9.1.0-1.1.x86_64.rpm"
+}

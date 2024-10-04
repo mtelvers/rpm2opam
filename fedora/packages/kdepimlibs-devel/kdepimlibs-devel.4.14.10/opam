@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kdepimlibs-devel-4.14.10-45.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kdepimlibs-devel-4.14.10-45.fc40.x86_64.rpm"]
+depends: [
+  "boost-devel" 
+  "cmake-filesystem" 
+  "gpgme-devel" 
+  "kdelibs-devel" 
+  "kdepimlibs" {= "4.14.10"}
+  "kdepimlibs-akonadi" {= "4.14.10"}
+  "kdepimlibs-gpgme" {= "4.14.10"}
+  "kdepimlibs-kxmlrpcclient" {= "4.14.10"}
+]
+extra-source "kdepimlibs-devel-4.14.10-45.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kdepimlibs-devel-4.14.10-45.fc40.x86_64.rpm"
+}

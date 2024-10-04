@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "phpPgAdmin-7.14.6-2.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "phpPgAdmin-7.14.6-2.2.noarch.rpm"]
+depends: [
+  "php8" {>= "7.2"}
+  "php8-pgsql" 
+  "system-user-wwwrun" 
+]
+extra-source "phpPgAdmin-7.14.6-2.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/phpPgAdmin-7.14.6-2.2.noarch.rpm"
+}

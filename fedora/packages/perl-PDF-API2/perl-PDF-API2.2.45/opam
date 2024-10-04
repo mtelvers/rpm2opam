@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-PDF-API2-2.045-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-PDF-API2-2.045-3.fc40.noarch.rpm"]
+depends: [
+  "dejavu-sans-fonts" 
+  "dejavu-sans-mono-fonts" 
+  "dejavu-serif-fonts" 
+  "perl-Carp" 
+  "perl-Encode" 
+  "perl-English" 
+  "perl-Exporter" 
+  "perl-File-Basename" 
+  "perl-File-Temp" 
+  "perl-FileHandle" 
+  "perl-Font-TTF" 
+  "perl-Graphics-TIFF" 
+  "perl-IO" 
+  "perl-IO-Compress" {>= "1.0"}
+  "perl-Math-Complex" 
+  "perl-POSIX" 
+  "perl-Scalar-List-Utils" 
+  "perl-Storable" 
+  "perl-Unicode-UCD" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-vars" 
+]
+extra-source "perl-PDF-API2-2.045-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-PDF-API2-2.045-3.fc40.noarch.rpm"
+}

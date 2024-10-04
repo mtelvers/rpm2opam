@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "NetworkManager-tui-1.48.8-1.el10.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "NetworkManager-tui-1.48.8-1.el10.1.x86_64.rpm"]
+depends: [
+  "NetworkManager" {= "1.48.8"}
+  "NetworkManager-libnm" {= "1.48.8"}
+  "glib2" 
+  "glibc" 
+  "libgcc" 
+  "newt" 
+]
+extra-source "NetworkManager-tui-1.48.8-1.el10.1.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/NetworkManager-tui-1.48.8-1.el10.1.x86_64.rpm"
+}

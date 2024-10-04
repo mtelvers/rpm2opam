@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Config-IniFiles-3.000003-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Config-IniFiles-3.000003-13.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-File-Temp" 
+  "perl-IO-stringy" {>= "2.109"}
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-Symbol" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-vars" 
+]
+extra-source "perl-Config-IniFiles-3.000003-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Config-IniFiles-3.000003-13.fc40.noarch.rpm"
+}

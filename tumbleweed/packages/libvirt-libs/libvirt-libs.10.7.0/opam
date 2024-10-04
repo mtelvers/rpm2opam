@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libvirt-libs-10.7.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libvirt-libs-10.7.0-1.1.x86_64.rpm"]
+depends: [
+  "cyrus-sasl-digestmd5" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libacl1" 
+  "libapparmor1" 
+  "libaudit1" 
+  "libcap-ng0" 
+  "libcurl-mini4" 
+  "libgcc_s1" 
+  "libgnutls30" 
+  "libnl3-200" 
+  "libnuma1" 
+  "libsasl2-3" 
+  "libselinux1" 
+  "libssh2-1" 
+  "libssh4" 
+  "libtirpc3" 
+  "libxml2-2" 
+  "libyajl2" 
+]
+extra-source "libvirt-libs-10.7.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libvirt-libs-10.7.0-1.1.x86_64.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "SFML-devel-2.6.1-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "SFML-devel-2.6.1-4.fc40.x86_64.rpm"]
+depends: [
+  "SFML" {= "2.6.1"}
+  "cmake" 
+  "cmake-filesystem" 
+  "flac-devel" 
+  "freetype-devel" 
+  "libogg-devel" 
+  "libvorbis-devel" 
+  "openal-soft-devel" 
+  "pkgconf-pkg-config" 
+]
+extra-source "SFML-devel-2.6.1-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/SFML-devel-2.6.1-4.fc40.x86_64.rpm"
+}

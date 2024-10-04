@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "Mesa-libGLESv3-devel-24.1.7-391.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Mesa-libGLESv3-devel-24.1.7-391.1.x86_64.rpm"]
+depends: [
+  "Mesa-KHR-devel" {= "24.1.7"}
+  "Mesa-libEGL-devel" 
+]
+extra-source "Mesa-libGLESv3-devel-24.1.7-391.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/Mesa-libGLESv3-devel-24.1.7-391.1.x86_64.rpm"
+}

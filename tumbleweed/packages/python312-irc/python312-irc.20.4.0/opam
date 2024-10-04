@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-irc-20.4.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-irc-20.4.0-1.1.noarch.rpm"]
+depends: [
+  "python312-base" {= "3.12"}
+  "python312-importlib-metadata" 
+  "python312-jaraco-collections" 
+  "python312-jaraco-functools" {>= "1.20"}
+  "python312-jaraco-logging" 
+  "python312-jaraco-stream" 
+  "python312-jaraco-text" 
+  "python312-more-itertools" 
+  "python312-pytz" 
+  "python312-tempora" {>= "1.6"}
+]
+extra-source "python312-irc-20.4.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-irc-20.4.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "bleachbit-lang-4.6.0-1.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "bleachbit-lang-4.6.0-1.3.noarch.rpm"]
+depends: [
+  "bleachbit" {= "4.6.0"}
+]
+extra-source "bleachbit-lang-4.6.0-1.3.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/bleachbit-lang-4.6.0-1.3.noarch.rpm"
+}

@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gtk2-2.24.33-18.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtk2-2.24.33-18.fc40.x86_64.rpm"]
+depends: [
+  "atk" {>= "1.29.4"}
+  "bash" 
+  "cairo" 
+  "cups-libs" 
+  "fontconfig" 
+  "gdk-pixbuf2" 
+  "gdk-pixbuf2-modules" 
+  "glib2" {>= "2.28.0"}
+  "glibc" 
+  "gtk-update-icon-cache" 
+  "hicolor-icon-theme" 
+  "libX11" 
+  "libXcomposite" 
+  "libXcursor" 
+  "libXdamage" 
+  "libXext" 
+  "libXfixes" 
+  "libXi" 
+  "libXinerama" 
+  "libXrandr" 
+  "libXrender" 
+  "libtiff" {>= "3.6.1"}
+  "pango" 
+]
+extra-source "gtk2-2.24.33-18.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gtk2-2.24.33-18.fc40.x86_64.rpm"
+}

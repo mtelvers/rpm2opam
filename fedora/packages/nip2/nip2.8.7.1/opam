@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nip2-8.7.1-17.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nip2-8.7.1-17.fc40.x86_64.rpm"]
+depends: [
+  "fftw-libs-double" 
+  "gdk-pixbuf2" 
+  "glib2" 
+  "glibc" 
+  "graphviz" 
+  "gsl" 
+  "gtk2" 
+  "libxml2" 
+  "pango" 
+  "vips" 
+]
+extra-source "nip2-8.7.1-17.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nip2-8.7.1-17.fc40.x86_64.rpm"
+}

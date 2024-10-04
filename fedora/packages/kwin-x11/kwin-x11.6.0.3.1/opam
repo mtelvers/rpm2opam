@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kwin-x11-6.0.3.1-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kwin-x11-6.0.3.1-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kdecoration" 
+  "kf6-kconfig" 
+  "kf6-kconfigwidgets" 
+  "kf6-kcoreaddons" 
+  "kf6-kcrash" 
+  "kf6-kdeclarative" 
+  "kf6-kglobalaccel" 
+  "kf6-ki18n" 
+  "kf6-kirigami" 
+  "kf6-kservice" 
+  "kf6-ksvg" 
+  "kf6-kwindowsystem" 
+  "kscreenlocker" 
+  "kwin-common" {= "6.0.3.1"}
+  "kwin-libs" {= "6.0.3.1"}
+  "libX11" 
+  "libXi" 
+  "libepoxy" 
+  "libgcc" 
+  "libplasma" {>= "6.0.3"}
+  "libstdc++" 
+  "libxcb" 
+  "libxkbcommon" 
+  "libxkbcommon-x11" 
+  "qaccessibilityclient-qt6" 
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qt6-qtdeclarative" 
+  "qt6-qtmultimedia" 
+  "xcb-util-keysyms" 
+  "xorg-x11-server-Xorg" 
+]
+extra-source "kwin-x11-6.0.3.1-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kwin-x11-6.0.3.1-1.fc40.x86_64.rpm"
+}

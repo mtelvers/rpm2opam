@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "globus-gram-job-manager-scripts-7.3-11.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "globus-gram-job-manager-scripts-7.3-11.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "globus-common" 
+  "globus-gram-protocol" 
+  "perl-Errno" 
+  "perl-File-Copy" 
+  "perl-File-Path" 
+  "perl-Getopt-Long" 
+  "perl-POSIX" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "globus-gram-job-manager-scripts-7.3-11.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/globus-gram-job-manager-scripts-7.3-11.fc40.noarch.rpm"
+}

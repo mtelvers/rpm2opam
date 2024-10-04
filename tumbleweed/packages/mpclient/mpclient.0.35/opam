@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mpclient-0.35-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mpclient-0.35-1.4.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libmpdclient2" 
+]
+extra-source "mpclient-0.35-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mpclient-0.35-1.4.x86_64.rpm"
+}

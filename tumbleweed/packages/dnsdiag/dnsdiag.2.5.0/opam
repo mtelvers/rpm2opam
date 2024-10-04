@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dnsdiag-2.5.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dnsdiag-2.5.0-1.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-cryptography" {>= "42.0.7"}
+  "python311-cymruwhois" {>= "1.6"}
+  "python311-dnspython" {>= "2.6.1"}
+  "python311-h2" {>= "4.1.0"}
+  "python311-httpx" {>= "0.27.0"}
+]
+extra-source "dnsdiag-2.5.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dnsdiag-2.5.0-1.1.noarch.rpm"
+}

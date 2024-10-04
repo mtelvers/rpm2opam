@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "GMT-6.5.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "GMT-6.5.0-1.fc40.x86_64.rpm"]
+depends: [
+  "GMT-common" {= "6.5.0"}
+  "GraphicsMagick" 
+  "bash" 
+  "dcw-gmt" 
+  "fftw-libs-single" 
+  "flexiblas-netlib" 
+  "gdal" 
+  "gdal-libs" 
+  "geos" 
+  "glib2" 
+  "glibc" 
+  "gshhg-gmt-nc4" 
+  "less" 
+  "libcurl" 
+  "libgcc" 
+  "libgomp" 
+  "netcdf" 
+  "pcre2" 
+  "xdg-utils" 
+  "zlib-ng-compat" 
+]
+extra-source "GMT-6.5.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/GMT-6.5.0-1.fc40.x86_64.rpm"
+}

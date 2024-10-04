@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gtkspell3-devel-3.0.10-3.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtkspell3-devel-3.0.10-3.10.x86_64.rpm"]
+depends: [
+  "enchant-devel" 
+  "glib2-devel" 
+  "gtk3-devel" 
+  "libgtkspell3-3-0" {= "3.0.10"}
+  "pkgconf-pkg-config" 
+  "typelib-1_0-GtkSpell-3_0" {= "3.0.10"}
+]
+extra-source "gtkspell3-devel-3.0.10-3.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gtkspell3-devel-3.0.10-3.10.x86_64.rpm"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-ignore-devel-0.4.22-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-ignore-devel-0.4.22-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-crossbeam-deque+default-devel" 
+  "rust-globset+default-devel" 
+  "rust-log+default-devel" 
+  "rust-memchr+default-devel" 
+  "rust-regex-automata+dfa-onepass-devel" 
+  "rust-regex-automata+hybrid-devel" 
+  "rust-regex-automata+meta-devel" 
+  "rust-regex-automata+nfa-devel" 
+  "rust-regex-automata+perf-devel" 
+  "rust-regex-automata+std-devel" 
+  "rust-regex-automata+syntax-devel" 
+  "rust-regex-automata-devel" 
+  "rust-same-file+default-devel" 
+  "rust-walkdir+default-devel" 
+]
+extra-source "rust-ignore-devel-0.4.22-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-ignore-devel-0.4.22-2.fc40.noarch.rpm"
+}

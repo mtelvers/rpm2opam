@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "alex-3.5.1.0-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "alex-3.5.1.0-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libffi8" 
+  "libgmp10" 
+  "libnuma1" 
+]
+extra-source "alex-3.5.1.0-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/alex-3.5.1.0-1.3.x86_64.rpm"
+}

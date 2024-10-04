@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gap-pkg-browse-doc-1.8.21-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gap-pkg-browse-doc-1.8.21-6.fc40.noarch.rpm"]
+depends: [
+  "GAPDoc-doc" 
+  "gap-pkg-browse" {= "1.8.21"}
+  "gap-pkg-ctbllib-doc" 
+  "gap-pkg-io-doc" 
+]
+extra-source "gap-pkg-browse-doc-1.8.21-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gap-pkg-browse-doc-1.8.21-6.fc40.noarch.rpm"
+}

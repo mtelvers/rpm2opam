@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "samba-client-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "samba-client-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "coreutils" 
+  "glibc" 
+  "krb5" 
+  "libarchive13" 
+  "libcom_err2" 
+  "libgnutls30" 
+  "libjansson4" 
+  "libldap2" 
+  "libldb2" 
+  "libncurses6" 
+  "libpopt0" 
+  "libreadline8" 
+  "libtalloc2" 
+  "libtdb1" 
+  "libtevent0" 
+  "perl-base" 
+  "python311-base" 
+  "samba-client-libs" 
+]
+extra-source "samba-client-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/samba-client-4.20.4+git.356.d4a5fa2a818-1.1.x86_64.rpm"
+}

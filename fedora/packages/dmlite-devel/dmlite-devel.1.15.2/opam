@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dmlite-devel-1.15.2-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dmlite-devel-1.15.2-20.fc40.x86_64.rpm"]
+depends: [
+  "dmlite-apache-httpd" 
+  "dmlite-libs" 
+]
+extra-source "dmlite-devel-1.15.2-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dmlite-devel-1.15.2-20.fc40.x86_64.rpm"
+}

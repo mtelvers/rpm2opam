@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fence-agents-kdump-4.15.0+git.1724675137.ca9ae93a-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fence-agents-kdump-4.15.0+git.1724675137.ca9ae93a-1.1.x86_64.rpm"]
+depends: [
+  "fence-agents-common" {= "4.15.0"}
+  "glibc" 
+]
+extra-source "fence-agents-kdump-4.15.0+git.1724675137.ca9ae93a-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/fence-agents-kdump-4.15.0+git.1724675137.ca9ae93a-1.1.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rocalution-devel-6.0.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rocalution-devel-6.0.0-3.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "rocalution" 
+]
+extra-source "rocalution-devel-6.0.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rocalution-devel-6.0.0-3.fc40.x86_64.rpm"
+}

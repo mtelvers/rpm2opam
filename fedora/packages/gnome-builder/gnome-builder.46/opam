@@ -1,0 +1,42 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gnome-builder-46~alpha-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-builder-46~alpha-1.fc40.x86_64.rpm"]
+depends: [
+  "cairo" 
+  "clang17-libs" 
+  "cmark-lib" 
+  "d-spy-libs" 
+  "editorconfig-libs" 
+  "enchant2" 
+  "flatpak-builder" 
+  "flatpak-libs" 
+  "gdk-pixbuf2" 
+  "glib2" {>= "2.75.0"}
+  "glibc" 
+  "gobject-introspection" 
+  "gtk4" {>= "4.10"}
+  "gtksourceview5" 
+  "json-glib" {>= "1.2.0"}
+  "jsonrpc-glib" {>= "3.43.0"}
+  "libadwaita" {>= "1.4"}
+  "libdex" {>= "0.2"}
+  "libgcc" 
+  "libgit2" 
+  "libgit2-glib" {>= "1.1.0"}
+  "libicu" 
+  "libpanel" 
+  "libpeas" {>= "1.99.0"}
+  "libpeas-loader-gjs" {>= "1.99.0"}
+  "libportal" 
+  "libportal-gtk4" 
+  "libsoup3" 
+  "libxml2" 
+  "pango" 
+  "python3" {= "3.12"}
+  "template-glib" 
+  "vte291-gtk4" 
+  "webkitgtk6-0" 
+]
+extra-source "gnome-builder-46~alpha-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gnome-builder-46~alpha-1.fc40.x86_64.rpm"
+}

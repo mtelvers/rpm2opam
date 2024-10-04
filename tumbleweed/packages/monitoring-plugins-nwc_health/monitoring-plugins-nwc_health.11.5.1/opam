@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "monitoring-plugins-nwc_health-11.5.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "monitoring-plugins-nwc_health-11.5.1-1.1.noarch.rpm"]
+depends: [
+  "perl-File-Slurp" 
+  "perl-JSON" 
+  "perl-JSON-XS" 
+  "perl-Nagios-Plugin" 
+  "perl-Net-SNMP" 
+  "perl-base" 
+]
+extra-source "monitoring-plugins-nwc_health-11.5.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/monitoring-plugins-nwc_health-11.5.1-1.1.noarch.rpm"
+}

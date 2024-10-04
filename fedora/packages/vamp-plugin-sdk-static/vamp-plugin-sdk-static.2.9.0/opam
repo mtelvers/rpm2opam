@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "vamp-plugin-sdk-static-2.9.0-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "vamp-plugin-sdk-static-2.9.0-9.fc40.x86_64.rpm"]
+depends: [
+  "vamp-plugin-sdk-devel" {= "2.9.0"}
+]
+extra-source "vamp-plugin-sdk-static-2.9.0-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/vamp-plugin-sdk-static-2.9.0-9.fc40.x86_64.rpm"
+}

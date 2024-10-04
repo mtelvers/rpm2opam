@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tucnak-4.58-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tucnak-4.58-1.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "alsa-lib" 
+  "fftw-libs-double" 
+  "glib2" 
+  "glibc" 
+  "hamlib" 
+  "hicolor-icon-theme" 
+  "libftdi" 
+  "libsndfile" 
+  "libzia" 
+  "portaudio" 
+  "rtl-sdr" 
+]
+extra-source "tucnak-4.58-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tucnak-4.58-1.fc40.x86_64.rpm"
+}

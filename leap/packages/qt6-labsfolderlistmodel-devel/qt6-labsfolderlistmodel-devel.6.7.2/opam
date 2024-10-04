@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qt6-labsfolderlistmodel-devel-6.7.2-lp160.1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qt6-labsfolderlistmodel-devel-6.7.2-lp160.1.4.x86_64.rpm"]
+depends: [
+  "libQt6LabsFolderListModel6" {= "6.7.2"}
+  "pkgconf-pkg-config" 
+  "qt6-core-devel" 
+  "qt6-core-private-devel" {= "6.7.2"}
+  "qt6-qml-devel" 
+  "qt6-qml-private-devel" {= "6.7.2"}
+  "qt6-qmlmodels-devel" 
+  "qt6-qmlmodels-private-devel" {= "6.7.2"}
+]
+extra-source "qt6-labsfolderlistmodel-devel-6.7.2-lp160.1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/qt6-labsfolderlistmodel-devel-6.7.2-lp160.1.4.x86_64.rpm"
+}

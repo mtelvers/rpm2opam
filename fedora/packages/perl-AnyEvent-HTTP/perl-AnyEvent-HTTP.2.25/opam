@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-AnyEvent-HTTP-2.25-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-AnyEvent-HTTP-2.25-13.fc40.noarch.rpm"]
+depends: [
+  "perl-AnyEvent" {>= "5.0"}
+  "perl-Errno" 
+  "perl-Exporter" 
+  "perl-base" 
+  "perl-common-sense" 
+  "perl-libs" 
+]
+extra-source "perl-AnyEvent-HTTP-2.25-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-AnyEvent-HTTP-2.25-13.fc40.noarch.rpm"
+}

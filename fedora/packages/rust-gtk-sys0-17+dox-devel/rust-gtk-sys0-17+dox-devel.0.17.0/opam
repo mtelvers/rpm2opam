@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gtk-sys0.17+dox-devel-0.17.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gtk-sys0.17+dox-devel-0.17.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-atk-sys0-15+dox-devel" 
+  "rust-cairo-sys-rs0-15+dox-devel" 
+  "rust-gdk-pixbuf-sys0-15+dox-devel" 
+  "rust-gdk-sys0-15+dox-devel" 
+  "rust-gio-sys0-15+dox-devel" 
+  "rust-glib-sys0-15+dox-devel" 
+  "rust-gobject-sys0-15+dox-devel" 
+  "rust-gtk-sys0-17-devel" {= "0.17.0"}
+  "rust-pango-sys0-15+dox-devel" 
+]
+extra-source "rust-gtk-sys0.17+dox-devel-0.17.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gtk-sys0.17+dox-devel-0.17.0-2.fc40.noarch.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "stress-ng-bash-completion-0.18.00-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "stress-ng-bash-completion-0.18.00-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "stress-ng" {= "0.18.0"}
+]
+extra-source "stress-ng-bash-completion-0.18.00-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/stress-ng-bash-completion-0.18.00-1.1.noarch.rpm"
+}

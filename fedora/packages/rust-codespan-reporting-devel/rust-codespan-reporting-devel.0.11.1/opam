@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-codespan-reporting-devel-0.11.1-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-codespan-reporting-devel-0.11.1-10.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-termcolor+default-devel" 
+  "rust-unicode-width+default-devel" 
+]
+extra-source "rust-codespan-reporting-devel-0.11.1-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-codespan-reporting-devel-0.11.1-10.fc40.noarch.rpm"
+}

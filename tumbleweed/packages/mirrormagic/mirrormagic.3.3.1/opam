@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mirrormagic-3.3.1-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mirrormagic-3.3.1-1.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libSDL2-2_0-0" 
+  "libSDL2_image-2_0-0" 
+  "libSDL2_mixer-2_0-0" 
+  "libSDL2_net-2_0-0" 
+  "libz-ng-compat1" 
+]
+extra-source "mirrormagic-3.3.1-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mirrormagic-3.3.1-1.3.x86_64.rpm"
+}

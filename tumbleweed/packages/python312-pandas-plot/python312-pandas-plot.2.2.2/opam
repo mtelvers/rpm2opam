@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-pandas-plot-2.2.2-7.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-pandas-plot-2.2.2-7.1.noarch.rpm"]
+depends: [
+  "python312-matplotlib" {>= "3.6.3"}
+  "python312-pandas" {= "2.2.2"}
+]
+extra-source "python312-pandas-plot-2.2.2-7.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-pandas-plot-2.2.2-7.1.noarch.rpm"
+}

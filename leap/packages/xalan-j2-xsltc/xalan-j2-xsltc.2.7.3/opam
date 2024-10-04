@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xalan-j2-xsltc-2.7.3-slfo.1.2.3.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xalan-j2-xsltc-2.7.3-slfo.1.2.3.noarch.rpm"]
+depends: [
+  "bcel" 
+  "java-11-openjdk-headless" 
+  "java-cup" 
+  "javapackages-filesystem" 
+  "jlex" 
+  "regexp" 
+  "xalan-j2" {= "2.7.3"}
+  "xerces-j2" 
+]
+extra-source "xalan-j2-xsltc-2.7.3-slfo.1.2.3.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/xalan-j2-xsltc-2.7.3-slfo.1.2.3.noarch.rpm"
+}

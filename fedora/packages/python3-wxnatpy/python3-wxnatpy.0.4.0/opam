@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-wxnatpy-0.4.0-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-wxnatpy-0.4.0-9.fc40.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-fsleyes-widgets" {>= "0.12.2"}
+  "python3-wxpython4" {>= "4"}
+  "python3-xnat" {>= "0.3.3"}
+]
+extra-source "python3-wxnatpy-0.4.0-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-wxnatpy-0.4.0-9.fc40.noarch.rpm"
+}

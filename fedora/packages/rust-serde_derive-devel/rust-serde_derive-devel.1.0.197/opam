@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-serde_derive-devel-1.0.197-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-serde_derive-devel-1.0.197-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.56"}
+  "rust-proc-macro2+proc-macro-devel" 
+  "rust-proc-macro2-0-4-devel" 
+  "rust-quote+proc-macro-devel" 
+  "rust-quote-devel" 
+  "rust-syn+clone-impls-devel" 
+  "rust-syn+derive-devel" 
+  "rust-syn+parsing-devel" 
+  "rust-syn+printing-devel" 
+  "rust-syn+proc-macro-devel" 
+  "rust-syn-devel" 
+]
+extra-source "rust-serde_derive-devel-1.0.197-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-serde_derive-devel-1.0.197-1.fc40.noarch.rpm"
+}

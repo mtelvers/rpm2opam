@@ -1,0 +1,53 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "389-ds-base-3.0.1-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "389-ds-base-3.0.1-2.fc40.x86_64.rpm"]
+depends: [
+  "389-ds-base-libs" {= "3.0.1"}
+  "acl" 
+  "bash" 
+  "cracklib" 
+  "cracklib-dicts" 
+  "cyrus-sasl-gssapi" 
+  "cyrus-sasl-lib" 
+  "cyrus-sasl-md5" 
+  "cyrus-sasl-plain" 
+  "glibc" 
+  "json-c" 
+  "krb5-libs" 
+  "libcom_err" 
+  "libdb" 
+  "libdb-utils" 
+  "libgcc" 
+  "libicu" 
+  "libstdc++" 
+  "libxcrypt" 
+  "lmdb-libs" 
+  "nspr" 
+  "nss" 
+  "nss-tools" 
+  "nss-util" 
+  "openldap" 
+  "openldap-clients" 
+  "openssl-libs" 
+  "openssl-perl" 
+  "pam-libs" 
+  "pcre2" 
+  "perl-Archive-Tar" 
+  "perl-DB_File" 
+  "perl-debugger" 
+  "perl-interpreter" 
+  "perl-sigtrap" 
+  "policycoreutils-python-utils" 
+  "python3" 
+  "python3-ldap" 
+  "python3-lib389" {= "3.0.1"}
+  "python3-libsemanage" 
+  "selinux-policy" {>= "3.14.1"}
+  "shadow-utils" 
+  "systemd" 
+  "systemd-libs" 
+  "zlib-ng-compat" 
+]
+extra-source "389-ds-base-3.0.1-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/3/389-ds-base-3.0.1-2.fc40.x86_64.rpm"
+}

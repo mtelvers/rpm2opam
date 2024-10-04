@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libmatroska-devel-1.7.1-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libmatroska-devel-1.7.1-6.fc40.x86_64.rpm"]
+depends: [
+  "cmake-filesystem" 
+  "libebml-devel" {>= "1.4.4"}
+  "libmatroska" {= "1.7.1"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libmatroska-devel-1.7.1-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libmatroska-devel-1.7.1-6.fc40.x86_64.rpm"
+}

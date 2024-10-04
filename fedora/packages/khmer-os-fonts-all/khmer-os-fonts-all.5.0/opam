@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "khmer-os-fonts-all-5.0-42.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "khmer-os-fonts-all-5.0-42.fc40.noarch.rpm"]
+depends: [
+  "khmer-os-battambang-fonts" {= "5.0"}
+  "khmer-os-bokor-fonts" {= "5.0"}
+  "khmer-os-content-fonts" {= "5.0"}
+  "khmer-os-metal-chrieng-fonts" {= "5.0"}
+  "khmer-os-siemreap-fonts" {= "5.0"}
+  "khmer-os-system-fonts" {= "5.0"}
+]
+extra-source "khmer-os-fonts-all-5.0-42.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/khmer-os-fonts-all-5.0-42.fc40.noarch.rpm"
+}

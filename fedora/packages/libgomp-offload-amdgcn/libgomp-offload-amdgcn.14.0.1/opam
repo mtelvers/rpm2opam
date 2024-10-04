@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libgomp-offload-amdgcn-14.0.1-0.15.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libgomp-offload-amdgcn-14.0.1-0.15.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgomp" {= "14.0.1"}
+  "rocm-runtime" {>= "6.0.0"}
+]
+extra-source "libgomp-offload-amdgcn-14.0.1-0.15.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libgomp-offload-amdgcn-14.0.1-0.15.fc40.x86_64.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gnome-commander-lang-1.18.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gnome-commander-lang-1.18.1-1.1.noarch.rpm"]
+depends: [
+  "gnome-commander" {= "1.18.1"}
+]
+extra-source "gnome-commander-lang-1.18.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/gnome-commander-lang-1.18.1-1.1.noarch.rpm"
+}

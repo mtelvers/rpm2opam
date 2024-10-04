@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-cloudflare-circl-devel-1.3.1-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-cloudflare-circl-devel-1.3.1-4.fc40.x86_64.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-bwesterb-ristretto-devel" 
+  "golang-github-mmcloughlin-avo-devel" 
+  "golang-x-crypto-devel" 
+  "golang-x-sys-devel" 
+]
+extra-source "golang-github-cloudflare-circl-devel-1.3.1-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-cloudflare-circl-devel-1.3.1-4.fc40.x86_64.rpm"
+}

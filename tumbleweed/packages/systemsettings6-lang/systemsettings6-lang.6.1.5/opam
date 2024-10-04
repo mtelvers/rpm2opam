@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "systemsettings6-lang-6.1.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "systemsettings6-lang-6.1.5-1.1.noarch.rpm"]
+depends: [
+  "systemsettings6" {= "6.1.5"}
+]
+extra-source "systemsettings6-lang-6.1.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/systemsettings6-lang-6.1.5-1.1.noarch.rpm"
+}

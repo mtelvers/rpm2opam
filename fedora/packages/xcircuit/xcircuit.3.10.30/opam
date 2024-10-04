@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "xcircuit-3.10.30-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xcircuit-3.10.30-10.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "cairo" 
+  "coreutils" 
+  "electronics-menu" 
+  "fontconfig" 
+  "glibc" 
+  "gtk2" 
+  "libX11" 
+  "libgs" 
+  "tcl" 
+  "tk" 
+  "zlib-ng-compat" 
+]
+extra-source "xcircuit-3.10.30-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/x/xcircuit-3.10.30-10.fc40.x86_64.rpm"
+}

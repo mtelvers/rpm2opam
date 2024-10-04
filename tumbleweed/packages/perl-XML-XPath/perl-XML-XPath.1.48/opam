@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-XML-XPath-1.48-1.7.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-XML-XPath-1.48-1.7.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "perl" 
+  "perl-Scalar-List-Utils" {>= "1.45"}
+  "perl-XML-Parser" {>= "2.23"}
+]
+extra-source "perl-XML-XPath-1.48-1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-XML-XPath-1.48-1.7.noarch.rpm"
+}

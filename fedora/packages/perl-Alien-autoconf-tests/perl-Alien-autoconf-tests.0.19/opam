@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Alien-autoconf-tests-0.19-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Alien-autoconf-tests-0.19-5.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "perl-Alien-Build" {>= "2.52"}
+  "perl-Alien-autoconf" 
+  "perl-Alien-m4" 
+  "perl-Env" 
+  "perl-File-Temp" 
+  "perl-File-chdir" 
+  "perl-Path-Tiny" 
+  "perl-Test-Harness" 
+  "perl-Test2-Suite" {>= "0.121"}
+  "perl-interpreter" 
+  "perl-libs" 
+]
+extra-source "perl-Alien-autoconf-tests-0.19-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Alien-autoconf-tests-0.19-5.fc40.noarch.rpm"
+}

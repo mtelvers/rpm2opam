@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-bugzilla-redhat-prof-1.0.1-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-bugzilla-redhat-prof-1.0.1-7.fc40.x86_64.rpm"]
+depends: [
+  "ghc-aeson-prof" 
+  "ghc-base-prof" 
+  "ghc-blaze-builder-prof" 
+  "ghc-bugzilla-redhat-devel" {= "1.0.1"}
+  "ghc-bytestring-prof" 
+  "ghc-connection-prof" 
+  "ghc-containers-prof" 
+  "ghc-http-conduit-prof" 
+  "ghc-http-types-prof" 
+  "ghc-iso8601-time-prof" 
+  "ghc-resourcet-prof" 
+  "ghc-text-prof" 
+  "ghc-time-prof" 
+  "ghc-transformers-prof" 
+  "ghc-unordered-containers-prof" 
+  "ghc-vector-prof" 
+]
+extra-source "ghc-bugzilla-redhat-prof-1.0.1-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-bugzilla-redhat-prof-1.0.1-7.fc40.x86_64.rpm"
+}

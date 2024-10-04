@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kasumi-2.5-25.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kasumi-2.5-25.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libanthy0" 
+  "libgcc_s1" 
+  "libgtk-3-0" 
+  "libstdc++6" 
+]
+extra-source "kasumi-2.5-25.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/kasumi-2.5-25.1.x86_64.rpm"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libKReport3-4-3.2.0-5.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libKReport3-4-3.2.0-5.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kreport" {>= "3.2.0"}
+  "libKF5ConfigCore5" 
+  "libKF5ConfigGui5" 
+  "libKF5CoreAddons5" 
+  "libKF5WidgetsAddons5" 
+  "libKPropertyCore3-4" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5PrintSupport5" 
+  "libQt5Widgets5" 
+  "libQt5Xml5" 
+  "libQtQuick5" 
+  "libstdc++6" 
+]
+extra-source "libKReport3-4-3.2.0-5.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libKReport3-4-3.2.0-5.2.x86_64.rpm"
+}

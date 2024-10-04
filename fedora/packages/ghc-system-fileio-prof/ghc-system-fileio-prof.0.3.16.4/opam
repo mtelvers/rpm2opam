@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-system-fileio-prof-0.3.16.4-24.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-system-fileio-prof-0.3.16.4-24.fc40.x86_64.rpm"]
+depends: [
+  "ghc-base-prof" 
+  "ghc-bytestring-prof" 
+  "ghc-system-fileio-devel" {= "0.3.16.4"}
+  "ghc-system-filepath-prof" 
+  "ghc-text-prof" 
+  "ghc-time-prof" 
+  "ghc-unix-prof" 
+]
+extra-source "ghc-system-fileio-prof-0.3.16.4-24.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-system-fileio-prof-0.3.16.4-24.fc40.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "whohas-0.29.1-20.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "whohas-0.29.1-20.fc40.noarch.rpm"]
+depends: [
+  "perl-Env" 
+  "perl-Getopt-Long" 
+  "perl-Sys-CPU" 
+  "perl-Thread-Queue" 
+  "perl-forks" 
+  "perl-if" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-libwww-perl" 
+  "perl-sigtrap" 
+  "perl-threads" 
+]
+extra-source "whohas-0.29.1-20.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/whohas-0.29.1-20.fc40.noarch.rpm"
+}

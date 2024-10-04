@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pagmo2-2.19.0-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pagmo2-2.19.0-1.fc40.x86_64.rpm"]
+depends: [
+  "NLopt" 
+  "boost-serialization" 
+  "coin-or-Ipopt" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "tbb" 
+]
+extra-source "pagmo2-2.19.0-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pagmo2-2.19.0-1.fc40.x86_64.rpm"
+}

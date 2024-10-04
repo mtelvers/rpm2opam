@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "enlightenment-devel-0.25.4-lp160.3.13.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "enlightenment-devel-0.25.4-lp160.3.13.x86_64.rpm"]
+depends: [
+  "dbus-1-devel" 
+  "efl-devel" 
+  "enlightenment" {= "0.25.4"}
+  "freetype2-devel" {>= "2.1.7"}
+  "libXext-devel" 
+  "libuuid-devel" 
+  "libxkbcommon-devel" 
+  "pam-devel" 
+  "pkgconf-pkg-config" 
+  "wayland-devel" {>= "1.11.0"}
+  "wayland-protocols-devel" {>= "1.12"}
+]
+extra-source "enlightenment-devel-0.25.4-lp160.3.13.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/enlightenment-devel-0.25.4-lp160.3.13.x86_64.rpm"
+}

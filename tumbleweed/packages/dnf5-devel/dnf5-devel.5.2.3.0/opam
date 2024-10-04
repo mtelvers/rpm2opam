@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dnf5-devel-5.2.3.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dnf5-devel-5.2.3.0-1.1.x86_64.rpm"]
+depends: [
+  "dnf5" {= "5.2.3.0"}
+  "libdnf5-cli-devel" {= "5.2.3.0"}
+  "libdnf5-devel" {= "5.2.3.0"}
+]
+extra-source "dnf5-devel-5.2.3.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/dnf5-devel-5.2.3.0-1.1.x86_64.rpm"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "clutter-devel-1.26.4-13.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "clutter-devel-1.26.4-13.fc40.x86_64.rpm"]
+depends: [
+  "atk-devel" {>= "2.5.3"}
+  "cairo-gobject-devel" {>= "1.14.0"}
+  "clutter" {= "1.26.4"}
+  "cogl-devel" 
+  "gdk-pixbuf2-devel" 
+  "glib2-devel" {>= "2.53.4"}
+  "gtk3-devel" 
+  "json-glib-devel" {>= "0.12.0"}
+  "libX11-devel" 
+  "libXcomposite-devel" {>= "0.4"}
+  "libXdamage-devel" 
+  "libXext-devel" 
+  "libXi-devel" 
+  "libinput-devel" {>= "0.19.0"}
+  "libxkbcommon-devel" 
+  "pango-devel" {>= "1.30"}
+  "pkgconf-pkg-config" 
+  "systemd-devel" {>= "136"}
+  "wayland-devel" 
+]
+extra-source "clutter-devel-1.26.4-13.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/clutter-devel-1.26.4-13.fc40.x86_64.rpm"
+}

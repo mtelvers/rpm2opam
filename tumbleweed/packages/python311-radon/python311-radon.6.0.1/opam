@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-radon-6.0.1-1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-radon-6.0.1-1.4.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-colorama" {>= "0.4.1"}
+  "python311-mando" {>= "0.6"}
+  "update-alternatives" 
+]
+extra-source "python311-radon-6.0.1-1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-radon-6.0.1-1.4.noarch.rpm"
+}

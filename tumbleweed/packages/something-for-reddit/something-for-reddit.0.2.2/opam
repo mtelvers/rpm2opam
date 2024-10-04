@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "something-for-reddit-0.2.2-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "something-for-reddit-0.2.2-1.9.noarch.rpm"]
+depends: [
+  "python311-Markdown" 
+  "python311-arrow" 
+  "python311-base" {= "3.11"}
+  "python311-gobject-Gdk" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" 
+  "typelib-1_0-Soup-2_4" {= "2.4"}
+  "typelib-1_0-WebKit2-4_0" {= "4.0"}
+]
+extra-source "something-for-reddit-0.2.2-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/something-for-reddit-0.2.2-1.9.noarch.rpm"
+}

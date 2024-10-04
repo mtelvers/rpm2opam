@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nxpwireless-firmware-20240624-5.el10.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nxpwireless-firmware-20240624-5.el10.noarch.rpm"]
+depends: [
+  "linux-firmware-whence" 
+]
+extra-source "nxpwireless-firmware-20240624-5.el10.noarch.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/nxpwireless-firmware-20240624-5.el10.noarch.rpm"
+}

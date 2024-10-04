@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Crypt-CBC-3.04-1.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Crypt-CBC-3.04-1.15.noarch.rpm"]
+depends: [
+  "perl" 
+  "perl-Crypt-PBKDF2" 
+  "perl-CryptX" 
+  "perl-base" 
+]
+extra-source "perl-Crypt-CBC-3.04-1.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Crypt-CBC-3.04-1.15.noarch.rpm"
+}

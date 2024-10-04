@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "minisat-devel-2.2.1+20200902-3.7.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "minisat-devel-2.2.1+20200902-3.7.x86_64.rpm"]
+depends: [
+  "libminisat2" {= "2.2.1"}
+  "zlib-devel" 
+]
+extra-source "minisat-devel-2.2.1+20200902-3.7.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/minisat-devel-2.2.1+20200902-3.7.x86_64.rpm"
+}

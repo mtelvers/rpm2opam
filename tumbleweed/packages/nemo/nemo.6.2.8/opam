@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nemo-6.2.8-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nemo-6.2.8-1.1.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "desktop-file-utils" {>= "0.7"}
+  "glib2-stage1-devel" 
+  "glib2-tools" 
+  "glibc" 
+  "gvfs" {>= "1.3.2"}
+  "libX11-6" 
+  "libatk-1_0-0" 
+  "libcairo-gobject2" 
+  "libcairo2" 
+  "libcinnamon-desktop4" 
+  "libexempi8" 
+  "libexif12" 
+  "libgdk_pixbuf-2_0-0" 
+  "libgsf-1-114" 
+  "libgtk-3-0" 
+  "libjson-glib-1_0-0" 
+  "libnemo-extension1" 
+  "libpango-1_0-0" 
+  "libselinux1" 
+  "libtracker-sparql-3_0-0" 
+  "libxapp1" 
+  "python311" 
+  "python311-base" 
+  "shared-mime-info" {>= "0.50"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" 
+  "typelib-1_0-XApp-1_0" {= "1.0"}
+]
+extra-source "nemo-6.2.8-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/nemo-6.2.8-1.1.x86_64.rpm"
+}

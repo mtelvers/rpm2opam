@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "coq-8.18.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "coq-8.18.0-4.fc40.x86_64.rpm"]
+depends: [
+  "coq-core" {= "8.18.0"}
+  "csdp-tools" 
+  "ocaml-findlib" 
+  "texlive-base" 
+]
+extra-source "coq-8.18.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/coq-8.18.0-4.fc40.x86_64.rpm"
+}

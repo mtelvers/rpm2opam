@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nautilus-extension-owncloud-5.0.0-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nautilus-extension-owncloud-5.0.0-2.1.noarch.rpm"]
+depends: [
+  "nautilus" 
+  "owncloud-client" 
+  "python311-gobject" 
+  "python311-nautilus" 
+]
+extra-source "nautilus-extension-owncloud-5.0.0-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nautilus-extension-owncloud-5.0.0-2.1.noarch.rpm"
+}

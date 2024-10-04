@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc9.0-ghci-prof-9.0.2-16.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc9.0-ghci-prof-9.0.2-16.fc40.x86_64.rpm"]
+depends: [
+  "ghc9-0-array-prof" 
+  "ghc9-0-base-prof" 
+  "ghc9-0-binary-prof" 
+  "ghc9-0-bytestring-prof" 
+  "ghc9-0-containers-prof" 
+  "ghc9-0-deepseq-prof" 
+  "ghc9-0-filepath-prof" 
+  "ghc9-0-ghc-boot-prof" 
+  "ghc9-0-ghc-boot-th-prof" 
+  "ghc9-0-ghc-heap-prof" 
+  "ghc9-0-ghci-devel" {= "9.0.2"}
+  "ghc9-0-template-haskell-prof" 
+  "ghc9-0-transformers-prof" 
+  "ghc9-0-unix-prof" 
+]
+extra-source "ghc9.0-ghci-prof-9.0.2-16.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc9.0-ghci-prof-9.0.2-16.fc40.x86_64.rpm"
+}

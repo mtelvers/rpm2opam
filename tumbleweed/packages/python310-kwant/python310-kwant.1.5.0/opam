@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-kwant-1.5.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-kwant-1.5.0-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libmumps5_3_5" 
+  "python310-base" {= "3.10"}
+  "python310-numpy" 
+  "python310-scipy" {>= "1.3"}
+  "python310-tinyarray" 
+]
+extra-source "python310-kwant-1.5.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python310-kwant-1.5.0-1.1.x86_64.rpm"
+}

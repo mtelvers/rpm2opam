@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mariadb-galera-11.5.2-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mariadb-galera-11.5.2-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "busybox-coreutils" 
+  "iproute2" 
+  "lsof" 
+  "mariadb" {= "11.5.2"}
+  "mariadb-client" 
+  "rsync" 
+  "socat" 
+  "which" 
+]
+extra-source "mariadb-galera-11.5.2-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/mariadb-galera-11.5.2-2.1.x86_64.rpm"
+}

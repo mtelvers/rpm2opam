@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "jmtpfs-0.5-10.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "jmtpfs-0.5-10.fc40.x86_64.rpm"]
+depends: [
+  "file-libs" 
+  "fuse" 
+  "fuse-libs" 
+  "glibc" 
+  "libgcc" 
+  "libmtp" 
+  "libstdc++" 
+]
+extra-source "jmtpfs-0.5-10.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/j/jmtpfs-0.5-10.fc40.x86_64.rpm"
+}

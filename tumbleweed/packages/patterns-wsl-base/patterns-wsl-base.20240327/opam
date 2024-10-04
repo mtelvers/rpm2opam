@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "patterns-wsl-base-20240327-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "patterns-wsl-base-20240327-1.1.noarch.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+]
+extra-source "patterns-wsl-base-20240327-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/patterns-wsl-base-20240327-1.1.noarch.rpm"
+}

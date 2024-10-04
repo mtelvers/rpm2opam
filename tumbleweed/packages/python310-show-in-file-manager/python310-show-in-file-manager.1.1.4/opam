@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-show-in-file-manager-1.1.4-1.16.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-show-in-file-manager-1.1.4-1.16.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python310-base" 
+  "python310-packaging" 
+  "python310-pyxdg" {>= "0.25"}
+  "update-alternatives" 
+]
+extra-source "python310-show-in-file-manager-1.1.4-1.16.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-show-in-file-manager-1.1.4-1.16.noarch.rpm"
+}

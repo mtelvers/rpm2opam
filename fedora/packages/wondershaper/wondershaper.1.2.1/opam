@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "wondershaper-1.2.1-21.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wondershaper-1.2.1-21.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "iproute" 
+  "kernel-modules-extra" 
+]
+extra-source "wondershaper-1.2.1-21.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/wondershaper-1.2.1-21.fc40.noarch.rpm"
+}

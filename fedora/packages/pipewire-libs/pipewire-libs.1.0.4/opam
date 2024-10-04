@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "pipewire-libs-1.0.4-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pipewire-libs-1.0.4-2.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib" 
+  "avahi-libs" 
+  "bluez-libs" 
+  "dbus-libs" 
+  "fdk-aac-free" 
+  "glib2" 
+  "glibc" 
+  "libgcc" 
+  "liblc3" 
+  "libldac" 
+  "libsbc" 
+  "libselinux" 
+  "libsndfile" 
+  "libstdc++" 
+  "libusb1" 
+  "openssl-libs" 
+  "opus" 
+  "pulseaudio-libs" 
+  "systemd-libs" 
+  "webrtc-audio-processing" 
+]
+extra-source "pipewire-libs-1.0.4-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/pipewire-libs-1.0.4-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "znc-tcl-1.9.1-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "znc-tcl-1.9.1-2.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "tcl" 
+  "znc" {= "1.9.1"}
+]
+extra-source "znc-tcl-1.9.1-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/znc-tcl-1.9.1-2.1.x86_64.rpm"
+}

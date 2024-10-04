@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "Vc-devel-1.4.5-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "Vc-devel-1.4.5-1.1.x86_64.rpm"]
+depends: [
+  "Vc-devel-static" {= "1.4.5"}
+]
+extra-source "Vc-devel-1.4.5-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/Vc-devel-1.4.5-1.1.x86_64.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cockpit-navigator-0.5.10-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cockpit-navigator-0.5.10-3.fc40.noarch.rpm"]
+depends: [
+  "cockpit-system" 
+  "python3" 
+  "rsync" 
+  "zip" 
+]
+extra-source "cockpit-navigator-0.5.10-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cockpit-navigator-0.5.10-3.fc40.noarch.rpm"
+}

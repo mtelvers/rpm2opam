@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-procfs0.14-devel-0.14.2-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-procfs0.14-devel-0.14.2-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.48"}
+  "rust-bitflags+default-devel" 
+  "rust-byteorder+default-devel" 
+  "rust-byteorder+i128-devel" 
+  "rust-hex+default-devel" 
+  "rust-lazy_static+default-devel" 
+  "rust-rustix+default-devel" 
+  "rust-rustix+fs-devel" 
+  "rust-rustix+param-devel" 
+  "rust-rustix+process-devel" 
+  "rust-rustix+thread-devel" 
+]
+extra-source "rust-procfs0.14-devel-0.14.2-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-procfs0.14-devel-0.14.2-3.fc40.noarch.rpm"
+}

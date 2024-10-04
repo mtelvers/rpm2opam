@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mutt-doc-2.2.13-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mutt-doc-2.2.13-2.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "mutt" {= "2.2.13"}
+]
+extra-source "mutt-doc-2.2.13-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/mutt-doc-2.2.13-2.1.noarch.rpm"
+}

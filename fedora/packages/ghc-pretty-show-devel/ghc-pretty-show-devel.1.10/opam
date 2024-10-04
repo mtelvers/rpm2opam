@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-pretty-show-devel-1.10-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-pretty-show-devel-1.10-19.fc40.x86_64.rpm"]
+depends: [
+  "ghc-array-devel" 
+  "ghc-base-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-filepath-devel" 
+  "ghc-haskell-lexer-devel" 
+  "ghc-pretty-devel" 
+  "ghc-pretty-show" {= "1.10"}
+  "ghc-text-devel" 
+  "glibc" 
+  "gmp" 
+  "libffi" 
+]
+extra-source "ghc-pretty-show-devel-1.10-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-pretty-show-devel-1.10-19.fc40.x86_64.rpm"
+}

@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "nss_db-2.39-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nss_db-2.39-6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" {= "2.39"}
+  "libselinux" 
+]
+extra-source "nss_db-2.39-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/n/nss_db-2.39-6.fc40.x86_64.rpm"
+}

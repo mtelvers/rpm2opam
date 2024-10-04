@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-POE-Component-IRC-6.93-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-POE-Component-IRC-6.93-10.fc40.noarch.rpm"]
+depends: [
+  "perl-Carp" 
+  "perl-Encode" 
+  "perl-Exporter" 
+  "perl-Fcntl" 
+  "perl-File-Basename" 
+  "perl-IO" 
+  "perl-IRC-Utils" {>= "0.12"}
+  "perl-POE" {>= "1.311"}
+  "perl-POE-Component-Syndicator" 
+  "perl-POE-Filter-IRCD" {>= "2.42"}
+  "perl-POSIX" 
+  "perl-PathTools" 
+  "perl-Scalar-List-Utils" {>= "1.33"}
+  "perl-Socket" 
+  "perl-base" 
+  "perl-constant" 
+  "perl-libs" 
+  "perl-overload" 
+]
+extra-source "perl-POE-Component-IRC-6.93-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-POE-Component-IRC-6.93-10.fc40.noarch.rpm"
+}

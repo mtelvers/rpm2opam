@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "feh-3.10.2-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "feh-3.10.2-3.fc40.x86_64.rpm"]
+depends: [
+  "dejavu-sans-fonts" 
+  "glibc" 
+  "imlib2" 
+  "libX11" 
+  "libXinerama" 
+  "libcurl" 
+  "libexif" 
+  "libpng" 
+]
+extra-source "feh-3.10.2-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/f/feh-3.10.2-3.fc40.x86_64.rpm"
+}

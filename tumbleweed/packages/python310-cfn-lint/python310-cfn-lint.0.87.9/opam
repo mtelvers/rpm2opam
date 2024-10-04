@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python310-cfn-lint-0.87.9-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python310-cfn-lint-0.87.9-1.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "git-core" 
+  "python310-PyYAML" {>= "5.4"}
+  "python310-aws-sam-translator" {>= "1.89.0"}
+  "python310-base" 
+  "python310-jschema-to-python" {>= "1.2.3"}
+  "python310-jsonpatch" 
+  "python310-jsonschema" 
+  "python310-junit-xml" {>= "1.9"}
+  "python310-networkx" {>= "2.4"}
+  "python310-regex" 
+  "python310-sarif-om" {>= "1.0.4"}
+  "python310-sympy" {>= "1.0.0"}
+  "update-alternatives" 
+]
+extra-source "python310-cfn-lint-0.87.9-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python310-cfn-lint-0.87.9-1.2.noarch.rpm"
+}

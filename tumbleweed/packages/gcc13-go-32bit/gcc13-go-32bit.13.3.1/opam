@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcc13-go-32bit-13.3.1+git8964-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcc13-go-32bit-13.3.1+git8964-1.1.x86_64.rpm"]
+depends: [
+  "gcc13-32bit" {= "13.3.1"}
+  "gcc13-go" {= "13.3.1"}
+  "libgo22-32bit" {>= "13.3.1"}
+]
+extra-source "gcc13-go-32bit-13.3.1+git8964-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/gcc13-go-32bit-13.3.1+git8964-1.1.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "python3-xbout-0.3.5-8.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python3-xbout-0.3.5-8.fc39.noarch.rpm"]
+depends: [
+  "python3" {= "3.12"}
+  "python3-animatplot" {>= "0.4.2"}
+  "python3-boutdata" 
+  "python3-dask" {>= "2.10"}
+  "python3-dask+array" {>= "2.10"}
+  "python3-gelidum" {>= "0.5.3"}
+  "python3-natsort" {>= "5.5"}
+  "python3-netcdf4" {>= "1.4"}
+  "python3-pillow" {>= "6.1"}
+  "python3-xarray" {>= "0.18"}
+]
+extra-source "python3-xbout-0.3.5-8.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/python3-xbout-0.3.5-8.fc39.noarch.rpm"
+}

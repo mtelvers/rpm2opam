@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "virt-manager-4.1.0-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "virt-manager-4.1.0-5.fc40.noarch.rpm"]
+depends: [
+  "dconf" 
+  "gtk-vnc2" 
+  "gtk3" {>= "3.22.0"}
+  "gtksourceview4" 
+  "libvirt-glib" {>= "0.0.9"}
+  "python3" 
+  "python3-gobject" {>= "3.31.3"}
+  "spice-gtk3" 
+  "virt-manager-common" {= "4.1.0"}
+  "vte291" 
+]
+extra-source "virt-manager-4.1.0-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/v/virt-manager-4.1.0-5.fc40.noarch.rpm"
+}

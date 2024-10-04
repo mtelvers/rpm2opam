@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sat4j-2.3.5-4.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sat4j-2.3.5-4.2.noarch.rpm"]
+depends: [
+  "java-11-openj9" {>= "1.8"}
+  "java-11-openj9-headless" 
+  "javapackages-filesystem" 
+]
+extra-source "sat4j-2.3.5-4.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/sat4j-2.3.5-4.2.noarch.rpm"
+}

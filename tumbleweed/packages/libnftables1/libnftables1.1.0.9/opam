@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libnftables1-1.0.9-3.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libnftables1-1.0.9-3.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgmp10" 
+  "libjansson4" 
+  "libmnl0" 
+  "libnftnl11" 
+]
+extra-source "libnftables1-1.0.9-3.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libnftables1-1.0.9-3.5.x86_64.rpm"
+}

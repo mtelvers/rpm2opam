@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "decker-1.41-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "decker-1.41-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libSDL2-2_0-0" 
+  "libSDL2_image-2_0-0" 
+]
+extra-source "decker-1.41-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/decker-1.41-1.1.x86_64.rpm"
+}

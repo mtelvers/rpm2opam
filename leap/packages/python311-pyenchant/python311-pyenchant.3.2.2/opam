@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-pyenchant-3.2.2-slfo.1.1.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-pyenchant-3.2.2-slfo.1.1.4.noarch.rpm"]
+depends: [
+  "enchant-2-backend-hunspell" 
+  "python311-base" {= "3.11"}
+]
+extra-source "python311-pyenchant-3.2.2-slfo.1.1.4.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/python311-pyenchant-3.2.2-slfo.1.1.4.noarch.rpm"
+}

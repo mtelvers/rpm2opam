@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "R-styler-1.10.0-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "R-styler-1.10.0-4.fc40.noarch.rpm"]
+depends: [
+  "R-R-cache" {>= "0.15.0"}
+  "R-cli" {>= "3.1.1"}
+  "R-core" {= "4.3"}
+  "R-magrittr" {>= "2.0.0"}
+  "R-purrr" {>= "0.2.3"}
+  "R-rlang" {>= "1.0.0"}
+  "R-rprojroot" {>= "1.1"}
+  "R-vctrs" {>= "0.4.1"}
+  "R-withr" {>= "2.3.0"}
+]
+extra-source "R-styler-1.10.0-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/R-styler-1.10.0-4.fc40.noarch.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "eiskaltdcpp-qt-2.4.2-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eiskaltdcpp-qt-2.4.2-11.fc40.x86_64.rpm"]
+depends: [
+  "aspell" 
+  "bash" 
+  "eiskaltdcpp" {= "2.4.2"}
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtmultimedia" 
+  "qt5-qtscript" 
+]
+extra-source "eiskaltdcpp-qt-2.4.2-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/eiskaltdcpp-qt-2.4.2-11.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-alga-devel-0.9.3-15.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-alga-devel-0.9.3-15.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-approx-devel" 
+  "rust-num-complex-devel" 
+  "rust-num-traits+libm-devel" 
+  "rust-num-traits-devel" 
+]
+extra-source "rust-alga-devel-0.9.3-15.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-alga-devel-0.9.3-15.fc40.noarch.rpm"
+}

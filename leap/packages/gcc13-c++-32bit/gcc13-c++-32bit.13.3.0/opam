@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gcc13-c++-32bit-13.3.0+git8781-slfo.1.1.11.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gcc13-c++-32bit-13.3.0+git8781-slfo.1.1.11.x86_64.rpm"]
+depends: [
+  "gcc13-32bit" {= "13.3.0"}
+  "gcc13-c++" {= "13.3.0"}
+  "libstdc++6-devel-gcc13-32bit" {= "13.3.0"}
+]
+extra-source "gcc13-c++-32bit-13.3.0+git8781-slfo.1.1.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/gcc13-c++-32bit-13.3.0+git8781-slfo.1.1.11.x86_64.rpm"
+}

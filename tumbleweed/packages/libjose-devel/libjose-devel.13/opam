@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libjose-devel-13-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libjose-devel-13-1.1.x86_64.rpm"]
+depends: [
+  "libjansson-devel" {>= "2.10"}
+  "libjose0" {= "13"}
+  "libopenssl-1_0_0-devel" {>= "1.0.2"}
+  "pkgconf-pkg-config" 
+  "zlib-devel" 
+]
+extra-source "libjose-devel-13-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libjose-devel-13-1.1.x86_64.rpm"
+}

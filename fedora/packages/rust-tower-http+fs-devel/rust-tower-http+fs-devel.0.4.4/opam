@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tower-http+fs-devel-0.4.4-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tower-http+fs-devel-0.4.4-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-futures-util+alloc-devel" 
+  "rust-tokio+fs-devel" 
+  "rust-tokio+io-util-devel" 
+  "rust-tokio-devel" 
+  "rust-tokio-util+io-devel" 
+  "rust-tokio-util-devel" 
+  "rust-tower-http+httpdate-devel" {= "0.4.4"}
+  "rust-tower-http+mime-devel" {= "0.4.4"}
+  "rust-tower-http+mime_guess-devel" {= "0.4.4"}
+  "rust-tower-http+percent-encoding-devel" {= "0.4.4"}
+  "rust-tower-http+set-status-devel" {= "0.4.4"}
+  "rust-tower-http+tracing-devel" {= "0.4.4"}
+  "rust-tower-http-devel" {= "0.4.4"}
+]
+extra-source "rust-tower-http+fs-devel-0.4.4-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tower-http+fs-devel-0.4.4-2.fc40.noarch.rpm"
+}

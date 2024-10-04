@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-async-global-executor-devel-2.4.1-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-async-global-executor-devel-2.4.1-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.60"}
+  "rust-async-channel+default-devel" 
+  "rust-async-executor+default-devel" 
+  "rust-async-lock+default-devel" 
+  "rust-blocking+default-devel" 
+  "rust-futures-lite+default-devel" 
+  "rust-once_cell+default-devel" 
+]
+extra-source "rust-async-global-executor-devel-2.4.1-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-async-global-executor-devel-2.4.1-2.fc40.noarch.rpm"
+}

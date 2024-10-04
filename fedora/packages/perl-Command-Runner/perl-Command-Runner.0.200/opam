@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Command-Runner-0.200-7.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Command-Runner-0.200-7.fc40.noarch.rpm"]
+depends: [
+  "perl-Capture-Tiny" 
+  "perl-Exporter" 
+  "perl-File-pushd" 
+  "perl-IO" 
+  "perl-POSIX" 
+  "perl-String-ShellQuote" 
+  "perl-Time-HiRes" 
+  "perl-constant" 
+  "perl-libs" 
+]
+extra-source "perl-Command-Runner-0.200-7.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Command-Runner-0.200-7.fc40.noarch.rpm"
+}

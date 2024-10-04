@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "syslogd-1.5.1-803.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "syslogd-1.5.1-803.2.x86_64.rpm"]
+depends: [
+  "bash" 
+  "bash-sh" 
+  "busybox-coreutils" 
+  "fillup" 
+  "glibc" 
+  "klogd" 
+  "libsystemd0" 
+  "permissions" 
+  "syslog-service" {>= "2.0"}
+  "system-user-news" 
+  "systemd" 
+]
+extra-source "syslogd-1.5.1-803.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/syslogd-1.5.1-803.2.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-rustls-devel-0.21.9-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-rustls-devel-0.21.9-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.61"}
+  "rust-ring+default-devel" 
+  "rust-rustls-webpki+alloc-devel" 
+  "rust-rustls-webpki+default-devel" 
+  "rust-rustls-webpki+std-devel" 
+  "rust-sct+default-devel" 
+]
+extra-source "rust-rustls-devel-0.21.9-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-rustls-devel-0.21.9-2.fc40.noarch.rpm"
+}

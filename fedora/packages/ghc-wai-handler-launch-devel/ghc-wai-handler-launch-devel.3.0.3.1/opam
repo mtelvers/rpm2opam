@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghc-wai-handler-launch-devel-3.0.3.1-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-wai-handler-launch-devel-3.0.3.1-19.fc40.x86_64.rpm"]
+depends: [
+  "ghc-async-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.4.5"}
+  "ghc-http-types-devel" 
+  "ghc-process-devel" 
+  "ghc-streaming-commons-devel" 
+  "ghc-transformers-devel" 
+  "ghc-wai-devel" 
+  "ghc-wai-handler-launch" {= "3.0.3.1"}
+  "ghc-warp-devel" 
+]
+extra-source "ghc-wai-handler-launch-devel-3.0.3.1-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghc-wai-handler-launch-devel-3.0.3.1-19.fc40.x86_64.rpm"
+}

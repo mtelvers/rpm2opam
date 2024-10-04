@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "trac-monotone-plugin-0.0.15-0.8.20210704mtn34341a53.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trac-monotone-plugin-0.0.15-0.8.20210704mtn34341a53.fc40.noarch.rpm"]
+depends: [
+  "monotone" {>= "1.1"}
+  "python3" {= "3.12"}
+  "python3-setuptools" 
+  "trac" {>= "1.5"}
+]
+extra-source "trac-monotone-plugin-0.0.15-0.8.20210704mtn34341a53.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/trac-monotone-plugin-0.0.15-0.8.20210704mtn34341a53.fc40.noarch.rpm"
+}

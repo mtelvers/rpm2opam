@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "fswatch-lang-1.17.1-1.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "fswatch-lang-1.17.1-1.2.noarch.rpm"]
+depends: [
+  "fswatch" {= "1.17.1"}
+]
+extra-source "fswatch-lang-1.17.1-1.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/fswatch-lang-1.17.1-1.2.noarch.rpm"
+}

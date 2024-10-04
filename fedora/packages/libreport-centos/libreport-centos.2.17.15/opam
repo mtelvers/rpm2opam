@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "libreport-centos-2.17.15-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libreport-centos-2.17.15-1.fc40.x86_64.rpm"]
+depends: [
+  "libreport" {= "2.17.15"}
+  "libreport-plugin-mantisbt" {= "2.17.15"}
+  "libreport-web" {= "2.17.15"}
+]
+extra-source "libreport-centos-2.17.15-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/libreport-centos-2.17.15-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cxxtools-devel-3.0-4.8.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cxxtools-devel-3.0-4.8.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc" 
+  "libcxxtools-bin10" 
+  "libcxxtools-http10" {= "3.0"}
+  "libcxxtools-json10" {= "3.0"}
+  "libcxxtools-unit10" {= "3.0"}
+  "libcxxtools-xmlrpc10" {= "3.0"}
+  "libcxxtools10" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "pkgconf-pkg-config" 
+]
+extra-source "cxxtools-devel-3.0-4.8.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cxxtools-devel-3.0-4.8.x86_64.rpm"
+}

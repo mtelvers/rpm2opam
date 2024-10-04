@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-markup-lwt-devel-1.0.3-14.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-markup-lwt-devel-1.0.3-14.fc40.x86_64.rpm"]
+depends: [
+  "ocaml" {= "2125"}
+  "ocaml-lwt" {= "0"}
+  "ocaml-lwt-devel" 
+  "ocaml-markup" {= "0"}
+  "ocaml-markup-devel" {= "1.0.3"}
+  "ocaml-markup-lwt" {= "1.0.3"}
+  "ocaml-uutf" {= "0"}
+]
+extra-source "ocaml-markup-lwt-devel-1.0.3-14.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-markup-lwt-devel-1.0.3-14.fc40.x86_64.rpm"
+}

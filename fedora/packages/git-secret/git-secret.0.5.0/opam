@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "git-secret-0.5.0-6.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "git-secret-0.5.0-6.fc40.noarch.rpm"]
+depends: [
+  "bash" 
+  "gawk" {>= "4.0.2"}
+  "git" {>= "1.8.3.1"}
+  "gnupg2" {>= "1.4"}
+]
+extra-source "git-secret-0.5.0-6.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/git-secret-0.5.0-6.fc40.noarch.rpm"
+}

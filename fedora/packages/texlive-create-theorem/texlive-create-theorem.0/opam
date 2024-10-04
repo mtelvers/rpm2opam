@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "texlive-create-theorem-svn64104-71.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "texlive-create-theorem-svn64104-71.fc40.noarch.rpm"]
+depends: [
+  "texlive-base" 
+  "texlive-crefthe" 
+  "texlive-kpathsea" 
+]
+extra-source "texlive-create-theorem-svn64104-71.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/texlive-create-theorem-svn64104-71.fc40.noarch.rpm"
+}

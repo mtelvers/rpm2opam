@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "shelldap-1.5.1-10.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "shelldap-1.5.1-10.fc40.noarch.rpm"]
+depends: [
+  "perl-Algorithm-Diff" 
+  "perl-Carp" 
+  "perl-Data-Dumper" 
+  "perl-Digest-MD5" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-LDAP" 
+  "perl-POSIX" 
+  "perl-Pod-Usage" 
+  "perl-Term-Shell" 
+  "perl-TermReadKey" 
+  "perl-Tie-IxHash" 
+  "perl-YAML-Syck" 
+  "perl-autodie" 
+  "perl-base" 
+  "perl-interpreter" 
+  "perl-libs" 
+  "perl-vars" 
+]
+extra-source "shelldap-1.5.1-10.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/shelldap-1.5.1-10.fc40.noarch.rpm"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mupen64plus-2.5-22.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mupen64plus-2.5-22.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "boost-filesystem" 
+  "freetype" 
+  "glibc" 
+  "hicolor-icon-theme" 
+  "libgcc" 
+  "libglvnd-glx" 
+  "libpng" 
+  "libsamplerate" 
+  "libstdc++" 
+  "lirc-libs" 
+  "mesa-libGLU" 
+  "zlib-ng-compat" 
+]
+extra-source "mupen64plus-2.5-22.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mupen64plus-2.5-22.fc40.x86_64.rpm"
+}

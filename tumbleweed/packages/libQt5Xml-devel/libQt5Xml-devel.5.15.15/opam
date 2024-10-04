@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "libQt5Xml-devel-5.15.15+kde127-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "libQt5Xml-devel-5.15.15+kde127-1.2.x86_64.rpm"]
+depends: [
+  "libQt5Core-devel" {= "5.15.15"}
+  "libQt5Xml5" {= "5.15.15"}
+  "pkgconf-pkg-config" 
+]
+extra-source "libQt5Xml-devel-5.15.15+kde127-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/libQt5Xml-devel-5.15.15+kde127-1.2.x86_64.rpm"
+}

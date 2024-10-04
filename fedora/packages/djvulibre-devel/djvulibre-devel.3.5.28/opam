@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "djvulibre-devel-3.5.28-7.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "djvulibre-devel-3.5.28-7.fc40.x86_64.rpm"]
+depends: [
+  "djvulibre-libs" {= "3.5.28"}
+  "pkgconf-pkg-config" 
+]
+extra-source "djvulibre-devel-3.5.28-7.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/djvulibre-devel-3.5.28-7.fc40.x86_64.rpm"
+}

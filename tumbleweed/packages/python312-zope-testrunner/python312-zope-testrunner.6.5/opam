@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-zope.testrunner-6.5-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-zope.testrunner-6.5-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python312-base" 
+  "python312-setuptools" 
+  "python312-zope-exceptions" 
+  "python312-zope-interface" 
+  "update-alternatives" 
+]
+extra-source "python312-zope.testrunner-6.5-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python312-zope.testrunner-6.5-1.1.noarch.rpm"
+}

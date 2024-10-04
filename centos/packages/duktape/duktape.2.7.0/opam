@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "duktape-2.7.0-8.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "duktape-2.7.0-8.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+]
+extra-source "duktape-2.7.0-8.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/duktape-2.7.0-8.el10.x86_64.rpm"
+}

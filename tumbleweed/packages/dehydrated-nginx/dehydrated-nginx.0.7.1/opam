@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dehydrated-nginx-0.7.1-3.2.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dehydrated-nginx-0.7.1-3.2.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "dehydrated" 
+  "nginx" 
+]
+extra-source "dehydrated-nginx-0.7.1-3.2.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dehydrated-nginx-0.7.1-3.2.noarch.rpm"
+}

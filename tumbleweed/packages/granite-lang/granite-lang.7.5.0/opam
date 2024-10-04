@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "granite-lang-7.5.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "granite-lang-7.5.0-1.1.noarch.rpm"]
+depends: [
+  "libgranite-7-7" {= "7.5.0"}
+]
+extra-source "granite-lang-7.5.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/granite-lang-7.5.0-1.1.noarch.rpm"
+}

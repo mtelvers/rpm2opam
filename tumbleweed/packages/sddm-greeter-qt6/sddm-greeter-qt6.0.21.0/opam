@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "sddm-greeter-qt6-0.21.0-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "sddm-greeter-qt6-0.21.0-4.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt6Core6" 
+  "libQt6Gui6" 
+  "libQt6Network6" 
+  "libQt6Qml6" 
+  "libQt6Quick6" 
+  "libgcc_s1" 
+  "libstdc++6" 
+  "libsystemd0" 
+  "libxcb-xkb1" 
+  "libxcb1" 
+  "qtdeclarative-imports-provides-qt6" 
+  "sddm" {= "0.21.0"}
+]
+extra-source "sddm-greeter-qt6-0.21.0-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/sddm-greeter-qt6-0.21.0-4.1.x86_64.rpm"
+}

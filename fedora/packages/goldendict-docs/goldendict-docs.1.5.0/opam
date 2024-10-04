@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "goldendict-docs-1.5.0-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "goldendict-docs-1.5.0-5.fc40.noarch.rpm"]
+depends: [
+  "goldendict" {= "1.5.0"}
+]
+extra-source "goldendict-docs-1.5.0-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/goldendict-docs-1.5.0-5.fc40.noarch.rpm"
+}

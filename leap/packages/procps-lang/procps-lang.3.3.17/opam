@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["/usr/bin/zypper" "-n" "install" "procps-lang-3.3.17-slfo.1.1.7.noarch.rpm"]
+]
+remove: [
+  ["/usr/bin/zypper" "-n" "remove" "procps-lang-3.3.17-slfo.1.1.7.noarch.rpm"]
+]
+depends: [
+  "procps" {= "3.3.17"}
+]
+extra-source "procps-lang-3.3.17-slfo.1.1.7.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/procps-lang-3.3.17-slfo.1.1.7.noarch.rpm"
+}

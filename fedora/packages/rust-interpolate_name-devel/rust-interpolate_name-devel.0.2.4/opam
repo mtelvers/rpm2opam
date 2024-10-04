@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-interpolate_name-devel-0.2.4-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-interpolate_name-devel-0.2.4-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-proc-macro2+default-devel" 
+  "rust-quote+default-devel" 
+  "rust-syn+default-devel" 
+  "rust-syn+fold-devel" 
+  "rust-syn+full-devel" 
+]
+extra-source "rust-interpolate_name-devel-0.2.4-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-interpolate_name-devel-0.2.4-2.fc40.noarch.rpm"
+}

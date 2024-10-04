@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-obexftp-0.24.2-2.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-obexftp-0.24.2-2.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "obexftp" 
+  "perl-base" {= "5.40.0"}
+]
+extra-source "perl-obexftp-0.24.2-2.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/perl-obexftp-0.24.2-2.3.x86_64.rpm"
+}

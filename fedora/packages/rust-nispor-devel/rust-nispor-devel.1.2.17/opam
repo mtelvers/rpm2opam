@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-nispor-devel-1.2.17-1.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-nispor-devel-1.2.17-1.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust" {>= "1.58"}
+  "rust-ethtool+default-devel" 
+  "rust-futures+default-devel" 
+  "rust-libc+default-devel" 
+  "rust-log+default-devel" 
+  "rust-mptcp-pm+default-devel" 
+  "rust-netlink-packet-route+default-devel" 
+  "rust-netlink-packet-utils+default-devel" 
+  "rust-netlink-sys+default-devel" 
+  "rust-rtnetlink+default-devel" 
+  "rust-serde+default-devel" 
+  "rust-serde+derive-devel" 
+  "rust-serde_json+default-devel" 
+  "rust-tokio+default-devel" 
+  "rust-tokio+macros-devel" 
+  "rust-tokio+rt-devel" 
+]
+extra-source "rust-nispor-devel-1.2.17-1.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-nispor-devel-1.2.17-1.fc40.noarch.rpm"
+}

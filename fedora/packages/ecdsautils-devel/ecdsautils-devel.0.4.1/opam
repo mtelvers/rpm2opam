@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ecdsautils-devel-0.4.1-9.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ecdsautils-devel-0.4.1-9.fc40.x86_64.rpm"]
+depends: [
+  "ecdsautils" {= "0.4.1"}
+  "ecdsautils-libs" 
+  "libuecc-devel" {>= "6"}
+  "pkgconf-pkg-config" 
+]
+extra-source "ecdsautils-devel-0.4.1-9.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/ecdsautils-devel-0.4.1-9.fc40.x86_64.rpm"
+}

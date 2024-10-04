@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rpmspectool-1.99.10-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rpmspectool-1.99.10-3.fc40.noarch.rpm"]
+depends: [
+  "python3" 
+  "python3-rpmspectool" {= "1.99.10"}
+]
+extra-source "rpmspectool-1.99.10-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rpmspectool-1.99.10-3.fc40.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glib2-tests-devel-2.80.5-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glib2-tests-devel-2.80.5-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-devel" {= "2.80.5"}
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libpcre2-8-0" 
+  "python311-base" 
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-Gio-2_0" 
+]
+extra-source "glib2-tests-devel-2.80.5-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/glib2-tests-devel-2.80.5-2.1.x86_64.rpm"
+}

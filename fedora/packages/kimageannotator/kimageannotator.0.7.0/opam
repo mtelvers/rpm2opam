@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "kimageannotator-0.7.0-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kimageannotator-0.7.0-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kcolorpicker" 
+  "kimageannotator-common" {= "0.7.0"}
+  "libX11" 
+  "libgcc" 
+  "libstdc++" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtsvg" 
+]
+extra-source "kimageannotator-0.7.0-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/k/kimageannotator-0.7.0-3.fc40.x86_64.rpm"
+}

@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gamescope-3.14.2-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gamescope-3.14.2-1.fc40.x86_64.rpm"]
+depends: [
+  "SDL2" 
+  "glibc" 
+  "libX11" 
+  "libX11-xcb" 
+  "libXcomposite" 
+  "libXcursor" 
+  "libXdamage" 
+  "libXext" 
+  "libXfixes" 
+  "libXi" 
+  "libXmu" 
+  "libXrender" 
+  "libXres" 
+  "libXtst" 
+  "libXxf86vm" 
+  "libavif" 
+  "libcap" 
+  "libdisplay-info" 
+  "libdrm" 
+  "libgcc" 
+  "libliftoff" {>= "0.4.1"}
+  "libstdc++" 
+  "libwayland-client" 
+  "libwayland-server" 
+  "libxcb" 
+  "libxkbcommon" 
+  "pipewire-libs" 
+  "wlroots" 
+  "xorg-x11-server-Xwayland" 
+]
+extra-source "gamescope-3.14.2-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gamescope-3.14.2-1.fc40.x86_64.rpm"
+}

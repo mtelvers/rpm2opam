@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "perl-Archive-Any-Lite-0.11-1.15.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Archive-Any-Lite-0.11-1.15.noarch.rpm"]
+depends: [
+  "perl" {>= "1.76"}
+  "perl-Archive-Zip" 
+  "perl-File-Temp" {>= "0.19"}
+]
+extra-source "perl-Archive-Any-Lite-0.11-1.15.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/perl-Archive-Any-Lite-0.11-1.15.noarch.rpm"
+}

@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "kate-lang-24.08.1-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "kate-lang-24.08.1-1.1.noarch.rpm"]
+depends: [
+  "kate" {= "24.8.1"}
+]
+extra-source "kate-lang-24.08.1-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/kate-lang-24.08.1-1.1.noarch.rpm"
+}

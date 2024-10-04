@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "lingot-devel-1.1.1-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lingot-devel-1.1.1-11.fc40.x86_64.rpm"]
+depends: [
+  "alsa-lib-devel" 
+  "fftw-devel" {>= "3.2.2"}
+  "gtk3-devel" {>= "3.10"}
+  "jack-audio-connection-kit-devel" {>= "0.117.0"}
+  "lingot" 
+  "pkgconf-pkg-config" 
+  "pulseaudio-libs-devel" {>= "0.9.10"}
+]
+extra-source "lingot-devel-1.1.1-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/lingot-devel-1.1.1-11.fc40.x86_64.rpm"
+}

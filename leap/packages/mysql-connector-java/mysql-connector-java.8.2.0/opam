@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "mysql-connector-java-8.2.0-slfo.1.2.13.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mysql-connector-java-8.2.0-slfo.1.2.13.noarch.rpm"]
+depends: [
+  "geronimo-jta-1_0_1B-api" {>= "1.0"}
+  "java-11-openjdk-headless" 
+  "javapackages-filesystem" 
+  "protobuf-java" 
+  "reload4j" 
+  "slf4j" 
+]
+extra-source "mysql-connector-java-8.2.0-slfo.1.2.13.noarch.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/noarch/mysql-connector-java-8.2.0-slfo.1.2.13.noarch.rpm"
+}

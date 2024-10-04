@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ghdl-mcode-3.0.0-1.20230308git7de967c.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghdl-mcode-3.0.0-1.20230308git7de967c.fc40.x86_64.rpm"]
+depends: [
+  "ghdl-mcode-grt" {= "3.0.0"}
+  "glibc" 
+  "libgcc" 
+  "libgnat" 
+  "zlib-ng-compat" 
+]
+extra-source "ghdl-mcode-3.0.0-1.20230308git7de967c.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ghdl-mcode-3.0.0-1.20230308git7de967c.fc40.x86_64.rpm"
+}

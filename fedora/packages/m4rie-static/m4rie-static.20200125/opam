@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "m4rie-static-20200125-11.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "m4rie-static-20200125-11.fc40.x86_64.rpm"]
+depends: [
+  "m4rie-devel" {= "20200125"}
+]
+extra-source "m4rie-static-20200125-11.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/m4rie-static-20200125-11.fc40.x86_64.rpm"
+}

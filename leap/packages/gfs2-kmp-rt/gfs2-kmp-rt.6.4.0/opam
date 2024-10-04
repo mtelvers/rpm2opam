@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "gfs2-kmp-rt-6.4.0-slfo.1.4.6.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gfs2-kmp-rt-6.4.0-slfo.1.4.6.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "dlm-kmp-rt" {= "6.4.0"}
+  "kernel-rt" {= "6.4.0"}
+  "suse-module-tools" {>= "12.4"}
+]
+extra-source "gfs2-kmp-rt-6.4.0-slfo.1.4.6.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/gfs2-kmp-rt-6.4.0-slfo.1.4.6.x86_64.rpm"
+}

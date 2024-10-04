@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "plasma-breeze-qt6-6.0.3-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "plasma-breeze-qt6-6.0.3-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "kf6-frameworkintegration-libs" 
+  "kf6-kcolorscheme" 
+  "kf6-kconfig" 
+  "kf6-kguiaddons" 
+  "kf6-kiconthemes" 
+  "kf6-kirigami" 
+  "kf6-kwindowsystem" 
+  "libstdc++" 
+  "plasma-breeze-common" {= "6.0.3"}
+  "qt6-qtbase" 
+  "qt6-qtbase-gui" 
+  "qt6-qtdeclarative" 
+]
+extra-source "plasma-breeze-qt6-6.0.3-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/plasma-breeze-qt6-6.0.3-1.fc40.x86_64.rpm"
+}

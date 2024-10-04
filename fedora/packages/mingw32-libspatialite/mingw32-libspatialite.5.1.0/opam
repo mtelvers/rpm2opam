@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw32-libspatialite-5.1.0-5.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw32-libspatialite-5.1.0-5.fc40.noarch.rpm"]
+depends: [
+  "mingw32-crt" 
+  "mingw32-filesystem" {>= "95"}
+  "mingw32-freexl" 
+  "mingw32-geos" 
+  "mingw32-libcharset" 
+  "mingw32-librttopo" 
+  "mingw32-libxml2" 
+  "mingw32-minizip" 
+  "mingw32-proj" 
+  "mingw32-sqlite" 
+  "mingw32-win-iconv" 
+  "mingw32-zlib" 
+]
+extra-source "mingw32-libspatialite-5.1.0-5.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw32-libspatialite-5.1.0-5.fc40.noarch.rpm"
+}

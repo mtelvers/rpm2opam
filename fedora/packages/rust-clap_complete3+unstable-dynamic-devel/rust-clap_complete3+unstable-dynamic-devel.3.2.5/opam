@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-clap_complete3+unstable-dynamic-devel-3.2.5-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-clap_complete3+unstable-dynamic-devel-3.2.5-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-clap+derive-devel" 
+  "rust-clap_complete3+clap_lex-devel" {= "3.2.5"}
+  "rust-clap_complete3+is_executable-devel" {= "3.2.5"}
+  "rust-clap_complete3+os_str_bytes-devel" {= "3.2.5"}
+  "rust-clap_complete3+pathdiff-devel" {= "3.2.5"}
+  "rust-clap_complete3+shlex-devel" {= "3.2.5"}
+  "rust-clap_complete3+unicode-xid-devel" {= "3.2.5"}
+  "rust-clap_complete3-devel" {= "3.2.5"}
+]
+extra-source "rust-clap_complete3+unstable-dynamic-devel-3.2.5-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-clap_complete3+unstable-dynamic-devel-3.2.5-3.fc40.noarch.rpm"
+}

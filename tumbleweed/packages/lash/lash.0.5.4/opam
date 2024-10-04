@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "lash-0.5.4-4.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "lash-0.5.4-4.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libasound2" 
+  "libgtk-2_0-0" 
+  "libjack0" 
+  "liblash1" 
+  "libreadline8" 
+  "libuuid1" 
+  "libxml2-2" 
+]
+extra-source "lash-0.5.4-4.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/lash-0.5.4-4.1.x86_64.rpm"
+}

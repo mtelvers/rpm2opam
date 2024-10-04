@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "nemo-extension-nextcloud-3.13.4-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "nemo-extension-nextcloud-3.13.4-1.1.noarch.rpm"]
+depends: [
+  "nemo" 
+  "nextcloud-desktop" {= "3.13.4"}
+  "python3-nemo" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-Nemo-3_0" 
+]
+extra-source "nemo-extension-nextcloud-3.13.4-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/nemo-extension-nextcloud-3.13.4-1.1.noarch.rpm"
+}

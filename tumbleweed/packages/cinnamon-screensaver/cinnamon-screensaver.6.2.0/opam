@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cinnamon-screensaver-6.2.0-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cinnamon-screensaver-6.2.0-1.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glib2-stage1-devel" 
+  "glibc" 
+  "iso-country-flags-png" 
+  "libcscreensaver-0_0_0" 
+  "libgtk-3-0" 
+  "libpango-1_0-0" 
+  "python311-base" 
+  "python311-gobject" 
+  "python311-gobject-Gdk" 
+  "python311-gobject-cairo" 
+  "python311-pycairo" 
+  "python311-setproctitle" 
+  "python311-xapp" 
+  "typelib-1_0-CScreensaver-1_0" {= "1.0"}
+  "typelib-1_0-Caribou-1_0" {= "1.0"}
+  "typelib-1_0-CinnamonDesktop-3_0" {= "3.0"}
+  "typelib-1_0-Cvc-1_0" {= "1.0"}
+  "typelib-1_0-GLib-2_0" 
+  "typelib-1_0-GObject-2_0" 
+  "typelib-1_0-GdkPixbuf-2_0" 
+  "typelib-1_0-Gio-2_0" 
+  "typelib-1_0-Gtk-2_0" 
+  "typelib-1_0-Gtk-3_0" {= "3.0"}
+  "typelib-1_0-Pango-1_0" 
+  "typelib-1_0-XApp-1_0" {= "1.0"}
+]
+extra-source "cinnamon-screensaver-6.2.0-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cinnamon-screensaver-6.2.0-1.1.x86_64.rpm"
+}

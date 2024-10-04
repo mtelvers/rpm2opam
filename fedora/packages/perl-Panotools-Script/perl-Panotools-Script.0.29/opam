@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perl-Panotools-Script-0.29-16.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perl-Panotools-Script-0.29-16.fc40.noarch.rpm"]
+depends: [
+  "ImageMagick" 
+  "ImageMagick-perl" 
+  "autotrace" 
+  "enblend" 
+  "hugin-base" 
+  "libpano13-tools" 
+  "perl-Digest-MD5" 
+  "perl-Exporter" 
+  "perl-File-Copy" 
+  "perl-File-Temp" 
+  "perl-Getopt-Long" 
+  "perl-Getopt-Std" 
+  "perl-IPC-Open3" 
+  "perl-Image-ExifTool" {>= "9.7"}
+  "perl-Image-Size" 
+  "perl-Math-Complex" 
+  "perl-PathTools" 
+  "perl-Pod-Usage" 
+  "perl-Storable" 
+  "perl-Symbol" 
+  "perl-Text-ParseWords" 
+  "perl-URI" 
+  "perl-constant" 
+  "perl-interpreter" 
+  "perl-libs" {>= "5.10.0"}
+  "perl-libwww-perl" 
+  "perl-vars" 
+  "zenity" 
+]
+extra-source "perl-Panotools-Script-0.29-16.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perl-Panotools-Script-0.29-16.fc40.noarch.rpm"
+}

@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "rdiff-2.3.4-1.5.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rdiff-2.3.4-1.5.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libpopt0" 
+  "librsync2" 
+]
+extra-source "rdiff-2.3.4-1.5.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/rdiff-2.3.4-1.5.x86_64.rpm"
+}

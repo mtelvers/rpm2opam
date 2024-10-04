@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "zabbix-6.0.27-1.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "zabbix-6.0.27-1.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcurl" 
+  "libxml2" 
+  "logrotate" 
+  "openssl-libs" 
+  "pcre2" 
+  "zabbix-selinux" 
+  "zlib-ng-compat" 
+]
+extra-source "zabbix-6.0.27-1.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/z/zabbix-6.0.27-1.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "gtkspell3-devel-3.0.10-19.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "gtkspell3-devel-3.0.10-19.fc40.x86_64.rpm"]
+depends: [
+  "enchant2-devel" 
+  "glib2-devel" 
+  "gtk3-devel" 
+  "gtkspell3" {= "3.0.10"}
+  "pkgconf-pkg-config" 
+]
+extra-source "gtkspell3-devel-3.0.10-19.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/gtkspell3-devel-3.0.10-19.fc40.x86_64.rpm"
+}

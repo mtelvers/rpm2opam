@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "eclipse-ecf-runtime-3.14.8-7.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "eclipse-ecf-runtime-3.14.8-7.1.noarch.rpm"]
+depends: [
+  "eclipse-ecf-core" {= "3.9.400.0"}
+  "java-11-openj9-headless" {>= "1.8"}
+  "javapackages-filesystem" 
+  "objectweb-asm" 
+  "xml-commons-apis" 
+]
+extra-source "eclipse-ecf-runtime-3.14.8-7.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/eclipse-ecf-runtime-3.14.8-7.1.noarch.rpm"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "TeXmacs-2.1.2-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "TeXmacs-2.1.2-6.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "compat-guile18" 
+  "fig2ps" 
+  "freetype" 
+  "ghostscript" 
+  "glibc" 
+  "libgcc" 
+  "libjpeg-turbo" 
+  "libpng" 
+  "libstdc++" 
+  "perl-Getopt-Long" 
+  "perl-interpreter" 
+  "python3" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "qt5-qtsvg" 
+  "sqlite-libs" 
+  "texmacs-fedora-fonts" {= "2.1.2"}
+  "zlib-ng-compat" 
+]
+extra-source "TeXmacs-2.1.2-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/TeXmacs-2.1.2-6.fc40.x86_64.rpm"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["/usr/bin/zypper" "-n" "install" "cmake-full-3.28.1-slfo.1.1.11.x86_64.rpm"]
+]
+remove: [
+  ["/usr/bin/zypper" "-n" "remove" "cmake-full-3.28.1-slfo.1.1.11.x86_64.rpm"]
+]
+depends: [
+  "glibc" 
+  "libarchive13" 
+  "libcurl4" 
+  "libexpat1" 
+  "libgcc_s1" 
+  "libjsoncpp25" 
+  "libncurses6" 
+  "librhash1" 
+  "libstdc++6" 
+  "libuv1" {= "1.48.0"}
+  "libz-ng-compat1" 
+  "make" 
+  "python311-base" 
+]
+extra-source "cmake-full-3.28.1-slfo.1.1.11.x86_64.rpm" {
+  src: "http://download.opensuse.org/distribution/leap/16.0/repo/oss/x86_64/cmake-full-3.28.1-slfo.1.1.11.x86_64.rpm"
+}

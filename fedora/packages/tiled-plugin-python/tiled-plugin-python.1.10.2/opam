@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tiled-plugin-python-1.10.2-1.fc39.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tiled-plugin-python-1.10.2-1.fc39.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "python3-libs" 
+  "qt5-qtbase" 
+  "qt5-qtbase-gui" 
+  "tiled" 
+]
+extra-source "tiled-plugin-python-1.10.2-1.fc39.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tiled-plugin-python-1.10.2-1.fc39.x86_64.rpm"
+}

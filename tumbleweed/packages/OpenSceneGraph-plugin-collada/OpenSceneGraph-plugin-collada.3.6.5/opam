@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "OpenSceneGraph-plugin-collada-3.6.5-9.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "OpenSceneGraph-plugin-collada-3.6.5-9.3.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libOpenSceneGraph161" 
+  "libOpenThreads21" 
+  "libcollada-dom2_5-dp0" 
+  "libgcc_s1" 
+  "libstdc++6" 
+]
+extra-source "OpenSceneGraph-plugin-collada-3.6.5-9.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/OpenSceneGraph-plugin-collada-3.6.5-9.3.x86_64.rpm"
+}

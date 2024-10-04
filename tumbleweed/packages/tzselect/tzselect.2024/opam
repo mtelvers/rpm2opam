@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "tzselect-2024b-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tzselect-2024b-1.1.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "gawk" 
+  "timezone" {= "2024"}
+]
+extra-source "tzselect-2024b-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/tzselect-2024b-1.1.noarch.rpm"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "wasmedge-0.13.5-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "wasmedge-0.13.5-2.fc40.x86_64.rpm"]
+depends: [
+  "fmt" 
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "lld" 
+  "lld17-libs" 
+  "llvm" 
+  "llvm17-libs" 
+  "spdlog" 
+]
+extra-source "wasmedge-0.13.5-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/w/wasmedge-0.13.5-2.fc40.x86_64.rpm"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "npkg-10.beta11-4.5.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "npkg-10.beta11-4.5.noarch.rpm"]
+depends: [
+  "busybox-coreutils" 
+  "nodejs-packaging" {= "10.0"}
+  "ruby" 
+  "ruby3-3" 
+  "ruby3-3-rubygem-nokogiri" 
+]
+extra-source "npkg-10.beta11-4.5.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/npkg-10.beta11-4.5.noarch.rpm"
+}

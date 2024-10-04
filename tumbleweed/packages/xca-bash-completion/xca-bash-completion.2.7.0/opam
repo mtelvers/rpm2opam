@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "xca-bash-completion-2.7.0-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "xca-bash-completion-2.7.0-1.1.noarch.rpm"]
+depends: [
+  "bash-completion" 
+  "xca" {= "2.7.0"}
+]
+extra-source "xca-bash-completion-2.7.0-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/xca-bash-completion-2.7.0-1.1.noarch.rpm"
+}

@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-clang-sys+clang_17_0-devel-1.7.0-2.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-clang-sys+clang_17_0-devel-1.7.0-2.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "clang-devel" {>= "17.0"}
+  "rust-clang-sys+clang_16_0-devel" {= "1.7.0"}
+  "rust-clang-sys-devel" {= "1.7.0"}
+]
+extra-source "rust-clang-sys+clang_17_0-devel-1.7.0-2.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-clang-sys+clang_17_0-devel-1.7.0-2.fc40.noarch.rpm"
+}

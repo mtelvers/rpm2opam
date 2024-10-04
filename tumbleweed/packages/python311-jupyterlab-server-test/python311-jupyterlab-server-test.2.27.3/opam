@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-jupyterlab-server-test-2.27.3-2.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-jupyterlab-server-test-2.27.3-2.1.noarch.rpm"]
+depends: [
+  "python311-Werkzeug" 
+  "python311-ipykernel" 
+  "python311-jupyterlab-server" {= "2.27.3"}
+  "python311-openapi-spec-validator" 
+  "python311-pytest" {>= "7"}
+  "python311-pytest-console-scripts" 
+  "python311-pytest-jupyter-server" {>= "0.6.2"}
+  "python311-pytest-timeout" 
+  "python311-requests-mock" 
+  "python311-ruamel-yaml" 
+  "python311-strict-rfc3339" 
+]
+extra-source "python311-jupyterlab-server-test-2.27.3-2.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-jupyterlab-server-test-2.27.3-2.1.noarch.rpm"
+}

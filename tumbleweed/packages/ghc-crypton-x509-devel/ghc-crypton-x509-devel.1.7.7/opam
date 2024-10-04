@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-crypton-x509-devel-1.7.7-1.3.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-crypton-x509-devel-1.7.7-1.3.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-asn1-encoding-devel" 
+  "ghc-asn1-parse-devel" 
+  "ghc-asn1-types-devel" 
+  "ghc-base-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-crypton-devel" 
+  "ghc-crypton-x509" {= "1.7.7"}
+  "ghc-hourglass-devel" 
+  "ghc-memory-devel" 
+  "ghc-pem-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-crypton-x509-devel-1.7.7-1.3.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-crypton-x509-devel-1.7.7-1.3.x86_64.rpm"
+}

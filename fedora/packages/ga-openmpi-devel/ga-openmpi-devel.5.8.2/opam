@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ga-openmpi-devel-5.8.2-5.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ga-openmpi-devel-5.8.2-5.fc40.x86_64.rpm"]
+depends: [
+  "bash" 
+  "flexiblas-devel" 
+  "ga-common" {= "5.8.2"}
+  "ga-openmpi" {= "5.8.2"}
+  "openmpi-devel" 
+  "scalapack-openmpi-devel" 
+]
+extra-source "ga-openmpi-devel-5.8.2-5.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/ga-openmpi-devel-5.8.2-5.fc40.x86_64.rpm"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-tokio-udp-devel-0.1.6-12.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-tokio-udp-devel-0.1.6-12.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-bytes+default-devel" 
+  "rust-futures+default-devel" 
+  "rust-log+default-devel" 
+  "rust-mio+default-devel" 
+  "rust-tokio-codec+default-devel" 
+  "rust-tokio-io+default-devel" 
+  "rust-tokio-reactor+default-devel" 
+]
+extra-source "rust-tokio-udp-devel-0.1.6-12.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-tokio-udp-devel-0.1.6-12.fc40.noarch.rpm"
+}

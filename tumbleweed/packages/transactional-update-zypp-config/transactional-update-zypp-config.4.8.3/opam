@@ -1,0 +1,9 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "transactional-update-zypp-config-4.8.3-1.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "transactional-update-zypp-config-4.8.3-1.1.noarch.rpm"]
+depends: [
+  "transactional-update" {= "4.8.3"}
+]
+extra-source "transactional-update-zypp-config-4.8.3-1.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/transactional-update-zypp-config-4.8.3-1.1.noarch.rpm"
+}

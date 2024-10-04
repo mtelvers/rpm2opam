@@ -1,0 +1,11 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-sshpubkeys-3.3.1-2.4.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-sshpubkeys-3.3.1-2.4.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "python311-cryptography" {>= "3.2"}
+  "python311-ecdsa" {>= "0.13.3"}
+]
+extra-source "python311-sshpubkeys-3.3.1-2.4.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-sshpubkeys-3.3.1-2.4.noarch.rpm"
+}

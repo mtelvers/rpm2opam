@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "rust-gtk3-macros0.15+default-devel-0.15.6-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "rust-gtk3-macros0.15+default-devel-0.15.6-3.fc40.noarch.rpm"]
+depends: [
+  "cargo" 
+  "rust-gtk3-macros0-15-devel" {= "0.15.6"}
+]
+extra-source "rust-gtk3-macros0.15+default-devel-0.15.6-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/r/rust-gtk3-macros0.15+default-devel-0.15.6-3.fc40.noarch.rpm"
+}

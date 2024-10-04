@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "syslinux-6.04-0.29.el10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "syslinux-6.04-0.29.el10.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libuuid" 
+  "mtools" 
+  "syslinux-nonlinux" {= "6.4"}
+]
+extra-source "syslinux-6.04-0.29.el10.x86_64.rpm" {
+  src: "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/syslinux-6.04-0.29.el10.x86_64.rpm"
+}

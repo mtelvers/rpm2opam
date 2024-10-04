@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "ocaml-ocamlbuild-0.14.3-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ocaml-ocamlbuild-0.14.3-3.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "ncurses" 
+  "ocaml" {= "2125"}
+  "ocaml-runtime" 
+]
+extra-source "ocaml-ocamlbuild-0.14.3-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/o/ocaml-ocamlbuild-0.14.3-3.fc40.x86_64.rpm"
+}

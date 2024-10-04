@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-sigs-k8s-aws-iam-authenticator-devel-0.5.2-12.fc39.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-sigs-k8s-aws-iam-authenticator-devel-0.5.2-12.fc39.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-aws-sdk-devel" 
+  "golang-github-gofrs-flock-devel" 
+  "golang-github-prometheus-client-devel" 
+  "golang-github-sirupsen-logrus-devel" 
+  "golang-github-spf13-cobra-devel" 
+  "golang-github-spf13-viper-devel" 
+  "golang-gopkg-yaml-2-devel" 
+  "golang-hein-version-devel" 
+  "golang-k8s-api-devel" 
+  "golang-k8s-apimachinery-devel" 
+  "golang-k8s-client-devel" 
+  "golang-k8s-component-base-devel" 
+  "golang-k8s-sample-controller-devel" 
+  "golang-x-time-devel" 
+]
+extra-source "golang-sigs-k8s-aws-iam-authenticator-devel-0.5.2-12.fc39.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-sigs-k8s-aws-iam-authenticator-devel-0.5.2-12.fc39.noarch.rpm"
+}

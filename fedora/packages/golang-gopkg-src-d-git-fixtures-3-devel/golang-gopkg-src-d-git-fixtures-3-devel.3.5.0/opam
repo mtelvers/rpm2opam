@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-gopkg-src-d-git-fixtures-3-devel-3.5.0-13.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-gopkg-src-d-git-fixtures-3-devel-3.5.0-13.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-alcortesm-tgz-devel" 
+  "golang-gopkg-check-1-devel" 
+  "golang-gopkg-src-d-billy-4-devel" 
+]
+extra-source "golang-gopkg-src-d-git-fixtures-3-devel-3.5.0-13.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-gopkg-src-d-git-fixtures-3-devel-3.5.0-13.fc40.noarch.rpm"
+}

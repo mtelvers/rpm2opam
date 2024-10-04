@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "link-grammar-java-5.12.3-6.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "link-grammar-java-5.12.3-6.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "hunspell" 
+  "java-21-openjdk-headless" {>= "1.6.0"}
+  "javapackages-tools" 
+  "libgcc" 
+  "libstdc++" 
+  "link-grammar" 
+  "pcre2" 
+]
+extra-source "link-grammar-java-5.12.3-6.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/l/link-grammar-java-5.12.3-6.fc40.x86_64.rpm"
+}

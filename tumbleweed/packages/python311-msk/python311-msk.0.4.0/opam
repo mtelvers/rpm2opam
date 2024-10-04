@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-msk-0.4.0-1.11.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-msk-0.4.0-1.11.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-GitPython" {>= "3.0.5"}
+  "python311-PyGithub" 
+  "python311-base" 
+  "python311-msm" {>= "0.5.13"}
+  "update-alternatives" 
+]
+extra-source "python311-msk-0.4.0-1.11.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-msk-0.4.0-1.11.noarch.rpm"
+}

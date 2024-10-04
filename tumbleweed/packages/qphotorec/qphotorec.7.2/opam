@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "qphotorec-7.2-1.2.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "qphotorec-7.2-1.2.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libQt5Core5" 
+  "libQt5Gui5" 
+  "libQt5Widgets5" 
+  "libext2fs2" 
+  "libgcc_s1" 
+  "libjpeg8" 
+  "libntfs-3g89" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+]
+extra-source "qphotorec-7.2-1.2.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/qphotorec-7.2-1.2.x86_64.rpm"
+}

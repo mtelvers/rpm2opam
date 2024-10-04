@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "cgnslib-mpich-devel-4.4.0-4.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cgnslib-mpich-devel-4.4.0-4.fc40.x86_64.rpm"]
+depends: [
+  "cgnslib-mpich" {= "4.4.0"}
+  "mpich-devel" 
+]
+extra-source "cgnslib-mpich-devel-4.4.0-4.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/c/cgnslib-mpich-devel-4.4.0-4.fc40.x86_64.rpm"
+}

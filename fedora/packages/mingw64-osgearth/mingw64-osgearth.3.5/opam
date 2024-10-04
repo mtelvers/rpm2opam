@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "mingw64-osgearth-3.5-4.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "mingw64-osgearth-3.5-4.fc40.noarch.rpm"]
+depends: [
+  "mingw64-OpenSceneGraph" 
+  "mingw64-crt" 
+  "mingw64-curl" 
+  "mingw64-filesystem" {>= "95"}
+  "mingw64-gdal" 
+  "mingw64-geos" 
+  "mingw64-libgcc" 
+  "mingw64-liblerc" 
+  "mingw64-libstdc++" 
+  "mingw64-libwebp" 
+  "mingw64-protobuf" 
+  "mingw64-sqlite" 
+  "mingw64-winpthreads" 
+]
+extra-source "mingw64-osgearth-3.5-4.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/mingw64-osgearth-3.5-4.fc40.noarch.rpm"
+}

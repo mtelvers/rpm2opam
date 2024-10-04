@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "erlang-p1_acme-1.0.8-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "erlang-p1_acme-1.0.8-9.fc40.noarch.rpm"]
+depends: [
+  "erlang-erts" 
+  "erlang-idna" 
+  "erlang-inets" 
+  "erlang-jiffy" 
+  "erlang-kernel" 
+  "erlang-public_key" 
+  "erlang-stdlib" 
+  "erlang-yconf" 
+]
+extra-source "erlang-p1_acme-1.0.8-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/e/erlang-p1_acme-1.0.8-9.fc40.noarch.rpm"
+}

@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "perlbrew-0.98-3.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "perlbrew-0.98-3.fc40.noarch.rpm"]
+depends: [
+  "curl" 
+  "perl-CPAN-Perl-Releases" 
+  "perl-Capture-Tiny" 
+  "perl-Data-Dumper" 
+  "perl-Devel-PatchPerl" {>= "2.0"}
+  "perl-Exporter" 
+  "perl-ExtUtils-MakeMaker" {>= "7.22"}
+  "perl-File-Basename" 
+  "perl-File-Copy" 
+  "perl-File-Path" 
+  "perl-File-Temp" 
+  "perl-FindBin" 
+  "perl-Getopt-Long" 
+  "perl-JSON-PP" 
+  "perl-PathTools" 
+  "perl-Pod-Usage" {>= "1.68"}
+  "perl-interpreter" 
+  "perl-libs" {>= "5.8.0"}
+  "perl-local-lib" {>= "2.14"}
+  "perl-overload" 
+]
+extra-source "perlbrew-0.98-3.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/p/perlbrew-0.98-3.fc40.noarch.rpm"
+}

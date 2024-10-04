@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "golang-github-circonus-labs-gometrics-devel-3.3.0-9.fc40.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "golang-github-circonus-labs-gometrics-devel-3.3.0-9.fc40.noarch.rpm"]
+depends: [
+  "go-filesystem" 
+  "golang-github-circonus-labs-apiclient-devel" 
+  "golang-github-circonus-labs-circonusllhist-devel" 
+  "golang-github-hashicorp-retryablehttp-devel" 
+  "golang-github-pkg-errors-devel" 
+  "golang-github-tv42-httpunix-devel" 
+]
+extra-source "golang-github-circonus-labs-gometrics-devel-3.3.0-9.fc40.noarch.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/g/golang-github-circonus-labs-gometrics-devel-3.3.0-9.fc40.noarch.rpm"
+}

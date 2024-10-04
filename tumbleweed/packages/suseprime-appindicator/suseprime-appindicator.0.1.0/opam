@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "suseprime-appindicator-0.1.0-3.12.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "suseprime-appindicator-0.1.0-3.12.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" {= "3.11"}
+  "python311-gobject" 
+  "suse-prime" 
+]
+extra-source "suseprime-appindicator-0.1.0-3.12.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/suseprime-appindicator-0.1.0-3.12.noarch.rpm"
+}

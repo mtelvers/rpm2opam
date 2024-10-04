@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "dmlite-dome-1.15.2-20.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dmlite-dome-1.15.2-20.fc40.x86_64.rpm"]
+depends: [
+  "boost-thread" 
+  "davix-libs" 
+  "dmlite-libs" 
+  "glibc" 
+  "httpd" 
+  "libgcc" 
+  "libstdc++" 
+  "mariadb-connector-c" 
+  "openssl-libs" 
+  "xrootd" {>= "5.2.0"}
+  "zlib-ng-compat" 
+]
+extra-source "dmlite-dome-1.15.2-20.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/d/dmlite-dome-1.15.2-20.fc40.x86_64.rpm"
+}

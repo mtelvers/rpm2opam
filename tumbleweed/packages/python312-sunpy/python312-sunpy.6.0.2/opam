@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python312-sunpy-6.0.2-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python312-sunpy-6.0.2-1.1.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "python312-aioftp" {>= "0.17.1"}
+  "python312-astropy" {>= "5.3"}
+  "python312-base" 
+  "python312-numpy" {> "1.24.5"}
+  "python312-packaging" {>= "23"}
+  "python312-parfive" {>= "2.0.0"}
+  "python312-pyerfa" 
+  "python312-requests" {>= "2.28.0"}
+]
+extra-source "python312-sunpy-6.0.2-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/python312-sunpy-6.0.2-1.1.x86_64.rpm"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "msmtp-1.8.25-3.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "msmtp-1.8.25-3.fc40.x86_64.rpm"]
+depends: [
+  "alternatives" 
+  "bash" 
+  "glibc" 
+  "gnutls" 
+  "info" 
+  "libgsasl" 
+  "libsecret" 
+]
+extra-source "msmtp-1.8.25-3.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/m/msmtp-1.8.25-3.fc40.x86_64.rpm"
+}

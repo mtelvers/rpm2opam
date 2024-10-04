@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "python311-flexx-0.8.4-1.9.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "python311-flexx-0.8.4-1.9.noarch.rpm"]
+depends: [
+  "bash-sh" 
+  "python311-base" 
+  "python311-dialite" {>= "0.5.2"}
+  "python311-pscript" {>= "0.7.3"}
+  "python311-tornado" 
+  "python311-webruntime" {>= "0.5.6"}
+  "update-alternatives" 
+]
+extra-source "python311-flexx-0.8.4-1.9.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/python311-flexx-0.8.4-1.9.noarch.rpm"
+}

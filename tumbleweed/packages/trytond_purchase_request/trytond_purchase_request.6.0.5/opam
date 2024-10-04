@@ -1,0 +1,12 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "trytond_purchase_request-6.0.5-3.1.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "trytond_purchase_request-6.0.5-3.1.noarch.rpm"]
+depends: [
+  "python311-base" {= "3.11"}
+  "trytond" 
+  "trytond_product" 
+  "trytond_purchase" 
+]
+extra-source "trytond_purchase_request-6.0.5-3.1.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/trytond_purchase_request-6.0.5-3.1.noarch.rpm"
+}

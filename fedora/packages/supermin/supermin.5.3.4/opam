@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "supermin-5.3.4-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "supermin-5.3.4-2.fc40.x86_64.rpm"]
+depends: [
+  "cpio" 
+  "e2fsprogs" 
+  "e2fsprogs-libs" {>= "1.42"}
+  "glibc" 
+  "libcom_err" 
+  "rpm" 
+  "rpm-libs" 
+  "tar" 
+  "util-linux" 
+]
+extra-source "supermin-5.3.4-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/s/supermin-5.3.4-2.fc40.x86_64.rpm"
+}

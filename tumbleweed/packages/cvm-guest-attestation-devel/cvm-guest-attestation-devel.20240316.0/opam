@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cvm-guest-attestation-devel-20240316.b613bcd-1.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cvm-guest-attestation-devel-20240316.b613bcd-1.1.x86_64.rpm"]
+depends: [
+  "libazguestattestation1" {= "20240316.0"}
+  "pkgconf-pkg-config" 
+]
+extra-source "cvm-guest-attestation-devel-20240316.b613bcd-1.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cvm-guest-attestation-devel-20240316.b613bcd-1.1.x86_64.rpm"
+}

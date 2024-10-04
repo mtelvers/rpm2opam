@@ -1,0 +1,10 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "glibc-gconv-modules-extra-32bit-2.40-2.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "glibc-gconv-modules-extra-32bit-2.40-2.1.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "glibc-32bit" 
+]
+extra-source "glibc-gconv-modules-extra-32bit-2.40-2.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/glibc-gconv-modules-extra-32bit-2.40-2.1.x86_64.rpm"
+}

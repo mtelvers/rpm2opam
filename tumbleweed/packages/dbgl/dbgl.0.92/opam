@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "dbgl-0.92-1.18.noarch.rpm"]
+remove: ["/usr/bin/rpm" "-e" "dbgl-0.92-1.18.noarch.rpm"]
+depends: [
+  "apache-commons-io" 
+  "apache-commons-lang3" 
+  "apache-commons-text" 
+  "bash" 
+  "dosbox" {>= "0.70"}
+  "eclipse-swt" 
+  "java-11-openj9" {>= "1.8"}
+  "javapackages-tools" 
+]
+extra-source "dbgl-0.92-1.18.noarch.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/noarch/dbgl-0.92-1.18.noarch.rpm"
+}

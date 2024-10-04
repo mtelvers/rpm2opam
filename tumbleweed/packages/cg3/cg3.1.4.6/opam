@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "cg3-1.4.6-1.4.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "cg3-1.4.6-1.4.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libcg3-1" 
+  "libgcc_s1" 
+  "libicu75" 
+  "libstdc++6" 
+  "perl-Digest-SHA1" 
+  "perl-base" 
+]
+extra-source "cg3-1.4.6-1.4.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/cg3-1.4.6-1.4.x86_64.rpm"
+}

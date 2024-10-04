@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-i" "--root=/root/chroot" "tcl-xapian-1.4.23-2.fc40.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "tcl-xapian-1.4.23-2.fc40.x86_64.rpm"]
+depends: [
+  "glibc" 
+  "libgcc" 
+  "libstdc++" 
+  "xapian-bindings" {= "1.4.23"}
+  "xapian-core-libs" 
+]
+extra-source "tcl-xapian-1.4.23-2.fc40.x86_64.rpm" {
+  src: "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os/Packages/t/tcl-xapian-1.4.23-2.fc40.x86_64.rpm"
+}

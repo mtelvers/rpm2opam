@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "ghc-lucid-devel-2.11.20230408-2.12.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "ghc-lucid-devel-2.11.20230408-2.12.x86_64.rpm"]
+depends: [
+  "bash-sh" 
+  "ghc-base-devel" 
+  "ghc-blaze-builder-devel" 
+  "ghc-bytestring-devel" 
+  "ghc-compiler" {= "9.8.2"}
+  "ghc-containers-devel" 
+  "ghc-hashable-devel" 
+  "ghc-lucid" {= "2.11.20230408"}
+  "ghc-mmorph-devel" 
+  "ghc-mtl-devel" 
+  "ghc-text-devel" 
+  "ghc-transformers-devel" 
+]
+extra-source "ghc-lucid-devel-2.11.20230408-2.12.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/ghc-lucid-devel-2.11.20230408-2.12.x86_64.rpm"
+}

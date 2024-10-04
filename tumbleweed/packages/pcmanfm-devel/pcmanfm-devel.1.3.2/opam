@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "pcmanfm-devel-1.3.2-2.10.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "pcmanfm-devel-1.3.2-2.10.x86_64.rpm"]
+depends: [
+  "gtk2-devel" 
+  "libfm-gtk4" {>= "1.3.2"}
+  "libfm4" {>= "1.3.2"}
+  "pcmanfm" {= "1.3.2"}
+  "pkgconf-pkg-config" 
+]
+extra-source "pcmanfm-devel-1.3.2-2.10.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/pcmanfm-devel-1.3.2-2.10.x86_64.rpm"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: ["/usr/bin/rpm" "-U" "--replacepkgs" "stardict-tools-3.0.1-86.1.x86_64.rpm"]
+remove: ["/usr/bin/rpm" "-e" "stardict-tools-3.0.1-86.1.x86_64.rpm"]
+depends: [
+  "glib2-stage1-devel" 
+  "glibc" 
+  "libgcc_s1" 
+  "libgtk-2_0-0" 
+  "libmariadb3" 
+  "libpcre1" 
+  "libstdc++6" 
+  "libz-ng-compat1" 
+  "perl-base" 
+  "python311-base" 
+]
+extra-source "stardict-tools-3.0.1-86.1.x86_64.rpm" {
+  src: "http://download.opensuse.org/tumbleweed/repo/oss/x86_64/stardict-tools-3.0.1-86.1.x86_64.rpm"
+}
