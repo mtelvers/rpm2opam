@@ -1,15 +1,15 @@
 type distribution = {
   name : string;
-  image : string;
   prefix : string;
   url : string;
 }
 
 let distributions =
   [
-    ("tumbleweed", { name = "tumbleweed"; image = "opensuse/tumbleweed"; prefix = ""; url = "http://download.opensuse.org/tumbleweed/repo/oss" });
-    ("leap", { name = "leap"; image = "opensuse/leap"; prefix = ""; url = "http://download.opensuse.org/distribution/leap/16.0/repo/oss" });
-    ("fedora", { name = "fedora"; image = "fedora"; prefix = ""; url = "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os" });
+    ("tumbleweed", { name = "tumbleweed"; prefix = ""; url = "http://download.opensuse.org/tumbleweed/repo/oss" });
+    ("leap", { name = "leap"; prefix = ""; url = "http://download.opensuse.org/distribution/leap/16.0/repo/oss" });
+    ("fedora", { name = "fedora"; prefix = ""; url = "https://fedora.mirrorservice.org/fedora/linux/releases/40/Everything/x86_64/os" });
+    ("centos", { name = "centos"; prefix = ""; url = "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os" });
   ]
 
 let distribution =
@@ -53,18 +53,6 @@ let _ =
 
 let primary = Xml.parse_file primary_xml
 
-let read file =
-  let ic = open_in file in
-  let rec loop input lines =
-    try
-      let line = input_line input in
-      loop input (line :: lines)
-    with End_of_file ->
-      close_in input;
-      lines
-  in
-  loop ic []
-
 let version_of_string s =
   let rec loop i r = function
     | [] -> i :: r
@@ -84,11 +72,6 @@ let version_of_string s =
         | _ -> i :: r)
   in
   List.init (String.length s) (String.get s) |> loop 0 [] |> List.rev
-
-let prepopulated_rpms_file = Filename.temp_file "rpm" ""
-let _ = Sys.command (Filename.quote_command "docker" ~stdout:prepopulated_rpms_file ["run"; "--rm"; distribution.image; "rpm"; "-qa"; "--qf"; "%{NAME} %{VERSION}\\n"])
-let prepopulated_rpms = read prepopulated_rpms_file |> List.map (fun s -> let l = String.split_on_char ' ' s in (List.nth l 0, version_of_string (List.nth l 1)))
-let () = Sys.remove prepopulated_rpms_file
 
 let string_of_version v = List.map string_of_int v |> String.concat "."
 
@@ -121,7 +104,7 @@ type con = {
   ver : int list;
 }
 
-let string_of_constraints = function
+let string_of_constraint = function
   | Some c -> "{" ^ symbol_of_flag c.flags ^ " \"" ^ string_of_version c.ver ^ "\"}"
   | _ -> ""
 
@@ -163,7 +146,7 @@ let list_of_xml_entry =
       in
       let con =
         match List.assoc_opt "flags" a with
-        | Some flags -> Some { flags = flag_of_string flags; ver = (List.assoc "epoch" a |> int_of_string) :: (List.assoc "ver" a |> version_of_string) }
+        | Some flags -> Some { flags = flag_of_string flags; ver = List.assoc "ver" a |> version_of_string }
         | None -> None
       in
       { name; con })
@@ -201,17 +184,6 @@ let rpms = List.filter (fun rpm -> rpm.arch = "x86_64" || rpm.arch = "noarch") r
 let provides = Hashtbl.create 100000
 let () = List.iter (fun rpm -> List.iter (fun p -> Hashtbl.add provides p.name (p, rpm)) rpm.details.provides) rpms
 
-let tests =
-  [
-    { name = "/usr/bin/less"; con = None };
-    { name = "/bin/sh"; con = Some { flags = `EQ; ver = [ 5; 9 ] } };
-    { name = "libxml2.so.2()(64bit)"; con = None };
-    { name = "libxml2.so.2(LIBXML2_2.4.30)(64bit)"; con = None };
-    { name = "libgcc_s.so.1()(64bit)"; con = None };
-    { name = "python3"; con = Some { flags = `GE; ver = [ 3; 6 ] } };
-    { name = "file-magic"; con = Some { flags = `EQ; ver = [ 5; 45 ] } };
-  ]
-
 let search req =
   let matches =
     Hashtbl.find_all provides req.name
@@ -237,23 +209,44 @@ let search req =
     |> List.map (fun rpm -> ({ name = req.name; con = None }, rpm))
   else matches
 
-let search2 req =
-  let () = Printf.printf "Searching for %s: " req.name in
-  let answer = search req in
-  if List.length answer = 0 then
-    let () = Printf.printf "Not found\n" in
-    []
-  else
-    let () = List.iter (fun (_, rpm) -> Printf.printf "%s," rpm.pkg) answer in
-    let () = Printf.printf "\n" in
-    answer
+let db = Hashtbl.create 100000
 
-let latest_rpm r = if List.length r > 0 then Some (List.sort (fun (_, p1) (_, p2) -> compare p1.pkg p2.pkg) r |> List.hd) else assert false
-(*
-let () = List.map search tests |> List.flatten |> List.iter (fun (req, rpm) -> Printf.printf "%s @ %s\n" rpm.pkg (string_of_constraints req.con))
-let r = List.filter_map (fun req -> search req |> latest_rpm) tests |> List.sort_uniq compare
-let () = List.iter (fun (req, rpm) -> Printf.printf "%s @ %s\n" rpm.pkg (string_of_constraints req.con)) r
-       *)
+let () =
+  List.iter
+    (fun rpm ->
+      let packages =
+        rpm.details.requires |> List.map search
+        |> List.filter_map (fun l ->
+               let l = List.sort (fun (_, rpm1) (_, rpm2) -> compare rpm1.pkg rpm2.pkg) l in
+               if List.length l > 0 then Some (List.hd l) else None)
+        |> List.map (fun (e, r) -> { name = r.pkg; con = e.con })
+        |> List.sort_uniq (fun r1 r2 -> compare r1.name r2.name)
+      in
+      Hashtbl.add db rpm.pkg packages)
+    rpms
+
+let visited = Hashtbl.create 100000
+
+let rec dfs bt r =
+  let deps = Hashtbl.find db r in
+  List.iter
+    (fun d ->
+      if List.mem d.name bt then Hashtbl.replace db r (List.filter (fun e -> e.name <> d.name) deps)
+      else
+        match Hashtbl.find_opt visited d.name with
+        | Some _ -> ()
+        | None ->
+            let () = dfs (r :: bt) d.name in
+            Hashtbl.add visited d.name true)
+    deps
+
+let () =
+  List.iter
+    (fun r ->
+      let () = Printf.printf "%s\n" r.pkg in
+      let () = dfs [] r.pkg in
+      flush stdout)
+    rpms
 
 let mkdir_p s =
   String.split_on_char '/' s
@@ -270,6 +263,12 @@ let quoted_string lst = List.map (fun x -> "\"" ^ x ^ "\"") lst |> String.concat
 let rpms = List.filter (fun rpm -> rpm.pkg <> "opam") rpms
 
 let () =
+  let _ = mkdir_p distribution.name in
+  let oc = open_out (distribution.name ^ "/repo") in
+  let () = Printf.fprintf oc "opam-version: \"2.0\"\n" in
+  close_out oc
+
+let () =
   List.iter
     (fun rpm ->
       let () = Printf.printf "Package: %s\n" rpm.pkg in
@@ -280,48 +279,9 @@ let () =
       let rpm_filename = String.split_on_char '/' rpm.location |> List.rev |> List.hd in
       let () = Printf.fprintf oc "build: [%s]\n" ([ "/usr/bin/rpm"; "-U"; "--replacepkgs"; rpm_filename ] |> quoted_string) in
       let () = Printf.fprintf oc "remove: [%s]\n" ([ "/usr/bin/rpm"; "-e"; rpm_filename ] |> quoted_string) in
-      let rec all_deps met res l =
-        let pkgs = List.map search l in
-        let met = met && List.fold_left (fun acc l -> acc && List.length l > 0) true pkgs in
-        let pkgs =
-          pkgs
-          |> List.filter_map (fun l ->
-                 let l = List.sort (fun (_, rpm1) (_, rpm2) -> compare rpm1.pkg rpm2.pkg) l in
-                 if List.length l > 0 then Some (List.hd l) else None)
-        in
-        let pkgs = pkgs |> List.append res |> List.sort_uniq (fun (_, rpm1) (_, rpm2) -> compare rpm1.pkg rpm2.pkg) in
-        (*
-        let () = List.iter (fun (entry, rpm) -> Printf.printf "satisfy %s with %s\n" entry.name rpm.pkg) pkgs in
-           *)
-        (met, pkgs)
-        (*
-        if List.length pkgs = List.length res then (met, pkgs) else all_deps met pkgs (List.fold_left (fun acc (_, rpm) -> acc @ rpm.details.requires) [] pkgs)
-           *)
-      in
-      let met, pkgs = all_deps true [] rpm.details.requires in
-      let () = if not met then Printf.fprintf oc "flags: [ avoid-version ]\n" in
-      let print_deps () =
-          let () = Printf.fprintf oc "depends: [\n" in
-          let () =
-            List.iter
-              (fun (req, p) ->
-                Printf.fprintf oc "  \"%s%s\" %s\n" distribution.prefix p.pkg
-                  (string_of_constraints (req.con |> Option.map (fun { flags; _ } -> { flags; ver = p.version }))))
-              pkgs
-          in
-          Printf.fprintf oc "]\n" in
-      let () = match List.assoc_opt rpm.pkg prepopulated_rpms with
-        | None -> print_deps ()
-        | Some ver when (compare rpm.version ver <> 0) -> print_deps ()
-        | Some _ -> () in
-      (*
-      let () =
-        if List.length rpm.details.conflicts > 0 then
-          let () = Printf.fprintf oc "conflicts: [\n" in
-          let () = List.iter (fun con -> Printf.fprintf oc "  \"%s%s\" %s\n" distribution.prefix con.name (string_of_constraints con)) rpm.details.conflicts in
-          Printf.fprintf oc "]\n"
-      in
-         *)
+      let () = Printf.fprintf oc "depends: [\n" in
+      let () = List.iter (fun e -> Printf.fprintf oc "  \"%s%s\" %s\n" distribution.prefix e.name (string_of_constraint e.con)) (Hashtbl.find db rpm.pkg) in
+      let () = Printf.fprintf oc "]\n" in
       let () = Printf.fprintf oc "extra-source \"%s\" {\n" rpm_filename in
       let () = Printf.fprintf oc "  src: \"%s/%s\"\n" distribution.url rpm.location in
       let () = Printf.fprintf oc "}\n" in
